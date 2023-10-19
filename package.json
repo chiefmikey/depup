@@ -1,0 +1,24 @@
+{
+  "name": "depup-npm",
+  "version": "0.0.0",
+  "description": "DepUp npm packages",
+  "devDependencies": {
+    "mikey-pro": "^6.6.6"
+  },
+  "homepage": "https://github.com/depup/npm",
+  "repository": "https://github.com/depup/npm",
+  "bugs": "https://github.com/depup/npm/issues",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "npm"
+  ],
+  "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
+  "prettier": "@mikey-pro/prettier-config",
+  "eslintConfig": {
+    "extends": "@mikey-pro/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@mikey-pro/stylelint-config"
+  }
+}
