@@ -1,0 +1,35 @@
+name: depup
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'npm package to bump'
+        required: true
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install
+      - run: |
+          if [ -n "${{ inputs.package }}" ]; then
+            npm run depup -- ${{ inputs.package }}
+          else
+            echo "No package specified, skipping"
+          fi
+      - name: Create pull request
+        if: ${{ inputs.package != '' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: bump ${{ inputs.package }}"
+          title: "chore: bump ${{ inputs.package }}"
+          body: "Automated dependency bump for ${{ inputs.package }}"
+          branch: "depup/${{ inputs.package }}"
+
