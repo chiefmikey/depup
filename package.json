@@ -3,11 +3,22 @@
   "version": "0.0.0",
   "description": "DepUp dependency bumped npm packages",
   "scripts": {
+    "cron:discover": "node scripts/cron-discover.mjs",
+    "cron:sync": "node scripts/cron-sync.mjs",
     "depup": "node scripts/depup.mjs",
+    "depup:bump": "node scripts/depup.mjs --bump-deps",
+    "depup:publish": "node scripts/depup.mjs --bump-deps --test --publish",
+    "depup:test": "node scripts/depup.mjs --test",
+    "example": "node scripts/example.mjs",
+    "integrity:report": "node scripts/integrity-meter.mjs report",
+    "integrity:status": "node scripts/integrity-meter.mjs status",
+    "integrity:vote": "node scripts/integrity-meter.mjs vote",
+    "readme:generate": "node scripts/generate-readme.mjs",
     "test": "node -e \"console.log('no tests yet')\""
   },
   "devDependencies": {
     "mikey-pro": "^7.2.1",
+    "npm-registry-fetch": "^16.0.0",
     "pacote": "^21.0.1"
   },
   "homepage": "https://github.com/depup/npm",
@@ -16,7 +27,10 @@
   "license": "MIT",
   "keywords": [
     "depup",
-    "npm"
+    "npm",
+    "dependencies",
+    "automation",
+    "package-management"
   ],
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
   "prettier": "@mikey-pro/prettier-config",
