@@ -17,9 +17,9 @@
   },
   "1.0.0": {
     "0": {
-      "up": 28,
+      "up": 30,
       "down": 0,
-      "neutral": 14,
+      "neutral": 15,
       "details": [
         {
           "id": "1757648059598",
@@ -313,6 +313,27 @@
           "vote": "neutral",
           "description": "Works but has minor issues",
           "timestamp": "2025-09-12T13:15:06.667Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683019919",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:16:59.919Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683020127",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:17:00.127Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683020336",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:17:00.336Z",
           "user": "mikl"
         }
       ]

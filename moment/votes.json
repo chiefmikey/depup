@@ -1,9 +1,9 @@
 {
   "1.0.0": {
     "0": {
-      "up": 28,
+      "up": 30,
       "down": 0,
-      "neutral": 14,
+      "neutral": 15,
       "details": [
         {
           "id": "1757648106493",
@@ -297,6 +297,27 @@
           "vote": "neutral",
           "description": "Works but has minor issues",
           "timestamp": "2025-09-12T13:16:00.204Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683049699",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:17:29.699Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683049900",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:17:29.900Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757683050105",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:17:30.105Z",
           "user": "mikl"
         }
       ]

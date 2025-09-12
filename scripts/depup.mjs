@@ -12,7 +12,7 @@ class DepUp {
 
   async main() {
     const [, , spec, ...flags] = process.argv;
-    
+
     // Debug mode
     const isDebug = flags.includes('--debug');
     if (isDebug) {
@@ -21,7 +21,7 @@ class DepUp {
       console.log('Package spec:', spec);
       console.log('Flags:', flags);
     }
-    
+
     // Handle help flag
     if (spec === '--help' || spec === '-h' || !spec) {
       console.log(`
@@ -64,7 +64,7 @@ The script will:
       const scopedName = `@depup/${packageName}`;
 
       console.log(`Processing ${packageName}@${baseVersion} -> ${scopedName}`);
-      
+
       if (isDebug) {
         console.log('📦 Package manifest:', {
           name: packageName,
@@ -208,25 +208,33 @@ The script will:
           stdio: 'pipe',
           timeout: 60_000, // 60 second timeout
         });
-      } catch (installError) {
-        console.log('  ⚠️  Production install failed, trying with legacy peer deps...');
+      } catch {
+        console.log(
+          '  ⚠️  Production install failed, trying with legacy peer deps...',
+        );
         try {
           execSync('npm install --production --legacy-peer-deps', {
             cwd: packageDir,
             stdio: 'pipe',
             timeout: 60_000,
           });
-        } catch (legacyError) {
-          console.log('  ⚠️  Legacy install also failed, trying with force and ignore-scripts...');
+        } catch {
+          console.log(
+            '  ⚠️  Legacy install also failed, trying with force and ignore-scripts...',
+          );
           try {
             execSync('npm install --production --force --ignore-scripts', {
               cwd: packageDir,
               stdio: 'pipe',
               timeout: 60_000,
             });
-          } catch (forceError) {
-            console.log('  ⚠️  All install methods failed, but continuing with package processing...');
-            console.log('  📝 Note: Some dependencies may not be fully installed due to conflicts');
+          } catch {
+            console.log(
+              '  ⚠️  All install methods failed, but continuing with package processing...',
+            );
+            console.log(
+              '  📝 Note: Some dependencies may not be fully installed due to conflicts',
+            );
           }
         }
       }
@@ -275,24 +283,30 @@ try {
           stdio: 'pipe',
           timeout: 60_000,
         });
-      } catch (testInstallError) {
-        console.log('  ⚠️  Test install failed, trying with legacy peer deps...');
+      } catch {
+        console.log(
+          '  ⚠️  Test install failed, trying with legacy peer deps...',
+        );
         try {
           execSync('npm install --legacy-peer-deps', {
             cwd: testDir,
             stdio: 'pipe',
             timeout: 60_000,
           });
-        } catch (legacyTestError) {
-          console.log('  ⚠️  Legacy test install also failed, trying with force and ignore-scripts...');
+        } catch {
+          console.log(
+            '  ⚠️  Legacy test install also failed, trying with force and ignore-scripts...',
+          );
           try {
             execSync('npm install --force --ignore-scripts', {
               cwd: testDir,
               stdio: 'pipe',
               timeout: 60_000,
             });
-          } catch (forceTestError) {
-            console.log('  ⚠️  All test install methods failed, but continuing...');
+          } catch {
+            console.log(
+              '  ⚠️  All test install methods failed, but continuing...',
+            );
             console.log('  📝 Note: Test may fail due to dependency conflicts');
           }
         }
