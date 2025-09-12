@@ -1,4 +1,4 @@
-name: "Input Package"
+name: "Process Package"
 
 on:
   workflow_dispatch: {
@@ -8,15 +8,30 @@ on:
         required: true
       },
       version: {
-        description: "Version",
+        description: "Version (optional, defaults to latest)",
         required: false,
+      },
+      bump-deps: {
+        description: "Bump Dependencies",
+        type: "boolean",
+        default: true
+      },
+      test: {
+        description: "Run Tests",
+        type: "boolean",
+        default: true
+      },
+      publish: {
+        description: "Publish to NPM",
+        type: "boolean",
+        default: true
       }
     }
   }
 
 jobs:
-  version:
-    name: Version
+  process:
+    name: Process Package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,51 +39,48 @@ jobs:
         with:
           fetch-tags: true
 
-      - name: Configure
-        run: |
-          apt-get update && apt-get install -y gnupg
-          git config --global user.name "Mikl Wolfe"
-          git config --global user.email "wolfemikl@gmail.com"
-
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_KEY_ID }}
-          passphrase: ${{ secrets.GPG_PASS }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-
-      - name: Bump Version
-        if: success()
-        id: bump
-        env:
-          GITHUB_TOKEN: ${{ secrets.UPDATE_PACKAGE }}
-        run: |
-          VERSION=$(npm version patch -m "v%s")
-          git commit -S --amend --no-edit
-          git push origin main --tags
-          echo "TAG=${VERSION}" >> $GITHUB_OUTPUT
-
-  publish:
-    name: Publish
-    runs-on: ubuntu-latest
-    needs: version
-    if: needs.version.result == 'success'
-    env:
-      TAG: ${{ needs.version.outputs.TAG }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.TAG }}
-
-      - name: Setup
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish
-        run: npm publish --access public
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "DepUp Bot"
+          git config --global user.email "bot@depup.dev"
+
+      - name: Process Package
         env:
-           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          PACKAGE_SPEC="${{ inputs.package-name }}"
+          if [ -n "${{ inputs.version }}" ]; then
+            PACKAGE_SPEC="${{ inputs.package-name }}@${{ inputs.version }}"
+          fi
+
+          FLAGS=""
+          if [ "${{ inputs.bump-deps }}" = "true" ]; then
+            FLAGS="$FLAGS --bump-deps"
+          fi
+          if [ "${{ inputs.test }}" = "true" ]; then
+            FLAGS="$FLAGS --test"
+          fi
+          if [ "${{ inputs.publish }}" = "true" ]; then
+            FLAGS="$FLAGS --publish"
+          fi
+
+          npm run depup -- $PACKAGE_SPEC $FLAGS
+
+      - name: Commit Changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat: process package ${{ inputs.package-name }}"
+            git push origin main
+          fi

@@ -1,0 +1,149 @@
+{
+  "name": "@depup/leaflet",
+  "version": "1.9.4_0",
+  "homepage": "https://leafletjs.com/",
+  "description": "JavaScript library for mobile-friendly interactive maps",
+  "devDependencies": {
+    "@mapbox/eslint-plugin-script-tags": "^1.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "bundlemon": "^3.1.0",
+    "eslint": "^9.35.0",
+    "eslint-config-mourner": "^4.1.0",
+    "git-rev-sync": "^3.0.2",
+    "happen": "^0.3.2",
+    "husky": "^9.1.7",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-expect": "^1.1.3",
+    "karma-firefox-launcher": "^2.1.3",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^2.0.1",
+    "karma-rollup-preprocessor": "^7.0.8",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-sinon": "^1.0.5",
+    "leafdoc": "^2.3.0",
+    "lint-staged": "^16.1.6",
+    "mocha": "^11.7.2",
+    "prosthetic-hand": "^2.0.0",
+    "rollup": "^4.50.1",
+    "rollup-plugin-git-version": "^0.3.1",
+    "sinon": "^21.0.0",
+    "ssri": "^12.0.0",
+    "uglify-js": "^3.19.3"
+  },
+  "main": "dist/leaflet-src.js",
+  "style": "dist/leaflet.css",
+  "files": [
+    "dist",
+    "src",
+    "!dist/leaflet.zip",
+    "!*.leafdoc",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "docs": "node ./build/docs.js && node ./build/integrity.js",
+    "test": "karma start ./spec/karma.conf.js",
+    "build": "npm run rollup && npm run uglify",
+    "lint": "eslint .",
+    "lintfix": "npm run lint -- --fix",
+    "rollup": "rollup -c build/rollup-config.js",
+    "watch": "rollup -w -c build/rollup-config.js",
+    "uglify": "uglifyjs dist/leaflet-src.js -c -m -o dist/leaflet.js --source-map filename=dist/leaflet.js.map --source-map content=dist/leaflet-src.js.map --source-map url=leaflet.js.map --comments",
+    "bundlemon": "bundlemon --subProject js --defaultCompression none && bundlemon --subProject js-gzip --defaultCompression gzip",
+    "serve": "cd docs && bundle exec jekyll serve",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "ignorePatterns": [
+      "dist",
+      "debug",
+      "docs/docs/highlight",
+      "docs/examples/choropleth/us-states.js",
+      "docs/examples/geojson/sample-geojson.js",
+      "docs/examples/map-panes/eu-countries.js",
+      "docs/examples/extending/extending-2-layers.md",
+      "docs/_posts/2012*",
+      "docs/_site",
+      "build/integrity.js"
+    ],
+    "root": true,
+    "env": {
+      "commonjs": true,
+      "amd": true,
+      "node": false
+    },
+    "extends": "mourner",
+    "plugins": [
+      "@mapbox/eslint-plugin-script-tags"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "linebreak-style": [
+        0,
+        "unix"
+      ],
+      "no-mixed-spaces-and-tabs": [
+        2,
+        "smart-tabs"
+      ],
+      "indent": [
+        2,
+        "tab",
+        {
+          "VariableDeclarator": 0,
+          "flatTernaryExpressions": true
+        }
+      ],
+      "curly": 2,
+      "spaced-comment": 2,
+      "strict": 0,
+      "wrap-iife": 0,
+      "key-spacing": 0,
+      "consistent-return": 0,
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "build/**/*"
+        ],
+        "env": {
+          "node": true
+        },
+        "rules": {
+          "global-require": 0
+        }
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "rules": {
+          "eol-last": 0,
+          "no-unused-vars": 0
+        }
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Leaflet/Leaflet.git"
+  },
+  "keywords": [
+    "gis",
+    "map"
+  ],
+  "license": "BSD-2-Clause",
+  "lint-staged": {
+    "*.(js|md)": "eslint --cache --fix"
+  }
+}
