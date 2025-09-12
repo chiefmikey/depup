@@ -109,7 +109,7 @@ class IntegrityMeter {
     );
 
     console.log(
-      `✅ Vote recorded: ${vote} for ${packageName}@${version}_${revision}`,
+      `✅ Vote recorded: ${vote} for ${packageName}@${version}-depup.${revision}`,
     );
     this.printStatus(packageName, version, revision, votes[version][revision]);
   }
@@ -235,7 +235,7 @@ class IntegrityMeter {
     const status = this.getStatusEmoji(score);
 
     console.log(
-      `  ${status} ${packageName}@${version}_${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
+      `  ${status} ${packageName}@${version}-depup.${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
     );
   }
 

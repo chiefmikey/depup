@@ -72,17 +72,40 @@
       "version": "5.6.2-depup.12",
       "timestamp": "2025-09-12T04:04:00.323Z",
       "status": "published"
+    },
+    "13": {
+      "version": "5.6.2-depup.13",
+      "timestamp": "2025-09-12T13:10:03.184Z",
+      "status": "published"
+    },
+    "14": {
+      "version": "5.6.2-depup.14",
+      "timestamp": "2025-09-12T13:14:49.392Z",
+      "status": "published",
+      "integrity": {
+        "score": 100,
+        "totalVotes": 1,
+        "upVotes": 1,
+        "downVotes": 0,
+        "neutralVotes": 0,
+        "lastUpdated": "2025-09-12T13:14:51.608Z"
+      }
+    },
+    "15": {
+      "version": "5.6.2-depup.15",
+      "timestamp": "2025-09-12T13:16:07.576Z",
+      "status": "published"
     }
   },
   "1.0.0": {
     "0": {
       "integrity": {
         "score": 67,
-        "totalVotes": 36,
-        "upVotes": 24,
+        "totalVotes": 42,
+        "upVotes": 28,
         "downVotes": 0,
-        "neutralVotes": 12,
-        "lastUpdated": "2025-09-12T04:04:01.269Z"
+        "neutralVotes": 14,
+        "lastUpdated": "2025-09-12T13:16:08.179Z"
       }
     }
   }

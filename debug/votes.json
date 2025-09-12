@@ -139,6 +139,34 @@
           "user": "mikl"
         }
       ]
+    },
+    "10": {
+      "up": 1,
+      "down": 0,
+      "neutral": 0,
+      "details": [
+        {
+          "id": "1757682546962",
+          "vote": "up",
+          "description": "Final test - works perfectly",
+          "timestamp": "2025-09-12T13:09:06.962Z",
+          "user": "mikl"
+        }
+      ]
+    },
+    "11": {
+      "up": 1,
+      "down": 0,
+      "neutral": 0,
+      "details": [
+        {
+          "id": "1757682721912",
+          "vote": "up",
+          "description": "Debug mode test - works perfectly",
+          "timestamp": "2025-09-12T13:12:01.912Z",
+          "user": "mikl"
+        }
+      ]
     }
   }
 }

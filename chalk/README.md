@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [chalk](https://www.npmjs.com/package/chalk)
-- **DepUp Version**: 5.6.2-depup.0
+- **DepUp Version**: 5.6.2-depup.14
 - **Original Version**: 5.6.2
-- **Last Updated**: 9/11/2025
+- **Last Updated**: 9/12/2025
 
 ## 🚀 Installation
 
@@ -26,6 +26,21 @@ npm install @depup/chalk
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.6.2 | 0 | 🟢 Excellent | 100% | 1 |
+| 5.6.2 | 1 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 2 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 3 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 4 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 5 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 6 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 7 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 8 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 9 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 10 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 11 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 12 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 13 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 14 | 🟢 Excellent | 100% | 1 |
+| 1.0.0 | 0 | 🟡 Good | 67% | 39 |
 
 
 ## 🔄 Version History
@@ -35,6 +50,26 @@ npm install @depup/chalk
 
 - **Revision 0** (5.6.2-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/11/2025
+- **Revision 1** (5.6.2-depup.1) - 🔴 Poor 0% integrity
+- **Revision 2** (5.6.2-depup.2) - 🔴 Poor 0% integrity
+- **Revision 3** (5.6.2-depup.3) - 🔴 Poor 0% integrity
+- **Revision 4** (5.6.2-depup.4) - 🔴 Poor 0% integrity
+- **Revision 5** (5.6.2-depup.5) - 🔴 Poor 0% integrity
+- **Revision 6** (5.6.2-depup.6) - 🔴 Poor 0% integrity
+- **Revision 7** (5.6.2-depup.7) - 🔴 Poor 0% integrity
+- **Revision 8** (5.6.2-depup.8) - 🔴 Poor 0% integrity
+- **Revision 9** (5.6.2-depup.9) - 🔴 Poor 0% integrity
+- **Revision 10** (5.6.2-depup.10) - 🔴 Poor 0% integrity
+- **Revision 11** (5.6.2-depup.11) - 🔴 Poor 0% integrity
+- **Revision 12** (5.6.2-depup.12) - 🔴 Poor 0% integrity
+- **Revision 13** (5.6.2-depup.13) - 🔴 Poor 0% integrity
+- **Revision 14** (5.6.2-depup.14) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+
+### Version 1.0.0
+
+- **Revision 0** (undefined) - 🟡 Good 67% integrity
+  - Last updated: 9/12/2025
 
 
 ## 🤝 Contributing

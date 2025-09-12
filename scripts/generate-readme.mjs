@@ -100,10 +100,11 @@ This package inherits the license from the original package. See the original pa
       throw new Error(`No version data found for ${packageName}`);
     }
 
-    const latestRevision = Object.keys(integrityData[latestVersion])
-      .sort()
-      .pop();
+    const revisions = Object.keys(integrityData[latestVersion])
+      .sort((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
+    const latestRevision = revisions.at(-1);
     const latestData = integrityData[latestVersion][latestRevision];
+
 
     // Generate content
     const content = this.template
