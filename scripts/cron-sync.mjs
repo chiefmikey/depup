@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+
 import fetch from 'npm-registry-fetch';
 
 class PackageSyncer {
@@ -12,34 +13,36 @@ class PackageSyncer {
 
   async main() {
     console.log('🔄 Starting package sync...');
-    
+
     try {
       // Get all existing packages
       const existingPackages = await this.getExistingPackages();
       console.log(`Found ${existingPackages.length} existing packages`);
-      
+
       // Process packages with rate limiting
       const syncedPackages = [];
-      for (const pkg of existingPackages.slice(0, this.maxPackagesPerRun)) {
+      for (const package_ of existingPackages.slice(
+        0,
+        this.maxPackagesPerRun,
+      )) {
         try {
-          console.log(`Syncing ${pkg.name}...`);
-          const synced = await this.syncPackage(pkg);
+          console.log(`Syncing ${package_.name}...`);
+          const synced = await this.syncPackage(package_);
           if (synced) {
-            syncedPackages.push(pkg.name);
+            syncedPackages.push(package_.name);
           }
-          
+
           // Rate limiting
           await this.sleep(this.rateLimitDelay);
         } catch (error) {
-          console.warn(`Failed to sync ${pkg.name}:`, error.message);
+          console.warn(`Failed to sync ${package_.name}:`, error.message);
         }
       }
-      
+
       console.log(`✅ Synced ${syncedPackages.length} packages`);
       if (syncedPackages.length > 0) {
         console.log('Synced packages:', syncedPackages.join(', '));
       }
-      
     } catch (error) {
       console.error('Sync failed:', error.message);
       process.exit(1);
@@ -49,20 +52,24 @@ class PackageSyncer {
   async getExistingPackages() {
     const packages = [];
     const rootDir = process.cwd();
-    
+
     try {
       const entries = await fs.readdir(rootDir, { withFileTypes: true });
-      
+
       for (const entry of entries) {
-        if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules') {
+        if (
+          entry.isDirectory() &&
+          !entry.name.startsWith('.') &&
+          entry.name !== 'node_modules'
+        ) {
           const packageDir = path.join(rootDir, entry.name);
           const integrityFile = path.join(packageDir, 'integrity.json');
-          
+
           // Check if it's a package directory with integrity data
           try {
             await fs.access(integrityFile);
-            const integrityData = JSON.parse(await fs.readFile(integrityFile, 'utf8'));
-            
+            const integrityData = JSON.parse(await fs.readFile(integrityFile));
+
             // Get the latest version from integrity data
             const versions = Object.keys(integrityData);
             if (versions.length > 0) {
@@ -71,7 +78,7 @@ class PackageSyncer {
                 name: entry.name,
                 version: latestVersion,
                 path: packageDir,
-                integrityData
+                integrityData,
               });
             }
           } catch {
@@ -82,73 +89,78 @@ class PackageSyncer {
     } catch (error) {
       console.error('Error reading packages:', error.message);
     }
-    
+
     return packages;
   }
 
-  async syncPackage(pkg) {
+  async syncPackage(package_) {
     try {
       // Get latest version from npm
-      const latestManifest = await fetch.json(`/${pkg.name}`, {
+      const latestManifest = await fetch.json(`/${package_.name}`, {
         registry: this.registry,
-        timeout: 5000
+        timeout: 5000,
       });
-      
-      const latestVersion = latestManifest['dist-tags']?.latest || latestManifest.version;
-      
+
+      const latestVersion =
+        latestManifest['dist-tags']?.latest || latestManifest.version;
+
       // Check if we need to update
-      if (latestVersion !== pkg.version) {
-        console.log(`  🔄 Version update: ${pkg.version} -> ${latestVersion}`);
-        await this.updatePackage(pkg, latestVersion);
+      if (latestVersion !== package_.version) {
+        console.log(
+          `  🔄 Version update: ${package_.version} -> ${latestVersion}`,
+        );
+        await this.updatePackage(package_, latestVersion);
         return true;
-      } else {
-        // Check if dependencies need updating
-        const needsDependencyUpdate = await this.checkDependencyUpdates(pkg);
-        if (needsDependencyUpdate) {
-          console.log(`  🔄 Dependencies need updating`);
-          await this.updateDependencies(pkg);
-          return true;
-        } else {
-          console.log(`  ✅ ${pkg.name} is up to date`);
-          return false;
-        }
       }
+      // Check if dependencies need updating
+      const needsDependencyUpdate = await this.checkDependencyUpdates(package_);
+      if (needsDependencyUpdate) {
+        console.log(`  🔄 Dependencies need updating`);
+        await this.updateDependencies(package_);
+        return true;
+      }
+      console.log(`  ✅ ${package_.name} is up to date`);
+      return false;
     } catch (error) {
-      console.warn(`  ⚠️  Could not sync ${pkg.name}:`, error.message);
+      console.warn(`  ⚠️  Could not sync ${package_.name}:`, error.message);
       return false;
     }
   }
 
-  async checkDependencyUpdates(pkg) {
+  async checkDependencyUpdates(package_) {
     try {
       // Get the latest revision directory
-      const versionDir = path.join(pkg.path, pkg.version);
+      const versionDir = path.join(package_.path, package_.version);
       const entries = await fs.readdir(versionDir, { withFileTypes: true });
-      const revDirs = entries
-        .filter(e => e.isDirectory() && e.name.startsWith('rev-'))
-        .map(e => e.name)
+      const revDirectories = entries
+        .filter((e) => e.isDirectory() && e.name.startsWith('rev-'))
+        .map((e) => e.name)
         .sort();
-      
-      if (revDirs.length === 0) return false;
-      
-      const latestRevDir = path.join(versionDir, revDirs[revDirs.length - 1]);
-      const pkgJsonPath = path.join(latestRevDir, 'package.json');
-      
-      if (!await this.fileExists(pkgJsonPath)) return false;
-      
-      const pkgJson = JSON.parse(await fs.readFile(pkgJsonPath, 'utf8'));
-      const dependencies = { ...pkgJson.dependencies, ...pkgJson.devDependencies };
-      
+
+      if (revDirectories.length === 0) return false;
+
+      const latestRevDir = path.join(versionDir, revDirectories.at(-1));
+      const packageJsonPath = path.join(latestRevDir, 'package.json');
+
+      if (!(await this.fileExists(packageJsonPath))) return false;
+
+      const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
       // Check if any dependencies can be updated
       for (const [depName, currentVersion] of Object.entries(dependencies)) {
         try {
           const latestManifest = await fetch.json(`/${depName}`, {
             registry: this.registry,
-            timeout: 3000
+            timeout: 3000,
           });
-          
-          const latestVersion = latestManifest['dist-tags']?.latest || latestManifest.version;
-          
+
+          const latestVersion =
+            latestManifest['dist-tags']?.latest || latestManifest.version;
+
           if (this.isVersionNewer(latestVersion, currentVersion)) {
             return true;
           }
@@ -156,47 +168,57 @@ class PackageSyncer {
           // Skip this dependency
         }
       }
-      
+
       return false;
     } catch {
       return false;
     }
   }
 
-  async updatePackage(pkg, newVersion) {
+  async updatePackage(package_, newVersion) {
     const { execSync } = await import('node:child_process');
-    
+
     try {
-      const command = `node scripts/depup.mjs ${pkg.name}@${newVersion} --bump-deps --test --publish`;
+      const command = `node scripts/depup.mjs ${package_.name}@${newVersion} --bump-deps --test --publish`;
       console.log(`  🚀 Running: ${command}`);
-      
-      execSync(command, { 
+
+      execSync(command, {
         stdio: 'inherit',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
-      console.log(`  ✅ Successfully updated ${pkg.name} to ${newVersion}`);
+
+      console.log(
+        `  ✅ Successfully updated ${package_.name} to ${newVersion}`,
+      );
     } catch (error) {
-      console.error(`  ❌ Failed to update ${pkg.name} to ${newVersion}:`, error.message);
+      console.error(
+        `  ❌ Failed to update ${package_.name} to ${newVersion}:`,
+        error.message,
+      );
       throw error;
     }
   }
 
-  async updateDependencies(pkg) {
+  async updateDependencies(package_) {
     const { execSync } = await import('node:child_process');
-    
+
     try {
-      const command = `node scripts/depup.mjs ${pkg.name}@${pkg.version} --bump-deps --test --publish`;
+      const command = `node scripts/depup.mjs ${package_.name}@${package_.version} --bump-deps --test --publish`;
       console.log(`  🚀 Running: ${command}`);
-      
-      execSync(command, { 
+
+      execSync(command, {
         stdio: 'inherit',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
-      console.log(`  ✅ Successfully updated dependencies for ${pkg.name}`);
+
+      console.log(
+        `  ✅ Successfully updated dependencies for ${package_.name}`,
+      );
     } catch (error) {
-      console.error(`  ❌ Failed to update dependencies for ${pkg.name}:`, error.message);
+      console.error(
+        `  ❌ Failed to update dependencies for ${package_.name}:`,
+        error.message,
+      );
       throw error;
     }
   }
@@ -205,15 +227,19 @@ class PackageSyncer {
     // Simple version comparison - in production you'd want to use semver
     const latestParts = latest.split('.').map(Number);
     const currentParts = current.replace(/[\^~]/, '').split('.').map(Number);
-    
-    for (let i = 0; i < Math.max(latestParts.length, currentParts.length); i++) {
-      const latestPart = latestParts[i] || 0;
-      const currentPart = currentParts[i] || 0;
-      
+
+    for (
+      let index = 0;
+      index < Math.max(latestParts.length, currentParts.length);
+      index++
+    ) {
+      const latestPart = latestParts[index] || 0;
+      const currentPart = currentParts[index] || 0;
+
       if (latestPart > currentPart) return true;
       if (latestPart < currentPart) return false;
     }
-    
+
     return false;
   }
 
@@ -227,7 +253,7 @@ class PackageSyncer {
   }
 
   async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
 
