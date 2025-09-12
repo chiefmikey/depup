@@ -12,11 +12,43 @@ class DepUp {
 
   async main() {
     const [, , spec, ...flags] = process.argv;
-    if (!spec) {
-      console.error(
-        'Usage: node scripts/depup.mjs <package[@version]> [--bump-deps] [--publish] [--test]',
-      );
-      process.exit(1);
+    
+    // Debug mode
+    const isDebug = flags.includes('--debug');
+    if (isDebug) {
+      console.log('🐛 Debug mode enabled');
+      console.log('Arguments:', process.argv);
+      console.log('Package spec:', spec);
+      console.log('Flags:', flags);
+    }
+    
+    // Handle help flag
+    if (spec === '--help' || spec === '-h' || !spec) {
+      console.log(`
+DepUp - Automated Package Factory
+
+Usage: node scripts/depup.mjs <package[@version]> [options]
+
+Options:
+  --bump-deps    Update all dependencies to latest versions
+  --test         Test package functionality after processing
+  --publish      Publish package to npm (requires NPM_TOKEN)
+  --help, -h     Show this help message
+
+Examples:
+  node scripts/depup.mjs lodash
+  node scripts/depup.mjs express@5.0.0 --bump-deps --test
+  node scripts/depup.mjs react --bump-deps --test --publish
+
+The script will:
+1. Download the specified package from npm
+2. Create a scoped version (@depup/package-name)
+3. Optionally bump dependencies to latest versions
+4. Optionally test the package functionality
+5. Optionally publish to npm
+6. Store in local monorepo structure
+`);
+      process.exit(0);
     }
 
     const shouldBumpDeps = flags.includes('--bump-deps');
@@ -25,12 +57,23 @@ class DepUp {
 
     try {
       // Fetch package manifest
+      if (isDebug) console.log('🔍 Fetching package manifest for:', spec);
       const manifest = await pacote.manifest(spec);
       const packageName = manifest.name;
       const baseVersion = manifest.version;
       const scopedName = `@depup/${packageName}`;
 
       console.log(`Processing ${packageName}@${baseVersion} -> ${scopedName}`);
+      
+      if (isDebug) {
+        console.log('📦 Package manifest:', {
+          name: packageName,
+          version: baseVersion,
+          scopedName,
+          dependencies: Object.keys(manifest.dependencies || {}).length,
+          devDependencies: Object.keys(manifest.devDependencies || {}).length,
+        });
+      }
 
       // Check if package already exists in repo
       const packageDir = path.join(process.cwd(), packageName);
@@ -159,11 +202,34 @@ class DepUp {
     try {
       // First, install dependencies in the package directory
       console.log('  📦 Installing package dependencies...');
-      execSync('npm install --production', {
-        cwd: packageDir,
-        stdio: 'pipe',
-        timeout: 60_000, // 60 second timeout
-      });
+      try {
+        execSync('npm install --production', {
+          cwd: packageDir,
+          stdio: 'pipe',
+          timeout: 60_000, // 60 second timeout
+        });
+      } catch (installError) {
+        console.log('  ⚠️  Production install failed, trying with legacy peer deps...');
+        try {
+          execSync('npm install --production --legacy-peer-deps', {
+            cwd: packageDir,
+            stdio: 'pipe',
+            timeout: 60_000,
+          });
+        } catch (legacyError) {
+          console.log('  ⚠️  Legacy install also failed, trying with force and ignore-scripts...');
+          try {
+            execSync('npm install --production --force --ignore-scripts', {
+              cwd: packageDir,
+              stdio: 'pipe',
+              timeout: 60_000,
+            });
+          } catch (forceError) {
+            console.log('  ⚠️  All install methods failed, but continuing with package processing...');
+            console.log('  📝 Note: Some dependencies may not be fully installed due to conflicts');
+          }
+        }
+      }
 
       // Create a temporary test environment
       const testDir = path.join(packageDir, '.test-temp');
@@ -203,11 +269,34 @@ try {
 
       // Install and test
       console.log('  🔧 Installing test dependencies...');
-      execSync('npm install', {
-        cwd: testDir,
-        stdio: 'pipe',
-        timeout: 60_000,
-      });
+      try {
+        execSync('npm install', {
+          cwd: testDir,
+          stdio: 'pipe',
+          timeout: 60_000,
+        });
+      } catch (testInstallError) {
+        console.log('  ⚠️  Test install failed, trying with legacy peer deps...');
+        try {
+          execSync('npm install --legacy-peer-deps', {
+            cwd: testDir,
+            stdio: 'pipe',
+            timeout: 60_000,
+          });
+        } catch (legacyTestError) {
+          console.log('  ⚠️  Legacy test install also failed, trying with force and ignore-scripts...');
+          try {
+            execSync('npm install --force --ignore-scripts', {
+              cwd: testDir,
+              stdio: 'pipe',
+              timeout: 60_000,
+            });
+          } catch (forceTestError) {
+            console.log('  ⚠️  All test install methods failed, but continuing...');
+            console.log('  📝 Note: Test may fail due to dependency conflicts');
+          }
+        }
+      }
 
       console.log('  🚀 Running import test...');
       execSync('node test.mjs', {

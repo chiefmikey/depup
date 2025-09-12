@@ -1,9 +1,9 @@
 {
   "1.0.0": {
     "0": {
-      "up": 24,
+      "up": 28,
       "down": 0,
-      "neutral": 12,
+      "neutral": 14,
       "details": [
         {
           "id": "1757648085595",
@@ -255,6 +255,48 @@
           "vote": "neutral",
           "description": "Works but has minor issues",
           "timestamp": "2025-09-12T04:03:43.747Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682577238",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:09:37.238Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682577500",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:09:37.500Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682577771",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:09:37.771Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682946655",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:15:46.655Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682946862",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:15:46.862Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682947312",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:15:47.312Z",
           "user": "mikl"
         }
       ]

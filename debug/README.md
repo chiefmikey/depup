@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [debug](https://www.npmjs.com/package/debug)
-- **DepUp Version**: 4.4.1-depup.9
+- **DepUp Version**: 4.4.1-depup.11
 - **Original Version**: 4.4.1
-- **Last Updated**: 9/11/2025
+- **Last Updated**: 9/12/2025
 
 ## 🚀 Installation
 
@@ -35,6 +35,8 @@ npm install @depup/debug
 | 4.4.1 | 7 | 🟢 Excellent | 100% | 1 |
 | 4.4.1 | 8 | 🟢 Excellent | 100% | 1 |
 | 4.4.1 | 9 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 10 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 11 | 🟢 Excellent | 100% | 1 |
 
 
 ## 🔄 Version History
@@ -62,6 +64,10 @@ npm install @depup/debug
   - Last updated: 9/11/2025
 - **Revision 9** (4.4.1-depup.9) - 🟢 Excellent 100% integrity
   - Last updated: 9/11/2025
+- **Revision 10** (4.4.1-depup.10) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 11** (4.4.1-depup.11) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
 
 
 ## 🤝 Contributing

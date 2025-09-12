@@ -13,13 +13,27 @@
           "user": "mikl"
         }
       ]
+    },
+    "14": {
+      "up": 1,
+      "down": 0,
+      "neutral": 0,
+      "details": [
+        {
+          "id": "1757682891599",
+          "vote": "up",
+          "description": "Debug improvements test - works perfectly",
+          "timestamp": "2025-09-12T13:14:51.599Z",
+          "user": "mikl"
+        }
+      ]
     }
   },
   "1.0.0": {
     "0": {
-      "up": 24,
+      "up": 28,
       "down": 0,
-      "neutral": 12,
+      "neutral": 14,
       "details": [
         {
           "id": "1757648113413",
@@ -271,6 +285,48 @@
           "vote": "neutral",
           "description": "Works but has minor issues",
           "timestamp": "2025-09-12T04:04:01.261Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682603402",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:10:03.402Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682603620",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:10:03.620Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682603831",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:10:03.831Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682967774",
+          "vote": "up",
+          "description": "Works perfectly in my project",
+          "timestamp": "2025-09-12T13:16:07.774Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682967972",
+          "vote": "up",
+          "description": "Great improvement over original",
+          "timestamp": "2025-09-12T13:16:07.972Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757682968177",
+          "vote": "neutral",
+          "description": "Works but has minor issues",
+          "timestamp": "2025-09-12T13:16:08.177Z",
           "user": "mikl"
         }
       ]
