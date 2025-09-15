@@ -70,9 +70,9 @@ This package inherits the license from the original package. See the original pa
   }
 
   async generateReadme(packageName) {
-    const packageDir = path.join(process.cwd(), packageName);
-    const integrityFile = path.join(packageDir, 'integrity.json');
-    const votesFile = path.join(packageDir, 'votes.json');
+    const packageDirectory = path.join(process.cwd(), packageName);
+    const integrityFile = path.join(packageDirectory, 'integrity.json');
+    const votesFile = path.join(packageDirectory, 'votes.json');
 
     // Load integrity data
     let integrityData = {};
@@ -128,11 +128,11 @@ This package inherits the license from the original package. See the original pa
       );
 
     // Write README
-    const readmePath = path.join(packageDir, 'README.md');
+    const readmePath = path.join(packageDirectory, 'README.md');
     await fs.writeFile(readmePath, content);
   }
 
-  generateIntegrityTable(integrityData, votesData) {
+  generateIntegrityTable(integrityData) {
     if (Object.keys(integrityData).length === 0) {
       return 'No integrity data available yet.';
     }
@@ -154,7 +154,7 @@ This package inherits the license from the original package. See the original pa
     return table;
   }
 
-  generateVersionHistory(integrityData, votesData) {
+  generateVersionHistory(integrityData) {
     if (Object.keys(integrityData).length === 0) {
       return 'No version history available yet.';
     }

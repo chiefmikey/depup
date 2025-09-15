@@ -9,8 +9,7 @@ class IntegrityMeter {
   }
 
   async main() {
-    const [, , action, packageName, version, revision, vote, ...arguments_] =
-      process.argv;
+    const [, , action, packageName, version, revision, vote] = process.argv; // eslint-disable-line unicorn/no-unreadable-array-destructuring
 
     if (!action || !packageName) {
       console.error(
@@ -27,7 +26,7 @@ class IntegrityMeter {
           version,
           revision,
           vote,
-          arguments_.join(' '),
+          process.argv.slice(7).join(' '),
         );
         break;
       }
@@ -60,8 +59,8 @@ class IntegrityMeter {
       process.exit(1);
     }
 
-    const packageDir = path.join(process.cwd(), packageName);
-    const votesFile = path.join(packageDir, this.votesFile);
+    const packageDirectory = path.join(process.cwd(), packageName);
+    const votesFile = path.join(packageDirectory, this.votesFile);
 
     // Load existing votes
     let votes = {};
@@ -97,12 +96,12 @@ class IntegrityMeter {
     });
 
     // Save votes
-    await fs.mkdir(packageDir, { recursive: true });
-    await fs.writeFile(votesFile, JSON.stringify(votes, null, 2));
+    await fs.mkdir(packageDirectory, { recursive: true });
+    await fs.writeFile(votesFile, JSON.stringify(votes, undefined, 2));
 
     // Update integrity data
     await this.updateIntegrityData(
-      packageDir,
+      packageDirectory,
       version,
       revision,
       votes[version][revision],
@@ -115,8 +114,8 @@ class IntegrityMeter {
   }
 
   async status(packageName, version) {
-    const packageDir = path.join(process.cwd(), packageName);
-    const votesFile = path.join(packageDir, this.votesFile);
+    const packageDirectory = path.join(process.cwd(), packageName);
+    const votesFile = path.join(packageDirectory, this.votesFile);
 
     try {
       const data = await fs.readFile(votesFile);
@@ -146,9 +145,9 @@ class IntegrityMeter {
   }
 
   async report(packageName) {
-    const packageDir = path.join(process.cwd(), packageName);
-    const votesFile = path.join(packageDir, this.votesFile);
-    const integrityFile = path.join(packageDir, this.integrityFile);
+    const packageDirectory = path.join(process.cwd(), packageName);
+    const votesFile = path.join(packageDirectory, this.votesFile);
+    // const integrityFile = path.join(packageDirectory, this.integrityFile);
 
     console.log(`\n📈 Integrity Report for ${packageName}`);
     console.log('='.repeat(50));
@@ -157,8 +156,8 @@ class IntegrityMeter {
       const votesData = await fs.readFile(votesFile);
       const votes = JSON.parse(votesData);
 
-      const integrityData = await fs.readFile(integrityFile);
-      const integrity = JSON.parse(integrityData);
+      // const integrityData = await fs.readFile(integrityFile);
+      // const integrity = JSON.parse(integrityData);
 
       // Generate report
       for (const [version, versionData] of Object.entries(votes)) {
@@ -195,8 +194,8 @@ class IntegrityMeter {
     }
   }
 
-  async updateIntegrityData(packageDir, version, revision, voteData) {
-    const integrityFile = path.join(packageDir, this.integrityFile);
+  async updateIntegrityData(packageDirectory, version, revision, voteData) {
+    const integrityFile = path.join(packageDirectory, this.integrityFile);
 
     let integrityData = {};
     try {
@@ -225,7 +224,10 @@ class IntegrityMeter {
       lastUpdated: new Date().toISOString(),
     };
 
-    await fs.writeFile(integrityFile, JSON.stringify(integrityData, null, 2));
+    await fs.writeFile(
+      integrityFile,
+      JSON.stringify(integrityData, undefined, 2),
+    );
   }
 
   printStatus(packageName, version, revision, data) {

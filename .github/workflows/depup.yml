@@ -1,35 +1,107 @@
-name: depup
+name: DepUp Package Processing
 
 on:
   workflow_dispatch:
     inputs:
       package:
-        description: 'npm package to bump'
+        description: 'npm package to process (e.g., lodash, express@5.0.0)'
         required: true
-  schedule:
-    - cron: '0 * * * *'
+        type: string
+      bump_deps:
+        description: 'Bump dependencies to latest versions'
+        required: false
+        type: boolean
+        default: true
+      test:
+        description: 'Test package functionality'
+        required: false
+        type: boolean
+        default: true
+      publish:
+        description: 'Publish to npm (requires NPM_TOKEN)'
+        required: false
+        type: boolean
+        default: false
+      debug:
+        description: 'Enable debug mode'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
-  bump:
+  process-package:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          node-version: 18
-      - run: npm install
-      - run: |
-          if [ -n "${{ inputs.package }}" ]; then
-            npm run depup -- ${{ inputs.package }}
-          else
-            echo "No package specified, skipping"
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate inputs
+        run: |
+          if [ -z "${{ inputs.package }}" ]; then
+            echo "Error: Package name is required"
+            exit 1
           fi
-      - name: Create pull request
-        if: ${{ inputs.package != '' }}
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "chore: bump ${{ inputs.package }}"
-          title: "chore: bump ${{ inputs.package }}"
-          body: "Automated dependency bump for ${{ inputs.package }}"
-          branch: "depup/${{ inputs.package }}"
+          echo "Processing package: ${{ inputs.package }}"
+
+      - name: Process package
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # Build command with options
+          CMD="npm run depup -- ${{ inputs.package }}"
+
+          if [ "${{ inputs.bump_deps }}" = "true" ]; then
+            CMD="$CMD --bump-deps"
+          fi
+
+          if [ "${{ inputs.test }}" = "true" ]; then
+            CMD="$CMD --test"
+          fi
+
+          if [ "${{ inputs.publish }}" = "true" ]; then
+            CMD="$CMD --publish"
+          fi
+
+          if [ "${{ inputs.debug }}" = "true" ]; then
+            CMD="$CMD --debug"
+          fi
+
+          echo "Running: $CMD"
+          eval $CMD
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "DepUp Bot"
+          git config --local user.email "bot@depup.dev"
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git add .
+            git commit -m "feat: process ${{ inputs.package }} with DepUp"
+            git push origin main
+          fi
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## DepUp Processing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: ${{ inputs.package }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Bump Dependencies**: ${{ inputs.bump_deps }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Test Package**: ${{ inputs.test }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Publish Package**: ${{ inputs.publish }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Debug Mode**: ${{ inputs.debug }}" >> $GITHUB_STEP_SUMMARY
 

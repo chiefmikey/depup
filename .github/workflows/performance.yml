@@ -1,0 +1,168 @@
+name: Performance Monitoring
+
+on:
+  schedule:
+    # Run performance tests weekly
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Specific package to test (optional)'
+        required: false
+        type: string
+
+jobs:
+  performance-test:
+    name: Performance Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install performance monitoring tools
+        run: |
+          npm install --save-dev cli-progress
+          npm install --save-dev autocannon
+          npm install --save-dev 0x
+
+      - name: Test package processing performance
+        run: |
+          echo "Testing package processing performance..."
+
+          # Test with a lightweight package
+          TEST_PACKAGE="${INPUT_PACKAGE:-lodash}"
+
+          echo "Testing with package: $TEST_PACKAGE"
+
+          # Measure processing time
+          start_time=$(date +%s)
+          npm run depup -- $TEST_PACKAGE --debug --dry-run
+          end_time=$(date +%s)
+
+          processing_time=$((end_time - start_time))
+          echo "Processing time: ${processing_time}s"
+
+          # Save performance metrics
+          echo "{
+            \"package\": \"$TEST_PACKAGE\",
+            \"processing_time_seconds\": $processing_time,
+            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+            \"node_version\": \"$(node --version)\",
+            \"npm_version\": \"$(npm --version)\"
+          }" > performance-metrics.json
+
+      - name: Test memory usage
+        run: |
+          echo "Testing memory usage..."
+
+          # Monitor memory usage during package processing
+          TEST_PACKAGE="${INPUT_PACKAGE:-lodash}"
+
+          # Use Node.js built-in memory monitoring
+          node -e "
+            const { execSync } = require('child_process');
+            const startMemory = process.memoryUsage();
+
+            try {
+              execSync('npm run depup -- $TEST_PACKAGE --debug --dry-run', { stdio: 'pipe' });
+            } catch (error) {
+              console.log('Command failed:', error.message);
+            }
+
+            const endMemory = process.memoryUsage();
+
+            console.log('Memory usage:');
+            console.log('Start RSS:', Math.round(startMemory.rss / 1024 / 1024), 'MB');
+            console.log('End RSS:', Math.round(endMemory.rss / 1024 / 1024), 'MB');
+            console.log('Peak RSS:', Math.round(endMemory.rss / 1024 / 1024), 'MB');
+
+            // Save memory metrics
+            const fs = require('fs');
+            const memoryData = {
+              package: '$TEST_PACKAGE',
+              start_rss_mb: Math.round(startMemory.rss / 1024 / 1024),
+              end_rss_mb: Math.round(endMemory.rss / 1024 / 1024),
+              peak_rss_mb: Math.round(endMemory.rss / 1024 / 1024),
+              timestamp: new Date().toISOString()
+            };
+
+            fs.writeFileSync('memory-metrics.json', JSON.stringify(memoryData, null, 2));
+          "
+
+      - name: Upload performance artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-metrics
+          path: |
+            performance-metrics.json
+            memory-metrics.json
+          retention-days: 90
+
+      - name: Performance Summary
+        if: always()
+        run: |
+          echo "## Performance Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Date**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Test Package**: ${INPUT_PACKAGE:-lodash}" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f performance-metrics.json ]; then
+            PROCESSING_TIME=$(cat performance-metrics.json | jq -r '.processing_time_seconds' 2>/dev/null || echo "N/A")
+            echo "- **Processing Time**: ${PROCESSING_TIME}s" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -f memory-metrics.json ]; then
+            PEAK_RSS=$(cat memory-metrics.json | jq -r '.peak_rss_mb' 2>/dev/null || echo "N/A")
+            echo "- **Peak Memory Usage**: ${PEAK_RSS}MB" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  benchmark-comparison:
+    name: Benchmark Comparison
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run benchmark comparison
+        run: |
+          echo "Running benchmark comparison..."
+
+          # Test multiple packages for comparison
+          PACKAGES=("lodash" "express" "axios" "moment")
+
+          for package in "${PACKAGES[@]}"; do
+            echo "Benchmarking $package..."
+
+            start_time=$(date +%s)
+            npm run depup -- $package --debug --dry-run
+            end_time=$(date +%s)
+
+            processing_time=$((end_time - start_time))
+            echo "$package: ${processing_time}s"
+          done

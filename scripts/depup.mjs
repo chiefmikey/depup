@@ -2,8 +2,13 @@
 import { execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+// import { fileURLToPath } from 'node:url';
 
+import chalk from 'chalk';
+import { Command } from 'commander';
+import ora from 'ora';
 import pacote from 'pacote';
+import semver from 'semver';
 
 class DepUp {
   constructor() {
@@ -11,170 +16,285 @@ class DepUp {
   }
 
   async main() {
-    const [, , spec, ...flags] = process.argv;
+    const program = new Command();
 
-    // Debug mode
-    const isDebug = flags.includes('--debug');
-    if (isDebug) {
-      console.log('🐛 Debug mode enabled');
-      console.log('Arguments:', process.argv);
-      console.log('Package spec:', spec);
-      console.log('Flags:', flags);
+    program
+      .name('depup')
+      .description('DepUp - Automated Package Factory')
+      .version('1.0.0')
+      .argument(
+        '<package>',
+        'npm package to process (e.g., lodash, express@5.0.0)',
+      )
+      .option('-b, --bump-deps', 'update all dependencies to latest versions')
+      .option('-t, --test', 'test package functionality after processing')
+      .option('-p, --publish', 'publish package to npm (requires NPM_TOKEN)')
+      .option('-d, --debug', 'enable debug mode')
+      .option('--dry-run', 'show what would be done without making changes')
+      .option(
+        '--timeout <ms>',
+        'timeout for operations in milliseconds',
+        '300000',
+      )
+      .action(async (packageSpec, options) => {
+        try {
+          await this.processPackage(packageSpec, options);
+        } catch (error) {
+          console.error(chalk.red('Error:'), error.message);
+          if (options.debug) {
+            console.error(chalk.gray('Stack trace:'), error.stack);
+          }
+          process.exit(1);
+        }
+      });
+
+    program.parse();
+  }
+
+  async processPackage(packageSpec, options) {
+    const {
+      debug,
+      dryRun,
+      timeout,
+      bumpDeps: shouldBumpDeps,
+      publish: shouldPublish,
+      test: shouldTest,
+    } = options;
+
+    if (debug) {
+      console.log(chalk.blue('🐛 Debug mode enabled'));
+      console.log('Package spec:', packageSpec);
+      console.log('Options:', options);
     }
 
-    // Handle help flag
-    if (spec === '--help' || spec === '-h' || !spec) {
-      console.log(`
-DepUp - Automated Package Factory
-
-Usage: node scripts/depup.mjs <package[@version]> [options]
-
-Options:
-  --bump-deps    Update all dependencies to latest versions
-  --test         Test package functionality after processing
-  --publish      Publish package to npm (requires NPM_TOKEN)
-  --help, -h     Show this help message
-
-Examples:
-  node scripts/depup.mjs lodash
-  node scripts/depup.mjs express@5.0.0 --bump-deps --test
-  node scripts/depup.mjs react --bump-deps --test --publish
-
-The script will:
-1. Download the specified package from npm
-2. Create a scoped version (@depup/package-name)
-3. Optionally bump dependencies to latest versions
-4. Optionally test the package functionality
-5. Optionally publish to npm
-6. Store in local monorepo structure
-`);
-      process.exit(0);
+    if (dryRun) {
+      console.log(chalk.yellow('🔍 Dry run mode - no changes will be made'));
     }
-
-    const shouldBumpDeps = flags.includes('--bump-deps');
-    const shouldPublish = flags.includes('--publish');
-    const shouldTest = flags.includes('--test');
 
     try {
-      // Fetch package manifest
-      if (isDebug) console.log('🔍 Fetching package manifest for:', spec);
-      const manifest = await pacote.manifest(spec);
-      const packageName = manifest.name;
-      const baseVersion = manifest.version;
-      const scopedName = `@depup/${packageName}`;
-
-      console.log(`Processing ${packageName}@${baseVersion} -> ${scopedName}`);
-
-      if (isDebug) {
-        console.log('📦 Package manifest:', {
-          name: packageName,
-          version: baseVersion,
-          scopedName,
-          dependencies: Object.keys(manifest.dependencies || {}).length,
-          devDependencies: Object.keys(manifest.devDependencies || {}).length,
-        });
+      // Validate package spec
+      if (!packageSpec || typeof packageSpec !== 'string') {
+        throw new Error('Package spec is required');
       }
 
-      // Check if package already exists in repo
-      const packageDir = path.join(process.cwd(), packageName);
-      const versionDir = path.join(packageDir, baseVersion);
-
-      // Create package directory structure
-      await fs.mkdir(versionDir, { recursive: true });
-
-      // Determine revision number
-      let revision = 0;
+      // Fetch package manifest with timeout
+      const spinner = ora('Fetching package manifest...').start();
       try {
-        const entries = await fs.readdir(versionDir, { withFileTypes: true });
-        const revs = entries
-          .filter((e) => e.isDirectory() && e.name.startsWith('rev-'))
-          .map((e) => Number.parseInt(e.name.replace('rev-', ''), 10))
-          .filter((n) => !Number.isNaN(n));
-        if (revs.length > 0) {
-          revision = Math.max(...revs) + 1;
+        const manifest = await Promise.race([
+          pacote.manifest(packageSpec),
+          new Promise((_, reject) =>
+            setTimeout(
+              () => reject(new Error('Timeout fetching package manifest')),
+              timeout,
+            ),
+          ),
+        ]);
+
+        spinner.succeed('Package manifest fetched');
+
+        const packageName = manifest.name;
+        const baseVersion = manifest.version;
+        const scopedName = `@depup/${packageName}`;
+
+        console.log(
+          chalk.cyan(
+            `Processing ${packageName}@${baseVersion} -> ${scopedName}`,
+          ),
+        );
+
+        if (debug) {
+          console.log(chalk.gray('📦 Package manifest:'), {
+            name: packageName,
+            version: baseVersion,
+            scopedName,
+            dependencies: Object.keys(manifest.dependencies || {}).length,
+            devDependencies: Object.keys(manifest.devDependencies || {}).length,
+          });
         }
-      } catch {
-        // ignore
-      }
 
-      const targetDir = path.join(versionDir, `rev-${revision}`);
+        // Check if package already exists in repo
+        const packageDirectory = path.join(process.cwd(), packageName);
+        const versionDirectory = path.join(packageDirectory, baseVersion);
 
-      // Download and extract package
-      await pacote.extract(spec, targetDir);
+        if (dryRun) {
+          console.log(
+            chalk.yellow(`Would create directory: ${versionDirectory}`),
+          );
+          return;
+        }
 
-      // Update package.json
-      const packageJsonPath = path.join(targetDir, 'package.json');
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
-      const originalVersion = packageJson.version;
+        // Create package directory structure
+        await fs.mkdir(versionDirectory, { recursive: true });
 
-      packageJson.name = scopedName;
-      packageJson.version = `${baseVersion}-depup.${revision}`;
+        // Determine revision number
+        let revision = 0;
+        try {
+          const entries = await fs.readdir(versionDirectory, {
+            withFileTypes: true,
+          });
+          const revs = entries
+            .filter(
+              (entry) => entry.isDirectory() && entry.name.startsWith('rev-'),
+            )
+            .map((entry) => Number.parseInt(entry.name.replace('rev-', ''), 10))
+            .filter((n) => !Number.isNaN(n));
+          if (revs.length > 0) {
+            revision = Math.max(...revs) + 1;
+          }
+        } catch {
+          // ignore
+        }
 
-      // Bump dependencies if requested
-      if (shouldBumpDeps) {
-        await this.bumpDependencies(targetDir, packageJson);
-      }
+        const targetDirectory = path.join(versionDirectory, `rev-${revision}`);
 
-      await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
+        // Download and extract package
+        const extractSpinner = ora(
+          'Downloading and extracting package...',
+        ).start();
+        try {
+          await Promise.race([
+            pacote.extract(packageSpec, targetDirectory),
+            new Promise((_, reject) =>
+              setTimeout(
+                () => reject(new Error('Timeout downloading package')),
+                timeout,
+              ),
+            ),
+          ]);
+          extractSpinner.succeed('Package downloaded and extracted');
+        } catch (error) {
+          extractSpinner.fail('Failed to download package');
+          throw error;
+        }
 
-      // Test if requested
-      if (shouldTest) {
-        const testPassed = await this.testPackage(targetDir, scopedName);
-        if (!testPassed) {
-          console.warn(
-            `⚠️  Tests failed for ${scopedName}@${packageJson.version}`,
+        // Update package.json
+        const packageJsonPath = path.join(targetDirectory, 'package.json');
+        const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+        const originalVersion = packageJson.version;
+
+        packageJson.name = scopedName;
+        packageJson.version = `${baseVersion}-depup.${revision}`;
+
+        // Bump dependencies if requested
+        if (shouldBumpDeps) {
+          await this.bumpDependencies(
+            targetDirectory,
+            packageJson,
+            debug,
+            timeout,
           );
         }
+
+        await fs.writeFile(
+          packageJsonPath,
+          JSON.stringify(packageJson, undefined, 2),
+        );
+
+        // Test if requested
+        if (shouldTest) {
+          const testPassed = await this.testPackage(
+            targetDirectory,
+            scopedName,
+            debug,
+            timeout,
+          );
+          if (!testPassed) {
+            console.warn(
+              chalk.yellow(
+                `⚠️  Tests failed for ${scopedName}@${packageJson.version}`,
+              ),
+            );
+          }
+        }
+
+        // Publish if requested
+        if (shouldPublish) {
+          await this.publishPackage(
+            targetDirectory,
+            scopedName,
+            packageJson.version,
+            debug,
+          );
+        }
+
+        // Update integrity data
+        await this.updateIntegrityData(
+          packageDirectory,
+          baseVersion,
+          revision,
+          packageJson.version,
+        );
+
+        console.log(
+          chalk.green(
+            `✅ Prepared ${scopedName}@${packageJson.version} in ${targetDirectory}`,
+          ),
+        );
+
+        return {
+          packageName,
+          scopedName,
+          version: packageJson.version,
+          originalVersion,
+          revision,
+          path: targetDirectory,
+        };
+      } catch (error) {
+        if (error.message.includes('Timeout')) {
+          throw new Error(`Operation timed out after ${timeout}ms`);
+        }
+        throw error;
       }
-
-      // Publish if requested
-      if (shouldPublish) {
-        await this.publishPackage(targetDir, scopedName, packageJson.version);
-      }
-
-      // Update integrity data
-      await this.updateIntegrityData(
-        packageDir,
-        baseVersion,
-        revision,
-        packageJson.version,
-      );
-
-      console.log(
-        `✅ Prepared ${scopedName}@${packageJson.version} in ${targetDir}`,
-      );
-
-      return {
-        packageName,
-        scopedName,
-        version: packageJson.version,
-        originalVersion,
-        revision,
-        path: targetDir,
-      };
     } catch (error) {
-      console.error('Error processing package:', error.message);
-      process.exit(1);
+      console.error(chalk.red('Error processing package:'), error.message);
+      if (debug) {
+        console.error(chalk.gray('Stack trace:'), error.stack);
+      }
+      throw error;
     }
   }
 
-  async bumpDependencies(packageDir, packageJson) {
-    console.log('🔄 Bumping dependencies...');
+  async bumpDependencies(
+    packageDirectory,
+    packageJson,
+    debug = false,
+    timeout = 300_000,
+  ) {
+    const spinner = ora('Bumping dependencies...').start();
 
     const dependencies = {
       ...packageJson.dependencies,
       ...packageJson.devDependencies,
     };
     let updatedCount = 0;
+    let errorCount = 0;
 
     for (const [depName, currentVersion] of Object.entries(dependencies)) {
       try {
-        // Get latest version
-        const latestManifest = await pacote.manifest(`${depName}@latest`);
+        // Clean version string for comparison
+        const cleanCurrentVersion = currentVersion.replace(/^[\^~]/, '');
+
+        // Get latest version with timeout
+        const latestManifest = await Promise.race([
+          pacote.manifest(`${depName}@latest`),
+          new Promise((_, reject) =>
+            setTimeout(
+              () => reject(new Error('Timeout fetching dependency')),
+              Math.min(timeout / 30, 10_000), // Use timeout parameter, max 10s per dependency
+            ),
+          ),
+        ]);
         const latestVersion = latestManifest.version;
 
-        if (latestVersion !== currentVersion) {
-          console.log(`  📦 ${depName}: ${currentVersion} -> ${latestVersion}`);
+        // Use semver to compare versions
+        if (semver.gt(latestVersion, cleanCurrentVersion)) {
+          if (debug) {
+            console.log(
+              chalk.gray(
+                `  📦 ${depName}: ${currentVersion} -> ${latestVersion}`,
+              ),
+            );
+          }
 
           if (packageJson.dependencies && packageJson.dependencies[depName]) {
             packageJson.dependencies[depName] = `^${latestVersion}`;
@@ -189,77 +309,100 @@ The script will:
           updatedCount++;
         }
       } catch (error) {
-        console.warn(`  ⚠️  Could not update ${depName}: ${error.message}`);
+        errorCount++;
+        if (debug) {
+          console.warn(
+            chalk.yellow(`  ⚠️  Could not update ${depName}: ${error.message}`),
+          );
+        }
       }
     }
 
-    console.log(`✅ Updated ${updatedCount} dependencies`);
+    if (updatedCount > 0) {
+      spinner.succeed(`Updated ${updatedCount} dependencies`);
+    } else {
+      spinner.succeed('No dependencies to update');
+    }
+
+    if (errorCount > 0) {
+      console.warn(
+        chalk.yellow(`⚠️  Failed to update ${errorCount} dependencies`),
+      );
+    }
   }
 
-  async testPackage(packageDir, packageName) {
-    console.log('🧪 Testing package...');
+  async testPackage(
+    packageDirectory,
+    packageName,
+    debug = false,
+    timeout = 300_000,
+  ) {
+    const spinner = ora('Testing package...').start();
 
     try {
       // First, install dependencies in the package directory
-      console.log('  📦 Installing package dependencies...');
-      try {
-        execSync('npm install --production', {
-          cwd: packageDir,
-          stdio: 'pipe',
-          timeout: 60_000, // 60 second timeout
-        });
-      } catch {
-        console.log(
-          '  ⚠️  Production install failed, trying with legacy peer deps...',
-        );
+      const installSpinner = ora('Installing package dependencies...').start();
+      let installSuccess = false;
+
+      const installMethods = [
+        'npm install --production',
+        'npm install --production --legacy-peer-deps',
+        'npm install --production --force --ignore-scripts',
+      ];
+
+      for (const method of installMethods) {
         try {
-          execSync('npm install --production --legacy-peer-deps', {
-            cwd: packageDir,
-            stdio: 'pipe',
-            timeout: 60_000,
+          execSync(method, {
+            cwd: packageDirectory,
+            stdio: debug ? 'inherit' : 'pipe',
+            timeout: Math.min(timeout / 4, 60_000), // 1/4 of total timeout or 60s max
           });
+          installSuccess = true;
+          break;
         } catch {
-          console.log(
-            '  ⚠️  Legacy install also failed, trying with force and ignore-scripts...',
-          );
-          try {
-            execSync('npm install --production --force --ignore-scripts', {
-              cwd: packageDir,
-              stdio: 'pipe',
-              timeout: 60_000,
-            });
-          } catch {
-            console.log(
-              '  ⚠️  All install methods failed, but continuing with package processing...',
-            );
-            console.log(
-              '  📝 Note: Some dependencies may not be fully installed due to conflicts',
-            );
+          if (debug) {
+            console.log(chalk.yellow(`  ⚠️  Install method failed: ${method}`));
           }
         }
       }
 
+      if (installSuccess) {
+        installSpinner.succeed('Dependencies installed');
+      } else {
+        installSpinner.warn(
+          'Dependency installation failed, but continuing...',
+        );
+        if (debug) {
+          console.log(
+            chalk.yellow(
+              '  📝 Note: Some dependencies may not be fully installed due to conflicts',
+            ),
+          );
+        }
+      }
+
       // Create a temporary test environment
-      const testDir = path.join(packageDir, '.test-temp');
-      await fs.mkdir(testDir, { recursive: true });
+      const testDirectory = path.join(packageDirectory, '.test-temp');
+      await fs.mkdir(testDirectory, { recursive: true });
 
-      // Create test package.json
-      const testPackageJson = {
-        name: 'depup-test',
-        version: '1.0.0',
-        type: 'module',
-        dependencies: {
-          [packageName]: `file:${packageDir}`,
-        },
-      };
+      try {
+        // Create test package.json
+        const testPackageJson = {
+          name: 'depup-test',
+          version: '1.0.0',
+          type: 'module',
+          dependencies: {
+            [packageName]: `file:${packageDirectory}`,
+          },
+        };
 
-      await fs.writeFile(
-        path.join(testDir, 'package.json'),
-        JSON.stringify(testPackageJson, null, 2),
-      );
+        await fs.writeFile(
+          path.join(testDirectory, 'package.json'),
+          JSON.stringify(testPackageJson, undefined, 2),
+        );
 
-      // Create test file
-      const testFile = `
+        // Create test file
+        const testFile = `
 try {
   const test = await import('${packageName}');
   console.log('✅ Import successful:', typeof test);
@@ -273,84 +416,120 @@ try {
 }
 `;
 
-      await fs.writeFile(path.join(testDir, 'test.mjs'), testFile);
+        await fs.writeFile(path.join(testDirectory, 'test.mjs'), testFile);
 
-      // Install and test
-      console.log('  🔧 Installing test dependencies...');
-      try {
-        execSync('npm install', {
-          cwd: testDir,
-          stdio: 'pipe',
-          timeout: 60_000,
-        });
-      } catch {
-        console.log(
-          '  ⚠️  Test install failed, trying with legacy peer deps...',
-        );
-        try {
-          execSync('npm install --legacy-peer-deps', {
-            cwd: testDir,
-            stdio: 'pipe',
-            timeout: 60_000,
-          });
-        } catch {
-          console.log(
-            '  ⚠️  Legacy test install also failed, trying with force and ignore-scripts...',
-          );
+        // Install and test
+        const testInstallSpinner = ora(
+          'Installing test dependencies...',
+        ).start();
+        let testInstallSuccess = false;
+
+        const testInstallMethods = [
+          'npm install',
+          'npm install --legacy-peer-deps',
+          'npm install --force --ignore-scripts',
+        ];
+
+        for (const method of testInstallMethods) {
           try {
-            execSync('npm install --force --ignore-scripts', {
-              cwd: testDir,
-              stdio: 'pipe',
-              timeout: 60_000,
+            execSync(method, {
+              cwd: testDirectory,
+              stdio: debug ? 'inherit' : 'pipe',
+              timeout: Math.min(timeout / 4, 60_000),
             });
+            testInstallSuccess = true;
+            break;
           } catch {
+            if (debug) {
+              console.log(
+                chalk.yellow(`  ⚠️  Test install method failed: ${method}`),
+              );
+            }
+          }
+        }
+
+        if (testInstallSuccess) {
+          testInstallSpinner.succeed('Test dependencies installed');
+        } else {
+          testInstallSpinner.warn(
+            'Test dependency installation failed, but continuing...',
+          );
+          if (debug) {
             console.log(
-              '  ⚠️  All test install methods failed, but continuing...',
+              chalk.yellow(
+                '  📝 Note: Test may fail due to dependency conflicts',
+              ),
             );
-            console.log('  📝 Note: Test may fail due to dependency conflicts');
+          }
+        }
+
+        // Run the test
+        const testRunSpinner = ora('Running import test...').start();
+        try {
+          execSync('node test.mjs', {
+            cwd: testDirectory,
+            stdio: debug ? 'inherit' : 'pipe',
+            timeout: Math.min(timeout / 4, 30_000),
+          });
+          testRunSpinner.succeed('Import test passed');
+        } catch (error) {
+          testRunSpinner.fail('Import test failed');
+          throw error;
+        }
+
+        spinner.succeed('Package test passed');
+        return true;
+      } finally {
+        // Cleanup
+        try {
+          await fs.rm(testDirectory, { recursive: true, force: true });
+        } catch (error) {
+          if (debug) {
+            console.warn(
+              chalk.yellow('Failed to cleanup test directory:', error.message),
+            );
           }
         }
       }
-
-      console.log('  🚀 Running import test...');
-      execSync('node test.mjs', {
-        cwd: testDir,
-        stdio: 'pipe',
-        timeout: 30_000,
-      });
-
-      // Cleanup
-      await fs.rm(testDir, { recursive: true, force: true });
-
-      console.log('✅ Package test passed');
-      return true;
     } catch (error) {
-      console.error('❌ Package test failed:', error.message);
+      spinner.fail('Package test failed');
+      if (debug) {
+        console.error(chalk.red('Test error:'), error.message);
+      }
       return false;
     }
   }
 
-  async publishPackage(packageDir, packageName, version) {
-    console.log(`📦 Publishing ${packageName}@${version}...`);
+  async publishPackage(packageDirectory, packageName, version, debug = false) {
+    const spinner = ora(`Publishing ${packageName}@${version}...`).start();
 
     try {
+      // Check if NPM_TOKEN is available
+      if (!process.env.NPM_TOKEN) {
+        throw new Error(
+          'NPM_TOKEN environment variable is required for publishing',
+        );
+      }
+
       execSync('npm publish --access public', {
-        cwd: packageDir,
-        stdio: 'inherit',
+        cwd: packageDirectory,
+        stdio: debug ? 'inherit' : 'pipe',
         env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
+        timeout: 120_000, // 2 minute timeout for publishing
       });
-      console.log(`✅ Published ${packageName}@${version}`);
+
+      spinner.succeed(`Published ${packageName}@${version}`);
     } catch (error) {
-      console.error(
-        `❌ Failed to publish ${packageName}@${version}:`,
-        error.message,
-      );
+      spinner.fail(`Failed to publish ${packageName}@${version}`);
+      if (debug) {
+        console.error(chalk.red('Publish error:'), error.message);
+      }
       throw error;
     }
   }
 
-  async updateIntegrityData(packageDir, baseVersion, revision, version) {
-    const integrityFile = path.join(packageDir, 'integrity.json');
+  async updateIntegrityData(packageDirectory, baseVersion, revision, version) {
+    const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     let integrityData = {};
     try {
@@ -365,12 +544,15 @@ try {
     }
 
     integrityData[baseVersion][revision] = {
-      version: `${baseVersion}-depup.${revision}`,
+      version,
       timestamp: new Date().toISOString(),
       status: 'published',
     };
 
-    await fs.writeFile(integrityFile, JSON.stringify(integrityData, null, 2));
+    await fs.writeFile(
+      integrityFile,
+      JSON.stringify(integrityData, undefined, 2),
+    );
   }
 }
 

@@ -17,7 +17,7 @@
   },
   "1.0.0": {
     "0": {
-      "up": 30,
+      "up": 31,
       "down": 0,
       "neutral": 15,
       "details": [
@@ -334,6 +334,13 @@
           "vote": "neutral",
           "description": "Works but has minor issues",
           "timestamp": "2025-09-12T13:17:00.336Z",
+          "user": "mikl"
+        },
+        {
+          "id": "1757914803136",
+          "vote": "up",
+          "description": "Final production test",
+          "timestamp": "2025-09-15T05:40:03.136Z",
           "user": "mikl"
         }
       ]
