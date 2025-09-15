@@ -4,26 +4,42 @@ on:
   schedule:
     # Run every 6 hours
     - cron: '0 */6 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      discover_only:
+        description: 'Only run discovery (skip sync)'
+        required: false
+        type: boolean
+        default: false
+      sync_only:
+        description: 'Only run sync (skip discovery)'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   discover:
     name: Discover New Packages
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ !inputs.sync_only }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-tags: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: '20'
+          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Configure Git
         run: |
@@ -34,36 +50,57 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          echo "Starting package discovery..."
           npm run cron:discover
 
-      - name: Commit Changes
+      - name: Check for changes
+        id: changes
         run: |
-          git add .
           if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
             echo "No changes to commit"
           else
-            git commit -m "feat: discover new packages"
-            git push origin main
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
           fi
+
+      - name: Commit Discovery Changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git add .
+          git commit -m "feat: discover new packages via cron"
+          git push origin main
+
+      - name: Discovery Summary
+        if: always()
+        run: |
+          echo "## Discovery Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ${{ steps.changes.outputs.changed == 'true' && 'Packages discovered' || 'No new packages' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
 
   sync:
     name: Sync Existing Packages
     runs-on: ubuntu-latest
     needs: discover
+    timeout-minutes: 120
+    if: always() && !inputs.discover_only
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-tags: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: '20'
+          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Configure Git
         run: |
@@ -74,14 +111,30 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          echo "Starting package sync..."
           npm run cron:sync
 
-      - name: Commit Changes
+      - name: Check for changes
+        id: changes
         run: |
-          git add .
           if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
             echo "No changes to commit"
           else
-            git commit -m "chore: sync packages"
-            git push origin main
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
           fi
+
+      - name: Commit Sync Changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git add .
+          git commit -m "chore: sync existing packages via cron"
+          git push origin main
+
+      - name: Sync Summary
+        if: always()
+        run: |
+          echo "## Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ${{ steps.changes.outputs.changed == 'true' && 'Packages synced' || 'No updates needed' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY

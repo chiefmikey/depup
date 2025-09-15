@@ -2,7 +2,9 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+import chalk from 'chalk';
 import fetch from 'npm-registry-fetch';
+import ora from 'ora';
 
 class PackageDiscoverer {
   constructor() {
@@ -12,32 +14,57 @@ class PackageDiscoverer {
   }
 
   async main() {
-    console.log('🔍 Starting package discovery...');
+    const spinner = ora('Starting package discovery...').start();
 
     try {
       // Get top packages from npm
+      spinner.text = 'Fetching top packages from npm...';
       const topPackages = await this.getTopPackages();
-      console.log(`Found ${topPackages.length} top packages`);
+      spinner.succeed(`Found ${topPackages.length} top packages`);
 
       // Process packages with rate limiting
       const processedPackages = [];
-      for (const package_ of topPackages.slice(0, this.maxPackages)) {
-        try {
-          console.log(`Processing ${package_.name}...`);
-          await this.processPackage(package_);
-          processedPackages.push(package_.name);
+      const failedPackages = [];
 
-          // Rate limiting
-          await this.sleep(this.rateLimitDelay);
+      for (const package_ of topPackages.slice(0, this.maxPackages)) {
+        const packageSpinner = ora(`Processing ${package_.name}...`).start();
+
+        try {
+          await this.processPackage(package_);
+          packageSpinner.succeed(`Processed ${package_.name}`);
+          processedPackages.push(package_.name);
         } catch (error) {
-          console.warn(`Failed to process ${package_.name}:`, error.message);
+          packageSpinner.fail(
+            `Failed to process ${package_.name}: ${error.message}`,
+          );
+          failedPackages.push({ name: package_.name, error: error.message });
         }
+
+        // Rate limiting
+        await this.sleep(this.rateLimitDelay);
       }
 
-      console.log(`✅ Processed ${processedPackages.length} packages`);
-      console.log('Packages:', processedPackages.join(', '));
+      console.log(chalk.green(`\n✅ Discovery completed`));
+      console.log(
+        chalk.cyan(`Processed: ${processedPackages.length} packages`),
+      );
+      console.log(chalk.red(`Failed: ${failedPackages.length} packages`));
+
+      if (processedPackages.length > 0) {
+        console.log(
+          chalk.gray(`Successful packages: ${processedPackages.join(', ')}`),
+        );
+      }
+
+      if (failedPackages.length > 0) {
+        console.log(chalk.gray(`Failed packages:`));
+        for (const package_ of failedPackages) {
+          console.log(chalk.gray(`  - ${package_.name}: ${package_.error}`));
+        }
+      }
     } catch (error) {
-      console.error('Discovery failed:', error.message);
+      spinner.fail('Discovery failed');
+      console.error(chalk.red('Error:'), error.message);
       process.exit(1);
     }
   }
@@ -119,31 +146,38 @@ class PackageDiscoverer {
   }
 
   async processPackage(package_) {
-    const packageDir = path.join(process.cwd(), package_.name);
-    const integrityFile = path.join(packageDir, 'integrity.json');
+    // Validate package data
+    if (!package_ || !package_.name) {
+      throw new Error('Invalid package data: missing name');
+    }
+
+    // Sanitize package name
+    const sanitizedName = package_.name.replaceAll(/[^\w.@-]/g, '');
+    if (sanitizedName !== package_.name) {
+      throw new Error(
+        `Invalid package name: ${package_.name} (contains invalid characters)`,
+      );
+    }
+
+    const packageDirectory = path.join(process.cwd(), sanitizedName);
+    const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     // Check if package already exists
-    if (await this.packageExists(packageDir)) {
-      console.log(
-        `  📦 ${package_.name} already exists, checking for updates...`,
-      );
-      await this.checkForUpdates(package_, packageDir, integrityFile);
-    } else {
-      console.log(`  🆕 Creating new package: ${package_.name}`);
-      await this.createNewPackage(package_, packageDir);
-    }
+    await ((await this.packageExists(packageDirectory))
+      ? this.checkForUpdates(package_, packageDirectory, integrityFile)
+      : this.createNewPackage(package_, packageDirectory));
   }
 
-  async packageExists(packageDir) {
+  async packageExists(packageDirectory) {
     try {
-      await fs.access(packageDir);
+      await fs.access(packageDirectory);
       return true;
     } catch {
       return false;
     }
   }
 
-  async checkForUpdates(package_, packageDir, integrityFile) {
+  async checkForUpdates(package_, packageDirectory, integrityFile) {
     try {
       // Get current version from integrity file
       let integrityData = {};
@@ -168,7 +202,7 @@ class PackageDiscoverer {
         console.log(`  ✅ ${package_.name} is up to date`);
       } else {
         console.log(`  🔄 New version available: ${latestVersion}`);
-        await this.createNewPackage(package_, packageDir, latestVersion);
+        await this.createNewPackage(package_, packageDirectory, latestVersion);
       }
     } catch (error) {
       console.warn(
@@ -178,29 +212,44 @@ class PackageDiscoverer {
     }
   }
 
-  async createNewPackage(package_, packageDir, version = null) {
+  async createNewPackage(package_, packageDirectory, version) {
     const targetVersion = version || package_.version;
     const { execSync } = await import('node:child_process');
 
+    // Validate version
+    if (!targetVersion || typeof targetVersion !== 'string') {
+      throw new Error(`Invalid version: ${targetVersion}`);
+    }
+
+    // Sanitize version
+    const sanitizedVersion = targetVersion.replaceAll(/[^\w.-]/g, '');
+    if (sanitizedVersion !== targetVersion) {
+      throw new Error(`Invalid version format: ${targetVersion}`);
+    }
+
     try {
-      // Run depup script
-      const command = `node scripts/depup.mjs ${package_.name}@${targetVersion} --bump-deps --test --publish`;
-      console.log(`  🚀 Running: ${command}`);
+      // Run depup script with timeout
+      const command = `node scripts/depup.mjs ${package_.name}@${sanitizedVersion} --bump-deps --test --publish`;
 
       execSync(command, {
-        stdio: 'inherit',
+        stdio: 'pipe',
         cwd: process.cwd(),
+        timeout: 300_000, // 5 minute timeout
+        env: { ...process.env, NODE_ENV: 'production' },
       });
-
-      console.log(
-        `  ✅ Successfully processed ${package_.name}@${targetVersion}`,
-      );
     } catch (error) {
-      console.error(
-        `  ❌ Failed to process ${package_.name}@${targetVersion}:`,
-        error.message,
-      );
-      throw error;
+      // Provide more detailed error information
+      let errorMessage = `Failed to process ${package_.name}@${sanitizedVersion}`;
+
+      if (error.signal === 'SIGTERM') {
+        errorMessage += ': Process timed out';
+      } else if (error.status) {
+        errorMessage += `: Exit code ${error.status}`;
+      } else {
+        errorMessage += `: ${error.message}`;
+      }
+
+      throw new Error(errorMessage);
     }
   }
 

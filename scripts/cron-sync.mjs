@@ -51,10 +51,10 @@ class PackageSyncer {
 
   async getExistingPackages() {
     const packages = [];
-    const rootDir = process.cwd();
+    const rootDirectory = process.cwd();
 
     try {
-      const entries = await fs.readdir(rootDir, { withFileTypes: true });
+      const entries = await fs.readdir(rootDirectory, { withFileTypes: true });
 
       for (const entry of entries) {
         if (
@@ -62,8 +62,8 @@ class PackageSyncer {
           !entry.name.startsWith('.') &&
           entry.name !== 'node_modules'
         ) {
-          const packageDir = path.join(rootDir, entry.name);
-          const integrityFile = path.join(packageDir, 'integrity.json');
+          const packageDirectory = path.join(rootDirectory, entry.name);
+          const integrityFile = path.join(packageDirectory, 'integrity.json');
 
           // Check if it's a package directory with integrity data
           try {
@@ -77,7 +77,7 @@ class PackageSyncer {
               packages.push({
                 name: entry.name,
                 version: latestVersion,
-                path: packageDir,
+                path: packageDirectory,
                 integrityData,
               });
             }
@@ -130,17 +130,22 @@ class PackageSyncer {
   async checkDependencyUpdates(package_) {
     try {
       // Get the latest revision directory
-      const versionDir = path.join(package_.path, package_.version);
-      const entries = await fs.readdir(versionDir, { withFileTypes: true });
+      const versionDirectory = path.join(package_.path, package_.version);
+      const entries = await fs.readdir(versionDirectory, {
+        withFileTypes: true,
+      });
       const revDirectories = entries
-        .filter((e) => e.isDirectory() && e.name.startsWith('rev-'))
-        .map((e) => e.name)
+        .filter((entry) => entry.isDirectory() && entry.name.startsWith('rev-'))
+        .map((entry) => entry.name)
         .sort();
 
       if (revDirectories.length === 0) return false;
 
-      const latestRevDir = path.join(versionDir, revDirectories.at(-1));
-      const packageJsonPath = path.join(latestRevDir, 'package.json');
+      const latestRevDirectory = path.join(
+        versionDirectory,
+        revDirectories.at(-1),
+      );
+      const packageJsonPath = path.join(latestRevDirectory, 'package.json');
 
       if (!(await this.fileExists(packageJsonPath))) return false;
 
@@ -175,11 +180,11 @@ class PackageSyncer {
     }
   }
 
-  async updatePackage(package_, newVersion) {
+  async updatePackage(package_, updatedVersion) {
     const { execSync } = await import('node:child_process');
 
     try {
-      const command = `node scripts/depup.mjs ${package_.name}@${newVersion} --bump-deps --test --publish`;
+      const command = `node scripts/depup.mjs ${package_.name}@${updatedVersion} --bump-deps --test --publish`;
       console.log(`  🚀 Running: ${command}`);
 
       execSync(command, {
@@ -188,11 +193,11 @@ class PackageSyncer {
       });
 
       console.log(
-        `  ✅ Successfully updated ${package_.name} to ${newVersion}`,
+        `  ✅ Successfully updated ${package_.name} to ${updatedVersion}`,
       );
     } catch (error) {
       console.error(
-        `  ❌ Failed to update ${package_.name} to ${newVersion}:`,
+        `  ❌ Failed to update ${package_.name} to ${updatedVersion}:`,
         error.message,
       );
       throw error;
