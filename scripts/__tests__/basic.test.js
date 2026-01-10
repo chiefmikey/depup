@@ -200,6 +200,27 @@ describe('depUp Basic Tests', () => {
       expect(compareVersions('1.0.0', '1.0.1')).toBe(-1);
       expect(compareVersions('2.0.0', '1.9.9')).toBe(1);
     });
+
+    it('should format DepUp version strings correctly', () => {
+      const formatDepUpVersion = (baseVersion, revision) => {
+        return `${baseVersion}-depup.${revision}`;
+      };
+
+      expect(formatDepUpVersion('1.0.0', 0)).toBe('1.0.0-depup.0');
+      expect(formatDepUpVersion('1.0.0', 1)).toBe('1.0.0-depup.1');
+      expect(formatDepUpVersion('2.1.3', 5)).toBe('2.1.3-depup.5');
+    });
+
+    it('should convert old version format to new format', () => {
+      const convertVersionFormat = (oldVersion) => {
+        return oldVersion.replace(/_(\d+)$/, '-depup.$1');
+      };
+
+      expect(convertVersionFormat('1.0.0_0')).toBe('1.0.0-depup.0');
+      expect(convertVersionFormat('1.0.0_1')).toBe('1.0.0-depup.1');
+      expect(convertVersionFormat('2.1.3_5')).toBe('2.1.3-depup.5');
+      expect(convertVersionFormat('1.0.0-depup.0')).toBe('1.0.0-depup.0');
+    });
   });
 
   describe('integrity Scoring', () => {

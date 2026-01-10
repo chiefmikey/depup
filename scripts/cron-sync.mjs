@@ -219,6 +219,13 @@ class PackageSyncer {
       console.log(
         `  ✅ Successfully updated dependencies for ${package_.name}`,
       );
+
+      // Auto-generate README after updating dependencies
+      try {
+        await this.generateReadme(package_.name);
+      } catch (error) {
+        console.warn(`  ⚠️  Could not generate README for ${package_.name}: ${error.message}`);
+      }
     } catch (error) {
       console.error(
         `  ❌ Failed to update dependencies for ${package_.name}:`,
@@ -254,6 +261,20 @@ class PackageSyncer {
       return true;
     } catch {
       return false;
+    }
+  }
+
+  async generateReadme(packageName) {
+    const { execSync } = await import('node:child_process');
+
+    try {
+      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+        timeout: 30_000, // 30 second timeout for README generation
+      });
+    } catch (error) {
+      throw new Error(`Failed to generate README: ${error.message}`);
     }
   }
 

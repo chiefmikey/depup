@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [lodash](https://www.npmjs.com/package/lodash)
-- **DepUp Version**: 4.17.21_0
+- **DepUp Version**: 4.17.21-depup.17
 - **Original Version**: 4.17.21
-- **Last Updated**: 9/11/2025
+- **Last Updated**: 1/10/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,24 @@ npm install @depup/lodash
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.17.21 | 0 | 🟢 Excellent | 100% | 1 |
+| 4.17.21 | 1 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 2 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 3 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 4 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 5 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 6 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 7 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 8 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 9 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 10 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 11 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 12 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 13 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 14 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 15 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 16 | 🔴 Poor | 0% | 0 |
+| 4.17.21 | 17 | 🔴 Poor | 0% | 0 |
+| 1.0.0 | 0 | 🟡 Good | 67% | 46 |
 
 
 ## 🔄 Version History
@@ -33,8 +51,30 @@ npm install @depup/lodash
 
 ### Version 4.17.21
 
-- **Revision 0** (4.17.21_0) - 🟢 Excellent 100% integrity
+- **Revision 0** (4.17.21-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/11/2025
+- **Revision 1** (4.17.21-depup.1) - 🔴 Poor 0% integrity
+- **Revision 2** (4.17.21-depup.2) - 🔴 Poor 0% integrity
+- **Revision 3** (4.17.21-depup.3) - 🔴 Poor 0% integrity
+- **Revision 4** (4.17.21-depup.4) - 🔴 Poor 0% integrity
+- **Revision 5** (4.17.21-depup.5) - 🔴 Poor 0% integrity
+- **Revision 6** (4.17.21-depup.6) - 🔴 Poor 0% integrity
+- **Revision 7** (4.17.21-depup.7) - 🔴 Poor 0% integrity
+- **Revision 8** (4.17.21-depup.8) - 🔴 Poor 0% integrity
+- **Revision 9** (4.17.21-depup.9) - 🔴 Poor 0% integrity
+- **Revision 10** (4.17.21-depup.10) - 🔴 Poor 0% integrity
+- **Revision 11** (4.17.21-depup.11) - 🔴 Poor 0% integrity
+- **Revision 12** (4.17.21-depup.12) - 🔴 Poor 0% integrity
+- **Revision 13** (4.17.21-depup.13) - 🔴 Poor 0% integrity
+- **Revision 14** (4.17.21-depup.14) - 🔴 Poor 0% integrity
+- **Revision 15** (4.17.21-depup.15) - 🔴 Poor 0% integrity
+- **Revision 16** (4.17.21-depup.16) - 🔴 Poor 0% integrity
+- **Revision 17** (4.17.21-depup.17) - 🔴 Poor 0% integrity
+
+### Version 1.0.0
+
+- **Revision 0** (undefined) - 🟡 Good 67% integrity
+  - Last updated: 9/14/2025
 
 
 ## 🤝 Contributing
