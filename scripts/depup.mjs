@@ -225,6 +225,17 @@ class DepUp {
           packageJson.version,
         );
 
+        // Auto-generate README
+        try {
+          await this.generateReadme(packageName);
+        } catch (error) {
+          if (debug) {
+            console.warn(
+              chalk.yellow(`⚠️  Could not generate README: ${error.message}`),
+            );
+          }
+        }
+
         console.log(
           chalk.green(
             `✅ Prepared ${scopedName}@${packageJson.version} in ${targetDirectory}`,
@@ -310,9 +321,11 @@ class DepUp {
         }
       } catch (error) {
         errorCount++;
+        const errorMessage =
+          error.message || error.toString() || 'Unknown error';
         if (debug) {
           console.warn(
-            chalk.yellow(`  ⚠️  Could not update ${depName}: ${error.message}`),
+            chalk.yellow(`  ⚠️  Could not update ${depName}: ${errorMessage}`),
           );
         }
       }
@@ -493,8 +506,12 @@ try {
       }
     } catch (error) {
       spinner.fail('Package test failed');
+      const errorMessage = error.message || error.toString() || 'Unknown error';
       if (debug) {
-        console.error(chalk.red('Test error:'), error.message);
+        console.error(chalk.red('Test error:'), errorMessage);
+        if (error.stack) {
+          console.error(chalk.gray('Stack trace:'), error.stack);
+        }
       }
       return false;
     }
@@ -521,10 +538,16 @@ try {
       spinner.succeed(`Published ${packageName}@${version}`);
     } catch (error) {
       spinner.fail(`Failed to publish ${packageName}@${version}`);
+      const errorMessage = error.message || error.toString() || 'Unknown error';
       if (debug) {
-        console.error(chalk.red('Publish error:'), error.message);
+        console.error(chalk.red('Publish error:'), errorMessage);
+        if (error.stack) {
+          console.error(chalk.gray('Stack trace:'), error.stack);
+        }
       }
-      throw error;
+      throw new Error(
+        `Failed to publish ${packageName}@${version}: ${errorMessage}`,
+      );
     }
   }
 
@@ -553,6 +576,20 @@ try {
       integrityFile,
       JSON.stringify(integrityData, undefined, 2),
     );
+  }
+
+  async generateReadme(packageName) {
+    const { execSync } = await import('node:child_process');
+
+    try {
+      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+        timeout: 30_000, // 30 second timeout for README generation
+      });
+    } catch (error) {
+      throw new Error(`Failed to generate README: ${error.message}`);
+    }
   }
 }
 

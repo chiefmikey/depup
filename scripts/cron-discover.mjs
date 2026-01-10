@@ -70,8 +70,68 @@ class PackageDiscoverer {
   }
 
   async getTopPackages() {
-    // This is a simplified version - in production you'd want to use
-    // a more sophisticated method to get top packages
+    try {
+      // Try to get dynamic list from npm API
+      const dynamicPackages = await this.getDynamicTopPackages();
+      if (dynamicPackages.length > 0) {
+        console.log(`Found ${dynamicPackages.length} packages via npm API`);
+        return dynamicPackages;
+      }
+    } catch (error) {
+      console.warn('Could not fetch dynamic package list, falling back to curated list:', error.message);
+    }
+
+    // Fallback to curated list
+    return this.getCuratedPackages();
+  }
+
+  async getDynamicTopPackages() {
+    try {
+      // Use npm registry search API to find popular packages
+      const searchUrl = '/-/v1/search?text=boost-exact:false&size=100&popularity=1.0&quality=0.0&maintenance=0.0';
+
+      const data = await fetch.json(searchUrl, {
+        registry: this.registry,
+        timeout: 10000,
+      });
+
+      if (!data.objects || !Array.isArray(data.objects)) {
+        throw new Error('Invalid search response format');
+      }
+
+      // Filter and process packages
+      const validPackages = [];
+      for (const item of data.objects.slice(0, this.maxPackages)) {
+        const package_ = item.package;
+        if (package_ && package_.name && !package_.name.startsWith('@')) {
+          try {
+            // Get the full manifest for version info
+            const manifest = await fetch.json(`/${package_.name}`, {
+              registry: this.registry,
+              timeout: 5000,
+            });
+
+            validPackages.push({
+              name: manifest.name,
+              version: manifest['dist-tags']?.latest || manifest.version,
+              downloads: item.downloads || 0,
+            });
+
+            await this.sleep(100); // Small delay between requests
+          } catch (error) {
+            // Skip packages that can't be fetched
+          }
+        }
+      }
+
+      return validPackages.sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
+    } catch (error) {
+      throw new Error(`Failed to fetch dynamic packages: ${error.message}`);
+    }
+  }
+
+  getCuratedPackages() {
+    // Curated list of popular packages as fallback
     const popularPackages = [
       'lodash',
       'react',
@@ -166,6 +226,13 @@ class PackageDiscoverer {
     await ((await this.packageExists(packageDirectory))
       ? this.checkForUpdates(package_, packageDirectory, integrityFile)
       : this.createNewPackage(package_, packageDirectory));
+
+    // Auto-generate README after processing
+    try {
+      await this.generateReadme(sanitizedName);
+    } catch (error) {
+      console.warn(`⚠️  Could not generate README for ${sanitizedName}: ${error.message}`);
+    }
   }
 
   async packageExists(packageDirectory) {
@@ -250,6 +317,20 @@ class PackageDiscoverer {
       }
 
       throw new Error(errorMessage);
+    }
+  }
+
+  async generateReadme(packageName) {
+    const { execSync } = await import('node:child_process');
+
+    try {
+      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+        timeout: 30_000, // 30 second timeout for README generation
+      });
+    } catch (error) {
+      throw new Error(`Failed to generate README: ${error.message}`);
     }
   }
 

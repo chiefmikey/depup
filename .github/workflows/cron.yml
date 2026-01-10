@@ -114,6 +114,11 @@ jobs:
           echo "Starting package sync..."
           npm run cron:sync
 
+      - name: Self-Healing
+        run: |
+          echo "Running self-healing checks..."
+          npm run heal:auto
+
       - name: Check for changes
         id: changes
         run: |

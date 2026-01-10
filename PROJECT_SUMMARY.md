@@ -16,7 +16,7 @@ maintaining high package integrity through community feedback.
   versions
 - **Scoped Publishing**: Publishes packages as `@depup/package-name`
 - **Version Management**: Tracks original version + revision number (e.g.,
-  `1.0.0_0`)
+  `1.0.0-depup.0`)
 - **Import Testing**: Validates packages with
   `import * as test from 'package-name'`
 

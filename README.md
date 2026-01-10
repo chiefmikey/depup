@@ -98,8 +98,8 @@ depup/
 
 ### Package Versioning
 
-- **Format**: `{original-version}_{revision}`
-- **Example**: `1.0.0_0`, `1.0.0_1`, `1.1.0_0`
+- **Format**: `{original-version}-depup.{revision}`
+- **Example**: `1.0.0-depup.0`, `1.0.0-depup.1`, `1.1.0-depup.0`
 - **Semantic**: Tracks both original package version and dependency bump count
 
 ## 🧪 Testing & Integrity
