@@ -1,0 +1,106 @@
+{
+  "name": "@depup/concurrently",
+  "version": "9.2.1-depup.1",
+  "description": "Run commands concurrently",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "commonjs",
+  "bin": {
+    "concurrently": "./dist/bin/concurrently.js",
+    "conc": "./dist/bin/concurrently.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-cli-tools/concurrently.git"
+  },
+  "funding": "https://github.com/open-cli-tools/concurrently?sponsor=1",
+  "keywords": [
+    "bash",
+    "concurrent",
+    "parallel",
+    "concurrently",
+    "command",
+    "sh"
+  ],
+  "author": "Kimmo Brunfeldt",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "rxjs": "7.8.2",
+    "shell-quote": "1.8.3",
+    "supports-color": "^10.2.2",
+    "tree-kill": "1.2.2",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@hirez_io/observer-spy": "^2.2.0",
+    "@types/node": "^25.0.6",
+    "@types/shell-quote": "^1.7.5",
+    "@types/supports-color": "^10.0.0",
+    "@types/yargs": "^17.0.35",
+    "@vitest/coverage-v8": "^4.0.16",
+    "@vitest/eslint-plugin": "^1.6.6",
+    "coveralls-next": "^6.0.1",
+    "ctrlc-wrapper": "^0.0.5",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "eslint-config-flat-gitignore": "^2.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import-lite": "^0.5.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^17.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "safe-publish-latest": "^2.0.0",
+    "string-argv": "^0.3.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0",
+    "vitest": "^4.0.16"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts",
+    "index.mjs",
+    "index.d.mts",
+    "!**/fixtures",
+    "!**/*.spec.js",
+    "!**/*.spec.d.ts",
+    "docs"
+  ],
+  "lint-staged": {
+    "*.?(m){js,ts}": "eslint --fix",
+    "*.{json,y?(a)ml,md}": "prettier --write"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "postbuild": "chmod +x dist/bin/concurrently.js",
+    "clean": "tsc --build --clean",
+    "format": "prettier --check '**/*.{json,y?(a)ml,md}'",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint",
+    "lint:fix": "pnpm run lint --fix",
+    "report-coverage": "cat coverage/lcov.info | coveralls",
+    "test": "vitest --project unit",
+    "test:smoke": "vitest run --project smoke"
+  }
+}
