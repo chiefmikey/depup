@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 import chalk from 'chalk';
 import ora from 'ora';
-import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
@@ -81,7 +81,10 @@ class PackageDiscoverer {
         return dynamicPackages;
       }
     } catch (error) {
-      console.warn('Could not fetch dynamic package list, falling back to curated list:', error.message);
+      console.warn(
+        'Could not fetch dynamic package list, falling back to curated list:',
+        error.message,
+      );
     }
 
     // Fallback to curated list
@@ -93,7 +96,9 @@ class PackageDiscoverer {
       // For now, return empty array to use curated packages
       // Dynamic discovery would require additional HTTP client setup
       // This is a placeholder for future implementation
-      console.log('Dynamic package discovery not yet implemented, using curated list');
+      console.log(
+        'Dynamic package discovery not yet implemented, using curated list',
+      );
       return [];
     } catch (error) {
       throw new Error(`Failed to fetch dynamic packages: ${error.message}`);
@@ -158,12 +163,12 @@ class PackageDiscoverer {
         // TODO: Re-enable manifest fetching after fixing import issues
         // For now, use placeholder data to allow discovery to work
         packages.push({
-          name: name,
+          name,
           version: '1.0.0', // Will be updated by sync process
           downloads: 0,
         });
       } catch (error) {
-        console.warn('Could not process ' + name + ':', error.message);
+        console.warn(`Could not process ${name}:`, error.message);
       }
     }
 
@@ -196,7 +201,9 @@ class PackageDiscoverer {
     try {
       await this.generateReadme(sanitizedName);
     } catch (error) {
-      console.warn(`⚠️  Could not generate README for ${sanitizedName}: ${error.message}`);
+      console.warn(
+        `⚠️  Could not generate README for ${sanitizedName}: ${error.message}`,
+      );
     }
   }
 
