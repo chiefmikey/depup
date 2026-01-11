@@ -1,0 +1,13 @@
+name: "Test PR Trigger"
+
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "PR event triggered successfully"

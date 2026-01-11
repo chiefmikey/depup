@@ -2,7 +2,7 @@ name: "Validate Package Addition"
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, labeled]
+    types: [opened, synchronize, reopened]
     branches:
       - main
 
