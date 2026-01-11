@@ -8,17 +8,28 @@ jobs:
   close-related-issue:
     name: Close Related Issue
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'package-addition')
+    if: github.event.pull_request.merged == true
     permissions:
       issues: write
       pull-requests: read
 
     steps:
+      - name: Check for Package Addition Label
+        run: |
+          LABEL_JSON='${{ toJSON(github.event.pull_request.labels) }}'
+          if echo "$LABEL_JSON" | jq -e '.[] | select(.name == "package-addition")' > /dev/null 2>&1; then
+            echo "✅ Found package-addition label"
+          else
+            echo "PR does not have package-addition label, skipping"
+            exit 0
+          fi
+
       - name: Extract Issue Number from PR Body
         id: extract-issue
         run: |
           PR_BODY="${{ github.event.pull_request.body }}"
-          ISSUE_NUM=$(echo "$PR_BODY" | grep -oP 'Requested in: #\K\d+' || echo "")
+          # Extract issue number using sed (more portable than grep -P)
+          ISSUE_NUM=$(echo "$PR_BODY" | grep "Requested in: #" | sed -n 's/.*Requested in: #\([0-9]*\).*/\1/p' | head -1)
           if [ -z "$ISSUE_NUM" ]; then
             echo "No issue number found in PR body"
             exit 0
