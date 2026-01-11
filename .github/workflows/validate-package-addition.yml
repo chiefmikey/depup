@@ -10,9 +10,16 @@ jobs:
   validate-package-addition:
     name: Validate Package Addition PR
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'package-addition')
 
     steps:
+      - name: Check for Package Addition Label
+        run: |
+          if [[ ! " ${{ github.event.pull_request.labels.*.name }} " =~ " package-addition " ]]; then
+            echo "PR does not have package-addition label, skipping validation"
+            exit 0
+          fi
+          echo "Found package-addition label, proceeding with validation"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
