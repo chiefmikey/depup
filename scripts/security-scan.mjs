@@ -506,11 +506,15 @@ class SecurityScanner {
       }
     };
 
-    const reportFile = path.join(reportPath, `security-report-${Date.now()}.json`);
+    // Ensure report directory exists
+    const reportDir = path.dirname(reportPath);
+    await fs.mkdir(reportDir, { recursive: true });
+
+    const reportFile = reportPath.replace(/\.json$/, `-${Date.now()}.json`);
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
 
     // Generate human-readable summary
-    const summaryFile = path.join(reportPath, `security-summary-${Date.now()}.txt`);
+    const summaryFile = reportPath.replace(/\.json$/, `-${Date.now()}.txt`);
     const summary = this.generateSummaryReport(report);
     await fs.writeFile(summaryFile, summary);
 
