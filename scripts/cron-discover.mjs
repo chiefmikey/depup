@@ -143,6 +143,7 @@ class PackageDiscoverer {
       'react',
       'redux',
       'rollup',
+      'semver',
       'sequelize',
       'sinon',
       'socket.io',
