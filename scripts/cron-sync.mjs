@@ -186,6 +186,7 @@ class PackageSyncer {
       execSync(command, {
         stdio: 'inherit',
         cwd: process.cwd(),
+        env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
       });
 
       console.log(
@@ -210,6 +211,7 @@ class PackageSyncer {
       execSync(command, {
         stdio: 'inherit',
         cwd: process.cwd(),
+        env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
       });
 
       console.log(
