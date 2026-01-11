@@ -19,6 +19,7 @@ jobs:
       - name: Check for Package Addition Label
         id: check-label
         run: |
+          echo "🔍 Checking PR labels..."
           # Check if PR has package-addition label
           LABEL_JSON='${{ toJSON(github.event.pull_request.labels) }}'
           echo "Labels JSON: $LABEL_JSON"
@@ -28,6 +29,7 @@ jobs:
           else
             echo "PR does not have package-addition label, skipping validation"
             echo "has_label=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
       - name: Checkout PR Branch
