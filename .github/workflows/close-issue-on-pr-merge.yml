@@ -1,0 +1,77 @@
+name: "Close Issue on PR Merge"
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-related-issue:
+    name: Close Related Issue
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'package-addition')
+    permissions:
+      issues: write
+      pull-requests: read
+
+    steps:
+      - name: Extract Issue Number from PR Body
+        id: extract-issue
+        run: |
+          PR_BODY="${{ github.event.pull_request.body }}"
+          ISSUE_NUM=$(echo "$PR_BODY" | grep -oP 'Requested in: #\K\d+' || echo "")
+          if [ -z "$ISSUE_NUM" ]; then
+            echo "No issue number found in PR body"
+            exit 0
+          fi
+          echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
+          echo "Found issue number: $ISSUE_NUM"
+
+      - name: Close Related Issue
+        if: steps.extract-issue.outputs.issue_number != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = parseInt('${{ steps.extract-issue.outputs.issue_number }}');
+            const packageName = '${{ github.event.pull_request.title }}'.replace('feat: add package ', '');
+
+            try {
+              // Check if issue exists and is open
+              const issue = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber
+              });
+
+              if (issue.data.state === 'open') {
+                // Close the issue with a comment
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  body: `✅ **Package Added Successfully**
+
+The pull request for \`${packageName}\` has been merged!
+
+**Next Steps:**
+- Package will be processed in the next discovery run (every 6 hours)
+- Updated package will be published under \`@depup/${packageName}\` scope
+- You can track the package at: \`packages/${packageName}\`
+
+---
+*This issue is being closed automatically as the package has been added to the system.*`
+                });
+
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  state: 'closed'
+                });
+
+                console.log(`✅ Closed issue #${issueNumber}`);
+              } else {
+                console.log(`Issue #${issueNumber} is already closed`);
+              }
+            } catch (error) {
+              console.log(`⚠️  Could not close issue #${issueNumber}:`, error.message);
+            }
