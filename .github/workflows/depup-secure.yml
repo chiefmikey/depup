@@ -63,6 +63,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install security tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clamav clamav-daemon
+          sudo freshclam --quiet
+
       - name: Validate package allowlist
         id: allowlist-check
         run: |

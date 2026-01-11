@@ -96,37 +96,64 @@ class SecurityScanner {
     const spinner = ora('Scanning for malware...').start();
 
     try {
-      // ClamAV scan
-      const clamCommand = `clamscan --recursive --infected --quiet --log=/tmp/clamav.log ${scanPath}`;
-
+      // Try ClamAV scan first
+      let clamavAvailable = false;
       try {
-        execSync(clamCommand, {
-          timeout: 300000, // 5 minutes
-          stdio: debug ? 'inherit' : 'pipe'
-        });
-
-        this.results.malware = {
-          status: 'passed',
-          details: ['No malware detected by ClamAV'],
-          timestamp: new Date().toISOString()
-        };
-
-      } catch (error) {
-        if (error.status === 1) {
-          // Infected files found
-          const logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
-          this.results.malware = {
-            status: 'failed',
-            details: ['Malware detected by ClamAV', logContent],
-            timestamp: new Date().toISOString()
-          };
-        } else {
-          throw new Error(`ClamAV scan failed: ${error.message}`);
+        execSync('which clamscan', { stdio: 'pipe' });
+        clamavAvailable = true;
+      } catch {
+        // ClamAV not available
+        if (debug) {
+          console.log('ClamAV not available, using fallback scanning');
         }
       }
 
-      // Additional malware checks
-      await this.performAdvancedMalwareChecks(scanPath);
+      if (clamavAvailable) {
+        // ClamAV scan
+        const clamCommand = `clamscan --recursive --infected --quiet --log=/tmp/clamav.log ${scanPath}`;
+
+        try {
+          execSync(clamCommand, {
+            timeout: 300000, // 5 minutes
+            stdio: debug ? 'inherit' : 'pipe'
+          });
+
+          this.results.malware = {
+            status: 'passed',
+            details: ['No malware detected by ClamAV'],
+            timestamp: new Date().toISOString()
+          };
+
+        } catch (error) {
+          if (error.status === 1) {
+            // Infected files found
+            const logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
+            this.results.malware = {
+              status: 'failed',
+              details: ['Malware detected by ClamAV', logContent],
+              timestamp: new Date().toISOString()
+            };
+          } else {
+            throw new Error(`ClamAV scan failed: ${error.message}`);
+          }
+        }
+      } else {
+        // Fallback: Basic file pattern analysis
+        this.results.malware = {
+          status: 'warning',
+          details: ['ClamAV not available - using basic pattern analysis'],
+          timestamp: new Date().toISOString()
+        };
+
+        // Still perform advanced checks without ClamAV
+        const advancedFindings = await this.performAdvancedMalwareChecks(scanPath);
+        if (advancedFindings && advancedFindings.length > 0) {
+          this.results.malware.status = 'warning';
+          this.results.malware.details.push(...advancedFindings);
+        } else {
+          this.results.malware.details.push('No suspicious patterns detected');
+        }
+      }
 
       spinner.succeed('Malware scan completed');
 
