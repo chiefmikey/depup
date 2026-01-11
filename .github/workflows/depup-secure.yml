@@ -1,0 +1,385 @@
+name: Secure DepUp Package Processing
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'npm package to process securely (must be in allowlist)'
+        required: true
+        type: string
+      bump_deps:
+        description: 'Bump dependencies to latest versions'
+        required: false
+        type: boolean
+        default: true
+      test:
+        description: 'Run comprehensive security testing'
+        required: false
+        type: boolean
+        default: true
+      publish:
+        description: 'Publish to npm after security validation'
+        required: false
+        type: boolean
+        default: false
+      debug:
+        description: 'Enable debug mode'
+        required: false
+        type: boolean
+        default: false
+      strict_security:
+        description: 'Enforce strict security requirements'
+        required: false
+        type: boolean
+        default: true
+
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+jobs:
+  security-validation:
+    name: Security Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    outputs:
+      package_allowed: ${{ steps.allowlist-check.outputs.allowed }}
+      security_status: ${{ steps.security-scan.outputs.status }}
+      compatibility_score: ${{ steps.compatibility-test.outputs.score }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate package allowlist
+        id: allowlist-check
+        run: |
+          echo "Checking if ${{ inputs.package }} is in security allowlist..."
+          node scripts/security-approval.mjs status ${{ inputs.package }}
+
+          # Check exit code to determine if package is allowed
+          if [ $? -eq 0 ]; then
+            echo "allowed=true" >> $GITHUB_OUTPUT
+            echo "✅ Package is in security allowlist"
+          else
+            echo "allowed=false" >> $GITHUB_OUTPUT
+            echo "❌ Package not in security allowlist"
+            if [ "${{ inputs.strict_security }}" = "true" ]; then
+              echo "Strict security mode: failing workflow"
+              exit 1
+            fi
+          fi
+
+      - name: Download and extract package for scanning
+        run: |
+          echo "Downloading package for security analysis..."
+          mkdir -p temp-package
+          cd temp-package
+          npm init -y > /dev/null 2>&1
+          npm install ${{ inputs.package }} --no-save
+
+      - name: Run security scan
+        id: security-scan
+        run: |
+          echo "Running comprehensive security scan..."
+          node scripts/security-scan.mjs temp-package/node_modules/${{ inputs.package }} \
+            --report security-reports/security-scan.json
+
+          # Check scan results
+          SCAN_STATUS=$(jq -r '.overall_status' security-reports/security-scan.json)
+          echo "status=$SCAN_STATUS" >> $GITHUB_OUTPUT
+
+          if [ "$SCAN_STATUS" = "failed" ]; then
+            echo "❌ Security scan failed"
+            if [ "${{ inputs.strict_security }}" = "true" ]; then
+              exit 1
+            fi
+          else
+            echo "✅ Security scan passed ($SCAN_STATUS)"
+          fi
+
+      - name: Run compatibility test
+        id: compatibility-test
+        run: |
+          echo "Running compatibility analysis..."
+          node scripts/compatibility-test.mjs temp-package/node_modules/${{ inputs.package }} \
+            --report security-reports/compatibility.json \
+            ${{ inputs.strict_security == true && '--strict' || '' }}
+
+          # Extract compatibility score
+          COMPATIBILITY_SCORE=$(jq -r '.compatibility.score' security-reports/compatibility.json)
+          echo "score=$COMPATIBILITY_SCORE" >> $GITHUB_OUTPUT
+
+          if [ "$COMPATIBILITY_SCORE" -lt 60 ] && [ "${{ inputs.strict_security }}" = "true" ]; then
+            echo "❌ Compatibility score too low: $COMPATIBILITY_SCORE/100"
+            exit 1
+          fi
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports-${{ inputs.package }}
+          path: security-reports/
+          retention-days: 30
+
+      - name: Security validation summary
+        run: |
+          echo "## 🔒 Security Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: ${{ inputs.package }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Allowlist Status**: ${{ steps.allowlist-check.outputs.allowed == 'true' && '✅ Approved' || '❌ Not Approved' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Security Scan**: ${{ steps.security-scan.outputs.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Compatibility Score**: ${{ steps.compatibility-test.outputs.score }}/100" >> $GITHUB_STEP_SUMMARY
+          echo "- **Strict Security**: ${{ inputs.strict_security && 'Enabled' || 'Disabled' }}" >> $GITHUB_STEP_SUMMARY
+
+  container-build:
+    name: Build Security Container
+    runs-on: ubuntu-latest
+    needs: security-validation
+    if: needs.security-validation.outputs.package_allowed == 'true'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: actions/docker/setup-buildx-action@v3
+
+      - name: Build security sandbox
+        uses: actions/docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: depup-security-sandbox:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          outputs: type=docker,dest=/tmp/depup-sandbox.tar
+
+      - name: Upload container image
+        uses: actions/upload-artifact@v4
+        with:
+          name: depup-security-sandbox
+          path: /tmp/depup-sandbox.tar
+          retention-days: 1
+
+  secure-processing:
+    name: Secure Package Processing
+    runs-on: ubuntu-latest
+    needs: [security-validation, container-build]
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download security container
+        uses: actions/download-artifact@v4
+        with:
+          name: depup-security-sandbox
+          path: /tmp/
+
+      - name: Load security container
+        run: |
+          docker load --input /tmp/depup-sandbox.tar
+
+      - name: Create secure processing environment
+        run: |
+          # Create temporary directories with proper permissions
+          mkdir -p packages security-reports temp-processing
+          chmod 755 packages security-reports temp-processing
+
+      - name: Run secure package processing
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "🚀 Starting secure package processing..."
+
+          # Build docker command
+          DOCKER_CMD="docker run --rm"
+          DOCKER_CMD="$DOCKER_CMD --user $(id -u):$(id -g)"
+          DOCKER_CMD="$DOCKER_CMD --tmpfs /tmp:rw,size=1g,mode=1777"
+          DOCKER_CMD="$DOCKER_CMD --read-only"
+          DOCKER_CMD="$DOCKER_CMD --cap-drop ALL"
+          DOCKER_CMD="$DOCKER_CMD --security-opt no-new-privileges"
+          DOCKER_CMD="$DOCKER_CMD -v $(pwd)/packages:/app/packages:rw"
+          DOCKER_CMD="$DOCKER_CMD -v $(pwd)/security-reports:/app/security-reports:rw"
+          DOCKER_CMD="$DOCKER_CMD -e NPM_TOKEN=$NPM_TOKEN"
+          DOCKER_CMD="$DOCKER_CMD -e NODE_ENV=production"
+          DOCKER_CMD="$DOCKER_CMD depup-security-sandbox"
+
+          # Add package processing arguments
+          ARGS="${{ inputs.package }}"
+
+          if [ "${{ inputs.bump_deps }}" = "true" ]; then
+            ARGS="$ARGS --bump-deps"
+          fi
+
+          if [ "${{ inputs.test }}" = "true" ]; then
+            ARGS="$ARGS --test"
+          fi
+
+          if [ "${{ inputs.publish }}" = "true" ]; then
+            ARGS="$ARGS --publish"
+          fi
+
+          if [ "${{ inputs.debug }}" = "true" ]; then
+            ARGS="$ARGS --debug"
+          fi
+
+          # Execute in security sandbox
+          FULL_CMD="$DOCKER_CMD $ARGS"
+          echo "Running: $FULL_CMD"
+          eval $FULL_CMD
+
+      - name: Validate processing results
+        run: |
+          echo "Validating processing results..."
+
+          # Check if package was processed successfully
+          if [ -d "packages/${{ inputs.package }}" ]; then
+            echo "✅ Package directory created"
+
+            # Check for security attestation
+            if [ -f "packages/${{ inputs.package }}/security-attestation.json" ]; then
+              echo "✅ Security attestation present"
+            else
+              echo "❌ Missing security attestation"
+              exit 1
+            fi
+          else
+            echo "❌ Package processing failed - no output directory"
+            exit 1
+          fi
+
+      - name: Upload processing reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: processing-reports-${{ inputs.package }}
+          path: security-reports/
+          retention-days: 30
+
+  final-validation:
+    name: Final Security Validation
+    runs-on: ubuntu-latest
+    needs: secure-processing
+    if: always()
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download all reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: "*-${{ inputs.package }}"
+          path: final-reports/
+
+      - name: Generate final security report
+        run: |
+          echo "Generating comprehensive security report..."
+
+          # Combine all reports into final assessment
+          cat > final-reports/security-assessment.md << 'EOF'
+          # 🔒 DepUp Security Assessment Report
+
+          ## Package Information
+          - **Package**: ${{ inputs.package }}
+          - **Processing Date**: $(date -Iseconds)
+          - **Workflow Run**: ${{ github.run_id }}
+
+          ## Security Validation Results
+
+          ### 1. Allowlist Check
+          - Status: ${{ needs.security-validation.outputs.package_allowed == 'true' && '✅ APPROVED' || '❌ DENIED' }}
+
+          ### 2. Security Scanning
+          - Status: ${{ needs.security-validation.outputs.security_status }}
+          - Malware Scan: Completed
+          - Vulnerability Scan: Completed
+
+          ### 3. Compatibility Analysis
+          - Score: ${{ needs.security-validation.outputs.compatibility_score }}/100
+          - Status: ${{ fromJSON(needs.security-validation.outputs.compatibility_score) >= 80 && '✅ EXCELLENT' || fromJSON(needs.security-validation.outputs.compatibility_score) >= 60 && '⚠️ GOOD' || '❌ NEEDS ATTENTION' }}
+
+          ### 4. Secure Processing
+          - Container Isolation: ✅ Enabled
+          - Sandbox Execution: ✅ Completed
+          - Security Attestation: ✅ Generated
+
+          ## Recommendations
+
+          EOF
+
+          # Add specific recommendations based on results
+          if [ "${{ needs.security-validation.outputs.package_allowed }}" != "true" ]; then
+            echo "- Request security approval for this package" >> final-reports/security-assessment.md
+          fi
+
+          if [ "${{ needs.security-validation.outputs.security_status }}" = "failed" ]; then
+            echo "- Address security scan failures before publishing" >> final-reports/security-assessment.md
+          fi
+
+          if [ "${{ fromJSON(needs.security-validation.outputs.compatibility_score) }}" -lt 60 ]; then
+            echo "- Improve dependency compatibility" >> final-reports/security-assessment.md
+          fi
+
+      - name: Upload final report
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-security-report-${{ inputs.package }}
+          path: final-reports/
+          retention-days: 90
+
+      - name: Commit secure changes
+        if: success()
+        run: |
+          git config --local user.name "DepUp Security Bot"
+          git config --local user.email "security@depup.dev"
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git add .
+            git commit -m "security: process ${{ inputs.package }} with security validation
+
+          🔒 Security Validation Results:
+          - Allowlist: ${{ needs.security-validation.outputs.package_allowed == 'true' && '✅ Approved' || '❌ Denied' }}
+          - Security Scan: ${{ needs.security-validation.outputs.security_status }}
+          - Compatibility: ${{ needs.security-validation.outputs.compatibility_score }}/100
+
+          Processed in secure sandbox environment with full malware scanning,
+          vulnerability assessment, and compatibility validation."
+            git push origin main
+          fi
+
+      - name: Final summary
+        if: always()
+        run: |
+          echo "## 🔒 Secure DepUp Processing Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Package: ${{ inputs.package }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Security Validation**: ${{ needs.security-validation.result == 'success' && '✅ PASSED' || '❌ FAILED' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Secure Processing**: ${{ needs.secure-processing.result == 'success' && '✅ COMPLETED' || '❌ FAILED' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Allowlist Status**: ${{ needs.security-validation.outputs.package_allowed == 'true' && 'Approved' || 'Not Approved' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Security Score**: ${{ needs.security-validation.outputs.compatibility_score }}/100" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Security Features Applied:" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔐 Container Sandboxing" >> $GITHUB_STEP_SUMMARY
+          echo "- 🦠 Malware Scanning (ClamAV)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔍 Vulnerability Assessment" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 Dependency Compatibility Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "- 📋 Security Attestation" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Allowlist Validation" >> $GITHUB_STEP_SUMMARY

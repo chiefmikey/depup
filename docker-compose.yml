@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  depup-sandbox:
+    build: .
+    container_name: depup-security-sandbox
+    user: depup:depup
+    read_only: true
+    tmpfs:
+      - /tmp:exec,size=100m,mode=1777
+      - /app/packages:rw,size=1g,mode=755
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_RAW  # For npm registry access
+    networks:
+      - depup-secure
+    environment:
+      - NODE_ENV=production
+      - NPM_CONFIG_UPDATE_NOTIFIER=false
+      - NPM_CONFIG_FUND=false
+      - NPM_CONFIG_AUDIT=false
+    volumes:
+      - ./packages:/app/packages:rw
+      - /tmp/depup-logs:/tmp/depup-logs:rw
+    restart: "no"
+    command: ["node", "scripts/depup-security.mjs"]
+
+  clamav-daemon:
+    image: clamav/clamav:latest
+    container_name: depup-clamav
+    networks:
+      - depup-secure
+    volumes:
+      - clamav-db:/var/lib/clamav
+      - ./packages:/scan:ro
+    environment:
+      - CLAMAV_NO_FRESHCLAMD_CONF=true
+      - CLAMAV_NO_CLAMD_CONF=true
+    command: ["clamd", "--foreground=yes"]
+    healthcheck:
+      test: ["CMD", "clamdcheck"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+  security-scanner:
+    build:
+      context: .
+      dockerfile: Dockerfile.security
+    container_name: depup-security-scanner
+    user: depup:depup
+    networks:
+      - depup-secure
+    volumes:
+      - ./packages:/scan:ro
+      - security-reports:/reports:rw
+    environment:
+      - SCAN_PATH=/scan
+      - REPORT_PATH=/reports
+    depends_on:
+      clamav-daemon:
+        condition: service_healthy
+    restart: "no"
+
+volumes:
+  clamav-db:
+  security-reports:
+
+networks:
+  depup-secure:
+    driver: bridge
+    internal: false
