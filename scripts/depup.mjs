@@ -542,7 +542,19 @@ try {
         timeout: 60_000, // 1 minute timeout for dependency installation
       });
 
-      execSync('npm publish --access public', {
+      // Check if version is a prerelease and add appropriate tag
+      const isPrerelease = semver.prerelease(version) !== null;
+      const publishCommand = isPrerelease
+        ? 'npm publish --access public --tag beta'
+        : 'npm publish --access public';
+
+      if (debug && isPrerelease) {
+        console.log(
+          chalk.gray(`  📦 Publishing as prerelease with 'beta' tag`),
+        );
+      }
+
+      execSync(publishCommand, {
         cwd: packageDirectory,
         stdio: debug ? 'inherit' : 'pipe',
         env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
