@@ -51,18 +51,14 @@ class PackageSyncer {
 
   async getExistingPackages() {
     const packages = [];
-    const rootDirectory = process.cwd();
+    const packagesDir = path.join(process.cwd(), 'packages');
 
     try {
-      const entries = await fs.readdir(rootDirectory, { withFileTypes: true });
+      const entries = await fs.readdir(packagesDir, { withFileTypes: true });
 
       for (const entry of entries) {
-        if (
-          entry.isDirectory() &&
-          !entry.name.startsWith('.') &&
-          entry.name !== 'node_modules'
-        ) {
-          const packageDirectory = path.join(rootDirectory, entry.name);
+        if (entry.isDirectory() && !entry.name.startsWith('.')) {
+          const packageDirectory = path.join(packagesDir, entry.name);
           const integrityFile = path.join(packageDirectory, 'integrity.json');
 
           // Check if it's a package directory with integrity data
@@ -224,7 +220,9 @@ class PackageSyncer {
       try {
         await this.generateReadme(package_.name);
       } catch (error) {
-        console.warn(`  ⚠️  Could not generate README for ${package_.name}: ${error.message}`);
+        console.warn(
+          `  ⚠️  Could not generate README for ${package_.name}: ${error.message}`,
+        );
       }
     } catch (error) {
       console.error(

@@ -113,7 +113,11 @@ class DepUp {
         }
 
         // Check if package already exists in repo
-        const packageDirectory = path.join(process.cwd(), packageName);
+        const packageDirectory = path.join(
+          process.cwd(),
+          'packages',
+          packageName,
+        );
         const versionDirectory = path.join(packageDirectory, baseVersion);
 
         if (dryRun) {

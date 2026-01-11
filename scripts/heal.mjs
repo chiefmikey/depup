@@ -263,17 +263,14 @@ class SelfHealer {
     const packages = [];
 
     try {
-      const entries = await fs.readdir(this.rootDirectory, {
+      const packagesDir = path.join(this.rootDirectory, 'packages');
+      const entries = await fs.readdir(packagesDir, {
         withFileTypes: true,
       });
 
       for (const entry of entries) {
-        if (
-          entry.isDirectory() &&
-          !entry.name.startsWith('.') &&
-          entry.name !== 'node_modules'
-        ) {
-          const packageDirectory = path.join(this.rootDirectory, entry.name);
+        if (entry.isDirectory() && !entry.name.startsWith('.')) {
+          const packageDirectory = path.join(packagesDir, entry.name);
 
           packages.push({
             name: entry.name,

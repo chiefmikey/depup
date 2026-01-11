@@ -71,8 +71,8 @@ async function findPackages(rootDir) {
     }
 
     const packageDir = path.join(rootDir, entry.name);
-    const revDirs = await findRevDirectories(packageDir);
-    packages.push(...revDirs);
+    const revDirectories = await findRevDirectories(packageDir);
+    packages.push(...revDirectories);
   }
 
   return packages;
@@ -83,7 +83,7 @@ async function findRevDirectories(packageDir) {
   try {
     const entries = await fs.readdir(packageDir, { withFileTypes: true });
     for (const entry of entries) {
-      if (entry.isDirectory() && entry.name.match(/^\d+\.\d+\.\d+/)) {
+      if (entry.isDirectory() && /^\d+\.\d+\.\d+/.test(entry.name)) {
         const versionDir = path.join(packageDir, entry.name);
         const revEntries = await fs.readdir(versionDir, {
           withFileTypes: true,
@@ -136,7 +136,7 @@ async function findIntegrityFiles(rootDir) {
 }
 
 async function fixPackageJson(packageJsonPath) {
-  const content = await fs.readFile(packageJsonPath, 'utf8');
+  const content = await fs.readFile(packageJsonPath);
   const packageJson = JSON.parse(content);
 
   if (!packageJson.version || !packageJson.version.includes('_')) {
@@ -149,7 +149,7 @@ async function fixPackageJson(packageJsonPath) {
 
   await fs.writeFile(
     packageJsonPath,
-    JSON.stringify(packageJson, undefined, 2) + '\n',
+    `${JSON.stringify(packageJson, undefined, 2)}\n`,
   );
 
   console.log(
@@ -162,7 +162,7 @@ async function fixPackageJson(packageJsonPath) {
 }
 
 async function fixIntegrityJson(integrityPath) {
-  const content = await fs.readFile(integrityPath, 'utf8');
+  const content = await fs.readFile(integrityPath);
   const integrityData = JSON.parse(content);
   let fixed = false;
 
@@ -193,7 +193,7 @@ async function fixIntegrityJson(integrityPath) {
   if (fixed) {
     await fs.writeFile(
       integrityPath,
-      JSON.stringify(integrityData, undefined, 2) + '\n',
+      `${JSON.stringify(integrityData, undefined, 2)}\n`,
     );
   }
 
@@ -207,9 +207,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     process.exit(1);
   });
 }
-
-
-
-
-
-

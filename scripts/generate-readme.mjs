@@ -70,7 +70,7 @@ This package inherits the license from the original package. See the original pa
   }
 
   async generateReadme(packageName) {
-    const packageDirectory = path.join(process.cwd(), packageName);
+    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const integrityFile = path.join(packageDirectory, 'integrity.json');
     const votesFile = path.join(packageDirectory, 'votes.json');
 
