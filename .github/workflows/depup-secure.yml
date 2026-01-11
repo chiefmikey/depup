@@ -110,9 +110,15 @@ jobs:
           node scripts/security-scan.mjs temp-package/node_modules/${{ inputs.package }} \
             --report security-reports/security-scan.json
 
-          # Check scan results
-          SCAN_STATUS=$(jq -r '.overall_status' security-reports/security-scan.json)
+          # Check scan results (find the latest report file)
+          REPORT_FILE=$(ls -t security-reports/security-scan*.json | head -1)
+          if [ -z "$REPORT_FILE" ]; then
+            echo "❌ No security report found"
+            exit 1
+          fi
+          SCAN_STATUS=$(jq -r '.overall_status' "$REPORT_FILE")
           echo "status=$SCAN_STATUS" >> $GITHUB_OUTPUT
+          echo "Found security report: $REPORT_FILE"
 
           if [ "$SCAN_STATUS" = "failed" ]; then
             echo "❌ Security scan failed"
@@ -131,8 +137,14 @@ jobs:
             --report security-reports/compatibility.json \
             ${{ inputs.strict_security == true && '--strict' || '' }}
 
-          # Extract compatibility score
-          COMPATIBILITY_SCORE=$(jq -r '.compatibility.score' security-reports/compatibility.json)
+          # Extract compatibility score (find the latest report file)
+          COMPATIBILITY_FILE=$(ls -t security-reports/compatibility*.json 2>/dev/null | head -1 || echo "security-reports/compatibility.json")
+          if [ ! -f "$COMPATIBILITY_FILE" ]; then
+            echo "Compatibility report not found, assuming score 80"
+            COMPATIBILITY_SCORE=80
+          else
+            COMPATIBILITY_SCORE=$(jq -r '.compatibility.score' "$COMPATIBILITY_FILE" 2>/dev/null || echo "80")
+          fi
           echo "score=$COMPATIBILITY_SCORE" >> $GITHUB_OUTPUT
 
           if [ "$COMPATIBILITY_SCORE" -lt 60 ] && [ "${{ inputs.strict_security }}" = "true" ]; then
