@@ -15,18 +15,22 @@ class SystemMonitor {
     const action = process.argv[2] || 'status';
 
     switch (action) {
-      case 'status':
+      case 'status': {
         await this.showStatus();
         break;
-      case 'report':
+      }
+      case 'report': {
         await this.generateReport();
         break;
-      case 'check':
+      }
+      case 'check': {
         await this.healthCheck();
         break;
-      default:
+      }
+      default: {
         console.error('Usage: node scripts/monitor.mjs [status|report|check]');
         process.exit(1);
+      }
     }
   }
 
@@ -99,7 +103,10 @@ class SystemMonitor {
         }
       }
 
-      console.log(chalk.gray('\nOverall Status:'), allPassed ? chalk.green('HEALTHY') : chalk.red('ISSUES DETECTED'));
+      console.log(
+        chalk.gray('\nOverall Status:'),
+        allPassed ? chalk.green('HEALTHY') : chalk.red('ISSUES DETECTED'),
+      );
 
       if (!allPassed) {
         process.exit(1);
@@ -124,7 +131,7 @@ class SystemMonitor {
     let goodPackages = 0;
     let fairPackages = 0;
     let poorPackages = 0;
-    let lastActivity = null;
+    let lastActivity;
 
     for (const package_ of packages) {
       totalPackages++;
@@ -146,7 +153,9 @@ class SystemMonitor {
               else if (score >= 40) fairPackages++;
               else poorPackages++;
 
-              const timestamp = new Date(revisionData.integrity.lastUpdated || revisionData.timestamp);
+              const timestamp = new Date(
+                revisionData.integrity.lastUpdated || revisionData.timestamp,
+              );
               if (!lastActivity || timestamp > lastActivity) {
                 lastActivity = timestamp;
               }
@@ -161,7 +170,10 @@ class SystemMonitor {
 
         for (const versionData of Object.values(package_.votesData)) {
           for (const revisionData of Object.values(versionData)) {
-            totalVotes += (revisionData.up || 0) + (revisionData.down || 0) + (revisionData.neutral || 0);
+            totalVotes +=
+              (revisionData.up || 0) +
+              (revisionData.down || 0) +
+              (revisionData.neutral || 0);
           }
         }
       }
@@ -172,7 +184,8 @@ class SystemMonitor {
       packagesWithIntegrity,
       packagesWithVotes,
       totalVotes,
-      averageIntegrity: integrityCount > 0 ? totalIntegrity / integrityCount : 0,
+      averageIntegrity:
+        integrityCount > 0 ? totalIntegrity / integrityCount : 0,
       excellentPackages,
       goodPackages,
       fairPackages,
@@ -185,7 +198,9 @@ class SystemMonitor {
     const packages = [];
 
     try {
-      const entries = await fs.readdir(this.rootDirectory, { withFileTypes: true });
+      const entries = await fs.readdir(this.rootDirectory, {
+        withFileTypes: true,
+      });
 
       for (const entry of entries) {
         if (
@@ -197,8 +212,8 @@ class SystemMonitor {
           const integrityFile = path.join(packageDirectory, 'integrity.json');
           const votesFile = path.join(packageDirectory, 'votes.json');
 
-          let integrityData = null;
-          let votesData = null;
+          let integrityData;
+          let votesData;
 
           // Load integrity data
           try {
@@ -243,7 +258,9 @@ class SystemMonitor {
     }
 
     if (stats.averageIntegrity < 50) {
-      issues.push(`Low average integrity score: ${stats.averageIntegrity.toFixed(1)}%`);
+      issues.push(
+        `Low average integrity score: ${stats.averageIntegrity.toFixed(1)}%`,
+      );
     }
 
     if (stats.poorPackages > stats.totalPackages * 0.2) {
@@ -252,7 +269,8 @@ class SystemMonitor {
 
     // Check if system has been active recently
     const lastActivity = new Date(stats.lastActivity);
-    const daysSinceActivity = (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60 * 24);
+    const daysSinceActivity =
+      (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60 * 24);
 
     if (daysSinceActivity > 7) {
       issues.push(`System inactive for ${Math.round(daysSinceActivity)} days`);
@@ -279,11 +297,13 @@ class SystemMonitor {
     const report = {
       generatedAt: new Date().toISOString(),
       summary: stats,
-      packages: packages.map(pkg => ({
-        name: pkg.name,
-        hasIntegrity: !!pkg.integrityData,
-        hasVotes: !!pkg.votesData,
-        versions: pkg.integrityData ? Object.keys(pkg.integrityData) : [],
+      packages: packages.map((package_) => ({
+        name: package_.name,
+        hasIntegrity: !!package_.integrityData,
+        hasVotes: !!package_.votesData,
+        versions: package_.integrityData
+          ? Object.keys(package_.integrityData)
+          : [],
       })),
       recommendations: this.generateRecommendations(stats),
     };
@@ -295,11 +315,15 @@ class SystemMonitor {
     const recommendations = [];
 
     if (stats.totalPackages === 0) {
-      recommendations.push('Initialize the system by running package discovery');
+      recommendations.push(
+        'Initialize the system by running package discovery',
+      );
     }
 
     if (stats.packagesWithIntegrity < stats.totalPackages) {
-      recommendations.push('Run integrity checks on packages without integrity data');
+      recommendations.push(
+        'Run integrity checks on packages without integrity data',
+      );
     }
 
     if (stats.averageIntegrity < 70) {
@@ -345,7 +369,9 @@ class SystemMonitor {
 
     // Check if package.json exists and is valid
     try {
-      const packageJson = JSON.parse(await fs.readFile(path.join(this.rootDirectory, 'package.json')));
+      const packageJson = JSON.parse(
+        await fs.readFile(path.join(this.rootDirectory, 'package.json')),
+      );
       checks.push({
         name: 'Package.json valid',
         passed: true,
@@ -361,21 +387,23 @@ class SystemMonitor {
 
     // Check system stats
     const stats = await this.getSystemStats();
-    checks.push({
-      name: 'Packages exist',
-      passed: stats.totalPackages > 0,
-      message: `Found ${stats.totalPackages} packages`,
-    });
-
-    checks.push({
-      name: 'Integrity system working',
-      passed: stats.packagesWithIntegrity > 0,
-      message: `${stats.packagesWithIntegrity} packages have integrity data`,
-    });
+    checks.push(
+      {
+        name: 'Packages exist',
+        passed: stats.totalPackages > 0,
+        message: `Found ${stats.totalPackages} packages`,
+      },
+      {
+        name: 'Integrity system working',
+        passed: stats.packagesWithIntegrity > 0,
+        message: `${stats.packagesWithIntegrity} packages have integrity data`,
+      },
+    );
 
     // Check recent activity
     const lastActivity = new Date(stats.lastActivity);
-    const hoursSinceActivity = (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60);
+    const hoursSinceActivity =
+      (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60);
     checks.push({
       name: 'Recent activity',
       passed: hoursSinceActivity < 24,
