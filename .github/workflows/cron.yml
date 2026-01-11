@@ -112,7 +112,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Starting package sync..."
-          npm run cron:sync
+          NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm run cron:sync
 
       - name: Self-Healing
         run: |
