@@ -106,6 +106,7 @@ jobs:
         id: security-scan
         run: |
           echo "Running comprehensive security scan..."
+          mkdir -p security-reports
           node scripts/security-scan.mjs temp-package/node_modules/${{ inputs.package }} \
             --report security-reports/security-scan.json
 
