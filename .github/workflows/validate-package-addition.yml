@@ -1,0 +1,257 @@
+name: "Validate Package Addition"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+    branches:
+      - main
+
+jobs:
+  validate-package-addition:
+    name: Validate Package Addition PR
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'package-addition')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Validate PR Changes
+        id: validate-changes
+        run: |
+          echo "🔍 Validating PR changes..."
+
+          # Check that only cron-discover.mjs was modified
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          # Allow only cron-discover.mjs to be changed
+          INVALID_FILES=$(echo "$CHANGED_FILES" | grep -v "scripts/cron-discover.mjs" | grep -v "^$")
+
+          if [ -n "$INVALID_FILES" ]; then
+            echo "❌ PR modifies files other than scripts/cron-discover.mjs:"
+            echo "$INVALID_FILES"
+            echo "Package addition PRs should only modify the curated package list."
+            exit 1
+          fi
+
+          echo "✅ PR only modifies allowed files"
+
+      - name: Extract Added Package
+        id: extract-package
+        run: |
+          echo "📦 Extracting added package name..."
+
+          # Get the diff of cron-discover.mjs
+          DIFF=$(git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
+
+          # Extract added lines that look like package names
+          ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -o '"[^"]*"' | tr -d '"' | grep -E '^[a-zA-Z0-9._-]+$')
+
+          echo "Added packages: $ADDED_PACKAGES"
+
+          # Should only be one package added
+          PACKAGE_COUNT=$(echo "$ADDED_PACKAGES" | wc -l)
+
+          if [ "$PACKAGE_COUNT" -ne 1 ]; then
+            echo "❌ PR should add exactly one package, found: $PACKAGE_COUNT"
+            exit 1
+          fi
+
+          PACKAGE_NAME="$ADDED_PACKAGES"
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+
+          echo "✅ Found package to validate: $PACKAGE_NAME"
+
+      - name: Validate Package Exists on NPM
+        run: |
+          PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
+
+          echo "🔍 Validating package $PACKAGE_NAME exists on npm..."
+
+          # Check if package exists
+          if npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+            echo "✅ Package $PACKAGE_NAME exists on npm"
+
+            # Extract version for processing
+            VERSION=$(jq -r '.version // "latest"' package_info.json)
+            echo "package_version=$VERSION" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Package $PACKAGE_NAME does not exist on npm"
+            exit 1
+          fi
+        id: npm-check
+
+      - name: Test Package Processing
+        run: |
+          PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
+          VERSION="${{ steps.npm-check.outputs.package_version }}"
+
+          echo "🧪 Testing package processing for $PACKAGE_NAME@$VERSION..."
+
+          # Create a temporary directory for testing
+          mkdir -p test-package
+          cd test-package
+
+          # Run depup with a short timeout to test basic functionality
+          # Don't publish or do full processing, just test that it can be fetched and processed
+          timeout 120s npm run depup -- "$PACKAGE_NAME@$VERSION" --dry-run --debug || {
+            echo "❌ Package processing test failed for $PACKAGE_NAME@$VERSION"
+            exit 1
+          }
+
+          echo "✅ Package $PACKAGE_NAME can be processed successfully"
+
+      - name: Check Package Uniqueness
+        run: |
+          PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
+
+          echo "🔍 Checking package uniqueness..."
+
+          # Check if package is mentioned elsewhere in the codebase
+          # (beyond the addition in cron-discover.mjs)
+          OTHER_REFERENCES=$(grep -r "$PACKAGE_NAME" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=packages . | grep -v "scripts/cron-discover.mjs" | wc -l)
+
+          if [ "$OTHER_REFERENCES" -gt 0 ]; then
+            echo "❌ Package $PACKAGE_NAME is already referenced elsewhere in the codebase"
+            echo "This might indicate it's already being processed or has conflicts."
+            exit 1
+          fi
+
+          echo "✅ Package $PACKAGE_NAME is unique in the codebase"
+
+      - name: Validate Package Quality
+        run: |
+          PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
+
+          echo "⭐ Validating package quality metrics..."
+
+          # Get package info
+          INFO=$(npm view "$PACKAGE_NAME" --json)
+
+          # Check if package has a description
+          DESCRIPTION=$(echo "$INFO" | jq -r '.description // empty')
+          if [ -z "$DESCRIPTION" ]; then
+            echo "⚠️  Warning: Package has no description"
+          else
+            echo "✅ Package has description"
+          fi
+
+          # Check if package has a repository
+          REPO=$(echo "$INFO" | jq -r '.repository.url // empty')
+          if [ -z "$REPO" ]; then
+            echo "⚠️  Warning: Package has no repository URL"
+          else
+            echo "✅ Package has repository"
+          fi
+
+          # Check if package is actively maintained (not too old)
+          LAST_MODIFIED=$(echo "$INFO" | jq -r '.time.modified // empty')
+          if [ -n "$LAST_MODIFIED" ]; then
+            # Convert to timestamp and check if within last 2 years
+            MODIFIED_TS=$(date -d "$LAST_MODIFIED" +%s 2>/dev/null || echo "0")
+            TWO_YEARS_AGO=$(date -d '2 years ago' +%s)
+            if [ "$MODIFIED_TS" -lt "$TWO_YEARS_AGO" ]; then
+              echo "⚠️  Warning: Package hasn't been updated in over 2 years"
+            else
+              echo "✅ Package has been updated recently"
+            fi
+          fi
+
+          echo "✅ Package quality validation completed"
+
+      - name: Approve PR for Auto-merge
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ github.event.pull_request.number }};
+            const packageName = '${{ steps.extract-package.outputs.package_name }}';
+
+            // Add approval review
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              event: 'APPROVE',
+              body: `✅ **Package Addition Approved**
+
+**Package:** \`${packageName}\`
+
+All validation checks passed:
+- ✅ Package exists on npm
+- ✅ Package can be processed successfully
+- ✅ Package is unique in the codebase
+- ✅ PR only modifies the curated package list
+- ✅ Package meets quality criteria
+
+This PR will be automatically merged and the package will be processed in the next discovery run.
+
+**Next steps:**
+1. PR auto-merges
+2. Package gets processed by cron discovery (every 6 hours)
+3. Updated package published under \`@depup/\` scope
+4. README and integrity data generated automatically`
+            });
+
+            // Add ready-to-merge label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              labels: ['ready-to-merge']
+            });
+
+      - name: Comment on Validation Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ github.event.pull_request.number }};
+            const packageName = '${{ steps.extract-package.outputs.package_name }}';
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `❌ **Package Addition Validation Failed**
+
+**Package:** \`${packageName}\`
+
+Please check the validation workflow logs for specific error details.
+
+Common issues:
+- Package doesn't exist on npm
+- Package cannot be processed by DepUp
+- PR modifies files other than \`scripts/cron-discover.mjs\`
+- Package is already in the system
+
+Please fix the issues and update the PR, or close this PR if the package request should be denied.
+
+---
+*This is an automated response*`
+            });
+
+      - name: Mark PR Ready for Auto-merge
+        if: success()
+        run: |
+          echo "✅ All validation checks passed!"
+          echo "The PR is now ready for auto-merge."
+          echo ""
+          echo "Next steps:"
+          echo "1. PR will be automatically merged if auto-merge is enabled"
+          echo "2. Package will be processed in the next discovery run (every 6 hours)"
+          echo "3. Updated package published under @depup/ scope"

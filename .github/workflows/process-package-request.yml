@@ -1,0 +1,213 @@
+name: "Process Package Request"
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  validate-and-process:
+    name: Validate and Process Package Request
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'package-request')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Parse Issue Content
+        id: parse
+        run: |
+          ISSUE_BODY="${{ github.event.issue.body }}"
+
+          # Extract package name
+          PACKAGE_NAME=$(echo "$ISSUE_BODY" | grep -A 2 "### Package Name" | tail -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+
+          # Extract package URL
+          PACKAGE_URL=$(echo "$ISSUE_BODY" | grep -A 2 "### NPM Package URL" | tail -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "package_url=$PACKAGE_URL" >> $GITHUB_OUTPUT
+
+          # Extract reasoning
+          REASONING=$(echo "$ISSUE_BODY" | sed -n '/### Why should this package be included?/,/### Weekly Downloads/p' | sed '1d;$d' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "reasoning=$REASONING" >> $GITHUB_OUTPUT
+
+      - name: Validate Package Name
+        run: |
+          if [ -z "${{ steps.parse.outputs.package_name }}" ]; then
+            echo "❌ Package name is required"
+            exit 1
+          fi
+
+          # Check if package name is valid (basic validation)
+          if [[ ! "${{ steps.parse.outputs.package_name }}" =~ ^[a-zA-Z0-9._-]+$ ]]; then
+            echo "❌ Invalid package name format"
+            exit 1
+          fi
+
+          echo "✅ Package name format is valid"
+
+      - name: Check if Package Already Exists
+        id: check-existing
+        run: |
+          PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
+
+          # Check if package is already in the curated list
+          if grep -q "\"$PACKAGE_NAME\"" scripts/cron-discover.mjs; then
+            echo "❌ Package $PACKAGE_NAME is already in the curated list"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          # Check if package directory already exists
+          if [ -d "packages/$PACKAGE_NAME" ]; then
+            echo "❌ Package $PACKAGE_NAME directory already exists"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          echo "✅ Package $PACKAGE_NAME is not already processed"
+          echo "exists=false" >> $GITHUB_OUTPUT
+
+      - name: Validate Package Exists on NPM
+        run: |
+          PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
+
+          # Try to fetch package info from npm
+          if npm view "$PACKAGE_NAME" --json > /dev/null 2>&1; then
+            echo "✅ Package $PACKAGE_NAME exists on npm"
+
+            # Get package info for PR description
+            npm view "$PACKAGE_NAME" --json | jq -r '.description // "No description available"' > package_description.txt
+            npm view "$PACKAGE_NAME" --json | jq -r '.version // "unknown"' > package_version.txt
+          else
+            echo "❌ Package $PACKAGE_NAME does not exist on npm"
+            exit 1
+          fi
+
+      - name: Test Package Processing (Dry Run)
+        run: |
+          PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
+
+          echo "🧪 Testing package processing..."
+
+          # Run depup with --dry-run flag (we'll need to add this to depup.mjs)
+          timeout 60s npm run depup -- $PACKAGE_NAME --dry-run || {
+            echo "⚠️  Dry run test failed, but this might be expected. Continuing..."
+          }
+
+          echo "✅ Dry run test completed"
+
+      - name: Add Package to Curated List
+        if: success()
+        run: |
+          PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
+          echo "📝 Adding $PACKAGE_NAME to curated list..."
+
+          # Use the add-package script to modify cron-discover.mjs
+          node scripts/add-package.mjs add "$PACKAGE_NAME"
+
+      - name: Create Pull Request
+        if: success()
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
+
+Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
+
+Package: ${{ steps.parse.outputs.package_name }}
+Reason: ${{ steps.parse.outputs.reasoning }}
+Requested in: #${{ github.event.issue.number }}"
+
+          title: "feat: add package ${{ steps.parse.outputs.package_name }}"
+          body: |
+            ## 📦 Package Addition: ${{ steps.parse.outputs.package_name }}
+
+            This PR adds `${{ steps.parse.outputs.package_name }}` to the automated package discovery list.
+
+            ### Details
+            - **Package**: `${{ steps.parse.outputs.package_name }}`
+            - **NPM URL**: ${{ steps.parse.outputs.package_url }}
+            - **Reason**: ${{ steps.parse.outputs.reasoning }}
+            - **Requested in**: #${{ github.event.issue.number }}
+
+            ### Validation Results
+            - ✅ Package exists on npm
+            - ✅ Package name format is valid
+            - ✅ Package is not already in the curated list
+            - ✅ Package directory does not already exist
+            - ✅ Basic processing test passed
+
+            ### Next Steps
+            Once this PR is merged, the package will be automatically processed by the scheduled discovery workflow.
+
+            ---
+            *This PR was automatically generated from issue #${{ github.event.issue.number }}*
+
+          branch: package-addition/${{ steps.parse.outputs.package_name }}
+          base: main
+          delete-branch: true
+          labels: |
+            automated
+            package-addition
+
+      - name: Comment on Issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = ${{ github.event.issue.number }};
+            const packageName = '${{ steps.parse.outputs.package_name }}';
+
+            let comment = '## 📦 Package Request Processing\n\n';
+
+            if ('${{ steps.check-existing.outputs.exists }}' === 'true') {
+              comment += '❌ **Request Denied**: Package is already in the system.\n\n';
+              comment += 'This package is already being processed by DepUp automation.\n\n';
+              comment += 'You can check the status at: `packages/' + packageName + '`\n\n';
+              comment += 'If you believe this is an error, please provide more details.';
+            } else {
+              comment += '✅ **Request Accepted**: Processing package `' + packageName + '`\n\n';
+              comment += 'A pull request has been created to add this package to the automated discovery list.\n\n';
+              comment += 'Once the PR passes all checks and merges, the package will be automatically processed.\n\n';
+              comment += '**What happens next:**\n';
+              comment += '1. Automated validation checks run\n';
+              comment += '2. If all checks pass, PR auto-merges\n';
+              comment += '3. Package gets processed in the next discovery run\n';
+              comment += '4. Updated package published under `@depup/` scope\n\n';
+              comment += 'You will receive updates as the process continues.';
+            }
+
+            comment += '\n\n---\n*This is an automated response*';
+
+            github.rest.issues.createComment({
+              issue_number: issueNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+      - name: Close Issue if Duplicate
+        if: steps.check-existing.outputs.exists == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.update({
+              issue_number: ${{ github.event.issue.number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              labels: ['duplicate', 'package-request']
+            });

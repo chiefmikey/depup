@@ -37,11 +37,25 @@ npm run integrity:report -- <package-name>
 
 ### 2. Package Discovery
 
-Suggest popular packages to be added to the automated discovery list:
+**🎯 Automated Package Requests (Recommended)**
 
-1. Open an issue with the package name and why it should be included
-2. Include usage statistics or popularity metrics if available
-3. We'll add it to the discovery script
+Request packages to be added to the automated discovery list:
+
+1. **Open a Package Request Issue** using the issue template
+2. **Fill out the form** with package details and reasoning
+3. **Submit and wait** - the system handles the rest automatically!
+
+**What happens automatically:**
+- ✅ Package validation (exists on npm, can be processed)
+- ✅ Duplicate checking (not already in system)
+- ✅ Quality assessment (maintenance status, etc.)
+- ✅ PR creation and validation
+- ✅ Auto-merge when all checks pass
+- ✅ Scheduled processing (every 6 hours)
+
+**Manual requests** (maintainers only):
+- Open an issue with package details
+- Wait for manual review and addition
 
 ### 3. Code Contributions
 
