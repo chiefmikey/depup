@@ -86,15 +86,39 @@ depup/
     └── generate-readme.mjs # README generation
 ```
 
+## 🔒 Security-First Architecture
+
+DepUp implements comprehensive security measures to protect against malicious packages and ensure ecosystem safety.
+
+### Security Features
+
+- **🛡️ Sandboxed Processing**: All packages processed in isolated Docker containers
+- **🦠 Malware Scanning**: Multi-engine malware detection with ClamAV
+- **🔍 Vulnerability Assessment**: Automated security vulnerability scanning
+- **📋 Approval Workflow**: Manual review process for new packages
+- **🔗 Compatibility Validation**: Dependency conflict detection and resolution
+- **📜 Security Attestation**: Cryptographically signed processing proofs
+
+### Secure Processing
+
+```bash
+# Recommended: Use secure processing
+npm run depup:secure -- <package-name>
+npm run depup:secure:publish -- <package-name>
+
+# Legacy: Direct processing (not recommended)
+npm run depup -- <package-name>
+```
+
 ## 🔄 Automated Workflows
 
 ### GitHub Actions
 
-- **Manual Input**: Process individual packages via workflow dispatch
-- **Cron Discovery**: Automatically discover and process popular packages every
-  6 hours
-- **Sync Updates**: Keep existing packages up-to-date with latest versions
+- **Secure Manual Input**: Process packages with full security validation
+- **Cron Discovery**: Automatically discover and process approved packages every 6 hours
+- **Sync Updates**: Keep existing packages up-to-date with security checks
 - **Rate Limited**: Respects npm API limits with intelligent pacing
+- **Security Gates**: All automated processing includes security validation
 
 ### Package Versioning
 

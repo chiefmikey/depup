@@ -1,0 +1,39 @@
+# DepUp Security Scanner - Pre-publication Security Validation
+FROM node:18-alpine
+
+# Install security scanning tools
+RUN apk add --no-cache \
+    clamav \
+    clamav-daemon \
+    freshclam \
+    npm \
+    git \
+    curl \
+    wget \
+    jq \
+    && freshclam --quiet
+
+# Install additional security tools via npm
+RUN npm install -g \
+    @snyk/cli \
+    audit-ci \
+    npm-check-updates \
+    && npm cache clean --force
+
+# Create non-root user
+RUN addgroup -g 1001 -S depup && \
+    adduser -u 1001 -S depup -G depup
+
+WORKDIR /app
+USER depup
+
+# Copy security scripts
+COPY --chown=depup:depup scripts/security-*.mjs ./scripts/
+COPY --chown=depup:depup package*.json ./
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD clamscan --version && snyk --version || exit 1
+
+# Default command
+CMD ["node", "scripts/security-scan.mjs"]
