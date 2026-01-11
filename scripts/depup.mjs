@@ -532,6 +532,16 @@ try {
         );
       }
 
+      // Install devDependencies to ensure build tools are available
+      if (debug) {
+        console.log('Installing devDependencies for build tools...');
+      }
+      execSync('npm install', {
+        cwd: packageDirectory,
+        stdio: debug ? 'inherit' : 'pipe',
+        timeout: 60_000, // 1 minute timeout for dependency installation
+      });
+
       execSync('npm publish --access public', {
         cwd: packageDirectory,
         stdio: debug ? 'inherit' : 'pipe',
