@@ -18,12 +18,14 @@ jobs:
     steps:
       - name: Check for Package Addition Label
         run: |
-          LABELS=$(echo '${{ toJSON(github.event.pull_request.labels) }}' | jq -r '.[].name' | tr '\n' ' ')
-          if [[ ! " $LABELS " =~ " package-addition " ]]; then
+          # Check if PR has package-addition label
+          LABEL_JSON='${{ toJSON(github.event.pull_request.labels) }}'
+          if echo "$LABEL_JSON" | jq -e '.[] | select(.name == "package-addition")' > /dev/null 2>&1; then
+            echo "✅ Found package-addition label, proceeding with validation"
+          else
             echo "PR does not have package-addition label, skipping validation"
             exit 0
           fi
-          echo "✅ Found package-addition label, proceeding with validation"
 
       - name: Checkout
         uses: actions/checkout@v4
