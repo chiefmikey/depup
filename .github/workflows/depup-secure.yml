@@ -63,11 +63,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install security tools
+      - name: Install security tools (optional)
+        continue-on-error: true
         run: |
-          sudo apt-get update
-          sudo apt-get install -y clamav clamav-daemon
-          sudo freshclam --quiet
+          # Try to install ClamAV for enhanced malware scanning
+          if command -v apt-get >/dev/null 2>&1; then
+            echo "Installing ClamAV..."
+            apt-get update && apt-get install -y clamav clamav-daemon
+            freshclam --quiet || echo "ClamAV database update failed, continuing..."
+          else
+            echo "apt-get not available, skipping ClamAV installation"
+          fi
 
       - name: Validate package allowlist
         id: allowlist-check
