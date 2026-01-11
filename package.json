@@ -7,6 +7,7 @@
     "config": "node scripts/cli.mjs config",
     "cron:discover": "node scripts/cron-discover.mjs",
     "cron:sync": "node scripts/cron-sync.mjs",
+    "add-package": "node scripts/add-package.mjs",
     "depup": "node scripts/depup.mjs",
     "depup:bump": "node scripts/depup.mjs --bump-deps",
     "depup:publish": "node scripts/depup.mjs --bump-deps --test --publish",
