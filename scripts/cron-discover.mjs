@@ -3,7 +3,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 import chalk from 'chalk';
-import { json as fetchJson } from 'npm-registry-fetch';
+import { json } from 'npm-registry-fetch';
 import ora from 'ora';
 
 class PackageDiscoverer {
@@ -152,7 +152,7 @@ class PackageDiscoverer {
     const packages = [];
     for (const name of popularPackages) {
       try {
-        const manifest = await fetchJson(`/${name}`, {
+        const manifest = await json(`/${name}`, {
           registry: this.registry,
           timeout: 5000,
         });
@@ -223,7 +223,7 @@ class PackageDiscoverer {
       }
 
       // Get latest version from npm
-      const latestManifest = await fetchJson(`/${package_.name}`, {
+      const latestManifest = await json(`/${package_.name}`, {
         registry: this.registry,
         timeout: 5000,
       });
