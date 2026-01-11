@@ -63,8 +63,8 @@ jobs:
         run: |
           PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
 
-          # Check if package is already in the curated list
-          if grep -q "\"$PACKAGE_NAME\"" scripts/cron-discover.mjs; then
+          # Check if package is already in the curated list (check for both single and double quotes)
+          if grep -q "'$PACKAGE_NAME'" scripts/cron-discover.mjs || grep -q "\"$PACKAGE_NAME\"" scripts/cron-discover.mjs; then
             echo "❌ Package $PACKAGE_NAME is already in the curated list"
             echo "exists=true" >> $GITHUB_OUTPUT
             exit 1
