@@ -17,32 +17,39 @@ jobs:
 
     steps:
       - name: Check for Package Addition Label
+        id: check-label
         run: |
           # Check if PR has package-addition label
           LABEL_JSON='${{ toJSON(github.event.pull_request.labels) }}'
+          echo "Labels JSON: $LABEL_JSON"
           if echo "$LABEL_JSON" | jq -e '.[] | select(.name == "package-addition")' > /dev/null 2>&1; then
             echo "✅ Found package-addition label, proceeding with validation"
+            echo "has_label=true" >> $GITHUB_OUTPUT
           else
             echo "PR does not have package-addition label, skipping validation"
-            exit 0
+            echo "has_label=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Checkout
+        if: steps.check-label.outputs.has_label == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-tags: true
 
       - name: Setup Node.js
+        if: steps.check-label.outputs.has_label == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
+        if: steps.check-label.outputs.has_label == 'true'
         run: npm install
 
       - name: Validate PR Changes
+        if: steps.check-label.outputs.has_label == 'true'
         id: validate-changes
         run: |
           echo "🔍 Validating PR changes..."
@@ -66,6 +73,7 @@ jobs:
           echo "✅ PR only modifies allowed files"
 
       - name: Extract Added Package
+        if: steps.check-label.outputs.has_label == 'true'
         id: extract-package
         run: |
           echo "📦 Extracting added package name..."
@@ -73,8 +81,8 @@ jobs:
           # Get the diff of cron-discover.mjs
           DIFF=$(git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
 
-          # Extract added lines that look like package names
-          ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -o '"[^"]*"' | tr -d '"' | grep -E '^[a-zA-Z0-9._-]+$')
+          # Extract added lines that look like package names (handle both single and double quotes)
+          ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -oE "'[^']*'|\"[^\"]*\"" | tr -d "\"'" | grep -E '^[a-zA-Z0-9._-]+$')
 
           echo "Added packages: $ADDED_PACKAGES"
 
@@ -92,6 +100,7 @@ jobs:
           echo "✅ Found package to validate: $PACKAGE_NAME"
 
       - name: Validate Package Exists on NPM
+        if: steps.check-label.outputs.has_label == 'true'
         run: |
           PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
 
@@ -111,6 +120,7 @@ jobs:
         id: npm-check
 
       - name: Test Package Processing
+        if: steps.check-label.outputs.has_label == 'true'
         run: |
           PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
           VERSION="${{ steps.npm-check.outputs.package_version }}"
@@ -131,6 +141,7 @@ jobs:
           echo "✅ Package $PACKAGE_NAME can be processed successfully"
 
       - name: Check Package Uniqueness
+        if: steps.check-label.outputs.has_label == 'true'
         run: |
           PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
 
@@ -149,6 +160,7 @@ jobs:
           echo "✅ Package $PACKAGE_NAME is unique in the codebase"
 
       - name: Validate Package Quality
+        if: steps.check-label.outputs.has_label == 'true'
         run: |
           PACKAGE_NAME="${{ steps.extract-package.outputs.package_name }}"
 
@@ -189,7 +201,7 @@ jobs:
           echo "✅ Package quality validation completed"
 
       - name: Approve and Enable Auto-merge
-        if: success()
+        if: steps.check-label.outputs.has_label == 'true' && success()
         uses: actions/github-script@v7
         with:
           script: |
@@ -224,7 +236,7 @@ All validation checks passed:
             }
 
       - name: Comment on Validation Failure
-        if: failure()
+        if: steps.check-label.outputs.has_label == 'true' && failure()
         uses: actions/github-script@v7
         with:
           script: |
