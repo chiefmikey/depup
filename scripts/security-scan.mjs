@@ -24,14 +24,15 @@ class SecurityScanner {
       .name('security-scan')
       .description('Comprehensive Security Scanner for DepUp Packages')
       .version('1.0.0')
-      .option('-p, --path <path>', 'path to scan', this.scanPath)
+      .argument('<path>', 'path to scan')
       .option('-r, --report <path>', 'report output path', this.reportPath)
       .option('-d, --debug', 'enable debug mode')
       .option('--malware-only', 'only perform malware scanning')
       .option('--vuln-only', 'only perform vulnerability scanning')
       .option('--compatibility-only', 'only perform compatibility analysis')
-      .action(async (options) => {
+      .action(async (scanPath, options) => {
         try {
+          options.path = scanPath; // Set the scan path from argument
           await this.performFullScan(options);
         } catch (error) {
           console.error(chalk.red('❌ Security scan failed:'), error.message);
@@ -269,6 +270,19 @@ class SecurityScanner {
 
   async runNpmAudit(scanPath) {
     try {
+      // Check if npm is available
+      try {
+        execSync('which npm', { stdio: 'pipe' });
+      } catch {
+        console.warn('npm not available, skipping npm audit');
+        this.results.vulnerabilities = {
+          status: 'warning',
+          details: ['npm not available for vulnerability scanning'],
+          timestamp: new Date().toISOString()
+        };
+        return;
+      }
+
       const auditCommand = 'npm audit --audit-level=moderate --json';
 
       const result = execSync(auditCommand, {
