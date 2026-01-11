@@ -124,6 +124,7 @@ class PackageDiscoverer {
       'express',
       'framer-motion',
       'helmet',
+      'inquirer',
       'jest',
       'jquery',
       'knex',
