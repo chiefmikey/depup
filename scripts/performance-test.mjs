@@ -56,19 +56,21 @@ class PerformanceTest {
   async runBenchmark(packageName, iterations, options) {
     const results = [];
 
-    for (let i = 0; i < iterations; i++) {
+    for (let index = 0; index < iterations; index++) {
       const iterationSpinner = ora(
-        `Running iteration ${i + 1}/${iterations}...`,
+        `Running iteration ${index + 1}/${iterations}...`,
       ).start();
 
       try {
         const result = await this.measureProcessing(packageName, options.debug);
         results.push(result);
         iterationSpinner.succeed(
-          `Iteration ${i + 1} completed in ${result.processingTime}s`,
+          `Iteration ${index + 1} completed in ${result.processingTime}s`,
         );
       } catch (error) {
-        iterationSpinner.fail(`Iteration ${i + 1} failed: ${error.message}`);
+        iterationSpinner.fail(
+          `Iteration ${index + 1} failed: ${error.message}`,
+        );
         if (options.debug) {
           console.error(chalk.red('Error details:'), error);
         }
@@ -180,11 +182,11 @@ class PerformanceTest {
     // Display individual results if multiple iterations
     if (results.length > 1) {
       console.log(chalk.yellow('\nIndividual Results:'));
-      results.forEach((result, index) => {
+      for (const [index, result] of results.entries()) {
         console.log(
           `  ${index + 1}. ${result.processingTime.toFixed(2)}s (${result.memory.end.rss}MB RSS)`,
         );
-      });
+      }
     }
   }
 
@@ -237,9 +239,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const tester = new PerformanceTest();
   tester.main();
 }
-
-
-
-
-
-

@@ -59,7 +59,7 @@ class IntegrityMeter {
       process.exit(1);
     }
 
-    const packageDirectory = path.join(process.cwd(), packageName);
+    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const votesFile = path.join(packageDirectory, this.votesFile);
 
     // Load existing votes
@@ -114,7 +114,7 @@ class IntegrityMeter {
   }
 
   async status(packageName, version) {
-    const packageDirectory = path.join(process.cwd(), packageName);
+    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const votesFile = path.join(packageDirectory, this.votesFile);
 
     try {
@@ -145,7 +145,7 @@ class IntegrityMeter {
   }
 
   async report(packageName) {
-    const packageDirectory = path.join(process.cwd(), packageName);
+    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const votesFile = path.join(packageDirectory, this.votesFile);
     // const integrityFile = path.join(packageDirectory, this.integrityFile);
 

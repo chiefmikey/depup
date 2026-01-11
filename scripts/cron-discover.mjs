@@ -189,7 +189,7 @@ class PackageDiscoverer {
       );
     }
 
-    const packageDirectory = path.join(process.cwd(), sanitizedName);
+    const packageDirectory = path.join(process.cwd(), 'packages', sanitizedName);
     const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     // Check if package already exists
