@@ -32,15 +32,15 @@ jobs:
           ISSUE_BODY="${{ github.event.issue.body }}"
 
           # Extract package name
-          PACKAGE_NAME=$(echo "$ISSUE_BODY" | grep -A 2 "### Package Name" | tail -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          PACKAGE_NAME=$(echo "$ISSUE_BODY" | grep -A 2 "### Package Name" | tail -2 | head -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
           echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
 
           # Extract package URL
-          PACKAGE_URL=$(echo "$ISSUE_BODY" | grep -A 2 "### NPM Package URL" | tail -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          PACKAGE_URL=$(echo "$ISSUE_BODY" | grep -A 2 "### NPM Package URL" | tail -2 | head -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
           echo "package_url=$PACKAGE_URL" >> $GITHUB_OUTPUT
 
           # Extract reasoning
-          REASONING=$(echo "$ISSUE_BODY" | sed -n '/### Why should this package be included?/,/### Weekly Downloads/p' | sed '1d;$d' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          REASONING=$(echo "$ISSUE_BODY" | sed -n '/### Why should this package be included?/,/### Weekly Downloads/p' | sed '1d;$d' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/  */ /g')
           echo "reasoning=$REASONING" >> $GITHUB_OUTPUT
 
       - name: Validate Package Name
