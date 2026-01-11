@@ -155,6 +155,7 @@ class PackageDiscoverer {
       'vite',
       'vue',
       'webpack',
+      'yargs',
     ];
 
     const packages = [];
