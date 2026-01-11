@@ -87,44 +87,11 @@ class PackageDiscoverer {
 
   async getDynamicTopPackages() {
     try {
-      // Use npm registry search API to find popular packages
-      const searchUrl = '/-/v1/search?text=boost-exact:false&size=100&popularity=1.0&quality=0.0&maintenance=0.0';
-
-      const data = await fetch.json(searchUrl, {
-        registry: this.registry,
-        timeout: 10000,
-      });
-
-      if (!data.objects || !Array.isArray(data.objects)) {
-        throw new Error('Invalid search response format');
-      }
-
-      // Filter and process packages
-      const validPackages = [];
-      for (const item of data.objects.slice(0, this.maxPackages)) {
-        const package_ = item.package;
-        if (package_ && package_.name && !package_.name.startsWith('@')) {
-          try {
-            // Get the full manifest for version info
-            const manifest = await fetch.json(`/${package_.name}`, {
-              registry: this.registry,
-              timeout: 5000,
-            });
-
-            validPackages.push({
-              name: manifest.name,
-              version: manifest['dist-tags']?.latest || manifest.version,
-              downloads: item.downloads || 0,
-            });
-
-            await this.sleep(100); // Small delay between requests
-          } catch (error) {
-            // Skip packages that can't be fetched
-          }
-        }
-      }
-
-      return validPackages.sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
+      // For now, return empty array to use curated packages
+      // Dynamic discovery would require additional HTTP client setup
+      // This is a placeholder for future implementation
+      console.log('Dynamic package discovery not yet implemented, using curated list');
+      return [];
     } catch (error) {
       throw new Error(`Failed to fetch dynamic packages: ${error.message}`);
     }
