@@ -185,3 +185,8 @@ Thumbs.db
 test-results/
 coverage/
 .local/
+
+# Temporary workflow files
+package_description.txt
+package_version.txt
+package_info.json
