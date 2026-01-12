@@ -133,6 +133,10 @@ jobs:
         run: |
           # Remove any temporary files that might have been created
           rm -f package_description.txt package_version.txt package_info.json
+          # Unstage if they were added
+          git reset HEAD package_description.txt package_version.txt package_info.json 2>/dev/null || true
+          # Remove from working directory
+          rm -f package_description.txt package_version.txt package_info.json
           git status
 
       - name: Create Pull Request
@@ -140,6 +144,10 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          exclude-paths: |
+            package_description.txt
+            package_version.txt
+            package_info.json
           commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
 
 Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
