@@ -81,16 +81,26 @@ jobs:
           echo "exists=false" >> $GITHUB_OUTPUT
 
       - name: Validate Package Exists on NPM
+        id: npm-info
         run: |
           PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
 
           # Try to fetch package info from npm
-          if npm view "$PACKAGE_NAME" --json > /dev/null 2>&1; then
+          if npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
             echo "✅ Package $PACKAGE_NAME exists on npm"
 
-            # Get package info for PR description
-            npm view "$PACKAGE_NAME" --json | jq -r '.description // "No description available"' > package_description.txt
-            npm view "$PACKAGE_NAME" --json | jq -r '.version // "unknown"' > package_version.txt
+            # Extract info for PR description (store in outputs, not files)
+            DESCRIPTION=$(jq -r '.description // "No description available"' package_info.json)
+            VERSION=$(jq -r '.version // "unknown"' package_info.json)
+            
+            echo "package_description<<EOF" >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            echo "package_version=$VERSION" >> $GITHUB_OUTPUT
+            
+            # Clean up
+            rm -f package_info.json
           else
             echo "❌ Package $PACKAGE_NAME does not exist on npm"
             exit 1
@@ -118,6 +128,13 @@ jobs:
           # Use the add-package script to modify cron-discover.mjs
           node scripts/add-package.mjs add "$PACKAGE_NAME"
 
+      - name: Clean Up Temporary Files
+        if: success()
+        run: |
+          # Remove any temporary files that might have been created
+          rm -f package_description.txt package_version.txt package_info.json
+          git status
+
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v5
@@ -139,7 +156,9 @@ Requested in: #${{ github.event.issue.number }}"
 
             ### Details
             - **Package**: `${{ steps.parse.outputs.package_name }}`
+            - **Version**: ${{ steps.npm-info.outputs.package_version }}
             - **NPM URL**: ${{ steps.parse.outputs.package_url }}
+            - **Description**: ${{ steps.npm-info.outputs.package_description }}
             - **Reason**: ${{ steps.parse.outputs.reasoning }}
             - **Requested in**: #${{ github.event.issue.number }}
 
