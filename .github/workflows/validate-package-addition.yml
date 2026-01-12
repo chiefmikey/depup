@@ -35,6 +35,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
           fetch-tags: true
 
       - name: Setup Node.js
@@ -54,8 +56,11 @@ jobs:
         run: |
           echo "🔍 Validating PR changes..."
 
+          # Fetch base branch for comparison
+          git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
+
           # Check that only cron-discover.mjs was modified
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD)
 
           echo "Changed files:"
           echo "$CHANGED_FILES"
@@ -79,7 +84,7 @@ jobs:
           echo "📦 Extracting added package name..."
 
           # Get the diff of cron-discover.mjs
-          DIFF=$(git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
+          DIFF=$(git diff ${{ github.event.pull_request.base.sha }} HEAD -- scripts/cron-discover.mjs)
 
           # Extract added lines that look like package names (handle both single and double quotes)
           ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -oE "'[^']*'|\"[^\"]*\"" | tr -d "\"'" | grep -E '^[a-zA-Z0-9._-]+$')
