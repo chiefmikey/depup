@@ -3,8 +3,6 @@ name: "Validate Package Addition"
 on:
   pull_request_target:
     types: [opened, synchronize, reopened, labeled]
-    branches:
-      - main
 
 jobs:
   validate-package-addition:
