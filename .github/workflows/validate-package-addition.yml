@@ -209,18 +209,15 @@ jobs:
                 repo: context.repo.repo,
                 pull_number: prNumber,
                 event: 'APPROVE',
-                body: `✅ **Package Addition Approved**
-
-**Package:** \`${packageName}\`
-
-All validation checks passed:
-- ✅ Package exists on npm
-- ✅ Package can be processed successfully
-- ✅ Package is unique in the codebase
-- ✅ PR only modifies the curated package list
-- ✅ Package meets quality criteria
-
-**Auto-merge enabled** - This PR will merge automatically once branch protection checks pass.`
+                body: '✅ **Package Addition Approved**\n\n' +
+                    '**Package:** `' + packageName + '`\n\n' +
+                    'All validation checks passed:\n' +
+                    '- ✅ Package exists on npm\n' +
+                    '- ✅ Package can be processed successfully\n' +
+                    '- ✅ Package is unique in the codebase\n' +
+                    '- ✅ PR only modifies the curated package list\n' +
+                    '- ✅ Package meets quality criteria\n\n' +
+                    '**Auto-merge enabled** - This PR will merge automatically once branch protection checks pass.'
               });
 
               console.log('✅ PR approved successfully');
@@ -241,20 +238,15 @@ All validation checks passed:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
-              body: `❌ **Package Addition Validation Failed**
-
-**Package:** \`${packageName}\`
-
-Please check the validation workflow logs for specific error details.
-
-Common issues:
-- Package doesn't exist on npm
-- Package cannot be processed by DepUp
-- PR modifies files other than \`scripts/cron-discover.mjs\`
-- Package is already in the system
-
-Please fix the issues and update the PR, or close this PR if the package request should be denied.
-
----
-*This is an automated response*`
+              body: '❌ **Package Addition Validation Failed**\n\n' +
+                    '**Package:** `' + packageName + '`\n\n' +
+                    'Please check the validation workflow logs for specific error details.\n\n' +
+                    'Common issues:\n' +
+                    '- Package doesn\'t exist on npm\n' +
+                    '- Package cannot be processed by DepUp\n' +
+                    '- PR modifies files other than `scripts/cron-discover.mjs`\n' +
+                    '- Package is already in the system\n\n' +
+                    'Please fix the issues and update the PR, or close this PR if the package request should be denied.\n\n' +
+                    '---\n' +
+                    '*This is an automated response*'
             });
