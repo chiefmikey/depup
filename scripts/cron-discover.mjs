@@ -142,6 +142,7 @@ class PackageDiscoverer {
       'prisma',
       'react',
       'redux',
+      'rimraf',
       'rollup',
       'semver',
       'sequelize',
