@@ -114,6 +114,7 @@ class PackageDiscoverer {
       'chai',
       'chart.js',
       'colors',
+      'commander',
       'compression',
       'concurrently',
       'cors',
