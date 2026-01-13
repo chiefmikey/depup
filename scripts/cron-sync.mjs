@@ -23,12 +23,12 @@ class PackageSyncer {
       // Process packages in parallel batches
       const packagesToProcess = existingPackages.slice(0, this.maxPackagesPerRun);
       const syncedPackages = [];
-      
+
       // Process in batches to avoid overwhelming the system
       for (let i = 0; i < packagesToProcess.length; i += this.concurrentPackages) {
         const batch = packagesToProcess.slice(i, i + this.concurrentPackages);
         console.log(`Processing batch ${Math.floor(i / this.concurrentPackages) + 1} (${batch.length} packages)...`);
-        
+
         // Process batch in parallel
         const batchResults = await Promise.allSettled(
           batch.map(async (package_) => {
@@ -42,14 +42,14 @@ class PackageSyncer {
             }
           })
         );
-        
+
         // Collect successful syncs
         for (const result of batchResults) {
           if (result.status === 'fulfilled' && result.value.synced) {
             syncedPackages.push(result.value.name);
           }
         }
-        
+
         // Rate limiting between batches (not between individual packages)
         if (i + this.concurrentPackages < packagesToProcess.length) {
           await this.sleep(this.rateLimitDelay);
