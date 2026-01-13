@@ -180,8 +180,9 @@ class DepUp {
         packageJson.version = `${baseVersion}-depup.${revision}`;
 
         // Bump dependencies if requested
+        let dependenciesUpdated = 0;
         if (shouldBumpDeps) {
-          await this.bumpDependencies(
+          dependenciesUpdated = await this.bumpDependencies(
             targetDirectory,
             packageJson,
             debug,
@@ -212,13 +213,28 @@ class DepUp {
         }
 
         // Publish if requested
+        // Only publish if:
+        // 1. It's the first revision (revision === 0) - new package/version
+        // 2. OR dependencies were actually updated (dependenciesUpdated > 0)
+        let published = false;
         if (shouldPublish) {
-          await this.publishPackage(
-            targetDirectory,
-            scopedName,
-            packageJson.version,
-            debug,
-          );
+          const shouldPublishThis = revision === 0 || dependenciesUpdated > 0;
+
+          if (shouldPublishThis) {
+            await this.publishPackage(
+              targetDirectory,
+              scopedName,
+              packageJson.version,
+              debug,
+            );
+            published = true;
+          } else {
+            console.log(
+              chalk.yellow(
+                `⏭️  Skipping publish: No dependencies were updated for ${scopedName}@${packageJson.version}`,
+              ),
+            );
+          }
         }
 
         // Update integrity data
@@ -227,6 +243,7 @@ class DepUp {
           baseVersion,
           revision,
           packageJson.version,
+          shouldPublish ? (published ? 'published' : 'skipped') : 'prepared',
         );
 
         // Auto-generate README
@@ -253,6 +270,7 @@ class DepUp {
           originalVersion,
           revision,
           path: targetDirectory,
+          published: shouldPublish ? published : undefined,
         };
       } catch (error) {
         if (error.message.includes('Timeout')) {
@@ -346,6 +364,8 @@ class DepUp {
         chalk.yellow(`⚠️  Failed to update ${errorCount} dependencies`),
       );
     }
+
+    return updatedCount;
   }
 
   async testPackage(
@@ -572,7 +592,10 @@ try {
         }
       }
       // Check for specific npm scope errors
-      if (errorMessage.includes('Scope not found') || errorMessage.includes('is not in this registry')) {
+      if (
+        errorMessage.includes('Scope not found') ||
+        errorMessage.includes('is not in this registry')
+      ) {
         const scopeMatch = packageName.match(/^@([^/]+)/);
         if (scopeMatch) {
           const scopeName = scopeMatch[1];
@@ -581,14 +604,20 @@ try {
           );
         }
       }
-      
+
       throw new Error(
         `Failed to publish ${packageName}@${version}: ${errorMessage}`,
       );
     }
   }
 
-  async updateIntegrityData(packageDirectory, baseVersion, revision, version) {
+  async updateIntegrityData(
+    packageDirectory,
+    baseVersion,
+    revision,
+    version,
+    status = 'published',
+  ) {
     const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     let integrityData = {};
@@ -606,7 +635,7 @@ try {
     integrityData[baseVersion][revision] = {
       version,
       timestamp: new Date().toISOString(),
-      status: 'published',
+      status,
     };
 
     await fs.writeFile(
