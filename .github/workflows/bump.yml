@@ -8,9 +8,6 @@ on:
       - '.github/workflows/**'
       - 'README.md'
       - 'CONTRIBUTING.md'
-  pull_request:
-    types:
-      - closed
   workflow_dispatch: {}
 
 jobs:
