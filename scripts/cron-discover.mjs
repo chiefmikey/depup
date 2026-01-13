@@ -130,6 +130,7 @@ class PackageDiscoverer {
       'knex',
       'leaflet',
       'lodash',
+      'minimist',
       'mocha',
       'moment',
       'mongoose',
