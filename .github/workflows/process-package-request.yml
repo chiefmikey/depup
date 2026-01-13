@@ -30,14 +30,13 @@ jobs:
 
       - name: Parse Issue Content
         id: parse
-        run: |
-          # Use github-script to safely parse issue body and avoid shell interpretation issues
-          node -e "
-            const fs = require('fs');
-            const issueBody = process.env.ISSUE_BODY;
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
             
             // Extract package name (remove backticks if present)
-            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[\`]?([a-zA-Z0-9._-]+)[\`]?/);
+            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?([a-zA-Z0-9._-]+)[`]?/);
             const packageName = packageNameMatch ? packageNameMatch[1] : '';
             
             // Extract package URL
@@ -48,13 +47,13 @@ jobs:
             const reasoningMatch = issueBody.match(/### Why should this package be included\?\s*\n\s*([\s\S]*?)(?=\n###|\n---|$)/);
             const reasoning = reasoningMatch ? reasoningMatch[1].trim().replace(/\n/g, ' ') : '';
             
-            // Write to outputs
-            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`package_name=\${packageName}\n\`);
-            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`package_url=\${packageUrl}\n\`);
-            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`reasoning=\${reasoning}\n\`);
-          "
-        env:
-          ISSUE_BODY: ${{ github.event.issue.body }}
+            // Set outputs
+            core.setOutput('package_name', packageName);
+            core.setOutput('package_url', packageUrl);
+            core.setOutput('reasoning', reasoning);
+            
+            console.log('Parsed package name:', packageName);
+            console.log('Parsed package URL:', packageUrl);
 
       - name: Validate Package Name
         run: |
