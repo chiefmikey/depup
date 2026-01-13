@@ -7,8 +7,9 @@ import fetch from 'npm-registry-fetch';
 class PackageSyncer {
   constructor() {
     this.registry = 'https://registry.npmjs.org';
-    this.rateLimitDelay = 2000; // 2 seconds between requests
-    this.maxPackagesPerRun = 10; // Limit packages per sync run
+    this.rateLimitDelay = 2000; // 2 seconds between batches
+    this.maxPackagesPerRun = 50; // Limit packages per sync run
+    this.concurrentPackages = 5; // Process this many packages in parallel
   }
 
   async main() {
@@ -19,23 +20,39 @@ class PackageSyncer {
       const existingPackages = await this.getExistingPackages();
       console.log(`Found ${existingPackages.length} existing packages`);
 
-      // Process packages with rate limiting
+      // Process packages in parallel batches
+      const packagesToProcess = existingPackages.slice(0, this.maxPackagesPerRun);
       const syncedPackages = [];
-      for (const package_ of existingPackages.slice(
-        0,
-        this.maxPackagesPerRun,
-      )) {
-        try {
-          console.log(`Syncing ${package_.name}...`);
-          const synced = await this.syncPackage(package_);
-          if (synced) {
-            syncedPackages.push(package_.name);
+      
+      // Process in batches to avoid overwhelming the system
+      for (let i = 0; i < packagesToProcess.length; i += this.concurrentPackages) {
+        const batch = packagesToProcess.slice(i, i + this.concurrentPackages);
+        console.log(`Processing batch ${Math.floor(i / this.concurrentPackages) + 1} (${batch.length} packages)...`);
+        
+        // Process batch in parallel
+        const batchResults = await Promise.allSettled(
+          batch.map(async (package_) => {
+            try {
+              console.log(`Syncing ${package_.name}...`);
+              const synced = await this.syncPackage(package_);
+              return { name: package_.name, synced, success: true };
+            } catch (error) {
+              console.warn(`Failed to sync ${package_.name}:`, error.message);
+              return { name: package_.name, synced: false, success: false, error: error.message };
+            }
+          })
+        );
+        
+        // Collect successful syncs
+        for (const result of batchResults) {
+          if (result.status === 'fulfilled' && result.value.synced) {
+            syncedPackages.push(result.value.name);
           }
-
-          // Rate limiting
+        }
+        
+        // Rate limiting between batches (not between individual packages)
+        if (i + this.concurrentPackages < packagesToProcess.length) {
           await this.sleep(this.rateLimitDelay);
-        } catch (error) {
-          console.warn(`Failed to sync ${package_.name}:`, error.message);
         }
       }
 
