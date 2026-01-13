@@ -8,7 +8,9 @@ jobs:
   validate-and-process:
     name: Validate and Process Package Request
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.labels.*.name, 'package-request')
+    if: |
+      github.event.issue.labels != null &&
+      contains(github.event.issue.labels.*.name, 'package-request')
 
     steps:
       - name: Checkout
@@ -127,7 +129,7 @@ jobs:
 
           # Use the add-package script to modify cron-discover.mjs
           node scripts/add-package.mjs add "$PACKAGE_NAME"
-          
+
           # Immediately remove any temporary files that might exist
           rm -f package_description.txt package_version.txt package_info.json
 
@@ -136,18 +138,18 @@ jobs:
         run: |
           # Remove any temporary files
           rm -f package_description.txt package_version.txt package_info.json
-          
+
           # Remove from git if they were accidentally added
           git rm --cached --ignore-unmatch package_description.txt package_version.txt package_info.json 2>/dev/null || true
-          
+
           # Ensure only cron-discover.mjs is staged
           git reset HEAD . 2>/dev/null || true
           git add scripts/cron-discover.mjs
-          
+
           # Verify what will be committed
           echo "Files to be committed:"
           git diff --cached --name-only
-          
+
           # Final cleanup
           rm -f package_description.txt package_version.txt package_info.json
 
