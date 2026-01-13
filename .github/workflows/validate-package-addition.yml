@@ -234,6 +234,33 @@ jobs:
 
               console.log('✅ PR approved successfully');
 
+              // Enable auto-merge
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  merge_method: 'squash',
+                  commit_title: `feat: add package ${packageName} to automated discovery`,
+                  commit_message: `Added ${packageName} to the curated package list for automated dependency bumping.`
+                });
+                console.log('✅ PR merged successfully');
+              } catch (mergeError) {
+                // If merge fails (e.g., branch protection), try to enable auto-merge
+                try {
+                  await github.rest.pulls.enableAutoMerge({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: prNumber,
+                    merge_method: 'SQUASH'
+                  });
+                  console.log('✅ Auto-merge enabled');
+                } catch (autoMergeError) {
+                  console.log('⚠️  Could not enable auto-merge:', autoMergeError.message);
+                  console.log('PR will need to be merged manually or via branch protection rules');
+                }
+              }
+
             } catch (error) {
               console.log('⚠️  Approval setup completed with warnings:', error.message);
             }
