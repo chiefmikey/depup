@@ -113,6 +113,7 @@ class PackageDiscoverer {
       'bootstrap',
       'chai',
       'chart.js',
+      'commander',
       'compression',
       'concurrently',
       'cors',
