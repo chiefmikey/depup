@@ -195,6 +195,10 @@ jobs:
           labels: 'automated, package-addition'
           branch: 'package-addition/${{ steps.parse.outputs.package_name }}'
           delete-branch: true
+          exclude: |
+            package_description.txt
+            package_version.txt
+            package_info.json
 
       - name: Comment on Issue
         if: always()
