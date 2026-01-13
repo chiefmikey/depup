@@ -31,17 +31,20 @@ jobs:
       - name: Extract Issue Number from PR Body
         if: steps.check-label.outputs.has_label == 'true'
         id: extract-issue
-        run: |
-          # Use toJSON to safely handle PR body with special characters
-          PR_BODY_JSON='${{ toJSON(github.event.pull_request.body) }}'
-          # Extract issue number using jq and sed (handle both "Requested in: #" and "**Requested in**: #")
-          ISSUE_NUM=$(echo "$PR_BODY_JSON" | jq -r '.' | grep -i "Requested in" | sed -n 's/.*Requested in.*#\([0-9]*\).*/\1/p' | head -1)
-          if [ -z "$ISSUE_NUM" ]; then
-            echo "No issue number found in PR body"
-            exit 0
-          fi
-          echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
-          echo "Found issue number: $ISSUE_NUM"
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prBody = context.payload.pull_request.body || '';
+            // Extract issue number from "Requested in: #123" or "**Requested in**: #123"
+            const match = prBody.match(/Requested in.*?#(\d+)/i);
+            if (match && match[1]) {
+              const issueNumber = match[1];
+              core.setOutput('issue_number', issueNumber);
+              console.log(`Found issue number: ${issueNumber}`);
+            } else {
+              console.log('No issue number found in PR body');
+              core.setOutput('issue_number', '');
+            }
 
       - name: Close Related Issue
         if: steps.check-label.outputs.has_label == 'true' && steps.extract-issue.outputs.issue_number != ''
