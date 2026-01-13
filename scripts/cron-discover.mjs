@@ -157,6 +157,7 @@ class PackageDiscoverer {
       'styled-components',
       'svelte',
       'tailwindcss',
+      'test-package',
       'three',
       'typeorm',
       'typescript',
