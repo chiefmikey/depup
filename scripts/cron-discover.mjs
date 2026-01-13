@@ -128,6 +128,7 @@ class PackageDiscoverer {
       'framer-motion',
       'glob',
       'helmet',
+      'inquirer',
       'jest',
       'jquery',
       'knex',
