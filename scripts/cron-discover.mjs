@@ -156,6 +156,7 @@ class PackageDiscoverer {
       'vite',
       'vue',
       'webpack',
+      'winston',
       'yargs',
     ];
 
