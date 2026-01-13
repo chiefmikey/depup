@@ -157,6 +157,7 @@ class PackageDiscoverer {
       'three',
       'typeorm',
       'typescript',
+      'underscore',
       'vite',
       'vue',
       'webpack',
