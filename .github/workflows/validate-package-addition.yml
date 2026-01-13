@@ -147,17 +147,23 @@ jobs:
 
           echo "🔍 Checking package uniqueness..."
 
-          # Check if package is mentioned elsewhere in the codebase
-          # (beyond the addition in cron-discover.mjs)
-          OTHER_REFERENCES=$(grep -r "$PACKAGE_NAME" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=packages . | grep -v "scripts/cron-discover.mjs" | wc -l)
+          # Check if package is already in the curated list (should not be, but double-check)
+          if grep -qE "['\"]$PACKAGE_NAME['\"]," scripts/cron-discover.mjs; then
+            # Count occurrences - should be exactly 1 (the one we're adding)
+            COUNT=$(grep -cE "['\"]$PACKAGE_NAME['\"]," scripts/cron-discover.mjs || echo "0")
+            if [ "$COUNT" -gt 1 ]; then
+              echo "❌ Package $PACKAGE_NAME appears multiple times in the curated list"
+              exit 1
+            fi
+          fi
 
-          if [ "$OTHER_REFERENCES" -gt 0 ]; then
-            echo "❌ Package $PACKAGE_NAME is already referenced elsewhere in the codebase"
-            echo "This might indicate it's already being processed or has conflicts."
+          # Check if package directory already exists
+          if [ -d "packages/$PACKAGE_NAME" ]; then
+            echo "❌ Package $PACKAGE_NAME directory already exists"
             exit 1
           fi
 
-          echo "✅ Package $PACKAGE_NAME is unique in the codebase"
+          echo "✅ Package $PACKAGE_NAME is unique"
 
       - name: Validate Package Quality
         if: steps.check-label.outputs.has_label == 'true'
