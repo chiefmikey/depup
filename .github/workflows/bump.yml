@@ -42,10 +42,11 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git add .
+          # Exclude temporary files
+          git add packages/ scripts/cron-discover.mjs 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync packages"
-            git push origin main
+            git commit -m "chore: sync packages" || echo "No changes to commit"
+            git push origin main || echo "Push failed (may be due to conflicts or no changes)"
           fi
