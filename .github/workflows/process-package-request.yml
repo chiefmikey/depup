@@ -228,12 +228,6 @@ Requested in: #${{ github.event.issue.number }}"
             ---
             *This PR was automatically generated from issue #${{ github.event.issue.number }}*
 
-          branch: package-addition/${{ steps.parse.outputs.package_name }}
-          base: main
-          delete-branch: true
-          labels: |
-            automated
-            package-addition
 
       - name: Comment on Issue
         if: always()
