@@ -32,10 +32,10 @@ jobs:
         if: steps.check-label.outputs.has_label == 'true'
         id: extract-issue
         run: |
-          PR_BODY='${{ github.event.pull_request.body }}'
-          # Extract issue number using sed (handle both "Requested in: #" and "**Requested in**: #")
-          # Use single quotes and proper escaping to prevent command execution
-          ISSUE_NUM=$(echo "$PR_BODY" | grep -i "Requested in" | sed -n 's/.*Requested in.*#\([0-9]*\).*/\1/p' | head -1)
+          # Use toJSON to safely handle PR body with special characters
+          PR_BODY_JSON='${{ toJSON(github.event.pull_request.body) }}'
+          # Extract issue number using jq and sed (handle both "Requested in: #" and "**Requested in**: #")
+          ISSUE_NUM=$(echo "$PR_BODY_JSON" | jq -r '.' | grep -i "Requested in" | sed -n 's/.*Requested in.*#\([0-9]*\).*/\1/p' | head -1)
           if [ -z "$ISSUE_NUM" ]; then
             echo "No issue number found in PR body"
             exit 0
