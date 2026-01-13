@@ -44,10 +44,10 @@ jobs:
         run: |
           # Pull latest changes first to avoid conflicts
           git pull origin main --rebase || git pull origin main || echo "Pull failed, continuing..."
-          
+
           # Exclude temporary files, only add package directories and curated list
           git add packages/ scripts/cron-discover.mjs 2>/dev/null || true
-          
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
