@@ -158,13 +158,14 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
+          commit-message: |
+            feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
 
-Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
+            Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
 
-Package: ${{ steps.parse.outputs.package_name }}
-Reason: ${{ steps.parse.outputs.reasoning }}
-Requested in: #${{ github.event.issue.number }}"
+            Package: ${{ steps.parse.outputs.package_name }}
+            Reason: ${{ steps.parse.outputs.reasoning }}
+            Requested in: #${{ github.event.issue.number }}
           title: "feat: add package ${{ steps.parse.outputs.package_name }}"
           body: |
             ## 📦 Package Addition: ${{ steps.parse.outputs.package_name }}
