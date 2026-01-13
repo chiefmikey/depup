@@ -571,6 +571,17 @@ try {
           console.error(chalk.gray('Stack trace:'), error.stack);
         }
       }
+      // Check for specific npm scope errors
+      if (errorMessage.includes('Scope not found') || errorMessage.includes('is not in this registry')) {
+        const scopeMatch = packageName.match(/^@([^/]+)/);
+        if (scopeMatch) {
+          const scopeName = scopeMatch[1];
+          throw new Error(
+            `Failed to publish ${packageName}@${version}: The npm scope '@${scopeName}' does not exist. Please create the organization at https://www.npmjs.com/org/create and add the NPM_TOKEN with proper permissions.`,
+          );
+        }
+      }
+      
       throw new Error(
         `Failed to publish ${packageName}@${version}: ${errorMessage}`,
       );
