@@ -31,19 +31,30 @@ jobs:
       - name: Parse Issue Content
         id: parse
         run: |
-          ISSUE_BODY="${{ github.event.issue.body }}"
-
-          # Extract package name
-          PACKAGE_NAME=$(echo "$ISSUE_BODY" | grep -A 2 "### Package Name" | tail -2 | head -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
-
-          # Extract package URL
-          PACKAGE_URL=$(echo "$ISSUE_BODY" | grep -A 2 "### NPM Package URL" | tail -2 | head -1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-          echo "package_url=$PACKAGE_URL" >> $GITHUB_OUTPUT
-
-          # Extract reasoning
-          REASONING=$(echo "$ISSUE_BODY" | sed -n '/### Why should this package be included?/,/### Weekly Downloads/p' | sed '1d;$d' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/  */ /g')
-          echo "reasoning=$REASONING" >> $GITHUB_OUTPUT
+          # Use github-script to safely parse issue body and avoid shell interpretation issues
+          node -e "
+            const fs = require('fs');
+            const issueBody = process.env.ISSUE_BODY;
+            
+            // Extract package name (remove backticks if present)
+            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[\`]?([a-zA-Z0-9._-]+)[\`]?/);
+            const packageName = packageNameMatch ? packageNameMatch[1] : '';
+            
+            // Extract package URL
+            const urlMatch = issueBody.match(/### NPM Package URL\s*\n\s*(https?:\/\/[^\s]+)/);
+            const packageUrl = urlMatch ? urlMatch[1] : '';
+            
+            // Extract reasoning
+            const reasoningMatch = issueBody.match(/### Why should this package be included\?\s*\n\s*([\s\S]*?)(?=\n###|\n---|$)/);
+            const reasoning = reasoningMatch ? reasoningMatch[1].trim().replace(/\n/g, ' ') : '';
+            
+            // Write to outputs
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`package_name=\${packageName}\n\`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`package_url=\${packageUrl}\n\`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, \`reasoning=\${reasoning}\n\`);
+          "
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
 
       - name: Validate Package Name
         run: |
