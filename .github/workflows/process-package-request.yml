@@ -194,42 +194,6 @@ Requested in: #${{ github.event.issue.number }}"
           labels: 'automated, package-addition'
           branch: 'package-addition/${{ steps.parse.outputs.package_name }}'
           delete-branch: true
-          path: 'scripts/cron-discover.mjs'
-          commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
-
-Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
-
-Package: ${{ steps.parse.outputs.package_name }}
-Reason: ${{ steps.parse.outputs.reasoning }}
-Requested in: #${{ github.event.issue.number }}"
-
-          title: "feat: add package ${{ steps.parse.outputs.package_name }}"
-          body: |
-            ## 📦 Package Addition: ${{ steps.parse.outputs.package_name }}
-
-            This PR adds `${{ steps.parse.outputs.package_name }}` to the automated package discovery list.
-
-            ### Details
-            - **Package**: `${{ steps.parse.outputs.package_name }}`
-            - **Version**: ${{ steps.npm-info.outputs.package_version }}
-            - **NPM URL**: ${{ steps.parse.outputs.package_url }}
-            - **Description**: ${{ steps.npm-info.outputs.package_description }}
-            - **Reason**: ${{ steps.parse.outputs.reasoning }}
-            - **Requested in**: #${{ github.event.issue.number }}
-
-            ### Validation Results
-            - ✅ Package exists on npm
-            - ✅ Package name format is valid
-            - ✅ Package is not already in the curated list
-            - ✅ Package directory does not already exist
-            - ✅ Basic processing test passed
-
-            ### Next Steps
-            Once this PR is merged, the package will be automatically processed by the scheduled discovery workflow.
-
-            ---
-            *This PR was automatically generated from issue #${{ github.event.issue.number }}*
-
 
       - name: Comment on Issue
         if: always()
