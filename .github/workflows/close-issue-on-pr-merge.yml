@@ -64,17 +64,14 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: issueNumber,
-                  body: `✅ **Package Added Successfully**
-
-The pull request for \`${packageName}\` has been merged!
-
-**Next Steps:**
-- Package will be processed in the next discovery run (every 6 hours)
-- Updated package will be published under \`@depup/${packageName}\` scope
-- You can track the package at: \`packages/${packageName}\`
-
----
-*This issue is being closed automatically as the package has been added to the system.*`
+                  body: '✅ **Package Added Successfully**\n\n' +
+                    'The pull request for `' + packageName + '` has been merged!\n\n' +
+                    '**Next Steps:**\n' +
+                    '- Package will be processed in the next discovery run (every 6 hours)\n' +
+                    '- Updated package will be published under `@depup/' + packageName + '` scope\n' +
+                    '- You can track the package at: `packages/' + packageName + '`\n\n' +
+                    '---\n' +
+                    '*This issue is being closed automatically as the package has been added to the system.*'
                 });
 
                 await github.rest.issues.update({
