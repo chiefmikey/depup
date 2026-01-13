@@ -69,7 +69,8 @@ jobs:
           echo "$CHANGED_FILES"
 
           # Allow only cron-discover.mjs to be changed (ignore temporary files)
-          INVALID_FILES=$(echo "$CHANGED_FILES" | grep -v "scripts/cron-discover.mjs" | grep -v "package_description.txt" | grep -v "package_version.txt" | grep -v "package_info.json" | grep -v "^$")
+          # Use || true to prevent pipeline from failing if grep finds nothing
+          INVALID_FILES=$(echo "$CHANGED_FILES" | grep -v "scripts/cron-discover.mjs" | grep -v "package_description.txt" | grep -v "package_version.txt" | grep -v "package_info.json" | grep -v "^$" || true)
 
           if [ -n "$INVALID_FILES" ]; then
             echo "❌ PR modifies files other than scripts/cron-discover.mjs:"
