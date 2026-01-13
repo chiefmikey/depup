@@ -58,8 +58,12 @@ jobs:
           # Fetch base and head SHAs for comparison
           git fetch origin ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
 
-          # Check that only cron-discover.mjs was modified (compare base to head SHA)
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          # Use merge-base to find the common ancestor, then compare only PR-introduced changes
+          MERGE_BASE=$(git merge-base ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          echo "Merge base: $MERGE_BASE"
+
+          # Check that only cron-discover.mjs was modified (compare merge-base to head SHA)
+          CHANGED_FILES=$(git diff --name-only $MERGE_BASE ${{ github.event.pull_request.head.sha }})
 
           echo "Changed files:"
           echo "$CHANGED_FILES"
@@ -82,8 +86,9 @@ jobs:
         run: |
           echo "📦 Extracting added package name..."
 
-          # Get the diff of cron-discover.mjs
-          DIFF=$(git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
+          # Get the diff of cron-discover.mjs (use merge-base for accurate comparison)
+          MERGE_BASE=$(git merge-base ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          DIFF=$(git diff $MERGE_BASE ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
 
           # Extract added lines that look like package names (handle both single and double quotes)
           ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -oE "'[^']*'|\"[^\"]*\"" | tr -d "\"'" | grep -E '^[a-zA-Z0-9._-]+$')
