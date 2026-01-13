@@ -124,6 +124,7 @@ class PackageDiscoverer {
       'emotion',
       'eslint',
       'express',
+      'fast-glob',
       'framer-motion',
       'glob',
       'helmet',
