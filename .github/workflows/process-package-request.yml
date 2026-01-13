@@ -92,13 +92,13 @@ jobs:
             # Extract info for PR description (store in outputs, not files)
             DESCRIPTION=$(jq -r '.description // "No description available"' package_info.json)
             VERSION=$(jq -r '.version // "unknown"' package_info.json)
-            
+
             echo "package_description<<EOF" >> $GITHUB_OUTPUT
             echo "$DESCRIPTION" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
-            
+
             echo "package_version=$VERSION" >> $GITHUB_OUTPUT
-            
+
             # Clean up
             rm -f package_info.json
           else
@@ -133,8 +133,16 @@ jobs:
         run: |
           # Remove any temporary files that might have been created
           rm -f package_description.txt package_version.txt package_info.json
-          # Unstage if they were added
-          git reset HEAD package_description.txt package_version.txt package_info.json 2>/dev/null || true
+          # Ensure they're in .gitignore
+          if ! grep -q "package_description.txt" .gitignore 2>/dev/null; then
+            echo "" >> .gitignore
+            echo "# Temporary workflow files" >> .gitignore
+            echo "package_description.txt" >> .gitignore
+            echo "package_version.txt" >> .gitignore
+            echo "package_info.json" >> .gitignore
+          fi
+          # Remove from git index if tracked
+          git rm --cached package_description.txt package_version.txt package_info.json 2>/dev/null || true
           # Remove from working directory
           rm -f package_description.txt package_version.txt package_info.json
           git status
