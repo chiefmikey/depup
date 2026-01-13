@@ -127,35 +127,72 @@ jobs:
 
           # Use the add-package script to modify cron-discover.mjs
           node scripts/add-package.mjs add "$PACKAGE_NAME"
+          
+          # Immediately remove any temporary files that might exist
+          rm -f package_description.txt package_version.txt package_info.json
 
-      - name: Clean Up Temporary Files
+      - name: Clean Up and Prepare for PR
         if: success()
         run: |
-          # Remove any temporary files that might have been created
+          # Remove any temporary files
           rm -f package_description.txt package_version.txt package_info.json
-          # Ensure they're in .gitignore
-          if ! grep -q "package_description.txt" .gitignore 2>/dev/null; then
-            echo "" >> .gitignore
-            echo "# Temporary workflow files" >> .gitignore
-            echo "package_description.txt" >> .gitignore
-            echo "package_version.txt" >> .gitignore
-            echo "package_info.json" >> .gitignore
-          fi
-          # Remove from git index if tracked
-          git rm --cached package_description.txt package_version.txt package_info.json 2>/dev/null || true
-          # Remove from working directory
+          
+          # Remove from git if they were accidentally added
+          git rm --cached --ignore-unmatch package_description.txt package_version.txt package_info.json 2>/dev/null || true
+          
+          # Ensure only cron-discover.mjs is staged
+          git reset HEAD . 2>/dev/null || true
+          git add scripts/cron-discover.mjs
+          
+          # Verify what will be committed
+          echo "Files to be committed:"
+          git diff --cached --name-only
+          
+          # Final cleanup
           rm -f package_description.txt package_version.txt package_info.json
-          git status
 
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          exclude-paths: |
-            package_description.txt
-            package_version.txt
-            package_info.json
+          commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
+
+Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
+
+Package: ${{ steps.parse.outputs.package_name }}
+Reason: ${{ steps.parse.outputs.reasoning }}
+Requested in: #${{ github.event.issue.number }}"
+          title: "feat: add package ${{ steps.parse.outputs.package_name }}"
+          body: |
+            ## 📦 Package Addition: ${{ steps.parse.outputs.package_name }}
+
+            This PR adds `${{ steps.parse.outputs.package_name }}` to the automated package discovery list.
+
+            ### Details
+            - **Package**: `${{ steps.parse.outputs.package_name }}`
+            - **Version**: ${{ steps.npm-info.outputs.package_version }}
+            - **NPM URL**: ${{ steps.parse.outputs.package_url }}
+            - **Description**: ${{ steps.npm-info.outputs.package_description }}
+            - **Reason**: ${{ steps.parse.outputs.reasoning }}
+            - **Requested in**: #${{ github.event.issue.number }}
+
+            ### Validation Results
+            - ✅ Package exists on npm
+            - ✅ Package name format is valid
+            - ✅ Package is not already in the curated list
+            - ✅ Package directory does not already exist
+            - ✅ Basic processing test passed
+
+            ### Next Steps
+            Once this PR is merged, the package will be automatically processed by the scheduled discovery workflow.
+
+            ---
+            *This PR was automatically generated from issue #${{ github.event.issue.number }}*
+          labels: 'automated, package-addition'
+          branch: 'package-addition/${{ steps.parse.outputs.package_name }}'
+          delete-branch: true
+          path: 'scripts/cron-discover.mjs'
           commit-message: "feat: add package ${{ steps.parse.outputs.package_name }} to automated discovery
 
 Added ${{ steps.parse.outputs.package_name }} to the curated package list for automated dependency bumping.
