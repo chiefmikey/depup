@@ -131,6 +131,7 @@ class PackageDiscoverer {
       'knex',
       'leaflet',
       'lodash',
+      'micromatch',
       'minimist',
       'mocha',
       'moment',
