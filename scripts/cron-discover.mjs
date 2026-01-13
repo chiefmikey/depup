@@ -123,6 +123,7 @@ class PackageDiscoverer {
       'eslint',
       'express',
       'framer-motion',
+      'fs-extra',
       'helmet',
       'jest',
       'jquery',
