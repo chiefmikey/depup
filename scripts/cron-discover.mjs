@@ -120,6 +120,7 @@ class PackageDiscoverer {
       'cross-env',
       'd3',
       'dotenv',
+      'dotenv-expand',
       'emotion',
       'eslint',
       'express',
