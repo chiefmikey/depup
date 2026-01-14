@@ -92,19 +92,28 @@ jobs:
           DIFF=$(git diff $MERGE_BASE ${{ github.event.pull_request.head.sha }} -- scripts/cron-discover.mjs)
 
           # Extract added lines that look like package names (handle both single and double quotes)
-          ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -oE "'[^']*'|\"[^\"]*\"" | tr -d "\"'" | grep -E '^[a-zA-Z0-9._-]+$')
+          # Support scoped packages (@scope/package) and regular packages
+          ADDED_PACKAGES=$(echo "$DIFF" | grep '^\+' | grep -oE "'[^']*'|\"[^\"]*\"" | tr -d "\"'" | grep -E '^(@[a-zA-Z0-9._-]+/)?[a-zA-Z0-9._-]+$')
 
           echo "Added packages: $ADDED_PACKAGES"
 
           # Should only be one package added
-          PACKAGE_COUNT=$(echo "$ADDED_PACKAGES" | wc -l)
+          PACKAGE_COUNT=$(echo "$ADDED_PACKAGES" | grep -v '^$' | wc -l | tr -d ' ')
 
-          if [ "$PACKAGE_COUNT" -ne 1 ]; then
-            echo "❌ PR should add exactly one package, found: $PACKAGE_COUNT"
+          if [ "$PACKAGE_COUNT" -eq 0 ]; then
+            echo "❌ PR should add exactly one package, found: 0"
+            echo "Please ensure the PR adds a valid package name to scripts/cron-discover.mjs"
             exit 1
           fi
 
-          PACKAGE_NAME="$ADDED_PACKAGES"
+          if [ "$PACKAGE_COUNT" -gt 1 ]; then
+            echo "❌ PR should add exactly one package, found: $PACKAGE_COUNT"
+            echo "Found packages:"
+            echo "$ADDED_PACKAGES"
+            exit 1
+          fi
+
+          PACKAGE_NAME=$(echo "$ADDED_PACKAGES" | head -1)
           echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
 
           echo "✅ Found package to validate: $PACKAGE_NAME"
@@ -116,15 +125,34 @@ jobs:
 
           echo "🔍 Validating package $PACKAGE_NAME exists on npm..."
 
-          # Check if package exists
-          if npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+          # Check if package exists with timeout
+          if timeout 30s npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+            # Verify the response is valid JSON
+            if [ ! -s package_info.json ] || ! jq -e '.name' package_info.json > /dev/null 2>&1; then
+              echo "❌ Package $PACKAGE_NAME does not exist on npm (invalid response)"
+              rm -f package_info.json
+              exit 1
+            fi
+
             echo "✅ Package $PACKAGE_NAME exists on npm"
 
             # Extract version for processing
             VERSION=$(jq -r '.version // "latest"' package_info.json)
             echo "package_version=$VERSION" >> $GITHUB_OUTPUT
+            
+            # Clean up
+            rm -f package_info.json
           else
-            echo "❌ Package $PACKAGE_NAME does not exist on npm"
+            EXIT_CODE=$?
+            rm -f package_info.json
+            
+            if [ $EXIT_CODE -eq 124 ]; then
+              echo "❌ Timeout checking package $PACKAGE_NAME on npm"
+              echo "The npm registry may be slow or unavailable."
+            else
+              echo "❌ Package $PACKAGE_NAME does not exist on npm"
+              echo "Please verify the package name is correct and the package is published."
+            fi
             exit 1
           fi
         id: npm-check
