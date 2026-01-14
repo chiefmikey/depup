@@ -139,13 +139,13 @@ jobs:
             # Extract version for processing
             VERSION=$(jq -r '.version // "latest"' package_info.json)
             echo "package_version=$VERSION" >> $GITHUB_OUTPUT
-            
+
             # Clean up
             rm -f package_info.json
           else
             EXIT_CODE=$?
             rm -f package_info.json
-            
+
             if [ $EXIT_CODE -eq 124 ]; then
               echo "❌ Timeout checking package $PACKAGE_NAME on npm"
               echo "The npm registry may be slow or unavailable."
