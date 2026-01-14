@@ -33,42 +33,76 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const issueBody = context.payload.issue.body;
-            
-            // Extract package name (remove backticks if present)
-            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?([a-zA-Z0-9._-]+)[`]?/);
-            const packageName = packageNameMatch ? packageNameMatch[1] : '';
-            
+            const issueBody = context.payload.issue.body || '';
+
+            // Extract package name (handle scoped packages @scope/package and regular packages)
+            // Support both with and without backticks
+            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?/);
+            let packageName = packageNameMatch ? packageNameMatch[1].trim() : '';
+
+            // If package name is empty, try extracting from title
+            if (!packageName) {
+              const titleMatch = context.payload.issue.title.match(/Add package:\s*(.+)/i);
+              if (titleMatch) {
+                packageName = titleMatch[1].trim();
+                // Remove brackets if present (e.g., [MISSING])
+                packageName = packageName.replace(/^\[|\]$/g, '');
+              }
+            }
+
             // Extract package URL
             const urlMatch = issueBody.match(/### NPM Package URL\s*\n\s*(https?:\/\/[^\s]+)/);
-            const packageUrl = urlMatch ? urlMatch[1] : '';
-            
+            const packageUrl = urlMatch ? urlMatch[1].trim() : '';
+
             // Extract reasoning
             const reasoningMatch = issueBody.match(/### Why should this package be included\?\s*\n\s*([\s\S]*?)(?=\n###|\n---|$)/);
             const reasoning = reasoningMatch ? reasoningMatch[1].trim().replace(/\n/g, ' ') : '';
-            
+
             // Set outputs
             core.setOutput('package_name', packageName);
             core.setOutput('package_url', packageUrl);
             core.setOutput('reasoning', reasoning);
+
+            console.log('Parsed package name:', packageName || '(empty)');
+            console.log('Parsed package URL:', packageUrl || '(empty)');
             
-            console.log('Parsed package name:', packageName);
-            console.log('Parsed package URL:', packageUrl);
+            // Validate that we have a package name
+            if (!packageName) {
+              core.setFailed('Package name is required but could not be extracted from issue body or title');
+            }
 
       - name: Validate Package Name
+        id: validate-package-name
         run: |
-          if [ -z "${{ steps.parse.outputs.package_name }}" ]; then
+          PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
+          
+          if [ -z "$PACKAGE_NAME" ]; then
             echo "❌ Package name is required"
+            echo "Please ensure the issue body contains a '### Package Name' section with a valid package name."
             exit 1
           fi
 
-          # Check if package name is valid (basic validation)
-          if [[ ! "${{ steps.parse.outputs.package_name }}" =~ ^[a-zA-Z0-9._-]+$ ]]; then
-            echo "❌ Invalid package name format"
+          # Check if package name is valid (supports scoped packages @scope/package and regular packages)
+          # NPM package names can be:
+          # - Regular: lowercase letters, numbers, dots, hyphens, underscores
+          # - Scoped: @scope/package-name (scope can have dots, package follows regular rules)
+          if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9._-]+/)?[a-zA-Z0-9._-]+$ ]]; then
+            echo "❌ Invalid package name format: $PACKAGE_NAME"
+            echo "Package names must follow npm naming conventions:"
+            echo "  - Regular packages: lowercase letters, numbers, dots, hyphens, underscores"
+            echo "  - Scoped packages: @scope/package-name"
+            echo "  - Cannot contain spaces or special characters like / (except for scoped packages)"
             exit 1
           fi
 
-          echo "✅ Package name format is valid"
+          # Additional validation: check for common invalid patterns
+          if [[ "$PACKAGE_NAME" =~ /[^/] ]] && [[ ! "$PACKAGE_NAME" =~ ^@ ]]; then
+            echo "❌ Invalid package name: $PACKAGE_NAME"
+            echo "Only scoped packages (starting with @) can contain slashes"
+            exit 1
+          fi
+
+          echo "✅ Package name format is valid: $PACKAGE_NAME"
 
       - name: Check if Package Already Exists
         id: check-existing
@@ -97,13 +131,25 @@ jobs:
         run: |
           PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
 
-          # Try to fetch package info from npm
-          if npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+          echo "🔍 Checking if package $PACKAGE_NAME exists on npm..."
+
+          # Try to fetch package info from npm with timeout
+          if timeout 30s npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+            # Verify the response is valid JSON and contains package info
+            if [ ! -s package_info.json ] || ! jq -e '.name' package_info.json > /dev/null 2>&1; then
+              echo "❌ Package $PACKAGE_NAME does not exist on npm (invalid response)"
+              rm -f package_info.json
+              exit 1
+            fi
+
             echo "✅ Package $PACKAGE_NAME exists on npm"
 
             # Extract info for PR description (store in outputs, not files)
             DESCRIPTION=$(jq -r '.description // "No description available"' package_info.json)
             VERSION=$(jq -r '.version // "unknown"' package_info.json)
+            
+            # Sanitize description for multiline output (escape newlines)
+            DESCRIPTION=$(echo "$DESCRIPTION" | tr '\n' ' ' | sed 's/  */ /g')
 
             echo "package_description<<EOF" >> $GITHUB_OUTPUT
             echo "$DESCRIPTION" >> $GITHUB_OUTPUT
@@ -114,7 +160,19 @@ jobs:
             # Clean up
             rm -f package_info.json
           else
-            echo "❌ Package $PACKAGE_NAME does not exist on npm"
+            EXIT_CODE=$?
+            rm -f package_info.json
+            
+            if [ $EXIT_CODE -eq 124 ]; then
+              echo "❌ Timeout checking package $PACKAGE_NAME on npm"
+              echo "The npm registry may be slow or unavailable. Please try again later."
+            else
+              echo "❌ Package $PACKAGE_NAME does not exist on npm"
+              echo "Please verify:"
+              echo "  1. The package name is spelled correctly"
+              echo "  2. The package is published on npm (https://www.npmjs.com/package/$PACKAGE_NAME)"
+              echo "  3. For scoped packages, use the format: @scope/package-name"
+            fi
             exit 1
           fi
 
@@ -212,16 +270,50 @@ jobs:
         with:
           script: |
             const issueNumber = ${{ github.event.issue.number }};
-            const packageName = '${{ steps.parse.outputs.package_name }}';
+            const packageName = '${{ steps.parse.outputs.package_name }}' || 'unknown';
+            const jobStatus = '${{ job.status }}';
+            const checkExisting = '${{ steps.check-existing.outputs.exists }}';
+            const parseFailed = '${{ steps.parse.outcome }}' === 'failure';
+            const validateFailed = '${{ steps.validate-package-name.outcome }}' === 'failure';
+            const npmCheckFailed = '${{ steps.npm-info.outcome }}' === 'failure';
 
             let comment = '## 📦 Package Request Processing\n\n';
 
-            if ('${{ steps.check-existing.outputs.exists }}' === 'true') {
+            // Handle different failure scenarios with specific error messages
+            if (parseFailed || !packageName || packageName === 'unknown') {
+              comment += '❌ **Request Failed**: Could not extract package name from issue.\n\n';
+              comment += '**Please ensure your issue includes:**\n';
+              comment += '- A `### Package Name` section with a valid package name\n';
+              comment += '- Package name can be extracted from the issue body or title\n';
+              comment += '- For scoped packages, use format: `@scope/package-name`\n\n';
+              comment += '**Example:**\n';
+              comment += '```\n';
+              comment += '### Package Name\n';
+              comment += '`package-name`\n';
+              comment += '```';
+            } else if (validateFailed) {
+              comment += '❌ **Request Denied**: Invalid package name format.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += 'Package names must follow npm naming conventions:\n';
+              comment += '- Regular packages: lowercase letters, numbers, dots, hyphens, underscores\n';
+              comment += '- Scoped packages: `@scope/package-name`\n';
+              comment += '- Cannot contain spaces or special characters\n\n';
+              comment += 'Please update the issue with a valid package name.';
+            } else if (npmCheckFailed) {
+              comment += '❌ **Request Denied**: Package does not exist on npm.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += '**Please verify:**\n';
+              comment += '1. The package name is spelled correctly\n';
+              comment += '2. The package is published on npm: https://www.npmjs.com/package/' + packageName + '\n';
+              comment += '3. For scoped packages, use the format: `@scope/package-name`\n\n';
+              comment += 'If the package exists but this check failed, it may be a temporary npm registry issue. Please try again later.';
+            } else if (checkExisting === 'true') {
               comment += '❌ **Request Denied**: Package is already in the system.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
               comment += 'This package is already being processed by DepUp automation.\n\n';
               comment += 'You can check the status at: `packages/' + packageName + '`\n\n';
               comment += 'If you believe this is an error, please provide more details.';
-            } else {
+            } else if (jobStatus === 'success') {
               comment += '✅ **Request Accepted**: Processing package `' + packageName + '`\n\n';
               comment += 'A pull request has been created to add this package to the automated discovery list.\n\n';
               comment += 'Once the PR passes all checks and merges, the package will be automatically processed.\n\n';
@@ -231,16 +323,24 @@ jobs:
               comment += '3. Package gets processed in the next discovery run\n';
               comment += '4. Updated package published under `@depup/` scope\n\n';
               comment += 'You will receive updates as the process continues.';
+            } else {
+              comment += '❌ **Request Failed**: An unexpected error occurred.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += 'Please check the workflow logs for details. If this persists, please open a new issue.';
             }
 
             comment += '\n\n---\n*This is an automated response*';
 
-            github.rest.issues.createComment({
-              issue_number: issueNumber,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: comment
-            });
+            try {
+              await github.rest.issues.createComment({
+                issue_number: issueNumber,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+            } catch (error) {
+              console.log('Could not create comment:', error.message);
+            }
 
       - name: Close Issue if Duplicate
         if: steps.check-existing.outputs.exists == 'true'
