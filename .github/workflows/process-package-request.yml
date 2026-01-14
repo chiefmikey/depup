@@ -65,7 +65,7 @@ jobs:
 
             console.log('Parsed package name:', packageName || '(empty)');
             console.log('Parsed package URL:', packageUrl || '(empty)');
-            
+
             // Validate that we have a package name
             if (!packageName) {
               core.setFailed('Package name is required but could not be extracted from issue body or title');
@@ -75,7 +75,7 @@ jobs:
         id: validate-package-name
         run: |
           PACKAGE_NAME="${{ steps.parse.outputs.package_name }}"
-          
+
           if [ -z "$PACKAGE_NAME" ]; then
             echo "❌ Package name is required"
             echo "Please ensure the issue body contains a '### Package Name' section with a valid package name."
@@ -133,6 +133,14 @@ jobs:
 
           echo "🔍 Checking if package $PACKAGE_NAME exists on npm..."
 
+          # Check GitHub API rate limits first
+          if command -v gh >/dev/null 2>&1; then
+            RATE_LIMIT=$(gh api /rate_limit --jq '.rate.remaining' 2>/dev/null || echo "1000")
+            if [ "$RATE_LIMIT" -lt 10 ]; then
+              echo "⚠️  GitHub API rate limit low ($RATE_LIMIT remaining), proceeding with caution..."
+            fi
+          fi
+
           # Try to fetch package info from npm with timeout
           if timeout 30s npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
             # Verify the response is valid JSON and contains package info
@@ -147,9 +155,9 @@ jobs:
             # Extract info for PR description (store in outputs, not files)
             DESCRIPTION=$(jq -r '.description // "No description available"' package_info.json)
             VERSION=$(jq -r '.version // "unknown"' package_info.json)
-            
-            # Sanitize description for multiline output (escape newlines)
-            DESCRIPTION=$(echo "$DESCRIPTION" | tr '\n' ' ' | sed 's/  */ /g')
+
+            # Sanitize description for multiline output (escape newlines and special chars)
+            DESCRIPTION=$(echo "$DESCRIPTION" | tr '\n\r\t' '   ' | sed 's/  */ /g' | cut -c1-500)
 
             echo "package_description<<EOF" >> $GITHUB_OUTPUT
             echo "$DESCRIPTION" >> $GITHUB_OUTPUT
@@ -162,7 +170,7 @@ jobs:
           else
             EXIT_CODE=$?
             rm -f package_info.json
-            
+
             if [ $EXIT_CODE -eq 124 ]; then
               echo "❌ Timeout checking package $PACKAGE_NAME on npm"
               echo "The npm registry may be slow or unavailable. Please try again later."
