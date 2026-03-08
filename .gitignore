@@ -154,6 +154,10 @@ Thumbs.db
 *.tgz
 *.tar.gz
 
+# Rev directory heavy files (published packages don't need source in git)
+packages/*/[0-9]*/rev-*/node_modules/
+packages/*/[0-9]*/rev-*/.test-temp/
+
 # Keep package structure but ignore large binary files
 *.exe
 *.dll

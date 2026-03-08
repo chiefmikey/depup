@@ -15,6 +15,10 @@ jobs:
     name: Sync Packages
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    # Skip if the push was from the cron job (DepUp Bot) to avoid redundant re-sync
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      !contains(github.event.head_commit.message, 'via cron')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
