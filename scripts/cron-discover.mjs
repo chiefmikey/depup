@@ -384,6 +384,7 @@ class PackageDiscoverer {
     'mocha',
     'moment',
     'mongoose',
+    'ms',
     'multer',
     'mysql2',
     'nanoid',
