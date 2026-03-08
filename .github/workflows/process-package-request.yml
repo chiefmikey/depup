@@ -111,8 +111,8 @@ jobs:
         env:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
         run: |
-          # Check if package is already in the curated list (check for both single and double quotes)
-          if grep -q "'$PACKAGE_NAME'" scripts/cron-discover.mjs || grep -q "\"$PACKAGE_NAME\"" scripts/cron-discover.mjs; then
+          # Check if package is already in the curated list (-F for literal match, not regex)
+          if grep -Fq "'$PACKAGE_NAME'" scripts/cron-discover.mjs || grep -Fq "\"$PACKAGE_NAME\"" scripts/cron-discover.mjs; then
             echo "Package $PACKAGE_NAME is already in the curated list"
             echo "exists=true" >> $GITHUB_OUTPUT
             exit 1
@@ -226,10 +226,21 @@ jobs:
             exit 0
           fi
 
-          # Commit and push directly to main
+          # Commit and push directly to main (retry up to 3 times for concurrent push races)
           git commit -m "feat: add package ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
-          git pull --rebase origin main
-          git push origin main
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Push failed after 3 attempts"
+              exit 1
+            fi
+            echo "Push failed on attempt $attempt, retrying..."
+            sleep 2
+          done
 
       - name: Comment on Issue
         if: always()
