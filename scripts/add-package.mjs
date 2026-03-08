@@ -9,8 +9,16 @@ class PackageAdder {
       throw new Error('Package name is required');
     }
 
-    // Validate package name format
-    if (!/^[\w.-]+$/u.test(packageName)) {
+    // Validate package name format (supports scoped packages like @scope/package)
+    const nameParts = packageName.startsWith('@')
+      ? packageName.slice(1).split('/')
+      : [packageName];
+    const validPart = /^[\w.-]+$/u;
+    if (
+      nameParts.length > 2 ||
+      nameParts.length === 0 ||
+      !nameParts.every((part) => validPart.test(part))
+    ) {
       throw new Error(`Invalid package name format: ${packageName}`);
     }
 
