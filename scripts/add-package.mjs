@@ -19,11 +19,11 @@ class PackageAdder {
 
     // Find the curated packages array
     const packageArrayMatch = content.match(
-      /const popularPackages = \[([\S\s]*?)\];/u,
+      /curatedPackageNames = \[([\S\s]*?)\];/u,
     );
     if (!packageArrayMatch) {
       throw new Error(
-        'Could not find popularPackages array in cron-discover.mjs',
+        'Could not find curatedPackageNames array in cron-discover.mjs',
       );
     }
 
@@ -49,13 +49,13 @@ class PackageAdder {
 
     // Format the updated array
     const updatedArrayContent = updatedPackages
-      .map((package_) => `      '${package_}',`)
+      .map((package_) => `    '${package_}',`)
       .join('\n');
 
     // Replace the old array with the updated one
     const updatedContent = content.replace(
-      /const popularPackages = \[([\S\s]*?)\];/u,
-      `const popularPackages = [\n${updatedArrayContent}\n    ];`,
+      /curatedPackageNames = \[([\S\s]*?)\];/u,
+      `curatedPackageNames = [\n${updatedArrayContent}\n  ];`,
     );
 
     // Write back to file
@@ -81,11 +81,11 @@ class PackageAdder {
 
     // Find the curated packages array
     const packageArrayMatch = content.match(
-      /const popularPackages = \[([\S\s]*?)\];/u,
+      /curatedPackageNames = \[([\S\s]*?)\];/u,
     );
     if (!packageArrayMatch) {
       throw new Error(
-        'Could not find popularPackages array in cron-discover.mjs',
+        'Could not find curatedPackageNames array in cron-discover.mjs',
       );
     }
 
@@ -111,13 +111,13 @@ class PackageAdder {
 
     // Format the updated array
     const updatedArrayContent = updatedPackages
-      .map((package_) => `      '${package_}',`)
+      .map((package_) => `    '${package_}',`)
       .join('\n');
 
     // Replace the old array with the updated one
     const updatedContent = content.replace(
-      /const popularPackages = \[([\S\s]*?)\];/u,
-      `const popularPackages = [\n${updatedArrayContent}\n    ];`,
+      /curatedPackageNames = \[([\S\s]*?)\];/u,
+      `curatedPackageNames = [\n${updatedArrayContent}\n  ];`,
     );
 
     // Write back to file
@@ -139,11 +139,11 @@ class PackageAdder {
 
     // Find the curated packages array
     const packageArrayMatch = content.match(
-      /const popularPackages = \[([\S\s]*?)\];/u,
+      /curatedPackageNames = \[([\S\s]*?)\];/u,
     );
     if (!packageArrayMatch) {
       throw new Error(
-        'Could not find popularPackages array in cron-discover.mjs',
+        'Could not find curatedPackageNames array in cron-discover.mjs',
       );
     }
 
