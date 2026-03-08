@@ -353,6 +353,7 @@ class PackageDiscoverer {
     'dotenv-expand',
     'drizzle-orm',
     'emotion',
+    'es5-shim',
     'esbuild',
     'eslint',
     'execa',
