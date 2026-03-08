@@ -329,6 +329,7 @@ class PackageDiscoverer {
   concurrentPackages = 10;
   curatedPackageNames = [
     '@types/node',
+    '7zip-bin',
     'angular',
     'axios',
     'better-sqlite3',
