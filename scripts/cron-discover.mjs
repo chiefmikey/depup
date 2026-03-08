@@ -371,7 +371,6 @@ class PackageDiscoverer {
     'husky',
     'inquirer',
     'ioredis',
-    'is_number',
     'is-odd',
     'jest',
     'jquery',
