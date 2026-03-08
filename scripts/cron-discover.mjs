@@ -328,6 +328,7 @@ class PackageDiscoverer {
   }
   concurrentPackages = 10;
   curatedPackageNames = [
+    'a',
     'angular',
     'axios',
     'better-sqlite3',
