@@ -333,6 +333,7 @@ class PackageDiscoverer {
     'better-sqlite3',
     'bootstrap',
     'c8',
+    'camelcase',
     'chai',
     'chalk',
     'chart.js',
