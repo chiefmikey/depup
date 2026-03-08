@@ -391,6 +391,7 @@ class PackageDiscoverer {
     'nodemailer',
     'nodemon',
     'np',
+    'nullbyte',
     'nuxt',
     'nyc',
     'ora',
