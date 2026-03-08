@@ -328,6 +328,7 @@ class PackageDiscoverer {
   }
   concurrentPackages = 10;
   curatedPackageNames = [
+    '@types/node',
     'a',
     'angular',
     'axios',
