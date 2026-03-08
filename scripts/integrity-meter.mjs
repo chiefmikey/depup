@@ -3,13 +3,15 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 class IntegrityMeter {
-  constructor() {
-    this.votesFile = 'votes.json';
-    this.integrityFile = 'integrity.json';
-  }
+  constructor() {}
 
   async main() {
-    const [, , action, packageName, version, revision, vote] = process.argv; // eslint-disable-line unicorn/no-unreadable-array-destructuring
+    const arguments_ = process.argv.slice(2);
+    const action = arguments_[0];
+    const packageName = arguments_[1];
+    const version = arguments_[2];
+    const revision = arguments_[3];
+    const vote = arguments_[4];
 
     if (!action || !packageName) {
       console.error(
@@ -77,10 +79,10 @@ class IntegrityMeter {
     }
     if (!votes[version][revision]) {
       votes[version][revision] = {
-        up: 0,
+        details: [],
         down: 0,
         neutral: 0,
-        details: [],
+        up: 0,
       };
     }
 
@@ -88,11 +90,11 @@ class IntegrityMeter {
     const voteId = Date.now().toString();
     votes[version][revision][vote]++;
     votes[version][revision].details.push({
-      id: voteId,
-      vote,
       description: description || '',
+      id: voteId,
       timestamp: new Date().toISOString(),
       user: process.env.USER || 'anonymous',
+      vote,
     });
 
     // Save votes
@@ -164,34 +166,41 @@ class IntegrityMeter {
         console.log(`\n📦 Version ${version}:`);
 
         for (const [revision, data] of Object.entries(versionData)) {
-          const total = data.up + data.down + data.neutral;
-          const score =
-            total > 0 ? (((data.up - data.down) / total) * 100).toFixed(1) : 0;
-          const status = this.getStatusEmoji(score);
-
-          console.log(
-            `  ${status} Revision ${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
-          );
-
-          if (data.details.length > 0) {
-            console.log('    Recent feedback:');
-            for (const detail of data.details.slice(-3)) {
-              const emoji =
-                detail.vote === 'up'
-                  ? '👍'
-                  : detail.vote === 'down'
-                    ? '👎'
-                    : '😐';
-              console.log(
-                `      ${emoji} ${detail.description || 'No description'}`,
-              );
-            }
-          }
+          this.printRevisionReport(revision, data);
         }
       }
     } catch {
       console.log('No data available for this package');
     }
+  }
+
+  printRevisionReport(revision, data) {
+    const total = data.up + data.down + data.neutral;
+    const score =
+      total > 0 ? (((data.up - data.down) / total) * 100).toFixed(1) : 0;
+    const status = this.getStatusEmoji(score);
+
+    console.log(
+      `  ${status} Revision ${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
+    );
+
+    if (data.details.length > 0) {
+      console.log('    Recent feedback:');
+      for (const detail of data.details.slice(-3)) {
+        const emoji = this.getVoteEmoji(detail.vote);
+        console.log(`      ${emoji} ${detail.description || 'No description'}`);
+      }
+    }
+  }
+
+  getVoteEmoji(vote) {
+    if (vote === 'up') {
+      return '👍';
+    }
+    if (vote === 'down') {
+      return '👎';
+    }
+    return '😐';
   }
 
   async updateIntegrityData(packageDirectory, version, revision, voteData) {
@@ -216,12 +225,12 @@ class IntegrityMeter {
     const score = total > 0 ? ((voteData.up - voteData.down) / total) * 100 : 0;
 
     integrityData[version][revision].integrity = {
+      downVotes: voteData.down,
+      lastUpdated: new Date().toISOString(),
+      neutralVotes: voteData.neutral,
       score: Math.round(score),
       totalVotes: total,
       upVotes: voteData.up,
-      downVotes: voteData.down,
-      neutralVotes: voteData.neutral,
-      lastUpdated: new Date().toISOString(),
     };
 
     await fs.writeFile(
@@ -242,11 +251,19 @@ class IntegrityMeter {
   }
 
   getStatusEmoji(score) {
-    if (score >= 80) return '🟢';
-    if (score >= 60) return '🟡';
-    if (score >= 40) return '🟠';
+    if (score >= 80) {
+      return '🟢';
+    }
+    if (score >= 60) {
+      return '🟡';
+    }
+    if (score >= 40) {
+      return '🟠';
+    }
     return '🔴';
   }
+  votesFile = 'votes.json';
+  integrityFile = 'integrity.json';
 }
 
 // Run if called directly

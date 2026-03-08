@@ -90,10 +90,10 @@ class SelfHealer {
   async diagnoseIssues() {
     const packages = await this.getAllPackages();
     const issues = {
-      missingReadmes: [],
       corruptIntegrity: [],
       invalidStructure: [],
       missingIntegrity: [],
+      missingReadmes: [],
     };
 
     for (const package_ of packages) {
@@ -144,10 +144,15 @@ class SelfHealer {
     for (const package_ of packages) {
       const readmePath = path.join(package_.path, 'README.md');
 
+      let readmeExists = false;
       try {
         await fs.access(readmePath);
-        continue; // README already exists
+        readmeExists = true;
       } catch {
+        // README doesn't exist
+      }
+
+      if (!readmeExists) {
         // Generate README
         try {
           await this.generateReadme(package_.name);
@@ -177,7 +182,7 @@ class SelfHealer {
 
       try {
         const data = await fs.readFile(integrityPath);
-        let integrityData = JSON.parse(data);
+        const integrityData = JSON.parse(data);
 
         // Validate and repair
         if (this.repairIntegrityData(integrityData)) {
@@ -207,20 +212,18 @@ class SelfHealer {
     const spinner = ora('Fixing package structures...').start();
 
     for (const package_ of packages) {
-      if (await this.hasValidStructure(package_)) {
-        continue;
-      }
-
-      try {
-        // Try to reconstruct structure from existing data
-        await this.reconstructPackageStructure(package_);
-        fixed++;
-        spinner.text = `Fixed structure for ${package_.name} (${fixed})`;
-      } catch (error) {
-        console.warn(
-          `Could not fix structure for ${package_.name}:`,
-          error.message,
-        );
+      if (!(await this.hasValidStructure(package_))) {
+        try {
+          // Try to reconstruct structure from existing data
+          await this.reconstructPackageStructure(package_);
+          fixed++;
+          spinner.text = `Fixed structure for ${package_.name} (${fixed})`;
+        } catch (error) {
+          console.warn(
+            `Could not fix structure for ${package_.name}:`,
+            error.message,
+          );
+        }
       }
     }
 
@@ -237,10 +240,15 @@ class SelfHealer {
     for (const package_ of packages) {
       const integrityPath = path.join(package_.path, 'integrity.json');
 
+      let integrityExists = false;
       try {
         await fs.access(integrityPath);
-        continue; // Integrity file exists
+        integrityExists = true;
       } catch {
+        // Integrity file doesn't exist
+      }
+
+      if (!integrityExists) {
         // Create basic integrity structure
         try {
           await this.createBasicIntegrity(package_);
@@ -286,15 +294,22 @@ class SelfHealer {
   }
 
   isValidIntegrityData(data) {
-    if (typeof data !== 'object' || data === null) return false;
+    if (typeof data !== 'object' || data === null) {
+      return false;
+    }
 
-    for (const [version, versionData] of Object.entries(data)) {
-      if (typeof versionData !== 'object' || versionData === null) return false;
+    for (const [, versionData] of Object.entries(data)) {
+      if (typeof versionData !== 'object' || versionData === null) {
+        return false;
+      }
 
-      for (const [revision, revisionData] of Object.entries(versionData)) {
-        if (typeof revisionData !== 'object' || revisionData === null)
+      for (const [, revisionData] of Object.entries(versionData)) {
+        if (typeof revisionData !== 'object' || revisionData === null) {
           return false;
-        if (!revisionData.version || !revisionData.timestamp) return false;
+        }
+        if (!revisionData.version || !revisionData.timestamp) {
+          return false;
+        }
       }
     }
 
@@ -304,8 +319,8 @@ class SelfHealer {
   repairIntegrityData(data) {
     let repaired = false;
 
-    for (const [version, versionData] of Object.entries(data)) {
-      for (const [revision, revisionData] of Object.entries(versionData)) {
+    for (const [, versionData] of Object.entries(data)) {
+      for (const [, revisionData] of Object.entries(versionData)) {
         if (!revisionData.timestamp) {
           revisionData.timestamp = new Date().toISOString();
           repaired = true;
@@ -326,7 +341,7 @@ class SelfHealer {
 
       // Should have at least one version directory
       const versionDirectories = entries.filter(
-        (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/.test(entry.name),
+        (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/u.test(entry.name),
       );
 
       return versionDirectories.length > 0;
@@ -352,11 +367,11 @@ class SelfHealer {
       const entries = await fs.readdir(package_.path, { withFileTypes: true });
       const versions = entries
         .filter(
-          (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/.test(entry.name),
+          (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/u.test(entry.name),
         )
         .map((entry) => entry.name)
-        .sort()
-        .reverse();
+        .toSorted()
+        .toReversed();
 
       if (versions.length > 0) {
         latestVersion = versions[0];
@@ -368,9 +383,9 @@ class SelfHealer {
     const integrityData = {
       [latestVersion]: {
         0: {
-          version: `${latestVersion}-depup.0`,
-          timestamp: new Date().toISOString(),
           status: 'created',
+          timestamp: new Date().toISOString(),
+          version: `${latestVersion}-depup.0`,
         },
       },
     };
@@ -386,12 +401,14 @@ class SelfHealer {
 
     try {
       execSync(`node scripts/generate-readme.mjs ${packageName}`, {
-        stdio: 'pipe',
         cwd: this.rootDirectory,
+        stdio: 'pipe',
         timeout: 30_000,
       });
     } catch (error) {
-      throw new Error(`Failed to generate README: ${error.message}`);
+      throw new Error(`Failed to generate README: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 }

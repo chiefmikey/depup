@@ -2,8 +2,9 @@
 import { execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { Command } from 'commander';
+
 import chalk from 'chalk';
+import { Command } from 'commander';
 import ora from 'ora';
 
 class SecurityScanner {
@@ -11,9 +12,9 @@ class SecurityScanner {
     this.scanPath = process.env.SCAN_PATH || '/scan';
     this.reportPath = process.env.REPORT_PATH || '/reports';
     this.results = {
-      malware: { status: 'pending', details: [] },
-      vulnerabilities: { status: 'pending', details: [] },
-      compatibility: { status: 'pending', details: [] }
+      compatibility: { details: [], status: 'pending' },
+      malware: { details: [], status: 'pending' },
+      vulnerabilities: { details: [], status: 'pending' },
     };
   }
 
@@ -47,7 +48,14 @@ class SecurityScanner {
   }
 
   async performFullScan(options) {
-    const { path: scanPath, report: reportPath, debug } = options;
+    const {
+      compatibilityOnly,
+      debug,
+      malwareOnly,
+      path: scanPath,
+      report: reportPath,
+      vulnOnly,
+    } = options;
 
     console.log(chalk.blue('🔍 DepUp Security Scanner'));
     console.log(chalk.gray(`Scan Path: ${scanPath}`));
@@ -60,18 +68,18 @@ class SecurityScanner {
 
     try {
       // Malware scanning
-      if (!options.vulnOnly && !options.compatibilityOnly) {
+      if (!vulnOnly && !compatibilityOnly) {
         await this.performMalwareScan(scanPath, debug);
       }
 
       // Vulnerability scanning
-      if (!options.malwareOnly && !options.compatibilityOnly) {
-        await this.performVulnerabilityScan(scanPath, debug);
+      if (!malwareOnly && !compatibilityOnly) {
+        await this.performVulnerabilityScan(scanPath);
       }
 
       // Compatibility analysis
-      if (!options.malwareOnly && !options.vulnOnly) {
-        await this.performCompatibilityAnalysis(scanPath, debug);
+      if (!malwareOnly && !vulnOnly) {
+        await this.performCompatibilityAnalysis(scanPath);
       }
 
       // Generate final report
@@ -86,7 +94,6 @@ class SecurityScanner {
       if (overallStatus === 'failed') {
         process.exit(1);
       }
-
     } catch (error) {
       await this.generateErrorReport(reportPath, error);
       throw error;
@@ -115,39 +122,41 @@ class SecurityScanner {
 
         try {
           execSync(clamCommand, {
-            timeout: 300000, // 5 minutes
-            stdio: debug ? 'inherit' : 'pipe'
+            stdio: debug ? 'inherit' : 'pipe',
+            timeout: 300_000, // 5 minutes
           });
 
           this.results.malware = {
-            status: 'passed',
             details: ['No malware detected by ClamAV'],
-            timestamp: new Date().toISOString()
+            status: 'passed',
+            timestamp: new Date().toISOString(),
           };
-
         } catch (error) {
           if (error.status === 1) {
             // Infected files found
             const logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
             this.results.malware = {
-              status: 'failed',
               details: ['Malware detected by ClamAV', logContent],
-              timestamp: new Date().toISOString()
+              status: 'failed',
+              timestamp: new Date().toISOString(),
             };
           } else {
-            throw new Error(`ClamAV scan failed: ${error.message}`);
+            throw new Error(`ClamAV scan failed: ${error.message}`, {
+              cause: error,
+            });
           }
         }
       } else {
         // Fallback: Basic file pattern analysis
         this.results.malware = {
-          status: 'warning',
           details: ['ClamAV not available - using basic pattern analysis'],
-          timestamp: new Date().toISOString()
+          status: 'warning',
+          timestamp: new Date().toISOString(),
         };
 
         // Still perform advanced checks without ClamAV
-        const advancedFindings = await this.performAdvancedMalwareChecks(scanPath);
+        const advancedFindings =
+          await this.performAdvancedMalwareChecks(scanPath);
         if (advancedFindings && advancedFindings.length > 0) {
           this.results.malware.status = 'warning';
           this.results.malware.details.push(...advancedFindings);
@@ -157,13 +166,12 @@ class SecurityScanner {
       }
 
       spinner.succeed('Malware scan completed');
-
     } catch (error) {
       spinner.fail('Malware scan failed');
       this.results.malware = {
-        status: 'error',
         details: [error.message],
-        timestamp: new Date().toISOString()
+        status: 'error',
+        timestamp: new Date().toISOString(),
       };
       throw error;
     }
@@ -171,17 +179,26 @@ class SecurityScanner {
 
   async performAdvancedMalwareChecks(scanPath) {
     // Check for suspicious files and patterns
-    const suspiciousFiles = [
+    const suspiciousFiles = new Set([
       '.DS_Store',
       'Thumbs.db',
       'desktop.ini',
-      'autorun.inf'
-    ];
+      'autorun.inf',
+    ]);
 
-    const suspiciousExtensions = [
-      '.exe', '.bat', '.cmd', '.scr', '.pif', '.com',
-      '.vbs', '.js', '.jar', '.dll', '.sys'
-    ];
+    const suspiciousExtensions = new Set([
+      '.exe',
+      '.bat',
+      '.cmd',
+      '.scr',
+      '.pif',
+      '.com',
+      '.vbs',
+      '.js',
+      '.jar',
+      '.dll',
+      '.sys',
+    ]);
 
     const findings = [];
 
@@ -192,13 +209,13 @@ class SecurityScanner {
         const fileName = path.basename(file);
 
         // Check for suspicious filenames
-        if (suspiciousFiles.includes(fileName.toLowerCase())) {
+        if (suspiciousFiles.has(fileName.toLowerCase())) {
           findings.push(`Suspicious file detected: ${file}`);
         }
 
         // Check for suspicious extensions
-        const ext = path.extname(file).toLowerCase();
-        if (suspiciousExtensions.includes(ext)) {
+        const extension = path.extname(file).toLowerCase();
+        if (suspiciousExtensions.has(extension)) {
           findings.push(`Suspicious file extension: ${file}`);
         }
 
@@ -212,7 +229,6 @@ class SecurityScanner {
         this.results.malware.details.push(...findings);
         this.results.malware.status = 'warning';
       }
-
     } catch (error) {
       console.warn('Advanced malware check failed:', error.message);
     }
@@ -242,7 +258,7 @@ class SecurityScanner {
     return files;
   }
 
-  async performVulnerabilityScan(scanPath, debug) {
+  async performVulnerabilityScan(scanPath) {
     const spinner = ora('Scanning for vulnerabilities...').start();
 
     try {
@@ -253,19 +269,41 @@ class SecurityScanner {
       await this.runSnykScan(scanPath);
 
       // OWASP Dependency Check (if available)
-      await this.runOwaspDependencyCheck(scanPath);
+      await this.runOwaspDependencyCheck();
 
       spinner.succeed('Vulnerability scan completed');
-
     } catch (error) {
       spinner.fail('Vulnerability scan failed');
       this.results.vulnerabilities = {
-        status: 'error',
         details: [error.message],
-        timestamp: new Date().toISOString()
+        status: 'error',
+        timestamp: new Date().toISOString(),
       };
       throw error;
     }
+  }
+
+  buildVulnerabilityResult(vulnerabilities) {
+    if (vulnerabilities.critical > 0 || vulnerabilities.high > 0) {
+      return {
+        details: [
+          `Critical: ${vulnerabilities.critical}`,
+          `High: ${vulnerabilities.high}`,
+          `Moderate: ${vulnerabilities.moderate}`,
+          `Low: ${vulnerabilities.low}`,
+        ],
+        status: 'failed',
+        timestamp: new Date().toISOString(),
+      };
+    }
+
+    return {
+      details: [
+        `Found ${vulnerabilities.total} vulnerabilities (moderate/low severity)`,
+      ],
+      status: 'warning',
+      timestamp: new Date().toISOString(),
+    };
   }
 
   async runNpmAudit(scanPath) {
@@ -276,9 +314,9 @@ class SecurityScanner {
       } catch {
         console.warn('npm not available, skipping npm audit');
         this.results.vulnerabilities = {
-          status: 'warning',
           details: ['npm not available for vulnerability scanning'],
-          timestamp: new Date().toISOString()
+          status: 'warning',
+          timestamp: new Date().toISOString(),
         };
         return;
       }
@@ -287,59 +325,41 @@ class SecurityScanner {
 
       const result = execSync(auditCommand, {
         cwd: scanPath,
-        timeout: 120000, // 2 minutes
+        encoding: 'utf8',
         stdio: 'pipe',
-        encoding: 'utf8'
+        timeout: 120_000, // 2 minutes
       });
 
       const auditData = JSON.parse(result);
 
       if (auditData.metadata?.vulnerabilities?.total > 0) {
-        const vulnerabilities = auditData.metadata.vulnerabilities;
-
-        if (vulnerabilities.critical > 0 || vulnerabilities.high > 0) {
-          this.results.vulnerabilities = {
-            status: 'failed',
-            details: [
-              `Critical: ${vulnerabilities.critical}`,
-              `High: ${vulnerabilities.high}`,
-              `Moderate: ${vulnerabilities.moderate}`,
-              `Low: ${vulnerabilities.low}`
-            ],
-            timestamp: new Date().toISOString()
-          };
-        } else {
-          this.results.vulnerabilities = {
-            status: 'warning',
-            details: [`Found ${vulnerabilities.total} vulnerabilities (moderate/low severity)`],
-            timestamp: new Date().toISOString()
-          };
-        }
+        const { vulnerabilities } = auditData.metadata;
+        this.results.vulnerabilities =
+          this.buildVulnerabilityResult(vulnerabilities);
       } else {
         this.results.vulnerabilities = {
-          status: 'passed',
           details: ['No vulnerabilities found by npm audit'],
-          timestamp: new Date().toISOString()
+          status: 'passed',
+          timestamp: new Date().toISOString(),
         };
       }
-
     } catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
       if (error.status === 1 && error.stdout) {
         const auditData = JSON.parse(error.stdout);
         if (auditData.metadata?.vulnerabilities?.total > 0) {
-          const vulnerabilities = auditData.metadata.vulnerabilities;
+          const { vulnerabilities } = auditData.metadata;
           this.results.vulnerabilities = {
-            status: 'failed',
             details: [
               `npm audit found ${vulnerabilities.total} vulnerabilities`,
-              `Critical: ${vulnerabilities.critical}, High: ${vulnerabilities.high}`
+              `Critical: ${vulnerabilities.critical}, High: ${vulnerabilities.high}`,
             ],
-            timestamp: new Date().toISOString()
+            status: 'failed',
+            timestamp: new Date().toISOString(),
           };
         }
       } else {
-        throw new Error(`npm audit failed: ${error.message}`);
+        throw new Error(`npm audit failed: ${error.message}`, { cause: error });
       }
     }
   }
@@ -350,34 +370,37 @@ class SecurityScanner {
 
       const result = execSync(snykCommand, {
         cwd: scanPath,
-        timeout: 180000, // 3 minutes
+        encoding: 'utf8',
         stdio: 'pipe',
-        encoding: 'utf8'
+        timeout: 180_000, // 3 minutes
       });
 
       const snykData = JSON.parse(result);
 
       if (snykData.vulnerabilities && snykData.vulnerabilities.length > 0) {
-        const critical = snykData.vulnerabilities.filter(v => v.severity === 'critical').length;
-        const high = snykData.vulnerabilities.filter(v => v.severity === 'high').length;
+        const critical = snykData.vulnerabilities.filter(
+          (v) => v.severity === 'critical',
+        ).length;
+        const high = snykData.vulnerabilities.filter(
+          (v) => v.severity === 'high',
+        ).length;
 
         if (critical > 0 || high > 0) {
           this.results.vulnerabilities.status = 'failed';
           this.results.vulnerabilities.details.push(
-            `Snyk found ${snykData.vulnerabilities.length} vulnerabilities (${critical} critical, ${high} high)`
+            `Snyk found ${snykData.vulnerabilities.length} vulnerabilities (${critical} critical, ${high} high)`,
           );
         }
       } else {
         this.results.vulnerabilities.details.push('Snyk scan passed');
       }
-
     } catch (error) {
       if (error.status === 1) {
         // Snyk found vulnerabilities
         const snykData = JSON.parse(error.stdout || error.stderr);
         this.results.vulnerabilities.status = 'failed';
         this.results.vulnerabilities.details.push(
-          `Snyk found ${snykData.vulnerabilities?.length || 'multiple'} vulnerabilities`
+          `Snyk found ${snykData.vulnerabilities?.length || 'multiple'} vulnerabilities`,
         );
       } else {
         console.warn('Snyk scan unavailable or failed:', error.message);
@@ -385,37 +408,36 @@ class SecurityScanner {
     }
   }
 
-  async runOwaspDependencyCheck(scanPath) {
+  async runOwaspDependencyCheck() {
     // Placeholder for OWASP Dependency Check integration
     // This would require additional setup and tools
     console.log(chalk.gray('OWASP Dependency Check not yet configured'));
   }
 
-  async performCompatibilityAnalysis(scanPath, debug) {
+  async performCompatibilityAnalysis(scanPath) {
     const spinner = ora('Analyzing dependency compatibility...').start();
 
     try {
       const packageJsonPath = path.join(scanPath, 'package.json');
 
       if (await this.fileExists(packageJsonPath)) {
-        const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
+        const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
         await this.analyzeDependencies(packageJson);
       }
 
       this.results.compatibility = {
-        status: 'passed',
         details: ['Dependency compatibility analysis completed'],
-        timestamp: new Date().toISOString()
+        status: 'passed',
+        timestamp: new Date().toISOString(),
       };
 
       spinner.succeed('Compatibility analysis completed');
-
     } catch (error) {
       spinner.fail('Compatibility analysis failed');
       this.results.compatibility = {
-        status: 'error',
         details: [error.message],
-        timestamp: new Date().toISOString()
+        status: 'error',
+        timestamp: new Date().toISOString(),
       };
       throw error;
     }
@@ -424,7 +446,7 @@ class SecurityScanner {
   async analyzeDependencies(packageJson) {
     const dependencies = {
       ...packageJson.dependencies,
-      ...packageJson.devDependencies
+      ...packageJson.devDependencies,
     };
 
     // Check for known problematic combinations
@@ -432,8 +454,8 @@ class SecurityScanner {
 
     // React ecosystem checks
     if (dependencies.react && dependencies['react-dom']) {
-      const reactVersion = dependencies.react.replace(/[\^~]/, '');
-      const reactDomVersion = dependencies['react-dom'].replace(/[\^~]/, '');
+      const reactVersion = dependencies.react.replace(/[\^~]/u, '');
+      const reactDomVersion = dependencies['react-dom'].replace(/[\^~]/u, '');
 
       if (reactVersion.startsWith('18') && !reactDomVersion.startsWith('18')) {
         compatibilityIssues.push('React 18 requires react-dom 18');
@@ -442,10 +464,16 @@ class SecurityScanner {
 
     // Webpack ecosystem checks
     if (dependencies.webpack && dependencies['webpack-cli']) {
-      const webpackVersion = dependencies.webpack.replace(/[\^~]/, '');
-      const webpackCliVersion = dependencies['webpack-cli'].replace(/[\^~]/, '');
+      const webpackVersion = dependencies.webpack.replace(/[\^~]/u, '');
+      const webpackCliVersion = dependencies['webpack-cli'].replace(
+        /[\^~]/u,
+        '',
+      );
 
-      if (webpackVersion.startsWith('5') && !webpackCliVersion.startsWith('4')) {
+      if (
+        webpackVersion.startsWith('5') &&
+        !webpackCliVersion.startsWith('4')
+      ) {
         compatibilityIssues.push('Webpack 5 requires webpack-cli 4+');
       }
     }
@@ -476,7 +504,7 @@ class SecurityScanner {
     const statuses = [
       this.results.malware.status,
       this.results.vulnerabilities.status,
-      this.results.compatibility.status
+      this.results.compatibility.status,
     ];
 
     if (statuses.includes('failed') || statuses.includes('error')) {
@@ -487,7 +515,9 @@ class SecurityScanner {
       return 'warning';
     }
 
-    if (statuses.every(status => status === 'passed' || status === 'pending')) {
+    if (
+      statuses.every((status) => status === 'passed' || status === 'pending')
+    ) {
       return 'passed';
     }
 
@@ -496,25 +526,25 @@ class SecurityScanner {
 
   async generateSecurityReport(reportPath, startTime) {
     const report = {
-      timestamp: new Date().toISOString(),
       duration: Date.now() - startTime,
+      metadata: {
+        container: process.env.HOSTNAME || 'unknown',
+        scanner_version: '1.0.0',
+      },
       overall_status: this.determineOverallStatus(),
       scans: this.results,
-      metadata: {
-        scanner_version: '1.0.0',
-        container: process.env.HOSTNAME || 'unknown'
-      }
+      timestamp: new Date().toISOString(),
     };
 
     // Ensure report directory exists
     const reportDir = path.dirname(reportPath);
     await fs.mkdir(reportDir, { recursive: true });
 
-    const reportFile = reportPath.replace(/\.json$/, `-${Date.now()}.json`);
+    const reportFile = reportPath.replace(/\.json$/u, `-${Date.now()}.json`);
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
 
     // Generate human-readable summary
-    const summaryFile = reportPath.replace(/\.json$/, `-${Date.now()}.txt`);
+    const summaryFile = reportPath.replace(/\.json$/u, `-${Date.now()}.txt`);
     const summary = this.generateSummaryReport(report);
     await fs.writeFile(summaryFile, summary);
 
@@ -549,15 +579,18 @@ Overall Status: ${report.overall_status.toUpperCase()}
 
   async generateErrorReport(reportPath, error) {
     const errorReport = {
-      timestamp: new Date().toISOString(),
       error: {
         message: error.message,
-        stack: error.stack
+        stack: error.stack,
       },
-      partial_results: this.results
+      partial_results: this.results,
+      timestamp: new Date().toISOString(),
     };
 
-    const errorFile = path.join(reportPath, `security-error-${Date.now()}.json`);
+    const errorFile = path.join(
+      reportPath,
+      `security-error-${Date.now()}.json`,
+    );
     await fs.writeFile(errorFile, JSON.stringify(errorReport, null, 2));
   }
 }

@@ -3,13 +3,13 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 import fetch from 'npm-registry-fetch';
+import semver from 'semver';
 
 class PackageSyncer {
   constructor() {
-    this.registry = 'https://registry.npmjs.org';
-    this.rateLimitDelay = 2000; // 2 seconds between batches
-    this.maxPackagesPerRun = 50; // Limit packages per sync run
-    this.concurrentPackages = 5; // Process this many packages in parallel
+    // 2 seconds between batches
+    // Limit packages per sync run
+    // Process this many packages in parallel
   }
 
   async main() {
@@ -21,13 +21,25 @@ class PackageSyncer {
       console.log(`Found ${existingPackages.length} existing packages`);
 
       // Process packages in parallel batches
-      const packagesToProcess = existingPackages.slice(0, this.maxPackagesPerRun);
+      const packagesToProcess = existingPackages.slice(
+        0,
+        this.maxPackagesPerRun,
+      );
       const syncedPackages = [];
 
       // Process in batches to avoid overwhelming the system
-      for (let i = 0; i < packagesToProcess.length; i += this.concurrentPackages) {
-        const batch = packagesToProcess.slice(i, i + this.concurrentPackages);
-        console.log(`Processing batch ${Math.floor(i / this.concurrentPackages) + 1} (${batch.length} packages)...`);
+      for (
+        let index = 0;
+        index < packagesToProcess.length;
+        index += this.concurrentPackages
+      ) {
+        const batch = packagesToProcess.slice(
+          index,
+          index + this.concurrentPackages,
+        );
+        console.log(
+          `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+        );
 
         // Process batch in parallel
         const batchResults = await Promise.allSettled(
@@ -35,12 +47,17 @@ class PackageSyncer {
             try {
               console.log(`Syncing ${package_.name}...`);
               const synced = await this.syncPackage(package_);
-              return { name: package_.name, synced, success: true };
+              return { name: package_.name, success: true, synced };
             } catch (error) {
               console.warn(`Failed to sync ${package_.name}:`, error.message);
-              return { name: package_.name, synced: false, success: false, error: error.message };
+              return {
+                error: error.message,
+                name: package_.name,
+                success: false,
+                synced: false,
+              };
             }
-          })
+          }),
         );
 
         // Collect successful syncs
@@ -51,7 +68,7 @@ class PackageSyncer {
         }
 
         // Rate limiting between batches (not between individual packages)
-        if (i + this.concurrentPackages < packagesToProcess.length) {
+        if (index + this.concurrentPackages < packagesToProcess.length) {
           await this.sleep(this.rateLimitDelay);
         }
       }
@@ -86,12 +103,12 @@ class PackageSyncer {
             // Get the latest version from integrity data
             const versions = Object.keys(integrityData);
             if (versions.length > 0) {
-              const latestVersion = versions.sort().pop();
+              const latestVersion = versions.toSorted().pop();
               packages.push({
-                name: entry.name,
-                version: latestVersion,
-                path: packageDirectory,
                 integrityData,
+                name: entry.name,
+                path: packageDirectory,
+                version: latestVersion,
               });
             }
           } catch {
@@ -108,6 +125,12 @@ class PackageSyncer {
 
   async syncPackage(package_) {
     try {
+      // Skip recently processed packages (e.g., just handled by discover)
+      if (await this.wasRecentlyProcessed(package_)) {
+        console.log(`  ${package_.name} was recently processed, skipping`);
+        return false;
+      }
+
       // Get latest version from npm
       const latestManifest = await fetch.json(`/${package_.name}`, {
         registry: this.registry,
@@ -150,9 +173,11 @@ class PackageSyncer {
       const revDirectories = entries
         .filter((entry) => entry.isDirectory() && entry.name.startsWith('rev-'))
         .map((entry) => entry.name)
-        .sort();
+        .toSorted();
 
-      if (revDirectories.length === 0) return false;
+      if (revDirectories.length === 0) {
+        return false;
+      }
 
       const latestRevDirectory = path.join(
         versionDirectory,
@@ -160,34 +185,56 @@ class PackageSyncer {
       );
       const packageJsonPath = path.join(latestRevDirectory, 'package.json');
 
-      if (!(await this.fileExists(packageJsonPath))) return false;
-
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
-      const dependencies = {
-        ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
-
-      // Check if any dependencies can be updated
-      for (const [depName, currentVersion] of Object.entries(dependencies)) {
-        try {
-          const latestManifest = await fetch.json(`/${depName}`, {
-            registry: this.registry,
-            timeout: 3000,
-          });
-
-          const latestVersion =
-            latestManifest['dist-tags']?.latest || latestManifest.version;
-
-          if (this.isVersionNewer(latestVersion, currentVersion)) {
-            return true;
-          }
-        } catch {
-          // Skip this dependency
-        }
+      if (!(await this.fileExists(packageJsonPath))) {
+        return false;
       }
 
-      return false;
+      const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+
+      // Only check production dependencies (not devDependencies) since those
+      // are what matter for consumers of the published package
+      const dependencies = packageJson.dependencies || {};
+      const dependencyEntries = Object.entries(dependencies);
+
+      if (dependencyEntries.length === 0) {
+        return false;
+      }
+
+      // Check all dependencies in parallel with abort-on-first-match
+      const abortController = new AbortController();
+      const { signal } = abortController;
+
+      const results = await Promise.allSettled(
+        dependencyEntries.map(async ([depName, currentVersion]) => {
+          // Skip check if another dep already triggered an update
+          if (signal.aborted) {
+            return false;
+          }
+
+          try {
+            const latestManifest = await fetch.json(`/${depName}`, {
+              registry: this.registry,
+              timeout: 2000,
+            });
+
+            const latestVersion =
+              latestManifest['dist-tags']?.latest || latestManifest.version;
+
+            if (this.isSignificantUpdate(latestVersion, currentVersion)) {
+              abortController.abort();
+              return true;
+            }
+          } catch {
+            // Skip this dependency on fetch failure
+          }
+
+          return false;
+        }),
+      );
+
+      return results.some(
+        (result) => result.status === 'fulfilled' && result.value === true,
+      );
     } catch {
       return false;
     }
@@ -201,9 +248,9 @@ class PackageSyncer {
       console.log(`  🚀 Running: ${command}`);
 
       execSync(command, {
-        stdio: 'inherit',
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
+        stdio: 'inherit',
       });
 
       console.log(
@@ -226,9 +273,9 @@ class PackageSyncer {
       console.log(`  🚀 Running: ${command}`);
 
       execSync(command, {
-        stdio: 'inherit',
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
+        stdio: 'inherit',
       });
 
       console.log(
@@ -252,10 +299,33 @@ class PackageSyncer {
     }
   }
 
+  isSignificantUpdate(latestVersion, currentVersion) {
+    const cleanCurrent = semver.coerce(currentVersion.replace(/^[\^~]/u, ''));
+    const cleanLatest = semver.coerce(latestVersion);
+
+    if (!cleanCurrent || !cleanLatest) {
+      return false;
+    }
+
+    // Skip if same or older
+    if (!semver.gt(cleanLatest, cleanCurrent)) {
+      return false;
+    }
+
+    // Only trigger for minor or major bumps
+    const diff = semver.diff(cleanCurrent, cleanLatest);
+    return (
+      diff === 'major' ||
+      diff === 'minor' ||
+      diff === 'premajor' ||
+      diff === 'preminor'
+    );
+  }
+
   isVersionNewer(latest, current) {
     // Simple version comparison - in production you'd want to use semver
     const latestParts = latest.split('.').map(Number);
-    const currentParts = current.replace(/[\^~]/, '').split('.').map(Number);
+    const currentParts = current.replace(/[\^~]/u, '').split('.').map(Number);
 
     for (
       let index = 0;
@@ -265,8 +335,12 @@ class PackageSyncer {
       const latestPart = latestParts[index] || 0;
       const currentPart = currentParts[index] || 0;
 
-      if (latestPart > currentPart) return true;
-      if (latestPart < currentPart) return false;
+      if (latestPart > currentPart) {
+        return true;
+      }
+      if (latestPart < currentPart) {
+        return false;
+      }
     }
 
     return false;
@@ -286,18 +360,37 @@ class PackageSyncer {
 
     try {
       execSync(`node scripts/generate-readme.mjs ${packageName}`, {
-        stdio: 'pipe',
         cwd: process.cwd(),
+        stdio: 'pipe',
         timeout: 30_000, // 30 second timeout for README generation
       });
     } catch (error) {
-      throw new Error(`Failed to generate README: ${error.message}`);
+      throw new Error(`Failed to generate README: ${error.message}`, {
+        cause: error,
+      });
+    }
+  }
+
+  async wasRecentlyProcessed(package_) {
+    try {
+      const integrityPath = path.join(package_.path, 'integrity.json');
+      const stat = await fs.stat(integrityPath);
+      const minutesSinceModified = (Date.now() - stat.mtimeMs) / 60_000;
+      return minutesSinceModified < 30;
+    } catch {
+      return false;
     }
   }
 
   async sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    await new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
   }
+  registry = 'https://registry.npmjs.org';
+  rateLimitDelay = 2000;
+  maxPackagesPerRun = 50;
+  concurrentPackages = 5;
 }
 
 // Run if called directly

@@ -9,96 +9,30 @@ import path from 'node:path';
 class ConfigManager {
   constructor() {
     this.configFile = path.join(process.cwd(), 'depup.config.json');
-    this.defaultConfig = {
-      registry: 'https://registry.npmjs.org',
-      rateLimitDelay: 1000,
-      maxPackagesPerRun: 50,
-      maxPackagesPerDiscovery: 50,
-      timeout: 300_000,
-      retryAttempts: 3,
-      retryDelay: 5000,
-      publish: {
-        enabled: false,
-        access: 'public',
-        tag: 'latest',
-      },
-      testing: {
-        enabled: true,
-        timeout: 60_000,
-        methods: [
-          'npm install --production',
-          'npm install --production --legacy-peer-deps',
-          'npm install --production --force --ignore-scripts',
-        ],
-      },
-      discovery: {
-        enabled: true,
-        schedule: '0 */6 * * *',
-        packages: [
-          'lodash',
-          'react',
-          'express',
-          'axios',
-          'moment',
-          'jquery',
-          'vue',
-          'angular',
-          'bootstrap',
-          'webpack',
-          'typescript',
-          'eslint',
-          'prettier',
-          'jest',
-          'mocha',
-          'chai',
-          'sinon',
-          'redux',
-          'next',
-          'nuxt',
-          'svelte',
-          'rollup',
-          'vite',
-          'tailwindcss',
-          'styled-components',
-          'emotion',
-          'framer-motion',
-          'three',
-          'd3',
-          'chart.js',
-          'leaflet',
-          'socket.io',
-          'mongoose',
-          'sequelize',
-          'prisma',
-          'typeorm',
-          'knex',
-          'nodemailer',
-          'multer',
-          'cors',
-          'helmet',
-          'compression',
-          'dotenv',
-          'cross-env',
-          'concurrently',
-          'nodemon',
-          'pm2',
-        ],
-      },
+    this.defaultConfig = this.buildDefaultConfig();
+  }
+
+  buildDefaultConfig() {
+    return {
+      discovery: this.getDefaultDiscoveryConfig(),
       integrity: {
         enabled: true,
-        voting: {
-          enabled: true,
-          anonymous: true,
-          requireDescription: false,
-        },
-        reporting: {
-          enabled: true,
-          autoGenerate: true,
-        },
+        reporting: { autoGenerate: true, enabled: true },
+        voting: { anonymous: true, enabled: true, requireDescription: false },
       },
-      security: {
+      maxPackagesPerDiscovery: 50,
+      maxPackagesPerRun: 50,
+      performance: {
+        benchmarks: { enabled: true, packages: ['lodash', 'express', 'axios'] },
         enabled: true,
-        auditLevel: 'moderate',
+        monitoring: true,
+      },
+      publish: { access: 'public', enabled: false, tag: 'latest' },
+      rateLimitDelay: 1000,
+      registry: 'https://registry.npmjs.org',
+      retryAttempts: 3,
+      retryDelay: 5000,
+      security: {
         allowLicenses: [
           'MIT',
           'Apache-2.0',
@@ -107,15 +41,75 @@ class ConfigManager {
           'ISC',
           'Unlicense',
         ],
-      },
-      performance: {
+        auditLevel: 'moderate',
         enabled: true,
-        monitoring: true,
-        benchmarks: {
-          enabled: true,
-          packages: ['lodash', 'express', 'axios'],
-        },
       },
+      testing: {
+        enabled: true,
+        methods: [
+          'npm install --production',
+          'npm install --production --legacy-peer-deps',
+          'npm install --production --force --ignore-scripts',
+        ],
+        timeout: 60_000,
+      },
+      timeout: 300_000,
+    };
+  }
+
+  getDefaultDiscoveryConfig() {
+    return {
+      enabled: true,
+      packages: [
+        'lodash',
+        'react',
+        'express',
+        'axios',
+        'moment',
+        'jquery',
+        'vue',
+        'angular',
+        'bootstrap',
+        'webpack',
+        'typescript',
+        'eslint',
+        'prettier',
+        'jest',
+        'mocha',
+        'chai',
+        'sinon',
+        'redux',
+        'next',
+        'nuxt',
+        'svelte',
+        'rollup',
+        'vite',
+        'tailwindcss',
+        'styled-components',
+        'emotion',
+        'framer-motion',
+        'three',
+        'd3',
+        'chart.js',
+        'leaflet',
+        'socket.io',
+        'mongoose',
+        'sequelize',
+        'prisma',
+        'typeorm',
+        'knex',
+        'nodemailer',
+        'multer',
+        'cors',
+        'helmet',
+        'compression',
+        'dotenv',
+        'cross-env',
+        'concurrently',
+        'nodemon',
+        'pm2',
+      ],
+      schedule: '0 */6 * * *',
     };
   }
 
@@ -129,7 +123,9 @@ class ConfigManager {
         // Config file doesn't exist, use defaults
         return this.defaultConfig;
       }
-      throw new Error(`Failed to load config: ${error.message}`);
+      throw new Error(`Failed to load config: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -142,7 +138,9 @@ class ConfigManager {
       );
       return validatedConfig;
     } catch (error) {
-      throw new Error(`Failed to save config: ${error.message}`);
+      throw new Error(`Failed to save config: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -154,7 +152,9 @@ class ConfigManager {
       );
       return this.defaultConfig;
     } catch (error) {
-      throw new Error(`Failed to create default config: ${error.message}`);
+      throw new Error(`Failed to create default config: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -176,16 +176,25 @@ class ConfigManager {
   validateConfig(config) {
     const validated = { ...config };
 
-    // Validate registry URL
-    if (validated.registry && typeof validated.registry === 'string') {
-      try {
-        new URL(validated.registry);
-      } catch {
-        throw new Error('Invalid registry URL');
-      }
-    }
+    this.validateRegistryUrl(validated);
+    this.validateNumericFields(validated);
+    this.validateBooleanFields(validated);
+    this.validateArrayFields(validated);
 
-    // Validate numeric values
+    return validated;
+  }
+
+  validateRegistryUrl(validated) {
+    if (
+      validated.registry &&
+      typeof validated.registry === 'string' &&
+      !URL.canParse(validated.registry)
+    ) {
+      throw new Error('Invalid registry URL');
+    }
+  }
+
+  validateNumericFields(validated) {
     const numericFields = [
       'rateLimitDelay',
       'maxPackagesPerRun',
@@ -205,8 +214,9 @@ class ConfigManager {
         validated[field] = number_;
       }
     }
+  }
 
-    // Validate boolean values
+  validateBooleanFields(validated) {
     const booleanFields = [
       'publish.enabled',
       'testing.enabled',
@@ -227,8 +237,9 @@ class ConfigManager {
         }
       }
     }
+  }
 
-    // Validate arrays
+  validateArrayFields(validated) {
     if (
       validated.discovery.packages &&
       !Array.isArray(validated.discovery.packages)
@@ -249,8 +260,6 @@ class ConfigManager {
     ) {
       throw new Error('security.allowLicenses must be an array');
     }
-
-    return validated;
   }
 
   getNestedValue(object, path) {
@@ -267,7 +276,9 @@ class ConfigManager {
     const lastKey = keys.pop();
     let current = object;
     for (const key of keys) {
-      if (!current[key]) current[key] = {};
+      if (!current[key]) {
+        current[key] = {};
+      }
       current = current[key];
     }
     current[lastKey] = value;
@@ -281,7 +292,7 @@ class ConfigManager {
   async setConfigValue(path, value) {
     const config = await this.loadConfig();
     this.setNestedValue(config, path, value);
-    return await this.saveConfig(config);
+    return this.saveConfig(config);
   }
 }
 

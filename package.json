@@ -2,6 +2,7 @@
   "name": "depup-npm",
   "version": "0.0.0",
   "description": "DepUp dependency bumped npm packages",
+  "type": "module",
   "scripts": {
     "cli": "node scripts/cli.mjs",
     "config": "node scripts/cli.mjs config",
@@ -57,10 +58,8 @@
     "semver": "^7.6.0"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
     "jest": "^29.7.0",
-    "mikey-pro": "^7.2.1",
-    "prettier": "^3.1.1",
+    "mikey-pro": "^10.1.0",
     "supertest": "^6.3.3"
   },
   "homepage": "https://github.com/depup/npm",
@@ -75,11 +74,8 @@
     "package-management"
   ],
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
-  "prettier": "@mikey-pro/prettier-config",
-  "eslintConfig": {
-    "extends": "@mikey-pro/eslint-config"
-  },
+  "prettier": "mikey-pro/prettier",
   "stylelint": {
-    "extends": "@mikey-pro/stylelint-config"
+    "extends": "mikey-pro/stylelint"
   }
 }

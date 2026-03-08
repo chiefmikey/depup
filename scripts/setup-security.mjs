@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import { promises as fs } from 'node:fs';
 import { execSync } from 'node:child_process';
+import { promises as fs } from 'node:fs';
 import path from 'node:path';
+
 import chalk from 'chalk';
 import ora from 'ora';
 
@@ -9,47 +10,49 @@ class SecuritySetup {
   constructor() {
     this.checks = [
       {
-        name: 'Docker Installation',
         check: () => this.checkDocker(),
+        fix: 'Install Docker from https://docker.com',
+        name: 'Docker Installation',
         required: true,
-        fix: 'Install Docker from https://docker.com'
       },
       {
-        name: 'Docker Compose',
         check: () => this.checkDockerCompose(),
+        fix: 'Install Docker Compose v2+',
+        name: 'Docker Compose',
         required: true,
-        fix: 'Install Docker Compose v2+'
       },
       {
-        name: 'Security Configuration',
         check: () => this.checkSecurityConfig(),
+        fix: 'Security config files will be created',
+        name: 'Security Configuration',
         required: true,
-        fix: 'Security config files will be created'
       },
       {
-        name: 'Package Allowlist',
         check: () => this.checkPackageAllowlist(),
+        fix: 'Package allowlist will be initialized',
+        name: 'Package Allowlist',
         required: true,
-        fix: 'Package allowlist will be initialized'
       },
       {
-        name: 'Directory Permissions',
         check: () => this.checkDirectoryPermissions(),
+        fix: 'Directory permissions will be set',
+        name: 'Directory Permissions',
         required: true,
-        fix: 'Directory permissions will be set'
       },
       {
-        name: 'GitHub Actions Security',
         check: () => this.checkGitHubActions(),
+        fix: 'Security workflows are available',
+        name: 'GitHub Actions Security',
         required: false,
-        fix: 'Security workflows are available'
-      }
+      },
     ];
   }
 
   async run() {
     console.log(chalk.blue.bold('🔧 DepUp Security Setup'));
-    console.log(chalk.gray('This setup will configure comprehensive security measures\n'));
+    console.log(
+      chalk.gray('This setup will configure comprehensive security measures\n'),
+    );
 
     const results = [];
 
@@ -59,7 +62,7 @@ class SecuritySetup {
     }
 
     await this.showResults(results);
-    await this.performSetup(results);
+    await this.performSetup();
 
     console.log(chalk.green.bold('\n✅ Security setup complete!'));
     console.log('');
@@ -76,7 +79,7 @@ class SecuritySetup {
     try {
       const result = await check.check();
       spinner.succeed(chalk.green(`${check.name}: ✅ ${result || 'OK'}`));
-      return { passed: true, message: result };
+      return { message: result, passed: true };
     } catch (error) {
       const failed = chalk.red(`${check.name}: ❌ ${error.message}`);
       if (check.required) {
@@ -84,7 +87,7 @@ class SecuritySetup {
       } else {
         spinner.warn(chalk.yellow(`${check.name}: ⚠️ ${error.message}`));
       }
-      return { passed: false, message: error.message };
+      return { message: error.message, passed: false };
     }
   }
 
@@ -104,7 +107,9 @@ class SecuritySetup {
     } catch {
       try {
         // Fallback to docker-compose
-        const version = execSync('docker-compose --version', { encoding: 'utf8' });
+        const version = execSync('docker-compose --version', {
+          encoding: 'utf8',
+        });
         return version.trim();
       } catch {
         throw new Error('Docker Compose not installed');
@@ -113,7 +118,11 @@ class SecuritySetup {
   }
 
   async checkSecurityConfig() {
-    const configPath = path.join(process.cwd(), 'config', 'security-config.json');
+    const configPath = path.join(
+      process.cwd(),
+      'config',
+      'security-config.json',
+    );
     try {
       await fs.access(configPath);
       return 'Configuration exists';
@@ -123,10 +132,14 @@ class SecuritySetup {
   }
 
   async checkPackageAllowlist() {
-    const allowlistPath = path.join(process.cwd(), 'config', 'security-allowlist.json');
+    const allowlistPath = path.join(
+      process.cwd(),
+      'config',
+      'security-allowlist.json',
+    );
     try {
       await fs.access(allowlistPath);
-      const data = await fs.readFile(allowlistPath, 'utf8');
+      const data = await fs.readFile(allowlistPath);
       const config = JSON.parse(data);
       return `${config.allowlisted.length} packages allowlisted`;
     } catch {
@@ -135,9 +148,9 @@ class SecuritySetup {
   }
 
   async checkDirectoryPermissions() {
-    const dirs = ['packages', 'config', 'security-reports'];
+    const directories = ['packages', 'config', 'security-reports'];
 
-    for (const dir of dirs) {
+    for (const dir of directories) {
       try {
         await fs.access(path.join(process.cwd(), dir));
       } catch {
@@ -149,7 +162,12 @@ class SecuritySetup {
   }
 
   async checkGitHubActions() {
-    const workflowPath = path.join(process.cwd(), '.github', 'workflows', 'depup-secure.yml');
+    const workflowPath = path.join(
+      process.cwd(),
+      '.github',
+      'workflows',
+      'depup-secure.yml',
+    );
     try {
       await fs.access(workflowPath);
       return 'Security workflows configured';
@@ -162,9 +180,9 @@ class SecuritySetup {
     console.log(chalk.blue.bold('\n📊 Setup Check Results'));
     console.log('');
 
-    const passed = results.filter(r => r.passed);
-    const failed = results.filter(r => !r.passed);
-    const required = failed.filter(r => r.required);
+    const passed = results.filter((r) => r.passed);
+    const failed = results.filter((r) => !r.passed);
+    const required = failed.filter((r) => r.required);
 
     console.log(chalk.green(`✅ Passed: ${passed.length}`));
     console.log(chalk.red(`❌ Failed: ${failed.length}`));
@@ -180,7 +198,7 @@ class SecuritySetup {
     console.log('');
   }
 
-  async performSetup(results) {
+  async performSetup() {
     const spinner = ora('Performing security setup...').start();
 
     try {
@@ -199,7 +217,6 @@ class SecuritySetup {
       await this.initializeSecurityConfig();
 
       spinner.succeed('Security setup completed');
-
     } catch (error) {
       spinner.fail('Setup failed');
       throw error;
@@ -208,8 +225,8 @@ class SecuritySetup {
 
   async setDirectoryPermissions() {
     // Set appropriate permissions for security
-    const dirs = ['packages', 'security-reports'];
-    for (const dir of dirs) {
+    const directories = ['packages', 'security-reports'];
+    for (const dir of directories) {
       try {
         execSync(`chmod 755 ${dir}`, { stdio: 'pipe' });
       } catch {
@@ -222,10 +239,12 @@ class SecuritySetup {
     try {
       execSync('docker-compose build --parallel', {
         stdio: 'pipe',
-        timeout: 300000 // 5 minutes
+        timeout: 300_000, // 5 minutes
       });
-    } catch (error) {
-      console.warn(chalk.yellow('Docker build failed, you may need to run manually'));
+    } catch {
+      console.warn(
+        chalk.yellow('Docker build failed, you may need to run manually'),
+      );
     }
   }
 
@@ -238,9 +257,11 @@ class SecuritySetup {
 
 // Run setup
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const setup = new SecuritySetup();
-  setup.run().catch(error => {
+  try {
+    const setup = new SecuritySetup();
+    await setup.run();
+  } catch (error) {
     console.error(chalk.red('Setup failed:'), error.message);
     process.exit(1);
-  });
+  }
 }

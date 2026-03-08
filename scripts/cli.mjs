@@ -151,11 +151,21 @@ class DepUpCLI {
         cmd += `@${options.version}`;
       }
 
-      if (options.bumpDeps) cmd += ' --bump-deps';
-      if (options.test) cmd += ' --test';
-      if (options.publish) cmd += ' --publish';
-      if (options.debug) cmd += ' --debug';
-      if (options.dryRun) cmd += ' --dry-run';
+      if (options.bumpDeps) {
+        cmd += ' --bump-deps';
+      }
+      if (options.test) {
+        cmd += ' --test';
+      }
+      if (options.publish) {
+        cmd += ' --publish';
+      }
+      if (options.debug) {
+        cmd += ' --debug';
+      }
+      if (options.dryRun) {
+        cmd += ' --dry-run';
+      }
 
       // Execute command
       const { execSync } = await import('node:child_process');
@@ -219,19 +229,19 @@ class DepUpCLI {
       if (options.vote) {
         const answers = await inquirer.prompt([
           {
-            type: 'list',
-            name: 'vote',
-            message: 'How would you rate this package?',
             choices: [
               { name: '👍 Up (Good)', value: 'up' },
               { name: '👎 Down (Bad)', value: 'down' },
               { name: '😐 Neutral', value: 'neutral' },
             ],
+            message: 'How would you rate this package?',
+            name: 'vote',
+            type: 'list',
           },
           {
-            type: 'input',
-            name: 'description',
             message: 'Description (optional):',
+            name: 'description',
+            type: 'input',
           },
         ]);
 
@@ -297,13 +307,10 @@ class DepUpCLI {
   async startInteractiveMode() {
     console.log(chalk.cyan('\n🚀 Welcome to DepUp Interactive Mode\n'));
 
-    // eslint-disable-next-line no-constant-condition
-    while (true) {
+    let running = true;
+    while (running) {
       const answers = await inquirer.prompt([
         {
-          type: 'list',
-          name: 'action',
-          message: 'What would you like to do?',
           choices: [
             { name: 'Process a package', value: 'package' },
             { name: 'Discover new packages', value: 'discover' },
@@ -313,93 +320,101 @@ class DepUpCLI {
             { name: 'Configure settings', value: 'config' },
             { name: 'Exit', value: 'exit' },
           ],
+          message: 'What would you like to do?',
+          name: 'action',
+          type: 'list',
         },
       ]);
 
       if (answers.action === 'exit') {
         console.log(chalk.green('\n👋 Goodbye!'));
+        running = false;
+      } else {
+        try {
+          await this.handleInteractiveAction(answers.action);
+        } catch (error) {
+          console.error(chalk.red('Error:'), error.message);
+        }
+        console.log(); // Add spacing
+      }
+    }
+  }
+
+  async handleInteractiveAction(action) {
+    switch (action) {
+      case 'package': {
+        const packageAnswers = await inquirer.prompt([
+          { message: 'Package name:', name: 'name', type: 'input' },
+          {
+            message: 'Version (optional):',
+            name: 'version',
+            type: 'input',
+          },
+          {
+            default: true,
+            message: 'Bump dependencies?',
+            name: 'bumpDeps',
+            type: 'confirm',
+          },
+          {
+            default: true,
+            message: 'Test package?',
+            name: 'test',
+            type: 'confirm',
+          },
+          {
+            default: false,
+            message: 'Publish to npm?',
+            name: 'publish',
+            type: 'confirm',
+          },
+        ]);
+        await this.handlePackageCommand(packageAnswers.name, packageAnswers);
         break;
       }
 
-      try {
-        switch (answers.action) {
-          case 'package': {
-            const packageAnswers = await inquirer.prompt([
-              { type: 'input', name: 'name', message: 'Package name:' },
-              {
-                type: 'input',
-                name: 'version',
-                message: 'Version (optional):',
-              },
-              {
-                type: 'confirm',
-                name: 'bumpDeps',
-                message: 'Bump dependencies?',
-                default: true,
-              },
-              {
-                type: 'confirm',
-                name: 'test',
-                message: 'Test package?',
-                default: true,
-              },
-              {
-                type: 'confirm',
-                name: 'publish',
-                message: 'Publish to npm?',
-                default: false,
-              },
-            ]);
-            await this.handlePackageCommand(
-              packageAnswers.name,
-              packageAnswers,
-            );
-            break;
-          }
-
-          case 'discover': {
-            await this.handleDiscoverCommand({});
-            break;
-          }
-
-          case 'sync': {
-            await this.handleSyncCommand({});
-            break;
-          }
-
-          case 'integrity': {
-            const integrityAnswers = await inquirer.prompt([
-              { type: 'input', name: 'package', message: 'Package name:' },
-            ]);
-            await this.handleIntegrityCommand({
-              status: integrityAnswers.package,
-            });
-            break;
-          }
-
-          case 'status': {
-            await this.handleStatusCommand();
-            break;
-          }
-
-          case 'config': {
-            const configAnswers = await inquirer.prompt([
-              {
-                type: 'list',
-                name: 'action',
-                message: 'Config action:',
-                choices: ['list', 'set', 'get'],
-              },
-            ]);
-            await this.handleConfigCommand({ [configAnswers.action]: true });
-            break;
-          }
-        }
-      } catch (error) {
-        console.error(chalk.red('Error:'), error.message);
+      case 'discover': {
+        await this.handleDiscoverCommand({});
+        break;
       }
 
-      console.log(); // Add spacing
+      case 'sync': {
+        await this.handleSyncCommand({});
+        break;
+      }
+
+      case 'integrity': {
+        const integrityAnswers = await inquirer.prompt([
+          { message: 'Package name:', name: 'package', type: 'input' },
+        ]);
+        await this.handleIntegrityCommand({
+          status: integrityAnswers.package,
+        });
+        break;
+      }
+
+      case 'status': {
+        await this.handleStatusCommand();
+        break;
+      }
+
+      case 'config': {
+        const configAnswers = await inquirer.prompt([
+          {
+            choices: ['list', 'set', 'get'],
+            message: 'Config action:',
+            name: 'action',
+            type: 'list',
+          },
+        ]);
+        await this.handleConfigCommand({ [configAnswers.action]: true });
+        break;
+      }
+
+      default: {
+        console.error(chalk.red(`Unknown action: ${action}`));
+        break;
+      }
     }
   }
 

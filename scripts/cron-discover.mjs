@@ -11,9 +11,9 @@ const npmregfetch = require('npm-registry-fetch');
 
 class PackageDiscoverer {
   constructor() {
-    this.registry = 'https://registry.npmjs.org';
-    this.rateLimitDelay = 1000; // 1 second between requests
-    this.maxPackages = 50; // Limit packages per run
+    // 2 seconds between batches
+    // Limit packages per run
+    // Process this many packages in parallel
   }
 
   async main() {
@@ -25,26 +25,64 @@ class PackageDiscoverer {
       const topPackages = await this.getTopPackages();
       spinner.succeed(`Found ${topPackages.length} top packages`);
 
-      // Process packages with rate limiting
+      // Process packages in parallel batches with rate limiting
       const processedPackages = [];
       const failedPackages = [];
+      const packagesToProcess = topPackages.slice(0, this.maxPackages);
 
-      for (const package_ of topPackages.slice(0, this.maxPackages)) {
-        const packageSpinner = ora(`Processing ${package_.name}...`).start();
+      for (
+        let index = 0;
+        index < packagesToProcess.length;
+        index += this.concurrentPackages
+      ) {
+        const batch = packagesToProcess.slice(
+          index,
+          index + this.concurrentPackages,
+        );
+        console.log(
+          chalk.cyan(
+            `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+          ),
+        );
 
-        try {
-          await this.processPackage(package_);
-          packageSpinner.succeed(`Processed ${package_.name}`);
-          processedPackages.push(package_.name);
-        } catch (error) {
-          packageSpinner.fail(
-            `Failed to process ${package_.name}: ${error.message}`,
-          );
-          failedPackages.push({ name: package_.name, error: error.message });
+        const batchResults = await Promise.allSettled(
+          batch.map(async (package_) => {
+            const packageSpinner = ora(
+              `Processing ${package_.name}...`,
+            ).start();
+
+            try {
+              await this.processPackage(package_);
+              packageSpinner.succeed(`Processed ${package_.name}`);
+              return { name: package_.name, success: true };
+            } catch (error) {
+              packageSpinner.fail(
+                `Failed to process ${package_.name}: ${error.message}`,
+              );
+              return {
+                error: error.message,
+                name: package_.name,
+                success: false,
+              };
+            }
+          }),
+        );
+
+        for (const result of batchResults) {
+          if (result.status === 'fulfilled' && result.value.success) {
+            processedPackages.push(result.value.name);
+          } else if (result.status === 'fulfilled' && !result.value.success) {
+            failedPackages.push({
+              error: result.value.error,
+              name: result.value.name,
+            });
+          }
         }
 
-        // Rate limiting
-        await this.sleep(this.rateLimitDelay);
+        // Rate limiting between batches
+        if (index + this.concurrentPackages < packagesToProcess.length) {
+          await this.sleep(this.rateLimitDelay);
+        }
       }
 
       console.log(chalk.green(`\n✅ Discovery completed`));
@@ -101,89 +139,49 @@ class PackageDiscoverer {
       );
       return [];
     } catch (error) {
-      throw new Error(`Failed to fetch dynamic packages: ${error.message}`);
+      throw new Error(`Failed to fetch dynamic packages: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
-  getCuratedPackages() {
-    // Curated list of popular packages as fallback
-    const popularPackages = [
-      'angular',
-      'axios',
-      'bootstrap',
-      'chai',
-      'chart.js',
-      'colors',
-      'compression',
-      'concurrently',
-      'cors',
-      'cross-env',
-      'd3',
-      'dotenv',
-      'dotenv-expand',
-      'emotion',
-      'eslint',
-      'express',
-      'fast-glob',
-      'framer-motion',
-      'glob',
-      'helmet',
-      'jest',
-      'jquery',
-      'knex',
-      'leaflet',
-      'lodash',
-      'micromatch',
-      'minimist',
-      'mocha',
-      'moment',
-      'mongoose',
-      'multer',
-      'next',
-      'nodemailer',
-      'nodemon',
-      'nuxt',
-      'pm2',
-      'prettier',
-      'prisma',
-      'react',
-      'redux',
-      'rimraf',
-      'rollup',
-      'semver',
-      'sequelize',
-      'sinon',
-      'socket.io',
-      'styled-components',
-      'svelte',
-      'tailwindcss',
-      'three',
-      'typeorm',
-      'typescript',
-      'underscore',
-      'vite',
-      'vue',
-      'webpack',
-      'winston',
-      'yargs',
-    ];
-
+  async getCuratedPackages() {
+    // Fetch latest versions from npm registry in parallel batches
     const packages = [];
-    for (const name of popularPackages) {
-      try {
-        // TODO: Re-enable manifest fetching after fixing import issues
-        // For now, use placeholder data to allow discovery to work
-        packages.push({
-          name,
-          version: '1.0.0', // Will be updated by sync process
-          downloads: 0,
-        });
-      } catch (error) {
-        console.warn(`Could not process ${name}:`, error.message);
+    for (
+      let index = 0;
+      index < this.curatedPackageNames.length;
+      index += this.versionFetchConcurrency
+    ) {
+      const batch = this.curatedPackageNames.slice(
+        index,
+        index + this.versionFetchConcurrency,
+      );
+      const batchResults = await Promise.allSettled(
+        batch.map(async (name) => this.fetchPackageVersion(name)),
+      );
+
+      for (const result of batchResults) {
+        if (result.status === 'fulfilled') {
+          packages.push(result.value);
+        } else {
+          console.warn(
+            `Could not fetch version for package: ${result.reason?.message}`,
+          );
+        }
       }
     }
 
-    return packages.sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
+    return packages.toSorted((a, b) => (b.downloads || 0) - (a.downloads || 0));
+  }
+
+  async fetchPackageVersion(name) {
+    const manifest = await npmregfetch.json(`/${name}`, {
+      registry: this.registry,
+      timeout: 5000,
+    });
+    const version = manifest['dist-tags']?.latest || manifest.version;
+    return { downloads: 0, name, version };
   }
 
   async processPackage(package_) {
@@ -193,14 +191,18 @@ class PackageDiscoverer {
     }
 
     // Sanitize package name
-    const sanitizedName = package_.name.replaceAll(/[^\w.@-]/g, '');
+    const sanitizedName = package_.name.replaceAll(/[^\w.@-]/gu, '');
     if (sanitizedName !== package_.name) {
       throw new Error(
         `Invalid package name: ${package_.name} (contains invalid characters)`,
       );
     }
 
-    const packageDirectory = path.join(process.cwd(), 'packages', sanitizedName);
+    const packageDirectory = path.join(
+      process.cwd(),
+      'packages',
+      sanitizedName,
+    );
     const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     // Check if package already exists
@@ -272,7 +274,7 @@ class PackageDiscoverer {
     }
 
     // Sanitize version
-    const sanitizedVersion = targetVersion.replaceAll(/[^\w.-]/g, '');
+    const sanitizedVersion = targetVersion.replaceAll(/[^\w.-]/gu, '');
     if (sanitizedVersion !== targetVersion) {
       throw new Error(`Invalid version format: ${targetVersion}`);
     }
@@ -282,10 +284,10 @@ class PackageDiscoverer {
       const command = `node scripts/depup.mjs ${package_.name}@${sanitizedVersion} --bump-deps --test --publish`;
 
       execSync(command, {
-        stdio: 'pipe',
         cwd: process.cwd(),
-        timeout: 300_000, // 5 minute timeout
         env: { ...process.env, NODE_ENV: 'production' },
+        stdio: 'pipe',
+        timeout: 300_000, // 5 minute timeout
       });
     } catch (error) {
       // Provide more detailed error information
@@ -299,7 +301,7 @@ class PackageDiscoverer {
         errorMessage += `: ${error.message}`;
       }
 
-      throw new Error(errorMessage);
+      throw new Error(errorMessage, { cause: error });
     }
   }
 
@@ -308,18 +310,87 @@ class PackageDiscoverer {
 
     try {
       execSync(`node scripts/generate-readme.mjs ${packageName}`, {
-        stdio: 'pipe',
         cwd: process.cwd(),
+        stdio: 'pipe',
         timeout: 30_000, // 30 second timeout for README generation
       });
     } catch (error) {
-      throw new Error(`Failed to generate README: ${error.message}`);
+      throw new Error(`Failed to generate README: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
   async sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    await new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
   }
+  concurrentPackages = 5;
+  curatedPackageNames = [
+    'angular',
+    'axios',
+    'bootstrap',
+    'chai',
+    'chart.js',
+    'colors',
+    'compression',
+    'concurrently',
+    'cors',
+    'cross-env',
+    'd3',
+    'dotenv',
+    'dotenv-expand',
+    'emotion',
+    'eslint',
+    'express',
+    'fast-glob',
+    'framer-motion',
+    'glob',
+    'helmet',
+    'jest',
+    'jquery',
+    'knex',
+    'leaflet',
+    'lodash',
+    'micromatch',
+    'minimist',
+    'mocha',
+    'moment',
+    'mongoose',
+    'multer',
+    'next',
+    'nodemailer',
+    'nodemon',
+    'nuxt',
+    'pm2',
+    'prettier',
+    'prisma',
+    'react',
+    'redux',
+    'rimraf',
+    'rollup',
+    'semver',
+    'sequelize',
+    'sinon',
+    'socket.io',
+    'styled-components',
+    'svelte',
+    'tailwindcss',
+    'three',
+    'typeorm',
+    'typescript',
+    'underscore',
+    'vite',
+    'vue',
+    'webpack',
+    'winston',
+    'yargs',
+  ];
+  maxPackages = 50;
+  rateLimitDelay = 2000;
+  registry = 'https://registry.npmjs.org';
+  versionFetchConcurrency = 10;
 }
 
 // Run if called directly

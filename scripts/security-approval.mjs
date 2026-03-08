@@ -1,15 +1,28 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { Command } from 'commander';
+
 import chalk from 'chalk';
+import { Command } from 'commander';
 import inquirer from 'inquirer';
 
 class SecurityApprovalWorkflow {
   constructor() {
-    this.allowlistPath = path.join(process.cwd(), 'config', 'security-allowlist.json');
-    this.pendingPath = path.join(process.cwd(), 'config', 'pending-approvals.json');
-    this.approvalLogPath = path.join(process.cwd(), 'config', 'approval-log.json');
+    this.allowlistPath = path.join(
+      process.cwd(),
+      'config',
+      'security-allowlist.json',
+    );
+    this.pendingPath = path.join(
+      process.cwd(),
+      'config',
+      'pending-approvals.json',
+    );
+    this.approvalLogPath = path.join(
+      process.cwd(),
+      'config',
+      'approval-log.json',
+    );
   }
 
   async main() {
@@ -28,7 +41,7 @@ class SecurityApprovalWorkflow {
           .option('-r, --reason <reason>', 'Reason for adding this package')
           .action(async (packageName, options) => {
             await this.requestApproval(packageName, options);
-          })
+          }),
       )
       .addCommand(
         new Command('review')
@@ -46,7 +59,7 @@ class SecurityApprovalWorkflow {
             } else {
               await this.interactiveReview();
             }
-          })
+          }),
       )
       .addCommand(
         new Command('status')
@@ -54,7 +67,7 @@ class SecurityApprovalWorkflow {
           .argument('<package>', 'Package name to check')
           .action(async (packageName) => {
             await this.checkStatus(packageName);
-          })
+          }),
       )
       .addCommand(
         new Command('log')
@@ -63,26 +76,32 @@ class SecurityApprovalWorkflow {
           .option('-l, --limit <number>', 'Limit number of entries')
           .action(async (options) => {
             await this.viewApprovalLog(options);
-          })
+          }),
       );
 
     program.parse();
   }
 
   async requestApproval(packageName, options) {
-    console.log(chalk.blue('📋 Requesting security approval for package:', packageName));
+    console.log(
+      chalk.blue('📋 Requesting security approval for package:', packageName),
+    );
 
     // Check if already in allowlist
     const allowlist = await this.loadAllowlist();
     if (allowlist.allowlisted.includes(packageName)) {
-      console.log(chalk.green('✅ Package is already in the security allowlist'));
+      console.log(
+        chalk.green('✅ Package is already in the security allowlist'),
+      );
       return;
     }
 
     // Check if already pending
     const pending = await this.loadPendingApprovals();
     if (pending[packageName]) {
-      console.log(chalk.yellow('⚠️  Approval request already pending for this package'));
+      console.log(
+        chalk.yellow('⚠️  Approval request already pending for this package'),
+      );
       return;
     }
 
@@ -91,12 +110,13 @@ class SecurityApprovalWorkflow {
 
     // Create approval request
     const request = {
+      packageInfo,
       packageName,
       requestedAt: new Date().toISOString(),
       requestedBy: process.env.USER || 'unknown',
+      securityAssessment:
+        await this.performPreliminarySecurityCheck(packageName),
       status: 'pending',
-      packageInfo,
-      securityAssessment: await this.performPreliminarySecurityCheck(packageName)
     };
 
     // Save pending request
@@ -104,21 +124,23 @@ class SecurityApprovalWorkflow {
     await this.savePendingApprovals(pending);
 
     console.log(chalk.green('✅ Approval request submitted'));
-    console.log(chalk.gray('The request will be reviewed by the security team.'));
+    console.log(
+      chalk.gray('The request will be reviewed by the security team.'),
+    );
     console.log(chalk.gray(`Request ID: ${request.requestedAt}`));
   }
 
   async gatherPackageInfo(packageName, options) {
     const info = {
-      name: packageName,
       description: options.description || 'Not provided',
+      name: packageName,
+      reason: options.reason || 'Not provided',
       url: options.url || `https://www.npmjs.com/package/${packageName}`,
-      reason: options.reason || 'Not provided'
     };
 
     // Try to fetch additional info from npm
     try {
-      const npmInfo = await this.fetchPackageInfo(packageName);
+      const npmInfo = await this.fetchPackageInfo();
       info.npmInfo = npmInfo;
     } catch (error) {
       console.warn(chalk.yellow('Could not fetch npm info:', error.message));
@@ -127,33 +149,33 @@ class SecurityApprovalWorkflow {
     return info;
   }
 
-  async fetchPackageInfo(packageName) {
+  async fetchPackageInfo() {
     // This would integrate with npm registry API
     // For now, return placeholder
     return {
-      latestVersion: 'unknown',
       downloads: 'unknown',
-      maintainers: 'unknown',
+      latestVersion: 'unknown',
       license: 'unknown',
-      repository: 'unknown'
+      maintainers: 'unknown',
+      repository: 'unknown',
     };
   }
 
   async performPreliminarySecurityCheck(packageName) {
     const assessment = {
-      risk_level: 'unknown',
       flags: [],
-      recommendations: []
+      recommendations: [],
+      risk_level: 'unknown',
     };
 
     // Basic security checks
     const suspiciousPatterns = [
-      /malware/i,
-      /virus/i,
-      /hack/i,
-      /exploit/i,
-      /trojan/i,
-      /backdoor/i
+      /malware/iu,
+      /virus/iu,
+      /hack/iu,
+      /exploit/iu,
+      /trojan/iu,
+      /backdoor/iu,
     ];
 
     for (const pattern of suspiciousPatterns) {
@@ -164,8 +186,10 @@ class SecurityApprovalWorkflow {
     }
 
     // Size and popularity checks would go here
-    assessment.recommendations.push('Manual security review required');
-    assessment.recommendations.push('Dependency analysis required');
+    assessment.recommendations.push(
+      'Manual security review required',
+      'Dependency analysis required',
+    );
 
     return assessment;
   }
@@ -179,7 +203,9 @@ class SecurityApprovalWorkflow {
       return;
     }
 
-    console.log(chalk.blue(`📋 Pending Approval Requests (${packages.length})`));
+    console.log(
+      chalk.blue(`📋 Pending Approval Requests (${packages.length})`),
+    );
     console.log('');
 
     for (const packageName of packages) {
@@ -187,8 +213,12 @@ class SecurityApprovalWorkflow {
       console.log(chalk.cyan(packageName));
       console.log(chalk.gray(`  Requested: ${request.requestedAt}`));
       console.log(chalk.gray(`  By: ${request.requestedBy}`));
-      console.log(chalk.gray(`  Risk Level: ${request.securityAssessment.risk_level}`));
-      console.log(chalk.gray(`  Description: ${request.packageInfo.description}`));
+      console.log(
+        chalk.gray(`  Risk Level: ${request.securityAssessment.risk_level}`),
+      );
+      console.log(
+        chalk.gray(`  Description: ${request.packageInfo.description}`),
+      );
       console.log('');
     }
   }
@@ -204,11 +234,11 @@ class SecurityApprovalWorkflow {
 
     const { selectedPackage } = await inquirer.prompt([
       {
-        type: 'list',
-        name: 'selectedPackage',
+        choices: packages,
         message: 'Select package to review:',
-        choices: packages
-      }
+        name: 'selectedPackage',
+        type: 'list',
+      },
     ]);
 
     const request = pending[selectedPackage];
@@ -217,7 +247,9 @@ class SecurityApprovalWorkflow {
     console.log(chalk.gray(`By: ${request.requestedBy}`));
     console.log(chalk.gray(`Description: ${request.packageInfo.description}`));
     console.log(chalk.gray(`Reason: ${request.packageInfo.reason}`));
-    console.log(chalk.gray(`Risk Level: ${request.securityAssessment.risk_level}`));
+    console.log(
+      chalk.gray(`Risk Level: ${request.securityAssessment.risk_level}`),
+    );
 
     if (request.securityAssessment.flags.length > 0) {
       console.log(chalk.yellow('⚠️  Security Flags:'));
@@ -228,15 +260,15 @@ class SecurityApprovalWorkflow {
 
     const { decision } = await inquirer.prompt([
       {
-        type: 'list',
-        name: 'decision',
-        message: 'Decision:',
         choices: [
           { name: 'Approve', value: 'approve' },
           { name: 'Deny', value: 'deny' },
-          { name: 'Defer', value: 'defer' }
-        ]
-      }
+          { name: 'Defer', value: 'defer' },
+        ],
+        message: 'Decision:',
+        name: 'decision',
+        type: 'list',
+      },
     ]);
 
     if (decision === 'approve') {
@@ -244,10 +276,10 @@ class SecurityApprovalWorkflow {
     } else if (decision === 'deny') {
       const { reason } = await inquirer.prompt([
         {
-          type: 'input',
+          message: 'Reason for denial:',
           name: 'reason',
-          message: 'Reason for denial:'
-        }
+          type: 'input',
+        },
       ]);
       await this.denyPackage(selectedPackage, reason);
     } else {
@@ -311,7 +343,9 @@ class SecurityApprovalWorkflow {
     }
 
     console.log(chalk.red('❌ Package is not approved and not in allowlist'));
-    console.log(chalk.gray('Use: npm run security-approval -- request ' + packageName));
+    console.log(
+      chalk.gray(`Use: npm run security-approval -- request ${packageName}`),
+    );
   }
 
   async viewApprovalLog(options) {
@@ -320,11 +354,13 @@ class SecurityApprovalWorkflow {
     let entries = log.decisions || [];
 
     if (options.package) {
-      entries = entries.filter(entry => entry.packageName === options.package);
+      entries = entries.filter(
+        (entry) => entry.packageName === options.package,
+      );
     }
 
     if (options.limit) {
-      entries = entries.slice(-parseInt(options.limit));
+      entries = entries.slice(-Number.parseInt(options.limit));
     }
 
     if (entries.length === 0) {
@@ -332,12 +368,17 @@ class SecurityApprovalWorkflow {
       return;
     }
 
-    console.log(chalk.blue(`📋 Approval Decision Log (${entries.length} entries)`));
+    console.log(
+      chalk.blue(`📋 Approval Decision Log (${entries.length} entries)`),
+    );
     console.log('');
 
-    for (const entry of entries.reverse()) {
-      const status = entry.decision === 'approved' ? chalk.green('✅') : chalk.red('❌');
-      console.log(`${status} ${entry.packageName} - ${entry.decision.toUpperCase()}`);
+    for (const entry of entries.toReversed()) {
+      const status =
+        entry.decision === 'approved' ? chalk.green('✅') : chalk.red('❌');
+      console.log(
+        `${status} ${entry.packageName} - ${entry.decision.toUpperCase()}`,
+      );
       console.log(chalk.gray(`  ${entry.timestamp} by ${entry.reviewedBy}`));
       if (entry.reason) {
         console.log(chalk.gray(`  Reason: ${entry.reason}`));
@@ -354,12 +395,12 @@ class SecurityApprovalWorkflow {
     }
 
     log.decisions.push({
-      packageName,
       decision,
-      timestamp: new Date().toISOString(),
-      reviewedBy: process.env.USER || 'unknown',
+      packageName,
       reason,
-      requestInfo: request
+      requestInfo: request,
+      reviewedBy: process.env.USER || 'unknown',
+      timestamp: new Date().toISOString(),
     });
 
     await this.saveApprovalLog(log);
@@ -367,7 +408,7 @@ class SecurityApprovalWorkflow {
 
   async loadAllowlist() {
     try {
-      const data = await fs.readFile(this.allowlistPath, 'utf8');
+      const data = await fs.readFile(this.allowlistPath);
       return JSON.parse(data);
     } catch {
       return { allowlisted: [], version: '1.0.0' };
@@ -380,7 +421,7 @@ class SecurityApprovalWorkflow {
 
   async loadPendingApprovals() {
     try {
-      const data = await fs.readFile(this.pendingPath, 'utf8');
+      const data = await fs.readFile(this.pendingPath);
       return JSON.parse(data);
     } catch {
       return {};
@@ -393,7 +434,7 @@ class SecurityApprovalWorkflow {
 
   async loadApprovalLog() {
     try {
-      const data = await fs.readFile(this.approvalLogPath, 'utf8');
+      const data = await fs.readFile(this.approvalLogPath);
       return JSON.parse(data);
     } catch {
       return { decisions: [] };

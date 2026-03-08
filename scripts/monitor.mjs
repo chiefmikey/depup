@@ -121,77 +121,101 @@ class SystemMonitor {
   async getSystemStats() {
     const packages = await this.getAllPackages();
 
-    let totalPackages = 0;
-    let packagesWithIntegrity = 0;
-    let packagesWithVotes = 0;
-    let totalVotes = 0;
-    let totalIntegrity = 0;
-    let integrityCount = 0;
-    let excellentPackages = 0;
-    let goodPackages = 0;
-    let fairPackages = 0;
-    let poorPackages = 0;
-    let lastActivity;
+    const stats = {
+      excellentPackages: 0,
+      fairPackages: 0,
+      goodPackages: 0,
+      integrityCount: 0,
+      lastActivity: undefined,
+      packagesWithIntegrity: 0,
+      packagesWithVotes: 0,
+      poorPackages: 0,
+      totalIntegrity: 0,
+      totalPackages: 0,
+      totalVotes: 0,
+    };
 
     for (const package_ of packages) {
-      totalPackages++;
-
-      // Check integrity data
-      if (package_.integrityData) {
-        packagesWithIntegrity++;
-
-        // Calculate integrity scores
-        for (const versionData of Object.values(package_.integrityData)) {
-          for (const revisionData of Object.values(versionData)) {
-            if (revisionData.integrity) {
-              const score = revisionData.integrity.score || 0;
-              totalIntegrity += score;
-              integrityCount++;
-
-              if (score >= 80) excellentPackages++;
-              else if (score >= 60) goodPackages++;
-              else if (score >= 40) fairPackages++;
-              else poorPackages++;
-
-              const timestamp = new Date(
-                revisionData.integrity.lastUpdated || revisionData.timestamp,
-              );
-              if (!lastActivity || timestamp > lastActivity) {
-                lastActivity = timestamp;
-              }
-            }
-          }
-        }
-      }
-
-      // Check votes data
-      if (package_.votesData) {
-        packagesWithVotes++;
-
-        for (const versionData of Object.values(package_.votesData)) {
-          for (const revisionData of Object.values(versionData)) {
-            totalVotes +=
-              (revisionData.up || 0) +
-              (revisionData.down || 0) +
-              (revisionData.neutral || 0);
-          }
-        }
-      }
+      stats.totalPackages++;
+      this.collectIntegrityStats(package_, stats);
+      this.collectVoteStats(package_, stats);
     }
 
     return {
-      totalPackages,
-      packagesWithIntegrity,
-      packagesWithVotes,
-      totalVotes,
       averageIntegrity:
-        integrityCount > 0 ? totalIntegrity / integrityCount : 0,
-      excellentPackages,
-      goodPackages,
-      fairPackages,
-      poorPackages,
-      lastActivity: lastActivity ? lastActivity.toISOString() : 'Never',
+        stats.integrityCount > 0
+          ? stats.totalIntegrity / stats.integrityCount
+          : 0,
+      excellentPackages: stats.excellentPackages,
+      fairPackages: stats.fairPackages,
+      goodPackages: stats.goodPackages,
+      lastActivity: stats.lastActivity
+        ? stats.lastActivity.toISOString()
+        : 'Never',
+      packagesWithIntegrity: stats.packagesWithIntegrity,
+      packagesWithVotes: stats.packagesWithVotes,
+      poorPackages: stats.poorPackages,
+      totalPackages: stats.totalPackages,
+      totalVotes: stats.totalVotes,
     };
+  }
+
+  collectIntegrityStats(package_, stats) {
+    if (!package_.integrityData) {
+      return;
+    }
+
+    stats.packagesWithIntegrity++;
+
+    for (const versionData of Object.values(package_.integrityData)) {
+      for (const revisionData of Object.values(versionData)) {
+        this.processRevisionIntegrity(revisionData, stats);
+      }
+    }
+  }
+
+  processRevisionIntegrity(revisionData, stats) {
+    if (!revisionData.integrity) {
+      return;
+    }
+
+    const score = revisionData.integrity.score || 0;
+    stats.totalIntegrity += score;
+    stats.integrityCount++;
+
+    if (score >= 80) {
+      stats.excellentPackages++;
+    } else if (score >= 60) {
+      stats.goodPackages++;
+    } else if (score >= 40) {
+      stats.fairPackages++;
+    } else {
+      stats.poorPackages++;
+    }
+
+    const timestamp = new Date(
+      revisionData.integrity.lastUpdated || revisionData.timestamp,
+    );
+    if (!stats.lastActivity || timestamp > stats.lastActivity) {
+      stats.lastActivity = timestamp;
+    }
+  }
+
+  collectVoteStats(package_, stats) {
+    if (!package_.votesData) {
+      return;
+    }
+
+    stats.packagesWithVotes++;
+
+    for (const versionData of Object.values(package_.votesData)) {
+      for (const revisionData of Object.values(versionData)) {
+        stats.totalVotes +=
+          (revisionData.up || 0) +
+          (revisionData.down || 0) +
+          (revisionData.neutral || 0);
+      }
+    }
   }
 
   async getAllPackages() {
@@ -229,9 +253,9 @@ class SystemMonitor {
           }
 
           packages.push({
+            integrityData,
             name: entry.name,
             path: packageDirectory,
-            integrityData,
             votesData,
           });
         }
@@ -284,28 +308,26 @@ class SystemMonitor {
       status = chalk.red('🔴 POOR');
     }
 
-    return { status, issues };
+    return { issues, status };
   }
 
   async createDetailedReport() {
     const stats = await this.getSystemStats();
     const packages = await this.getAllPackages();
 
-    const report = {
+    return {
       generatedAt: new Date().toISOString(),
-      summary: stats,
       packages: packages.map((package_) => ({
-        name: package_.name,
         hasIntegrity: !!package_.integrityData,
         hasVotes: !!package_.votesData,
+        name: package_.name,
         versions: package_.integrityData
           ? Object.keys(package_.integrityData)
           : [],
       })),
       recommendations: this.generateRecommendations(stats),
+      summary: stats,
     };
-
-    return report;
   }
 
   generateRecommendations(stats) {
@@ -351,15 +373,15 @@ class SystemMonitor {
       try {
         await fs.access(scriptPath);
         checks.push({
+          message: 'Found',
           name: `Script exists: ${script}`,
           passed: true,
-          message: 'Found',
         });
       } catch {
         checks.push({
+          message: 'Missing',
           name: `Script exists: ${script}`,
           passed: false,
-          message: 'Missing',
         });
       }
     }
@@ -370,15 +392,15 @@ class SystemMonitor {
         await fs.readFile(path.join(this.rootDirectory, 'package.json')),
       );
       checks.push({
+        message: `Version ${packageJson.version}`,
         name: 'Package.json valid',
         passed: true,
-        message: `Version ${packageJson.version}`,
       });
     } catch {
       checks.push({
+        message: 'Invalid or missing',
         name: 'Package.json valid',
         passed: false,
-        message: 'Invalid or missing',
       });
     }
 
@@ -386,14 +408,14 @@ class SystemMonitor {
     const stats = await this.getSystemStats();
     checks.push(
       {
+        message: `Found ${stats.totalPackages} packages`,
         name: 'Packages exist',
         passed: stats.totalPackages > 0,
-        message: `Found ${stats.totalPackages} packages`,
       },
       {
+        message: `${stats.packagesWithIntegrity} packages have integrity data`,
         name: 'Integrity system working',
         passed: stats.packagesWithIntegrity > 0,
-        message: `${stats.packagesWithIntegrity} packages have integrity data`,
       },
     );
 
@@ -402,9 +424,9 @@ class SystemMonitor {
     const hoursSinceActivity =
       (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60);
     checks.push({
+      message: `Last activity ${Math.round(hoursSinceActivity)} hours ago`,
       name: 'Recent activity',
       passed: hoursSinceActivity < 24,
-      message: `Last activity ${Math.round(hoursSinceActivity)} hours ago`,
     });
 
     return checks;

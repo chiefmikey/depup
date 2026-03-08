@@ -20,8 +20,8 @@ class ExampleRunner {
 
         // Run depup with basic processing (no publish for demo)
         execSync(`npm run depup -- ${package_} --bump-deps --test`, {
-          stdio: 'inherit',
           cwd: process.cwd(),
+          stdio: 'inherit',
         });
 
         console.log(`✅ Successfully processed ${package_}\n`);
@@ -53,18 +53,18 @@ class ExampleRunner {
     try {
       // Add some example votes to demonstrate the system
       const votes = [
-        { vote: 'up', description: 'Works perfectly in my project' },
-        { vote: 'up', description: 'Great improvement over original' },
-        { vote: 'neutral', description: 'Works but has minor issues' },
+        { description: 'Works perfectly in my project', vote: 'up' },
+        { description: 'Great improvement over original', vote: 'up' },
+        { description: 'Works but has minor issues', vote: 'neutral' },
       ];
 
-      for (const { vote, description } of votes) {
+      for (const { description, vote } of votes) {
         try {
           execSync(
             `npm run integrity:vote -- ${packageName} 1.0.0 0 ${vote} "${description}"`,
             {
-              stdio: 'pipe',
               cwd: process.cwd(),
+              stdio: 'pipe',
             },
           );
         } catch {

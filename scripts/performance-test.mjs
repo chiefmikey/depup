@@ -77,7 +77,7 @@ class PerformanceTest {
       }
     }
 
-    this.displayResults(results, options);
+    this.displayResults(results);
     await this.saveResults(results, options.output);
   }
 
@@ -103,28 +103,28 @@ class PerformanceTest {
     const processingTime = (endTime - startTime) / 1000; // Convert to seconds
 
     return {
-      package: packageName,
-      processingTime,
       memory: {
-        start: {
-          rss: Math.round(startMemory.rss / 1024 / 1024),
-          heapUsed: Math.round(startMemory.heapUsed / 1024 / 1024),
-          heapTotal: Math.round(startMemory.heapTotal / 1024 / 1024),
-        },
         end: {
-          rss: Math.round(endMemory.rss / 1024 / 1024),
-          heapUsed: Math.round(endMemory.heapUsed / 1024 / 1024),
           heapTotal: Math.round(endMemory.heapTotal / 1024 / 1024),
+          heapUsed: Math.round(endMemory.heapUsed / 1024 / 1024),
+          rss: Math.round(endMemory.rss / 1024 / 1024),
         },
         peak: {
-          rss: Math.round(endMemory.rss / 1024 / 1024),
-          heapUsed: Math.round(endMemory.heapUsed / 1024 / 1024),
           heapTotal: Math.round(endMemory.heapTotal / 1024 / 1024),
+          heapUsed: Math.round(endMemory.heapUsed / 1024 / 1024),
+          rss: Math.round(endMemory.rss / 1024 / 1024),
+        },
+        start: {
+          heapTotal: Math.round(startMemory.heapTotal / 1024 / 1024),
+          heapUsed: Math.round(startMemory.heapUsed / 1024 / 1024),
+          rss: Math.round(startMemory.rss / 1024 / 1024),
         },
       },
-      timestamp: new Date().toISOString(),
       nodeVersion: process.version,
       npmVersion: this.getNpmVersion(),
+      package: packageName,
+      processingTime,
+      timestamp: new Date().toISOString(),
     };
   }
 
@@ -136,7 +136,7 @@ class PerformanceTest {
     }
   }
 
-  displayResults(results, options) {
+  displayResults(results) {
     if (results.length === 0) {
       console.log(chalk.red('\n❌ No results to display'));
       return;
@@ -152,16 +152,16 @@ class PerformanceTest {
     const maxTime = Math.max(...processingTimes);
 
     const avgMemory = {
-      rss: Math.round(
-        results.reduce((sum, r) => sum + r.memory.end.rss, 0) / results.length,
+      heapTotal: Math.round(
+        results.reduce((sum, r) => sum + r.memory.end.heapTotal, 0) /
+          results.length,
       ),
       heapUsed: Math.round(
         results.reduce((sum, r) => sum + r.memory.end.heapUsed, 0) /
           results.length,
       ),
-      heapTotal: Math.round(
-        results.reduce((sum, r) => sum + r.memory.end.heapTotal, 0) /
-          results.length,
+      rss: Math.round(
+        results.reduce((sum, r) => sum + r.memory.end.rss, 0) / results.length,
       ),
     };
 
@@ -197,29 +197,29 @@ class PerformanceTest {
 
     const outputPath = path.resolve(process.cwd(), outputFile);
     const summary = {
+      results,
       summary: {
-        totalTests: results.length,
-        averageProcessingTime:
-          results.reduce((sum, r) => sum + r.processingTime, 0) /
-          results.length,
-        minProcessingTime: Math.min(...results.map((r) => r.processingTime)),
-        maxProcessingTime: Math.max(...results.map((r) => r.processingTime)),
         averageMemory: {
-          rss: Math.round(
-            results.reduce((sum, r) => sum + r.memory.end.rss, 0) /
+          heapTotal: Math.round(
+            results.reduce((sum, r) => sum + r.memory.end.heapTotal, 0) /
               results.length,
           ),
           heapUsed: Math.round(
             results.reduce((sum, r) => sum + r.memory.end.heapUsed, 0) /
               results.length,
           ),
-          heapTotal: Math.round(
-            results.reduce((sum, r) => sum + r.memory.end.heapTotal, 0) /
+          rss: Math.round(
+            results.reduce((sum, r) => sum + r.memory.end.rss, 0) /
               results.length,
           ),
         },
+        averageProcessingTime:
+          results.reduce((sum, r) => sum + r.processingTime, 0) /
+          results.length,
+        maxProcessingTime: Math.max(...results.map((r) => r.processingTime)),
+        minProcessingTime: Math.min(...results.map((r) => r.processingTime)),
+        totalTests: results.length,
       },
-      results,
       timestamp: new Date().toISOString(),
     };
 

@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
 
 class PackageAdder {
-  constructor() {
-    this.cronDiscoverPath = './scripts/cron-discover.mjs';
-  }
+  constructor() {}
 
   async addPackage(packageName) {
     if (!packageName) {
@@ -15,17 +10,21 @@ class PackageAdder {
     }
 
     // Validate package name format
-    if (!/^[a-zA-Z0-9._-]+$/.test(packageName)) {
+    if (!/^[\w.-]+$/u.test(packageName)) {
       throw new Error(`Invalid package name format: ${packageName}`);
     }
 
     // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf-8');
+    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
 
     // Find the curated packages array
-    const packageArrayMatch = content.match(/const popularPackages = \[([\s\S]*?)\];/);
+    const packageArrayMatch = content.match(
+      /const popularPackages = \[([\S\s]*?)\];/u,
+    );
     if (!packageArrayMatch) {
-      throw new Error('Could not find popularPackages array in cron-discover.mjs');
+      throw new Error(
+        'Could not find popularPackages array in cron-discover.mjs',
+      );
     }
 
     const packageArrayContent = packageArrayMatch[1];
@@ -33,10 +32,10 @@ class PackageAdder {
     // Parse existing packages
     const existingPackages = packageArrayContent
       .split('\n')
-      .map(line => line.trim())
-      .filter(line => line.startsWith("'") && line.endsWith("',"))
-      .map(line => line.slice(1, -2)) // Remove quotes and comma
-      .filter(pkg => pkg.length > 0);
+      .map((line) => line.trim())
+      .filter((line) => line.startsWith("'") && line.endsWith("',"))
+      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter((package_) => package_.length > 0);
 
     // Check if package already exists
     if (existingPackages.includes(packageName)) {
@@ -44,31 +43,31 @@ class PackageAdder {
     }
 
     // Sort packages alphabetically (case-insensitive)
-    const newPackages = [...existingPackages, packageName].sort((a, b) =>
-      a.toLowerCase().localeCompare(b.toLowerCase())
+    const updatedPackages = [...existingPackages, packageName].toSorted(
+      (a, b) => a.toLowerCase().localeCompare(b.toLowerCase()),
     );
 
-    // Format the new array
-    const newArrayContent = newPackages
-      .map(pkg => `      '${pkg}',`)
+    // Format the updated array
+    const updatedArrayContent = updatedPackages
+      .map((package_) => `      '${package_}',`)
       .join('\n');
 
-    // Replace the old array with the new one
-    const newContent = content.replace(
-      /const popularPackages = \[([\s\S]*?)\];/,
-      `const popularPackages = [\n${newArrayContent}\n    ];`
+    // Replace the old array with the updated one
+    const updatedContent = content.replace(
+      /const popularPackages = \[([\S\s]*?)\];/u,
+      `const popularPackages = [\n${updatedArrayContent}\n    ];`,
     );
 
     // Write back to file
-    await fs.writeFile(this.cronDiscoverPath, newContent, 'utf-8');
+    await fs.writeFile(this.cronDiscoverPath, updatedContent, 'utf8');
 
     console.log(`✅ Added package '${packageName}' to the curated list`);
-    console.log(`📦 New total packages: ${newPackages.length}`);
+    console.log(`📦 New total packages: ${updatedPackages.length}`);
 
     return {
+      added: true,
       packageName,
-      totalPackages: newPackages.length,
-      added: true
+      totalPackages: updatedPackages.length,
     };
   }
 
@@ -78,12 +77,16 @@ class PackageAdder {
     }
 
     // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf-8');
+    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
 
     // Find the curated packages array
-    const packageArrayMatch = content.match(/const popularPackages = \[([\s\S]*?)\];/);
+    const packageArrayMatch = content.match(
+      /const popularPackages = \[([\S\s]*?)\];/u,
+    );
     if (!packageArrayMatch) {
-      throw new Error('Could not find popularPackages array in cron-discover.mjs');
+      throw new Error(
+        'Could not find popularPackages array in cron-discover.mjs',
+      );
     }
 
     const packageArrayContent = packageArrayMatch[1];
@@ -91,10 +94,10 @@ class PackageAdder {
     // Parse existing packages
     const existingPackages = packageArrayContent
       .split('\n')
-      .map(line => line.trim())
-      .filter(line => line.startsWith("'") && line.endsWith("',"))
-      .map(line => line.slice(1, -2)) // Remove quotes and comma
-      .filter(pkg => pkg.length > 0);
+      .map((line) => line.trim())
+      .filter((line) => line.startsWith("'") && line.endsWith("',"))
+      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter((package_) => package_.length > 0);
 
     // Check if package exists
     if (!existingPackages.includes(packageName)) {
@@ -102,40 +105,46 @@ class PackageAdder {
     }
 
     // Remove the package
-    const newPackages = existingPackages.filter(pkg => pkg !== packageName);
+    const updatedPackages = existingPackages.filter(
+      (package_) => package_ !== packageName,
+    );
 
-    // Format the new array
-    const newArrayContent = newPackages
-      .map(pkg => `      '${pkg}',`)
+    // Format the updated array
+    const updatedArrayContent = updatedPackages
+      .map((package_) => `      '${package_}',`)
       .join('\n');
 
-    // Replace the old array with the new one
-    const newContent = content.replace(
-      /const popularPackages = \[([\s\S]*?)\];/,
-      `const popularPackages = [\n${newArrayContent}\n    ];`
+    // Replace the old array with the updated one
+    const updatedContent = content.replace(
+      /const popularPackages = \[([\S\s]*?)\];/u,
+      `const popularPackages = [\n${updatedArrayContent}\n    ];`,
     );
 
     // Write back to file
-    await fs.writeFile(this.cronDiscoverPath, newContent, 'utf-8');
+    await fs.writeFile(this.cronDiscoverPath, updatedContent, 'utf8');
 
     console.log(`✅ Removed package '${packageName}' from the curated list`);
-    console.log(`📦 New total packages: ${newPackages.length}`);
+    console.log(`📦 New total packages: ${updatedPackages.length}`);
 
     return {
       packageName,
-      totalPackages: newPackages.length,
-      removed: true
+      removed: true,
+      totalPackages: updatedPackages.length,
     };
   }
 
   async listPackages() {
     // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf-8');
+    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
 
     // Find the curated packages array
-    const packageArrayMatch = content.match(/const popularPackages = \[([\s\S]*?)\];/);
+    const packageArrayMatch = content.match(
+      /const popularPackages = \[([\S\s]*?)\];/u,
+    );
     if (!packageArrayMatch) {
-      throw new Error('Could not find popularPackages array in cron-discover.mjs');
+      throw new Error(
+        'Could not find popularPackages array in cron-discover.mjs',
+      );
     }
 
     const packageArrayContent = packageArrayMatch[1];
@@ -143,17 +152,18 @@ class PackageAdder {
     // Parse existing packages
     const packages = packageArrayContent
       .split('\n')
-      .map(line => line.trim())
-      .filter(line => line.startsWith("'") && line.endsWith("',"))
-      .map(line => line.slice(1, -2)) // Remove quotes and comma
-      .filter(pkg => pkg.length > 0)
-      .sort();
+      .map((line) => line.trim())
+      .filter((line) => line.startsWith("'") && line.endsWith("',"))
+      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter((package_) => package_.length > 0)
+      .toSorted();
 
     return {
+      count: packages.length,
       packages,
-      count: packages.length
     };
   }
+  cronDiscoverPath = './scripts/cron-discover.mjs';
 }
 
 // CLI interface
@@ -165,44 +175,57 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const packageName = process.argv[3];
 
   switch (command) {
-    case 'add':
+    case 'add': {
       if (!packageName) {
         console.error('Usage: node scripts/add-package.mjs add <package-name>');
         process.exit(1);
       }
-      adder.addPackage(packageName).catch(error => {
+      try {
+        await adder.addPackage(packageName);
+      } catch (error) {
         console.error('Error:', error.message);
-        process.exit(1);
-      });
-      break;
-
-    case 'remove':
-      if (!packageName) {
-        console.error('Usage: node scripts/add-package.mjs remove <package-name>');
         process.exit(1);
       }
-      adder.removePackage(packageName).catch(error => {
+      break;
+    }
+
+    case 'remove': {
+      if (!packageName) {
+        console.error(
+          'Usage: node scripts/add-package.mjs remove <package-name>',
+        );
+        process.exit(1);
+      }
+      try {
+        await adder.removePackage(packageName);
+      } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);
-      });
+      }
       break;
+    }
 
-    case 'list':
-      adder.listPackages().then(result => {
+    case 'list': {
+      try {
+        const result = await adder.listPackages();
         console.log(`📦 Curated packages (${result.count}):`);
-        result.packages.forEach(pkg => console.log(`  - ${pkg}`));
-      }).catch(error => {
+        for (const package_ of result.packages) {
+          console.log(`  - ${package_}`);
+        }
+      } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);
-      });
+      }
       break;
+    }
 
-    default:
+    default: {
       console.log('Usage:');
       console.log('  node scripts/add-package.mjs add <package-name>');
       console.log('  node scripts/add-package.mjs remove <package-name>');
       console.log('  node scripts/add-package.mjs list');
       break;
+    }
   }
 }
 

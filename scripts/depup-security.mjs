@@ -2,8 +2,9 @@
 import { execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { Command } from 'commander';
+
 import chalk from 'chalk';
+import { Command } from 'commander';
 import ora from 'ora';
 
 class SecureDepUp {
@@ -45,13 +46,11 @@ class SecureDepUp {
 
   async processPackageSecurely(packageSpec, options) {
     const {
-      debug,
-      dryRun,
       bumpDeps: shouldBumpDeps,
-      test: shouldTest,
+      dryRun,
       publish: shouldPublish,
-      skipVulnCheck,
       skipMalwareScan,
+      skipVulnCheck,
     } = options;
 
     console.log(chalk.blue('🔒 Secure DepUp Processing'));
@@ -71,7 +70,10 @@ class SecureDepUp {
     }
 
     // Step 3: Download and extract package
-    const packageInfo = await this.downloadAndExtractSecurely(packageSpec, options);
+    const packageInfo = await this.downloadAndExtractSecurely(
+      packageSpec,
+      options,
+    );
 
     // Step 4: Post-extraction malware scan
     if (!skipMalwareScan) {
@@ -80,7 +82,7 @@ class SecureDepUp {
 
     // Step 5: Vulnerability scanning
     if (!skipVulnCheck) {
-      await this.performVulnerabilityScan(packageInfo.path, packageSpec);
+      await this.performVulnerabilityScan(packageInfo.path);
     }
 
     // Step 6: Dependency compatibility analysis
@@ -114,7 +116,7 @@ class SecureDepUp {
       if (!allowlist.includes(packageName)) {
         throw new Error(
           `Package ${packageName} is not in the security allowlist. ` +
-          `Submit a security review request to add this package.`
+            `Submit a security review request to add this package.`,
         );
       }
 
@@ -127,15 +129,27 @@ class SecureDepUp {
 
   async loadPackageAllowlist() {
     try {
-      const allowlistPath = path.join(process.cwd(), 'config', 'security-allowlist.json');
-      const data = await fs.readFile(allowlistPath, 'utf8');
+      const allowlistPath = path.join(
+        process.cwd(),
+        'config',
+        'security-allowlist.json',
+      );
+      const data = await fs.readFile(allowlistPath);
       const config = JSON.parse(data);
       return config.allowlisted || [];
     } catch {
       // Fallback to basic allowlist
       return [
-        'lodash', 'react', 'express', 'axios', 'moment',
-        'jquery', 'vue', 'bootstrap', 'webpack', 'typescript'
+        'lodash',
+        'react',
+        'express',
+        'axios',
+        'moment',
+        'jquery',
+        'vue',
+        'bootstrap',
+        'webpack',
+        'typescript',
       ];
     }
   }
@@ -149,7 +163,7 @@ class SecureDepUp {
 
       if (scanResult.flagged) {
         throw new Error(
-          `Package flagged by security scan: ${scanResult.reason}`
+          `Package flagged by security scan: ${scanResult.reason}`,
         );
       }
 
@@ -167,19 +181,19 @@ class SecureDepUp {
 
     // Check for suspicious package names
     const suspiciousPatterns = [
-      /malware/i,
-      /virus/i,
-      /trojan/i,
-      /exploit/i,
-      /hack/i,
-      /steal/i
+      /malware/iu,
+      /virus/iu,
+      /trojan/iu,
+      /exploit/iu,
+      /hack/iu,
+      /steal/iu,
     ];
 
     for (const pattern of suspiciousPatterns) {
       if (pattern.test(packageName)) {
         return {
           flagged: true,
-          reason: `Package name matches suspicious pattern: ${pattern}`
+          reason: `Package name matches suspicious pattern: ${pattern}`,
         };
       }
     }
@@ -188,7 +202,9 @@ class SecureDepUp {
   }
 
   async downloadAndExtractSecurely(packageSpec, options) {
-    const spinner = ora('Downloading and extracting package securely...').start();
+    const spinner = ora(
+      'Downloading and extracting package securely...',
+    ).start();
 
     try {
       // Use the existing depup.mjs but with security wrapper
@@ -211,16 +227,20 @@ class SecureDepUp {
 
       try {
         execSync(scanCommand, {
-          timeout: 60000, // 1 minute timeout
-          stdio: 'pipe'
+          stdio: 'pipe',
+          timeout: 60_000, // 1 minute timeout
         });
         spinner.succeed('Malware scan passed');
       } catch (error) {
         if (error.status === 1) {
           // ClamAV found infected files
-          throw new Error('Malware detected in package files');
+          throw new Error('Malware detected in package files', {
+            cause: error,
+          });
         }
-        throw new Error(`Malware scan failed: ${error.message}`);
+        throw new Error(`Malware scan failed: ${error.message}`, {
+          cause: error,
+        });
       }
     } catch (error) {
       spinner.fail('Malware scan failed');
@@ -228,7 +248,7 @@ class SecureDepUp {
     }
   }
 
-  async performVulnerabilityScan(packagePath, packageSpec) {
+  async performVulnerabilityScan(packagePath) {
     const spinner = ora('Scanning for vulnerabilities...').start();
 
     try {
@@ -237,9 +257,9 @@ class SecureDepUp {
 
       const auditResult = execSync(auditCommand, {
         cwd: packagePath,
-        timeout: 60000,
+        encoding: 'utf8',
         stdio: 'pipe',
-        encoding: 'utf8'
+        timeout: 60_000,
       });
 
       const auditData = JSON.parse(auditResult);
@@ -250,26 +270,31 @@ class SecureDepUp {
 
         if (critical > 0 || high > 0) {
           throw new Error(
-            `Critical vulnerabilities found: ${critical} critical, ${high} high`
+            `Critical vulnerabilities found: ${critical} critical, ${high} high`,
           );
         }
 
-        console.warn(chalk.yellow(
-          `⚠️  Found ${auditData.metadata.vulnerabilities.total} vulnerabilities`
-        ));
+        console.warn(
+          chalk.yellow(
+            `⚠️  Found ${auditData.metadata.vulnerabilities.total} vulnerabilities`,
+          ),
+        );
       }
 
       // Run Snyk if available
       try {
         execSync('snyk test --json', {
           cwd: packagePath,
-          timeout: 120000,
-          stdio: 'pipe'
+          stdio: 'pipe',
+          timeout: 120_000,
         });
       } catch (error) {
         // Snyk might not be available or might find issues
         if (error.status === 1) {
-          throw new Error('Snyk security scan failed - vulnerabilities detected');
+          throw new Error(
+            'Snyk security scan failed - vulnerabilities detected',
+            { cause: error },
+          );
         }
       }
 
@@ -286,7 +311,7 @@ class SecureDepUp {
     try {
       // Check for known incompatible dependency combinations
       const packageJsonPath = path.join(packagePath, 'package.json');
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
+      const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
 
       await this.checkDependencyConflicts(packageJson);
 
@@ -300,27 +325,29 @@ class SecureDepUp {
   async checkDependencyConflicts(packageJson) {
     const dependencies = {
       ...packageJson.dependencies,
-      ...packageJson.devDependencies
+      ...packageJson.devDependencies,
     };
 
     // Known problematic combinations
     const conflictRules = {
-      'react': {
+      react: {
         'react-dom': '>= 17.0.0', // React 18+ requires react-dom 18+
       },
-      'webpack': {
+      webpack: {
         'webpack-cli': '>= 4.0.0', // Webpack 5 requires webpack-cli 4+
-      }
+      },
     };
 
-    for (const [pkg, rules] of Object.entries(conflictRules)) {
-      if (dependencies[pkg]) {
-        for (const [dep, requiredVersion] of Object.entries(rules)) {
+    for (const [package_, rules] of Object.entries(conflictRules)) {
+      if (dependencies[package_]) {
+        for (const [dep] of Object.entries(rules)) {
           if (dependencies[dep]) {
             // This would need semver checking - simplified for now
-            console.log(chalk.gray(
-              `  📋 Checking ${pkg}@${dependencies[pkg]} with ${dep}@${dependencies[dep]}`
-            ));
+            console.log(
+              chalk.gray(
+                `  📋 Checking ${package_}@${dependencies[package_]} with ${dep}@${dependencies[dep]}`,
+              ),
+            );
           }
         }
       }
@@ -332,7 +359,11 @@ class SecureDepUp {
 
     try {
       // Run the actual processing in the sandbox
-      const result = await this.runInSandbox('process', packageInfo.path, options);
+      const result = await this.runInSandbox(
+        'process',
+        packageInfo.path,
+        options,
+      );
 
       spinner.succeed('Package processed securely');
       return result;
@@ -353,22 +384,24 @@ class SecureDepUp {
     try {
       const result = execSync(command, {
         cwd: process.cwd(),
-        timeout: 300000, // 5 minutes
-        stdio: 'pipe',
         encoding: 'utf8',
         env: {
           ...process.env,
           NODE_ENV: 'production',
+          NPM_CONFIG_AUDIT: 'false',
+          NPM_CONFIG_FUND: 'false',
           // Security constraints
           NPM_CONFIG_IGNORE_SCRIPTS: 'true',
-          NPM_CONFIG_FUND: 'false',
-          NPM_CONFIG_AUDIT: 'false'
-        }
+        },
+        stdio: 'pipe',
+        timeout: 300_000, // 5 minutes
       });
 
       return JSON.parse(result);
     } catch (error) {
-      throw new Error(`Sandbox execution failed: ${error.message}`);
+      throw new Error(`Sandbox execution failed: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -389,14 +422,19 @@ class SecureDepUp {
   async validateProcessedPackage(packagePath) {
     // Check that the package.json has been properly modified
     const packageJsonPath = path.join(packagePath, 'package.json');
-    const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
+    const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
 
     if (!packageJson.name.startsWith('@depup/')) {
       throw new Error('Package name not properly scoped');
     }
 
     // Verify no dangerous scripts remain
-    const dangerousScripts = ['preinstall', 'postinstall', 'preuninstall', 'postuninstall'];
+    const dangerousScripts = [
+      'preinstall',
+      'postinstall',
+      'preuninstall',
+      'postuninstall',
+    ];
     for (const script of dangerousScripts) {
       if (packageJson.scripts?.[script]) {
         throw new Error(`Dangerous script detected: ${script}`);
@@ -412,7 +450,11 @@ class SecureDepUp {
       await this.addSecurityAttestation(packageInfo.path);
 
       // Publish through secure channel
-      const result = await this.runInSandbox('publish', packageInfo.path, options);
+      const result = await this.runInSandbox(
+        'publish',
+        packageInfo.path,
+        options,
+      );
 
       spinner.succeed('Package published with security attestation');
       return result;
@@ -426,14 +468,14 @@ class SecureDepUp {
     const attestationPath = path.join(packagePath, 'security-attestation.json');
 
     const attestation = {
-      timestamp: new Date().toISOString(),
       container: this.containerId,
       scans: {
+        compatibility: 'analyzed',
         malware: this.scanResults.get('malware') || 'passed',
         vulnerabilities: this.vulnerabilityResults.get('npm-audit') || 'passed',
-        compatibility: 'analyzed'
       },
-      version: '1.0.0'
+      timestamp: new Date().toISOString(),
+      version: '1.0.0',
     };
 
     await fs.writeFile(attestationPath, JSON.stringify(attestation, null, 2));

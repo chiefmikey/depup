@@ -93,14 +93,14 @@ This package inherits the license from the original package. See the original pa
     }
 
     // Get latest version info
-    const versions = Object.keys(integrityData).sort();
+    const versions = Object.keys(integrityData).toSorted();
     const latestVersion = versions.at(-1);
 
     if (!latestVersion) {
       throw new Error(`No version data found for ${packageName}`);
     }
 
-    const revisions = Object.keys(integrityData[latestVersion]).sort(
+    const revisions = Object.keys(integrityData[latestVersion]).toSorted(
       (a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10),
     );
     const latestRevision = revisions.at(-1);
@@ -181,9 +181,15 @@ This package inherits the license from the original package. See the original pa
   }
 
   getStatusEmoji(score) {
-    if (score >= 80) return '🟢 Excellent';
-    if (score >= 60) return '🟡 Good';
-    if (score >= 40) return '🟠 Fair';
+    if (score >= 80) {
+      return '🟢 Excellent';
+    }
+    if (score >= 60) {
+      return '🟡 Good';
+    }
+    if (score >= 40) {
+      return '🟠 Fair';
+    }
     return '🔴 Poor';
   }
 }
