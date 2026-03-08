@@ -329,7 +329,6 @@ class PackageDiscoverer {
   concurrentPackages = 10;
   curatedPackageNames = [
     '@types/node',
-    'a',
     'angular',
     'axios',
     'better-sqlite3',
@@ -354,7 +353,6 @@ class PackageDiscoverer {
     'dotenv-expand',
     'drizzle-orm',
     'emotion',
-    'es5-shim',
     'esbuild',
     'eslint',
     'execa',
