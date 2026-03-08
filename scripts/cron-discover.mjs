@@ -330,6 +330,7 @@ class PackageDiscoverer {
   curatedPackageNames = [
     '@babel/core',
     '@types/node',
+    '@vue/compiler-sfc',
     '7zip-bin',
     'angular',
     'axios',
