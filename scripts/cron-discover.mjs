@@ -340,6 +340,7 @@ class PackageDiscoverer {
     'chai',
     'chalk',
     'chart.js',
+    'color',
     'colors',
     'commander',
     'compression',
