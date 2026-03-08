@@ -388,9 +388,9 @@ class PackageSyncer {
     });
   }
   registry = 'https://registry.npmjs.org';
-  rateLimitDelay = 2000;
-  maxPackagesPerRun = 50;
-  concurrentPackages = 5;
+  rateLimitDelay = 200;
+  maxPackagesPerRun = 200;
+  concurrentPackages = 10;
 }
 
 // Run if called directly

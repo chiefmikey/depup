@@ -240,10 +240,17 @@ class DepUp {
   async fetchManifest(packageSpec, timeout) {
     const spinner = ora('Fetching package manifest...').start();
     try {
-      const manifest = await Promise.race([
-        pacote.manifest(packageSpec),
-        this.rejectAfterTimeout('Timeout fetching package manifest', timeout),
-      ]);
+      const manifest = await this.retryWithBackoff(
+        () =>
+          Promise.race([
+            pacote.manifest(packageSpec),
+            this.rejectAfterTimeout(
+              'Timeout fetching package manifest',
+              timeout,
+            ),
+          ]),
+        { attempts: 3, baseDelay: 1000 },
+      );
       spinner.succeed('Package manifest fetched');
       return manifest;
     } catch (error) {
@@ -278,10 +285,14 @@ class DepUp {
   async downloadPackage(packageSpec, targetDirectory, timeout) {
     const spinner = ora('Downloading and extracting package...').start();
     try {
-      await Promise.race([
-        pacote.extract(packageSpec, targetDirectory),
-        this.rejectAfterTimeout('Timeout downloading package', timeout),
-      ]);
+      await this.retryWithBackoff(
+        () =>
+          Promise.race([
+            pacote.extract(packageSpec, targetDirectory),
+            this.rejectAfterTimeout('Timeout downloading package', timeout),
+          ]),
+        { attempts: 3, baseDelay: 2000 },
+      );
       spinner.succeed('Package downloaded and extracted');
     } catch (error) {
       spinner.fail('Failed to download package');
@@ -341,6 +352,24 @@ class DepUp {
     });
   }
 
+  async retryWithBackoff(operation, { attempts = 3, baseDelay = 1000 } = {}) {
+    let lastError;
+    for (let attempt = 0; attempt < attempts; attempt++) {
+      try {
+        return await operation();
+      } catch (error) {
+        lastError = error;
+        if (attempt < attempts - 1) {
+          const delay = baseDelay * 2 ** attempt;
+          await new Promise((resolve) => {
+            setTimeout(resolve, delay);
+          });
+        }
+      }
+    }
+    throw lastError;
+  }
+
   async bumpDependencies(
     packageDirectory,
     packageJson,
@@ -349,29 +378,39 @@ class DepUp {
   ) {
     const spinner = ora('Bumping dependencies...').start();
 
-    const dependencies = {
-      ...packageJson.dependencies,
-      ...packageJson.devDependencies,
-    };
+    const dependencies = { ...packageJson.dependencies };
     const changes = [];
     let errorCount = 0;
+    const depBatchSize = 10;
+    const entries = Object.entries(dependencies);
 
-    for (const [depName, currentVersion] of Object.entries(dependencies)) {
-      const result = await this.updateSingleDependency(
-        depName,
-        currentVersion,
-        packageJson,
-        debug,
-        timeout,
+    for (let index = 0; index < entries.length; index += depBatchSize) {
+      const batch = entries.slice(index, index + depBatchSize);
+      const results = await Promise.allSettled(
+        batch.map(([depName, currentVersion]) =>
+          this.updateSingleDependency(
+            depName,
+            currentVersion,
+            packageJson,
+            debug,
+            timeout,
+          ),
+        ),
       );
-      if (result.result === 'updated') {
-        changes.push({
-          depName: result.depName,
-          from: result.from,
-          to: result.to,
-        });
-      } else if (result.result === 'error') {
-        errorCount++;
+
+      for (const result of results) {
+        if (result.status === 'fulfilled' && result.value.result === 'updated') {
+          changes.push({
+            depName: result.value.depName,
+            from: result.value.from,
+            to: result.value.to,
+          });
+        } else if (
+          result.status === 'rejected' ||
+          (result.status === 'fulfilled' && result.value.result === 'error')
+        ) {
+          errorCount++;
+        }
       }
     }
 
@@ -397,13 +436,17 @@ class DepUp {
     try {
       const cleanCurrentVersion = currentVersion.replace(/^[\^~]/u, '');
 
-      const latestManifest = await Promise.race([
-        pacote.manifest(`${depName}@latest`),
-        this.rejectAfterTimeout(
-          'Timeout fetching dependency',
-          Math.min(timeout / 30, 10_000),
-        ),
-      ]);
+      const latestManifest = await this.retryWithBackoff(
+        () =>
+          Promise.race([
+            pacote.manifest(`${depName}@latest`),
+            this.rejectAfterTimeout(
+              'Timeout fetching dependency',
+              Math.min(timeout / 30, 3000),
+            ),
+          ]),
+        { attempts: 2, baseDelay: 500 },
+      );
       const latestVersion = latestManifest.version;
 
       if (!semver.gt(latestVersion, cleanCurrentVersion)) {

@@ -81,9 +81,8 @@ jobs:
   sync:
     name: Sync Existing Packages
     runs-on: ubuntu-latest
-    needs: discover
     timeout-minutes: 120
-    if: always() && !inputs.discover_only
+    if: ${{ !inputs.discover_only }}
 
     steps:
       - name: Checkout

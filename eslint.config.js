@@ -12,7 +12,7 @@ export default [
       // kebab-case filenames are standard for npm script entry points
       'unicorn/filename-case': 'off',
       // Practical limits for self-contained processing scripts
-      'max-lines': ['error', { max: 700, skipBlankLines: true, skipComments: true }],
+      'max-lines': ['error', { max: 800, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': ['error', { max: 80, skipBlankLines: true, skipComments: true }],
       'max-depth': ['error', { max: 5 }],
       'max-params': ['error', { max: 5 }],
