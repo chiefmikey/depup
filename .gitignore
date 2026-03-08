@@ -185,6 +185,10 @@ packages/*/[0-9]*/rev-*/.test-temp/
 !**/icon.png
 !**/logo.*
 
+# Claude docs (keep local, not in repo)
+CLAUDE.md
+docs/
+
 # Test files
 test-results/
 coverage/
