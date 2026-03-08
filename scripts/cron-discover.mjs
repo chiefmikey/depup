@@ -328,6 +328,7 @@ class PackageDiscoverer {
   }
   concurrentPackages = 10;
   curatedPackageNames = [
+    '@babel/core',
     '@types/node',
     '7zip-bin',
     'angular',
