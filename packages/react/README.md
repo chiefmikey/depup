@@ -13,7 +13,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 - **Original Package**: [react](https://www.npmjs.com/package/react)
 - **DepUp Version**: unknown
 - **Original Version**: 1.0.0
-- **Last Updated**: unknown
+- **Last Updated**: 1/10/2026
 
 ## 🚀 Installation
 
@@ -34,7 +34,7 @@ npm install @depup/react
 ### Version 1.0.0
 
 - **Revision 0** (undefined) - 🟢 Excellent 100% integrity
-  - Last updated: 9/14/2025
+  - Last updated: 9/15/2025
 
 
 ## 🤝 Contributing
