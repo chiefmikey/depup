@@ -44,5 +44,5 @@ ENV NPM_CONFIG_AUDIT=false
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD node --version || exit 1
 
-# Default command
-CMD ["node", "scripts/depup.mjs"]
+# Entrypoint receives package name and flags as arguments
+ENTRYPOINT ["node", "scripts/depup.mjs"]

@@ -265,9 +265,10 @@ jobs:
           echo "🚀 Starting secure package processing..."
 
           # Build docker run arguments
+          # Note: network access is required for npm registry (download + dep version checks)
+          # Security is enforced via: read-only rootfs, memory/cpu/pid limits, dropped caps
           DOCKER_ARGS=(
             "run" "--rm"
-            "--network" "none"
             "--read-only"
             "--tmpfs" "/tmp:rw,exec"
             "--memory" "2g"
