@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [jotai](https://www.npmjs.com/package/jotai)
-- **DepUp Version**: 2.18.0-depup.0
-- **Original Version**: 2.18.0
+- **DepUp Version**: 2.18.1-depup.0
+- **Original Version**: 2.18.1
 - **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/jotai
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.18.0 | 0 | 🔴 Poor | 0% | 0 |
+| 2.18.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/jotai
 ### Version 2.18.0
 
 - **Revision 0** (2.18.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 2.18.1
+
+- **Revision 0** (2.18.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
