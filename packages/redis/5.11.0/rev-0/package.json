@@ -1,0 +1,47 @@
+{
+  "name": "@depup/redis",
+  "description": "[DepUp] A modern, high performance Redis client",
+  "version": "5.11.0-depup.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@redis/bloom": "5.11.0",
+    "@redis/client": "5.11.0",
+    "@redis/json": "5.11.0",
+    "@redis/search": "5.11.0",
+    "@redis/time-series": "5.11.0"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/redis/node-redis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redis/node-redis/issues"
+  },
+  "homepage": "https://github.com/redis/node-redis",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "redis"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "redis",
+    "originalVersion": "5.11.0",
+    "processedAt": "2026-03-09T04:20:01.223Z",
+    "smokeTest": "passed"
+  }
+}

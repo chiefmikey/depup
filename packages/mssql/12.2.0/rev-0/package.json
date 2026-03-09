@@ -1,0 +1,102 @@
+{
+  "author": {
+    "name": "Patrik Simek",
+    "url": "https://patriksimek.cz"
+  },
+  "name": "@depup/mssql",
+  "description": "[DepUp] Microsoft SQL Server client for Node.js.",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "mssql",
+    "database",
+    "sql",
+    "server",
+    "msnodesql",
+    "sqlserver",
+    "tds",
+    "node-tds",
+    "tedious",
+    "node-sqlserver",
+    "msnodesqlv8",
+    "azure",
+    "node-mssql"
+  ],
+  "version": "12.2.0-depup.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tediousjs/node-mssql.git"
+  },
+  "homepage": "https://github.com/tediousjs/node-mssql#readme",
+  "bugs": {
+    "url": "https://github.com/tediousjs/node-mssql/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tediousjs/connection-string": "^1.0.0",
+    "commander": "^14.0.3",
+    "debug": "^4.4.3",
+    "tarn": "^3.0.2",
+    "tedious": "^19.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.3",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "mocha": "^11.0.1",
+    "semantic-release": "^22.0.12",
+    "standard": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "tedious.js",
+    "msnodesqlv8.js"
+  ],
+  "scripts": {
+    "commitlint": "commitlint --from origin/master --to HEAD",
+    "test": "npm run lint && npm run test-unit",
+    "lint": "standard",
+    "test-unit": "mocha --exit -t 15000 test/common/unit.js",
+    "test-tedious": "mocha --exit -t 15000 test/tedious",
+    "test-msnodesqlv8": "mocha --exit -t 30000 test/msnodesqlv8",
+    "test-cli": "mocha --exit -t 15000 test/common/cli.js"
+  },
+  "bin": {
+    "mssql": "bin/mssql"
+  },
+  "depup": {
+    "changes": {
+      "@tediousjs/connection-string": {
+        "from": "^0.6.0",
+        "to": "^1.0.0"
+      },
+      "commander": {
+        "from": "^11.0.0",
+        "to": "^14.0.3"
+      },
+      "debug": {
+        "from": "^4.3.3",
+        "to": "^4.4.3"
+      },
+      "tedious": {
+        "from": "^19.0.0",
+        "to": "^19.2.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "mssql",
+    "originalVersion": "12.2.0",
+    "processedAt": "2026-03-09T05:14:45.172Z",
+    "smokeTest": "passed"
+  }
+}

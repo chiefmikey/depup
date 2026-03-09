@@ -1,0 +1,72 @@
+{
+  "name": "@depup/parcel",
+  "version": "2.16.4-depup.0",
+  "description": "[DepUp] Blazing fast, zero configuration web application bundler",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parcel-bundler/parcel.git"
+  },
+  "bin": "lib/bin.js",
+  "main": "lib/bin.js",
+  "source": "src/bin.js",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "dependencies": {
+    "@parcel/config-default": "2.16.4",
+    "@parcel/core": "2.16.4",
+    "@parcel/diagnostic": "2.16.4",
+    "@parcel/events": "2.16.4",
+    "@parcel/feature-flags": "2.16.4",
+    "@parcel/fs": "2.16.4",
+    "@parcel/logger": "2.16.4",
+    "@parcel/package-manager": "2.16.4",
+    "@parcel/reporter-cli": "2.16.4",
+    "@parcel/reporter-dev-server": "2.16.4",
+    "@parcel/reporter-tracer": "2.16.4",
+    "@parcel/utils": "2.16.4",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "get-port": "^7.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@parcel/babel-register": "2.16.4"
+  },
+  "gitHead": "59484858a1a0bcbb71f74088956bb437a2db6505",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "parcel"
+  ],
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^5.6.2"
+      },
+      "commander": {
+        "from": "^12.1.0",
+        "to": "^14.0.3"
+      },
+      "get-port": {
+        "from": "^4.2.0",
+        "to": "^7.1.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "parcel",
+    "originalVersion": "2.16.4",
+    "processedAt": "2026-03-09T03:52:32.055Z",
+    "smokeTest": "failed"
+  }
+}

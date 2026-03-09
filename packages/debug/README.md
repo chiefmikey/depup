@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [debug](https://www.npmjs.com/package/debug)
-- **DepUp Version**: 4.4.1-depup.11
-- **Original Version**: 4.4.1
-- **Last Updated**: 9/12/2025
+- **DepUp Version**: 4.4.3-depup.5
+- **Original Version**: 4.4.3
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -37,6 +37,7 @@ npm install @depup/debug
 | 4.4.1 | 9 | 🟢 Excellent | 100% | 1 |
 | 4.4.1 | 10 | 🟢 Excellent | 100% | 1 |
 | 4.4.1 | 11 | 🟢 Excellent | 100% | 1 |
+| 4.4.3 | 5 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -45,29 +46,33 @@ npm install @depup/debug
 ### Version 4.4.1
 
 - **Revision 0** (4.4.1-depup.0) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 1** (4.4.1-depup.1) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 2** (4.4.1-depup.2) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 3** (4.4.1-depup.3) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 4** (4.4.1-depup.4) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 5** (4.4.1-depup.5) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 6** (4.4.1-depup.6) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 7** (4.4.1-depup.7) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 8** (4.4.1-depup.8) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 9** (4.4.1-depup.9) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 10** (4.4.1-depup.10) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
 - **Revision 11** (4.4.1-depup.11) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
+
+### Version 4.4.3
+
+- **Revision 5** (4.4.3-depup.5) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
