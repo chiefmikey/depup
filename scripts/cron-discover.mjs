@@ -398,6 +398,7 @@ class PackageDiscoverer {
     'np',
     'nuxt',
     'nyc',
+    'open-cli',
     'ora',
     'p-limit',
     'p-queue',
