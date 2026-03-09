@@ -327,6 +327,7 @@ class PackageDiscoverer {
     '@types/node',
     '@vue/compiler-sfc',
     '7zip-bin',
+    'a',
     'angular',
     'axios',
     'better-sqlite3',
