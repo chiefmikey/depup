@@ -69,7 +69,12 @@ jobs:
           fi
           git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main
+            # Try rebase first; if conflicts, fall back to merge
+            if ! git pull --rebase origin main; then
+              echo "Rebase failed (likely conflicts), falling back to merge..."
+              git rebase --abort 2>/dev/null || true
+              git pull origin main --no-edit -X ours || true
+            fi
             if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
@@ -145,7 +150,11 @@ jobs:
           fi
           git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main
+            if ! git pull --rebase origin main; then
+              echo "Rebase failed (likely conflicts), falling back to merge..."
+              git rebase --abort 2>/dev/null || true
+              git pull origin main --no-edit -X ours || true
+            fi
             if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
