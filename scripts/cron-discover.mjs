@@ -417,6 +417,7 @@ class PackageDiscoverer {
     '@rollup/plugin-node-resolve',
     '@rollup/plugin-typescript',
     '@sendgrid/mail',
+    '@sindresorhus/slugify',
     '@sveltejs/kit',
     '@swc/core',
     '@tanstack/react-query',
