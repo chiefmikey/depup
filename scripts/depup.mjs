@@ -94,6 +94,15 @@ class DepUp {
       throw new Error('Package spec is required');
     }
 
+    // Validate package spec before any filesystem or network operations
+    // Reject path traversal and characters not valid in npm package specs
+    if (
+      packageSpec.includes('..') ||
+      /[;`$|><\\{}[\]!#%^&*()='"]/u.test(packageSpec)
+    ) {
+      throw new Error(`Invalid package spec format: ${packageSpec}`);
+    }
+
     const manifest = await this.fetchManifest(packageSpec, timeout);
     const packageName = manifest.name;
     const baseVersion = manifest.version;

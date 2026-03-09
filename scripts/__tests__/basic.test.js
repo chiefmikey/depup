@@ -893,4 +893,24 @@ describe('depUp Basic Tests', () => {
       expect(scopedName.includes('..')).toBe(false);
     });
   });
+
+  describe('Package Spec Input Validation', () => {
+    test('should reject dangerous characters in package spec', () => {
+      const dangerousChars = /[;`$|><\\{}[\]!#%^&*()='"]/u;
+
+      // Injection attempts
+      expect(dangerousChars.test('foo;rm -rf /')).toBe(true);
+      expect(dangerousChars.test('foo`whoami`')).toBe(true);
+      expect(dangerousChars.test('foo$(whoami)')).toBe(true);
+      expect(dangerousChars.test('foo|cat /etc/passwd')).toBe(true);
+
+      // Valid package names pass
+      expect(dangerousChars.test('express')).toBe(false);
+      expect(dangerousChars.test('@babel/core')).toBe(false);
+      expect(dangerousChars.test('socket.io')).toBe(false);
+      expect(dangerousChars.test('is-odd')).toBe(false);
+      expect(dangerousChars.test('express@4.21.0')).toBe(false);
+      expect(dangerousChars.test('@nestjs/common@latest')).toBe(false);
+    });
+  });
 });
