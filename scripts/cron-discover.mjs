@@ -420,6 +420,7 @@ class PackageDiscoverer {
     'sharp',
     'sinon',
     'socket.io',
+    'strip-json-comments',
     'styled-components',
     'superstruct',
     'supertest',
