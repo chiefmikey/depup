@@ -71,14 +71,35 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
-              echo "Rebase failed on attempt $attempt, aborting and retrying..."
-              git rebase --abort 2>/dev/null || true
-              sleep $((attempt * 2))
-              if [ "$attempt" -eq 5 ]; then
-                echo "Rebase failed after 5 attempts"
-                exit 1
+              # Check for content conflicts (another shard pushed same package data)
+              conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+              if [ -n "$conflicted" ]; then
+                echo "Rebase conflict on attempt $attempt, auto-resolving by keeping upstream..."
+                echo "$conflicted" | while IFS= read -r file; do
+                  git checkout --ours -- "$file" 2>/dev/null || true
+                done
+                git add -A
+                GIT_EDITOR=true git rebase --continue 2>/dev/null || {
+                  git rebase --abort 2>/dev/null || true
+                  sleep $((attempt * 2))
+                  if [ "$attempt" -eq 5 ]; then
+                    echo "Rebase failed after 5 attempts"
+                    exit 1
+                  fi
+                  continue
+                }
+              else
+                echo "Rebase failed on attempt $attempt, aborting and retrying..."
+                git rebase --abort 2>/dev/null || true
+                sleep $((attempt * 2))
+                if [ "$attempt" -eq 5 ]; then
+                  echo "Rebase failed after 5 attempts"
+                  exit 1
+                fi
+                continue
               fi
-            elif git push origin main; then
+            fi
+            if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
             else
@@ -156,14 +177,35 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
-              echo "Rebase failed on attempt $attempt, aborting and retrying..."
-              git rebase --abort 2>/dev/null || true
-              sleep $((attempt * 2))
-              if [ "$attempt" -eq 5 ]; then
-                echo "Rebase failed after 5 attempts"
-                exit 1
+              # Check for content conflicts (another shard pushed same package data)
+              conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+              if [ -n "$conflicted" ]; then
+                echo "Rebase conflict on attempt $attempt, auto-resolving by keeping upstream..."
+                echo "$conflicted" | while IFS= read -r file; do
+                  git checkout --ours -- "$file" 2>/dev/null || true
+                done
+                git add -A
+                GIT_EDITOR=true git rebase --continue 2>/dev/null || {
+                  git rebase --abort 2>/dev/null || true
+                  sleep $((attempt * 2))
+                  if [ "$attempt" -eq 5 ]; then
+                    echo "Rebase failed after 5 attempts"
+                    exit 1
+                  fi
+                  continue
+                }
+              else
+                echo "Rebase failed on attempt $attempt, aborting and retrying..."
+                git rebase --abort 2>/dev/null || true
+                sleep $((attempt * 2))
+                if [ "$attempt" -eq 5 ]; then
+                  echo "Rebase failed after 5 attempts"
+                  exit 1
+                fi
+                continue
               fi
-            elif git push origin main; then
+            fi
+            if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
             else

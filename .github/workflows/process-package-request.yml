@@ -2,7 +2,7 @@ name: "Process Package Request"
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   validate-and-process:
@@ -48,6 +48,12 @@ jobs:
                 // Remove brackets if present (e.g., [MISSING])
                 packageName = packageName.replace(/^\[|\]$/g, '');
               }
+            }
+
+            // If still empty, treat the entire title as the package name
+            // (supports simple issues where title is just the package name)
+            if (!packageName) {
+              packageName = context.payload.issue.title.trim();
             }
 
             // SECURITY: Sanitize package name to prevent shell/expression injection
