@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
-- **DepUp Version**: 8.3.0-depup.0
-- **Original Version**: 8.3.0
+- **DepUp Version**: 8.3.1-depup.1
+- **Original Version**: 8.3.1
 - **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/express-rate-limit
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 8.3.0 | 0 | 🔴 Poor | 0% | 0 |
+| 8.3.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/express-rate-limit
 ### Version 8.3.0
 
 - **Revision 0** (8.3.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 8.3.1
+
+- **Revision 1** (8.3.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
