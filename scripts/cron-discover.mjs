@@ -373,6 +373,7 @@ class PackageDiscoverer {
     'koa',
     'ky',
     'leaflet',
+    'level',
     'lint-staged',
     'lodash',
     'micromatch',
