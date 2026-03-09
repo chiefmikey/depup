@@ -347,6 +347,7 @@ class PackageDiscoverer {
     'cypress',
     'd3',
     'date-fns',
+    'date-fns-tz',
     'dayjs',
     'debug',
     'dotenv',
