@@ -582,6 +582,7 @@ class PackageDiscoverer {
     'mssql',
     'multer',
     'mysql2',
+    'nanocolors',
     'nanoid',
     'nconf',
     'next',
