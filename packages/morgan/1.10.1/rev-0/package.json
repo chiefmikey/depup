@@ -1,0 +1,73 @@
+{
+  "name": "@depup/morgan",
+  "description": "[DepUp] HTTP request logger middleware for node.js",
+  "version": "1.10.1-depup.0",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "morgan",
+    "express",
+    "http",
+    "logger",
+    "middleware"
+  ],
+  "repository": "expressjs/morgan",
+  "dependencies": {
+    "basic-auth": "~2.0.1",
+    "debug": "^4.4.3",
+    "depd": "~2.0.0",
+    "on-finished": "^2.4.1",
+    "on-headers": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-markdown": "1.0.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "mocha": "10.4.0",
+    "nyc": "15.1.0",
+    "split": "1.0.1",
+    "supertest": "4.0.2"
+  },
+  "files": [
+    "LICENSE",
+    "HISTORY.md",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "lint": "eslint --plugin markdown --ext js,md .",
+    "test": "mocha --check-leaks --reporter spec",
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "2.6.9",
+        "to": "^4.4.3"
+      },
+      "on-finished": {
+        "from": "~2.3.0",
+        "to": "^2.4.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "morgan",
+    "originalVersion": "1.10.1",
+    "processedAt": "2026-03-09T04:43:16.997Z",
+    "smokeTest": "passed"
+  }
+}

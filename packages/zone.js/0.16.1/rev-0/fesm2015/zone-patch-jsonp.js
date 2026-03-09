@@ -1,0 +1,73 @@
+'use strict';
+/**
+ * @license Angular
+ * (c) 2010-2026 Google LLC. https://angular.dev/
+ * License: MIT
+ */
+
+// packages/zone.js/lib/extra/jsonp.js
+function patchJsonp(Zone2) {
+  Zone2.__load_patch("jsonp", (global, Zone3, api) => {
+    const noop = function() {
+    };
+    Zone3[Zone3.__symbol__("jsonp")] = function patchJsonp2(options) {
+      if (!options || !options.jsonp || !options.sendFuncName) {
+        return;
+      }
+      const noop2 = function() {
+      };
+      [options.successFuncName, options.failedFuncName].forEach((methodName) => {
+        if (!methodName) {
+          return;
+        }
+        const oriFunc = global[methodName];
+        if (oriFunc) {
+          api.patchMethod(global, methodName, (delegate) => (self, args) => {
+            const task = global[api.symbol("jsonTask")];
+            if (task) {
+              task.callback = delegate;
+              return task.invoke.apply(self, args);
+            } else {
+              return delegate.apply(self, args);
+            }
+          });
+        } else {
+          Object.defineProperty(global, methodName, {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return function() {
+                const task = global[api.symbol("jsonpTask")];
+                const target = this ? this : global;
+                const delegate = global[api.symbol(`jsonp${methodName}callback`)];
+                if (task) {
+                  if (delegate) {
+                    task.callback = delegate;
+                  }
+                  global[api.symbol("jsonpTask")] = void 0;
+                  return task.invoke.apply(this, arguments);
+                } else {
+                  if (delegate) {
+                    return delegate.apply(this, arguments);
+                  }
+                }
+                return null;
+              };
+            },
+            set: function(callback) {
+              this[api.symbol(`jsonp${methodName}callback`)] = callback;
+            }
+          });
+        }
+      });
+      api.patchMethod(options.jsonp, options.sendFuncName, (delegate) => (self, args) => {
+        global[api.symbol("jsonpTask")] = Zone3.current.scheduleMacroTask("jsonp", noop2, {}, (task) => {
+          return delegate.apply(self, args);
+        }, noop2);
+      });
+    };
+  });
+}
+
+// packages/zone.js/lib/extra/rollup-jsonp.js
+patchJsonp(Zone);

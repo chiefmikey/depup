@@ -13,7 +13,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 - **Original Package**: [uuid](https://www.npmjs.com/package/uuid)
 - **DepUp Version**: 13.0.0-depup.0
 - **Original Version**: 13.0.0
-- **Last Updated**: 9/11/2025
+- **Last Updated**: 9/12/2025
 
 ## 🚀 Installation
 
@@ -34,7 +34,7 @@ npm install @depup/uuid
 ### Version 13.0.0
 
 - **Revision 0** (13.0.0-depup.0) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 
 
 ## 🤝 Contributing

@@ -1,0 +1,52 @@
+{
+  "name": "@depup/class-transformer",
+  "version": "0.5.1-depup.0",
+  "description": "[DepUp] Proper decorator-based transformation / serialization / deserialization of plain javascript objects to class constructors",
+  "author": "TypeStack contributors",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "sideEffects": false,
+  "main": "./cjs/index.js",
+  "module": "./esm5/index.js",
+  "es2015": "./esm2015/index.js",
+  "typings": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typestack/class-transformer.git"
+  },
+  "tags": [
+    "serialization",
+    "deserialization",
+    "serializer",
+    "typescript",
+    "object-to-class",
+    "typescript-serializer"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "npm run prettier:fix"
+    ],
+    "*.ts": [
+      "npm run prettier:fix"
+    ]
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "class-transformer"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "class-transformer",
+    "originalVersion": "0.5.1",
+    "processedAt": "2026-03-09T05:02:42.983Z",
+    "smokeTest": "passed"
+  }
+}
