@@ -101,15 +101,6 @@ class DepUp {
     console.log(
       chalk.cyan(`Processing ${packageName}@${baseVersion} -> ${scopedName}`),
     );
-    if (debug) {
-      console.log(chalk.gray('Package manifest:'), {
-        dependencies: Object.keys(manifest.dependencies || {}).length,
-        devDependencies: Object.keys(manifest.devDependencies || {}).length,
-        name: packageName,
-        scopedName,
-        version: baseVersion,
-      });
-    }
 
     const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const versionDirectory = path.join(packageDirectory, baseVersion);
@@ -130,6 +121,7 @@ class DepUp {
       scopedName,
       baseVersion,
       revision,
+      packageName,
     );
 
     const bumpResult = await this.maybeBumpDeps(
@@ -147,7 +139,22 @@ class DepUp {
       targetDirectory,
     );
 
-    await this.maybeTest(context, targetDirectory, scopedName, packageJson);
+    const testResult = await this.maybeTest(
+      context,
+      targetDirectory,
+      scopedName,
+      packageJson,
+    );
+
+    await this.preparePublishArtifacts({
+      baseVersion,
+      changesData,
+      packageJson,
+      packageName,
+      targetDirectory,
+      testResult,
+    });
+
     const published = await this.handlePublishStep({
       ...context,
       dependenciesUpdated: bumpResult.updatedCount,
@@ -157,34 +164,52 @@ class DepUp {
       targetDirectory,
     });
 
-    if (published) {
-      await this.cleanupAfterPublish(targetDirectory, debug);
-    }
-
-    await this.updateIntegrityData(
-      packageDirectory,
+    await this.finalizePackage({
       baseVersion,
+      changesData,
+      debug,
+      packageDirectory,
+      packageJson,
+      packageName,
+      published,
       revision,
-      packageJson.version,
-      {
-        changes: changesData.bumped,
-        status: this.getPublishStatus(shouldPublish, published),
-      },
-    );
-
-    await this.safeGenerateReadme(packageName, debug);
-    console.log(
-      chalk.green(
-        `Prepared ${scopedName}@${packageJson.version} in ${targetDirectory}`,
-      ),
-    );
+      scopedName,
+      shouldPublish,
+      targetDirectory,
+    });
   }
 
-  async preparePackageJson(targetDirectory, scopedName, baseVersion, revision) {
+  async preparePackageJson(
+    targetDirectory,
+    scopedName,
+    baseVersion,
+    revision,
+    originalName,
+  ) {
     const packageJsonPath = path.join(targetDirectory, 'package.json');
     const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
     packageJson.name = scopedName;
     packageJson.version = `${baseVersion}-depup.${revision}`;
+
+    // Discoverability: prefix description
+    packageJson.description = packageJson.description
+      ? `[DepUp] ${packageJson.description}`
+      : `[DepUp] Dependency-bumped version of ${originalName}`;
+
+    // Discoverability: add depup keywords while preserving originals
+    const existingKeywords = Array.isArray(packageJson.keywords)
+      ? packageJson.keywords
+      : [];
+    const depupKeywords = [
+      'depup',
+      'dependency-bumped',
+      'updated-deps',
+      originalName,
+    ];
+    packageJson.keywords = [
+      ...new Set([...depupKeywords, ...existingKeywords]),
+    ];
+
     return packageJson;
   }
 
@@ -222,7 +247,7 @@ class DepUp {
 
   async maybeTest(context, targetDirectory, scopedName, packageJson) {
     if (!context.shouldTest) {
-      return;
+      return 'skipped';
     }
     const testPassed = await this.testPackage(
       targetDirectory,
@@ -235,6 +260,7 @@ class DepUp {
         chalk.yellow(`Tests failed for ${scopedName}@${packageJson.version}`),
       );
     }
+    return testPassed ? 'passed' : 'failed';
   }
 
   async fetchManifest(packageSpec, timeout) {
@@ -464,9 +490,6 @@ class DepUp {
 
       if (packageJson.dependencies && packageJson.dependencies[depName]) {
         packageJson.dependencies[depName] = `^${latestVersion}`;
-      }
-      if (packageJson.devDependencies && packageJson.devDependencies[depName]) {
-        packageJson.devDependencies[depName] = `^${latestVersion}`;
       }
 
       return {
@@ -724,11 +747,20 @@ try {
 
   executePublish(packageDirectory, version, debug) {
     const isPrerelease = semver.prerelease(version) !== null;
-    const publishCommand = isPrerelease
-      ? 'npm publish --access public --tag beta'
-      : 'npm publish --access public';
+    const isDepupVersion =
+      Array.isArray(semver.prerelease(version)) &&
+      semver.prerelease(version).includes('depup');
+    let publishTag = '';
+    if (isDepupVersion) {
+      publishTag = ' --tag latest';
+    } else if (isPrerelease) {
+      publishTag = ' --tag beta';
+    }
+    const publishCommand = `npm publish --access public${publishTag}`;
 
-    if (debug && isPrerelease) {
+    if (debug && isDepupVersion) {
+      console.log(chalk.gray(`  Publishing depup version with 'latest' tag`));
+    } else if (debug && isPrerelease) {
       console.log(chalk.gray(`  Publishing as prerelease with 'beta' tag`));
     }
 
@@ -818,6 +850,127 @@ try {
         cause: error,
       });
     }
+  }
+
+  async finalizePackage(context) {
+    const {
+      baseVersion,
+      changesData,
+      debug,
+      packageDirectory,
+      packageJson,
+      packageName,
+      published,
+      revision,
+      scopedName,
+      shouldPublish,
+      targetDirectory,
+    } = context;
+
+    if (published) {
+      await this.cleanupAfterPublish(targetDirectory, debug);
+    }
+
+    await this.updateIntegrityData(
+      packageDirectory,
+      baseVersion,
+      revision,
+      packageJson.version,
+      {
+        changes: changesData.bumped,
+        status: this.getPublishStatus(shouldPublish, published),
+      },
+    );
+
+    await this.safeGenerateReadme(packageName, debug);
+    console.log(
+      chalk.green(
+        `Prepared ${scopedName}@${packageJson.version} in ${targetDirectory}`,
+      ),
+    );
+  }
+
+  async preparePublishArtifacts(context) {
+    const {
+      baseVersion,
+      changesData,
+      packageJson,
+      packageName,
+      targetDirectory,
+      testResult,
+    } = context;
+
+    packageJson.depup = {
+      changes: changesData.bumped || {},
+      depsUpdated: changesData.totalUpdated || 0,
+      originalPackage: packageName,
+      originalVersion: baseVersion,
+      processedAt: new Date().toISOString(),
+      smokeTest: testResult,
+    };
+
+    await fs.writeFile(
+      path.join(targetDirectory, 'package.json'),
+      JSON.stringify(packageJson, undefined, 2),
+    );
+
+    await this.generatePublishReadme(context);
+  }
+
+  async generatePublishReadme(context) {
+    const { baseVersion, changesData, packageName, targetDirectory, testResult } =
+      context;
+    const npmUrl = `https://www.npmjs.com/package/${packageName}`;
+    const date = new Date().toISOString().split('T')[0];
+    const lines = [
+      `# @depup/${packageName}`,
+      '',
+      `> Dependency-bumped version of [${packageName}](${npmUrl})`,
+      '',
+      'Generated by [DepUp](https://github.com/depup/npm) -- all production',
+      'dependencies bumped to latest versions.',
+      '',
+      '## Installation',
+      '',
+      `\`\`\`bash\nnpm install @depup/${packageName}\n\`\`\``,
+      '',
+      '| Field | Value |',
+      '|-------|-------|',
+      `| Original | [${packageName}](${npmUrl}) @ ${baseVersion} |`,
+      `| Processed | ${date} |`,
+      `| Smoke test | ${testResult} |`,
+      `| Deps updated | ${changesData.totalUpdated || 0} |`,
+    ];
+
+    const bumped = Object.entries(changesData.bumped || {});
+    if (bumped.length > 0) {
+      lines.push(
+        '',
+        '## Dependency Changes',
+        '',
+        '| Dependency | From | To |',
+        '|------------|------|-----|',
+      );
+      for (const [dep, ver] of bumped.toSorted(([a], [b]) =>
+        a.localeCompare(b),
+      )) {
+        lines.push(`| ${dep} | ${ver.from} | ${ver.to} |`);
+      }
+    }
+
+    lines.push(
+      '',
+      '---',
+      '',
+      `Source: https://github.com/depup/npm | Original: ${npmUrl}`,
+      '',
+      'License inherited from the original package.',
+    );
+
+    await fs.writeFile(
+      path.join(targetDirectory, 'README.md'),
+      lines.join('\n'),
+    );
   }
 
   getPublishStatus(shouldPublish, published) {

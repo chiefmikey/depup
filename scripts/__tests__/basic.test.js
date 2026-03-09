@@ -252,6 +252,92 @@ describe('depUp Basic Tests', () => {
     });
   });
 
+  describe('discoverability Metadata', () => {
+    it('should add depup keywords while preserving originals', () => {
+      const originalKeywords = ['utility', 'lodash'];
+      const depupKeywords = ['depup', 'dependency-bumped', 'updated-deps', 'lodash'];
+      const merged = [...new Set([...depupKeywords, ...originalKeywords])];
+
+      expect(merged).toContain('depup');
+      expect(merged).toContain('dependency-bumped');
+      expect(merged).toContain('updated-deps');
+      expect(merged).toContain('utility');
+      expect(merged).toContain('lodash');
+      // No duplicates
+      expect(merged.filter((k) => k === 'lodash').length).toBe(1);
+    });
+
+    it('should prefix description with [DepUp]', () => {
+      const original = 'A utility library';
+      const prefixed = `[DepUp] ${original}`;
+      expect(prefixed).toBe('[DepUp] A utility library');
+      expect(prefixed.startsWith('[DepUp]')).toBe(true);
+    });
+
+    it('should generate fallback description for packages without one', () => {
+      const packageName = 'lodash';
+      const fallback = `[DepUp] Dependency-bumped version of ${packageName}`;
+      expect(fallback).toBe('[DepUp] Dependency-bumped version of lodash');
+    });
+  });
+
+  describe('depup Metadata', () => {
+    it('should construct depup metadata field correctly', () => {
+      const metadata = {
+        changes: { axios: { from: '^1.0.0', to: '^2.0.0' } },
+        depsUpdated: 1,
+        originalPackage: 'express',
+        originalVersion: '4.18.2',
+        processedAt: '2026-03-08T00:00:00.000Z',
+        smokeTest: 'passed',
+      };
+
+      expect(metadata.originalPackage).toBe('express');
+      expect(metadata.originalVersion).toBe('4.18.2');
+      expect(metadata.depsUpdated).toBe(1);
+      expect(metadata.smokeTest).toBe('passed');
+      expect(metadata.changes.axios.from).toBe('^1.0.0');
+      expect(metadata.changes.axios.to).toBe('^2.0.0');
+    });
+
+    it('should return correct smoke test statuses', () => {
+      const statuses = ['passed', 'failed', 'skipped'];
+      for (const status of statuses) {
+        expect(typeof status).toBe('string');
+        expect(statuses).toContain(status);
+      }
+    });
+  });
+
+  describe('publish Tag Logic', () => {
+    it('should identify depup prerelease versions', () => {
+      const isDepupVersion = (version) => {
+        const match = version.match(/-depup\.\d+$/);
+        return match !== null;
+      };
+
+      expect(isDepupVersion('1.0.0-depup.0')).toBe(true);
+      expect(isDepupVersion('2.1.3-depup.5')).toBe(true);
+      expect(isDepupVersion('1.0.0-beta.1')).toBe(false);
+      expect(isDepupVersion('1.0.0')).toBe(false);
+    });
+
+    it('should select correct publish tag', () => {
+      const getPublishTag = (version) => {
+        const isDepup = /-depup\.\d+$/.test(version);
+        const isPrerelease = /-/.test(version);
+
+        if (isDepup) return 'latest';
+        if (isPrerelease) return 'beta';
+        return '';
+      };
+
+      expect(getPublishTag('1.0.0-depup.0')).toBe('latest');
+      expect(getPublishTag('1.0.0-beta.1')).toBe('beta');
+      expect(getPublishTag('1.0.0')).toBe('');
+    });
+  });
+
   describe('rate Limiting', () => {
     it('should calculate delays correctly', () => {
       const calculateDelay = (baseDelay, attempt) => {
