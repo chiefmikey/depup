@@ -380,6 +380,7 @@ class PackageDiscoverer {
     'level',
     'lint-staged',
     'lodash',
+    'meow',
     'micromatch',
     'mime',
     'minimist',
