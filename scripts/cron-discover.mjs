@@ -401,6 +401,7 @@ class PackageDiscoverer {
     'p-queue',
     'pg',
     'pino',
+    'pkg',
     'playwright',
     'pm2',
     'prettier',
