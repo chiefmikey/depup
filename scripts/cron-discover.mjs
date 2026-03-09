@@ -478,6 +478,7 @@ class PackageDiscoverer {
     'decimal.js',
     'deepmerge',
     'del',
+    'destr',
     'dotenv',
     'dotenv-expand',
     'drizzle-orm',
