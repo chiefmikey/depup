@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [tailwindcss](https://www.npmjs.com/package/tailwindcss)
-- **DepUp Version**: 4.1.13-depup.0
-- **Original Version**: 4.1.13
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 4.2.1-depup.1
+- **Original Version**: 4.2.1
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/tailwindcss
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.1.13 | 0 | 🔴 Poor | 0% | 0 |
+| 4.2.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/tailwindcss
 ### Version 4.1.13
 
 - **Revision 0** (4.1.13-depup.0) - 🔴 Poor 0% integrity
+
+### Version 4.2.1
+
+- **Revision 1** (4.2.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
