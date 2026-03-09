@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [three](https://www.npmjs.com/package/three)
-- **DepUp Version**: 0.180.0-depup.0
-- **Original Version**: 0.180.0
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 0.183.2-depup.1
+- **Original Version**: 0.183.2
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/three
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 0.180.0 | 0 | 🔴 Poor | 0% | 0 |
+| 0.183.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/three
 ### Version 0.180.0
 
 - **Revision 0** (0.180.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 0.183.2
+
+- **Revision 1** (0.183.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

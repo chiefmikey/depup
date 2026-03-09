@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [jquery](https://www.npmjs.com/package/jquery)
-- **DepUp Version**: 3.7.1-depup.0
-- **Original Version**: 3.7.1
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 4.0.0-depup.1
+- **Original Version**: 4.0.0
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/jquery
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.7.1 | 0 | 🔴 Poor | 0% | 0 |
+| 4.0.0 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/jquery
 ### Version 3.7.1
 
 - **Revision 0** (3.7.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 4.0.0
+
+- **Revision 1** (4.0.0-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
