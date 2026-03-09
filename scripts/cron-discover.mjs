@@ -543,6 +543,7 @@ class PackageDiscoverer {
     'json5',
     'jsonwebtoken',
     'keyv',
+    'kleur',
     'knex',
     'koa',
     'koa-router',
