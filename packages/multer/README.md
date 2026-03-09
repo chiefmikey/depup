@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [multer](https://www.npmjs.com/package/multer)
-- **DepUp Version**: 2.0.2-depup.0
-- **Original Version**: 2.0.2
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 2.1.1-depup.1
+- **Original Version**: 2.1.1
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/multer
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.0.2 | 0 | 🔴 Poor | 0% | 0 |
+| 2.1.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/multer
 ### Version 2.0.2
 
 - **Revision 0** (2.0.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 2.1.1
+
+- **Revision 1** (2.1.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

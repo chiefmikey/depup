@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [vue](https://www.npmjs.com/package/vue)
-- **DepUp Version**: 3.5.29-depup.1
-- **Original Version**: 3.5.29
+- **DepUp Version**: 3.5.30-depup.0
+- **Original Version**: 3.5.30
 - **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
@@ -27,6 +27,7 @@ npm install @depup/vue
 |---------|----------|--------|-------|-------|
 | 3.5.21 | 0 | 🔴 Poor | 0% | 0 |
 | 3.5.29 | 1 | 🔴 Poor | 0% | 0 |
+| 3.5.30 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/vue
 ### Version 3.5.29
 
 - **Revision 1** (3.5.29-depup.1) - 🔴 Poor 0% integrity
+
+### Version 3.5.30
+
+- **Revision 0** (3.5.30-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
