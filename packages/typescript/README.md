@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [typescript](https://www.npmjs.com/package/typescript)
-- **DepUp Version**: 5.9.2-depup.0
-- **Original Version**: 5.9.2
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 5.9.3-depup.1
+- **Original Version**: 5.9.3
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/typescript
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.9.2 | 0 | 🔴 Poor | 0% | 0 |
+| 5.9.3 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/typescript
 ### Version 5.9.2
 
 - **Revision 0** (5.9.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.9.3
+
+- **Revision 1** (5.9.3-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
