@@ -3,8 +3,6 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 class IntegrityMeter {
-  constructor() {}
-
   async main() {
     const arguments_ = process.argv.slice(2);
     const action = arguments_[0];

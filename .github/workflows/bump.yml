@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
@@ -43,7 +43,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm run cron:sync
+          npm run cron:sync
 
       - name: Commit Changes
         run: |

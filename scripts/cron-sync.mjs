@@ -6,12 +6,6 @@ import fetch from 'npm-registry-fetch';
 import semver from 'semver';
 
 class PackageSyncer {
-  constructor() {
-    // 2 seconds between batches
-    // Limit packages per sync run
-    // Process this many packages in parallel
-  }
-
   async main() {
     console.log('🔄 Starting package sync...');
 

@@ -10,12 +10,6 @@ const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
 
 class PackageDiscoverer {
-  constructor() {
-    // 2 seconds between batches
-    // Limit packages per run
-    // Process this many packages in parallel
-  }
-
   async main() {
     const spinner = ora('Starting package discovery...').start();
 
@@ -191,7 +185,7 @@ class PackageDiscoverer {
     }
 
     // Sanitize package name
-    const sanitizedName = package_.name.replaceAll(/[^\w.@-]/gu, '');
+    const sanitizedName = package_.name.replaceAll(/[^\w.@/-]/gu, '');
     if (sanitizedName !== package_.name) {
       throw new Error(
         `Invalid package name: ${package_.name} (contains invalid characters)`,

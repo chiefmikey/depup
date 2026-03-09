@@ -347,7 +347,7 @@ class DepUp {
   }
 
   rejectAfterTimeout(message, timeout) {
-    return new Promise((_, reject) => {
+    return new Promise((_resolve, reject) => {
       setTimeout(() => reject(new Error(message)), timeout);
     });
   }
@@ -399,7 +399,10 @@ class DepUp {
       );
 
       for (const result of results) {
-        if (result.status === 'fulfilled' && result.value.result === 'updated') {
+        if (
+          result.status === 'fulfilled' &&
+          result.value.result === 'updated'
+        ) {
           changes.push({
             depName: result.value.depName,
             from: result.value.from,

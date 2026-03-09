@@ -59,8 +59,10 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "mikey-pro": "^10.1.0",
-    "supertest": "^6.3.3"
+    "mikey-pro": "^10.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "homepage": "https://github.com/depup/npm",
   "repository": "https://github.com/depup/npm",

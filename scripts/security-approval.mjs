@@ -360,7 +360,7 @@ class SecurityApprovalWorkflow {
     }
 
     if (options.limit) {
-      entries = entries.slice(-Number.parseInt(options.limit));
+      entries = entries.slice(-Number.parseInt(options.limit, 10));
     }
 
     if (entries.length === 0) {

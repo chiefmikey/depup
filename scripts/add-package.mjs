@@ -2,8 +2,6 @@
 import { promises as fs } from 'node:fs';
 
 class PackageAdder {
-  constructor() {}
-
   async addPackage(packageName) {
     if (!packageName) {
       throw new Error('Package name is required');
