@@ -1,0 +1,47 @@
+@layer vuetify-components {
+  .v-system-bar {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    height: 24px;
+    justify-content: flex-end;
+    max-width: 100%;
+    padding-inline: 8px;
+    position: relative;
+    text-align: end;
+    width: 100%;
+  }
+  .v-system-bar .v-icon {
+    opacity: var(--v-medium-emphasis-opacity);
+  }
+  .v-system-bar {
+    box-shadow: 0px 0px 0px 0px rgba(var(--v-shadow-color), var(--v-shadow-key-opacity, 0.3)), 0px 0px 0px 0px rgba(var(--v-shadow-color), var(--v-shadow-ambient-opacity, 0.15));
+    --v-elevation-overlay: color-mix(in srgb, var(--v-elevation-overlay-color) 0%, transparent);
+  }
+  .v-system-bar--absolute {
+    position: absolute;
+  }
+  .v-system-bar--fixed {
+    position: fixed;
+  }
+  .v-system-bar {
+    background: rgba(var(--v-theme-surface-light));
+    color: color-mix(in srgb, rgb(var(--v-theme-on-surface-light)) calc(var(--v-high-emphasis-opacity) * 100%), transparent);
+  }
+  .v-system-bar {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.0454545455em;
+    line-height: 1.4545454545;
+    text-transform: none;
+  }
+  .v-system-bar--rounded {
+    border-radius: 0;
+  }
+  .v-system-bar--window {
+    height: 32px;
+  }
+  .v-system-bar:not(.v-system-bar--absolute) {
+    padding-inline-end: calc(var(--v-scrollbar-offset) + 8px);
+  }
+}

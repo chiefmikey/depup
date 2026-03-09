@@ -1,0 +1,54 @@
+{
+  "name": "@depup/source-map-support",
+  "description": "[DepUp] Fixes stack traces for files with source maps",
+  "version": "0.5.21-depup.0",
+  "main": "./source-map-support.js",
+  "scripts": {
+    "build": "node build.js",
+    "serve-tests": "http-server -p 1336",
+    "prepublish": "npm run build",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "buffer-from": "^1.1.2",
+    "source-map": "^0.7.6"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.3",
+    "coffeescript": "^1.12.7",
+    "http-server": "^0.11.1",
+    "mocha": "^3.5.3",
+    "webpack": "^1.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanw/node-source-map-support"
+  },
+  "bugs": {
+    "url": "https://github.com/evanw/node-source-map-support/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "source-map-support"
+  ],
+  "depup": {
+    "changes": {
+      "buffer-from": {
+        "from": "^1.0.0",
+        "to": "^1.1.2"
+      },
+      "source-map": {
+        "from": "^0.6.0",
+        "to": "^0.7.6"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "source-map-support",
+    "originalVersion": "0.5.21",
+    "processedAt": "2026-03-09T05:29:57.059Z",
+    "smokeTest": "passed"
+  }
+}

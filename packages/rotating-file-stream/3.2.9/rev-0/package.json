@@ -1,0 +1,85 @@
+{
+  "name": "@depup/rotating-file-stream",
+  "version": "3.2.9-depup.0",
+  "description": "[DepUp] Opens a stream.Writable to a file rotated by interval and/or size. A logrotate alternative.",
+  "scripts": {
+    "all": "yarn eslint && yarn coverage",
+    "coverage": "rm -rf dist && TZ=Europe/Rome jest --coverage --runInBand",
+    "eslint": "eslint index.ts utils.ts test/*ts",
+    "ignore": "tsx utils ignore",
+    "prepare": "npm run ignore && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.types.json",
+    "test": "rm -rf dist && TZ=Europe/Rome jest --runInBand"
+  },
+  "bugs": "https://github.com/iccicci/rotating-file-stream/issues",
+  "repository": {
+    "url": "git+https://github.com/iccicci/rotating-file-stream.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "rotating-file-stream",
+    "log",
+    "rotate",
+    "logrotate"
+  ],
+  "engines": {
+    "node": ">=14.0"
+  },
+  "author": "Daniele Ricci <daniele.icc@gmail.com> (https://github.com/iccicci)",
+  "contributors": [
+    "cicci (https://www.trinityteam.it/DanieleRicci#en)",
+    "allevo",
+    "kbirger",
+    "jvassev",
+    "wangao",
+    "rakshith-ravi",
+    "Jorge Silva <jorgemsrs@gmail.com>",
+    "Jan Christoph Bernack <jc.bernack@gmail.com>",
+    "cchare (https://github.com/cchare)"
+  ],
+  "license": "MIT",
+  "funding": {
+    "url": "https://www.blockchain.com/btc/address/12p1p5q7sK75tPyuesZmssiMYr4TKzpSCN"
+  },
+  "readmeFilename": "README.md",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "30.0.0",
+    "@types/node": "25.3.0",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-sort-keys": "2.3.5",
+    "jest": "30.2.0",
+    "jest-environment-node-single-context": "29.4.0",
+    "prettier": "3.8.1",
+    "ts-jest": "29.4.6",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "jsxBracketSameLine": true,
+    "printWidth": 200,
+    "trailingComma": "none"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "rotating-file-stream",
+    "originalVersion": "3.2.9",
+    "processedAt": "2026-03-09T05:29:49.669Z",
+    "smokeTest": "passed"
+  }
+}

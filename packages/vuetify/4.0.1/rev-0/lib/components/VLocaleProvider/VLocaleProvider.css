@@ -1,0 +1,5 @@
+@layer vuetify-components {
+  .v-locale-provider {
+    display: contents;
+  }
+}

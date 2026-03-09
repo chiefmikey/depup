@@ -1,0 +1,32 @@
+@use '../tools/functions' as *;
+
+$shadow-key-color: rgba(var(--v-shadow-color), var(--v-shadow-key-opacity, 0.3)) !default;
+$shadow-ambient-color: rgba(var(--v-shadow-color), var(--v-shadow-ambient-opacity, 0.15)) !default;
+
+$shadow-key: () !default;
+$shadow-key: map-deep-merge(
+  (
+    0: (0px 0px 0px 0px $shadow-key-color),
+    1: (0px 1px 2px 0px $shadow-key-color),
+    2: (0px 1px 2px 0px $shadow-key-color),
+    3: (0px 1px 3px 0px $shadow-key-color),
+    4: (0px 2px 3px 0px $shadow-key-color),
+    5: (0px 4px 4px 0px $shadow-key-color)
+  ),
+  $shadow-key
+);
+
+$shadow-ambient: () !default;
+$shadow-ambient: map-deep-merge(
+  (
+    0: (0px 0px 0px 0px $shadow-ambient-color),
+    1: (0px 1px 3px 1px $shadow-ambient-color),
+    2: (0px 2px 6px 2px $shadow-ambient-color),
+    3: (0px 4px 8px 3px $shadow-ambient-color),
+    4: (0px 6px 10px 4px $shadow-ambient-color),
+    5: (0px 8px 12px 6px $shadow-ambient-color)
+  ),
+  $shadow-ambient
+);
+
+$elevation-overlay-step: 2%;

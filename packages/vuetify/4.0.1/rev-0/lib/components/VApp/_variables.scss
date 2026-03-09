@@ -1,0 +1,6 @@
+@use '../../styles/settings';
+@use '../../styles/tools';
+
+// VApp
+$application-background: rgb(var(--v-theme-background)) !default;
+$application-color: tools.theme-color('on-background', var(--v-high-emphasis-opacity)) !default;
