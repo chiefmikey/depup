@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@vue/compiler-sfc](https://www.npmjs.com/package/@vue/compiler-sfc)
-- **DepUp Version**: 3.5.29-depup.0
-- **Original Version**: 3.5.29
+- **DepUp Version**: 3.5.30-depup.0
+- **Original Version**: 3.5.30
 - **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/vue__compiler-sfc
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.5.29 | 0 | 🔴 Poor | 0% | 0 |
+| 3.5.30 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/vue__compiler-sfc
 ### Version 3.5.29
 
 - **Revision 0** (3.5.29-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.5.30
+
+- **Revision 0** (3.5.30-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

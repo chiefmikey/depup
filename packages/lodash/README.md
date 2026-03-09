@@ -13,7 +13,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 - **Original Package**: [lodash](https://www.npmjs.com/package/lodash)
 - **DepUp Version**: 4.17.23-depup.0
 - **Original Version**: 4.17.23
-- **Last Updated**: 3/8/2026
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -53,7 +53,7 @@ npm install @depup/lodash
 ### Version 4.17.21
 
 - **Revision 0** (4.17.21-depup.0) - 🟢 Excellent 100% integrity
-  - Last updated: 9/11/2025
+  - Last updated: 9/12/2025
 - **Revision 1** (4.17.21-depup.1) - 🔴 Poor 0% integrity
 - **Revision 2** (4.17.21-depup.2) - 🔴 Poor 0% integrity
 - **Revision 3** (4.17.21-depup.3) - 🔴 Poor 0% integrity
@@ -75,7 +75,7 @@ npm install @depup/lodash
 ### Version 1.0.0
 
 - **Revision 0** (undefined) - 🟡 Good 67% integrity
-  - Last updated: 9/14/2025
+  - Last updated: 9/15/2025
 
 ### Version 4.17.23
 
