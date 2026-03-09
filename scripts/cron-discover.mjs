@@ -335,6 +335,7 @@ class PackageDiscoverer {
     'chai',
     'chalk',
     'chart.js',
+    'cls-hooked',
     'color',
     'colors',
     'commander',
