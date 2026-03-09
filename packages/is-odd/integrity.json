@@ -4,6 +4,17 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.887Z",
       "version": "3.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "is-number": {
+          "from": "^6.0.0",
+          "to": "^7.0.0"
+        }
+      },
+      "status": "prepared",
+      "timestamp": "2026-03-09T20:09:22.152Z",
+      "version": "3.0.1-depup.1"
     }
   }
 }

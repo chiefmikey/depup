@@ -11,7 +11,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [cors](https://www.npmjs.com/package/cors)
-- **DepUp Version**: 2.8.6-depup.0
+- **DepUp Version**: 2.8.6-depup.1
 - **Original Version**: 2.8.6
 - **Last Updated**: 3/9/2026
 
@@ -27,6 +27,7 @@ npm install @depup/cors
 |---------|----------|--------|-------|-------|
 | 2.8.5 | 0 | 🔴 Poor | 0% | 0 |
 | 2.8.6 | 0 | 🔴 Poor | 0% | 0 |
+| 2.8.6 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,7 @@ npm install @depup/cors
 ### Version 2.8.6
 
 - **Revision 0** (2.8.6-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (2.8.6-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

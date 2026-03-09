@@ -11,7 +11,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [chalk](https://www.npmjs.com/package/chalk)
-- **DepUp Version**: 5.6.2-depup.0
+- **DepUp Version**: 5.6.2-depup.25
 - **Original Version**: 5.6.2
 - **Last Updated**: 3/9/2026
 
@@ -26,6 +26,7 @@ npm install @depup/chalk
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.6.2 | 0 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 25 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/chalk
 ### Version 5.6.2
 
 - **Revision 0** (5.6.2-depup.0) - 🔴 Poor 0% integrity
+- **Revision 25** (5.6.2-depup.25) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -11,7 +11,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [express](https://www.npmjs.com/package/express)
-- **DepUp Version**: 5.2.1-depup.5
+- **DepUp Version**: 5.2.1-depup.6
 - **Original Version**: 5.2.1
 - **Last Updated**: 3/9/2026
 
@@ -43,6 +43,7 @@ npm install @depup/express
 | 5.1.0 | 15 | 🔴 Poor | 0% | 0 |
 | 1.0.0 | 0 | 🟡 Good | 67% | 45 |
 | 5.2.1 | 5 | 🔴 Poor | 0% | 0 |
+| 5.2.1 | 6 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -75,6 +76,7 @@ npm install @depup/express
 ### Version 5.2.1
 
 - **Revision 5** (5.2.1-depup.5) - 🔴 Poor 0% integrity
+- **Revision 6** (5.2.1-depup.6) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
