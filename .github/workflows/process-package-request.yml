@@ -26,7 +26,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Parse Issue Content
         id: parse
@@ -217,8 +217,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage only the curated list change
+          # Stage only the curated list change and discard any other modifications
           git add scripts/cron-discover.mjs
+          git checkout -- .
 
           # Verify there are changes to commit
           if git diff --cached --quiet; then
