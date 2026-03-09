@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [nodemailer](https://www.npmjs.com/package/nodemailer)
-- **DepUp Version**: 8.0.1-depup.1
-- **Original Version**: 8.0.1
+- **DepUp Version**: 8.0.2-depup.0
+- **Original Version**: 8.0.2
 - **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
@@ -27,6 +27,7 @@ npm install @depup/nodemailer
 |---------|----------|--------|-------|-------|
 | 7.0.6 | 0 | 🔴 Poor | 0% | 0 |
 | 8.0.1 | 1 | 🔴 Poor | 0% | 0 |
+| 8.0.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/nodemailer
 ### Version 8.0.1
 
 - **Revision 1** (8.0.1-depup.1) - 🔴 Poor 0% integrity
+
+### Version 8.0.2
+
+- **Revision 0** (8.0.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
