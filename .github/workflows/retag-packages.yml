@@ -1,0 +1,69 @@
+name: "Retag Beta Packages to Latest"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  retag:
+    name: Fix dist-tags
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Retag packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          FAILED=0
+
+          retag() {
+            local pkg="$1"
+            local version="$2"
+            echo "Retagging @depup/${pkg}@${version} as latest..."
+            if npm dist-tag add "@depup/${pkg}@${version}" latest; then
+              echo "  OK"
+            else
+              echo "  FAILED"
+              FAILED=$((FAILED + 1))
+            fi
+          }
+
+          # Packages where beta > latest (published after the tag fix)
+          retag dotenv 17.3.1-depup.0
+          retag jquery 4.0.0-depup.0
+          retag mongoose 9.2.4-depup.0
+          retag multer 2.1.1-depup.0
+          retag nodemailer 8.0.1-depup.0
+          retag nuxt 4.3.0-depup.0
+          retag prettier 3.8.1-depup.0
+          retag prisma 7.4.2-depup.0
+          retag react 19.2.4-depup.0
+          retag svelte 5.53.7-depup.0
+          retag three 0.183.2-depup.0
+          retag vue 3.5.29-depup.0
+
+          # Remove stale beta tags from all published packages
+          for pkg in concurrently debug dotenv express jest jquery knex leaflet lodash moment mongoose multer nodemailer nodemon nuxt pm2 prettier prisma react svelte three typeorm typescript vite vue; do
+            echo "Removing beta tag from @depup/${pkg}..."
+            npm dist-tag rm "@depup/${pkg}" beta 2>/dev/null || true
+          done
+
+          echo ""
+          echo "=== Verification ==="
+          for pkg in concurrently debug dotenv express jest jquery knex leaflet lodash moment mongoose multer nodemailer nodemon nuxt pm2 prettier prisma react svelte three typeorm typescript vite vue; do
+            echo "--- @depup/${pkg} ---"
+            npm dist-tag ls "@depup/${pkg}" 2>/dev/null || echo "  (not found)"
+          done
+
+          if [ $FAILED -gt 0 ]; then
+            echo ""
+            echo "WARNING: $FAILED retag operations failed"
+            exit 1
+          fi
+
+          echo ""
+          echo "All packages retagged successfully"
