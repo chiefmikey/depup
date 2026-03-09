@@ -360,6 +360,7 @@ class PackageDiscoverer {
     'express',
     'fast-glob',
     'fastify',
+    'file-type',
     'framer-motion',
     'gatsby',
     'glob',
