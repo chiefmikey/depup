@@ -403,6 +403,7 @@ class PackageDiscoverer {
     'playwright',
     'pm2',
     'prettier',
+    'pretty-bytes',
     'prisma',
     'puppeteer',
     'react',
