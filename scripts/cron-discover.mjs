@@ -323,6 +323,7 @@ class PackageDiscoverer {
   concurrentPackages = 10;
   curatedPackageNames = [
     '@babel/core',
+    '@emotion/react',
     '@types/node',
     '@vue/compiler-sfc',
     '7zip-bin',
