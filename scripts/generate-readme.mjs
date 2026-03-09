@@ -2,6 +2,8 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+import semver from 'semver';
+
 class ReadmeGenerator {
   constructor() {
     this.template = `# @depup/{{packageName}}
@@ -93,22 +95,31 @@ This package inherits the license from the original package. See the original pa
     }
 
     // Get latest version info
-    const versions = Object.keys(integrityData).toSorted();
+    const versions = Object.keys(integrityData)
+      .filter((v) => semver.valid(v))
+      .toSorted((a, b) => semver.compare(a, b));
     const latestVersion = versions.at(-1);
 
     if (!latestVersion) {
       throw new Error(`No version data found for ${packageName}`);
     }
 
-    const revisions = Object.keys(integrityData[latestVersion]).toSorted(
-      (a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10),
-    );
+    const revisions = Object.keys(integrityData[latestVersion])
+      .filter((key) => !Number.isNaN(Number.parseInt(key, 10)))
+      .toSorted((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
     const latestRevision = revisions.at(-1);
-    const latestData = integrityData[latestVersion][latestRevision];
+    const latestData = latestRevision
+      ? integrityData[latestVersion][latestRevision]
+      : undefined;
+
+    // Flatten scoped names for @depup/ publishing: @nestjs/common -> nestjs__common
+    const flatName = packageName.startsWith('@')
+      ? packageName.slice(1).replace(/\//u, '__')
+      : packageName;
 
     // Generate content
     const content = this.template
-      .replaceAll('{{packageName}}', packageName)
+      .replaceAll('{{packageName}}', flatName)
       .replaceAll('{{originalPackage}}', packageName)
       .replaceAll('{{version}}', latestData?.version || 'unknown')
       .replaceAll('{{originalVersion}}', latestVersion)
@@ -132,7 +143,7 @@ This package inherits the license from the original package. See the original pa
     await fs.writeFile(readmePath, content);
   }
 
-  generateIntegrityTable(integrityData) {
+  generateIntegrityTable(integrityData, votesData) {
     if (Object.keys(integrityData).length === 0) {
       return 'No integrity data available yet.';
     }
@@ -144,7 +155,9 @@ This package inherits the license from the original package. See the original pa
       for (const [revision, data] of Object.entries(versionData)) {
         const integrity = data.integrity || {};
         const score = integrity.score || 0;
-        const totalVotes = integrity.totalVotes || 0;
+        const versionVotes = votesData?.[version];
+        const totalVotes =
+          versionVotes?.totalVotes || integrity.totalVotes || 0;
         const status = this.getStatusEmoji(score);
 
         table += `| ${version} | ${revision} | ${status} | ${score}% | ${totalVotes} |\n`;
@@ -154,7 +167,7 @@ This package inherits the license from the original package. See the original pa
     return table;
   }
 
-  generateVersionHistory(integrityData) {
+  generateVersionHistory(integrityData, votesData) {
     if (Object.keys(integrityData).length === 0) {
       return 'No version history available yet.';
     }
@@ -162,7 +175,13 @@ This package inherits the license from the original package. See the original pa
     let history = '';
 
     for (const [version, versionData] of Object.entries(integrityData)) {
-      history += `\n### Version ${version}\n\n`;
+      const versionVotes = votesData?.[version];
+      const totalVotes = versionVotes?.totalVotes || 0;
+      history += `\n### Version ${version}`;
+      if (totalVotes > 0) {
+        history += ` (${totalVotes} votes)`;
+      }
+      history += `\n\n`;
 
       for (const [revision, data] of Object.entries(versionData)) {
         const integrity = data.integrity || {};

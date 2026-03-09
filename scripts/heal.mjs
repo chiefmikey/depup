@@ -1,9 +1,11 @@
 #!/usr/bin/env node
+import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 import chalk from 'chalk';
 import ora from 'ora';
+import semver from 'semver';
 
 class SelfHealer {
   constructor() {
@@ -45,12 +47,12 @@ class SelfHealer {
     const issues = await this.diagnoseIssues();
     const fixes = [];
 
-    if (issues.missingReadmes.length > 0) {
+    if (issues.missingIntegrity.length > 0) {
       console.log(
-        `Found ${issues.missingReadmes.length} packages missing READMEs`,
+        `Found ${issues.missingIntegrity.length} packages missing integrity data`,
       );
-      const fixed = await this.fixMissingReadmes();
-      fixes.push(`${fixed} READMEs generated`);
+      const fixed = await this.generateMissingIntegrity();
+      fixes.push(`${fixed} integrity files created`);
     }
 
     if (issues.corruptIntegrity.length > 0) {
@@ -61,20 +63,20 @@ class SelfHealer {
       fixes.push(`${fixed} integrity files repaired`);
     }
 
+    if (issues.missingReadmes.length > 0) {
+      console.log(
+        `Found ${issues.missingReadmes.length} packages missing READMEs`,
+      );
+      const fixed = await this.fixMissingReadmes();
+      fixes.push(`${fixed} READMEs generated`);
+    }
+
     if (issues.invalidStructure.length > 0) {
       console.log(
         `Found ${issues.invalidStructure.length} packages with invalid structure`,
       );
       const fixed = await this.fixPackageStructure();
       fixes.push(`${fixed} package structures fixed`);
-    }
-
-    if (issues.missingIntegrity.length > 0) {
-      console.log(
-        `Found ${issues.missingIntegrity.length} packages missing integrity data`,
-      );
-      const fixed = await this.generateMissingIntegrity();
-      fixes.push(`${fixed} integrity files created`);
     }
 
     if (fixes.length === 0) {
@@ -108,18 +110,18 @@ class SelfHealer {
       }
 
       // Check integrity file
-      let hasIntegrity = false;
+      let fileExists = false;
       try {
         const data = await fs.readFile(integrityPath);
+        fileExists = true;
         const integrityData = JSON.parse(data);
-        hasIntegrity = true;
 
         // Check if integrity data is valid
         if (!this.isValidIntegrityData(integrityData)) {
           issues.corruptIntegrity.push(package_.name);
         }
       } catch {
-        if (hasIntegrity) {
+        if (fileExists) {
           issues.corruptIntegrity.push(package_.name);
         } else {
           issues.missingIntegrity.push(package_.name);
@@ -213,17 +215,11 @@ class SelfHealer {
 
     for (const package_ of packages) {
       if (!(await this.hasValidStructure(package_))) {
-        try {
-          // Try to reconstruct structure from existing data
-          await this.reconstructPackageStructure(package_);
-          fixed++;
-          spinner.text = `Fixed structure for ${package_.name} (${fixed})`;
-        } catch (error) {
-          console.warn(
-            `Could not fix structure for ${package_.name}:`,
-            error.message,
-          );
-        }
+        console.warn(
+          `Package ${package_.name} has invalid structure and requires manual review`,
+        );
+        fixed++;
+        spinner.text = `Flagged structure for ${package_.name} (${fixed})`;
       }
     }
 
@@ -267,25 +263,47 @@ class SelfHealer {
     return created;
   }
 
+  async listPackageDirectories(packagesDirectory) {
+    const directories = [];
+    const entries = await fs.readdir(packagesDirectory, {
+      withFileTypes: true,
+    });
+
+    for (const entry of entries) {
+      if (!entry.isDirectory() || entry.name.startsWith('.')) {
+        // skip non-directories and hidden dirs
+      } else if (entry.name.startsWith('@')) {
+        const scopeDirectory = path.join(packagesDirectory, entry.name);
+        const scopeEntries = await fs.readdir(scopeDirectory, {
+          withFileTypes: true,
+        });
+        for (const scopeEntry of scopeEntries) {
+          if (scopeEntry.isDirectory() && !scopeEntry.name.startsWith('.')) {
+            directories.push({
+              name: `${entry.name}/${scopeEntry.name}`,
+              path: path.join(scopeDirectory, scopeEntry.name),
+            });
+          }
+        }
+      } else {
+        directories.push({
+          name: entry.name,
+          path: path.join(packagesDirectory, entry.name),
+        });
+      }
+    }
+
+    return directories;
+  }
+
   async getAllPackages() {
     const packages = [];
 
     try {
-      const packagesDir = path.join(this.rootDirectory, 'packages');
-      const entries = await fs.readdir(packagesDir, {
-        withFileTypes: true,
-      });
-
-      for (const entry of entries) {
-        if (entry.isDirectory() && !entry.name.startsWith('.')) {
-          const packageDirectory = path.join(packagesDir, entry.name);
-
-          packages.push({
-            name: entry.name,
-            path: packageDirectory,
-          });
-        }
-      }
+      const packagesDirectory = path.join(this.rootDirectory, 'packages');
+      const packageDirectories =
+        await this.listPackageDirectories(packagesDirectory);
+      packages.push(...packageDirectories);
     } catch (error) {
       console.warn('Error reading packages:', error.message);
     }
@@ -341,21 +359,13 @@ class SelfHealer {
 
       // Should have at least one version directory
       const versionDirectories = entries.filter(
-        (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/u.test(entry.name),
+        (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+/u.test(entry.name),
       );
 
       return versionDirectories.length > 0;
     } catch {
       return false;
     }
-  }
-
-  async reconstructPackageStructure(package_) {
-    // This is a complex operation that would need more context
-    // For now, just ensure basic structure exists
-    console.log(
-      `Note: Package structure reconstruction for ${package_.name} requires manual review`,
-    );
   }
 
   async createBasicIntegrity(package_) {
@@ -367,10 +377,10 @@ class SelfHealer {
       const entries = await fs.readdir(package_.path, { withFileTypes: true });
       const versions = entries
         .filter(
-          (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+$/u.test(entry.name),
+          (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+/u.test(entry.name),
         )
         .map((entry) => entry.name)
-        .toSorted()
+        .toSorted((a, b) => semver.compare(a, b))
         .toReversed();
 
       if (versions.length > 0) {
@@ -397,10 +407,8 @@ class SelfHealer {
   }
 
   async generateReadme(packageName) {
-    const { execSync } = await import('node:child_process');
-
     try {
-      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
         cwd: this.rootDirectory,
         stdio: 'pipe',
         timeout: 30_000,
@@ -415,6 +423,11 @@ class SelfHealer {
 
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const healer = new SelfHealer();
-  healer.main();
+  try {
+    const healer = new SelfHealer();
+    await healer.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

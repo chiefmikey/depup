@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -61,9 +61,6 @@ class SecurityScanner {
     console.log(chalk.gray(`Scan Path: ${scanPath}`));
     console.log(chalk.gray(`Report Path: ${reportPath}`));
 
-    // Ensure report directory exists
-    await fs.mkdir(reportPath, { recursive: true });
-
     const startTime = Date.now();
 
     try {
@@ -118,13 +115,21 @@ class SecurityScanner {
 
       if (clamavAvailable) {
         // ClamAV scan
-        const clamCommand = `clamscan --recursive --infected --quiet --log=/tmp/clamav.log ${scanPath}`;
-
         try {
-          execSync(clamCommand, {
-            stdio: debug ? 'inherit' : 'pipe',
-            timeout: 300_000, // 5 minutes
-          });
+          execFileSync(
+            'clamscan',
+            [
+              '--recursive',
+              '--infected',
+              '--quiet',
+              `--log=/tmp/clamav.log`,
+              scanPath,
+            ],
+            {
+              stdio: debug ? 'inherit' : 'pipe',
+              timeout: 300_000, // 5 minutes
+            },
+          );
 
           this.results.malware = {
             details: ['No malware detected by ClamAV'],
@@ -134,7 +139,12 @@ class SecurityScanner {
         } catch (error) {
           if (error.status === 1) {
             // Infected files found
-            const logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
+            let logContent = 'ClamAV log not available';
+            try {
+              logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
+            } catch {
+              // Log file may not exist despite exit code 1
+            }
             this.results.malware = {
               details: ['Malware detected by ClamAV', logContent],
               status: 'failed',
@@ -194,7 +204,6 @@ class SecurityScanner {
       '.pif',
       '.com',
       '.vbs',
-      '.js',
       '.jar',
       '.dll',
       '.sys',
@@ -234,19 +243,27 @@ class SecurityScanner {
     }
   }
 
-  async getAllFiles(dirPath) {
+  async getAllFiles(directoryPath) {
     const files = [];
 
-    async function scanDir(currentPath) {
-      const items = await fs.readdir(currentPath, { withFileTypes: true });
+    async function scanDirectory(currentPath) {
+      let items;
+      try {
+        items = await fs.readdir(currentPath, { withFileTypes: true });
+      } catch {
+        // Skip directories we cannot read (EACCES, ENOENT)
+        return;
+      }
 
       for (const item of items) {
         const fullPath = path.join(currentPath, item.name);
 
-        if (item.isDirectory()) {
+        if (item.isSymbolicLink()) {
+          // Skip symlinks to prevent traversal attacks
+        } else if (item.isDirectory()) {
           // Skip node_modules and other large directories
           if (!['node_modules', '.git', 'packages'].includes(item.name)) {
-            await scanDir(fullPath);
+            await scanDirectory(fullPath);
           }
         } else {
           files.push(fullPath);
@@ -254,7 +271,7 @@ class SecurityScanner {
       }
     }
 
-    await scanDir(dirPath);
+    await scanDirectory(directoryPath);
     return files;
   }
 
@@ -396,12 +413,18 @@ class SecurityScanner {
       }
     } catch (error) {
       if (error.status === 1) {
-        // Snyk found vulnerabilities
-        const snykData = JSON.parse(error.stdout || error.stderr);
-        this.results.vulnerabilities.status = 'failed';
-        this.results.vulnerabilities.details.push(
-          `Snyk found ${snykData.vulnerabilities?.length || 'multiple'} vulnerabilities`,
-        );
+        try {
+          const snykData = JSON.parse(error.stdout || error.stderr || '{}');
+          this.results.vulnerabilities.status = 'failed';
+          this.results.vulnerabilities.details.push(
+            `Snyk found ${snykData.vulnerabilities?.length || 'multiple'} vulnerabilities`,
+          );
+        } catch {
+          this.results.vulnerabilities.status = 'failed';
+          this.results.vulnerabilities.details.push(
+            'Snyk found vulnerabilities (could not parse output)',
+          );
+        }
       } else {
         console.warn('Snyk scan unavailable or failed:', error.message);
       }
@@ -536,15 +559,26 @@ class SecurityScanner {
       timestamp: new Date().toISOString(),
     };
 
-    // Ensure report directory exists
-    const reportDir = path.dirname(reportPath);
-    await fs.mkdir(reportDir, { recursive: true });
+    // Ensure we have a proper file path, not just a directory
+    let baseReportPath = reportPath;
+    if (reportPath.endsWith('.json')) {
+      await fs.mkdir(path.dirname(reportPath), { recursive: true });
+    } else {
+      await fs.mkdir(reportPath, { recursive: true });
+      baseReportPath = path.join(reportPath, 'security-report.json');
+    }
 
-    const reportFile = reportPath.replace(/\.json$/u, `-${Date.now()}.json`);
+    const reportFile = baseReportPath.replace(
+      /\.json$/u,
+      `-${Date.now()}.json`,
+    );
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
 
     // Generate human-readable summary
-    const summaryFile = reportPath.replace(/\.json$/u, `-${Date.now()}.txt`);
+    const summaryFile = baseReportPath.replace(
+      /\.json$/u,
+      `-${Date.now()}.txt`,
+    );
     const summary = this.generateSummaryReport(report);
     await fs.writeFile(summaryFile, summary);
 

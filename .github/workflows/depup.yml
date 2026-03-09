@@ -28,6 +28,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: depup-${{ github.workflow }}-${{ inputs.package }}
+  cancel-in-progress: false
+
 jobs:
   process-package:
     runs-on: ubuntu-latest
@@ -44,6 +48,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -59,39 +64,46 @@ jobs:
       - name: Process package
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_NAME: ${{ inputs.package }}
+          BUMP_DEPS: ${{ inputs.bump_deps }}
+          DO_TEST: ${{ inputs.test }}
+          DO_PUBLISH: ${{ inputs.publish }}
+          DO_DEBUG: ${{ inputs.debug }}
         run: |
-          # Build command with options
-          CMD="npm run depup -- ${{ inputs.package }}"
+          ARGS=("$PACKAGE_NAME")
 
-          if [ "${{ inputs.bump_deps }}" = "true" ]; then
-            CMD="$CMD --bump-deps"
+          if [ "$BUMP_DEPS" = "true" ]; then
+            ARGS+=("--bump-deps")
           fi
 
-          if [ "${{ inputs.test }}" = "true" ]; then
-            CMD="$CMD --test"
+          if [ "$DO_TEST" = "true" ]; then
+            ARGS+=("--test")
           fi
 
-          if [ "${{ inputs.publish }}" = "true" ]; then
-            CMD="$CMD --publish"
+          if [ "$DO_PUBLISH" = "true" ]; then
+            ARGS+=("--publish")
           fi
 
-          if [ "${{ inputs.debug }}" = "true" ]; then
-            CMD="$CMD --debug"
+          if [ "$DO_DEBUG" = "true" ]; then
+            ARGS+=("--debug")
           fi
 
-          echo "Running: $CMD"
-          eval $CMD
+          echo "Running: npm run depup -- ${ARGS[*]}"
+          npm run depup -- "${ARGS[@]}"
 
       - name: Commit changes
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
         run: |
           git config --local user.name "DepUp Bot"
           git config --local user.email "bot@depup.dev"
 
+          git add packages/
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git add .
-            git commit -m "feat: process ${{ inputs.package }} with DepUp"
+            git commit -m "feat: process ${PACKAGE_NAME} with DepUp"
             git push origin main
           fi
 

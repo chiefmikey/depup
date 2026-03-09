@@ -218,47 +218,76 @@ class SystemMonitor {
     }
   }
 
+  async listPackageDirectories(packagesDirectory) {
+    const directories = [];
+    const entries = await fs.readdir(packagesDirectory, {
+      withFileTypes: true,
+    });
+
+    for (const entry of entries) {
+      if (!entry.isDirectory() || entry.name.startsWith('.')) {
+        // skip non-directories and hidden dirs
+      } else if (entry.name.startsWith('@')) {
+        const scopeDirectory = path.join(packagesDirectory, entry.name);
+        const scopeEntries = await fs.readdir(scopeDirectory, {
+          withFileTypes: true,
+        });
+        for (const scopeEntry of scopeEntries) {
+          if (scopeEntry.isDirectory() && !scopeEntry.name.startsWith('.')) {
+            directories.push({
+              name: `${entry.name}/${scopeEntry.name}`,
+              path: path.join(scopeDirectory, scopeEntry.name),
+            });
+          }
+        }
+      } else {
+        directories.push({
+          name: entry.name,
+          path: path.join(packagesDirectory, entry.name),
+        });
+      }
+    }
+
+    return directories;
+  }
+
   async getAllPackages() {
     const packages = [];
 
     try {
-      const packagesDir = path.join(this.rootDirectory, 'packages');
-      const entries = await fs.readdir(packagesDir, {
-        withFileTypes: true,
-      });
+      const packagesDirectory = path.join(this.rootDirectory, 'packages');
+      const packageDirectories =
+        await this.listPackageDirectories(packagesDirectory);
 
-      for (const entry of entries) {
-        if (entry.isDirectory() && !entry.name.startsWith('.')) {
-          const packageDirectory = path.join(packagesDir, entry.name);
-          const integrityFile = path.join(packageDirectory, 'integrity.json');
-          const votesFile = path.join(packageDirectory, 'votes.json');
+      for (const packageEntry of packageDirectories) {
+        const integrityFile = path.join(packageEntry.path, 'integrity.json');
+        const votesFile = path.join(packageEntry.path, 'votes.json');
 
-          let integrityData;
-          let votesData;
+        let integrityData;
+        let votesData;
 
-          // Load integrity data
-          try {
-            const data = await fs.readFile(integrityFile);
-            integrityData = JSON.parse(data);
-          } catch {
-            // No integrity data
-          }
-
-          // Load votes data
-          try {
-            const data = await fs.readFile(votesFile);
-            votesData = JSON.parse(data);
-          } catch {
-            // No votes data
-          }
-
-          packages.push({
-            integrityData,
-            name: entry.name,
-            path: packageDirectory,
-            votesData,
-          });
+        // Load integrity data
+        try {
+          const data = await fs.readFile(integrityFile);
+          integrityData = JSON.parse(data);
+        } catch {
+          // No integrity data
         }
+
+        // Load votes data
+        try {
+          const data = await fs.readFile(votesFile);
+          votesData = JSON.parse(data);
+        } catch {
+          // No votes data
+        }
+
+        packages.push({
+          integrityData,
+          name: packageEntry.name,
+          path: packageEntry.path,
+          votesData,
+        });
       }
     } catch (error) {
       console.warn('Error reading packages:', error.message);
@@ -289,12 +318,17 @@ class SystemMonitor {
     }
 
     // Check if system has been active recently
-    const lastActivity = new Date(stats.lastActivity);
-    const daysSinceActivity =
-      (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60 * 24);
-
-    if (daysSinceActivity > 7) {
-      issues.push(`System inactive for ${Math.round(daysSinceActivity)} days`);
+    if (stats.lastActivity === 'Never') {
+      issues.push('System has never recorded any activity');
+    } else {
+      const lastActivity = new Date(stats.lastActivity);
+      const daysSinceActivity =
+        (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60 * 24);
+      if (daysSinceActivity > 7) {
+        issues.push(
+          `System inactive for ${Math.round(daysSinceActivity)} days`,
+        );
+      }
     }
 
     let status;
@@ -303,7 +337,7 @@ class SystemMonitor {
     } else if (issues.length <= 2) {
       status = chalk.yellow('🟡 GOOD');
     } else if (issues.length <= 4) {
-      status = chalk.orange('🟠 FAIR');
+      status = chalk.hex('#FFA500')('🟠 FAIR');
     } else {
       status = chalk.red('🔴 POOR');
     }
@@ -420,11 +454,17 @@ class SystemMonitor {
     );
 
     // Check recent activity
-    const lastActivity = new Date(stats.lastActivity);
-    const hoursSinceActivity =
-      (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60);
+    let hoursSinceActivity = Number.POSITIVE_INFINITY;
+    if (stats.lastActivity !== 'Never') {
+      const lastActivity = new Date(stats.lastActivity);
+      hoursSinceActivity =
+        (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60);
+    }
     checks.push({
-      message: `Last activity ${Math.round(hoursSinceActivity)} hours ago`,
+      message:
+        stats.lastActivity === 'Never'
+          ? 'No activity recorded'
+          : `Last activity ${Math.round(hoursSinceActivity)} hours ago`,
       name: 'Recent activity',
       passed: hoursSinceActivity < 24,
     });

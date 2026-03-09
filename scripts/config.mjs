@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-// import { fileURLToPath } from 'node:url';
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
 class ConfigManager {
   constructor() {
@@ -206,7 +202,7 @@ class ConfigManager {
     for (const field of numericFields) {
       if (validated[field] !== undefined) {
         const number_ = Number(validated[field]);
-        if (Number.isNaN(number_) || number_ < 0) {
+        if (!Number.isFinite(number_) || number_ < 0) {
           throw new Error(
             `Invalid value for ${field}: must be a non-negative number`,
           );
@@ -241,21 +237,21 @@ class ConfigManager {
 
   validateArrayFields(validated) {
     if (
-      validated.discovery.packages &&
+      validated.discovery?.packages &&
       !Array.isArray(validated.discovery.packages)
     ) {
       throw new Error('discovery.packages must be an array');
     }
 
     if (
-      validated.testing.methods &&
+      validated.testing?.methods &&
       !Array.isArray(validated.testing.methods)
     ) {
       throw new Error('testing.methods must be an array');
     }
 
     if (
-      validated.security.allowLicenses &&
+      validated.security?.allowLicenses &&
       !Array.isArray(validated.security.allowLicenses)
     ) {
       throw new Error('security.allowLicenses must be an array');

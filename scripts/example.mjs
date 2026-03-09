@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 
 class ExampleRunner {
   constructor() {
@@ -19,10 +19,14 @@ class ExampleRunner {
         console.log(`📦 Processing ${package_}...`);
 
         // Run depup with basic processing (no publish for demo)
-        execSync(`npm run depup -- ${package_} --bump-deps --test`, {
-          cwd: process.cwd(),
-          stdio: 'inherit',
-        });
+        execFileSync(
+          'npm',
+          ['run', 'depup', '--', package_, '--bump-deps', '--test'],
+          {
+            cwd: process.cwd(),
+            stdio: 'inherit',
+          },
+        );
 
         console.log(`✅ Successfully processed ${package_}\n`);
 
@@ -60,8 +64,18 @@ class ExampleRunner {
 
       for (const { description, vote } of votes) {
         try {
-          execSync(
-            `npm run integrity:vote -- ${packageName} 1.0.0 0 ${vote} "${description}"`,
+          execFileSync(
+            'npm',
+            [
+              'run',
+              'integrity:vote',
+              '--',
+              packageName,
+              '1.0.0',
+              '0',
+              vote,
+              description,
+            ],
             {
               cwd: process.cwd(),
               stdio: 'pipe',
@@ -80,5 +94,5 @@ class ExampleRunner {
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   const runner = new ExampleRunner();
-  runner.main();
+  await runner.main();
 }

@@ -10,6 +10,71 @@ const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
 
 class PackageDiscoverer {
+  async processBatches(packagesToProcess) {
+    const processedPackages = [];
+    const failedPackages = [];
+
+    for (
+      let index = 0;
+      index < packagesToProcess.length;
+      index += this.concurrentPackages
+    ) {
+      const batch = packagesToProcess.slice(
+        index,
+        index + this.concurrentPackages,
+      );
+      console.log(
+        chalk.cyan(
+          `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+        ),
+      );
+
+      const batchResults = await Promise.allSettled(
+        batch.map(async (package_) => {
+          const packageSpinner = ora(`Processing ${package_.name}...`).start();
+
+          try {
+            await this.processPackage(package_);
+            packageSpinner.succeed(`Processed ${package_.name}`);
+            return { name: package_.name, success: true };
+          } catch (error) {
+            packageSpinner.fail(
+              `Failed to process ${package_.name}: ${error.message}`,
+            );
+            return {
+              error: error.message,
+              name: package_.name,
+              success: false,
+            };
+          }
+        }),
+      );
+
+      for (const result of batchResults) {
+        if (result.status === 'fulfilled' && result.value.success) {
+          processedPackages.push(result.value.name);
+        } else if (result.status === 'fulfilled' && !result.value.success) {
+          failedPackages.push({
+            error: result.value.error,
+            name: result.value.name,
+          });
+        } else if (result.status === 'rejected') {
+          failedPackages.push({
+            error: result.reason?.message || 'Unknown error',
+            name: 'unknown',
+          });
+        }
+      }
+
+      // Rate limiting between batches
+      if (index + this.concurrentPackages < packagesToProcess.length) {
+        await this.sleep(this.rateLimitDelay);
+      }
+    }
+
+    return { failedPackages, processedPackages };
+  }
+
   async main() {
     const spinner = ora('Starting package discovery...').start();
 
@@ -19,65 +84,9 @@ class PackageDiscoverer {
       const topPackages = await this.getTopPackages();
       spinner.succeed(`Found ${topPackages.length} top packages`);
 
-      // Process packages in parallel batches with rate limiting
-      const processedPackages = [];
-      const failedPackages = [];
       const packagesToProcess = topPackages.slice(0, this.maxPackages);
-
-      for (
-        let index = 0;
-        index < packagesToProcess.length;
-        index += this.concurrentPackages
-      ) {
-        const batch = packagesToProcess.slice(
-          index,
-          index + this.concurrentPackages,
-        );
-        console.log(
-          chalk.cyan(
-            `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
-          ),
-        );
-
-        const batchResults = await Promise.allSettled(
-          batch.map(async (package_) => {
-            const packageSpinner = ora(
-              `Processing ${package_.name}...`,
-            ).start();
-
-            try {
-              await this.processPackage(package_);
-              packageSpinner.succeed(`Processed ${package_.name}`);
-              return { name: package_.name, success: true };
-            } catch (error) {
-              packageSpinner.fail(
-                `Failed to process ${package_.name}: ${error.message}`,
-              );
-              return {
-                error: error.message,
-                name: package_.name,
-                success: false,
-              };
-            }
-          }),
-        );
-
-        for (const result of batchResults) {
-          if (result.status === 'fulfilled' && result.value.success) {
-            processedPackages.push(result.value.name);
-          } else if (result.status === 'fulfilled' && !result.value.success) {
-            failedPackages.push({
-              error: result.value.error,
-              name: result.value.name,
-            });
-          }
-        }
-
-        // Rate limiting between batches
-        if (index + this.concurrentPackages < packagesToProcess.length) {
-          await this.sleep(this.rateLimitDelay);
-        }
-      }
+      const { failedPackages, processedPackages } =
+        await this.processBatches(packagesToProcess);
 
       console.log(chalk.green(`\n✅ Discovery completed`));
       console.log(
@@ -124,32 +133,38 @@ class PackageDiscoverer {
   }
 
   async getDynamicTopPackages() {
-    try {
-      // For now, return empty array to use curated packages
-      // Dynamic discovery would require additional HTTP client setup
-      // This is a placeholder for future implementation
-      console.log(
-        'Dynamic package discovery not yet implemented, using curated list',
+    // For now, return empty array to use curated packages
+    // Dynamic discovery would require additional HTTP client setup
+    // This is a placeholder for future implementation
+    console.log(
+      'Dynamic package discovery not yet implemented, using curated list',
+    );
+    return [];
+  }
+
+  getShardConfig() {
+    const shardIndex = Number.parseInt(process.env.SHARD_INDEX || '0', 10);
+    const shardTotal = Number.parseInt(process.env.SHARD_TOTAL || '1', 10);
+
+    if (
+      Number.isNaN(shardIndex) ||
+      Number.isNaN(shardTotal) ||
+      shardTotal < 1 ||
+      shardIndex < 0 ||
+      shardIndex >= shardTotal
+    ) {
+      throw new Error(
+        `Invalid shard configuration: SHARD_INDEX=${process.env.SHARD_INDEX}, SHARD_TOTAL=${process.env.SHARD_TOTAL}`,
       );
-      return [];
-    } catch (error) {
-      throw new Error(`Failed to fetch dynamic packages: ${error.message}`, {
-        cause: error,
-      });
     }
+
+    return { shardIndex, shardTotal };
   }
 
   async getCuratedPackages() {
     // Apply sharding if configured (for parallel runner support)
     let packageNames = this.curatedPackageNames;
-    const shardIndex = Number.parseInt(
-      process.env.SHARD_INDEX || '0',
-      10,
-    );
-    const shardTotal = Number.parseInt(
-      process.env.SHARD_TOTAL || '1',
-      10,
-    );
+    const { shardIndex, shardTotal } = this.getShardConfig();
 
     if (shardTotal > 1) {
       packageNames = packageNames.filter(
@@ -194,7 +209,8 @@ class PackageDiscoverer {
       registry: this.registry,
       timeout: 5000,
     });
-    const version = manifest['dist-tags']?.latest || manifest.version;
+    const version =
+      manifest['dist-tags']?.latest || manifest.version || '0.0.0';
     return { downloads: 0, name, version };
   }
 
@@ -204,7 +220,12 @@ class PackageDiscoverer {
       throw new Error('Invalid package data: missing name');
     }
 
-    // Sanitize package name
+    // Sanitize package name (reject path traversal sequences)
+    if (package_.name.includes('..')) {
+      throw new Error(
+        `Invalid package name: ${package_.name} (contains path traversal)`,
+      );
+    }
     const sanitizedName = package_.name.replaceAll(/[^\w.@/-]/gu, '');
     if (sanitizedName !== package_.name) {
       throw new Error(
@@ -251,7 +272,12 @@ class PackageDiscoverer {
         const data = await fs.readFile(integrityFile);
         integrityData = JSON.parse(data);
       } catch {
-        return; // No integrity data, skip
+        // No integrity data -- directory exists but was never finalized. Reprocess.
+        console.log(
+          `  🔄 ${package_.name}: missing integrity data, reprocessing`,
+        );
+        await this.createNewPackage(package_, packageDirectory);
+        return;
       }
 
       // Get latest version from npm
@@ -280,14 +306,17 @@ class PackageDiscoverer {
 
   async createNewPackage(package_, packageDirectory, version) {
     const targetVersion = version || package_.version;
-    const { execSync } = await import('node:child_process');
+    const { execFileSync } = await import('node:child_process');
 
     // Validate version
     if (!targetVersion || typeof targetVersion !== 'string') {
       throw new Error(`Invalid version: ${targetVersion}`);
     }
 
-    // Sanitize version
+    // Sanitize version (reject path traversal sequences)
+    if (targetVersion.includes('..')) {
+      throw new Error(`Invalid version format: ${targetVersion}`);
+    }
     const sanitizedVersion = targetVersion.replaceAll(/[^\w.-]/gu, '');
     if (sanitizedVersion !== targetVersion) {
       throw new Error(`Invalid version format: ${targetVersion}`);
@@ -295,9 +324,15 @@ class PackageDiscoverer {
 
     try {
       // Run depup script with timeout
-      const command = `node scripts/depup.mjs ${package_.name}@${sanitizedVersion} --bump-deps --test --publish`;
+      const commandArguments = [
+        'scripts/depup.mjs',
+        `${package_.name}@${sanitizedVersion}`,
+        '--bump-deps',
+        '--test',
+        '--publish',
+      ];
 
-      execSync(command, {
+      execFileSync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NODE_ENV: 'production' },
         stdio: 'pipe',
@@ -320,10 +355,10 @@ class PackageDiscoverer {
   }
 
   async generateReadme(packageName) {
-    const { execSync } = await import('node:child_process');
+    const { execFileSync } = await import('node:child_process');
 
     try {
-      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
         cwd: process.cwd(),
         stdio: 'pipe',
         timeout: 30_000, // 30 second timeout for README generation
@@ -423,7 +458,6 @@ class PackageDiscoverer {
     '@angular/cli',
     '@angular/core',
     '@angular/material',
-    'angular',
     'rxjs',
     'zone.js',
     // --- Svelte ecosystem ---
@@ -587,7 +621,6 @@ class PackageDiscoverer {
     // --- Auth & security ---
     'bcrypt',
     'bcryptjs',
-    'csurf',
     // --- Image & media ---
     'canvas',
     'jimp',
@@ -617,7 +650,6 @@ class PackageDiscoverer {
     '@aws-sdk/lib-dynamodb',
     '@google-cloud/storage',
     '@sendgrid/mail',
-    'aws-sdk',
     'firebase',
     'firebase-admin',
     // --- API & documentation ---
@@ -662,8 +694,6 @@ class PackageDiscoverer {
     // --- Miscellaneous popular ---
     '7zip-bin',
     'body-parser',
-    'cls-hooked',
-    'colors',
     'config',
     'connect-redis',
     'copy-webpack-plugin',
@@ -694,10 +724,8 @@ class PackageDiscoverer {
     'mssql',
     'nconf',
     'node-schedule',
-    'nodemailer-sendgrid-transport',
     'np',
     'nunjucks',
-    'object-assign',
     'on-finished',
     'pg-promise',
     'portfinder',
@@ -731,6 +759,11 @@ class PackageDiscoverer {
 
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const discoverer = new PackageDiscoverer();
-  discoverer.main();
+  try {
+    const discoverer = new PackageDiscoverer();
+    await discoverer.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

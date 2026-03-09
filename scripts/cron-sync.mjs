@@ -58,6 +58,10 @@ class PackageSyncer {
         for (const result of batchResults) {
           if (result.status === 'fulfilled' && result.value.synced) {
             syncedPackages.push(result.value.name);
+          } else if (result.status === 'rejected') {
+            console.warn(
+              `Sync failed: ${result.reason?.message || 'Unknown error'}`,
+            );
           }
         }
 
@@ -77,52 +81,79 @@ class PackageSyncer {
     }
   }
 
+  async listPackageDirectories(packagesDirectory) {
+    const directories = [];
+    const entries = await fs.readdir(packagesDirectory, {
+      withFileTypes: true,
+    });
+
+    for (const entry of entries) {
+      if (!entry.isDirectory() || entry.name.startsWith('.')) {
+        // skip non-directories and hidden dirs
+      } else if (entry.name.startsWith('@')) {
+        const scopeDirectory = path.join(packagesDirectory, entry.name);
+        const scopeEntries = await fs.readdir(scopeDirectory, {
+          withFileTypes: true,
+        });
+        for (const scopeEntry of scopeEntries) {
+          if (scopeEntry.isDirectory() && !scopeEntry.name.startsWith('.')) {
+            directories.push({
+              name: `${entry.name}/${scopeEntry.name}`,
+              path: path.join(scopeDirectory, scopeEntry.name),
+            });
+          }
+        }
+      } else {
+        directories.push({
+          name: entry.name,
+          path: path.join(packagesDirectory, entry.name),
+        });
+      }
+    }
+
+    return directories;
+  }
+
   async getExistingPackages() {
     const packages = [];
-    const packagesDir = path.join(process.cwd(), 'packages');
+    const packagesDirectory = path.join(process.cwd(), 'packages');
 
     try {
-      const entries = await fs.readdir(packagesDir, { withFileTypes: true });
+      const packageDirectories =
+        await this.listPackageDirectories(packagesDirectory);
 
-      for (const entry of entries) {
-        if (entry.isDirectory() && !entry.name.startsWith('.')) {
-          const packageDirectory = path.join(packagesDir, entry.name);
-          const integrityFile = path.join(packageDirectory, 'integrity.json');
+      for (const packageEntry of packageDirectories) {
+        const integrityFile = path.join(packageEntry.path, 'integrity.json');
 
-          // Check if it's a package directory with integrity data
-          try {
-            await fs.access(integrityFile);
-            const integrityData = JSON.parse(await fs.readFile(integrityFile));
+        // Check if it's a package directory with integrity data
+        try {
+          await fs.access(integrityFile);
+          const integrityData = JSON.parse(await fs.readFile(integrityFile));
 
-            // Get the latest version from integrity data
-            const versions = Object.keys(integrityData);
-            if (versions.length > 0) {
-              const latestVersion = versions.toSorted().pop();
-              packages.push({
-                integrityData,
-                name: entry.name,
-                path: packageDirectory,
-                version: latestVersion,
-              });
-            }
-          } catch {
-            // Not a valid package directory, skip
+          // Get the latest version from integrity data
+          const versions = Object.keys(integrityData).filter((v) =>
+            semver.valid(v),
+          );
+          if (versions.length > 0) {
+            const latestVersion = versions
+              .toSorted((a, b) => semver.compare(a, b))
+              .pop();
+            packages.push({
+              integrityData,
+              name: packageEntry.name,
+              path: packageEntry.path,
+              version: latestVersion,
+            });
           }
+        } catch {
+          // Not a valid package directory, skip
         }
       }
     } catch (error) {
       console.error('Error reading packages:', error.message);
     }
 
-    // Apply sharding if configured (for parallel runner support)
-    const shardIndex = Number.parseInt(
-      process.env.SHARD_INDEX || '0',
-      10,
-    );
-    const shardTotal = Number.parseInt(
-      process.env.SHARD_TOTAL || '1',
-      10,
-    );
+    const { shardIndex, shardTotal } = this.getShardConfig();
 
     if (shardTotal > 1) {
       const shardedPackages = packages.filter(
@@ -135,6 +166,25 @@ class PackageSyncer {
     }
 
     return packages;
+  }
+
+  getShardConfig() {
+    const shardIndex = Number.parseInt(process.env.SHARD_INDEX || '0', 10);
+    const shardTotal = Number.parseInt(process.env.SHARD_TOTAL || '1', 10);
+
+    if (
+      Number.isNaN(shardIndex) ||
+      Number.isNaN(shardTotal) ||
+      shardTotal < 1 ||
+      shardIndex < 0 ||
+      shardIndex >= shardTotal
+    ) {
+      throw new Error(
+        `Invalid shard configuration: SHARD_INDEX=${process.env.SHARD_INDEX}, SHARD_TOTAL=${process.env.SHARD_TOTAL}`,
+      );
+    }
+
+    return { shardIndex, shardTotal };
   }
 
   async syncPackage(package_) {
@@ -185,9 +235,13 @@ class PackageSyncer {
         withFileTypes: true,
       });
       const revDirectories = entries
-        .filter((entry) => entry.isDirectory() && entry.name.startsWith('rev-'))
+        .filter((entry) => entry.isDirectory() && /^rev-\d+$/u.test(entry.name))
         .map((entry) => entry.name)
-        .toSorted();
+        .toSorted((a, b) => {
+          const aNumber = Number.parseInt(a.split('-')[1], 10);
+          const bNumber = Number.parseInt(b.split('-')[1], 10);
+          return aNumber - bNumber;
+        });
 
       if (revDirectories.length === 0) {
         return false;
@@ -255,16 +309,23 @@ class PackageSyncer {
   }
 
   async updatePackage(package_, updatedVersion) {
-    const { execSync } = await import('node:child_process');
+    const { execFileSync } = await import('node:child_process');
 
     try {
-      const command = `node scripts/depup.mjs ${package_.name}@${updatedVersion} --bump-deps --test --publish`;
-      console.log(`  🚀 Running: ${command}`);
+      const commandArguments = [
+        'scripts/depup.mjs',
+        `${package_.name}@${updatedVersion}`,
+        '--bump-deps',
+        '--test',
+        '--publish',
+      ];
+      console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      execSync(command, {
+      execFileSync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
         stdio: 'inherit',
+        timeout: 300_000, // 5 minute timeout for package update
       });
 
       console.log(
@@ -280,30 +341,28 @@ class PackageSyncer {
   }
 
   async updateDependencies(package_) {
-    const { execSync } = await import('node:child_process');
+    const { execFileSync } = await import('node:child_process');
 
     try {
-      const command = `node scripts/depup.mjs ${package_.name}@${package_.version} --bump-deps --test --publish`;
-      console.log(`  🚀 Running: ${command}`);
+      const commandArguments = [
+        'scripts/depup.mjs',
+        `${package_.name}@${package_.version}`,
+        '--bump-deps',
+        '--test',
+        '--publish',
+      ];
+      console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      execSync(command, {
+      execFileSync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
         stdio: 'inherit',
+        timeout: 300_000, // 5 minute timeout for dependency update
       });
 
       console.log(
         `  ✅ Successfully updated dependencies for ${package_.name}`,
       );
-
-      // Auto-generate README after updating dependencies
-      try {
-        await this.generateReadme(package_.name);
-      } catch (error) {
-        console.warn(
-          `  ⚠️  Could not generate README for ${package_.name}: ${error.message}`,
-        );
-      }
     } catch (error) {
       console.error(
         `  ❌ Failed to update dependencies for ${package_.name}:`,
@@ -336,30 +395,6 @@ class PackageSyncer {
     );
   }
 
-  isVersionNewer(latest, current) {
-    // Simple version comparison - in production you'd want to use semver
-    const latestParts = latest.split('.').map(Number);
-    const currentParts = current.replace(/[\^~]/u, '').split('.').map(Number);
-
-    for (
-      let index = 0;
-      index < Math.max(latestParts.length, currentParts.length);
-      index++
-    ) {
-      const latestPart = latestParts[index] || 0;
-      const currentPart = currentParts[index] || 0;
-
-      if (latestPart > currentPart) {
-        return true;
-      }
-      if (latestPart < currentPart) {
-        return false;
-      }
-    }
-
-    return false;
-  }
-
   async fileExists(filePath) {
     try {
       await fs.access(filePath);
@@ -370,10 +405,10 @@ class PackageSyncer {
   }
 
   async generateReadme(packageName) {
-    const { execSync } = await import('node:child_process');
+    const { execFileSync } = await import('node:child_process');
 
     try {
-      execSync(`node scripts/generate-readme.mjs ${packageName}`, {
+      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
         cwd: process.cwd(),
         stdio: 'pipe',
         timeout: 30_000, // 30 second timeout for README generation
@@ -409,6 +444,11 @@ class PackageSyncer {
 
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const syncer = new PackageSyncer();
-  syncer.main();
+  try {
+    const syncer = new PackageSyncer();
+    await syncer.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

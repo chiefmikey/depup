@@ -230,17 +230,26 @@ jobs:
           # Commit and push directly to main (retry up to 3 times for concurrent push races)
           git commit -m "feat: add package ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
           for attempt in 1 2 3; do
-            git pull --rebase origin main
-            if git push origin main; then
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "Rebase failed on attempt $attempt, aborting..."
+              git rebase --abort 2>/dev/null || true
+              sleep 2
+              if [ "$attempt" -eq 3 ]; then
+                echo "Rebase failed after 3 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
               echo "Push successful on attempt $attempt"
               break
+            else
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts"
+                exit 1
+              fi
+              echo "Push failed on attempt $attempt, retrying..."
+              sleep 2
             fi
-            if [ "$attempt" -eq 3 ]; then
-              echo "Push failed after 3 attempts"
-              exit 1
-            fi
-            echo "Push failed on attempt $attempt, retrying..."
-            sleep 2
           done
 
       - name: Comment on Issue

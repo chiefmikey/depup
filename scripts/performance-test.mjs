@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -87,7 +87,7 @@ class PerformanceTest {
 
     try {
       // Run depup in dry-run mode to measure performance
-      execSync(`npm run depup -- ${packageName} --dry-run`, {
+      execFileSync('npm', ['run', 'depup', '--', packageName, '--dry-run'], {
         stdio: debug ? 'inherit' : 'pipe',
         timeout: 300_000, // 5 minute timeout
       });

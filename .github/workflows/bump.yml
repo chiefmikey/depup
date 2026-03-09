@@ -10,6 +10,10 @@ on:
       - 'CONTRIBUTING.md'
   workflow_dispatch: {}
 
+concurrency:
+  group: depup-sync-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   sync:
     name: Sync Packages
@@ -29,6 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
@@ -48,16 +53,33 @@ jobs:
 
       - name: Commit Changes
         run: |
-          # Pull latest changes first to avoid conflicts
-          git pull origin main --rebase || git pull origin main || echo "Pull failed, continuing..."
-
-          # Exclude temporary files, only add package directories and curated list
-          git add packages/ scripts/cron-discover.mjs 2>/dev/null || true
+          # Exclude temporary files, only add package directories
+          git add packages/ 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync packages" || echo "No changes to commit"
-            git pull origin main --rebase || git pull origin main || echo "Pull before push failed"
-            git push origin main || echo "Push failed (may be due to conflicts or no changes)"
+            git commit -m "chore: sync packages"
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase failed on attempt $attempt, aborting..."
+                git rebase --abort 2>/dev/null || true
+                sleep 2
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Rebase failed after 3 attempts"
+                  exit 1
+                fi
+              elif git push origin main; then
+                echo "Push successful on attempt $attempt"
+                break
+              else
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Push failed after 3 attempts"
+                  exit 1
+                fi
+                echo "Push failed on attempt $attempt, retrying..."
+                sleep 2
+              fi
+            done
           fi

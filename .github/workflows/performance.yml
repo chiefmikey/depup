@@ -39,6 +39,8 @@ jobs:
           npm install --save-dev 0x
 
       - name: Test package processing performance
+        env:
+          INPUT_PACKAGE: ${{ inputs.package }}
         run: |
           echo "Testing package processing performance..."
 
@@ -49,7 +51,7 @@ jobs:
 
           # Measure processing time
           start_time=$(date +%s)
-          npm run depup -- $TEST_PACKAGE --debug --dry-run
+          npm run depup -- "$TEST_PACKAGE" --debug --dry-run
           end_time=$(date +%s)
 
           processing_time=$((end_time - start_time))
@@ -65,6 +67,8 @@ jobs:
           }" > performance-metrics.json
 
       - name: Test memory usage
+        env:
+          INPUT_PACKAGE: ${{ inputs.package }}
         run: |
           echo "Testing memory usage..."
 
@@ -72,12 +76,14 @@ jobs:
           TEST_PACKAGE="${INPUT_PACKAGE:-lodash}"
 
           # Use Node.js built-in memory monitoring
+          export TEST_PACKAGE
           node -e "
-            const { execSync } = require('child_process');
+            const { execFileSync } = require('child_process');
             const startMemory = process.memoryUsage();
+            const testPackage = process.env.TEST_PACKAGE;
 
             try {
-              execSync('npm run depup -- $TEST_PACKAGE --debug --dry-run', { stdio: 'pipe' });
+              execFileSync('npm', ['run', 'depup', '--', testPackage, '--debug', '--dry-run'], { stdio: 'pipe' });
             } catch (error) {
               console.log('Command failed:', error.message);
             }
@@ -92,7 +98,7 @@ jobs:
             // Save memory metrics
             const fs = require('fs');
             const memoryData = {
-              package: '$TEST_PACKAGE',
+              package: testPackage,
               start_rss_mb: Math.round(startMemory.rss / 1024 / 1024),
               end_rss_mb: Math.round(endMemory.rss / 1024 / 1024),
               peak_rss_mb: Math.round(endMemory.rss / 1024 / 1024),
@@ -114,6 +120,8 @@ jobs:
 
       - name: Performance Summary
         if: always()
+        env:
+          INPUT_PACKAGE: ${{ inputs.package }}
         run: |
           echo "## Performance Test Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Date**: $(date)" >> $GITHUB_STEP_SUMMARY
@@ -132,6 +140,7 @@ jobs:
   benchmark-comparison:
     name: Benchmark Comparison
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     if: github.event_name == 'schedule'
 
     steps:
@@ -160,7 +169,7 @@ jobs:
             echo "Benchmarking $package..."
 
             start_time=$(date +%s)
-            npm run depup -- $package --debug --dry-run
+            npm run depup -- "$package" --debug --dry-run
             end_time=$(date +%s)
 
             processing_time=$((end_time - start_time))

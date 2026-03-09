@@ -62,29 +62,33 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add .
+          git add packages/ scripts/cron-discover.mjs
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
-            # Try rebase first; if conflicts, fall back to merge
-            if ! git pull --rebase origin main; then
-              echo "Rebase failed (likely conflicts), falling back to merge..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "Rebase failed on attempt $attempt, aborting and retrying..."
               git rebase --abort 2>/dev/null || true
-              git pull origin main --no-edit -X ours || true
-            fi
-            if git push origin main; then
+              sleep $((attempt * 2))
+              if [ "$attempt" -eq 5 ]; then
+                echo "Rebase failed after 5 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
               echo "Push successful on attempt $attempt"
               break
+            else
+              if [ "$attempt" -eq 5 ]; then
+                echo "Push failed after 5 attempts"
+                exit 1
+              fi
+              echo "Push failed on attempt $attempt, retrying..."
+              sleep $((attempt * 2))
             fi
-            if [ "$attempt" -eq 5 ]; then
-              echo "Push failed after 5 attempts"
-              exit 1
-            fi
-            echo "Push failed on attempt $attempt, retrying..."
-            sleep $((attempt * 2))
           done
 
       - name: Shard Summary
@@ -143,28 +147,33 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add .
+          git add packages/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
-            if ! git pull --rebase origin main; then
-              echo "Rebase failed (likely conflicts), falling back to merge..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "Rebase failed on attempt $attempt, aborting and retrying..."
               git rebase --abort 2>/dev/null || true
-              git pull origin main --no-edit -X ours || true
-            fi
-            if git push origin main; then
+              sleep $((attempt * 2))
+              if [ "$attempt" -eq 5 ]; then
+                echo "Rebase failed after 5 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
               echo "Push successful on attempt $attempt"
               break
+            else
+              if [ "$attempt" -eq 5 ]; then
+                echo "Push failed after 5 attempts"
+                exit 1
+              fi
+              echo "Push failed on attempt $attempt, retrying..."
+              sleep $((attempt * 2))
             fi
-            if [ "$attempt" -eq 5 ]; then
-              echo "Push failed after 5 attempts"
-              exit 1
-            fi
-            echo "Push failed on attempt $attempt, retrying..."
-            sleep $((attempt * 2))
           done
 
       - name: Shard Summary

@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import { execFileSync } from 'node:child_process';
+
 import chalk from 'chalk';
 import { Command } from 'commander';
 import inquirer from 'inquirer';
@@ -107,8 +109,9 @@ class DepUpCLI {
       }
 
       if (options.set) {
-        const [path, value] = options.set.split('=');
-        if (!path || value === undefined) {
+        const [path, ...rest] = options.set.split('=');
+        const value = rest.join('=');
+        if (!path || !value) {
           console.error(chalk.red('Error: Invalid format. Use path=value'));
           process.exit(1);
         }
@@ -144,32 +147,32 @@ class DepUpCLI {
     try {
       const spinner = ora(`Processing package ${name}...`).start();
 
-      // Build command
-      let cmd = `node scripts/depup.mjs ${name}`;
+      // Build argument array
+      const arguments_ = ['scripts/depup.mjs'];
 
       if (options.version) {
-        cmd += `@${options.version}`;
+        arguments_.push(`${name}@${options.version}`);
+      } else {
+        arguments_.push(name);
       }
 
       if (options.bumpDeps) {
-        cmd += ' --bump-deps';
+        arguments_.push('--bump-deps');
       }
       if (options.test) {
-        cmd += ' --test';
+        arguments_.push('--test');
       }
       if (options.publish) {
-        cmd += ' --publish';
+        arguments_.push('--publish');
       }
       if (options.debug) {
-        cmd += ' --debug';
+        arguments_.push('--debug');
       }
       if (options.dryRun) {
-        cmd += ' --dry-run';
+        arguments_.push('--dry-run');
       }
 
-      // Execute command
-      const { execSync } = await import('node:child_process');
-      execSync(cmd, { stdio: 'inherit' });
+      execFileSync('node', arguments_, { stdio: 'inherit' });
 
       spinner.succeed(`Successfully processed ${name}`);
     } catch (error) {
@@ -182,7 +185,6 @@ class DepUpCLI {
     try {
       const spinner = ora('Starting package discovery...').start();
 
-      const cmd = 'node scripts/cron-discover.mjs';
       if (options.limit) {
         // Note: This would need to be implemented in the discover script
         console.log(
@@ -192,8 +194,7 @@ class DepUpCLI {
         );
       }
 
-      const { execSync } = await import('node:child_process');
-      execSync(cmd, { stdio: 'inherit' });
+      execFileSync('node', ['scripts/cron-discover.mjs'], { stdio: 'inherit' });
 
       spinner.succeed('Package discovery completed');
     } catch (error) {
@@ -206,7 +207,6 @@ class DepUpCLI {
     try {
       const spinner = ora('Starting package sync...').start();
 
-      const cmd = 'node scripts/cron-sync.mjs';
       if (options.limit) {
         // Note: This would need to be implemented in the sync script
         console.log(
@@ -214,8 +214,7 @@ class DepUpCLI {
         );
       }
 
-      const { execSync } = await import('node:child_process');
-      execSync(cmd, { stdio: 'inherit' });
+      execFileSync('node', ['scripts/cron-sync.mjs'], { stdio: 'inherit' });
 
       spinner.succeed('Package sync completed');
     } catch (error) {
@@ -245,23 +244,37 @@ class DepUpCLI {
           },
         ]);
 
-        const cmd = `node scripts/integrity-meter.mjs vote ${options.vote} 1.0.0 0 ${answers.vote} "${answers.description}"`;
-        const { execSync } = await import('node:child_process');
-        execSync(cmd, { stdio: 'inherit' });
+        execFileSync(
+          'node',
+          [
+            'scripts/integrity-meter.mjs',
+            'vote',
+            options.vote,
+            '1.0.0',
+            '0',
+            answers.vote,
+            answers.description,
+          ],
+          { stdio: 'inherit' },
+        );
         return;
       }
 
       if (options.status) {
-        const cmd = `node scripts/integrity-meter.mjs status ${options.status}`;
-        const { execSync } = await import('node:child_process');
-        execSync(cmd, { stdio: 'inherit' });
+        execFileSync(
+          'node',
+          ['scripts/integrity-meter.mjs', 'status', options.status],
+          { stdio: 'inherit' },
+        );
         return;
       }
 
       if (options.report) {
-        const cmd = `node scripts/integrity-meter.mjs report ${options.report}`;
-        const { execSync } = await import('node:child_process');
-        execSync(cmd, { stdio: 'inherit' });
+        execFileSync(
+          'node',
+          ['scripts/integrity-meter.mjs', 'report', options.report],
+          { stdio: 'inherit' },
+        );
         return;
       }
 

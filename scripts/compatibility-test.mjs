@@ -376,12 +376,12 @@ class CompatibilityTester {
     }
   }
 
-  async collectFiles(dirPath) {
+  async collectFiles(directoryPath) {
     const files = [];
-    const items = await fs.readdir(dirPath, { withFileTypes: true });
+    const items = await fs.readdir(directoryPath, { withFileTypes: true });
 
     for (const item of items) {
-      const fullPath = path.join(dirPath, item.name);
+      const fullPath = path.join(directoryPath, item.name);
 
       if (item.isDirectory() && item.name !== 'node_modules') {
         const subFiles = await this.collectFiles(fullPath);

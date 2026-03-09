@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { promises as fs } from 'node:fs';
+import path from 'node:path';
 
 class PackageAdder {
   async addPackage(packageName) {
@@ -169,7 +170,7 @@ class PackageAdder {
       packages,
     };
   }
-  cronDiscoverPath = './scripts/cron-discover.mjs';
+  cronDiscoverPath = path.join(import.meta.dirname, 'cron-discover.mjs');
 }
 
 // CLI interface

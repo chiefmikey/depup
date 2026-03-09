@@ -44,7 +44,7 @@
     "security:demo": "node scripts/security-demo.mjs",
     "depup:secure": "docker-compose run --rm depup-sandbox",
     "depup:secure:publish": "docker-compose run --rm depup-sandbox --bump-deps --test --publish",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
   },

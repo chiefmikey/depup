@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -104,6 +104,20 @@ class SecureDepUp {
     console.log(chalk.green('✅ Package processed securely'));
   }
 
+  parsePackageName(packageSpec) {
+    if (packageSpec.startsWith('@')) {
+      // Scoped: @scope/name or @scope/name@version
+      const withoutLeadingAt = packageSpec.slice(1);
+      const atIndex = withoutLeadingAt.indexOf('@');
+      if (atIndex === -1) {
+        return packageSpec; // @scope/name (no version)
+      }
+      return `@${withoutLeadingAt.slice(0, atIndex)}`; // @scope/name (strip version)
+    }
+    // Unscoped: name or name@version
+    return packageSpec.split('@')[0];
+  }
+
   async validatePackageAllowlist(packageSpec) {
     const spinner = ora('Validating package allowlist...').start();
 
@@ -111,7 +125,7 @@ class SecureDepUp {
       // Load allowlist from secure configuration
       const allowlist = await this.loadPackageAllowlist();
 
-      const packageName = packageSpec.split('@')[0];
+      const packageName = this.parsePackageName(packageSpec);
 
       if (!allowlist.includes(packageName)) {
         throw new Error(
@@ -177,7 +191,7 @@ class SecureDepUp {
   async scanPackageManifest(packageSpec) {
     // This would integrate with security databases
     // For now, implement basic checks
-    const packageName = packageSpec.split('@')[0];
+    const packageName = this.parsePackageName(packageSpec);
 
     // Check for suspicious package names
     const suspiciousPatterns = [
@@ -223,13 +237,15 @@ class SecureDepUp {
 
     try {
       // Run ClamAV scan on extracted files
-      const scanCommand = `clamscan --recursive --infected --quiet ${packagePath}`;
-
       try {
-        execSync(scanCommand, {
-          stdio: 'pipe',
-          timeout: 60_000, // 1 minute timeout
-        });
+        execFileSync(
+          'clamscan',
+          ['--recursive', '--infected', '--quiet', packagePath],
+          {
+            stdio: 'pipe',
+            timeout: 60_000, // 1 minute timeout
+          },
+        );
         spinner.succeed('Malware scan passed');
       } catch (error) {
         if (error.status === 1) {
@@ -375,14 +391,19 @@ class SecureDepUp {
 
   async runInSandbox(operation, target, options) {
     // This is where we would call the original depup.mjs with security constraints
-    // For now, we'll simulate the secure execution
-
-    const command = `node scripts/depup.mjs ${target} ${
-      options.bumpDeps ? '--bump-deps' : ''
-    } ${options.test ? '--test' : ''} ${options.debug ? '--debug' : ''}`;
+    const arguments_ = ['scripts/depup.mjs', target];
+    if (options.bumpDeps) {
+      arguments_.push('--bump-deps');
+    }
+    if (options.test) {
+      arguments_.push('--test');
+    }
+    if (options.debug) {
+      arguments_.push('--debug');
+    }
 
     try {
-      const result = execSync(command, {
+      const result = execFileSync('node', arguments_, {
         cwd: process.cwd(),
         encoding: 'utf8',
         env: {
@@ -390,11 +411,10 @@ class SecureDepUp {
           NODE_ENV: 'production',
           NPM_CONFIG_AUDIT: 'false',
           NPM_CONFIG_FUND: 'false',
-          // Security constraints
           NPM_CONFIG_IGNORE_SCRIPTS: 'true',
         },
         stdio: 'pipe',
-        timeout: 300_000, // 5 minutes
+        timeout: 300_000,
       });
 
       return JSON.parse(result);

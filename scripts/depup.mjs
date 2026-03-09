@@ -1,14 +1,15 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-// import { fileURLToPath } from 'node:url';
 import chalk from 'chalk';
 import { Command } from 'commander';
 import ora from 'ora';
 import pacote from 'pacote';
 import semver from 'semver';
+
+const PACKAGE_JSON = 'package.json';
 
 class DepUp {
   async main() {
@@ -96,7 +97,7 @@ class DepUp {
     const manifest = await this.fetchManifest(packageSpec, timeout);
     const packageName = manifest.name;
     const baseVersion = manifest.version;
-    const scopedName = `@depup/${packageName}`;
+    const scopedName = DepUp.toScopedName(packageName);
 
     console.log(
       chalk.cyan(`Processing ${packageName}@${baseVersion} -> ${scopedName}`),
@@ -130,7 +131,7 @@ class DepUp {
       packageJson,
     );
     await fs.writeFile(
-      path.join(targetDirectory, 'package.json'),
+      path.join(targetDirectory, PACKAGE_JSON),
       JSON.stringify(packageJson, undefined, 2),
     );
 
@@ -186,7 +187,7 @@ class DepUp {
     revision,
     originalName,
   ) {
-    const packageJsonPath = path.join(targetDirectory, 'package.json');
+    const packageJsonPath = path.join(targetDirectory, PACKAGE_JSON);
     const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
     packageJson.name = scopedName;
     packageJson.version = `${baseVersion}-depup.${revision}`;
@@ -296,9 +297,8 @@ class DepUp {
         withFileTypes: true,
       });
       const revs = entries
-        .filter((entry) => entry.isDirectory() && entry.name.startsWith('rev-'))
-        .map((entry) => Number.parseInt(entry.name.replace('rev-', ''), 10))
-        .filter((n) => !Number.isNaN(n));
+        .filter((entry) => entry.isDirectory() && /^rev-\d+$/u.test(entry.name))
+        .map((entry) => Number.parseInt(entry.name.replace('rev-', ''), 10));
       if (revs.length > 0) {
         return Math.max(...revs) + 1;
       }
@@ -374,7 +374,8 @@ class DepUp {
 
   rejectAfterTimeout(message, timeout) {
     return new Promise((_resolve, reject) => {
-      setTimeout(() => reject(new Error(message)), timeout);
+      const timerId = setTimeout(() => reject(new Error(message)), timeout);
+      timerId.unref();
     });
   }
 
@@ -404,11 +405,15 @@ class DepUp {
   ) {
     const spinner = ora('Bumping dependencies...').start();
 
-    const dependencies = { ...packageJson.dependencies };
+    if (!packageJson.dependencies) {
+      spinner.succeed('No dependencies to update');
+      return { changes: [], updatedCount: 0 };
+    }
+
     const changes = [];
     let errorCount = 0;
     const depBatchSize = 10;
-    const entries = Object.entries(dependencies);
+    const entries = Object.entries(packageJson.dependencies);
 
     for (let index = 0; index < entries.length; index += depBatchSize) {
       const batch = entries.slice(index, index + depBatchSize);
@@ -612,7 +617,7 @@ class DepUp {
     };
 
     await fs.writeFile(
-      path.join(testDirectory, 'package.json'),
+      path.join(testDirectory, PACKAGE_JSON),
       JSON.stringify(testPackageJson, undefined, 2),
     );
 
@@ -683,7 +688,7 @@ try {
       const entries = await fs.readdir(targetDirectory, {
         withFileTypes: true,
       });
-      const keepFiles = new Set(['changes.json', 'package.json']);
+      const keepFiles = new Set(['changes.json', PACKAGE_JSON]);
       for (const entry of entries) {
         if (!keepFiles.has(entry.name)) {
           await fs.rm(path.join(targetDirectory, entry.name), {
@@ -837,10 +842,8 @@ try {
   }
 
   async generateReadme(packageName) {
-    const { execSync: execSyncImport } = await import('node:child_process');
-
     try {
-      execSyncImport(`node scripts/generate-readme.mjs ${packageName}`, {
+      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
         cwd: process.cwd(),
         stdio: 'pipe',
         timeout: 30_000,
@@ -910,7 +913,7 @@ try {
     };
 
     await fs.writeFile(
-      path.join(targetDirectory, 'package.json'),
+      path.join(targetDirectory, PACKAGE_JSON),
       JSON.stringify(packageJson, undefined, 2),
     );
 
@@ -918,12 +921,18 @@ try {
   }
 
   async generatePublishReadme(context) {
-    const { baseVersion, changesData, packageName, targetDirectory, testResult } =
-      context;
+    const {
+      baseVersion,
+      changesData,
+      packageName,
+      targetDirectory,
+      testResult,
+    } = context;
+    const scopedName = DepUp.toScopedName(packageName);
     const npmUrl = `https://www.npmjs.com/package/${packageName}`;
     const date = new Date().toISOString().split('T')[0];
     const lines = [
-      `# @depup/${packageName}`,
+      `# ${scopedName}`,
       '',
       `> Dependency-bumped version of [${packageName}](${npmUrl})`,
       '',
@@ -932,7 +941,7 @@ try {
       '',
       '## Installation',
       '',
-      `\`\`\`bash\nnpm install @depup/${packageName}\n\`\`\``,
+      `\`\`\`bash\nnpm install ${scopedName}\n\`\`\``,
       '',
       '| Field | Value |',
       '|-------|-------|',
@@ -951,10 +960,10 @@ try {
         '| Dependency | From | To |',
         '|------------|------|-----|',
       );
-      for (const [dep, ver] of bumped.toSorted(([a], [b]) =>
+      for (const [dep, version] of bumped.toSorted(([a], [b]) =>
         a.localeCompare(b),
       )) {
-        lines.push(`| ${dep} | ${ver.from} | ${ver.to} |`);
+        lines.push(`| ${dep} | ${version.from} | ${version.to} |`);
       }
     }
 
@@ -978,6 +987,14 @@ try {
       return 'prepared';
     }
     return published ? 'published' : 'skipped';
+  }
+
+  // Flatten scoped package names for @depup/ publishing: @nestjs/common -> nestjs__common
+  static toScopedName(packageName) {
+    const flatName = packageName.startsWith('@')
+      ? packageName.slice(1).replace(/\//u, '__')
+      : packageName;
+    return `@depup/${flatName}`;
   }
 
   npmRegistry = 'https://registry.npmjs.org';

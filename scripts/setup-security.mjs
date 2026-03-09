@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -150,11 +150,11 @@ class SecuritySetup {
   async checkDirectoryPermissions() {
     const directories = ['packages', 'config', 'security-reports'];
 
-    for (const dir of directories) {
+    for (const directory of directories) {
       try {
-        await fs.access(path.join(process.cwd(), dir));
+        await fs.access(path.join(process.cwd(), directory));
       } catch {
-        throw new Error(`Directory '${dir}' missing`);
+        throw new Error(`Directory '${directory}' missing`);
       }
     }
 
@@ -226,9 +226,9 @@ class SecuritySetup {
   async setDirectoryPermissions() {
     // Set appropriate permissions for security
     const directories = ['packages', 'security-reports'];
-    for (const dir of directories) {
+    for (const directory of directories) {
       try {
-        execSync(`chmod 755 ${dir}`, { stdio: 'pipe' });
+        execFileSync('chmod', ['755', directory], { stdio: 'pipe' });
       } catch {
         // Ignore permission errors in some environments
       }
