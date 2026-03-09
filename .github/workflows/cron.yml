@@ -2,8 +2,8 @@ name: "Automated Discovery & Sync"
 
 on:
   schedule:
-    # Run every 6 hours
-    - cron: '0 */6 * * *'
+    # Run every 4 hours
+    - cron: '0 */4 * * *'
   workflow_dispatch:
     inputs:
       discover_only:
@@ -19,10 +19,14 @@ on:
 
 jobs:
   discover:
-    name: Discover New Packages
+    name: Discover (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     if: ${{ !inputs.sync_only }}
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
 
     steps:
       - name: Checkout
@@ -49,40 +53,50 @@ jobs:
       - name: Discover Packages
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '5'
         run: |
-          echo "Starting package discovery..."
+          echo "Starting package discovery (shard ${{ matrix.shard }}/5)..."
           npm run cron:discover
 
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --staged --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes to commit"
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected"
-          fi
-
-      - name: Commit Discovery Changes
-        if: steps.changes.outputs.changed == 'true'
+      - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "feat: discover new packages via cron"
-          git push origin main
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "Push failed after 5 attempts"
+              exit 1
+            fi
+            echo "Push failed on attempt $attempt, retrying..."
+            sleep $((attempt * 2))
+          done
 
-      - name: Discovery Summary
+      - name: Shard Summary
         if: always()
         run: |
-          echo "## Discovery Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Status**: ${{ steps.changes.outputs.changed == 'true' && 'Packages discovered' || 'No new packages' }}" >> $GITHUB_STEP_SUMMARY
+          echo "## Discovery Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
 
   sync:
-    name: Sync Existing Packages
+    name: Sync (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
     timeout-minutes: 120
     if: ${{ !inputs.discover_only }}
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
 
     steps:
       - name: Checkout
@@ -109,36 +123,43 @@ jobs:
       - name: Sync Packages
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '5'
         run: |
-          echo "Starting package sync..."
+          echo "Starting package sync (shard ${{ matrix.shard }}/5)..."
           npm run cron:sync
 
       - name: Self-Healing
+        if: matrix.shard == 0
         run: |
           echo "Running self-healing checks..."
           npm run heal:auto
 
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --staged --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes to commit"
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected"
-          fi
-
-      - name: Commit Sync Changes
-        if: steps.changes.outputs.changed == 'true'
+      - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "chore: sync existing packages via cron"
-          git push origin main
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "Push failed after 5 attempts"
+              exit 1
+            fi
+            echo "Push failed on attempt $attempt, retrying..."
+            sleep $((attempt * 2))
+          done
 
-      - name: Sync Summary
+      - name: Shard Summary
         if: always()
         run: |
-          echo "## Sync Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Status**: ${{ steps.changes.outputs.changed == 'true' && 'Packages synced' || 'No updates needed' }}" >> $GITHUB_STEP_SUMMARY
+          echo "## Sync Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY

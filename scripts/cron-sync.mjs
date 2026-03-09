@@ -114,6 +114,26 @@ class PackageSyncer {
       console.error('Error reading packages:', error.message);
     }
 
+    // Apply sharding if configured (for parallel runner support)
+    const shardIndex = Number.parseInt(
+      process.env.SHARD_INDEX || '0',
+      10,
+    );
+    const shardTotal = Number.parseInt(
+      process.env.SHARD_TOTAL || '1',
+      10,
+    );
+
+    if (shardTotal > 1) {
+      const shardedPackages = packages.filter(
+        (_package, index) => index % shardTotal === shardIndex,
+      );
+      console.log(
+        `Shard ${shardIndex + 1}/${shardTotal}: syncing ${shardedPackages.length} of ${packages.length} packages`,
+      );
+      return shardedPackages;
+    }
+
     return packages;
   }
 
@@ -382,9 +402,9 @@ class PackageSyncer {
     });
   }
   registry = 'https://registry.npmjs.org';
-  rateLimitDelay = 200;
-  maxPackagesPerRun = 200;
-  concurrentPackages = 10;
+  rateLimitDelay = 100;
+  maxPackagesPerRun = 600;
+  concurrentPackages = 20;
 }
 
 // Run if called directly
