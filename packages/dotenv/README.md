@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [dotenv](https://www.npmjs.com/package/dotenv)
-- **DepUp Version**: 17.2.2-depup.0
-- **Original Version**: 17.2.2
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 17.3.1-depup.1
+- **Original Version**: 17.3.1
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/dotenv
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 17.2.2 | 0 | 🔴 Poor | 0% | 0 |
+| 17.3.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/dotenv
 ### Version 17.2.2
 
 - **Revision 0** (17.2.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 17.3.1
+
+- **Revision 1** (17.3.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

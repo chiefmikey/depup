@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [vite](https://www.npmjs.com/package/vite)
-- **DepUp Version**: 7.1.5-depup.0
-- **Original Version**: 7.1.5
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 7.3.1-depup.1
+- **Original Version**: 7.3.1
+- **Last Updated**: 3/9/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/vite
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 7.1.5 | 0 | 🔴 Poor | 0% | 0 |
+| 7.3.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/vite
 ### Version 7.1.5
 
 - **Revision 0** (7.1.5-depup.0) - 🔴 Poor 0% integrity
+
+### Version 7.3.1
+
+- **Revision 1** (7.3.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
