@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [i18next](https://www.npmjs.com/package/i18next)
-- **DepUp Version**: 25.8.14-depup.0
-- **Original Version**: 25.8.14
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 25.8.17-depup.1
+- **Original Version**: 25.8.17
+- **Last Updated**: 3/10/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/i18next
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 25.8.14 | 0 | 🔴 Poor | 0% | 0 |
+| 25.8.17 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/i18next
 ### Version 25.8.14
 
 - **Revision 0** (25.8.14-depup.0) - 🔴 Poor 0% integrity
+
+### Version 25.8.17
+
+- **Revision 1** (25.8.17-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
