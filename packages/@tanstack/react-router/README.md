@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@tanstack/react-router](https://www.npmjs.com/package/@tanstack/react-router)
-- **DepUp Version**: 1.166.4-depup.0
-- **Original Version**: 1.166.4
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 1.166.6-depup.0
+- **Original Version**: 1.166.6
+- **Last Updated**: 3/10/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/tanstack__react-router
 |---------|----------|--------|-------|-------|
 | 1.166.3 | 0 | 🔴 Poor | 0% | 0 |
 | 1.166.4 | 0 | 🔴 Poor | 0% | 0 |
+| 1.166.6 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/tanstack__react-router
 ### Version 1.166.4
 
 - **Revision 0** (1.166.4-depup.0) - 🔴 Poor 0% integrity
+
+### Version 1.166.6
+
+- **Revision 0** (1.166.6-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

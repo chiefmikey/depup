@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [mysql2](https://www.npmjs.com/package/mysql2)
-- **DepUp Version**: 3.19.0-depup.0
-- **Original Version**: 3.19.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 3.19.1-depup.1
+- **Original Version**: 3.19.1
+- **Last Updated**: 3/10/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/mysql2
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.19.0 | 0 | 🔴 Poor | 0% | 0 |
+| 3.19.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/mysql2
 ### Version 3.19.0
 
 - **Revision 0** (3.19.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.19.1
+
+- **Revision 1** (3.19.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

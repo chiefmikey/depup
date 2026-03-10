@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [turbo](https://www.npmjs.com/package/turbo)
-- **DepUp Version**: 2.8.14-depup.0
-- **Original Version**: 2.8.14
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 2.8.15-depup.0
+- **Original Version**: 2.8.15
+- **Last Updated**: 3/10/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/turbo
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.8.14 | 0 | 🔴 Poor | 0% | 0 |
+| 2.8.15 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/turbo
 ### Version 2.8.14
 
 - **Revision 0** (2.8.14-depup.0) - 🔴 Poor 0% integrity
+
+### Version 2.8.15
+
+- **Revision 0** (2.8.15-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
