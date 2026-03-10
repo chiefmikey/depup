@@ -5,5 +5,18 @@
       "timestamp": "2026-03-09T08:18:51.893Z",
       "version": "16.3.2-depup.0"
     }
+  },
+  "16.3.3": {
+    "0": {
+      "changes": {
+        "listr2": {
+          "from": "^9.0.5",
+          "to": "^10.2.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-10T08:16:08.812Z",
+      "version": "16.3.3-depup.0"
+    }
   }
 }
