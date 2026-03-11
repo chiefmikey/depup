@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [lerna](https://www.npmjs.com/package/lerna)
-- **DepUp Version**: 9.0.5-depup.0
-- **Original Version**: 9.0.5
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 9.0.6-depup.0
+- **Original Version**: 9.0.6
+- **Last Updated**: 3/11/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/lerna
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 9.0.5 | 0 | 🔴 Poor | 0% | 0 |
+| 9.0.6 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/lerna
 ### Version 9.0.5
 
 - **Revision 0** (9.0.5-depup.0) - 🔴 Poor 0% integrity
+
+### Version 9.0.6
+
+- **Revision 0** (9.0.6-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
