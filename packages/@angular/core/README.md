@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@angular/core](https://www.npmjs.com/package/@angular/core)
-- **DepUp Version**: 21.2.3-depup.0
-- **Original Version**: 21.2.3
-- **Last Updated**: 3/11/2026
+- **DepUp Version**: 21.2.4-depup.0
+- **Original Version**: 21.2.4
+- **Last Updated**: 3/12/2026
 
 ## 🚀 Installation
 
@@ -28,6 +28,7 @@ npm install @depup/angular__core
 | 21.2.1 | 0 | 🔴 Poor | 0% | 0 |
 | 21.2.2 | 0 | 🔴 Poor | 0% | 0 |
 | 21.2.3 | 0 | 🔴 Poor | 0% | 0 |
+| 21.2.4 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -44,6 +45,10 @@ npm install @depup/angular__core
 ### Version 21.2.3
 
 - **Revision 0** (21.2.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 21.2.4
+
+- **Revision 0** (21.2.4-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
