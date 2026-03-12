@@ -1,0 +1,13 @@
+@use '../tools';
+
+@include tools.layer('core.base') {
+  .v-locale {
+    &--is-rtl {
+      direction: rtl;
+    }
+
+    &--is-ltr {
+      direction: ltr;
+    }
+  }
+}
