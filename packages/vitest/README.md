@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [vitest](https://www.npmjs.com/package/vitest)
-- **DepUp Version**: 4.0.18-depup.0
-- **Original Version**: 4.0.18
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 4.1.0-depup.0
+- **Original Version**: 4.1.0
+- **Last Updated**: 3/12/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/vitest
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.0.18 | 0 | 🔴 Poor | 0% | 0 |
+| 4.1.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/vitest
 ### Version 4.0.18
 
 - **Revision 0** (4.0.18-depup.0) - 🔴 Poor 0% integrity
+
+### Version 4.1.0
+
+- **Revision 0** (4.1.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
