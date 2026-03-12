@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [vuetify](https://www.npmjs.com/package/vuetify)
-- **DepUp Version**: 4.0.1-depup.0
-- **Original Version**: 4.0.1
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 4.0.2-depup.1
+- **Original Version**: 4.0.2
+- **Last Updated**: 3/12/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/vuetify
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.0.1 | 0 | 🔴 Poor | 0% | 0 |
+| 4.0.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/vuetify
 ### Version 4.0.1
 
 - **Revision 0** (4.0.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 4.0.2
+
+- **Revision 1** (4.0.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

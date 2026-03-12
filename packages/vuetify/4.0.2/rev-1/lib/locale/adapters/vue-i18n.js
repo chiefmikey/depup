@@ -1,0 +1,76 @@
+// Composables
+import { useProxiedModel } from "../../composables/proxiedModel.js"; // Utilities
+import { toRef, watch } from 'vue';
+
+// Types
+
+function useProvided(props, prop, provided) {
+  const internal = useProxiedModel(props, prop);
+  internal.value = props[prop] ?? provided.value;
+  watch(provided, v => {
+    if (props[prop] == null) {
+      internal.value = v;
+    }
+  });
+  return internal;
+}
+function inferDecimalSeparator(format) {
+  return format(0.1).includes(',') ? ',' : '.';
+}
+function createProvideFunction(data) {
+  return props => {
+    const current = useProvided(props, 'locale', data.current);
+    const fallback = useProvided(props, 'fallback', data.fallback);
+    const messages = useProvided(props, 'messages', data.messages);
+    const i18n = data.useI18n({
+      locale: current.value,
+      fallbackLocale: fallback.value,
+      messages: messages.value,
+      useScope: 'local',
+      legacy: false,
+      inheritLocale: false
+    });
+    watch(current, v => {
+      i18n.locale.value = v;
+    });
+    return {
+      name: 'vue-i18n',
+      current,
+      fallback,
+      messages,
+      decimalSeparator: toRef(() => props.decimalSeparator ?? inferDecimalSeparator(i18n.n)),
+      t: (key, ...params) => i18n.t(key, params),
+      n: i18n.n,
+      provide: createProvideFunction({
+        current,
+        fallback,
+        messages,
+        useI18n: data.useI18n
+      })
+    };
+  };
+}
+export function createVueI18nAdapter({
+  i18n,
+  useI18n
+}) {
+  const current = i18n.global.locale;
+  const fallback = i18n.global.fallbackLocale;
+  const messages = i18n.global.messages;
+  return {
+    name: 'vue-i18n',
+    current,
+    fallback,
+    messages,
+    decimalSeparator: toRef(() => inferDecimalSeparator(i18n.global.n)),
+    t: (key, ...params) => i18n.global.t(key, params),
+    n: i18n.global.n,
+    provide: createProvideFunction({
+      current,
+      fallback,
+      messages,
+      useI18n
+    })
+  };
+}
+//# sourceMappingURL=vue-i18n.js.map

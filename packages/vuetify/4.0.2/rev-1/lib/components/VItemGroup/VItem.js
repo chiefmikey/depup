@@ -1,0 +1,32 @@
+// Composables
+import { VItemGroupSymbol } from "./VItemGroup.js";
+import { makeGroupItemProps, useGroupItem } from "../../composables/group.js"; // Utilities
+import { genericComponent } from "../../util/index.js";
+export const VItem = genericComponent()({
+  name: 'VItem',
+  props: makeGroupItemProps(),
+  emits: {
+    'group:selected': val => true
+  },
+  setup(props, {
+    slots
+  }) {
+    const {
+      isSelected,
+      select,
+      toggle,
+      selectedClass,
+      value,
+      disabled
+    } = useGroupItem(props, VItemGroupSymbol);
+    return () => slots.default?.({
+      isSelected: isSelected.value,
+      selectedClass: selectedClass.value,
+      select,
+      toggle,
+      value: value.value,
+      disabled: disabled.value
+    });
+  }
+});
+//# sourceMappingURL=VItem.js.map
