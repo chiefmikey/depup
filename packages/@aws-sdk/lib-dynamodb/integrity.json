@@ -44,5 +44,30 @@
       "timestamp": "2026-03-11T20:12:47.509Z",
       "version": "3.1007.0-depup.0"
     }
+  },
+  "3.1008.0": {
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.9",
+          "to": "^3.23.11"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.3",
+          "to": "^4.12.5"
+        },
+        "@smithy/types": {
+          "from": "^4.13.0",
+          "to": "^4.13.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-13T04:38:36.227Z",
+      "version": "3.1008.0-depup.1"
+    }
   }
 }

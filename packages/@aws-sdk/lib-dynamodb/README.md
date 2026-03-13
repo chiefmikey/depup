@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@aws-sdk/lib-dynamodb](https://www.npmjs.com/package/@aws-sdk/lib-dynamodb)
-- **DepUp Version**: 3.1007.0-depup.0
-- **Original Version**: 3.1007.0
-- **Last Updated**: 3/11/2026
+- **DepUp Version**: 3.1008.0-depup.1
+- **Original Version**: 3.1008.0
+- **Last Updated**: 3/13/2026
 
 ## 🚀 Installation
 
@@ -29,6 +29,7 @@ npm install @depup/aws-sdk__lib-dynamodb
 | 3.1005.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1006.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1007.0 | 0 | 🔴 Poor | 0% | 0 |
+| 3.1008.0 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -49,6 +50,10 @@ npm install @depup/aws-sdk__lib-dynamodb
 ### Version 3.1007.0
 
 - **Revision 0** (3.1007.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.1008.0
+
+- **Revision 1** (3.1008.0-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
