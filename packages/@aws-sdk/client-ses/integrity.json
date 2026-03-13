@@ -145,5 +145,18 @@
       "timestamp": "2026-03-13T00:34:16.204Z",
       "version": "3.1008.0-depup.0"
     }
+  },
+  "3.1009.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-13T20:12:36.885Z",
+      "version": "3.1009.0-depup.0"
+    }
   }
 }

@@ -5,5 +5,26 @@
       "timestamp": "2026-03-09T08:18:51.943Z",
       "version": "6.0.1-depup.0"
     }
+  },
+  "7.0.0": {
+    "0": {
+      "changes": {
+        "envinfo": {
+          "from": "^7.14.0",
+          "to": "^7.21.0"
+        },
+        "fastest-levenshtein": {
+          "from": "^1.0.12",
+          "to": "^1.0.16"
+        },
+        "import-local": {
+          "from": "^3.0.2",
+          "to": "^3.2.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-13T20:14:05.395Z",
+      "version": "7.0.0-depup.0"
+    }
   }
 }
