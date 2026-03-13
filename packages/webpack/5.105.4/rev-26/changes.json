@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@types/eslint-scope": {
+      "from": "^3.7.7",
+      "to": "^9.1.0"
+    },
+    "acorn-import-phases": {
+      "from": "^1.0.3",
+      "to": "^1.0.4"
+    },
+    "chrome-trace-event": {
+      "from": "^1.0.2",
+      "to": "^1.0.4"
+    },
+    "eslint-scope": {
+      "from": "5.1.1",
+      "to": "^9.1.2"
+    },
+    "events": {
+      "from": "^3.2.0",
+      "to": "^3.3.0"
+    },
+    "json-parse-even-better-errors": {
+      "from": "^2.3.1",
+      "to": "^5.0.0"
+    },
+    "mime-types": {
+      "from": "^2.1.27",
+      "to": "^3.0.2"
+    },
+    "terser-webpack-plugin": {
+      "from": "^5.3.17",
+      "to": "^5.4.0"
+    }
+  },
+  "timestamp": "2026-03-13T04:39:15.083Z",
+  "totalUpdated": 8
+}
