@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [file-type](https://www.npmjs.com/package/file-type)
-- **DepUp Version**: 21.3.1-depup.0
-- **Original Version**: 21.3.1
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 21.3.2-depup.0
+- **Original Version**: 21.3.2
+- **Last Updated**: 3/13/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/file-type
 |---------|----------|--------|-------|-------|
 | 21.3.0 | 0 | 🔴 Poor | 0% | 0 |
 | 21.3.1 | 0 | 🔴 Poor | 0% | 0 |
+| 21.3.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/file-type
 ### Version 21.3.1
 
 - **Revision 0** (21.3.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 21.3.2
+
+- **Revision 0** (21.3.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
