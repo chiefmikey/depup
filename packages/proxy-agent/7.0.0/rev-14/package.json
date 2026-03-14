@@ -1,0 +1,87 @@
+{
+  "name": "@depup/proxy-agent",
+  "version": "7.0.0-depup.14",
+  "type": "module",
+  "description": "[DepUp] Maps proxy protocols to `http.Agent` implementations",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">= 14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooTallNate/proxy-agents.git",
+    "directory": "packages/proxy-agent"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "proxy-agent",
+    "http",
+    "https",
+    "socks",
+    "agent",
+    "mapping",
+    "proxy"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "lru-cache": "^11.2.7",
+    "proxy-from-env": "^2.0.0",
+    "agent-base": "8.0.0",
+    "http-proxy-agent": "8.0.0",
+    "https-proxy-agent": "8.0.0",
+    "socks-proxy-agent": "9.0.0",
+    "pac-proxy-agent": "8.0.0"
+  },
+  "devDependencies": {
+    "@types/agent-base": "^4.2.0",
+    "@types/debug": "^4.1.7",
+    "@types/node": "^22.13.0",
+    "@types/proxy-from-env": "^1.0.1",
+    "@types/ws": "^8.5.4",
+    "async-listen": "^3.0.0",
+    "socksv5": "github:TooTallNate/socksv5#fix/dstSock-close-event",
+    "typescript": "^5.1.6",
+    "ws": "^8.13.0",
+    "proxy": "3.0.0",
+    "tsconfig": "0.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint . --ext .ts",
+    "pack": "node ../../scripts/pack.mjs"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.3.4",
+        "to": "^4.4.3"
+      },
+      "lru-cache": {
+        "from": "^7.14.1",
+        "to": "^11.2.7"
+      },
+      "proxy-from-env": {
+        "from": "^1.1.0",
+        "to": "^2.0.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "proxy-agent",
+    "originalVersion": "7.0.0",
+    "processedAt": "2026-03-14T16:15:58.719Z",
+    "smokeTest": "failed"
+  }
+}
