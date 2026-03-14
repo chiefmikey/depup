@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [kysely](https://www.npmjs.com/package/kysely)
-- **DepUp Version**: 0.28.11-depup.0
-- **Original Version**: 0.28.11
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 0.28.12-depup.0
+- **Original Version**: 0.28.12
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/kysely
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 0.28.11 | 0 | 🔴 Poor | 0% | 0 |
+| 0.28.12 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/kysely
 ### Version 0.28.11
 
 - **Revision 0** (0.28.11-depup.0) - 🔴 Poor 0% integrity
+
+### Version 0.28.12
+
+- **Revision 0** (0.28.12-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

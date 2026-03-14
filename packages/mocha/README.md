@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [mocha](https://www.npmjs.com/package/mocha)
-- **DepUp Version**: 11.7.2-depup.0
-- **Original Version**: 11.7.2
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 11.7.5-depup.29
+- **Original Version**: 11.7.5
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/mocha
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 11.7.2 | 0 | 🔴 Poor | 0% | 0 |
+| 11.7.5 | 29 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/mocha
 ### Version 11.7.2
 
 - **Revision 0** (11.7.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 11.7.5
+
+- **Revision 29** (11.7.5-depup.29) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

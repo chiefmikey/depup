@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "parse5": {
+      "from": "^7.3.0",
+      "to": "^8.0.0"
+    },
+    "parse5-htmlparser2-tree-adapter": {
+      "from": "^7.1.0",
+      "to": "^8.0.0"
+    },
+    "parse5-parser-stream": {
+      "from": "^7.1.2",
+      "to": "^8.0.0"
+    },
+    "undici": {
+      "from": "^7.19.0",
+      "to": "^7.24.3"
+    },
+    "whatwg-mimetype": {
+      "from": "^4.0.0",
+      "to": "^5.0.0"
+    }
+  },
+  "timestamp": "2026-03-14T20:32:29.253Z",
+  "totalUpdated": 5
+}

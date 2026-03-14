@@ -18,6 +18,21 @@
       "status": "skipped",
       "timestamp": "2026-03-09T20:09:46.361Z",
       "version": "2.8.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "object-assign": {
+          "from": "^4",
+          "to": "^4.1.1"
+        },
+        "vary": {
+          "from": "^1",
+          "to": "^1.1.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-14T20:33:23.117Z",
+      "version": "2.8.6-depup.2"
     }
   }
 }

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [nodemon](https://www.npmjs.com/package/nodemon)
-- **DepUp Version**: 3.1.10-depup.0
-- **Original Version**: 3.1.10
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 3.1.14-depup.38
+- **Original Version**: 3.1.14
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/nodemon
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.1.10 | 0 | 🔴 Poor | 0% | 0 |
+| 3.1.14 | 38 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/nodemon
 ### Version 3.1.10
 
 - **Revision 0** (3.1.10-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.1.14
+
+- **Revision 38** (3.1.14-depup.38) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

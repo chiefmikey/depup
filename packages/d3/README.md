@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [d3](https://www.npmjs.com/package/d3)
-- **DepUp Version**: 7.9.0-depup.0
+- **DepUp Version**: 7.9.0-depup.6
 - **Original Version**: 7.9.0
-- **Last Updated**: 1/10/2026
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/d3
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 7.9.0 | 0 | 🔴 Poor | 0% | 0 |
+| 7.9.0 | 6 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/d3
 ### Version 7.9.0
 
 - **Revision 0** (7.9.0-depup.0) - 🔴 Poor 0% integrity
+- **Revision 6** (7.9.0-depup.6) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

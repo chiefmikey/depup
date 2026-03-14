@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [proxy-agent](https://www.npmjs.com/package/proxy-agent)
-- **DepUp Version**: 6.5.0-depup.0
-- **Original Version**: 6.5.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 7.0.0-depup.16
+- **Original Version**: 7.0.0
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/proxy-agent
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.5.0 | 0 | 🔴 Poor | 0% | 0 |
+| 7.0.0 | 16 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/proxy-agent
 ### Version 6.5.0
 
 - **Revision 0** (6.5.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 7.0.0
+
+- **Revision 16** (7.0.0-depup.16) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

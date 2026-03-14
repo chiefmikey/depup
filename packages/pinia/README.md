@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [pinia](https://www.npmjs.com/package/pinia)
-- **DepUp Version**: 3.0.4-depup.0
+- **DepUp Version**: 3.0.4-depup.1
 - **Original Version**: 3.0.4
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/pinia
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.0.4 | 0 | 🔴 Poor | 0% | 0 |
+| 3.0.4 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/pinia
 ### Version 3.0.4
 
 - **Revision 0** (3.0.4-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (3.0.4-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

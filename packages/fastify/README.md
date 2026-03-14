@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [fastify](https://www.npmjs.com/package/fastify)
-- **DepUp Version**: 5.8.2-depup.0
+- **DepUp Version**: 5.8.2-depup.1
 - **Original Version**: 5.8.2
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/fastify
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.8.2 | 0 | 🔴 Poor | 0% | 0 |
+| 5.8.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/fastify
 ### Version 5.8.2
 
 - **Revision 0** (5.8.2-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (5.8.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

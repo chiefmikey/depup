@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [mini-css-extract-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)
-- **DepUp Version**: 2.10.0-depup.0
-- **Original Version**: 2.10.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 2.10.1-depup.16
+- **Original Version**: 2.10.1
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/mini-css-extract-plugin
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.10.0 | 0 | 🔴 Poor | 0% | 0 |
+| 2.10.1 | 16 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/mini-css-extract-plugin
 ### Version 2.10.0
 
 - **Revision 0** (2.10.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 2.10.1
+
+- **Revision 16** (2.10.1-depup.16) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
