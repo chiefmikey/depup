@@ -170,6 +170,20 @@ class DepUpCLI {
       if (options.vote) {
         const answers = await inquirer.prompt([
           {
+            message: 'Version:',
+            name: 'version',
+            type: 'input',
+            validate: (input) =>
+              input && input.trim() ? true : 'Version is required',
+          },
+          {
+            message: 'Revision number:',
+            name: 'revision',
+            type: 'input',
+            validate: (input) =>
+              /^\d+$/u.test(input) ? true : 'Revision must be a number',
+          },
+          {
             choices: [
               { name: '👍 Up (Good)', value: 'up' },
               { name: '👎 Down (Bad)', value: 'down' },
@@ -192,8 +206,8 @@ class DepUpCLI {
             'scripts/integrity-meter.mjs',
             'vote',
             options.vote,
-            '1.0.0',
-            '0',
+            answers.version,
+            answers.revision,
             answers.vote,
             answers.description,
           ],

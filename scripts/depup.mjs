@@ -287,6 +287,27 @@ class DepUp {
     packageJson.name = scopedName;
     packageJson.version = `${baseVersion}-depup.${revision}`;
 
+    // Remove fields that would cause publish to fail or go to wrong registry
+    delete packageJson.publishConfig;
+    delete packageJson.private;
+
+    // Remove dangerous lifecycle scripts from original package
+    if (packageJson.scripts) {
+      const dangerousScripts = [
+        'preinstall',
+        'install',
+        'postinstall',
+        'preuninstall',
+        'postuninstall',
+        'prepublish',
+        'prepublishOnly',
+        'prepare',
+      ];
+      for (const script of dangerousScripts) {
+        delete packageJson.scripts[script];
+      }
+    }
+
     // Discoverability: prefix description
     packageJson.description = packageJson.description
       ? `[DepUp] ${packageJson.description}`

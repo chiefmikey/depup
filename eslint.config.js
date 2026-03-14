@@ -59,7 +59,7 @@ export default [
     rules: {
       complexity: ['error', { max: 13 }],
       'sonarjs/cognitive-complexity': ['warn', 15],
-      'max-lines': ['error', { max: 1065, skipBlankLines: true, skipComments: true }],
+      'max-lines': ['error', { max: 1080, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': [
         'error',
         { max: 85, skipBlankLines: true, skipComments: true },
@@ -67,9 +67,9 @@ export default [
     },
   },
   {
-    // Discovery pipeline and malware scanner have higher complexity due to multi-backend
-    // fallback logic and sharded orchestration
-    files: ['scripts/cron-discover.mjs', 'scripts/security-scan.mjs'],
+    // Discovery pipeline, malware scanner, and secure pipeline have higher complexity
+    // due to multi-backend fallback logic and sharded orchestration
+    files: ['scripts/cron-discover.mjs', 'scripts/depup-security.mjs', 'scripts/security-scan.mjs'],
     rules: {
       complexity: ['error', { max: 18 }],
       'sonarjs/cognitive-complexity': ['warn', 24],

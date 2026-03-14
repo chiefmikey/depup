@@ -339,13 +339,16 @@ class SecurityApprovalWorkflow {
     if (pending[packageName]) {
       console.log(chalk.yellow('⏳ Package approval is pending review'));
       console.log(chalk.gray(`Requested: ${pending[packageName].requestedAt}`));
-      return;
+      // Exit non-zero so CI workflows detect unapproved status
+      process.exit(1);
     }
 
     console.log(chalk.red('❌ Package is not approved and not in allowlist'));
     console.log(
       chalk.gray(`Use: npm run security-approval -- request ${packageName}`),
     );
+    // Exit non-zero so CI workflows detect unapproved status
+    process.exit(1);
   }
 
   async viewApprovalLog(options) {

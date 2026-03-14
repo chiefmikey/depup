@@ -193,8 +193,8 @@ class SecurityScanner {
   async performAdvancedMalwareChecks(scanPath) {
     // Check for suspicious files and patterns
     const suspiciousFiles = new Set([
-      '.DS_Store',
-      'Thumbs.db',
+      '.ds_store',
+      'thumbs.db',
       'desktop.ini',
       'autorun.inf',
     ]);

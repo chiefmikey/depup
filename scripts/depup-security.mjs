@@ -420,26 +420,34 @@ class SecureDepUp {
       ...packageJson.devDependencies,
     };
 
-    // Known problematic combinations
+    // Known problematic combinations: package -> { companion -> minimum version range }
     const conflictRules = {
       react: {
-        'react-dom': '>= 17.0.0', // React 18+ requires react-dom 18+
+        'react-dom': '>= 17.0.0',
       },
       webpack: {
-        'webpack-cli': '>= 4.0.0', // Webpack 5 requires webpack-cli 4+
+        'webpack-cli': '>= 4.0.0',
       },
     };
 
     for (const [package_, rules] of Object.entries(conflictRules)) {
       if (dependencies[package_]) {
-        for (const [dep] of Object.entries(rules)) {
+        for (const [dep, requiredRange] of Object.entries(rules)) {
           if (dependencies[dep]) {
-            // This would need semver checking - simplified for now
-            console.log(
-              chalk.gray(
-                `  📋 Checking ${package_}@${dependencies[package_]} with ${dep}@${dependencies[dep]}`,
-              ),
-            );
+            const depVersion = semver.coerce(dependencies[dep])?.version;
+            if (depVersion && !semver.satisfies(depVersion, requiredRange)) {
+              console.warn(
+                chalk.yellow(
+                  `  ⚠️  ${package_}@${dependencies[package_]} expects ${dep}@${requiredRange}, found ${dependencies[dep]}`,
+                ),
+              );
+            } else {
+              console.log(
+                chalk.gray(
+                  `  📋 ${package_}@${dependencies[package_]} + ${dep}@${dependencies[dep]} -- compatible`,
+                ),
+              );
+            }
           }
         }
       }

