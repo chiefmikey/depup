@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [sass](https://www.npmjs.com/package/sass)
-- **DepUp Version**: 1.97.3-depup.0
-- **Original Version**: 1.97.3
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 1.98.0-depup.0
+- **Original Version**: 1.98.0
+- **Last Updated**: 3/11/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/sass
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 1.97.3 | 0 | 🔴 Poor | 0% | 0 |
+| 1.98.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/sass
 ### Version 1.97.3
 
 - **Revision 0** (1.97.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 1.98.0
+
+- **Revision 0** (1.98.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

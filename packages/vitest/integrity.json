@@ -5,5 +5,30 @@
       "timestamp": "2026-03-09T08:18:51.941Z",
       "version": "4.0.18-depup.0"
     }
+  },
+  "4.1.0": {
+    "0": {
+      "changes": {
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.0.0"
+        },
+        "tinybench": {
+          "from": "^2.9.0",
+          "to": "^6.0.0"
+        },
+        "tinyrainbow": {
+          "from": "^3.0.3",
+          "to": "^3.1.0"
+        },
+        "why-is-node-running": {
+          "from": "^2.3.0",
+          "to": "^3.2.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-12T20:13:31.966Z",
+      "version": "4.1.0-depup.0"
+    }
   }
 }

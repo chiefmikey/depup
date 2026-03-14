@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [dayjs](https://www.npmjs.com/package/dayjs)
-- **DepUp Version**: 1.11.19-depup.0
-- **Original Version**: 1.11.19
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 1.11.20-depup.0
+- **Original Version**: 1.11.20
+- **Last Updated**: 3/12/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/dayjs
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 1.11.19 | 0 | 🔴 Poor | 0% | 0 |
+| 1.11.20 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/dayjs
 ### Version 1.11.19
 
 - **Revision 0** (1.11.19-depup.0) - 🔴 Poor 0% integrity
+
+### Version 1.11.20
+
+- **Revision 0** (1.11.20-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

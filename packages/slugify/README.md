@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [slugify](https://www.npmjs.com/package/slugify)
-- **DepUp Version**: 1.6.6-depup.0
-- **Original Version**: 1.6.6
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 1.6.8-depup.0
+- **Original Version**: 1.6.8
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/slugify
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 1.6.6 | 0 | 🔴 Poor | 0% | 0 |
+| 1.6.8 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/slugify
 ### Version 1.6.6
 
 - **Revision 0** (1.6.6-depup.0) - 🔴 Poor 0% integrity
+
+### Version 1.6.8
+
+- **Revision 0** (1.6.8-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

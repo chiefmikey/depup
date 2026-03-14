@@ -1,0 +1,25 @@
+@use 'sass:map'
+@use '../../styles/settings'
+@use '../../styles/tools'
+
+@mixin make-container($padding-x: settings.$container-padding-x)
+  width: 100%
+  padding: $padding-x
+  margin-right: auto
+  margin-left: auto
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths
+  $max-widths: settings.$container-max-widths
+  $breakpoints: settings.$grid-breakpoints
+  @each $breakpoint, $container-max-width in $max-widths
+    @include tools.media-breakpoint-up($breakpoint, $breakpoints)
+      max-width: $container-max-width
+
+@mixin make-grid-columns
+  $breakpoints: settings.$grid-breakpoints
+  @each $breakpoint in map.keys($breakpoints)
+    $infix: tools.breakpoint-infix($breakpoint, $breakpoints)
+
+    @include tools.media-breakpoint-up($breakpoint, $breakpoints)
+      @content($infix)

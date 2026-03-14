@@ -1,0 +1,9 @@
+@layer vuetify-components {
+  .v-counter {
+    opacity: var(--v-medium-emphasis-opacity);
+    flex: 0 1 auto;
+    font-size: 12px;
+    transition-duration: 150ms;
+    white-space: nowrap;
+  }
+}

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [esbuild](https://www.npmjs.com/package/esbuild)
-- **DepUp Version**: 0.27.3-depup.0
-- **Original Version**: 0.27.3
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 0.27.4-depup.1
+- **Original Version**: 0.27.4
+- **Last Updated**: 3/12/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/esbuild
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 0.27.3 | 0 | 🔴 Poor | 0% | 0 |
+| 0.27.4 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/esbuild
 ### Version 0.27.3
 
 - **Revision 0** (0.27.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 0.27.4
+
+- **Revision 1** (0.27.4-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

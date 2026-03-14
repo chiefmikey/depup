@@ -1,0 +1,59 @@
+@layer vuetify-components {
+  .v-stepper.v-sheet {
+    overflow: hidden;
+  }
+  .v-stepper.v-sheet {
+    box-shadow: 0px 1px 2px 0px rgba(var(--v-shadow-color), var(--v-shadow-key-opacity, 0.3)), 0px 1px 3px 1px rgba(var(--v-shadow-color), var(--v-shadow-ambient-opacity, 0.15));
+    --v-elevation-overlay: color-mix(in srgb, var(--v-elevation-overlay-color) 2%, transparent);
+  }
+  .v-stepper.v-sheet {
+    border-radius: 4px;
+  }
+  .v-stepper.v-sheet.v-stepper--flat {
+    box-shadow: 0px 0px 0px 0px rgba(var(--v-shadow-color), var(--v-shadow-key-opacity, 0.3)), 0px 0px 0px 0px rgba(var(--v-shadow-color), var(--v-shadow-ambient-opacity, 0.15));
+    --v-elevation-overlay: color-mix(in srgb, var(--v-elevation-overlay-color) 0%, transparent);
+  }
+  .v-stepper-header {
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  .v-stepper-header {
+    box-shadow: 0px 1px 2px 0px rgba(var(--v-shadow-color), var(--v-shadow-key-opacity, 0.3)), 0px 1px 3px 1px rgba(var(--v-shadow-color), var(--v-shadow-ambient-opacity, 0.15));
+    --v-elevation-overlay: color-mix(in srgb, var(--v-elevation-overlay-color) 2%, transparent);
+  }
+  .v-stepper-header .v-divider {
+    margin: 0 -16px;
+  }
+  .v-stepper-header .v-divider:last-child {
+    margin-inline-end: 0;
+  }
+  .v-stepper-header .v-divider:first-child {
+    margin-inline-start: 0;
+  }
+  .v-stepper--alt-labels .v-stepper-header {
+    height: auto;
+  }
+  .v-stepper--alt-labels .v-stepper-header .v-divider {
+    align-self: flex-start;
+    margin: 35px -67px 0;
+  }
+  .v-stepper-window {
+    margin: 1.5rem;
+  }
+  .v-stepper-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .v-stepper .v-stepper-actions {
+    padding: 0 1.5rem 1rem;
+  }
+  .v-stepper-window-item .v-stepper-actions {
+    padding: 1.5rem 0 0;
+  }
+}

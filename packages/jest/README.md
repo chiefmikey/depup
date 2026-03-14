@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [jest](https://www.npmjs.com/package/jest)
-- **DepUp Version**: 30.2.0-depup.1
-- **Original Version**: 30.2.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 30.3.0-depup.0
+- **Original Version**: 30.3.0
+- **Last Updated**: 3/10/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/jest
 |---------|----------|--------|-------|-------|
 | 30.1.3 | 0 | 🔴 Poor | 0% | 0 |
 | 30.2.0 | 1 | 🔴 Poor | 0% | 0 |
+| 30.3.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/jest
 ### Version 30.2.0
 
 - **Revision 1** (30.2.0-depup.1) - 🔴 Poor 0% integrity
+
+### Version 30.3.0
+
+- **Revision 0** (30.3.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [undici](https://www.npmjs.com/package/undici)
-- **DepUp Version**: 7.22.0-depup.0
-- **Original Version**: 7.22.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 7.24.2-depup.1
+- **Original Version**: 7.24.2
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,10 @@ npm install @depup/undici
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 7.22.0 | 0 | 🔴 Poor | 0% | 0 |
+| 7.23.0 | 1 | 🔴 Poor | 0% | 0 |
+| 7.24.0 | 1 | 🔴 Poor | 0% | 0 |
+| 7.24.1 | 1 | 🔴 Poor | 0% | 0 |
+| 7.24.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +38,22 @@ npm install @depup/undici
 ### Version 7.22.0
 
 - **Revision 0** (7.22.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 7.23.0
+
+- **Revision 1** (7.23.0-depup.1) - 🔴 Poor 0% integrity
+
+### Version 7.24.0
+
+- **Revision 1** (7.24.0-depup.1) - 🔴 Poor 0% integrity
+
+### Version 7.24.1
+
+- **Revision 1** (7.24.1-depup.1) - 🔴 Poor 0% integrity
+
+### Version 7.24.2
+
+- **Revision 1** (7.24.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

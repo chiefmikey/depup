@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [svelte](https://www.npmjs.com/package/svelte)
-- **DepUp Version**: 5.53.8-depup.0
-- **Original Version**: 5.53.8
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 5.53.12-depup.0
+- **Original Version**: 5.53.12
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -28,6 +28,10 @@ npm install @depup/svelte
 | 5.38.10 | 0 | 🔴 Poor | 0% | 0 |
 | 5.53.7 | 1 | 🔴 Poor | 0% | 0 |
 | 5.53.8 | 0 | 🔴 Poor | 0% | 0 |
+| 5.53.9 | 0 | 🔴 Poor | 0% | 0 |
+| 5.53.10 | 0 | 🔴 Poor | 0% | 0 |
+| 5.53.11 | 0 | 🔴 Poor | 0% | 0 |
+| 5.53.12 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -44,6 +48,22 @@ npm install @depup/svelte
 ### Version 5.53.8
 
 - **Revision 0** (5.53.8-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.53.9
+
+- **Revision 0** (5.53.9-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.53.10
+
+- **Revision 0** (5.53.10-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.53.11
+
+- **Revision 0** (5.53.11-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.53.12
+
+- **Revision 0** (5.53.12-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [lint-staged](https://www.npmjs.com/package/lint-staged)
-- **DepUp Version**: 16.3.2-depup.0
-- **Original Version**: 16.3.2
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 16.4.0-depup.0
+- **Original Version**: 16.4.0
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,9 @@ npm install @depup/lint-staged
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 16.3.2 | 0 | 🔴 Poor | 0% | 0 |
+| 16.3.3 | 0 | 🔴 Poor | 0% | 0 |
+| 16.3.4 | 0 | 🔴 Poor | 0% | 0 |
+| 16.4.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +37,18 @@ npm install @depup/lint-staged
 ### Version 16.3.2
 
 - **Revision 0** (16.3.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 16.3.3
+
+- **Revision 0** (16.3.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 16.3.4
+
+- **Revision 0** (16.3.4-depup.0) - 🔴 Poor 0% integrity
+
+### Version 16.4.0
+
+- **Revision 0** (16.4.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
