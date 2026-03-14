@@ -5,7 +5,12 @@ import path from 'node:path';
 import fetch from 'npm-registry-fetch';
 import semver from 'semver';
 
-import { getShardConfig, listPackageDirectories, sleep } from './utilities.mjs';
+import {
+  getShardConfig,
+  isNonSemverSpecifier,
+  listPackageDirectories,
+  sleep,
+} from './utilities.mjs';
 
 class PackageSyncer {
   async main() {
@@ -99,20 +104,22 @@ class PackageSyncer {
           await fs.access(integrityFile);
           const integrityData = JSON.parse(await fs.readFile(integrityFile));
 
-          // Get the latest version from integrity data
-          const versions = Object.keys(integrityData).filter((v) =>
-            semver.valid(v),
-          );
-          if (versions.length > 0) {
-            const latestVersion = versions
-              .toSorted((a, b) => semver.compare(a, b))
-              .pop();
-            packages.push({
-              integrityData,
-              name: packageEntry.name,
-              path: packageEntry.path,
-              version: latestVersion,
-            });
+          if (integrityData && typeof integrityData === 'object') {
+            // Get the latest version from integrity data
+            const versions = Object.keys(integrityData).filter((v) =>
+              semver.valid(v),
+            );
+            if (versions.length > 0) {
+              const latestVersion = versions
+                .toSorted((a, b) => semver.compare(a, b))
+                .pop();
+              packages.push({
+                integrityData,
+                name: packageEntry.name,
+                path: packageEntry.path,
+                version: latestVersion,
+              });
+            }
           }
         } catch {
           // Not a valid package directory, skip
@@ -122,19 +129,25 @@ class PackageSyncer {
       console.error('Error reading packages:', error.message);
     }
 
+    // Sort deterministically before sharding so each package always maps
+    // to the same shard regardless of filesystem enumeration order.
+    const sortedPackages = packages.toSorted((a, b) =>
+      a.name.localeCompare(b.name),
+    );
+
     const { shardIndex, shardTotal } = getShardConfig();
 
     if (shardTotal > 1) {
-      const shardedPackages = packages.filter(
+      const shardedPackages = sortedPackages.filter(
         (_package, index) => index % shardTotal === shardIndex,
       );
       console.log(
-        `Shard ${shardIndex + 1}/${shardTotal}: syncing ${shardedPackages.length} of ${packages.length} packages`,
+        `Shard ${shardIndex + 1}/${shardTotal}: syncing ${shardedPackages.length} of ${sortedPackages.length} packages`,
       );
       return shardedPackages;
     }
 
-    return packages;
+    return sortedPackages;
   }
 
   async syncPackage(package_) {
@@ -151,8 +164,14 @@ class PackageSyncer {
         timeout: 5000,
       });
 
-      const latestVersion =
-        latestManifest['dist-tags']?.latest || latestManifest.version;
+      const latestVersion = latestManifest['dist-tags']?.latest;
+
+      if (!latestVersion) {
+        console.warn(
+          `  No latest version found for ${package_.name}, skipping`,
+        );
+        return false;
+      }
 
       // Check if we need to update
       if (latestVersion !== package_.version) {
@@ -160,6 +179,7 @@ class PackageSyncer {
           `  🔄 Version update: ${package_.version} -> ${latestVersion}`,
         );
         await this.updatePackage(package_, latestVersion);
+        await this.generateReadme(package_.name);
         return true;
       }
       // Check if dependencies need updating
@@ -167,6 +187,7 @@ class PackageSyncer {
       if (needsDependencyUpdate) {
         console.log(`  🔄 Dependencies need updating`);
         await this.updateDependencies(package_);
+        await this.generateReadme(package_.name);
         return true;
       }
       console.log(`  ✅ ${package_.name} is up to date`);
@@ -235,10 +256,12 @@ class PackageSyncer {
               timeout: 2000,
             });
 
-            const latestVersion =
-              latestManifest['dist-tags']?.latest || latestManifest.version;
+            const latestVersion = latestManifest['dist-tags']?.latest;
 
-            if (this.isSignificantUpdate(latestVersion, currentVersion)) {
+            if (
+              latestVersion &&
+              this.isSignificantUpdate(latestVersion, currentVersion)
+            ) {
               abortController.abort();
               return true;
             }
@@ -323,7 +346,14 @@ class PackageSyncer {
   }
 
   isSignificantUpdate(latestVersion, currentVersion) {
-    const cleanCurrent = semver.coerce(currentVersion.replace(/^[\^~]/u, ''));
+    if (
+      isNonSemverSpecifier(currentVersion) ||
+      isNonSemverSpecifier(latestVersion)
+    ) {
+      return false;
+    }
+
+    const cleanCurrent = semver.coerce(currentVersion);
     const cleanLatest = semver.coerce(latestVersion);
 
     if (!cleanCurrent || !cleanLatest) {
@@ -370,12 +400,42 @@ class PackageSyncer {
     }
   }
 
+  getLatestProcessedAt(integrityData) {
+    if (!integrityData || typeof integrityData !== 'object') {
+      return 0;
+    }
+
+    let latestTime = 0;
+
+    for (const versionData of Object.values(integrityData)) {
+      if (versionData && typeof versionData === 'object') {
+        for (const revisionData of Object.values(versionData)) {
+          if (
+            revisionData &&
+            typeof revisionData === 'object' &&
+            revisionData.timestamp
+          ) {
+            const time = new Date(revisionData.timestamp).getTime();
+            if (!Number.isNaN(time) && time > latestTime) {
+              latestTime = time;
+            }
+          }
+        }
+      }
+    }
+
+    return latestTime;
+  }
+
   async wasRecentlyProcessed(package_) {
     try {
-      const integrityPath = path.join(package_.path, 'integrity.json');
-      const stat = await fs.stat(integrityPath);
-      const minutesSinceModified = (Date.now() - stat.mtimeMs) / 60_000;
-      return minutesSinceModified < 30;
+      // Check integrity data timestamps instead of file mtime.
+      // File mtime is unreliable in CI because actions/checkout resets all
+      // mtimes to the checkout time, making mtime-based dedup useless.
+      const { integrityData } = package_;
+      const latestProcessedAt = this.getLatestProcessedAt(integrityData);
+      const thirtyMinutesAgo = Date.now() - 30 * 60_000;
+      return latestProcessedAt > thirtyMinutesAgo;
     } catch {
       return false;
     }
@@ -388,7 +448,7 @@ class PackageSyncer {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] === import.meta.filename) {
   try {
     const syncer = new PackageSyncer();
     await syncer.main();

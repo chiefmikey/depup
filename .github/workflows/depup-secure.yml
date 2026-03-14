@@ -33,6 +33,10 @@ on:
         type: boolean
         default: true
 
+concurrency:
+  group: depup-secure-${{ inputs.package }}
+  cancel-in-progress: false
+
 env:
   DOCKER_BUILDKIT: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
@@ -47,8 +51,17 @@ jobs:
       package_allowed: ${{ steps.allowlist-check.outputs.allowed }}
       security_status: ${{ steps.security-scan.outputs.status }}
       compatibility_score: ${{ steps.compatibility-test.outputs.score }}
+      package_safe: ${{ steps.sanitize.outputs.safe_name }}
 
     steps:
+      - name: Sanitize package name for artifact paths
+        id: sanitize
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
+        run: |
+          SAFE_NAME=$(echo "$PACKAGE_NAME" | sed 's/[/@]/_/g')
+          echo "safe_name=$SAFE_NAME" >> $GITHUB_OUTPUT
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -69,7 +82,7 @@ jobs:
           # Try to install ClamAV for enhanced malware scanning
           if command -v apt-get >/dev/null 2>&1; then
             echo "Installing ClamAV..."
-            apt-get update && apt-get install -y clamav clamav-daemon
+            sudo apt-get update && sudo apt-get install -y clamav clamav-daemon
             freshclam --quiet || echo "ClamAV database update failed, continuing..."
           else
             echo "apt-get not available, skipping ClamAV installation"
@@ -82,10 +95,11 @@ jobs:
           STRICT_SECURITY: ${{ inputs.strict_security }}
         run: |
           echo "Checking if $PACKAGE_NAME is in security allowlist..."
-          node scripts/security-approval.mjs status "$PACKAGE_NAME"
+          EXIT_CODE=0
+          node scripts/security-approval.mjs status "$PACKAGE_NAME" || EXIT_CODE=$?
 
           # Check exit code to determine if package is allowed
-          if [ $? -eq 0 ]; then
+          if [ $EXIT_CODE -eq 0 ]; then
             echo "allowed=true" >> $GITHUB_OUTPUT
             echo "✅ Package is in security allowlist"
           else
@@ -124,7 +138,7 @@ jobs:
             echo "❌ No security report found"
             exit 1
           fi
-          SCAN_STATUS=$(jq -r '.overall_status' "$REPORT_FILE")
+          SCAN_STATUS=$(jq -r '.overall_status // "unknown"' "$REPORT_FILE")
           echo "status=$SCAN_STATUS" >> $GITHUB_OUTPUT
           echo "Found security report: $REPORT_FILE"
 
@@ -156,7 +170,7 @@ jobs:
             echo "Compatibility report not found, assuming score 80"
             COMPATIBILITY_SCORE=80
           else
-            COMPATIBILITY_SCORE=$(jq -r '.compatibility.score' "$COMPATIBILITY_FILE" 2>/dev/null || echo "80")
+            COMPATIBILITY_SCORE=$(jq -r '.compatibility.score // 80' "$COMPATIBILITY_FILE" 2>/dev/null || echo "80")
           fi
           echo "score=$COMPATIBILITY_SCORE" >> $GITHUB_OUTPUT
 
@@ -168,7 +182,7 @@ jobs:
       - name: Upload security reports
         uses: actions/upload-artifact@v4
         with:
-          name: security-reports-${{ inputs.package }}
+          name: security-reports-${{ steps.sanitize.outputs.safe_name || needs.security-validation.outputs.package_safe }}
           path: security-reports/
           retention-days: 30
 
@@ -198,6 +212,7 @@ jobs:
   container-build:
     name: Build Security Container
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     needs: security-validation
     if: needs.security-validation.outputs.package_allowed == 'true'
 
@@ -279,7 +294,9 @@ jobs:
             "-v" "$(pwd)/packages:/app/packages:rw"
             "-v" "$(pwd)/security-reports:/app/security-reports:rw"
             "-e" "NPM_TOKEN"
+            "-e" "NODE_AUTH_TOKEN=${NPM_TOKEN}"
             "-e" "NODE_ENV=production"
+            "-e" "NPM_CONFIG_CACHE=/tmp/npm-cache"
             "depup-security-sandbox"
           )
 
@@ -332,28 +349,69 @@ jobs:
             exit 1
           fi
 
+      - name: Commit processed packages
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
+        run: |
+          git config --local user.name "DepUp Security Bot"
+          git config --local user.email "security@depup.dev"
+
+          git add packages/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "security: process $PACKAGE_NAME with security validation"
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase failed on attempt $attempt, aborting..."
+                git rebase --abort 2>/dev/null || true
+                sleep 2
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Rebase failed after 3 attempts"
+                  exit 1
+                fi
+              elif git push origin main; then
+                echo "Push successful on attempt $attempt"
+                break
+              else
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Push failed after 3 attempts"
+                  exit 1
+                fi
+                echo "Push failed on attempt $attempt, retrying..."
+                sleep 2
+              fi
+            done
+          fi
+
       - name: Upload processing reports
         uses: actions/upload-artifact@v4
         with:
-          name: processing-reports-${{ inputs.package }}
+          name: processing-reports-${{ needs.security-validation.outputs.package_safe }}
           path: security-reports/
           retention-days: 30
 
   final-validation:
     name: Final Security Validation
     runs-on: ubuntu-latest
-    needs: secure-processing
-    if: always()
+    timeout-minutes: 10
+    needs: [secure-processing, security-validation]
+    if: ${{ !cancelled() }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Download all reports
+        continue-on-error: true
         uses: actions/download-artifact@v4
         with:
-          pattern: "*-${{ inputs.package }}"
+          pattern: "*-${{ needs.security-validation.outputs.package_safe }}"
           path: final-reports/
+
+      - name: Ensure report directory exists
+        run: mkdir -p final-reports
 
       - name: Generate final security report
         env:
@@ -430,25 +488,9 @@ jobs:
       - name: Upload final report
         uses: actions/upload-artifact@v4
         with:
-          name: final-security-report-${{ inputs.package }}
+          name: final-security-report-${{ needs.security-validation.outputs.package_safe }}
           path: final-reports/
           retention-days: 90
-
-      - name: Commit secure changes
-        if: success()
-        env:
-          PACKAGE_NAME: ${{ inputs.package }}
-        run: |
-          git config --local user.name "DepUp Security Bot"
-          git config --local user.email "security@depup.dev"
-
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git add packages/
-            git commit -m "security: process $PACKAGE_NAME with security validation"
-            git push origin main
-          fi
 
       - name: Final summary
         if: always()

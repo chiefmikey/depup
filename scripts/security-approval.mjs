@@ -79,7 +79,7 @@ class SecurityApprovalWorkflow {
           }),
       );
 
-    program.parse();
+    await program.parseAsync();
   }
 
   async requestApproval(packageName, options) {
@@ -294,7 +294,7 @@ class SecurityApprovalWorkflow {
     const allowlist = await this.loadAllowlist();
     if (!allowlist.allowlisted.includes(packageName)) {
       allowlist.allowlisted.push(packageName);
-      allowlist.allowlisted.sort();
+      allowlist.allowlisted = allowlist.allowlisted.toSorted();
       allowlist.last_updated = new Date().toISOString();
       await this.saveAllowlist(allowlist);
     }
@@ -360,7 +360,10 @@ class SecurityApprovalWorkflow {
     }
 
     if (options.limit) {
-      entries = entries.slice(-Number.parseInt(options.limit, 10));
+      const limit = Number.parseInt(options.limit, 10);
+      if (limit > 0) {
+        entries = entries.slice(-limit);
+      }
     }
 
     if (entries.length === 0) {
@@ -409,13 +412,20 @@ class SecurityApprovalWorkflow {
   async loadAllowlist() {
     try {
       const data = await fs.readFile(this.allowlistPath);
-      return JSON.parse(data);
+      const parsed = JSON.parse(data);
+
+      if (!Array.isArray(parsed.allowlisted)) {
+        return { allowlisted: [], version: parsed.version || '1.0.0' };
+      }
+
+      return parsed;
     } catch {
       return { allowlisted: [], version: '1.0.0' };
     }
   }
 
   async saveAllowlist(allowlist) {
+    await fs.mkdir(path.dirname(this.allowlistPath), { recursive: true });
     await fs.writeFile(this.allowlistPath, JSON.stringify(allowlist, null, 2));
   }
 
@@ -429,6 +439,7 @@ class SecurityApprovalWorkflow {
   }
 
   async savePendingApprovals(pending) {
+    await fs.mkdir(path.dirname(this.pendingPath), { recursive: true });
     await fs.writeFile(this.pendingPath, JSON.stringify(pending, null, 2));
   }
 
@@ -442,12 +453,18 @@ class SecurityApprovalWorkflow {
   }
 
   async saveApprovalLog(log) {
+    await fs.mkdir(path.dirname(this.approvalLogPath), { recursive: true });
     await fs.writeFile(this.approvalLogPath, JSON.stringify(log, null, 2));
   }
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const workflow = new SecurityApprovalWorkflow();
-  workflow.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const workflow = new SecurityApprovalWorkflow();
+    await workflow.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

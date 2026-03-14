@@ -77,8 +77,8 @@ class SelfHealer {
       console.log(
         `Found ${issues.invalidStructure.length} packages with invalid structure`,
       );
-      const fixed = await this.fixPackageStructure();
-      fixes.push(`${fixed} package structures fixed`);
+      const flagged = await this.fixPackageStructure();
+      fixes.push(`${flagged} package structures flagged for review`);
     }
 
     if (fixes.length === 0) {
@@ -188,8 +188,13 @@ class SelfHealer {
         const data = await fs.readFile(integrityPath);
         const integrityData = JSON.parse(data);
 
-        // Validate and repair
-        if (this.repairIntegrityData(integrityData)) {
+        // Handle null/non-object data by rebuilding from scratch
+        if (!integrityData || typeof integrityData !== 'object') {
+          await this.createBasicIntegrity(package_);
+          fixed++;
+          spinner.text = `Rebuilt integrity for ${package_.name} (${fixed})`;
+        } else if (this.repairIntegrityData(integrityData)) {
+          // Validate and repair existing data
           await fs.writeFile(
             integrityPath,
             JSON.stringify(integrityData, undefined, 2),
@@ -198,10 +203,21 @@ class SelfHealer {
           spinner.text = `Repaired integrity for ${package_.name} (${fixed})`;
         }
       } catch (error) {
-        console.warn(
-          `Could not repair integrity for ${package_.name}:`,
-          error.message,
-        );
+        if (error.code === 'ENOENT') {
+          console.warn(
+            `No integrity file for ${package_.name}:`,
+            error.message,
+          );
+        } else {
+          // JSON parse error or other corruption -- rebuild from scratch
+          console.warn(
+            `Rebuilding corrupted integrity for ${package_.name}:`,
+            error.message,
+          );
+          await this.createBasicIntegrity(package_);
+          fixed++;
+          spinner.text = `Rebuilt integrity for ${package_.name} (${fixed})`;
+        }
       }
     }
 
@@ -225,7 +241,7 @@ class SelfHealer {
       }
     }
 
-    spinner.succeed(`Fixed ${fixed} package structures`);
+    spinner.succeed(`Flagged ${fixed} package structures for review`);
     return fixed;
   }
 
@@ -306,15 +322,32 @@ class SelfHealer {
   repairIntegrityData(data) {
     let repaired = false;
 
-    for (const [, versionData] of Object.entries(data)) {
-      for (const [, revisionData] of Object.entries(versionData)) {
-        if (!revisionData.timestamp) {
-          revisionData.timestamp = new Date().toISOString();
-          repaired = true;
-        }
-        if (!revisionData.status) {
-          revisionData.status = 'unknown';
-          repaired = true;
+    for (const [key, versionData] of Object.entries(data)) {
+      if (typeof versionData !== 'object' || versionData === null) {
+        data[key] = {};
+        repaired = true;
+      } else {
+        for (const [revKey, revisionData] of Object.entries(versionData)) {
+          if (typeof revisionData !== 'object' || revisionData === null) {
+            versionData[revKey] = {
+              status: 'unknown',
+              timestamp: new Date().toISOString(),
+            };
+            repaired = true;
+          } else {
+            if (!revisionData.timestamp) {
+              revisionData.timestamp = new Date().toISOString();
+              repaired = true;
+            }
+            if (!revisionData.status) {
+              revisionData.status = 'unknown';
+              repaired = true;
+            }
+            if (!revisionData.version) {
+              revisionData.version = `${key}-depup.${revKey}`;
+              repaired = true;
+            }
+          }
         }
       }
     }
@@ -349,6 +382,7 @@ class SelfHealer {
           (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+/u.test(entry.name),
         )
         .map((entry) => entry.name)
+        .filter((v) => semver.valid(v))
         .toSorted((a, b) => semver.compare(a, b))
         .toReversed();
 
@@ -391,7 +425,7 @@ class SelfHealer {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] === import.meta.filename) {
   try {
     const healer = new SelfHealer();
     await healer.main();

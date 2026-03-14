@@ -87,6 +87,7 @@ class DepUpCLI {
   async handlePackageCommand(name, options) {
     try {
       const spinner = ora(`Processing package ${name}...`).start();
+      spinner.stop();
 
       // Build argument array
       const arguments_ = ['scripts/depup.mjs'];
@@ -113,7 +114,7 @@ class DepUpCLI {
         arguments_.push('--dry-run');
       }
 
-      execFileSync('node', arguments_, { stdio: 'inherit' });
+      execFileSync('node', arguments_, { stdio: 'inherit', timeout: 300_000 });
 
       spinner.succeed(`Successfully processed ${name}`);
     } catch (error) {
@@ -125,9 +126,9 @@ class DepUpCLI {
   async handleDiscoverCommand(options) {
     try {
       const spinner = ora('Starting package discovery...').start();
+      spinner.stop();
 
       if (options.limit) {
-        // Note: This would need to be implemented in the discover script
         console.log(
           chalk.yellow(
             'Note: Limit option not yet implemented in discover script',
@@ -147,9 +148,9 @@ class DepUpCLI {
   async handleSyncCommand(options) {
     try {
       const spinner = ora('Starting package sync...').start();
+      spinner.stop();
 
       if (options.limit) {
-        // Note: This would need to be implemented in the sync script
         console.log(
           chalk.yellow('Note: Limit option not yet implemented in sync script'),
         );
@@ -290,7 +291,20 @@ class DepUpCLI {
     switch (action) {
       case 'package': {
         const packageAnswers = await inquirer.prompt([
-          { message: 'Package name:', name: 'name', type: 'input' },
+          {
+            message: 'Package name:',
+            name: 'name',
+            type: 'input',
+            validate: (input) => {
+              if (!input || !input.trim()) {
+                return 'Package name is required';
+              }
+              if (/[;`$|><\\{}[\]!#%^&*()='"]/u.test(input)) {
+                return 'Package name contains invalid characters';
+              }
+              return true;
+            },
+          },
           {
             message: 'Version (optional):',
             name: 'version',
@@ -357,7 +371,12 @@ class DepUpCLI {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const cli = new DepUpCLI();
-  cli.run();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const cli = new DepUpCLI();
+    await cli.run();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

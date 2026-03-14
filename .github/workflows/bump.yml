@@ -19,15 +19,18 @@ jobs:
     name: Sync Packages
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    # Skip if the push was from the cron job (DepUp Bot) to avoid redundant re-sync
+    # Skip if the push was from an automated workflow (DepUp Bot or github-actions)
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      !contains(github.event.head_commit.message, 'via cron')
+      (github.event.head_commit.author.name != 'DepUp Bot' &&
+       github.event.head_commit.author.name != 'DepUp Security Bot' &&
+       github.event.head_commit.author.name != 'github-actions[bot]')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-tags: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

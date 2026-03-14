@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execFileSync, execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -9,7 +9,7 @@ import ora from 'ora';
 import pacote from 'pacote';
 import semver from 'semver';
 
-import { toScopedName } from './utilities.mjs';
+import { isNonSemverSpecifier, toScopedName } from './utilities.mjs';
 
 const PACKAGE_JSON = 'package.json';
 
@@ -47,7 +47,7 @@ class DepUp {
         }
       });
 
-    program.parse();
+    await program.parseAsync();
   }
 
   async processPackage(packageSpec, options) {
@@ -57,8 +57,10 @@ class DepUp {
       dryRun,
       publish: shouldPublish,
       test: shouldTest,
-      timeout,
+      timeout: rawTimeout,
     } = options;
+
+    const timeout = Math.max(Number.parseInt(rawTimeout, 10) || 300_000, 1000);
 
     if (debug) {
       console.log(chalk.blue('Debug mode enabled'));
@@ -90,7 +92,7 @@ class DepUp {
   }
 
   async processPackageCore(context) {
-    const { debug, dryRun, packageSpec, shouldPublish, timeout } = context;
+    const { dryRun, packageSpec, timeout } = context;
 
     if (!packageSpec || typeof packageSpec !== 'string') {
       throw new Error('Package spec is required');
@@ -106,15 +108,13 @@ class DepUp {
     }
 
     const manifest = await this.fetchManifest(packageSpec, timeout);
-    const packageName = manifest.name;
-    const baseVersion = manifest.version;
-    const scopedName = toScopedName(packageName);
+    const { baseVersion, packageDirectory, packageName, scopedName } =
+      this.validateManifest(manifest, packageSpec);
 
     console.log(
       chalk.cyan(`Processing ${packageName}@${baseVersion} -> ${scopedName}`),
     );
 
-    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const versionDirectory = path.join(packageDirectory, baseVersion);
 
     if (dryRun) {
@@ -167,28 +167,105 @@ class DepUp {
       testResult,
     });
 
-    const published = await this.handlePublishStep({
+    await this.publishAndFinalize({
       ...context,
-      dependenciesUpdated: bumpResult.updatedCount,
+      baseVersion,
+      bumpResult,
+      changesData,
+      packageDirectory,
       packageJson,
+      packageName,
       revision,
       scopedName,
       targetDirectory,
     });
+  }
 
-    await this.finalizePackage({
+  validateManifest(manifest, packageSpec) {
+    const packageName = manifest.name;
+    const baseVersion = manifest.version;
+
+    if (!packageName || !baseVersion) {
+      throw new Error(
+        `Incomplete manifest for ${packageSpec}: name=${packageName}, version=${baseVersion}`,
+      );
+    }
+
+    const reservedKeys = new Set(['__proto__', 'constructor', 'prototype']);
+    if (reservedKeys.has(baseVersion) || reservedKeys.has(packageName)) {
+      throw new Error(`Invalid manifest data: reserved key detected`);
+    }
+
+    const packagesRoot = path.resolve(process.cwd(), 'packages');
+    const packageDirectory = path.join(packagesRoot, packageName);
+    if (!packageDirectory.startsWith(packagesRoot + path.sep)) {
+      throw new Error(
+        `Path traversal detected in manifest name: ${packageName}`,
+      );
+    }
+
+    return {
       baseVersion,
+      packageDirectory,
+      packageName,
+      scopedName: toScopedName(packageName),
+    };
+  }
+
+  async publishAndFinalize(parameters) {
+    const {
+      baseVersion,
+      bumpResult,
       changesData,
       debug,
       packageDirectory,
       packageJson,
       packageName,
-      published,
       revision,
       scopedName,
       shouldPublish,
       targetDirectory,
-    });
+    } = parameters;
+
+    let published = false;
+    let publishError;
+    try {
+      published = await this.handlePublishStep({
+        ...parameters,
+        dependenciesUpdated: bumpResult.updatedCount,
+      });
+    } catch (error) {
+      publishError = error;
+    }
+
+    try {
+      await this.finalizePackage({
+        baseVersion,
+        changesData,
+        debug,
+        packageDirectory,
+        packageJson,
+        packageName,
+        published,
+        revision,
+        scopedName,
+        shouldPublish,
+        targetDirectory,
+      });
+    } catch (finalizeError) {
+      if (publishError) {
+        // Chain finalize error as cause, attach publish error in message
+        throw new Error(
+          `Publish failed (${publishError.message}) and finalization also failed`,
+          { cause: finalizeError },
+        );
+      }
+      throw finalizeError;
+    }
+
+    if (publishError) {
+      throw publishError;
+    }
   }
 
   async preparePackageJson(
@@ -199,7 +276,14 @@ class DepUp {
     originalName,
   ) {
     const packageJsonPath = path.join(targetDirectory, PACKAGE_JSON);
-    const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+    let packageJson;
+    try {
+      packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+    } catch (error) {
+      throw new Error(`Failed to parse ${packageJsonPath}: ${error.message}`, {
+        cause: error,
+      });
+    }
     packageJson.name = scopedName;
     packageJson.version = `${baseVersion}-depup.${revision}`;
 
@@ -311,7 +395,11 @@ class DepUp {
         .filter((entry) => entry.isDirectory() && /^rev-\d+$/u.test(entry.name))
         .map((entry) => Number.parseInt(entry.name.replace('rev-', ''), 10));
       if (revs.length > 0) {
-        return Math.max(...revs) + 1;
+        let maxRev = 0;
+        for (const rev of revs) {
+          maxRev = Math.max(maxRev, rev);
+        }
+        return maxRev + 1;
       }
     } catch {
       // ignore - directory may not have revisions yet
@@ -398,7 +486,7 @@ class DepUp {
       } catch (error) {
         lastError = error;
         if (attempt < attempts - 1) {
-          const delay = baseDelay * 2 ** attempt;
+          const delay = baseDelay * 2 ** attempt * (0.5 + Math.random());
           await new Promise((resolve) => {
             setTimeout(resolve, delay);
           });
@@ -479,7 +567,14 @@ class DepUp {
     timeout,
   ) {
     try {
-      const cleanCurrentVersion = currentVersion.replace(/^[\^~]/u, '');
+      if (isNonSemverSpecifier(currentVersion)) {
+        return { result: 'skipped' };
+      }
+
+      const cleanCurrentVersion = semver.coerce(currentVersion)?.version;
+      if (!cleanCurrentVersion) {
+        return { result: 'skipped' };
+      }
 
       const latestManifest = await this.retryWithBackoff(
         () =>
@@ -493,6 +588,9 @@ class DepUp {
         { attempts: 2, baseDelay: 500 },
       );
       const latestVersion = latestManifest.version;
+      if (!latestVersion) {
+        return { result: 'skipped' };
+      }
 
       if (!semver.gt(latestVersion, cleanCurrentVersion)) {
         return { result: 'unchanged' };
@@ -557,11 +655,14 @@ class DepUp {
 
   async installProductionDeps(packageDirectory, debug, timeout) {
     const installSpinner = ora('Installing package dependencies...').start();
+    if (debug) {
+      installSpinner.stop();
+    }
 
     const installMethods = [
-      'npm install --production',
-      'npm install --production --legacy-peer-deps',
-      'npm install --production --force --ignore-scripts',
+      ['npm', ['install', '--omit=dev']],
+      ['npm', ['install', '--omit=dev', '--legacy-peer-deps']],
+      ['npm', ['install', '--omit=dev', '--force', '--ignore-scripts']],
     ];
 
     const success = this.tryInstallMethods(
@@ -586,9 +687,9 @@ class DepUp {
   }
 
   tryInstallMethods(methods, directory, debug, timeout) {
-    for (const method of methods) {
+    for (const [command, commandArguments] of methods) {
       try {
-        execSync(method, {
+        execFileSync(command, commandArguments, {
           cwd: directory,
           stdio: debug ? 'inherit' : 'pipe',
           timeout: Math.min(timeout / 4, 60_000),
@@ -596,7 +697,11 @@ class DepUp {
         return true;
       } catch {
         if (debug) {
-          console.log(chalk.yellow(`  Install method failed: ${method}`));
+          console.log(
+            chalk.yellow(
+              `  Install method failed: ${command} ${commandArguments.join(' ')}`,
+            ),
+          );
         }
       }
     }
@@ -632,9 +737,10 @@ class DepUp {
       JSON.stringify(testPackageJson, undefined, 2),
     );
 
+    const safePackageName = JSON.stringify(packageName);
     const testFile = `
 try {
-  const test = await import('${packageName}');
+  const test = await import(${safePackageName});
   console.log('Import successful:', typeof test);
   console.log('Default export:', typeof test.default);
   if (test.default && typeof test.default === 'object') {
@@ -651,11 +757,14 @@ try {
 
   async installTestDeps(testDirectory, debug, timeout) {
     const testInstallSpinner = ora('Installing test dependencies...').start();
+    if (debug) {
+      testInstallSpinner.stop();
+    }
 
     const testInstallMethods = [
-      'npm install',
-      'npm install --legacy-peer-deps',
-      'npm install --force --ignore-scripts',
+      ['npm', ['install']],
+      ['npm', ['install', '--legacy-peer-deps']],
+      ['npm', ['install', '--force', '--ignore-scripts']],
     ];
 
     const success = this.tryInstallMethods(
@@ -681,8 +790,11 @@ try {
 
   async executeImportTest(testDirectory, debug, timeout) {
     const testRunSpinner = ora('Running import test...').start();
+    if (debug) {
+      testRunSpinner.stop();
+    }
     try {
-      execSync('node test.mjs', {
+      execFileSync('node', ['test.mjs'], {
         cwd: testDirectory,
         stdio: debug ? 'inherit' : 'pipe',
         timeout: Math.min(timeout / 4, 30_000),
@@ -730,6 +842,9 @@ try {
 
   async publishPackage(packageDirectory, packageName, version, debug = false) {
     const spinner = ora(`Publishing ${packageName}@${version}...`).start();
+    if (debug) {
+      spinner.stop();
+    }
 
     try {
       this.validateNpmToken();
@@ -738,6 +853,7 @@ try {
       spinner.succeed(`Published ${packageName}@${version}`);
     } catch (error) {
       spinner.fail(`Failed to publish ${packageName}@${version}`);
+      // handlePublishError returns for EPUBLISHCONFLICT, throws for real errors
       this.handlePublishError(error, packageName, version, debug);
     }
   }
@@ -754,25 +870,28 @@ try {
     if (debug) {
       console.log('Installing devDependencies for build tools...');
     }
-    execSync('npm install', {
-      cwd: packageDirectory,
-      stdio: debug ? 'inherit' : 'pipe',
-      timeout: 60_000,
-    });
+    try {
+      execFileSync('npm', ['install'], {
+        cwd: packageDirectory,
+        stdio: debug ? 'inherit' : 'pipe',
+        timeout: 60_000,
+      });
+    } catch (error) {
+      console.warn(`Build dependency install failed: ${error.message}`);
+    }
   }
 
   executePublish(packageDirectory, version, debug) {
-    const isPrerelease = semver.prerelease(version) !== null;
-    const isDepupVersion =
-      Array.isArray(semver.prerelease(version)) &&
-      semver.prerelease(version).includes('depup');
-    let publishTag = '';
+    const prereleaseIds = semver.prerelease(version);
+    const isPrerelease = prereleaseIds !== null;
+    const isDepupVersion = this.isDepupPrereleaseVersion(prereleaseIds);
+
+    const publishArguments = ['publish', '--access', 'public'];
     if (isDepupVersion) {
-      publishTag = ' --tag latest';
+      publishArguments.push('--tag', 'latest');
     } else if (isPrerelease) {
-      publishTag = ' --tag beta';
+      publishArguments.push('--tag', 'beta');
     }
-    const publishCommand = `npm publish --access public${publishTag}`;
 
     if (debug && isDepupVersion) {
       console.log(chalk.gray(`  Publishing depup version with 'latest' tag`));
@@ -780,7 +899,7 @@ try {
       console.log(chalk.gray(`  Publishing as prerelease with 'beta' tag`));
     }
 
-    execSync(publishCommand, {
+    execFileSync('npm', publishArguments, {
       cwd: packageDirectory,
       env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
       stdio: debug ? 'inherit' : 'pipe',
@@ -795,6 +914,17 @@ try {
       if (error.stack) {
         console.error(chalk.gray('Stack trace:'), error.stack);
       }
+    }
+
+    // EPUBLISHCONFLICT or "already exists" means another shard published
+    // this version -- treat as success, not failure.
+    if (this.isAlreadyPublishedError(error)) {
+      console.log(
+        chalk.yellow(
+          `Version ${packageName}@${version} already published (concurrent shard)`,
+        ),
+      );
+      return;
     }
 
     const scopeError =
@@ -818,6 +948,38 @@ try {
     );
   }
 
+  isDepupPrereleaseVersion(prereleaseIds) {
+    if (!Array.isArray(prereleaseIds)) {
+      return false;
+    }
+    return prereleaseIds.some(
+      (id) =>
+        id === 'depup' || (typeof id === 'string' && id.endsWith('-depup')),
+    );
+  }
+
+  isAlreadyPublishedError(error) {
+    // Walk the cause chain to find the actual npm error (depth-limited)
+    let current = error;
+    let depth = 0;
+    while (current && depth < 10) {
+      const message = current.message || '';
+      const stderr = current.stderr?.toString?.() || '';
+      const code = current.code || '';
+      const combined = `${message} ${stderr} ${code}`;
+      if (
+        combined.includes('EPUBLISHCONFLICT') ||
+        combined.includes('cannot publish over the previously published') ||
+        combined.includes('You cannot publish over the previously published')
+      ) {
+        return true;
+      }
+      current = current.cause;
+      depth++;
+    }
+    return false;
+  }
+
   async updateIntegrityData(
     packageDirectory,
     baseVersion,
@@ -830,12 +992,30 @@ try {
     let integrityData = {};
     try {
       const data = await fs.readFile(integrityFile);
-      integrityData = JSON.parse(data);
-    } catch {
-      // File doesn't exist, start fresh
+      const parsed = JSON.parse(data);
+      if (
+        typeof parsed === 'object' &&
+        parsed !== null &&
+        !Array.isArray(parsed)
+      ) {
+        integrityData = parsed;
+      }
+    } catch (error) {
+      if (error.code !== 'ENOENT') {
+        // Corrupt JSON -- backup before overwriting
+        console.warn(`Warning: corrupt integrity.json: ${error.message}`);
+        try {
+          await fs.copyFile(integrityFile, `${integrityFile}.bak`);
+        } catch {
+          // Best effort backup
+        }
+      }
     }
 
-    if (!integrityData[baseVersion]) {
+    if (
+      typeof integrityData[baseVersion] !== 'object' ||
+      integrityData[baseVersion] === null
+    ) {
       integrityData[baseVersion] = {};
     }
 
@@ -974,7 +1154,9 @@ try {
       for (const [dep, version] of bumped.toSorted(([a], [b]) =>
         a.localeCompare(b),
       )) {
-        lines.push(`| ${dep} | ${version.from} | ${version.to} |`);
+        if (typeof version === 'object' && version !== null) {
+          lines.push(`| ${dep} | ${version.from} | ${version.to} |`);
+        }
       }
     }
 
@@ -1004,7 +1186,12 @@ try {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const depup = new DepUp();
-  depup.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const depup = new DepUp();
+    await depup.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

@@ -13,7 +13,10 @@ class PackageAdder {
       ? packageName.slice(1).split('/')
       : [packageName];
     const validPart = /^[\w.-]+$/u;
+    const isScopedWithoutName =
+      packageName.startsWith('@') && nameParts.length !== 2;
     if (
+      isScopedWithoutName ||
       nameParts.length > 2 ||
       nameParts.length === 0 ||
       !nameParts.every((part) => validPart.test(part))
@@ -40,12 +43,20 @@ class PackageAdder {
     const existingPackages = packageArrayContent
       .split('\n')
       .map((line) => line.trim())
-      .filter((line) => line.startsWith("'") && line.endsWith("',"))
-      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter(
+        (line) =>
+          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
+      )
+      .map((line) => {
+        // Remove quotes and optional trailing comma
+        const end = line.endsWith("',") ? -2 : -1;
+        return line.slice(1, end);
+      })
       .filter((package_) => package_.length > 0);
 
-    // Check if package already exists
-    if (existingPackages.includes(packageName)) {
+    // Check if package already exists (case-insensitive)
+    const lowerPackageName = packageName.toLowerCase();
+    if (existingPackages.some((p) => p.toLowerCase() === lowerPackageName)) {
       throw new Error(`Package ${packageName} is already in the curated list`);
     }
 
@@ -102,18 +113,24 @@ class PackageAdder {
     const existingPackages = packageArrayContent
       .split('\n')
       .map((line) => line.trim())
-      .filter((line) => line.startsWith("'") && line.endsWith("',"))
-      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter(
+        (line) =>
+          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
+      )
+      .map((line) => {
+        // Remove quotes and optional trailing comma
+        const end = line.endsWith("',") ? -2 : -1;
+        return line.slice(1, end);
+      })
       .filter((package_) => package_.length > 0);
 
-    // Check if package exists
-    if (!existingPackages.includes(packageName)) {
+    // Check if package exists (case-insensitive to match removal logic)
+    const lowerPackageName = packageName.toLowerCase();
+    if (!existingPackages.some((p) => p.toLowerCase() === lowerPackageName)) {
       throw new Error(`Package ${packageName} is not in the curated list`);
     }
-
-    // Remove the package
     const updatedPackages = existingPackages.filter(
-      (package_) => package_ !== packageName,
+      (package_) => package_.toLowerCase() !== lowerPackageName,
     );
 
     // Format the updated array
@@ -160,10 +177,17 @@ class PackageAdder {
     const packages = packageArrayContent
       .split('\n')
       .map((line) => line.trim())
-      .filter((line) => line.startsWith("'") && line.endsWith("',"))
-      .map((line) => line.slice(1, -2)) // Remove quotes and comma
+      .filter(
+        (line) =>
+          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
+      )
+      .map((line) => {
+        // Remove quotes and optional trailing comma
+        const end = line.endsWith("',") ? -2 : -1;
+        return line.slice(1, end);
+      })
       .filter((package_) => package_.length > 0)
-      .toSorted();
+      .toSorted((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
     return {
       count: packages.length,
@@ -174,7 +198,7 @@ class PackageAdder {
 }
 
 // CLI interface
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] === import.meta.filename) {
   const adder = new PackageAdder();
 
   // Simple argument parsing

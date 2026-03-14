@@ -19,6 +19,12 @@ class IntegrityMeter {
       process.exit(1);
     }
 
+    // Path traversal prevention (block both .. and absolute paths)
+    if (packageName.includes('..') || path.isAbsolute(packageName)) {
+      console.error('Invalid package name: path traversal not allowed');
+      process.exit(1);
+    }
+
     switch (action) {
       case 'vote': {
         await this.vote(
@@ -45,6 +51,40 @@ class IntegrityMeter {
     }
   }
 
+  async loadVotes(votesFile) {
+    try {
+      const data = await fs.readFile(votesFile);
+      const parsed = JSON.parse(data);
+      if (
+        typeof parsed === 'object' &&
+        parsed !== null &&
+        !Array.isArray(parsed)
+      ) {
+        return parsed;
+      }
+    } catch {
+      // File doesn't exist, start fresh
+    }
+    return {};
+  }
+
+  initializeVoteEntry(votes, version, revision) {
+    if (typeof votes[version] !== 'object' || votes[version] === null) {
+      votes[version] = {};
+    }
+    if (
+      typeof votes[version][revision] !== 'object' ||
+      votes[version][revision] === null
+    ) {
+      votes[version][revision] = {
+        details: [],
+        down: 0,
+        neutral: 0,
+        up: 0,
+      };
+    }
+  }
+
   async vote(packageName, version, revision, vote, description) {
     if (!version || !revision || !vote) {
       console.error(
@@ -62,34 +102,20 @@ class IntegrityMeter {
     const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const votesFile = path.join(packageDirectory, this.votesFile);
 
-    // Load existing votes
-    let votes = {};
-    try {
-      const data = await fs.readFile(votesFile);
-      votes = JSON.parse(data);
-    } catch {
-      // File doesn't exist, start fresh
-    }
+    const votes = await this.loadVotes(votesFile);
+    this.initializeVoteEntry(votes, version, revision);
 
-    // Initialize structure
-    if (!votes[version]) {
-      votes[version] = {};
-    }
-    if (!votes[version][revision]) {
-      votes[version][revision] = {
-        details: [],
-        down: 0,
-        neutral: 0,
-        up: 0,
-      };
-    }
+    // Add vote (coerce to number in case of corrupt data)
+    votes[version][revision][vote] =
+      (Number(votes[version][revision][vote]) || 0) + 1;
 
-    // Add vote
-    const voteId = Date.now().toString();
-    votes[version][revision][vote]++;
+    // Guard corrupted details field (could be null, string, etc.)
+    if (!Array.isArray(votes[version][revision].details)) {
+      votes[version][revision].details = [];
+    }
     votes[version][revision].details.push({
       description: description || '',
-      id: voteId,
+      id: Date.now().toString(),
       timestamp: new Date().toISOString(),
       user: process.env.USER || 'anonymous',
       vote,
@@ -113,6 +139,17 @@ class IntegrityMeter {
     this.printStatus(packageName, version, revision, votes[version][revision]);
   }
 
+  printVersionRevisions(packageName, version, versionData) {
+    if (typeof versionData !== 'object' || versionData === null) {
+      return;
+    }
+    for (const [revision, revisionData] of Object.entries(versionData)) {
+      if (typeof revisionData === 'object' && revisionData !== null) {
+        this.printStatus(packageName, version, revision, revisionData);
+      }
+    }
+  }
+
   async status(packageName, version) {
     const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const votesFile = path.join(packageDirectory, this.votesFile);
@@ -122,20 +159,18 @@ class IntegrityMeter {
       const votes = JSON.parse(data);
 
       if (version) {
-        if (votes[version]) {
+        if (votes[version] && typeof votes[version] === 'object') {
           console.log(`\n📊 Status for ${packageName}@${version}:`);
-          for (const [revision, data] of Object.entries(votes[version])) {
-            this.printStatus(packageName, version, revision, data);
-          }
+          this.printVersionRevisions(packageName, version, votes[version]);
         } else {
           console.log(`No votes found for ${packageName}@${version}`);
         }
       } else {
         console.log(`\n📊 Status for ${packageName}:`);
         for (const [version_, versionData] of Object.entries(votes)) {
-          console.log(`\n  Version ${version_}:`);
-          for (const [revision, data] of Object.entries(versionData)) {
-            this.printStatus(packageName, version_, revision, data);
+          if (typeof versionData === 'object' && versionData !== null) {
+            console.log(`\n  Version ${version_}:`);
+            this.printVersionRevisions(packageName, version_, versionData);
           }
         }
       }
@@ -161,10 +196,14 @@ class IntegrityMeter {
 
       // Generate report
       for (const [version, versionData] of Object.entries(votes)) {
-        console.log(`\n📦 Version ${version}:`);
+        if (typeof versionData === 'object' && versionData !== null) {
+          console.log(`\n📦 Version ${version}:`);
 
-        for (const [revision, data] of Object.entries(versionData)) {
-          this.printRevisionReport(revision, data);
+          for (const [revision, data] of Object.entries(versionData)) {
+            if (typeof data === 'object' && data !== null) {
+              this.printRevisionReport(revision, data);
+            }
+          }
         }
       }
     } catch {
@@ -173,16 +212,18 @@ class IntegrityMeter {
   }
 
   printRevisionReport(revision, data) {
-    const total = data.up + data.down + data.neutral;
-    const score =
-      total > 0 ? (((data.up - data.down) / total) * 100).toFixed(1) : 0;
+    const up = Number(data.up) || 0;
+    const down = Number(data.down) || 0;
+    const neutral = Number(data.neutral) || 0;
+    const total = up + down + neutral;
+    const score = total > 0 ? (((up - down) / total) * 100).toFixed(1) : 0;
     const status = this.getStatusEmoji(score);
 
     console.log(
-      `  ${status} Revision ${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
+      `  ${status} Revision ${revision}: ${score}% (${up}↑ ${down}↓ ${neutral}→)`,
     );
 
-    if (data.details.length > 0) {
+    if (Array.isArray(data.details) && data.details.length > 0) {
       console.log('    Recent feedback:');
       for (const detail of data.details.slice(-3)) {
         const emoji = this.getVoteEmoji(detail.vote);
@@ -212,23 +253,33 @@ class IntegrityMeter {
       // File doesn't exist, start fresh
     }
 
-    if (!integrityData[version]) {
+    if (
+      typeof integrityData[version] !== 'object' ||
+      integrityData[version] === null
+    ) {
       integrityData[version] = {};
     }
-    if (!integrityData[version][revision]) {
+    if (
+      typeof integrityData[version][revision] !== 'object' ||
+      integrityData[version][revision] === null
+    ) {
       integrityData[version][revision] = {};
     }
 
-    const total = voteData.up + voteData.down + voteData.neutral;
-    const score = total > 0 ? ((voteData.up - voteData.down) / total) * 100 : 0;
+    // Coerce all vote fields to prevent NaN from corrupt data
+    const up = Number(voteData.up) || 0;
+    const down = Number(voteData.down) || 0;
+    const neutral = Number(voteData.neutral) || 0;
+    const total = up + down + neutral;
+    const score = total > 0 ? ((up - down) / total) * 100 : 0;
 
     integrityData[version][revision].integrity = {
-      downVotes: voteData.down,
+      downVotes: down,
       lastUpdated: new Date().toISOString(),
-      neutralVotes: voteData.neutral,
+      neutralVotes: neutral,
       score: Math.round(score),
       totalVotes: total,
-      upVotes: voteData.up,
+      upVotes: up,
     };
 
     await fs.writeFile(
@@ -238,13 +289,15 @@ class IntegrityMeter {
   }
 
   printStatus(packageName, version, revision, data) {
-    const total = data.up + data.down + data.neutral;
-    const score =
-      total > 0 ? (((data.up - data.down) / total) * 100).toFixed(1) : 0;
+    const up = Number(data.up) || 0;
+    const down = Number(data.down) || 0;
+    const neutral = Number(data.neutral) || 0;
+    const total = up + down + neutral;
+    const score = total > 0 ? (((up - down) / total) * 100).toFixed(1) : 0;
     const status = this.getStatusEmoji(score);
 
     console.log(
-      `  ${status} ${packageName}@${version}-depup.${revision}: ${score}% (${data.up}↑ ${data.down}↓ ${data.neutral}→)`,
+      `  ${status} ${packageName}@${version}-depup.${revision}: ${score}% (${up}↑ ${down}↓ ${neutral}→)`,
     );
   }
 
@@ -265,7 +318,12 @@ class IntegrityMeter {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const meter = new IntegrityMeter();
-  meter.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const meter = new IntegrityMeter();
+    await meter.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

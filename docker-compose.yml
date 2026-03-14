@@ -8,17 +8,16 @@ services:
     read_only: true
     tmpfs:
       - /tmp:exec,size=100m,mode=1777
-      - /app/packages:rw,size=1g,mode=755
     security_opt:
       - no-new-privileges:true
     cap_drop:
       - ALL
-    cap_add:
-      - NET_RAW  # For npm registry access
+    # NET_RAW not needed - npm uses TCP which works without raw socket access
     networks:
       - depup-secure
     environment:
       - NODE_ENV=production
+      - NPM_CONFIG_CACHE=/tmp/npm-cache
       - NPM_CONFIG_UPDATE_NOTIFIER=false
       - NPM_CONFIG_FUND=false
       - NPM_CONFIG_AUDIT=false
@@ -26,7 +25,7 @@ services:
       - ./packages:/app/packages:rw
       - /tmp/depup-logs:/tmp/depup-logs:rw
     restart: "no"
-    command: ["node", "scripts/depup-security.mjs"]
+    # No command — Dockerfile ENTRYPOINT handles execution
 
   clamav-daemon:
     image: clamav/clamav:latest
@@ -41,9 +40,10 @@ services:
       - CLAMAV_NO_CLAMD_CONF=true
     command: ["clamd", "--foreground=yes"]
     healthcheck:
-      test: ["CMD", "clamdcheck"]
+      test: ["CMD", "clamdscan", "/dev/null", "--no-summary"]
       interval: 60s
       timeout: 10s
+      start_period: 120s
       retries: 3
 
   security-scanner:

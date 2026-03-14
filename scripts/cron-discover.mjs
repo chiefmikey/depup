@@ -121,7 +121,10 @@ class PackageDiscoverer {
 
   async getCuratedPackages() {
     // Apply sharding if configured (for parallel runner support)
-    let packageNames = this.curatedPackageNames;
+    // Sort before sharding for deterministic shard assignment matching cron-sync
+    let packageNames = [...this.curatedPackageNames].toSorted((a, b) =>
+      a.localeCompare(b),
+    );
     const { shardIndex, shardTotal } = getShardConfig();
 
     if (shardTotal > 1) {
@@ -163,13 +166,19 @@ class PackageDiscoverer {
   }
 
   async fetchPackageVersion(name) {
-    const manifest = await npmregfetch.json(`/${name}`, {
-      registry: this.registry,
-      timeout: 5000,
-    });
-    const version =
-      manifest['dist-tags']?.latest || manifest.version || '0.0.0';
-    return { downloads: 0, name, version };
+    try {
+      const manifest = await npmregfetch.json(`/${name}`, {
+        registry: this.registry,
+        timeout: 5000,
+      });
+      const version =
+        manifest['dist-tags']?.latest || manifest.version || '0.0.0';
+      return { downloads: 0, name, version };
+    } catch (error) {
+      throw new Error(`Failed to fetch ${name}: ${error.message}`, {
+        cause: error,
+      });
+    }
   }
 
   async processPackage(package_) {
@@ -185,7 +194,7 @@ class PackageDiscoverer {
       );
     }
     const sanitizedName = package_.name.replaceAll(/[^\w.@/-]/gu, '');
-    if (sanitizedName !== package_.name) {
+    if (!sanitizedName || sanitizedName !== package_.name) {
       throw new Error(
         `Invalid package name: ${package_.name} (contains invalid characters)`,
       );
@@ -247,8 +256,13 @@ class PackageDiscoverer {
       const latestVersion =
         latestManifest['dist-tags']?.latest || latestManifest.version;
 
-      // Check if we have this version
-      if (integrityData[latestVersion]) {
+      if (!latestVersion) {
+        console.warn(`  ⚠️  No version found for ${package_.name}`);
+        return;
+      }
+
+      // Check if we have this version (use `in` to handle null/falsy entries)
+      if (latestVersion in integrityData) {
         console.log(`  ✅ ${package_.name} is up to date`);
       } else {
         console.log(`  🔄 New version available: ${latestVersion}`);
@@ -275,8 +289,8 @@ class PackageDiscoverer {
     if (targetVersion.includes('..')) {
       throw new Error(`Invalid version format: ${targetVersion}`);
     }
-    const sanitizedVersion = targetVersion.replaceAll(/[^\w.-]/gu, '');
-    if (sanitizedVersion !== targetVersion) {
+    const sanitizedVersion = targetVersion.replaceAll(/[^\w.+-]/gu, '');
+    if (!sanitizedVersion || sanitizedVersion !== targetVersion) {
       throw new Error(`Invalid version format: ${targetVersion}`);
     }
 
@@ -687,7 +701,7 @@ class PackageDiscoverer {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] === import.meta.filename) {
   try {
     const discoverer = new PackageDiscoverer();
     await discoverer.main();

@@ -54,16 +54,19 @@ jobs:
         run: npm ci
 
       - name: Validate inputs
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
         run: |
-          if [ -z "${{ inputs.package }}" ]; then
+          if [ -z "$PACKAGE_NAME" ]; then
             echo "Error: Package name is required"
             exit 1
           fi
-          echo "Processing package: ${{ inputs.package }}"
+          echo "Processing package: $PACKAGE_NAME"
 
       - name: Process package
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           PACKAGE_NAME: ${{ inputs.package }}
           BUMP_DEPS: ${{ inputs.bump_deps }}
           DO_TEST: ${{ inputs.test }}
@@ -103,17 +106,44 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "feat: process ${PACKAGE_NAME} with DepUp"
-            git push origin main
+            git commit -m "feat: process $PACKAGE_NAME with DepUp"
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase failed on attempt $attempt, aborting..."
+                git rebase --abort 2>/dev/null || true
+                sleep 2
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Rebase failed after 3 attempts"
+                  exit 1
+                fi
+              elif git push origin main; then
+                echo "Push successful on attempt $attempt"
+                break
+              else
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Push failed after 3 attempts"
+                  exit 1
+                fi
+                echo "Push failed on attempt $attempt, retrying..."
+                sleep 2
+              fi
+            done
           fi
 
       - name: Create summary
         if: always()
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
+          BUMP_DEPS: ${{ inputs.bump_deps }}
+          DO_TEST: ${{ inputs.test }}
+          DO_PUBLISH: ${{ inputs.publish }}
+          DO_DEBUG: ${{ inputs.debug }}
         run: |
           echo "## DepUp Processing Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Package**: ${{ inputs.package }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Bump Dependencies**: ${{ inputs.bump_deps }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Test Package**: ${{ inputs.test }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Publish Package**: ${{ inputs.publish }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Debug Mode**: ${{ inputs.debug }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: $PACKAGE_NAME" >> $GITHUB_STEP_SUMMARY
+          echo "- **Bump Dependencies**: $BUMP_DEPS" >> $GITHUB_STEP_SUMMARY
+          echo "- **Test Package**: $DO_TEST" >> $GITHUB_STEP_SUMMARY
+          echo "- **Publish Package**: $DO_PUBLISH" >> $GITHUB_STEP_SUMMARY
+          echo "- **Debug Mode**: $DO_DEBUG" >> $GITHUB_STEP_SUMMARY
 

@@ -49,15 +49,22 @@ export function isNonSemverSpecifier(version) {
 
 async function listScopeDirectories(packagesDirectory, scopeName) {
   const scopeDirectory = path.join(packagesDirectory, scopeName);
-  const scopeEntries = await fs.readdir(scopeDirectory, {
-    withFileTypes: true,
-  });
-  return scopeEntries
-    .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
-    .map((entry) => ({
-      name: `${scopeName}/${entry.name}`,
-      path: path.join(scopeDirectory, entry.name),
-    }));
+  try {
+    const scopeEntries = await fs.readdir(scopeDirectory, {
+      withFileTypes: true,
+    });
+    return scopeEntries
+      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+      .map((entry) => ({
+        name: `${scopeName}/${entry.name}`,
+        path: path.join(scopeDirectory, entry.name),
+      }));
+  } catch (error) {
+    console.warn(
+      `Could not read scope directory ${scopeName}: ${error.message}`,
+    );
+    return [];
+  }
 }
 
 /**

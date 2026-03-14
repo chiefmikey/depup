@@ -32,12 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install performance monitoring tools
-        run: |
-          npm install --save-dev cli-progress
-          npm install --save-dev autocannon
-          npm install --save-dev 0x
-
       - name: Test package processing performance
         env:
           INPUT_PACKAGE: ${{ inputs.package }}
@@ -57,14 +51,15 @@ jobs:
           processing_time=$((end_time - start_time))
           echo "Processing time: ${processing_time}s"
 
-          # Save performance metrics
-          echo "{
-            \"package\": \"$TEST_PACKAGE\",
-            \"processing_time_seconds\": $processing_time,
-            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
-            \"node_version\": \"$(node --version)\",
-            \"npm_version\": \"$(npm --version)\"
-          }" > performance-metrics.json
+          # Save performance metrics (use jq for safe JSON construction)
+          jq -n \
+            --arg pkg "$TEST_PACKAGE" \
+            --argjson time "$processing_time" \
+            --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg node_ver "$(node --version)" \
+            --arg npm_ver "$(npm --version)" \
+            '{package: $pkg, processing_time_seconds: $time, timestamp: $ts, node_version: $node_ver, npm_version: $npm_ver}' \
+            > performance-metrics.json
 
       - name: Test memory usage
         env:
@@ -128,12 +123,12 @@ jobs:
           echo "- **Test Package**: ${INPUT_PACKAGE:-lodash}" >> $GITHUB_STEP_SUMMARY
 
           if [ -f performance-metrics.json ]; then
-            PROCESSING_TIME=$(cat performance-metrics.json | jq -r '.processing_time_seconds' 2>/dev/null || echo "N/A")
+            PROCESSING_TIME=$(jq -r '.processing_time_seconds // "N/A"' performance-metrics.json 2>/dev/null || echo "N/A")
             echo "- **Processing Time**: ${PROCESSING_TIME}s" >> $GITHUB_STEP_SUMMARY
           fi
 
           if [ -f memory-metrics.json ]; then
-            PEAK_RSS=$(cat memory-metrics.json | jq -r '.peak_rss_mb' 2>/dev/null || echo "N/A")
+            PEAK_RSS=$(jq -r '.peak_rss_mb // "N/A"' memory-metrics.json 2>/dev/null || echo "N/A")
             echo "- **Peak Memory Usage**: ${PEAK_RSS}MB" >> $GITHUB_STEP_SUMMARY
           fi
 

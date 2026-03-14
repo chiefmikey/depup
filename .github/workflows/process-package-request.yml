@@ -4,10 +4,15 @@ on:
   issues:
     types: [opened, labeled]
 
+concurrency:
+  group: process-package-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
 jobs:
   validate-and-process:
     name: Validate and Process Package Request
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: |
       github.event.issue.labels != null &&
       contains(github.event.issue.labels.*.name, 'package-request')
@@ -17,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-tags: true
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
@@ -316,9 +322,10 @@ jobs:
             } else if (jobStatus === 'success') {
               comment += '**Package Added**: `' + packageName + '` has been added to the curated list.\n\n';
               comment += '**What happens next:**\n';
-              comment += '1. Package gets processed in the next discovery run (every 6 hours)\n';
+              comment += '1. Package gets processed in the next discovery run (every 4 hours)\n';
               comment += '2. Dependencies are bumped to latest versions\n';
-              comment += '3. Updated package published under `@depup/' + packageName + '` scope\n\n';
+              const flatName = packageName.startsWith('@') ? packageName.slice(1).replace(/\//g, '__') : packageName;
+              comment += '3. Updated package published under `@depup/' + flatName + '` scope\n\n';
               comment += 'This issue will be closed automatically.';
             } else {
               comment += 'Request Failed: An unexpected error occurred.\n\n';

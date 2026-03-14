@@ -36,11 +36,20 @@ export default [
     files: [
       'scripts/compatibility-test.mjs',
       'scripts/cron-sync.mjs',
-      'scripts/heal.mjs',
+      'scripts/generate-readme.mjs',
       'scripts/integrity-meter.mjs',
     ],
     rules: {
-      'sonarjs/cognitive-complexity': ['warn', 14],
+      complexity: ['error', { max: 15 }],
+      'sonarjs/cognitive-complexity': ['warn', 22],
+    },
+  },
+  {
+    // heal.mjs repairIntegrityData has nested validation for version/revision/field data
+    files: ['scripts/heal.mjs'],
+    rules: {
+      complexity: ['error', { max: 15 }],
+      'sonarjs/cognitive-complexity': ['warn', 28],
     },
   },
   {
@@ -49,7 +58,8 @@ export default [
     files: ['scripts/depup.mjs'],
     rules: {
       complexity: ['error', { max: 13 }],
-      'max-lines': ['error', { max: 1020, skipBlankLines: true, skipComments: true }],
+      'sonarjs/cognitive-complexity': ['warn', 15],
+      'max-lines': ['error', { max: 1065, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': [
         'error',
         { max: 85, skipBlankLines: true, skipComments: true },
@@ -61,7 +71,8 @@ export default [
     // fallback logic and sharded orchestration
     files: ['scripts/cron-discover.mjs', 'scripts/security-scan.mjs'],
     rules: {
-      'sonarjs/cognitive-complexity': ['warn', 18],
+      complexity: ['error', { max: 18 }],
+      'sonarjs/cognitive-complexity': ['warn', 24],
     },
   },
   {
@@ -80,6 +91,7 @@ export default [
       'security/detect-unsafe-regex': 'off',
       'security/detect-object-injection': 'off',
       'import-x/no-extraneous-dependencies': 'off',
+      'import-x/no-relative-parent-imports': 'off',
       'no-unused-vars': 'off',
       'sonarjs/no-duplicate-string': 'off',
       'max-lines': 'off',

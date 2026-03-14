@@ -17,6 +17,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: depup-cron
+  cancel-in-progress: false
+
 jobs:
   discover:
     name: Discover (shard ${{ matrix.shard }})
@@ -62,7 +66,11 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add packages/ scripts/cron-discover.mjs
+          git add packages/
+          # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
+          if [ "${{ matrix.shard }}" = "0" ]; then
+            git add scripts/cron-discover.mjs
+          fi
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
@@ -78,7 +86,10 @@ jobs:
                 echo "$conflicted" | while IFS= read -r file; do
                   git checkout --ours -- "$file" 2>/dev/null || true
                 done
-                git add -A
+                git add packages/
+                if [ "${{ matrix.shard }}" = "0" ]; then
+                  git add scripts/cron-discover.mjs
+                fi
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
                   git rebase --abort 2>/dev/null || true
                   sleep $((attempt * 2))
@@ -120,18 +131,20 @@ jobs:
 
   sync:
     name: Sync (shard ${{ matrix.shard }})
+    needs: discover
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    if: ${{ !inputs.discover_only }}
+    if: ${{ !cancelled() && !inputs.discover_only && (needs.discover.result == 'success' || needs.discover.result == 'skipped') }}
     strategy:
       fail-fast: false
       matrix:
         shard: [0, 1, 2, 3, 4]
 
     steps:
-      - name: Checkout
+      - name: Checkout (latest main, including discover pushes)
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-tags: true
           fetch-depth: 0
 
@@ -162,6 +175,9 @@ jobs:
 
       - name: Self-Healing
         if: matrix.shard == 0
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Running self-healing checks..."
           npm run heal:auto
@@ -184,7 +200,7 @@ jobs:
                 echo "$conflicted" | while IFS= read -r file; do
                   git checkout --ours -- "$file" 2>/dev/null || true
                 done
-                git add -A
+                git add packages/
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
                   git rebase --abort 2>/dev/null || true
                   sleep $((attempt * 2))

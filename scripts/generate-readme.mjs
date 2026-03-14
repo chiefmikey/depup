@@ -106,8 +106,15 @@ This package inherits the license from the original package. See the original pa
       throw new Error(`No version data found for ${packageName}`);
     }
 
-    const revisions = Object.keys(integrityData[latestVersion])
-      .filter((key) => !Number.isNaN(Number.parseInt(key, 10)))
+    const versionEntry = integrityData[latestVersion];
+    if (typeof versionEntry !== 'object' || versionEntry === null) {
+      throw new Error(
+        `Corrupt version data for ${packageName}@${latestVersion}`,
+      );
+    }
+
+    const revisions = Object.keys(versionEntry)
+      .filter((key) => /^\d+$/u.test(key))
       .toSorted((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
     const latestRevision = revisions.at(-1);
     const latestData = latestRevision
@@ -122,12 +129,7 @@ This package inherits the license from the original package. See the original pa
       .replaceAll('{{originalPackage}}', packageName)
       .replaceAll('{{version}}', latestData?.version || 'unknown')
       .replaceAll('{{originalVersion}}', latestVersion)
-      .replaceAll(
-        '{{lastUpdated}}',
-        latestData?.timestamp
-          ? new Date(latestData.timestamp).toLocaleDateString()
-          : 'unknown',
-      )
+      .replaceAll('{{lastUpdated}}', this.formatDate(latestData?.timestamp))
       .replaceAll(
         '{{integrityTable}}',
         this.generateIntegrityTable(integrityData, votesData),
@@ -151,15 +153,20 @@ This package inherits the license from the original package. See the original pa
     table += '|---------|----------|--------|-------|-------|\n';
 
     for (const [version, versionData] of Object.entries(integrityData)) {
-      for (const [revision, data] of Object.entries(versionData)) {
-        const integrity = data.integrity || {};
-        const score = integrity.score || 0;
-        const versionVotes = votesData?.[version];
-        const totalVotes =
-          versionVotes?.totalVotes || integrity.totalVotes || 0;
-        const status = this.getStatusEmoji(score);
+      if (typeof versionData === 'object' && versionData !== null) {
+        for (const [revision, data] of Object.entries(versionData)) {
+          if (typeof data === 'object' && data !== null) {
+            const integrity = data.integrity || {};
+            const score = integrity.score || 0;
+            const totalVotes =
+              integrity.totalVotes ||
+              this.getRevisionVoteCount(votesData, version, revision) ||
+              0;
+            const status = this.getStatusEmoji(score);
 
-        table += `| ${version} | ${revision} | ${status} | ${score}% | ${totalVotes} |\n`;
+            table += `| ${version} | ${revision} | ${status} | ${score}% | ${totalVotes} |\n`;
+          }
+        }
       }
     }
 
@@ -174,28 +181,71 @@ This package inherits the license from the original package. See the original pa
     let history = '';
 
     for (const [version, versionData] of Object.entries(integrityData)) {
-      const versionVotes = votesData?.[version];
-      const totalVotes = versionVotes?.totalVotes || 0;
-      history += `\n### Version ${version}`;
-      if (totalVotes > 0) {
-        history += ` (${totalVotes} votes)`;
-      }
-      history += `\n\n`;
+      if (typeof versionData === 'object' && versionData !== null) {
+        const totalVotes = this.getVersionVoteCount(votesData, version);
+        history += `\n### Version ${version}`;
+        if (totalVotes > 0) {
+          history += ` (${totalVotes} votes)`;
+        }
+        history += `\n\n`;
 
-      for (const [revision, data] of Object.entries(versionData)) {
-        const integrity = data.integrity || {};
-        const score = integrity.score || 0;
-        const status = this.getStatusEmoji(score);
+        for (const [revision, data] of Object.entries(versionData)) {
+          if (typeof data === 'object' && data !== null) {
+            const integrity = data.integrity || {};
+            const score = integrity.score || 0;
+            const status = this.getStatusEmoji(score);
 
-        history += `- **Revision ${revision}** (${data.version}) - ${status} ${score}% integrity\n`;
+            history += `- **Revision ${revision}** (${data.version}) - ${status} ${score}% integrity\n`;
 
-        if (integrity.lastUpdated) {
-          history += `  - Last updated: ${new Date(integrity.lastUpdated).toLocaleDateString()}\n`;
+            if (integrity.lastUpdated) {
+              history += `  - Last updated: ${this.formatDate(integrity.lastUpdated)}\n`;
+            }
+          }
         }
       }
     }
 
     return history;
+  }
+
+  getRevisionVoteCount(votesData, version, revision) {
+    const revisionData = votesData?.[version]?.[revision];
+    if (typeof revisionData !== 'object' || revisionData === null) {
+      return 0;
+    }
+    return (
+      (Number(revisionData.up) || 0) +
+      (Number(revisionData.down) || 0) +
+      (Number(revisionData.neutral) || 0)
+    );
+  }
+
+  getVersionVoteCount(votesData, version) {
+    const versionData = votesData?.[version];
+    if (typeof versionData !== 'object' || versionData === null) {
+      return 0;
+    }
+    let total = 0;
+    for (const revisionData of Object.values(versionData)) {
+      if (typeof revisionData === 'object' && revisionData !== null) {
+        total +=
+          (Number(revisionData.up) || 0) +
+          (Number(revisionData.down) || 0) +
+          (Number(revisionData.neutral) || 0);
+      }
+    }
+    return total;
+  }
+
+  formatDate(timestamp) {
+    if (!timestamp) {
+      return 'unknown';
+    }
+    const date = new Date(timestamp);
+    if (Number.isNaN(date.getTime())) {
+      return 'unknown';
+    }
+    return date.toLocaleDateString();
   }
 
   getStatusEmoji(score) {
@@ -213,7 +263,12 @@ This package inherits the license from the original package. See the original pa
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const generator = new ReadmeGenerator();
-  generator.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const generator = new ReadmeGenerator();
+    await generator.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

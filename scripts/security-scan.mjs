@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-import { execFileSync, execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
+import { randomUUID } from 'node:crypto';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 import chalk from 'chalk';
 import { Command } from 'commander';
 import ora from 'ora';
+import semver from 'semver';
 
 class SecurityScanner {
   constructor() {
@@ -44,7 +46,7 @@ class SecurityScanner {
         }
       });
 
-    program.parse();
+    await program.parseAsync();
   }
 
   async performFullScan(options) {
@@ -104,7 +106,7 @@ class SecurityScanner {
       // Try ClamAV scan first
       let clamavAvailable = false;
       try {
-        execSync('which clamscan', { stdio: 'pipe' });
+        execFileSync('which', ['clamscan'], { stdio: 'pipe' });
         clamavAvailable = true;
       } catch {
         // ClamAV not available
@@ -114,7 +116,8 @@ class SecurityScanner {
       }
 
       if (clamavAvailable) {
-        // ClamAV scan
+        // ClamAV scan -- use unique log path to prevent symlink attacks
+        const clamLogPath = `/tmp/clamav-${randomUUID()}.log`;
         try {
           execFileSync(
             'clamscan',
@@ -122,7 +125,7 @@ class SecurityScanner {
               '--recursive',
               '--infected',
               '--quiet',
-              `--log=/tmp/clamav.log`,
+              `--log=${clamLogPath}`,
               scanPath,
             ],
             {
@@ -141,7 +144,7 @@ class SecurityScanner {
             // Infected files found
             let logContent = 'ClamAV log not available';
             try {
-              logContent = await fs.readFile('/tmp/clamav.log', 'utf8');
+              logContent = await fs.readFile(clamLogPath, 'utf8');
             } catch {
               // Log file may not exist despite exit code 1
             }
@@ -228,18 +231,39 @@ class SecurityScanner {
           findings.push(`Suspicious file extension: ${file}`);
         }
 
-        // Check for hidden files
-        if (fileName.startsWith('.')) {
+        // Check for hidden files (skip legitimate dotfiles common in npm packages)
+        const legitimateDotfiles = new Set([
+          '.babelrc',
+          '.browserslistrc',
+          '.editorconfig',
+          '.eslintignore',
+          '.eslintrc',
+          '.eslintrc.json',
+          '.eslintrc.js',
+          '.eslintrc.yml',
+          '.gitattributes',
+          '.gitignore',
+          '.npmignore',
+          '.npmrc',
+          '.nvmrc',
+          '.prettierignore',
+          '.prettierrc',
+          '.prettierrc.json',
+          '.stylelintrc',
+          '.yarnrc',
+        ]);
+        if (
+          fileName.startsWith('.') &&
+          !legitimateDotfiles.has(fileName.toLowerCase())
+        ) {
           findings.push(`Hidden file detected: ${file}`);
         }
       }
 
-      if (findings.length > 0) {
-        this.results.malware.details.push(...findings);
-        this.results.malware.status = 'warning';
-      }
+      return findings;
     } catch (error) {
       console.warn('Advanced malware check failed:', error.message);
+      return [];
     }
   }
 
@@ -327,7 +351,7 @@ class SecurityScanner {
     try {
       // Check if npm is available
       try {
-        execSync('which npm', { stdio: 'pipe' });
+        execFileSync('which', ['npm'], { stdio: 'pipe' });
       } catch {
         console.warn('npm not available, skipping npm audit');
         this.results.vulnerabilities = {
@@ -338,14 +362,16 @@ class SecurityScanner {
         return;
       }
 
-      const auditCommand = 'npm audit --audit-level=moderate --json';
-
-      const result = execSync(auditCommand, {
-        cwd: scanPath,
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: 120_000, // 2 minutes
-      });
+      const result = execFileSync(
+        'npm',
+        ['audit', '--audit-level=moderate', '--json'],
+        {
+          cwd: scanPath,
+          encoding: 'utf8',
+          stdio: 'pipe',
+          timeout: 120_000,
+        },
+      );
 
       const auditData = JSON.parse(result);
 
@@ -362,16 +388,26 @@ class SecurityScanner {
       }
     } catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
-      if (error.status === 1 && error.stdout) {
-        const auditData = JSON.parse(error.stdout);
-        if (auditData.metadata?.vulnerabilities?.total > 0) {
-          const { vulnerabilities } = auditData.metadata;
+      if (error.stdout) {
+        try {
+          const auditData = JSON.parse(error.stdout);
+          if (auditData.metadata?.vulnerabilities?.total > 0) {
+            const { vulnerabilities } = auditData.metadata;
+            this.results.vulnerabilities =
+              this.buildVulnerabilityResult(vulnerabilities);
+          } else {
+            this.results.vulnerabilities = {
+              details: [
+                'npm audit returned exit 1 but no vulnerabilities in metadata',
+              ],
+              status: 'warning',
+              timestamp: new Date().toISOString(),
+            };
+          }
+        } catch (parseError) {
           this.results.vulnerabilities = {
-            details: [
-              `npm audit found ${vulnerabilities.total} vulnerabilities`,
-              `Critical: ${vulnerabilities.critical}, High: ${vulnerabilities.high}`,
-            ],
-            status: 'failed',
+            details: [`npm audit output not parseable: ${parseError.message}`],
+            status: 'warning',
             timestamp: new Date().toISOString(),
           };
         }
@@ -383,13 +419,11 @@ class SecurityScanner {
 
   async runSnykScan(scanPath) {
     try {
-      const snykCommand = 'snyk test --json';
-
-      const result = execSync(snykCommand, {
+      const result = execFileSync('snyk', ['test', '--json'], {
         cwd: scanPath,
         encoding: 'utf8',
         stdio: 'pipe',
-        timeout: 180_000, // 3 minutes
+        timeout: 180_000,
       });
 
       const snykData = JSON.parse(result);
@@ -446,13 +480,27 @@ class SecurityScanner {
       if (await this.fileExists(packageJsonPath)) {
         const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
         await this.analyzeDependencies(packageJson);
+      } else {
+        this.results.compatibility = {
+          details: ['No package.json found -- compatibility analysis skipped'],
+          status: 'skipped',
+          timestamp: new Date().toISOString(),
+        };
+        spinner.succeed('Compatibility analysis skipped (no package.json)');
+        return;
       }
 
-      this.results.compatibility = {
-        details: ['Dependency compatibility analysis completed'],
-        status: 'passed',
-        timestamp: new Date().toISOString(),
-      };
+      // Only set to 'passed' if analyzeDependencies didn't already set a
+      // more specific status (e.g., 'warning' with compatibility issues).
+      if (this.results.compatibility.status === 'pending') {
+        this.results.compatibility = {
+          details: ['Dependency compatibility analysis completed'],
+          status: 'passed',
+          timestamp: new Date().toISOString(),
+        };
+      } else {
+        this.results.compatibility.timestamp = new Date().toISOString();
+      }
 
       spinner.succeed('Compatibility analysis completed');
     } catch (error) {
@@ -477,26 +525,24 @@ class SecurityScanner {
 
     // React ecosystem checks
     if (dependencies.react && dependencies['react-dom']) {
-      const reactVersion = dependencies.react.replace(/[\^~]/u, '');
-      const reactDomVersion = dependencies['react-dom'].replace(/[\^~]/u, '');
+      const reactMajor = semver.coerce(dependencies.react)?.major;
+      const reactDomMajor = semver.coerce(dependencies['react-dom'])?.major;
 
-      if (reactVersion.startsWith('18') && !reactDomVersion.startsWith('18')) {
+      if (
+        reactMajor === 18 &&
+        reactDomMajor !== undefined &&
+        reactDomMajor !== 18
+      ) {
         compatibilityIssues.push('React 18 requires react-dom 18');
       }
     }
 
     // Webpack ecosystem checks
     if (dependencies.webpack && dependencies['webpack-cli']) {
-      const webpackVersion = dependencies.webpack.replace(/[\^~]/u, '');
-      const webpackCliVersion = dependencies['webpack-cli'].replace(
-        /[\^~]/u,
-        '',
-      );
+      const webpackMajor = semver.coerce(dependencies.webpack)?.major;
+      const cliMajor = semver.coerce(dependencies['webpack-cli'])?.major;
 
-      if (
-        webpackVersion.startsWith('5') &&
-        !webpackCliVersion.startsWith('4')
-      ) {
+      if (webpackMajor === 5 && cliMajor !== undefined && cliMajor < 4) {
         compatibilityIssues.push('Webpack 5 requires webpack-cli 4+');
       }
     }
@@ -538,9 +584,11 @@ class SecurityScanner {
       return 'warning';
     }
 
-    if (
-      statuses.every((status) => status === 'passed' || status === 'pending')
-    ) {
+    if (statuses.includes('pending') || statuses.includes('skipped')) {
+      return 'incomplete';
+    }
+
+    if (statuses.every((status) => status === 'passed')) {
       return 'passed';
     }
 
@@ -568,16 +616,18 @@ class SecurityScanner {
       baseReportPath = path.join(reportPath, 'security-report.json');
     }
 
+    // Use a single timestamp for both report files so they match
+    const reportTimestamp = Date.now();
     const reportFile = baseReportPath.replace(
       /\.json$/u,
-      `-${Date.now()}.json`,
+      `-${reportTimestamp}.json`,
     );
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
 
     // Generate human-readable summary
     const summaryFile = baseReportPath.replace(
       /\.json$/u,
-      `-${Date.now()}.txt`,
+      `-${reportTimestamp}.txt`,
     );
     const summary = this.generateSummaryReport(report);
     await fs.writeFile(summaryFile, summary);
@@ -621,8 +671,15 @@ Overall Status: ${report.overall_status.toUpperCase()}
       timestamp: new Date().toISOString(),
     };
 
+    // Handle both directory paths and .json file paths
+    let errorDirectory = reportPath;
+    if (reportPath.endsWith('.json')) {
+      errorDirectory = path.dirname(reportPath);
+    }
+    await fs.mkdir(errorDirectory, { recursive: true });
+
     const errorFile = path.join(
-      reportPath,
+      errorDirectory,
       `security-error-${Date.now()}.json`,
     );
     await fs.writeFile(errorFile, JSON.stringify(errorReport, null, 2));
@@ -630,7 +687,12 @@ Overall Status: ${report.overall_status.toUpperCase()}
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const scanner = new SecurityScanner();
-  scanner.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const scanner = new SecurityScanner();
+    await scanner.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }

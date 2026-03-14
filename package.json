@@ -35,8 +35,8 @@
     "depup:secure": "docker-compose run --rm depup-sandbox",
     "depup:secure:publish": "docker-compose run --rm depup-sandbox --bump-deps --test --publish",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch"
   },
   "dependencies": {
     "chalk": "^5.3.0",

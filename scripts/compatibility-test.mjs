@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-import { execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
-import { createRequire } from 'node:module';
 import path from 'node:path';
 
 import chalk from 'chalk';
 import { Command } from 'commander';
 import ora from 'ora';
+import semver from 'semver';
 
 class CompatibilityTester {
   constructor() {
@@ -26,6 +26,7 @@ class CompatibilityTester {
       .option('-r, --report <path>', 'Output compatibility report')
       .option('-s, --strict', 'Fail on any compatibility warnings')
       .option('--fix-attempts', 'Attempt to fix compatibility issues')
+      .option('--debug', 'Show stack traces on error')
       .action(async (packagePath, options) => {
         try {
           await this.testCompatibility(packagePath, options);
@@ -41,7 +42,7 @@ class CompatibilityTester {
         }
       });
 
-    program.parse();
+    await program.parseAsync();
   }
 
   loadCompatibilityRules() {
@@ -98,7 +99,14 @@ class CompatibilityTester {
     console.log(chalk.gray(`Package: ${packagePath}`));
 
     const packageJsonPath = path.join(packagePath, 'package.json');
-    const packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+    let packageJson;
+    try {
+      packageJson = JSON.parse(await fs.readFile(packageJsonPath));
+    } catch (error) {
+      throw new Error(`Failed to parse ${packageJsonPath}: ${error.message}`, {
+        cause: error,
+      });
+    }
 
     const results = {
       analysis: {},
@@ -240,36 +248,20 @@ class CompatibilityTester {
   }
 
   findExpectedVersion(version, versionMap) {
-    // Simplified version matching
+    // Simplified version matching -- extract major version number
     const majorVersion = version.replaceAll(/[<=>^~]/gu, '').split('.')[0];
+    const key = `${majorVersion}.x`;
 
-    for (const [range, expected] of Object.entries(versionMap)) {
-      if (range.startsWith(majorVersion)) {
-        return expected;
-      }
-    }
-
-    return null;
+    return versionMap[key] || null;
   }
 
   isVersionCompatible(actualVersion, expectedVersion) {
-    try {
-      // Use semver for proper version comparison
-      const esmRequire = createRequire(import.meta.url);
-      const semver = esmRequire('semver');
-
-      // Remove range operators for comparison
-      const cleanActual = actualVersion.replaceAll(/[\^~]/gu, '');
-      const cleanExpected = expectedVersion.replaceAll(/[\^~]/gu, '');
-
-      return (
-        semver.satisfies(cleanActual, cleanExpected) ||
-        semver.satisfies(cleanExpected, cleanActual)
-      );
-    } catch {
-      // Fallback to simple string comparison
-      return actualVersion.includes(expectedVersion.replaceAll(/[\^~]/gu, ''));
+    const cleanActual = semver.coerce(actualVersion)?.version;
+    if (!cleanActual) {
+      return false;
     }
+
+    return semver.satisfies(cleanActual, expectedVersion);
   }
 
   detectPotentialCircularDeps() {
@@ -310,7 +302,7 @@ class CompatibilityTester {
   async testInstallation(packagePath, results) {
     try {
       // Test npm install
-      execSync('npm install --dry-run', {
+      execFileSync('npm', ['install', '--dry-run'], {
         cwd: packagePath,
         stdio: 'pipe',
         timeout: 60_000,
@@ -381,12 +373,14 @@ class CompatibilityTester {
     const items = await fs.readdir(directoryPath, { withFileTypes: true });
 
     for (const item of items) {
-      const fullPath = path.join(directoryPath, item.name);
-
-      if (item.isDirectory() && item.name !== 'node_modules') {
+      if (item.isSymbolicLink()) {
+        // Skip symlinks to prevent traversal loops and security issues
+      } else if (item.isDirectory() && item.name !== 'node_modules') {
+        const fullPath = path.join(directoryPath, item.name);
         const subFiles = await this.collectFiles(fullPath);
         files.push(...subFiles);
       } else if (item.isFile()) {
+        const fullPath = path.join(directoryPath, item.name);
         files.push(fullPath);
       }
     }
@@ -457,14 +451,7 @@ class CompatibilityTester {
   }
 
   isNodeVersionCompatible(requirement) {
-    try {
-      const esmRequire = createRequire(import.meta.url);
-      const semver = esmRequire('semver');
-      return semver.satisfies(process.version, requirement);
-    } catch {
-      // Fallback to simple check
-      return true;
-    }
+    return semver.satisfies(process.version, requirement);
   }
 
   calculateCompatibilityScore(results) {
@@ -578,7 +565,12 @@ class CompatibilityTester {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const tester = new CompatibilityTester();
-  tester.main();
+if (process.argv[1] === import.meta.filename) {
+  try {
+    const tester = new CompatibilityTester();
+    await tester.main();
+  } catch (error) {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  }
 }
