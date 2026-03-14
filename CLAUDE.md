@@ -14,21 +14,19 @@ Automated npm package factory. Takes any npm package, bumps all dependencies to 
 ## Architecture
 ```
 scripts/           # All source code — .mjs ESM files
-  depup.mjs        # Core: DepUp class — download, clone, bump, test, publish
+  utilities.mjs    # Shared: listPackageDirectories, getShardConfig, sleep, etc.
+  depup.mjs        # Core: DepUp class -- download, clone, bump, test, publish
   cli.mjs          # Interactive CLI (commander + inquirer)
-  config.mjs       # ConfigManager — depup.config.json management
-  cron-discover.mjs # Automated package discovery (popular packages list)
+  cron-discover.mjs # Automated package discovery (curated list + sharding)
   cron-sync.mjs    # Keep existing packages up-to-date
   integrity-meter.mjs # Community voting system
   generate-readme.mjs # Auto-generate package READMEs
   add-package.mjs  # Add/remove packages from curated list
-  monitor.mjs      # System health monitoring
   heal.mjs         # Self-healing (fix missing readmes, integrity data)
   security-scan.mjs # Malware + vulnerability scanning
   depup-security.mjs # Containerized secure processing
   security-approval.mjs # Package approval workflow
   compatibility-test.mjs # Dependency compatibility testing
-  performance-test.mjs # Benchmarking
   __tests__/basic.test.js # Unit tests
 packages/          # Generated package data (one dir per package)
 config/            # Security allowlists and config
@@ -47,7 +45,6 @@ npm run depup:test -- <pkg> # Process + test
 npm run depup:publish -- <pkg> # Full pipeline
 npm run cron:discover       # Discover new packages
 npm run cron:sync           # Sync existing packages
-npm run monitor             # System health check
 npm run heal                # Self-healing repairs
 ```
 
@@ -102,7 +99,6 @@ npm run heal                # Self-healing repairs
 - Globally disabled for scripts/: `detect-object-injection`, `no-await-in-loop`, `compat/compat`
 
 ## Known Limitations
-- Dynamic package discovery (`getDynamicTopPackages()`) returns empty -- falls back to curated list
 - Use `execFileSync` with args arrays (not `execSync` with string interpolation) when command includes user/package input
 - `chalk.orange` does not exist -- use `chalk.hex('#FFA500')` for orange
 

@@ -9,6 +9,8 @@ import ora from 'ora';
 import pacote from 'pacote';
 import semver from 'semver';
 
+import { toScopedName } from './utilities.mjs';
+
 const PACKAGE_JSON = 'package.json';
 
 class DepUp {
@@ -106,7 +108,7 @@ class DepUp {
     const manifest = await this.fetchManifest(packageSpec, timeout);
     const packageName = manifest.name;
     const baseVersion = manifest.version;
-    const scopedName = DepUp.toScopedName(packageName);
+    const scopedName = toScopedName(packageName);
 
     console.log(
       chalk.cyan(`Processing ${packageName}@${baseVersion} -> ${scopedName}`),
@@ -937,7 +939,7 @@ try {
       targetDirectory,
       testResult,
     } = context;
-    const scopedName = DepUp.toScopedName(packageName);
+    const scopedName = toScopedName(packageName);
     const npmUrl = `https://www.npmjs.com/package/${packageName}`;
     const date = new Date().toISOString().split('T')[0];
     const lines = [
@@ -996,14 +998,6 @@ try {
       return 'prepared';
     }
     return published ? 'published' : 'skipped';
-  }
-
-  // Flatten scoped package names for @depup/ publishing: @nestjs/common -> nestjs__common
-  static toScopedName(packageName) {
-    const flatName = packageName.startsWith('@')
-      ? packageName.slice(1).replace(/\//u, '__')
-      : packageName;
-    return `@depup/${flatName}`;
   }
 
   npmRegistry = 'https://registry.npmjs.org';

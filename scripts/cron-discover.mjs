@@ -6,6 +6,8 @@ import path from 'node:path';
 import chalk from 'chalk';
 import ora from 'ora';
 
+import { getShardConfig, sleep } from './utilities.mjs';
+
 const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
 
@@ -68,7 +70,7 @@ class PackageDiscoverer {
 
       // Rate limiting between batches
       if (index + this.concurrentPackages < packagesToProcess.length) {
-        await this.sleep(this.rateLimitDelay);
+        await sleep(this.rateLimitDelay);
       }
     }
 
@@ -114,57 +116,13 @@ class PackageDiscoverer {
   }
 
   async getTopPackages() {
-    try {
-      // Try to get dynamic list from npm API
-      const dynamicPackages = await this.getDynamicTopPackages();
-      if (dynamicPackages.length > 0) {
-        console.log(`Found ${dynamicPackages.length} packages via npm API`);
-        return dynamicPackages;
-      }
-    } catch (error) {
-      console.warn(
-        'Could not fetch dynamic package list, falling back to curated list:',
-        error.message,
-      );
-    }
-
-    // Fallback to curated list
     return this.getCuratedPackages();
-  }
-
-  async getDynamicTopPackages() {
-    // For now, return empty array to use curated packages
-    // Dynamic discovery would require additional HTTP client setup
-    // This is a placeholder for future implementation
-    console.log(
-      'Dynamic package discovery not yet implemented, using curated list',
-    );
-    return [];
-  }
-
-  getShardConfig() {
-    const shardIndex = Number.parseInt(process.env.SHARD_INDEX || '0', 10);
-    const shardTotal = Number.parseInt(process.env.SHARD_TOTAL || '1', 10);
-
-    if (
-      Number.isNaN(shardIndex) ||
-      Number.isNaN(shardTotal) ||
-      shardTotal < 1 ||
-      shardIndex < 0 ||
-      shardIndex >= shardTotal
-    ) {
-      throw new Error(
-        `Invalid shard configuration: SHARD_INDEX=${process.env.SHARD_INDEX}, SHARD_TOTAL=${process.env.SHARD_TOTAL}`,
-      );
-    }
-
-    return { shardIndex, shardTotal };
   }
 
   async getCuratedPackages() {
     // Apply sharding if configured (for parallel runner support)
     let packageNames = this.curatedPackageNames;
-    const { shardIndex, shardTotal } = this.getShardConfig();
+    const { shardIndex, shardTotal } = getShardConfig();
 
     if (shardTotal > 1) {
       packageNames = packageNames.filter(
@@ -370,11 +328,6 @@ class PackageDiscoverer {
     }
   }
 
-  async sleep(ms) {
-    await new Promise((resolve) => {
-      setTimeout(resolve, ms);
-    });
-  }
   concurrentPackages = 20;
   curatedPackageNames = [
     '@angular/cli',

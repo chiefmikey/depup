@@ -7,6 +7,8 @@ import chalk from 'chalk';
 import ora from 'ora';
 import semver from 'semver';
 
+import { listPackageDirectories } from './utilities.mjs';
+
 class SelfHealer {
   constructor() {
     this.rootDirectory = process.cwd();
@@ -263,46 +265,13 @@ class SelfHealer {
     return created;
   }
 
-  async listPackageDirectories(packagesDirectory) {
-    const directories = [];
-    const entries = await fs.readdir(packagesDirectory, {
-      withFileTypes: true,
-    });
-
-    for (const entry of entries) {
-      if (!entry.isDirectory() || entry.name.startsWith('.')) {
-        // skip non-directories and hidden dirs
-      } else if (entry.name.startsWith('@')) {
-        const scopeDirectory = path.join(packagesDirectory, entry.name);
-        const scopeEntries = await fs.readdir(scopeDirectory, {
-          withFileTypes: true,
-        });
-        for (const scopeEntry of scopeEntries) {
-          if (scopeEntry.isDirectory() && !scopeEntry.name.startsWith('.')) {
-            directories.push({
-              name: `${entry.name}/${scopeEntry.name}`,
-              path: path.join(scopeDirectory, scopeEntry.name),
-            });
-          }
-        }
-      } else {
-        directories.push({
-          name: entry.name,
-          path: path.join(packagesDirectory, entry.name),
-        });
-      }
-    }
-
-    return directories;
-  }
-
   async getAllPackages() {
     const packages = [];
 
     try {
       const packagesDirectory = path.join(this.rootDirectory, 'packages');
       const packageDirectories =
-        await this.listPackageDirectories(packagesDirectory);
+        await listPackageDirectories(packagesDirectory);
       packages.push(...packageDirectories);
     } catch (error) {
       console.warn('Error reading packages:', error.message);

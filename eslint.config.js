@@ -38,7 +38,6 @@ export default [
       'scripts/cron-sync.mjs',
       'scripts/heal.mjs',
       'scripts/integrity-meter.mjs',
-      'scripts/monitor.mjs',
     ],
     rules: {
       'sonarjs/cognitive-complexity': ['warn', 14],

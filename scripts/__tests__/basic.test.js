@@ -913,4 +913,90 @@ describe('depUp Basic Tests', () => {
       expect(dangerousChars.test('@nestjs/common@latest')).toBe(false);
     });
   });
+
+  describe('utilities module', () => {
+    it('should export flattenPackageName correctly', async () => {
+      const { flattenPackageName } = await import('../utilities.mjs');
+
+      expect(flattenPackageName('lodash')).toBe('lodash');
+      expect(flattenPackageName('express')).toBe('express');
+      expect(flattenPackageName('@nestjs/common')).toBe('nestjs__common');
+      expect(flattenPackageName('@babel/core')).toBe('babel__core');
+      expect(flattenPackageName('@a/b')).toBe('a__b');
+    });
+
+    it('should export toScopedName correctly', async () => {
+      const { toScopedName } = await import('../utilities.mjs');
+
+      expect(toScopedName('lodash')).toBe('@depup/lodash');
+      expect(toScopedName('express')).toBe('@depup/express');
+      expect(toScopedName('@nestjs/common')).toBe('@depup/nestjs__common');
+      expect(toScopedName('@babel/core')).toBe('@depup/babel__core');
+    });
+
+    it('should export isNonSemverSpecifier correctly', async () => {
+      const { isNonSemverSpecifier } = await import(
+        '../utilities.mjs'
+      );
+
+      expect(isNonSemverSpecifier('npm:@types/react@^18.0.0')).toBe(true);
+      expect(isNonSemverSpecifier('git+https://github.com/foo/bar.git')).toBe(
+        true,
+      );
+      expect(isNonSemverSpecifier('file:../local-pkg')).toBe(true);
+      expect(isNonSemverSpecifier('workspace:*')).toBe(true);
+      expect(isNonSemverSpecifier('github:user/repo')).toBe(true);
+      expect(isNonSemverSpecifier('http://example.com/pkg.tgz')).toBe(true);
+      expect(isNonSemverSpecifier('https://example.com/pkg.tgz')).toBe(true);
+      expect(isNonSemverSpecifier('link:../other')).toBe(true);
+      expect(isNonSemverSpecifier('^1.0.0')).toBe(false);
+      expect(isNonSemverSpecifier('~2.3.4')).toBe(false);
+      expect(isNonSemverSpecifier('>=1.0.0')).toBe(false);
+      expect(isNonSemverSpecifier()).toBe(true);
+      expect(isNonSemverSpecifier(null)).toBe(true);
+      expect(isNonSemverSpecifier(123)).toBe(true);
+    });
+
+    it('should export getShardConfig correctly', async () => {
+      const { getShardConfig } = await import('../utilities.mjs');
+
+      const originalIndex = process.env.SHARD_INDEX;
+      const originalTotal = process.env.SHARD_TOTAL;
+      delete process.env.SHARD_INDEX;
+      delete process.env.SHARD_TOTAL;
+
+      const config = getShardConfig();
+      expect(config).toEqual({ shardIndex: 0, shardTotal: 1 });
+
+      process.env.SHARD_INDEX = '2';
+      process.env.SHARD_TOTAL = '5';
+      const config2 = getShardConfig();
+      expect(config2).toEqual({ shardIndex: 2, shardTotal: 5 });
+
+      process.env.SHARD_INDEX = '5';
+      process.env.SHARD_TOTAL = '5';
+      expect(() => getShardConfig()).toThrow('Invalid shard configuration');
+
+      if (originalIndex === undefined) {
+        delete process.env.SHARD_INDEX;
+      } else {
+        process.env.SHARD_INDEX = originalIndex;
+      }
+      if (originalTotal === undefined) {
+        delete process.env.SHARD_TOTAL;
+      } else {
+        process.env.SHARD_TOTAL = originalTotal;
+      }
+    });
+
+    it('should export sleep as an async function', async () => {
+      const { sleep } = await import('../utilities.mjs');
+      expect(typeof sleep).toBe('function');
+
+      const start = Date.now();
+      await sleep(10);
+      const elapsed = Date.now() - start;
+      expect(elapsed).toBeGreaterThanOrEqual(5);
+    });
+  });
 });

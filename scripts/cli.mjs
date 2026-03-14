@@ -6,11 +6,8 @@ import { Command } from 'commander';
 import inquirer from 'inquirer';
 import ora from 'ora';
 
-import ConfigManager from './config.mjs';
-
 class DepUpCLI {
   constructor() {
-    this.configManager = new ConfigManager();
     this.program = new Command();
     this.setupCommands();
   }
@@ -20,18 +17,6 @@ class DepUpCLI {
       .name('depup-cli')
       .description('DepUp Command Line Interface')
       .version('1.0.0');
-
-    // Config commands
-    this.program
-      .command('config')
-      .description('Manage DepUp configuration')
-      .option('-s, --set <path=value>', 'Set a configuration value')
-      .option('-g, --get <path>', 'Get a configuration value')
-      .option('-i, --init', 'Initialize default configuration')
-      .option('-l, --list', 'List all configuration values')
-      .action(async (options) => {
-        await this.handleConfigCommand(options);
-      });
 
     // Package commands
     this.program
@@ -97,50 +82,6 @@ class DepUpCLI {
       .action(async () => {
         await this.startInteractiveMode();
       });
-  }
-
-  async handleConfigCommand(options) {
-    try {
-      if (options.init) {
-        const spinner = ora('Initializing default configuration...').start();
-        await this.configManager.createDefaultConfig();
-        spinner.succeed('Default configuration created');
-        return;
-      }
-
-      if (options.set) {
-        const [path, ...rest] = options.set.split('=');
-        const value = rest.join('=');
-        if (!path || !value) {
-          console.error(chalk.red('Error: Invalid format. Use path=value'));
-          process.exit(1);
-        }
-
-        const spinner = ora(`Setting ${path}...`).start();
-        await this.configManager.setConfigValue(path, value);
-        spinner.succeed(`Set ${path} = ${value}`);
-        return;
-      }
-
-      if (options.get) {
-        const value = await this.configManager.getConfigValue(options.get);
-        console.log(chalk.cyan(`${options.get}: ${JSON.stringify(value)}`));
-        return;
-      }
-
-      if (options.list) {
-        const config = await this.configManager.loadConfig();
-        console.log(chalk.cyan('Current configuration:'));
-        console.log(JSON.stringify(config, undefined, 2));
-        return;
-      }
-
-      // No options provided, show help
-      this.program.help();
-    } catch (error) {
-      console.error(chalk.red('Config error:'), error.message);
-      process.exit(1);
-    }
   }
 
   async handlePackageCommand(name, options) {
@@ -288,29 +229,22 @@ class DepUpCLI {
 
   async handleStatusCommand() {
     try {
-      const config = await this.configManager.loadConfig();
+      console.log(chalk.cyan('\nDepUp System Status\n'));
 
-      console.log(chalk.cyan('\n📊 DepUp System Status\n'));
+      console.log(chalk.gray('Pipeline:'));
+      console.log('  Registry: https://registry.npmjs.org');
+      console.log('  Rate Limit: 100ms');
+      console.log('  Max Packages: 600');
+      console.log('  Concurrent: 20');
+      console.log('  Sharding: 5 runners');
 
-      console.log(chalk.gray('Configuration:'));
-      console.log(`  Registry: ${config.registry}`);
-      console.log(`  Rate Limit: ${config.rateLimitDelay}ms`);
-      console.log(`  Max Packages: ${config.maxPackagesPerRun}`);
-      console.log(`  Timeout: ${config.timeout}ms`);
-
-      console.log(chalk.gray('\nFeatures:'));
-      console.log(`  Discovery: ${config.discovery.enabled ? '✅' : '❌'}`);
-      console.log(`  Testing: ${config.testing.enabled ? '✅' : '❌'}`);
-      console.log(`  Publishing: ${config.publish.enabled ? '✅' : '❌'}`);
-      console.log(`  Integrity: ${config.integrity.enabled ? '✅' : '❌'}`);
-      console.log(`  Security: ${config.security.enabled ? '✅' : '❌'}`);
-      console.log(`  Performance: ${config.performance.enabled ? '✅' : '❌'}`);
-
-      console.log(chalk.gray('\nDiscovery Packages:'));
-      console.log(`  Total: ${config.discovery.packages.length}`);
-      console.log(
-        `  Sample: ${config.discovery.packages.slice(0, 5).join(', ')}${config.discovery.packages.length > 5 ? '...' : ''}`,
-      );
+      console.log(chalk.gray('\nScripts:'));
+      console.log('  depup.mjs        - Core processing pipeline');
+      console.log('  cron-discover.mjs - Package discovery');
+      console.log('  cron-sync.mjs    - Package sync');
+      console.log('  heal.mjs         - Self-healing repairs');
+      console.log('  integrity-meter  - Community voting');
+      console.log('  generate-readme  - README generation');
     } catch (error) {
       console.error(chalk.red('Status error:'), error.message);
       process.exit(1);
@@ -330,7 +264,6 @@ class DepUpCLI {
             { name: 'Sync existing packages', value: 'sync' },
             { name: 'Manage integrity', value: 'integrity' },
             { name: 'View status', value: 'status' },
-            { name: 'Configure settings', value: 'config' },
             { name: 'Exit', value: 'exit' },
           ],
           message: 'What would you like to do?',
@@ -408,19 +341,6 @@ class DepUpCLI {
 
       case 'status': {
         await this.handleStatusCommand();
-        break;
-      }
-
-      case 'config': {
-        const configAnswers = await inquirer.prompt([
-          {
-            choices: ['list', 'set', 'get'],
-            message: 'Config action:',
-            name: 'action',
-            type: 'list',
-          },
-        ]);
-        await this.handleConfigCommand({ [configAnswers.action]: true });
         break;
       }
 

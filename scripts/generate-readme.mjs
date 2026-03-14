@@ -4,6 +4,8 @@ import path from 'node:path';
 
 import semver from 'semver';
 
+import { flattenPackageName } from './utilities.mjs';
+
 class ReadmeGenerator {
   constructor() {
     this.template = `# @depup/{{packageName}}
@@ -112,10 +114,7 @@ This package inherits the license from the original package. See the original pa
       ? integrityData[latestVersion][latestRevision]
       : undefined;
 
-    // Flatten scoped names for @depup/ publishing: @nestjs/common -> nestjs__common
-    const flatName = packageName.startsWith('@')
-      ? packageName.slice(1).replace(/\//u, '__')
-      : packageName;
+    const flatName = flattenPackageName(packageName);
 
     // Generate content
     const content = this.template

@@ -5,6 +5,8 @@ import path from 'node:path';
 import fetch from 'npm-registry-fetch';
 import semver from 'semver';
 
+import { getShardConfig, listPackageDirectories, sleep } from './utilities.mjs';
+
 class PackageSyncer {
   async main() {
     console.log('🔄 Starting package sync...');
@@ -67,7 +69,7 @@ class PackageSyncer {
 
         // Rate limiting between batches (not between individual packages)
         if (index + this.concurrentPackages < packagesToProcess.length) {
-          await this.sleep(this.rateLimitDelay);
+          await sleep(this.rateLimitDelay);
         }
       }
 
@@ -81,46 +83,13 @@ class PackageSyncer {
     }
   }
 
-  async listPackageDirectories(packagesDirectory) {
-    const directories = [];
-    const entries = await fs.readdir(packagesDirectory, {
-      withFileTypes: true,
-    });
-
-    for (const entry of entries) {
-      if (!entry.isDirectory() || entry.name.startsWith('.')) {
-        // skip non-directories and hidden dirs
-      } else if (entry.name.startsWith('@')) {
-        const scopeDirectory = path.join(packagesDirectory, entry.name);
-        const scopeEntries = await fs.readdir(scopeDirectory, {
-          withFileTypes: true,
-        });
-        for (const scopeEntry of scopeEntries) {
-          if (scopeEntry.isDirectory() && !scopeEntry.name.startsWith('.')) {
-            directories.push({
-              name: `${entry.name}/${scopeEntry.name}`,
-              path: path.join(scopeDirectory, scopeEntry.name),
-            });
-          }
-        }
-      } else {
-        directories.push({
-          name: entry.name,
-          path: path.join(packagesDirectory, entry.name),
-        });
-      }
-    }
-
-    return directories;
-  }
-
   async getExistingPackages() {
     const packages = [];
     const packagesDirectory = path.join(process.cwd(), 'packages');
 
     try {
       const packageDirectories =
-        await this.listPackageDirectories(packagesDirectory);
+        await listPackageDirectories(packagesDirectory);
 
       for (const packageEntry of packageDirectories) {
         const integrityFile = path.join(packageEntry.path, 'integrity.json');
@@ -153,7 +122,7 @@ class PackageSyncer {
       console.error('Error reading packages:', error.message);
     }
 
-    const { shardIndex, shardTotal } = this.getShardConfig();
+    const { shardIndex, shardTotal } = getShardConfig();
 
     if (shardTotal > 1) {
       const shardedPackages = packages.filter(
@@ -166,25 +135,6 @@ class PackageSyncer {
     }
 
     return packages;
-  }
-
-  getShardConfig() {
-    const shardIndex = Number.parseInt(process.env.SHARD_INDEX || '0', 10);
-    const shardTotal = Number.parseInt(process.env.SHARD_TOTAL || '1', 10);
-
-    if (
-      Number.isNaN(shardIndex) ||
-      Number.isNaN(shardTotal) ||
-      shardTotal < 1 ||
-      shardIndex < 0 ||
-      shardIndex >= shardTotal
-    ) {
-      throw new Error(
-        `Invalid shard configuration: SHARD_INDEX=${process.env.SHARD_INDEX}, SHARD_TOTAL=${process.env.SHARD_TOTAL}`,
-      );
-    }
-
-    return { shardIndex, shardTotal };
   }
 
   async syncPackage(package_) {
@@ -431,11 +381,6 @@ class PackageSyncer {
     }
   }
 
-  async sleep(ms) {
-    await new Promise((resolve) => {
-      setTimeout(resolve, ms);
-    });
-  }
   registry = 'https://registry.npmjs.org';
   rateLimitDelay = 100;
   maxPackagesPerRun = 600;
