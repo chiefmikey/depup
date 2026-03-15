@@ -68,7 +68,7 @@ npm install @depup/express
 - **Revision 14** (5.1.0-depup.14) - 🔴 Poor 0% integrity
 - **Revision 15** (5.1.0-depup.15) - 🔴 Poor 0% integrity
 
-### Version 1.0.0
+### Version 1.0.0 (45 votes)
 
 - **Revision 0** (undefined) - 🟡 Good 67% integrity
   - Last updated: 9/12/2025

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@trpc/client](https://www.npmjs.com/package/@trpc/client)
-- **DepUp Version**: 11.12.0-depup.0
-- **Original Version**: 11.12.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 11.12.1-depup.0
+- **Original Version**: 11.12.1
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/trpc__client
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 11.12.0 | 0 | 🔴 Poor | 0% | 0 |
+| 11.12.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/trpc__client
 ### Version 11.12.0
 
 - **Revision 0** (11.12.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 11.12.1
+
+- **Revision 0** (11.12.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

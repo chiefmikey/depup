@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [storybook](https://www.npmjs.com/package/storybook)
-- **DepUp Version**: 10.2.16-depup.0
-- **Original Version**: 10.2.16
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 10.2.19-depup.8
+- **Original Version**: 10.2.19
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/storybook
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 10.2.16 | 0 | 🔴 Poor | 0% | 0 |
+| 10.2.19 | 8 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/storybook
 ### Version 10.2.16
 
 - **Revision 0** (10.2.16-depup.0) - 🔴 Poor 0% integrity
+
+### Version 10.2.19
+
+- **Revision 8** (10.2.19-depup.8) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
