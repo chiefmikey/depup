@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [node-fetch](https://www.npmjs.com/package/node-fetch)
-- **DepUp Version**: 3.3.2-depup.0
+- **DepUp Version**: 3.3.2-depup.1
 - **Original Version**: 3.3.2
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/node-fetch
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.3.2 | 0 | 🔴 Poor | 0% | 0 |
+| 3.3.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/node-fetch
 ### Version 3.3.2
 
 - **Revision 0** (3.3.2-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (3.3.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
