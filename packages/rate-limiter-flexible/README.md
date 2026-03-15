@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [rate-limiter-flexible](https://www.npmjs.com/package/rate-limiter-flexible)
-- **DepUp Version**: 10.0.0-depup.0
-- **Original Version**: 10.0.0
+- **DepUp Version**: 10.0.1-depup.0
+- **Original Version**: 10.0.1
 - **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
@@ -27,6 +27,7 @@ npm install @depup/rate-limiter-flexible
 |---------|----------|--------|-------|-------|
 | 9.1.1 | 0 | 🔴 Poor | 0% | 0 |
 | 10.0.0 | 0 | 🔴 Poor | 0% | 0 |
+| 10.0.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/rate-limiter-flexible
 ### Version 10.0.0
 
 - **Revision 0** (10.0.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 10.0.1
+
+- **Revision 0** (10.0.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
