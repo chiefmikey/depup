@@ -5,5 +5,18 @@
       "timestamp": "2026-01-10T16:45:34.062Z",
       "status": "created"
     }
+  },
+  "6.3.11": {
+    "38": {
+      "changes": {
+        "postcss": {
+          "from": "8.4.49",
+          "to": "^8.5.8"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T00:40:46.299Z",
+      "version": "6.3.11-depup.38"
+    }
   }
 }

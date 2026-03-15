@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [styled-components](https://www.npmjs.com/package/styled-components)
-- **DepUp Version**: 6.1.19-depup.0
-- **Original Version**: 6.1.19
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 6.3.11-depup.38
+- **Original Version**: 6.3.11
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/styled-components
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.1.19 | 0 | 🔴 Poor | 0% | 0 |
+| 6.3.11 | 38 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/styled-components
 ### Version 6.1.19
 
 - **Revision 0** (6.1.19-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.3.11
+
+- **Revision 38** (6.3.11-depup.38) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

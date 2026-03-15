@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [puppeteer](https://www.npmjs.com/package/puppeteer)
-- **DepUp Version**: 24.38.0-depup.0
-- **Original Version**: 24.38.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 24.39.1-depup.8
+- **Original Version**: 24.39.1
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/puppeteer
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 24.38.0 | 0 | 🔴 Poor | 0% | 0 |
+| 24.39.1 | 8 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/puppeteer
 ### Version 24.38.0
 
 - **Revision 0** (24.38.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 24.39.1
+
+- **Revision 8** (24.39.1-depup.8) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
