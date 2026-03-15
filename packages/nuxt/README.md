@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [nuxt](https://www.npmjs.com/package/nuxt)
-- **DepUp Version**: 4.4.2-depup.0
+- **DepUp Version**: 4.4.2-depup.1
 - **Original Version**: 4.4.2
-- **Last Updated**: 3/12/2026
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/nuxt
 |---------|----------|--------|-------|-------|
 | 4.1.1 | 0 | 🔴 Poor | 0% | 0 |
 | 4.4.2 | 0 | 🔴 Poor | 0% | 0 |
+| 4.4.2 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,7 @@ npm install @depup/nuxt
 ### Version 4.4.2
 
 - **Revision 0** (4.4.2-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (4.4.2-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

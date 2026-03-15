@@ -5,5 +5,18 @@
       "timestamp": "2026-03-09T08:18:51.929Z",
       "version": "3.32.3-depup.0"
     }
+  },
+  "3.33.0": {
+    "12": {
+      "changes": {
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T00:49:12.530Z",
+      "version": "3.33.0-depup.12"
+    }
   }
 }
