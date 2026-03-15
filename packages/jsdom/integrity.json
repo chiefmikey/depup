@@ -44,5 +44,18 @@
       "timestamp": "2026-03-14T20:35:35.096Z",
       "version": "28.1.0-depup.1"
     }
+  },
+  "29.0.0": {
+    "0": {
+      "changes": {
+        "@asamuzakjp/dom-selector": {
+          "from": "^7.0.2",
+          "to": "^7.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T08:15:05.006Z",
+      "version": "29.0.0-depup.0"
+    }
   }
 }
