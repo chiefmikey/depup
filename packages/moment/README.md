@@ -66,7 +66,7 @@ npm install @depup/moment
 
 ### Version 1.0.0 (45 votes)
 
-- **Revision 0** (undefined) - 🟡 Good 67% integrity
+- **Revision 0** (1.0.0-depup.0) - 🟡 Good 67% integrity
   - Last updated: 9/12/2025
 
 
