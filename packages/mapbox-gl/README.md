@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [mapbox-gl](https://www.npmjs.com/package/mapbox-gl)
-- **DepUp Version**: 3.19.1-depup.0
-- **Original Version**: 3.19.1
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 3.20.0-depup.14
+- **Original Version**: 3.20.0
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/mapbox-gl
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.19.1 | 0 | 🔴 Poor | 0% | 0 |
+| 3.20.0 | 14 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/mapbox-gl
 ### Version 3.19.1
 
 - **Revision 0** (3.19.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.20.0
+
+- **Revision 14** (3.20.0-depup.14) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

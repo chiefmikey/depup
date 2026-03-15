@@ -5,5 +5,18 @@
       "timestamp": "2026-03-09T08:18:51.918Z",
       "version": "16.5.6-depup.0"
     }
+  },
+  "16.5.8": {
+    "10": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.4",
+          "to": "^7.28.6"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T00:41:24.537Z",
+      "version": "16.5.8-depup.10"
+    }
   }
 }
