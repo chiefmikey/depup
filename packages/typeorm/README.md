@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [typeorm](https://www.npmjs.com/package/typeorm)
-- **DepUp Version**: 0.3.26-depup.0
-- **Original Version**: 0.3.26
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 0.3.28-depup.37
+- **Original Version**: 0.3.28
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/typeorm
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 0.3.26 | 0 | 🔴 Poor | 0% | 0 |
+| 0.3.28 | 37 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/typeorm
 ### Version 0.3.26
 
 - **Revision 0** (0.3.26-depup.0) - 🔴 Poor 0% integrity
+
+### Version 0.3.28
+
+- **Revision 37** (0.3.28-depup.37) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

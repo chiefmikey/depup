@@ -31,7 +31,7 @@ npm install @depup/uuid
 ## 🔄 Version History
 
 
-### Version 13.0.0
+### Version 13.0.0 (1 votes)
 
 - **Revision 0** (13.0.0-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
