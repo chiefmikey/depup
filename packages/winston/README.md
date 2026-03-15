@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [winston](https://www.npmjs.com/package/winston)
-- **DepUp Version**: 3.19.0-depup.0
+- **DepUp Version**: 3.19.0-depup.1
 - **Original Version**: 3.19.0
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/winston
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.19.0 | 0 | 🔴 Poor | 0% | 0 |
+| 3.19.0 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/winston
 ### Version 3.19.0
 
 - **Revision 0** (3.19.0-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (3.19.0-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
