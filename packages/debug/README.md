@@ -43,7 +43,7 @@ npm install @depup/debug
 ## 🔄 Version History
 
 
-### Version 4.4.1
+### Version 4.4.1 (12 votes)
 
 - **Revision 0** (4.4.1-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
