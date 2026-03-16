@@ -302,11 +302,33 @@ class PackageSyncer {
     }
   }
 
-  async updatePackage(package_, updatedVersion) {
-    const { execFile } = await import('node:child_process');
-    const { promisify } = await import('node:util');
-    const execFileAsync = promisify(execFile);
+  async spawnAsync(command, commandArguments, options) {
+    const { spawn } = await import('node:child_process');
+    return new Promise((resolve, reject) => {
+      const child = spawn(command, commandArguments, options);
+      let killed = false;
+      const timer = setTimeout(() => {
+        killed = true;
+        child.kill('SIGTERM');
+      }, options.timeout || 300_000);
+      child.on('close', (code) => {
+        clearTimeout(timer);
+        if (killed) {
+          reject(new Error(`Process timed out after ${options.timeout}ms`));
+        } else if (code === 0) {
+          resolve();
+        } else {
+          reject(new Error(`Process exited with code ${code}`));
+        }
+      });
+      child.on('error', (error) => {
+        clearTimeout(timer);
+        reject(error);
+      });
+    });
+  }
 
+  async updatePackage(package_, updatedVersion) {
     try {
       const commandArguments = [
         'scripts/depup.mjs',
@@ -317,10 +339,11 @@ class PackageSyncer {
       ];
       console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      await execFileAsync('node', commandArguments, {
+      await this.spawnAsync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
-        timeout: 300_000, // 5 minute timeout for package update
+        stdio: 'inherit',
+        timeout: 300_000,
       });
 
       console.log(
@@ -336,10 +359,6 @@ class PackageSyncer {
   }
 
   async updateDependencies(package_) {
-    const { execFile } = await import('node:child_process');
-    const { promisify } = await import('node:util');
-    const execFileAsync = promisify(execFile);
-
     try {
       const commandArguments = [
         'scripts/depup.mjs',
@@ -350,10 +369,11 @@ class PackageSyncer {
       ];
       console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      await execFileAsync('node', commandArguments, {
+      await this.spawnAsync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
-        timeout: 300_000, // 5 minute timeout for dependency update
+        stdio: 'inherit',
+        timeout: 300_000,
       });
 
       console.log(

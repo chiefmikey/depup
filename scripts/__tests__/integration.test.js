@@ -121,6 +121,11 @@ describe('depup.mjs end-to-end', () => {
       // private was stripped
       expect(packageJson.private).toBeUndefined();
 
+      // .npmrc was removed (prevents registry hijacking)
+      const npmrcPath = path.join(revisionDirectory, '.npmrc');
+
+      await expect(fs.access(npmrcPath)).rejects.toThrow();
+
       // Dangerous scripts were removed
       if (packageJson.scripts) {
         expect(packageJson.scripts.preinstall).toBeUndefined();

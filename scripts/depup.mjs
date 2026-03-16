@@ -128,6 +128,14 @@ class DepUp {
 
     await this.downloadPackage(packageSpec, targetDirectory, timeout);
 
+    // Remove .npmrc from extracted package -- a malicious .npmrc could
+    // redirect `npm publish` to an attacker-controlled registry and leak NPM_TOKEN
+    try {
+      await fs.rm(path.join(targetDirectory, '.npmrc'), { force: true });
+    } catch {
+      // .npmrc may not exist -- that's fine
+    }
+
     const packageJson = await this.preparePackageJson(
       targetDirectory,
       scopedName,
