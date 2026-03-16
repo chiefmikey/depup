@@ -25,8 +25,8 @@ npm install @depup/babel__core
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 7.29.0 | 0 | 🔴 Poor | 0% | 0 |
 | 7.29.0 | 1 | 🔴 Poor | 0% | 0 |
+| 7.29.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/babel__core
 
 ### Version 7.29.0
 
-- **Revision 0** (7.29.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (7.29.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (7.29.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

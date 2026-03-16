@@ -25,8 +25,8 @@ npm install @depup/next-auth
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 4.24.13 | 0 | 🔴 Poor | 0% | 0 |
 | 4.24.13 | 1 | 🔴 Poor | 0% | 0 |
+| 4.24.13 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/next-auth
 
 ### Version 4.24.13
 
-- **Revision 0** (4.24.13-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (4.24.13-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (4.24.13-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

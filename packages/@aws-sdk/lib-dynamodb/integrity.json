@@ -82,5 +82,26 @@
       "timestamp": "2026-03-13T20:12:29.116Z",
       "version": "3.1009.0-depup.0"
     }
+  },
+  "3.1010.0": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.11",
+          "to": "^3.23.12"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T19:27:06.025Z",
+      "version": "3.1010.0-depup.0"
+    }
   }
 }

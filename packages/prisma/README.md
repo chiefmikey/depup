@@ -26,10 +26,10 @@ npm install @depup/prisma
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.16.1 | 0 | 🔴 Poor | 0% | 0 |
-| 7.5.0 | 0 | 🔴 Poor | 0% | 0 |
-| 7.5.0 | 1 | 🔴 Poor | 0% | 0 |
-| 7.5.0 | 2 | 🔴 Poor | 0% | 0 |
 | 7.5.0 | 3 | 🔴 Poor | 0% | 0 |
+| 7.5.0 | 2 | 🔴 Poor | 0% | 0 |
+| 7.5.0 | 1 | 🔴 Poor | 0% | 0 |
+| 7.5.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -41,10 +41,10 @@ npm install @depup/prisma
 
 ### Version 7.5.0
 
-- **Revision 0** (7.5.0-depup.0) - 🔴 Poor 0% integrity
-- **Revision 1** (7.5.0-depup.1) - 🔴 Poor 0% integrity
-- **Revision 2** (7.5.0-depup.2) - 🔴 Poor 0% integrity
 - **Revision 3** (7.5.0-depup.3) - 🔴 Poor 0% integrity
+- **Revision 2** (7.5.0-depup.2) - 🔴 Poor 0% integrity
+- **Revision 1** (7.5.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (7.5.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

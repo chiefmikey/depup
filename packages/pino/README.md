@@ -25,8 +25,8 @@ npm install @depup/pino
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 10.3.1 | 0 | 🔴 Poor | 0% | 0 |
 | 10.3.1 | 1 | 🔴 Poor | 0% | 0 |
+| 10.3.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/pino
 
 ### Version 10.3.1
 
-- **Revision 0** (10.3.1-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (10.3.1-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (10.3.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

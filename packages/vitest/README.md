@@ -26,8 +26,8 @@ npm install @depup/vitest
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.0.18 | 0 | 🔴 Poor | 0% | 0 |
-| 4.1.0 | 0 | 🔴 Poor | 0% | 0 |
 | 4.1.0 | 1 | 🔴 Poor | 0% | 0 |
+| 4.1.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,8 +39,8 @@ npm install @depup/vitest
 
 ### Version 4.1.0
 
-- **Revision 0** (4.1.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (4.1.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (4.1.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

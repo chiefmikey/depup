@@ -26,9 +26,9 @@ npm install @depup/cors
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.8.5 | 0 | 🔴 Poor | 0% | 0 |
-| 2.8.6 | 0 | 🔴 Poor | 0% | 0 |
-| 2.8.6 | 1 | 🔴 Poor | 0% | 0 |
 | 2.8.6 | 2 | 🔴 Poor | 0% | 0 |
+| 2.8.6 | 1 | 🔴 Poor | 0% | 0 |
+| 2.8.6 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -40,9 +40,9 @@ npm install @depup/cors
 
 ### Version 2.8.6
 
-- **Revision 0** (2.8.6-depup.0) - 🔴 Poor 0% integrity
-- **Revision 1** (2.8.6-depup.1) - 🔴 Poor 0% integrity
 - **Revision 2** (2.8.6-depup.2) - 🔴 Poor 0% integrity
+- **Revision 1** (2.8.6-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (2.8.6-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

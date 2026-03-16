@@ -26,8 +26,8 @@ npm install @depup/pm2
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.0.10 | 0 | 🔴 Poor | 0% | 0 |
-| 6.0.14 | 1 | 🔴 Poor | 0% | 0 |
 | 6.0.14 | 2 | 🔴 Poor | 0% | 0 |
+| 6.0.14 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,8 +39,8 @@ npm install @depup/pm2
 
 ### Version 6.0.14
 
-- **Revision 1** (6.0.14-depup.1) - 🔴 Poor 0% integrity
 - **Revision 2** (6.0.14-depup.2) - 🔴 Poor 0% integrity
+- **Revision 1** (6.0.14-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

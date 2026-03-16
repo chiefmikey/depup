@@ -25,8 +25,8 @@ npm install @depup/eslint-plugin-react
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 7.37.5 | 0 | 🔴 Poor | 0% | 0 |
 | 7.37.5 | 1 | 🔴 Poor | 0% | 0 |
+| 7.37.5 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/eslint-plugin-react
 
 ### Version 7.37.5
 
-- **Revision 0** (7.37.5-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (7.37.5-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (7.37.5-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

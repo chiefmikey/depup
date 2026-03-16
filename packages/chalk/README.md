@@ -25,8 +25,8 @@ npm install @depup/chalk
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 5.6.2 | 0 | 🔴 Poor | 0% | 0 |
 | 5.6.2 | 25 | 🔴 Poor | 0% | 0 |
+| 5.6.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/chalk
 
 ### Version 5.6.2
 
-- **Revision 0** (5.6.2-depup.0) - 🔴 Poor 0% integrity
 - **Revision 25** (5.6.2-depup.25) - 🔴 Poor 0% integrity
+- **Revision 0** (5.6.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -26,10 +26,10 @@ npm install @depup/nuxt
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.1.1 | 0 | 🔴 Poor | 0% | 0 |
-| 4.4.2 | 0 | 🔴 Poor | 0% | 0 |
-| 4.4.2 | 1 | 🔴 Poor | 0% | 0 |
-| 4.4.2 | 2 | 🔴 Poor | 0% | 0 |
 | 4.4.2 | 3 | 🔴 Poor | 0% | 0 |
+| 4.4.2 | 2 | 🔴 Poor | 0% | 0 |
+| 4.4.2 | 1 | 🔴 Poor | 0% | 0 |
+| 4.4.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -41,10 +41,10 @@ npm install @depup/nuxt
 
 ### Version 4.4.2
 
-- **Revision 0** (4.4.2-depup.0) - 🔴 Poor 0% integrity
-- **Revision 1** (4.4.2-depup.1) - 🔴 Poor 0% integrity
-- **Revision 2** (4.4.2-depup.2) - 🔴 Poor 0% integrity
 - **Revision 3** (4.4.2-depup.3) - 🔴 Poor 0% integrity
+- **Revision 2** (4.4.2-depup.2) - 🔴 Poor 0% integrity
+- **Revision 1** (4.4.2-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (4.4.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

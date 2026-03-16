@@ -25,8 +25,8 @@ npm install @depup/tedious
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 19.2.1 | 0 | 🔴 Poor | 0% | 0 |
 | 19.2.1 | 1 | 🔴 Poor | 0% | 0 |
+| 19.2.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/tedious
 
 ### Version 19.2.1
 
-- **Revision 0** (19.2.1-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (19.2.1-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (19.2.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

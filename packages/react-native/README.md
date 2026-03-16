@@ -25,8 +25,8 @@ npm install @depup/react-native
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 0.84.1 | 0 | 🔴 Poor | 0% | 0 |
 | 0.84.1 | 1 | 🔴 Poor | 0% | 0 |
+| 0.84.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/react-native
 
 ### Version 0.84.1
 
-- **Revision 0** (0.84.1-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (0.84.1-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (0.84.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

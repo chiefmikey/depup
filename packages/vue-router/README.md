@@ -25,8 +25,8 @@ npm install @depup/vue-router
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 5.0.3 | 0 | 🔴 Poor | 0% | 0 |
 | 5.0.3 | 1 | 🔴 Poor | 0% | 0 |
+| 5.0.3 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/vue-router
 
 ### Version 5.0.3
 
-- **Revision 0** (5.0.3-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (5.0.3-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (5.0.3-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
