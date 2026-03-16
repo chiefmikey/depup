@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [sinon](https://www.npmjs.com/package/sinon)
-- **DepUp Version**: 21.0.2-depup.23
-- **Original Version**: 21.0.2
-- **Last Updated**: 3/15/2026
+- **DepUp Version**: 21.0.3-depup.0
+- **Original Version**: 21.0.3
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/sinon
 |---------|----------|--------|-------|-------|
 | 21.0.0 | 0 | 🔴 Poor | 0% | 0 |
 | 21.0.2 | 23 | 🔴 Poor | 0% | 0 |
+| 21.0.3 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/sinon
 ### Version 21.0.2
 
 - **Revision 23** (21.0.2-depup.23) - 🔴 Poor 0% integrity
+
+### Version 21.0.3
+
+- **Revision 0** (21.0.3-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
