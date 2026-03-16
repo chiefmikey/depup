@@ -34,5 +34,34 @@
       "timestamp": "2026-03-15T00:49:47.003Z",
       "version": "16.1.6-depup.13"
     }
+  },
+  "16.1.7": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "0.5.15",
+          "to": "^0.5.19"
+        },
+        "baseline-browser-mapping": {
+          "from": "^2.9.19",
+          "to": "^2.10.8"
+        },
+        "caniuse-lite": {
+          "from": "^1.0.30001579",
+          "to": "^1.0.30001779"
+        },
+        "postcss": {
+          "from": "8.4.31",
+          "to": "^8.5.8"
+        },
+        "styled-jsx": {
+          "from": "5.1.6",
+          "to": "^5.1.7"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T23:29:40.750Z",
+      "version": "16.1.7-depup.0"
+    }
   }
 }

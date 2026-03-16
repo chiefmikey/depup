@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [react-select](https://www.npmjs.com/package/react-select)
-- **DepUp Version**: 5.10.2-depup.0
+- **DepUp Version**: 5.10.2-depup.1
 - **Original Version**: 5.10.2
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/react-select
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 5.10.2 | 1 | 🔴 Poor | 0% | 0 |
 | 5.10.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/react-select
 
 ### Version 5.10.2
 
+- **Revision 1** (5.10.2-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (5.10.2-depup.0) - 🔴 Poor 0% integrity
 
 

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@emotion/react](https://www.npmjs.com/package/@emotion/react)
-- **DepUp Version**: 11.14.0-depup.0
+- **DepUp Version**: 11.14.0-depup.1
 - **Original Version**: 11.14.0
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/emotion__react
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 11.14.0 | 1 | 🔴 Poor | 0% | 0 |
 | 11.14.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/emotion__react
 
 ### Version 11.14.0
 
+- **Revision 1** (11.14.0-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (11.14.0-depup.0) - 🔴 Poor 0% integrity
 
 

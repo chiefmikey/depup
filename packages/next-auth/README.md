@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [next-auth](https://www.npmjs.com/package/next-auth)
-- **DepUp Version**: 4.24.13-depup.1
+- **DepUp Version**: 4.24.13-depup.2
 - **Original Version**: 4.24.13
-- **Last Updated**: 3/15/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/next-auth
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 4.24.13 | 2 | 🔴 Poor | 0% | 0 |
 | 4.24.13 | 1 | 🔴 Poor | 0% | 0 |
 | 4.24.13 | 0 | 🔴 Poor | 0% | 0 |
 
@@ -34,6 +35,7 @@ npm install @depup/next-auth
 
 ### Version 4.24.13
 
+- **Revision 2** (4.24.13-depup.2) - 🔴 Poor 0% integrity
 - **Revision 1** (4.24.13-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (4.24.13-depup.0) - 🔴 Poor 0% integrity
 
