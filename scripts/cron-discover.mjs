@@ -247,16 +247,11 @@ class PackageDiscoverer {
         return;
       }
 
-      // Get latest version from npm
-      const latestManifest = await npmregfetch.json(`/${package_.name}`, {
-        registry: this.registry,
-        timeout: 5000,
-      });
+      // Use the version already fetched by getCuratedPackages (avoids redundant
+      // registry request -- the version was fetched moments ago in the same run)
+      const latestVersion = package_.version;
 
-      const latestVersion =
-        latestManifest['dist-tags']?.latest || latestManifest.version;
-
-      if (!latestVersion) {
+      if (!latestVersion || latestVersion === '0.0.0') {
         console.warn(`  ⚠️  No version found for ${package_.name}`);
         return;
       }

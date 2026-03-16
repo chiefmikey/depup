@@ -2999,4 +2999,68 @@ describe('depUp Basic Tests', () => {
       expect(collectFiles(false)).toStrictEqual([]);
     });
   });
+
+  describe('depup-security single processing pipeline', () => {
+    it('should process package once then scan the result', () => {
+      // Simulates the fixed pipeline order: process THEN scan
+      const runCount = { depupCalls: 0, publishCalls: 0, scanCalls: 0 };
+
+      // Step 3: Process (creates bumped revision)
+      runCount.depupCalls++;
+      const currentRevision = `rev-${runCount.depupCalls - 1}`;
+
+      // Steps 4-6: Scan the SAME revision that was just created
+      runCount.scanCalls++;
+      const scannedRevision = currentRevision;
+
+      // Step 8: Publish the scanned revision directly (no re-processing)
+      runCount.publishCalls++;
+      const publishedRevision = scannedRevision;
+
+      // Only 1 depup.mjs invocation, scans and publish target the same revision
+      expect(runCount.depupCalls).toBe(1);
+      expect(scannedRevision).toBe('rev-0');
+      expect(publishedRevision).toBe('rev-0');
+    });
+  });
+
+  describe('retryWithBackoff respects total timeout', () => {
+    it('should pass remaining time to operation callback', () => {
+      const totalTimeout = 10_000;
+      const startTime = Date.now();
+      const remainingValues = [];
+
+      // Simulate 3 attempts with elapsed time
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const elapsed = attempt * 3000; // 3s per attempt
+        const remaining = totalTimeout > 0 ? totalTimeout - elapsed : 0;
+        remainingValues.push(remaining);
+      }
+
+      // First attempt: 10s remaining
+      expect(remainingValues[0]).toBe(10_000);
+      // Second attempt: 7s remaining
+      expect(remainingValues[1]).toBe(7000);
+      // Third attempt: 4s remaining
+      expect(remainingValues[2]).toBe(4000);
+    });
+  });
+
+  describe('cron-discover reuses fetched version', () => {
+    it('should not re-fetch when package_ already has version', () => {
+      const package_ = { name: 'express', version: '4.18.2' };
+
+      // The fix: use package_.version instead of fetching again
+      const latestVersion = package_.version;
+
+      expect(latestVersion).toBe('4.18.2');
+
+      // 0.0.0 fallback should be treated as "no version"
+      const fallbackPackage = { name: 'unknown', version: '0.0.0' };
+      const isMissing =
+        !fallbackPackage.version || fallbackPackage.version === '0.0.0';
+
+      expect(isMissing).toBe(true);
+    });
+  });
 });

@@ -393,15 +393,15 @@ class DepUp {
     const spinner = ora('Fetching package manifest...').start();
     try {
       const manifest = await this.retryWithBackoff(
-        () =>
+        (remaining) =>
           Promise.race([
             pacote.manifest(packageSpec),
             this.rejectAfterTimeout(
               'Timeout fetching package manifest',
-              timeout,
+              remaining > 0 ? Math.max(remaining, 5000) : timeout,
             ),
           ]),
-        { attempts: 3, baseDelay: 1000 },
+        { attempts: 3, baseDelay: 1000, totalTimeout: timeout },
       );
       spinner.succeed('Package manifest fetched');
       return manifest;
@@ -441,12 +441,15 @@ class DepUp {
     const spinner = ora('Downloading and extracting package...').start();
     try {
       await this.retryWithBackoff(
-        () =>
+        (remaining) =>
           Promise.race([
             pacote.extract(packageSpec, targetDirectory),
-            this.rejectAfterTimeout('Timeout downloading package', timeout),
+            this.rejectAfterTimeout(
+              'Timeout downloading package',
+              remaining > 0 ? Math.max(remaining, 10_000) : timeout,
+            ),
           ]),
-        { attempts: 3, baseDelay: 2000 },
+        { attempts: 3, baseDelay: 2000, totalTimeout: timeout },
       );
       spinner.succeed('Package downloaded and extracted');
     } catch (error) {
@@ -508,11 +511,17 @@ class DepUp {
     });
   }
 
-  async retryWithBackoff(operation, { attempts = 3, baseDelay = 1000 } = {}) {
+  async retryWithBackoff(
+    operation,
+    { attempts = 3, baseDelay = 1000, totalTimeout = 0 } = {},
+  ) {
     let lastError;
+    const startTime = Date.now();
     for (let attempt = 0; attempt < attempts; attempt++) {
       try {
-        return await operation();
+        const elapsed = Date.now() - startTime;
+        const remaining = totalTimeout > 0 ? totalTimeout - elapsed : 0;
+        return await operation(remaining);
       } catch (error) {
         lastError = error;
         if (attempt < attempts - 1) {

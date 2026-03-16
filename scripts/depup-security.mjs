@@ -51,10 +51,12 @@ class SecureDepUp {
   async processPackageSecurely(packageSpec, options) {
     const {
       bumpDeps: shouldBumpDeps,
+      debug,
       dryRun,
       publish: shouldPublish,
       skipMalwareScan,
       skipVulnCheck,
+      test: shouldTest,
     } = options;
 
     console.log(chalk.blue('🔒 Secure DepUp Processing'));
@@ -65,21 +67,29 @@ class SecureDepUp {
       console.log(chalk.yellow('🔍 Dry run mode - no changes will be made'));
     }
 
+    const packageName = this.parsePackageName(packageSpec);
+    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
+
     // Step 1: Validate package against allowlist
     await this.validatePackageAllowlist(packageSpec);
 
-    // Step 2: Pre-download security scan
+    // Step 2: Pre-download security scan (registry metadata only)
     if (!skipMalwareScan) {
       await this.performPreDownloadSecurityScan(packageSpec);
     }
 
-    // Step 3: Download and extract package
-    const packageInfo = await this.downloadAndExtractSecurely(
-      packageSpec,
-      options,
-    );
+    // Step 3: Process in sandbox (download, bump deps, test -- but NOT publish)
+    // This creates the package directory with the final bumped code
+    await this.runInSandbox(packageSpec, {
+      bumpDeps: shouldBumpDeps,
+      debug,
+      test: shouldTest,
+    });
 
-    // Step 4: Post-extraction malware scan
+    const packageInfo = { name: packageName, path: packageDirectory };
+
+    // Steps 4-6 scan the POST-BUMP code (the actual code that will be published)
+    // Step 4: Post-processing malware scan
     if (!skipMalwareScan) {
       await this.performPostExtractionScan(packageInfo.path);
     }
@@ -94,13 +104,10 @@ class SecureDepUp {
       await this.analyzeDependencyCompatibility(packageInfo.path);
     }
 
-    // Step 7: Secure processing (pass package spec, not filesystem path)
-    await this.processInSandbox(packageSpec, options);
-
-    // Step 8: Final security validation
+    // Step 7: Final security validation
     await this.finalSecurityValidation(packageInfo);
 
-    // Step 9: Publish with security attestation
+    // Step 8: Add attestation and publish the already-processed package
     if (shouldPublish) {
       await this.publishWithSecurityAttestation(
         packageSpec,
@@ -259,33 +266,6 @@ class SecureDepUp {
     }
 
     return { flagged: false };
-  }
-
-  async downloadAndExtractSecurely(packageSpec, options) {
-    const spinner = ora(
-      'Downloading and extracting package securely...',
-    ).start();
-
-    try {
-      // Download the package without bumping or testing
-      await this.runInSandbox(packageSpec, {
-        debug: options.debug,
-      });
-
-      // Determine the package path from the packages directory
-      const packageName = this.parsePackageName(packageSpec);
-      const packageDirectory = path.join(
-        process.cwd(),
-        'packages',
-        packageName,
-      );
-
-      spinner.succeed('Package downloaded and extracted securely');
-      return { name: packageName, path: packageDirectory };
-    } catch (error) {
-      spinner.fail('Secure download failed');
-      throw error;
-    }
   }
 
   async performPostExtractionScan(packagePath) {
@@ -454,20 +434,6 @@ class SecureDepUp {
     }
   }
 
-  async processInSandbox(packageSpec, options) {
-    const spinner = ora('Processing package in secure sandbox...').start();
-
-    try {
-      // Run the actual processing in the sandbox (pass package spec, not path)
-      await this.runInSandbox(packageSpec, options);
-
-      spinner.succeed('Package processed securely');
-    } catch (error) {
-      spinner.fail('Secure processing failed');
-      throw error;
-    }
-  }
-
   async runInSandbox(target, options) {
     // Call depup.mjs with security constraints
     const arguments_ = ['scripts/depup.mjs', target];
@@ -547,19 +513,33 @@ class SecureDepUp {
     const spinner = ora('Publishing with security attestation...').start();
 
     try {
-      // Add security attestation to package
+      // Add security attestation to the already-processed revision
       await this.addSecurityAttestation(packageInfo.path);
 
-      // Publish through secure channel (pass package spec, not path)
-      await this.runInSandbox(packageSpec, {
-        ...options,
-        publish: true,
-      });
+      // Publish the existing revision directly (do NOT re-run depup.mjs)
+      const revisionDirectory = await this.findLatestRevisionDirectory(
+        packageInfo.path,
+      );
+      execFileSync(
+        'npm',
+        ['publish', '--access', 'public', '--tag', 'latest'],
+        {
+          cwd: revisionDirectory,
+          env: {
+            ...process.env,
+            NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+          },
+          stdio: options.debug ? 'inherit' : 'pipe',
+          timeout: 120_000,
+        },
+      );
 
       spinner.succeed('Package published with security attestation');
     } catch (error) {
       spinner.fail('Secure publishing failed');
-      throw error;
+      throw new Error(`Secure publish failed: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
