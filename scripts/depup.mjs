@@ -325,6 +325,16 @@ class DepUp {
       }
     }
 
+    // Ensure depup artifacts are included in the npm tarball even when
+    // the original package has a restrictive `files` field
+    if (Array.isArray(packageJson.files)) {
+      for (const required of ['changes.json', 'README.md']) {
+        if (!packageJson.files.includes(required)) {
+          packageJson.files.push(required);
+        }
+      }
+    }
+
     // Discoverability: prefix description
     packageJson.description = packageJson.description
       ? `[DepUp] ${packageJson.description}`
@@ -1166,8 +1176,42 @@ try {
           console.log(chalk.gray(`  Pruned old revision: ${directory.name}`));
         }
       }
+
+      // Also prune corresponding integrity.json entries so they don't
+      // accumulate stale data for revisions that no longer exist on disk
+      const packageDirectory = path.dirname(versionDirectory);
+      const versionKey = path.basename(versionDirectory);
+      await this.pruneIntegrityEntries(
+        packageDirectory,
+        versionKey,
+        toRemove.map((d) => String(d.number)),
+      );
     } catch {
       // Non-fatal -- pruning failure shouldn't block processing
+    }
+  }
+
+  async pruneIntegrityEntries(packageDirectory, versionKey, revisionKeys) {
+    try {
+      const integrityFile = path.join(packageDirectory, 'integrity.json');
+      const data = await fs.readFile(integrityFile);
+      const integrity = JSON.parse(data);
+      if (
+        typeof integrity !== 'object' ||
+        integrity === null ||
+        !integrity[versionKey]
+      ) {
+        return;
+      }
+      for (const revKey of revisionKeys) {
+        delete integrity[versionKey][revKey];
+      }
+      await fs.writeFile(
+        integrityFile,
+        JSON.stringify(integrity, undefined, 2),
+      );
+    } catch {
+      // Non-fatal
     }
   }
 

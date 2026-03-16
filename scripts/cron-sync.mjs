@@ -104,7 +104,11 @@ class PackageSyncer {
           await fs.access(integrityFile);
           const integrityData = JSON.parse(await fs.readFile(integrityFile));
 
-          if (integrityData && typeof integrityData === 'object') {
+          if (
+            integrityData &&
+            typeof integrityData === 'object' &&
+            !Array.isArray(integrityData)
+          ) {
             // Get the latest version from integrity data
             const versions = Object.keys(integrityData).filter((v) =>
               semver.valid(v),

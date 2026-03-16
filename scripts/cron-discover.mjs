@@ -246,11 +246,19 @@ class PackageDiscoverer {
       let integrityData = {};
       try {
         const data = await fs.readFile(integrityFile);
-        integrityData = JSON.parse(data);
+        const parsed = JSON.parse(data);
+        if (
+          typeof parsed !== 'object' ||
+          parsed === null ||
+          Array.isArray(parsed)
+        ) {
+          throw new Error('Invalid integrity data format');
+        }
+        integrityData = parsed;
       } catch {
-        // No integrity data -- directory exists but was never finalized. Reprocess.
+        // No integrity data or corrupt -- directory exists but needs reprocessing
         console.log(
-          `  🔄 ${package_.name}: missing integrity data, reprocessing`,
+          `  🔄 ${package_.name}: missing/corrupt integrity data, reprocessing`,
         );
         await this.createNewPackage(package_, packageDirectory);
         return;
