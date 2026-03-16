@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [inquirer](https://www.npmjs.com/package/inquirer)
-- **DepUp Version**: 13.3.1-depup.0
-- **Original Version**: 13.3.1
-- **Last Updated**: 3/15/2026
+- **DepUp Version**: 13.3.2-depup.0
+- **Original Version**: 13.3.2
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/inquirer
 |---------|----------|--------|-------|-------|
 | 13.3.0 | 0 | 🔴 Poor | 0% | 0 |
 | 13.3.1 | 0 | 🔴 Poor | 0% | 0 |
+| 13.3.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/inquirer
 ### Version 13.3.1
 
 - **Revision 0** (13.3.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 13.3.2
+
+- **Revision 0** (13.3.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
