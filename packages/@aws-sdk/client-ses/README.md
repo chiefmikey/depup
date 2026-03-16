@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@aws-sdk/client-ses](https://www.npmjs.com/package/@aws-sdk/client-ses)
-- **DepUp Version**: 3.1009.0-depup.1
-- **Original Version**: 3.1009.0
+- **DepUp Version**: 3.1010.0-depup.0
+- **Original Version**: 3.1010.0
 - **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
@@ -30,8 +30,9 @@ npm install @depup/aws-sdk__client-ses
 | 3.1006.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1007.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1008.0 | 0 | 🔴 Poor | 0% | 0 |
-| 3.1009.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1009.0 | 1 | 🔴 Poor | 0% | 0 |
+| 3.1009.0 | 0 | 🔴 Poor | 0% | 0 |
+| 3.1010.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -59,8 +60,12 @@ npm install @depup/aws-sdk__client-ses
 
 ### Version 3.1009.0
 
-- **Revision 0** (3.1009.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (3.1009.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (3.1009.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.1010.0
+
+- **Revision 0** (3.1010.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
