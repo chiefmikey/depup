@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [better-sqlite3](https://www.npmjs.com/package/better-sqlite3)
-- **DepUp Version**: 12.6.2-depup.0
-- **Original Version**: 12.6.2
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 12.8.0-depup.27
+- **Original Version**: 12.8.0
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/better-sqlite3
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 12.6.2 | 0 | 🔴 Poor | 0% | 0 |
+| 12.8.0 | 27 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/better-sqlite3
 ### Version 12.6.2
 
 - **Revision 0** (12.6.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 12.8.0
+
+- **Revision 27** (12.8.0-depup.27) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

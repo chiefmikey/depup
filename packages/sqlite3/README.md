@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [sqlite3](https://www.npmjs.com/package/sqlite3)
-- **DepUp Version**: 5.1.7-depup.0
-- **Original Version**: 5.1.7
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 6.0.1-depup.31
+- **Original Version**: 6.0.1
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/sqlite3
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.1.7 | 0 | 🔴 Poor | 0% | 0 |
+| 6.0.1 | 31 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/sqlite3
 ### Version 5.1.7
 
 - **Revision 0** (5.1.7-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.0.1
+
+- **Revision 31** (6.0.1-depup.31) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

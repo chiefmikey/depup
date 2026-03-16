@@ -67,6 +67,29 @@
       "status": "published",
       "timestamp": "2026-03-16T12:36:12.341Z",
       "version": "7.5.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@prisma/dev": {
+          "from": "0.20.0",
+          "to": "^0.22.0"
+        },
+        "@prisma/studio-core": {
+          "from": "0.21.1",
+          "to": "^0.25.1"
+        },
+        "mysql2": {
+          "from": "3.15.3",
+          "to": "^3.20.0"
+        },
+        "postgres": {
+          "from": "3.4.7",
+          "to": "^3.4.8"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T16:50:44.189Z",
+      "version": "7.5.0-depup.3"
     }
   }
 }
