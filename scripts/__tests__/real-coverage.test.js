@@ -6,25 +6,25 @@ import { promises as fs } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { describe, expect, it, beforeEach, afterEach } from '@jest/globals';
+import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
 import semver from 'semver';
 
-// Import actual classes
-import { DepUp } from '../depup.mjs';
+import { CompatibilityTester } from '../compatibility-test.mjs';
 import { PackageSyncer } from '../cron-sync.mjs';
-import { SelfHealer } from '../heal.mjs';
+import { SecureDepUp } from '../depup-security.mjs';
+import { DepUp } from '../depup.mjs';
+// Import actual classes
 import { ReadmeGenerator } from '../generate-readme.mjs';
+import { SelfHealer } from '../heal.mjs';
 import { IntegrityMeter } from '../integrity-meter.mjs';
 import { SecurityScanner } from '../security-scan.mjs';
-import { SecureDepUp } from '../depup-security.mjs';
-import { CompatibilityTester } from '../compatibility-test.mjs';
 import {
   flattenPackageName,
   getShardConfig,
   isNonSemverSpecifier,
-  toScopedName,
   listPackageDirectories,
   sleep,
+  toScopedName,
 } from '../utilities.mjs';
 
 // ═══════════════════════════════════════════════════════════════════
@@ -71,50 +71,55 @@ describe('utilities.mjs', () => {
     });
 
     it('rejects non-string input', () => {
-      expect(isNonSemverSpecifier(undefined)).toBe(true);
+      expect(isNonSemverSpecifier()).toBe(true);
       expect(isNonSemverSpecifier(null)).toBe(true);
       expect(isNonSemverSpecifier(123)).toBe(true);
     });
   });
 
   describe('getShardConfig', () => {
-    const originalEnv = process.env;
+    const originalEnvironment = process.env;
 
     beforeEach(() => {
-      process.env = { ...originalEnv };
+      process.env = { ...originalEnvironment };
     });
 
     afterEach(() => {
-      process.env = originalEnv;
+      process.env = originalEnvironment;
     });
 
     it('returns defaults when env vars not set', () => {
       delete process.env.SHARD_INDEX;
       delete process.env.SHARD_TOTAL;
+
       expect(getShardConfig()).toStrictEqual({ shardIndex: 0, shardTotal: 1 });
     });
 
     it('parses valid shard config', () => {
       process.env.SHARD_INDEX = '2';
       process.env.SHARD_TOTAL = '5';
+
       expect(getShardConfig()).toStrictEqual({ shardIndex: 2, shardTotal: 5 });
     });
 
     it('throws on invalid config', () => {
       process.env.SHARD_INDEX = '5';
       process.env.SHARD_TOTAL = '5';
+
       expect(() => getShardConfig()).toThrow('Invalid shard configuration');
     });
 
     it('throws on negative index', () => {
       process.env.SHARD_INDEX = '-1';
       process.env.SHARD_TOTAL = '5';
+
       expect(() => getShardConfig()).toThrow('Invalid shard configuration');
     });
 
     it('throws on zero total', () => {
       process.env.SHARD_INDEX = '0';
       process.env.SHARD_TOTAL = '0';
+
       expect(() => getShardConfig()).toThrow('Invalid shard configuration');
     });
   });
@@ -123,6 +128,7 @@ describe('utilities.mjs', () => {
     it('resolves after delay', async () => {
       const start = Date.now();
       await sleep(50);
+
       expect(Date.now() - start).toBeGreaterThanOrEqual(40);
     });
   });
@@ -148,6 +154,7 @@ describe('utilities.mjs', () => {
 
       const result = await listPackageDirectories(temporaryDirectory);
       const names = result.map((r) => r.name).toSorted();
+
       expect(names).toStrictEqual(['express', 'lodash']);
     });
 
@@ -160,6 +167,7 @@ describe('utilities.mjs', () => {
 
       const result = await listPackageDirectories(temporaryDirectory);
       const names = result.map((r) => r.name).toSorted();
+
       expect(names).toStrictEqual(['@nestjs/common', '@nestjs/core']);
     });
 
@@ -168,12 +176,14 @@ describe('utilities.mjs', () => {
       await fs.mkdir(path.join(temporaryDirectory, 'express'));
 
       const result = await listPackageDirectories(temporaryDirectory);
+
       expect(result).toHaveLength(1);
       expect(result[0].name).toBe('express');
     });
 
     it('handles empty directory', async () => {
       const result = await listPackageDirectories(temporaryDirectory);
+
       expect(result).toStrictEqual([]);
     });
   });
@@ -182,7 +192,7 @@ describe('utilities.mjs', () => {
 // ═══════════════════════════════════════════════════════════════════
 // depup.mjs -- DepUp class pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('DepUp class', () => {
+describe('depUp class', () => {
   let depup;
 
   beforeEach(() => {
@@ -195,6 +205,7 @@ describe('DepUp class', () => {
         { name: 'express', version: '4.18.2' },
         'express@4.18.2',
       );
+
       expect(result.packageName).toBe('express');
       expect(result.baseVersion).toBe('4.18.2');
       expect(result.scopedName).toBe('@depup/express');
@@ -208,17 +219,14 @@ describe('DepUp class', () => {
     });
 
     it('throws on missing version', () => {
-      expect(() =>
-        depup.validateManifest({ name: 'test' }, 'test'),
-      ).toThrow('Incomplete manifest');
+      expect(() => depup.validateManifest({ name: 'test' }, 'test')).toThrow(
+        'Incomplete manifest',
+      );
     });
 
     it('rejects reserved keys', () => {
       expect(() =>
-        depup.validateManifest(
-          { name: '__proto__', version: '1.0.0' },
-          'test',
-        ),
+        depup.validateManifest({ name: '__proto__', version: '1.0.0' }, 'test'),
       ).toThrow('reserved key');
     });
 
@@ -261,12 +269,14 @@ describe('DepUp class', () => {
   describe('isAlreadyPublishedError', () => {
     it('detects EPUBLISHCONFLICT', () => {
       const error = new Error('EPUBLISHCONFLICT');
+
       expect(depup.isAlreadyPublishedError(error)).toBe(true);
     });
 
     it('detects "cannot publish over" in nested cause', () => {
       const inner = new Error('cannot publish over the previously published');
       const outer = new Error('publish failed', { cause: inner });
+
       expect(depup.isAlreadyPublishedError(outer)).toBe(true);
     });
 
@@ -281,6 +291,7 @@ describe('DepUp class', () => {
       const errorA = new Error('a');
       const errorB = new Error('b', { cause: errorA });
       errorA.cause = errorB;
+
       // Should terminate without infinite loop
       expect(depup.isAlreadyPublishedError(errorA)).toBe(false);
     });
@@ -318,38 +329,50 @@ describe('DepUp class', () => {
     });
 
     it('returns 0 for empty directory', async () => {
-      expect(await depup.determineRevision(temporaryDirectory)).toBe(0);
+      await expect(depup.determineRevision(temporaryDirectory)).resolves.toBe(
+        0,
+      );
     });
 
     it('returns next revision number', async () => {
       await fs.mkdir(path.join(temporaryDirectory, 'rev-0'));
       await fs.mkdir(path.join(temporaryDirectory, 'rev-1'));
-      expect(await depup.determineRevision(temporaryDirectory)).toBe(2);
+
+      await expect(depup.determineRevision(temporaryDirectory)).resolves.toBe(
+        2,
+      );
     });
 
     it('handles gaps in revision numbers', async () => {
       await fs.mkdir(path.join(temporaryDirectory, 'rev-0'));
       await fs.mkdir(path.join(temporaryDirectory, 'rev-5'));
-      expect(await depup.determineRevision(temporaryDirectory)).toBe(6);
+
+      await expect(depup.determineRevision(temporaryDirectory)).resolves.toBe(
+        6,
+      );
     });
 
     it('ignores non-revision directories', async () => {
       await fs.mkdir(path.join(temporaryDirectory, 'rev-0'));
       await fs.mkdir(path.join(temporaryDirectory, 'node_modules'));
       await fs.mkdir(path.join(temporaryDirectory, 'rev-abc'));
-      expect(await depup.determineRevision(temporaryDirectory)).toBe(1);
+
+      await expect(depup.determineRevision(temporaryDirectory)).resolves.toBe(
+        1,
+      );
     });
 
     it('returns 0 for nonexistent directory', async () => {
-      expect(
-        await depup.determineRevision('/nonexistent/path/xyz'),
-      ).toBe(0);
+      await expect(
+        depup.determineRevision('/nonexistent/path/xyz'),
+      ).resolves.toBe(0);
     });
   });
 
   describe('rejectAfterTimeout', () => {
     it('rejects after specified delay', async () => {
       const promise = depup.rejectAfterTimeout('timeout', 50);
+
       await expect(promise).rejects.toThrow('timeout');
     });
   });
@@ -376,10 +399,9 @@ describe('DepUp class', () => {
         { changes: {}, status: 'published' },
       );
       const data = JSON.parse(
-        await fs.readFile(
-          path.join(temporaryDirectory, 'integrity.json'),
-        ),
+        await fs.readFile(path.join(temporaryDirectory, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
       expect(data['1.0.0']['0'].version).toBe('1.0.0-depup.0');
     });
@@ -397,10 +419,9 @@ describe('DepUp class', () => {
         { changes: {}, status: 'published' },
       );
       const data = JSON.parse(
-        await fs.readFile(
-          path.join(temporaryDirectory, 'integrity.json'),
-        ),
+        await fs.readFile(path.join(temporaryDirectory, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
       expect(data['1.0.0']['1'].status).toBe('published');
     });
@@ -418,10 +439,9 @@ describe('DepUp class', () => {
         { status: 'published' },
       );
       const data = JSON.parse(
-        await fs.readFile(
-          path.join(temporaryDirectory, 'integrity.json'),
-        ),
+        await fs.readFile(path.join(temporaryDirectory, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
     });
 
@@ -438,10 +458,9 @@ describe('DepUp class', () => {
         { status: 'published' },
       );
       const data = JSON.parse(
-        await fs.readFile(
-          path.join(temporaryDirectory, 'integrity.json'),
-        ),
+        await fs.readFile(path.join(temporaryDirectory, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
     });
   });
@@ -465,6 +484,7 @@ describe('DepUp class', () => {
       }
       await depup.pruneOldRevisions(temporaryDirectory, false, 5);
       const remaining = await fs.readdir(temporaryDirectory);
+
       expect(remaining.toSorted()).toStrictEqual([
         'rev-3',
         'rev-4',
@@ -479,6 +499,7 @@ describe('DepUp class', () => {
       await fs.mkdir(path.join(temporaryDirectory, 'rev-1'));
       await depup.pruneOldRevisions(temporaryDirectory, false, 5);
       const remaining = await fs.readdir(temporaryDirectory);
+
       expect(remaining).toHaveLength(2);
     });
 
@@ -492,7 +513,7 @@ describe('DepUp class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // cron-sync.mjs -- PackageSyncer pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('PackageSyncer class', () => {
+describe('packageSyncer class', () => {
   let syncer;
 
   beforeEach(() => {
@@ -533,7 +554,7 @@ describe('PackageSyncer class', () => {
 
     it('returns 0 for null/non-object', () => {
       expect(syncer.getLatestProcessedAt(null)).toBe(0);
-      expect(syncer.getLatestProcessedAt(undefined)).toBe(0);
+      expect(syncer.getLatestProcessedAt()).toBe(0);
       expect(syncer.getLatestProcessedAt('string')).toBe(0);
     });
 
@@ -548,6 +569,7 @@ describe('PackageSyncer class', () => {
         },
       };
       const result = syncer.getLatestProcessedAt(data);
+
       expect(result).toBe(new Date('2026-06-01T00:00:00Z').getTime());
     });
 
@@ -559,6 +581,7 @@ describe('PackageSyncer class', () => {
         },
       };
       const result = syncer.getLatestProcessedAt(data);
+
       expect(result).toBe(new Date('2026-01-01T00:00:00Z').getTime());
     });
 
@@ -570,6 +593,7 @@ describe('PackageSyncer class', () => {
           1: { timestamp: '2026-01-01T00:00:00Z' },
         },
       };
+
       expect(syncer.getLatestProcessedAt(data)).toBe(
         new Date('2026-01-01T00:00:00Z').getTime(),
       );
@@ -578,11 +602,13 @@ describe('PackageSyncer class', () => {
 
   describe('fileExists', () => {
     it('returns true for existing file', async () => {
-      expect(await syncer.fileExists(process.cwd())).toBe(true);
+      await expect(syncer.fileExists(process.cwd())).resolves.toBe(true);
     });
 
     it('returns false for nonexistent file', async () => {
-      expect(await syncer.fileExists('/nonexistent/file.txt')).toBe(false);
+      await expect(syncer.fileExists('/nonexistent/file.txt')).resolves.toBe(
+        false,
+      );
     });
   });
 });
@@ -590,7 +616,7 @@ describe('PackageSyncer class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // heal.mjs -- SelfHealer pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('SelfHealer class', () => {
+describe('selfHealer class', () => {
   let healer;
 
   beforeEach(() => {
@@ -636,29 +662,34 @@ describe('SelfHealer class', () => {
       const data = {
         '1.0.0': { 0: { status: 'published', timestamp: 't', version: 'v' } },
       };
+
       expect(healer.repairIntegrityData(data)).toBe(false);
     });
 
     it('repairs missing timestamp', () => {
       const data = { '1.0.0': { 0: { status: 'published', version: 'v' } } };
+
       expect(healer.repairIntegrityData(data)).toBe(true);
       expect(data['1.0.0']['0'].timestamp).toBeTruthy();
     });
 
     it('repairs missing version', () => {
       const data = { '1.0.0': { 0: { status: 'published', timestamp: 't' } } };
+
       expect(healer.repairIntegrityData(data)).toBe(true);
       expect(data['1.0.0']['0'].version).toBe('1.0.0-depup.0');
     });
 
     it('repairs non-object version entries', () => {
       const data = { '1.0.0': 'corrupt' };
+
       expect(healer.repairIntegrityData(data)).toBe(true);
       expect(typeof data['1.0.0']).toBe('object');
     });
 
     it('repairs non-object revision entries', () => {
       const data = { '1.0.0': { 0: 'corrupt' } };
+
       expect(healer.repairIntegrityData(data)).toBe(true);
       expect(data['1.0.0']['0']).toStrictEqual(
         expect.objectContaining({ status: 'unknown' }),
@@ -670,7 +701,7 @@ describe('SelfHealer class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // generate-readme.mjs -- ReadmeGenerator pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('ReadmeGenerator class', () => {
+describe('readmeGenerator class', () => {
   let generator;
 
   beforeEach(() => {
@@ -684,7 +715,7 @@ describe('ReadmeGenerator class', () => {
 
     it('returns unknown for null/undefined', () => {
       expect(generator.formatDate(null)).toBe('unknown');
-      expect(generator.formatDate(undefined)).toBe('unknown');
+      expect(generator.formatDate()).toBe('unknown');
     });
 
     it('returns unknown for invalid date string', () => {
@@ -704,6 +735,7 @@ describe('ReadmeGenerator class', () => {
   describe('getRevisionVoteCount', () => {
     it('sums vote counts', () => {
       const votes = { '1.0.0': { 0: { down: 1, neutral: 1, up: 5 } } };
+
       expect(generator.getRevisionVoteCount(votes, '1.0.0', '0')).toBe(7);
     });
 
@@ -721,6 +753,7 @@ describe('ReadmeGenerator class', () => {
           1: { down: 1, neutral: 0, up: 2 },
         },
       };
+
       expect(generator.getVersionVoteCount(votes, '1.0.0')).toBe(6);
     });
   });
@@ -742,6 +775,7 @@ describe('ReadmeGenerator class', () => {
       const filePath = path.join(temporaryDirectory, 'test.json');
       await fs.writeFile(filePath, '{"key": "value"}');
       const result = await generator.loadJsonSafe(filePath, 'test');
+
       expect(result).toStrictEqual({ key: 'value' });
     });
 
@@ -749,6 +783,7 @@ describe('ReadmeGenerator class', () => {
       const filePath = path.join(temporaryDirectory, 'test.json');
       await fs.writeFile(filePath, 'null');
       const result = await generator.loadJsonSafe(filePath, 'test');
+
       expect(result).toStrictEqual({});
     });
 
@@ -756,11 +791,13 @@ describe('ReadmeGenerator class', () => {
       const filePath = path.join(temporaryDirectory, 'test.json');
       await fs.writeFile(filePath, '[1,2,3]');
       const result = await generator.loadJsonSafe(filePath, 'test');
+
       expect(result).toStrictEqual({});
     });
 
     it('returns empty object for missing file', async () => {
       const result = await generator.loadJsonSafe('/nonexistent.json', 'test');
+
       expect(result).toStrictEqual({});
     });
   });
@@ -769,7 +806,7 @@ describe('ReadmeGenerator class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // security-scan.mjs -- SecurityScanner pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('SecurityScanner class', () => {
+describe('securityScanner class', () => {
   let scanner;
 
   beforeEach(() => {
@@ -781,6 +818,7 @@ describe('SecurityScanner class', () => {
       scanner.results.malware.status = 'passed';
       scanner.results.vulnerabilities.status = 'failed';
       scanner.results.compatibility.status = 'passed';
+
       expect(scanner.determineOverallStatus()).toBe('failed');
     });
 
@@ -788,6 +826,7 @@ describe('SecurityScanner class', () => {
       scanner.results.malware.status = 'passed';
       scanner.results.vulnerabilities.status = 'warning';
       scanner.results.compatibility.status = 'passed';
+
       expect(scanner.determineOverallStatus()).toBe('warning');
     });
 
@@ -800,6 +839,7 @@ describe('SecurityScanner class', () => {
       scanner.results.malware.status = 'passed';
       scanner.results.vulnerabilities.status = 'passed';
       scanner.results.compatibility.status = 'passed';
+
       expect(scanner.determineOverallStatus()).toBe('passed');
     });
   });
@@ -812,6 +852,7 @@ describe('SecurityScanner class', () => {
         low: 0,
         moderate: 0,
       });
+
       expect(result.status).toBe('failed');
     });
 
@@ -823,6 +864,7 @@ describe('SecurityScanner class', () => {
         moderate: 3,
         total: 8,
       });
+
       expect(result.status).toBe('warning');
     });
   });
@@ -831,11 +873,11 @@ describe('SecurityScanner class', () => {
 
   describe('fileExists', () => {
     it('returns true for existing file', async () => {
-      expect(await scanner.fileExists(process.cwd())).toBe(true);
+      await expect(scanner.fileExists(process.cwd())).resolves.toBe(true);
     });
 
     it('returns false for missing file', async () => {
-      expect(await scanner.fileExists('/no/such/file')).toBe(false);
+      await expect(scanner.fileExists('/no/such/file')).resolves.toBe(false);
     });
   });
 });
@@ -843,7 +885,7 @@ describe('SecurityScanner class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // depup-security.mjs -- SecureDepUp pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('SecureDepUp class', () => {
+describe('secureDepUp class', () => {
   let secure;
 
   beforeEach(() => {
@@ -873,11 +915,13 @@ describe('SecureDepUp class', () => {
   describe('scanPackageManifest', () => {
     it('flags suspicious package names', async () => {
       const result = await secure.scanPackageManifest('malware-tool');
+
       expect(result.flagged).toBe(true);
     });
 
     it('passes normal package names', async () => {
       const result = await secure.scanPackageManifest('express');
+
       expect(result.flagged).toBe(false);
     });
   });
@@ -919,7 +963,7 @@ describe('SecureDepUp class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // compatibility-test.mjs -- CompatibilityTester pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('CompatibilityTester class', () => {
+describe('compatibilityTester class', () => {
   let tester;
 
   beforeEach(() => {
@@ -929,11 +973,13 @@ describe('CompatibilityTester class', () => {
   describe('findExpectedVersion', () => {
     it('finds version for major match', () => {
       const versionMap = { '17.x': '17.x', '18.x': '18.x' };
+
       expect(tester.findExpectedVersion('^18.0.0', versionMap)).toBe('18.x');
     });
 
     it('returns null for no match', () => {
       const versionMap = { '17.x': '17.x', '18.x': '18.x' };
+
       expect(tester.findExpectedVersion('^16.0.0', versionMap)).toBeNull();
     });
   });
@@ -972,6 +1018,7 @@ describe('CompatibilityTester class', () => {
         compatibility: { issues: [], recommendations: [], warnings: [] },
       };
       tester.calculateCompatibilityScore(results);
+
       expect(results.compatibility.score).toBe(100);
       expect(results.compatibility.status).toBe('excellent');
     });
@@ -986,6 +1033,7 @@ describe('CompatibilityTester class', () => {
         },
       };
       tester.calculateCompatibilityScore(results);
+
       expect(results.compatibility.score).toBe(60);
     });
 
@@ -999,6 +1047,7 @@ describe('CompatibilityTester class', () => {
         },
       };
       tester.calculateCompatibilityScore(results);
+
       expect(results.compatibility.score).toBe(80);
     });
 
@@ -1012,6 +1061,7 @@ describe('CompatibilityTester class', () => {
         },
       };
       tester.calculateCompatibilityScore(results);
+
       expect(results.compatibility.score).toBe(0);
       expect(results.compatibility.status).toBe('poor');
     });
@@ -1021,7 +1071,7 @@ describe('CompatibilityTester class', () => {
 // ═══════════════════════════════════════════════════════════════════
 // integrity-meter.mjs -- IntegrityMeter pure methods
 // ═══════════════════════════════════════════════════════════════════
-describe('IntegrityMeter class', () => {
+describe('integrityMeter class', () => {
   let meter;
 
   beforeEach(() => {
@@ -1032,6 +1082,7 @@ describe('IntegrityMeter class', () => {
     it('creates nested structure', () => {
       const votes = {};
       meter.initializeVoteEntry(votes, '1.0.0', '0');
+
       expect(votes['1.0.0']['0']).toStrictEqual({
         details: [],
         down: 0,
@@ -1041,14 +1092,18 @@ describe('IntegrityMeter class', () => {
     });
 
     it('does not overwrite existing data', () => {
-      const votes = { '1.0.0': { 0: { details: [], down: 1, neutral: 0, up: 5 } } };
+      const votes = {
+        '1.0.0': { 0: { details: [], down: 1, neutral: 0, up: 5 } },
+      };
       meter.initializeVoteEntry(votes, '1.0.0', '0');
+
       expect(votes['1.0.0']['0'].up).toBe(5);
     });
 
     it('repairs null version entry', () => {
       const votes = { '1.0.0': null };
       meter.initializeVoteEntry(votes, '1.0.0', '0');
+
       expect(votes['1.0.0']['0'].up).toBe(0);
     });
   });
@@ -1070,11 +1125,13 @@ describe('IntegrityMeter class', () => {
       const filePath = path.join(temporaryDirectory, 'votes.json');
       await fs.writeFile(filePath, '{"1.0.0": {"0": {"up": 5}}}');
       const result = await meter.loadVotes(filePath);
+
       expect(result['1.0.0']['0'].up).toBe(5);
     });
 
     it('returns empty object for missing file', async () => {
       const result = await meter.loadVotes('/nonexistent/votes.json');
+
       expect(result).toStrictEqual({});
     });
 
@@ -1082,6 +1139,7 @@ describe('IntegrityMeter class', () => {
       const filePath = path.join(temporaryDirectory, 'votes.json');
       await fs.writeFile(filePath, 'null');
       const result = await meter.loadVotes(filePath);
+
       expect(result).toStrictEqual({});
     });
 
@@ -1089,6 +1147,7 @@ describe('IntegrityMeter class', () => {
       const filePath = path.join(temporaryDirectory, 'votes.json');
       await fs.writeFile(filePath, '[]');
       const result = await meter.loadVotes(filePath);
+
       expect(result).toStrictEqual({});
     });
   });
