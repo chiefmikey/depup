@@ -7,13 +7,11 @@ import os from 'node:os';
 import path from 'node:path';
 
 import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
-import semver from 'semver';
 
 import { CompatibilityTester } from '../compatibility-test.mjs';
 import { PackageSyncer } from '../cron-sync.mjs';
 import { SecureDepUp } from '../depup-security.mjs';
 import { DepUp } from '../depup.mjs';
-// Import actual classes
 import { ReadmeGenerator } from '../generate-readme.mjs';
 import { SelfHealer } from '../heal.mjs';
 import { IntegrityMeter } from '../integrity-meter.mjs';
