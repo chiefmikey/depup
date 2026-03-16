@@ -9,6 +9,7 @@ import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
 
 import { CompatibilityTester } from '../compatibility-test.mjs';
+import { PackageDiscoverer } from '../cron-discover.mjs';
 import { PackageSyncer } from '../cron-sync.mjs';
 import { SecureDepUp } from '../depup-security.mjs';
 import { DepUp } from '../depup.mjs';
@@ -1164,6 +1165,506 @@ describe('integrityMeter class', () => {
       expect(meter.getVoteEmoji('up')).toBe('👍');
       expect(meter.getVoteEmoji('down')).toBe('👎');
       expect(meter.getVoteEmoji('neutral')).toBe('😐');
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// PackageDiscoverer -- testable methods
+// ═══════════════════════════════════════════════════════════════════
+describe('packageDiscoverer class', () => {
+  let discoverer;
+
+  beforeEach(() => {
+    discoverer = new PackageDiscoverer();
+  });
+
+  describe('fetchPackageVersion', () => {
+    it('fetches real package version from npm', async () => {
+      const result = await discoverer.fetchPackageVersion('is-odd');
+
+      expect(result.name).toBe('is-odd');
+      expect(result.version).toBeTruthy();
+      expect(result.version).not.toBe('0.0.0');
+    });
+
+    it('throws for nonexistent package', async () => {
+      await expect(
+        discoverer.fetchPackageVersion('this-pkg-does-not-exist-xyz-123'),
+      ).rejects.toThrow();
+    });
+  });
+
+  describe('packageExists', () => {
+    it('returns true for existing directory', async () => {
+      await expect(discoverer.packageExists(process.cwd())).resolves.toBe(true);
+    });
+
+    it('returns false for nonexistent directory', async () => {
+      await expect(discoverer.packageExists('/no/such/dir')).resolves.toBe(
+        false,
+      );
+    });
+  });
+
+  describe('processPackage validation', () => {
+    it('rejects null package data', async () => {
+      await expect(discoverer.processPackage(null)).rejects.toThrow(
+        'missing name',
+      );
+    });
+
+    it('rejects package with path traversal', async () => {
+      await expect(
+        discoverer.processPackage({ name: '../etc/passwd', version: '1.0.0' }),
+      ).rejects.toThrow('path traversal');
+    });
+
+    it('rejects package with invalid characters', async () => {
+      await expect(
+        discoverer.processPackage({ name: 'pkg;rm -rf', version: '1.0.0' }),
+      ).rejects.toThrow('invalid characters');
+    });
+  });
+
+  describe('getCuratedPackages sharding', () => {
+    it('returns subset when sharding is configured', async () => {
+      const originalIndex = process.env.SHARD_INDEX;
+      const originalTotal = process.env.SHARD_TOTAL;
+      process.env.SHARD_INDEX = '0';
+      process.env.SHARD_TOTAL = '5';
+
+      try {
+        const packages = await discoverer.getCuratedPackages();
+        // Should get roughly 1/5 of the curated list
+        const totalCurated = discoverer.curatedPackageNames.length;
+
+        expect(packages.length).toBeGreaterThan(0);
+        expect(packages.length).toBeLessThanOrEqual(
+          Math.ceil(totalCurated / 5) + 1,
+        );
+      } finally {
+        if (originalIndex === undefined) {
+          delete process.env.SHARD_INDEX;
+        } else {
+          process.env.SHARD_INDEX = originalIndex;
+        }
+        if (originalTotal === undefined) {
+          delete process.env.SHARD_TOTAL;
+        } else {
+          process.env.SHARD_TOTAL = originalTotal;
+        }
+      }
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// SecurityScanner -- more methods
+// ═══════════════════════════════════════════════════════════════════
+describe('securityScanner additional methods', () => {
+  let scanner;
+
+  beforeEach(() => {
+    scanner = new SecurityScanner();
+  });
+
+  describe('performAdvancedMalwareChecks', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-scan-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('returns empty array for clean directory', async () => {
+      await fs.writeFile(path.join(temporaryDirectory, 'index.js'), '');
+      const findings =
+        await scanner.performAdvancedMalwareChecks(temporaryDirectory);
+
+      expect(Array.isArray(findings)).toBe(true);
+    });
+
+    it('detects suspicious file extensions', async () => {
+      await fs.writeFile(path.join(temporaryDirectory, 'payload.exe'), '');
+      const findings =
+        await scanner.performAdvancedMalwareChecks(temporaryDirectory);
+
+      expect(findings.length).toBeGreaterThan(0);
+      expect(findings[0]).toContain('.exe');
+    });
+
+    it('detects suspicious filenames', async () => {
+      await fs.writeFile(path.join(temporaryDirectory, 'autorun.inf'), '');
+      const findings =
+        await scanner.performAdvancedMalwareChecks(temporaryDirectory);
+
+      expect(findings.length).toBeGreaterThan(0);
+    });
+
+    it('handles empty directory', async () => {
+      const findings =
+        await scanner.performAdvancedMalwareChecks(temporaryDirectory);
+
+      expect(findings).toStrictEqual([]);
+    });
+
+    it('returns empty array for unreadable directory', async () => {
+      const findings = await scanner.performAdvancedMalwareChecks(
+        '/nonexistent/directory',
+      );
+
+      expect(findings).toStrictEqual([]);
+    });
+  });
+
+  describe('getAllFiles', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-files-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('lists files recursively', async () => {
+      await fs.mkdir(path.join(temporaryDirectory, 'src'));
+      await fs.writeFile(path.join(temporaryDirectory, 'index.js'), '');
+      await fs.writeFile(path.join(temporaryDirectory, 'src', 'app.js'), '');
+
+      const files = await scanner.getAllFiles(temporaryDirectory);
+
+      expect(files).toHaveLength(2);
+    });
+
+    it('skips node_modules', async () => {
+      await fs.mkdir(path.join(temporaryDirectory, 'node_modules'));
+      await fs.writeFile(
+        path.join(temporaryDirectory, 'node_modules', 'dep.js'),
+        '',
+      );
+      await fs.writeFile(path.join(temporaryDirectory, 'index.js'), '');
+
+      const files = await scanner.getAllFiles(temporaryDirectory);
+
+      expect(files).toHaveLength(1);
+    });
+  });
+
+  describe('generateSummaryReport', () => {
+    it('produces text report', () => {
+      const report = {
+        duration: 5000,
+        overall_status: 'passed',
+        scans: {
+          compatibility: { details: ['ok'], status: 'passed' },
+          malware: { details: ['clean'], status: 'passed' },
+          vulnerabilities: { details: ['none'], status: 'passed' },
+        },
+        timestamp: '2026-01-01T00:00:00Z',
+      };
+      const summary = scanner.generateSummaryReport(report);
+
+      expect(summary).toContain('PASSED');
+      expect(summary).toContain('MALWARE');
+      expect(summary).toContain('VULNERABILITIES');
+    });
+  });
+
+  describe('generateSecurityReport', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-report-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('writes JSON and text report files', async () => {
+      scanner.results.malware.status = 'passed';
+      scanner.results.vulnerabilities.status = 'passed';
+      scanner.results.compatibility.status = 'passed';
+
+      await scanner.generateSecurityReport(temporaryDirectory, Date.now());
+      const files = await fs.readdir(temporaryDirectory);
+      const jsonFiles = files.filter((f) => f.endsWith('.json'));
+      const txtFiles = files.filter((f) => f.endsWith('.txt'));
+
+      expect(jsonFiles.length).toBeGreaterThan(0);
+      expect(txtFiles.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('generateErrorReport', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-err-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('writes error report file', async () => {
+      await scanner.generateErrorReport(
+        temporaryDirectory,
+        new Error('test error'),
+      );
+      const files = await fs.readdir(temporaryDirectory);
+
+      expect(files.length).toBeGreaterThan(0);
+      expect(files[0]).toContain('security-error');
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// DepUp -- more method coverage
+// ═══════════════════════════════════════════════════════════════════
+describe('depUp additional methods', () => {
+  let depup;
+
+  beforeEach(() => {
+    depup = new DepUp();
+  });
+
+  describe('retryWithBackoff', () => {
+    it('succeeds on first attempt', async () => {
+      let attempts = 0;
+      const result = await depup.retryWithBackoff(
+        () => {
+          attempts++;
+          return Promise.resolve('ok');
+        },
+        { attempts: 3, baseDelay: 10 },
+      );
+
+      expect(result).toBe('ok');
+      expect(attempts).toBe(1);
+    });
+
+    it('retries on failure then succeeds', async () => {
+      let attempts = 0;
+      const result = await depup.retryWithBackoff(
+        () => {
+          attempts++;
+          if (attempts < 3) {
+            return Promise.reject(new Error('fail'));
+          }
+          return Promise.resolve('ok');
+        },
+        { attempts: 3, baseDelay: 10 },
+      );
+
+      expect(result).toBe('ok');
+      expect(attempts).toBe(3);
+    });
+
+    it('throws after all attempts exhausted', async () => {
+      await expect(
+        depup.retryWithBackoff(() => Promise.reject(new Error('always fail')), {
+          attempts: 2,
+          baseDelay: 10,
+        }),
+      ).rejects.toThrow('always fail');
+    });
+
+    it('passes remaining timeout to operation', async () => {
+      const receivedRemaining = [];
+      await depup.retryWithBackoff(
+        (remaining) => {
+          receivedRemaining.push(remaining);
+          if (receivedRemaining.length < 2) {
+            return Promise.reject(new Error('retry'));
+          }
+          return Promise.resolve('ok');
+        },
+        { attempts: 3, baseDelay: 10, totalTimeout: 10_000 },
+      );
+
+      // First call should have close to full timeout
+      expect(receivedRemaining[0]).toBeGreaterThan(9000);
+      // Second call should have less remaining
+      expect(receivedRemaining[1]).toBeLessThanOrEqual(receivedRemaining[0]);
+    });
+  });
+
+  describe('cleanupAfterPublish', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-cleanup-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('keeps only package.json and changes.json', async () => {
+      await fs.writeFile(path.join(temporaryDirectory, 'package.json'), '{}');
+      await fs.writeFile(path.join(temporaryDirectory, 'changes.json'), '{}');
+      await fs.writeFile(path.join(temporaryDirectory, 'index.js'), '');
+      await fs.writeFile(path.join(temporaryDirectory, 'README.md'), '');
+      await fs.mkdir(path.join(temporaryDirectory, 'src'));
+      await fs.writeFile(path.join(temporaryDirectory, 'src', 'app.js'), '');
+
+      await depup.cleanupAfterPublish(temporaryDirectory, false);
+
+      const remaining = await fs.readdir(temporaryDirectory);
+
+      expect(remaining.toSorted()).toStrictEqual([
+        'changes.json',
+        'package.json',
+      ]);
+    });
+  });
+
+  describe('writeChangesJson', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-changes-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('writes changes file with correct structure', async () => {
+      const bumpResult = {
+        changes: [
+          { depName: 'lodash', from: '^4.0.0', to: '^4.17.21' },
+          { depName: 'express', from: '^4.0.0', to: '^5.0.0' },
+        ],
+        updatedCount: 2,
+      };
+
+      const result = await depup.writeChangesJson(
+        bumpResult,
+        temporaryDirectory,
+      );
+
+      expect(result.totalUpdated).toBe(2);
+      expect(result.bumped.lodash.to).toBe('^4.17.21');
+
+      const written = JSON.parse(
+        await fs.readFile(path.join(temporaryDirectory, 'changes.json')),
+      );
+
+      expect(written.totalUpdated).toBe(2);
+    });
+
+    it('handles empty changes', async () => {
+      const result = await depup.writeChangesJson(
+        { changes: [], updatedCount: 0 },
+        temporaryDirectory,
+      );
+
+      expect(result.totalUpdated).toBe(0);
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// SelfHealer -- more method coverage
+// ═══════════════════════════════════════════════════════════════════
+describe('selfHealer additional methods', () => {
+  let healer;
+  let temporaryDirectory;
+
+  beforeEach(async () => {
+    healer = new SelfHealer();
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-heal-'),
+    );
+    // Override rootDirectory to use temp dir
+    healer.rootDirectory = temporaryDirectory;
+  });
+
+  afterEach(async () => {
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  describe('hasValidStructure', () => {
+    it('returns true when version directories exist', async () => {
+      const pkgDir = path.join(temporaryDirectory, 'packages', 'express');
+      await fs.mkdir(path.join(pkgDir, '4.18.2'), { recursive: true });
+
+      await expect(healer.hasValidStructure({ path: pkgDir })).resolves.toBe(
+        true,
+      );
+    });
+
+    it('returns false for empty package directory', async () => {
+      const pkgDir = path.join(temporaryDirectory, 'packages', 'empty');
+      await fs.mkdir(pkgDir, { recursive: true });
+
+      await expect(healer.hasValidStructure({ path: pkgDir })).resolves.toBe(
+        false,
+      );
+    });
+
+    it('returns false for nonexistent directory', async () => {
+      await expect(
+        healer.hasValidStructure({ path: '/no/such/dir' }),
+      ).resolves.toBe(false);
+    });
+  });
+
+  describe('diagnoseIssues', () => {
+    it('reports missing integrity for package without integrity.json', async () => {
+      const pkgDir = path.join(temporaryDirectory, 'packages', 'express');
+      await fs.mkdir(path.join(pkgDir, '4.18.2'), { recursive: true });
+
+      const issues = await healer.diagnoseIssues();
+
+      expect(issues.missingIntegrity.length).toBeGreaterThan(0);
+    });
+
+    it('reports corrupt integrity for invalid JSON', async () => {
+      const pkgDir = path.join(temporaryDirectory, 'packages', 'express');
+      await fs.mkdir(path.join(pkgDir, '4.18.2'), { recursive: true });
+      await fs.writeFile(
+        path.join(pkgDir, 'integrity.json'),
+        '{"4.18.2": {"0": {"status": "ok"}}}',
+      );
+
+      const issues = await healer.diagnoseIssues();
+
+      expect(issues.corruptIntegrity.length).toBeGreaterThan(0);
+    });
+
+    it('reports missing readme', async () => {
+      const pkgDir = path.join(temporaryDirectory, 'packages', 'express');
+      await fs.mkdir(path.join(pkgDir, '4.18.2'), { recursive: true });
+      await fs.writeFile(
+        path.join(pkgDir, 'integrity.json'),
+        '{"4.18.2": {"0": {"status": "ok", "timestamp": "t", "version": "v"}}}',
+      );
+
+      const issues = await healer.diagnoseIssues();
+
+      expect(issues.missingReadmes.length).toBeGreaterThan(0);
     });
   });
 });

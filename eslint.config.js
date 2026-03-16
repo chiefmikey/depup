@@ -97,6 +97,7 @@ export default [
       'max-lines': 'off',
       'no-await-in-loop': 'off',
       'no-unused-vars': 'off',
+      'require-atomic-updates': 'off',
       'simple-import-sort/imports': 'off',
       'security/detect-non-literal-fs-filename': 'off',
       'security/detect-object-injection': 'off',
