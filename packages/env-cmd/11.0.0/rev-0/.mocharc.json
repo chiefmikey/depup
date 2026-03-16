@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/mocharc.json",
-  "require": ["tsx/esm", "esmock"],
-  "extensions": ["ts"],
-  "spec": [
-    "test/**/*.ts"
-  ]
-}
