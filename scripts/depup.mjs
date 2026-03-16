@@ -199,6 +199,12 @@ class DepUp {
       );
     }
 
+    if (!semver.valid(baseVersion)) {
+      throw new Error(
+        `Invalid version in manifest for ${packageSpec}: ${baseVersion} is not valid semver`,
+      );
+    }
+
     const reservedKeys = new Set(['__proto__', 'constructor', 'prototype']);
     if (reservedKeys.has(baseVersion) || reservedKeys.has(packageName)) {
       throw new Error(`Invalid manifest data: reserved key detected`);

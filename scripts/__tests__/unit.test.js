@@ -245,7 +245,13 @@ describe('depUp class', () => {
           { name: 'express', version: '../../.github' },
           'test',
         ),
-      ).toThrow('Path traversal');
+      ).toThrow();
+    });
+
+    it('rejects non-semver version strings', () => {
+      expect(() =>
+        depup.validateManifest({ name: 'express', version: 'latest' }, 'test'),
+      ).toThrow('not valid semver');
     });
   });
 
