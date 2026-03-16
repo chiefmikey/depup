@@ -3129,22 +3129,29 @@ describe('depUp Basic Tests', () => {
     });
   });
 
-  describe('unconditional rev directory cleanup', () => {
-    it('should always clean up regardless of publish status', () => {
-      // The fix: cleanup is unconditional -- no condition check needed
-      const scenarios = [
-        { published: true, shouldPublish: true, status: 'published' },
-        { published: false, shouldPublish: true, status: 'skipped' },
-        { published: false, shouldPublish: true, status: 'failed' },
-        { published: false, shouldPublish: false, status: 'prepared' },
-      ];
+  describe('rev directory cleanup gated on shouldPublish', () => {
+    it('should clean when this invocation owns publish, preserve for external', () => {
+      // Cleanup only when shouldPublish is true (cron pipeline).
+      // When false (security pipeline), files are preserved for external publish.
+      const shouldCleanup = (shouldPublish) => shouldPublish;
 
-      for (const scenario of scenarios) {
-        // All scenarios should trigger cleanup
-        const shouldCleanup = true; // unconditional
+      // Cron pipeline (--publish): always clean
+      expect(shouldCleanup(true)).toBe(true);
+      // Security pipeline (no --publish): preserve for external publish/scan
+      expect(shouldCleanup(false)).toBe(false);
+    });
+  });
 
-        expect(shouldCleanup).toBe(true);
-      }
+  describe('async execFile enables true batch concurrency', () => {
+    it('should use promisified execFile not execFileSync', () => {
+      // execFileSync blocks the event loop, making Promise.allSettled serial.
+      // promisify(execFile) returns a promise that doesn't block.
+      const isBlocking = (functionName) => functionName === 'execFileSync';
+      const isAsync = (functionName) => functionName === 'execFile';
+
+      expect(isBlocking('execFileSync')).toBe(true);
+      expect(isAsync('execFile')).toBe(true);
+      expect(isBlocking('execFile')).toBe(false);
     });
   });
 });

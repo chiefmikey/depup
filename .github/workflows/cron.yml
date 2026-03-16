@@ -252,7 +252,7 @@ jobs:
     needs: sync
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: ${{ !cancelled() && !inputs.discover_only && needs.sync.result == 'success' }}
+    if: ${{ !cancelled() && !inputs.discover_only }}
 
     steps:
       - name: Checkout (latest main after all syncs)

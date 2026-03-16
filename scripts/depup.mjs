@@ -1101,9 +1101,12 @@ try {
       targetDirectory,
     } = context;
 
-    // Always clean up rev directory -- source files are not needed in git
-    // (published packages are on npm, retries re-download from registry)
-    await this.cleanupAfterPublish(targetDirectory, debug);
+    // Clean up rev directory when this invocation owns publish responsibility.
+    // When shouldPublish is false, the caller may need the files (e.g., the
+    // security pipeline publishes externally after scanning the rev directory).
+    if (shouldPublish) {
+      await this.cleanupAfterPublish(targetDirectory, debug);
+    }
 
     await this.updateIntegrityData(
       packageDirectory,

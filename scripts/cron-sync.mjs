@@ -303,7 +303,9 @@ class PackageSyncer {
   }
 
   async updatePackage(package_, updatedVersion) {
-    const { execFileSync } = await import('node:child_process');
+    const { execFile } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const execFileAsync = promisify(execFile);
 
     try {
       const commandArguments = [
@@ -315,10 +317,9 @@ class PackageSyncer {
       ];
       console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      execFileSync('node', commandArguments, {
+      await execFileAsync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
-        stdio: 'inherit',
         timeout: 300_000, // 5 minute timeout for package update
       });
 
@@ -335,7 +336,9 @@ class PackageSyncer {
   }
 
   async updateDependencies(package_) {
-    const { execFileSync } = await import('node:child_process');
+    const { execFile } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const execFileAsync = promisify(execFile);
 
     try {
       const commandArguments = [
@@ -347,10 +350,9 @@ class PackageSyncer {
       ];
       console.log(`  Running: node ${commandArguments.join(' ')}`);
 
-      execFileSync('node', commandArguments, {
+      await execFileAsync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NPM_TOKEN: process.env.NPM_TOKEN },
-        stdio: 'inherit',
         timeout: 300_000, // 5 minute timeout for dependency update
       });
 
@@ -406,14 +408,19 @@ class PackageSyncer {
   }
 
   async generateReadme(packageName) {
-    const { execFileSync } = await import('node:child_process');
+    const { execFile } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const execFileAsync = promisify(execFile);
 
     try {
-      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        timeout: 30_000, // 30 second timeout for README generation
-      });
+      await execFileAsync(
+        'node',
+        ['scripts/generate-readme.mjs', packageName],
+        {
+          cwd: process.cwd(),
+          timeout: 30_000, // 30 second timeout for README generation
+        },
+      );
     } catch (error) {
       throw new Error(`Failed to generate README: ${error.message}`, {
         cause: error,
@@ -465,7 +472,9 @@ class PackageSyncer {
   registry = 'https://registry.npmjs.org';
   rateLimitDelay = 100;
   maxPackagesPerRun = 600;
-  concurrentPackages = 20;
+  // Limit to 5 concurrent packages (heavy operations spawn depup.mjs child
+  // processes that each run npm install -- 20 concurrent would OOM the runner)
+  concurrentPackages = 5;
 }
 
 // Run if called directly

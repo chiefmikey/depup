@@ -282,7 +282,9 @@ class PackageDiscoverer {
 
   async createNewPackage(package_, packageDirectory, version) {
     const targetVersion = version || package_.version;
-    const { execFileSync } = await import('node:child_process');
+    const { execFile } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const execFileAsync = promisify(execFile);
 
     // Validate version
     if (!targetVersion || typeof targetVersion !== 'string') {
@@ -299,7 +301,7 @@ class PackageDiscoverer {
     }
 
     try {
-      // Run depup script with timeout
+      // Run depup script with timeout (async -- enables true batch concurrency)
       const commandArguments = [
         'scripts/depup.mjs',
         `${package_.name}@${sanitizedVersion}`,
@@ -308,10 +310,9 @@ class PackageDiscoverer {
         '--publish',
       ];
 
-      execFileSync('node', commandArguments, {
+      await execFileAsync('node', commandArguments, {
         cwd: process.cwd(),
         env: { ...process.env, NODE_ENV: 'production' },
-        stdio: 'pipe',
         timeout: 300_000, // 5 minute timeout
       });
     } catch (error) {
@@ -320,8 +321,10 @@ class PackageDiscoverer {
 
       if (error.signal === 'SIGTERM') {
         errorMessage += ': Process timed out';
-      } else if (error.status) {
-        errorMessage += `: Exit code ${error.status}`;
+      } else if (error.killed) {
+        errorMessage += ': Process killed';
+      } else if (error.code) {
+        errorMessage += `: Exit code ${error.code}`;
       } else {
         errorMessage += `: ${error.message}`;
       }
@@ -331,14 +334,19 @@ class PackageDiscoverer {
   }
 
   async generateReadme(packageName) {
-    const { execFileSync } = await import('node:child_process');
+    const { execFile } = await import('node:child_process');
+    const { promisify } = await import('node:util');
+    const execFileAsync = promisify(execFile);
 
     try {
-      execFileSync('node', ['scripts/generate-readme.mjs', packageName], {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        timeout: 30_000, // 30 second timeout for README generation
-      });
+      await execFileAsync(
+        'node',
+        ['scripts/generate-readme.mjs', packageName],
+        {
+          cwd: process.cwd(),
+          timeout: 30_000, // 30 second timeout for README generation
+        },
+      );
     } catch (error) {
       throw new Error(`Failed to generate README: ${error.message}`, {
         cause: error,
@@ -346,7 +354,9 @@ class PackageDiscoverer {
     }
   }
 
-  concurrentPackages = 20;
+  // Limit to 5 concurrent package processing (each spawns depup.mjs which
+  // runs npm install -- 20 concurrent installs would OOM a 7GB CI runner)
+  concurrentPackages = 5;
   curatedPackageNames = [
     '@angular/cli',
     '@angular/core',
