@@ -16,6 +16,7 @@ import { DepUp } from '../depup.mjs';
 import { ReadmeGenerator } from '../generate-readme.mjs';
 import { SelfHealer } from '../heal.mjs';
 import { IntegrityMeter } from '../integrity-meter.mjs';
+import { SecurityApprovalWorkflow } from '../security-approval.mjs';
 import { SecurityScanner } from '../security-scan.mjs';
 import {
   flattenPackageName,
@@ -1631,6 +1632,29 @@ describe('selfHealer additional methods', () => {
     });
   });
 
+  describe('getAllPackages', () => {
+    it('lists packages in the packages directory', async () => {
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        'lodash',
+      );
+      await fs.mkdir(packageDirectory, { recursive: true });
+
+      const packages = await healer.getAllPackages();
+
+      expect(packages.length).toBeGreaterThan(0);
+      expect(packages[0].name).toBe('lodash');
+    });
+
+    it('returns empty array when no packages directory', async () => {
+      healer.rootDirectory = '/nonexistent/dir';
+      const packages = await healer.getAllPackages();
+
+      expect(packages).toStrictEqual([]);
+    });
+  });
+
   describe('diagnoseIssues', () => {
     it('reports missing integrity for package without integrity.json', async () => {
       const pkgDir = path.join(temporaryDirectory, 'packages', 'express');
@@ -1665,6 +1689,172 @@ describe('selfHealer additional methods', () => {
       const issues = await healer.diagnoseIssues();
 
       expect(issues.missingReadmes.length).toBeGreaterThan(0);
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// SecurityApprovalWorkflow -- file-based methods
+// ═══════════════════════════════════════════════════════════════════
+describe('securityApprovalWorkflow class', () => {
+  let workflow;
+  let temporaryDirectory;
+
+  beforeEach(async () => {
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-approval-'),
+    );
+    workflow = new SecurityApprovalWorkflow();
+    // Override paths to use temp directory
+    const configDirectory = path.join(temporaryDirectory, 'config');
+    await fs.mkdir(configDirectory, { recursive: true });
+    workflow.allowlistPath = path.join(
+      configDirectory,
+      'security-allowlist.json',
+    );
+    workflow.pendingPath = path.join(configDirectory, 'pending-approvals.json');
+    workflow.approvalLogPath = path.join(configDirectory, 'approval-log.json');
+  });
+
+  afterEach(async () => {
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  describe('loadAllowlist', () => {
+    it('returns empty allowlist when file missing', async () => {
+      const result = await workflow.loadAllowlist();
+
+      expect(result.allowlisted).toStrictEqual([]);
+    });
+
+    it('loads existing allowlist', async () => {
+      await fs.writeFile(
+        workflow.allowlistPath,
+        JSON.stringify({
+          allowlisted: ['express', 'lodash'],
+          version: '1.0.0',
+        }),
+      );
+      const result = await workflow.loadAllowlist();
+
+      expect(result.allowlisted).toStrictEqual(['express', 'lodash']);
+    });
+
+    it('handles corrupt allowlisted field', async () => {
+      await fs.writeFile(
+        workflow.allowlistPath,
+        JSON.stringify({ allowlisted: 'not-array', version: '1.0.0' }),
+      );
+      const result = await workflow.loadAllowlist();
+
+      expect(result.allowlisted).toStrictEqual([]);
+    });
+  });
+
+  describe('saveAllowlist + loadAllowlist round-trip', () => {
+    it('persists and retrieves allowlist', async () => {
+      await workflow.saveAllowlist({
+        allowlisted: ['express', 'lodash'],
+        version: '1.0.0',
+      });
+      const loaded = await workflow.loadAllowlist();
+
+      expect(loaded.allowlisted).toStrictEqual(['express', 'lodash']);
+    });
+  });
+
+  describe('loadPendingApprovals', () => {
+    it('returns empty object when file missing', async () => {
+      const result = await workflow.loadPendingApprovals();
+
+      expect(result).toStrictEqual({});
+    });
+  });
+
+  describe('savePendingApprovals + loadPendingApprovals round-trip', () => {
+    it('persists and retrieves pending', async () => {
+      await workflow.savePendingApprovals({
+        express: { requestedAt: '2026-01-01', status: 'pending' },
+      });
+      const loaded = await workflow.loadPendingApprovals();
+
+      expect(loaded.express.status).toBe('pending');
+    });
+  });
+
+  describe('loadApprovalLog', () => {
+    it('returns empty decisions when file missing', async () => {
+      const result = await workflow.loadApprovalLog();
+
+      expect(result.decisions).toStrictEqual([]);
+    });
+  });
+
+  describe('logDecision', () => {
+    it('appends decision to log', async () => {
+      await workflow.logDecision('express', 'approved', null, 'safe');
+      await workflow.logDecision('malware-pkg', 'denied', null, 'unsafe');
+
+      const log = await workflow.loadApprovalLog();
+
+      expect(log.decisions).toHaveLength(2);
+      expect(log.decisions[0].decision).toBe('approved');
+      expect(log.decisions[1].decision).toBe('denied');
+    });
+  });
+
+  describe('performPreliminarySecurityCheck', () => {
+    it('flags suspicious package names', async () => {
+      const result =
+        await workflow.performPreliminarySecurityCheck('malware-tool');
+
+      expect(result.risk_level).toBe('high');
+      expect(result.flags.length).toBeGreaterThan(0);
+    });
+
+    it('passes normal package names', async () => {
+      const result = await workflow.performPreliminarySecurityCheck('express');
+
+      expect(result.risk_level).toBe('unknown');
+      expect(result.flags).toStrictEqual([]);
+    });
+  });
+
+  describe('approvePackage', () => {
+    it('adds package to allowlist and removes from pending', async () => {
+      // Set up pending request
+      await workflow.savePendingApprovals({
+        express: { requestedAt: '2026-01-01', status: 'pending' },
+      });
+
+      await workflow.approvePackage('express');
+
+      const allowlist = await workflow.loadAllowlist();
+
+      expect(allowlist.allowlisted).toContain('express');
+
+      const pending = await workflow.loadPendingApprovals();
+
+      expect(pending.express).toBeUndefined();
+    });
+  });
+
+  describe('denyPackage', () => {
+    it('removes from pending and logs denial', async () => {
+      await workflow.savePendingApprovals({
+        'bad-pkg': { requestedAt: '2026-01-01', status: 'pending' },
+      });
+
+      await workflow.denyPackage('bad-pkg', 'known malware');
+
+      const pending = await workflow.loadPendingApprovals();
+
+      expect(pending['bad-pkg']).toBeUndefined();
+
+      const log = await workflow.loadApprovalLog();
+
+      expect(log.decisions[0].decision).toBe('denied');
+      expect(log.decisions[0].reason).toBe('known malware');
     });
   });
 });
