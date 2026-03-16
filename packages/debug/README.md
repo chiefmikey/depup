@@ -25,18 +25,16 @@ npm install @depup/debug
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 4.4.1 | 0 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 1 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 2 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 3 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 4 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 5 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 6 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 7 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 8 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 9 | 🟢 Excellent | 100% | 1 |
-| 4.4.1 | 10 | 🟢 Excellent | 100% | 1 |
 | 4.4.1 | 11 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 10 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 9 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 8 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 7 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 6 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 5 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 4 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 3 | 🟢 Excellent | 100% | 1 |
+| 4.4.1 | 2 | 🟢 Excellent | 100% | 1 |
 | 4.4.3 | 5 | 🔴 Poor | 0% | 0 |
 
 
@@ -45,29 +43,25 @@ npm install @depup/debug
 
 ### Version 4.4.1 (12 votes)
 
-- **Revision 0** (4.4.1-depup.0) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 1** (4.4.1-depup.1) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 2** (4.4.1-depup.2) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 3** (4.4.1-depup.3) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 4** (4.4.1-depup.4) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 5** (4.4.1-depup.5) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 6** (4.4.1-depup.6) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 7** (4.4.1-depup.7) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 8** (4.4.1-depup.8) - 🟢 Excellent 100% integrity
-  - Last updated: 9/12/2025
-- **Revision 9** (4.4.1-depup.9) - 🟢 Excellent 100% integrity
+- **Revision 11** (4.4.1-depup.11) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
 - **Revision 10** (4.4.1-depup.10) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
-- **Revision 11** (4.4.1-depup.11) - 🟢 Excellent 100% integrity
+- **Revision 9** (4.4.1-depup.9) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 8** (4.4.1-depup.8) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 7** (4.4.1-depup.7) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 6** (4.4.1-depup.6) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 5** (4.4.1-depup.5) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 4** (4.4.1-depup.4) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 3** (4.4.1-depup.3) - 🟢 Excellent 100% integrity
+  - Last updated: 9/12/2025
+- **Revision 2** (4.4.1-depup.2) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
 
 ### Version 4.4.3

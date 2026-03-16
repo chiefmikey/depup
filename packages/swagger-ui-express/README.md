@@ -25,8 +25,8 @@ npm install @depup/swagger-ui-express
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 5.0.1 | 0 | 🔴 Poor | 0% | 0 |
 | 5.0.1 | 1 | 🔴 Poor | 0% | 0 |
+| 5.0.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/swagger-ui-express
 
 ### Version 5.0.1
 
-- **Revision 0** (5.0.1-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (5.0.1-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (5.0.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

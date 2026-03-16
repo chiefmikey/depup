@@ -25,8 +25,8 @@ npm install @depup/cheerio
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 1.2.0 | 0 | 🔴 Poor | 0% | 0 |
 | 1.2.0 | 1 | 🔴 Poor | 0% | 0 |
+| 1.2.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/cheerio
 
 ### Version 1.2.0
 
-- **Revision 0** (1.2.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (1.2.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (1.2.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -27,9 +27,9 @@ npm install @depup/vite
 |---------|----------|--------|-------|-------|
 | 7.1.5 | 0 | 🔴 Poor | 0% | 0 |
 | 7.3.1 | 1 | 🔴 Poor | 0% | 0 |
-| 8.0.0 | 0 | 🔴 Poor | 0% | 0 |
-| 8.0.0 | 1 | 🔴 Poor | 0% | 0 |
 | 8.0.0 | 2 | 🔴 Poor | 0% | 0 |
+| 8.0.0 | 1 | 🔴 Poor | 0% | 0 |
+| 8.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -45,9 +45,9 @@ npm install @depup/vite
 
 ### Version 8.0.0
 
-- **Revision 0** (8.0.0-depup.0) - 🔴 Poor 0% integrity
-- **Revision 1** (8.0.0-depup.1) - 🔴 Poor 0% integrity
 - **Revision 2** (8.0.0-depup.2) - 🔴 Poor 0% integrity
+- **Revision 1** (8.0.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (8.0.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
