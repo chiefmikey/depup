@@ -16,6 +16,7 @@ import { promisify } from 'node:util';
 
 import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
 
+import { PackageSyncer } from '../cron-sync.mjs';
 import { DepUp } from '../depup.mjs';
 import { ReadmeGenerator } from '../generate-readme.mjs';
 import { SelfHealer } from '../heal.mjs';
@@ -333,7 +334,60 @@ describe('heal.mjs end-to-end', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════
-// 5. Input validation -- bad inputs don't crash, they error cleanly
+// 5. cron-sync.mjs -- detects packages and checks for updates
+// ═══════════════════════════════════════════════════════════════════
+describe('cron-sync.mjs end-to-end', () => {
+  it(
+    'getExistingPackages finds processed packages',
+    async () => {
+      const syncer = new PackageSyncer();
+      const packages = await syncer.getExistingPackages();
+
+      // Should find is-odd from the depup integration test
+      expect(packages.length).toBeGreaterThan(0);
+
+      const isOdd = packages.find((p) => p.name === TEST_PACKAGE);
+
+      expect(isOdd).toBeDefined();
+      expect(isOdd.version).toBe(TEST_VERSION);
+    },
+    TIMEOUT,
+  );
+
+  it(
+    'syncPackage detects up-to-date package',
+    async () => {
+      const syncer = new PackageSyncer();
+      const packages = await syncer.getExistingPackages();
+      const isOdd = packages.find((p) => p.name === TEST_PACKAGE);
+
+      // Recently processed -- should be skipped or up-to-date
+      const synced = await syncer.syncPackage(isOdd);
+
+      // Returns false when package is up-to-date or recently processed
+      expect(synced).toBe(false);
+    },
+    TIMEOUT,
+  );
+
+  it(
+    'checkDependencyUpdates reads dependencies from rev directory',
+    async () => {
+      const syncer = new PackageSyncer();
+      const packages = await syncer.getExistingPackages();
+      const isOdd = packages.find((p) => p.name === TEST_PACKAGE);
+
+      const needsUpdate = await syncer.checkDependencyUpdates(isOdd);
+
+      // is-odd has 1 dep (is-number) -- may or may not need update
+      expect(typeof needsUpdate).toBe('boolean');
+    },
+    TIMEOUT,
+  );
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// 6. Input validation -- bad inputs don't crash, they error cleanly
 // ═══════════════════════════════════════════════════════════════════
 describe('input validation end-to-end', () => {
   it(
