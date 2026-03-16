@@ -98,12 +98,16 @@ depup.config.json
 scripts/integrity.json
 
 # Rev directory heavy files (published packages don't need source in git)
+# After publish, depup.mjs keeps only package.json + changes.json
+# These patterns prevent any leftover source files from being tracked
 # Unscoped packages: packages/express/1.0.0/rev-0/...
 packages/*/[0-9]*/rev-*/node_modules/
 packages/*/[0-9]*/rev-*/.test-temp/
+packages/*/[0-9]*/rev-*/package-lock.json
 # Scoped packages: packages/@babel/core/1.0.0/rev-0/...
 packages/@*/*/[0-9]*/rev-*/node_modules/
 packages/@*/*/[0-9]*/rev-*/.test-temp/
+packages/@*/*/[0-9]*/rev-*/package-lock.json
 
 # Binary files
 *.exe

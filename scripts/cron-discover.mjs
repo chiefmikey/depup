@@ -78,6 +78,15 @@ class PackageDiscoverer {
   }
 
   async main() {
+    // Fail fast if NPM_TOKEN is missing (prevents wasting CI minutes on
+    // packages that would all fail at the publish step)
+    if (!process.env.NPM_TOKEN) {
+      console.error(
+        chalk.red('NPM_TOKEN is required for publishing. Aborting discovery.'),
+      );
+      process.exit(1);
+    }
+
     const spinner = ora('Starting package discovery...').start();
 
     try {

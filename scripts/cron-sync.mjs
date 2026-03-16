@@ -239,43 +239,64 @@ class PackageSyncer {
         return false;
       }
 
-      // Check all dependencies in parallel with abort-on-first-match
+      // Check dependencies in batches of 10 with abort-on-first-match
+      // (prevents 100+ simultaneous registry requests for large packages)
       const abortController = new AbortController();
       const { signal } = abortController;
+      const depBatchSize = 10;
 
-      const results = await Promise.allSettled(
-        dependencyEntries.map(async ([depName, currentVersion]) => {
-          // Skip check if another dep already triggered an update
-          if (signal.aborted) {
-            return false;
-          }
+      for (
+        let depIndex = 0;
+        depIndex < dependencyEntries.length;
+        depIndex += depBatchSize
+      ) {
+        if (signal.aborted) {
+          return true;
+        }
 
-          try {
-            const latestManifest = await fetch.json(`/${depName}`, {
-              registry: this.registry,
-              timeout: 2000,
-            });
-
-            const latestVersion = latestManifest['dist-tags']?.latest;
-
-            if (
-              latestVersion &&
-              this.isSignificantUpdate(latestVersion, currentVersion)
-            ) {
-              abortController.abort();
-              return true;
+        const batch = dependencyEntries.slice(
+          depIndex,
+          depIndex + depBatchSize,
+        );
+        const results = await Promise.allSettled(
+          batch.map(async ([depName, currentVersion]) => {
+            if (signal.aborted) {
+              return false;
             }
-          } catch {
-            // Skip this dependency on fetch failure
-          }
 
-          return false;
-        }),
-      );
+            try {
+              const latestManifest = await fetch.json(`/${depName}`, {
+                registry: this.registry,
+                timeout: 2000,
+              });
 
-      return results.some(
-        (result) => result.status === 'fulfilled' && result.value === true,
-      );
+              const latestVersion = latestManifest['dist-tags']?.latest;
+
+              if (
+                latestVersion &&
+                this.isSignificantUpdate(latestVersion, currentVersion)
+              ) {
+                abortController.abort();
+                return true;
+              }
+            } catch {
+              // Skip this dependency on fetch failure
+            }
+
+            return false;
+          }),
+        );
+
+        if (
+          results.some(
+            (result) => result.status === 'fulfilled' && result.value === true,
+          )
+        ) {
+          return true;
+        }
+      }
+
+      return false;
     } catch {
       return false;
     }

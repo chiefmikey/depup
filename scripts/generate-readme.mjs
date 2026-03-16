@@ -162,18 +162,24 @@ This package inherits the license from the original package. See the original pa
 
     for (const [version, versionData] of Object.entries(integrityData)) {
       if (typeof versionData === 'object' && versionData !== null) {
-        for (const [revision, data] of Object.entries(versionData)) {
-          if (typeof data === 'object' && data !== null) {
-            const integrity = data.integrity || {};
-            const score = integrity.score || 0;
-            const totalVotes =
-              integrity.totalVotes ||
-              this.getRevisionVoteCount(votesData, version, revision) ||
-              0;
-            const status = this.getStatusEmoji(score);
+        // Show only the last 10 revisions per version to prevent unbounded growth
+        const revisions = Object.entries(versionData)
+          .filter(([, data]) => typeof data === 'object' && data !== null)
+          .toSorted(
+            ([a], [b]) => Number.parseInt(b, 10) - Number.parseInt(a, 10),
+          )
+          .slice(0, 10);
 
-            table += `| ${version} | ${revision} | ${status} | ${score}% | ${totalVotes} |\n`;
-          }
+        for (const [revision, data] of revisions) {
+          const integrity = data.integrity || {};
+          const score = integrity.score || 0;
+          const totalVotes =
+            integrity.totalVotes ||
+            this.getRevisionVoteCount(votesData, version, revision) ||
+            0;
+          const status = this.getStatusEmoji(score);
+
+          table += `| ${version} | ${revision} | ${status} | ${score}% | ${totalVotes} |\n`;
         }
       }
     }
@@ -197,17 +203,23 @@ This package inherits the license from the original package. See the original pa
         }
         history += `\n\n`;
 
-        for (const [revision, data] of Object.entries(versionData)) {
-          if (typeof data === 'object' && data !== null) {
-            const integrity = data.integrity || {};
-            const score = integrity.score || 0;
-            const status = this.getStatusEmoji(score);
+        // Show only the last 10 revisions per version
+        const revisions = Object.entries(versionData)
+          .filter(([, data]) => typeof data === 'object' && data !== null)
+          .toSorted(
+            ([a], [b]) => Number.parseInt(b, 10) - Number.parseInt(a, 10),
+          )
+          .slice(0, 10);
 
-            history += `- **Revision ${revision}** (${data.version}) - ${status} ${score}% integrity\n`;
+        for (const [revision, data] of revisions) {
+          const integrity = data.integrity || {};
+          const score = integrity.score || 0;
+          const status = this.getStatusEmoji(score);
 
-            if (integrity.lastUpdated) {
-              history += `  - Last updated: ${this.formatDate(integrity.lastUpdated)}\n`;
-            }
+          history += `- **Revision ${revision}** (${data.version}) - ${status} ${score}% integrity\n`;
+
+          if (integrity.lastUpdated) {
+            history += `  - Last updated: ${this.formatDate(integrity.lastUpdated)}\n`;
           }
         }
       }

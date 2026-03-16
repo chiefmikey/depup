@@ -1101,10 +1101,9 @@ try {
       targetDirectory,
     } = context;
 
-    // Clean up rev directory after publish or when skipped (prevent git bloat)
-    if (published || (shouldPublish && !published && !publishDidFail)) {
-      await this.cleanupAfterPublish(targetDirectory, debug);
-    }
+    // Always clean up rev directory -- source files are not needed in git
+    // (published packages are on npm, retries re-download from registry)
+    await this.cleanupAfterPublish(targetDirectory, debug);
 
     await this.updateIntegrityData(
       packageDirectory,
@@ -1117,12 +1116,48 @@ try {
       },
     );
 
+    // Prune old revisions to prevent unbounded git growth
+    const versionDirectory = path.dirname(targetDirectory);
+    await this.pruneOldRevisions(versionDirectory, debug);
+
     await this.safeGenerateReadme(packageName, debug);
     console.log(
       chalk.green(
         `Prepared ${scopedName}@${packageJson.version} in ${targetDirectory}`,
       ),
     );
+  }
+
+  async pruneOldRevisions(versionDirectory, debug, keepCount = 5) {
+    try {
+      const entries = await fs.readdir(versionDirectory, {
+        withFileTypes: true,
+      });
+      const revDirectories = entries
+        .filter((entry) => entry.isDirectory() && /^rev-\d+$/u.test(entry.name))
+        .map((entry) => ({
+          name: entry.name,
+          number: Number.parseInt(entry.name.split('-')[1], 10),
+        }))
+        .toSorted((a, b) => a.number - b.number);
+
+      if (revDirectories.length <= keepCount) {
+        return;
+      }
+
+      const toRemove = revDirectories.slice(0, -keepCount);
+      for (const directory of toRemove) {
+        await fs.rm(path.join(versionDirectory, directory.name), {
+          force: true,
+          recursive: true,
+        });
+        if (debug) {
+          console.log(chalk.gray(`  Pruned old revision: ${directory.name}`));
+        }
+      }
+    } catch {
+      // Non-fatal -- pruning failure shouldn't block processing
+    }
   }
 
   async preparePublishArtifacts(context) {

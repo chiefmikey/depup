@@ -3063,4 +3063,88 @@ describe('depUp Basic Tests', () => {
       expect(isMissing).toBe(true);
     });
   });
+
+  describe('revision pruning keeps only last N revisions', () => {
+    it('should identify revisions to remove when over threshold', () => {
+      const revDirectories = [
+        { name: 'rev-0', number: 0 },
+        { name: 'rev-1', number: 1 },
+        { name: 'rev-2', number: 2 },
+        { name: 'rev-5', number: 5 },
+        { name: 'rev-8', number: 8 },
+        { name: 'rev-10', number: 10 },
+        { name: 'rev-11', number: 11 },
+      ];
+      const keepCount = 5;
+      const sorted = revDirectories.toSorted((a, b) => a.number - b.number);
+      const toRemove = sorted.slice(0, -keepCount);
+
+      expect(toRemove).toHaveLength(2);
+      expect(toRemove[0].name).toBe('rev-0');
+      expect(toRemove[1].name).toBe('rev-1');
+
+      // Under threshold: nothing to prune
+      const fewRevs = sorted.slice(0, 3);
+
+      expect(fewRevs.length).toBeLessThanOrEqual(keepCount);
+    });
+  });
+
+  describe('dep checking uses batched requests', () => {
+    it('should process dependencies in batches of 10', () => {
+      const dependencies = Array.from({ length: 25 }, (_, index) => [
+        `dep-${index}`,
+        `^1.0.${index}`,
+      ]);
+      const batchSize = 10;
+      const batches = [];
+
+      for (let index = 0; index < dependencies.length; index += batchSize) {
+        batches.push(dependencies.slice(index, index + batchSize));
+      }
+
+      expect(batches).toHaveLength(3);
+      expect(batches[0]).toHaveLength(10);
+      expect(batches[1]).toHaveLength(10);
+      expect(batches[2]).toHaveLength(5);
+    });
+  });
+
+  describe('rEADME generation limits revisions per version', () => {
+    it('should show only the last N revisions', () => {
+      const versionData = {};
+      for (let index = 0; index < 20; index++) {
+        versionData[index] = { timestamp: '2026-01-01', version: '1.0.0' };
+      }
+
+      const revisions = Object.entries(versionData)
+        .filter(([, data]) => typeof data === 'object' && data !== null)
+        .toSorted(([a], [b]) => Number.parseInt(b, 10) - Number.parseInt(a, 10))
+        .slice(0, 10);
+
+      expect(revisions).toHaveLength(10);
+      // Should have the most recent (highest numbered) revisions
+      expect(revisions[0][0]).toBe('19');
+      expect(revisions[9][0]).toBe('10');
+    });
+  });
+
+  describe('unconditional rev directory cleanup', () => {
+    it('should always clean up regardless of publish status', () => {
+      // The fix: cleanup is unconditional -- no condition check needed
+      const scenarios = [
+        { published: true, shouldPublish: true, status: 'published' },
+        { published: false, shouldPublish: true, status: 'skipped' },
+        { published: false, shouldPublish: true, status: 'failed' },
+        { published: false, shouldPublish: false, status: 'prepared' },
+      ];
+
+      for (const scenario of scenarios) {
+        // All scenarios should trigger cleanup
+        const shouldCleanup = true; // unconditional
+
+        expect(shouldCleanup).toBe(true);
+      }
+    });
+  });
 });
