@@ -91,7 +91,15 @@ jobs:
                   git add scripts/cron-discover.mjs
                 fi
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
-                  git rebase --abort 2>/dev/null || true
+                  # Check if commit became empty after conflict resolution
+                  if git diff --cached --quiet 2>/dev/null; then
+                    echo "Commit became empty after conflict resolution, skipping..."
+                    git rebase --skip 2>/dev/null || {
+                      git rebase --abort 2>/dev/null || true
+                    }
+                  else
+                    git rebase --abort 2>/dev/null || true
+                  fi
                   sleep $((attempt * 2))
                   if [ "$attempt" -eq 5 ]; then
                     echo "Rebase failed after 5 attempts"
@@ -173,15 +181,6 @@ jobs:
           echo "Starting package sync (shard ${{ matrix.shard }}/5)..."
           npm run cron:sync
 
-      - name: Self-Healing
-        if: matrix.shard == 0
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "Running self-healing checks..."
-          npm run heal:auto
-
       - name: Commit and Push Changes
         run: |
           git add packages/
@@ -202,7 +201,15 @@ jobs:
                 done
                 git add packages/
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
-                  git rebase --abort 2>/dev/null || true
+                  # Check if commit became empty after conflict resolution
+                  if git diff --cached --quiet 2>/dev/null; then
+                    echo "Commit became empty after conflict resolution, skipping..."
+                    git rebase --skip 2>/dev/null || {
+                      git rebase --abort 2>/dev/null || true
+                    }
+                  else
+                    git rebase --abort 2>/dev/null || true
+                  fi
                   sleep $((attempt * 2))
                   if [ "$attempt" -eq 5 ]; then
                     echo "Rebase failed after 5 attempts"
@@ -239,3 +246,69 @@ jobs:
         run: |
           echo "## Sync Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+
+  heal:
+    name: Self-Healing
+    needs: sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: ${{ !cancelled() && !inputs.discover_only && needs.sync.result == 'success' }}
+
+    steps:
+      - name: Checkout (latest main after all syncs)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "DepUp Bot"
+          git config --global user.email "bot@depup.dev"
+
+      - name: Run Self-Healing
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "Running self-healing checks..."
+          npm run heal:auto
+
+      - name: Commit and Push
+        run: |
+          git add packages/
+          if git diff --cached --quiet; then
+            echo "No heal changes needed"
+            exit 0
+          fi
+          git commit -m "chore: self-healing repairs"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort 2>/dev/null || true
+              sleep 2
+              if [ "$attempt" -eq 3 ]; then
+                echo "Rebase failed after 3 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            else
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts"
+                exit 1
+              fi
+              sleep 2
+            fi
+          done

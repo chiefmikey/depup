@@ -112,6 +112,7 @@ jobs:
           fi
 
       - name: Download and extract package for scanning
+        id: download
         env:
           PACKAGE_NAME: ${{ inputs.package }}
         run: |
@@ -121,15 +122,25 @@ jobs:
           npm init -y > /dev/null 2>&1
           npm install "$PACKAGE_NAME" --no-save
 
+          # Strip version specifier for node_modules path lookup
+          # e.g., express@5.0.0 -> express, @angular/core@17.0.0 -> @angular/core
+          SCAN_NAME="$PACKAGE_NAME"
+          if [[ "$SCAN_NAME" =~ ^(@[^@]+)@.+ ]]; then
+            SCAN_NAME="${BASH_REMATCH[1]}"
+          elif [[ "$SCAN_NAME" =~ ^([^@]+)@.+ ]]; then
+            SCAN_NAME="${BASH_REMATCH[1]}"
+          fi
+          echo "scan_name=$SCAN_NAME" >> $GITHUB_OUTPUT
+
       - name: Run security scan
         id: security-scan
         env:
-          PACKAGE_NAME: ${{ inputs.package }}
+          SCAN_NAME: ${{ steps.download.outputs.scan_name }}
           STRICT_SECURITY: ${{ inputs.strict_security }}
         run: |
           echo "Running comprehensive security scan..."
           mkdir -p security-reports
-          node scripts/security-scan.mjs "temp-package/node_modules/$PACKAGE_NAME" \
+          node scripts/security-scan.mjs "temp-package/node_modules/$SCAN_NAME" \
             --report security-reports/security-scan.json
 
           # Check scan results (find the latest report file)
@@ -154,11 +165,11 @@ jobs:
       - name: Run compatibility test
         id: compatibility-test
         env:
-          PACKAGE_NAME: ${{ inputs.package }}
+          SCAN_NAME: ${{ steps.download.outputs.scan_name }}
           STRICT_SECURITY: ${{ inputs.strict_security }}
         run: |
           echo "Running compatibility analysis..."
-          COMPAT_ARGS=("temp-package/node_modules/$PACKAGE_NAME" "--report" "security-reports/compatibility.json")
+          COMPAT_ARGS=("temp-package/node_modules/$SCAN_NAME" "--report" "security-reports/compatibility.json")
           if [ "$STRICT_SECURITY" = "true" ]; then
             COMPAT_ARGS+=("--strict")
           fi
