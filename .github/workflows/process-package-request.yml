@@ -268,16 +268,17 @@ jobs:
         if: always()
         uses: actions/github-script@v7
         env:
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
           CHECK_EXISTS: ${{ steps.check-existing.outputs.exists }}
+          JOB_STATUS: ${{ job.status }}
+          NPM_OUTCOME: ${{ steps.npm-info.outcome }}
+          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
           PARSE_OUTCOME: ${{ steps.parse.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate-package-name.outcome }}
-          NPM_OUTCOME: ${{ steps.npm-info.outcome }}
         with:
           script: |
             const issueNumber = context.issue.number;
             const packageName = process.env.PACKAGE_NAME || 'unknown';
-            const jobStatus = '${{ job.status }}';
+            const jobStatus = process.env.JOB_STATUS;
             const checkExisting = process.env.CHECK_EXISTS;
             const parseFailed = process.env.PARSE_OUTCOME === 'failure';
             const validateFailed = process.env.VALIDATE_OUTCOME === 'failure';
