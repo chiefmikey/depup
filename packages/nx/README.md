@@ -25,8 +25,8 @@ npm install @depup/nx
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 22.5.4 | 0 | 🔴 Poor | 0% | 0 |
 | 22.5.4 | 1 | 🔴 Poor | 0% | 0 |
+| 22.5.4 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/nx
 
 ### Version 22.5.4
 
-- **Revision 0** (22.5.4-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (22.5.4-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (22.5.4-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

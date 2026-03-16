@@ -26,8 +26,8 @@ npm install @depup/sass
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 1.97.3 | 0 | 🔴 Poor | 0% | 0 |
-| 1.98.0 | 0 | 🔴 Poor | 0% | 0 |
 | 1.98.0 | 1 | 🔴 Poor | 0% | 0 |
+| 1.98.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,8 +39,8 @@ npm install @depup/sass
 
 ### Version 1.98.0
 
-- **Revision 0** (1.98.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (1.98.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (1.98.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

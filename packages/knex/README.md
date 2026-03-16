@@ -25,8 +25,8 @@ npm install @depup/knex
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 3.1.0 | 0 | 🔴 Poor | 0% | 0 |
 | 3.1.0 | 1 | 🔴 Poor | 0% | 0 |
+| 3.1.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/knex
 
 ### Version 3.1.0
 
-- **Revision 0** (3.1.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (3.1.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (3.1.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

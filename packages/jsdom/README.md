@@ -25,8 +25,8 @@ npm install @depup/jsdom
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 28.1.0 | 0 | 🔴 Poor | 0% | 0 |
 | 28.1.0 | 1 | 🔴 Poor | 0% | 0 |
+| 28.1.0 | 0 | 🔴 Poor | 0% | 0 |
 | 29.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -35,8 +35,8 @@ npm install @depup/jsdom
 
 ### Version 28.1.0
 
-- **Revision 0** (28.1.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (28.1.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (28.1.0-depup.0) - 🔴 Poor 0% integrity
 
 ### Version 29.0.0
 
