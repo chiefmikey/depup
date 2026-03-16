@@ -5,5 +5,18 @@
       "timestamp": "2026-03-09T08:18:51.855Z",
       "version": "12.6.2-depup.0"
     }
+  },
+  "12.8.0": {
+    "27": {
+      "changes": {
+        "prebuild-install": {
+          "from": "^7.1.1",
+          "to": "^7.1.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T16:49:29.692Z",
+      "version": "12.8.0-depup.27"
+    }
   }
 }
