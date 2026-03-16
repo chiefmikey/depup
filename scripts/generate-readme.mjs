@@ -73,28 +73,36 @@ This package inherits the license from the original package. See the original pa
     }
   }
 
+  async loadJsonSafe(filePath, label) {
+    try {
+      const data = await fs.readFile(filePath);
+      const parsed = JSON.parse(data);
+      if (
+        typeof parsed === 'object' &&
+        parsed !== null &&
+        !Array.isArray(parsed)
+      ) {
+        return parsed;
+      }
+    } catch {
+      console.warn(`No ${label} found`);
+    }
+    return {};
+  }
+
   async generateReadme(packageName) {
     const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const integrityFile = path.join(packageDirectory, 'integrity.json');
     const votesFile = path.join(packageDirectory, 'votes.json');
 
-    // Load integrity data
-    let integrityData = {};
-    try {
-      const data = await fs.readFile(integrityFile);
-      integrityData = JSON.parse(data);
-    } catch {
-      console.warn(`No integrity data found for ${packageName}`);
-    }
-
-    // Load votes data
-    let votesData = {};
-    try {
-      const data = await fs.readFile(votesFile);
-      votesData = JSON.parse(data);
-    } catch {
-      console.warn(`No votes data found for ${packageName}`);
-    }
+    const integrityData = await this.loadJsonSafe(
+      integrityFile,
+      `integrity data for ${packageName}`,
+    );
+    const votesData = await this.loadJsonSafe(
+      votesFile,
+      `votes data for ${packageName}`,
+    );
 
     // Get latest version info
     const versions = Object.keys(integrityData)

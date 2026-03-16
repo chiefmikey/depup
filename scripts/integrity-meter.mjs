@@ -248,7 +248,14 @@ class IntegrityMeter {
     let integrityData = {};
     try {
       const data = await fs.readFile(integrityFile);
-      integrityData = JSON.parse(data);
+      const parsed = JSON.parse(data);
+      if (
+        typeof parsed === 'object' &&
+        parsed !== null &&
+        !Array.isArray(parsed)
+      ) {
+        integrityData = parsed;
+      }
     } catch {
       // File doesn't exist, start fresh
     }

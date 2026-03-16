@@ -188,8 +188,12 @@ class SelfHealer {
         const data = await fs.readFile(integrityPath);
         const integrityData = JSON.parse(data);
 
-        // Handle null/non-object data by rebuilding from scratch
-        if (!integrityData || typeof integrityData !== 'object') {
+        // Handle null/non-object/array data by rebuilding from scratch
+        if (
+          !integrityData ||
+          typeof integrityData !== 'object' ||
+          Array.isArray(integrityData)
+        ) {
           await this.createBasicIntegrity(package_);
           fixed++;
           spinner.text = `Rebuilt integrity for ${package_.name} (${fixed})`;
@@ -297,7 +301,7 @@ class SelfHealer {
   }
 
   isValidIntegrityData(data) {
-    if (typeof data !== 'object' || data === null) {
+    if (typeof data !== 'object' || data === null || Array.isArray(data)) {
       return false;
     }
 

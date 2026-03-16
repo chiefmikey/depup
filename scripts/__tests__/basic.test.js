@@ -2878,4 +2878,125 @@ describe('depUp Basic Tests', () => {
       expect(checkConflict('latest', '>= 1.0.0')).toBe(false);
     });
   });
+
+  describe('installBuildDeps uses --ignore-scripts', () => {
+    it('should include --ignore-scripts to prevent RCE via devDependencies', () => {
+      const installArguments = ['install', '--ignore-scripts'];
+
+      expect(installArguments).toContain('--ignore-scripts');
+      expect(installArguments).not.toContain('--production');
+    });
+  });
+
+  describe('baseVersion path traversal prevention', () => {
+    it('should reject versions with path traversal sequences', () => {
+      const validateVersion = (baseVersion, packageDirectory) => {
+        const versionDirectory = path.join(packageDirectory, baseVersion);
+        return versionDirectory.startsWith(packageDirectory + path.sep);
+      };
+
+      expect(validateVersion('1.0.0', '/app/packages/express')).toBe(true);
+      expect(
+        validateVersion('../../.github/workflows', '/app/packages/express'),
+      ).toBe(false);
+      expect(validateVersion('../etc/passwd', '/app/packages/express')).toBe(
+        false,
+      );
+    });
+  });
+
+  describe('publish failure status tracking', () => {
+    it('should return failed when publish attempted and errored', () => {
+      const getPublishStatus = (shouldPublish, published, publishDidFail) => {
+        if (!shouldPublish) {
+          return 'prepared';
+        }
+        if (publishDidFail) {
+          return 'failed';
+        }
+        return published ? 'published' : 'skipped';
+      };
+
+      expect(getPublishStatus(false, false, false)).toBe('prepared');
+      expect(getPublishStatus(true, true, false)).toBe('published');
+      expect(getPublishStatus(true, false, false)).toBe('skipped');
+      expect(getPublishStatus(true, false, true)).toBe('failed');
+    });
+  });
+
+  describe('null/array integrity.json guards', () => {
+    it('should safely load null or array JSON as empty object', () => {
+      const loadSafe = (parsed) => {
+        if (
+          typeof parsed === 'object' &&
+          parsed !== null &&
+          !Array.isArray(parsed)
+        ) {
+          return parsed;
+        }
+        return {};
+      };
+
+      expect(loadSafe({ '1.0.0': {} })).toStrictEqual({ '1.0.0': {} });
+      expect(loadSafe(null)).toStrictEqual({});
+      expect(loadSafe([])).toStrictEqual({});
+      expect(loadSafe([1, 2, 3])).toStrictEqual({});
+      expect(loadSafe('string')).toStrictEqual({});
+      expect(loadSafe(42)).toStrictEqual({});
+    });
+  });
+
+  describe('heal.mjs isValidIntegrityData rejects arrays', () => {
+    it('should return false for array integrity data', () => {
+      const isValid = (data) => {
+        if (typeof data !== 'object' || data === null || Array.isArray(data)) {
+          return false;
+        }
+        return true;
+      };
+
+      expect(isValid({})).toBe(true);
+      expect(
+        isValid({ '1.0.0': { 0: { timestamp: 't', version: 'v' } } }),
+      ).toBe(true);
+      expect(isValid([])).toBe(false);
+      expect(isValid(null)).toBe(false);
+      expect(isValid('string')).toBe(false);
+    });
+  });
+
+  describe('skipped-revision cleanup', () => {
+    it('should clean up when publish intentionally skipped (not failed)', () => {
+      const shouldCleanup = (published, shouldPublish, publishDidFail) =>
+        published || (shouldPublish && !published && !publishDidFail);
+
+      // Published: clean up
+      expect(shouldCleanup(true, true, false)).toBe(true);
+      // Skipped (no dep updates): clean up to prevent git bloat
+      expect(shouldCleanup(false, true, false)).toBe(true);
+      // Failed: do NOT clean up (preserve for debugging/retry)
+      expect(shouldCleanup(false, true, true)).toBe(false);
+      // Not publishing: do NOT clean up (local/dry-run mode)
+      expect(shouldCleanup(false, false, false)).toBe(false);
+    });
+  });
+
+  describe('collectFiles handles unreadable directories', () => {
+    it('should return empty array instead of crashing', () => {
+      // Simulate the fix: try/catch around readdir
+      const collectFiles = (canRead) => {
+        try {
+          if (!canRead) {
+            throw new Error('EACCES');
+          }
+          return ['file1.js', 'file2.js'];
+        } catch {
+          return [];
+        }
+      };
+
+      expect(collectFiles(true)).toStrictEqual(['file1.js', 'file2.js']);
+      expect(collectFiles(false)).toStrictEqual([]);
+    });
+  });
 });

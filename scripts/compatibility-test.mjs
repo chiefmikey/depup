@@ -370,7 +370,13 @@ class CompatibilityTester {
 
   async collectFiles(directoryPath) {
     const files = [];
-    const items = await fs.readdir(directoryPath, { withFileTypes: true });
+    let items;
+    try {
+      items = await fs.readdir(directoryPath, { withFileTypes: true });
+    } catch {
+      // Skip directories we cannot read (EACCES, ENOENT)
+      return files;
+    }
 
     for (const item of items) {
       if (item.isSymbolicLink()) {
@@ -397,6 +403,20 @@ class CompatibilityTester {
       totalSize: 0,
     };
 
+    // Read root package.json for scripts and dependency counts (not nested ones)
+    try {
+      const rootPackagePath = path.join(packagePath, 'package.json');
+      const content = await fs.readFile(rootPackagePath);
+      const package_ = JSON.parse(content);
+      stats.hasScripts =
+        Boolean(package_.scripts) && Object.keys(package_.scripts).length > 0;
+      stats.dependencyCount =
+        Object.keys(package_.dependencies || {}).length +
+        Object.keys(package_.devDependencies || {}).length;
+    } catch {
+      // No root package.json
+    }
+
     const files = await this.collectFiles(packagePath);
     stats.fileCount = files.length;
 
@@ -410,18 +430,6 @@ class CompatibilityTester {
           ['.node', '.so', '.dylib', '.dll'].includes(path.extname(fullPath))
         ) {
           stats.hasNativeCode = true;
-        }
-
-        // Check for scripts (simplified)
-        if (path.basename(fullPath) === 'package.json') {
-          const content = await fs.readFile(fullPath);
-          const package_ = JSON.parse(content);
-          stats.hasScripts =
-            Boolean(package_.scripts) &&
-            Object.keys(package_.scripts).length > 0;
-          stats.dependencyCount =
-            Object.keys(package_.dependencies || {}).length +
-            Object.keys(package_.devDependencies || {}).length;
         }
       } catch {
         // Ignore files we can't read

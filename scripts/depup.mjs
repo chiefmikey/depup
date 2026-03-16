@@ -204,6 +204,14 @@ class DepUp {
       );
     }
 
+    // Validate version for path traversal (comes from registry, could be tampered)
+    const versionDirectory = path.join(packageDirectory, baseVersion);
+    if (!versionDirectory.startsWith(packageDirectory + path.sep)) {
+      throw new Error(
+        `Path traversal detected in manifest version: ${baseVersion}`,
+      );
+    }
+
     return {
       baseVersion,
       packageDirectory,
@@ -246,6 +254,7 @@ class DepUp {
         packageDirectory,
         packageJson,
         packageName,
+        publishDidFail: Boolean(publishError),
         published,
         revision,
         scopedName,
@@ -892,7 +901,7 @@ try {
       console.log('Installing devDependencies for build tools...');
     }
     try {
-      execFileSync('npm', ['install'], {
+      execFileSync('npm', ['install', '--ignore-scripts'], {
         cwd: packageDirectory,
         stdio: debug ? 'inherit' : 'pipe',
         timeout: 60_000,
@@ -1075,6 +1084,7 @@ try {
       packageDirectory,
       packageJson,
       packageName,
+      publishDidFail,
       published,
       revision,
       scopedName,
@@ -1082,7 +1092,8 @@ try {
       targetDirectory,
     } = context;
 
-    if (published) {
+    // Clean up rev directory after publish or when skipped (prevent git bloat)
+    if (published || (shouldPublish && !published && !publishDidFail)) {
       await this.cleanupAfterPublish(targetDirectory, debug);
     }
 
@@ -1093,7 +1104,7 @@ try {
       packageJson.version,
       {
         changes: changesData.bumped,
-        status: this.getPublishStatus(shouldPublish, published),
+        status: this.getPublishStatus(shouldPublish, published, publishDidFail),
       },
     );
 
@@ -1196,9 +1207,12 @@ try {
     );
   }
 
-  getPublishStatus(shouldPublish, published) {
+  getPublishStatus(shouldPublish, published, publishDidFail = false) {
     if (!shouldPublish) {
       return 'prepared';
+    }
+    if (publishDidFail) {
+      return 'failed';
     }
     return published ? 'published' : 'skipped';
   }
