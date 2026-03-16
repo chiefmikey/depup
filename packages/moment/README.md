@@ -25,21 +25,16 @@ npm install @depup/moment
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 2.30.1 | 1 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 2 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 3 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 4 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 5 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 6 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 7 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 8 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 9 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 10 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 11 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 12 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 13 | 🔴 Poor | 0% | 0 |
-| 2.30.1 | 14 | 🔴 Poor | 0% | 0 |
 | 2.30.1 | 15 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 14 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 13 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 12 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 11 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 10 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 9 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 8 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 7 | 🔴 Poor | 0% | 0 |
+| 2.30.1 | 6 | 🔴 Poor | 0% | 0 |
 | 1.0.0 | 0 | 🟡 Good | 67% | 45 |
 
 
@@ -48,21 +43,16 @@ npm install @depup/moment
 
 ### Version 2.30.1
 
-- **Revision 1** (2.30.1-depup.1) - 🔴 Poor 0% integrity
-- **Revision 2** (2.30.1-depup.2) - 🔴 Poor 0% integrity
-- **Revision 3** (2.30.1-depup.3) - 🔴 Poor 0% integrity
-- **Revision 4** (2.30.1-depup.4) - 🔴 Poor 0% integrity
-- **Revision 5** (2.30.1-depup.5) - 🔴 Poor 0% integrity
-- **Revision 6** (2.30.1-depup.6) - 🔴 Poor 0% integrity
-- **Revision 7** (2.30.1-depup.7) - 🔴 Poor 0% integrity
-- **Revision 8** (2.30.1-depup.8) - 🔴 Poor 0% integrity
-- **Revision 9** (2.30.1-depup.9) - 🔴 Poor 0% integrity
-- **Revision 10** (2.30.1-depup.10) - 🔴 Poor 0% integrity
-- **Revision 11** (2.30.1-depup.11) - 🔴 Poor 0% integrity
-- **Revision 12** (2.30.1-depup.12) - 🔴 Poor 0% integrity
-- **Revision 13** (2.30.1-depup.13) - 🔴 Poor 0% integrity
-- **Revision 14** (2.30.1-depup.14) - 🔴 Poor 0% integrity
 - **Revision 15** (2.30.1-depup.15) - 🔴 Poor 0% integrity
+- **Revision 14** (2.30.1-depup.14) - 🔴 Poor 0% integrity
+- **Revision 13** (2.30.1-depup.13) - 🔴 Poor 0% integrity
+- **Revision 12** (2.30.1-depup.12) - 🔴 Poor 0% integrity
+- **Revision 11** (2.30.1-depup.11) - 🔴 Poor 0% integrity
+- **Revision 10** (2.30.1-depup.10) - 🔴 Poor 0% integrity
+- **Revision 9** (2.30.1-depup.9) - 🔴 Poor 0% integrity
+- **Revision 8** (2.30.1-depup.8) - 🔴 Poor 0% integrity
+- **Revision 7** (2.30.1-depup.7) - 🔴 Poor 0% integrity
+- **Revision 6** (2.30.1-depup.6) - 🔴 Poor 0% integrity
 
 ### Version 1.0.0 (45 votes)
 
