@@ -4,6 +4,37 @@
       "status": "created",
       "timestamp": "2026-03-09T20:08:02.810Z",
       "version": "7.29.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/plugin-proposal-private-property-in-object": {
+          "from": "7.21.0-placeholder-for-preset-env.2",
+          "to": "^7.21.11"
+        },
+        "babel-plugin-polyfill-corejs2": {
+          "from": "^0.4.15",
+          "to": "^0.4.17"
+        },
+        "babel-plugin-polyfill-corejs3": {
+          "from": "^0.14.0",
+          "to": "^0.14.2"
+        },
+        "babel-plugin-polyfill-regenerator": {
+          "from": "^0.6.6",
+          "to": "^0.6.8"
+        },
+        "core-js-compat": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.7.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T22:06:35.395Z",
+      "version": "7.29.0-depup.1"
     }
   }
 }
