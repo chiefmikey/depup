@@ -572,6 +572,8 @@ class CompatibilityTester {
   }
 }
 
+export { CompatibilityTester };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

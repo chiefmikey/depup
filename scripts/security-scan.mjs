@@ -686,6 +686,8 @@ Overall Status: ${report.overall_status.toUpperCase()}
   }
 }
 
+export { SecurityScanner };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

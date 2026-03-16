@@ -324,6 +324,8 @@ class IntegrityMeter {
   integrityFile = 'integrity.json';
 }
 
+export { IntegrityMeter };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

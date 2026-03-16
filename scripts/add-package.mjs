@@ -197,6 +197,8 @@ class PackageAdder {
   cronDiscoverPath = path.join(import.meta.dirname, 'cron-discover.mjs');
 }
 
+export { PackageAdder };
+
 // CLI interface
 if (process.argv[1] === import.meta.filename) {
   const adder = new PackageAdder();

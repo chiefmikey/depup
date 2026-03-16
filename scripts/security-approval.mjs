@@ -461,6 +461,8 @@ class SecurityApprovalWorkflow {
   }
 }
 
+export { SecurityApprovalWorkflow };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

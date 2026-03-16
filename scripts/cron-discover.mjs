@@ -714,6 +714,8 @@ class PackageDiscoverer {
   versionFetchConcurrency = 40;
 }
 
+export { PackageDiscoverer };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

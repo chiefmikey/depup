@@ -282,6 +282,8 @@ This package inherits the license from the original package. See the original pa
   }
 }
 
+export { ReadmeGenerator };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

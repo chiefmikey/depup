@@ -384,6 +384,8 @@ class DepUpCLI {
   }
 }
 
+export { DepUpCLI };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {

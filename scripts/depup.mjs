@@ -1267,6 +1267,8 @@ try {
   npmRegistry = 'https://registry.npmjs.org';
 }
 
+export { DepUp };
+
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
   try {
