@@ -78,6 +78,9 @@ jobs:
           git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
             git fetch origin main
+            # Clean any unstaged changes before rebase (e.g., case-different
+            # README files from original packages that git sees as modified)
+            git checkout -- . 2>/dev/null || true
             if ! git rebase origin/main; then
               # Check for content conflicts (another shard pushed same package data)
               conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
@@ -191,6 +194,9 @@ jobs:
           git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
           for attempt in 1 2 3 4 5; do
             git fetch origin main
+            # Clean any unstaged changes before rebase (e.g., case-different
+            # README files from original packages that git sees as modified)
+            git checkout -- . 2>/dev/null || true
             if ! git rebase origin/main; then
               # Check for content conflicts (another shard pushed same package data)
               conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
@@ -294,6 +300,8 @@ jobs:
           git commit -m "chore: self-healing repairs"
           for attempt in 1 2 3; do
             git fetch origin main
+            # Clean unstaged changes before rebase (case-different files from packages)
+            git checkout -- . 2>/dev/null || true
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
               sleep 2

@@ -65,6 +65,8 @@ jobs:
             git commit -m "chore: sync packages"
             for attempt in 1 2 3; do
               git fetch origin main
+              # Clean unstaged changes before rebase (case-different files from packages)
+              git checkout -- . 2>/dev/null || true
               if ! git rebase origin/main; then
                 echo "Rebase failed on attempt $attempt, aborting..."
                 git rebase --abort 2>/dev/null || true
