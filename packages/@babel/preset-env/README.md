@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
-- **DepUp Version**: 7.29.0-depup.0
+- **DepUp Version**: 7.29.0-depup.1
 - **Original Version**: 7.29.0
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/babel__preset-env
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 7.29.0 | 1 | 🔴 Poor | 0% | 0 |
 | 7.29.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/babel__preset-env
 
 ### Version 7.29.0
 
+- **Revision 1** (7.29.0-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (7.29.0-depup.0) - 🔴 Poor 0% integrity
 
 
