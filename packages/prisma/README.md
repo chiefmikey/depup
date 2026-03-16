@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [prisma](https://www.npmjs.com/package/prisma)
-- **DepUp Version**: 7.5.0-depup.0
+- **DepUp Version**: 7.5.0-depup.1
 - **Original Version**: 7.5.0
-- **Last Updated**: 3/15/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/prisma
 |---------|----------|--------|-------|-------|
 | 6.16.1 | 0 | 🔴 Poor | 0% | 0 |
 | 7.5.0 | 0 | 🔴 Poor | 0% | 0 |
+| 7.5.0 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,7 @@ npm install @depup/prisma
 ### Version 7.5.0
 
 - **Revision 0** (7.5.0-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (7.5.0-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
