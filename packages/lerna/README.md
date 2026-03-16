@@ -27,8 +27,8 @@ npm install @depup/lerna
 |---------|----------|--------|-------|-------|
 | 9.0.5 | 0 | 🔴 Poor | 0% | 0 |
 | 9.0.6 | 0 | 🔴 Poor | 0% | 0 |
-| 9.0.7 | 0 | 🔴 Poor | 0% | 0 |
 | 9.0.7 | 1 | 🔴 Poor | 0% | 0 |
+| 9.0.7 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -44,8 +44,8 @@ npm install @depup/lerna
 
 ### Version 9.0.7
 
-- **Revision 0** (9.0.7-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (9.0.7-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (9.0.7-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

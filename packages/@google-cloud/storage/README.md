@@ -25,8 +25,8 @@ npm install @depup/google-cloud__storage
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 7.19.0 | 0 | 🔴 Poor | 0% | 0 |
 | 7.19.0 | 1 | 🔴 Poor | 0% | 0 |
+| 7.19.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/google-cloud__storage
 
 ### Version 7.19.0
 
-- **Revision 0** (7.19.0-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (7.19.0-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (7.19.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

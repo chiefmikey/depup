@@ -25,8 +25,8 @@ npm install @depup/fastify
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 5.8.2 | 0 | 🔴 Poor | 0% | 0 |
 | 5.8.2 | 1 | 🔴 Poor | 0% | 0 |
+| 5.8.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/fastify
 
 ### Version 5.8.2
 
-- **Revision 0** (5.8.2-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (5.8.2-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (5.8.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
