@@ -25,8 +25,8 @@ npm install @depup/node-fetch
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
-| 3.3.2 | 0 | 🔴 Poor | 0% | 0 |
 | 3.3.2 | 1 | 🔴 Poor | 0% | 0 |
+| 3.3.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,8 +34,8 @@ npm install @depup/node-fetch
 
 ### Version 3.3.2
 
-- **Revision 0** (3.3.2-depup.0) - 🔴 Poor 0% integrity
 - **Revision 1** (3.3.2-depup.1) - 🔴 Poor 0% integrity
+- **Revision 0** (3.3.2-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
