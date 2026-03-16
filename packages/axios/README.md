@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [axios](https://www.npmjs.com/package/axios)
-- **DepUp Version**: 1.13.2-depup.0
-- **Original Version**: 1.13.2
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 1.13.6-depup.32
+- **Original Version**: 1.13.6
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/axios
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 1.13.2 | 0 | 🔴 Poor | 0% | 0 |
+| 1.13.6 | 32 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/axios
 ### Version 1.13.2
 
 - **Revision 0** (1.13.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 1.13.6
+
+- **Revision 32** (1.13.6-depup.32) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

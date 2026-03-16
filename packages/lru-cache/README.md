@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [lru-cache](https://www.npmjs.com/package/lru-cache)
-- **DepUp Version**: 11.2.6-depup.0
-- **Original Version**: 11.2.6
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 11.2.7-depup.1
+- **Original Version**: 11.2.7
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/lru-cache
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 11.2.6 | 0 | 🔴 Poor | 0% | 0 |
+| 11.2.7 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/lru-cache
 ### Version 11.2.6
 
 - **Revision 0** (11.2.6-depup.0) - 🔴 Poor 0% integrity
+
+### Version 11.2.7
+
+- **Revision 1** (11.2.7-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

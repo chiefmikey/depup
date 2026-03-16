@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [pino](https://www.npmjs.com/package/pino)
-- **DepUp Version**: 10.3.1-depup.0
+- **DepUp Version**: 10.3.1-depup.1
 - **Original Version**: 10.3.1
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/pino
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 10.3.1 | 0 | 🔴 Poor | 0% | 0 |
+| 10.3.1 | 1 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,7 @@ npm install @depup/pino
 ### Version 10.3.1
 
 - **Revision 0** (10.3.1-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (10.3.1-depup.1) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

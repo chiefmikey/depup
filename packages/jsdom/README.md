@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [jsdom](https://www.npmjs.com/package/jsdom)
-- **DepUp Version**: 28.1.0-depup.0
-- **Original Version**: 28.1.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 29.0.0-depup.0
+- **Original Version**: 29.0.0
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,8 @@ npm install @depup/jsdom
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 28.1.0 | 0 | 🔴 Poor | 0% | 0 |
+| 28.1.0 | 1 | 🔴 Poor | 0% | 0 |
+| 29.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +36,11 @@ npm install @depup/jsdom
 ### Version 28.1.0
 
 - **Revision 0** (28.1.0-depup.0) - 🔴 Poor 0% integrity
+- **Revision 1** (28.1.0-depup.1) - 🔴 Poor 0% integrity
+
+### Version 29.0.0
+
+- **Revision 0** (29.0.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

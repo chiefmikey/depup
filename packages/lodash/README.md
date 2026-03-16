@@ -50,7 +50,7 @@ npm install @depup/lodash
 ## 🔄 Version History
 
 
-### Version 4.17.21
+### Version 4.17.21 (1 votes)
 
 - **Revision 0** (4.17.21-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/12/2025
@@ -72,9 +72,9 @@ npm install @depup/lodash
 - **Revision 16** (4.17.21-depup.16) - 🔴 Poor 0% integrity
 - **Revision 17** (4.17.21-depup.17) - 🔴 Poor 0% integrity
 
-### Version 1.0.0
+### Version 1.0.0 (46 votes)
 
-- **Revision 0** (undefined) - 🟡 Good 67% integrity
+- **Revision 0** (1.0.0-depup.0) - 🟡 Good 67% integrity
   - Last updated: 9/15/2025
 
 ### Version 4.17.23

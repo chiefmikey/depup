@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [framer-motion](https://www.npmjs.com/package/framer-motion)
-- **DepUp Version**: 12.23.12-depup.0
-- **Original Version**: 12.23.12
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 12.37.0-depup.0
+- **Original Version**: 12.37.0
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,8 @@ npm install @depup/framer-motion
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 12.23.12 | 0 | 🔴 Poor | 0% | 0 |
+| 12.36.0 | 9 | 🔴 Poor | 0% | 0 |
+| 12.37.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +36,14 @@ npm install @depup/framer-motion
 ### Version 12.23.12
 
 - **Revision 0** (12.23.12-depup.0) - 🔴 Poor 0% integrity
+
+### Version 12.36.0
+
+- **Revision 9** (12.36.0-depup.9) - 🔴 Poor 0% integrity
+
+### Version 12.37.0
+
+- **Revision 0** (12.37.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

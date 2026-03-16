@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [terser](https://www.npmjs.com/package/terser)
-- **DepUp Version**: 5.46.0-depup.0
-- **Original Version**: 5.46.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 5.46.1-depup.0
+- **Original Version**: 5.46.1
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/terser
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.46.0 | 0 | 🔴 Poor | 0% | 0 |
+| 5.46.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/terser
 ### Version 5.46.0
 
 - **Revision 0** (5.46.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.46.1
+
+- **Revision 0** (5.46.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

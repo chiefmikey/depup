@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [cypress](https://www.npmjs.com/package/cypress)
-- **DepUp Version**: 15.11.0-depup.0
-- **Original Version**: 15.11.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 15.12.0-depup.4
+- **Original Version**: 15.12.0
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/cypress
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 15.11.0 | 0 | 🔴 Poor | 0% | 0 |
+| 15.12.0 | 4 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/cypress
 ### Version 15.11.0
 
 - **Revision 0** (15.11.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 15.12.0
+
+- **Revision 4** (15.12.0-depup.4) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

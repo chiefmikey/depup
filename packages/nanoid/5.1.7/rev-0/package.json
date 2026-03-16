@@ -1,0 +1,58 @@
+{
+  "name": "@depup/nanoid",
+  "version": "5.1.7-depup.0",
+  "description": "[DepUp] A tiny (118 bytes), secure URL-friendly unique string ID generator",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "nanoid",
+    "uuid",
+    "random",
+    "id",
+    "url"
+  ],
+  "type": "module",
+  "engines": {
+    "node": "^18 || >=20"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ai"
+    }
+  ],
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "ai/nanoid",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "browser": "./index.browser.js",
+      "react-native": "./index.browser.js",
+      "default": "./index.js"
+    },
+    "./non-secure": {
+      "types": "./non-secure/index.d.ts",
+      "default": "./non-secure/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "browser": {
+    "./index.js": "./index.browser.js"
+  },
+  "react-native": {
+    "./index.js": "./index.browser.js"
+  },
+  "bin": "./bin/nanoid.js",
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "nanoid",
+    "originalVersion": "5.1.7",
+    "processedAt": "2026-03-15T20:14:49.286Z",
+    "smokeTest": "passed"
+  }
+}

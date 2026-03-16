@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [sequelize](https://www.npmjs.com/package/sequelize)
-- **DepUp Version**: 6.37.7-depup.0
-- **Original Version**: 6.37.7
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 6.37.8-depup.24
+- **Original Version**: 6.37.8
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/sequelize
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.37.7 | 0 | 🔴 Poor | 0% | 0 |
+| 6.37.8 | 24 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/sequelize
 ### Version 6.37.7
 
 - **Revision 0** (6.37.7-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.37.8
+
+- **Revision 24** (6.37.8-depup.24) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

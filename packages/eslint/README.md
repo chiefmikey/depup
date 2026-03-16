@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [eslint](https://www.npmjs.com/package/eslint)
-- **DepUp Version**: 9.35.0-depup.0
-- **Original Version**: 9.35.0
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 10.0.3-depup.36
+- **Original Version**: 10.0.3
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/eslint
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 9.35.0 | 0 | 🔴 Poor | 0% | 0 |
+| 10.0.3 | 36 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/eslint
 ### Version 9.35.0
 
 - **Revision 0** (9.35.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 10.0.3
+
+- **Revision 36** (10.0.3-depup.36) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [simple-git](https://www.npmjs.com/package/simple-git)
-- **DepUp Version**: 3.32.3-depup.0
-- **Original Version**: 3.32.3
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 3.33.0-depup.12
+- **Original Version**: 3.33.0
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/simple-git
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.32.3 | 0 | 🔴 Poor | 0% | 0 |
+| 3.33.0 | 12 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/simple-git
 ### Version 3.32.3
 
 - **Revision 0** (3.32.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.33.0
+
+- **Revision 12** (3.33.0-depup.12) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

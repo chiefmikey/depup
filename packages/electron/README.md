@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [electron](https://www.npmjs.com/package/electron)
-- **DepUp Version**: 40.8.0-depup.0
-- **Original Version**: 40.8.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 41.0.2-depup.8
+- **Original Version**: 41.0.2
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/electron
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 40.8.0 | 0 | 🔴 Poor | 0% | 0 |
+| 41.0.2 | 8 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/electron
 ### Version 40.8.0
 
 - **Revision 0** (40.8.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 41.0.2
+
+- **Revision 8** (41.0.2-depup.8) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

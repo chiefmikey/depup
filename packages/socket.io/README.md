@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [socket.io](https://www.npmjs.com/package/socket.io)
-- **DepUp Version**: 4.8.1-depup.0
-- **Original Version**: 4.8.1
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 4.8.3-depup.28
+- **Original Version**: 4.8.3
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/socket.io
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 4.8.1 | 0 | 🔴 Poor | 0% | 0 |
+| 4.8.3 | 28 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/socket.io
 ### Version 4.8.1
 
 - **Revision 0** (4.8.1-depup.0) - 🔴 Poor 0% integrity
+
+### Version 4.8.3
+
+- **Revision 28** (4.8.3-depup.28) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

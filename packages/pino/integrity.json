@@ -4,6 +4,37 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.913Z",
       "version": "10.3.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "on-exit-leak-free": {
+          "from": "^2.1.0",
+          "to": "^2.1.2"
+        },
+        "pino-std-serializers": {
+          "from": "^7.0.0",
+          "to": "^7.1.0"
+        },
+        "quick-format-unescaped": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "real-require": {
+          "from": "^0.2.0",
+          "to": "^1.0.0"
+        },
+        "safe-stable-stringify": {
+          "from": "^2.3.1",
+          "to": "^2.5.0"
+        },
+        "sonic-boom": {
+          "from": "^4.0.1",
+          "to": "^4.2.1"
+        }
+      },
+      "status": "skipped",
+      "timestamp": "2026-03-14T20:38:17.423Z",
+      "version": "10.3.1-depup.1"
     }
   }
 }

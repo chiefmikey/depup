@@ -5,5 +5,39 @@
       "timestamp": "2026-01-10T16:45:34.061Z",
       "status": "created"
     }
+  },
+  "21.0.2": {
+    "23": {
+      "changes": {
+        "@sinonjs/commons": {
+          "from": "^3.0.1",
+          "to": "^4.0.0-alpha.0"
+        },
+        "supports-color": {
+          "from": "^7.2.0",
+          "to": "^10.2.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T00:41:24.585Z",
+      "version": "21.0.2-depup.23"
+    }
+  },
+  "21.0.3": {
+    "0": {
+      "changes": {
+        "@sinonjs/commons": {
+          "from": "^3.0.1",
+          "to": "^4.0.0-alpha.0"
+        },
+        "supports-color": {
+          "from": "^7.2.0",
+          "to": "^10.2.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T12:24:28.670Z",
+      "version": "21.0.3-depup.0"
+    }
   }
 }

@@ -32,9 +32,9 @@ npm install @depup/react
 ## 🔄 Version History
 
 
-### Version 1.0.0
+### Version 1.0.0 (2 votes)
 
-- **Revision 0** (undefined) - 🟢 Excellent 100% integrity
+- **Revision 0** (1.0.0-depup.0) - 🟢 Excellent 100% integrity
   - Last updated: 9/15/2025
 
 ### Version 19.2.4

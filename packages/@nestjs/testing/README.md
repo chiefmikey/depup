@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@nestjs/testing](https://www.npmjs.com/package/@nestjs/testing)
-- **DepUp Version**: 11.1.16-depup.0
-- **Original Version**: 11.1.16
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 11.1.17-depup.0
+- **Original Version**: 11.1.17
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/nestjs__testing
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 11.1.16 | 0 | 🔴 Poor | 0% | 0 |
+| 11.1.17 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/nestjs__testing
 ### Version 11.1.16
 
 - **Revision 0** (11.1.16-depup.0) - 🔴 Poor 0% integrity
+
+### Version 11.1.17
+
+- **Revision 0** (11.1.17-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

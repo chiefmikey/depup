@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@sveltejs/kit](https://www.npmjs.com/package/@sveltejs/kit)
-- **DepUp Version**: 2.53.4-depup.0
-- **Original Version**: 2.53.4
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 2.55.0-depup.10
+- **Original Version**: 2.55.0
+- **Last Updated**: 3/14/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/sveltejs__kit
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.53.4 | 0 | 🔴 Poor | 0% | 0 |
+| 2.55.0 | 10 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/sveltejs__kit
 ### Version 2.53.4
 
 - **Revision 0** (2.53.4-depup.0) - 🔴 Poor 0% integrity
+
+### Version 2.55.0
+
+- **Revision 10** (2.55.0-depup.10) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

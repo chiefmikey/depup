@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [webpack](https://www.npmjs.com/package/webpack)
-- **DepUp Version**: 5.101.3-depup.0
-- **Original Version**: 5.101.3
-- **Last Updated**: 1/10/2026
+- **DepUp Version**: 5.105.4-depup.37
+- **Original Version**: 5.105.4
+- **Last Updated**: 3/15/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/webpack
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 5.101.3 | 0 | 🔴 Poor | 0% | 0 |
+| 5.105.4 | 37 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/webpack
 ### Version 5.101.3
 
 - **Revision 0** (5.101.3-depup.0) - 🔴 Poor 0% integrity
+
+### Version 5.105.4
+
+- **Revision 37** (5.105.4-depup.37) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
