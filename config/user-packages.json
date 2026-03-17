@@ -1,5 +1,5 @@
 {
-  "count": 133,
+  "count": 134,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -77,6 +77,7 @@
     "nightwatch",
     "nitro",
     "npm-run-all",
+    "oclif",
     "ofetch",
     "pako",
     "pdf-lib",
@@ -135,5 +136,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:30:45.435Z"
+  "updatedAt": "2026-03-17T19:30:47.823Z"
 }
