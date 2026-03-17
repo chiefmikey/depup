@@ -1,5 +1,5 @@
 {
-  "count": 65,
+  "count": 66,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -56,6 +56,7 @@
     "react-virtualized",
     "sendgrid",
     "snowpack",
+    "solid-js",
     "tap",
     "tasuku",
     "testcafe",
@@ -67,5 +68,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:07:19.356Z"
+  "updatedAt": "2026-03-17T18:07:22.156Z"
 }
