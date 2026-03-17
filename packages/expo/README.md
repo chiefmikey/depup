@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [expo](https://www.npmjs.com/package/expo)
-- **DepUp Version**: 55.0.6-depup.16
-- **Original Version**: 55.0.6
-- **Last Updated**: 3/16/2026
+- **DepUp Version**: 55.0.7-depup.0
+- **Original Version**: 55.0.7
+- **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
 
@@ -28,6 +28,7 @@ npm install @depup/expo
 | 55.0.5 | 0 | 🔴 Poor | 0% | 0 |
 | 55.0.6 | 16 | 🔴 Poor | 0% | 0 |
 | 55.0.6 | 15 | 🔴 Poor | 0% | 0 |
+| 55.0.7 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -41,6 +42,10 @@ npm install @depup/expo
 
 - **Revision 16** (55.0.6-depup.16) - 🔴 Poor 0% integrity
 - **Revision 15** (55.0.6-depup.15) - 🔴 Poor 0% integrity
+
+### Version 55.0.7
+
+- **Revision 0** (55.0.7-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
