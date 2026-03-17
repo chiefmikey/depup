@@ -552,6 +552,7 @@ class PackageDiscoverer {
     'jquery',
     'js-yaml',
     'jsdom',
+    'json-schema-traverse',
     'json5',
     'jsonwebtoken',
     'keyv',
