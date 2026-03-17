@@ -531,6 +531,7 @@ class PackageDiscoverer {
     'formidable',
     'framer-motion',
     'fs-extra',
+    'get-stream',
     'glob',
     'globby',
     'got',
