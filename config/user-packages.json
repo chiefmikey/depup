@@ -1,5 +1,5 @@
 {
-  "count": 298,
+  "count": 299,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -46,6 +46,7 @@
     "ava",
     "avsc",
     "aws-lambda",
+    "base64-js",
     "beanstalkd",
     "bee-queue",
     "begin",
@@ -300,5 +301,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:21.794Z"
+  "updatedAt": "2026-03-17T22:58:24.886Z"
 }
