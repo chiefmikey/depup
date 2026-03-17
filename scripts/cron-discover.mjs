@@ -525,6 +525,7 @@ class PackageDiscoverer {
     'fast-glob',
     'fastify',
     'figlet',
+    'file-entry-cache',
     'file-type',
     'firebase',
     'firebase-admin',
