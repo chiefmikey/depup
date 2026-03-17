@@ -1,5 +1,5 @@
 {
-  "count": 38,
+  "count": 39,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,6 +29,7 @@
     "react-helmet",
     "react-modal",
     "react-pdf",
+    "react-player",
     "react-slider",
     "react-table",
     "react-tooltip",
@@ -40,5 +41,5 @@
     "vuepress",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:05:51.697Z"
+  "updatedAt": "2026-03-17T18:05:54.605Z"
 }
