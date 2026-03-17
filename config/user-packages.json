@@ -1,5 +1,5 @@
 {
-  "count": 63,
+  "count": 64,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,6 +29,7 @@
     "effector",
     "flat-cache",
     "graphql-tools",
+    "graphql-yoga",
     "hapi",
     "kebab-case",
     "mailgun-js",
@@ -65,5 +66,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:07:08.159Z"
+  "updatedAt": "2026-03-17T18:07:10.189Z"
 }
