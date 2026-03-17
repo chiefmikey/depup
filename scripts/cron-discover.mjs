@@ -693,6 +693,7 @@ class PackageDiscoverer {
     'rotating-file-stream',
     'rxjs',
     'safe-buffer',
+    'safer-buffer',
     'sass',
     'semver',
     'sequelize',
