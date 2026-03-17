@@ -1,5 +1,5 @@
 {
-  "count": 44,
+  "count": 45,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,6 +29,7 @@
     "micro",
     "microbundle",
     "mikro-orm",
+    "nitro",
     "pkgroll",
     "polka",
     "react-helmet",
@@ -46,5 +47,5 @@
     "vuepress",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:06.221Z"
+  "updatedAt": "2026-03-17T18:06:08.073Z"
 }
