@@ -1,5 +1,5 @@
 {
-  "count": 171,
+  "count": 172,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -94,6 +94,7 @@
     "mikro-orm",
     "miniflare",
     "mqtt",
+    "multiparty",
     "mustache",
     "nanostores",
     "nats",
@@ -173,5 +174,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:27.770Z"
+  "updatedAt": "2026-03-17T19:32:32.704Z"
 }
