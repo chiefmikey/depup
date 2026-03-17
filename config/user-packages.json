@@ -1,5 +1,5 @@
 {
-  "count": 301,
+  "count": 302,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -153,6 +153,7 @@
     "lz4",
     "mailgun-js",
     "make",
+    "mathjs",
     "mdx",
     "meilisearch",
     "mem",
@@ -303,5 +304,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:30.704Z"
+  "updatedAt": "2026-03-17T22:58:32.264Z"
 }
