@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [markdown-it](https://www.npmjs.com/package/markdown-it)
-- **DepUp Version**: 14.1.1-depup.0
+- **DepUp Version**: 14.1.1-depup.1
 - **Original Version**: 14.1.1
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/markdown-it
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 14.1.1 | 1 | 🔴 Poor | 0% | 0 |
 | 14.1.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/markdown-it
 
 ### Version 14.1.1
 
+- **Revision 1** (14.1.1-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (14.1.1-depup.0) - 🔴 Poor 0% integrity
 
 
