@@ -474,6 +474,7 @@ class PackageDiscoverer {
     'class-transformer',
     'class-validator',
     'class-variance-authority',
+    'cli-cursor',
     'cli-progress',
     'clsx',
     'color',
