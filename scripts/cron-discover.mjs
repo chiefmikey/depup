@@ -546,6 +546,7 @@ class PackageDiscoverer {
     'fast-csv',
     'fast-glob',
     'fastify',
+    'fastq',
     'figlet',
     'file-entry-cache',
     'file-type',
