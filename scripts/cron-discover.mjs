@@ -747,6 +747,7 @@ class PackageDiscoverer {
     'xss',
     'yaml',
     'yargs',
+    'yocto-queue',
     'yup',
     'zod',
     'zone.js',
