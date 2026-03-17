@@ -1,5 +1,5 @@
 {
-  "count": 279,
+  "count": 280,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -259,6 +259,7 @@
     "tsc-watch",
     "turborepo",
     "turndown",
+    "tweetnacl",
     "type-graphql",
     "typebox",
     "typesafe-i18n",
@@ -281,5 +282,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:37.364Z"
+  "updatedAt": "2026-03-17T22:57:38.469Z"
 }
