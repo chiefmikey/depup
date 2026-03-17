@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [cheerio](https://www.npmjs.com/package/cheerio)
-- **DepUp Version**: 1.2.0-depup.1
+- **DepUp Version**: 1.2.0-depup.2
 - **Original Version**: 1.2.0
-- **Last Updated**: 3/14/2026
+- **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/cheerio
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 1.2.0 | 2 | 🔴 Poor | 0% | 0 |
 | 1.2.0 | 1 | 🔴 Poor | 0% | 0 |
 | 1.2.0 | 0 | 🔴 Poor | 0% | 0 |
 
@@ -34,6 +35,7 @@ npm install @depup/cheerio
 
 ### Version 1.2.0
 
+- **Revision 2** (1.2.0-depup.2) - 🔴 Poor 0% integrity
 - **Revision 1** (1.2.0-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (1.2.0-depup.0) - 🔴 Poor 0% integrity
 

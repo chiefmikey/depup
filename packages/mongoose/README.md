@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [mongoose](https://www.npmjs.com/package/mongoose)
-- **DepUp Version**: 9.3.0-depup.0
-- **Original Version**: 9.3.0
-- **Last Updated**: 3/11/2026
+- **DepUp Version**: 9.3.1-depup.0
+- **Original Version**: 9.3.1
+- **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
 
@@ -28,6 +28,7 @@ npm install @depup/mongoose
 | 8.18.1 | 0 | 🔴 Poor | 0% | 0 |
 | 9.2.4 | 1 | 🔴 Poor | 0% | 0 |
 | 9.3.0 | 0 | 🔴 Poor | 0% | 0 |
+| 9.3.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -44,6 +45,10 @@ npm install @depup/mongoose
 ### Version 9.3.0
 
 - **Revision 0** (9.3.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 9.3.1
+
+- **Revision 0** (9.3.1-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
