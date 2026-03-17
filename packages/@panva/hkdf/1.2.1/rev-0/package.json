@@ -1,0 +1,63 @@
+{
+  "name": "@depup/panva__hkdf",
+  "version": "1.2.1-depup.0",
+  "description": "[DepUp] HKDF with no dependencies using runtime's native crypto",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@panva/hkdf",
+    "browser",
+    "cloudflare",
+    "deno",
+    "electron",
+    "hkdf",
+    "isomorphic",
+    "rfc5869",
+    "RFC 5869",
+    "universal",
+    "webcrypto",
+    "workers"
+  ],
+  "homepage": "https://github.com/panva/hkdf",
+  "repository": "panva/hkdf",
+  "funding": {
+    "url": "https://github.com/sponsors/panva"
+  },
+  "license": "MIT",
+  "author": "Filip Skokan <panva.ip@gmail.com>",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "bun": "./dist/web/index.js",
+      "deno": "./dist/web/index.js",
+      "browser": "./dist/web/index.js",
+      "worker": "./dist/web/index.js",
+      "workerd": "./dist/web/index.js",
+      "import": "./dist/node/esm/index.js",
+      "require": "./dist/node/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/node/cjs/index.js",
+  "browser": "./dist/web/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/**/package.json",
+    "dist/**/*.js",
+    "dist/types/**/*.d.ts",
+    "!dist/types/runtime/*",
+    "!dist/deno/**/*",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@panva/hkdf",
+    "originalVersion": "1.2.1",
+    "processedAt": "2026-03-17T16:32:38.005Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@depup/tinyqueue",
+  "version": "3.0.0-depup.0",
+  "description": "[DepUp] The smallest and simplest JavaScript priority queue",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint": "eslint *.js",
+    "pretest": "npm run lint",
+    "test": "node --test",
+    "bench": "node bench.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mourner/tinyqueue.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "tinyqueue",
+    "queue",
+    "priority",
+    "binary heap",
+    "data structures"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mourner/tinyqueue/issues"
+  },
+  "homepage": "https://github.com/mourner/tinyqueue",
+  "devDependencies": {
+    "eslint": "^9.6.0",
+    "eslint-config-mourner": "^4.0.1"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "tinyqueue",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-03-17T16:38:52.422Z",
+    "smokeTest": "passed"
+  }
+}
