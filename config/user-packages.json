@@ -1,5 +1,5 @@
 {
-  "count": 219,
+  "count": 220,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -139,6 +139,7 @@
     "npm-run-all",
     "oclif",
     "ofetch",
+    "onetime",
     "openpgp",
     "opentelemetry",
     "os-utils",
@@ -221,5 +222,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:37:03.321Z"
+  "updatedAt": "2026-03-17T19:37:11.574Z"
 }
