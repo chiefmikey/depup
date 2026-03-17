@@ -615,6 +615,7 @@ class PackageDiscoverer {
     'level',
     'lint-staged',
     'listr2',
+    'loader-utils',
     'lodash',
     'lodash-es',
     'log4js',
