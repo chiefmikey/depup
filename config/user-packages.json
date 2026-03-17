@@ -1,5 +1,5 @@
 {
-  "count": 289,
+  "count": 290,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -68,6 +68,7 @@
     "chalk-animation",
     "changesets",
     "chokidar",
+    "chroma-js",
     "clack",
     "clipboardy",
     "co-body",
@@ -291,5 +292,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:02.752Z"
+  "updatedAt": "2026-03-17T22:58:04.112Z"
 }
