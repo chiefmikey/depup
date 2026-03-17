@@ -1,0 +1,85 @@
+{
+  "name": "@depup/got-retry",
+  "version": "1.1.0-depup.0",
+  "description": "[DepUp] Retry got request on network error",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdemedes/got-retry.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "got-retry",
+    "got",
+    "retry",
+    "request"
+  ],
+  "author": "Vadim Demedes <vdemedes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdemedes/got-retry/issues"
+  },
+  "homepage": "https://github.com/vdemedes/got-retry#readme",
+  "devDependencies": {
+    "into-stream": "^2.0.0",
+    "make-lint": "^1.0.1",
+    "pem": "^1.7.2",
+    "tap": "^1.3.2"
+  },
+  "dependencies": {
+    "debug": "^4.4.3",
+    "got": "^14.6.6",
+    "is-plain-obj": "^4.1.0",
+    "is-stream": "^4.0.1",
+    "object-assign": "^4.1.1",
+    "pinkie-promise": "^2.0.1",
+    "retry": "^0.13.1"
+  },
+  "files": [
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^2.2.0",
+        "to": "^4.4.3"
+      },
+      "got": {
+        "from": "^4.1.1",
+        "to": "^14.6.6"
+      },
+      "is-plain-obj": {
+        "from": "^1.0.0",
+        "to": "^4.1.0"
+      },
+      "is-stream": {
+        "from": "^1.0.1",
+        "to": "^4.0.1"
+      },
+      "object-assign": {
+        "from": "^3.0.0",
+        "to": "^4.1.1"
+      },
+      "pinkie-promise": {
+        "from": "^1.0.0",
+        "to": "^2.0.1"
+      },
+      "retry": {
+        "from": "^0.6.1",
+        "to": "^0.13.1"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "got-retry",
+    "originalVersion": "1.1.0",
+    "processedAt": "2026-03-17T22:57:05.125Z",
+    "smokeTest": "passed"
+  }
+}

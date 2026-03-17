@@ -1,5 +1,5 @@
 {
-  "count": 264,
+  "count": 265,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -101,6 +101,7 @@
     "ghost",
     "google-auth-library",
     "googleapis",
+    "got-retry",
     "gradient-string",
     "graphql-tools",
     "graphql-yoga",
@@ -266,5 +267,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:10.057Z"
+  "updatedAt": "2026-03-17T22:57:11.351Z"
 }
