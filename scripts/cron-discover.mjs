@@ -618,6 +618,7 @@ class PackageDiscoverer {
     'merge-stream',
     'micromatch',
     'mime',
+    'mimic-response',
     'mini-css-extract-plugin',
     'minimist',
     'minipass',
