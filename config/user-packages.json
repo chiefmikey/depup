@@ -1,5 +1,5 @@
 {
-  "count": 68,
+  "count": 69,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -64,11 +64,12 @@
     "tsc-watch",
     "typebox",
     "unbuild",
+    "uvu",
     "vitepress",
     "vuepress",
     "waterline",
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:07:30.706Z"
+  "updatedAt": "2026-03-17T18:07:31.986Z"
 }
