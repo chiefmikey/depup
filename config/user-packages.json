@@ -1,5 +1,5 @@
 {
-  "count": 131,
+  "count": 132,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -46,6 +46,7 @@
     "effect",
     "effector",
     "ejs",
+    "eleventy",
     "enquirer",
     "eta",
     "flat-cache",
@@ -133,5 +134,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:30:37.260Z"
+  "updatedAt": "2026-03-17T19:30:43.790Z"
 }
