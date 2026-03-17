@@ -1,5 +1,5 @@
 {
-  "count": 47,
+  "count": 48,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -47,7 +47,8 @@
     "unbuild",
     "vitepress",
     "vuepress",
+    "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:11.803Z"
+  "updatedAt": "2026-03-17T18:06:14.335Z"
 }
