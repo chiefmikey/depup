@@ -402,6 +402,7 @@ class PackageDiscoverer {
     '@aws-sdk/types',
     '@aws-sdk/util-user-agent-node',
     '@babel/core',
+    '@babel/plugin-syntax-typescript',
     '@babel/preset-env',
     '@babel/preset-react',
     '@babel/preset-typescript',
