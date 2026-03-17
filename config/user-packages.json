@@ -1,5 +1,5 @@
 {
-  "count": 168,
+  "count": 169,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -23,6 +23,7 @@
     "@vitest/pretty-format",
     "adm-zip",
     "agenda",
+    "ajv-errors",
     "ajv-formats",
     "amqplib",
     "anime",
@@ -170,5 +171,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:21.352Z"
+  "updatedAt": "2026-03-17T19:32:23.155Z"
 }
