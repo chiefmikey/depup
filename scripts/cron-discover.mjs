@@ -524,6 +524,7 @@ class PackageDiscoverer {
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
     'eslint-scope',
+    'etag',
     'eventemitter3',
     'execa',
     'expo',
