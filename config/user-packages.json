@@ -1,5 +1,5 @@
 {
-  "count": 195,
+  "count": 196,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -70,6 +70,7 @@
     "eleventy",
     "engine.io",
     "enquirer",
+    "envalid",
     "eta",
     "fast-xml-parser",
     "fastest-validator",
@@ -197,5 +198,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:33:54.249Z"
+  "updatedAt": "2026-03-17T19:33:56.605Z"
 }
