@@ -752,6 +752,7 @@ class PackageDiscoverer {
     'swagger-ui-express',
     'swr',
     'tailwindcss',
+    'tar-stream',
     'tedious',
     'terser',
     'three',
