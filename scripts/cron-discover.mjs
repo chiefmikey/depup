@@ -540,6 +540,7 @@ class PackageDiscoverer {
     'helmet',
     'html-webpack-plugin',
     'http-errors',
+    'http-proxy-agent',
     'http-proxy-middleware',
     'https-proxy-agent',
     'humanize-duration',
