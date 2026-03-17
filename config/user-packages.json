@@ -1,5 +1,5 @@
 {
-  "count": 227,
+  "count": 228,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -60,6 +60,7 @@
     "cosmiconfig",
     "cron-parser",
     "croner",
+    "cssnano",
     "dd-trace",
     "devcert",
     "directus",
@@ -229,5 +230,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:55:44.897Z"
+  "updatedAt": "2026-03-17T22:55:46.175Z"
 }
