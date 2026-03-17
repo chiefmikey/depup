@@ -220,7 +220,7 @@ jobs:
 
           # Rebase-free push: reset to origin/main, re-apply list change +
           # package data, push. Handles concurrent workflows without conflicts.
-          for attempt in 1 2 3 4 5; do
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
             git fetch origin main
             git reset --hard origin/main
 
@@ -247,9 +247,10 @@ jobs:
             fi
 
             echo "Push race on attempt $attempt, retrying..."
-            sleep $((attempt * 2))
-            if [ "$attempt" -eq 5 ]; then
-              echo "Push failed after 5 attempts"
+            # Random jitter (1-10s) + exponential backoff to spread concurrent pushes
+            sleep $((RANDOM % 10 + attempt * 3))
+            if [ "$attempt" -eq 10 ]; then
+              echo "Push failed after 10 attempts"
               exit 1
             fi
           done
