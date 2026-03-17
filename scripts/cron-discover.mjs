@@ -550,6 +550,7 @@ class PackageDiscoverer {
     'figlet',
     'file-entry-cache',
     'file-type',
+    'finalhandler',
     'firebase',
     'firebase-admin',
     'flat',
