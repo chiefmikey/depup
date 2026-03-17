@@ -436,6 +436,7 @@ class PackageDiscoverer {
     '@sendgrid/mail',
     '@sinclair/typebox',
     '@sindresorhus/slugify',
+    '@smithy/protocol-http',
     '@sveltejs/kit',
     '@swc/core',
     '@tanstack/react-query',
