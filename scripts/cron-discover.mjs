@@ -793,6 +793,7 @@ class PackageDiscoverer {
     'webpack-cli',
     'webpack-dev-server',
     'webpack-merge',
+    'whatwg-url',
     'winston',
     'winston-daily-rotate-file',
     'ws',
