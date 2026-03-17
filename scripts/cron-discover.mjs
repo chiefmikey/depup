@@ -686,6 +686,7 @@ class PackageDiscoverer {
     'proxy-agent',
     'puppeteer',
     'qs',
+    'queue-microtask',
     'ramda',
     'rate-limiter-flexible',
     'raw-body',
