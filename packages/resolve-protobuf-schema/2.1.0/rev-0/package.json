@@ -1,0 +1,44 @@
+{
+  "name": "@depup/resolve-protobuf-schema",
+  "version": "2.1.0-depup.0",
+  "description": "[DepUp] Read a protobuf schema from the disk, parse it and resolve all imports",
+  "main": "index.js",
+  "dependencies": {
+    "protocol-buffers-schema": "^3.6.0"
+  },
+  "devDependencies": {
+    "tape": "^3.0.0"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/resolve-protobuf-schema.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/resolve-protobuf-schema/issues"
+  },
+  "homepage": "https://github.com/mafintosh/resolve-protobuf-schema",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "resolve-protobuf-schema"
+  ],
+  "depup": {
+    "changes": {
+      "protocol-buffers-schema": {
+        "from": "^3.3.1",
+        "to": "^3.6.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "resolve-protobuf-schema",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-03-17T16:38:46.670Z",
+    "smokeTest": "passed"
+  }
+}

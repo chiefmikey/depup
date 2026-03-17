@@ -1,0 +1,31 @@
+{
+  "9.5.4": {
+    "0": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.0",
+          "to": "^5.6.2"
+        },
+        "enhanced-resolve": {
+          "from": "^5.0.0",
+          "to": "^5.20.1"
+        },
+        "micromatch": {
+          "from": "^4.0.0",
+          "to": "^4.0.8"
+        },
+        "semver": {
+          "from": "^7.3.4",
+          "to": "^7.7.4"
+        },
+        "source-map": {
+          "from": "^0.7.4",
+          "to": "^0.7.6"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:39:54.095Z",
+      "version": "9.5.4-depup.0"
+    }
+  }
+}

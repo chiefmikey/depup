@@ -1,0 +1,51 @@
+{
+  "name": "@depup/redis__json",
+  "version": "5.11.0-depup.0",
+  "license": "MIT",
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "files": [
+    "dist/",
+    "!dist/tsconfig.tsbuildinfo",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "nyc -r text-summary -r lcov mocha -r tsx --reporter mocha-multi-reporters --reporter-options configFile=mocha-multi-reporter-config.json --exit  './lib/**/*.spec.ts'",
+    "release": "release-it"
+  },
+  "peerDependencies": {
+    "@redis/client": "^5.11.0"
+  },
+  "devDependencies": {
+    "@redis/test-utils": "*"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/redis/node-redis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redis/node-redis/issues"
+  },
+  "homepage": "https://github.com/redis/node-redis/tree/master/packages/json",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@redis/json",
+    "redis",
+    "RedisJSON"
+  ],
+  "description": "[DepUp] Dependency-bumped version of @redis/json",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@redis/json",
+    "originalVersion": "5.11.0",
+    "processedAt": "2026-03-17T16:34:15.033Z",
+    "smokeTest": "failed"
+  }
+}

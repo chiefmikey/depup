@@ -1,0 +1,110 @@
+{
+  "name": "@depup/webpack-manifest-plugin",
+  "version": "6.0.1-depup.0",
+  "description": "[DepUp] A Webpack Plugin for generating Asset Manifests",
+  "license": "MIT",
+  "repository": "shellscape/webpack-manifest-plugin",
+  "author": "Dane Thurber <dane.thurber@gmail.com>",
+  "homepage": "https://github.com/shellscape/webpack-manifest-plugin",
+  "bugs": "https://github.com/shellscape/webpack-manifest-plugin/issues",
+  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "changes.json"
+  ],
+  "peerDependencies": {
+    "webpack": "^5.75.0"
+  },
+  "dependencies": {
+    "tapable": "^2.3.0",
+    "webpack-sources": "^3.3.4"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^24.9.2",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-sources": "^3.2.3",
+    "@wordpress/dependency-extraction-webpack-plugin": "^6.34.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "del": "^8.0.1",
+    "eslint": "^8.57.0",
+    "eslint-config-shellscape": "^6.0.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "file-loader": "^6.2.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.6",
+    "memory-fs": "^0.5.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-package": "^2.0.0",
+    "react": "^19.2.0",
+    "style-loader": "^4.0.0",
+    "tslib": "^2.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^4.0.5",
+    "webpack": "^5.75.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,cjs,mjs}": [
+      "eslint --fix"
+    ]
+  },
+  "maintainers": [
+    "Andrew Powell <andrew@shellscape.org>"
+  ],
+  "pre-commit": "lint-staged",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "ci:lint": "pnpm lint && pnpm security",
+    "ci:test": "vitest run",
+    "lint": "pnpm lint:docs && pnpm lint:json && pnpm lint:js",
+    "lint-staged": "lint-staged",
+    "lint:docs": "prettier --write README.md",
+    "lint:js": "eslint --cache --fix src test",
+    "lint:json": "prettier --write package.json",
+    "security": "pnpm audit --audit-level=high --prod",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "webpack-manifest-plugin"
+  ],
+  "depup": {
+    "changes": {
+      "tapable": {
+        "from": "^2.0.0",
+        "to": "^2.3.0"
+      },
+      "webpack-sources": {
+        "from": "^3.3.3",
+        "to": "^3.3.4"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "webpack-manifest-plugin",
+    "originalVersion": "6.0.1",
+    "processedAt": "2026-03-17T16:40:11.256Z",
+    "smokeTest": "passed"
+  }
+}

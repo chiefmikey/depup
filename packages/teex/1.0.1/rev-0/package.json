@@ -1,0 +1,45 @@
+{
+  "name": "@depup/teex",
+  "version": "1.0.1-depup.0",
+  "description": "[DepUp] Turn a readable stream into multiple readable streamx streams",
+  "main": "index.js",
+  "dependencies": {
+    "streamx": "^2.23.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4",
+    "tape": "^5.0.1"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/teex.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/teex/issues"
+  },
+  "homepage": "https://github.com/mafintosh/teex",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "teex"
+  ],
+  "depup": {
+    "changes": {
+      "streamx": {
+        "from": "^2.12.5",
+        "to": "^2.23.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "teex",
+    "originalVersion": "1.0.1",
+    "processedAt": "2026-03-17T16:39:28.546Z",
+    "smokeTest": "passed"
+  }
+}

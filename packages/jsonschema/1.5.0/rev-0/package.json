@@ -1,0 +1,53 @@
+{
+  "author": "Tom de Grunt <tom@degrunt.nl>",
+  "name": "@depup/jsonschema",
+  "version": "1.5.0-depup.0",
+  "license": "MIT",
+  "dependencies": {},
+  "contributors": [
+    {
+      "name": "Austin Wright"
+    }
+  ],
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "@stryker-mutator/core": "^4.0.0",
+    "@stryker-mutator/mocha-runner": "^4.0.0",
+    "chai": "~4.2.0",
+    "eslint": "^7.7.0",
+    "json-metaschema": "^1.2.0",
+    "mocha": "~8.1.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "jsonschema",
+    "json",
+    "schema",
+    "validator",
+    "validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tdegrunt/jsonschema.git"
+  },
+  "description": "[DepUp] A fast and easy to use JSON Schema validator",
+  "scripts": {
+    "stryker": "stryker run",
+    "test": "./node_modules/.bin/mocha -R spec"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "jsonschema",
+    "originalVersion": "1.5.0",
+    "processedAt": "2026-03-17T16:37:15.463Z",
+    "smokeTest": "passed"
+  }
+}

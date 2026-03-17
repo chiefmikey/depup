@@ -1,0 +1,46 @@
+{
+  "name": "@depup/stream-combiner",
+  "version": "0.2.2-depup.0",
+  "homepage": "https://github.com/dominictarr/stream-combiner",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/stream-combiner.git"
+  },
+  "dependencies": {
+    "duplexer": "^0.1.2",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "tape": "~2.3.0",
+    "event-stream": "~3.0.7"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT",
+  "description": "[DepUp] Dependency-bumped version of stream-combiner",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "stream-combiner"
+  ],
+  "depup": {
+    "changes": {
+      "duplexer": {
+        "from": "~0.1.1",
+        "to": "^0.1.2"
+      },
+      "through": {
+        "from": "~2.3.4",
+        "to": "^2.3.8"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "stream-combiner",
+    "originalVersion": "0.2.2",
+    "processedAt": "2026-03-17T16:38:56.327Z",
+    "smokeTest": "passed"
+  }
+}
