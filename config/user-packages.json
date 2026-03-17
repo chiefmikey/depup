@@ -1,5 +1,5 @@
 {
-  "count": 263,
+  "count": 264,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -17,6 +17,7 @@
     "@eslint/config-helpers",
     "@eslint/js",
     "@eslint/object-schema",
+    "@sentry/node",
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/types",
     "@typescript-eslint/typescript-estree",
@@ -265,5 +266,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:08.516Z"
+  "updatedAt": "2026-03-17T22:57:10.057Z"
 }
