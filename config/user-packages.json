@@ -1,5 +1,5 @@
 {
-  "count": 307,
+  "count": 308,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -112,6 +112,7 @@
     "fluent-ffmpeg",
     "forever",
     "formatjs",
+    "fraction.js",
     "gatsby",
     "geolib",
     "ghost",
@@ -309,5 +310,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:45.565Z"
+  "updatedAt": "2026-03-17T22:58:51.840Z"
 }
