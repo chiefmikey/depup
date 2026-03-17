@@ -450,6 +450,7 @@ class PackageDiscoverer {
     '7zip-bin',
     'ajv',
     'animejs',
+    'arg',
     'argparse',
     'async',
     'autoprefixer',
