@@ -631,6 +631,7 @@ class PackageDiscoverer {
     'jest',
     'jest-mock',
     'jimp',
+    'jiti',
     'joi',
     'jose',
     'jotai',
