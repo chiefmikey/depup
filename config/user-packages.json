@@ -1,5 +1,5 @@
 {
-  "count": 285,
+  "count": 286,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -38,6 +38,7 @@
     "arc",
     "archiver",
     "arctic",
+    "argon2",
     "arktype",
     "astro",
     "async-hooks",
@@ -287,5 +288,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:49.781Z"
+  "updatedAt": "2026-03-17T22:57:52.060Z"
 }
