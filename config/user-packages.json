@@ -1,5 +1,5 @@
 {
-  "count": 173,
+  "count": 174,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -45,6 +45,7 @@
     "changesets",
     "chokidar",
     "clack",
+    "co-body",
     "conf",
     "consola",
     "convict",
@@ -175,5 +176,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:35.252Z"
+  "updatedAt": "2026-03-17T19:32:39.144Z"
 }
