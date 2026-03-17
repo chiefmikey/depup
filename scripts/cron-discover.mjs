@@ -548,6 +548,7 @@ class PackageDiscoverer {
     'follow-redirects',
     'form-data',
     'formidable',
+    'forwarded',
     'framer-motion',
     'fresh',
     'fs-extra',
