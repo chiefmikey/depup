@@ -1,5 +1,5 @@
 {
-  "count": 281,
+  "count": 282,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -18,6 +18,7 @@
     "@eslint/config-helpers",
     "@eslint/js",
     "@eslint/object-schema",
+    "@opentelemetry/sdk-node",
     "@sentry/node",
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/types",
@@ -283,5 +284,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:41.885Z"
+  "updatedAt": "2026-03-17T22:57:43.265Z"
 }
