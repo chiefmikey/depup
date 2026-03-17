@@ -693,6 +693,7 @@ class PackageDiscoverer {
     'rehype',
     'remark',
     'response-time',
+    'restore-cursor',
     'retry',
     'rimraf',
     'rollup',
