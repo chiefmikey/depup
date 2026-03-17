@@ -1,5 +1,5 @@
 {
-  "count": 186,
+  "count": 187,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -59,6 +59,7 @@
     "documentation",
     "domain",
     "doxygen",
+    "duckdb",
     "effect",
     "effector",
     "ejs",
@@ -188,5 +189,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:33:18.310Z"
+  "updatedAt": "2026-03-17T19:33:24.355Z"
 }
