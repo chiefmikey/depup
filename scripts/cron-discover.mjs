@@ -448,6 +448,7 @@ class PackageDiscoverer {
     '@trpc/client',
     '@trpc/server',
     '@typescript-eslint/parser',
+    '@typescript-eslint/project-service',
     '@typescript-eslint/scope-manager',
     '@typescript-eslint/type-utils',
     '@vue/compiler-sfc',
