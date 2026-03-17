@@ -748,6 +748,7 @@ class PackageDiscoverer {
     'unified',
     'uuid',
     'validator',
+    'vary',
     'vite',
     'vitest',
     'vue',
