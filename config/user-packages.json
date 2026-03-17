@@ -1,5 +1,5 @@
 {
-  "count": 64,
+  "count": 65,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -38,6 +38,7 @@
     "micro",
     "microbundle",
     "mikro-orm",
+    "nanostores",
     "nightwatch",
     "nitro",
     "ofetch",
@@ -66,5 +67,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:07:10.189Z"
+  "updatedAt": "2026-03-17T18:07:19.356Z"
 }
