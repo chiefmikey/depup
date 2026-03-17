@@ -1,0 +1,15 @@
+{
+  "1.32.0": {
+    "0": {
+      "changes": {
+        "detect-libc": {
+          "from": "^2.0.3",
+          "to": "^2.1.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T22:56:04.031Z",
+      "version": "1.32.0-depup.0"
+    }
+  }
+}
