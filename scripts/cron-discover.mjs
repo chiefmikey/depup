@@ -564,6 +564,7 @@ class PackageDiscoverer {
     'io-ts',
     'ioredis',
     'ip',
+    'is-docker',
     'is-odd',
     'is-stream',
     'jest',
