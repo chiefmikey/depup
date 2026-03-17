@@ -1,5 +1,5 @@
 {
-  "count": 305,
+  "count": 306,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -131,6 +131,7 @@
     "hexo",
     "hono",
     "hot-shots",
+    "ieee754",
     "imagemin",
     "ink",
     "intl-messageformat",
@@ -307,5 +308,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:38.356Z"
+  "updatedAt": "2026-03-17T22:58:41.970Z"
 }
