@@ -1,5 +1,5 @@
 {
-  "count": 123,
+  "count": 124,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -41,6 +41,7 @@
     "cosmiconfig",
     "documentation",
     "doxygen",
+    "effect",
     "effector",
     "ejs",
     "enquirer",
@@ -125,5 +126,5 @@
     "xml2js",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T19:00:37.363Z"
+  "updatedAt": "2026-03-17T19:00:47.555Z"
 }
