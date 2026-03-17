@@ -405,6 +405,7 @@ class PackageDiscoverer {
     '@emotion/react',
     '@emotion/styled',
     '@esbuild/linux-x64',
+    '@eslint/eslintrc',
     '@google-cloud/storage',
     '@hapi/hapi',
     '@headlessui/react',
