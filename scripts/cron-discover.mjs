@@ -536,6 +536,7 @@ class PackageDiscoverer {
     'firebase',
     'firebase-admin',
     'flat',
+    'follow-redirects',
     'form-data',
     'formidable',
     'framer-motion',
