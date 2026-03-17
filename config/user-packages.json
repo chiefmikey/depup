@@ -1,5 +1,5 @@
 {
-  "count": 107,
+  "count": 108,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -22,6 +22,7 @@
     "@typescript-eslint/visitor-keys",
     "@vitest/pretty-format",
     "adm-zip",
+    "agenda",
     "ajv-formats",
     "anime",
     "archiver",
@@ -109,5 +110,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:09:05.249Z"
+  "updatedAt": "2026-03-17T18:09:06.997Z"
 }
