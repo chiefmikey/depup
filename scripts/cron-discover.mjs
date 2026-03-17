@@ -573,6 +573,7 @@ class PackageDiscoverer {
     'gsap',
     'handlebars',
     'helmet',
+    'html-encoding-sniffer',
     'html-webpack-plugin',
     'http-errors',
     'http-proxy-agent',
