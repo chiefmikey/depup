@@ -1,5 +1,5 @@
 {
-  "count": 249,
+  "count": 250,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -166,6 +166,7 @@
     "polka",
     "popmotion",
     "postcss-import",
+    "postcss-modules",
     "postcss-nested",
     "postcss-preset-env",
     "preact",
@@ -251,5 +252,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:56:35.026Z"
+  "updatedAt": "2026-03-17T22:56:36.580Z"
 }
