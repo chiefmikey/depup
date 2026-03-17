@@ -1,5 +1,5 @@
 {
-  "count": 302,
+  "count": 303,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -246,6 +246,7 @@
     "read-pkg",
     "read-pkg-up",
     "rehype-highlight",
+    "remark-gfm",
     "remix",
     "resolve-from",
     "restify",
@@ -304,5 +305,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:32.264Z"
+  "updatedAt": "2026-03-17T22:58:34.039Z"
 }
