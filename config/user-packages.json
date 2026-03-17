@@ -1,5 +1,5 @@
 {
-  "count": 137,
+  "count": 138,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -25,6 +25,7 @@
     "agenda",
     "ajv-formats",
     "anime",
+    "arc",
     "archiver",
     "ava",
     "bee-queue",
@@ -139,5 +140,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:30:56.709Z"
+  "updatedAt": "2026-03-17T19:31:01.973Z"
 }
