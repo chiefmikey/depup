@@ -1,5 +1,5 @@
 {
-  "count": 209,
+  "count": 210,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -140,6 +140,7 @@
     "os-utils",
     "pako",
     "parent-module",
+    "path-exists",
     "payload",
     "pdf-lib",
     "pdfkit",
@@ -211,5 +212,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:34:47.829Z"
+  "updatedAt": "2026-03-17T19:34:50.924Z"
 }
