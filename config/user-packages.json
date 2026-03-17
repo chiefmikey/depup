@@ -1,5 +1,5 @@
 {
-  "count": 291,
+  "count": 292,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -211,6 +211,7 @@
     "prom-client",
     "pug",
     "pulumi",
+    "pump",
     "puppeteer-core",
     "qrcode",
     "quasar",
@@ -293,5 +294,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:07.094Z"
+  "updatedAt": "2026-03-17T22:58:08.719Z"
 }
