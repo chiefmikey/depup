@@ -1,5 +1,5 @@
 {
-  "count": 54,
+  "count": 55,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -47,6 +47,7 @@
     "react-virtualized",
     "snowpack",
     "tap",
+    "tasuku",
     "testcafe",
     "tsc-watch",
     "typebox",
@@ -56,5 +57,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:38.983Z"
+  "updatedAt": "2026-03-17T18:06:41.315Z"
 }
