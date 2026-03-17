@@ -397,7 +397,6 @@ class PackageDiscoverer {
     '@nestjs/platform-express',
     '@nestjs/swagger',
     '@nestjs/testing',
-    '@parcel/packager-default',
     '@playwright/test',
     '@prisma/client',
     '@radix-ui/react-dialog',
