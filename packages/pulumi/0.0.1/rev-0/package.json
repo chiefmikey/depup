@@ -1,0 +1,21 @@
+{
+  "name": "@depup/pulumi",
+  "version": "0.0.1-depup.0",
+  "description": "[DepUp] Dependency-bumped version of pulumi",
+  "main": "index.js",
+  "author": "",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "pulumi"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "pulumi",
+    "originalVersion": "0.0.1",
+    "processedAt": "2026-03-17T18:44:02.712Z",
+    "smokeTest": "failed"
+  }
+}
