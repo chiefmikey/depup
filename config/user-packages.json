@@ -1,5 +1,5 @@
 {
-  "count": 240,
+  "count": 241,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -180,6 +180,7 @@
     "react-modal",
     "react-native-elements",
     "react-native-image-picker",
+    "react-native-maps",
     "react-native-safe-area-context",
     "react-native-screens",
     "react-native-vector-icons",
@@ -242,5 +243,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:56:14.109Z"
+  "updatedAt": "2026-03-17T22:56:16.607Z"
 }
