@@ -397,6 +397,7 @@ class PackageDiscoverer {
     '@aws-sdk/client-ses',
     '@aws-sdk/client-sqs',
     '@aws-sdk/lib-dynamodb',
+    '@aws-sdk/types',
     '@babel/core',
     '@babel/preset-env',
     '@babel/preset-react',
