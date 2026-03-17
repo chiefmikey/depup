@@ -473,6 +473,7 @@ class PackageDiscoverer {
     'cli-progress',
     'clsx',
     'color',
+    'combined-stream',
     'commander',
     'compression',
     'concurrently',
