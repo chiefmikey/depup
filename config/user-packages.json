@@ -1,5 +1,5 @@
 {
-  "count": 269,
+  "count": 270,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -85,6 +85,7 @@
     "effector",
     "ejs",
     "elastic",
+    "elasticsearch",
     "electron-log",
     "electron-store",
     "electron-updater",
@@ -271,5 +272,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:18.591Z"
+  "updatedAt": "2026-03-17T22:57:19.976Z"
 }

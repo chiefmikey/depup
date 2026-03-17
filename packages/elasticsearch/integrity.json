@@ -1,0 +1,23 @@
+{
+  "16.7.3": {
+    "0": {
+      "changes": {
+        "agentkeepalive": {
+          "from": "^3.4.1",
+          "to": "^4.6.0"
+        },
+        "chalk": {
+          "from": "^1.0.0",
+          "to": "^5.6.2"
+        },
+        "lodash": {
+          "from": "^4.17.10",
+          "to": "^4.17.23"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T22:57:19.075Z",
+      "version": "16.7.3-depup.0"
+    }
+  }
+}
