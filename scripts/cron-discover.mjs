@@ -591,6 +591,7 @@ class PackageDiscoverer {
     'is-odd',
     'is-stream',
     'jest',
+    'jest-mock',
     'jimp',
     'joi',
     'jose',
