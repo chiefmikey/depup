@@ -264,6 +264,18 @@ jobs:
             fi
           done
 
+      - name: Process and Publish Package
+        if: success()
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+        run: |
+          echo "Processing and publishing $PACKAGE_NAME..."
+          node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish || {
+            echo "Processing failed -- package was added to list and will be retried by cron"
+          }
+
       - name: Comment on Issue
         if: always()
         uses: actions/github-script@v7
