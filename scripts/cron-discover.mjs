@@ -426,6 +426,7 @@ class PackageDiscoverer {
     '@rollup/plugin-commonjs',
     '@rollup/plugin-node-resolve',
     '@rollup/plugin-typescript',
+    '@rollup/rollup-linux-x64-musl',
     '@sendgrid/mail',
     '@sindresorhus/slugify',
     '@sveltejs/kit',
