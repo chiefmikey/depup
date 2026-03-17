@@ -1,5 +1,5 @@
 {
-  "count": 114,
+  "count": 115,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -104,6 +104,7 @@
     "testcafe",
     "tsc-watch",
     "turborepo",
+    "type-graphql",
     "typebox",
     "typesafe-i18n",
     "unbuild",
@@ -116,5 +117,5 @@
     "xlsx",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:11:02.761Z"
+  "updatedAt": "2026-03-17T18:11:06.833Z"
 }
