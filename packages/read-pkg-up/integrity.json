@@ -1,0 +1,44 @@
+{
+  "10.1.0": {
+    "0": {
+      "changes": {
+        "find-up": {
+          "from": "^6.3.0",
+          "to": "^8.0.0"
+        },
+        "read-pkg": {
+          "from": "^8.1.0",
+          "to": "^10.1.0"
+        },
+        "type-fest": {
+          "from": "^4.2.0",
+          "to": "^5.4.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T19:35:40.525Z",
+      "version": "10.1.0-depup.0"
+    }
+  },
+  "11.0.0": {
+    "0": {
+      "changes": {
+        "find-up-simple": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "read-pkg": {
+          "from": "^9.0.0",
+          "to": "^10.1.0"
+        },
+        "type-fest": {
+          "from": "^4.6.0",
+          "to": "^5.4.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T20:16:30.331Z",
+      "version": "11.0.0-depup.0"
+    }
+  }
+}

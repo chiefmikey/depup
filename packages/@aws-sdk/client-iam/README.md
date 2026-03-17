@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@aws-sdk/client-iam](https://www.npmjs.com/package/@aws-sdk/client-iam)
-- **DepUp Version**: 3.1010.0-depup.0
-- **Original Version**: 3.1010.0
+- **DepUp Version**: 3.1011.0-depup.0
+- **Original Version**: 3.1011.0
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/aws-sdk__client-iam
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 3.1010.0 | 0 | 🔴 Poor | 0% | 0 |
+| 3.1011.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/aws-sdk__client-iam
 ### Version 3.1010.0
 
 - **Revision 0** (3.1010.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.1011.0
+
+- **Revision 0** (3.1011.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

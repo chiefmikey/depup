@@ -11,7 +11,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@aws-sdk/credential-provider-sso](https://www.npmjs.com/package/@aws-sdk/credential-provider-sso)
-- **DepUp Version**: 3.972.20-depup.0
+- **DepUp Version**: 3.972.20-depup.1
 - **Original Version**: 3.972.20
 - **Last Updated**: 3/17/2026
 
@@ -25,6 +25,7 @@ npm install @depup/aws-sdk__credential-provider-sso
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 3.972.20 | 1 | 🔴 Poor | 0% | 0 |
 | 3.972.20 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/aws-sdk__credential-provider-sso
 
 ### Version 3.972.20
 
+- **Revision 1** (3.972.20-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (3.972.20-depup.0) - 🔴 Poor 0% integrity
 
 

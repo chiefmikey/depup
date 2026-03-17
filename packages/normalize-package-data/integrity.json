@@ -1,0 +1,19 @@
+{
+  "8.0.0": {
+    "0": {
+      "changes": {
+        "hosted-git-info": {
+          "from": "^9.0.0",
+          "to": "^9.0.2"
+        },
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.7.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T19:35:00.530Z",
+      "version": "8.0.0-depup.0"
+    }
+  }
+}

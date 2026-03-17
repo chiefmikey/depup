@@ -11,7 +11,7 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [pac-proxy-agent](https://www.npmjs.com/package/pac-proxy-agent)
-- **DepUp Version**: 8.0.0-depup.0
+- **DepUp Version**: 8.0.0-depup.1
 - **Original Version**: 8.0.0
 - **Last Updated**: 3/17/2026
 
@@ -25,6 +25,7 @@ npm install @depup/pac-proxy-agent
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 8.0.0 | 1 | 🔴 Poor | 0% | 0 |
 | 8.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/pac-proxy-agent
 
 ### Version 8.0.0
 
+- **Revision 1** (8.0.0-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (8.0.0-depup.0) - 🔴 Poor 0% integrity
 
 

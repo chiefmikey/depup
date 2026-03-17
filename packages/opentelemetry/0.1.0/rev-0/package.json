@@ -1,0 +1,23 @@
+{
+  "name": "@depup/opentelemetry",
+  "version": "0.1.0-depup.0",
+  "license": "MIT",
+  "author": "erchoc",
+  "description": "[DepUp] Dependency-bumped version of opentelemetry",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "opentelemetry"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "opentelemetry",
+    "originalVersion": "0.1.0",
+    "processedAt": "2026-03-17T20:17:52.929Z",
+    "smokeTest": "failed"
+  }
+}
