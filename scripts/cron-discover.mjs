@@ -403,6 +403,7 @@ class PackageDiscoverer {
     '@babel/preset-typescript',
     '@emotion/react',
     '@emotion/styled',
+    '@esbuild/linux-x64',
     '@google-cloud/storage',
     '@hapi/hapi',
     '@headlessui/react',
