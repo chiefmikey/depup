@@ -430,6 +430,7 @@ class PackageDiscoverer {
     '@rollup/plugin-typescript',
     '@rollup/rollup-linux-x64-musl',
     '@sendgrid/mail',
+    '@sinclair/typebox',
     '@sindresorhus/slugify',
     '@sveltejs/kit',
     '@swc/core',
