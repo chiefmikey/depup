@@ -496,6 +496,7 @@ class PackageDiscoverer {
     'decimal.js',
     'deepmerge',
     'del',
+    'delayed-stream',
     'destr',
     'dotenv',
     'dotenv-expand',
