@@ -454,6 +454,7 @@ class PackageDiscoverer {
     '@typescript-eslint/project-service',
     '@typescript-eslint/scope-manager',
     '@typescript-eslint/type-utils',
+    '@vitest/utils',
     '@vue/compiler-sfc',
     '@vueuse/core',
     '7zip-bin',
