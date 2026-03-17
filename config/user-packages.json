@@ -1,5 +1,5 @@
 {
-  "count": 77,
+  "count": 78,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -65,6 +65,7 @@
     "snowpack",
     "solid-js",
     "stitches",
+    "syncpack",
     "tap",
     "tasuku",
     "testcafe",
@@ -79,5 +80,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:07:48.019Z"
+  "updatedAt": "2026-03-17T18:07:51.088Z"
 }
