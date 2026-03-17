@@ -410,6 +410,7 @@ class PackageDiscoverer {
     '@esbuild/linux-x64',
     '@eslint/core',
     '@eslint/eslintrc',
+    '@eslint/plugin-kit',
     '@google-cloud/storage',
     '@hapi/hapi',
     '@headlessui/react',
