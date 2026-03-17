@@ -580,6 +580,7 @@ class PackageDiscoverer {
     'mime',
     'mini-css-extract-plugin',
     'minimist',
+    'minipass',
     'mitt',
     'mkdirp',
     'mocha',
