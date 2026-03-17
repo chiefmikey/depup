@@ -663,6 +663,7 @@ class PackageDiscoverer {
     'react-hook-form',
     'react-i18next',
     'react-icons',
+    'react-is',
     'react-markdown',
     'react-native',
     'react-query',
