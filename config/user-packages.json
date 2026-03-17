@@ -1,5 +1,5 @@
 {
-  "count": 267,
+  "count": 268,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -123,6 +123,7 @@
     "kafkajs",
     "kebab-case",
     "keystone",
+    "kubernetes-client",
     "lambda-api",
     "launchdarkly-node-server-sdk",
     "lightningcss",
@@ -269,5 +270,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:15.967Z"
+  "updatedAt": "2026-03-17T22:57:17.258Z"
 }
