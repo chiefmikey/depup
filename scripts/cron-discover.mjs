@@ -640,6 +640,7 @@ class PackageDiscoverer {
     'next',
     'next-auth',
     'nock',
+    'node-addon-api',
     'node-cron',
     'node-fetch',
     'node-schedule',
