@@ -592,6 +592,7 @@ class PackageDiscoverer {
     'jest',
     'jimp',
     'joi',
+    'jose',
     'jotai',
     'jquery',
     'js-yaml',
