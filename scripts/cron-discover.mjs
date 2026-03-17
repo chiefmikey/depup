@@ -440,6 +440,7 @@ class PackageDiscoverer {
     '@testing-library/user-event',
     '@trpc/client',
     '@trpc/server',
+    '@typescript-eslint/scope-manager',
     '@vue/compiler-sfc',
     '@vueuse/core',
     '7zip-bin',
