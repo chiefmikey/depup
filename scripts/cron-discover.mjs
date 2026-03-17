@@ -672,6 +672,7 @@ class PackageDiscoverer {
     'rollup',
     'rotating-file-stream',
     'rxjs',
+    'safe-buffer',
     'sass',
     'semver',
     'sequelize',
