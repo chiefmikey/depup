@@ -1,5 +1,5 @@
 {
-  "count": 105,
+  "count": 106,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,6 +29,7 @@
     "bee-queue",
     "bookshelf",
     "bull",
+    "catbox",
     "cdk",
     "changesets",
     "chokidar",
@@ -107,5 +108,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:09:00.720Z"
+  "updatedAt": "2026-03-17T18:09:03.580Z"
 }
