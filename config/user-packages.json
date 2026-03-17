@@ -1,5 +1,5 @@
 {
-  "count": 24,
+  "count": 25,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -24,7 +24,8 @@
     "ajv-formats",
     "flat-cache",
     "merge2",
+    "unbuild",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T16:27:09.360Z"
+  "updatedAt": "2026-03-17T18:05:19.025Z"
 }
