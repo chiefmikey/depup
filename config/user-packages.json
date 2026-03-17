@@ -1,5 +1,5 @@
 {
-  "count": 293,
+  "count": 294,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -243,6 +243,7 @@
     "restify",
     "rosetta",
     "runtypes",
+    "sanity",
     "saxes",
     "sendgrid",
     "serverless",
@@ -295,5 +296,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:10.191Z"
+  "updatedAt": "2026-03-17T22:58:13.109Z"
 }
