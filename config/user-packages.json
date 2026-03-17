@@ -1,5 +1,5 @@
 {
-  "count": 202,
+  "count": 203,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -133,6 +133,7 @@
     "opentelemetry",
     "os-utils",
     "pako",
+    "parent-module",
     "payload",
     "pdf-lib",
     "pdfkit",
@@ -204,5 +205,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:34:18.694Z"
+  "updatedAt": "2026-03-17T19:34:29.768Z"
 }
