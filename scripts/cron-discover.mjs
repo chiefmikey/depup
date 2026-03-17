@@ -443,6 +443,7 @@ class PackageDiscoverer {
     '7zip-bin',
     'ajv',
     'animejs',
+    'argparse',
     'async',
     'autoprefixer',
     'axios',
