@@ -161,9 +161,9 @@ class PackageDiscoverer {
       );
 
       for (const result of batchResults) {
-        if (result.status === 'fulfilled') {
+        if (result.status === 'fulfilled' && result.value !== null) {
           packages.push(result.value);
-        } else {
+        } else if (result.status === 'rejected') {
           console.warn(
             `Could not fetch version for package: ${result.reason?.message}`,
           );
@@ -180,6 +180,11 @@ class PackageDiscoverer {
         registry: this.registry,
         timeout: 5000,
       });
+      // Skip deprecated packages -- no point bumping deps on abandoned software
+      if (manifest.deprecated) {
+        console.warn(`  Skipping deprecated package: ${name}`);
+        return null;
+      }
       const version =
         manifest['dist-tags']?.latest || manifest.version || '0.0.0';
       return { downloads: 0, name, version };
