@@ -1,5 +1,5 @@
 {
-  "count": 149,
+  "count": 150,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -104,6 +104,7 @@
     "primus",
     "pug",
     "pulumi",
+    "puppeteer-core",
     "quasar",
     "rc",
     "react-dropzone",
@@ -151,5 +152,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:31:30.149Z"
+  "updatedAt": "2026-03-17T19:31:31.772Z"
 }
