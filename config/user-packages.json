@@ -1,5 +1,5 @@
 {
-  "count": 108,
+  "count": 109,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -53,6 +53,7 @@
     "jsdoc",
     "kebab-case",
     "linaria",
+    "lunr",
     "mailgun-js",
     "make",
     "mdx",
@@ -110,5 +111,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:09:06.997Z"
+  "updatedAt": "2026-03-17T18:09:10.981Z"
 }
