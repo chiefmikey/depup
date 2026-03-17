@@ -556,6 +556,7 @@ class PackageDiscoverer {
     'i18next',
     'iconv-lite',
     'immer',
+    'import-fresh',
     'inquirer',
     'io-ts',
     'ioredis',
