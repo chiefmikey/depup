@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [strapi](https://www.npmjs.com/package/strapi)
-- **DepUp Version**: 2.0.2-depup.0
-- **Original Version**: 2.0.2
+- **DepUp Version**: 3.6.11-depup.0
+- **Original Version**: 3.6.11
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/strapi
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 2.0.2 | 0 | 🔴 Poor | 0% | 0 |
+| 3.6.11 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/strapi
 ### Version 2.0.2
 
 - **Revision 0** (2.0.2-depup.0) - 🔴 Poor 0% integrity
+
+### Version 3.6.11
+
+- **Revision 0** (3.6.11-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

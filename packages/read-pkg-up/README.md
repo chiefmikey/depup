@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [read-pkg-up](https://www.npmjs.com/package/read-pkg-up)
-- **DepUp Version**: 10.1.0-depup.0
-- **Original Version**: 10.1.0
+- **DepUp Version**: 11.0.0-depup.0
+- **Original Version**: 11.0.0
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/read-pkg-up
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 10.1.0 | 0 | 🔴 Poor | 0% | 0 |
+| 11.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/read-pkg-up
 ### Version 10.1.0
 
 - **Revision 0** (10.1.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 11.0.0
+
+- **Revision 0** (11.0.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
