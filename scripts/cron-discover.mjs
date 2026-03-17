@@ -514,6 +514,7 @@ class PackageDiscoverer {
     'electron',
     'electron-builder',
     'encoding',
+    'end-of-stream',
     'env-cmd',
     'esbuild',
     'eslint',
