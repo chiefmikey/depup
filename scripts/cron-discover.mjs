@@ -539,6 +539,7 @@ class PackageDiscoverer {
     'form-data',
     'formidable',
     'framer-motion',
+    'fresh',
     'fs-extra',
     'get-stream',
     'glob',
