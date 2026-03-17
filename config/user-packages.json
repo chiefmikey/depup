@@ -1,5 +1,5 @@
 {
-  "count": 228,
+  "count": 229,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -160,6 +160,7 @@
     "playwright-core",
     "polka",
     "popmotion",
+    "postcss-nested",
     "preact",
     "primus",
     "prom-client",
@@ -230,5 +231,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:55:46.175Z"
+  "updatedAt": "2026-03-17T22:55:50.560Z"
 }
