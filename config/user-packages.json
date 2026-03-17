@@ -1,5 +1,5 @@
 {
-  "count": 258,
+  "count": 259,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -41,6 +41,7 @@
     "beanstalkd",
     "bee-queue",
     "begin",
+    "better-auth",
     "blessed",
     "blessed-contrib",
     "bookshelf",
@@ -260,5 +261,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:56:58.397Z"
+  "updatedAt": "2026-03-17T22:56:59.596Z"
 }
