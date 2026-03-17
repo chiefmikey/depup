@@ -1,5 +1,5 @@
 {
-  "count": 254,
+  "count": 255,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -60,6 +60,7 @@
     "conf",
     "consola",
     "contentful",
+    "contentlayer",
     "convict",
     "cosmiconfig",
     "cron-parser",
@@ -256,5 +257,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:56:48.131Z"
+  "updatedAt": "2026-03-17T22:56:49.897Z"
 }
