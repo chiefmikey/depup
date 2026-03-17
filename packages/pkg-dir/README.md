@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [pkg-dir](https://www.npmjs.com/package/pkg-dir)
-- **DepUp Version**: 8.0.0-depup.0
-- **Original Version**: 8.0.0
+- **DepUp Version**: 9.0.0-depup.0
+- **Original Version**: 9.0.0
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/pkg-dir
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 8.0.0 | 0 | 🔴 Poor | 0% | 0 |
+| 9.0.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/pkg-dir
 ### Version 8.0.0
 
 - **Revision 0** (8.0.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 9.0.0
+
+- **Revision 0** (9.0.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
