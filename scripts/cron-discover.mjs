@@ -755,6 +755,7 @@ class PackageDiscoverer {
     'underscore',
     'undici',
     'unified',
+    'unpipe',
     'uuid',
     'validator',
     'vary',
