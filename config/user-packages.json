@@ -1,5 +1,5 @@
 {
-  "count": 198,
+  "count": 199,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -178,6 +178,7 @@
     "tap",
     "tar",
     "tasuku",
+    "terminal-link",
     "testcafe",
     "tsc-watch",
     "turborepo",
@@ -200,5 +201,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:34:08.994Z"
+  "updatedAt": "2026-03-17T19:34:10.649Z"
 }
