@@ -599,6 +599,7 @@ class PackageDiscoverer {
     'nanocolors',
     'nanoid',
     'nconf',
+    'negotiator',
     'next',
     'next-auth',
     'nock',
