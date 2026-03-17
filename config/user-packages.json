@@ -1,5 +1,5 @@
 {
-  "count": 306,
+  "count": 307,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -190,6 +190,7 @@
     "onetime",
     "openpgp",
     "opentelemetry",
+    "ora-classic",
     "os-utils",
     "p-all",
     "p-throttle",
@@ -308,5 +309,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:41.970Z"
+  "updatedAt": "2026-03-17T22:58:45.565Z"
 }
