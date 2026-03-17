@@ -443,6 +443,7 @@ class PackageDiscoverer {
     '@testing-library/user-event',
     '@trpc/client',
     '@trpc/server',
+    '@typescript-eslint/parser',
     '@typescript-eslint/scope-manager',
     '@vue/compiler-sfc',
     '@vueuse/core',
