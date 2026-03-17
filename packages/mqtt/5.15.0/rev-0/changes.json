@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@types/readable-stream": {
+      "from": "^4.0.21",
+      "to": "^4.0.23"
+    },
+    "debug": {
+      "from": "^4.4.1",
+      "to": "^4.4.3"
+    },
+    "lru-cache": {
+      "from": "^10.4.3",
+      "to": "^11.2.7"
+    },
+    "socks": {
+      "from": "^2.8.6",
+      "to": "^2.8.7"
+    },
+    "worker-timers": {
+      "from": "^8.0.23",
+      "to": "^8.0.31"
+    },
+    "ws": {
+      "from": "^8.18.3",
+      "to": "^8.19.0"
+    }
+  },
+  "timestamp": "2026-03-17T19:31:10.825Z",
+  "totalUpdated": 6
+}

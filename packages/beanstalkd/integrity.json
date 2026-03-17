@@ -1,0 +1,27 @@
+{
+  "2.2.5": {
+    "0": {
+      "changes": {
+        "babel-runtime": {
+          "from": "^5.8.25",
+          "to": "^6.26.0"
+        },
+        "bluebird": {
+          "from": "^3.4.7",
+          "to": "^3.7.2"
+        },
+        "debug": {
+          "from": "^2.2.0",
+          "to": "^4.4.3"
+        },
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^4.1.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T19:33:37.429Z",
+      "version": "2.2.5-depup.0"
+    }
+  }
+}

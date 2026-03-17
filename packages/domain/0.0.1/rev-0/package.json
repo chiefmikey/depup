@@ -1,0 +1,67 @@
+{
+  "name": "@depup/domain",
+  "version": "0.0.1-depup.0",
+  "description": "[DepUp] domain for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leogiese/domain"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "domain",
+    "ddd",
+    "cqrs"
+  ],
+  "author": "leogiese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leogiese/domain/issues"
+  },
+  "homepage": "https://github.com/leogiese/domain",
+  "dependencies": {
+    "co": "^4.6.0",
+    "eventstore": "^1.15.5",
+    "shortid": "^2.2.17",
+    "should": "^13.2.3",
+    "thunkify": "^2.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.0.4",
+    "traceur": "0.0.72"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "depup": {
+    "changes": {
+      "co": {
+        "from": "^3.1.0",
+        "to": "^4.6.0"
+      },
+      "eventstore": {
+        "from": "^1.0.3",
+        "to": "^1.15.5"
+      },
+      "shortid": {
+        "from": "^2.0.1",
+        "to": "^2.2.17"
+      },
+      "should": {
+        "from": "^4.1.0",
+        "to": "^13.2.3"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "domain",
+    "originalVersion": "0.0.1",
+    "processedAt": "2026-03-17T19:31:10.688Z",
+    "smokeTest": "failed"
+  }
+}
