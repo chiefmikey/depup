@@ -1,0 +1,73 @@
+{
+  "name": "@depup/micro",
+  "version": "10.0.1-depup.0",
+  "description": "[DepUp] Asynchronous HTTP microservices",
+  "license": "MIT",
+  "main": "./dist/src/lib/index.js",
+  "types": "./types/src/lib",
+  "files": [
+    "src",
+    "dist",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "micro": "./dist/src/bin/micro.js"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "eslint-check": "eslint --max-warnings=0 .",
+    "prettier-check": "prettier --check .",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": "vercel/micro",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "micro",
+    "service",
+    "microservice",
+    "serverless",
+    "API"
+  ],
+  "dependencies": {
+    "arg": "^5.0.2",
+    "content-type": "^1.0.5",
+    "raw-body": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/content-type": "1.1.5",
+    "@types/node": "18.0.3",
+    "@vercel/style-guide": "3.0.0",
+    "eslint": "8.19.0",
+    "prettier": "2.7.1",
+    "typescript": "4.7.4"
+  },
+  "prettier": "@vercel/style-guide/prettier",
+  "depup": {
+    "changes": {
+      "arg": {
+        "from": "4.1.0",
+        "to": "^5.0.2"
+      },
+      "content-type": {
+        "from": "1.0.4",
+        "to": "^1.0.5"
+      },
+      "raw-body": {
+        "from": "2.4.1",
+        "to": "^3.0.2"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "micro",
+    "originalVersion": "10.0.1",
+    "processedAt": "2026-03-17T18:41:34.261Z",
+    "smokeTest": "passed"
+  }
+}

@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [openai](https://www.npmjs.com/package/openai)
-- **DepUp Version**: 6.31.0-depup.0
-- **Original Version**: 6.31.0
+- **DepUp Version**: 6.32.0-depup.0
+- **Original Version**: 6.32.0
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/openai
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.31.0 | 0 | 🔴 Poor | 0% | 0 |
+| 6.32.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/openai
 ### Version 6.31.0
 
 - **Revision 0** (6.31.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.32.0
+
+- **Revision 0** (6.32.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

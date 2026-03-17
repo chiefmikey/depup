@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@depup/sst",
+  "type": "module",
+  "sideEffects": false,
+  "version": "4.3.7-depup.0",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anomalyco/sst.git"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js",
+    "./auth": "./dist/auth/index.js",
+    "./auth/adapter": "./dist/auth/adapter/index.js",
+    "./event": "./dist/event/index.js",
+    "./realtime": "./dist/realtime/index.js",
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "release": "./scripts/release.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "20.1.4",
+    "@types/aws-lambda": "^8.10.155",
+    "@types/node": "22.10.0",
+    "bun-types": "1.3.0",
+    "hono": "4.3.9",
+    "typescript": "5.7.2",
+    "valibot": "^1.0.0-rc.3",
+    "zod": "^3.24.2"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "sst": "./bin/sst.mjs"
+  },
+  "optionalDependencies": {
+    "sst-linux-x86": "4.3.7",
+    "sst-linux-x64": "4.3.7",
+    "sst-linux-arm64": "4.3.7",
+    "sst-darwin-x64": "4.3.7",
+    "sst-win32-arm64": "4.3.7",
+    "sst-win32-x64": "4.3.7",
+    "sst-darwin-arm64": "4.3.7",
+    "sst-win32-x86": "4.3.7"
+  },
+  "dependencies": {
+    "aws4fetch": "^1.0.20",
+    "jose": "^6.2.1",
+    "openid-client": "^6.8.2"
+  },
+  "description": "[DepUp] Dependency-bumped version of sst",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "sst"
+  ],
+  "depup": {
+    "changes": {
+      "aws4fetch": {
+        "from": "1.0.18",
+        "to": "^1.0.20"
+      },
+      "jose": {
+        "from": "5.2.3",
+        "to": "^6.2.1"
+      },
+      "openid-client": {
+        "from": "5.6.4",
+        "to": "^6.8.2"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "sst",
+    "originalVersion": "4.3.7",
+    "processedAt": "2026-03-17T18:43:03.314Z",
+    "smokeTest": "passed"
+  }
+}

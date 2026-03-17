@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [csv-parse](https://www.npmjs.com/package/csv-parse)
-- **DepUp Version**: 6.1.0-depup.0
-- **Original Version**: 6.1.0
-- **Last Updated**: 3/9/2026
+- **DepUp Version**: 6.2.0-depup.0
+- **Original Version**: 6.2.0
+- **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
 
@@ -26,6 +26,7 @@ npm install @depup/csv-parse
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.1.0 | 0 | 🔴 Poor | 0% | 0 |
+| 6.2.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/csv-parse
 ### Version 6.1.0
 
 - **Revision 0** (6.1.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.2.0
+
+- **Revision 0** (6.2.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

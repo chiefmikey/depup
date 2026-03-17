@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@expo/cli](https://www.npmjs.com/package/@expo/cli)
-- **DepUp Version**: 55.0.16-depup.0
-- **Original Version**: 55.0.16
+- **DepUp Version**: 55.0.17-depup.0
+- **Original Version**: 55.0.17
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/expo__cli
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 55.0.16 | 0 | 🔴 Poor | 0% | 0 |
+| 55.0.17 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/expo__cli
 ### Version 55.0.16
 
 - **Revision 0** (55.0.16-depup.0) - 🔴 Poor 0% integrity
+
+### Version 55.0.17
+
+- **Revision 0** (55.0.17-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

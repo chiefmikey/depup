@@ -1,0 +1,23 @@
+{
+  "4.3.7": {
+    "0": {
+      "changes": {
+        "aws4fetch": {
+          "from": "1.0.18",
+          "to": "^1.0.20"
+        },
+        "jose": {
+          "from": "5.2.3",
+          "to": "^6.2.1"
+        },
+        "openid-client": {
+          "from": "5.6.4",
+          "to": "^6.8.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T18:43:06.097Z",
+      "version": "4.3.7-depup.0"
+    }
+  }
+}

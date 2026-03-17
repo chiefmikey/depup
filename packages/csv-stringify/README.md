@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [csv-stringify](https://www.npmjs.com/package/csv-stringify)
-- **DepUp Version**: 6.6.0-depup.0
-- **Original Version**: 6.6.0
+- **DepUp Version**: 6.7.0-depup.0
+- **Original Version**: 6.7.0
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/csv-stringify
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 6.6.0 | 0 | 🔴 Poor | 0% | 0 |
+| 6.7.0 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/csv-stringify
 ### Version 6.6.0
 
 - **Revision 0** (6.6.0-depup.0) - 🔴 Poor 0% integrity
+
+### Version 6.7.0
+
+- **Revision 0** (6.7.0-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing

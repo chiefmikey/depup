@@ -1,0 +1,125 @@
+{
+  "name": "@depup/npm-run-all",
+  "version": "4.1.5-depup.0",
+  "description": "[DepUp] A CLI tool to run multiple npm-scripts in parallel or sequential.",
+  "bin": {
+    "run-p": "bin/run-p/index.js",
+    "run-s": "bin/run-s/index.js",
+    "npm-run-all": "bin/npm-run-all/index.js"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "bin",
+    "lib",
+    "docs",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "_mocha": "mocha \"test/*.js\" --timeout 120000",
+    "clean": "rimraf .nyc_output coverage jsdoc \"test-workspace/{build,test.txt}\"",
+    "docs": "jsdoc -c jsdoc.json",
+    "lint": "eslint bin lib scripts test \"test-workspace/tasks/*.js\"",
+    "pretest": "node scripts/make-slink.js && npm run lint",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags",
+    "test": "nyc --require babel-register npm run _mocha",
+    "watch": "npm run _mocha -- --require babel-register --watch --growl",
+    "codecov": "nyc report -r lcovonly && codecov"
+  },
+  "dependencies": {
+    "ansi-styles": "^6.2.3",
+    "chalk": "^5.6.2",
+    "cross-spawn": "^7.0.6",
+    "memorystream": "^0.3.1",
+    "minimatch": "^10.2.4",
+    "pidtree": "^0.6.0",
+    "read-pkg": "^10.1.0",
+    "shell-quote": "^1.8.3",
+    "string.prototype.padend": "^3.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^4.9.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-power-assert": "^2.0.0",
+    "babel-register": "^6.26.0",
+    "codecov": "^3.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-mysticatea": "^12.0.0",
+    "fs-extra": "^7.0.1",
+    "mocha": "^5.2.0",
+    "nyc": "^11.9.0",
+    "p-queue": "^2.4.2",
+    "power-assert": "^1.6.1",
+    "rimraf": "^2.6.2",
+    "yarn": "^1.12.3"
+  },
+  "repository": "mysticatea/npm-run-all",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "npm-run-all",
+    "cli",
+    "command",
+    "commandline",
+    "tool",
+    "npm",
+    "npm-scripts",
+    "run",
+    "sequential",
+    "serial",
+    "parallel",
+    "task"
+  ],
+  "author": "Toru Nagashima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mysticatea/npm-run-all/issues"
+  },
+  "homepage": "https://github.com/mysticatea/npm-run-all",
+  "depup": {
+    "changes": {
+      "ansi-styles": {
+        "from": "^3.2.1",
+        "to": "^6.2.3"
+      },
+      "chalk": {
+        "from": "^2.4.1",
+        "to": "^5.6.2"
+      },
+      "cross-spawn": {
+        "from": "^6.0.5",
+        "to": "^7.0.6"
+      },
+      "minimatch": {
+        "from": "^3.0.4",
+        "to": "^10.2.4"
+      },
+      "pidtree": {
+        "from": "^0.3.0",
+        "to": "^0.6.0"
+      },
+      "read-pkg": {
+        "from": "^3.0.0",
+        "to": "^10.1.0"
+      },
+      "shell-quote": {
+        "from": "^1.6.1",
+        "to": "^1.8.3"
+      },
+      "string.prototype.padend": {
+        "from": "^3.0.0",
+        "to": "^3.1.6"
+      }
+    },
+    "depsUpdated": 8,
+    "originalPackage": "npm-run-all",
+    "originalVersion": "4.1.5",
+    "processedAt": "2026-03-17T18:43:14.767Z",
+    "smokeTest": "passed"
+  }
+}

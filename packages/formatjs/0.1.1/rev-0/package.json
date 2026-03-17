@@ -1,0 +1,54 @@
+{
+  "name": "@depup/formatjs",
+  "description": "[DepUp] JavaScript date format tester.",
+  "version": "0.1.1-depup.0",
+  "homepage": "https://github.com/nowamasa/formatjs",
+  "author": {
+    "name": "nowamasa",
+    "email": "nowamasa@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nowamasa/formatjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nowamasa/formatjs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nowamasa/formatjs/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "dist/formatjs",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.3.9",
+    "grunt-coffee": "~0.0.2"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "formatjs",
+    "validator",
+    "dates",
+    "testing",
+    "format",
+    "date formats"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "formatjs",
+    "originalVersion": "0.1.1",
+    "processedAt": "2026-03-17T18:40:56.026Z",
+    "smokeTest": "passed"
+  }
+}
