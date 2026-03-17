@@ -1,5 +1,5 @@
 {
-  "count": 124,
+  "count": 125,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -55,6 +55,7 @@
     "gulp",
     "h3",
     "hapi",
+    "hono",
     "jsdoc",
     "kebab-case",
     "linaria",
@@ -126,5 +127,5 @@
     "xml2js",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T19:00:47.555Z"
+  "updatedAt": "2026-03-17T19:01:27.502Z"
 }
