@@ -734,6 +734,7 @@ class PackageDiscoverer {
     'safe-buffer',
     'safer-buffer',
     'sass',
+    'schema-utils',
     'semver',
     'send',
     'sequelize',
