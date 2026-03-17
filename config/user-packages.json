@@ -1,5 +1,5 @@
 {
-  "count": 194,
+  "count": 195,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -76,6 +76,7 @@
     "flat-cache",
     "forever",
     "formatjs",
+    "gradient-string",
     "graphql-tools",
     "graphql-yoga",
     "grunt",
@@ -196,5 +197,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:33:52.353Z"
+  "updatedAt": "2026-03-17T19:33:54.249Z"
 }
