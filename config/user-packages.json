@@ -1,5 +1,5 @@
 {
-  "count": 179,
+  "count": 180,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -32,6 +32,7 @@
     "astro",
     "async-hooks",
     "ava",
+    "avsc",
     "bee-queue",
     "begin",
     "blessed",
@@ -181,5 +182,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:55.931Z"
+  "updatedAt": "2026-03-17T19:32:58.064Z"
 }
