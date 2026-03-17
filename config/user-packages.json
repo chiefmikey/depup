@@ -1,5 +1,5 @@
 {
-  "count": 138,
+  "count": 139,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -24,6 +24,7 @@
     "adm-zip",
     "agenda",
     "ajv-formats",
+    "amqplib",
     "anime",
     "arc",
     "archiver",
@@ -140,5 +141,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:31:01.973Z"
+  "updatedAt": "2026-03-17T19:31:05.626Z"
 }
