@@ -450,6 +450,7 @@ class PackageDiscoverer {
     '@vueuse/core',
     '7zip-bin',
     'ajv',
+    'ajv-keywords',
     'animejs',
     'arg',
     'argparse',
