@@ -1,5 +1,5 @@
 {
-  "count": 265,
+  "count": 266,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -37,6 +37,7 @@
     "arktype",
     "astro",
     "async-hooks",
+    "async-retry",
     "ava",
     "avsc",
     "aws-lambda",
@@ -267,5 +268,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:11.351Z"
+  "updatedAt": "2026-03-17T22:57:14.990Z"
 }
