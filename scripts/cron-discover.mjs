@@ -742,6 +742,7 @@ class PackageDiscoverer {
     'terser',
     'three',
     'tiny-invariant',
+    'ts-api-utils',
     'ts-node',
     'tsconfig-paths',
     'tslib',
