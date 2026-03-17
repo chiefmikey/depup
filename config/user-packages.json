@@ -1,5 +1,5 @@
 {
-  "count": 288,
+  "count": 289,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -205,6 +205,7 @@
     "postcss-preset-env",
     "preact",
     "primus",
+    "proj4",
     "prom-client",
     "pug",
     "pulumi",
@@ -290,5 +291,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:59.945Z"
+  "updatedAt": "2026-03-17T22:58:02.752Z"
 }
