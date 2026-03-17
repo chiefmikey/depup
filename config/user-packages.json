@@ -1,5 +1,5 @@
 {
-  "count": 226,
+  "count": 227,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -199,6 +199,7 @@
     "strapi",
     "strip-ansi",
     "svg-captcha",
+    "swc",
     "syncpack",
     "systeminformation",
     "tap",
@@ -228,5 +229,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:55:39.945Z"
+  "updatedAt": "2026-03-17T22:55:44.897Z"
 }
