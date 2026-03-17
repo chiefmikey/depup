@@ -1,5 +1,5 @@
 {
-  "count": 45,
+  "count": 46,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -32,6 +32,7 @@
     "nitro",
     "pkgroll",
     "polka",
+    "react-dropzone",
     "react-helmet",
     "react-modal",
     "react-pdf",
@@ -47,5 +48,5 @@
     "vuepress",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:08.073Z"
+  "updatedAt": "2026-03-17T18:06:09.983Z"
 }
