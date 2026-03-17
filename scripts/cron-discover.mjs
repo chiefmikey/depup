@@ -518,6 +518,7 @@ class PackageDiscoverer {
     'del',
     'delayed-stream',
     'destr',
+    'destroy',
     'dotenv',
     'dotenv-expand',
     'drizzle-orm',
