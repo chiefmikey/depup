@@ -1,0 +1,33 @@
+{
+  "name": "@depup/postgres-range",
+  "version": "1.1.4-depup.0",
+  "description": "[DepUp] Range data type parser and serializer for PostgreSQL",
+  "main": "index.js",
+  "repository": "https://github.com/martianboy/postgres-range",
+  "author": "Abbas Mashayekh <martianboy2005@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && tape test.js | tap-spec"
+  },
+  "devDependencies": {
+    "@types/tape": "^4.13.2",
+    "standard": "^17.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.5.3",
+    "typescript": "^4.7.3"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "postgres-range"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postgres-range",
+    "originalVersion": "1.1.4",
+    "processedAt": "2026-03-17T16:37:36.695Z",
+    "smokeTest": "passed"
+  }
+}

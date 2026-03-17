@@ -1,0 +1,111 @@
+{
+  "name": "@depup/flat-cache",
+  "version": "6.1.20-depup.0",
+  "description": "[DepUp] A simple key/value storage using files to persist the data",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "directory": "packages/flat-cache"
+  },
+  "author": "Jared Wray <me@jaredwray.com>",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "flat-cache",
+    "cache",
+    "caching",
+    "cacheable",
+    "flat",
+    "file",
+    "file-cache",
+    "file-caching",
+    "file-based-cache",
+    "file-persist",
+    "file-persistence",
+    "file-storage",
+    "file-system",
+    "file-management",
+    "filesystem-cache",
+    "disk-cache",
+    "cache-persistence",
+    "cache-persist",
+    "persistent-cache",
+    "persistent-storage",
+    "cache-to-file",
+    "cache-on-disk",
+    "cache-file",
+    "cache-expiration",
+    "cache-lifetime",
+    "data-persistence",
+    "data-storage",
+    "local-storage",
+    "file-system-cache"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@faker-js/faker": "^10.2.0",
+    "@types/node": "^25.0.8",
+    "@vitest/coverage-v8": "^4.0.17",
+    "rimraf": "^6.1.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
+  },
+  "dependencies": {
+    "flatted": "^3.4.2",
+    "hookified": "^2.1.0",
+    "cacheable": "^2.3.3"
+  },
+  "files": [
+    "dist",
+    "license",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "lint": "biome check --write --error-on-warnings",
+    "test": "pnpm lint && vitest run --coverage",
+    "test:ci": "biome check --error-on-warnings && vitest run --coverage",
+    "clean": "rimraf ./dist ./coverage ./node_modules"
+  },
+  "depup": {
+    "changes": {
+      "flatted": {
+        "from": "^3.3.3",
+        "to": "^3.4.2"
+      },
+      "hookified": {
+        "from": "^1.15.0",
+        "to": "^2.1.0"
+      },
+      "cacheable": {
+        "from": "^2.3.2",
+        "to": "^2.3.3"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "flat-cache",
+    "originalVersion": "6.1.20",
+    "processedAt": "2026-03-17T16:36:05.818Z",
+    "smokeTest": "passed"
+  }
+}

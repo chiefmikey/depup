@@ -1,0 +1,19 @@
+{
+  "3.974.0": {
+    "0": {
+      "changes": {
+        "@smithy/util-stream": {
+          "from": "^4.5.19",
+          "to": "^4.5.20"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:24.614Z",
+      "version": "3.974.0-depup.0"
+    }
+  }
+}

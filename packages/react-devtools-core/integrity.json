@@ -1,0 +1,19 @@
+{
+  "7.0.1": {
+    "0": {
+      "changes": {
+        "shell-quote": {
+          "from": "^1.6.1",
+          "to": "^1.8.3"
+        },
+        "ws": {
+          "from": "^7",
+          "to": "^8.19.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:37:54.012Z",
+      "version": "7.0.1-depup.0"
+    }
+  }
+}

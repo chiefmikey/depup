@@ -1,0 +1,39 @@
+{
+  "8.0.3": {
+    "0": {
+      "changes": {
+        "@octokit/auth-oauth-app": {
+          "from": "^9.0.2",
+          "to": "^9.0.3"
+        },
+        "@octokit/auth-oauth-user": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "@octokit/auth-unauthenticated": {
+          "from": "^7.0.2",
+          "to": "^7.0.3"
+        },
+        "@octokit/core": {
+          "from": "^7.0.5",
+          "to": "^7.0.6"
+        },
+        "@octokit/oauth-methods": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "@types/aws-lambda": {
+          "from": "^8.10.83",
+          "to": "^8.10.161"
+        },
+        "universal-user-agent": {
+          "from": "^7.0.0",
+          "to": "^7.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:32:27.699Z",
+      "version": "8.0.3-depup.0"
+    }
+  }
+}
