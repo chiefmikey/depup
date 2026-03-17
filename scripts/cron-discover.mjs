@@ -497,6 +497,7 @@ class PackageDiscoverer {
     'cross-env',
     'cross-spawn',
     'css-loader',
+    'css-tree',
     'csstype',
     'csv-parse',
     'csv-parser',
