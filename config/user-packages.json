@@ -1,5 +1,5 @@
 {
-  "count": 169,
+  "count": 170,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -75,6 +75,7 @@
     "imagemin",
     "ink",
     "jsdoc",
+    "kafkajs",
     "kebab-case",
     "keystone",
     "lambda-api",
@@ -171,5 +172,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:23.155Z"
+  "updatedAt": "2026-03-17T19:32:25.400Z"
 }
