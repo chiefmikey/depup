@@ -593,6 +593,7 @@ class PackageDiscoverer {
     'is-docker',
     'is-odd',
     'is-stream',
+    'istanbul-lib-instrument',
     'jest',
     'jest-mock',
     'jimp',
