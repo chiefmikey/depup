@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@testing-library/react](https://www.npmjs.com/package/@testing-library/react)
-- **DepUp Version**: 16.3.2-depup.0
+- **DepUp Version**: 16.3.2-depup.1
 - **Original Version**: 16.3.2
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/testing-library__react
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 16.3.2 | 1 | 🔴 Poor | 0% | 0 |
 | 16.3.2 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/testing-library__react
 
 ### Version 16.3.2
 
+- **Revision 1** (16.3.2-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (16.3.2-depup.0) - 🔴 Poor 0% integrity
 
 

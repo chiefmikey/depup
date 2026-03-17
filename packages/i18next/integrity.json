@@ -20,6 +20,17 @@
       "status": "skipped",
       "timestamp": "2026-03-12T04:38:50.301Z",
       "version": "25.8.18-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.6",
+          "to": "^7.29.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T23:27:56.930Z",
+      "version": "25.8.18-depup.2"
     }
   }
 }

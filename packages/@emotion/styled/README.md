@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@emotion/styled](https://www.npmjs.com/package/@emotion/styled)
-- **DepUp Version**: 11.14.1-depup.0
+- **DepUp Version**: 11.14.1-depup.1
 - **Original Version**: 11.14.1
-- **Last Updated**: 3/9/2026
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -25,6 +25,7 @@ npm install @depup/emotion__styled
 
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
+| 11.14.1 | 1 | 🔴 Poor | 0% | 0 |
 | 11.14.1 | 0 | 🔴 Poor | 0% | 0 |
 
 
@@ -33,6 +34,7 @@ npm install @depup/emotion__styled
 
 ### Version 11.14.1
 
+- **Revision 1** (11.14.1-depup.1) - 🔴 Poor 0% integrity
 - **Revision 0** (11.14.1-depup.0) - 🔴 Poor 0% integrity
 
 

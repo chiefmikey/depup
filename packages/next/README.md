@@ -11,9 +11,9 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [next](https://www.npmjs.com/package/next)
-- **DepUp Version**: 16.1.6-depup.13
-- **Original Version**: 16.1.6
-- **Last Updated**: 3/15/2026
+- **DepUp Version**: 16.1.7-depup.0
+- **Original Version**: 16.1.7
+- **Last Updated**: 3/16/2026
 
 ## 🚀 Installation
 
@@ -27,6 +27,7 @@ npm install @depup/next
 |---------|----------|--------|-------|-------|
 | 15.5.3 | 0 | 🔴 Poor | 0% | 0 |
 | 16.1.6 | 13 | 🔴 Poor | 0% | 0 |
+| 16.1.7 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -39,6 +40,10 @@ npm install @depup/next
 ### Version 16.1.6
 
 - **Revision 13** (16.1.6-depup.13) - 🔴 Poor 0% integrity
+
+### Version 16.1.7
+
+- **Revision 0** (16.1.7-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
