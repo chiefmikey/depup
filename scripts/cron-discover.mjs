@@ -547,6 +547,7 @@ class PackageDiscoverer {
     'ioredis',
     'ip',
     'is-odd',
+    'is-stream',
     'jest',
     'jimp',
     'joi',
