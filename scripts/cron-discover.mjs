@@ -400,6 +400,7 @@ class PackageDiscoverer {
     '@aws-sdk/lib-dynamodb',
     '@aws-sdk/middleware-user-agent',
     '@aws-sdk/types',
+    '@aws-sdk/util-user-agent-node',
     '@babel/core',
     '@babel/preset-env',
     '@babel/preset-react',
