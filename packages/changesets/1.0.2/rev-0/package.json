@@ -1,0 +1,45 @@
+{
+  "name": "@depup/changesets",
+  "version": "1.0.2-depup.0",
+  "description": "[DepUp] Changeset library incorporating an operational transformation (OT) algorithm - for node and the browser, with shareJS support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelklehr/changesets.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "changesets",
+    "operational transformation",
+    "ot",
+    "diff",
+    "Forward Transformation",
+    "Backward Transformation",
+    "Inclusion Transformation",
+    "Exclusion Transformation",
+    "collaborative",
+    "undo",
+    "text"
+  ],
+  "main": "./lib/index",
+  "scripts": {
+    "test": "vows ./test/*"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "diff_match_patch": "*",
+    "vows": "0.7.x"
+  },
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "changesets",
+    "originalVersion": "1.0.2",
+    "processedAt": "2026-03-17T18:40:40.074Z",
+    "smokeTest": "passed"
+  }
+}
