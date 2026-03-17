@@ -1,5 +1,5 @@
 {
-  "count": 147,
+  "count": 148,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -73,6 +73,7 @@
     "mailgun-js",
     "make",
     "mdx",
+    "memcached",
     "mercurius",
     "merge2",
     "micro",
@@ -149,5 +150,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:31:26.318Z"
+  "updatedAt": "2026-03-17T19:31:28.020Z"
 }
