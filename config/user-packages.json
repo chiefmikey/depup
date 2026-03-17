@@ -1,5 +1,5 @@
 {
-  "count": 125,
+  "count": 126,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -118,6 +118,7 @@
     "typesafe-i18n",
     "unbuild",
     "uvu",
+    "vinxi",
     "vitepress",
     "vuepress",
     "wait-on",
@@ -127,5 +128,5 @@
     "xml2js",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T19:01:27.502Z"
+  "updatedAt": "2026-03-17T19:01:29.620Z"
 }
