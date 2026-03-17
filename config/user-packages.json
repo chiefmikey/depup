@@ -1,5 +1,5 @@
 {
-  "count": 242,
+  "count": 243,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -238,11 +238,12 @@
     "wait-on",
     "waterline",
     "webpack-sources",
+    "wireit",
     "wrangler",
     "xlsx",
     "xml2js",
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:56:18.120Z"
+  "updatedAt": "2026-03-17T22:56:19.469Z"
 }
