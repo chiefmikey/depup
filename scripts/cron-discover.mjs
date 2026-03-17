@@ -603,6 +603,7 @@ class PackageDiscoverer {
     'markdown-it',
     'marked',
     'meow',
+    'merge-stream',
     'micromatch',
     'mime',
     'mini-css-extract-plugin',
