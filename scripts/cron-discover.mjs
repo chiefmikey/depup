@@ -708,6 +708,7 @@ class PackageDiscoverer {
     'tiny-invariant',
     'ts-node',
     'tsconfig-paths',
+    'tslib',
     'tsup',
     'tsx',
     'turbo',
