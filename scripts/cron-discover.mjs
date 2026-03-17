@@ -536,6 +536,7 @@ class PackageDiscoverer {
     'html-webpack-plugin',
     'http-errors',
     'http-proxy-middleware',
+    'https-proxy-agent',
     'humanize-duration',
     'husky',
     'i18n',
