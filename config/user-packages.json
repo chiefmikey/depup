@@ -1,5 +1,5 @@
 {
-  "count": 96,
+  "count": 97,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -60,6 +60,7 @@
     "nitro",
     "ofetch",
     "pako",
+    "pdf-lib",
     "pkgroll",
     "polka",
     "preact",
@@ -98,5 +99,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:08:38.468Z"
+  "updatedAt": "2026-03-17T18:08:39.901Z"
 }
