@@ -617,6 +617,7 @@ class PackageDiscoverer {
     'open-cli',
     'ora',
     'p-limit',
+    'p-locate',
     'p-map',
     'p-queue',
     'p-retry',
