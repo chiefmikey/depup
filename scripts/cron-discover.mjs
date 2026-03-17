@@ -732,6 +732,7 @@ class PackageDiscoverer {
     'safer-buffer',
     'sass',
     'semver',
+    'send',
     'sequelize',
     'serve-favicon',
     'serve-static',
