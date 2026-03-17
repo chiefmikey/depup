@@ -1,5 +1,5 @@
 {
-  "count": 27,
+  "count": 28,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -26,8 +26,9 @@
     "merge2",
     "microbundle",
     "pkgroll",
+    "tsc-watch",
     "unbuild",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:05:24.595Z"
+  "updatedAt": "2026-03-17T18:05:27.746Z"
 }
