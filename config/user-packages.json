@@ -1,5 +1,5 @@
 {
-  "count": 43,
+  "count": 44,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -26,6 +26,7 @@
     "flat-cache",
     "hapi",
     "merge2",
+    "micro",
     "microbundle",
     "mikro-orm",
     "pkgroll",
@@ -45,5 +46,5 @@
     "vuepress",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:04.222Z"
+  "updatedAt": "2026-03-17T18:06:06.221Z"
 }
