@@ -474,6 +474,7 @@ class PackageDiscoverer {
     'concurrently',
     'config',
     'connect-redis',
+    'cookie',
     'cookie-parser',
     'copy-webpack-plugin',
     'cors',
