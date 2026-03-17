@@ -1,5 +1,5 @@
 {
-  "count": 61,
+  "count": 62,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -26,6 +26,7 @@
     "bookshelf",
     "chokidar",
     "consola",
+    "effector",
     "flat-cache",
     "hapi",
     "kebab-case",
@@ -63,5 +64,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:07:02.644Z"
+  "updatedAt": "2026-03-17T18:07:06.565Z"
 }
