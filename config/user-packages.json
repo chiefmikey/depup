@@ -1,5 +1,5 @@
 {
-  "count": 48,
+  "count": 49,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -30,6 +30,7 @@
     "microbundle",
     "mikro-orm",
     "nitro",
+    "ofetch",
     "pkgroll",
     "polka",
     "react-dropzone",
@@ -50,5 +51,5 @@
     "waterline",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:06:14.335Z"
+  "updatedAt": "2026-03-17T18:06:15.806Z"
 }
