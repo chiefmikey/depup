@@ -1,0 +1,72 @@
+{
+  "name": "@depup/mdx",
+  "description": "[DepUp] Generic documentation extractor. Extensible enough to work with any language that supports comments.",
+  "version": "0.3.1-depup.0",
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "bin": {
+    "mdx": "./bin/mdx"
+  },
+  "bugs": {
+    "url": "https://github.com/rstacruz/mdx/issues"
+  },
+  "dependencies": {
+    "meow": "^14.1.0",
+    "mustache": "^4.2.0",
+    "object-assign": "^4.1.1",
+    "read-input": "0.3.1"
+  },
+  "devDependencies": {
+    "chai": "3.4.1",
+    "markdown-it": "5.0.2",
+    "mocha": "2.3.4",
+    "mocha-standard": "1.0.0",
+    "nixt": "0.4.1",
+    "redent": "1.0.0",
+    "standard": "5.4.1"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "homepage": "https://github.com/rstacruz/mdx#readme",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "mdx",
+    "comments",
+    "documentation",
+    "inline",
+    "markdown"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/mdx.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "depup": {
+    "changes": {
+      "meow": {
+        "from": "3.6.0",
+        "to": "^14.1.0"
+      },
+      "mustache": {
+        "from": "2.2.1",
+        "to": "^4.2.0"
+      },
+      "object-assign": {
+        "from": "4.0.1",
+        "to": "^4.1.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "mdx",
+    "originalVersion": "0.3.1",
+    "processedAt": "2026-03-17T18:41:59.778Z",
+    "smokeTest": "passed"
+  }
+}
