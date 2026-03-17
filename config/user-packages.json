@@ -1,5 +1,5 @@
 {
-  "count": 198,
+  "count": 202,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -57,6 +57,7 @@
     "consola",
     "convict",
     "cosmiconfig",
+    "cron-parser",
     "croner",
     "dd-trace",
     "devcert",
@@ -123,6 +124,7 @@
     "nexe",
     "nightwatch",
     "nitro",
+    "node-forge",
     "node-pty",
     "npm-run-all",
     "oclif",
@@ -147,6 +149,7 @@
     "pug",
     "pulumi",
     "puppeteer-core",
+    "qrcode",
     "quasar",
     "rc",
     "react-dropzone",
@@ -178,6 +181,7 @@
     "tap",
     "tar",
     "tasuku",
+    "terminal-link",
     "testcafe",
     "tsc-watch",
     "turborepo",
@@ -200,5 +204,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:34:08.994Z"
+  "updatedAt": "2026-03-17T19:34:18.694Z"
 }
