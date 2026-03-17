@@ -1,5 +1,5 @@
 {
-  "count": 294,
+  "count": 295,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -111,6 +111,7 @@
     "forever",
     "formatjs",
     "gatsby",
+    "geolib",
     "ghost",
     "google-auth-library",
     "googleapis",
@@ -296,5 +297,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:13.109Z"
+  "updatedAt": "2026-03-17T22:58:14.902Z"
 }
