@@ -1,0 +1,80 @@
+{
+  "name": "@depup/pkg-dir",
+  "version": "8.0.0-depup.0",
+  "description": "[DepUp] Find the root directory of a Node.js project or npm package",
+  "license": "MIT",
+  "repository": "sindresorhus/pkg-dir",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "pkg-dir",
+    "package",
+    "json",
+    "root",
+    "npm",
+    "entry",
+    "find",
+    "up",
+    "find-up",
+    "findup",
+    "look-up",
+    "look",
+    "file",
+    "search",
+    "match",
+    "resolve",
+    "parent",
+    "parents",
+    "folder",
+    "directory",
+    "walk",
+    "walking",
+    "path"
+  ],
+  "dependencies": {
+    "find-up-simple": "^1.0.1"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "tempy": "^3.1.0",
+    "tsd": "^0.29.0",
+    "xo": "^0.56.0"
+  },
+  "depup": {
+    "changes": {
+      "find-up-simple": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "pkg-dir",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-03-17T19:39:33.956Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "count": 222,
+  "count": 223,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -153,6 +153,7 @@
     "pg-boss",
     "pidusage",
     "pkg",
+    "pkg-dir",
     "pkgroll",
     "playwright-core",
     "polka",
@@ -224,5 +225,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:38:18.119Z"
+  "updatedAt": "2026-03-17T19:40:32.350Z"
 }
