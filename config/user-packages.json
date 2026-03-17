@@ -1,5 +1,5 @@
 {
-  "count": 192,
+  "count": 193,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -21,6 +21,7 @@
     "@typescript-eslint/utils",
     "@typescript-eslint/visitor-keys",
     "@vitest/pretty-format",
+    "acme-client",
     "adm-zip",
     "agenda",
     "ajv-errors",
@@ -194,5 +195,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:33:42.858Z"
+  "updatedAt": "2026-03-17T19:33:45.133Z"
 }
