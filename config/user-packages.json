@@ -1,5 +1,5 @@
 {
-  "count": 70,
+  "count": 71,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -45,6 +45,7 @@
     "ofetch",
     "pkgroll",
     "polka",
+    "preact",
     "quasar",
     "react-dropzone",
     "react-helmet",
@@ -72,5 +73,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:07:33.577Z"
+  "updatedAt": "2026-03-17T18:07:35.338Z"
 }
