@@ -1,5 +1,5 @@
 {
-  "count": 275,
+  "count": 276,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -175,6 +175,7 @@
     "opentelemetry",
     "os-utils",
     "p-all",
+    "p-throttle",
     "pako",
     "parent-module",
     "path-exists",
@@ -277,5 +278,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:29.469Z"
+  "updatedAt": "2026-03-17T22:57:31.128Z"
 }
