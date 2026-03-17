@@ -193,76 +193,9 @@ jobs:
         env:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
         run: |
-          echo "Testing package processing..."
-
-          # Run depup with --dry-run flag
-          timeout 60s npm run depup -- "$PACKAGE_NAME" --dry-run || {
-            echo "Dry run test failed, but this might be expected. Continuing..."
-          }
-
-          echo "Dry run test completed"
-
-      - name: Add Package to Curated List
-        if: success()
-        env:
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
-        run: |
           echo "Adding $PACKAGE_NAME to curated list..."
-
-          # Use the add-package script to modify cron-discover.mjs
           node scripts/add-package.mjs add "$PACKAGE_NAME"
-
-          # Immediately remove any temporary files that might exist
           rm -f package_description.txt package_version.txt package_info.json
-
-      - name: Commit and Push to Main
-        if: success()
-        env:
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: |
-          # Remove any temporary files
-          rm -f package_description.txt package_version.txt package_info.json
-
-          # Configure git
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Rebase-free push strategy: reset to latest origin/main, re-apply
-          # the change, and push. This avoids merge conflicts when multiple
-          # package request workflows run concurrently.
-          for attempt in 1 2 3 4 5; do
-            git fetch origin main
-            git reset --hard origin/main
-
-            # Re-run add-package on the latest state (idempotent -- skips if already added)
-            if ! node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null; then
-              echo "Package already in list or add failed -- checking if present"
-              if node -e "const d=JSON.parse(require('fs').readFileSync('config/user-packages.json'));process.exit(d.packages.includes('$PACKAGE_NAME')?0:1)" 2>/dev/null; then
-                echo "Package already added by another workflow"
-                exit 0
-              fi
-            fi
-
-            git add config/user-packages.json
-            if git diff --cached --quiet; then
-              echo "No changes to commit (package already in list)"
-              exit 0
-            fi
-
-            git commit -m "feat: add package ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
-            if git push origin main; then
-              echo "Push successful on attempt $attempt"
-              break
-            fi
-
-            echo "Push failed on attempt $attempt (concurrent push), retrying..."
-            sleep $((attempt * 2))
-            if [ "$attempt" -eq 5 ]; then
-              echo "Push failed after 5 attempts"
-              exit 1
-            fi
-          done
 
       - name: Process and Publish Package
         if: success()
@@ -273,8 +206,53 @@ jobs:
         run: |
           echo "Processing and publishing $PACKAGE_NAME..."
           node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish || {
-            echo "Processing failed -- package was added to list and will be retried by cron"
+            echo "Publish failed -- will be retried by cron"
           }
+
+      - name: Commit and Push
+        if: success()
+        env:
+          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Rebase-free push: reset to origin/main, re-apply list change +
+          # package data, push. Handles concurrent workflows without conflicts.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Re-add package to list (idempotent)
+            node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null || true
+
+            # Re-process if package data was lost by reset (skip publish -- already done)
+            if [ ! -d "packages/${PACKAGE_NAME}" ] && [ ! -d "packages/$(echo $PACKAGE_NAME | sed 's|@||;s|/|__|')" ]; then
+              node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test 2>/dev/null || true
+            fi
+
+            # Stage list + package data
+            git add config/user-packages.json
+            git add packages/ 2>/dev/null || true
+            if git diff --cached --quiet; then
+              echo "No changes (already processed by another workflow)"
+              exit 0
+            fi
+
+            git commit -m "feat: add and publish ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            fi
+
+            echo "Push race on attempt $attempt, retrying..."
+            sleep $((attempt * 2))
+            if [ "$attempt" -eq 5 ]; then
+              echo "Push failed after 5 attempts"
+              exit 1
+            fi
+          done
 
       - name: Comment on Issue
         if: always()
