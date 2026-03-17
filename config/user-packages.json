@@ -1,5 +1,5 @@
 {
-  "count": 88,
+  "count": 89,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -37,6 +37,7 @@
     "flat-cache",
     "graphql-tools",
     "graphql-yoga",
+    "h3",
     "hapi",
     "jsdoc",
     "kebab-case",
@@ -90,5 +91,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:08:10.745Z"
+  "updatedAt": "2026-03-17T18:08:12.546Z"
 }
