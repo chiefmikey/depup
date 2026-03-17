@@ -324,6 +324,8 @@ class DepUp {
         'postuninstall',
         'prepublish',
         'prepublishOnly',
+        'prepack',
+        'postpack',
         'prepare',
       ];
       for (const script of dangerousScripts) {
