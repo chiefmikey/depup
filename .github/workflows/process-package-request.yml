@@ -2,11 +2,11 @@ name: "Process Package Request"
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 concurrency:
   group: process-package-${{ github.event.issue.number }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   validate-and-process:
@@ -311,13 +311,10 @@ jobs:
               comment += 'You can check the status at: `packages/' + packageName + '`\n\n';
               comment += 'If you believe this is an error, please provide more details.';
             } else if (jobStatus === 'success') {
-              comment += '**Package Added**: `' + packageName + '` has been added to the curated list.\n\n';
-              comment += '**What happens next:**\n';
-              comment += '1. Package gets processed in the next discovery run (every 4 hours)\n';
-              comment += '2. Dependencies are bumped to latest versions\n';
               const flatName = packageName.startsWith('@') ? packageName.slice(1).replace(/\//g, '__') : packageName;
-              comment += '3. Updated package published under `@depup/' + flatName + '` scope\n\n';
-              comment += 'This issue will be closed automatically.';
+              comment += '**Package published**: [`@depup/' + flatName + '`](https://www.npmjs.com/package/@depup/' + flatName + ')\n\n';
+              comment += 'Dependencies bumped to latest versions. Install with:\n';
+              comment += '```\nnpm install @depup/' + flatName + '\n```';
             } else {
               comment += 'Request Failed: An unexpected error occurred.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
