@@ -1,5 +1,5 @@
 {
-  "count": 71,
+  "count": 72,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -64,6 +64,7 @@
     "tasuku",
     "testcafe",
     "tsc-watch",
+    "turborepo",
     "typebox",
     "unbuild",
     "uvu",
@@ -73,5 +74,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:07:35.338Z"
+  "updatedAt": "2026-03-17T18:07:36.658Z"
 }
