@@ -1,5 +1,5 @@
 {
-  "count": 86,
+  "count": 87,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -53,6 +53,7 @@
     "nightwatch",
     "nitro",
     "ofetch",
+    "pako",
     "pkgroll",
     "polka",
     "preact",
@@ -88,5 +89,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:08:07.870Z"
+  "updatedAt": "2026-03-17T18:08:08.883Z"
 }
