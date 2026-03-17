@@ -1,0 +1,42 @@
+{
+  "name": "@depup/http-deceiver",
+  "version": "1.2.7-depup.0",
+  "description": "[DepUp] Deceive HTTP parser",
+  "main": "lib/deceiver.js",
+  "scripts": {
+    "test": "mocha --reporter=spec test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indutny/http-deceiver.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "http-deceiver",
+    "http",
+    "net",
+    "deceive"
+  ],
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indutny/http-deceiver/issues"
+  },
+  "homepage": "https://github.com/indutny/http-deceiver#readme",
+  "devDependencies": {
+    "handle-thing": "^1.0.1",
+    "mocha": "^2.2.5",
+    "readable-stream": "^2.0.1",
+    "stream-pair": "^1.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "http-deceiver",
+    "originalVersion": "1.2.7",
+    "processedAt": "2026-03-17T16:36:23.128Z",
+    "smokeTest": "failed"
+  }
+}

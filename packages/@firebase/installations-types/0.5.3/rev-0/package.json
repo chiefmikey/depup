@@ -1,0 +1,44 @@
+{
+  "name": "@depup/firebase__installations-types",
+  "version": "0.5.3-depup.0",
+  "description": "[DepUp] @firebase/installations Types",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@firebase/app-types": "0.x"
+  },
+  "repository": {
+    "directory": "packages/installations-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@firebase/installations-types"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/installations-types",
+    "originalVersion": "0.5.3",
+    "processedAt": "2026-03-17T16:32:30.391Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "name": "@depup/nise",
+  "version": "6.1.4-depup.0",
+  "description": "[DepUp] Fake XHR and server",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "nise",
+    "test",
+    "testing",
+    "fake",
+    "mock",
+    "xhr",
+    "server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sinonjs/nise.git"
+  },
+  "main": "lib/index.js",
+  "module": "nise.js",
+  "scripts": {
+    "bundle": "browserify  -x timers -x timers/promises --no-detect-globals -s nise -o nise.js lib/index.js",
+    "lint": "eslint --max-warnings 0 .",
+    "prettier:check": "prettier --check '**/*.{js,css,md}'",
+    "prettier:write": "prettier --write '**/*.{js,css,md}'",
+    "test": "mocha lib/**/*.test.js",
+    "test:coverage": "nyc --reporter=lcov --reporter=text --all npm test -- --reporter dot",
+    "test:headless": "mochify --https-server --plugin [ proxyquire-universal ] --no-detect-globals test/global-hack.js lib/**/*.test.js"
+  },
+  "browser": {
+    "jsdom": false,
+    "jsdom-global": false
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "nyc": {
+    "exclude": [
+      "nise.js",
+      "coverage/**",
+      "**/*.test.js"
+    ]
+  },
+  "files": [
+    "nise.js",
+    "lib/**/*.js",
+    "!lib/**/*.test.js",
+    "changes.json",
+    "README.md"
+  ],
+  "// remark": "do not update browserify to version 17 or above. breaks `nise`! See issue #221",
+  "devDependencies": {
+    "@sinonjs/eslint-config": "^6.0.0",
+    "@sinonjs/referee": "^11.0.1",
+    "browserify": "^16.5.2",
+    "husky": "^9.1.7",
+    "jsdom": "^28",
+    "jsdom-global": "3.0.2",
+    "lint-staged": "^16.3.1",
+    "mocha": "^11.7.5",
+    "mochify": "^9.2.0",
+    "nyc": "^18.0.0",
+    "prettier": "^3.8.1",
+    "proxyquire": "^2.1.3",
+    "proxyquire-universal": "^3.0.1",
+    "proxyquireify": "^3.2.1",
+    "sinon": ">=21"
+  },
+  "dependencies": {
+    "@sinonjs/commons": "^4.0.0-alpha.0",
+    "@sinonjs/fake-timers": "^15.1.1",
+    "just-extend": "^6.2.0",
+    "path-to-regexp": "^8.3.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --check",
+    "*.js": "eslint --quiet"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "depup": {
+    "changes": {
+      "@sinonjs/commons": {
+        "from": "^3.0.1",
+        "to": "^4.0.0-alpha.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "nise",
+    "originalVersion": "6.1.4",
+    "processedAt": "2026-03-17T16:37:30.379Z",
+    "smokeTest": "failed"
+  }
+}

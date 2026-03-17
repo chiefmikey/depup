@@ -1,0 +1,49 @@
+{
+  "name": "@depup/postgres-date",
+  "main": "index.js",
+  "version": "2.1.0-depup.0",
+  "description": "[DepUp] Postgres date column parser",
+  "license": "MIT",
+  "repository": "bendrucker/postgres-date",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "test": "standard && tape test.js && tsd"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "postgres-date",
+    "postgres",
+    "date",
+    "parser"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^16.0.0",
+    "tape": "^5.0.0",
+    "tsd": "^0.19.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "readme.md",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postgres-date",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-03-17T16:37:38.806Z",
+    "smokeTest": "passed"
+  }
+}

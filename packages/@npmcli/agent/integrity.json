@@ -1,0 +1,31 @@
+{
+  "4.0.0": {
+    "0": {
+      "changes": {
+        "agent-base": {
+          "from": "^7.1.0",
+          "to": "^8.0.0"
+        },
+        "http-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "lru-cache": {
+          "from": "^11.2.1",
+          "to": "^11.2.7"
+        },
+        "socks-proxy-agent": {
+          "from": "^8.0.3",
+          "to": "^9.0.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:33:32.098Z",
+      "version": "4.0.0-depup.0"
+    }
+  }
+}

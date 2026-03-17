@@ -1,0 +1,67 @@
+{
+  "name": "@depup/surma__rollup-plugin-off-main-thread",
+  "version": "2.2.3-depup.0",
+  "description": "[DepUp] Use Rollup with workers and ES6 modules today.",
+  "main": "index.js",
+  "scripts": {
+    "fmt": "prettier --write 'tests/**/*.js' *.js *.md *.json",
+    "test": "node ./run_tests.js"
+  },
+  "author": "Surma <surma@google.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chalk": "^2.4.2",
+    "karma": "4.2.0",
+    "karma-chai": "0.1.0",
+    "karma-chrome-launcher": "3.0.0",
+    "karma-firefox-launcher": "1.1.0",
+    "karma-mocha": "1.3.0",
+    "karma-safari-launcher": "1.0.0",
+    "karma-safaritechpreview-launcher": "2.0.2",
+    "mocha": "6.1.4",
+    "prettier": "1.18.2",
+    "rollup": "2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surma/rollup-plugin-off-main-thread"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "json5": "^2.2.3",
+    "magic-string": "^0.30.21",
+    "string.prototype.matchall": "^4.0.12"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@surma/rollup-plugin-off-main-thread"
+  ],
+  "depup": {
+    "changes": {
+      "ejs": {
+        "from": "^3.1.6",
+        "to": "^5.0.1"
+      },
+      "json5": {
+        "from": "^2.2.0",
+        "to": "^2.2.3"
+      },
+      "magic-string": {
+        "from": "^0.25.0",
+        "to": "^0.30.21"
+      },
+      "string.prototype.matchall": {
+        "from": "^4.0.6",
+        "to": "^4.0.12"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@surma/rollup-plugin-off-main-thread",
+    "originalVersion": "2.2.3",
+    "processedAt": "2026-03-17T16:34:19.102Z",
+    "smokeTest": "passed"
+  }
+}

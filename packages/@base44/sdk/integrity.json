@@ -1,0 +1,19 @@
+{
+  "0.8.22": {
+    "0": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.2",
+          "to": "^1.13.6"
+        },
+        "socket.io-client": {
+          "from": "^4.7.5",
+          "to": "^4.8.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:31:10.000Z",
+      "version": "0.8.22-depup.0"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "bumped": {
+    "@babel/code-frame": {
+      "from": "^7.16.7",
+      "to": "^7.29.0"
+    },
+    "chalk": {
+      "from": "^4.1.2",
+      "to": "^5.6.2"
+    },
+    "chokidar": {
+      "from": "^4.0.1",
+      "to": "^5.0.0"
+    },
+    "cosmiconfig": {
+      "from": "^8.2.0",
+      "to": "^9.0.1"
+    },
+    "deepmerge": {
+      "from": "^4.2.2",
+      "to": "^4.3.1"
+    },
+    "fs-extra": {
+      "from": "^10.0.0",
+      "to": "^11.3.4"
+    },
+    "memfs": {
+      "from": "^3.4.1",
+      "to": "^4.56.11"
+    },
+    "minimatch": {
+      "from": "^3.0.4",
+      "to": "^10.2.4"
+    },
+    "node-abort-controller": {
+      "from": "^3.0.1",
+      "to": "^3.1.1"
+    },
+    "schema-utils": {
+      "from": "^3.1.1",
+      "to": "^4.3.3"
+    },
+    "semver": {
+      "from": "^7.3.5",
+      "to": "^7.7.4"
+    },
+    "tapable": {
+      "from": "^2.2.1",
+      "to": "^2.3.0"
+    }
+  },
+  "timestamp": "2026-03-17T16:36:07.241Z",
+  "totalUpdated": 12
+}
