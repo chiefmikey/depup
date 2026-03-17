@@ -418,6 +418,7 @@ class PackageDiscoverer {
     '@nestjs/platform-express',
     '@nestjs/swagger',
     '@nestjs/testing',
+    '@opentelemetry/api-logs',
     '@playwright/test',
     '@prisma/client',
     '@radix-ui/react-dialog',
