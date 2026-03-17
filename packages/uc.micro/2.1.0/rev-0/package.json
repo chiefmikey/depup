@@ -1,0 +1,52 @@
+{
+  "name": "@depup/uc.micro",
+  "version": "2.1.0-depup.0",
+  "description": "[DepUp] Micro subset of unicode data files for markdown-it projects.",
+  "repository": "markdown-it/uc.micro",
+  "license": "MIT",
+  "main": "build/index.cjs.js",
+  "module": "index.mjs",
+  "exports": {
+    ".": {
+      "require": "./build/index.cjs.js",
+      "import": "./index.mjs"
+    },
+    "./*": {
+      "require": "./*",
+      "import": "./*"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "categories/",
+    "properties/",
+    "build/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run build && mocha",
+    "build": "rollup -c",
+    "update": "node update.mjs && npm test"
+  },
+  "devDependencies": {
+    "@unicode/unicode-15.1.0": "^1.5.2",
+    "mocha": "^10.2.0",
+    "rollup": "^4.6.1",
+    "shelljs": "^0.8.5"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "uc.micro"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "uc.micro",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-03-17T16:39:35.276Z",
+    "smokeTest": "passed"
+  }
+}

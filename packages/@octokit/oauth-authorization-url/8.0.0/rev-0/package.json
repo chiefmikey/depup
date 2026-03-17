@@ -1,0 +1,53 @@
+{
+  "name": "@depup/octokit__oauth-authorization-url",
+  "type": "module",
+  "version": "8.0.0-depup.0",
+  "description": "[DepUp] Universal library to retrieve GitHubâs identity URL for the OAuth web flow",
+  "repository": "github:octokit/oauth-authorization-url.js",
+  "files": [
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@octokit/oauth-authorization-url",
+    "octokit",
+    "github",
+    "oauth"
+  ],
+  "author": "Gregor Martynus (https://github.com/gr2m)",
+  "license": "MIT",
+  "devDependencies": {
+    "@octokit/tsconfig": "^4.0.0",
+    "@vitest/coverage-v8": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "glob": "^11.0.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "types": "./dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "import": "./dist-src/index.js",
+      "default": "./dist-src/index.js"
+    }
+  },
+  "sideEffects": false,
+  "unpkg": "dist-src/index.js",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@octokit/oauth-authorization-url",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-03-17T16:32:28.099Z",
+    "smokeTest": "passed"
+  }
+}

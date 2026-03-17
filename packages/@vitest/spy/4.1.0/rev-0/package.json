@@ -1,0 +1,56 @@
+{
+  "name": "@depup/vitest__spy",
+  "type": "module",
+  "version": "4.1.0-depup.0",
+  "description": "[DepUp] Lightweight Jest compatible spy implementation",
+  "license": "MIT",
+  "funding": "https://opencollective.com/vitest",
+  "homepage": "https://vitest.dev/api/mock",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitest-dev/vitest.git",
+    "directory": "packages/spy"
+  },
+  "bugs": {
+    "url": "https://github.com/vitest-dev/vitest/issues"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@vitest/spy",
+    "vitest",
+    "test",
+    "mock",
+    "spy",
+    "intercept"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "premove dist && rollup -c",
+    "dev": "rollup -c --watch"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitest/spy",
+    "originalVersion": "4.1.0",
+    "processedAt": "2026-03-17T16:34:23.426Z",
+    "smokeTest": "passed"
+  }
+}

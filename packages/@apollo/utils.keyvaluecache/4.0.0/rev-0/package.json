@@ -1,0 +1,44 @@
+{
+  "name": "@depup/apollo__utils.keyvaluecache",
+  "version": "4.0.0-depup.0",
+  "description": "[DepUp] Minimal key-value cache interface",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollographql/apollo-utils.git",
+    "directory": "packages/keyValueCache/"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@apollo/utils.keyvaluecache",
+    "apollo",
+    "graphql",
+    "typescript",
+    "node"
+  ],
+  "author": "Apollo <packages@apollographql.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@apollo/utils.logger": "^3.0.0",
+    "lru-cache": "^11.2.7"
+  },
+  "depup": {
+    "changes": {
+      "lru-cache": {
+        "from": "^11.0.0",
+        "to": "^11.2.7"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@apollo/utils.keyvaluecache",
+    "originalVersion": "4.0.0",
+    "processedAt": "2026-03-17T16:30:06.488Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@depup/stream-json",
+  "version": "1.9.1-depup.0",
+  "description": "[DepUp] stream-json is the micro-library of Node.js stream components for creating custom JSON processing pipelines with a minimal memory footprint. It can parse JSON files far exceeding available memory streaming individual primitives using a SAX-inspired API. Includes utilities to stream JSON database dumps.",
+  "homepage": "http://github.com/uhop/stream-json",
+  "bugs": "http://github.com/uhop/stream-json/issues",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "stream-chain": "^3.4.1"
+  },
+  "devDependencies": {
+    "heya-unit": "^0.3.0"
+  },
+  "scripts": {
+    "test": "node tests/tests.js",
+    "debug": "node --inspect-brk tests/tests.js"
+  },
+  "github": "http://github.com/uhop/stream-json",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uhop/stream-json.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "stream-json",
+    "scanner",
+    "lexer",
+    "tokenizer",
+    "parser",
+    "django",
+    "stream",
+    "streaming",
+    "json"
+  ],
+  "author": "Eugene Lazutkin <eugene.lazutkin@gmail.com> (http://lazutkin.com/)",
+  "license": "BSD-3-Clause",
+  "files": [
+    "/*.js",
+    "/filters",
+    "/jsonl",
+    "/streamers",
+    "/utils",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {
+      "stream-chain": {
+        "from": "^2.2.5",
+        "to": "^3.4.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "stream-json",
+    "originalVersion": "1.9.1",
+    "processedAt": "2026-03-17T16:39:26.281Z",
+    "smokeTest": "passed"
+  }
+}
