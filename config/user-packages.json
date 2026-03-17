@@ -1,5 +1,5 @@
 {
-  "count": 286,
+  "count": 287,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -188,6 +188,7 @@
     "payload",
     "paypal-rest-sdk",
     "pdf-lib",
+    "pdf-parse",
     "pdfkit",
     "pg-boss",
     "pidusage",
@@ -288,5 +289,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:52.060Z"
+  "updatedAt": "2026-03-17T22:57:56.844Z"
 }
