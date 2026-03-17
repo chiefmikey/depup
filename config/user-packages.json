@@ -1,5 +1,5 @@
 {
-  "count": 283,
+  "count": 284,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -283,7 +283,8 @@
     "xml2js",
     "xstate",
     "zodios",
+    "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:44.746Z"
+  "updatedAt": "2026-03-17T22:57:47.410Z"
 }
