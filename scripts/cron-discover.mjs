@@ -461,6 +461,7 @@ class PackageDiscoverer {
     'buffer',
     'bunyan',
     'c8',
+    'callsites',
     'camelcase',
     'canvas',
     'chai',
