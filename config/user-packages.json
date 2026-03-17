@@ -1,5 +1,5 @@
 {
-  "count": 274,
+  "count": 275,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -160,6 +160,7 @@
     "nats",
     "neo4j-driver",
     "netlify-cli",
+    "newrelic",
     "nexe",
     "nightwatch",
     "nitro",
@@ -276,5 +277,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:27.713Z"
+  "updatedAt": "2026-03-17T22:57:29.469Z"
 }
