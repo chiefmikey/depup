@@ -1,5 +1,5 @@
 {
-  "count": 130,
+  "count": 131,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -98,6 +98,7 @@
     "react-table",
     "react-tooltip",
     "react-virtualized",
+    "remix",
     "restify",
     "rosetta",
     "sendgrid",
@@ -132,5 +133,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:30:34.086Z"
+  "updatedAt": "2026-03-17T19:30:37.260Z"
 }
