@@ -1,5 +1,5 @@
 {
-  "count": 172,
+  "count": 173,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -138,6 +138,7 @@
     "remix",
     "restify",
     "rosetta",
+    "saxes",
     "sendgrid",
     "serverless",
     "short-uuid",
@@ -174,5 +175,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:32:32.704Z"
+  "updatedAt": "2026-03-17T19:32:35.252Z"
 }
