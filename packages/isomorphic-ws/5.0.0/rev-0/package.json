@@ -1,0 +1,48 @@
+{
+  "name": "@depup/isomorphic-ws",
+  "version": "5.0.0-depup.0",
+  "description": "[DepUp] Isomorphic implementation of WebSocket",
+  "main": "node.js",
+  "types": "index.d.ts",
+  "browser": "browser.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heineiuo/isomorphic-ws.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "isomorphic-ws",
+    "browser",
+    "browsers",
+    "isomorphic",
+    "node",
+    "websocket",
+    "ws"
+  ],
+  "author": "@heineiuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heineiuo/isomorphic-ws/issues"
+  },
+  "homepage": "https://github.com/heineiuo/isomorphic-ws#readme",
+  "peerDependencies": {
+    "ws": "*"
+  },
+  "files": [
+    "index.d.ts",
+    "node.js",
+    "browser.js",
+    "README.md",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "isomorphic-ws",
+    "originalVersion": "5.0.0",
+    "processedAt": "2026-03-17T16:36:26.426Z",
+    "smokeTest": "passed"
+  }
+}

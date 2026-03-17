@@ -1,0 +1,71 @@
+{
+  "name": "@depup/stream-browserify",
+  "version": "3.0.0-depup.0",
+  "description": "[DepUp] the stream module from node core for browsers",
+  "main": "index.js",
+  "dependencies": {
+    "inherits": "~2.0.4",
+    "readable-stream": "^4.7.0"
+  },
+  "devDependencies": {
+    "airtap": "^1.0.2",
+    "safe-buffer": "^5.1.2",
+    "tape": "^4.13.0",
+    "through": "^2.3.8"
+  },
+  "scripts": {
+    "test": "node test",
+    "test:browsers": "airtap -- test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/browserify/stream-browserify.git"
+  },
+  "homepage": "https://github.com/browserify/stream-browserify",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "stream-browserify",
+    "stream",
+    "browser",
+    "browserify"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT",
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/3.5",
+      "firefox/10",
+      "firefox/nightly",
+      "chrome/10",
+      "chrome/latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "readable-stream": {
+        "from": "^3.5.0",
+        "to": "^4.7.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "stream-browserify",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-03-17T16:39:20.352Z",
+    "smokeTest": "passed"
+  }
+}

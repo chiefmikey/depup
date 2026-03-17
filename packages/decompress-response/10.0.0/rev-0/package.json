@@ -1,0 +1,73 @@
+{
+  "name": "@depup/decompress-response",
+  "version": "10.0.0-depup.0",
+  "description": "[DepUp] Decompress a HTTP response if needed",
+  "license": "MIT",
+  "repository": "sindresorhus/decompress-response",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "decompress-response",
+    "decompress",
+    "response",
+    "http",
+    "https",
+    "zlib",
+    "gzip",
+    "zip",
+    "deflate",
+    "unzip",
+    "ungzip",
+    "incoming",
+    "message",
+    "stream",
+    "compressed",
+    "brotli",
+    "zstd",
+    "zstandard"
+  ],
+  "dependencies": {
+    "mimic-response": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "ava": "^6.4.1",
+    "get-stream": "^8.0.1",
+    "pify": "^6.1.0",
+    "tsd": "^0.33.0",
+    "xo": "^1.2.3"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "decompress-response",
+    "originalVersion": "10.0.0",
+    "processedAt": "2026-03-17T16:35:18.439Z",
+    "smokeTest": "passed"
+  }
+}

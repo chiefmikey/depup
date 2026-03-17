@@ -1,0 +1,47 @@
+{
+  "name": "@depup/tokenizer__token",
+  "version": "0.3.0-depup.0",
+  "description": "[DepUp] TypeScript definition for strtok3 token",
+  "main": "",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@tokenizer/token",
+    "token",
+    "interface",
+    "tokenizer",
+    "TypeScript"
+  ],
+  "author": {
+    "name": "Borewit",
+    "url": "https://github.com/Borewit"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Borewit/tokenizer-token.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Borewit/tokenizer-token/issues"
+  },
+  "typeScriptVersion": "3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.1.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@tokenizer/token",
+    "originalVersion": "0.3.0",
+    "processedAt": "2026-03-17T16:34:31.239Z",
+    "smokeTest": "failed"
+  }
+}

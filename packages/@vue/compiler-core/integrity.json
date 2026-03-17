@@ -1,0 +1,23 @@
+{
+  "3.5.30": {
+    "0": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.0",
+          "to": "^7.29.2"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:33:45.145Z",
+      "version": "3.5.30-depup.0"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "3.1010.0": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.11",
+          "to": "^3.23.12"
+        },
+        "@smithy/middleware-endpoint": {
+          "from": "^4.4.25",
+          "to": "^4.4.26"
+        },
+        "@smithy/middleware-retry": {
+          "from": "^4.4.42",
+          "to": "^4.4.43"
+        },
+        "@smithy/middleware-serde": {
+          "from": "^4.2.14",
+          "to": "^4.2.15"
+        },
+        "@smithy/node-http-handler": {
+          "from": "^4.4.16",
+          "to": "^4.5.0"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "@smithy/util-defaults-mode-browser": {
+          "from": "^4.3.41",
+          "to": "^4.3.42"
+        },
+        "@smithy/util-defaults-mode-node": {
+          "from": "^4.2.44",
+          "to": "^4.2.45"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:26.423Z",
+      "version": "3.1010.0-depup.0"
+    }
+  }
+}

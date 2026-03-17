@@ -1,0 +1,15 @@
+{
+  "4.0.1": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": ">=18",
+          "to": "^25.5.0"
+        }
+      },
+      "status": "failed",
+      "timestamp": "2026-03-17T16:33:17.118Z",
+      "version": "4.0.1-depup.0"
+    }
+  }
+}

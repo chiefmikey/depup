@@ -1,0 +1,122 @@
+{
+  "name": "@depup/eslint-plugin-es-x",
+  "version": "9.5.0-depup.0",
+  "description": "[DepUp] ESLint plugin about ECMAScript syntactic features.",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "eslint": ">=9.29.0"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-utils": "^4.9.1",
+    "@eslint-community/regexpp": "^4.12.2",
+    "eslint-type-tracer": "^0.5.2"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2",
+    "@clack/prompts": "^1.0.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
+    "@svitejs/changesets-changelog-github-compact": "^1.2.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "env-cmd": "^11.0.0",
+    "eslint": "^10.0.0",
+    "eslint-plugin-eslint-plugin": "^7.0.0",
+    "eslint-plugin-n": "^17.8.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "espree": "^11.0.0",
+    "globals": "^17.0.0",
+    "jsdom": "^28.0.0",
+    "mocha": "^11.0.0",
+    "monaco-editor": "^0.55.0",
+    "npm-run-all2": "^8.0.0",
+    "nyc": "^17.0.0",
+    "opener": "^1.5.1",
+    "rimraf": "^6.0.0",
+    "semver": "^7.0.0",
+    "typescript": "^5.8.3",
+    "vite-plugin-eslint4b": "^0.6.0",
+    "vitepress": "^1.0.0",
+    "vue-eslint-parser": "^10.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf .nyc_output coverage",
+    "coverage": "nyc report -r lcov && opener ./coverage/lcov-report/index.html",
+    "docs:build": "vitepress build docs",
+    "docs:watch": "vitepress dev docs",
+    "lint": "eslint lib tests scripts eslint-internal docs/.vitepress",
+    "lint:fix": "eslint lib tests scripts eslint-internal docs/.vitepress --fix",
+    "new": "node scripts/new-rule",
+    "pretest": "npm run -s lint",
+    "test": "npm run -s test:mocha",
+    "test:mocha": "nyc mocha tests/**/*.{js,mjs} --reporter dot --timeout 60000",
+    "test:debug": "mocha tests/**/*.{js,mjs} --reporter dot --timeout 60000",
+    "update": "run-s update:*",
+    "update:url": "npm run -s lint -- --fix",
+    "update:configs": "node scripts/update-lib-configs",
+    "update:flat-configs": "node scripts/update-lib-flat-configs",
+    "update:index": "node scripts/update-lib-index",
+    "update:doc": "node scripts/update-docs-readme",
+    "update:rule-docs": "node scripts/update-docs-rules",
+    "update:config-docs": "node scripts/update-docs-configs",
+    "resource-update:unicode-properties": "node scripts/update-unicode-properties",
+    "preversion": "npm test",
+    "version": "npm run generate:version && git add .",
+    "postversion": "git push && git push --tags",
+    "watch": "mocha tests/**/*.{js,mjs} --reporter progress --watch --growl",
+    "generate:version": "env-cmd -e version -- run-s update:*",
+    "changeset:version": "changeset version && npm run generate:version && git add --all",
+    "changeset:publish": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslint-community/eslint-plugin-es-x.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "eslint-plugin-es-x",
+    "eslint",
+    "plugin",
+    "eslintplugin"
+  ],
+  "author": "Toru Nagashima (https://github.com/mysticatea)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eslint-community/eslint-plugin-es-x/issues"
+  },
+  "homepage": "https://github.com/eslint-community/eslint-plugin-es-x#readme",
+  "funding": [
+    "https://github.com/sponsors/ota-meshi",
+    "https://opencollective.com/eslint"
+  ],
+  "depup": {
+    "changes": {
+      "@eslint-community/eslint-utils": {
+        "from": "^4.1.2",
+        "to": "^4.9.1"
+      },
+      "@eslint-community/regexpp": {
+        "from": "^4.12.1",
+        "to": "^4.12.2"
+      },
+      "eslint-type-tracer": {
+        "from": "^0.4.0",
+        "to": "^0.5.2"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "eslint-plugin-es-x",
+    "originalVersion": "9.5.0",
+    "processedAt": "2026-03-17T16:36:02.156Z",
+    "smokeTest": "passed"
+  }
+}

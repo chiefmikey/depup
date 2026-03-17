@@ -1,0 +1,23 @@
+{
+  "4.1.0": {
+    "0": {
+      "changes": {
+        "postgres-array": {
+          "from": "~3.0.1",
+          "to": "^3.0.4"
+        },
+        "postgres-interval": {
+          "from": "^3.0.0",
+          "to": "^4.0.2"
+        },
+        "postgres-range": {
+          "from": "^1.1.1",
+          "to": "^1.1.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:37:27.373Z",
+      "version": "4.1.0-depup.0"
+    }
+  }
+}

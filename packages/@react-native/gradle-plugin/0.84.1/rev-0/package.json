@@ -1,0 +1,51 @@
+{
+  "name": "@depup/react-native__gradle-plugin",
+  "version": "0.84.1-depup.0",
+  "description": "[DepUp] Gradle Plugin for React Native",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/react-native.git",
+    "directory": "packages/gradle-plugin"
+  },
+  "homepage": "https://github.com/facebook/react-native/tree/HEAD/packages/gradle-plugin#readme",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@react-native/gradle-plugin",
+    "gradle",
+    "plugin",
+    "react-native"
+  ],
+  "bugs": "https://github.com/facebook/react-native/issues",
+  "engines": {
+    "node": ">= 20.19.4"
+  },
+  "scripts": {
+    "build": "./gradlew build",
+    "clean": "./gradlew clean",
+    "test": "./gradlew check"
+  },
+  "files": [
+    "settings.gradle.kts",
+    "build.gradle.kts",
+    "gradle",
+    "gradlew",
+    "gradlew.bat",
+    "README.md",
+    "react-native-gradle-plugin",
+    "settings-plugin",
+    "shared",
+    "shared-testutil",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-native/gradle-plugin",
+    "originalVersion": "0.84.1",
+    "processedAt": "2026-03-17T16:32:54.075Z",
+    "smokeTest": "failed"
+  }
+}

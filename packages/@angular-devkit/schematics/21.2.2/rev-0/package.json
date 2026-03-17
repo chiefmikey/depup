@@ -1,0 +1,55 @@
+{
+  "name": "@depup/angular-devkit__schematics",
+  "version": "21.2.2-depup.0",
+  "description": "[DepUp] Angular Schematics - Library",
+  "main": "src/index.js",
+  "typings": "src/index.d.ts",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@angular-devkit/schematics",
+    "Angular CLI",
+    "Angular DevKit",
+    "angular",
+    "blueprints",
+    "code generation",
+    "devkit",
+    "scaffolding",
+    "schematics",
+    "sdk",
+    "template",
+    "tooling"
+  ],
+  "dependencies": {
+    "@angular-devkit/core": "21.2.2",
+    "jsonc-parser": "3.3.1",
+    "magic-string": "0.30.21",
+    "ora": "9.3.0",
+    "rxjs": "7.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-cli.git"
+  },
+  "packageManager": "pnpm@10.31.0",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+    "yarn": ">= 1.13.0"
+  },
+  "author": "Angular Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular-cli/issues"
+  },
+  "homepage": "https://github.com/angular/angular-cli",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@angular-devkit/schematics",
+    "originalVersion": "21.2.2",
+    "processedAt": "2026-03-17T16:29:47.581Z",
+    "smokeTest": "passed"
+  }
+}

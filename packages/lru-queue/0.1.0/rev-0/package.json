@@ -1,0 +1,42 @@
+{
+  "name": "@depup/lru-queue",
+  "version": "0.1.0-depup.0",
+  "description": "[DepUp] LRU Queue",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/lru-queue.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "lru-queue",
+    "lru",
+    "cache",
+    "queue"
+  ],
+  "dependencies": {
+    "es5-ext": "^0.10.64"
+  },
+  "devDependencies": {
+    "tad": "~0.1.21"
+  },
+  "scripts": {
+    "test": "node node_modules/tad/bin/tad"
+  },
+  "license": "MIT",
+  "depup": {
+    "changes": {
+      "es5-ext": {
+        "from": "~0.10.2",
+        "to": "^0.10.64"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "lru-queue",
+    "originalVersion": "0.1.0",
+    "processedAt": "2026-03-17T16:37:25.365Z",
+    "smokeTest": "passed"
+  }
+}

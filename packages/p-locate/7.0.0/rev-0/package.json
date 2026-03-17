@@ -1,0 +1,79 @@
+{
+  "name": "@depup/p-locate",
+  "version": "7.0.0-depup.0",
+  "description": "[DepUp] Get the first fulfilled promise that satisfies the provided testing function",
+  "license": "MIT",
+  "repository": "sindresorhus/p-locate",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "p-locate",
+    "promise",
+    "locate",
+    "find",
+    "finder",
+    "search",
+    "searcher",
+    "test",
+    "array",
+    "collection",
+    "iterable",
+    "iterator",
+    "race",
+    "fulfilled",
+    "fastest",
+    "async",
+    "await",
+    "promises",
+    "bluebird"
+  ],
+  "dependencies": {
+    "p-limit": "^7.3.0"
+  },
+  "devDependencies": {
+    "ava": "^6.4.1",
+    "delay": "^7.0.0",
+    "in-range": "^3.0.0",
+    "time-span": "^5.1.0",
+    "tsd": "^0.33.0",
+    "xo": "^1.2.3"
+  },
+  "depup": {
+    "changes": {
+      "p-limit": {
+        "from": "^7.2.0",
+        "to": "^7.3.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "p-locate",
+    "originalVersion": "7.0.0",
+    "processedAt": "2026-03-17T16:37:39.534Z",
+    "smokeTest": "passed"
+  }
+}

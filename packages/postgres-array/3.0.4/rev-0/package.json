@@ -1,0 +1,49 @@
+{
+  "name": "@depup/postgres-array",
+  "main": "index.js",
+  "version": "3.0.4-depup.0",
+  "description": "[DepUp] Parse postgres array columns",
+  "license": "MIT",
+  "repository": "bendrucker/postgres-array",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "types": "index.d.ts",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "postgres-array",
+    "postgres",
+    "array",
+    "parser"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "tape": "^5.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "readme.md",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postgres-array",
+    "originalVersion": "3.0.4",
+    "processedAt": "2026-03-17T16:38:12.872Z",
+    "smokeTest": "passed"
+  }
+}

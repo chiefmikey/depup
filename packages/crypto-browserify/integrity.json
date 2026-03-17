@@ -1,0 +1,23 @@
+{
+  "3.12.1": {
+    "0": {
+      "changes": {
+        "browserify-sign": {
+          "from": "^4.2.3",
+          "to": "^4.2.5"
+        },
+        "hash-base": {
+          "from": "~3.0.4",
+          "to": "^3.1.2"
+        },
+        "pbkdf2": {
+          "from": "^3.1.2",
+          "to": "^3.1.5"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:35:48.990Z",
+      "version": "3.12.1-depup.0"
+    }
+  }
+}

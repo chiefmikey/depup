@@ -1,0 +1,49 @@
+{
+  "name": "@depup/next__env",
+  "version": "16.1.7-depup.0",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@next/env",
+    "react",
+    "next",
+    "next.js",
+    "dotenv"
+  ],
+  "description": "[DepUp] Next.js dotenv file loading",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel/next.js",
+    "directory": "packages/next-env"
+  },
+  "author": "Next.js Team <support@vercel.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "prebuild:source": "node ../../scripts/rm.mjs dist",
+    "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
+    "build:source": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "build": "pnpm build:source && pnpm types"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.34.0",
+    "dotenv": "16.3.1",
+    "dotenv-expand": "10.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@next/env",
+    "originalVersion": "16.1.7",
+    "processedAt": "2026-03-17T16:32:00.229Z",
+    "smokeTest": "passed"
+  }
+}

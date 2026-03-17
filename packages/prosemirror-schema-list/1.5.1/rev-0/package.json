@@ -1,0 +1,66 @@
+{
+  "name": "@depup/prosemirror-schema-list",
+  "version": "1.5.1-depup.0",
+  "description": "[DepUp] List-related schema elements and commands for ProseMirror",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Marijn Haverbeke",
+      "email": "marijn@haverbeke.berlin",
+      "web": "http://marijnhaverbeke.nl"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prosemirror/prosemirror-schema-list.git"
+  },
+  "dependencies": {
+    "prosemirror-model": "^1.25.4",
+    "prosemirror-transform": "^1.11.0",
+    "prosemirror-state": "^1.4.4"
+  },
+  "devDependencies": {
+    "prosemirror-state": "^1.0.0",
+    "@prosemirror/buildhelper": "^0.1.5",
+    "prosemirror-test-builder": "^1.0.0"
+  },
+  "scripts": {
+    "test": "pm-runtests"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "prosemirror-schema-list"
+  ],
+  "depup": {
+    "changes": {
+      "prosemirror-model": {
+        "from": "^1.0.0",
+        "to": "^1.25.4"
+      },
+      "prosemirror-transform": {
+        "from": "^1.7.3",
+        "to": "^1.11.0"
+      },
+      "prosemirror-state": {
+        "from": "^1.0.0",
+        "to": "^1.4.4"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "prosemirror-schema-list",
+    "originalVersion": "1.5.1",
+    "processedAt": "2026-03-17T16:37:42.295Z",
+    "smokeTest": "failed"
+  }
+}

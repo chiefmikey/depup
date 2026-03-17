@@ -1,0 +1,56 @@
+{
+  "name": "@depup/metro-cache",
+  "version": "0.84.2-depup.0",
+  "description": "[DepUp] 🚇 Cache layers for Metro.",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./private/*": "./src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/metro.git",
+    "directory": "packages/metro-cache"
+  },
+  "scripts": {
+    "prepare-release": "test -d build && rm -rf src.real && mv src src.real && mv build src",
+    "cleanup-release": "test ! -e build && mv src build && mv src.real src"
+  },
+  "dependencies": {
+    "exponential-backoff": "^3.1.3",
+    "flow-enums-runtime": "^0.0.6",
+    "https-proxy-agent": "^8.0.0",
+    "metro-core": "0.84.2"
+  },
+  "devDependencies": {
+    "memfs": "^4.38.2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.4 || ^22.13.0 || ^24.3.0 || >= 25.0.0"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "metro-cache"
+  ],
+  "depup": {
+    "changes": {
+      "exponential-backoff": {
+        "from": "^3.1.1",
+        "to": "^3.1.3"
+      },
+      "https-proxy-agent": {
+        "from": "^7.0.5",
+        "to": "^8.0.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "metro-cache",
+    "originalVersion": "0.84.2",
+    "processedAt": "2026-03-17T16:37:40.385Z",
+    "smokeTest": "failed"
+  }
+}

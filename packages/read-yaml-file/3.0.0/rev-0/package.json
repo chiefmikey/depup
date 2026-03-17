@@ -1,0 +1,49 @@
+{
+  "name": "@depup/read-yaml-file",
+  "version": "3.0.0-depup.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "description": "[DepUp] Read and parse a YAML file",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "read-yaml-file",
+    "yaml",
+    "read"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/main/read-yaml-file",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "js-yaml": "^4.1.1",
+    "strip-bom": "^5.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "scripts": {
+    "test": "standard && node --test test.js"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "read-yaml-file",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-03-17T16:38:48.249Z",
+    "smokeTest": "passed"
+  }
+}

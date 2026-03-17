@@ -1,0 +1,54 @@
+{
+  "name": "@depup/run-queue",
+  "version": "2.0.1-depup.0",
+  "description": "[DepUp] A promise based, dynamic priority queue runner, with concurrency limiting.",
+  "main": "queue.js",
+  "scripts": {
+    "test": "iarna-standard && tap --100 test",
+    "test-v4": "tap --100 test"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "run-queue"
+  ],
+  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@iarna/standard": "^2.0.0",
+    "tap": "^12.4.0"
+  },
+  "files": [
+    "queue.js",
+    "changes.json",
+    "README.md"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aproba": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iarna/run-queue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iarna/run-queue/issues"
+  },
+  "homepage": "https://npmjs.com/package/run-queue",
+  "depup": {
+    "changes": {
+      "aproba": {
+        "from": "^2.0.0",
+        "to": "^2.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "run-queue",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-17T16:38:26.700Z",
+    "smokeTest": "passed"
+  }
+}

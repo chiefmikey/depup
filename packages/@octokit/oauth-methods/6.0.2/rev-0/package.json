@@ -1,0 +1,73 @@
+{
+  "name": "@depup/octokit__oauth-methods",
+  "type": "module",
+  "version": "6.0.2-depup.0",
+  "description": "[DepUp] Set of stateless request methods to create, check, reset, refresh, and delete user access tokens for OAuth and GitHub Apps",
+  "repository": "https://github.com/octokit/oauth-methods.js",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@octokit/oauth-methods",
+    "github",
+    "api",
+    "sdk",
+    "toolkit",
+    "oauth"
+  ],
+  "author": "Gregor Martynus (https://dev.to/gr2m)",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/oauth-authorization-url": "^8.0.0",
+    "@octokit/request": "^10.0.8",
+    "@octokit/request-error": "^7.1.0",
+    "@octokit/types": "^16.0.0"
+  },
+  "devDependencies": {
+    "@octokit/tsconfig": "^4.0.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "fetch-mock": "^11.0.0",
+    "glob": "^11.0.0",
+    "prettier": "3.5.3",
+    "semantic-release-plugin-update-version-in-files": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "files": [
+    "dist-*/**",
+    "bin/**",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "./dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "import": "./dist-bundle/index.js",
+      "default": "./dist-bundle/index.js"
+    }
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {
+      "@octokit/request": {
+        "from": "^10.0.6",
+        "to": "^10.0.8"
+      },
+      "@octokit/request-error": {
+        "from": "^7.0.2",
+        "to": "^7.1.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@octokit/oauth-methods",
+    "originalVersion": "6.0.2",
+    "processedAt": "2026-03-17T16:33:33.969Z",
+    "smokeTest": "passed"
+  }
+}

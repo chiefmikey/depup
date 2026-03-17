@@ -1,0 +1,31 @@
+{
+  "11.1.2": {
+    "0": {
+      "changes": {
+        "@types/hast": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "mdast-util-to-hast": {
+          "from": "^13.0.0",
+          "to": "^13.2.1"
+        },
+        "unified": {
+          "from": "^11.0.0",
+          "to": "^11.0.5"
+        },
+        "vfile": {
+          "from": "^6.0.0",
+          "to": "^6.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:38:35.314Z",
+      "version": "11.1.2-depup.0"
+    }
+  }
+}

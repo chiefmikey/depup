@@ -1,0 +1,39 @@
+{
+  "name": "@depup/oas-schema-walker",
+  "version": "1.1.5-depup.0",
+  "description": "[DepUp] Library to walk OAS 3 schema objects and call a callback",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "funding": "https://github.com/Mermade/oas-kit?sponsor=1",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "oas-schema-walker",
+    "openapi",
+    "swagger",
+    "oas",
+    "schema",
+    "json-schema"
+  ],
+  "author": "Mike Ralphson",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mermade/oas-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mermade/oas-kit/issues"
+  },
+  "gitHead": "dc53888b6184e0896ac878a39fec92f835fd44a3",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "oas-schema-walker",
+    "originalVersion": "1.1.5",
+    "processedAt": "2026-03-17T16:37:12.543Z",
+    "smokeTest": "passed"
+  }
+}

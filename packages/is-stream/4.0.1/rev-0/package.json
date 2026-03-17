@@ -1,0 +1,62 @@
+{
+  "name": "@depup/is-stream",
+  "version": "4.0.1-depup.0",
+  "description": "[DepUp] Check if something is a Node.js stream",
+  "license": "MIT",
+  "repository": "sindresorhus/is-stream",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "is-stream",
+    "stream",
+    "type",
+    "streams",
+    "writable",
+    "readable",
+    "duplex",
+    "transform",
+    "check",
+    "detect",
+    "is"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "ava": "^5.3.1",
+    "tempy": "^3.1.0",
+    "tsd": "^0.30.5",
+    "xo": "^0.57.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "is-stream",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-03-17T16:37:03.400Z",
+    "smokeTest": "passed"
+  }
+}

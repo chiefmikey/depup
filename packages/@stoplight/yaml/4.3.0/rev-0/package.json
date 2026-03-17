@@ -1,0 +1,52 @@
+{
+  "name": "@depup/stoplight__yaml",
+  "version": "4.3.0-depup.0",
+  "description": "[DepUp] Useful functions when working with YAML.",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@stoplight/yaml",
+    "yaml",
+    "yaml parser",
+    "yaml.parse",
+    "parser",
+    "sourcemap"
+  ],
+  "main": "index.js",
+  "sideEffects": false,
+  "files": [
+    "**/*",
+    "changes.json",
+    "README.md"
+  ],
+  "author": "Stoplight <support@stoplight.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoplightio/yaml"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=10.8"
+  },
+  "dependencies": {
+    "@stoplight/ordered-object-literal": "^1.0.5",
+    "@stoplight/types": "^14.1.1",
+    "@stoplight/yaml-ast-parser": "0.0.50",
+    "tslib": "^2.8.1"
+  },
+  "typings": "index.d.ts",
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.2.0",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@stoplight/yaml",
+    "originalVersion": "4.3.0",
+    "processedAt": "2026-03-17T16:34:31.920Z",
+    "smokeTest": "passed"
+  }
+}

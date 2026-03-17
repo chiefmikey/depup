@@ -1,0 +1,30 @@
+{
+  "name": "@depup/nicolo-ribaudo__eslint-scope-5-internals",
+  "version": "5.1.1-v1-depup.0",
+  "description": "[DepUp] Proxy package exposing internals of eslint-scope@5 for @babel/eslint-parser",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-scope": "^9.1.2"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@nicolo-ribaudo/eslint-scope-5-internals"
+  ],
+  "depup": {
+    "changes": {
+      "eslint-scope": {
+        "from": "5.1.1",
+        "to": "^9.1.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@nicolo-ribaudo/eslint-scope-5-internals",
+    "originalVersion": "5.1.1-v1",
+    "processedAt": "2026-03-17T16:33:29.672Z",
+    "smokeTest": "failed"
+  }
+}

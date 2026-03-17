@@ -1,0 +1,56 @@
+{
+  "name": "@depup/storybook__manager-api",
+  "version": "8.6.14-depup.0",
+  "description": "[DepUp] Core Storybook Manager API & Context",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@storybook/manager-api",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybookjs/storybook/tree/next/code/lib/manager-api",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "code/lib/manager-api"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./shim.d.ts",
+      "import": "./shim.mjs",
+      "require": "./shim.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./shim.js",
+  "module": "./shim.mjs",
+  "types": "./shim.d.ts",
+  "files": [
+    "README.md",
+    "*.js",
+    "*.mjs",
+    "*.cjs",
+    "*.d.ts",
+    "changes.json"
+  ],
+  "peerDependencies": {
+    "storybook": "^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@storybook/manager-api",
+    "originalVersion": "8.6.14",
+    "processedAt": "2026-03-17T16:33:53.774Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@depup/simple-concat",
+  "description": "[DepUp] Super-minimalist version of `concat-stream`. Less than 15 lines!",
+  "version": "1.0.1-depup.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/simple-concat/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "*",
+    "tape": "^5.0.1"
+  },
+  "homepage": "https://github.com/feross/simple-concat",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "simple-concat",
+    "concat",
+    "concat-stream",
+    "concat stream"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/simple-concat.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/feross"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/feross"
+    },
+    {
+      "type": "consulting",
+      "url": "https://feross.org/support"
+    }
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "simple-concat",
+    "originalVersion": "1.0.1",
+    "processedAt": "2026-03-17T16:38:40.456Z",
+    "smokeTest": "passed"
+  }
+}

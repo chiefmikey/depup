@@ -1,0 +1,66 @@
+{
+  "name": "@depup/queue-microtask",
+  "description": "[DepUp] fast, tiny `queueMicrotask` shim for modern engines",
+  "version": "1.2.3-depup.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/queue-microtask/issues"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "tape": "^5.2.2"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/feross"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/feross"
+    },
+    {
+      "type": "consulting",
+      "url": "https://feross.org/support"
+    }
+  ],
+  "homepage": "https://github.com/feross/queue-microtask",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "queue-microtask",
+    "asap",
+    "immediate",
+    "micro task",
+    "microtask",
+    "nextTick",
+    "process.nextTick",
+    "queue micro task",
+    "queue microtask",
+    "queueMicrotask",
+    "setImmediate",
+    "task"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/queue-microtask.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "queue-microtask",
+    "originalVersion": "1.2.3",
+    "processedAt": "2026-03-17T16:37:46.173Z",
+    "smokeTest": "passed"
+  }
+}

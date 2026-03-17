@@ -1,0 +1,38 @@
+{
+  "name": "@depup/from",
+  "version": "0.1.7-depup.0",
+  "description": "[DepUp] Easy way to make a Readable Stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "asynct test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/from.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "from",
+    "stream",
+    "streams",
+    "readable",
+    "easy"
+  ],
+  "devDependencies": {
+    "asynct": "1",
+    "stream-spec": "0",
+    "assertions": "~2.3.0"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)",
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "from",
+    "originalVersion": "0.1.7",
+    "processedAt": "2026-03-17T16:36:08.386Z",
+    "smokeTest": "passed"
+  }
+}

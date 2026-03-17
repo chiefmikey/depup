@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@drizzle-team/brocli": {
+      "from": "^0.10.2",
+      "to": "^0.11.0"
+    },
+    "@esbuild-kit/esm-loader": {
+      "from": "^2.5.5",
+      "to": "^2.6.5"
+    },
+    "esbuild": {
+      "from": "^0.25.4",
+      "to": "^0.27.4"
+    }
+  },
+  "timestamp": "2026-03-17T16:35:34.606Z",
+  "totalUpdated": 3
+}

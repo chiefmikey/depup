@@ -1,0 +1,19 @@
+{
+  "0.3.24": {
+    "0": {
+      "changes": {
+        "faye-websocket": {
+          "from": "^0.11.3",
+          "to": "^0.11.4"
+        },
+        "uuid": {
+          "from": "^8.3.2",
+          "to": "^13.0.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:39:18.092Z",
+      "version": "0.3.24-depup.0"
+    }
+  }
+}

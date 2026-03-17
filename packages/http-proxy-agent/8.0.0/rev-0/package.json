@@ -1,0 +1,68 @@
+{
+  "name": "@depup/http-proxy-agent",
+  "version": "8.0.0-depup.0",
+  "type": "module",
+  "description": "[DepUp] An HTTP(s) proxy `http.Agent` implementation for HTTP",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooTallNate/proxy-agents.git",
+    "directory": "packages/http-proxy-agent"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "http-proxy-agent",
+    "http",
+    "proxy",
+    "endpoint",
+    "agent"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "agent-base": "8.0.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^22.13.0",
+    "async-listen": "^3.0.0",
+    "typescript": "^5.1.6",
+    "tsconfig": "0.0.0",
+    "proxy": "3.0.0"
+  },
+  "engines": {
+    "node": ">= 14"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint . --ext .ts",
+    "pack": "node ../../scripts/pack.mjs"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.3.4",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "http-proxy-agent",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-03-17T16:36:59.687Z",
+    "smokeTest": "passed"
+  }
+}
