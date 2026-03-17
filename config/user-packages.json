@@ -1,5 +1,5 @@
 {
-  "count": 31,
+  "count": 32,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,9 +29,10 @@
     "react-helmet",
     "react-modal",
     "react-table",
+    "snowpack",
     "tsc-watch",
     "unbuild",
     "webpack-sources"
   ],
-  "updatedAt": "2026-03-17T18:05:33.922Z"
+  "updatedAt": "2026-03-17T18:05:35.739Z"
 }
