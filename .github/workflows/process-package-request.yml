@@ -228,40 +228,39 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage only the user packages JSON (not source code -- avoids merge conflicts)
-          git add config/user-packages.json
-          git checkout -- .
-
-          # Verify there are changes to commit
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          # Commit and push directly to main (retry up to 3 times for concurrent push races)
-          git commit -m "feat: add package ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
-          for attempt in 1 2 3; do
+          # Rebase-free push strategy: reset to latest origin/main, re-apply
+          # the change, and push. This avoids merge conflicts when multiple
+          # package request workflows run concurrently.
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            # Clean unstaged changes before rebase (case-different files from packages)
-            git checkout -- . 2>/dev/null || true
-            if ! git rebase origin/main; then
-              echo "Rebase failed on attempt $attempt, aborting..."
-              git rebase --abort 2>/dev/null || true
-              sleep 2
-              if [ "$attempt" -eq 3 ]; then
-                echo "Rebase failed after 3 attempts"
-                exit 1
+            git reset --hard origin/main
+
+            # Re-run add-package on the latest state (idempotent -- skips if already added)
+            if ! node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null; then
+              echo "Package already in list or add failed -- checking if present"
+              if node -e "const d=JSON.parse(require('fs').readFileSync('config/user-packages.json'));process.exit(d.packages.includes('$PACKAGE_NAME')?0:1)" 2>/dev/null; then
+                echo "Package already added by another workflow"
+                exit 0
               fi
-            elif git push origin main; then
+            fi
+
+            git add config/user-packages.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit (package already in list)"
+              exit 0
+            fi
+
+            git commit -m "feat: add package ${PACKAGE_NAME} via issue #${ISSUE_NUMBER}"
+            if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
-            else
-              if [ "$attempt" -eq 3 ]; then
-                echo "Push failed after 3 attempts"
-                exit 1
-              fi
-              echo "Push failed on attempt $attempt, retrying..."
-              sleep 2
+            fi
+
+            echo "Push failed on attempt $attempt (concurrent push), retrying..."
+            sleep $((attempt * 2))
+            if [ "$attempt" -eq 5 ]; then
+              echo "Push failed after 5 attempts"
+              exit 1
             fi
           done
 
