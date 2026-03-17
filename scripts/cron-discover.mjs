@@ -657,6 +657,7 @@ class PackageDiscoverer {
     'react-select',
     'react-spring',
     'react-toastify',
+    'readable-stream',
     'recoil',
     'redis',
     'redux',
