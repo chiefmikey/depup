@@ -1,5 +1,5 @@
 {
-  "count": 266,
+  "count": 267,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -13,6 +13,7 @@
     "@aws-sdk/util-user-agent-browser",
     "@azure/cosmos",
     "@azure/identity",
+    "@azure/storage-blob",
     "@eslint-community/eslint-utils",
     "@eslint/config-helpers",
     "@eslint/js",
@@ -268,5 +269,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:14.990Z"
+  "updatedAt": "2026-03-17T22:57:15.967Z"
 }
