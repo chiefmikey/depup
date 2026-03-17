@@ -1,5 +1,5 @@
 {
-  "count": 300,
+  "count": 301,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -244,6 +244,7 @@
     "react-virtualized",
     "read-pkg",
     "read-pkg-up",
+    "rehype-highlight",
     "remix",
     "resolve-from",
     "restify",
@@ -302,5 +303,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:58:26.694Z"
+  "updatedAt": "2026-03-17T22:58:30.704Z"
 }
