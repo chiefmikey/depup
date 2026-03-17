@@ -1,5 +1,5 @@
 {
-  "count": 89,
+  "count": 90,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -30,6 +30,7 @@
     "cdk",
     "changesets",
     "chokidar",
+    "conf",
     "consola",
     "documentation",
     "doxygen",
@@ -91,5 +92,5 @@
     "webpack-sources",
     "xstate"
   ],
-  "updatedAt": "2026-03-17T18:08:12.546Z"
+  "updatedAt": "2026-03-17T18:08:18.469Z"
 }
