@@ -1,5 +1,5 @@
 {
-  "count": 277,
+  "count": 278,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -53,6 +53,7 @@
     "braintree",
     "bree",
     "brotli",
+    "brotli-wasm",
     "bull",
     "busboy",
     "catbox",
@@ -279,5 +280,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:34.554Z"
+  "updatedAt": "2026-03-17T22:57:36.132Z"
 }
