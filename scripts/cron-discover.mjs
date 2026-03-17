@@ -696,6 +696,7 @@ class PackageDiscoverer {
     'socket.io-client',
     'source-map-support',
     'sqlite3',
+    'statuses',
     'storybook',
     'strip-json-comments',
     'style-loader',
