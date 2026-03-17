@@ -228,8 +228,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage only the curated list change and discard any other modifications
-          git add scripts/cron-discover.mjs
+          # Stage only the user packages JSON (not source code -- avoids merge conflicts)
+          git add config/user-packages.json
           git checkout -- .
 
           # Verify there are changes to commit

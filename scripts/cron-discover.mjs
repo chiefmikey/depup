@@ -129,25 +129,59 @@ class PackageDiscoverer {
   }
 
   async getCuratedPackages() {
-    // Load package list: prefer dynamic config file, fall back to hardcoded list
-    let packageNames;
+    // Load package lists: auto-curated + user-submitted, fall back to hardcoded
+    const packageSet = new Set();
+
+    // 1. Auto-curated list (from weekly refresh-curated-list.mjs)
     try {
-      const configPath = path.resolve(process.cwd(), 'config', 'curated-packages.json');
+      const configPath = path.resolve(
+        process.cwd(),
+        'config',
+        'curated-packages.json',
+      );
       const data = JSON.parse(await fs.readFile(configPath));
-      if (Array.isArray(data.packages) && data.packages.length > 0) {
-        packageNames = data.packages;
+      if (Array.isArray(data.packages)) {
+        for (const name of data.packages) {
+          packageSet.add(name);
+        }
         console.log(
           chalk.gray(
-            `Loaded ${packageNames.length} packages from curated-packages.json (refreshed: ${data.refreshedAt || 'unknown'})`,
+            `Loaded ${data.packages.length} auto-curated packages (refreshed: ${data.refreshedAt || 'unknown'})`,
           ),
         );
       }
     } catch {
-      // Config file missing or corrupt -- fall back to hardcoded list
+      // Config file missing -- use hardcoded fallback
+      for (const name of this.curatedPackageNames) {
+        packageSet.add(name);
+      }
     }
-    if (!packageNames) {
-      packageNames = [...this.curatedPackageNames];
+
+    // 2. User-submitted packages (from GitHub issue submissions)
+    try {
+      const userPath = path.resolve(
+        process.cwd(),
+        'config',
+        'user-packages.json',
+      );
+      const data = JSON.parse(await fs.readFile(userPath));
+      if (Array.isArray(data.packages)) {
+        let added = 0;
+        for (const name of data.packages) {
+          if (!packageSet.has(name)) {
+            packageSet.add(name);
+            added++;
+          }
+        }
+        if (added > 0) {
+          console.log(chalk.gray(`Added ${added} user-submitted packages`));
+        }
+      }
+    } catch {
+      // No user-submitted packages -- that's fine
     }
+
+    let packageNames = [...packageSet];
 
     // Sort before sharding for deterministic shard assignment matching cron-sync
     packageNames = packageNames.toSorted((a, b) => a.localeCompare(b));

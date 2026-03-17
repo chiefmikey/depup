@@ -35,6 +35,7 @@ export default [
     // the default threshold. Raising limits to match actual complexity per file.
     files: [
       'scripts/compatibility-test.mjs',
+      'scripts/cron-discover.mjs',
       'scripts/cron-sync.mjs',
       'scripts/generate-readme.mjs',
       'scripts/integrity-meter.mjs',

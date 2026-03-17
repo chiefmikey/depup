@@ -2,13 +2,55 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+/**
+ * Manages user-submitted packages in config/user-packages.json.
+ * This file is separate from the auto-curated list to avoid merge conflicts
+ * when multiple package requests are processed concurrently.
+ *
+ * The discover script merges both lists at runtime.
+ */
 class PackageAdder {
+  userPackagesPath = path.resolve(
+    import.meta.dirname,
+    '..',
+    'config',
+    'user-packages.json',
+  );
+
+  async loadUserPackages() {
+    try {
+      const data = JSON.parse(await fs.readFile(this.userPackagesPath));
+      if (Array.isArray(data.packages)) {
+        return data.packages;
+      }
+    } catch {
+      // File missing or corrupt -- start fresh
+    }
+    return [];
+  }
+
+  async saveUserPackages(packages) {
+    await fs.mkdir(path.dirname(this.userPackagesPath), { recursive: true });
+    await fs.writeFile(
+      this.userPackagesPath,
+      JSON.stringify(
+        {
+          count: packages.length,
+          packages,
+          updatedAt: new Date().toISOString(),
+        },
+        undefined,
+        2,
+      ),
+    );
+  }
+
   async addPackage(packageName) {
     if (!packageName) {
       throw new Error('Package name is required');
     }
 
-    // Validate package name format (supports scoped packages like @scope/package)
+    // Validate package name format
     const nameParts = packageName.startsWith('@')
       ? packageName.slice(1).split('/')
       : [packageName];
@@ -24,68 +66,26 @@ class PackageAdder {
       throw new Error(`Invalid package name format: ${packageName}`);
     }
 
-    // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
+    const existing = await this.loadUserPackages();
 
-    // Find the curated packages array
-    const packageArrayMatch = content.match(
-      /curatedPackageNames = \[([\S\s]*?)\];/u,
-    );
-    if (!packageArrayMatch) {
-      throw new Error(
-        'Could not find curatedPackageNames array in cron-discover.mjs',
-      );
+    // Check if already in list (case-insensitive)
+    if (existing.some((p) => p.toLowerCase() === packageName.toLowerCase())) {
+      throw new Error(`Package ${packageName} is already in the user list`);
     }
 
-    const packageArrayContent = packageArrayMatch[1];
-
-    // Parse existing packages
-    const existingPackages = packageArrayContent
-      .split('\n')
-      .map((line) => line.trim())
-      .filter(
-        (line) =>
-          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
-      )
-      .map((line) => {
-        // Remove quotes and optional trailing comma
-        const end = line.endsWith("',") ? -2 : -1;
-        return line.slice(1, end);
-      })
-      .filter((package_) => package_.length > 0);
-
-    // Check if package already exists (case-insensitive)
-    const lowerPackageName = packageName.toLowerCase();
-    if (existingPackages.some((p) => p.toLowerCase() === lowerPackageName)) {
-      throw new Error(`Package ${packageName} is already in the curated list`);
-    }
-
-    // Sort packages alphabetically (case-insensitive)
-    const updatedPackages = [...existingPackages, packageName].toSorted(
-      (a, b) => a.toLowerCase().localeCompare(b.toLowerCase()),
+    const updated = [...existing, packageName].toSorted((a, b) =>
+      a.toLowerCase().localeCompare(b.toLowerCase()),
     );
 
-    // Format the updated array
-    const updatedArrayContent = updatedPackages
-      .map((package_) => `    '${package_}',`)
-      .join('\n');
+    await this.saveUserPackages(updated);
 
-    // Replace the old array with the updated one
-    const updatedContent = content.replace(
-      /curatedPackageNames = \[([\S\s]*?)\];/u,
-      `curatedPackageNames = [\n${updatedArrayContent}\n  ];`,
-    );
-
-    // Write back to file
-    await fs.writeFile(this.cronDiscoverPath, updatedContent, 'utf8');
-
-    console.log(`✅ Added package '${packageName}' to the curated list`);
-    console.log(`📦 New total packages: ${updatedPackages.length}`);
+    console.log(`Added package '${packageName}' to user-packages.json`);
+    console.log(`Total user-submitted packages: ${updated.length}`);
 
     return {
       added: true,
       packageName,
-      totalPackages: updatedPackages.length,
+      totalPackages: updated.length,
     };
   }
 
@@ -94,107 +94,35 @@ class PackageAdder {
       throw new Error('Package name is required');
     }
 
-    // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
+    const existing = await this.loadUserPackages();
+    const lowerName = packageName.toLowerCase();
 
-    // Find the curated packages array
-    const packageArrayMatch = content.match(
-      /curatedPackageNames = \[([\S\s]*?)\];/u,
-    );
-    if (!packageArrayMatch) {
-      throw new Error(
-        'Could not find curatedPackageNames array in cron-discover.mjs',
-      );
+    if (!existing.some((p) => p.toLowerCase() === lowerName)) {
+      throw new Error(`Package ${packageName} is not in the user list`);
     }
 
-    const packageArrayContent = packageArrayMatch[1];
+    const updated = existing.filter((p) => p.toLowerCase() !== lowerName);
+    await this.saveUserPackages(updated);
 
-    // Parse existing packages
-    const existingPackages = packageArrayContent
-      .split('\n')
-      .map((line) => line.trim())
-      .filter(
-        (line) =>
-          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
-      )
-      .map((line) => {
-        // Remove quotes and optional trailing comma
-        const end = line.endsWith("',") ? -2 : -1;
-        return line.slice(1, end);
-      })
-      .filter((package_) => package_.length > 0);
-
-    // Check if package exists (case-insensitive to match removal logic)
-    const lowerPackageName = packageName.toLowerCase();
-    if (!existingPackages.some((p) => p.toLowerCase() === lowerPackageName)) {
-      throw new Error(`Package ${packageName} is not in the curated list`);
-    }
-    const updatedPackages = existingPackages.filter(
-      (package_) => package_.toLowerCase() !== lowerPackageName,
-    );
-
-    // Format the updated array
-    const updatedArrayContent = updatedPackages
-      .map((package_) => `    '${package_}',`)
-      .join('\n');
-
-    // Replace the old array with the updated one
-    const updatedContent = content.replace(
-      /curatedPackageNames = \[([\S\s]*?)\];/u,
-      `curatedPackageNames = [\n${updatedArrayContent}\n  ];`,
-    );
-
-    // Write back to file
-    await fs.writeFile(this.cronDiscoverPath, updatedContent, 'utf8');
-
-    console.log(`✅ Removed package '${packageName}' from the curated list`);
-    console.log(`📦 New total packages: ${updatedPackages.length}`);
+    console.log(`Removed package '${packageName}' from user-packages.json`);
+    console.log(`Total user-submitted packages: ${updated.length}`);
 
     return {
       packageName,
       removed: true,
-      totalPackages: updatedPackages.length,
+      totalPackages: updated.length,
     };
   }
 
   async listPackages() {
-    // Read the current cron-discover.mjs file
-    const content = await fs.readFile(this.cronDiscoverPath, 'utf8');
-
-    // Find the curated packages array
-    const packageArrayMatch = content.match(
-      /curatedPackageNames = \[([\S\s]*?)\];/u,
-    );
-    if (!packageArrayMatch) {
-      throw new Error(
-        'Could not find curatedPackageNames array in cron-discover.mjs',
-      );
-    }
-
-    const packageArrayContent = packageArrayMatch[1];
-
-    // Parse existing packages
-    const packages = packageArrayContent
-      .split('\n')
-      .map((line) => line.trim())
-      .filter(
-        (line) =>
-          line.startsWith("'") && (line.endsWith("',") || line.endsWith("'")),
-      )
-      .map((line) => {
-        // Remove quotes and optional trailing comma
-        const end = line.endsWith("',") ? -2 : -1;
-        return line.slice(1, end);
-      })
-      .filter((package_) => package_.length > 0)
-      .toSorted((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
+    const packages = await this.loadUserPackages();
     return {
       count: packages.length,
-      packages,
+      packages: packages.toSorted((a, b) =>
+        a.toLowerCase().localeCompare(b.toLowerCase()),
+      ),
     };
   }
-  cronDiscoverPath = path.join(import.meta.dirname, 'cron-discover.mjs');
 }
 
 export { PackageAdder };
@@ -202,8 +130,6 @@ export { PackageAdder };
 // CLI interface
 if (process.argv[1] === import.meta.filename) {
   const adder = new PackageAdder();
-
-  // Simple argument parsing
   const command = process.argv[2];
   const packageName = process.argv[3];
 
@@ -241,7 +167,7 @@ if (process.argv[1] === import.meta.filename) {
     case 'list': {
       try {
         const result = await adder.listPackages();
-        console.log(`📦 Curated packages (${result.count}):`);
+        console.log(`User-submitted packages (${result.count}):`);
         for (const package_ of result.packages) {
           console.log(`  - ${package_}`);
         }

@@ -1243,6 +1243,7 @@ describe('packageDiscoverer class', () => {
 
       try {
         const packages = await discoverer.getCuratedPackages();
+
         // Should get a subset -- shard 0 of 5 gets roughly 1/5 of the list
         // (exact count depends on whether config file or hardcoded list is loaded)
         expect(packages.length).toBeGreaterThan(0);
