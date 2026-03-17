@@ -456,6 +456,7 @@ class PackageDiscoverer {
     'body-parser',
     'bootstrap',
     'boxen',
+    'buffer',
     'bunyan',
     'c8',
     'camelcase',
