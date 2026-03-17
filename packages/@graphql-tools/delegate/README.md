@@ -11,8 +11,8 @@ DepUp automatically creates scoped clones of popular npm packages with their dep
 ## 📦 Package Information
 
 - **Original Package**: [@graphql-tools/delegate](https://www.npmjs.com/package/@graphql-tools/delegate)
-- **DepUp Version**: 12.0.11-depup.0
-- **Original Version**: 12.0.11
+- **DepUp Version**: 12.0.12-depup.0
+- **Original Version**: 12.0.12
 - **Last Updated**: 3/17/2026
 
 ## 🚀 Installation
@@ -26,6 +26,7 @@ npm install @depup/graphql-tools__delegate
 | Version | Revision | Status | Score | Votes |
 |---------|----------|--------|-------|-------|
 | 12.0.11 | 0 | 🔴 Poor | 0% | 0 |
+| 12.0.12 | 0 | 🔴 Poor | 0% | 0 |
 
 
 ## 🔄 Version History
@@ -34,6 +35,10 @@ npm install @depup/graphql-tools__delegate
 ### Version 12.0.11
 
 - **Revision 0** (12.0.11-depup.0) - 🔴 Poor 0% integrity
+
+### Version 12.0.12
+
+- **Revision 0** (12.0.12-depup.0) - 🔴 Poor 0% integrity
 
 
 ## 🤝 Contributing
