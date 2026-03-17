@@ -1,5 +1,5 @@
 {
-  "count": 225,
+  "count": 226,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -171,6 +171,7 @@
     "react-dropzone",
     "react-helmet",
     "react-modal",
+    "react-native-safe-area-context",
     "react-native-web",
     "react-pdf",
     "react-player",
@@ -227,5 +228,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:55:35.378Z"
+  "updatedAt": "2026-03-17T22:55:39.945Z"
 }
