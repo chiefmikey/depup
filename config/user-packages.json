@@ -1,5 +1,5 @@
 {
-  "count": 280,
+  "count": 281,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -157,6 +157,7 @@
     "msgpack5",
     "multer-s3",
     "multiparty",
+    "music-metadata",
     "mustache",
     "nanostores",
     "nats",
@@ -282,5 +283,5 @@
     "zodios",
     "zx"
   ],
-  "updatedAt": "2026-03-17T22:57:38.469Z"
+  "updatedAt": "2026-03-17T22:57:41.885Z"
 }
