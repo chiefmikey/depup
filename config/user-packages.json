@@ -1,5 +1,5 @@
 {
-  "count": 135,
+  "count": 136,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -74,6 +74,7 @@
     "mikro-orm",
     "mustache",
     "nanostores",
+    "netlify-cli",
     "nexe",
     "nightwatch",
     "nitro",
@@ -137,5 +138,5 @@
     "xstate",
     "zx"
   ],
-  "updatedAt": "2026-03-17T19:30:50.821Z"
+  "updatedAt": "2026-03-17T19:30:53.055Z"
 }
