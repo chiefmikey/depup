@@ -129,11 +129,28 @@ class PackageDiscoverer {
   }
 
   async getCuratedPackages() {
-    // Apply sharding if configured (for parallel runner support)
+    // Load package list: prefer dynamic config file, fall back to hardcoded list
+    let packageNames;
+    try {
+      const configPath = path.resolve(process.cwd(), 'config', 'curated-packages.json');
+      const data = JSON.parse(await fs.readFile(configPath));
+      if (Array.isArray(data.packages) && data.packages.length > 0) {
+        packageNames = data.packages;
+        console.log(
+          chalk.gray(
+            `Loaded ${packageNames.length} packages from curated-packages.json (refreshed: ${data.refreshedAt || 'unknown'})`,
+          ),
+        );
+      }
+    } catch {
+      // Config file missing or corrupt -- fall back to hardcoded list
+    }
+    if (!packageNames) {
+      packageNames = [...this.curatedPackageNames];
+    }
+
     // Sort before sharding for deterministic shard assignment matching cron-sync
-    let packageNames = [...this.curatedPackageNames].toSorted((a, b) =>
-      a.localeCompare(b),
-    );
+    packageNames = packageNames.toSorted((a, b) => a.localeCompare(b));
     const { shardIndex, shardTotal } = getShardConfig();
 
     if (shardTotal > 1) {

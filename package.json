@@ -37,7 +37,8 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit --testTimeout=120000",
     "test:unit": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/unit.test.js --forceExit",
     "test:integration": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/integration.test.js --forceExit --testTimeout=120000",
-    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000"
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000",
+    "refresh-list": "node scripts/refresh-curated-list.mjs"
   },
   "dependencies": {
     "chalk": "5.6.2",
@@ -53,7 +54,7 @@
     "mikey-pro": "10.1.0"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   },
   "homepage": "https://github.com/depup/npm",
   "repository": "https://github.com/depup/npm",
