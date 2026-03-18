@@ -1,5 +1,5 @@
 {
-  "count": 380,
+  "count": 381,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -297,6 +297,7 @@
     "react-native-vector-icons",
     "react-native-web",
     "react-pdf",
+    "react-pdf-viewer",
     "react-player",
     "react-responsive",
     "react-slider",
@@ -382,5 +383,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:35.498Z"
+  "updatedAt": "2026-03-18T22:42:40.463Z"
 }
