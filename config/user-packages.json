@@ -1,5 +1,5 @@
 {
-  "count": 370,
+  "count": 371,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -277,6 +277,7 @@
     "react-hot-toast",
     "react-intersection-observer",
     "react-konva",
+    "react-leaflet",
     "react-map-gl",
     "react-modal",
     "react-mosaic-component",
@@ -372,5 +373,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:07.753Z"
+  "updatedAt": "2026-03-18T22:42:09.483Z"
 }
