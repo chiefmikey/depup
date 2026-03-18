@@ -1,5 +1,5 @@
 {
-  "count": 350,
+  "count": 351,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -39,6 +39,7 @@
     "@typescript-eslint/typescript-estree",
     "@typescript-eslint/utils",
     "@typescript-eslint/visitor-keys",
+    "@uiw/react-codemirror",
     "@vitest/pretty-format",
     "acme-client",
     "adm-zip",
@@ -352,5 +353,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:41:11.830Z"
+  "updatedAt": "2026-03-18T22:41:14.595Z"
 }
