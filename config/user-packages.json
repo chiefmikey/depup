@@ -1,5 +1,5 @@
 {
-  "count": 457,
+  "count": 458,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -23,6 +23,7 @@
     "@clerk/nextjs",
     "@clerk/themes",
     "@conform-to/react",
+    "@date-io/date-fns",
     "@dnd-kit/core",
     "@dnd-kit/sortable",
     "@dnd-kit/utilities",
@@ -459,5 +460,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:59.711Z"
+  "updatedAt": "2026-03-18T23:29:01.451Z"
 }
