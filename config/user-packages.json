@@ -1,5 +1,5 @@
 {
-  "count": 440,
+  "count": 441,
   "packages": [
     "@auth/core",
     "@auth/prisma-adapter",
@@ -16,6 +16,7 @@
     "@azure/cosmos",
     "@azure/identity",
     "@azure/storage-blob",
+    "@clerk/themes",
     "@dnd-kit/core",
     "@dnd-kit/sortable",
     "@dnd-kit/utilities",
@@ -442,5 +443,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:13.129Z"
+  "updatedAt": "2026-03-18T23:28:16.585Z"
 }
