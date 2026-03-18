@@ -1,6 +1,7 @@
 {
-  "count": 445,
+  "count": 446,
   "packages": [
+    "@ai-sdk/anthropic",
     "@ai-sdk/openai",
     "@auth/core",
     "@auth/prisma-adapter",
@@ -447,5 +448,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:32.561Z"
+  "updatedAt": "2026-03-18T23:28:34.044Z"
 }
