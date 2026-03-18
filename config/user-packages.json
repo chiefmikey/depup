@@ -1,5 +1,5 @@
 {
-  "count": 487,
+  "count": 488,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -34,6 +34,7 @@
     "@eslint/config-helpers",
     "@eslint/js",
     "@eslint/object-schema",
+    "@happykit/flags",
     "@headlessui/tailwindcss",
     "@lexical/react",
     "@magicbell/magicbell-react",
@@ -489,5 +490,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:30:19.907Z"
+  "updatedAt": "2026-03-18T23:30:24.326Z"
 }
