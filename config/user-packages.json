@@ -1,5 +1,5 @@
 {
-  "count": 328,
+  "count": 329,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -293,6 +293,7 @@
     "syncpack",
     "systeminformation",
     "tailwind-merge",
+    "tailwind-variants",
     "tap",
     "tar",
     "tasuku",
@@ -330,5 +331,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:03:41.816Z"
+  "updatedAt": "2026-03-18T22:03:43.343Z"
 }
