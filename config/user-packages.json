@@ -1,5 +1,5 @@
 {
-  "count": 341,
+  "count": 342,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -324,6 +324,7 @@
     "typesense",
     "ultra-runner",
     "unbuild",
+    "usehooks-ts",
     "uvu",
     "vaul",
     "velite",
@@ -343,5 +344,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:40:42.619Z"
+  "updatedAt": "2026-03-18T22:40:48.586Z"
 }
