@@ -1,5 +1,5 @@
 {
-  "count": 421,
+  "count": 422,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -28,6 +28,7 @@
     "@radix-ui/react-accordion",
     "@radix-ui/react-checkbox",
     "@radix-ui/react-label",
+    "@radix-ui/react-scroll-area",
     "@radix-ui/react-separator",
     "@radix-ui/react-slider",
     "@radix-ui/react-switch",
@@ -423,5 +424,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:44:39.303Z"
+  "updatedAt": "2026-03-18T22:44:43.488Z"
 }
