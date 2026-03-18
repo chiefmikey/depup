@@ -1,5 +1,5 @@
 {
-  "count": 502,
+  "count": 503,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -40,6 +40,7 @@
     "@lexical/react",
     "@magicbell/magicbell-react",
     "@mswjs/data",
+    "@next/bundle-analyzer",
     "@next/font",
     "@next/mdx",
     "@novu/node",
@@ -504,5 +505,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:31:03.431Z"
+  "updatedAt": "2026-03-18T23:31:06.253Z"
 }
