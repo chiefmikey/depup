@@ -1,5 +1,5 @@
 {
-  "count": 492,
+  "count": 493,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -34,6 +34,7 @@
     "@eslint/config-helpers",
     "@eslint/js",
     "@eslint/object-schema",
+    "@floating-ui/dom",
     "@happykit/flags",
     "@headlessui/tailwindcss",
     "@lexical/react",
@@ -494,5 +495,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:30:37.116Z"
+  "updatedAt": "2026-03-18T23:30:38.873Z"
 }
