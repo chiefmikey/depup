@@ -1,5 +1,5 @@
 {
-  "count": 387,
+  "count": 388,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -327,6 +327,7 @@
     "sanity",
     "saxes",
     "sendgrid",
+    "sentry-react",
     "serverless",
     "short-uuid",
     "signale",
@@ -389,5 +390,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:59.171Z"
+  "updatedAt": "2026-03-18T22:43:00.180Z"
 }
