@@ -1,5 +1,5 @@
 {
-  "count": 367,
+  "count": 368,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -239,6 +239,7 @@
     "pdf-parse",
     "pdfkit",
     "pg-boss",
+    "phaser",
     "pidusage",
     "pkg",
     "pkg-dir",
@@ -369,5 +370,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:00.762Z"
+  "updatedAt": "2026-03-18T22:42:02.368Z"
 }
