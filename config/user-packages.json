@@ -1,5 +1,5 @@
 {
-  "count": 469,
+  "count": 470,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -41,6 +41,7 @@
     "@next/mdx",
     "@novu/node",
     "@opentelemetry/sdk-node",
+    "@phosphor-icons/react",
     "@prisma/engines",
     "@radix-ui/react-accordion",
     "@radix-ui/react-avatar",
@@ -471,5 +472,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:29:31.133Z"
+  "updatedAt": "2026-03-18T23:29:36.069Z"
 }
