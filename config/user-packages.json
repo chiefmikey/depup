@@ -1,5 +1,5 @@
 {
-  "count": 331,
+  "count": 332,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -119,6 +119,7 @@
     "forever",
     "formatjs",
     "fraction.js",
+    "fumadocs-core",
     "gatsby",
     "geolib",
     "ghost",
@@ -333,5 +334,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:06:07.795Z"
+  "updatedAt": "2026-03-18T22:07:04.692Z"
 }
