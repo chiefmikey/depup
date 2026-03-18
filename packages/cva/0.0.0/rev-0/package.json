@@ -1,0 +1,29 @@
+{
+  "name": "@depup/cva",
+  "version": "0.0.0-depup.0",
+  "description": "Awesome node module (with updated dependencies)",
+  "keywords": [
+    "cva",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "placeholder",
+    "zce"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "zce",
+    "email": "w@zce.me",
+    "url": "https://zce.me"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "cva",
+    "originalVersion": "0.0.0",
+    "processedAt": "2026-03-18T22:02:45.461Z",
+    "smokeTest": "failed"
+  }
+}
