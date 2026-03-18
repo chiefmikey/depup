@@ -1,6 +1,7 @@
 {
-  "count": 443,
+  "count": 444,
   "packages": [
+    "@ai-sdk/openai",
     "@auth/core",
     "@auth/prisma-adapter",
     "@aws-sdk/credential-provider-env",
@@ -445,5 +446,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:24.234Z"
+  "updatedAt": "2026-03-18T23:28:30.414Z"
 }
