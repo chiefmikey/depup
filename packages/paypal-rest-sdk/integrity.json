@@ -1,0 +1,19 @@
+{
+  "1.8.1": {
+    "0": {
+      "changes": {
+        "buffer-crc32": {
+          "from": "^0.2.3",
+          "to": "^1.0.0"
+        },
+        "semver": {
+          "from": "^5.0.3",
+          "to": "^7.7.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-18T00:37:54.091Z",
+      "version": "1.8.1-depup.0"
+    }
+  }
+}
