@@ -1,7 +1,8 @@
 {
-  "count": 437,
+  "count": 438,
   "packages": [
     "@auth/core",
+    "@auth/prisma-adapter",
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
     "@aws-sdk/credential-provider-node",
@@ -439,5 +440,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:27:59.701Z"
+  "updatedAt": "2026-03-18T23:28:04.871Z"
 }
