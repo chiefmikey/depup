@@ -1,5 +1,5 @@
 {
-  "count": 484,
+  "count": 485,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -67,6 +67,7 @@
     "@storybook/blocks",
     "@stripe/stripe-js",
     "@supabase/auth-helpers-nextjs",
+    "@supabase/ssr",
     "@supabase/supabase-js",
     "@tabler/icons-react",
     "@tanstack/match-sorter-utils",
@@ -486,5 +487,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:30:11.652Z"
+  "updatedAt": "2026-03-18T23:30:13.684Z"
 }
