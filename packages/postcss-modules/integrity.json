@@ -1,0 +1,19 @@
+{
+  "6.0.1": {
+    "0": {
+      "changes": {
+        "postcss-modules-local-by-default": {
+          "from": "^4.0.5",
+          "to": "^4.2.0"
+        },
+        "postcss-modules-scope": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-18T00:37:45.087Z",
+      "version": "6.0.1-depup.0"
+    }
+  }
+}

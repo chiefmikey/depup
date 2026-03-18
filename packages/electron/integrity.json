@@ -22,5 +22,22 @@
       "timestamp": "2026-03-15T00:45:16.309Z",
       "version": "41.0.2-depup.8"
     }
+  },
+  "41.0.3": {
+    "0": {
+      "changes": {
+        "@electron/get": {
+          "from": "^2.0.0",
+          "to": "^4.0.2"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.5.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-18T00:41:13.930Z",
+      "version": "41.0.3-depup.0"
+    }
   }
 }

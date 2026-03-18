@@ -11,5 +11,18 @@
       "timestamp": "2026-03-17T22:56:13.334Z",
       "version": "0.10.4-depup.0"
     }
+  },
+  "0.11.3": {
+    "0": {
+      "changes": {
+        "axios": {
+          "from": "^0.19.2",
+          "to": "^1.13.6"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-18T00:39:53.968Z",
+      "version": "0.11.3-depup.0"
+    }
   }
 }
