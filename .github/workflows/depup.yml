@@ -98,8 +98,8 @@ jobs:
         env:
           PACKAGE_NAME: ${{ inputs.package }}
         run: |
-          git config --local user.name "DepUp Bot"
-          git config --local user.email "bot@depup.dev"
+          git config --local user.name "De Pup"
+          git config --local user.email "devdepup@gmail.com"
 
           git add packages/
 

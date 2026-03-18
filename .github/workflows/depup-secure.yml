@@ -364,8 +364,8 @@ jobs:
         env:
           PACKAGE_NAME: ${{ inputs.package }}
         run: |
-          git config --local user.name "DepUp Security Bot"
-          git config --local user.email "security@depup.dev"
+          git config --local user.name "De Pup"
+          git config --local user.email "devdepup@gmail.com"
 
           git add packages/
           if git diff --staged --quiet; then

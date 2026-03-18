@@ -50,8 +50,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "DepUp Bot"
-          git config --global user.email "bot@depup.dev"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
 
       - name: Discover Packages
         env:
@@ -169,8 +169,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "DepUp Bot"
-          git config --global user.email "bot@depup.dev"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
 
       - name: Sync Packages
         env:
@@ -277,8 +277,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "DepUp Bot"
-          git config --global user.email "bot@depup.dev"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
 
       - name: Run Self-Healing
         env:
