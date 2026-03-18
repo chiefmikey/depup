@@ -1,5 +1,5 @@
 {
-  "count": 401,
+  "count": 402,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -284,6 +284,7 @@
     "react-color",
     "react-cookie",
     "react-csv",
+    "react-currency-input-field",
     "react-draft-wysiwyg",
     "react-dropzone",
     "react-ga4",
@@ -403,5 +404,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:43:37.534Z"
+  "updatedAt": "2026-03-18T22:43:39.234Z"
 }
