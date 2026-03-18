@@ -1,0 +1,46 @@
+{
+  "name": "@depup/rebass",
+  "version": "4.0.7-depup.0",
+  "description": "React primitive UI components built with Styled System (with updated dependencies)",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {},
+  "keywords": [
+    "rebass",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "design-system",
+    "styled-system",
+    "styled-components",
+    "emotion",
+    "theming",
+    "presentational",
+    "stateless",
+    "functional"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "reflexbox": "^4.0.6"
+  },
+  "repository": "rebassjs/rebass",
+  "bugs": {
+    "url": "https://github.com/rebassjs/rebass/issues"
+  },
+  "gitHead": "51e10d992430edcd85b3a229556ecbe4a8d9d60b",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "rebass",
+    "originalVersion": "4.0.7",
+    "processedAt": "2026-03-18T23:29:50.385Z",
+    "smokeTest": "passed"
+  }
+}
