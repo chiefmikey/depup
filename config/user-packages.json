@@ -1,5 +1,5 @@
 {
-  "count": 318,
+  "count": 319,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -74,6 +74,7 @@
     "clack",
     "cliffy",
     "clipboardy",
+    "cmdk",
     "co-body",
     "conf",
     "consola",
@@ -320,5 +321,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:02:55.490Z"
+  "updatedAt": "2026-03-18T22:03:02.828Z"
 }
