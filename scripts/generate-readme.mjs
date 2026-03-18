@@ -22,7 +22,7 @@ npm install @depup/{{packageName}}
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: {{originalVersion}} | **DepUp version**: {{version}} | **Updated**: {{lastUpdated}}
+**Original version**: {{originalVersion}} | **DepUp version**: {{version}} | **Updated**: {{lastUpdated}} | **Import test**: {{testStatus}}
 
 ## What changed
 
@@ -114,6 +114,7 @@ This package inherits the license from [{{originalPackage}}](https://www.npmjs.c
       .replaceAll('{{version}}', latestData?.version || 'unknown')
       .replaceAll('{{originalVersion}}', latestVersion)
       .replaceAll('{{lastUpdated}}', this.formatDate(latestData?.timestamp))
+      .replaceAll('{{testStatus}}', latestData?.smokeTest || 'unknown')
       .replaceAll('{{changesTable}}', this.generateChangesTable(integrityData));
 
     // Write README

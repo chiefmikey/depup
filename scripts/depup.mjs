@@ -186,6 +186,7 @@ class DepUp {
       revision,
       scopedName,
       targetDirectory,
+      testResult,
     });
   }
 
@@ -247,6 +248,7 @@ class DepUp {
       scopedName,
       shouldPublish,
       targetDirectory,
+      testResult,
     } = parameters;
 
     let published = false;
@@ -274,6 +276,7 @@ class DepUp {
         scopedName,
         shouldPublish,
         targetDirectory,
+        testResult,
       });
     } catch (finalizeError) {
       if (publishError) {
@@ -1052,7 +1055,7 @@ try {
     baseVersion,
     revision,
     version,
-    { changes, status = 'published' } = {},
+    { changes, depsUpdated, smokeTest, status = 'published' } = {},
   ) {
     const integrityFile = path.join(packageDirectory, 'integrity.json');
 
@@ -1088,6 +1091,8 @@ try {
 
     integrityData[baseVersion][revision] = {
       changes: changes || {},
+      depsUpdated: depsUpdated || 0,
+      smokeTest: smokeTest || 'skipped',
       status,
       timestamp: new Date().toISOString(),
       version,
@@ -1127,6 +1132,7 @@ try {
       scopedName,
       shouldPublish,
       targetDirectory,
+      testResult,
     } = context;
 
     // Clean up rev directory when this invocation owns publish responsibility.
@@ -1143,6 +1149,8 @@ try {
       packageJson.version,
       {
         changes: changesData.bumped,
+        depsUpdated: changesData.totalUpdated || 0,
+        smokeTest: testResult || 'skipped',
         status: this.getPublishStatus(shouldPublish, published, publishDidFail),
       },
     );
