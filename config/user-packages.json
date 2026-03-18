@@ -1,5 +1,5 @@
 {
-  "count": 362,
+  "count": 363,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -251,6 +251,7 @@
     "postcss-preset-env",
     "preact",
     "primus",
+    "prism-react-renderer",
     "prismjs",
     "proj4",
     "prom-client",
@@ -364,5 +365,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:41:46.021Z"
+  "updatedAt": "2026-03-18T22:41:51.948Z"
 }
