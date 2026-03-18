@@ -1,5 +1,5 @@
 {
-  "count": 493,
+  "count": 494,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -95,6 +95,7 @@
     "@vercel/blob",
     "@vercel/edge",
     "@vercel/kv",
+    "@vercel/postgres",
     "@vercel/speed-insights",
     "@vitest/pretty-format",
     "@xstate/react",
@@ -495,5 +496,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:30:38.873Z"
+  "updatedAt": "2026-03-18T23:30:40.499Z"
 }
