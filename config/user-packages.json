@@ -1,5 +1,5 @@
 {
-  "count": 435,
+  "count": 436,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -130,6 +130,7 @@
     "domain",
     "downshift",
     "doxygen",
+    "drizzle-valibot",
     "duckdb",
     "effect",
     "effector",
@@ -437,5 +438,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:27:55.602Z"
+  "updatedAt": "2026-03-18T23:27:58.205Z"
 }
