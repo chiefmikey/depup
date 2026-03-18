@@ -1,5 +1,5 @@
 {
-  "count": 433,
+  "count": 434,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -25,6 +25,7 @@
     "@headlessui/tailwindcss",
     "@lexical/react",
     "@mswjs/data",
+    "@next/font",
     "@next/mdx",
     "@opentelemetry/sdk-node",
     "@radix-ui/react-accordion",
@@ -435,5 +436,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:27:44.397Z"
+  "updatedAt": "2026-03-18T23:27:49.417Z"
 }

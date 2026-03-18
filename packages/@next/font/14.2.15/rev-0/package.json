@@ -1,0 +1,48 @@
+{
+  "name": "@depup/next__font",
+  "version": "14.2.15-depup.0",
+  "repository": {
+    "url": "vercel/next.js",
+    "directory": "packages/font"
+  },
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist",
+    "google",
+    "local",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "node ../../scripts/rm.mjs dist && pnpm ncc-fontkit && tsc -d -p tsconfig.json",
+    "dev": "pnpm ncc-fontkit && tsc -d -w -p tsconfig.json",
+    "typescript": "tsec --noEmit -p tsconfig.json",
+    "ncc-fontkit": "ncc build ./fontkit.js --minify -o dist/fontkit"
+  },
+  "devDependencies": {
+    "@types/fontkit": "2.0.0",
+    "@vercel/ncc": "0.34.0",
+    "fontkit": "2.0.2"
+  },
+  "peerDependencies": {
+    "next": "*"
+  },
+  "description": "@next/font with all dependencies updated to latest",
+  "keywords": [
+    "@next/font",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@next/font",
+    "originalVersion": "14.2.15",
+    "processedAt": "2026-03-18T23:27:43.615Z",
+    "smokeTest": "failed"
+  }
+}
