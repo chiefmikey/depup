@@ -12,34 +12,34 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.0 | **DepUp version**: 6.22.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.22.0 | **DepUp version**: 6.22.0-depup.1 | **Updated**: 3/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1011.0` |
+| @aws-sdk/client-s3 | `3.864.0` | `^3.1012.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.3.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
 | @sentry/node | `7.120.4` | `^10.44.0` |
 | @slack/webhook | `7.0.6` | `^7.0.8` |
-| @tryghost/adapter-base-cache | `0.1.17` | `^0.1.22` |
-| @tryghost/admin-api-schema | `4.5.10` | `^4.7.1` |
+| @tryghost/adapter-base-cache | `0.1.17` | `^0.1.23` |
+| @tryghost/admin-api-schema | `4.5.10` | `^4.7.2` |
 | @tryghost/api-framework | `1.0.3` | `^3.0.3` |
 | @tryghost/bookshelf-plugins | `2.0.2` | `^2.0.3` |
-| @tryghost/color-utils | `0.2.10` | `^0.2.15` |
-| @tryghost/config-url-helpers | `1.0.17` | `^1.0.22` |
-| @tryghost/custom-fonts | `1.0.2` | `^1.0.7` |
+| @tryghost/color-utils | `0.2.10` | `^0.2.16` |
+| @tryghost/config-url-helpers | `1.0.17` | `^1.0.23` |
+| @tryghost/custom-fonts | `1.0.2` | `^1.0.8` |
 | @tryghost/database-info | `0.3.30` | `^2.0.3` |
 | @tryghost/debug | `0.1.35` | `^2.0.3` |
 | @tryghost/domain-events | `1.0.2` | `^3.0.3` |
 | @tryghost/email-mock-receiver | `0.3.11` | `^2.0.3` |
 | @tryghost/errors | `1.3.8` | `^3.0.3` |
-| @tryghost/helpers | `1.1.97` | `^1.1.102` |
+| @tryghost/helpers | `1.1.97` | `^1.1.103` |
 | @tryghost/html-to-plaintext | `1.0.4` | `^1.0.8` |
 | @tryghost/http-cache-utils | `0.1.20` | `^2.0.3` |
-| @tryghost/image-transform | `1.4.6` | `^1.4.12` |
+| @tryghost/image-transform | `1.4.6` | `^1.4.13` |
 | @tryghost/job-manager | `1.0.3` | `^3.0.3` |
 | @tryghost/kg-card-factory | `5.1.10` | `^5.1.12` |
 | @tryghost/kg-clean-basic-html | `4.2.18` | `^4.2.20` |
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/kg-lexical-html-renderer | `1.3.36` | `^1.3.38` |
 | @tryghost/kg-markdown-html-renderer | `7.1.13` | `^7.1.15` |
 | @tryghost/kg-mobiledoc-html-renderer | `7.1.13` | `^7.1.15` |
-| @tryghost/limit-service | `1.4.1` | `^1.5.1` |
+| @tryghost/limit-service | `1.4.1` | `^1.5.2` |
 | @tryghost/logging | `2.5.0` | `^4.0.3` |
 | @tryghost/members-csv | `2.0.3` | `^2.0.5` |
 | @tryghost/metrics | `1.0.38` | `^3.0.3` |
@@ -62,14 +62,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/pretty-cli | `1.2.47` | `^3.0.3` |
 | @tryghost/prometheus-metrics | `1.0.2` | `^3.0.3` |
 | @tryghost/promise | `0.3.15` | `^2.0.3` |
-| @tryghost/referrer-parser | `0.1.8` | `^0.1.14` |
+| @tryghost/referrer-parser | `0.1.8` | `^0.1.15` |
 | @tryghost/request | `1.0.12` | `^3.0.3` |
 | @tryghost/root-utils | `0.3.33` | `^2.0.3` |
 | @tryghost/security | `1.0.1` | `^3.0.3` |
-| @tryghost/social-urls | `0.1.54` | `^0.1.59` |
-| @tryghost/string | `0.2.17` | `^0.3.1` |
+| @tryghost/social-urls | `0.1.54` | `^0.1.60` |
+| @tryghost/string | `0.2.17` | `^0.3.2` |
 | @tryghost/tpl | `0.1.35` | `^2.0.3` |
-| @tryghost/url-utils | `5.1.2` | `^5.2.1` |
+| @tryghost/url-utils | `5.1.2` | `^5.2.2` |
 | @tryghost/validator | `0.2.17` | `^2.0.3` |
 | @tryghost/version | `0.1.33` | `^2.0.3` |
 | @tryghost/zip | `1.1.49` | `^3.0.3` |
@@ -112,14 +112,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-url | `5.45.10` | `^5.49.25` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | moment | `2.24.0` | `^2.30.1` |
-| moment-timezone | `0.5.45` | `^0.6.0` |
+| moment-timezone | `0.5.45` | `^0.6.1` |
 | multer | `2.0.2` | `^2.1.1` |
 | mysql2 | `3.18.1` | `^3.20.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `6.10.1` | `^8.0.2` |
+| nodemailer | `6.10.1` | `^8.0.3` |
 | otplib | `12.0.1` | `^13.3.0` |
 | papaparse | `5.3.2` | `^5.5.3` |
-| sanitize-html | `2.17.0` | `^2.17.1` |
+| sanitize-html | `2.17.0` | `^2.17.2` |
 | semver | `7.7.3` | `^7.7.4` |
 | stripe | `8.222.0` | `^20.4.1` |
 | superagent | `5.3.1` | `^10.3.0` |
