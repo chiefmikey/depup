@@ -1,5 +1,5 @@
 {
-  "count": 504,
+  "count": 505,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -37,6 +37,7 @@
     "@floating-ui/dom",
     "@happykit/flags",
     "@headlessui/tailwindcss",
+    "@heroicons/react",
     "@lexical/react",
     "@magicbell/magicbell-react",
     "@mswjs/data",
@@ -506,5 +507,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:31:07.656Z"
+  "updatedAt": "2026-03-18T23:31:10.139Z"
 }
