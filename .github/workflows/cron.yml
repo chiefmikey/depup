@@ -54,10 +54,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global author.name "De Pup"
-          git config --global author.email "devdepup@gmail.com"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
           git config --global commit.gpgsign true
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
@@ -182,10 +180,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global author.name "De Pup"
-          git config --global author.email "devdepup@gmail.com"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
           git config --global commit.gpgsign true
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
@@ -299,10 +295,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global author.name "De Pup"
-          git config --global author.email "devdepup@gmail.com"
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
           git config --global commit.gpgsign true
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
