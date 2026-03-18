@@ -1,5 +1,5 @@
 {
-  "count": 348,
+  "count": 349,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -249,6 +249,7 @@
     "prismjs",
     "proj4",
     "prom-client",
+    "prosemirror-view",
     "pug",
     "pulumi",
     "pump",
@@ -350,5 +351,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:41:05.772Z"
+  "updatedAt": "2026-03-18T22:41:07.201Z"
 }
