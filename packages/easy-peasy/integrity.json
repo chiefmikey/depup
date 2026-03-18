@@ -1,0 +1,25 @@
+{
+  "6.1.0": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.22.6",
+          "to": "^7.29.2"
+        },
+        "immer": {
+          "from": "^9.0.21",
+          "to": "^11.1.4"
+        },
+        "use-sync-external-store": {
+          "from": "^1.4.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T23:30:45.721Z",
+      "version": "6.1.0-depup.0"
+    }
+  }
+}
