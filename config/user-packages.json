@@ -1,9 +1,10 @@
 {
-  "count": 453,
+  "count": 454,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
     "@auth/core",
+    "@auth/drizzle-adapter",
     "@auth/prisma-adapter",
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -455,5 +456,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:51.378Z"
+  "updatedAt": "2026-03-18T23:28:52.960Z"
 }
