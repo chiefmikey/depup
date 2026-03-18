@@ -1,5 +1,5 @@
 {
-  "count": 335,
+  "count": 336,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -21,6 +21,7 @@
     "@eslint/object-schema",
     "@opentelemetry/sdk-node",
     "@radix-ui/react-accordion",
+    "@radix-ui/react-slider",
     "@sentry/node",
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/types",
@@ -337,5 +338,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:40:18.194Z"
+  "updatedAt": "2026-03-18T22:40:20.942Z"
 }
