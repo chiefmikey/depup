@@ -12,7 +12,7 @@ npm install @depup/socket.io
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.8.3 | **DepUp version**: 4.8.3-depup.28 | **Updated**: 3/14/2026
+**Original version**: 4.8.3 | **DepUp version**: 4.8.3-depup.28 | **Updated**: 3/14/2026 | **Import test**: unknown
 
 ## What changed
 
