@@ -1,5 +1,5 @@
 {
-  "count": 434,
+  "count": 435,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -28,6 +28,7 @@
     "@next/font",
     "@next/mdx",
     "@opentelemetry/sdk-node",
+    "@prisma/engines",
     "@radix-ui/react-accordion",
     "@radix-ui/react-avatar",
     "@radix-ui/react-checkbox",
@@ -436,5 +437,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:27:49.417Z"
+  "updatedAt": "2026-03-18T23:27:55.602Z"
 }
