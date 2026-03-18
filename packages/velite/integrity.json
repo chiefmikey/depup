@@ -1,0 +1,21 @@
+{
+  "0.3.1": {
+    "0": {
+      "changes": {
+        "esbuild": {
+          "from": "^0.25.12",
+          "to": "^0.27.4"
+        },
+        "terser": {
+          "from": "^5.44.1",
+          "to": "^5.46.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T22:03:06.966Z",
+      "version": "0.3.1-depup.0"
+    }
+  }
+}
