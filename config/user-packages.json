@@ -1,5 +1,5 @@
 {
-  "count": 344,
+  "count": 345,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -29,6 +29,7 @@
     "@radix-ui/react-toggle",
     "@sentry/node",
     "@tanstack/react-form",
+    "@tiptap/core",
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/types",
     "@typescript-eslint/typescript-estree",
@@ -346,5 +347,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:40:53.923Z"
+  "updatedAt": "2026-03-18T22:40:55.974Z"
 }
