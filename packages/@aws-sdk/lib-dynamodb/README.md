@@ -12,14 +12,12 @@ npm install @depup/aws-sdk__lib-dynamodb
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1011.0 | **DepUp version**: 3.1011.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.1012.0 | **DepUp version**: 3.1012.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.23.11` | `^3.23.12` |
-| @smithy/smithy-client | `^4.12.5` | `^4.12.6` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
