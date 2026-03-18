@@ -1,5 +1,5 @@
 {
-  "count": 416,
+  "count": 417,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -228,6 +228,7 @@
     "nextra",
     "nightwatch",
     "nitro",
+    "nivo",
     "node-forge",
     "node-pty",
     "normalize-package-data",
@@ -418,5 +419,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:44:20.878Z"
+  "updatedAt": "2026-03-18T22:44:24.289Z"
 }
