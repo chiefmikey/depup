@@ -1,5 +1,5 @@
 {
-  "count": 413,
+  "count": 414,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -37,6 +37,7 @@
     "@react-three/postprocessing",
     "@sentry/node",
     "@sentry/react",
+    "@tanstack/query-core",
     "@tanstack/react-form",
     "@tanstack/react-virtual",
     "@tiptap/core",
@@ -415,5 +416,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:44:11.664Z"
+  "updatedAt": "2026-03-18T22:44:13.568Z"
 }
