@@ -1,5 +1,5 @@
 {
-  "count": 423,
+  "count": 424,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -139,6 +139,7 @@
     "envalid",
     "err-code",
     "eta",
+    "fabric",
     "fast-xml-parser",
     "fastest-validator",
     "find-up",
@@ -425,5 +426,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:44:46.880Z"
+  "updatedAt": "2026-03-18T22:44:51.260Z"
 }
