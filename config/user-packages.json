@@ -1,5 +1,5 @@
 {
-  "count": 446,
+  "count": 447,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -56,6 +56,7 @@
     "@tanstack/query-core",
     "@tanstack/react-form",
     "@tanstack/react-virtual",
+    "@tanstack/table-core",
     "@tiptap/core",
     "@tiptap/starter-kit",
     "@trpc/next",
@@ -448,5 +449,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:34.044Z"
+  "updatedAt": "2026-03-18T23:28:37.059Z"
 }
