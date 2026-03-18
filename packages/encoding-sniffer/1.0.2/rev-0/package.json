@@ -1,0 +1,85 @@
+{
+  "name": "@depup/encoding-sniffer",
+  "version": "1.0.2-depup.0",
+  "description": "Implementation of the HTML encoding sniffer algo, with stream support (with updated dependencies)",
+  "bugs": {
+    "url": "https://github.com/fb55/encoding-sniffer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fb55/encoding-sniffer.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/fb55/encoding-sniffer?sponsor=1"
+  },
+  "license": "MIT",
+  "author": "Felix Boehm <me@feedic.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./sniffer": {
+      "types": "./dist/sniffer.d.ts",
+      "default": "./dist/sniffer.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "!**/*.spec.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc --hideGenerator src/index.ts",
+    "format": "npm run format:es && npm run format:biome",
+    "format:biome": "biome check --write .",
+    "format:es": "npm run lint:es -- --fix",
+    "lint": "npm run lint:es && npm run lint:ts && npm run lint:biome",
+    "lint:biome": "biome check .",
+    "lint:es": "eslint .",
+    "lint:ts": "tsc --noEmit",
+    "test": "npm run test:vi && npm run lint",
+    "test:vi": "vitest run"
+  },
+  "dependencies": {
+    "@exodus/bytes": "^1.15.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.7",
+    "@feedic/eslint-config": "^0.3.1",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.0.3",
+    "eslint-config-biome": "^2.1.3",
+    "globals": "^17.4.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "vitest": "^4.0.17"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "keywords": [
+    "encoding-sniffer",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "encoding-sniffer",
+    "originalVersion": "1.0.2",
+    "processedAt": "2026-03-18T00:36:53.852Z",
+    "smokeTest": "passed"
+  }
+}
