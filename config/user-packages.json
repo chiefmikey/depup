@@ -1,5 +1,5 @@
 {
-  "count": 439,
+  "count": 440,
   "packages": [
     "@auth/core",
     "@auth/prisma-adapter",
@@ -53,6 +53,7 @@
     "@tanstack/react-virtual",
     "@tiptap/core",
     "@tiptap/starter-kit",
+    "@trpc/next",
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/types",
     "@typescript-eslint/typescript-estree",
@@ -441,5 +442,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:08.685Z"
+  "updatedAt": "2026-03-18T23:28:13.129Z"
 }
