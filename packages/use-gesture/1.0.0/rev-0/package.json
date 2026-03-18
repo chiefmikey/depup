@@ -1,0 +1,27 @@
+{
+  "name": "@depup/use-gesture",
+  "version": "1.0.0-depup.0",
+  "description": "use-gesture with all dependencies updated to latest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "use-gesture",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "use-gesture",
+    "originalVersion": "1.0.0",
+    "processedAt": "2026-03-18T23:30:33.742Z",
+    "smokeTest": "failed"
+  }
+}
