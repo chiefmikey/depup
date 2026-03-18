@@ -1,5 +1,5 @@
 {
-  "count": 471,
+  "count": 472,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -80,6 +80,7 @@
     "@typescript-eslint/visitor-keys",
     "@uiw/react-codemirror",
     "@uploadthing/react",
+    "@vanilla-extract/recipes",
     "@vercel/analytics",
     "@vercel/blob",
     "@vercel/edge",
@@ -473,5 +474,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:29:39.149Z"
+  "updatedAt": "2026-03-18T23:29:40.722Z"
 }
