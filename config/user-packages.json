@@ -1,5 +1,5 @@
 {
-  "count": 403,
+  "count": 404,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -35,6 +35,7 @@
     "@react-three/drei",
     "@react-three/postprocessing",
     "@sentry/node",
+    "@sentry/react",
     "@tanstack/react-form",
     "@tanstack/react-virtual",
     "@tiptap/core",
@@ -405,5 +406,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:43:43.714Z"
+  "updatedAt": "2026-03-18T22:43:47.752Z"
 }
