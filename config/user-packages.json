@@ -1,5 +1,5 @@
 {
-  "count": 483,
+  "count": 484,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -63,6 +63,7 @@
     "@storybook/addon-actions",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-links",
     "@storybook/blocks",
     "@stripe/stripe-js",
     "@supabase/auth-helpers-nextjs",
@@ -485,5 +486,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:30:09.591Z"
+  "updatedAt": "2026-03-18T23:30:11.652Z"
 }
