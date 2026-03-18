@@ -26,9 +26,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 
 ## What changed
 
-{{integrityTable}}
+{{changesTable}}
 
-{{versionHistory}}
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/{{packageName}}&labels=bug).
 
 ## About DepUp
 
@@ -74,15 +74,10 @@ This package inherits the license from [{{originalPackage}}](https://www.npmjs.c
   async generateReadme(packageName) {
     const packageDirectory = path.join(process.cwd(), 'packages', packageName);
     const integrityFile = path.join(packageDirectory, 'integrity.json');
-    const votesFile = path.join(packageDirectory, 'votes.json');
 
     const integrityData = await this.loadJsonSafe(
       integrityFile,
       `integrity data for ${packageName}`,
-    );
-    const votesData = await this.loadJsonSafe(
-      votesFile,
-      `votes data for ${packageName}`,
     );
 
     // Get latest version info
@@ -119,18 +114,55 @@ This package inherits the license from [{{originalPackage}}](https://www.npmjs.c
       .replaceAll('{{version}}', latestData?.version || 'unknown')
       .replaceAll('{{originalVersion}}', latestVersion)
       .replaceAll('{{lastUpdated}}', this.formatDate(latestData?.timestamp))
-      .replaceAll(
-        '{{integrityTable}}',
-        this.generateIntegrityTable(integrityData, votesData),
-      )
-      .replaceAll(
-        '{{versionHistory}}',
-        this.generateVersionHistory(integrityData, votesData),
-      );
+      .replaceAll('{{changesTable}}', this.generateChangesTable(integrityData));
 
     // Write README
     const readmePath = path.join(packageDirectory, 'README.md');
     await fs.writeFile(readmePath, content);
+  }
+
+  generateChangesTable(integrityData) {
+    if (Object.keys(integrityData).length === 0) {
+      return 'No changes recorded yet.';
+    }
+
+    // Find the latest version and revision
+    const versions = Object.keys(integrityData)
+      .filter((v) => semver.valid(v))
+      .toSorted((a, b) => semver.compare(a, b));
+    const latestVersion = versions.at(-1);
+    if (!latestVersion) {
+      return 'No version data available.';
+    }
+
+    const versionData = integrityData[latestVersion];
+    if (typeof versionData !== 'object' || versionData === null) {
+      return 'No revision data available.';
+    }
+
+    const revisions = Object.keys(versionData)
+      .filter((key) => /^\d+$/u.test(key))
+      .toSorted((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
+    const latestRevision = revisions.at(-1);
+    const latestData = latestRevision ? versionData[latestRevision] : undefined;
+
+    if (!latestData?.changes || typeof latestData.changes !== 'object') {
+      return 'No dependency changes in the latest revision.';
+    }
+
+    const changes = Object.entries(latestData.changes);
+    if (changes.length === 0) {
+      return 'No dependencies were updated (all already at latest).';
+    }
+
+    let table = '| Dependency | Original | Updated |\n';
+    table += '|------------|----------|--------|\n';
+    for (const [depName, change] of changes) {
+      const from = change?.from || '?';
+      const to = change?.to || '?';
+      table += `| ${depName} | \`${from}\` | \`${to}\` |\n`;
+    }
+    return table;
   }
 
   generateIntegrityTable(integrityData, votesData) {

@@ -221,9 +221,9 @@ describe('generate-readme.mjs end-to-end', () => {
       expect(readme).toContain(TEST_PACKAGE);
       expect(readme).toContain('npm install');
 
-      // Contains integrity table
-      expect(readme).toContain('Version');
-      expect(readme).toContain('Revision');
+      // Contains changes table
+      expect(readme).toContain('Dependency');
+      expect(readme).toContain('Updated');
 
       // Contains version history
       expect(readme).toContain(TEST_VERSION);
