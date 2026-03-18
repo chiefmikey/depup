@@ -1,201 +1,47 @@
-# DepUp npm packages
+# DepUp
 
-> Automated package factory that takes an npm package input and produces +
-> publishes a dependency bump clone
-
-This repository hosts automatically generated dependency-bumped clones of
-existing npm packages. Packages are republished under the `@depup` scope so that
-consumers can depend on up-to-date versions without waiting for the original
-maintainers to bump their dependencies.
-
-## 🎯 What is DepUp?
-
-DepUp is an automated package factory that:
-
-- Takes any npm package as input
-- Creates a scoped clone (`@depup/package-name`)
-- Bumps all dependencies to their latest versions
-- Publishes the updated package
-- Maintains integrity tracking and community feedback
-- Runs completely autonomously with minimal manual intervention
-
-## 🚀 Quick Start
-
-### Manual Package Processing
+Drop-in replacements for npm packages with all dependencies updated to latest.
 
 ```bash
-# Basic package clone
-npm run depup -- <package-name>
-
-# With dependency bumping
-npm run depup:bump -- <package-name>
-
-# With testing
-npm run depup:test -- <package-name>
-
-# Full process (bump + test + publish)
-npm run depup:publish -- <package-name>
+npm install @depup/express    # express with fresh deps
+npm install @depup/mongoose   # mongoose with fresh deps
+npm install @depup/webpack    # webpack with fresh deps
 ```
 
-### Package Discovery & Sync
+Same API. Same code. Fresher dependencies.
 
-```bash
-# Discover new popular packages
-npm run cron:discover
+## Why
 
-# Sync existing packages for updates
-npm run cron:sync
-```
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most maintainers don't bump deps on every patch. DepUp does it automatically -- 1000+ packages, every 4 hours.
 
-### Integrity Management
+## How it works
 
-```bash
-# Vote on package integrity
-npm run integrity:vote -- <package-name> <version> <revision> <vote> [description]
+1. Downloads the original package from npm
+2. Bumps all production dependencies to their latest versions
+3. Runs import tests to verify nothing breaks
+4. Publishes as `@depup/package-name`
 
-# Check package status
-npm run integrity:status -- <package-name> [version]
+The original source code is untouched. Only `package.json` dependency versions change.
 
-# Generate integrity report
-npm run integrity:report -- <package-name>
+## Request a package
 
-# Generate package README with integrity data
-npm run readme:generate -- <package-name>
-```
+Open an [issue](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60). The package is validated, processed, published to npm, and the issue closed -- typically within 5 minutes.
 
-## 📦 Package Structure
+## Scoped package naming
 
-```
-depup/
-├── package-name/
-│   ├── 1.0.0/
-│   │   ├── rev-0/          # First dependency bump
-│   │   ├── rev-1/          # Second dependency bump
-│   │   └── ...
-│   ├── 1.1.0/
-│   │   ├── rev-0/
-│   │   └── ...
-│   ├── integrity.json      # Version tracking
-│   ├── votes.json          # Community feedback
-│   └── README.md           # Auto-generated with integrity data
-└── scripts/
-    ├── depup.mjs           # Main processing script
-    ├── cron-discover.mjs   # Package discovery
-    ├── cron-sync.mjs       # Package synchronization
-    ├── integrity-meter.mjs # Community voting system
-    └── generate-readme.mjs # README generation
-```
+| Original | DepUp |
+|----------|-------|
+| `express` | `@depup/express` |
+| `@nestjs/core` | `@depup/nestjs__core` |
+| `@babel/core` | `@depup/babel__core` |
 
-## 🔒 Security-First Architecture
+## Stats
 
-DepUp implements comprehensive security measures to protect against malicious packages and ensure ecosystem safety.
+- 1000+ packages tracked from npm popularity data
+- Auto-refreshed weekly from npm registry
+- 5 parallel CI shards processing every 4 hours
+- Self-healing system repairs corrupt data automatically
 
-### Security Features
+## License
 
-- **🛡️ Sandboxed Processing**: All packages processed in isolated Docker containers
-- **🦠 Malware Scanning**: Multi-engine malware detection with ClamAV
-- **🔍 Vulnerability Assessment**: Automated security vulnerability scanning
-- **📋 Approval Workflow**: Manual review process for new packages
-- **🔗 Compatibility Validation**: Dependency conflict detection and resolution
-- **📜 Security Attestation**: Cryptographically signed processing proofs
-
-### Secure Processing
-
-```bash
-# Recommended: Use secure processing
-npm run depup:secure -- <package-name>
-npm run depup:secure:publish -- <package-name>
-
-# Legacy: Direct processing (not recommended)
-npm run depup -- <package-name>
-```
-
-## 🔄 Automated Workflows
-
-### GitHub Actions
-
-- **Secure Manual Input**: Process packages with full security validation
-- **Cron Discovery**: Automatically discover and process approved packages every 6 hours
-- **Sync Updates**: Keep existing packages up-to-date with security checks
-- **Rate Limited**: Respects npm API limits with intelligent pacing
-- **Security Gates**: All automated processing includes security validation
-
-### Package Versioning
-
-- **Format**: `{original-version}-depup.{revision}`
-- **Example**: `1.0.0-depup.0`, `1.0.0-depup.1`, `1.1.0-depup.0`
-- **Semantic**: Tracks both original package version and dependency bump count
-
-## 🧪 Testing & Integrity
-
-### Import Testing
-
-- Tests package imports with `import * as test from 'package-name'`
-- Validates package functionality before publishing
-- Identifies broken dependency combinations
-
-### Community Feedback
-
-- **Voting System**: Users can vote on package integrity (up/down/neutral)
-- **Integrity Meter**: Visual status indicators (🟢🟡🟠🔴)
-- **Feedback Tracking**: Detailed issue reporting and discussion logs
-- **Auto-generated Reports**: Comprehensive integrity status for each package
-
-## 📊 Integrity Status
-
-Each package includes an integrity meter showing:
-
-- **🟢 Excellent (80%+)**: Highly reliable, well-tested
-- **🟡 Good (60-79%)**: Generally reliable with minor issues
-- **🟠 Fair (40-59%)**: Some issues, use with caution
-- **🔴 Poor (<40%)**: Significant issues, not recommended
-
-## 🤝 Contributing
-
-### Community Participation
-
-1. **Vote on Packages**: Help maintain quality by voting on package integrity
-2. **Report Issues**: Provide detailed feedback when packages don't work
-3. **Submit PRs**: Contribute to the DepUp automation system
-4. **Suggest Packages**: Request packages to be added to the discovery list
-
-### Development
-
-1. Install dependencies: `npm install`
-2. Test locally: `npm run depup -- <package-name>`
-3. Check integrity: `npm run integrity:status -- <package-name>`
-4. Submit pull requests with your improvements
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed contribution
-guidelines.
-
-## 🔧 Configuration
-
-### Environment Variables
-
-- `NPM_TOKEN`: Required for publishing packages
-- `GITHUB_TOKEN`: Required for GitHub Actions
-
-### Rate Limiting
-
-- Built-in delays between API calls
-- Configurable limits per run
-- Respects npm registry rate limits
-
-## 📈 Future Features
-
-- [ ] Advanced dependency conflict resolution
-- [ ] Automated rollback to last working version
-- [ ] Integration with package vulnerability databases
-- [ ] Support for private npm registries
-- [ ] Package performance benchmarking
-- [ ] Automated security scanning
-
-## 📄 License
-
-MIT License - see [LICENSE](./LICENSE) for details.
-
----
-
-_Generated by [DepUp](https://github.com/depup/npm) - Automated dependency
-bumping for npm packages_
+MIT

@@ -343,20 +343,22 @@ class DepUp {
       }
     }
 
-    // Discoverability: prefix description
+    // Description: append context instead of prepending a tag nobody recognizes
     packageJson.description = packageJson.description
-      ? `[DepUp] ${packageJson.description}`
-      : `[DepUp] Dependency-bumped version of ${originalName}`;
+      ? `${packageJson.description} (with updated dependencies)`
+      : `${originalName} with all dependencies updated to latest`;
 
-    // Discoverability: add depup keywords while preserving originals
+    // Keywords: include terms people actually search for
     const existingKeywords = Array.isArray(packageJson.keywords)
       ? packageJson.keywords
       : [];
     const depupKeywords = [
-      'depup',
-      'dependency-bumped',
-      'updated-deps',
       originalName,
+      'depup',
+      'updated-dependencies',
+      'security',
+      'latest',
+      'patched',
     ];
     packageJson.keywords = [
       ...new Set([...depupKeywords, ...existingKeywords]),

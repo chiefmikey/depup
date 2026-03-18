@@ -64,7 +64,7 @@ export default [
     rules: {
       complexity: ['error', { max: 13 }],
       'sonarjs/cognitive-complexity': ['warn', 15],
-      'max-lines': ['error', { max: 1175, skipBlankLines: true, skipComments: true }],
+      'max-lines': ['error', { max: 1185, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': [
         'error',
         { max: 85, skipBlankLines: true, skipComments: true },

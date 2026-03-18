@@ -104,12 +104,12 @@ describe('depup.mjs end-to-end', () => {
       // Version has depup suffix
       expect(packageJson.version).toBe(`${TEST_VERSION}-depup.0`);
 
-      // Description is prefixed
-      expect(packageJson.description).toMatch(/^\[DepUp\]/u);
+      // Description includes "updated dependencies"
+      expect(packageJson.description).toContain('updated dependencies');
 
       // Keywords include depup markers
       expect(packageJson.keywords).toContain('depup');
-      expect(packageJson.keywords).toContain('dependency-bumped');
+      expect(packageJson.keywords).toContain('updated-dependencies');
 
       // depup metadata field exists
       expect(packageJson.depup).toBeDefined();
