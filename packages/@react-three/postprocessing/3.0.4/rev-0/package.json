@@ -1,0 +1,96 @@
+{
+  "name": "@depup/react-three__postprocessing",
+  "version": "3.0.4-depup.0",
+  "description": "postprocessing wrapper for React and @react-three/fiber (with updated dependencies)",
+  "keywords": [
+    "@react-three/postprocessing",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "postprocessing",
+    "react",
+    "three",
+    "@react-three/fiber",
+    "webgl",
+    "3d"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmndrs/react-postprocessing.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && vite build && tsc",
+    "eslint": "eslint . --fix --ext=js,ts,jsx,tsx",
+    "eslint:ci": "eslint . --ext=js,ts,jsx,tsx",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "maath": "^0.10.8",
+    "n8ao": "^1.10.1",
+    "postprocessing": "^6.38.3"
+  },
+  "devDependencies": {
+    "@react-three/fiber": "^9.0.4",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/three": "^0.156.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "^6.0.1",
+    "three": "^0.156.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "react": "^19.0",
+    "three": ">= 0.156.0"
+  },
+  "depup": {
+    "changes": {
+      "maath": {
+        "from": "^0.6.0",
+        "to": "^0.10.8"
+      },
+      "n8ao": {
+        "from": "^1.9.4",
+        "to": "^1.10.1"
+      },
+      "postprocessing": {
+        "from": "^6.36.6",
+        "to": "^6.38.3"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@react-three/postprocessing",
+    "originalVersion": "3.0.4",
+    "processedAt": "2026-03-18T22:41:41.963Z",
+    "smokeTest": "failed"
+  }
+}
