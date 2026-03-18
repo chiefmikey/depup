@@ -1,5 +1,5 @@
 {
-  "count": 511,
+  "count": 512,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -420,6 +420,7 @@
     "react-timer-hook",
     "react-tooltip",
     "react-tracked",
+    "react-use-measure",
     "react-virtualized",
     "react-webcam",
     "react-wrap-balancer",
@@ -513,5 +514,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:31:28.009Z"
+  "updatedAt": "2026-03-18T23:31:30.054Z"
 }
