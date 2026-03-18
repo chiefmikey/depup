@@ -1,5 +1,5 @@
 {
-  "count": 456,
+  "count": 457,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -19,6 +19,7 @@
     "@azure/cosmos",
     "@azure/identity",
     "@azure/storage-blob",
+    "@clerk/backend",
     "@clerk/nextjs",
     "@clerk/themes",
     "@conform-to/react",
@@ -458,5 +459,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:56.894Z"
+  "updatedAt": "2026-03-18T23:28:59.711Z"
 }
