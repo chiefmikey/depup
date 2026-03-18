@@ -209,6 +209,10 @@ jobs:
             echo "Publish failed -- will be retried by cron"
           }
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Commit and Push
         if: success()
         env:
@@ -219,6 +223,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config author.name "De Pup"
           git config author.email "devdepup@gmail.com"
+          git config commit.gpgsign true
+          git config gpg.program gpg
+          git config user.signingkey 5A5141965C39129D
 
           # Rebase-free push: reset to origin/main, re-apply list change +
           # package data, push. Handles concurrent workflows without conflicts.

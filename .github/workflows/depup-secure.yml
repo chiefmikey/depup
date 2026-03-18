@@ -360,6 +360,10 @@ jobs:
             exit 1
           fi
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Commit processed packages
         env:
           PACKAGE_NAME: ${{ inputs.package }}
@@ -368,6 +372,9 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local author.name "De Pup"
           git config --local author.email "devdepup@gmail.com"
+          git config --local commit.gpgsign true
+          git config --local gpg.program gpg
+          git config --local user.signingkey 5A5141965C39129D
 
           git add packages/
           if git diff --staged --quiet; then

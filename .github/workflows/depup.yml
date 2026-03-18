@@ -94,6 +94,10 @@ jobs:
           echo "Running: npm run depup -- ${ARGS[*]}"
           npm run depup -- "${ARGS[@]}"
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Commit changes
         env:
           PACKAGE_NAME: ${{ inputs.package }}
@@ -102,6 +106,9 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local author.name "De Pup"
           git config --local author.email "devdepup@gmail.com"
+          git config --local commit.gpgsign true
+          git config --local gpg.program gpg
+          git config --local user.signingkey 5A5141965C39129D
 
           git add packages/
 

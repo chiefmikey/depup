@@ -48,12 +48,19 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global author.name "De Pup"
           git config --global author.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
 
       - name: Discover Packages
         env:
@@ -169,12 +176,19 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global author.name "De Pup"
           git config --global author.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
 
       - name: Sync Packages
         env:
@@ -279,12 +293,19 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global author.name "De Pup"
           git config --global author.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
 
       - name: Run Self-Healing
         env:
