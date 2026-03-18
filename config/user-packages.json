@@ -1,5 +1,5 @@
 {
-  "count": 336,
+  "count": 337,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -245,6 +245,7 @@
     "puppeteer-core",
     "qrcode",
     "quasar",
+    "radix-ui",
     "rc",
     "react-collapsed",
     "react-dropzone",
@@ -338,5 +339,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:40:20.942Z"
+  "updatedAt": "2026-03-18T22:40:24.424Z"
 }
