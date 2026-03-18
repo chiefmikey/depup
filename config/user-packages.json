@@ -1,5 +1,5 @@
 {
-  "count": 386,
+  "count": 387,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -314,6 +314,7 @@
     "react-three-fiber",
     "react-tooltip",
     "react-virtualized",
+    "react-webcam",
     "read-pkg",
     "read-pkg-up",
     "rehype-highlight",
@@ -388,5 +389,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:54.379Z"
+  "updatedAt": "2026-03-18T22:42:59.171Z"
 }
