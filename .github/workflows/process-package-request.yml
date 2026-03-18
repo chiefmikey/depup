@@ -266,6 +266,7 @@ jobs:
           PARSE_OUTCOME: ${{ steps.parse.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate-package-name.outcome }}
         with:
+          github-token: ${{ secrets.BOT_PAT }}
           script: |
             const issueNumber = context.issue.number;
             const packageName = process.env.PACKAGE_NAME || 'unknown';
@@ -339,6 +340,7 @@ jobs:
         if: success()
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.BOT_PAT }}
           script: |
             await github.rest.issues.update({
               issue_number: context.issue.number,
@@ -351,6 +353,7 @@ jobs:
         if: always() && steps.check-existing.outputs.exists == 'true'
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.BOT_PAT }}
           script: |
             await github.rest.issues.update({
               issue_number: context.issue.number,
