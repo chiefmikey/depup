@@ -1,5 +1,5 @@
 {
-  "count": 353,
+  "count": 354,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -16,6 +16,7 @@
     "@azure/storage-blob",
     "@dnd-kit/core",
     "@dnd-kit/sortable",
+    "@dnd-kit/utilities",
     "@elastic/elasticsearch",
     "@eslint-community/eslint-utils",
     "@eslint/config-helpers",
@@ -355,5 +356,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:41:19.359Z"
+  "updatedAt": "2026-03-18T22:41:20.917Z"
 }
