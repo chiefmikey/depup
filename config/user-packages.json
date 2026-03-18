@@ -1,5 +1,5 @@
 {
-  "count": 517,
+  "count": 518,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -51,6 +51,7 @@
     "@phosphor-icons/react",
     "@preact/signals-react",
     "@prisma/engines",
+    "@prisma/migrate",
     "@radix-ui/react-accordion",
     "@radix-ui/react-avatar",
     "@radix-ui/react-checkbox",
@@ -519,5 +520,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:32:03.996Z"
+  "updatedAt": "2026-03-18T23:32:10.450Z"
 }
