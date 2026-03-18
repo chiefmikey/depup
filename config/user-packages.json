@@ -1,5 +1,5 @@
 {
-  "count": 510,
+  "count": 511,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -86,6 +86,7 @@
     "@tiptap/core",
     "@tiptap/starter-kit",
     "@trpc/next",
+    "@trpc/react-query",
     "@turbo/gen",
     "@turbo/workspaces",
     "@typescript-eslint/eslint-plugin",
@@ -512,5 +513,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:31:26.150Z"
+  "updatedAt": "2026-03-18T23:31:28.009Z"
 }
