@@ -1,5 +1,5 @@
 {
-  "count": 442,
+  "count": 443,
   "packages": [
     "@auth/core",
     "@auth/prisma-adapter",
@@ -43,6 +43,7 @@
     "@radix-ui/react-switch",
     "@radix-ui/react-tabs",
     "@radix-ui/react-toggle",
+    "@react-email/components",
     "@react-three/drei",
     "@react-three/postprocessing",
     "@sentry/node",
@@ -444,5 +445,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:18.271Z"
+  "updatedAt": "2026-03-18T23:28:24.234Z"
 }
