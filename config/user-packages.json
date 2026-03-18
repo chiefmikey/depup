@@ -1,7 +1,8 @@
 {
-  "count": 519,
+  "count": 520,
   "packages": [
     "@ai-sdk/anthropic",
+    "@ai-sdk/google",
     "@ai-sdk/openai",
     "@auth/core",
     "@auth/drizzle-adapter",
@@ -521,5 +522,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:32:31.162Z"
+  "updatedAt": "2026-03-18T23:32:45.997Z"
 }
