@@ -1,5 +1,5 @@
 {
-  "count": 465,
+  "count": 466,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
@@ -117,6 +117,7 @@
     "brotli-wasm",
     "buffer-from",
     "bull",
+    "bun-types",
     "busboy",
     "catbox",
     "catbox-redis",
@@ -467,5 +468,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:29:19.556Z"
+  "updatedAt": "2026-03-18T23:29:21.013Z"
 }
