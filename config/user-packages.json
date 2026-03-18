@@ -1,5 +1,5 @@
 {
-  "count": 369,
+  "count": 370,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -30,6 +30,7 @@
     "@radix-ui/react-separator",
     "@radix-ui/react-slider",
     "@radix-ui/react-switch",
+    "@radix-ui/react-tabs",
     "@radix-ui/react-toggle",
     "@react-three/postprocessing",
     "@sentry/node",
@@ -371,5 +372,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:42:05.335Z"
+  "updatedAt": "2026-03-18T22:42:07.753Z"
 }
