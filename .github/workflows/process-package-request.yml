@@ -215,7 +215,7 @@ jobs:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          git config user.name "De Pup"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config author.name "De Pup"
           git config author.email "devdepup@gmail.com"
