@@ -1,5 +1,5 @@
 {
-  "count": 313,
+  "count": 314,
   "packages": [
     "@aws-sdk/credential-provider-env",
     "@aws-sdk/credential-provider-ini",
@@ -138,6 +138,7 @@
     "ieee754",
     "imagemin",
     "ink",
+    "input-otp",
     "intl-messageformat",
     "iron-session",
     "jsdoc",
@@ -315,5 +316,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T22:02:39.280Z"
+  "updatedAt": "2026-03-18T22:02:41.175Z"
 }
