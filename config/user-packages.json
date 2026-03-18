@@ -1,5 +1,5 @@
 {
-  "count": 438,
+  "count": 439,
   "packages": [
     "@auth/core",
     "@auth/prisma-adapter",
@@ -47,6 +47,7 @@
     "@sentry/react",
     "@shadcn/ui",
     "@storybook/addon-essentials",
+    "@supabase/supabase-js",
     "@tanstack/query-core",
     "@tanstack/react-form",
     "@tanstack/react-virtual",
@@ -440,5 +441,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-18T23:28:04.871Z"
+  "updatedAt": "2026-03-18T23:28:08.685Z"
 }
