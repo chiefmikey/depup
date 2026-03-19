@@ -1,31 +1,34 @@
-# @depup/angular__forms
+# @depup/happy-dom
 
-> [@angular/forms](https://www.npmjs.com/package/@angular/forms) with all dependencies updated to latest versions.
+> [happy-dom](https://www.npmjs.com/package/happy-dom) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/angular__forms
+npm install @depup/happy-dom
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.5 | **DepUp version**: 21.2.5-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 20.8.4 | **DepUp version**: 20.8.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| tslib | `^2.3.0` | `^2.8.1` |
-| @standard-schema/spec | `^1.0.0` | `^1.1.0` |
+| @types/node | `>=20.0.0` | `^25.5.0` |
+| @types/whatwg-mimetype | `^3.0.2` | `^5.0.0` |
+| entities | `^7.0.1` | `^8.0.0` |
+| whatwg-mimetype | `^3.0.0` | `^5.0.0` |
+| ws | `^8.18.3` | `^8.19.0` |
 
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular__forms&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/happy-dom&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [@angular/forms](https://www.npmjs.com/package/@angular/forms).
+This package inherits the license from [happy-dom](https://www.npmjs.com/package/happy-dom).
