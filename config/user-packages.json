@@ -1,5 +1,5 @@
 {
-  "count": 538,
+  "count": 539,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -171,6 +171,7 @@
     "connect-slashes",
     "connect-timeout",
     "consola",
+    "content-disposition",
     "contentful",
     "contentlayer",
     "contentlayer2",
@@ -540,5 +541,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:32.717Z"
+  "updatedAt": "2026-03-19T03:02:34.657Z"
 }
