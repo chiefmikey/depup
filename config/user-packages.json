@@ -1,5 +1,5 @@
 {
-  "count": 675,
+  "count": 676,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -159,6 +159,7 @@
     "bunyan-prettystream",
     "busboy",
     "cache-loader",
+    "casual",
     "catbox",
     "catbox-redis",
     "caxa",
@@ -677,5 +678,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:30:53.174Z"
+  "updatedAt": "2026-03-19T03:30:55.913Z"
 }
