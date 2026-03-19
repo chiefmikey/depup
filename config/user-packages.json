@@ -1,5 +1,5 @@
 {
-  "count": 767,
+  "count": 768,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -125,6 +125,7 @@
     "amqplib",
     "anime",
     "ansi-colors",
+    "anymatch",
     "arangojs",
     "arc",
     "archiver",
@@ -769,5 +770,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:31.723Z"
+  "updatedAt": "2026-03-19T03:34:33.448Z"
 }
