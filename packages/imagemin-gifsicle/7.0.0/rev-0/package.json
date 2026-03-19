@@ -1,0 +1,67 @@
+{
+  "name": "@depup/imagemin-gifsicle",
+  "version": "7.0.0-depup.0",
+  "description": "Imagemin plugin for Gifsicle (with updated dependencies)",
+  "license": "MIT",
+  "repository": "imagemin/imagemin-gifsicle",
+  "funding": "https://github.com/imagemin/imagemin-gifsicle?sponsor=1",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "imagemin-gifsicle",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "compress",
+    "gif",
+    "gifsicle",
+    "gulpplugin",
+    "image",
+    "imageminplugin",
+    "img",
+    "minify",
+    "optimize"
+  ],
+  "dependencies": {
+    "execa": "^9.6.1",
+    "gifsicle": "^7.0.1",
+    "is-gif": "^4.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "pify": "^4.0.0",
+    "xo": "^0.25.3"
+  },
+  "depup": {
+    "changes": {
+      "execa": {
+        "from": "^1.0.0",
+        "to": "^9.6.1"
+      },
+      "gifsicle": {
+        "from": "^5.0.0",
+        "to": "^7.0.1"
+      },
+      "is-gif": {
+        "from": "^3.0.0",
+        "to": "^4.0.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "imagemin-gifsicle",
+    "originalVersion": "7.0.0",
+    "processedAt": "2026-03-19T03:28:52.998Z",
+    "smokeTest": "passed"
+  }
+}
