@@ -1,5 +1,5 @@
 {
-  "count": 763,
+  "count": 764,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -199,6 +199,7 @@
     "command-line-usage",
     "compression-webpack-plugin",
     "conf",
+    "conf-cli",
     "connect-flash",
     "connect-mongo",
     "connect-slashes",
@@ -765,5 +766,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:25.236Z"
+  "updatedAt": "2026-03-19T03:34:26.743Z"
 }
