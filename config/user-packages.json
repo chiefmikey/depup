@@ -1,5 +1,5 @@
 {
-  "count": 702,
+  "count": 703,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -343,6 +343,7 @@
     "intro.js-react",
     "ioredis-mock",
     "iron-session",
+    "jaeger-client",
     "jest-canvas-mock",
     "jest-date-mock",
     "jest-environment-jsdom",
@@ -704,5 +705,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:02.371Z"
+  "updatedAt": "2026-03-19T03:32:05.450Z"
 }
