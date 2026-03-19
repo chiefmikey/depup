@@ -1,5 +1,5 @@
 {
-  "count": 574,
+  "count": 575,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -501,6 +501,7 @@
     "short-uuid",
     "signale",
     "slate-react",
+    "sliding-window-rate-limiter",
     "snappy",
     "snowpack",
     "solid-js",
@@ -576,5 +577,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:00.114Z"
+  "updatedAt": "2026-03-19T03:04:01.723Z"
 }
