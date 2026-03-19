@@ -12,14 +12,14 @@ npm install @depup/vinyl-fs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | iconv-lite | `^0.6.3` | `^0.7.2` |
-| streamx | `^2.14.0` | `^2.23.0` |
+| streamx | `^2.14.0` | `^2.24.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vinyl-fs&labels=bug).
