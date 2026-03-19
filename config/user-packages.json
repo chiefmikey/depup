@@ -1,5 +1,5 @@
 {
-  "count": 710,
+  "count": 711,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -203,6 +203,7 @@
     "continuation-local-storage",
     "convict",
     "cosmiconfig",
+    "cron-converter",
     "cron-parser",
     "croner",
     "cssnano",
@@ -712,5 +713,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:23.652Z"
+  "updatedAt": "2026-03-19T03:32:26.464Z"
 }
