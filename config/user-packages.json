@@ -1,5 +1,5 @@
 {
-  "count": 622,
+  "count": 623,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -240,6 +240,7 @@
     "fastify-cors",
     "fastify-helmet",
     "fastify-jwt",
+    "fastify-multipart",
     "fastify-passport",
     "fastify-rate-limit",
     "fastify-session",
@@ -624,5 +625,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:10:15.396Z"
+  "updatedAt": "2026-03-19T03:10:59.229Z"
 }
