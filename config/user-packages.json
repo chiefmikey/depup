@@ -1,5 +1,5 @@
 {
-  "count": 582,
+  "count": 583,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -251,6 +251,7 @@
     "grant",
     "graphql-shield",
     "graphql-tools",
+    "graphql-upload",
     "graphql-yoga",
     "greenlock",
     "grunt",
@@ -584,5 +585,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:22.342Z"
+  "updatedAt": "2026-03-19T03:04:24.172Z"
 }
