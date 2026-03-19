@@ -1,5 +1,5 @@
 {
-  "count": 628,
+  "count": 629,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -299,6 +299,7 @@
     "ienoopen",
     "imagemin",
     "imagemin-mozjpeg",
+    "imagemin-pngquant",
     "ink",
     "input-otp",
     "intl-messageformat",
@@ -630,5 +631,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:28:50.189Z"
+  "updatedAt": "2026-03-19T03:28:51.916Z"
 }

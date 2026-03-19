@@ -1,0 +1,80 @@
+{
+  "name": "@depup/imagemin-pngquant",
+  "version": "10.0.0-depup.0",
+  "description": "Imagemin plugin for `pngquant` (with updated dependencies)",
+  "license": "MIT",
+  "repository": "imagemin/imagemin-pngquant",
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "xo && npm run test:cover && tsc --noEmit index.d.ts",
+    "test:cover": "c8 --check-coverage --statements 90 ava"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "imagemin-pngquant",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "compress",
+    "image",
+    "imageminplugin",
+    "minify",
+    "optimize",
+    "png",
+    "pngquant"
+  ],
+  "dependencies": {
+    "environment": "^1.1.0",
+    "execa": "^9.6.1",
+    "is-png": "^3.0.1",
+    "ow": "^3.1.1",
+    "pngquant-bin": "^9.0.0",
+    "uint8array-extras": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "ava": "^6.1.3",
+    "c8": "^9.1.0",
+    "typescript": "^5.4.5",
+    "xo": "^0.58.0"
+  },
+  "depup": {
+    "changes": {
+      "environment": {
+        "from": "^1.0.0",
+        "to": "^1.1.0"
+      },
+      "execa": {
+        "from": "^8.0.1",
+        "to": "^9.6.1"
+      },
+      "ow": {
+        "from": "^2.0.0",
+        "to": "^3.1.1"
+      },
+      "uint8array-extras": {
+        "from": "^1.1.0",
+        "to": "^1.5.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "imagemin-pngquant",
+    "originalVersion": "10.0.0",
+    "processedAt": "2026-03-19T03:28:43.273Z",
+    "smokeTest": "passed"
+  }
+}
