@@ -1,5 +1,5 @@
 {
-  "count": 706,
+  "count": 707,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -462,6 +462,7 @@
     "paypal-rest-sdk",
     "pdf-lib",
     "pdf-parse",
+    "pdfjs-dist",
     "pdfkit",
     "pg-boss",
     "pg-mem",
@@ -708,5 +709,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:10.978Z"
+  "updatedAt": "2026-03-19T03:32:15.998Z"
 }
