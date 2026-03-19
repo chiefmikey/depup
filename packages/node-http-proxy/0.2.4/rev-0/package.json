@@ -1,0 +1,81 @@
+{
+  "name": "@depup/node-http-proxy",
+  "version": "0.2.4-depup.0",
+  "description": "a http(s) proxy server  (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "bin": {
+    "nproxy": "./bin/node-http-proxy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wddqing/node-http-proxy.git"
+  },
+  "dependencies": {
+    "pm": "^2.2.6",
+    "bufferhelper": "^0.2.1",
+    "request": "^2.88.2",
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "pm": "latest",
+    "bufferhelper": "latest",
+    "request": "latest",
+    "commander": "latest"
+  },
+  "author": "wddqing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wddqing/node-http-proxy/issues"
+  },
+  "homepage": "https://github.com/wddqing/node-http-proxy",
+  "keywords": [
+    "node-http-proxy",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "http-proxy",
+    "proxy",
+    "bufferhelper",
+    "pm",
+    "request",
+    "commander"
+  ],
+  "depup": {
+    "changes": {
+      "pm": {
+        "from": "2.2.5",
+        "to": "^2.2.6"
+      },
+      "bufferhelper": {
+        "from": "0.2.0",
+        "to": "^0.2.1"
+      },
+      "request": {
+        "from": "2.51.0",
+        "to": "^2.88.2"
+      },
+      "commander": {
+        "from": "2.6.0",
+        "to": "^14.0.3"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "node-http-proxy",
+    "originalVersion": "0.2.4",
+    "processedAt": "2026-03-19T04:45:16.781Z",
+    "smokeTest": "failed"
+  }
+}

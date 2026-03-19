@@ -1,0 +1,21 @@
+{
+  "2.0.3": {
+    "0": {
+      "changes": {
+        "@types/notp": {
+          "from": "^2.0.0",
+          "to": "^2.0.5"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T04:45:23.346Z",
+      "version": "2.0.3-depup.0"
+    }
+  }
+}

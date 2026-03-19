@@ -1,30 +1,31 @@
-# @depup/fastify-rate-limit
+# @depup/node-2fa
 
-> [fastify-rate-limit](https://www.npmjs.com/package/fastify-rate-limit) with all dependencies updated to latest versions.
+> [node-2fa](https://www.npmjs.com/package/node-2fa) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/fastify-rate-limit
+npm install @depup/node-2fa
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.9.0 | **DepUp version**: 5.9.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 2.0.3 | **DepUp version**: 2.0.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| process-warning | `^1.0.0` | `^5.0.0` |
+| @types/notp | `^2.0.0` | `^2.0.5` |
+| tslib | `^2.1.0` | `^2.8.1` |
 
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-rate-limit&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/node-2fa&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [fastify-rate-limit](https://www.npmjs.com/package/fastify-rate-limit).
+This package inherits the license from [node-2fa](https://www.npmjs.com/package/node-2fa).

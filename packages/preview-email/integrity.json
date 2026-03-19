@@ -1,0 +1,53 @@
+{
+  "3.1.1": {
+    "0": {
+      "changes": {
+        "ci-info": {
+          "from": "^3.8.0",
+          "to": "^4.4.0"
+        },
+        "display-notification": {
+          "from": "2.0.0",
+          "to": "^3.0.0"
+        },
+        "get-port": {
+          "from": "5.1.1",
+          "to": "^7.1.0"
+        },
+        "mailparser": {
+          "from": "^3.9.1",
+          "to": "^3.9.4"
+        },
+        "nodemailer": {
+          "from": "^7.0.12",
+          "to": "^8.0.3"
+        },
+        "open": {
+          "from": "7",
+          "to": "^11.0.0"
+        },
+        "p-event": {
+          "from": "4.2.0",
+          "to": "^7.1.0"
+        },
+        "p-wait-for": {
+          "from": "3.2.0",
+          "to": "^6.0.0"
+        },
+        "pug": {
+          "from": "^3.0.3",
+          "to": "^3.0.4"
+        },
+        "uuid": {
+          "from": "^9.0.1",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T04:46:02.949Z",
+      "version": "3.1.1-depup.0"
+    }
+  }
+}
