@@ -1,5 +1,5 @@
 {
-  "count": 576,
+  "count": 577,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -246,6 +246,7 @@
     "googleapis",
     "got-retry",
     "gradient-string",
+    "grant",
     "graphql-tools",
     "graphql-yoga",
     "greenlock",
@@ -578,5 +579,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:02.790Z"
+  "updatedAt": "2026-03-19T03:04:07.334Z"
 }
