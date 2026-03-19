@@ -1,5 +1,5 @@
 {
-  "count": 717,
+  "count": 718,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -415,6 +415,7 @@
     "multiparty",
     "music-metadata",
     "mustache",
+    "nano-memoize",
     "nanostores",
     "nats",
     "neo4j-driver",
@@ -719,5 +720,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:37.241Z"
+  "updatedAt": "2026-03-19T03:32:39.340Z"
 }
