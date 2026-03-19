@@ -1,5 +1,5 @@
 {
-  "count": 623,
+  "count": 624,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -337,6 +337,7 @@
     "memcached",
     "memorystore",
     "mercurius",
+    "mercurius-auth",
     "merge2",
     "method-override",
     "micro",
@@ -625,5 +626,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:10:59.229Z"
+  "updatedAt": "2026-03-19T03:11:50.054Z"
 }
