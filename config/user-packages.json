@@ -1,5 +1,5 @@
 {
-  "count": 581,
+  "count": 582,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -140,6 +140,7 @@
     "begin",
     "bell",
     "better-auth",
+    "better-sqlite3-helper",
     "bignumber.js",
     "blessed",
     "blessed-contrib",
@@ -583,5 +584,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:20.508Z"
+  "updatedAt": "2026-03-19T03:04:22.342Z"
 }
