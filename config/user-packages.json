@@ -1,5 +1,5 @@
 {
-  "count": 785,
+  "count": 786,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -392,6 +392,7 @@
     "jest-mock-extended",
     "jest-playwright-preset",
     "jest-transform-stub",
+    "join-stream",
     "jotai-devtools",
     "js-cookie",
     "jsdoc",
@@ -787,5 +788,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:35:13.166Z"
+  "updatedAt": "2026-03-19T03:35:14.488Z"
 }
