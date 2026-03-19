@@ -1,5 +1,5 @@
 {
-  "count": 594,
+  "count": 595,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -380,6 +380,7 @@
     "pdf-parse",
     "pdfkit",
     "pg-boss",
+    "pg-mem",
     "phaser",
     "pidusage",
     "pino-http",
@@ -596,5 +597,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:50.951Z"
+  "updatedAt": "2026-03-19T03:04:53.632Z"
 }
