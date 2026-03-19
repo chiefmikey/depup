@@ -1,5 +1,5 @@
 {
-  "count": 599,
+  "count": 600,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -294,6 +294,7 @@
     "keystone",
     "keyv-redis",
     "knex-cleaner",
+    "knex-migrate",
     "kubernetes-client",
     "lambda-api",
     "launchdarkly-node-server-sdk",
@@ -601,5 +602,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:05:02.597Z"
+  "updatedAt": "2026-03-19T03:05:05.852Z"
 }
