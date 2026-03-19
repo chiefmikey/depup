@@ -1,5 +1,5 @@
 {
-  "count": 530,
+  "count": 531,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -282,6 +282,7 @@
     "memcached",
     "mercurius",
     "merge2",
+    "method-override",
     "micro",
     "microbundle",
     "middy",
@@ -532,5 +533,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:07.658Z"
+  "updatedAt": "2026-03-19T03:02:09.943Z"
 }
