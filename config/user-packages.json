@@ -1,5 +1,5 @@
 {
-  "count": 532,
+  "count": 533,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -209,6 +209,7 @@
     "envalid",
     "err-code",
     "eta",
+    "express-async-errors",
     "express-fileupload",
     "express-promise-router",
     "fabric",
@@ -534,5 +535,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:13.984Z"
+  "updatedAt": "2026-03-19T03:02:16.212Z"
 }
