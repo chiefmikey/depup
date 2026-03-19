@@ -1,0 +1,75 @@
+{
+  "name": "@depup/redis-mock",
+  "version": "0.56.3-depup.0",
+  "description": "Redis client mock object for unit testing (with updated dependencies)",
+  "author": "Kristian Faeldt <kristian.faeldt@gmail.com>",
+  "main": "./lib/index",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeahoffline/redis-mock"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "mocha": "6.2.3",
+    "should": "13.2.3",
+    "redis": "^3.0.2"
+  },
+  "scripts": {
+    "test": "mocha --timeout 5000 --recursive",
+    "test:valid": "VALID_TESTS=true npm run test -- --exit",
+    "lint": "eslint ./lib ./test",
+    "preversion": "node ./bin/updateMockedCoverage.js && git add README.md && git commit --amend --no-edit"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "redis-mock",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "redis",
+    "mock-redis",
+    "redis test",
+    "redis mock",
+    "redis testing",
+    "redis fake",
+    "redis-js",
+    "redis js",
+    "redisjs",
+    "redis standalone",
+    "redis inmemory",
+    "redis memory",
+    "in-memory"
+  ],
+  "contributors": [
+    "lahabana (Charly Molter) <charly.molter@gmail.com>",
+    "yeahoffline (Frank) <frank.gasser@gmail.com>",
+    "cmawhorter (cory) <cory.mawhorter@gmail.com>",
+    "pmarques (Patrick Marques) <>",
+    "matthewmatician (Matthew Larson) <matthewmatician@gmail.com>",
+    "christian-muertz (Christian Mürtz) <teraarts@t-online.de>",
+    "DawidLoubser (Dawid Loubser) <dawid.loubser@gmail.com>",
+    "kamiljano (Kamil Janowski) <kgjanowski@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/yeahoffline/redis-mock/issues",
+    "email": "frank.gasser@gmail.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "redis-mock",
+    "originalVersion": "0.56.3",
+    "processedAt": "2026-03-19T03:03:47.013Z",
+    "smokeTest": "passed"
+  }
+}
