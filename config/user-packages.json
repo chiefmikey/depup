@@ -1,5 +1,5 @@
 {
-  "count": 780,
+  "count": 781,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -413,6 +413,7 @@
     "libsodium-wrappers",
     "lightningcss",
     "linaria",
+    "loadtest",
     "locate-path",
     "lockfile",
     "lodash-decorators",
@@ -782,5 +783,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:35:01.136Z"
+  "updatedAt": "2026-03-19T03:35:03.251Z"
 }
