@@ -1,5 +1,5 @@
 {
-  "count": 714,
+  "count": 715,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -394,6 +394,7 @@
     "meilisearch",
     "mem",
     "memcached",
+    "memoize-one",
     "memorystore",
     "mercurius",
     "mercurius-auth",
@@ -716,5 +717,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:30.815Z"
+  "updatedAt": "2026-03-19T03:32:33.031Z"
 }
