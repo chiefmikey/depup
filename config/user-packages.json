@@ -1,5 +1,5 @@
 {
-  "count": 537,
+  "count": 538,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -314,6 +314,7 @@
     "nitro",
     "nivo",
     "node-forge",
+    "node-http-proxy",
     "node-pty",
     "normalize-package-data",
     "npm-run-all",
@@ -539,5 +540,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:31.353Z"
+  "updatedAt": "2026-03-19T03:02:32.717Z"
 }
