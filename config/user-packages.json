@@ -1,5 +1,5 @@
 {
-  "count": 798,
+  "count": 799,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -531,6 +531,7 @@
     "pg-boss",
     "pg-mem",
     "phaser",
+    "picomatch",
     "pidusage",
     "pino-debug",
     "pino-http",
@@ -800,5 +801,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:37:02.753Z"
+  "updatedAt": "2026-03-19T03:37:04.819Z"
 }
