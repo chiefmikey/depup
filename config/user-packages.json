@@ -1,5 +1,5 @@
 {
-  "count": 772,
+  "count": 773,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -421,6 +421,7 @@
     "lz4",
     "mailgun-js",
     "make",
+    "make-dir",
     "mathjs",
     "mdx",
     "meilisearch",
@@ -774,5 +775,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:46.404Z"
+  "updatedAt": "2026-03-19T03:34:48.778Z"
 }
