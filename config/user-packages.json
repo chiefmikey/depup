@@ -1,5 +1,5 @@
 {
-  "count": 645,
+  "count": 646,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -564,6 +564,7 @@
     "sharp-cli",
     "short-uuid",
     "signale",
+    "sinon-express-mock",
     "slate-react",
     "sliding-window-rate-limiter",
     "snappy",
@@ -647,5 +648,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:29:37.903Z"
+  "updatedAt": "2026-03-19T03:29:39.958Z"
 }
