@@ -30,5 +30,24 @@
       "timestamp": "2026-03-18T16:28:43.227Z",
       "version": "10.3.0-depup.0"
     }
+  },
+  "10.3.1": {
+    "0": {
+      "changes": {
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "react-docgen-typescript": {
+          "from": "^2.2.2",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T20:15:29.793Z",
+      "version": "10.3.1-depup.0"
+    }
   }
 }
