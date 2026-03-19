@@ -1,5 +1,5 @@
 {
-  "count": 755,
+  "count": 756,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -700,6 +700,7 @@
     "trpc",
     "tsc-watch",
     "tsoa",
+    "tsyringe",
     "turborepo",
     "turf",
     "turndown",
@@ -757,5 +758,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:04.737Z"
+  "updatedAt": "2026-03-19T03:34:07.261Z"
 }
