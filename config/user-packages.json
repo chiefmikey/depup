@@ -1,5 +1,5 @@
 {
-  "count": 764,
+  "count": 765,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -136,6 +136,7 @@
     "astro",
     "async-hooks",
     "async-retry",
+    "atomic-file-rw",
     "autobind-decorator",
     "autocannon",
     "ava",
@@ -766,5 +767,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:26.743Z"
+  "updatedAt": "2026-03-19T03:34:29.204Z"
 }
