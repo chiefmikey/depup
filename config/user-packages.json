@@ -1,5 +1,5 @@
 {
-  "count": 605,
+  "count": 606,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -186,6 +186,7 @@
     "cssnano",
     "culori",
     "cva",
+    "dataloader",
     "dd-trace",
     "deck.gl",
     "depcheck",
@@ -607,5 +608,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:05:19.451Z"
+  "updatedAt": "2026-03-19T03:05:20.857Z"
 }
