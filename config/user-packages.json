@@ -1,5 +1,5 @@
 {
-  "count": 775,
+  "count": 776,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -320,6 +320,7 @@
     "get-image-colors",
     "get-website-favicon",
     "ghost",
+    "glob-stream",
     "globalize",
     "globrex",
     "google-auth-library",
@@ -777,5 +778,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:52.277Z"
+  "updatedAt": "2026-03-19T03:34:54.405Z"
 }

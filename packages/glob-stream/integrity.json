@@ -1,0 +1,21 @@
+{
+  "8.0.3": {
+    "0": {
+      "changes": {
+        "fastq": {
+          "from": "^1.13.0",
+          "to": "^1.20.1"
+        },
+        "streamx": {
+          "from": "^2.12.5",
+          "to": "^2.23.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:34:52.930Z",
+      "version": "8.0.3-depup.0"
+    }
+  }
+}
