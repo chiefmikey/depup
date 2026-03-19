@@ -1,0 +1,48 @@
+{
+  "name": "@depup/helmet-csp",
+  "description": "Content Security Policy middleware (with updated dependencies)",
+  "version": "4.0.0-depup.0",
+  "author": "Adam Baldwin <adam@npmjs.com> (https://evilpacket.net)",
+  "contributors": [
+    "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
+    "Ryan Cannon <ryan@ryancannon.com> (https://ryancannon.com)"
+  ],
+  "homepage": "https://helmetjs.github.io/",
+  "bugs": {
+    "url": "https://github.com/helmetjs/helmet/issues",
+    "email": "me@evanhahn.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/helmetjs/helmet.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "helmet-csp",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "express",
+    "content-security-policy",
+    "csp",
+    "xss"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    "require": "./index.cjs"
+  },
+  "main": "./index.cjs",
+  "types": "./index.d.cts",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "helmet-csp",
+    "originalVersion": "4.0.0",
+    "processedAt": "2026-03-19T03:02:27.578Z",
+    "smokeTest": "failed"
+  }
+}
