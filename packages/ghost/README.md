@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.0 | **DepUp version**: 6.22.0-depup.2 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 6.22.0 | **DepUp version**: 6.22.0-depup.3 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.3.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.44.0` |
+| @sentry/node | `7.120.4` | `^10.45.0` |
 | @slack/webhook | `7.0.6` | `^7.0.8` |
 | @tryghost/adapter-base-cache | `0.1.17` | `^0.1.23` |
 | @tryghost/admin-api-schema | `4.5.10` | `^4.7.2` |
@@ -117,7 +117,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mysql2 | `3.18.1` | `^3.20.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `6.10.1` | `^8.0.3` |
-| otplib | `12.0.1` | `^13.3.0` |
+| otplib | `12.0.1` | `^13.4.0` |
 | papaparse | `5.3.2` | `^5.5.3` |
 | sanitize-html | `2.17.0` | `^2.17.2` |
 | semver | `7.7.3` | `^7.7.4` |
