@@ -1,123 +1,59 @@
 # Dependencies
 node_modules/
-jspm_packages/
+*/node_modules/
 
 # Logs
-logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
 
 # Coverage
 coverage/
 *.lcov
-.nyc_output
-
-# Build tools
-.grunt
-.lock-wscript
-build/Release
 
 # Caches
 .eslintcache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-*.tsbuildinfo
-.cache
-.cache/
-.parcel-cache
-
-# TypeScript
-*.tsbuildinfo
 
 # npm
 .npm
-.node_repl_history
 *.tgz
-.yarn-integrity
 
-# Environment variables
+# Environment
 .env
-.env.test
-.env.local
-.env.production
+.env.*
 
-# Bower
-bower_components
-
-# Framework build outputs
-.next
-.nuxt
-dist
-
-# Gatsby
-public
-
-# Storybook
-.out
-.storybook-out
-
-# Temporary folders
-tmp/
-temp/
-
-# Instrumented libs (jscoverage/JSCover)
-lib-cov
-
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
-*.swo
 *~
 
-# OS generated files
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# DepUp specific
-*/node_modules/
+# DepUp generated artifacts
 */.test-temp/
-*.tar.gz
 health-report.json
 depup.config.json
 scripts/integrity.json
+test-results/
+.local/
+package_description.txt
+package_version.txt
+package_info.json
 
-# Rev directory heavy files (published packages don't need source in git)
-# After publish, depup.mjs keeps only package.json + changes.json
-# These patterns prevent any leftover source files from being tracked
-# Unscoped packages: packages/express/1.0.0/rev-0/...
+# Rev directory cleanup (only package.json + changes.json should be tracked)
 packages/*/[0-9]*/rev-*/node_modules/
 packages/*/[0-9]*/rev-*/.test-temp/
 packages/*/[0-9]*/rev-*/package-lock.json
-# Scoped packages: packages/@babel/core/1.0.0/rev-0/...
 packages/@*/*/[0-9]*/rev-*/node_modules/
 packages/@*/*/[0-9]*/rev-*/.test-temp/
 packages/@*/*/[0-9]*/rev-*/package-lock.json
 
-# Binary files
+# Binary files (shouldn't be in npm packages we track)
 *.exe
 *.dll
 *.so
 *.dylib
-*.a
-*.lib
-*.o
-*.obj
 
 # Large assets
 *.png
@@ -131,21 +67,7 @@ packages/@*/*/[0-9]*/rev-*/package-lock.json
 *.ttf
 *.eot
 
-# But keep small icons and important images
-!**/favicon.ico
-!**/icon.png
-!**/logo.*
-
-# Claude docs (keep local, not in repo)
+# Local docs (not in repo)
 CLAUDE.md
 /docs/
 .claude/
-
-# Test files
-test-results/
-.local/
-
-# Temporary workflow files
-package_description.txt
-package_version.txt
-package_info.json
