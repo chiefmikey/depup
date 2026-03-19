@@ -1,5 +1,5 @@
 {
-  "count": 701,
+  "count": 702,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -442,6 +442,7 @@
     "otplib",
     "oxlint",
     "p-all",
+    "p-memoize",
     "p-throttle",
     "pako",
     "parent-module",
@@ -703,5 +704,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:00.070Z"
+  "updatedAt": "2026-03-19T03:32:02.371Z"
 }
