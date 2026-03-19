@@ -1,5 +1,5 @@
 {
-  "count": 691,
+  "count": 692,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -421,6 +421,7 @@
     "node-2fa",
     "node-forge",
     "node-http-proxy",
+    "node-memwatch",
     "node-pty",
     "normalize-package-data",
     "npm-run-all",
@@ -693,5 +694,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:26.123Z"
+  "updatedAt": "2026-03-19T03:31:28.989Z"
 }
