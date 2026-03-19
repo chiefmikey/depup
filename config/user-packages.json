@@ -1,5 +1,5 @@
 {
-  "count": 682,
+  "count": 683,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -228,6 +228,7 @@
     "effector",
     "ejs",
     "elastic",
+    "elastic-apm-node",
     "elasticsearch",
     "electron-log",
     "electron-store",
@@ -684,5 +685,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:10.438Z"
+  "updatedAt": "2026-03-19T03:31:12.340Z"
 }
