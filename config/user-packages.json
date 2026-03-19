@@ -1,5 +1,5 @@
 {
-  "count": 639,
+  "count": 640,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -170,6 +170,7 @@
     "clipboardy",
     "cmdk",
     "co-body",
+    "compression-webpack-plugin",
     "conf",
     "connect-flash",
     "connect-mongo",
@@ -641,5 +642,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:29:23.653Z"
+  "updatedAt": "2026-03-19T03:29:25.582Z"
 }
