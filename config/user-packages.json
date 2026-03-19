@@ -1,5 +1,5 @@
 {
-  "count": 746,
+  "count": 747,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -515,6 +515,7 @@
     "postcss-preset-env",
     "posthog-js",
     "preact",
+    "pretty-ms",
     "preview-email",
     "primus",
     "prism-cli",
@@ -748,5 +749,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:33:45.164Z"
+  "updatedAt": "2026-03-19T03:33:47.893Z"
 }
