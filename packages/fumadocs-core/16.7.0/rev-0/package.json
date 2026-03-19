@@ -1,0 +1,267 @@
+{
+  "name": "@depup/fumadocs-core",
+  "version": "16.7.0-depup.0",
+  "description": "The React.js library for building a documentation website (with updated dependencies)",
+  "keywords": [
+    "fumadocs-core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Docs",
+    "Fumadocs"
+  ],
+  "homepage": "https://fumadocs.dev",
+  "license": "MIT",
+  "author": "Fuma Nama",
+  "repository": "github:fuma-nama/fumadocs",
+  "files": [
+    "dist/*",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    "./breadcrumb": {
+      "types": "./dist/breadcrumb.d.ts",
+      "import": "./dist/breadcrumb.js"
+    },
+    "./toc": {
+      "types": "./dist/toc.d.ts",
+      "import": "./dist/toc.js"
+    },
+    "./content": {
+      "types": "./dist/content/md.d.ts",
+      "import": "./dist/content/md.js"
+    },
+    "./content/*": {
+      "types": "./dist/content/*.d.ts",
+      "import": "./dist/content/*.js"
+    },
+    "./negotiation": {
+      "types": "./dist/negotiation/index.d.ts",
+      "import": "./dist/negotiation/index.js"
+    },
+    "./page-tree": {
+      "types": "./dist/page-tree/index.d.ts",
+      "import": "./dist/page-tree/index.js"
+    },
+    "./search": {
+      "types": "./dist/search/index.d.ts",
+      "import": "./dist/search/index.js"
+    },
+    "./search/*": {
+      "types": "./dist/search/*.d.ts",
+      "import": "./dist/search/*.js"
+    },
+    "./source": {
+      "types": "./dist/source/index.d.ts",
+      "import": "./dist/source/index.js"
+    },
+    "./source/client": {
+      "types": "./dist/source/client/index.d.ts",
+      "import": "./dist/source/client/index.js"
+    },
+    "./source/schema": {
+      "types": "./dist/source/schema.d.ts",
+      "import": "./dist/source/schema.js"
+    },
+    "./source/*": {
+      "types": "./dist/source/plugins/*.d.ts",
+      "import": "./dist/source/plugins/*.js"
+    },
+    "./utils/*": {
+      "types": "./dist/utils/*.d.ts",
+      "import": "./dist/utils/*.js"
+    },
+    "./link": {
+      "types": "./dist/link.d.ts",
+      "import": "./dist/link.js"
+    },
+    "./dynamic-link": {
+      "types": "./dist/dynamic-link.d.ts",
+      "import": "./dist/dynamic-link.js"
+    },
+    "./mdx-plugins": {
+      "types": "./dist/mdx-plugins/index.d.ts",
+      "import": "./dist/mdx-plugins/index.js"
+    },
+    "./mdx-plugins/*": {
+      "types": "./dist/mdx-plugins/*.d.ts",
+      "import": "./dist/mdx-plugins/*.js"
+    },
+    "./i18n": {
+      "types": "./dist/i18n/index.d.ts",
+      "import": "./dist/i18n/index.js"
+    },
+    "./i18n/middleware": {
+      "types": "./dist/i18n/middleware.d.ts",
+      "import": "./dist/i18n/middleware.js"
+    },
+    "./highlight": {
+      "types": "./dist/highlight/index.d.ts",
+      "import": "./dist/highlight/index.js"
+    },
+    "./highlight/shiki": {
+      "types": "./dist/highlight/shiki/index.d.ts",
+      "import": "./dist/highlight/shiki/index.js"
+    },
+    "./highlight/*": {
+      "types": "./dist/highlight/*.d.ts",
+      "import": "./dist/highlight/*.js"
+    },
+    "./framework": {
+      "types": "./dist/framework/index.d.ts",
+      "import": "./dist/framework/index.js"
+    },
+    "./framework/*": {
+      "types": "./dist/framework/*.d.ts",
+      "import": "./dist/framework/*.js"
+    }
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.8.2",
+    "@orama/orama": "^3.1.18",
+    "@shikijs/rehype": "^4.0.2",
+    "@shikijs/transformers": "^4.0.2",
+    "estree-util-value-to-estree": "^3.5.0",
+    "github-slugger": "^2.0.0",
+    "hast-util-to-estree": "^3.1.3",
+    "hast-util-to-jsx-runtime": "^2.3.6",
+    "image-size": "^2.0.2",
+    "mdast-util-mdx": "^3.0.0",
+    "mdast-util-to-markdown": "^2.1.2",
+    "negotiator": "^1.0.0",
+    "npm-to-yarn": "^3.0.1",
+    "path-to-regexp": "^8.3.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-rehype": "^11.1.2",
+    "scroll-into-view-if-needed": "^3.1.0",
+    "shiki": "^4.0.2",
+    "tinyglobby": "^0.2.15",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
+    "vfile": "^6.0.3"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "@mixedbread/sdk": "^0.59.0",
+    "@orama/core": "^1.2.19",
+    "@oramacloud/client": "^2.1.4",
+    "@tanstack/react-router": "1.167.5",
+    "@types/estree-jsx": "^1.0.5",
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@types/negotiator": "^0.6.4",
+    "@types/node": "25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "algoliasearch": "5.49.2",
+    "flexsearch": "^0.8.212",
+    "lucide-react": "^0.577.0",
+    "next": "16.2.0",
+    "react-router": "^7.13.1",
+    "remark-directive": "^4.0.0",
+    "remark-mdx": "^3.1.1",
+    "remove-markdown": "^0.6.3",
+    "tsdown": "0.21.4",
+    "typescript": "^5.9.3",
+    "waku": "1.0.0-alpha.5",
+    "zod": "^4.3.6",
+    "eslint-config-custom": "0.0.0",
+    "tsconfig": "0.0.0"
+  },
+  "peerDependencies": {
+    "@mdx-js/mdx": "*",
+    "@mixedbread/sdk": "^0.46.0",
+    "@orama/core": "1.x.x",
+    "@oramacloud/client": "2.x.x",
+    "@tanstack/react-router": "1.x.x",
+    "@types/estree-jsx": "*",
+    "@types/hast": "*",
+    "@types/mdast": "*",
+    "@types/react": "*",
+    "algoliasearch": "5.x.x",
+    "flexsearch": "*",
+    "lucide-react": "*",
+    "next": "16.x.x",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "7.x.x",
+    "waku": "^0.26.0 || ^0.27.0 || ^1.0.0",
+    "zod": "4.x.x"
+  },
+  "peerDependenciesMeta": {
+    "flexsearch": {
+      "optional": true
+    },
+    "@mdx-js/mdx": {
+      "optional": true
+    },
+    "@types/estree-jsx": {
+      "optional": true
+    },
+    "@types/hast": {
+      "optional": true
+    },
+    "@types/mdast": {
+      "optional": true
+    },
+    "@mixedbread/sdk": {
+      "optional": true
+    },
+    "@types/react": {
+      "optional": true
+    },
+    "@orama/core": {
+      "optional": true
+    },
+    "@oramacloud/client": {
+      "optional": true
+    },
+    "algoliasearch": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router": {
+      "optional": true
+    },
+    "waku": {
+      "optional": true
+    },
+    "@tanstack/react-router": {
+      "optional": true
+    },
+    "lucide-react": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rimraf dist",
+    "dev": "tsdown --watch --clean false",
+    "lint": "eslint .",
+    "types:check": "tsc --noEmit"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "fumadocs-core",
+    "originalVersion": "16.7.0",
+    "processedAt": "2026-03-19T16:25:14.779Z",
+    "smokeTest": "failed"
+  }
+}
