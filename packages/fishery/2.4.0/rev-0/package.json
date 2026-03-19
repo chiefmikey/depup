@@ -1,0 +1,94 @@
+{
+  "name": "@depup/fishery",
+  "version": "2.4.0-depup.0",
+  "description": "A library for setting up JavaScript factories to help build objects as test data, with full TypeScript support (with updated dependencies)",
+  "keywords": [
+    "fishery",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "factories",
+    "testing",
+    "typescript",
+    "factory_bot",
+    "factorybot",
+    "mock",
+    "test data"
+  ],
+  "main": "dist/fishery.js",
+  "module": "dist/fishery.mjs",
+  "unpkg": "dist/fishery.umd.js",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "dist/index.d.ts",
+  "tsd": {
+    "directory": "lib/__tests__/types"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "test": "jest",
+    "test:all": "yarn test && yarn test:types && yarn pretty:check",
+    "test:types": "mkdir -p dist && touch dist/index.d.ts && yarn tsd",
+    "testinit": "jest --init",
+    "pretty": "prettier --write '{*,.*,lib/**/*}.{ts,json,md}'",
+    "pretty:check": "prettier --check '{*,.*,lib/**/*}.{ts,json,md}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtbot/fishery.git"
+  },
+  "author": "Stephen Hanson <shanson@thoughtbot.com> (https://shanson.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoughtbot/fishery/issues"
+  },
+  "homepage": "https://github.com/thoughtbot/fishery#readme",
+  "prettier": {
+    "arrowParens": "avoid",
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "semi": true,
+    "overrides": [
+      {
+        "files": "**/package.json",
+        "options": {
+          "parser": "json-stringify"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/lodash.mergewith": "4.6.9",
+    "@types/node": "^22.10.5",
+    "jest": "^29.7.0",
+    "prettier": "^2.2.1",
+    "rollup": "^4.30.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-jest": "^29.2.5",
+    "tsd": "^0.31.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "lodash.mergewith": "^4.6.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "fishery",
+    "originalVersion": "2.4.0",
+    "processedAt": "2026-03-19T03:32:51.253Z",
+    "smokeTest": "passed"
+  }
+}
