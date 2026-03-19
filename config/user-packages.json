@@ -1,5 +1,5 @@
 {
-  "count": 672,
+  "count": 673,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -660,6 +660,7 @@
     "wait-on",
     "waterline",
     "webpack-sources",
+    "winston-cloudwatch",
     "winston-elasticsearch",
     "wireit",
     "wrangler",
@@ -674,5 +675,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:30:48.404Z"
+  "updatedAt": "2026-03-19T03:30:50.431Z"
 }
