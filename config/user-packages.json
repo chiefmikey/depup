@@ -1,5 +1,5 @@
 {
-  "count": 797,
+  "count": 798,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -782,6 +782,7 @@
     "winston-elasticsearch",
     "wireit",
     "wrangler",
+    "wrap-ansi",
     "write-file-atomic",
     "x-xss-protection",
     "xlsx",
@@ -799,5 +800,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:36:12.480Z"
+  "updatedAt": "2026-03-19T03:37:02.753Z"
 }
