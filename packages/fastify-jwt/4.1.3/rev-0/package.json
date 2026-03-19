@@ -1,0 +1,87 @@
+{
+  "name": "@depup/fastify-jwt",
+  "version": "4.1.3-depup.0",
+  "description": "JWT utils for Fastify (with updated dependencies)",
+  "main": "jwt.js",
+  "types": "jwt.d.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "npm run lint && npm run unit && npm run test:typescript",
+    "test:typescript": "tsd",
+    "unit": "tap -J test/*.test.js",
+    "unit:report": "npm run unit -- --cov --coverage-report=html",
+    "unit:verbose": "npm run unit -- -Rspec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastify/fastify-jwt.git"
+  },
+  "keywords": [
+    "fastify-jwt",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "jwt",
+    "json",
+    "token",
+    "jsonwebtoken",
+    "fastify"
+  ],
+  "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fastify/fastify-jwt/issues"
+  },
+  "homepage": "https://github.com/fastify/fastify-jwt#readme",
+  "dependencies": {
+    "@lukeed/ms": "^2.0.2",
+    "fast-jwt": "^6.1.0",
+    "fastify-plugin": "^5.1.0",
+    "http-errors": "^2.0.1",
+    "steed": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "fastify": "^3.24.0",
+    "fastify-cookie": "^5.4.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^16.0.4",
+    "tap": "^15.1.2",
+    "tsd": "^0.19.0",
+    "typescript": "^4.5.2"
+  },
+  "tsd": {
+    "directory": "test/types"
+  },
+  "depup": {
+    "changes": {
+      "@lukeed/ms": {
+        "from": "^2.0.0",
+        "to": "^2.0.2"
+      },
+      "fast-jwt": {
+        "from": "^1.4.0",
+        "to": "^6.1.0"
+      },
+      "fastify-plugin": {
+        "from": "^3.0.0",
+        "to": "^5.1.0"
+      },
+      "http-errors": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "fastify-jwt",
+    "originalVersion": "4.1.3",
+    "processedAt": "2026-03-19T03:05:11.799Z",
+    "smokeTest": "passed"
+  }
+}

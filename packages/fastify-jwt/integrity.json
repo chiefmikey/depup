@@ -1,0 +1,29 @@
+{
+  "4.1.3": {
+    "0": {
+      "changes": {
+        "@lukeed/ms": {
+          "from": "^2.0.0",
+          "to": "^2.0.2"
+        },
+        "fast-jwt": {
+          "from": "^1.4.0",
+          "to": "^6.1.0"
+        },
+        "fastify-plugin": {
+          "from": "^3.0.0",
+          "to": "^5.1.0"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:05:22.329Z",
+      "version": "4.1.3-depup.0"
+    }
+  }
+}
