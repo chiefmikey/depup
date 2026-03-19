@@ -1,0 +1,36 @@
+{
+  "name": "@depup/fastify-cookie",
+  "version": "5.7.0-depup.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/fastify/fastify-cookie.git"
+  },
+  "homepage": "https://github.com/fastify/fastify-cookie",
+  "dependencies": {
+    "process-warning": "^5.0.0",
+    "fastify-cookie-deprecated": "npm:fastify-cookie@5.6.1"
+  },
+  "description": "fastify-cookie with all dependencies updated to latest",
+  "keywords": [
+    "fastify-cookie",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "process-warning": {
+        "from": "^1.0.0",
+        "to": "^5.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "fastify-cookie",
+    "originalVersion": "5.7.0",
+    "processedAt": "2026-03-19T04:45:54.864Z",
+    "smokeTest": "failed"
+  }
+}

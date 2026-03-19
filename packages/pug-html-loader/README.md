@@ -1,30 +1,31 @@
-# @depup/module-federation__manifest
+# @depup/pug-html-loader
 
-> [@module-federation/manifest](https://www.npmjs.com/package/@module-federation/manifest) with all dependencies updated to latest versions.
+> [pug-html-loader](https://www.npmjs.com/package/pug-html-loader) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/module-federation__manifest
+npm install @depup/pug-html-loader
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.3 | **DepUp version**: 2.2.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.1.7 | **DepUp version**: 1.1.7-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `3.0.0` | `^5.6.2` |
+| loader-utils | `^2.0.0` | `^3.3.1` |
+| pug | `^3.0.2` | `^3.0.4` |
 
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/module-federation__manifest&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pug-html-loader&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [@module-federation/manifest](https://www.npmjs.com/package/@module-federation/manifest).
+This package inherits the license from [pug-html-loader](https://www.npmjs.com/package/pug-html-loader).
