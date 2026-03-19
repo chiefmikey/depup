@@ -1,5 +1,5 @@
 {
-  "count": 535,
+  "count": 536,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -318,6 +318,7 @@
     "npm-run-all",
     "oclif",
     "ofetch",
+    "on-headers",
     "onetime",
     "openpgp",
     "opentelemetry",
@@ -537,5 +538,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:21.159Z"
+  "updatedAt": "2026-03-19T03:02:26.234Z"
 }
