@@ -1,0 +1,25 @@
+{
+  "name": "depup-cli",
+  "version": "1.0.0",
+  "description": "Submit npm packages to DepUp for dependency bumping",
+  "bin": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "depup",
+    "npm",
+    "dependencies",
+    "security",
+    "automation",
+    "bump",
+    "update",
+    "latest"
+  ],
+  "repository": "https://github.com/depup/npm",
+  "homepage": "https://chiefmikey.github.io/depup/",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
