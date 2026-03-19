@@ -1,5 +1,5 @@
 {
-  "count": 685,
+  "count": 686,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -351,6 +351,7 @@
     "json2csv",
     "jsqr",
     "just-debounce-it",
+    "k6",
     "kafkajs",
     "kebab-case",
     "keystone",
@@ -687,5 +688,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:15.333Z"
+  "updatedAt": "2026-03-19T03:31:16.781Z"
 }
