@@ -1,5 +1,5 @@
 {
-  "count": 777,
+  "count": 778,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -266,6 +266,7 @@
     "enzyme-adapter-react-16",
     "err-code",
     "eta",
+    "event-stream",
     "expect-ct",
     "express-async-errors",
     "express-bouncer",
@@ -779,5 +780,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:55.881Z"
+  "updatedAt": "2026-03-19T03:34:58.183Z"
 }
