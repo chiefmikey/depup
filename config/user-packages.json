@@ -1,5 +1,5 @@
 {
-  "count": 687,
+  "count": 688,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -252,6 +252,7 @@
     "express-mysql-session",
     "express-openapi-validator",
     "express-openid-connect",
+    "express-prometheus-middleware",
     "express-promise-router",
     "express-slow-down",
     "express-status-monitor",
@@ -689,5 +690,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:18.369Z"
+  "updatedAt": "2026-03-19T03:31:19.690Z"
 }
