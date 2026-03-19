@@ -1,0 +1,73 @@
+{
+  "name": "@depup/get-image-colors",
+  "version": "4.0.1-depup.0",
+  "description": "Extract colors from images. Supports GIF, JPG, PNG, and even SVG! (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha && standard && standard-markdown *.md",
+    "lint": "standard"
+  },
+  "repository": "https://github.com/colorjs/get-image-colors",
+  "keywords": [
+    "get-image-colors",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "color",
+    "palette",
+    "svg",
+    "gif",
+    "png",
+    "jpg",
+    "canvas",
+    "pixels",
+    "rgb",
+    "rgba"
+  ],
+  "author": "zeke",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "standard": "^14.3.4",
+    "standard-markdown": "^6.0.0"
+  },
+  "dependencies": {
+    "chroma-js": "^3.2.0",
+    "get-pixels": "^3.3.3",
+    "get-rgba-palette": "^2.0.1",
+    "get-svg-colors": "^2.0.1",
+    "pify": "^6.1.0"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "chroma-js": {
+        "from": "^2.1.0",
+        "to": "^3.2.0"
+      },
+      "get-pixels": {
+        "from": "^3.3.2",
+        "to": "^3.3.3"
+      },
+      "get-svg-colors": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "pify": {
+        "from": "^5.0.0",
+        "to": "^6.1.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "get-image-colors",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-03-19T04:44:01.403Z",
+    "smokeTest": "failed"
+  }
+}

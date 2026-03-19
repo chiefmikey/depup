@@ -12,7 +12,7 @@ npm install @depup/cheerio
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.0 | **DepUp version**: 1.2.0-depup.4 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.2.0 | **DepUp version**: 1.2.0-depup.5 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,8 +20,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | dom-serializer | `^2.0.0` | `^3.0.0` |
 | domhandler | `^5.0.3` | `^6.0.1` |
-| domutils | `^3.2.2` | `^4.0.1` |
+| domutils | `^3.2.2` | `^4.0.2` |
 | encoding-sniffer | `^0.2.1` | `^1.0.2` |
+| htmlparser2 | `^10.1.0` | `^11.0.0` |
 | parse5 | `^7.3.0` | `^8.0.0` |
 | parse5-htmlparser2-tree-adapter | `^7.1.0` | `^8.0.0` |
 | parse5-parser-stream | `^7.1.2` | `^8.0.0` |

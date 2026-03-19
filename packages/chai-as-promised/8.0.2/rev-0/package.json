@@ -1,0 +1,70 @@
+{
+  "name": "@depup/chai-as-promised",
+  "type": "module",
+  "description": "Extends Chai with assertions about promises. (with updated dependencies)",
+  "keywords": [
+    "chai-as-promised",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "chai",
+    "chai-plugin",
+    "browser",
+    "async",
+    "testing",
+    "assertions",
+    "promises",
+    "promises-aplus"
+  ],
+  "version": "8.0.2-depup.0",
+  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaijs/chai-as-promised.git"
+  },
+  "main": "./lib/chai-as-promised.js",
+  "exports": {
+    ".": "./lib/chai-as-promised.js"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "c8 mocha",
+    "lint": "eslint .",
+    "format": "prettier --write lib test"
+  },
+  "dependencies": {
+    "check-error": "^2.1.3"
+  },
+  "peerDependencies": {
+    "chai": ">= 2.1.2 < 7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "c8": "^10.0.0",
+    "chai": "^6.0.1",
+    "eslint": "^9.0.0",
+    "globals": "^16.0.0",
+    "mocha": "^11.0.0",
+    "prettier": "^3.2.5"
+  },
+  "depup": {
+    "changes": {
+      "check-error": {
+        "from": "^2.1.1",
+        "to": "^2.1.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "chai-as-promised",
+    "originalVersion": "8.0.2",
+    "processedAt": "2026-03-19T04:43:58.451Z",
+    "smokeTest": "passed"
+  }
+}

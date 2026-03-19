@@ -12,18 +12,13 @@ npm install @depup/fastify-swagger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.1 | **DepUp version**: 5.1.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fastify-plugin | `^3.0.0` | `^5.1.0` |
-| fastify-static | `^4.0.0` | `^4.7.0` |
-| js-yaml | `^4.0.0` | `^4.1.1` |
-| json-schema-resolver | `^1.3.0` | `^3.0.0` |
-| openapi-types | `^10.0.0` | `^12.1.3` |
-| rfdc | `^1.3.0` | `^1.4.1` |
+| process-warning | `^1.0.0` | `^5.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-swagger&labels=bug).

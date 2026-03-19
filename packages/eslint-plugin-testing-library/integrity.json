@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:36:25.436Z",
       "version": "7.16.0-depup.0"
     }
+  },
+  "7.16.1": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/scope-manager": {
+          "from": "^8.56.0",
+          "to": "^8.57.1"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.56.0",
+          "to": "^8.57.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T12:18:38.511Z",
+      "version": "7.16.1-depup.0"
+    }
   }
 }

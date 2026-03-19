@@ -12,14 +12,13 @@ npm install @depup/fastify-rate-limit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.8.0 | **DepUp version**: 5.8.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 5.9.0 | **DepUp version**: 5.9.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fastify-plugin | `^3.0.1` | `^5.1.0` |
-| tiny-lru | `^8.0.1` | `^11.4.7` |
+| process-warning | `^1.0.0` | `^5.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-rate-limit&labels=bug).

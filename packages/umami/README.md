@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.1 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
 | react-dom | `^18.2.0` | `^19.2.4` |
 | react-error-boundary | `^4.0.4` | `^6.1.1` |
-| react-intl | `^6.5.5` | `^10.0.0` |
+| react-intl | `^6.5.5` | `^10.1.0` |
 | react-simple-maps | `^2.3.0` | `^3.0.0` |
 | react-use-measure | `^2.0.4` | `^2.1.7` |
 | react-window | `^1.8.6` | `^2.2.7` |

@@ -1,0 +1,57 @@
+{
+  "name": "@depup/jest-date-mock",
+  "version": "1.0.10-depup.0",
+  "description": "Mock `window.Date` when run unit test cases with jest. Make tests of `Date` easier. (with updated dependencies)",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --no-cache",
+    "build": "babel src --out-dir lib --copy-files && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hustcc/jest-date-mock.git"
+  },
+  "keywords": [
+    "jest-date-mock",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "mock",
+    "jest",
+    "jest-date",
+    "Date",
+    "datetime",
+    "timestamp"
+  ],
+  "author": "hustcc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hustcc/jest-date-mock/issues"
+  },
+  "homepage": "https://github.com/hustcc/jest-date-mock#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-version": "^0.2.2",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "setupFiles": [
+      "./src/index.js"
+    ]
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "jest-date-mock",
+    "originalVersion": "1.0.10",
+    "processedAt": "2026-03-19T04:45:05.627Z",
+    "smokeTest": "passed"
+  }
+}

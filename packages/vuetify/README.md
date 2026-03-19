@@ -12,7 +12,7 @@ npm install @depup/vuetify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.1 | **Updated**: 3/12/2026 | **Import test**: unknown
+**Original version**: 4.0.3 | **DepUp version**: 4.0.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 

@@ -32,6 +32,39 @@
       "status": "published",
       "timestamp": "2026-03-18T22:43:30.642Z",
       "version": "2.9.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@gilbarbara/deep-equal": {
+          "from": "^0.3.1",
+          "to": "^0.4.1"
+        },
+        "is-lite": {
+          "from": "^1.2.1",
+          "to": "^2.0.0"
+        },
+        "react-floater": {
+          "from": "^0.7.9",
+          "to": "^0.10.0"
+        },
+        "react-is": {
+          "from": "^16.13.1",
+          "to": "^19.2.4"
+        },
+        "tree-changes": {
+          "from": "^0.11.2",
+          "to": "^0.11.3"
+        },
+        "type-fest": {
+          "from": "^4.27.0",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T08:22:09.664Z",
+      "version": "2.9.3-depup.1"
     }
   }
 }

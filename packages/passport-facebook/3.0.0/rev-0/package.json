@@ -1,0 +1,67 @@
+{
+  "name": "@depup/passport-facebook",
+  "version": "3.0.0-depup.0",
+  "description": "Facebook authentication strategy for Passport. (with updated dependencies)",
+  "keywords": [
+    "passport-facebook",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "passport",
+    "facebook",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/passport-facebook.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/passport-facebook/issues"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "passport-oauth2": "^1.8.0"
+  },
+  "devDependencies": {
+    "make-node": "0.3.x",
+    "mocha": "1.x.x",
+    "chai": "2.x.x",
+    "chai-passport-strategy": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --require test/bootstrap/node test/*.test.js"
+  },
+  "depup": {
+    "changes": {
+      "passport-oauth2": {
+        "from": "1.x.x",
+        "to": "^1.8.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "passport-facebook",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-03-19T04:46:50.995Z",
+    "smokeTest": "passed"
+  }
+}

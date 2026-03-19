@@ -1,0 +1,36 @@
+{
+  "name": "@depup/fastify-multipart",
+  "version": "5.4.0-depup.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/fastify/fastify-multipart.git"
+  },
+  "homepage": "https://github.com/fastify/fastify-multipart",
+  "dependencies": {
+    "process-warning": "^5.0.0",
+    "fastify-multipart-deprecated": "npm:fastify-multipart@5.3.1"
+  },
+  "description": "fastify-multipart with all dependencies updated to latest",
+  "keywords": [
+    "fastify-multipart",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "process-warning": {
+        "from": "^1.0.0",
+        "to": "^5.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "fastify-multipart",
+    "originalVersion": "5.4.0",
+    "processedAt": "2026-03-19T04:44:43.777Z",
+    "smokeTest": "failed"
+  }
+}

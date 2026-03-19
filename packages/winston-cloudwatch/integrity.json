@@ -1,0 +1,25 @@
+{
+  "6.3.0": {
+    "0": {
+      "changes": {
+        "async": {
+          "from": "^3.1.0",
+          "to": "^3.2.6"
+        },
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "fast-safe-stringify": {
+          "from": "^2.0.7",
+          "to": "^2.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T04:46:18.940Z",
+      "version": "6.3.0-depup.0"
+    }
+  }
+}
