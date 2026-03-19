@@ -12,16 +12,20 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 24.3.0 | **DepUp version**: 24.3.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 24.3.0 | **DepUp version**: 24.3.0-depup.1 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @netlify/blobs | `10.7.0` | `^10.7.2` |
-| @netlify/build | `35.8.9` | `^35.9.0` |
-| @netlify/edge-bundler | `14.9.15` | `^14.9.16` |
+| @netlify/blobs | `10.7.0` | `^10.7.4` |
+| @netlify/build | `35.8.9` | `^35.10.0` |
+| @netlify/dev | `4.16.2` | `^4.16.4` |
+| @netlify/dev-utils | `4.4.1` | `^4.4.3` |
+| @netlify/edge-bundler | `14.9.15` | `^14.9.17` |
+| @netlify/edge-functions | `3.0.4` | `^3.0.6` |
 | @netlify/edge-functions-bootstrap | `2.17.1` | `^3.1.0` |
+| @netlify/images | `1.3.5` | `^1.3.7` |
 | @octokit/rest | `22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `1.8.0` | `^1.9.0` |
 | chokidar | `4.0.3` | `^5.0.0` |
@@ -35,6 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | inquirer | `8.2.7` | `^13.3.2` |
 | inquirer-autocomplete-prompt | `1.4.0` | `^3.0.1` |
 | is-wsl | `3.1.0` | `^3.1.1` |
+| modern-tar | `^0.7.5` | `^0.7.6` |
 | normalize-package-data | `7.0.1` | `^8.0.0` |
 | p-map | `7.0.3` | `^7.0.4` |
 | raw-body | `3.0.1` | `^3.0.2` |
