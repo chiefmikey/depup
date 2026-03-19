@@ -1,5 +1,5 @@
 {
-  "count": 789,
+  "count": 790,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -217,6 +217,7 @@
     "core-decorators",
     "cosmiconfig",
     "cpy",
+    "crawlee",
     "cron-converter",
     "cron-parser",
     "croner",
@@ -791,5 +792,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:35:26.014Z"
+  "updatedAt": "2026-03-19T03:35:27.565Z"
 }
