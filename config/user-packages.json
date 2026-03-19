@@ -1,5 +1,5 @@
 {
-  "count": 784,
+  "count": 785,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -483,6 +483,7 @@
     "node-pty",
     "normalize-package-data",
     "npm-run-all",
+    "nsfw",
     "objection-db-errors",
     "oclif",
     "ofetch",
@@ -786,5 +787,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:35:11.079Z"
+  "updatedAt": "2026-03-19T03:35:13.166Z"
 }
