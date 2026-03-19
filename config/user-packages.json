@@ -1,5 +1,5 @@
 {
-  "count": 750,
+  "count": 751,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -169,6 +169,7 @@
     "busboy",
     "bytes",
     "cache-loader",
+    "caporal",
     "casual",
     "catbox",
     "catbox-redis",
@@ -752,5 +753,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:33:55.463Z"
+  "updatedAt": "2026-03-19T03:33:57.008Z"
 }
