@@ -12,9 +12,18 @@ npm install @depup/express
 
 Every package is a drop-in replacement for the original with all dependencies bumped to latest.
 
-## Request a package
+## Submit a package
 
-[Open an issue](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) -- it publishes to npm in under 5 minutes.
+**CLI**
+```bash
+npx depup-cli express
+```
+
+**Web** -- [depup.dev](https://chiefmikey.github.io/depup/)
+
+**GitHub** -- [open an issue](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60)
+
+All three publish to npm in under 5 minutes.
 
 ## Naming
 
