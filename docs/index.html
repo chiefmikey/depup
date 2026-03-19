@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DepUp - npm packages with updated dependencies</title>
+<meta name="description" content="Get any npm package with all dependencies bumped to latest. Drop-in replacement, fresher deps.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.container { max-width: 480px; width: 100%; text-align: center; }
+.logo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1.5rem; }
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.tagline { color: #888; font-size: 1.1rem; margin-bottom: 2.5rem; }
+.input-group { display: flex; gap: 0; margin-bottom: 1rem; }
+input {
+  flex: 1; padding: 0.85rem 1rem; font-size: 1rem; background: #1a1a1a;
+  border: 1px solid #333; border-right: none; border-radius: 8px 0 0 8px;
+  color: #e5e5e5; outline: none; font-family: 'SF Mono', 'Fira Code', monospace;
+}
+input:focus { border-color: #555; }
+input::placeholder { color: #555; }
+button {
+  padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 600;
+  background: #fff; color: #0a0a0a; border: none; border-radius: 0 8px 8px 0;
+  cursor: pointer; white-space: nowrap;
+}
+button:hover { background: #ddd; }
+button:disabled { background: #333; color: #666; cursor: not-allowed; }
+.hint { color: #555; font-size: 0.85rem; margin-bottom: 2rem; }
+.hint code { background: #1a1a1a; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
+.status { margin-top: 1.5rem; padding: 1.5rem; border-radius: 10px; display: none; }
+.status.visible { display: block; }
+.status.processing { background: #1a1a1a; border: 1px solid #333; }
+.status.success { background: #0a1a0a; border: 1px solid #1a4a1a; }
+.status.error { background: #1a0a0a; border: 1px solid #4a1a1a; }
+.spinner {
+  display: inline-block; width: 20px; height: 20px; border: 2px solid #333;
+  border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite;
+  vertical-align: middle; margin-right: 0.5rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.status-content { font-size: 0.95rem; line-height: 1.6; }
+.status-content a { color: #6cb6ff; text-decoration: none; }
+.status-content a:hover { text-decoration: underline; }
+.install-cmd {
+  display: block; background: #111; padding: 0.75rem 1rem; border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem;
+  margin-top: 1rem; color: #7ee787; cursor: pointer; border: 1px solid #222;
+}
+.install-cmd:hover { border-color: #444; }
+.changes-table { width: 100%; margin-top: 1rem; border-collapse: collapse; font-size: 0.85rem; text-align: left; }
+.changes-table th { color: #888; font-weight: 500; padding: 0.4rem 0.6rem; border-bottom: 1px solid #222; }
+.changes-table td {
+  padding: 0.4rem 0.6rem; border-bottom: 1px solid #1a1a1a;
+  font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.8rem;
+}
+.browse { margin-top: 3rem; font-size: 0.85rem; color: #555; }
+.browse a { color: #6cb6ff; text-decoration: none; }
+.browse a:hover { text-decoration: underline; }
+.cli-section { margin-top: 2rem; text-align: left; }
+.cli-section h3 { font-size: 0.9rem; color: #888; margin-bottom: 0.5rem; }
+.cli-cmd { background: #111; padding: 0.6rem 1rem; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85rem; color: #ccc; border: 1px solid #222; }
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://avatars.githubusercontent.com/u/153659703?v=4" alt="De Pup" class="logo">
+  <h1>DepUp</h1>
+  <p class="tagline">npm packages with updated dependencies</p>
+
+  <div class="input-group">
+    <input type="text" id="pkg" placeholder="express" autocomplete="off" spellcheck="false">
+    <button id="submit">Bump it</button>
+  </div>
+  <p class="hint">Scoped packages work too: <code>@nestjs/core</code></p>
+
+  <div class="status" id="status">
+    <div class="status-content" id="status-content"></div>
+  </div>
+
+  <p class="browse">
+    <a href="https://www.npmjs.com/org/depup">Browse 1000+ packages</a>
+    &middot;
+    <a href="https://github.com/depup/npm">GitHub</a>
+  </p>
+</div>
+
+<script>
+const REPO = 'chiefmikey/depup';
+const input = document.getElementById('pkg');
+const btn = document.getElementById('submit');
+const statusEl = document.getElementById('status');
+const statusContent = document.getElementById('status-content');
+
+btn.addEventListener('click', submitPackage);
+input.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitPackage(); });
+
+function flatName(pkg) {
+  return pkg.startsWith('@') ? pkg.slice(1).replace('/', '__') : pkg;
+}
+
+function showProcessing(msg) {
+  statusEl.className = 'status visible processing';
+  statusContent.textContent = '';
+  var spinner = document.createElement('span');
+  spinner.className = 'spinner';
+  statusContent.appendChild(spinner);
+  statusContent.appendChild(document.createTextNode(' ' + msg));
+}
+
+function showError(msg) {
+  statusEl.className = 'status visible error';
+  statusContent.textContent = msg;
+}
+
+function showResult(pkg, version, changes) {
+  var flat = flatName(pkg);
+  statusEl.className = 'status visible success';
+  statusContent.textContent = '';
+
+  var link = document.createElement('a');
+  link.href = 'https://www.npmjs.com/package/@depup/' + flat;
+  link.textContent = '@depup/' + flat + '@' + (version || 'latest');
+  link.target = '_blank';
+
+  var label = document.createTextNode('Published: ');
+  statusContent.appendChild(label);
+  statusContent.appendChild(link);
+
+  var cmd = document.createElement('code');
+  cmd.className = 'install-cmd';
+  cmd.textContent = 'npm install @depup/' + flat;
+  cmd.title = 'Click to copy';
+  cmd.addEventListener('click', function() {
+    navigator.clipboard.writeText(cmd.textContent);
+    var orig = cmd.textContent;
+    cmd.textContent = 'Copied!';
+    setTimeout(function() { cmd.textContent = orig; }, 1500);
+  });
+  statusContent.appendChild(cmd);
+
+  if (changes && Object.keys(changes).length > 0) {
+    var table = document.createElement('table');
+    table.className = 'changes-table';
+    var header = document.createElement('tr');
+    ['Dependency', 'From', 'To'].forEach(function(text) {
+      var th = document.createElement('th');
+      th.textContent = text;
+      header.appendChild(th);
+    });
+    table.appendChild(header);
+    Object.entries(changes).forEach(function(entry) {
+      var tr = document.createElement('tr');
+      [entry[0], (entry[1].from || '?'), (entry[1].to || '?')].forEach(function(text) {
+        var td = document.createElement('td');
+        td.textContent = text;
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+    statusContent.appendChild(table);
+  }
+}
+
+async function submitPackage() {
+  var pkg = input.value.trim();
+  if (!pkg) return;
+
+  btn.disabled = true;
+  showProcessing('Checking if @depup/' + flatName(pkg) + ' exists...');
+
+  // Check if already on npm
+  try {
+    var r = await fetch('https://registry.npmjs.org/@depup/' + flatName(pkg));
+    if (r.ok) {
+      var data = await r.json();
+      var version = data['dist-tags'] && data['dist-tags'].latest;
+      var changes = null;
+      if (version) {
+        try {
+          var vr = await fetch('https://registry.npmjs.org/@depup/' + flatName(pkg) + '/' + version);
+          if (vr.ok) { var vd = await vr.json(); changes = vd.depup && vd.depup.changes; }
+        } catch(e) {}
+      }
+      showResult(pkg, version, changes);
+      btn.disabled = false;
+      return;
+    }
+  } catch(e) {}
+
+  // Not on npm yet -- open GitHub issue
+  showProcessing('Opening GitHub to submit request...');
+  var title = encodeURIComponent('Add package: ' + pkg);
+  var body = encodeURIComponent('### Package Name\n`' + pkg + '`\n\n### Reason\nSubmitted via depup.dev');
+  var url = 'https://github.com/' + REPO + '/issues/new?labels=package-request&title=' + title + '&body=' + body;
+  window.open(url, '_blank');
+
+  showProcessing('Submit the issue on GitHub, then wait here. De Pup will process it.');
+
+  // Poll npm registry for the package to appear
+  var attempts = 0;
+  var maxAttempts = 90;
+  var poll = setInterval(async function() {
+    attempts++;
+    if (attempts > maxAttempts) {
+      clearInterval(poll);
+      showError('Timed out. Check GitHub issues for status.');
+      btn.disabled = false;
+      return;
+    }
+    try {
+      var r = await fetch('https://registry.npmjs.org/@depup/' + flatName(pkg));
+      if (r.ok) {
+        clearInterval(poll);
+        var data = await r.json();
+        var version = data['dist-tags'] && data['dist-tags'].latest;
+        var changes = null;
+        if (version) {
+          try {
+            var vr = await fetch('https://registry.npmjs.org/@depup/' + flatName(pkg) + '/' + version);
+            if (vr.ok) { var vd = await vr.json(); changes = vd.depup && vd.depup.changes; }
+          } catch(e) {}
+        }
+        showResult(pkg, version, changes);
+        btn.disabled = false;
+      } else {
+        var elapsed = attempts * 5;
+        var mins = Math.floor(elapsed / 60);
+        var secs = elapsed % 60;
+        showProcessing('De Pup is processing ' + pkg + '... ' + mins + ':' + String(secs).padStart(2, '0'));
+      }
+    } catch(e) {}
+  }, 5000);
+}
+</script>
+</body>
+</html>
