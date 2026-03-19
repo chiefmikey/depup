@@ -1,5 +1,5 @@
 {
-  "count": 766,
+  "count": 767,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -758,6 +758,7 @@
     "xlsx-populate",
     "xml2js",
     "xstate",
+    "yargs-parser",
     "yargs-unparser",
     "zipkin",
     "zipkin-transport-http",
@@ -768,5 +769,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:30.398Z"
+  "updatedAt": "2026-03-19T03:34:31.723Z"
 }
