@@ -1,30 +1,34 @@
-# @depup/fastify-jwt
+# @depup/cache-loader
 
-> [fastify-jwt](https://www.npmjs.com/package/fastify-jwt) with all dependencies updated to latest versions.
+> [cache-loader](https://www.npmjs.com/package/cache-loader) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/fastify-jwt
+npm install @depup/cache-loader
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 4.1.0 | **DepUp version**: 4.1.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| process-warning | `^1.0.0` | `^5.0.0` |
+| find-cache-dir | `^3.0.0` | `^6.0.0` |
+| loader-utils | `^1.2.3` | `^3.3.1` |
+| mkdirp | `^0.5.1` | `^3.0.1` |
+| neo-async | `^2.6.1` | `^2.6.2` |
+| schema-utils | `^2.0.0` | `^4.3.3` |
 
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-jwt&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cache-loader&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [fastify-jwt](https://www.npmjs.com/package/fastify-jwt).
+This package inherits the license from [cache-loader](https://www.npmjs.com/package/cache-loader).
