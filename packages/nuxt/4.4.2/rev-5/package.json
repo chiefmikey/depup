@@ -1,13 +1,13 @@
 {
   "name": "@depup/nuxt",
-  "version": "4.4.2-depup.0",
+  "version": "4.4.2-depup.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuxt/nuxt.git",
     "directory": "packages/nuxt"
   },
   "homepage": "https://nuxt.com",
-  "description": "[DepUp] Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
+  "description": "Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js. (with updated dependencies)",
   "license": "MIT",
   "type": "module",
   "types": "./types.d.ts",
@@ -46,16 +46,18 @@
     "config.*",
     "kit.*",
     "meta.*",
-    "schema.*"
+    "schema.*",
+    "changes.json",
+    "README.md"
   ],
   "dependencies": {
     "@dxup/nuxt": "^0.4.0",
     "@nuxt/cli": "^3.34.0",
-    "@nuxt/devtools": "^3.2.3",
+    "@nuxt/devtools": "^4.0.0-alpha.1",
     "@nuxt/telemetry": "^2.7.0",
     "@unhead/vue": "^2.1.12",
     "@vue/shared": "^3.5.30",
-    "c12": "^4.0.0-beta.3",
+    "c12": "^4.0.0-beta.4",
     "chokidar": "^5.0.0",
     "compatx": "^0.2.0",
     "consola": "^3.4.2",
@@ -65,7 +67,7 @@
     "errx": "^0.1.0",
     "escape-string-regexp": "^5.0.0",
     "exsolve": "^1.0.8",
-    "hookable": "^6.0.1",
+    "hookable": "^6.1.0",
     "ignore": "^7.0.5",
     "impound": "^1.1.5",
     "jiti": "^2.6.1",
@@ -78,9 +80,9 @@
     "ofetch": "^1.5.1",
     "ohash": "^2.0.11",
     "on-change": "^6.0.2",
-    "oxc-minify": "^0.118.0",
-    "oxc-parser": "^0.118.0",
-    "oxc-transform": "^0.118.0",
+    "oxc-minify": "^0.121.0",
+    "oxc-parser": "^0.121.0",
+    "oxc-transform": "^0.121.0",
     "oxc-walker": "^0.7.0",
     "pathe": "^2.0.3",
     "perfect-debounce": "^2.1.0",
@@ -95,9 +97,9 @@
     "ultrahtml": "^1.6.0",
     "uncrypto": "^0.1.3",
     "unctx": "^2.5.0",
-    "unimport": "^6.0.1",
+    "unimport": "^6.0.2",
     "unplugin": "^3.0.0",
-    "unrouting": "^0.1.5",
+    "unrouting": "^0.1.7",
     "untyped": "^2.0.0",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3",
@@ -140,38 +142,56 @@
     "test:attw": "attw --pack"
   },
   "keywords": [
+    "nuxt",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "nuxt"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
+      "@nuxt/devtools": {
+        "from": "^3.2.3",
+        "to": "^4.0.0-alpha.1"
+      },
       "c12": {
         "from": "^3.3.3",
-        "to": "^4.0.0-beta.3"
+        "to": "^4.0.0-beta.4"
       },
       "devalue": {
         "from": "^5.6.3",
         "to": "^5.6.4"
       },
+      "hookable": {
+        "from": "^6.0.1",
+        "to": "^6.1.0"
+      },
       "oxc-minify": {
         "from": "^0.117.0",
-        "to": "^0.118.0"
+        "to": "^0.121.0"
       },
       "oxc-parser": {
         "from": "^0.117.0",
-        "to": "^0.118.0"
+        "to": "^0.121.0"
       },
       "oxc-transform": {
         "from": "^0.117.0",
-        "to": "^0.118.0"
+        "to": "^0.121.0"
+      },
+      "unimport": {
+        "from": "^6.0.1",
+        "to": "^6.0.2"
+      },
+      "unrouting": {
+        "from": "^0.1.5",
+        "to": "^0.1.7"
       }
     },
-    "depsUpdated": 5,
+    "depsUpdated": 9,
     "originalPackage": "nuxt",
     "originalVersion": "4.4.2",
-    "processedAt": "2026-03-12T12:19:00.214Z",
+    "processedAt": "2026-03-19T08:21:19.156Z",
     "smokeTest": "passed"
   }
 }

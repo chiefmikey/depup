@@ -12,7 +12,7 @@ npm install @depup/react-joyride
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.9.3 | **DepUp version**: 2.9.3-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
+**Original version**: 2.9.3 | **DepUp version**: 2.9.3-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-floater | `^0.7.9` | `^0.10.0` |
 | react-is | `^16.13.1` | `^19.2.4` |
 | tree-changes | `^0.11.2` | `^0.11.3` |
-| type-fest | `^4.27.0` | `^5.4.4` |
+| type-fest | `^4.27.0` | `^5.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-joyride&labels=bug).
