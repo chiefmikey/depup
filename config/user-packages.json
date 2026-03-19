@@ -1,5 +1,5 @@
 {
-  "count": 620,
+  "count": 621,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -540,6 +540,7 @@
     "sequelize-cli",
     "serverless",
     "session-file-store",
+    "set-cookie-parser",
     "short-uuid",
     "signale",
     "slate-react",
@@ -622,5 +623,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:06:23.902Z"
+  "updatedAt": "2026-03-19T03:08:06.390Z"
 }
