@@ -1,0 +1,134 @@
+{
+  "name": "@depup/typeorm-extension",
+  "version": "3.9.0-depup.0",
+  "description": "A library to create/drop database, simple seeding data sets, ... (with updated dependencies)",
+  "author": {
+    "name": "Peter Placzek",
+    "email": "contact@tada5hi.net",
+    "url": "https://github.com/tada5hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tada5hi/typeorm-extension.git"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./bin/*": "./bin/*"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0"
+  },
+  "scripts": {
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build": "rimraf dist && rimraf bin && npm run build:types && npm run build:js",
+    "build:watch": "npm run build -- --watch",
+    "commit": "npx git-cz",
+    "test": "jest --config ./test/jest.config.js",
+    "test:coverage": "cross-env NODE_ENV=test jest --config ./test/jest.config.js --coverage",
+    "lint": "eslint --ext .js,.vue,.ts ./src ./test",
+    "lint:fix": "npm run lint -- --fix",
+    "docs:dev": "vitepress dev docs --temp .temp",
+    "docs:build": "vitepress build docs --temp .temp",
+    "docs:help": "vitepress --help"
+  },
+  "keywords": [
+    "typeorm-extension",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "database",
+    "create",
+    "drop",
+    "api",
+    "json-api",
+    "jsonapi",
+    "migration",
+    "seeder",
+    "seeding",
+    "cli"
+  ],
+  "bin": {
+    "typeorm-extension": "bin/cli.cjs",
+    "typeorm-extension-esm": "bin/cli.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "consola": "^3.4.2",
+    "envix": "^1.5.0",
+    "locter": "^2.2.1",
+    "pascal-case": "^4.0.0",
+    "rapiq": "^1.0.0",
+    "reflect-metadata": "^0.2.2",
+    "smob": "^1.6.1",
+    "yargs": "^18.0.0"
+  },
+  "peerDependencies": {
+    "@faker-js/faker": ">=8.4.1",
+    "typeorm": "~0.3.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@swc/core": "^1.15.3",
+    "@tada5hi/commitlint-config": "^1.2.6",
+    "@tada5hi/eslint-config-typescript": "^1.2.17",
+    "@tada5hi/tsconfig": "^0.6.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "better-sqlite3": "^12.4.6",
+    "cross-env": "^10.1.0",
+    "eslint": "^8.56.0",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "rimraf": "^6.1.2",
+    "rollup": "^4.53.3",
+    "ts-jest": "^29.4.5",
+    "typeorm": "^0.3.27",
+    "typescript": "^5.9.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.25",
+    "workspaces-publish": "^1.5.0"
+  },
+  "depup": {
+    "changes": {
+      "consola": {
+        "from": "^3.4.0",
+        "to": "^3.4.2"
+      },
+      "pascal-case": {
+        "from": "^3.1.2",
+        "to": "^4.0.0"
+      },
+      "rapiq": {
+        "from": "^0.9.0",
+        "to": "^1.0.0"
+      },
+      "smob": {
+        "from": "^1.5.0",
+        "to": "^1.6.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "typeorm-extension",
+    "originalVersion": "3.9.0",
+    "processedAt": "2026-03-19T03:04:48.607Z",
+    "smokeTest": "failed"
+  }
+}
