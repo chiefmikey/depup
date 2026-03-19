@@ -1,0 +1,25 @@
+{
+  "9.6.1": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^25.2.3",
+          "to": "^25.5.0"
+        },
+        "nanoid": {
+          "from": "^5.1.3",
+          "to": "^5.1.7"
+        },
+        "xml-js": {
+          "from": "^1.6.8",
+          "to": "^1.6.11"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:32:18.599Z",
+      "version": "9.6.1-depup.0"
+    }
+  }
+}
