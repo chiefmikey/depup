@@ -1,5 +1,5 @@
 {
-  "count": 796,
+  "count": 797,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -336,6 +336,7 @@
     "google-auth-library",
     "googleapis",
     "got-retry",
+    "got-scraping",
     "graceful-fs",
     "gradient-string",
     "grant",
@@ -798,5 +799,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:36:00.286Z"
+  "updatedAt": "2026-03-19T03:36:12.480Z"
 }
