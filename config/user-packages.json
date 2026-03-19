@@ -1,5 +1,5 @@
 {
-  "count": 543,
+  "count": 544,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -343,6 +343,7 @@
     "pg-boss",
     "phaser",
     "pidusage",
+    "pino-http",
     "pixi.js",
     "pkg",
     "pkg-dir",
@@ -545,5 +546,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:48.560Z"
+  "updatedAt": "2026-03-19T03:02:50.314Z"
 }
