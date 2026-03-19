@@ -17,5 +17,24 @@
       "timestamp": "2026-03-18T23:33:13.234Z",
       "version": "0.2.1-depup.0"
     }
+  },
+  "0.2.2": {
+    "0": {
+      "changes": {
+        "@testing-library/dom": {
+          "from": "^9.0.0",
+          "to": "^10.4.1"
+        },
+        "@testing-library/user-event": {
+          "from": "^14.4.0",
+          "to": "^14.6.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:37:10.859Z",
+      "version": "0.2.2-depup.0"
+    }
   }
 }
