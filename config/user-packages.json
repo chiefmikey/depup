@@ -1,5 +1,5 @@
 {
-  "count": 631,
+  "count": 632,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -308,6 +308,7 @@
     "intro.js-react",
     "ioredis-mock",
     "iron-session",
+    "jest-environment-jsdom",
     "jotai-devtools",
     "js-cookie",
     "jsdoc",
@@ -633,5 +634,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:28:55.128Z"
+  "updatedAt": "2026-03-19T03:28:59.764Z"
 }
