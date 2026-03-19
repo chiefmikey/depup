@@ -1,0 +1,58 @@
+{
+  "name": "@depup/factory-girl",
+  "description": "A factory library for Node.js and JavaScript inspired by factory_girl (with updated dependencies)",
+  "main": "./src/index",
+  "author": [
+    "@aexmachina",
+    "@chetanism"
+  ],
+  "version": "5.0.4-depup.0",
+  "keywords": [
+    "factory-girl",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "factory",
+    "test",
+    "bdd",
+    "tdd",
+    "fixture"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aexmachina/factory-girl.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/aexmachina/factory-girl/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/aexmachina/factory-girl/raw/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "chance": "^1.1.13"
+  },
+  "depup": {
+    "changes": {
+      "babel-runtime": {
+        "from": "^6.11.6",
+        "to": "^6.26.0"
+      },
+      "chance": {
+        "from": "^1.0.4",
+        "to": "^1.1.13"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "factory-girl",
+    "originalVersion": "5.0.4",
+    "processedAt": "2026-03-19T03:29:32.943Z",
+    "smokeTest": "passed"
+  }
+}

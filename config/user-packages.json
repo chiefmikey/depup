@@ -1,5 +1,5 @@
 {
-  "count": 643,
+  "count": 644,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -238,6 +238,7 @@
     "express-unless",
     "express-ws",
     "fabric",
+    "factory-girl",
     "fakeredis",
     "fast-xml-parser",
     "fastest-validator",
@@ -645,5 +646,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:29:33.125Z"
+  "updatedAt": "2026-03-19T03:29:36.250Z"
 }
