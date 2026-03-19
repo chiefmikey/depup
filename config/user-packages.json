@@ -1,5 +1,5 @@
 {
-  "count": 715,
+  "count": 716,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -471,6 +471,7 @@
     "pdf-parse",
     "pdfjs-dist",
     "pdfkit",
+    "pdfmake",
     "pg-boss",
     "pg-mem",
     "phaser",
@@ -717,5 +718,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:33.031Z"
+  "updatedAt": "2026-03-19T03:32:34.580Z"
 }
