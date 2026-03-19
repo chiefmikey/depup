@@ -1,5 +1,5 @@
 {
-  "count": 553,
+  "count": 554,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -479,6 +479,7 @@
     "sendgrid",
     "sentry-react",
     "serverless",
+    "session-file-store",
     "short-uuid",
     "signale",
     "slate-react",
@@ -555,5 +556,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:03:14.499Z"
+  "updatedAt": "2026-03-19T03:03:16.705Z"
 }
