@@ -1,5 +1,5 @@
 {
-  "count": 652,
+  "count": 653,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -160,6 +160,7 @@
     "catbox-redis",
     "caxa",
     "cdk",
+    "chai-as-promised",
     "chai-sorted",
     "chai-things",
     "chalk-animation",
@@ -654,5 +655,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:29:52.188Z"
+  "updatedAt": "2026-03-19T03:29:53.872Z"
 }
