@@ -1,5 +1,5 @@
 {
-  "count": 544,
+  "count": 545,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -187,6 +187,7 @@
     "depcheck",
     "devcert",
     "directus",
+    "dns-prefetch-control",
     "documentation",
     "domain",
     "downshift",
@@ -546,5 +547,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:02:50.314Z"
+  "updatedAt": "2026-03-19T03:02:51.802Z"
 }
