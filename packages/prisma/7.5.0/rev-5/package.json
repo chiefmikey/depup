@@ -1,12 +1,14 @@
 {
-  "version": "7.5.0-depup.0",
+  "version": "7.5.0-depup.5",
   "name": "@depup/prisma",
-  "description": "[DepUp] Prisma is an open-source database toolkit. It includes a JavaScript/TypeScript ORM for Node.js, migrations and a modern GUI to view and edit the data in your database. You can use Prisma in new projects or add it to an existing one.",
+  "description": "Prisma is an open-source database toolkit. It includes a JavaScript/TypeScript ORM for Node.js, migrations and a modern GUI to view and edit the data in your database. You can use Prisma in new projects or add it to an existing one. (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "prisma",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "CLI",
     "ORM",
     "Prisma",
@@ -62,7 +64,8 @@
     "runtime/llhttp",
     "prisma-client",
     "preinstall",
-    "scripts/preinstall-entry.js"
+    "scripts/preinstall-entry.js",
+    "changes.json"
   ],
   "pkg": {
     "assets": [
@@ -171,9 +174,9 @@
     "@prisma/migrate": "7.5.0"
   },
   "dependencies": {
-    "@prisma/dev": "0.20.0",
-    "@prisma/studio-core": "^0.25.1",
-    "mysql2": "^3.19.1",
+    "@prisma/dev": "^0.22.2",
+    "@prisma/studio-core": "^0.27.0",
+    "mysql2": "^3.20.0",
     "postgres": "^3.4.8",
     "@prisma/config": "7.5.0",
     "@prisma/engines": "7.5.0"
@@ -204,23 +207,27 @@
   },
   "depup": {
     "changes": {
+      "@prisma/dev": {
+        "from": "0.20.0",
+        "to": "^0.22.2"
+      },
       "@prisma/studio-core": {
         "from": "0.21.1",
-        "to": "^0.25.1"
+        "to": "^0.27.0"
       },
       "mysql2": {
         "from": "3.15.3",
-        "to": "^3.19.1"
+        "to": "^3.20.0"
       },
       "postgres": {
         "from": "3.4.7",
         "to": "^3.4.8"
       }
     },
-    "depsUpdated": 3,
+    "depsUpdated": 4,
     "originalPackage": "prisma",
     "originalVersion": "7.5.0",
-    "processedAt": "2026-03-15T00:53:06.622Z",
+    "processedAt": "2026-03-19T12:20:55.941Z",
     "smokeTest": "failed"
   }
 }
