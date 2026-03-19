@@ -1,5 +1,5 @@
 {
-  "count": 747,
+  "count": 748,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -293,6 +293,7 @@
     "fastify-swagger",
     "fastify-websocket",
     "favicon-getter",
+    "filesize",
     "find-up",
     "fishery",
     "flat-cache",
@@ -749,5 +750,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:33:47.893Z"
+  "updatedAt": "2026-03-19T03:33:49.693Z"
 }
