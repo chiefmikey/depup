@@ -1,0 +1,21 @@
+{
+  "5.8.0": {
+    "0": {
+      "changes": {
+        "fastify-plugin": {
+          "from": "^3.0.1",
+          "to": "^5.1.0"
+        },
+        "tiny-lru": {
+          "from": "^8.0.1",
+          "to": "^11.4.7"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:05:09.506Z",
+      "version": "5.8.0-depup.0"
+    }
+  }
+}
