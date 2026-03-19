@@ -1,5 +1,5 @@
 {
-  "count": 716,
+  "count": 717,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -700,6 +700,7 @@
     "vuepress",
     "wait-on",
     "waterline",
+    "web-push",
     "webpack-sources",
     "winston-cloudwatch",
     "winston-elasticsearch",
@@ -718,5 +719,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:32:34.580Z"
+  "updatedAt": "2026-03-19T03:32:37.241Z"
 }
