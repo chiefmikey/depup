@@ -90,5 +90,52 @@
       "timestamp": "2026-03-18T17:28:36.786Z",
       "version": "6.0.6-depup.0"
     }
+  },
+  "6.0.7": {
+    "0": {
+      "changes": {
+        "@astrojs/compiler": {
+          "from": "^3.0.0",
+          "to": "^3.0.1"
+        },
+        "@clack/prompts": {
+          "from": "^1.0.1",
+          "to": "^1.1.0"
+        },
+        "devalue": {
+          "from": "^5.6.3",
+          "to": "^5.6.4"
+        },
+        "esbuild": {
+          "from": "^0.27.3",
+          "to": "^0.27.4"
+        },
+        "shiki": {
+          "from": "^4.0.0",
+          "to": "^4.0.2"
+        },
+        "svgo": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        },
+        "tinyclip": {
+          "from": "^0.1.6",
+          "to": "^0.1.12"
+        },
+        "tinyexec": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "vite": {
+          "from": "^7.3.1",
+          "to": "^8.0.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T20:16:29.781Z",
+      "version": "6.0.7-depup.0"
+    }
   }
 }

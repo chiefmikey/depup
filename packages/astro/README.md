@@ -12,7 +12,7 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.6 | **DepUp version**: 6.0.6-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 6.0.7 | **DepUp version**: 6.0.7-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -26,7 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | svgo | `^4.0.0` | `^4.0.1` |
 | tinyclip | `^0.1.6` | `^0.1.12` |
 | tinyexec | `^1.0.2` | `^1.0.4` |
-| vite | `^7.3.1` | `^8.0.0` |
+| vite | `^7.3.1` | `^8.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/astro&labels=bug).
