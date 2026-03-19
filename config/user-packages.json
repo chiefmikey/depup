@@ -1,5 +1,5 @@
 {
-  "count": 731,
+  "count": 732,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -516,6 +516,7 @@
     "prosemirror-view",
     "proxy-addr",
     "pug",
+    "pug-html-loader",
     "pullstate",
     "pulumi",
     "pump",
@@ -733,5 +734,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:33:12.970Z"
+  "updatedAt": "2026-03-19T03:33:14.142Z"
 }
