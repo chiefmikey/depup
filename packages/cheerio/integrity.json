@@ -1,10 +1,5 @@
 {
   "1.2.0": {
-    "0": {
-      "status": "created",
-      "timestamp": "2026-03-09T08:18:51.858Z",
-      "version": "1.2.0-depup.0"
-    },
     "1": {
       "changes": {
         "parse5": {
@@ -140,6 +135,55 @@
       "status": "published",
       "timestamp": "2026-03-18T00:41:26.624Z",
       "version": "1.2.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "dom-serializer": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        },
+        "domhandler": {
+          "from": "^5.0.3",
+          "to": "^6.0.1"
+        },
+        "domutils": {
+          "from": "^3.2.2",
+          "to": "^4.0.2"
+        },
+        "encoding-sniffer": {
+          "from": "^0.2.1",
+          "to": "^1.0.2"
+        },
+        "htmlparser2": {
+          "from": "^10.1.0",
+          "to": "^11.0.0"
+        },
+        "parse5": {
+          "from": "^7.3.0",
+          "to": "^8.0.0"
+        },
+        "parse5-htmlparser2-tree-adapter": {
+          "from": "^7.1.0",
+          "to": "^8.0.0"
+        },
+        "parse5-parser-stream": {
+          "from": "^7.1.2",
+          "to": "^8.0.0"
+        },
+        "undici": {
+          "from": "^7.19.0",
+          "to": "^7.24.4"
+        },
+        "whatwg-mimetype": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T12:23:46.243Z",
+      "version": "1.2.0-depup.5"
     }
   }
 }
