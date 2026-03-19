@@ -1,5 +1,5 @@
 {
-  "count": 674,
+  "count": 675,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -203,6 +203,7 @@
     "cypress-wait-until",
     "dataloader",
     "dd-trace",
+    "debug-logger",
     "deck.gl",
     "depcheck",
     "devcert",
@@ -676,5 +677,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:30:51.886Z"
+  "updatedAt": "2026-03-19T03:30:53.174Z"
 }
