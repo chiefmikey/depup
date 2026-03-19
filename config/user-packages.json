@@ -1,5 +1,5 @@
 {
-  "count": 793,
+  "count": 794,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -410,6 +410,7 @@
     "kebab-case",
     "keystone",
     "keyv-redis",
+    "klaw-sync",
     "knex-cleaner",
     "knex-migrate",
     "kolorist",
@@ -795,5 +796,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:35:43.749Z"
+  "updatedAt": "2026-03-19T03:35:53.734Z"
 }
