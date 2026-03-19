@@ -1,0 +1,96 @@
+{
+  "name": "@depup/onesignal-node",
+  "version": "3.4.0-depup.0",
+  "description": "A Node.js Library for OneSignal push notification service (with updated dependencies)",
+  "engines": {
+    "node": ">=8.13.0"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "changes.json"
+  ],
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src test --ext .js,.ts",
+    "build": "./node_modules/.bin/tsc",
+    "test": "./node_modules/.bin/mocha -r ts-node/register 'test/unit/**/*.spec.ts'",
+    "test-integration": "./node_modules/.bin/mocha -r ts-node/register 'test/integration/**/*.spec.ts'",
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov npm run test",
+    "update-codecov": "./node_modules/.bin/codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeyneloz/onesignal-node.git"
+  },
+  "keywords": [
+    "onesignal-node",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "onesignal",
+    "one-signal",
+    "gcm",
+    "signal",
+    "notification"
+  ],
+  "author": "Zeynel <ozdemir.zynl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeyneloz/onesignal-node.git/issues"
+  },
+  "homepage": "https://github.com/zeyneloz/onesignal-node.git#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/chai-string": "^1.4.2",
+    "@types/mocha": "^5.2.7",
+    "@types/nock": "^11.1.0",
+    "@types/node": "^12.20.55",
+    "@types/request": "^2.48.8",
+    "@types/request-promise": "^4.1.48",
+    "@types/sinon": "^7.5.2",
+    "@types/sinon-chai": "^3.2.8",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-string": "^1.5.0",
+    "codecov": "^3.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.30.1",
+    "mocha": "^6.2.3",
+    "nock": "^11.9.1",
+    "nyc": "^14.1.1",
+    "prettier": "^1.19.1",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.7.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^8.10.2",
+    "typedoc": "^0.23.2",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "onesignal-node",
+    "originalVersion": "3.4.0",
+    "processedAt": "2026-03-19T04:45:46.397Z",
+    "smokeTest": "passed"
+  }
+}

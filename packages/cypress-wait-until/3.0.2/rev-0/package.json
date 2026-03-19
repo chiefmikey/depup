@@ -1,0 +1,65 @@
+{
+  "name": "@depup/cypress-wait-until",
+  "version": "3.0.2-depup.0",
+  "description": "A waiting plugin for Cypress (with updated dependencies)",
+  "main": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "12.13.0",
+    "cz-conventional-changelog": "3.3.0",
+    "git-cz": "4.9.0",
+    "serve": "14.2.0",
+    "start-server-and-test": "2.0.0",
+    "typescript": "5.0.4",
+    "@semantic-release/npm": "10.0.3",
+    "semantic-release": "21.0.2"
+  },
+  "types": "index.d.ts",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "cypressUploadRecordings": true
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "serve": "serve public",
+    "cy:open": "cypress open",
+    "test": "npm run typescript && npm run cy:start-server-and-test",
+    "cy:start-server-and-test": "start-server-and-test serve :3000 cy:run",
+    "cy:run": "cypress run",
+    "typescript": "tsc --project ./tsconfig.json",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoriSte/cypress-wait-until.git"
+  },
+  "keywords": [
+    "cypress-wait-until",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cypress",
+    "promise",
+    "recursive-promise",
+    "wait",
+    "open-source-saturday"
+  ],
+  "author": "NoriSte <nori.ste.magni@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoriSte/cypress-wait-until/issues"
+  },
+  "homepage": "https://github.com/NoriSte/cypress-wait-until#readme",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "cypress-wait-until",
+    "originalVersion": "3.0.2",
+    "processedAt": "2026-03-19T04:44:24.912Z",
+    "smokeTest": "failed"
+  }
+}

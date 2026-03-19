@@ -1,0 +1,84 @@
+{
+  "name": "@depup/passport-ldapauth",
+  "description": "LDAP authentication strategy for Passport (with updated dependencies)",
+  "author": "Vesa Poikajärvi <vesa.poikajarvi@iki.fi>",
+  "contributors": [
+    "Simon Gaeremynck <gaeremyncks@gmail.com>",
+    "Michael Bailly <mbailly@linagora.com>",
+    "Jason Gelinas <jason.gelinas@citi.com>",
+    "arumi <arumi@wge7033.secheron.net>",
+    "Anthony Hernandez <anthony.hernandez@clownphobia.com>",
+    "Chris Harwood <harwood@teralogics.com>",
+    "David Dolcimascolo <david.dolcimascolo@stordata.fr>"
+  ],
+  "keywords": [
+    "passport-ldapauth",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ldap",
+    "passport",
+    "authentication",
+    "ldapauth"
+  ],
+  "version": "3.0.1-depup.0",
+  "license": "MIT",
+  "main": "./lib/passport-ldapauth",
+  "types": "./lib/passport-ldapauth/strategy.d.ts",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vesse/passport-ldapauth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vesse/passport-ldapauth/issues"
+  },
+  "dependencies": {
+    "ldapauth-fork": "^6.1.0",
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/basic-auth": "^1.1.3",
+    "@types/bunyan": "^1.8.6",
+    "@types/express": "^4.17.9",
+    "@types/node": "^14.14.7",
+    "@types/passport": "^1.0.4",
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.14",
+    "chai": "^4.2.0",
+    "eslint": "^7.13.0",
+    "express": "^4.17.1",
+    "ldapjs": "^2.2.1",
+    "merge": "^2.1.0",
+    "mocha": "^8.2.1",
+    "passport": "^0.4.1",
+    "supertest": "^6.0.1",
+    "typescript": "^4.0.5",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "lint": "eslint ./lib",
+    "lint:watch": "watch 'npm run lint' ./lib --wait 0.5",
+    "test": "NODE_PATH=lib mocha --reporter spec test/*-test.js",
+    "test:watch": "watch 'npm test' ./lib ./test --wait 0.5",
+    "test:typescript": "cd test/typescript && tsc"
+  },
+  "depup": {
+    "changes": {
+      "ldapauth-fork": {
+        "from": "^5.0.1",
+        "to": "^6.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "passport-ldapauth",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-03-19T04:45:53.642Z",
+    "smokeTest": "passed"
+  }
+}
