@@ -1,0 +1,53 @@
+{
+  "name": "@depup/bottlejs",
+  "version": "2.0.1-depup.0",
+  "description": "A powerful dependency injection micro container (with updated dependencies)",
+  "main": "dist/bottle.js",
+  "module": "dist/bottle-es.js",
+  "typings": "dist/bottle.d.ts",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/young-steveo/bottlejs.git"
+  },
+  "keywords": [
+    "bottlejs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "di",
+    "dependency",
+    "injection",
+    "micro",
+    "angular",
+    "pimple"
+  ],
+  "author": "Stephen Young <young.steveo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/young-steveo/bottlejs/issues"
+  },
+  "homepage": "https://github.com/young-steveo/bottlejs",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^2.0.0",
+    "grunt-contrib-jasmine": "^3.0.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-wrap": "^0.3.1",
+    "lodash": "^4.17.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "bottlejs",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-19T03:31:13.509Z",
+    "smokeTest": "passed"
+  }
+}
