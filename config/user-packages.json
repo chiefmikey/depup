@@ -1,5 +1,5 @@
 {
-  "count": 566,
+  "count": 567,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -361,6 +361,7 @@
     "phaser",
     "pidusage",
     "pino-http",
+    "pino-multi-stream",
     "pixi.js",
     "pkg",
     "pkg-dir",
@@ -568,5 +569,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:03:42.197Z"
+  "updatedAt": "2026-03-19T03:03:43.707Z"
 }
