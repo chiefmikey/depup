@@ -1,5 +1,5 @@
 {
-  "count": 684,
+  "count": 685,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -645,6 +645,7 @@
     "type-graphql-utils",
     "type-is",
     "typebox",
+    "typedi",
     "typeorm-extension",
     "typesafe-i18n",
     "typesense",
@@ -686,5 +687,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:14.133Z"
+  "updatedAt": "2026-03-19T03:31:15.333Z"
 }

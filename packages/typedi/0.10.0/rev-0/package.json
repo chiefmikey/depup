@@ -1,0 +1,53 @@
+{
+  "name": "@depup/typedi",
+  "version": "0.10.0-depup.0",
+  "description": "Dependency injection for TypeScript. (with updated dependencies)",
+  "author": "TypeStack contributors",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./cjs/index.js",
+  "module": "./esm5/index.js",
+  "es2015": "./esm2015/index.js",
+  "typings": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pleerock/typedi.git"
+  },
+  "tags": [
+    "di",
+    "container",
+    "di-container",
+    "typescript",
+    "typescript-di",
+    "dependency-injection"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "npm run prettier:fix"
+    ],
+    "*.ts": [
+      "npm run prettier:fix"
+    ]
+  },
+  "keywords": [
+    "typedi",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "typedi",
+    "originalVersion": "0.10.0",
+    "processedAt": "2026-03-19T03:31:12.175Z",
+    "smokeTest": "passed"
+  }
+}
