@@ -1,0 +1,69 @@
+{
+  "name": "@depup/react-three-fiber",
+  "version": "6.0.13-depup.0",
+  "description": "A React renderer for Threejs (with updated dependencies)",
+  "keywords": [
+    "react-three-fiber",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "renderer",
+    "fiber",
+    "three",
+    "threejs"
+  ],
+  "author": "Paul Henschel (https://github.com/drcmda)",
+  "license": "MIT",
+  "maintainers": [
+    "Josh Ellis (https://github.com/joshuaellis)"
+  ],
+  "bugs": {
+    "url": "https://github.com/pmndrs/react-three-fiber/issues"
+  },
+  "homepage": "https://github.com/pmndrs/react-three-fiber#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmndrs/react-three-fiber.git"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-three-fiber"
+  },
+  "main": "dist/react-three-fiber.cjs.js",
+  "module": "dist/react-three-fiber.esm.js",
+  "types": "dist/react-three-fiber.cjs.d.ts",
+  "react-native": "dist/native.js",
+  "sideEffects": false,
+  "preconstruct": {
+    "entrypoints": [
+      "index.tsx"
+    ]
+  },
+  "scripts": {
+    "prebuild": "cp ../../readme.md readme.md"
+  },
+  "dependencies": {
+    "@react-three/fiber": "latest"
+  },
+  "peerDependencies": {
+    "react": ">=17.0",
+    "react-dom": ">=17.0",
+    "three": ">=0.126"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-three-fiber",
+    "originalVersion": "6.0.13",
+    "processedAt": "2026-03-19T00:39:12.478Z",
+    "smokeTest": "passed"
+  }
+}
