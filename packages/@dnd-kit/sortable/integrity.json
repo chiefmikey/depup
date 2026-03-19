@@ -1,0 +1,17 @@
+{
+  "10.0.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.0.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:36:25.187Z",
+      "version": "10.0.0-depup.0"
+    }
+  }
+}
