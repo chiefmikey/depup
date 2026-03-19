@@ -12,13 +12,13 @@ npm install @depup/crypto-random-string
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| type-fest | `^2.12.2` | `^5.4.4` |
+| type-fest | `^2.12.2` | `^5.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/crypto-random-string&labels=bug).
