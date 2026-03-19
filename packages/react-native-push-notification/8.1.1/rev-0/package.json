@@ -1,0 +1,46 @@
+{
+  "name": "@depup/react-native-push-notification",
+  "version": "8.1.1-depup.0",
+  "description": "React Native Local and Remote Notifications (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native-push-notification",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "notifications",
+    "push",
+    "apns",
+    "firebase"
+  ],
+  "bugs": {
+    "url": "https://github.com/zo0r/react-native-push-notification/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:zo0r/react-native-push-notification.git"
+  },
+  "peerDependencies": {
+    "@react-native-community/push-notification-ios": "^1.10.1",
+    "react-native": ">=0.33"
+  },
+  "author": "zo0r <http://zo0r.me>",
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-native-push-notification",
+    "originalVersion": "8.1.1",
+    "processedAt": "2026-03-19T00:39:57.144Z",
+    "smokeTest": "failed"
+  }
+}

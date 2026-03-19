@@ -1,0 +1,97 @@
+{
+  "name": "@depup/theme-ui",
+  "version": "0.17.4-depup.0",
+  "description": "The Design Graph Framework (with updated dependencies)",
+  "source": "src/index.ts",
+  "main": "dist/theme-ui.cjs.js",
+  "module": "dist/theme-ui.esm.js",
+  "browser": {
+    "./dist/theme-ui.esm.js": "./dist/theme-ui.browser.esm.js"
+  },
+  "exports": {
+    ".": {
+      "module": {
+        "worker": "./dist/theme-ui.worker.esm.js",
+        "browser": "./dist/theme-ui.browser.esm.js",
+        "default": "./dist/theme-ui.esm.js"
+      },
+      "default": "./dist/theme-ui.cjs.js"
+    },
+    "./jsx-runtime": {
+      "module": {
+        "worker": "./jsx-runtime/dist/theme-ui-jsx-runtime.worker.esm.js",
+        "browser": "./jsx-runtime/dist/theme-ui-jsx-runtime.browser.esm.js",
+        "default": "./jsx-runtime/dist/theme-ui-jsx-runtime.esm.js"
+      },
+      "default": "./jsx-runtime/dist/theme-ui-jsx-runtime.cjs.js"
+    },
+    "./jsx-dev-runtime": {
+      "module": {
+        "worker": "./jsx-dev-runtime/dist/theme-ui-jsx-dev-runtime.worker.esm.js",
+        "browser": "./jsx-dev-runtime/dist/theme-ui-jsx-dev-runtime.browser.esm.js",
+        "default": "./jsx-dev-runtime/dist/theme-ui-jsx-dev-runtime.esm.js"
+      },
+      "default": "./jsx-dev-runtime/dist/theme-ui-jsx-dev-runtime.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "dist/theme-ui.cjs.d.ts",
+  "sideEffects": false,
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "repository": "system-ui/theme-ui",
+  "dependencies": {
+    "@theme-ui/core": "^0.17.4",
+    "@theme-ui/color-modes": "^0.17.4",
+    "@theme-ui/components": "^0.17.4",
+    "@theme-ui/css": "^0.17.4",
+    "@theme-ui/global": "^0.17.4",
+    "@theme-ui/theme-provider": "^0.17.4"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.1.1",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@types/react": "^18.2.12",
+    "react": "^18.1.0",
+    "react-dom": "^18",
+    "@theme-ui/test-utils": "^0.17.4"
+  },
+  "keywords": [
+    "theme-ui",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "emotion",
+    "mdx",
+    "css",
+    "styles",
+    "css-in-js"
+  ],
+  "preconstruct": {
+    "exports": {
+      "envConditions": [
+        "browser",
+        "worker"
+      ]
+    },
+    "entrypoints": [
+      "index.ts",
+      "jsx-dev-runtime.ts",
+      "jsx-runtime.ts"
+    ]
+  },
+  "scripts": {},
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "theme-ui",
+    "originalVersion": "0.17.4",
+    "processedAt": "2026-03-18T23:29:49.158Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "1.16.0": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.19"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T23:30:57.907Z",
+      "version": "1.16.0-depup.0"
+    }
+  }
+}

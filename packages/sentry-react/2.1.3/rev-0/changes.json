@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@sentry/browser": {
+      "from": "^8.51.0",
+      "to": "^10.44.0"
+    },
+    "@sentry/core": {
+      "from": "^8.51.0",
+      "to": "^10.44.0"
+    },
+    "@sentry/react": {
+      "from": "^8.51.0",
+      "to": "^10.44.0"
+    },
+    "@sentry/types": {
+      "from": "^8.51.0",
+      "to": "^10.44.0"
+    },
+    "fmrs": {
+      "from": "^2.0.3",
+      "to": "^2.1.2"
+    }
+  },
+  "timestamp": "2026-03-18T22:42:57.765Z",
+  "totalUpdated": 5
+}

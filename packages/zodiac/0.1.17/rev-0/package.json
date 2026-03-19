@@ -1,0 +1,65 @@
+{
+  "name": "@depup/zodiac",
+  "version": "0.1.17-depup.0",
+  "description": "Reactive renderig library (with updated dependencies)",
+  "keywords": [
+    "zodiac",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "reactive",
+    "templates",
+    "web",
+    "components",
+    "views",
+    "frp",
+    "spa"
+  ],
+  "homepage": "https://github.com/jbe/zodiac",
+  "bugs": {
+    "url": "https://github.com/jbe/zodiac/issues"
+  },
+  "license": "MIT",
+  "author": "Jostein B. Eliassen (http://jostein.be)",
+  "main": "dist/zodiac.js",
+  "repository": "jbe/zodiac.git",
+  "scripts": {
+    "build": "babel ./src --out-dir dist && webpack --config webpack/build.js",
+    "dev": "webpack-dev-server --config webpack/dev-server.js",
+    "test": "karma start --single-run",
+    "travis": "karma start --single-run --browsers PhantomJS,Firefox",
+    "karma": "karma start"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-object-rest-spread": "*",
+    "babel-polyfill": "*",
+    "babel-preset-es2016": "*",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "zodiac",
+    "originalVersion": "0.1.17",
+    "processedAt": "2026-03-18T23:28:42.803Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "4.2.3": {
+    "0": {
+      "changes": {
+        "@next/env": {
+          "from": "^13.4.3",
+          "to": "^16.2.0"
+        },
+        "fast-glob": {
+          "from": "^3.2.12",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:38:41.481Z",
+      "version": "4.2.3-depup.0"
+    }
+  }
+}

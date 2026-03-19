@@ -1,0 +1,74 @@
+{
+  "name": "@depup/react-mosaic-component",
+  "version": "7.0.0-beta0-depup.0",
+  "description": "A React Tiling Window Manager (with updated dependencies)",
+  "main": "./index.mjs",
+  "type": "module",
+  "exports": {
+    "./react-mosaic-component.css": "./react-mosaic-component.css",
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./index.mjs",
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.cjs"
+      }
+    }
+  },
+  "style": "./react-mosaic-component.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nomcopter/react-mosaic.git"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "keywords": [
+    "react-mosaic-component",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ui",
+    "react",
+    "component",
+    "typescript",
+    "tiling-window-manager",
+    "window-manager"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "dnd-core": "16.0.1",
+    "immutability-helper": "^3.1.1",
+    "lodash-es": "^4.17.23",
+    "prop-types": "^15.8.1",
+    "rdndmb-html5-to-touch": "^9.0.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dnd-multi-backend": "^9.0.0",
+    "react-dnd-touch-backend": "^16.0.1",
+    "uuid": "^13.0.0"
+  },
+  "peerDependencies": {
+    "react": "16 - 19"
+  },
+  "depup": {
+    "changes": {
+      "lodash-es": {
+        "from": "^4.17.21",
+        "to": "^4.17.23"
+      },
+      "uuid": {
+        "from": "^11.1.0",
+        "to": "^13.0.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "react-mosaic-component",
+    "originalVersion": "7.0.0-beta0",
+    "processedAt": "2026-03-19T00:39:45.990Z",
+    "smokeTest": "passed"
+  }
+}

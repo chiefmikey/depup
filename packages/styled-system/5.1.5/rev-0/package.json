@@ -1,0 +1,50 @@
+{
+  "name": "@depup/styled-system",
+  "version": "5.1.5-depup.0",
+  "description": "Responsive, theme-based style props for building design systems with React (with updated dependencies)",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "keywords": [
+    "styled-system",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "css-in-js",
+    "styled-components",
+    "emotion"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "@styled-system/background": "^5.1.2",
+    "@styled-system/border": "^5.1.5",
+    "@styled-system/color": "^5.1.2",
+    "@styled-system/core": "^5.1.2",
+    "@styled-system/flexbox": "^5.1.2",
+    "@styled-system/grid": "^5.1.2",
+    "@styled-system/layout": "^5.1.2",
+    "@styled-system/position": "^5.1.2",
+    "@styled-system/shadow": "^5.1.2",
+    "@styled-system/space": "^5.1.2",
+    "@styled-system/typography": "^5.1.2",
+    "@styled-system/variant": "^5.1.5",
+    "object-assign": "^4.1.1"
+  },
+  "gitHead": "629fa1a080fb71c0f966c79539aa4c5fd92f2f74",
+  "devDependencies": {
+    "@emotion/styled": "^10.0.14",
+    "jest-styled-components": "^7.0.0",
+    "styled-components": "^5.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "styled-system",
+    "originalVersion": "5.1.5",
+    "processedAt": "2026-03-19T00:39:20.485Z",
+    "smokeTest": "passed"
+  }
+}

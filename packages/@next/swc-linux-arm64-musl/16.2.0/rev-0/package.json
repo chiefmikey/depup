@@ -1,0 +1,45 @@
+{
+  "name": "@depup/next__swc-linux-arm64-musl",
+  "version": "16.2.0-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel/next.js",
+    "directory": "crates/next-napi-bindings/npm/linux-arm64-musl"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "libc": [
+    "musl"
+  ],
+  "main": "next-swc.linux-arm64-musl.node",
+  "files": [
+    "next-swc.linux-arm64-musl.node",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "description": "@next/swc-linux-arm64-musl with all dependencies updated to latest",
+  "keywords": [
+    "@next/swc-linux-arm64-musl",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@next/swc-linux-arm64-musl",
+    "originalVersion": "16.2.0",
+    "processedAt": "2026-03-18T17:26:40.883Z",
+    "smokeTest": "failed"
+  }
+}

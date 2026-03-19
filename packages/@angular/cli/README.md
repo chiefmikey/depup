@@ -12,14 +12,14 @@ npm install @depup/angular__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.2 | **DepUp version**: 21.2.2-depup.0 | **Updated**: 3/11/2026 | **Import test**: unknown
+**Original version**: 21.2.3 | **DepUp version**: 21.2.3-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @inquirer/prompts | `7.10.1` | `^8.3.0` |
-| @listr2/prompt-adapter-inquirer | `3.0.5` | `^4.2.1` |
+| @inquirer/prompts | `7.10.1` | `^8.3.2` |
+| @listr2/prompt-adapter-inquirer | `3.0.5` | `^4.2.2` |
 | @modelcontextprotocol/sdk | `1.26.0` | `^1.27.1` |
 | algoliasearch | `5.48.1` | `^5.49.2` |
 | listr2 | `9.0.5` | `^10.2.1` |

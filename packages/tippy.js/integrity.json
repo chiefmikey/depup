@@ -1,0 +1,17 @@
+{
+  "6.3.7": {
+    "0": {
+      "changes": {
+        "@popperjs/core": {
+          "from": "^2.9.0",
+          "to": "^2.11.8"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T23:34:11.479Z",
+      "version": "6.3.7-depup.0"
+    }
+  }
+}
