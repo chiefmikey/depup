@@ -1,5 +1,5 @@
 {
-  "count": 697,
+  "count": 698,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -435,6 +435,7 @@
     "onetime",
     "openpgp",
     "opentelemetry",
+    "opentracing",
     "ora-classic",
     "os-utils",
     "otplib",
@@ -699,5 +700,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:48.072Z"
+  "updatedAt": "2026-03-19T03:31:50.177Z"
 }
