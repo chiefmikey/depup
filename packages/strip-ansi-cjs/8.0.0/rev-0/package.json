@@ -1,0 +1,27 @@
+{
+  "name": "@depup/strip-ansi-cjs",
+  "version": "8.0.0-depup.0",
+  "description": "strip-ansi-cjs with all dependencies updated to latest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "strip-ansi-cjs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "strip-ansi-cjs",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-03-19T03:33:22.435Z",
+    "smokeTest": "failed"
+  }
+}
