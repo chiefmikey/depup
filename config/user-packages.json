@@ -1,5 +1,5 @@
 {
-  "count": 774,
+  "count": 775,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -705,6 +705,7 @@
     "theme-ui",
     "thread-loader",
     "throttle-debounce",
+    "through2-filter",
     "tinybench",
     "tippy.js",
     "tough-cookie",
@@ -776,5 +777,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:50.395Z"
+  "updatedAt": "2026-03-19T03:34:52.277Z"
 }
