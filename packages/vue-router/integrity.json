@@ -28,5 +28,32 @@
       "timestamp": "2026-03-14T20:44:55.282Z",
       "version": "5.0.3-depup.1"
     }
+  },
+  "5.0.4": {
+    "0": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.6",
+          "to": "^7.29.1"
+        },
+        "@vue-macros/common": {
+          "from": "^3.1.1",
+          "to": "^3.1.2"
+        },
+        "@vue/devtools-api": {
+          "from": "^8.0.6",
+          "to": "^8.1.0"
+        },
+        "mlly": {
+          "from": "^1.8.0",
+          "to": "^1.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T16:25:45.722Z",
+      "version": "5.0.4-depup.0"
+    }
   }
 }
