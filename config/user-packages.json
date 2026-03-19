@@ -1,5 +1,5 @@
 {
-  "count": 771,
+  "count": 772,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -441,6 +441,7 @@
     "mjml",
     "monaco-editor",
     "mongodb-memory-server",
+    "move-file",
     "mqtt",
     "msgpack5",
     "multer-s3",
@@ -773,5 +774,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:34:43.490Z"
+  "updatedAt": "2026-03-19T03:34:46.404Z"
 }
