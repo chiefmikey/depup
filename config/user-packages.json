@@ -1,5 +1,5 @@
 {
-  "count": 590,
+  "count": 591,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -112,6 +112,7 @@
     "@vercel/speed-insights",
     "@vitest/pretty-format",
     "@xstate/react",
+    "accepts",
     "acme-client",
     "adm-zip",
     "agenda",
@@ -592,5 +593,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:04:42.574Z"
+  "updatedAt": "2026-03-19T03:04:45.457Z"
 }
