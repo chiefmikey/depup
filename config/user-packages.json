@@ -1,5 +1,5 @@
 {
-  "count": 569,
+  "count": 570,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -350,6 +350,7 @@
     "parent-module",
     "passport-github2",
     "passport-google-oauth20",
+    "passport-http-bearer",
     "passport-linkedin-oauth2",
     "passport-twitter",
     "path-exists",
@@ -571,5 +572,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:03:48.308Z"
+  "updatedAt": "2026-03-19T03:03:51.990Z"
 }
