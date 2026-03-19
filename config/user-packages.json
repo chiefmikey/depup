@@ -1,5 +1,5 @@
 {
-  "count": 651,
+  "count": 652,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -438,6 +438,7 @@
     "pkg-dir",
     "pkgroll",
     "playwright-core",
+    "playwright-test",
     "polished",
     "polka",
     "popmotion",
@@ -653,5 +654,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:29:50.605Z"
+  "updatedAt": "2026-03-19T03:29:52.188Z"
 }
