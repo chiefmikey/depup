@@ -1,0 +1,46 @@
+{
+  "name": "@depup/connect-slashes",
+  "version": "1.4.0-depup.0",
+  "description": "Trailing slash redirect middleware for Connect and Express.js (with updated dependencies)",
+  "keywords": [
+    "connect-slashes",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "trailing",
+    "slash",
+    "connect",
+    "middleware",
+    "express"
+  ],
+  "author": "Roi Avinoam <avinoamr@gmail.com>",
+  "contributors": [
+    "Feross Aboukhadijeh <feross@feross.org> (http://feross.org)",
+    "brunogfranca (https://github.com/brunogfranca)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avinoamr/connect-slashes.git"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "main": "index",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "connect-slashes",
+    "originalVersion": "1.4.0",
+    "processedAt": "2026-03-19T03:01:49.257Z",
+    "smokeTest": "passed"
+  }
+}

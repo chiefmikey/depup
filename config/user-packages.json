@@ -1,5 +1,5 @@
 {
-  "count": 526,
+  "count": 527,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -168,6 +168,7 @@
     "co-body",
     "conf",
     "connect-flash",
+    "connect-slashes",
     "consola",
     "contentful",
     "contentlayer",
@@ -528,5 +529,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:01:49.334Z"
+  "updatedAt": "2026-03-19T03:01:53.984Z"
 }
