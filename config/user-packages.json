@@ -1,5 +1,5 @@
 {
-  "count": 749,
+  "count": 750,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -681,6 +681,7 @@
     "tar",
     "tasuku",
     "temporal-polyfill",
+    "terminal-columns",
     "terminal-link",
     "testcafe",
     "theme-ui",
@@ -751,5 +752,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:33:52.572Z"
+  "updatedAt": "2026-03-19T03:33:55.463Z"
 }
