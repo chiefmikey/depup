@@ -1,5 +1,5 @@
 {
-  "count": 700,
+  "count": 701,
   "packages": [
     "@ai-sdk/anthropic",
     "@ai-sdk/google",
@@ -181,6 +181,7 @@
     "chroma-js",
     "clack",
     "clamp",
+    "class-validator-jsonschema",
     "clean-css",
     "cliffy",
     "clinic",
@@ -702,5 +703,5 @@
     "zstd-codec",
     "zx"
   ],
-  "updatedAt": "2026-03-19T03:31:54.876Z"
+  "updatedAt": "2026-03-19T03:32:00.070Z"
 }
