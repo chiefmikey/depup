@@ -1,12 +1,14 @@
 {
   "name": "@depup/sveltejs__kit",
-  "version": "2.55.0-depup.2",
-  "description": "[DepUp] SvelteKit is the fastest way to build Svelte apps",
+  "version": "2.55.0-depup.11",
+  "description": "SvelteKit is the fastest way to build Svelte apps (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "@sveltejs/kit",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "framework",
     "official",
     "svelte",
@@ -32,7 +34,7 @@
     "kleur": "^4.1.5",
     "magic-string": "^0.30.21",
     "mrmime": "^2.0.1",
-    "set-cookie-parser": "^3.0.1",
+    "set-cookie-parser": "^3.1.0",
     "sirv": "^3.0.2"
   },
   "devDependencies": {
@@ -74,7 +76,9 @@
     "!src/core/**/fixtures",
     "!src/core/**/test",
     "types",
-    "svelte-kit.js"
+    "svelte-kit.js",
+    "changes.json",
+    "README.md"
   ],
   "imports": {
     "#app/paths": {
@@ -168,7 +172,7 @@
       },
       "set-cookie-parser": {
         "from": "^3.0.0",
-        "to": "^3.0.1"
+        "to": "^3.1.0"
       },
       "sirv": {
         "from": "^3.0.0",
@@ -178,7 +182,7 @@
     "depsUpdated": 9,
     "originalPackage": "@sveltejs/kit",
     "originalVersion": "2.55.0",
-    "processedAt": "2026-03-13T08:16:52.324Z",
+    "processedAt": "2026-03-20T20:14:20.734Z",
     "smokeTest": "passed"
   }
 }
