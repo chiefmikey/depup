@@ -1,0 +1,61 @@
+{
+  "author": "Lloyd Hilaiel <lloyd@hilaiel.com> (http://lloyd.io)",
+  "name": "@depup/convict",
+  "description": "Featureful configuration management library for Node.js (nested structure, schema validation, etc.) (with updated dependencies)",
+  "keywords": [
+    "convict",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "configuration",
+    "config",
+    "conf",
+    "key value store",
+    "schema",
+    "nested",
+    "validation",
+    "customize",
+    "env",
+    "environment",
+    "json",
+    "yaml",
+    "toml"
+  ],
+  "version": "6.2.5-depup.0",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/mozilla/node-convict",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozilla/node-convict/tree/master/packages/convict"
+  },
+  "bugs": "https://github.com/mozilla/node-convict/issues",
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "src/main.js",
+  "files": [
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "yargs-parser": "^22.0.0"
+  },
+  "gitHead": "ba7693f368e10f596397dc676263a578f910a2a9",
+  "depup": {
+    "changes": {
+      "yargs-parser": {
+        "from": "^20.2.7",
+        "to": "^22.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "convict",
+    "originalVersion": "6.2.5",
+    "processedAt": "2026-03-20T00:35:18.603Z",
+    "smokeTest": "passed"
+  }
+}
