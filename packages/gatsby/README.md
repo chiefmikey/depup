@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.3.1` |
 | enhanced-resolve | `^5.15.0` | `^5.20.1` |
-| eslint | `^7.32.0` | `^10.0.3` |
+| eslint | `^7.32.0` | `^10.1.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
@@ -126,7 +126,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tmp | `^0.2.1` | `^0.2.5` |
 | uuid | `^8.3.2` | `^13.0.0` |
 | webpack | `~5.98.0` | `^5.105.4` |
-| webpack-dev-middleware | `^5.3.4` | `^7.4.5` |
+| webpack-dev-middleware | `^5.3.4` | `^8.0.0` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.28.0` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |
