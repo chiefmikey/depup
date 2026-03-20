@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:36:59.515Z",
       "version": "6.6.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cookie": {
+          "from": "^1.0.1",
+          "to": "^1.1.1"
+        },
+        "process-warning": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "set-cookie-parser": {
+          "from": "^2.6.0",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-20T20:14:33.969Z",
+      "version": "6.6.0-depup.1"
     }
   }
 }
