@@ -23,5 +23,20 @@
       "timestamp": "2026-03-17T16:39:46.899Z",
       "version": "7.4.5-depup.0"
     }
+  },
+  "8.0.0": {
+    "0": {
+      "changes": {
+        "memfs": {
+          "from": "^4.56.10",
+          "to": "^4.56.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-20T16:19:51.500Z",
+      "version": "8.0.0-depup.0"
+    }
   }
 }
