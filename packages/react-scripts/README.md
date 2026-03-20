@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -31,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | css-minimizer-webpack-plugin | `^3.2.0` | `^8.0.0` |
 | dotenv | `^10.0.0` | `^17.3.1` |
 | dotenv-expand | `^5.1.0` | `^12.0.3` |
-| eslint | `^8.3.0` | `^10.0.3` |
+| eslint | `^8.3.0` | `^10.1.0` |
 | eslint-webpack-plugin | `^3.1.1` | `^5.0.3` |
 | fs-extra | `^10.0.0` | `^11.3.4` |
 | html-webpack-plugin | `^5.5.0` | `^5.6.6` |
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | semver | `^7.3.5` | `^7.7.4` |
 | source-map-loader | `^3.0.0` | `^5.0.0` |
 | style-loader | `^3.3.1` | `^4.0.0` |
-| tailwindcss | `^3.0.2` | `^4.2.1` |
+| tailwindcss | `^3.0.2` | `^4.2.2` |
 | terser-webpack-plugin | `^5.2.5` | `^5.4.0` |
 | webpack | `^5.64.4` | `^5.105.4` |
 | webpack-dev-server | `^4.6.0` | `^5.2.3` |
