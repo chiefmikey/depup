@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.0 | **DepUp version**: 6.22.0-depup.4 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/adapter-base-cache | `0.1.17` | `^0.1.23` |
 | @tryghost/admin-api-schema | `4.5.10` | `^4.7.2` |
 | @tryghost/api-framework | `1.0.3` | `^3.0.3` |
-| @tryghost/bookshelf-plugins | `2.0.2` | `^2.0.3` |
 | @tryghost/color-utils | `0.2.10` | `^0.2.16` |
 | @tryghost/config-url-helpers | `1.0.17` | `^1.0.23` |
 | @tryghost/custom-fonts | `1.0.2` | `^1.0.8` |
@@ -39,19 +38,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/helpers | `1.1.97` | `^1.1.103` |
 | @tryghost/html-to-plaintext | `1.0.4` | `^1.0.8` |
 | @tryghost/http-cache-utils | `0.1.20` | `^2.0.3` |
-| @tryghost/image-transform | `1.4.6` | `^1.4.13` |
 | @tryghost/job-manager | `1.0.3` | `^3.0.3` |
-| @tryghost/kg-card-factory | `5.1.10` | `^5.1.12` |
-| @tryghost/kg-clean-basic-html | `4.2.18` | `^4.2.20` |
-| @tryghost/kg-converters | `1.1.18` | `^1.1.19` |
-| @tryghost/kg-default-atoms | `5.1.5` | `^5.1.7` |
-| @tryghost/kg-default-cards | `10.2.8` | `^10.2.10` |
-| @tryghost/kg-default-nodes | `2.0.13` | `^2.0.15` |
-| @tryghost/kg-default-transforms | `1.2.36` | `^1.2.38` |
-| @tryghost/kg-html-to-lexical | `1.2.36` | `^1.2.38` |
-| @tryghost/kg-lexical-html-renderer | `1.3.36` | `^1.3.38` |
-| @tryghost/kg-markdown-html-renderer | `7.1.13` | `^7.1.15` |
-| @tryghost/kg-mobiledoc-html-renderer | `7.1.13` | `^7.1.15` |
+| @tryghost/kg-card-factory | `5.1.12` | `^5.1.13` |
+| @tryghost/kg-clean-basic-html | `4.2.20` | `^4.2.21` |
+| @tryghost/kg-converters | `1.1.19` | `^1.1.20` |
+| @tryghost/kg-default-atoms | `5.1.7` | `^5.1.8` |
+| @tryghost/kg-default-cards | `10.2.10` | `^10.2.11` |
+| @tryghost/kg-default-nodes | `2.0.15` | `^2.0.16` |
+| @tryghost/kg-default-transforms | `1.2.38` | `^1.2.39` |
+| @tryghost/kg-html-to-lexical | `1.2.38` | `^1.2.39` |
+| @tryghost/kg-lexical-html-renderer | `1.3.38` | `^1.3.39` |
+| @tryghost/kg-markdown-html-renderer | `7.1.15` | `^7.1.16` |
+| @tryghost/kg-mobiledoc-html-renderer | `7.1.15` | `^7.1.16` |
 | @tryghost/limit-service | `1.4.1` | `^1.5.2` |
 | @tryghost/logging | `2.5.0` | `^4.0.3` |
 | @tryghost/members-csv | `2.0.3` | `^2.0.5` |
@@ -88,7 +86,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ghost-storage-base | `1.0.0` | `^1.1.2` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `11.8.6` | `^14.6.6` |
-| gscan | `5.3.3` | `^5.4.0` |
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.7` | `^2.0.8` |
 | iconv-lite | `0.6.3` | `^0.7.2` |

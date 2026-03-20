@@ -53,5 +53,24 @@
       "timestamp": "2026-03-18T16:28:50.182Z",
       "version": "2.24.0-depup.0"
     }
+  },
+  "2.24.1": {
+    "0": {
+      "changes": {
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-20T16:18:44.806Z",
+      "version": "2.24.1-depup.0"
+    }
   }
 }
