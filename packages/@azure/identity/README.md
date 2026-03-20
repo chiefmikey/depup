@@ -12,7 +12,7 @@ npm install @depup/azure__identity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.13.0 | **DepUp version**: 4.13.0-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 4.13.1 | **DepUp version**: 4.13.1-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,8 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/core-tracing | `^1.0.0` | `^1.3.1` |
 | @azure/core-util | `^1.11.0` | `^1.13.1` |
 | @azure/logger | `^1.0.0` | `^1.3.0` |
-| @azure/msal-browser | `^4.2.0` | `^5.6.1` |
-| @azure/msal-node | `^3.5.0` | `^3.8.10` |
+| @azure/msal-browser | `^5.5.0` | `^5.6.1` |
 | open | `^10.1.0` | `^11.0.0` |
 | tslib | `^2.2.0` | `^2.8.1` |
 
