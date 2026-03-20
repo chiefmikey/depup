@@ -1,0 +1,45 @@
+{
+  "name": "@depup/unicorn",
+  "homepage": "http://github.com/rafaelrinaldi/unicorn",
+  "version": "0.0.1-depup.0",
+  "author": "Rafael Rinaldi <rafael.rinaldi@gmail.com>",
+  "description": "Add some color to your command line. (with updated dependencies)",
+  "keywords": [
+    "unicorn",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "color",
+    "style"
+  ],
+  "main": "lib/unicorn.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelrinaldi/unicorn.git"
+  },
+  "dependencies": {
+    "mout": "^1.2.4"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "depup": {
+    "changes": {
+      "mout": {
+        "from": ">= 0.6.0",
+        "to": "^1.2.4"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "unicorn",
+    "originalVersion": "0.0.1",
+    "processedAt": "2026-03-20T22:15:33.168Z",
+    "smokeTest": "passed"
+  }
+}
