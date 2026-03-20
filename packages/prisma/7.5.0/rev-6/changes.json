@@ -1,8 +1,12 @@
 {
   "bumped": {
+    "@prisma/dev": {
+      "from": "0.20.0",
+      "to": "^0.23.1"
+    },
     "@prisma/studio-core": {
       "from": "0.21.1",
-      "to": "^0.25.1"
+      "to": "^0.27.3"
     },
     "mysql2": {
       "from": "3.15.3",
@@ -13,6 +17,6 @@
       "to": "^3.4.8"
     }
   },
-  "timestamp": "2026-03-16T00:50:33.059Z",
-  "totalUpdated": 3
+  "timestamp": "2026-03-20T12:19:24.784Z",
+  "totalUpdated": 4
 }
