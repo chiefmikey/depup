@@ -1,0 +1,59 @@
+{
+  "name": "@depup/docker-modem",
+  "description": "Docker remote API network layer module. (with updated dependencies)",
+  "version": "5.0.7-depup.0",
+  "author": "Pedro Dias <petermdias@gmail.com>",
+  "maintainers": [
+    "apocas <petermdias@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/apocas/docker-modem.git"
+  },
+  "keywords": [
+    "docker-modem",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "containers",
+    "api",
+    "docker"
+  ],
+  "dependencies": {
+    "debug": "^4.4.3",
+    "readable-stream": "^4.7.0",
+    "split-ca": "^1.0.1",
+    "ssh2": "^1.17.0"
+  },
+  "main": "./lib/modem",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">= 8.0"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.1.1",
+        "to": "^4.4.3"
+      },
+      "readable-stream": {
+        "from": "^3.5.0",
+        "to": "^4.7.0"
+      },
+      "ssh2": {
+        "from": "^1.15.0",
+        "to": "^1.17.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "docker-modem",
+    "originalVersion": "5.0.7",
+    "processedAt": "2026-03-20T20:12:25.870Z",
+    "smokeTest": "passed"
+  }
+}

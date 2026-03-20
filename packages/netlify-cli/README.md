@@ -12,27 +12,19 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 24.3.0 | **DepUp version**: 24.3.0-depup.1 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 24.4.0 | **DepUp version**: 24.4.0-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @netlify/blobs | `10.7.0` | `^10.7.4` |
-| @netlify/build | `35.8.9` | `^35.10.0` |
-| @netlify/dev | `4.16.2` | `^4.16.4` |
-| @netlify/dev-utils | `4.4.1` | `^4.4.3` |
-| @netlify/edge-bundler | `14.9.15` | `^14.9.17` |
-| @netlify/edge-functions | `3.0.4` | `^3.0.6` |
 | @netlify/edge-functions-bootstrap | `2.17.1` | `^3.1.0` |
-| @netlify/images | `1.3.5` | `^1.3.7` |
 | @octokit/rest | `22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `1.8.0` | `^1.9.0` |
 | chokidar | `4.0.3` | `^5.0.0` |
 | commander | `12.1.0` | `^14.0.3` |
-| cookie | `1.0.2` | `^1.1.1` |
 | cron-parser | `4.9.0` | `^5.5.0` |
-| envinfo | `7.15.0` | `^7.21.0` |
 | execa | `5.1.1` | `^9.6.1` |
 | get-port | `5.1.1` | `^7.1.0` |
 | https-proxy-agent | `7.0.6` | `^8.0.0` |
