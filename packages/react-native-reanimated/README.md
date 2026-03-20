@@ -12,14 +12,14 @@ npm install @depup/react-native-reanimated
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.2 | **DepUp version**: 4.2.2-depup.0 | **Updated**: 3/18/2026 | **Import test**: unknown
+**Original version**: 4.2.3 | **DepUp version**: 4.2.3-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| react-native-is-edge-to-edge | `1.2.1` | `^1.3.1` |
-| semver | `7.7.3` | `^7.7.4` |
+| react-native-is-edge-to-edge | `^1.2.1` | `^1.3.1` |
+| semver | `^7.7.3` | `^7.7.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native-reanimated&labels=bug).
