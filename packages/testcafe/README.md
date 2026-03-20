@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.4 | **DepUp version**: 3.7.4-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.7.4 | **DepUp version**: 3.7.4-depup.1 | **Updated**: 3/20/2026 | **Import test**: passed
 
 ## What changed
 
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dedent | `^0.4.0` | `^1.7.2` |
 | del | `^3.0.0` | `^8.0.1` |
 | device-specs | `^1.0.0` | `^1.0.1` |
-| devtools-protocol | `0.0.1109433` | `^0.0.1596832` |
+| devtools-protocol | `0.0.1109433` | `^0.0.1602427` |
 | elegant-spinner | `^1.0.1` | `^3.0.0` |
 | emittery | `^0.4.1` | `^2.0.0` |
 | execa | `^4.0.3` | `^9.6.1` |
@@ -80,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | resolve-from | `^4.0.0` | `^5.0.0` |
 | sanitize-filename | `^1.6.0` | `^1.6.3` |
 | semver | `^7.5.3` | `^7.7.4` |
-| set-cookie-parser | `^2.5.1` | `^3.0.1` |
+| set-cookie-parser | `^2.5.1` | `^3.1.0` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
 | testcafe-legacy-api | `5.1.8` | `^5.1.9` |

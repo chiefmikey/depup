@@ -14,35 +14,51 @@
     },
     "@mux/mux-player-react": {
       "from": "^3.10.2",
-      "to": "^3.11.5"
+      "to": "^3.11.6"
     },
     "@portabletext/editor": {
       "from": "^6.4.0",
-      "to": "^6.5.1"
+      "to": "^6.5.2"
+    },
+    "@portabletext/html": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
     },
     "@portabletext/plugin-markdown-shortcuts": {
       "from": "^7.0.19",
-      "to": "^7.0.21"
+      "to": "^7.0.22"
     },
     "@portabletext/plugin-one-line": {
       "from": "^6.0.19",
-      "to": "^6.0.21"
+      "to": "^6.0.22"
     },
     "@portabletext/plugin-paste-link": {
       "from": "^3.0.19",
-      "to": "^3.0.21"
+      "to": "^3.0.22"
     },
     "@portabletext/plugin-typography": {
       "from": "^7.0.19",
-      "to": "^7.0.21"
+      "to": "^7.0.22"
     },
     "@sanity/cli": {
       "from": "^6.1.5",
-      "to": "^6.1.8"
+      "to": "^6.2.0"
+    },
+    "@sanity/client": {
+      "from": "^7.17.0",
+      "to": "^7.20.0"
     },
     "@sanity/diff-patch": {
       "from": "^5.0.0",
       "to": "^6.0.0"
+    },
+    "@sanity/migrate": {
+      "from": "^6.0.0",
+      "to": "^6.1.0"
+    },
+    "@sanity/preview-url-secret": {
+      "from": "^4.0.3",
+      "to": "^4.0.4"
     },
     "@sanity/sdk": {
       "from": "2.1.2",
@@ -54,7 +70,7 @@
     },
     "@sentry/react": {
       "from": "^8.55.0",
-      "to": "^10.44.0"
+      "to": "^10.45.0"
     },
     "@tanstack/react-virtual": {
       "from": "^3.13.18",
@@ -70,7 +86,7 @@
     },
     "i18next": {
       "from": "^25.8.17",
-      "to": "^25.8.19"
+      "to": "^25.8.20"
     },
     "isomorphic-dompurify": {
       "from": "2.26.0",
@@ -113,6 +129,6 @@
       "to": "^5.28.0"
     }
   },
-  "timestamp": "2026-03-19T12:24:04.963Z",
-  "totalUpdated": 28
+  "timestamp": "2026-03-20T20:14:42.018Z",
+  "totalUpdated": 32
 }

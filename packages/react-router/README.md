@@ -12,11 +12,15 @@ npm install @depup/react-router
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.13.1 | **DepUp version**: 7.13.1-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 7.13.1 | **DepUp version**: 7.13.1-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| cookie | `^1.0.1` | `^1.1.1` |
+| set-cookie-parser | `^2.6.0` | `^3.1.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-router&labels=bug).
 
