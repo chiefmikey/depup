@@ -422,6 +422,151 @@
       "status": "published",
       "timestamp": "2026-03-20T00:39:29.341Z",
       "version": "2.0.30-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@aws-sdk/client-cloudwatch-logs": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-ec2": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-ecs": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-iam": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-lambda": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-s3": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-sqs": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-ssm": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/client-sts": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@aws-sdk/credential-providers": {
+          "from": "^3.972.0",
+          "to": "^3.1014.0"
+        },
+        "@azure/identity": {
+          "from": "^4.13.0",
+          "to": "^4.13.1"
+        },
+        "@azure/storage-blob": {
+          "from": "^12.30.0",
+          "to": "^12.31.0"
+        },
+        "@oclif/core": {
+          "from": "^4.8.0",
+          "to": "^4.10.1"
+        },
+        "@oclif/plugin-help": {
+          "from": "^6.2.36",
+          "to": "^6.2.38"
+        },
+        "@oclif/plugin-not-found": {
+          "from": "^3.2.73",
+          "to": "^3.2.75"
+        },
+        "@upstash/redis": {
+          "from": "^1.36.1",
+          "to": "^1.37.0"
+        },
+        "async": {
+          "from": "^2.6.4",
+          "to": "^3.2.6"
+        },
+        "chalk": {
+          "from": "^2.4.2",
+          "to": "^5.6.2"
+        },
+        "chokidar": {
+          "from": "^3.6.0",
+          "to": "^5.0.0"
+        },
+        "ci-info": {
+          "from": "^4.3.1",
+          "to": "^4.4.0"
+        },
+        "csv-parse": {
+          "from": "^4.16.3",
+          "to": "^6.2.1"
+        },
+        "dependency-tree": {
+          "from": "^11.2.0",
+          "to": "^11.4.0"
+        },
+        "dotenv": {
+          "from": "^16.6.1",
+          "to": "^17.3.1"
+        },
+        "esbuild-wasm": {
+          "from": "^0.19.12",
+          "to": "^0.27.4"
+        },
+        "fs-extra": {
+          "from": "^11.3.3",
+          "to": "^11.3.4"
+        },
+        "got": {
+          "from": "^11.8.5",
+          "to": "^14.6.6"
+        },
+        "joi": {
+          "from": "^17.13.3",
+          "to": "^18.0.2"
+        },
+        "js-yaml": {
+          "from": "^3.14.1",
+          "to": "^4.1.1"
+        },
+        "lodash": {
+          "from": "^4.17.21",
+          "to": "^4.17.23"
+        },
+        "nanoid": {
+          "from": "^3.3.4",
+          "to": "^5.1.7"
+        },
+        "ora": {
+          "from": "^4.0.4",
+          "to": "^9.3.0"
+        },
+        "sqs-consumer": {
+          "from": "6.0.2",
+          "to": "^14.2.5"
+        },
+        "tempy": {
+          "from": "3.1.0",
+          "to": "^3.2.0"
+        },
+        "walk-sync": {
+          "from": "^0.2.3",
+          "to": "^4.0.1"
+        }
+      },
+      "depsUpdated": 34,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-20T20:15:02.903Z",
+      "version": "2.0.30-depup.3"
     }
   }
 }
