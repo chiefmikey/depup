@@ -5,5 +5,20 @@
       "timestamp": "2026-03-09T08:18:51.899Z",
       "version": "1.9.1-depup.0"
     }
+  },
+  "1.9.3": {
+    "0": {
+      "changes": {
+        "mongoose-lean-virtuals": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-20T08:19:14.126Z",
+      "version": "1.9.3-depup.0"
+    }
   }
 }
