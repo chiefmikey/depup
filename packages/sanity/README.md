@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.17.1 | **DepUp version**: 5.17.1-depup.3 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 5.17.1 | **DepUp version**: 5.17.1-depup.4 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,14 +21,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
-| @mux/mux-player-react | `^3.10.2` | `^3.11.5` |
+| @mux/mux-player-react | `^3.10.2` | `^3.11.6` |
 | @portabletext/editor | `^6.4.0` | `^6.5.2` |
 | @portabletext/html | `^1.0.0` | `^1.0.1` |
 | @portabletext/plugin-markdown-shortcuts | `^7.0.19` | `^7.0.22` |
 | @portabletext/plugin-one-line | `^6.0.19` | `^6.0.22` |
 | @portabletext/plugin-paste-link | `^3.0.19` | `^3.0.22` |
 | @portabletext/plugin-typography | `^7.0.19` | `^7.0.22` |
-| @sanity/cli | `^6.1.5` | `^6.1.8` |
+| @sanity/cli | `^6.1.5` | `^6.2.0` |
 | @sanity/client | `^7.17.0` | `^7.18.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/migrate | `^6.0.0` | `^6.1.0` |

@@ -1,0 +1,210 @@
+{
+  "name": "@depup/uploadthing",
+  "version": "7.7.4-depup.1",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:pingdotgg/uploadthing",
+    "directory": "packages/uploadthing"
+  },
+  "license": "MIT",
+  "exports": {
+    "./package.json": "./package.json",
+    "./client": {
+      "import": {
+        "types": "./client/index.d.ts",
+        "default": "./client/index.js"
+      },
+      "require": {
+        "types": "./client/index.d.cts",
+        "default": "./client/index.cjs"
+      }
+    },
+    "./client-future": {
+      "import": {
+        "types": "./client-future/index.d.ts",
+        "default": "./client-future/index.js"
+      },
+      "require": {
+        "types": "./client-future/index.d.cts",
+        "default": "./client-future/index.cjs"
+      }
+    },
+    "./server": {
+      "import": {
+        "types": "./server/index.d.ts",
+        "default": "./server/index.js"
+      },
+      "require": {
+        "types": "./server/index.d.cts",
+        "default": "./server/index.cjs"
+      }
+    },
+    "./next": {
+      "import": {
+        "types": "./next/index.d.ts",
+        "default": "./next/index.js"
+      },
+      "require": {
+        "types": "./next/index.d.cts",
+        "default": "./next/index.cjs"
+      }
+    },
+    "./next-legacy": {
+      "import": {
+        "types": "./next-legacy/index.d.ts",
+        "default": "./next-legacy/index.js"
+      },
+      "require": {
+        "types": "./next-legacy/index.d.cts",
+        "default": "./next-legacy/index.cjs"
+      }
+    },
+    "./effect-platform": {
+      "import": {
+        "types": "./effect-platform/index.d.ts",
+        "default": "./effect-platform/index.js"
+      },
+      "require": {
+        "types": "./effect-platform/index.d.cts",
+        "default": "./effect-platform/index.cjs"
+      }
+    },
+    "./tw": {
+      "browser": "./tw/index.browser.js",
+      "import": {
+        "types": "./tw/index.d.ts",
+        "default": "./tw/index.js"
+      },
+      "require": {
+        "types": "./tw/index.d.cts",
+        "default": "./tw/index.cjs"
+      }
+    },
+    "./tw/v4": "./tw/v4.css",
+    "./fastify": {
+      "import": {
+        "types": "./fastify/index.d.ts",
+        "default": "./fastify/index.js"
+      },
+      "require": {
+        "types": "./fastify/index.d.cts",
+        "default": "./fastify/index.cjs"
+      }
+    },
+    "./express": {
+      "import": {
+        "types": "./express/index.d.ts",
+        "default": "./express/index.js"
+      },
+      "require": {
+        "types": "./express/index.d.cts",
+        "default": "./express/index.cjs"
+      }
+    },
+    "./h3": {
+      "import": {
+        "types": "./h3/index.d.ts",
+        "default": "./h3/index.js"
+      },
+      "require": {
+        "types": "./h3/index.d.cts",
+        "default": "./h3/index.cjs"
+      }
+    },
+    "./remix": {
+      "import": {
+        "types": "./remix/index.d.ts",
+        "default": "./remix/index.js"
+      },
+      "require": {
+        "types": "./remix/index.d.cts",
+        "default": "./remix/index.cjs"
+      }
+    },
+    "./types": {
+      "types": "./types/index.d.ts",
+      "default": "./types/index.js"
+    }
+  },
+  "files": [
+    "client",
+    "client-future",
+    "dist",
+    "effect-platform",
+    "express",
+    "fastify",
+    "h3",
+    "next",
+    "next-legacy",
+    "remix",
+    "server",
+    "types",
+    "tw",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@effect/platform": "^0.96.0",
+    "@standard-schema/spec": "^1.1.0",
+    "@uploadthing/mime-types": "0.3.6",
+    "@uploadthing/shared": "7.1.10",
+    "effect": "^3.21.0"
+  },
+  "peerDependencies": {
+    "express": "*",
+    "h3": "*",
+    "tailwindcss": "^3.0.0 || ^4.0.0-beta.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    },
+    "express": {
+      "optional": true
+    },
+    "fastify": {
+      "optional": true
+    },
+    "h3": {
+      "optional": true
+    },
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "description": "uploadthing with all dependencies updated to latest",
+  "keywords": [
+    "uploadthing",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@effect/platform": {
+        "from": "0.90.3",
+        "to": "^0.96.0"
+      },
+      "@standard-schema/spec": {
+        "from": "1.0.0-beta.4",
+        "to": "^1.1.0"
+      },
+      "effect": {
+        "from": "3.17.7",
+        "to": "^3.21.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "uploadthing",
+    "originalVersion": "7.7.4",
+    "processedAt": "2026-03-20T00:38:49.874Z",
+    "smokeTest": "failed"
+  }
+}

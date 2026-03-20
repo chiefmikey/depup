@@ -12,15 +12,15 @@ npm install @depup/uploadthing
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.7.4 | **DepUp version**: 7.7.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 7.7.4 | **DepUp version**: 7.7.4-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @effect/platform | `0.90.3` | `^0.95.0` |
+| @effect/platform | `0.90.3` | `^0.96.0` |
 | @standard-schema/spec | `1.0.0-beta.4` | `^1.1.0` |
-| effect | `3.17.7` | `^3.20.0` |
+| effect | `3.17.7` | `^3.21.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/uploadthing&labels=bug).
