@@ -12,7 +12,7 @@ npm install @depup/apify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.0 | **DepUp version**: 3.7.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.7.0 | **DepUp version**: 3.7.0-depup.1 | **Updated**: 3/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -26,12 +26,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @crawlee/core | `^3.14.1` | `^3.16.0` |
 | @crawlee/types | `^3.14.1` | `^3.16.0` |
 | @crawlee/utils | `^3.14.1` | `^3.16.0` |
-| apify-client | `^2.17.0` | `^2.22.2` |
+| apify-client | `^2.17.0` | `^2.22.3` |
 | fs-extra | `^11.2.0` | `^11.3.4` |
 | ow | `^0.28.2` | `^3.1.1` |
 | semver | `^7.5.4` | `^7.7.4` |
 | tslib | `^2.6.2` | `^2.8.1` |
-| ws | `^8.18.0` | `^8.19.0` |
+| ws | `^8.18.0` | `^8.20.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/apify&labels=bug).

@@ -12,13 +12,13 @@ npm install @depup/webpack-dev-middleware
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.0 | **Updated**: 3/20/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.1 | **Updated**: 3/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| memfs | `^4.56.10` | `^4.56.11` |
+| memfs | `^4.56.10` | `^4.57.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-dev-middleware&labels=bug).
