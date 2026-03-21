@@ -12,7 +12,7 @@ npm install @depup/h3
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.1-rc.17 | **DepUp version**: 2.0.1-rc.17-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 2.0.1-rc.18 | **DepUp version**: 2.0.1-rc.18-depup.0 | **Updated**: 3/21/2026 | **Import test**: failed
 
 ## What changed
 
