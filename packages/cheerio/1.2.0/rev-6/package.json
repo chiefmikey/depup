@@ -1,12 +1,14 @@
 {
   "name": "@depup/cheerio",
-  "version": "1.2.0-depup.1",
-  "description": "[DepUp] The fast, flexible & elegant library for parsing and manipulating HTML and XML.",
+  "version": "1.2.0-depup.6",
+  "description": "The fast, flexible & elegant library for parsing and manipulating HTML and XML. (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "cheerio",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "htmlparser",
     "jquery",
     "selector",
@@ -85,7 +87,9 @@
     "src",
     "!**/*.spec.{t,j}s",
     "!**/__tests__/*",
-    "!**/__fixtures__/*"
+    "!**/__fixtures__/*",
+    "changes.json",
+    "README.md"
   ],
   "scripts": {
     "benchmark": "node --import=tsx benchmark/benchmark.ts",
@@ -98,8 +102,6 @@
     "lint:es": "eslint .",
     "lint:prettier": "npm run format:prettier:raw -- --check",
     "lint:ts": "tsc --noEmit",
-    "prepare": "husky",
-    "prepublishOnly": "npm run build",
     "test": "npm run lint && npm run test:vi",
     "test:vi": "vitest run",
     "update-sponsors": "tsx scripts/fetch-sponsors.mts"
@@ -124,15 +126,15 @@
   },
   "dependencies": {
     "cheerio-select": "^2.1.0",
-    "dom-serializer": "^2.0.0",
-    "domhandler": "^5.0.3",
-    "domutils": "^3.2.2",
-    "encoding-sniffer": "^0.2.1",
-    "htmlparser2": "^10.1.0",
+    "dom-serializer": "^3.0.0",
+    "domhandler": "^6.0.1",
+    "domutils": "^4.0.2",
+    "encoding-sniffer": "^1.0.2",
+    "htmlparser2": "^12.0.0",
     "parse5": "^8.0.0",
     "parse5-htmlparser2-tree-adapter": "^8.0.0",
     "parse5-parser-stream": "^8.0.0",
-    "undici": "^7.24.3",
+    "undici": "^7.24.5",
     "whatwg-mimetype": "^5.0.0"
   },
   "devDependencies": {
@@ -185,6 +187,26 @@
   },
   "depup": {
     "changes": {
+      "dom-serializer": {
+        "from": "^2.0.0",
+        "to": "^3.0.0"
+      },
+      "domhandler": {
+        "from": "^5.0.3",
+        "to": "^6.0.1"
+      },
+      "domutils": {
+        "from": "^3.2.2",
+        "to": "^4.0.2"
+      },
+      "encoding-sniffer": {
+        "from": "^0.2.1",
+        "to": "^1.0.2"
+      },
+      "htmlparser2": {
+        "from": "^10.1.0",
+        "to": "^12.0.0"
+      },
       "parse5": {
         "from": "^7.3.0",
         "to": "^8.0.0"
@@ -199,17 +221,17 @@
       },
       "undici": {
         "from": "^7.19.0",
-        "to": "^7.24.3"
+        "to": "^7.24.5"
       },
       "whatwg-mimetype": {
         "from": "^4.0.0",
         "to": "^5.0.0"
       }
     },
-    "depsUpdated": 5,
+    "depsUpdated": 10,
     "originalPackage": "cheerio",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-03-14T20:32:49.263Z",
+    "processedAt": "2026-03-21T00:36:24.960Z",
     "smokeTest": "passed"
   }
 }
