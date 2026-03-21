@@ -12,14 +12,11 @@ npm install @depup/react-i18next
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.5.8 | **DepUp version**: 16.5.8-depup.11 | **Updated**: 3/16/2026 | **Import test**: unknown
+**Original version**: 16.6.0 | **DepUp version**: 16.6.0-depup.0 | **Updated**: 3/21/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @babel/runtime | `^7.28.4` | `^7.29.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-i18next&labels=bug).
 
