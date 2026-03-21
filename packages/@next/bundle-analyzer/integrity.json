@@ -13,5 +13,20 @@
       "timestamp": "2026-03-19T00:36:38.672Z",
       "version": "16.2.0-depup.0"
     }
+  },
+  "16.2.1": {
+    "0": {
+      "changes": {
+        "webpack-bundle-analyzer": {
+          "from": "4.10.1",
+          "to": "^5.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-21T00:32:55.417Z",
+      "version": "16.2.1-depup.0"
+    }
   }
 }
