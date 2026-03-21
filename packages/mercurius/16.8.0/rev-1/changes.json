@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@fastify/error": {
+      "from": "^4.0.0",
+      "to": "^4.2.0"
+    },
+    "@fastify/websocket": {
+      "from": "^11.0.0",
+      "to": "^11.2.0"
+    },
+    "fastify-plugin": {
+      "from": "^5.0.0",
+      "to": "^5.1.0"
+    },
+    "mqemitter": {
+      "from": "^7.0.0",
+      "to": "^7.1.0"
+    },
+    "p-map": {
+      "from": "^4.0.0",
+      "to": "^7.0.4"
+    },
+    "quick-lru": {
+      "from": "^7.0.0",
+      "to": "^7.3.0"
+    },
+    "readable-stream": {
+      "from": "^4.0.0",
+      "to": "^4.7.0"
+    },
+    "safe-stable-stringify": {
+      "from": "^2.3.0",
+      "to": "^2.5.0"
+    },
+    "single-user-cache": {
+      "from": "^2.0.0",
+      "to": "^2.1.0"
+    },
+    "tiny-lru": {
+      "from": "^11.0.0",
+      "to": "^11.4.7"
+    },
+    "ws": {
+      "from": "^8.2.2",
+      "to": "^8.20.0"
+    }
+  },
+  "timestamp": "2026-03-21T20:10:17.365Z",
+  "totalUpdated": 11
+}

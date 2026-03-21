@@ -12,13 +12,13 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.1 | **Updated**: 3/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `^2.6.4` | `^9.4.1` |
+| @npmcli/arborist | `^2.6.4` | `^9.4.2` |
 | bufferutil | `^4.0.2` | `^4.1.0` |
 | cachedir | `^2.3.0` | `^2.4.0` |
 | cheerio | `1.0.0-rc.10` | `^1.2.0` |
@@ -53,13 +53,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | postcss-modules | `^4.0.0` | `^6.0.1` |
 | resolve | `^1.20.0` | `^1.22.11` |
 | rimraf | `^3.0.0` | `^6.1.3` |
-| rollup | `~2.37.1` | `^4.59.0` |
+| rollup | `~2.37.1` | `^4.59.1` |
 | signal-exit | `^3.0.3` | `^4.1.0` |
 | slash | `~3.0.0` | `^5.1.0` |
 | source-map | `^0.7.3` | `^0.7.6` |
 | strip-ansi | `^6.0.0` | `^7.2.0` |
 | utf-8-validate | `^5.0.3` | `^6.0.6` |
-| ws | `^7.3.0` | `^8.19.0` |
+| ws | `^7.3.0` | `^8.20.0` |
 | yargs-parser | `^20.0.0` | `^22.0.0` |
 
 

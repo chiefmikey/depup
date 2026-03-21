@@ -1,0 +1,141 @@
+{
+  "name": "@depup/mercurius",
+  "version": "16.8.0-depup.1",
+  "description": "Fastify GraphQL adapter with subscription support (with updated dependencies)",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "docs": "docsify serve",
+    "unit": "borp --no-typescript --timeout 300000 --reporter spec 'test/**/*.test.js'",
+    "cov": "borp --coverage --no-typescript --check-coverage --lines 100 --functions 100 --statements 100 --branches 100 --timeout 300000 --reporter spec 'test/**/*.test.js'",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typescript": "tsd",
+    "test": "npm run lint && npm run unit && npm run typescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mercurius-js/mercurius.git"
+  },
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mercurius-js/mercurius/issues"
+  },
+  "homepage": "https://mercurius.dev",
+  "peerDependencies": {
+    "graphql": "^16.0.0"
+  },
+  "devDependencies": {
+    "@graphql-tools/merge": "^9.0.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/utils": "^11.0.0",
+    "@matteo.collina/snap": "^0.3.0",
+    "@sinonjs/fake-timers": "^15.0.0",
+    "@types/isomorphic-form-data": "^2.0.0",
+    "@types/node": "^25.0.2",
+    "@types/ws": "^8.2.0",
+    "autocannon": "^8.0.0",
+    "borp": "^0.21.0",
+    "concurrently": "^9.0.0",
+    "docsify-cli": "^4.4.3",
+    "eslint": "^9.9.1",
+    "fastify": "^5.0.0",
+    "graphql": "^16.0.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^6.0.1",
+    "neostandard": "^0.12.0",
+    "pre-commit": "^1.2.2",
+    "proxyquire": "^2.1.3",
+    "semver": "^7.5.0",
+    "sinon": "^21.0.0",
+    "split2": "^4.0.0",
+    "tsd": "^0.32.0",
+    "typescript": "~5.9.2",
+    "undici": "^7.0.0",
+    "wait-on": "^9.0.1"
+  },
+  "dependencies": {
+    "@fastify/error": "^4.2.0",
+    "@fastify/static": "^9.0.0",
+    "@fastify/websocket": "^11.2.0",
+    "fastify-plugin": "^5.1.0",
+    "graphql-jit": "0.8.7",
+    "mqemitter": "^7.1.0",
+    "p-map": "^7.0.4",
+    "quick-lru": "^7.3.0",
+    "readable-stream": "^4.7.0",
+    "safe-stable-stringify": "^2.5.0",
+    "secure-json-parse": "^4.1.0",
+    "single-user-cache": "^2.1.0",
+    "tiny-lru": "^11.4.7",
+    "ws": "^8.20.0"
+  },
+  "tsd": {
+    "directory": "test/types"
+  },
+  "engines": {
+    "node": "^20.9.0 || >=22.0.0"
+  },
+  "keywords": [
+    "mercurius",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@fastify/error": {
+        "from": "^4.0.0",
+        "to": "^4.2.0"
+      },
+      "@fastify/websocket": {
+        "from": "^11.0.0",
+        "to": "^11.2.0"
+      },
+      "fastify-plugin": {
+        "from": "^5.0.0",
+        "to": "^5.1.0"
+      },
+      "mqemitter": {
+        "from": "^7.0.0",
+        "to": "^7.1.0"
+      },
+      "p-map": {
+        "from": "^4.0.0",
+        "to": "^7.0.4"
+      },
+      "quick-lru": {
+        "from": "^7.0.0",
+        "to": "^7.3.0"
+      },
+      "readable-stream": {
+        "from": "^4.0.0",
+        "to": "^4.7.0"
+      },
+      "safe-stable-stringify": {
+        "from": "^2.3.0",
+        "to": "^2.5.0"
+      },
+      "single-user-cache": {
+        "from": "^2.0.0",
+        "to": "^2.1.0"
+      },
+      "tiny-lru": {
+        "from": "^11.0.0",
+        "to": "^11.4.7"
+      },
+      "ws": {
+        "from": "^8.2.2",
+        "to": "^8.20.0"
+      }
+    },
+    "depsUpdated": 11,
+    "originalPackage": "mercurius",
+    "originalVersion": "16.8.0",
+    "processedAt": "2026-03-21T20:10:30.399Z",
+    "smokeTest": "passed"
+  }
+}
