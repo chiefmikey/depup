@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:37:54.012Z",
       "version": "7.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "shell-quote": {
+          "from": "^1.6.1",
+          "to": "^1.8.3"
+        },
+        "ws": {
+          "from": "^7",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-21T20:10:56.483Z",
+      "version": "7.0.1-depup.1"
     }
   }
 }

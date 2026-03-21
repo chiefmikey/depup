@@ -12,7 +12,7 @@ npm install @depup/react-native__dev-middleware
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.1 | **Updated**: 3/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.4.0` | `^4.4.3` |
 | open | `^7.0.3` | `^11.0.0` |
 | serve-static | `^1.16.2` | `^2.2.1` |
-| ws | `^7.5.10` | `^8.19.0` |
+| ws | `^7.5.10` | `^8.20.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native__dev-middleware&labels=bug).

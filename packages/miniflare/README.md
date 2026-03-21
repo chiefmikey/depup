@@ -12,14 +12,14 @@ npm install @depup/miniflare
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.20260317.1 | **DepUp version**: 4.20260317.1-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 4.20260317.1 | **DepUp version**: 4.20260317.1-depup.1 | **Updated**: 3/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | undici | `7.24.4` | `^7.24.5` |
-| ws | `8.18.0` | `^8.19.0` |
+| ws | `8.18.0` | `^8.20.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/miniflare&labels=bug).
