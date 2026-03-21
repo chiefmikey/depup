@@ -26,5 +26,20 @@
       "timestamp": "2026-03-18T17:26:44.349Z",
       "version": "16.2.0-depup.0"
     }
+  },
+  "16.2.1": {
+    "0": {
+      "changes": {
+        "fast-glob": {
+          "from": "3.3.1",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-21T00:33:01.843Z",
+      "version": "16.2.1-depup.0"
+    }
   }
 }

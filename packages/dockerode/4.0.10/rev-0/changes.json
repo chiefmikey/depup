@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@grpc/grpc-js": {
+      "from": "^1.11.1",
+      "to": "^1.14.3"
+    },
+    "@grpc/proto-loader": {
+      "from": "^0.7.13",
+      "to": "^0.8.0"
+    },
+    "protobufjs": {
+      "from": "^7.3.2",
+      "to": "^8.0.0"
+    },
+    "tar-fs": {
+      "from": "^2.1.4",
+      "to": "^3.1.2"
+    },
+    "uuid": {
+      "from": "^10.0.0",
+      "to": "^13.0.0"
+    }
+  },
+  "timestamp": "2026-03-21T00:33:54.239Z",
+  "totalUpdated": 5
+}
