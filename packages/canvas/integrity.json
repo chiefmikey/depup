@@ -5,5 +5,20 @@
       "timestamp": "2026-03-09T08:18:51.857Z",
       "version": "3.2.1-depup.0"
     }
+  },
+  "3.2.2": {
+    "0": {
+      "changes": {
+        "node-addon-api": {
+          "from": "^7.0.0",
+          "to": "^8.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:42:47.916Z",
+      "version": "3.2.2-depup.0"
+    }
   }
 }
