@@ -12,14 +12,14 @@ npm install @depup/devcert
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.1 | **Updated**: 3/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @types/configstore | `^2.1.1` | `^6.0.2` |
-| @types/debug | `^0.0.30` | `^4.1.12` |
+| @types/debug | `^0.0.30` | `^4.1.13` |
 | @types/get-port | `^3.2.0` | `^4.2.0` |
 | @types/glob | `^5.0.34` | `^9.0.0` |
 | @types/lodash | `^4.14.92` | `^4.17.24` |
@@ -31,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | command-exists | `^1.2.4` | `^1.2.9` |
 | debug | `^3.1.0` | `^4.4.3` |
 | eol | `^0.9.1` | `^0.10.0` |
-| get-port | `^3.2.0` | `^7.1.0` |
+| get-port | `^3.2.0` | `^7.2.0` |
 | glob | `^7.1.2` | `^13.0.6` |
 | lodash | `^4.17.4` | `^4.17.23` |
 | mkdirp | `^0.5.1` | `^3.0.1` |

@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@rollup/plugin-commonjs": {
+      "from": "^29.0.0",
+      "to": "^29.0.2"
+    },
+    "esbuild": {
+      "from": "^0.26.0",
+      "to": "^0.27.4"
+    },
+    "rollup": {
+      "from": "^4.53.5",
+      "to": "^4.60.0"
+    },
+    "yaml": {
+      "from": "^2.8.2",
+      "to": "^2.8.3"
+    }
+  },
+  "timestamp": "2026-03-22T08:14:49.935Z",
+  "totalUpdated": 4
+}
