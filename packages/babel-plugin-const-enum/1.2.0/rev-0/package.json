@@ -1,0 +1,75 @@
+{
+  "name": "@depup/babel-plugin-const-enum",
+  "version": "1.2.0-depup.0",
+  "description": "Transform TypeScript `const` enums (with updated dependencies)",
+  "repository": "https://github.com/dosentmatter/babel-plugin-const-enum",
+  "author": "Kevin Lau",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "babel-plugin-const-enum",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin",
+    "typescript",
+    "const",
+    "enum",
+    "terser",
+    "uglify",
+    "minify",
+    "compress"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "jest",
+    "lint-fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
+    "prettier-fix": "prettier --write 'src/**/*.js' '__tests__/**/*.js'"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.28.6",
+    "@babel/plugin-syntax-typescript": "^7.28.6",
+    "@babel/traverse": "^7.29.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-typescript": "^7.9.4",
+    "@babel/preset-env": "^7.5.0",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.7.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.0.4"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/helper-plugin-utils": {
+        "from": "^7.0.0",
+        "to": "^7.28.6"
+      },
+      "@babel/plugin-syntax-typescript": {
+        "from": "^7.3.3",
+        "to": "^7.28.6"
+      },
+      "@babel/traverse": {
+        "from": "^7.16.0",
+        "to": "^7.29.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "babel-plugin-const-enum",
+    "originalVersion": "1.2.0",
+    "processedAt": "2026-03-22T00:38:52.638Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@depup/rollup__rollup-openharmony-arm64",
+  "version": "4.59.1-depup.0",
+  "os": [
+    "openharmony"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "files": [
+    "rollup.openharmony-arm64.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Native bindings for Rollup (with updated dependencies)",
+  "author": "Lukas Taegert-Atkinson",
+  "homepage": "https://rollupjs.org/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollup/rollup.git"
+  },
+  "main": "./rollup.openharmony-arm64.node",
+  "keywords": [
+    "@rollup/rollup-openharmony-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rollup/rollup-openharmony-arm64",
+    "originalVersion": "4.59.1",
+    "processedAt": "2026-03-22T00:38:42.090Z",
+    "smokeTest": "failed"
+  }
+}

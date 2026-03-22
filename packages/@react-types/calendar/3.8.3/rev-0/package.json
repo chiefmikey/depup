@@ -1,0 +1,35 @@
+{
+  "name": "@depup/react-types__calendar",
+  "version": "3.8.3-depup.0",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.12.0",
+    "@react-types/shared": "^3.33.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "8df187370053aa35f553cb388ad670f65e1ab371",
+  "keywords": [
+    "@react-types/calendar",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-types/calendar",
+    "originalVersion": "3.8.3",
+    "processedAt": "2026-03-22T00:38:28.891Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "1.6.1": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "^3.2.7",
+          "to": "^4.4.3"
+        },
+        "eventsource": {
+          "from": "^2.0.2",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-03-22T00:40:07.978Z",
+      "version": "1.6.1-depup.0"
+    }
+  }
+}

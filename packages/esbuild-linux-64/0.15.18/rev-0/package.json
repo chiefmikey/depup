@@ -1,0 +1,33 @@
+{
+  "name": "@depup/esbuild-linux-64",
+  "version": "0.15.18-depup.0",
+  "description": "The Linux 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": "https://github.com/evanw/esbuild",
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "esbuild-linux-64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "esbuild-linux-64",
+    "originalVersion": "0.15.18",
+    "processedAt": "2026-03-22T00:38:58.946Z",
+    "smokeTest": "failed"
+  }
+}

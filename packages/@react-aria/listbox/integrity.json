@@ -1,0 +1,17 @@
+{
+  "3.15.3": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.19"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:38:26.368Z",
+      "version": "3.15.3-depup.0"
+    }
+  }
+}

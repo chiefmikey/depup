@@ -1,0 +1,55 @@
+{
+  "name": "@depup/pnp-webpack-plugin",
+  "version": "1.7.0-depup.0",
+  "description": "plug'n'play resolver for Webpack (with updated dependencies)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://github.com/arcanis/pnp-webpack-plugin",
+  "bugs": {
+    "url": "https://github.com/arcanis/pnp-webpack-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcanis/pnp-webpack-plugin.git"
+  },
+  "keywords": [
+    "pnp-webpack-plugin",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webpack",
+    "yarn",
+    "plugnplay",
+    "pnp"
+  ],
+  "dependencies": {
+    "ts-pnp": "^1.2.0"
+  },
+  "devDependencies": {
+    "enhanced-resolve": "^4.1.0",
+    "jest": "^23.6.0",
+    "jest-environment-node": "^23.4.0",
+    "jest-pnp-resolver": "^1.0.1",
+    "source-map": "^0.7.3"
+  },
+  "installConfig": {
+    "pnp": true
+  },
+  "depup": {
+    "changes": {
+      "ts-pnp": {
+        "from": "^1.1.6",
+        "to": "^1.2.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "pnp-webpack-plugin",
+    "originalVersion": "1.7.0",
+    "processedAt": "2026-03-22T00:39:29.172Z",
+    "smokeTest": "passed"
+  }
+}

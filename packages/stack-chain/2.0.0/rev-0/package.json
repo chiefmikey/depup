@@ -1,0 +1,40 @@
+{
+  "name": "@depup/stack-chain",
+  "description": "API for combining call site modifiers (with updated dependencies)",
+  "version": "2.0.0-depup.0",
+  "author": "Andreas Madsen <amwebdk@gmail.com>",
+  "scripts": {
+    "test": "tap ./test/simple/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AndreasMadsen/stack-chain.git"
+  },
+  "keywords": [
+    "stack-chain",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "stack",
+    "chain",
+    "trace",
+    "call site",
+    "concat",
+    "format"
+  ],
+  "devDependencies": {
+    "tap": "2.x.x",
+    "uglify-js": "2.5.x"
+  },
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "stack-chain",
+    "originalVersion": "2.0.0",
+    "processedAt": "2026-03-22T00:40:10.832Z",
+    "smokeTest": "passed"
+  }
+}
