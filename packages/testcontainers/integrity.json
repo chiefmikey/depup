@@ -10,6 +10,27 @@
       "status": "failed",
       "timestamp": "2026-03-17T16:39:00.341Z",
       "version": "11.13.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "dockerode": {
+          "from": "^4.0.9",
+          "to": "^4.0.10"
+        },
+        "get-port": {
+          "from": "^7.1.0",
+          "to": "^7.2.0"
+        },
+        "undici": {
+          "from": "^7.24.3",
+          "to": "^7.24.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T08:15:17.100Z",
+      "version": "11.13.0-depup.1"
     }
   }
 }
