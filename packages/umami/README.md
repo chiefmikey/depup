@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.2 | **Updated**: 3/21/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.3 | **Updated**: 3/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @prisma/client | `5.7.0` | `^7.5.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.0.3` |
-| @tanstack/react-query | `^5.12.2` | `^5.94.5` |
+| @tanstack/react-query | `^5.12.2` | `^5.95.0` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^5.6.2` |
