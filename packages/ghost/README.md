@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.2 | **Updated**: 3/21/2026 | **Import test**: failed
+**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.3 | **Updated**: 3/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -80,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dompurify | `3.3.0` | `^3.3.3` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
-| file-type | `16.5.4` | `^21.3.3` |
+| file-type | `16.5.4` | `^21.3.4` |
 | form-data | `4.0.4` | `^4.0.5` |
 | fs-extra | `11.3.0` | `^11.3.4` |
 | ghost-storage-base | `1.0.0` | `^1.1.2` |
@@ -94,7 +94,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
-| knex | `2.4.2` | `^3.1.0` |
+| knex | `2.4.2` | `^3.2.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | lodash | `4.17.21` | `^4.17.23` |
 | mailgun.js | `10.4.0` | `^12.7.1` |
