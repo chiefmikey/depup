@@ -1,0 +1,45 @@
+{
+  "name": "@depup/ts-pnp",
+  "version": "1.2.0-depup.0",
+  "description": "plug'n'play resolver for TypeScript (with updated dependencies)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://github.com/arcanis/ts-pnp",
+  "bugs": {
+    "url": "https://github.com/arcanis/ts-pnp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcanis/ts-pnp.git"
+  },
+  "keywords": [
+    "ts-pnp",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "typescript",
+    "yarn",
+    "plugnplay",
+    "pnp"
+  ],
+  "devDependencies": {
+    "typescript": "3.5.3"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "ts-pnp",
+    "originalVersion": "1.2.0",
+    "processedAt": "2026-03-22T00:41:13.999Z",
+    "smokeTest": "passed"
+  }
+}

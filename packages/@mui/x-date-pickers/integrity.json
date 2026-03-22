@@ -1,0 +1,21 @@
+{
+  "8.27.2": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.4",
+          "to": "^7.29.2"
+        },
+        "@mui/utils": {
+          "from": "^7.3.5",
+          "to": "^7.3.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:37:40.585Z",
+      "version": "8.27.2-depup.0"
+    }
+  }
+}

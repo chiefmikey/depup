@@ -1,0 +1,72 @@
+{
+  "name": "@depup/react-aria__menu",
+  "version": "3.21.0-depup.0",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "exports": {
+    "source": "./src/index.ts",
+    "types": [
+      "./dist/types.d.ts",
+      "./src/index.ts"
+    ],
+    "import": "./dist/import.mjs",
+    "require": "./dist/main.js"
+  },
+  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/focus": "^3.21.5",
+    "@react-aria/i18n": "^3.12.16",
+    "@react-aria/interactions": "^3.27.1",
+    "@react-aria/overlays": "^3.31.2",
+    "@react-aria/selection": "^3.27.2",
+    "@react-aria/utils": "^3.33.1",
+    "@react-stately/collections": "^3.12.10",
+    "@react-stately/menu": "^3.9.11",
+    "@react-stately/selection": "^3.20.9",
+    "@react-stately/tree": "^3.9.6",
+    "@react-types/button": "^3.15.1",
+    "@react-types/menu": "^3.10.7",
+    "@react-types/shared": "^3.33.1",
+    "@swc/helpers": "^0.5.19"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "8df187370053aa35f553cb388ad670f65e1ab371",
+  "keywords": [
+    "@react-aria/menu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@swc/helpers": {
+        "from": "^0.5.0",
+        "to": "^0.5.19"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@react-aria/menu",
+    "originalVersion": "3.21.0",
+    "processedAt": "2026-03-22T00:38:11.136Z",
+    "smokeTest": "passed"
+  }
+}

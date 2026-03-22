@@ -1,0 +1,17 @@
+{
+  "3.0.0": {
+    "0": {
+      "changes": {
+        "readable-stream": {
+          "from": "^4.0.0",
+          "to": "^4.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:39:29.766Z",
+      "version": "3.0.0-depup.0"
+    }
+  }
+}

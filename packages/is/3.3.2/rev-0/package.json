@@ -1,0 +1,79 @@
+{
+  "name": "@depup/is",
+  "version": "3.3.2-depup.0",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "npm run --silent tests-only",
+    "tests-only": "nyc tape 'test/**/*.js'",
+    "posttest": "aud --production",
+    "lint": "eslint ."
+  },
+  "author": {
+    "name": "Enrico Marino",
+    "url": "http://onirame.com"
+  },
+  "description": "the definitive JavaScript type testing library (with updated dependencies)",
+  "homepage": "https://github.com/enricomarino/is",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/enricomarino/is.git"
+  },
+  "keywords": [
+    "is",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "util",
+    "type",
+    "test"
+  ],
+  "contributors": [
+    {
+      "name": "Jordan Harband",
+      "url": "https://github.com/ljharb"
+    }
+  ],
+  "devDependencies": {
+    "@ljharb/eslint-config": "^21.1.1",
+    "aud": "^2.0.4",
+    "eslint": "=8.8.0",
+    "foreach": "^2.0.6",
+    "in-publish": "^2.0.1",
+    "make-generator-function": "^1.1.0",
+    "nyc": "^10.3.2",
+    "safe-publish-latest": "^2.0.0",
+    "tape": "^5.7.5"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "iexplore/6.0..latest",
+      "firefox/3.0",
+      "firefox/15.0..latest",
+      "firefox/nightly",
+      "chrome/4.0",
+      "chrome/22.0..latest",
+      "chrome/canary",
+      "opera/10.0..latest",
+      "opera/next",
+      "safari/5.0.5..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest"
+    ]
+  },
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "is",
+    "originalVersion": "3.3.2",
+    "processedAt": "2026-03-22T00:40:07.944Z",
+    "smokeTest": "passed"
+  }
+}
