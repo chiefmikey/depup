@@ -1,0 +1,31 @@
+{
+  "name": "@depup/crypto-randomuuid",
+  "version": "1.0.0-depup.0",
+  "description": "Polyfill crypto.randomUUID (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "crypto-randomuuid",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "crypto",
+    "random",
+    "uuid",
+    "polyfill"
+  ],
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "crypto-randomuuid",
+    "originalVersion": "1.0.0",
+    "processedAt": "2026-03-22T00:38:28.734Z",
+    "smokeTest": "passed"
+  }
+}

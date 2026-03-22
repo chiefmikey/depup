@@ -1,0 +1,100 @@
+{
+  "name": "@depup/mobx-react-lite",
+  "version": "4.1.1-depup.0",
+  "description": "Lightweight React bindings for MobX based on React 16.8+ and Hooks (with updated dependencies)",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/mobxreact.umd.production.min.js",
+  "unpkg": "dist/mobxreactlite.umd.production.min.js",
+  "jsdelivr": "dist/mobxreactlite.umd.production.min.js",
+  "jsnext:main": "dist/mobxreactlite.esm.production.min.js",
+  "module": "es/index.js",
+  "react-native": "es/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist/",
+    "lib/",
+    "es/",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "batching*",
+    "changes.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobxjs/mobx.git"
+  },
+  "author": "Daniel K.",
+  "license": "MIT",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/mobx"
+  },
+  "bugs": {
+    "url": "https://github.com/mobxjs/mobx/issues"
+  },
+  "homepage": "https://mobx.js.org",
+  "dependencies": {
+    "use-sync-external-store": "^1.6.0"
+  },
+  "peerDependencies": {
+    "mobx": "^6.9.0",
+    "react": "^16.8.0 || ^17 || ^18 || ^19"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "mobx": "^6.15.0",
+    "expose-gc": "^1.0.0"
+  },
+  "keywords": [
+    "mobx-react-lite",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "mobx",
+    "mobservable",
+    "react-component",
+    "react",
+    "reactjs",
+    "reactive",
+    "hooks",
+    "observer",
+    "useLocalObservable"
+  ],
+  "scripts": {
+    "lint": "eslint src/**/* --ext .js,.ts,.tsx",
+    "build": "node ../../scripts/build.js mobxReactLite",
+    "build:test": "yarn build --target test",
+    "build:cjs": "tsc --project tsconfig.build.cjs.json",
+    "build:es": "tsc --project tsconfig.build.es.json",
+    "test": "jest",
+    "test:size": "yarn import-size --report . observer useLocalObservable",
+    "test:types": "tsc --noEmit",
+    "test:check": "yarn test:types"
+  },
+  "depup": {
+    "changes": {
+      "use-sync-external-store": {
+        "from": "^1.4.0",
+        "to": "^1.6.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "mobx-react-lite",
+    "originalVersion": "4.1.1",
+    "processedAt": "2026-03-22T00:39:04.881Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,27 +1,27 @@
-# @depup/syncpack
+# @depup/crypto-randomuuid
 
-> [syncpack](https://www.npmjs.com/package/syncpack) with all dependencies updated to latest versions.
+> [crypto-randomuuid](https://www.npmjs.com/package/crypto-randomuuid) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/syncpack
+npm install @depup/crypto-randomuuid
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.2.1 | **DepUp version**: 14.2.1-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
 
 ## What changed
 
 No dependencies were updated (all already at latest).
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/syncpack&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/crypto-randomuuid&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [syncpack](https://www.npmjs.com/package/syncpack).
+This package inherits the license from [crypto-randomuuid](https://www.npmjs.com/package/crypto-randomuuid).

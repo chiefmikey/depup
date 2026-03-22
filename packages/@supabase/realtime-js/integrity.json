@@ -1,0 +1,21 @@
+{
+  "2.99.3": {
+    "0": {
+      "changes": {
+        "@types/phoenix": {
+          "from": "^1.6.6",
+          "to": "^1.6.7"
+        },
+        "ws": {
+          "from": "^8.18.2",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:38:09.824Z",
+      "version": "2.99.3-depup.0"
+    }
+  }
+}

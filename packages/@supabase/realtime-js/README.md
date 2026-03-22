@@ -1,0 +1,31 @@
+# @depup/supabase__realtime-js
+
+> [@supabase/realtime-js](https://www.npmjs.com/package/@supabase/realtime-js) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/supabase__realtime-js
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 2.99.3 | **DepUp version**: 2.99.3-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @types/phoenix | `^1.6.6` | `^1.6.7` |
+| ws | `^8.18.2` | `^8.20.0` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/supabase__realtime-js&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [@supabase/realtime-js](https://www.npmjs.com/package/@supabase/realtime-js).

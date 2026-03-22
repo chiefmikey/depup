@@ -1,0 +1,21 @@
+{
+  "3.2.0": {
+    "0": {
+      "changes": {
+        "escape-string-regexp": {
+          "from": "^1.0.5",
+          "to": "^5.0.0"
+        },
+        "ignore": {
+          "from": "^5.0.5",
+          "to": "^7.0.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:38:59.555Z",
+      "version": "3.2.0-depup.0"
+    }
+  }
+}
