@@ -485,5 +485,80 @@
       "timestamp": "2026-03-22T04:42:19.227Z",
       "version": "4.22.94-depup.0"
     }
+  },
+  "4.22.96": {
+    "0": {
+      "changes": {
+        "@aws-sdk/client-cloudfront": {
+          "from": "3.1009.0",
+          "to": "^3.1014.0"
+        },
+        "@inquirer/confirm": {
+          "from": "^3.1.22",
+          "to": "^6.0.10"
+        },
+        "@inquirer/input": {
+          "from": "^2.2.4",
+          "to": "^5.0.10"
+        },
+        "@inquirer/select": {
+          "from": "^2.5.0",
+          "to": "^5.1.2"
+        },
+        "@oclif/core": {
+          "from": "4.9.0",
+          "to": "^4.10.2"
+        },
+        "@oclif/plugin-help": {
+          "from": "^6.2.38",
+          "to": "^6.2.40"
+        },
+        "@oclif/plugin-not-found": {
+          "from": "^3.2.76",
+          "to": "^3.2.77"
+        },
+        "ansis": {
+          "from": "^3.16.0",
+          "to": "^4.2.0"
+        },
+        "change-case": {
+          "from": "^4",
+          "to": "^5.4.4"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "ejs": {
+          "from": "^3.1.10",
+          "to": "^5.0.1"
+        },
+        "fs-extra": {
+          "from": "^8.1",
+          "to": "^11.3.4"
+        },
+        "got": {
+          "from": "^13",
+          "to": "^14.6.6"
+        },
+        "normalize-package-data": {
+          "from": "^6",
+          "to": "^8.0.0"
+        },
+        "sort-package-json": {
+          "from": "^2.15.1",
+          "to": "^3.6.1"
+        },
+        "validate-npm-package-name": {
+          "from": "^5.0.1",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 16,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T12:14:05.716Z",
+      "version": "4.22.96-depup.0"
+    }
   }
 }
