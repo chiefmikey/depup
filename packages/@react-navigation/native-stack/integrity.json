@@ -1,0 +1,21 @@
+{
+  "7.14.6": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:38:31.130Z",
+      "version": "7.14.6-depup.0"
+    }
+  }
+}

@@ -1,27 +1,27 @@
-# @depup/prettier
+# @depup/mime-db
 
-> [prettier](https://www.npmjs.com/package/prettier) with all dependencies updated to latest versions.
+> [mime-db](https://www.npmjs.com/package/mime-db) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/prettier
+npm install @depup/mime-db
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.1 | **DepUp version**: 3.8.1-depup.1 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 1.54.0 | **DepUp version**: 1.54.0-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
 
 ## What changed
 
 No dependencies were updated (all already at latest).
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/prettier&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mime-db&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [prettier](https://www.npmjs.com/package/prettier).
+This package inherits the license from [mime-db](https://www.npmjs.com/package/mime-db).

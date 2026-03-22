@@ -1,0 +1,56 @@
+{
+  "name": "@depup/angular-eslint__eslint-plugin",
+  "version": "21.3.1-depup.0",
+  "description": "ESLint plugin for Angular applications, following https://angular.dev/style-guide (with updated dependencies)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-eslint/angular-eslint.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "dependencies": {
+    "ts-api-utils": "^2.5.0",
+    "@angular-eslint/bundled-angular-compiler": "21.3.1",
+    "@angular-eslint/utils": "21.3.1"
+  },
+  "devDependencies": {
+    "@angular-eslint/test-utils": "21.3.1"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/utils": "^7.11.0 || ^8.0.0",
+    "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "typescript": "*"
+  },
+  "gitHead": "e2006e5e9c99e5a943d1a999e0efa5247d29ec24",
+  "keywords": [
+    "@angular-eslint/eslint-plugin",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "ts-api-utils": {
+        "from": "^2.1.0",
+        "to": "^2.5.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@angular-eslint/eslint-plugin",
+    "originalVersion": "21.3.1",
+    "processedAt": "2026-03-22T00:36:59.588Z",
+    "smokeTest": "passed"
+  }
+}
