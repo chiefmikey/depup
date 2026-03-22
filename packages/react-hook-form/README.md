@@ -12,11 +12,11 @@ npm install @depup/react-hook-form
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.71.2 | **DepUp version**: 7.71.2-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 7.72.0 | **DepUp version**: 7.72.0-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
 
 ## What changed
 
-No dependency changes in the latest revision.
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-hook-form&labels=bug).
 
