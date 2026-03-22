@@ -1,0 +1,40 @@
+{
+  "name": "@depup/unrs__resolver-binding-linux-x64-musl",
+  "version": "1.11.1-depup.0",
+  "cpu": [
+    "x64"
+  ],
+  "main": "resolver.linux-x64-musl.node",
+  "files": [
+    "resolver.linux-x64-musl.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "UnRS Resolver Node API with PNP support (with updated dependencies)",
+  "author": "JounQin <admin@1stg.me> (https://www.1stG.me)",
+  "homepage": "https://github.com/unrs/unrs-resolver#readme",
+  "license": "MIT",
+  "repository": "git+https://github.com/unrs/unrs-resolver.git",
+  "os": [
+    "linux"
+  ],
+  "libc": [
+    "musl"
+  ],
+  "keywords": [
+    "@unrs/resolver-binding-linux-x64-musl",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@unrs/resolver-binding-linux-x64-musl",
+    "originalVersion": "1.11.1",
+    "processedAt": "2026-03-22T00:38:31.032Z",
+    "smokeTest": "failed"
+  }
+}

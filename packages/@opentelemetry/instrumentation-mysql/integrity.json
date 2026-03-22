@@ -1,0 +1,17 @@
+{
+  "0.59.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.33.0",
+          "to": "^1.40.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:37:49.798Z",
+      "version": "0.59.0-depup.0"
+    }
+  }
+}

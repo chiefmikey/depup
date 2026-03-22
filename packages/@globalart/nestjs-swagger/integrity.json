@@ -1,0 +1,25 @@
+{
+  "1.3.0": {
+    "0": {
+      "changes": {
+        "@nestjs/common": {
+          "from": "11.1.14",
+          "to": "^11.1.17"
+        },
+        "@nestjs/core": {
+          "from": "11.1.14",
+          "to": "^11.1.17"
+        },
+        "@nestjs/testing": {
+          "from": "11.1.14",
+          "to": "^11.1.17"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-22T00:37:25.585Z",
+      "version": "1.3.0-depup.0"
+    }
+  }
+}

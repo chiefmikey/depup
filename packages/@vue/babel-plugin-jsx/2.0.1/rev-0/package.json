@@ -1,0 +1,102 @@
+{
+  "name": "@depup/vue__babel-plugin-jsx",
+  "version": "2.0.1-depup.0",
+  "description": "Babel plugin for Vue 3 JSX (with updated dependencies)",
+  "author": "Amour1688 <lcz_1996@foxmail.com>",
+  "homepage": "https://github.com/vuejs/babel-plugin-jsx/tree/dev/packages/babel-plugin-jsx#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/babel-plugin-jsx.git",
+    "directory": "packages/babel-plugin-jsx"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/babel-plugin-jsx/issues"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/helper-module-imports": "^7.28.6",
+    "@babel/helper-plugin-utils": "^7.28.6",
+    "@babel/plugin-syntax-jsx": "^7.28.6",
+    "@babel/template": "^7.28.6",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
+    "@vue/shared": "^3.5.30",
+    "@vue/babel-helper-vue-transform-on": "2.0.1",
+    "@vue/babel-plugin-resolve-type": "2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@types/babel__template": "^7.4.4",
+    "@types/babel__traverse": "^7.28.0",
+    "@vue/test-utils": "^2.4.6",
+    "regenerator-runtime": "^0.14.1",
+    "vue": "^3.5.22"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "@vue/babel-plugin-jsx",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/helper-module-imports": {
+        "from": "^7.27.1",
+        "to": "^7.28.6"
+      },
+      "@babel/helper-plugin-utils": {
+        "from": "^7.27.1",
+        "to": "^7.28.6"
+      },
+      "@babel/plugin-syntax-jsx": {
+        "from": "^7.27.1",
+        "to": "^7.28.6"
+      },
+      "@babel/template": {
+        "from": "^7.27.2",
+        "to": "^7.28.6"
+      },
+      "@babel/traverse": {
+        "from": "^7.28.4",
+        "to": "^7.29.0"
+      },
+      "@babel/types": {
+        "from": "^7.28.4",
+        "to": "^7.29.0"
+      },
+      "@vue/shared": {
+        "from": "^3.5.22",
+        "to": "^3.5.30"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "@vue/babel-plugin-jsx",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-22T00:38:39.429Z",
+    "smokeTest": "passed"
+  }
+}

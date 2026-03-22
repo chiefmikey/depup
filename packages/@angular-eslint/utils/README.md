@@ -1,27 +1,27 @@
-# @depup/markdown-to-jsx
+# @depup/angular-eslint__utils
 
-> [markdown-to-jsx](https://www.npmjs.com/package/markdown-to-jsx) with all dependencies updated to latest versions.
+> [@angular-eslint/utils](https://www.npmjs.com/package/@angular-eslint/utils) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/markdown-to-jsx
+npm install @depup/angular-eslint__utils
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.7.13 | **DepUp version**: 9.7.13-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 21.3.1 | **DepUp version**: 21.3.1-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
 
 ## What changed
 
 No dependencies were updated (all already at latest).
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/markdown-to-jsx&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular-eslint__utils&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [markdown-to-jsx](https://www.npmjs.com/package/markdown-to-jsx).
+This package inherits the license from [@angular-eslint/utils](https://www.npmjs.com/package/@angular-eslint/utils).
