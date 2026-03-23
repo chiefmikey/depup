@@ -11,5 +11,20 @@
       "timestamp": "2026-03-17T16:34:51.472Z",
       "version": "8.57.1-depup.0"
     }
+  },
+  "8.57.2": {
+    "0": {
+      "changes": {
+        "eslint-visitor-keys": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-23T20:17:29.384Z",
+      "version": "8.57.2-depup.0"
+    }
   }
 }
