@@ -12,13 +12,13 @@ npm install @depup/acme-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.1 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @peculiar/x509 | `^1.11.0` | `^1.14.3` |
+| @peculiar/x509 | `^1.11.0` | `^2.0.0` |
 | asn1js | `^3.0.5` | `^3.0.7` |
 | axios | `^1.7.2` | `^1.13.6` |
 | debug | `^4.3.5` | `^4.4.3` |
