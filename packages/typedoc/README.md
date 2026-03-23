@@ -12,16 +12,13 @@ npm install @depup/typedoc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.28.17 | **DepUp version**: 0.28.17-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.28.18 | **DepUp version**: 0.28.18-depup.0 | **Updated**: 3/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @gerrit0/mini-shiki | `^3.17.0` | `^3.23.0` |
-| markdown-it | `^14.1.0` | `^14.1.1` |
-| minimatch | `^9.0.5` | `^10.2.4` |
-| yaml | `^2.8.1` | `^2.8.2` |
+| yaml | `^2.8.2` | `^2.8.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/typedoc&labels=bug).
