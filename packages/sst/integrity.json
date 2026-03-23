@@ -88,5 +88,28 @@
       "timestamp": "2026-03-19T20:16:46.028Z",
       "version": "4.5.1-depup.0"
     }
+  },
+  "4.5.2": {
+    "0": {
+      "changes": {
+        "aws4fetch": {
+          "from": "1.0.18",
+          "to": "^1.0.20"
+        },
+        "jose": {
+          "from": "5.2.3",
+          "to": "^6.2.2"
+        },
+        "openid-client": {
+          "from": "5.6.4",
+          "to": "^6.8.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-23T20:18:21.270Z",
+      "version": "4.5.2-depup.0"
+    }
   }
 }
