@@ -12,7 +12,7 @@ npm install @depup/typescript__native-preview
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.0-dev.20260322.1 | **DepUp version**: 7.0.0-dev.20260322.1-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 7.0.0-dev.20260323.1 | **DepUp version**: 7.0.0-dev.20260323.1-depup.0 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
