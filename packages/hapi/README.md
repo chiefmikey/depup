@@ -12,7 +12,7 @@ npm install @depup/hapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 18.1.0 | **DepUp version**: 18.1.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 18.1.0 | **DepUp version**: 18.1.0-depup.1 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | catbox-memory | `4.x.x` | `^4.0.1` |
 | heavy | `6.x.x` | `^6.1.2` |
 | hoek | `6.x.x` | `^6.1.3` |
-| joi | `14.x.x` | `^18.0.2` |
+| joi | `14.x.x` | `^18.1.1` |
 | mimos | `4.x.x` | `^4.0.2` |
 | podium | `3.x.x` | `^3.2.0` |
 | shot | `4.x.x` | `^4.0.7` |
