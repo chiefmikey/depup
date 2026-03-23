@@ -28,5 +28,24 @@
       "timestamp": "2026-03-21T20:09:39.214Z",
       "version": "4.1.0-depup.1"
     }
+  },
+  "4.1.1": {
+    "0": {
+      "changes": {
+        "tinyrainbow": {
+          "from": "^3.0.3",
+          "to": "^3.1.0"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-23T16:25:24.329Z",
+      "version": "4.1.1-depup.0"
+    }
   }
 }
