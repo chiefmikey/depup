@@ -12,14 +12,11 @@ npm install @depup/command-line-args
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.0 | **Updated**: 3/23/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| typical | `^7.2.0` | `^7.3.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/command-line-args&labels=bug).
 

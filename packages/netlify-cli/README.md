@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 24.4.0 | **DepUp version**: 24.4.0-depup.2 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 24.4.1 | **DepUp version**: 24.4.1-depup.0 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -26,12 +26,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | commander | `12.1.0` | `^14.0.3` |
 | cron-parser | `4.9.0` | `^5.5.0` |
 | execa | `5.1.1` | `^9.6.1` |
+| fastify | `5.8.2` | `^5.8.4` |
 | get-port | `5.1.1` | `^7.2.0` |
-| https-proxy-agent | `7.0.6` | `^8.0.0` |
 | inquirer | `8.2.7` | `^13.3.2` |
 | inquirer-autocomplete-prompt | `1.4.0` | `^3.0.1` |
 | is-wsl | `3.1.0` | `^3.1.1` |
-| modern-tar | `^0.7.5` | `^0.7.6` |
+| modern-tar | `0.7.5` | `^0.7.6` |
 | normalize-package-data | `7.0.1` | `^8.0.0` |
 | p-map | `7.0.3` | `^7.0.4` |
 | raw-body | `3.0.1` | `^3.0.2` |
