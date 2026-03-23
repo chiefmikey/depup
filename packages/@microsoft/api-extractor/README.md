@@ -12,18 +12,18 @@ npm install @depup/microsoft__api-extractor
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.57.7 | **DepUp version**: 7.57.7-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 7.57.7 | **DepUp version**: 7.57.7-depup.1 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| diff | `~8.0.2` | `^8.0.3` |
+| diff | `~8.0.2` | `^8.0.4` |
 | minimatch | `10.2.3` | `^10.2.4` |
 | resolve | `~1.22.1` | `^1.22.11` |
 | semver | `~7.5.4` | `^7.7.4` |
 | source-map | `~0.6.1` | `^0.7.6` |
-| typescript | `5.8.2` | `^5.9.3` |
+| typescript | `5.8.2` | `^6.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/microsoft__api-extractor&labels=bug).
