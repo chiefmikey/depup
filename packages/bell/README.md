@@ -12,7 +12,7 @@ npm install @depup/bell
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.1 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | bounce | `1.x.x` | `^1.2.3` |
 | cryptiles | `4.x.x` | `^4.1.3` |
 | hoek | `6.x.x` | `^6.1.3` |
-| joi | `14.x.x` | `^18.0.2` |
+| joi | `14.x.x` | `^18.1.1` |
 | wreck | `14.x.x` | `^14.2.0` |
 
 

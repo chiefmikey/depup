@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.3 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.4 | **Updated**: 3/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1014.0` |
+| @aws-sdk/client-s3 | `3.864.0` | `^3.1015.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.3.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -40,14 +40,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/http-cache-utils | `0.1.20` | `^2.0.3` |
 | @tryghost/job-manager | `1.0.3` | `^3.0.3` |
 | @tryghost/kg-card-factory | `5.1.12` | `^5.1.13` |
-| @tryghost/kg-clean-basic-html | `4.2.20` | `^4.2.21` |
+| @tryghost/kg-clean-basic-html | `4.2.20` | `^4.2.22` |
 | @tryghost/kg-converters | `1.1.19` | `^1.1.20` |
 | @tryghost/kg-default-atoms | `5.1.7` | `^5.1.8` |
 | @tryghost/kg-default-cards | `10.2.10` | `^10.2.11` |
-| @tryghost/kg-default-nodes | `2.0.15` | `^2.0.16` |
-| @tryghost/kg-default-transforms | `1.2.38` | `^1.2.39` |
-| @tryghost/kg-html-to-lexical | `1.2.38` | `^1.2.39` |
-| @tryghost/kg-lexical-html-renderer | `1.3.38` | `^1.3.39` |
+| @tryghost/kg-default-nodes | `2.0.15` | `^2.0.18` |
+| @tryghost/kg-default-transforms | `1.2.38` | `^1.2.41` |
+| @tryghost/kg-html-to-lexical | `1.2.38` | `^1.2.42` |
+| @tryghost/kg-lexical-html-renderer | `1.3.38` | `^1.3.41` |
 | @tryghost/kg-markdown-html-renderer | `7.1.15` | `^7.1.16` |
 | @tryghost/kg-mobiledoc-html-renderer | `7.1.15` | `^7.1.16` |
 | @tryghost/limit-service | `1.4.1` | `^1.5.2` |
@@ -94,7 +94,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
-| knex | `2.4.2` | `^3.2.0` |
+| knex | `2.4.2` | `^3.2.4` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | lodash | `4.17.21` | `^4.17.23` |
 | mailgun.js | `10.4.0` | `^12.7.1` |
