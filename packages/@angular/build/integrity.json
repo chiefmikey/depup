@@ -89,6 +89,55 @@
       "status": "published",
       "timestamp": "2026-03-18T20:15:42.389Z",
       "version": "21.2.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@inquirer/confirm": {
+          "from": "5.1.21",
+          "to": "^6.0.10"
+        },
+        "@vitejs/plugin-basic-ssl": {
+          "from": "2.1.4",
+          "to": "^2.3.0"
+        },
+        "browserslist": {
+          "from": "^4.26.0",
+          "to": "^4.28.1"
+        },
+        "esbuild": {
+          "from": "0.27.3",
+          "to": "^0.27.4"
+        },
+        "https-proxy-agent": {
+          "from": "7.0.6",
+          "to": "^8.0.0"
+        },
+        "listr2": {
+          "from": "9.0.5",
+          "to": "^10.2.1"
+        },
+        "picomatch": {
+          "from": "4.0.3",
+          "to": "^4.0.4"
+        },
+        "sass": {
+          "from": "1.97.3",
+          "to": "^1.98.0"
+        },
+        "undici": {
+          "from": "7.22.0",
+          "to": "^7.24.5"
+        },
+        "vite": {
+          "from": "7.3.1",
+          "to": "^8.0.2"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-24T16:30:39.609Z",
+      "version": "21.2.3-depup.1"
     }
   }
 }
