@@ -21,5 +21,24 @@
       "timestamp": "2026-03-18T22:41:33.779Z",
       "version": "2.2.2-depup.0"
     }
+  },
+  "2.2.3": {
+    "0": {
+      "changes": {
+        "fast-equals": {
+          "from": "^4.0.3",
+          "to": "^6.0.0"
+        },
+        "react-draggable": {
+          "from": "^4.4.6",
+          "to": "^4.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-24T16:29:13.102Z",
+      "version": "2.2.3-depup.0"
+    }
   }
 }
