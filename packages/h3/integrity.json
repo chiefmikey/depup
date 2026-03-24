@@ -35,5 +35,20 @@
       "timestamp": "2026-03-21T00:33:45.027Z",
       "version": "2.0.1-rc.18-depup.0"
     }
+  },
+  "2.0.1-rc.19": {
+    "0": {
+      "changes": {
+        "srvx": {
+          "from": "^0.11.12",
+          "to": "^0.11.13"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-24T00:31:48.693Z",
+      "version": "2.0.1-rc.19-depup.0"
+    }
   }
 }
