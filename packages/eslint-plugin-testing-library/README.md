@@ -12,14 +12,14 @@ npm install @depup/eslint-plugin-testing-library
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.16.1 | **DepUp version**: 7.16.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 7.16.2 | **DepUp version**: 7.16.2-depup.0 | **Updated**: 3/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @typescript-eslint/scope-manager | `^8.56.0` | `^8.57.1` |
-| @typescript-eslint/utils | `^8.56.0` | `^8.57.1` |
+| @typescript-eslint/scope-manager | `^8.56.0` | `^8.57.2` |
+| @typescript-eslint/utils | `^8.56.0` | `^8.57.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-plugin-testing-library&labels=bug).
