@@ -7,6 +7,19 @@
       "status": "published",
       "timestamp": "2026-03-18T23:27:54.765Z",
       "version": "7.5.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@prisma/engines-version": {
+          "from": "7.5.0-15.280c870be64f457428992c43c1f6d557fab6e29e",
+          "to": "^7.6.0-1.75cbdc1eb7150937890ad5465d861175c6624711"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-24T20:21:54.678Z",
+      "version": "7.5.0-depup.1"
     }
   }
 }
