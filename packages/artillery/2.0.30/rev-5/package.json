@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.30-depup.0",
+  "version": "2.0.30-depup.5",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "types": "./types.d.ts",
   "exports": {
@@ -113,23 +113,23 @@
   "dependencies": {
     "@artilleryio/int-commons": "2.21.0",
     "@artilleryio/int-core": "2.25.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1012.0",
-    "@aws-sdk/client-ec2": "^3.1012.0",
-    "@aws-sdk/client-ecs": "^3.1012.0",
-    "@aws-sdk/client-iam": "^3.1012.0",
-    "@aws-sdk/client-lambda": "^3.1012.0",
-    "@aws-sdk/client-s3": "^3.1012.0",
-    "@aws-sdk/client-sqs": "^3.1012.0",
-    "@aws-sdk/client-ssm": "^3.1012.0",
-    "@aws-sdk/client-sts": "^3.1012.0",
-    "@aws-sdk/credential-providers": "^3.1012.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1016.0",
+    "@aws-sdk/client-ec2": "^3.1016.0",
+    "@aws-sdk/client-ecs": "^3.1016.0",
+    "@aws-sdk/client-iam": "^3.1016.0",
+    "@aws-sdk/client-lambda": "^3.1016.0",
+    "@aws-sdk/client-s3": "^3.1016.0",
+    "@aws-sdk/client-sqs": "^3.1016.0",
+    "@aws-sdk/client-ssm": "^3.1016.0",
+    "@aws-sdk/client-sts": "^3.1016.0",
+    "@aws-sdk/credential-providers": "^3.1016.0",
     "@azure/arm-containerinstance": "^9.1.0",
-    "@azure/identity": "^4.13.0",
+    "@azure/identity": "^4.13.1",
     "@azure/storage-blob": "^12.31.0",
     "@azure/storage-queue": "^12.29.0",
-    "@oclif/core": "^4.9.0",
-    "@oclif/plugin-help": "^6.2.38",
-    "@oclif/plugin-not-found": "^3.2.75",
+    "@oclif/core": "^4.10.2",
+    "@oclif/plugin-help": "^6.2.40",
+    "@oclif/plugin-not-found": "^3.2.77",
     "@upstash/redis": "^1.37.0",
     "artillery-engine-playwright": "1.27.0",
     "artillery-plugin-apdex": "1.21.0",
@@ -145,7 +145,7 @@
     "ci-info": "^4.4.0",
     "cli-table3": "^0.6.5",
     "cross-spawn": "^7.0.6",
-    "csv-parse": "^6.2.0",
+    "csv-parse": "^6.2.1",
     "debug": "^4.4.3",
     "dependency-tree": "^11.4.0",
     "detective-es6": "^5.0.1",
@@ -155,7 +155,7 @@
     "eventemitter3": "^5.0.4",
     "fs-extra": "^11.3.4",
     "got": "^14.6.6",
-    "joi": "^18.0.2",
+    "joi": "^18.1.1",
     "js-yaml": "^4.1.1",
     "jsonwebtoken": "^9.0.3",
     "lodash": "^4.17.23",
@@ -163,7 +163,7 @@
     "nanoid": "^5.1.7",
     "ora": "^9.3.0",
     "rc": "^1.2.8",
-    "sqs-consumer": "^14.2.3",
+    "sqs-consumer": "^14.2.5",
     "tempy": "^3.2.0",
     "walk-sync": "^4.0.1",
     "yaml-js": "^0.3.1"
@@ -183,43 +183,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.972.0",
-        "to": "^3.1012.0"
+        "to": "^3.1016.0"
+      },
+      "@azure/identity": {
+        "from": "^4.13.0",
+        "to": "^4.13.1"
       },
       "@azure/storage-blob": {
         "from": "^12.30.0",
@@ -227,15 +231,15 @@
       },
       "@oclif/core": {
         "from": "^4.8.0",
-        "to": "^4.9.0"
+        "to": "^4.10.2"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.36",
-        "to": "^6.2.38"
+        "to": "^6.2.40"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.73",
-        "to": "^3.2.75"
+        "to": "^3.2.77"
       },
       "@upstash/redis": {
         "from": "^1.36.1",
@@ -259,7 +263,7 @@
       },
       "csv-parse": {
         "from": "^4.16.3",
-        "to": "^6.2.0"
+        "to": "^6.2.1"
       },
       "dependency-tree": {
         "from": "^11.2.0",
@@ -283,7 +287,7 @@
       },
       "joi": {
         "from": "^17.13.3",
-        "to": "^18.0.2"
+        "to": "^18.1.1"
       },
       "js-yaml": {
         "from": "^3.14.1",
@@ -303,7 +307,7 @@
       },
       "sqs-consumer": {
         "from": "6.0.2",
-        "to": "^14.2.3"
+        "to": "^14.2.5"
       },
       "tempy": {
         "from": "3.1.0",
@@ -314,10 +318,10 @@
         "to": "^4.0.1"
       }
     },
-    "depsUpdated": 33,
+    "depsUpdated": 34,
     "originalPackage": "artillery",
     "originalVersion": "2.0.30",
-    "processedAt": "2026-03-19T04:44:38.956Z",
+    "processedAt": "2026-03-24T20:23:01.685Z",
     "smokeTest": "failed"
   }
 }
