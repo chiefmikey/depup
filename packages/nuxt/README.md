@@ -12,21 +12,25 @@ npm install @depup/nuxt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.4.2 | **DepUp version**: 4.4.2-depup.5 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 4.4.2 | **DepUp version**: 4.4.2-depup.6 | **Updated**: 3/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @nuxt/devtools | `^3.2.3` | `^4.0.0-alpha.1` |
+| @nuxt/devtools | `^3.2.3` | `^4.0.0-alpha.3` |
 | c12 | `^3.3.3` | `^4.0.0-beta.4` |
+| cookie-es | `^2.0.0` | `^3.0.1` |
 | devalue | `^5.6.3` | `^5.6.4` |
 | hookable | `^6.0.1` | `^6.1.0` |
+| mlly | `^1.8.1` | `^1.8.2` |
 | oxc-minify | `^0.117.0` | `^0.121.0` |
 | oxc-parser | `^0.117.0` | `^0.121.0` |
 | oxc-transform | `^0.117.0` | `^0.121.0` |
+| picomatch | `^4.0.3` | `^4.0.4` |
 | unimport | `^6.0.1` | `^6.0.2` |
 | unrouting | `^0.1.5` | `^0.1.7` |
+| vue-router | `^5.0.3` | `^5.0.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nuxt&labels=bug).

@@ -7,37 +7,6 @@
     }
   },
   "4.4.2": {
-    "1": {
-      "changes": {
-        "c12": {
-          "from": "^3.3.3",
-          "to": "^4.0.0-beta.3"
-        },
-        "devalue": {
-          "from": "^5.6.3",
-          "to": "^5.6.4"
-        },
-        "oxc-minify": {
-          "from": "^0.117.0",
-          "to": "^0.119.0"
-        },
-        "oxc-parser": {
-          "from": "^0.117.0",
-          "to": "^0.119.0"
-        },
-        "oxc-transform": {
-          "from": "^0.117.0",
-          "to": "^0.119.0"
-        },
-        "unrouting": {
-          "from": "^0.1.5",
-          "to": "^0.1.7"
-        }
-      },
-      "status": "published",
-      "timestamp": "2026-03-15T00:48:48.051Z",
-      "version": "4.4.2-depup.1"
-    },
     "2": {
       "changes": {
         "c12": {
@@ -197,6 +166,67 @@
       "status": "published",
       "timestamp": "2026-03-19T08:21:24.451Z",
       "version": "4.4.2-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.3",
+          "to": "^4.0.0-alpha.3"
+        },
+        "c12": {
+          "from": "^3.3.3",
+          "to": "^4.0.0-beta.4"
+        },
+        "cookie-es": {
+          "from": "^2.0.0",
+          "to": "^3.0.1"
+        },
+        "devalue": {
+          "from": "^5.6.3",
+          "to": "^5.6.4"
+        },
+        "hookable": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "mlly": {
+          "from": "^1.8.1",
+          "to": "^1.8.2"
+        },
+        "oxc-minify": {
+          "from": "^0.117.0",
+          "to": "^0.121.0"
+        },
+        "oxc-parser": {
+          "from": "^0.117.0",
+          "to": "^0.121.0"
+        },
+        "oxc-transform": {
+          "from": "^0.117.0",
+          "to": "^0.121.0"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "unimport": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "unrouting": {
+          "from": "^0.1.5",
+          "to": "^0.1.7"
+        },
+        "vue-router": {
+          "from": "^5.0.3",
+          "to": "^5.0.4"
+        }
+      },
+      "depsUpdated": 13,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-24T00:35:21.029Z",
+      "version": "4.4.2-depup.6"
     }
   }
 }
