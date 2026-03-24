@@ -1,5 +1,9 @@
 {
   "bumped": {
+    "@algorithm.ts/lcs": {
+      "from": "^4.0.5",
+      "to": "^4.0.6"
+    },
     "@dnd-kit/modifiers": {
       "from": "^6.0.1",
       "to": "^9.0.0"
@@ -46,7 +50,7 @@
     },
     "@sanity/client": {
       "from": "^7.17.0",
-      "to": "^7.18.0"
+      "to": "^7.20.0"
     },
     "@sanity/diff-patch": {
       "from": "^5.0.0",
@@ -86,11 +90,11 @@
     },
     "i18next": {
       "from": "^25.8.17",
-      "to": "^25.8.20"
+      "to": "^25.10.5"
     },
     "isomorphic-dompurify": {
       "from": "2.26.0",
-      "to": "^3.5.1"
+      "to": "^3.7.0"
     },
     "lodash-es": {
       "from": "^4.17.22",
@@ -114,7 +118,7 @@
     },
     "react-i18next": {
       "from": "15.6.1",
-      "to": "^16.5.8"
+      "to": "^16.6.2"
     },
     "semver": {
       "from": "^7.7.2",
@@ -129,6 +133,6 @@
       "to": "^5.28.0"
     }
   },
-  "timestamp": "2026-03-20T00:37:36.247Z",
-  "totalUpdated": 32
+  "timestamp": "2026-03-24T08:22:03.537Z",
+  "totalUpdated": 33
 }
