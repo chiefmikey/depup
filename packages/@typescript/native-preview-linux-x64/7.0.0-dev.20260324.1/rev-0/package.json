@@ -1,0 +1,49 @@
+{
+  "name": "@depup/typescript__native-preview-linux-x64",
+  "version": "7.0.0-dev.20260324.1-depup.0",
+  "license": "Apache-2.0",
+  "author": "Microsoft Corp.",
+  "homepage": "https://www.typescriptlang.org/",
+  "description": "Preview CLI of the native TypeScript compiler port (with updated dependencies)",
+  "keywords": [
+    "@typescript/native-preview-linux-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript",
+    "tsgo"
+  ],
+  "bugs": {
+    "url": "https://github.com/microsoft/typescript-go/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/typescript-go.git"
+  },
+  "type": "module",
+  "preferUnplugged": true,
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "gitHead": "1065e9f9e032c27c58e6b60a78f322ab31609324",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@typescript/native-preview-linux-x64",
+    "originalVersion": "7.0.0-dev.20260324.1",
+    "processedAt": "2026-03-24T08:20:36.131Z",
+    "smokeTest": "failed"
+  }
+}
