@@ -10,6 +10,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:32:22.085Z",
       "version": "0.41.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@open-draft/deferred-promise": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        },
+        "@open-draft/until": {
+          "from": "^2.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-24T20:22:34.270Z",
+      "version": "0.41.3-depup.1"
     }
   }
 }
