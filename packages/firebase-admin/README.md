@@ -12,11 +12,22 @@ npm install @depup/firebase-admin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.7.0 | **DepUp version**: 13.7.0-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 13.7.0 | **DepUp version**: 13.7.0-depup.1 | **Updated**: 3/25/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @fastify/busboy | `^3.0.0` | `^3.2.0` |
+| @firebase/database-compat | `^2.0.0` | `^2.1.2` |
+| @firebase/database-types | `^1.0.6` | `^1.0.18` |
+| fast-deep-equal | `^3.1.1` | `^3.1.3` |
+| google-auth-library | `^10.6.1` | `^10.6.2` |
+| jsonwebtoken | `^9.0.0` | `^9.0.3` |
+| jwks-rsa | `^3.1.0` | `^4.0.1` |
+| node-forge | `^1.3.1` | `^1.4.0` |
+| uuid | `^11.0.2` | `^13.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/firebase-admin&labels=bug).
 
