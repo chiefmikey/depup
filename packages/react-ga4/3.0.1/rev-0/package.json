@@ -1,0 +1,54 @@
+{
+  "name": "@depup/react-ga4",
+  "version": "3.0.1-depup.0",
+  "description": "React Google Analytics 4 (with updated dependencies)",
+  "type": "module",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    ".github/FUNDING.yml",
+    "src",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest"
+  },
+  "author": "Han Lin Yap (https://yap.nu)",
+  "license": "MIT",
+  "keywords": [
+    "react-ga4",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "GA",
+    "GTM",
+    "Google Analytics",
+    "Google Analytics 4",
+    "Google Tag Manager"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codler/react-ga4.git"
+  },
+  "devDependencies": {
+    "tsdown": "0.21.4",
+    "typescript": "5.9.3",
+    "vitest": "4.1.1"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-ga4",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-03-25T00:35:56.856Z",
+    "smokeTest": "passed"
+  }
+}
