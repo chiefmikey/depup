@@ -12,13 +12,13 @@ npm install @depup/opentelemetry__api-logs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.213.0 | **DepUp version**: 0.213.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.214.0 | **DepUp version**: 0.214.0-depup.0 | **Updated**: 3/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @opentelemetry/api | `^1.3.0` | `^1.9.0` |
+| @opentelemetry/api | `^1.3.0` | `^1.9.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/opentelemetry__api-logs&labels=bug).
