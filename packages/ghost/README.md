@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.6 | **Updated**: 3/24/2026 | **Import test**: failed
+**Original version**: 6.22.1 | **DepUp version**: 6.22.1-depup.7 | **Updated**: 3/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.45.0` |
+| @sentry/node | `7.120.4` | `^10.46.0` |
 | @slack/webhook | `7.0.6` | `^7.0.8` |
 | @tryghost/adapter-base-cache | `0.1.17` | `^0.1.23` |
 | @tryghost/admin-api-schema | `4.5.10` | `^4.7.2` |
@@ -44,10 +44,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/kg-converters | `1.1.19` | `^1.1.20` |
 | @tryghost/kg-default-atoms | `5.1.7` | `^5.1.8` |
 | @tryghost/kg-default-cards | `10.2.10` | `^10.2.11` |
-| @tryghost/kg-default-nodes | `2.0.15` | `^2.0.18` |
-| @tryghost/kg-default-transforms | `1.2.38` | `^1.2.41` |
-| @tryghost/kg-html-to-lexical | `1.2.38` | `^1.2.42` |
-| @tryghost/kg-lexical-html-renderer | `1.3.38` | `^1.3.41` |
+| @tryghost/kg-default-nodes | `2.0.15` | `^2.0.19` |
+| @tryghost/kg-default-transforms | `1.2.38` | `^1.2.42` |
+| @tryghost/kg-html-to-lexical | `1.2.38` | `^1.2.43` |
+| @tryghost/kg-lexical-html-renderer | `1.3.38` | `^1.3.42` |
 | @tryghost/kg-markdown-html-renderer | `7.1.15` | `^7.1.16` |
 | @tryghost/kg-mobiledoc-html-renderer | `7.1.15` | `^7.1.16` |
 | @tryghost/limit-service | `1.4.1` | `^1.5.2` |
@@ -94,7 +94,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
-| knex | `2.4.2` | `^3.2.5` |
+| knex | `2.4.2` | `^3.2.6` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | lodash | `4.17.21` | `^4.17.23` |
 | mailgun.js | `10.4.0` | `^12.7.1` |
@@ -113,7 +113,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | multer | `2.0.2` | `^2.1.1` |
 | mysql2 | `3.18.1` | `^3.20.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `6.10.1` | `^8.0.3` |
+| nodemailer | `6.10.1` | `^8.0.4` |
 | otplib | `12.0.1` | `^13.4.0` |
 | papaparse | `5.3.2` | `^5.5.3` |
 | sanitize-html | `2.17.0` | `^2.17.2` |
