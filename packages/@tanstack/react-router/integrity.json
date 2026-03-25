@@ -205,5 +205,20 @@
       "timestamp": "2026-03-23T16:28:22.031Z",
       "version": "1.168.3-depup.0"
     }
+  },
+  "1.168.4": {
+    "0": {
+      "changes": {
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.1.36"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-25T20:19:05.026Z",
+      "version": "1.168.4-depup.0"
+    }
   }
 }
