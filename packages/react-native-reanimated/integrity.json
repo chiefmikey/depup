@@ -34,5 +34,20 @@
       "timestamp": "2026-03-20T16:19:38.894Z",
       "version": "4.2.3-depup.0"
     }
+  },
+  "4.3.0": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-25T20:17:03.525Z",
+      "version": "4.3.0-depup.0"
+    }
   }
 }
