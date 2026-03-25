@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "fs-minipass": {
+      "from": "^3.0.0",
+      "to": "^3.0.3"
+    },
+    "glob": {
+      "from": "^13.0.0",
+      "to": "^13.0.6"
+    },
+    "lru-cache": {
+      "from": "^11.1.0",
+      "to": "^11.2.7"
+    },
+    "minipass": {
+      "from": "^7.0.3",
+      "to": "^7.1.3"
+    },
+    "minipass-flush": {
+      "from": "^1.0.5",
+      "to": "^2.0.0"
+    },
+    "minipass-pipeline": {
+      "from": "^1.2.4",
+      "to": "^3.0.0"
+    },
+    "p-map": {
+      "from": "^7.0.2",
+      "to": "^7.0.4"
+    },
+    "ssri": {
+      "from": "^13.0.0",
+      "to": "^13.0.1"
+    }
+  },
+  "timestamp": "2026-03-25T20:18:59.874Z",
+  "totalUpdated": 8
+}
