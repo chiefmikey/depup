@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "core-js": {
+      "from": "^3.38.1",
+      "to": "^3.49.0"
+    },
+    "dompurify": {
+      "from": "^3.3.2",
+      "to": "^3.3.3"
+    },
+    "fflate": {
+      "from": "^0.4.8",
+      "to": "^0.8.2"
+    },
+    "preact": {
+      "from": "^10.28.2",
+      "to": "^10.29.0"
+    },
+    "@opentelemetry/api-logs": {
+      "from": "^0.208.0",
+      "to": "^0.213.0"
+    },
+    "@opentelemetry/exporter-logs-otlp-http": {
+      "from": "^0.208.0",
+      "to": "^0.213.0"
+    },
+    "@opentelemetry/resources": {
+      "from": "^2.2.0",
+      "to": "^2.6.0"
+    },
+    "@opentelemetry/sdk-logs": {
+      "from": "^0.208.0",
+      "to": "^0.213.0"
+    }
+  },
+  "timestamp": "2026-03-25T08:20:09.269Z",
+  "totalUpdated": 8
+}
