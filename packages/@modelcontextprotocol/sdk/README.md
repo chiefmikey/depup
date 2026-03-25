@@ -12,7 +12,7 @@ npm install @depup/modelcontextprotocol__sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.27.1 | **DepUp version**: 1.27.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.28.0 | **DepUp version**: 1.28.0-depup.0 | **Updated**: 3/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,8 +25,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eventsource | `^3.0.2` | `^4.1.0` |
 | eventsource-parser | `^3.0.0` | `^3.0.6` |
 | express-rate-limit | `^8.2.1` | `^8.3.1` |
-| hono | `^4.11.4` | `^4.12.8` |
-| jose | `^6.1.3` | `^6.2.1` |
+| hono | `^4.11.4` | `^4.12.9` |
+| jose | `^6.1.3` | `^6.2.2` |
 | pkce-challenge | `^5.0.0` | `^6.0.0` |
 | raw-body | `^3.0.0` | `^3.0.2` |
 | zod | `^3.25 || ^4.0` | `^4.3.6` |
