@@ -12,6 +12,23 @@
       "status": "published",
       "timestamp": "2026-03-22T00:37:53.660Z",
       "version": "0.58.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@opentelemetry/instrumentation": {
+          "from": "^0.213.0",
+          "to": "^0.214.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.37.0",
+          "to": "^1.40.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-25T16:34:26.008Z",
+      "version": "0.58.0-depup.1"
     }
   }
 }

@@ -16,6 +16,27 @@
       "status": "published",
       "timestamp": "2026-03-22T00:38:11.222Z",
       "version": "0.56.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@opentelemetry/instrumentation": {
+          "from": "^0.213.0",
+          "to": "^0.214.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.33.0",
+          "to": "^1.40.0"
+        },
+        "@types/memcached": {
+          "from": "^2.2.6",
+          "to": "^2.2.10"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-25T16:34:40.822Z",
+      "version": "0.56.0-depup.1"
     }
   }
 }
