@@ -22,5 +22,24 @@
       "timestamp": "2026-03-14T20:36:46.175Z",
       "version": "2.10.1-depup.16"
     }
+  },
+  "2.10.2": {
+    "0": {
+      "changes": {
+        "schema-utils": {
+          "from": "^4.0.0",
+          "to": "^4.3.3"
+        },
+        "tapable": {
+          "from": "^2.2.1",
+          "to": "^2.3.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T16:37:45.412Z",
+      "version": "2.10.2-depup.0"
+    }
   }
 }
