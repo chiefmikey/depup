@@ -1,0 +1,70 @@
+{
+  "name": "@depup/mikro-orm",
+  "version": "6.6.10-depup.0",
+  "description": "TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usage with vanilla JavaScript. (with updated dependencies)",
+  "main": "index.js",
+  "module": "index.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": "./index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mikro-orm/mikro-orm.git"
+  },
+  "keywords": [
+    "mikro-orm",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "orm",
+    "mongo",
+    "mongodb",
+    "mysql",
+    "mariadb",
+    "postgresql",
+    "sqlite",
+    "sqlite3",
+    "ts",
+    "typescript",
+    "js",
+    "javascript",
+    "entity",
+    "ddd",
+    "unit-of-work",
+    "data-mapper",
+    "identity-map"
+  ],
+  "author": "Martin Adámek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikro-orm/mikro-orm/issues"
+  },
+  "homepage": "https://mikro-orm.io",
+  "engines": {
+    "node": ">= 18.12.0"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn compile && yarn copy && yarn run -T gen-esm-wrapper index.js index.mjs",
+    "clean": "yarn run -T rimraf ./dist",
+    "compile": "yarn run -T tsc -p tsconfig.build.json",
+    "copy": "node ../../scripts/copy.mjs"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "mikro-orm",
+    "originalVersion": "6.6.10",
+    "processedAt": "2026-03-26T16:31:57.848Z",
+    "smokeTest": "passed"
+  }
+}
