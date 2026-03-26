@@ -12,11 +12,15 @@ npm install @depup/nestjs__swagger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.6 | **DepUp version**: 11.2.6-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 11.2.6 | **DepUp version**: 11.2.6-depup.1 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| path-to-regexp | `8.3.0` | `^8.4.0` |
+| swagger-ui-dist | `5.31.0` | `^5.32.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nestjs__swagger&labels=bug).
 

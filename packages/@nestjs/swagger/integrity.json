@@ -4,6 +4,23 @@
       "status": "created",
       "timestamp": "2026-03-09T20:08:02.813Z",
       "version": "11.2.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "path-to-regexp": {
+          "from": "8.3.0",
+          "to": "^8.4.0"
+        },
+        "swagger-ui-dist": {
+          "from": "5.31.0",
+          "to": "^5.32.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:17:48.829Z",
+      "version": "11.2.6-depup.1"
     }
   }
 }
