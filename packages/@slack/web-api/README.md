@@ -12,7 +12,7 @@ npm install @depup/slack__web-api
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.15.0 | **DepUp version**: 7.15.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 7.15.0 | **DepUp version**: 7.15.0-depup.1 | **Updated**: 3/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | form-data | `^4.0.4` | `^4.0.5` |
 | is-stream | `^2` | `^4.0.1` |
 | p-queue | `^6` | `^9.1.0` |
-| p-retry | `^4` | `^7.1.1` |
+| p-retry | `^4` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/slack__web-api&labels=bug).

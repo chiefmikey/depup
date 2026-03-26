@@ -1,0 +1,84 @@
+{
+  "name": "@depup/p-retry",
+  "version": "8.0.0-depup.0",
+  "description": "Retry a promise-returning or async function (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/p-retry",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "p-retry",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "promise",
+    "retry",
+    "retries",
+    "operation",
+    "failed",
+    "rejected",
+    "try",
+    "exponential",
+    "backoff",
+    "attempt",
+    "async",
+    "await",
+    "promises",
+    "concurrently",
+    "concurrency",
+    "parallel",
+    "bluebird"
+  ],
+  "dependencies": {
+    "is-network-error": "^1.3.1"
+  },
+  "devDependencies": {
+    "ava": "^6.4.1",
+    "delay": "^7.0.0",
+    "execa": "^9.6.1",
+    "tsd": "^0.33.0",
+    "xo": "^1.2.3"
+  },
+  "xo": {
+    "rules": {
+      "no-await-in-loop": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "is-network-error": {
+        "from": "^1.3.0",
+        "to": "^1.3.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "p-retry",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-03-26T16:37:06.302Z",
+    "smokeTest": "passed"
+  }
+}
