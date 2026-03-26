@@ -21,6 +21,23 @@
       "status": "published",
       "timestamp": "2026-03-16T16:55:35.987Z",
       "version": "6.0.1-depup.31"
+    },
+    "32": {
+      "changes": {
+        "node-addon-api": {
+          "from": "^8.0.0",
+          "to": "^8.7.0"
+        },
+        "tar": {
+          "from": "^7.5.10",
+          "to": "^7.5.13"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T05:00:44.651Z",
+      "version": "6.0.1-depup.32"
     }
   }
 }

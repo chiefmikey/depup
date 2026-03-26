@@ -10,6 +10,19 @@
       "status": "published",
       "timestamp": "2026-03-09T04:56:45.496Z",
       "version": "6.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "node-addon-api": {
+          "from": "^8.3.0",
+          "to": "^8.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-03-26T04:53:14.339Z",
+      "version": "6.0.0-depup.1"
     }
   }
 }
