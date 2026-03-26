@@ -10,6 +10,23 @@
       "status": "published",
       "timestamp": "2026-03-18T00:37:39.572Z",
       "version": "11.12.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "file-type": {
+          "from": "^21.3.1",
+          "to": "^22.0.0"
+        },
+        "strtok3": {
+          "from": "^10.3.4",
+          "to": "^10.3.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:18:32.594Z",
+      "version": "11.12.3-depup.1"
     }
   }
 }

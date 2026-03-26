@@ -14,6 +14,19 @@
       "status": "published",
       "timestamp": "2026-03-25T20:19:35.289Z",
       "version": "9.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "file-type": {
+          "from": "^21.3.4",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:19:07.329Z",
+      "version": "9.0.0-depup.1"
     }
   }
 }

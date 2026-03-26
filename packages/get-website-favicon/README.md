@@ -12,7 +12,7 @@ npm install @depup/get-website-favicon
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.0.7 | **DepUp version**: 0.0.7-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 0.0.7 | **DepUp version**: 0.0.7-depup.1 | **Updated**: 3/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | axios | `^0.18.0` | `^1.13.6` |
 | cheerio | `^1.0.0-rc.2` | `^1.2.0` |
-| file-type | `^7.6.0` | `^21.3.3` |
+| file-type | `^7.6.0` | `^22.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/get-website-favicon&labels=bug).

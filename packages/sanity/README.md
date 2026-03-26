@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.2 | **Updated**: 3/25/2026 | **Import test**: failed
+**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.3 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
-| @mux/mux-player-react | `^3.10.2` | `^3.11.6` |
+| @mux/mux-player-react | `^3.10.2` | `^3.11.7` |
 | @portabletext/editor | `^6.4.0` | `^6.5.2` |
 | @portabletext/html | `^1.0.0` | `^1.0.1` |
 | @portabletext/plugin-markdown-shortcuts | `^7.0.19` | `^7.0.22` |
@@ -38,12 +38,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tanstack/react-virtual | `^3.13.18` | `^3.13.23` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
-| i18next | `^25.8.17` | `^25.10.9` |
+| i18next | `^25.8.17` | `^25.10.10` |
 | isomorphic-dompurify | `2.26.0` | `^3.7.1` |
 | lodash-es | `^4.17.22` | `^4.17.23` |
 | motion | `^12.27.1` | `^12.38.0` |
 | nanoid | `^3.3.11` | `^5.1.7` |
-| path-to-regexp | `^6.3.0` | `^8.3.0` |
+| path-to-regexp | `^6.3.0` | `^8.4.0` |
 | player.style | `^0.1.9` | `^0.3.1` |
 | react-i18next | `15.6.1` | `^16.6.6` |
 | semver | `^7.7.2` | `^7.7.4` |

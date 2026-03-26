@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-19T03:33:51.536Z",
       "version": "0.0.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^0.18.0",
+          "to": "^1.13.6"
+        },
+        "cheerio": {
+          "from": "^1.0.0-rc.2",
+          "to": "^1.2.0"
+        },
+        "file-type": {
+          "from": "^7.6.0",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:17:32.966Z",
+      "version": "0.0.7-depup.1"
     }
   }
 }

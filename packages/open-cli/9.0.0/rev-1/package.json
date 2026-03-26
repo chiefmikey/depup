@@ -1,0 +1,85 @@
+{
+  "name": "@depup/open-cli",
+  "version": "9.0.0-depup.1",
+  "description": "Open stuff like URLs, files, executables. Cross-platform. (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/open-cli",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "bin": {
+    "open-cli": "./cli.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "open-cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli-app",
+    "cli",
+    "app",
+    "open",
+    "opener",
+    "opens",
+    "launch",
+    "start",
+    "xdg-open",
+    "xdg",
+    "default",
+    "cmd",
+    "browser",
+    "editor",
+    "executable",
+    "exe",
+    "url",
+    "urls",
+    "arguments",
+    "spawn",
+    "exec",
+    "child",
+    "process",
+    "website",
+    "file"
+  ],
+  "dependencies": {
+    "file-type": "^22.0.0",
+    "meow": "^14.1.0",
+    "open": "^11.0.0",
+    "tempy": "^3.2.0"
+  },
+  "devDependencies": {
+    "ava": "^7.0.0",
+    "execa": "^9.6.1",
+    "xo": "^2.0.2"
+  },
+  "depup": {
+    "changes": {
+      "file-type": {
+        "from": "^21.3.4",
+        "to": "^22.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "open-cli",
+    "originalVersion": "9.0.0",
+    "processedAt": "2026-03-26T20:18:59.870Z",
+    "smokeTest": "failed"
+  }
+}
