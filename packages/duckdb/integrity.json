@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T19:33:23.441Z",
       "version": "1.4.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@mapbox/node-pre-gyp": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        },
+        "node-addon-api": {
+          "from": "^7.0.0",
+          "to": "^8.7.0"
+        },
+        "node-gyp": {
+          "from": "^9.4.1",
+          "to": "^12.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-26T04:53:42.854Z",
+      "version": "1.4.4-depup.1"
     }
   }
 }
