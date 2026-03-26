@@ -12,21 +12,18 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.8 | **DepUp version**: 6.0.8-depup.0 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 6.1.0 | **DepUp version**: 6.1.0-depup.0 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @astrojs/compiler | `^3.0.0` | `^3.0.1` |
-| @clack/prompts | `^1.0.1` | `^1.1.0` |
 | devalue | `^5.6.3` | `^5.6.4` |
+| diff | `^8.0.3` | `^8.0.4` |
 | esbuild | `^0.27.3` | `^0.27.4` |
-| shiki | `^4.0.0` | `^4.0.2` |
-| svgo | `^4.0.0` | `^4.0.1` |
-| tinyclip | `^0.1.6` | `^0.1.12` |
-| tinyexec | `^1.0.2` | `^1.0.4` |
-| vite | `^7.3.1` | `^8.0.1` |
+| picomatch | `^4.0.3` | `^4.0.4` |
+| smol-toml | `^1.6.0` | `^1.6.1` |
+| vite | `^7.3.1` | `^8.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/astro&labels=bug).
