@@ -12,7 +12,7 @@ npm install @depup/vinxi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.5.11 | **DepUp version**: 0.5.11-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.5.11 | **DepUp version**: 0.5.11-depup.1 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,11 +29,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | es-module-lexer | `^1.7.0` | `^2.0.0` |
 | esbuild | `^0.25.3` | `^0.27.4` |
 | get-port-please | `^3.1.2` | `^3.2.0` |
-| h3 | `1.15.3` | `^2.0.1-rc.16` |
+| h3 | `1.15.3` | `^2.0.1-rc.19` |
 | hookable | `^5.5.3` | `^6.1.0` |
-| nitropack | `^2.11.10` | `^2.13.1` |
+| nitropack | `^2.11.10` | `^2.13.2` |
 | node-fetch-native | `^1.6.6` | `^1.6.7` |
-| path-to-regexp | `^6.2.1` | `^8.3.0` |
+| path-to-regexp | `^6.2.1` | `^8.4.0` |
 | pathe | `^1.1.1` | `^2.0.3` |
 | resolve | `^1.22.10` | `^1.22.11` |
 | serve-placeholder | `^2.0.1` | `^2.0.2` |
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinyglobby | `^0.2.14` | `^0.2.15` |
 | ufo | `^1.6.1` | `^1.6.3` |
 | unctx | `^2.4.1` | `^2.5.0` |
-| unstorage | `^1.16.0` | `^1.17.4` |
-| vite | `^6.4.1` | `^8.0.0` |
+| unstorage | `^1.16.0` | `^1.17.5` |
+| vite | `^6.4.1` | `^8.0.3` |
 | zod | `^4.0.0` | `^4.3.6` |
 
 

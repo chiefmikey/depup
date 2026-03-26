@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.23.0 | **DepUp version**: 6.23.0-depup.0 | **Updated**: 3/26/2026 | **Import test**: failed
+**Original version**: 6.23.0 | **DepUp version**: 6.23.0-depup.1 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1017.0` |
+| @aws-sdk/client-s3 | `3.864.0` | `^3.1018.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -74,7 +74,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dompurify | `3.3.0` | `^3.3.3` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
-| file-type | `16.5.4` | `^21.3.4` |
+| file-type | `16.5.4` | `^22.0.0` |
 | form-data | `4.0.4` | `^4.0.5` |
 | fs-extra | `11.3.0` | `^11.3.4` |
 | ghost-storage-base | `1.0.0` | `^1.1.2` |
@@ -112,7 +112,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | papaparse | `5.3.2` | `^5.5.3` |
 | sanitize-html | `2.17.0` | `^2.17.2` |
 | semver | `7.7.3` | `^7.7.4` |
-| stripe | `8.222.0` | `^21.0.0` |
+| stripe | `8.222.0` | `^21.0.1` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.44.0` | `^5.46.1` |
 | ua-parser-js | `1.0.41` | `^2.0.9` |

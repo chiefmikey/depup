@@ -1,26 +1,5 @@
 {
   "3.0.1": {
-    "2": {
-      "changes": {
-        "@aws-sdk/lib-storage": {
-          "from": "^3.46.0",
-          "to": "^3.1013.0"
-        },
-        "file-type": {
-          "from": "^3.3.0",
-          "to": "^21.3.3"
-        },
-        "run-parallel": {
-          "from": "^1.1.6",
-          "to": "^1.2.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-20T00:38:12.458Z",
-      "version": "3.0.1-depup.2"
-    },
     "3": {
       "changes": {
         "@aws-sdk/lib-storage": {
@@ -104,6 +83,27 @@
       "status": "published",
       "timestamp": "2026-03-25T20:21:34.165Z",
       "version": "3.0.1-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@aws-sdk/lib-storage": {
+          "from": "^3.46.0",
+          "to": "^3.1018.0"
+        },
+        "file-type": {
+          "from": "^3.3.0",
+          "to": "^22.0.0"
+        },
+        "run-parallel": {
+          "from": "^1.1.6",
+          "to": "^1.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:20:52.099Z",
+      "version": "3.0.1-depup.7"
     }
   }
 }
