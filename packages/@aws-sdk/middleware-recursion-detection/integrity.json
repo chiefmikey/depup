@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:30:26.781Z",
       "version": "3.972.8-depup.0"
     }
+  },
+  "3.972.9": {
+    "0": {
+      "changes": {
+        "@aws/lambda-invoke-store": {
+          "from": "^0.2.2",
+          "to": "^0.2.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:14:01.285Z",
+      "version": "3.972.9-depup.0"
+    }
   }
 }
