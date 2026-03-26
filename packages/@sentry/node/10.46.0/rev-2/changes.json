@@ -1,0 +1,126 @@
+{
+  "bumped": {
+    "@opentelemetry/api": {
+      "from": "^1.9.0",
+      "to": "^1.9.1"
+    },
+    "@opentelemetry/context-async-hooks": {
+      "from": "^2.6.0",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/core": {
+      "from": "^2.6.0",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/instrumentation": {
+      "from": "^0.213.0",
+      "to": "^0.214.0"
+    },
+    "@opentelemetry/instrumentation-amqplib": {
+      "from": "0.60.0",
+      "to": "^0.61.0"
+    },
+    "@opentelemetry/instrumentation-connect": {
+      "from": "0.56.0",
+      "to": "^0.57.0"
+    },
+    "@opentelemetry/instrumentation-dataloader": {
+      "from": "0.30.0",
+      "to": "^0.31.0"
+    },
+    "@opentelemetry/instrumentation-express": {
+      "from": "0.61.0",
+      "to": "^0.62.0"
+    },
+    "@opentelemetry/instrumentation-fs": {
+      "from": "0.32.0",
+      "to": "^0.33.0"
+    },
+    "@opentelemetry/instrumentation-generic-pool": {
+      "from": "0.56.0",
+      "to": "^0.57.0"
+    },
+    "@opentelemetry/instrumentation-graphql": {
+      "from": "0.61.0",
+      "to": "^0.62.0"
+    },
+    "@opentelemetry/instrumentation-hapi": {
+      "from": "0.59.0",
+      "to": "^0.60.0"
+    },
+    "@opentelemetry/instrumentation-http": {
+      "from": "0.213.0",
+      "to": "^0.214.0"
+    },
+    "@opentelemetry/instrumentation-ioredis": {
+      "from": "0.61.0",
+      "to": "^0.62.0"
+    },
+    "@opentelemetry/instrumentation-kafkajs": {
+      "from": "0.22.0",
+      "to": "^0.23.0"
+    },
+    "@opentelemetry/instrumentation-knex": {
+      "from": "0.57.0",
+      "to": "^0.58.0"
+    },
+    "@opentelemetry/instrumentation-koa": {
+      "from": "0.61.0",
+      "to": "^0.62.0"
+    },
+    "@opentelemetry/instrumentation-lru-memoizer": {
+      "from": "0.57.0",
+      "to": "^0.58.0"
+    },
+    "@opentelemetry/instrumentation-mongodb": {
+      "from": "0.66.0",
+      "to": "^0.67.0"
+    },
+    "@opentelemetry/instrumentation-mongoose": {
+      "from": "0.59.0",
+      "to": "^0.60.0"
+    },
+    "@opentelemetry/instrumentation-mysql": {
+      "from": "0.59.0",
+      "to": "^0.60.0"
+    },
+    "@opentelemetry/instrumentation-mysql2": {
+      "from": "0.59.0",
+      "to": "^0.60.0"
+    },
+    "@opentelemetry/instrumentation-pg": {
+      "from": "0.65.0",
+      "to": "^0.66.0"
+    },
+    "@opentelemetry/instrumentation-redis": {
+      "from": "0.61.0",
+      "to": "^0.62.0"
+    },
+    "@opentelemetry/instrumentation-tedious": {
+      "from": "0.32.0",
+      "to": "^0.33.0"
+    },
+    "@opentelemetry/instrumentation-undici": {
+      "from": "0.23.0",
+      "to": "^0.24.0"
+    },
+    "@opentelemetry/resources": {
+      "from": "^2.6.0",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/sdk-trace-base": {
+      "from": "^2.6.0",
+      "to": "^2.6.1"
+    },
+    "@prisma/instrumentation": {
+      "from": "7.4.2",
+      "to": "^7.5.0"
+    },
+    "@fastify/otel": {
+      "from": "0.17.1",
+      "to": "^0.18.0"
+    }
+  },
+  "timestamp": "2026-03-26T12:28:32.915Z",
+  "totalUpdated": 30
+}
