@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.3 | **Updated**: 3/24/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.4 | **Updated**: 3/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -97,14 +97,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | memoizee | `^0.4.15` | `^0.4.17` |
 | micromatch | `^4.0.5` | `^4.0.8` |
 | mime | `^3.0.0` | `^4.1.0` |
-| mini-css-extract-plugin | `1.6.2` | `^2.10.1` |
+| mini-css-extract-plugin | `1.6.2` | `^2.10.2` |
 | mitt | `^1.2.0` | `^3.0.1` |
 | moment | `^2.29.4` | `^2.30.1` |
 | multer | `^2.0.1` | `^2.1.1` |
 | node-fetch | `^2.6.11` | `^3.3.2` |
 | node-html-parser | `^5.4.2` | `^7.1.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
-| path-to-regexp | `0.1.12` | `^8.3.0` |
+| path-to-regexp | `0.1.12` | `^8.4.0` |
 | postcss | `^8.4.24` | `^8.5.8` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.3.1` |
