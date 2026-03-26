@@ -36,6 +36,43 @@
       "status": "published",
       "timestamp": "2026-03-22T00:37:57.506Z",
       "version": "2.3.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@globalart/text-utils": {
+          "from": "^1.0.4",
+          "to": "^1.0.6"
+        },
+        "@nestjs/axios": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        },
+        "@nestjs/schedule": {
+          "from": "^6.0.0",
+          "to": "^6.1.1"
+        },
+        "axios": {
+          "from": "^1.9.0",
+          "to": "^1.13.6"
+        },
+        "cron": {
+          "from": "4.3.0",
+          "to": "^4.4.0"
+        },
+        "lavalink-client": {
+          "from": "^2.5.3",
+          "to": "^2.9.9"
+        },
+        "path-to-regexp": {
+          "from": "^8.0.0",
+          "to": "^8.4.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:17:36.156Z",
+      "version": "2.3.1-depup.1"
     }
   }
 }

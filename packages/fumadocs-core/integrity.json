@@ -72,6 +72,19 @@
       "status": "published",
       "timestamp": "2026-03-25T16:32:53.453Z",
       "version": "16.7.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "path-to-regexp": {
+          "from": "^8.3.0",
+          "to": "^8.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-26T20:18:53.956Z",
+      "version": "16.7.6-depup.1"
     }
   }
 }
