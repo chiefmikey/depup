@@ -118,5 +118,28 @@
       "timestamp": "2026-03-24T16:28:12.994Z",
       "version": "2.25.1-depup.0"
     }
+  },
+  "2.25.2": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.0",
+          "to": "^8.18.1"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-27T16:22:44.512Z",
+      "version": "2.25.2-depup.0"
+    }
   }
 }
