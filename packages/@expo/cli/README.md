@@ -12,7 +12,7 @@ npm install @depup/expo__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 55.0.18 | **DepUp version**: 55.0.18-depup.2 | **Updated**: 3/25/2026 | **Import test**: failed
+**Original version**: 55.0.19 | **DepUp version**: 55.0.19-depup.0 | **Updated**: 3/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @expo/ws-tunnel | `^1.0.1` | `^1.0.6` |
 | @expo/xcpretty | `^4.4.0` | `^4.4.1` |
-| @react-native/dev-middleware | `0.83.2` | `^0.84.1` |
+| @react-native/dev-middleware | `0.83.4` | `^0.84.1` |
 | bplist-creator | `0.1.0` | `^0.1.1` |
 | bplist-parser | `^0.3.1` | `^0.3.2` |
 | chalk | `^4.0.0` | `^5.6.2` |
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | compression | `^1.7.4` | `^1.8.1` |
 | debug | `^4.3.4` | `^4.4.3` |
 | dnssd-advertise | `^1.1.3` | `^1.1.4` |
-| fetch-nodeshim | `^0.4.6` | `^0.4.9` |
+| fetch-nodeshim | `^0.4.6` | `^0.4.10` |
 | glob | `^13.0.0` | `^13.0.6` |
 | multitars | `^0.2.3` | `^0.2.4` |
 | node-forge | `^1.3.3` | `^1.4.0` |
