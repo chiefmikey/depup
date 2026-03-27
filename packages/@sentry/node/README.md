@@ -12,7 +12,7 @@ npm install @depup/sentry__node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.46.0 | **DepUp version**: 10.46.0-depup.2 | **Updated**: 3/26/2026 | **Import test**: passed
+**Original version**: 10.46.0 | **DepUp version**: 10.46.0-depup.3 | **Updated**: 3/27/2026 | **Import test**: passed
 
 ## What changed
 
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/instrumentation-undici | `0.23.0` | `^0.24.0` |
 | @opentelemetry/resources | `^2.6.0` | `^2.6.1` |
 | @opentelemetry/sdk-trace-base | `^2.6.0` | `^2.6.1` |
-| @prisma/instrumentation | `7.4.2` | `^7.5.0` |
+| @prisma/instrumentation | `7.4.2` | `^7.6.0` |
 | @fastify/otel | `0.17.1` | `^0.18.0` |
 
 
