@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-19T00:38:31.253Z",
       "version": "3.3.11-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@prisma/client-runtime-utils": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        },
+        "@prisma/dmmf": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        },
+        "@prisma/generator-helper": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-27T16:30:12.539Z",
+      "version": "3.3.11-depup.1"
     }
   }
 }
