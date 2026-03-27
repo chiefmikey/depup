@@ -105,5 +105,32 @@
       "timestamp": "2026-03-19T00:42:31.172Z",
       "version": "55.0.8-depup.0"
     }
+  },
+  "55.0.9": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.0",
+          "to": "^7.29.2"
+        },
+        "@expo/vector-icons": {
+          "from": "^15.0.2",
+          "to": "^15.1.1"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.3.0"
+        },
+        "react-refresh": {
+          "from": "^0.14.2",
+          "to": "^0.18.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-27T20:19:14.027Z",
+      "version": "55.0.9-depup.0"
+    }
   }
 }

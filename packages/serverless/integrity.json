@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T18:44:34.294Z",
       "version": "4.33.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.14.0"
+        },
+        "rimraf": {
+          "from": "^5.0.10",
+          "to": "^6.1.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-27T20:21:34.483Z",
+      "version": "4.33.0-depup.1"
     }
   }
 }
