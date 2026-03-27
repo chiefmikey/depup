@@ -58,5 +58,24 @@
       "timestamp": "2026-03-25T04:44:04.820Z",
       "version": "41.0.4-depup.0"
     }
+  },
+  "41.1.0": {
+    "0": {
+      "changes": {
+        "@electron/get": {
+          "from": "^2.0.0",
+          "to": "^4.0.3"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-27T08:23:09.920Z",
+      "version": "41.1.0-depup.0"
+    }
   }
 }
