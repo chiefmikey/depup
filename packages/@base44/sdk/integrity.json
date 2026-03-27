@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-03-24T12:23:21.466Z",
       "version": "0.8.23-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.2",
+          "to": "^1.14.0"
+        },
+        "socket.io-client": {
+          "from": "^4.7.5",
+          "to": "^4.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-27T20:18:02.227Z",
+      "version": "0.8.23-depup.1"
     }
   }
 }

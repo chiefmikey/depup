@@ -12,7 +12,7 @@ npm install @depup/globalart__nestcord
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.3.1 | **DepUp version**: 2.3.1-depup.1 | **Updated**: 3/26/2026 | **Import test**: failed
+**Original version**: 2.3.1 | **DepUp version**: 2.3.1-depup.2 | **Updated**: 3/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,9 +21,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @globalart/text-utils | `^1.0.4` | `^1.0.6` |
 | @nestjs/axios | `^4.0.0` | `^4.0.1` |
 | @nestjs/schedule | `^6.0.0` | `^6.1.1` |
-| axios | `^1.9.0` | `^1.13.6` |
+| axios | `^1.9.0` | `^1.14.0` |
 | cron | `4.3.0` | `^4.4.0` |
-| lavalink-client | `^2.5.3` | `^2.9.9` |
+| lavalink-client | `^2.5.3` | `^2.9.10` |
 | path-to-regexp | `^8.0.0` | `^8.4.0` |
 
 

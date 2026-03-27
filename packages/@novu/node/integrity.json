@@ -24,6 +24,31 @@
       "status": "published",
       "timestamp": "2026-03-18T23:29:04.944Z",
       "version": "2.6.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.8",
+          "to": "^1.14.0"
+        },
+        "axios-retry": {
+          "from": "^3.8.0",
+          "to": "^4.5.0"
+        },
+        "handlebars": {
+          "from": "^4.7.7",
+          "to": "^4.7.9"
+        },
+        "uuid": {
+          "from": "^9.0.1",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-27T20:18:56.599Z",
+      "version": "2.6.6-depup.1"
     }
   }
 }
