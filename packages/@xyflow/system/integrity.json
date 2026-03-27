@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:33:56.203Z",
       "version": "0.0.75-depup.0"
     }
+  },
+  "0.0.76": {
+    "0": {
+      "changes": {
+        "@types/d3-selection": {
+          "from": "^3.0.10",
+          "to": "^3.0.11"
+        },
+        "@types/d3-transition": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-27T12:20:50.089Z",
+      "version": "0.0.76-depup.0"
+    }
   }
 }
