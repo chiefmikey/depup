@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.3 | **Updated**: 3/26/2026 | **Import test**: failed
+**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.4 | **Updated**: 3/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -31,6 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @portabletext/plugin-typography | `^7.0.19` | `^7.0.22` |
 | @sanity/client | `^7.17.0` | `^7.20.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
+| @sanity/image-url | `^2.0.3` | `^2.1.0` |
 | @sanity/migrate | `^6.0.0` | `^6.1.0` |
 | @sanity/preview-url-secret | `^4.0.3` | `^4.0.4` |
 | @sanity/sdk | `2.1.2` | `^2.8.0` |
