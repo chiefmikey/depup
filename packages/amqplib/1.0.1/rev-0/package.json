@@ -1,0 +1,51 @@
+{
+  "name": "@depup/amqplib",
+  "homepage": "http://amqp-node.github.io/amqplib/",
+  "main": "./channel_api.js",
+  "version": "1.0.1-depup.0",
+  "description": "An AMQP 0-9-1 (e.g., RabbitMQ) library and client. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amqp-node/amqplib.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "buffer-more-ints": "~1.0.0",
+    "url-parse": "~1.5.10"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.2",
+    "claire": "0.4.1",
+    "lefthook": "^1.12.3",
+    "uglify-js": "2.8.x"
+  },
+  "scripts": {
+    "test": "make test",
+    "test:only": "node --test --test-only",
+    "format": "biome format . --write",
+    "lint": "biome lint --max-diagnostics=1000 ."
+  },
+  "keywords": [
+    "amqplib",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "AMQP",
+    "AMQP 0-9-1",
+    "RabbitMQ"
+  ],
+  "author": "Michael Bridgen <mikeb@squaremobius.net>",
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "amqplib",
+    "originalVersion": "1.0.1",
+    "processedAt": "2026-03-28T16:11:39.881Z",
+    "smokeTest": "passed"
+  }
+}
