@@ -1,0 +1,112 @@
+{
+  "name": "@depup/react-navigation__native",
+  "description": "React Native integration for React Navigation (with updated dependencies)",
+  "version": "7.2.2-depup.0",
+  "keywords": [
+    "@react-navigation/native",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react-native",
+    "react-navigation",
+    "ios",
+    "android"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-navigation/react-navigation.git",
+    "directory": "packages/native"
+  },
+  "bugs": {
+    "url": "https://github.com/react-navigation/react-navigation/issues"
+  },
+  "homepage": "https://reactnavigation.org",
+  "main": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.tsx",
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "del lib"
+  },
+  "dependencies": {
+    "@react-navigation/core": "^7.17.2",
+    "escape-string-regexp": "^5.0.0",
+    "fast-deep-equal": "^3.1.3",
+    "nanoid": "^5.1.7",
+    "use-latest-callback": "^0.3.3"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.0.0",
+    "@testing-library/react-native": "^13.2.1",
+    "@types/react": "~19.0.10",
+    "@types/react-dom": "~19.1.7",
+    "del-cli": "^6.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-builder-bob": "^0.40.17",
+    "react-test-renderer": "19.1.0",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "react": ">= 18.2.0",
+    "react-native": "*"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "gitHead": "f25ef01d8dcd691ea445eb1359eb37fd21113b26",
+  "depup": {
+    "changes": {
+      "escape-string-regexp": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "nanoid": {
+        "from": "^3.3.11",
+        "to": "^5.1.7"
+      },
+      "use-latest-callback": {
+        "from": "^0.2.4",
+        "to": "^0.3.3"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@react-navigation/native",
+    "originalVersion": "7.2.2",
+    "processedAt": "2026-03-28T12:16:36.934Z",
+    "smokeTest": "failed"
+  }
+}

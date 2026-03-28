@@ -34,5 +34,24 @@
       "timestamp": "2026-03-28T00:35:50.754Z",
       "version": "0.8.13-canary-20260327-0789fbc-depup.0"
     }
+  },
+  "0.8.13-canary-20260328-2049187": {
+    "0": {
+      "changes": {
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "semver": {
+          "from": "^7.6.0",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-28T12:16:26.601Z",
+      "version": "0.8.13-canary-20260328-2049187-depup.0"
+    }
   }
 }
