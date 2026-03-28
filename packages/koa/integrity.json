@@ -5,5 +5,28 @@
       "timestamp": "2026-03-09T08:18:51.890Z",
       "version": "3.1.2-depup.0"
     }
+  },
+  "3.2.0": {
+    "0": {
+      "changes": {
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-28T08:17:05.515Z",
+      "version": "3.2.0-depup.0"
+    }
   }
 }
