@@ -1,0 +1,108 @@
+{
+  "name": "@depup/apideck__better-ajv-errors",
+  "description": "Human-friendly JSON Schema validation for APIs (with updated dependencies)",
+  "version": "0.3.7-depup.0",
+  "author": "Apideck <support@apideck.com> (https://apideck.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apideck-libraries/better-ajv-errors"
+  },
+  "bugs": {
+    "url": "https://github.com/apideck-libraries/better-ajv-errors/issues"
+  },
+  "contributors": [
+    "Elias Meire <elias@apideck.com>"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/better-ajv-errors.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "size": "size-limit",
+    "release": "np --no-publish && npm publish --access public --registry https://registry.npmjs.org",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/better-ajv-errors.cjs.production.min.js",
+      "limit": "2 KB"
+    },
+    {
+      "path": "dist/better-ajv-errors.esm.js",
+      "limit": "2.5 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "ajv": "^8.11.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "np": "^7.6.1",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "json-schema": "^0.4.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.2"
+  },
+  "peerDependencies": {
+    "ajv": ">=8"
+  },
+  "dependencies": {
+    "jsonpointer": "^5.0.1",
+    "leven": "^4.1.0"
+  },
+  "resolutions": {
+    "prettier": "^2.3.0"
+  },
+  "keywords": [
+    "@apideck/better-ajv-errors",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "apideck",
+    "ajv",
+    "json",
+    "schema",
+    "json-schema",
+    "errors",
+    "human"
+  ],
+  "depup": {
+    "changes": {
+      "leven": {
+        "from": "^3.1.0",
+        "to": "^4.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@apideck/better-ajv-errors",
+    "originalVersion": "0.3.7",
+    "processedAt": "2026-03-28T12:16:24.995Z",
+    "smokeTest": "passed"
+  }
+}

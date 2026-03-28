@@ -12,13 +12,12 @@ npm install @depup/apideck__better-ajv-errors
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.6 | **DepUp version**: 0.3.6-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.3.7 | **DepUp version**: 0.3.7-depup.0 | **Updated**: 3/28/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| jsonpointer | `^5.0.0` | `^5.0.1` |
 | leven | `^3.1.0` | `^4.1.0` |
 
 
