@@ -1,0 +1,50 @@
+{
+  "name": "@depup/expo__schema-utils",
+  "version": "55.0.3-canary-20260328-bdc6273-depup.0",
+  "description": "Reusable JSON Schema (Draft 04) validation library for Expo (with updated dependencies)",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && babel src --out-dir build --extensions \".ts\" --source-maps --ignore \"src/**/__mocks__/*\",\"src/**/__tests__/*\"",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "generate": "node ./scripts/generate.js",
+    "test": "expo-module test",
+    "typecheck": "expo-module typecheck"
+  },
+  "homepage": "https://github.com/expo/expo/tree/main/packages/@expo/schema-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/@expo/schema-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/expo/expo/issues"
+  },
+  "devDependencies": {
+    "expo-module-scripts": "^55.0.2",
+    "json-schema-to-typescript": "^15.0.0"
+  },
+  "keywords": [
+    "@expo/schema-utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@expo/schema-utils",
+    "originalVersion": "55.0.3-canary-20260328-bdc6273",
+    "processedAt": "2026-03-28T20:10:35.725Z",
+    "smokeTest": "passed"
+  }
+}
