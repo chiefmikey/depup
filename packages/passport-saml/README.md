@@ -12,13 +12,13 @@ npm install @depup/passport-saml
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.4 | **DepUp version**: 3.2.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.2.4 | **DepUp version**: 3.2.4-depup.1 | **Updated**: 3/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @xmldom/xmldom | `^0.7.6` | `^0.8.11` |
+| @xmldom/xmldom | `^0.7.6` | `^0.9.9` |
 | debug | `^4.3.2` | `^4.4.3` |
 | xml-crypto | `^2.1.3` | `^6.1.2` |
 | xml-encryption | `^2.0.0` | `^3.1.0` |
