@@ -1,7 +1,7 @@
 {
   "name": "@depup/expo__image-utils",
-  "version": "0.8.12-depup.0",
-  "description": "[DepUp] A package used by Expo CLI for processing images",
+  "version": "0.8.12-depup.5",
+  "description": "A package used by Expo CLI for processing images (with updated dependencies)",
   "main": "build/index.js",
   "scripts": {
     "build": "expo-module tsc",
@@ -18,10 +18,12 @@
     "directory": "packages/@expo/image-utils"
   },
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "@expo/image-utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "json"
   ],
   "license": "MIT",
@@ -64,7 +66,7 @@
     "depsUpdated": 2,
     "originalPackage": "@expo/image-utils",
     "originalVersion": "0.8.12",
-    "processedAt": "2026-03-17T16:31:34.045Z",
+    "processedAt": "2026-03-29T20:12:09.845Z",
     "smokeTest": "passed"
   }
 }

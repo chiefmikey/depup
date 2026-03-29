@@ -12,6 +12,27 @@
       "status": "published",
       "timestamp": "2026-03-18T22:42:26.027Z",
       "version": "8.17.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@xmldom/xmldom": {
+          "from": "^0.8.11",
+          "to": "^0.9.9"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^12.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-29T20:13:44.221Z",
+      "version": "8.17.1-depup.1"
     }
   }
 }
