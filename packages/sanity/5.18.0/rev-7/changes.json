@@ -18,7 +18,7 @@
     },
     "@mux/mux-player-react": {
       "from": "^3.10.2",
-      "to": "^3.11.6"
+      "to": "^3.11.7"
     },
     "@portabletext/editor": {
       "from": "^6.4.0",
@@ -52,6 +52,10 @@
       "from": "^5.0.0",
       "to": "^6.0.0"
     },
+    "@sanity/image-url": {
+      "from": "^2.0.3",
+      "to": "^2.1.0"
+    },
     "@sanity/migrate": {
       "from": "^6.0.0",
       "to": "^6.1.0"
@@ -82,7 +86,7 @@
     },
     "i18next": {
       "from": "^25.8.17",
-      "to": "^25.10.9"
+      "to": "^26.0.1"
     },
     "isomorphic-dompurify": {
       "from": "2.26.0",
@@ -102,7 +106,7 @@
     },
     "path-to-regexp": {
       "from": "^6.3.0",
-      "to": "^8.3.0"
+      "to": "^8.4.0"
     },
     "player.style": {
       "from": "^0.1.9",
@@ -110,7 +114,7 @@
     },
     "react-i18next": {
       "from": "15.6.1",
-      "to": "^16.6.6"
+      "to": "^17.0.1"
     },
     "semver": {
       "from": "^7.7.2",
@@ -126,9 +130,9 @@
     },
     "xstate": {
       "from": "^5.25.1",
-      "to": "^5.29.0"
+      "to": "^5.30.0"
     }
   },
-  "timestamp": "2026-03-25T20:19:50.500Z",
-  "totalUpdated": 32
+  "timestamp": "2026-03-29T00:44:26.531Z",
+  "totalUpdated": 33
 }
