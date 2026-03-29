@@ -1,0 +1,89 @@
+{
+  "name": "@depup/hasha",
+  "version": "7.0.0-depup.0",
+  "description": "Hashing made simple. Get the hash of a buffer/string/stream/file. (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/hasha",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && node --test && tsc index.d.ts"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "thread.js",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "hasha",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "hash",
+    "hashing",
+    "crypto",
+    "hex",
+    "base64",
+    "md5",
+    "sha1",
+    "sha256",
+    "sha512",
+    "sum",
+    "stream",
+    "file",
+    "fs",
+    "buffer",
+    "string",
+    "text",
+    "rev",
+    "revving",
+    "simple",
+    "easy"
+  ],
+  "dependencies": {
+    "is-stream": "^4.0.1",
+    "type-fest": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "esmock": "^2.7.3",
+    "typescript": "^5.9.2",
+    "xo": "^1.2.2"
+  },
+  "xo": {
+    "rules": {
+      "unicorn/no-await-expression-member": "off",
+      "n/prefer-global/buffer": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "type-fest": {
+        "from": "^4.41.0",
+        "to": "^5.5.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "hasha",
+    "originalVersion": "7.0.0",
+    "processedAt": "2026-03-29T00:40:48.953Z",
+    "smokeTest": "passed"
+  }
+}
