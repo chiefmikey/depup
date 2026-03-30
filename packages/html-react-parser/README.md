@@ -12,14 +12,14 @@ npm install @depup/html-react-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.17 | **DepUp version**: 5.2.17-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 5.2.17 | **DepUp version**: 5.2.17-depup.1 | **Updated**: 3/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | domhandler | `5.0.3` | `^6.0.1` |
-| html-dom-parser | `5.1.8` | `^6.0.0` |
+| html-dom-parser | `5.1.8` | `^7.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/html-react-parser&labels=bug).
