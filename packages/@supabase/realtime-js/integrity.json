@@ -47,5 +47,20 @@
       "timestamp": "2026-03-26T16:31:41.209Z",
       "version": "2.100.1-depup.0"
     }
+  },
+  "2.101.0": {
+    "0": {
+      "changes": {
+        "ws": {
+          "from": "^8.18.2",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-30T16:26:49.379Z",
+      "version": "2.101.0-depup.0"
+    }
   }
 }
