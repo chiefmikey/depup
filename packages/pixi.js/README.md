@@ -12,7 +12,7 @@ npm install @depup/pixi.js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.17.1 | **DepUp version**: 8.17.1-depup.1 | **Updated**: 3/29/2026 | **Import test**: failed
+**Original version**: 8.17.1 | **DepUp version**: 8.17.1-depup.2 | **Updated**: 3/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @xmldom/xmldom | `^0.8.11` | `^0.9.9` |
 | eventemitter3 | `^5.0.1` | `^5.0.4` |
-| tiny-lru | `^11.4.7` | `^12.0.0` |
+| tiny-lru | `^11.4.7` | `^13.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pixi.js&labels=bug).
