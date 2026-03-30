@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.24.0 | **DepUp version**: 6.24.0-depup.1 | **Updated**: 3/27/2026 | **Import test**: failed
+**Original version**: 6.24.0 | **DepUp version**: 6.24.0-depup.2 | **Updated**: 3/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1019.0` |
+| @aws-sdk/client-s3 | `3.864.0` | `^3.1020.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -80,6 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ghost-storage-base | `1.0.0` | `^1.1.2` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `11.8.6` | `^14.6.6` |
+| gscan | `5.4.0` | `^5.4.1` |
 | handlebars | `4.7.8` | `^4.7.9` |
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.7` | `^2.0.8` |
@@ -89,7 +90,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
-| knex | `2.4.2` | `^3.2.7` |
+| knex | `2.4.2` | `^3.2.8` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | lodash | `4.17.21` | `^4.17.23` |
 | mailgun.js | `10.4.0` | `^12.7.1` |
