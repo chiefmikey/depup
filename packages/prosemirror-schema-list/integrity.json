@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:37:45.305Z",
       "version": "1.5.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "prosemirror-model": {
+          "from": "^1.0.0",
+          "to": "^1.25.4"
+        },
+        "prosemirror-transform": {
+          "from": "^1.7.3",
+          "to": "^1.12.0"
+        },
+        "prosemirror-state": {
+          "from": "^1.0.0",
+          "to": "^1.4.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-30T12:27:51.142Z",
+      "version": "1.5.1-depup.1"
     }
   }
 }
