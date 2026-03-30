@@ -1,0 +1,108 @@
+{
+  "name": "@depup/resend",
+  "version": "6.10.0-depup.0",
+  "description": "Node.js library for the Resend API (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist/**",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=22.0.0"
+    }
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resend/resend-node.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/resend/resend-node/issues"
+  },
+  "homepage": "https://github.com/resend/resend-node#readme",
+  "dependencies": {
+    "postal-mime": "2.7.4",
+    "svix": "^1.89.0"
+  },
+  "peerDependencies": {
+    "@react-email/render": "*"
+  },
+  "peerDependenciesMeta": {
+    "@react-email/render": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.7",
+    "@pollyjs/adapter-fetch": "6.0.7",
+    "@pollyjs/core": "6.0.6",
+    "@pollyjs/persister-fs": "6.0.6",
+    "@types/mailparser": "3.4.6",
+    "@types/node": "24.12.0",
+    "@types/react": "19.2.14",
+    "cross-env": "10.1.0",
+    "dotenv": "17.3.1",
+    "pkg-pr-new": "0.0.66",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "rimraf": "6.1.3",
+    "tsdown": "0.21.4",
+    "typescript": "5.9.3",
+    "vitest": "4.1.0",
+    "vitest-fetch-mock": "0.4.5"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts",
+    "integration:nextjs": "cd ./e2e/nextjs && next build --turbopack",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "test": "vitest run --exclude e2e",
+    "test:dev": "cross-env TEST_MODE=dev vitest run --exclude e2e",
+    "test:e2e": "vitest run e2e",
+    "test:record": "rimraf --glob \"**/__recordings__\" && cross-env TEST_MODE=record vitest run --exclude e2e",
+    "test:watch": "vitest --exclude e2e",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "resend",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "svix": {
+        "from": "1.88.0",
+        "to": "^1.89.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "resend",
+    "originalVersion": "6.10.0",
+    "processedAt": "2026-03-30T20:19:27.470Z",
+    "smokeTest": "passed"
+  }
+}
