@@ -546,5 +546,56 @@
       "timestamp": "2026-03-27T16:26:53.337Z",
       "version": "1.364.1-depup.0"
     }
+  },
+  "1.364.2": {
+    "0": {
+      "changes": {
+        "core-js": {
+          "from": "^3.38.1",
+          "to": "^3.49.0"
+        },
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.3.3"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.2"
+        },
+        "preact": {
+          "from": "^10.28.2",
+          "to": "^10.29.0"
+        },
+        "web-vitals": {
+          "from": "^5.1.0",
+          "to": "^5.2.0"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/api-logs": {
+          "from": "^0.208.0",
+          "to": "^0.214.0"
+        },
+        "@opentelemetry/exporter-logs-otlp-http": {
+          "from": "^0.208.0",
+          "to": "^0.214.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.2.0",
+          "to": "^2.6.1"
+        },
+        "@opentelemetry/sdk-logs": {
+          "from": "^0.208.0",
+          "to": "^0.214.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-30T16:27:32.752Z",
+      "version": "1.364.2-depup.0"
+    }
   }
 }
