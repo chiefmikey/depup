@@ -53,6 +53,19 @@
       "status": "published",
       "timestamp": "2026-03-25T16:32:22.960Z",
       "version": "1.0.0-rc.12-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@oxc-project/types": {
+          "from": "=0.122.0",
+          "to": "^0.123.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-30T12:28:08.680Z",
+      "version": "1.0.0-rc.12-depup.1"
     }
   }
 }
