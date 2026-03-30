@@ -258,5 +258,44 @@
       "timestamp": "2026-03-27T00:39:54.033Z",
       "version": "6.1.1-depup.0"
     }
+  },
+  "6.1.2": {
+    "0": {
+      "changes": {
+        "devalue": {
+          "from": "^5.6.3",
+          "to": "^5.6.4"
+        },
+        "diff": {
+          "from": "^8.0.3",
+          "to": "^8.0.4"
+        },
+        "esbuild": {
+          "from": "^0.27.3",
+          "to": "^0.27.4"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "smol-toml": {
+          "from": "^1.6.0",
+          "to": "^1.6.1"
+        },
+        "unstorage": {
+          "from": "^1.17.4",
+          "to": "^1.17.5"
+        },
+        "vite": {
+          "from": "^7.3.1",
+          "to": "^8.0.3"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-30T16:28:03.627Z",
+      "version": "6.1.2-depup.0"
+    }
   }
 }

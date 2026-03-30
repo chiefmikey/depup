@@ -1,0 +1,86 @@
+{
+  "bumped": {
+    "@grpc/grpc-js": {
+      "from": "^1.13.2",
+      "to": "^1.14.3"
+    },
+    "@grpc/proto-loader": {
+      "from": "^0.7.5",
+      "to": "^0.8.0"
+    },
+    "@newrelic/security-agent": {
+      "from": "^3.0.0",
+      "to": "^3.0.2"
+    },
+    "@opentelemetry/api": {
+      "from": "^1.9.0",
+      "to": "^1.9.1"
+    },
+    "@opentelemetry/api-logs": {
+      "from": "^0.203.0",
+      "to": "^0.214.0"
+    },
+    "@opentelemetry/core": {
+      "from": "^2.0.0",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/exporter-metrics-otlp-proto": {
+      "from": "^0.201.1",
+      "to": "^0.214.0"
+    },
+    "@opentelemetry/resources": {
+      "from": "^2.0.1",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/sdk-logs": {
+      "from": "^0.203.0",
+      "to": "^0.214.0"
+    },
+    "@opentelemetry/sdk-metrics": {
+      "from": "^2.0.1",
+      "to": "^2.6.1"
+    },
+    "@opentelemetry/sdk-trace-base": {
+      "from": "^2.0.0",
+      "to": "^2.6.1"
+    },
+    "@tyriar/fibonacci-heap": {
+      "from": "^2.0.7",
+      "to": "^2.0.9"
+    },
+    "https-proxy-agent": {
+      "from": "^7.0.1",
+      "to": "^8.0.0"
+    },
+    "import-in-the-middle": {
+      "from": "^1.13.0",
+      "to": "^3.0.0"
+    },
+    "json-stringify-safe": {
+      "from": "^5.0.0",
+      "to": "^5.0.1"
+    },
+    "module-details-from-path": {
+      "from": "^1.0.3",
+      "to": "^1.0.4"
+    },
+    "readable-stream": {
+      "from": "^3.6.1",
+      "to": "^4.7.0"
+    },
+    "require-in-the-middle": {
+      "from": "^7.4.0",
+      "to": "^8.0.1"
+    },
+    "semver": {
+      "from": "^7.5.2",
+      "to": "^7.7.4"
+    },
+    "winston-transport": {
+      "from": "^4.5.0",
+      "to": "^4.9.0"
+    }
+  },
+  "timestamp": "2026-03-30T16:28:30.011Z",
+  "totalUpdated": 20
+}
