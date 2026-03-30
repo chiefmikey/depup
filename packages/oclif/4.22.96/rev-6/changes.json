@@ -2,11 +2,11 @@
   "bumped": {
     "@aws-sdk/client-cloudfront": {
       "from": "3.1009.0",
-      "to": "^3.1015.0"
+      "to": "^3.1020.0"
     },
     "@aws-sdk/client-s3": {
       "from": "3.1014.0",
-      "to": "^3.1015.0"
+      "to": "^3.1020.0"
     },
     "@inquirer/confirm": {
       "from": "^3.1.22",
@@ -22,15 +22,19 @@
     },
     "@oclif/core": {
       "from": "4.9.0",
-      "to": "^4.10.2"
+      "to": "^4.10.3"
     },
     "@oclif/plugin-help": {
       "from": "^6.2.38",
-      "to": "^6.2.40"
+      "to": "^6.2.41"
     },
     "@oclif/plugin-not-found": {
       "from": "^3.2.76",
-      "to": "^3.2.77"
+      "to": "^3.2.78"
+    },
+    "@oclif/plugin-warn-if-update-available": {
+      "from": "^3.1.57",
+      "to": "^3.1.58"
     },
     "ansis": {
       "from": "^3.16.0",
@@ -69,6 +73,6 @@
       "to": "^7.0.2"
     }
   },
-  "timestamp": "2026-03-23T20:23:44.812Z",
-  "totalUpdated": 17
+  "timestamp": "2026-03-30T20:24:12.349Z",
+  "totalUpdated": 18
 }
