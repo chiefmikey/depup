@@ -13,5 +13,20 @@
       "timestamp": "2026-03-18T22:40:38.232Z",
       "version": "1.28.5-depup.0"
     }
+  },
+  "1.28.6": {
+    "0": {
+      "changes": {
+        "@tanstack/react-store": {
+          "from": "^0.9.1",
+          "to": "^0.9.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-30T12:26:13.559Z",
+      "version": "1.28.6-depup.0"
+    }
   }
 }
