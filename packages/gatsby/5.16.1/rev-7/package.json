@@ -1,7 +1,7 @@
 {
   "name": "@depup/gatsby",
   "description": "Blazing fast modern site generator for React (with updated dependencies)",
-  "version": "5.16.1-depup.2",
+  "version": "5.16.1-depup.7",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bin": {
     "gatsby": "./cli.js"
@@ -36,15 +36,15 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
     "@sigmacomputing/babel-plugin-lodash": "^3.3.5",
     "@types/http-proxy": "^1.17.17",
-    "@typescript-eslint/eslint-plugin": "^8.57.2",
-    "@typescript-eslint/parser": "^8.57.2",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
     "@vercel/webpack-asset-relocator-loader": "^1.10.0",
     "acorn-loose": "^8.5.2",
     "acorn-walk": "^8.3.5",
     "address": "^2.0.3",
     "anser": "^2.3.5",
     "autoprefixer": "^10.4.27",
-    "axios": "^1.13.6",
+    "axios": "^1.14.0",
     "babel-jsx-utils": "^1.1.0",
     "babel-loader": "^10.1.1",
     "babel-plugin-add-module-exports": "^1.0.4",
@@ -105,9 +105,9 @@
     "gatsby-script": "^2.16.0",
     "gatsby-worker": "^2.16.0",
     "glob": "^13.0.6",
-    "globby": "^16.1.1",
+    "globby": "^16.2.0",
     "got": "^14.6.6",
-    "graphql": "^16.13.1",
+    "graphql": "^16.13.2",
     "graphql-compose": "^9.1.0",
     "graphql-http": "^1.22.4",
     "graphql-tag": "^2.12.6",
@@ -115,7 +115,7 @@
     "invariant": "^2.2.4",
     "is-relative": "^1.0.0",
     "is-relative-url": "^4.1.0",
-    "joi": "^18.1.1",
+    "joi": "^18.1.2",
     "json-loader": "^0.5.7",
     "latest-version": "^9.0.0",
     "linkfs": "^2.1.0",
@@ -125,7 +125,7 @@
     "memoizee": "^0.4.17",
     "micromatch": "^4.0.8",
     "mime": "^4.1.0",
-    "mini-css-extract-plugin": "^2.10.1",
+    "mini-css-extract-plugin": "^2.10.2",
     "mitt": "^3.0.1",
     "moment": "^2.30.1",
     "multer": "^2.1.1",
@@ -136,7 +136,7 @@
     "opentracing": "^0.14.7",
     "p-defer": "^4.0.1",
     "parseurl": "^1.3.3",
-    "path-to-regexp": "^8.3.0",
+    "path-to-regexp": "^8.4.0",
     "physical-cpu-count": "^2.0.0",
     "platform": "^1.3.6",
     "postcss": "^8.5.8",
@@ -170,11 +170,11 @@
     "url-loader": "^4.1.1",
     "uuid": "^13.0.0",
     "webpack": "^5.105.4",
-    "webpack-dev-middleware": "^8.0.1",
+    "webpack-dev-middleware": "^8.0.2",
     "webpack-merge": "^6.0.1",
     "webpack-stats-plugin": "^1.1.3",
     "webpack-virtual-modules": "^0.6.2",
-    "xstate": "^5.28.0",
+    "xstate": "^5.30.0",
     "yaml-loader": "^0.9.0"
   },
   "devDependencies": {
@@ -382,11 +382,11 @@
       },
       "@typescript-eslint/eslint-plugin": {
         "from": "^5.60.1",
-        "to": "^8.57.2"
+        "to": "^8.58.0"
       },
       "@typescript-eslint/parser": {
         "from": "^5.60.1",
-        "to": "^8.57.2"
+        "to": "^8.58.0"
       },
       "@vercel/webpack-asset-relocator-loader": {
         "from": "1.7.3",
@@ -414,7 +414,7 @@
       },
       "axios": {
         "from": "^1.6.4",
-        "to": "^1.13.6"
+        "to": "^1.14.0"
       },
       "babel-loader": {
         "from": "^8.3.0",
@@ -546,7 +546,7 @@
       },
       "globby": {
         "from": "^11.1.0",
-        "to": "^16.1.1"
+        "to": "^16.2.0"
       },
       "got": {
         "from": "^11.8.6",
@@ -554,7 +554,7 @@
       },
       "graphql": {
         "from": "^16.7.1",
-        "to": "^16.13.1"
+        "to": "^16.13.2"
       },
       "graphql-compose": {
         "from": "^9.0.10",
@@ -574,7 +574,7 @@
       },
       "joi": {
         "from": "^17.9.2",
-        "to": "^18.1.1"
+        "to": "^18.1.2"
       },
       "latest-version": {
         "from": "^7.0.0",
@@ -606,7 +606,7 @@
       },
       "mini-css-extract-plugin": {
         "from": "1.6.2",
-        "to": "^2.10.1"
+        "to": "^2.10.2"
       },
       "mitt": {
         "from": "^1.2.0",
@@ -634,7 +634,7 @@
       },
       "path-to-regexp": {
         "from": "0.1.12",
-        "to": "^8.3.0"
+        "to": "^8.4.0"
       },
       "postcss": {
         "from": "^8.4.24",
@@ -722,7 +722,7 @@
       },
       "webpack-dev-middleware": {
         "from": "^5.3.4",
-        "to": "^8.0.1"
+        "to": "^8.0.2"
       },
       "webpack-merge": {
         "from": "^5.9.0",
@@ -730,7 +730,7 @@
       },
       "xstate": {
         "from": "^4.38.0",
-        "to": "^5.28.0"
+        "to": "^5.30.0"
       },
       "yaml-loader": {
         "from": "^0.8.0",
@@ -740,7 +740,7 @@
     "depsUpdated": 112,
     "originalPackage": "gatsby",
     "originalVersion": "5.16.1",
-    "processedAt": "2026-03-23T20:26:20.845Z",
+    "processedAt": "2026-03-30T20:24:46.309Z",
     "smokeTest": "failed"
   }
 }
