@@ -1,0 +1,58 @@
+{
+  "name": "@depup/supabase__auth-js",
+  "version": "2.101.0-depup.0",
+  "description": "Official SDK for Supabase Auth (with updated dependencies)",
+  "keywords": [
+    "@supabase/auth-js",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "supabase",
+    "authentication"
+  ],
+  "homepage": "https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js",
+  "bugs": "https://github.com/supabase/supabase-js/issues",
+  "license": "MIT",
+  "author": "Supabase",
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "types": "dist/module/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supabase/supabase-js.git",
+    "directory": "packages/core/auth-js"
+  },
+  "scripts": {
+    "build": "npm run build:main && npm run build:module",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "docs": "typedoc src/index.ts --out docs/v2 --excludePrivate --excludeProtected",
+    "docs:json": "typedoc --json docs/v2/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+  },
+  "dependencies": {
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@supabase/auth-js",
+    "originalVersion": "2.101.0",
+    "processedAt": "2026-03-30T16:26:42.509Z",
+    "smokeTest": "passed"
+  }
+}
