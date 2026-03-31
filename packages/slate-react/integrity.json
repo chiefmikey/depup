@@ -43,6 +43,27 @@
       "status": "published",
       "timestamp": "2026-03-23T20:18:15.220Z",
       "version": "0.124.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "direction": {
+          "from": "^1.0.4",
+          "to": "^2.0.1"
+        },
+        "lodash": {
+          "from": "^4.17.21",
+          "to": "^4.18.0"
+        },
+        "tiny-invariant": {
+          "from": "1.3.1",
+          "to": "^1.3.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T20:26:10.590Z",
+      "version": "0.124.0-depup.1"
     }
   }
 }

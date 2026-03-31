@@ -1,0 +1,112 @@
+{
+  "name": "@depup/email-templates",
+  "description": "Create, preview (browser/iOS Simulator), and send custom email templates for Node.js. Made for Forward Email and Lad. (with updated dependencies)",
+  "version": "13.0.1-depup.1",
+  "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)",
+  "bugs": {
+    "url": "https://github.com/forwardemail/email-templates/issues",
+    "email": "niftylettuce@gmail.com"
+  },
+  "contributors": [
+    "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)"
+  ],
+  "dependencies": {
+    "@ladjs/consolidate": "^1.0.4",
+    "@ladjs/i18n": "^10.0.0",
+    "get-paths": "^0.0.7",
+    "html-to-text": "^9.0.5",
+    "juice": "^11.1.1",
+    "lodash": "^4.18.0",
+    "nodemailer": "^8.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "ava": "^5.3.0",
+    "cheerio": "1.0.0-rc.12",
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.10",
+    "eslint": "^8.42.0",
+    "eslint-config-xo-lass": "^2.0.1",
+    "fixpack": "^4.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "nodemailer-sendgrid": "^1.0.3",
+    "nyc": "^15.1.0",
+    "preview-email": "^3.0.17",
+    "pug": "^3.0.3",
+    "remark-cli": "11.0.0",
+    "remark-preset-github": "^4.0.4",
+    "xo": "^0.54.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/forwardemail/email-templates",
+  "keywords": [
+    "email-templates",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "consolidate",
+    "email",
+    "engine",
+    "koa",
+    "lad",
+    "lass",
+    "mailchimp",
+    "mailgun",
+    "mandrill",
+    "moonmail",
+    "nodemailer",
+    "postmark",
+    "pug",
+    "sendgrid",
+    "template",
+    "templates",
+    "transport"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "optionalDependencies": {
+    "preview-email": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forwardemail/email-templates"
+  },
+  "scripts": {
+    "lint": "xo --fix && remark . -qfo && fixpack",
+    "pre-commit": "lint-staged",
+    "pretest": "npm run lint",
+    "test": "cross-env NODE_ENV=test nyc ava"
+  },
+  "depup": {
+    "changes": {
+      "juice": {
+        "from": "^11.0.3",
+        "to": "^11.1.1"
+      },
+      "lodash": {
+        "from": "^4.17.21",
+        "to": "^4.18.0"
+      },
+      "nodemailer": {
+        "from": "^7.0.12",
+        "to": "^8.0.4"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "email-templates",
+    "originalVersion": "13.0.1",
+    "processedAt": "2026-03-31T20:22:21.768Z",
+    "smokeTest": "passed"
+  }
+}

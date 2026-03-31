@@ -73,6 +73,27 @@
       "status": "published",
       "timestamp": "2026-03-24T00:33:11.008Z",
       "version": "8.8.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "lodash": {
+          "from": "4.17.23",
+          "to": "^4.18.0"
+        },
+        "prop-types": {
+          "from": "15.x.x",
+          "to": "^15.8.1"
+        },
+        "tslib": {
+          "from": "1.9.3",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T20:25:08.914Z",
+      "version": "8.8.1-depup.1"
     }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/react-quill
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @types/quill | `^1.3.10` | `^2.0.14` |
-| lodash | `^4.17.4` | `^4.17.23` |
+| lodash | `^4.17.4` | `^4.18.0` |
 | quill | `^1.3.7` | `^2.0.3` |
 
 

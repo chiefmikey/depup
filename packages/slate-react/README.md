@@ -12,14 +12,14 @@ npm install @depup/slate-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.124.0 | **DepUp version**: 0.124.0-depup.0 | **Updated**: 3/23/2026 | **Import test**: failed
+**Original version**: 0.124.0 | **DepUp version**: 0.124.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | direction | `^1.0.4` | `^2.0.1` |
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.0` |
 | tiny-invariant | `1.3.1` | `^1.3.3` |
 
 
