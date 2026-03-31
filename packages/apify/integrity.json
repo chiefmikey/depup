@@ -129,6 +129,71 @@
       "status": "published",
       "timestamp": "2026-03-21T20:10:42.971Z",
       "version": "3.7.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@apify/consts": {
+          "from": "^2.51.0",
+          "to": "^2.52.0"
+        },
+        "@apify/input_secrets": {
+          "from": "^1.2.0",
+          "to": "^1.2.27"
+        },
+        "@apify/log": {
+          "from": "^2.4.3",
+          "to": "^2.5.34"
+        },
+        "@apify/timeout": {
+          "from": "^0.3.0",
+          "to": "^0.3.2"
+        },
+        "@apify/utilities": {
+          "from": "^2.13.0",
+          "to": "^2.25.6"
+        },
+        "@crawlee/core": {
+          "from": "^3.14.1",
+          "to": "^3.16.0"
+        },
+        "@crawlee/types": {
+          "from": "^3.14.1",
+          "to": "^3.16.0"
+        },
+        "@crawlee/utils": {
+          "from": "^3.14.1",
+          "to": "^3.16.0"
+        },
+        "apify-client": {
+          "from": "^2.17.0",
+          "to": "^2.22.3"
+        },
+        "fs-extra": {
+          "from": "^11.2.0",
+          "to": "^11.3.4"
+        },
+        "ow": {
+          "from": "^0.28.2",
+          "to": "^3.1.1"
+        },
+        "semver": {
+          "from": "^7.5.4",
+          "to": "^7.7.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        },
+        "ws": {
+          "from": "^8.18.0",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 14,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-31T12:31:00.018Z",
+      "version": "3.7.0-depup.2"
     }
   }
 }
