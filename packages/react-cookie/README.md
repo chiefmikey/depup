@@ -12,14 +12,13 @@ npm install @depup/react-cookie
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.0 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/hoist-non-react-statics | `^3.3.6` | `^3.3.7` |
-| universal-cookie | `^8.0.0` | `^8.0.1` |
+| universal-cookie | `^8.0.0` | `^8.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-cookie&labels=bug).
