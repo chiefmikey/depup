@@ -12,22 +12,22 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.9 | **Updated**: 3/30/2026 | **Import test**: failed
+**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.10 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-ecs | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-iam | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-lambda | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-s3 | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-sqs | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-ssm | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/client-sts | `^3.972.0` | `^3.1020.0` |
-| @aws-sdk/credential-providers | `^3.972.0` | `^3.1020.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-ecs | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-iam | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-lambda | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-s3 | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-sqs | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-ssm | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/client-sts | `^3.972.0` | `^3.1021.0` |
+| @aws-sdk/credential-providers | `^3.972.0` | `^3.1021.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.10.3` |
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | got | `^11.8.5` | `^14.6.6` |
 | joi | `^17.13.3` | `^18.1.2` |
 | js-yaml | `^3.14.1` | `^4.1.1` |
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.0` |
 | nanoid | `^3.3.4` | `^5.1.7` |
 | ora | `^4.0.4` | `^9.3.0` |
 | sqs-consumer | `6.0.2` | `^14.2.6` |

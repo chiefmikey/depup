@@ -12,7 +12,7 @@ npm install @depup/xlsx-populate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.21.0 | **DepUp version**: 1.21.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.21.0 | **DepUp version**: 1.21.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | cfb | `^1.1.3` | `^1.2.2` |
 | jszip | `^3.2.2` | `^3.10.1` |
-| lodash | `^4.17.15` | `^4.17.23` |
+| lodash | `^4.17.15` | `^4.18.0` |
 | sax | `^1.2.4` | `^1.6.0` |
 
 
