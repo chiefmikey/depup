@@ -12,14 +12,11 @@ npm install @depup/universal-cookie
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.0 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| cookie | `^1.0.2` | `^1.1.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/universal-cookie&labels=bug).
 
