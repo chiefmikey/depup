@@ -1,0 +1,98 @@
+{
+  "bumped": {
+    "@netlify/blobs": {
+      "from": "10.7.0",
+      "to": "^10.7.4"
+    },
+    "@netlify/edge-functions-bootstrap": {
+      "from": "2.17.1",
+      "to": "^3.1.0"
+    },
+    "@octokit/rest": {
+      "from": "22.0.0",
+      "to": "^22.0.1"
+    },
+    "@opentelemetry/api": {
+      "from": "1.8.0",
+      "to": "^1.9.1"
+    },
+    "chokidar": {
+      "from": "4.0.3",
+      "to": "^5.0.0"
+    },
+    "commander": {
+      "from": "12.1.0",
+      "to": "^14.0.3"
+    },
+    "cron-parser": {
+      "from": "4.9.0",
+      "to": "^5.5.0"
+    },
+    "execa": {
+      "from": "5.1.1",
+      "to": "^9.6.1"
+    },
+    "fastify": {
+      "from": "5.8.3",
+      "to": "^5.8.4"
+    },
+    "get-port": {
+      "from": "5.1.1",
+      "to": "^7.2.0"
+    },
+    "inquirer": {
+      "from": "8.2.7",
+      "to": "^13.3.2"
+    },
+    "inquirer-autocomplete-prompt": {
+      "from": "1.4.0",
+      "to": "^3.0.1"
+    },
+    "is-wsl": {
+      "from": "3.1.0",
+      "to": "^3.1.1"
+    },
+    "modern-tar": {
+      "from": "0.7.5",
+      "to": "^0.7.6"
+    },
+    "normalize-package-data": {
+      "from": "7.0.1",
+      "to": "^8.0.0"
+    },
+    "p-map": {
+      "from": "7.0.3",
+      "to": "^7.0.4"
+    },
+    "raw-body": {
+      "from": "3.0.1",
+      "to": "^3.0.2"
+    },
+    "readdirp": {
+      "from": "4.1.2",
+      "to": "^5.0.0"
+    },
+    "semver": {
+      "from": "7.7.2",
+      "to": "^7.7.4"
+    },
+    "toml": {
+      "from": "3.0.0",
+      "to": "^4.0.1"
+    },
+    "ulid": {
+      "from": "3.0.1",
+      "to": "^3.0.2"
+    },
+    "write-file-atomic": {
+      "from": "5.0.1",
+      "to": "^7.0.1"
+    },
+    "ws": {
+      "from": "8.19.0",
+      "to": "^8.20.0"
+    }
+  },
+  "timestamp": "2026-03-31T16:27:47.877Z",
+  "totalUpdated": 23
+}

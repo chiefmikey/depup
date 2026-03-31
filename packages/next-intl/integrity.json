@@ -21,5 +21,28 @@
       "timestamp": "2026-03-18T22:06:06.573Z",
       "version": "4.8.3-depup.0"
     }
+  },
+  "4.8.4": {
+    "0": {
+      "changes": {
+        "@formatjs/intl-localematcher": {
+          "from": "^0.8.1",
+          "to": "^0.8.2"
+        },
+        "@parcel/watcher": {
+          "from": "^2.4.1",
+          "to": "^2.5.6"
+        },
+        "@swc/core": {
+          "from": "^1.15.2",
+          "to": "^1.15.21"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-03-31T16:28:08.032Z",
+      "version": "4.8.4-depup.0"
+    }
   }
 }
