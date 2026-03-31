@@ -12,13 +12,13 @@ npm install @depup/typesense
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.4 | **DepUp version**: 3.0.4-depup.1 | **Updated**: 3/27/2026 | **Import test**: passed
+**Original version**: 3.0.5 | **DepUp version**: 3.0.5-depup.0 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| axios | `^1.13.5` | `^1.14.0` |
+| axios | `1.13.5` | `^1.14.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/typesense&labels=bug).
