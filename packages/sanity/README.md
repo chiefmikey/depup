@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.9 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 5.18.0 | **DepUp version**: 5.18.0-depup.10 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -36,18 +36,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/migrate | `^6.0.0` | `^6.1.0` |
 | @sanity/preview-url-secret | `^4.0.3` | `^4.0.4` |
 | @sanity/sdk | `2.1.2` | `^2.8.0` |
-| @sentry/react | `^8.55.0` | `^10.46.0` |
+| @sentry/react | `^8.55.0` | `^10.47.0` |
 | @tanstack/react-virtual | `^3.13.18` | `^3.13.23` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
-| i18next | `^25.8.17` | `^26.0.2` |
+| i18next | `^25.8.17` | `^26.0.3` |
 | isomorphic-dompurify | `2.26.0` | `^3.7.1` |
 | lodash-es | `^4.17.22` | `^4.17.23` |
 | motion | `^12.27.1` | `^12.38.0` |
 | nanoid | `^3.3.11` | `^5.1.7` |
 | path-to-regexp | `^6.3.0` | `^8.4.1` |
 | player.style | `^0.1.9` | `^0.3.1` |
-| react-i18next | `15.6.1` | `^17.0.1` |
+| react-i18next | `15.6.1` | `^17.0.2` |
 | semver | `^7.7.2` | `^7.7.4` |
 | uuid | `^11.1.0` | `^13.0.0` |
 | web-vitals | `^5.1.0` | `^5.2.0` |

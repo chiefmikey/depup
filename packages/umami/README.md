@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.4 | **Updated**: 3/27/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.5 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @prisma/client | `5.7.0` | `^7.6.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.0.3` |
-| @tanstack/react-query | `^5.12.2` | `^5.95.2` |
+| @tanstack/react-query | `^5.12.2` | `^5.96.0` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^5.6.2` |
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | is-ci | `^3.0.1` | `^4.1.0` |
 | is-docker | `^3.0.0` | `^4.0.0` |
 | is-localhost-ip | `^1.4.0` | `^3.0.1` |
-| isbot | `^3.4.5` | `^5.1.36` |
+| isbot | `^3.4.5` | `^5.1.37` |
 | kafkajs | `^2.1.0` | `^2.2.4` |
 | maxmind | `^4.3.6` | `^5.0.5` |
 | moment-timezone | `^0.5.35` | `^0.6.1` |

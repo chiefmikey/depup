@@ -1,6 +1,6 @@
 {
   "name": "@depup/umami",
-  "version": "2.10.0-depup.0",
+  "version": "2.10.0-depup.5",
   "description": "A simple, fast, privacy-focused alternative to Google Analytics. (with updated dependencies)",
   "author": "Mike Cao <mike@mikecao.com>",
   "license": "MIT",
@@ -62,10 +62,10 @@
   "dependencies": {
     "@clickhouse/client": "^1.18.2",
     "@fontsource/inter": "^5.2.8",
-    "@prisma/client": "^7.5.0",
+    "@prisma/client": "^7.6.0",
     "@prisma/extension-read-replicas": "^0.5.0",
     "@react-spring/web": "^10.0.3",
-    "@tanstack/react-query": "^5.91.0",
+    "@tanstack/react-query": "^5.96.0",
     "@umami/prisma-client": "^0.20.0",
     "@umami/redis-client": "^0.30.0",
     "chalk": "^5.6.2",
@@ -88,22 +88,22 @@
     "is-ci": "^4.1.0",
     "is-docker": "^4.0.0",
     "is-localhost-ip": "^3.0.1",
-    "isbot": "^5.1.36",
+    "isbot": "^5.1.37",
     "kafkajs": "^2.2.4",
     "maxmind": "^5.0.5",
     "md5": "^2.3.0",
     "moment-timezone": "^0.6.1",
-    "next": "^16.2.0",
+    "next": "^16.2.1",
     "next-basics": "^0.40.0",
     "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
-    "prisma": "^7.5.0",
+    "prisma": "^7.6.0",
     "react": "^19.2.4",
     "react-basics": "^0.126.0",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^19.2.4",
     "react-error-boundary": "^6.1.1",
-    "react-intl": "^10.0.0",
+    "react-intl": "^10.1.1",
     "react-simple-maps": "^3.0.0",
     "react-use-measure": "^2.1.7",
     "react-window": "^2.2.7",
@@ -185,7 +185,7 @@
       },
       "@prisma/client": {
         "from": "5.7.0",
-        "to": "^7.5.0"
+        "to": "^7.6.0"
       },
       "@prisma/extension-read-replicas": {
         "from": "^0.3.0",
@@ -197,7 +197,7 @@
       },
       "@tanstack/react-query": {
         "from": "^5.12.2",
-        "to": "^5.91.0"
+        "to": "^5.96.0"
       },
       "@umami/prisma-client": {
         "from": "^0.13.0",
@@ -281,7 +281,7 @@
       },
       "isbot": {
         "from": "^3.4.5",
-        "to": "^5.1.36"
+        "to": "^5.1.37"
       },
       "kafkajs": {
         "from": "^2.1.0",
@@ -297,7 +297,7 @@
       },
       "next": {
         "from": "14.0.4",
-        "to": "^16.2.0"
+        "to": "^16.2.1"
       },
       "next-basics": {
         "from": "^0.39.0",
@@ -309,7 +309,7 @@
       },
       "prisma": {
         "from": "5.7.0",
-        "to": "^7.5.0"
+        "to": "^7.6.0"
       },
       "react": {
         "from": "^18.2.0",
@@ -333,7 +333,7 @@
       },
       "react-intl": {
         "from": "^6.5.5",
-        "to": "^10.0.0"
+        "to": "^10.1.1"
       },
       "react-simple-maps": {
         "from": "^2.3.0",
@@ -371,7 +371,7 @@
     "depsUpdated": 48,
     "originalPackage": "umami",
     "originalVersion": "2.10.0",
-    "processedAt": "2026-03-19T00:40:51.432Z",
+    "processedAt": "2026-03-31T12:33:27.463Z",
     "smokeTest": "failed"
   }
 }

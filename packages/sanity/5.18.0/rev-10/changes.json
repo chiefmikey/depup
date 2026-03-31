@@ -22,7 +22,7 @@
     },
     "@portabletext/editor": {
       "from": "^6.4.0",
-      "to": "^6.5.2"
+      "to": "^6.6.0"
     },
     "@portabletext/html": {
       "from": "^1.0.0",
@@ -30,19 +30,23 @@
     },
     "@portabletext/plugin-markdown-shortcuts": {
       "from": "^7.0.19",
-      "to": "^7.0.22"
+      "to": "^7.0.23"
     },
     "@portabletext/plugin-one-line": {
       "from": "^6.0.19",
-      "to": "^6.0.22"
+      "to": "^6.0.23"
     },
     "@portabletext/plugin-paste-link": {
       "from": "^3.0.19",
-      "to": "^3.0.22"
+      "to": "^3.0.23"
     },
     "@portabletext/plugin-typography": {
       "from": "^7.0.19",
-      "to": "^7.0.22"
+      "to": "^7.0.23"
+    },
+    "@sanity/cli": {
+      "from": "^6.2.1",
+      "to": "^6.3.0"
     },
     "@sanity/client": {
       "from": "^7.17.0",
@@ -54,7 +58,7 @@
     },
     "@sanity/image-url": {
       "from": "^2.0.3",
-      "to": "^2.1.0"
+      "to": "^2.1.1"
     },
     "@sanity/migrate": {
       "from": "^6.0.0",
@@ -70,7 +74,7 @@
     },
     "@sentry/react": {
       "from": "^8.55.0",
-      "to": "^10.46.0"
+      "to": "^10.47.0"
     },
     "@tanstack/react-virtual": {
       "from": "^3.13.18",
@@ -86,7 +90,7 @@
     },
     "i18next": {
       "from": "^25.8.17",
-      "to": "^25.10.10"
+      "to": "^26.0.3"
     },
     "isomorphic-dompurify": {
       "from": "2.26.0",
@@ -106,7 +110,7 @@
     },
     "path-to-regexp": {
       "from": "^6.3.0",
-      "to": "^8.4.0"
+      "to": "^8.4.1"
     },
     "player.style": {
       "from": "^0.1.9",
@@ -114,7 +118,7 @@
     },
     "react-i18next": {
       "from": "15.6.1",
-      "to": "^17.0.0"
+      "to": "^17.0.2"
     },
     "semver": {
       "from": "^7.7.2",
@@ -130,9 +134,9 @@
     },
     "xstate": {
       "from": "^5.25.1",
-      "to": "^5.29.0"
+      "to": "^5.30.0"
     }
   },
-  "timestamp": "2026-03-27T20:20:34.827Z",
-  "totalUpdated": 33
+  "timestamp": "2026-03-31T12:31:53.500Z",
+  "totalUpdated": 34
 }
