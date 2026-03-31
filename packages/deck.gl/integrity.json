@@ -7,6 +7,27 @@
       "status": "published",
       "timestamp": "2026-03-19T00:39:08.654Z",
       "version": "9.2.11-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@loaders.gl/core": {
+          "from": "~4.3.4",
+          "to": "^4.4.0"
+        },
+        "@luma.gl/core": {
+          "from": "~9.2.6",
+          "to": "^9.3.0"
+        },
+        "@luma.gl/engine": {
+          "from": "~9.2.6",
+          "to": "^9.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T16:29:51.333Z",
+      "version": "9.2.11-depup.1"
     }
   }
 }

@@ -27,6 +27,27 @@
       "status": "published",
       "timestamp": "2026-03-26T20:18:51.658Z",
       "version": "6.1.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@sinonjs/commons": {
+          "from": "^3.0.1",
+          "to": "^4.0.0-alpha.0"
+        },
+        "@sinonjs/fake-timers": {
+          "from": "^15.1.1",
+          "to": "^15.2.0"
+        },
+        "path-to-regexp": {
+          "from": "^8.3.0",
+          "to": "^8.4.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T16:30:30.288Z",
+      "version": "6.1.4-depup.2"
     }
   }
 }
