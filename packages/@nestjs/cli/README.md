@@ -12,24 +12,22 @@ npm install @depup/nestjs__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.0.16 | **DepUp version**: 11.0.16-depup.1 | **Updated**: 3/23/2026 | **Import test**: failed
+**Original version**: 11.0.17 | **DepUp version**: 11.0.17-depup.0 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @angular-devkit/core | `19.2.19` | `^21.2.3` |
-| @angular-devkit/schematics | `19.2.19` | `^21.2.3` |
-| @angular-devkit/schematics-cli | `19.2.19` | `^21.2.3` |
+| @angular-devkit/core | `19.2.22` | `^21.2.5` |
+| @angular-devkit/schematics | `19.2.22` | `^21.2.5` |
+| @angular-devkit/schematics-cli | `19.2.22` | `^21.2.5` |
 | @inquirer/prompts | `7.10.1` | `^8.3.2` |
-| @nestjs/schematics | `^11.0.1` | `^11.0.9` |
+| @nestjs/schematics | `^11.0.1` | `^11.0.10` |
 | chokidar | `4.0.3` | `^5.0.0` |
 | commander | `4.1.1` | `^14.0.3` |
-| glob | `13.0.0` | `^13.0.6` |
 | node-emoji | `1.11.0` | `^2.2.0` |
 | ora | `5.4.1` | `^9.3.0` |
 | typescript | `5.9.3` | `^6.0.2` |
-| webpack | `5.104.1` | `^5.105.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nestjs__cli&labels=bug).

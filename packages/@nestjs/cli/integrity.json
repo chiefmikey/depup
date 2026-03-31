@@ -108,5 +108,56 @@
       "timestamp": "2026-03-23T16:28:30.915Z",
       "version": "11.0.16-depup.1"
     }
+  },
+  "11.0.17": {
+    "0": {
+      "changes": {
+        "@angular-devkit/core": {
+          "from": "19.2.22",
+          "to": "^21.2.5"
+        },
+        "@angular-devkit/schematics": {
+          "from": "19.2.22",
+          "to": "^21.2.5"
+        },
+        "@angular-devkit/schematics-cli": {
+          "from": "19.2.22",
+          "to": "^21.2.5"
+        },
+        "@inquirer/prompts": {
+          "from": "7.10.1",
+          "to": "^8.3.2"
+        },
+        "@nestjs/schematics": {
+          "from": "^11.0.1",
+          "to": "^11.0.10"
+        },
+        "chokidar": {
+          "from": "4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "4.1.1",
+          "to": "^14.0.3"
+        },
+        "node-emoji": {
+          "from": "1.11.0",
+          "to": "^2.2.0"
+        },
+        "ora": {
+          "from": "5.4.1",
+          "to": "^9.3.0"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.2"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T08:29:53.179Z",
+      "version": "11.0.17-depup.0"
+    }
   }
 }
