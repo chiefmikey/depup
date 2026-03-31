@@ -12,7 +12,7 @@ npm install @depup/caporal
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cli-table3 | `^0.5.0` | `^0.6.5` |
 | colorette | `^1.0.1` | `^2.0.20` |
 | fast-levenshtein | `^2.0.6` | `^3.0.0` |
-| lodash | `^4.17.14` | `^4.17.23` |
+| lodash | `^4.17.14` | `^4.18.0` |
 | prettyjson | `^1.2.1` | `^1.2.5` |
 | tabtab | `^2.2.2` | `^3.0.2` |
 | winston | `^2.3.1` | `^3.19.0` |

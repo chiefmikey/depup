@@ -12,20 +12,20 @@ npm install @depup/sequelize
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.24 | **Updated**: 3/15/2026 | **Import test**: unknown
+**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.25 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/debug | `^4.1.8` | `^4.1.12` |
+| @types/debug | `^4.1.8` | `^4.1.13` |
 | @types/validator | `^13.7.17` | `^13.15.10` |
 | debug | `^4.3.4` | `^4.4.3` |
 | dottie | `^2.0.6` | `^2.0.7` |
 | inflection | `^1.13.4` | `^3.0.2` |
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.0` |
 | moment | `^2.29.4` | `^2.30.1` |
-| moment-timezone | `^0.5.43` | `^0.6.0` |
+| moment-timezone | `^0.5.43` | `^0.6.1` |
 | pg-connection-string | `^2.6.1` | `^2.12.0` |
 | retry-as-promised | `^7.0.4` | `^7.1.1` |
 | semver | `^7.5.4` | `^7.7.4` |

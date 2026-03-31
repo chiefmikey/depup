@@ -12,13 +12,13 @@ npm install @depup/dogapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.8.4 | **DepUp version**: 2.8.4-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.8.4 | **DepUp version**: 2.8.4-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.0` |
 | minimist | `^1.2.5` | `^1.2.8` |
 
 

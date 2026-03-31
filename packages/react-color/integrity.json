@@ -36,6 +36,43 @@
       "status": "published",
       "timestamp": "2026-03-18T22:43:32.705Z",
       "version": "2.19.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@icons/material": {
+          "from": "^0.2.4",
+          "to": "^0.4.1"
+        },
+        "lodash": {
+          "from": "^4.17.15",
+          "to": "^4.18.0"
+        },
+        "lodash-es": {
+          "from": "^4.17.15",
+          "to": "^4.17.23"
+        },
+        "material-colors": {
+          "from": "^1.2.1",
+          "to": "^1.2.6"
+        },
+        "prop-types": {
+          "from": "^15.5.10",
+          "to": "^15.8.1"
+        },
+        "reactcss": {
+          "from": "^1.2.0",
+          "to": "^1.2.3"
+        },
+        "tinycolor2": {
+          "from": "^1.4.1",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-31T20:28:16.154Z",
+      "version": "2.19.3-depup.1"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/knex-migrate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.7.4 | **DepUp version**: 1.7.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.7.4 | **DepUp version**: 1.7.4-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | bluebird | `^3.4.6` | `^3.7.2` |
 | invariant | `^2.2.1` | `^2.2.4` |
-| lodash | `^4.16.4` | `^4.17.23` |
+| lodash | `^4.16.4` | `^4.18.0` |
 | minimist | `^1.2.0` | `^1.2.8` |
 | mkdirp | `^0.5.1` | `^3.0.1` |
 | prettyjson | `^1.1.3` | `^1.2.5` |

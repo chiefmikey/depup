@@ -12,11 +12,17 @@ npm install @depup/html-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.6.6 | **DepUp version**: 5.6.6-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 5.6.6 | **DepUp version**: 5.6.6-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @types/html-minifier-terser | `^6.0.0` | `^7.0.2` |
+| html-minifier-terser | `^6.0.2` | `^7.2.0` |
+| lodash | `^4.17.21` | `^4.18.0` |
+| tapable | `^2.0.0` | `^2.3.2` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/html-webpack-plugin&labels=bug).
 

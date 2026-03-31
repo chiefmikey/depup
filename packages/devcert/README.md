@@ -12,7 +12,7 @@ npm install @depup/devcert
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.1 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.2 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eol | `^0.9.1` | `^0.10.0` |
 | get-port | `^3.2.0` | `^7.2.0` |
 | glob | `^7.1.2` | `^13.0.6` |
-| lodash | `^4.17.4` | `^4.17.23` |
+| lodash | `^4.17.4` | `^4.18.0` |
 | mkdirp | `^0.5.1` | `^3.0.1` |
 | password-prompt | `^1.0.4` | `^1.1.3` |
 | rimraf | `^2.6.2` | `^6.1.3` |
