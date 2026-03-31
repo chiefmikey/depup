@@ -12,7 +12,7 @@ npm install @depup/nivo
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.31.0 | **DepUp version**: 0.31.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 0.31.0 | **DepUp version**: 0.31.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | d3-time | `^1.0.7` | `^3.1.0` |
 | d3-time-format | `^2.0.5` | `^4.1.0` |
 | d3-voronoi | `^1.1.2` | `^1.1.4` |
-| lodash | `^4.17.4` | `^4.17.23` |
+| lodash | `^4.17.4` | `^4.18.0` |
 | prop-types | `^15.5.10` | `^15.8.1` |
 | react-measure | `^2.0.2` | `^2.5.2` |
 | react-motion | `^0.5.1` | `^0.5.2` |

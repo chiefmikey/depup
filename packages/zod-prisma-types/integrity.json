@@ -41,6 +41,31 @@
       "status": "published",
       "timestamp": "2026-03-27T16:30:12.539Z",
       "version": "3.3.11-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@prisma/client-runtime-utils": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        },
+        "@prisma/dmmf": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        },
+        "@prisma/generator-helper": {
+          "from": "^7.3.0",
+          "to": "^7.6.0"
+        },
+        "lodash": {
+          "from": "^4.17.23",
+          "to": "^4.18.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-31T20:25:53.760Z",
+      "version": "3.3.11-depup.2"
     }
   }
 }

@@ -1,0 +1,290 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "^7.23.2",
+      "to": "^7.29.0"
+    },
+    "@babel/plugin-proposal-decorators": {
+      "from": "^7.23.2",
+      "to": "^7.29.0"
+    },
+    "@babel/plugin-transform-async-generator-functions": {
+      "from": "^7.25.4",
+      "to": "^7.29.0"
+    },
+    "@babel/plugin-transform-async-to-generator": {
+      "from": "^7.22.5",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-class-properties": {
+      "from": "^7.25.4",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-class-static-block": {
+      "from": "^7.24.7",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-exponentiation-operator": {
+      "from": "^7.22.5",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-for-of": {
+      "from": "^7.22.15",
+      "to": "^7.27.1"
+    },
+    "@babel/plugin-transform-object-rest-spread": {
+      "from": "^7.24.7",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-private-methods": {
+      "from": "^7.25.4",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-transform-runtime": {
+      "from": "7.23.3",
+      "to": "^7.29.0"
+    },
+    "@babel/preset-env": {
+      "from": "^7.23.2",
+      "to": "^7.29.2"
+    },
+    "@babel/preset-flow": {
+      "from": "^7.22.15",
+      "to": "^7.27.1"
+    },
+    "@babel/preset-react": {
+      "from": "^7.22.15",
+      "to": "^7.28.5"
+    },
+    "@babel/runtime": {
+      "from": "^7.23.2",
+      "to": "^7.29.2"
+    },
+    "@devexpress/callsite-record": {
+      "from": "^4.1.6",
+      "to": "^4.1.7"
+    },
+    "@types/node": {
+      "from": "20.14.5",
+      "to": "^25.5.0"
+    },
+    "address": {
+      "from": "^2.0.2",
+      "to": "^2.0.3"
+    },
+    "async-exit-hook": {
+      "from": "^1.1.2",
+      "to": "^2.0.1"
+    },
+    "babel-plugin-module-resolver": {
+      "from": "5.0.0",
+      "to": "^5.0.3"
+    },
+    "bowser": {
+      "from": "^2.8.1",
+      "to": "^2.14.1"
+    },
+    "chai": {
+      "from": "4.3.4",
+      "to": "^6.2.2"
+    },
+    "chalk": {
+      "from": "^2.3.0",
+      "to": "^5.6.2"
+    },
+    "chrome-remote-interface": {
+      "from": "^0.32.2",
+      "to": "^0.34.0"
+    },
+    "coffeescript": {
+      "from": "^2.3.1",
+      "to": "^2.7.0"
+    },
+    "commander": {
+      "from": "^8.3.0",
+      "to": "^14.0.3"
+    },
+    "debug": {
+      "from": "^4.3.1",
+      "to": "^4.4.3"
+    },
+    "dedent": {
+      "from": "^0.4.0",
+      "to": "^1.7.2"
+    },
+    "del": {
+      "from": "^3.0.0",
+      "to": "^8.0.1"
+    },
+    "device-specs": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "devtools-protocol": {
+      "from": "0.0.1109433",
+      "to": "^0.0.1604597"
+    },
+    "diff": {
+      "from": "^8.0.3",
+      "to": "^8.0.4"
+    },
+    "elegant-spinner": {
+      "from": "^1.0.1",
+      "to": "^3.0.0"
+    },
+    "emittery": {
+      "from": "^0.4.1",
+      "to": "^2.0.0"
+    },
+    "execa": {
+      "from": "^4.0.3",
+      "to": "^9.6.1"
+    },
+    "globby": {
+      "from": "^11.0.4",
+      "to": "^16.2.0"
+    },
+    "graceful-fs": {
+      "from": "^4.1.11",
+      "to": "^4.2.11"
+    },
+    "graphlib": {
+      "from": "^2.1.5",
+      "to": "^2.1.8"
+    },
+    "http-status-codes": {
+      "from": "^2.2.0",
+      "to": "^2.3.0"
+    },
+    "humanize-duration": {
+      "from": "^3.25.0",
+      "to": "^3.33.2"
+    },
+    "import-lazy": {
+      "from": "^3.1.0",
+      "to": "^4.0.0"
+    },
+    "indent-string": {
+      "from": "^1.2.2",
+      "to": "^5.0.0"
+    },
+    "is-ci": {
+      "from": "^1.0.10",
+      "to": "^4.1.0"
+    },
+    "is-docker": {
+      "from": "^2.0.0",
+      "to": "^4.0.0"
+    },
+    "is-glob": {
+      "from": "^2.0.1",
+      "to": "^4.0.3"
+    },
+    "is-stream": {
+      "from": "^2.0.0",
+      "to": "^4.0.1"
+    },
+    "json5": {
+      "from": "^2.2.2",
+      "to": "^2.2.3"
+    },
+    "lodash": {
+      "from": "^4.17.21",
+      "to": "^4.18.0"
+    },
+    "make-dir": {
+      "from": "^3.0.0",
+      "to": "^5.1.0"
+    },
+    "mime-db": {
+      "from": "^1.41.0",
+      "to": "^1.54.0"
+    },
+    "moment": {
+      "from": "^2.29.4",
+      "to": "^2.30.1"
+    },
+    "moment-duration-format-commonjs": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "mustache": {
+      "from": "^2.1.2",
+      "to": "^4.2.0"
+    },
+    "nanoid": {
+      "from": "^3.1.31",
+      "to": "^5.1.7"
+    },
+    "os-family": {
+      "from": "^1.0.0",
+      "to": "^1.1.0"
+    },
+    "parse5": {
+      "from": "^1.5.0",
+      "to": "^8.0.0"
+    },
+    "pify": {
+      "from": "^2.3.0",
+      "to": "^6.1.0"
+    },
+    "pngjs": {
+      "from": "^3.3.1",
+      "to": "^7.0.0"
+    },
+    "qrcode-terminal": {
+      "from": "^0.10.0",
+      "to": "^0.12.0"
+    },
+    "resolve-cwd": {
+      "from": "^1.0.0",
+      "to": "^3.0.0"
+    },
+    "resolve-from": {
+      "from": "^4.0.0",
+      "to": "^5.0.0"
+    },
+    "sanitize-filename": {
+      "from": "^1.6.0",
+      "to": "^1.6.4"
+    },
+    "semver": {
+      "from": "^7.5.3",
+      "to": "^7.7.4"
+    },
+    "set-cookie-parser": {
+      "from": "^2.5.1",
+      "to": "^3.1.0"
+    },
+    "source-map-support": {
+      "from": "^0.5.16",
+      "to": "^0.5.21"
+    },
+    "strip-bom": {
+      "from": "^2.0.0",
+      "to": "^5.0.0"
+    },
+    "testcafe-legacy-api": {
+      "from": "5.1.8",
+      "to": "^5.1.9"
+    },
+    "testcafe-reporter-json": {
+      "from": "^2.1.0",
+      "to": "^2.2.0"
+    },
+    "testcafe-reporter-xunit": {
+      "from": "^2.2.1",
+      "to": "^2.2.3"
+    },
+    "time-limit-promise": {
+      "from": "^1.0.2",
+      "to": "^1.0.4"
+    },
+    "typescript": {
+      "from": "4.7.4",
+      "to": "^6.0.2"
+    }
+  },
+  "timestamp": "2026-03-31T20:25:06.636Z",
+  "totalUpdated": 71
+}

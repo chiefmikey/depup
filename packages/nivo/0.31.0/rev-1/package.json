@@ -1,0 +1,227 @@
+{
+  "name": "@depup/nivo",
+  "version": "0.31.0-depup.1",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/plouc/nivo/blob/master/LICENSE.md"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/plouc/nivo"
+  },
+  "author": {
+    "name": "Raphaël Benitte",
+    "url": "https://github.com/plouc"
+  },
+  "keywords": [
+    "nivo",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "dependencies": {
+    "d3-chord": "^3.0.1",
+    "d3-color": "^3.1.0",
+    "d3-format": "^3.1.2",
+    "d3-hierarchy": "^3.1.2",
+    "d3-interpolate": "^3.0.1",
+    "d3-sankey": "^0.12.3",
+    "d3-scale": "^4.0.2",
+    "d3-scale-chromatic": "^3.1.0",
+    "d3-shape": "^3.2.0",
+    "d3-time": "^3.1.0",
+    "d3-time-format": "^4.1.0",
+    "d3-voronoi": "^1.1.4",
+    "lodash": "^4.18.0",
+    "prop-types": "^15.8.1",
+    "react-measure": "^2.5.2",
+    "react-motion": "^0.5.2",
+    "recompose": "^0.30.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/react": "^3.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^20.0.3",
+    "babel-plugin-check-es2015-constants": "^6.22.0",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-computed-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-function-name": "^6.24.1",
+    "babel-plugin-transform-es2015-literals": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-object-super": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "clog-cli": "^1.0.0",
+    "cross-env": "^5.0.5",
+    "enzyme": "^2.9.1",
+    "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.1",
+    "lint-staged": "^4.1.0",
+    "nivo-generators": "0.9.3",
+    "prettier": "^1.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "peerDependencies": {
+    "react": ">= 15.6.1 < 17.0.0"
+  },
+  "main": "./lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:cover": "npm run test:unit:cover",
+    "test:unit": "jest --verbose ./test",
+    "test:unit:cover": "jest --verbose --coverage ./test",
+    "build:commonjs": "rm -rf lib && cross-env NODE_ENV=commonjs babel src --out-dir lib",
+    "build:commonjs:watch": "npm run build:commonjs -- --watch",
+    "build:es": "rm -rf es && cross-env NODE_ENV=es babel src --out-dir es",
+    "build:es:watch": "npm run build:es -- --watch",
+    "build": "npm run build:commonjs && npm run build:es",
+    "fmt": "prettier --print-width=100 --tab-width=4 --bracket-spacing --no-semi --trailing-comma es5 --single-quote --color --write \"{src,specs,test,.storybook,stories}/**/*.js\"",
+    "fmt:check": "prettier --print-width=100 --tab-width=4 --bracket-spacing --no-semi --trailing-comma es5 --single-quote --list-different \"{src,specs,test,.storybook,stories}/**/*.js\"",
+    "version": "echo ${npm_package_version}",
+    "precommit": "lint-staged",
+    "commitmsg": "validate-commit-msg",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "storybook:publish": "npm run storybook:build && gh-pages -d storybook-static -r git@github.com:plouc/nivo.git -b gh-pages -e storybook",
+    "changelog": "rm CHANGELOG.md && node scripts/generate-changelog.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "fmt",
+      "git add",
+      "test"
+    ]
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "scope": {
+        "required": true,
+        "allowed": [
+          "*"
+        ],
+        "validate": false,
+        "multiple": false
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 80,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "",
+      "autoFix": false
+    }
+  },
+  "description": "nivo with all dependencies updated to latest",
+  "depup": {
+    "changes": {
+      "d3-chord": {
+        "from": "^1.0.4",
+        "to": "^3.0.1"
+      },
+      "d3-color": {
+        "from": "^1.0.3",
+        "to": "^3.1.0"
+      },
+      "d3-format": {
+        "from": "^1.2.0",
+        "to": "^3.1.2"
+      },
+      "d3-hierarchy": {
+        "from": "^1.1.5",
+        "to": "^3.1.2"
+      },
+      "d3-interpolate": {
+        "from": "^1.1.5",
+        "to": "^3.0.1"
+      },
+      "d3-sankey": {
+        "from": "^0.7.1",
+        "to": "^0.12.3"
+      },
+      "d3-scale": {
+        "from": "^1.0.6",
+        "to": "^4.0.2"
+      },
+      "d3-scale-chromatic": {
+        "from": "^1.1.1",
+        "to": "^3.1.0"
+      },
+      "d3-shape": {
+        "from": "^1.2.0",
+        "to": "^3.2.0"
+      },
+      "d3-time": {
+        "from": "^1.0.7",
+        "to": "^3.1.0"
+      },
+      "d3-time-format": {
+        "from": "^2.0.5",
+        "to": "^4.1.0"
+      },
+      "d3-voronoi": {
+        "from": "^1.1.2",
+        "to": "^1.1.4"
+      },
+      "lodash": {
+        "from": "^4.17.4",
+        "to": "^4.18.0"
+      },
+      "prop-types": {
+        "from": "^15.5.10",
+        "to": "^15.8.1"
+      },
+      "react-measure": {
+        "from": "^2.0.2",
+        "to": "^2.5.2"
+      },
+      "react-motion": {
+        "from": "^0.5.1",
+        "to": "^0.5.2"
+      },
+      "recompose": {
+        "from": "^0.25.0",
+        "to": "^0.30.0"
+      }
+    },
+    "depsUpdated": 17,
+    "originalPackage": "nivo",
+    "originalVersion": "0.31.0",
+    "processedAt": "2026-03-31T20:23:52.632Z",
+    "smokeTest": "failed"
+  }
+}
