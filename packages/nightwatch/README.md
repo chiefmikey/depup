@@ -12,7 +12,7 @@ npm install @depup/nightwatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.15.0 | **DepUp version**: 3.15.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.15.0 | **DepUp version**: 3.15.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,14 +27,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.2` | `^5.6.2` |
 | ci-info | `3.3.0` | `^4.4.0` |
 | cli-table3 | `^0.6.3` | `^0.6.5` |
-| devtools-protocol | `^0.0.1140464` | `^0.0.1596832` |
+| devtools-protocol | `^0.0.1140464` | `^0.0.1604597` |
 | dotenv | `16.3.1` | `^17.3.1` |
 | ejs | `^3.1.10` | `^5.0.1` |
 | envinfo | `7.11.0` | `^7.21.0` |
 | glob | `7.2.3` | `^13.0.6` |
-| jsdom | `^24.1.0` | `^29.0.0` |
-| lodash | `^4.17.21` | `^4.17.23` |
-| minimatch | `3.1.2` | `^10.2.4` |
+| jsdom | `^24.1.0` | `^29.0.1` |
+| lodash | `^4.17.21` | `^4.18.0` |
+| minimatch | `3.1.2` | `^10.2.5` |
 | minimist | `1.2.6` | `^1.2.8` |
 | mocha | `10.8.2` | `^11.7.5` |
 | nightwatch-axe-verbose | `^2.3.0` | `^2.5.1` |

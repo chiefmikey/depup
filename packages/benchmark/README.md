@@ -12,13 +12,13 @@ npm install @depup/benchmark
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.4 | **DepUp version**: 2.1.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 2.1.4 | **DepUp version**: 2.1.4-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| lodash | `^4.17.4` | `^4.17.23` |
+| lodash | `^4.17.4` | `^4.18.0` |
 | platform | `^1.3.3` | `^1.3.6` |
 
 

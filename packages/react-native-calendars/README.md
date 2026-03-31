@@ -12,14 +12,14 @@ npm install @depup/react-native-calendars
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1314.0 | **DepUp version**: 1.1314.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 1.1314.0 | **DepUp version**: 1.1314.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | hoist-non-react-statics | `^3.3.1` | `^3.3.2` |
-| lodash | `^4.17.15` | `^4.17.23` |
+| lodash | `^4.17.15` | `^4.18.0` |
 | memoize-one | `^5.2.1` | `^6.0.0` |
 | prop-types | `^15.5.10` | `^15.8.1` |
 | recyclerlistview | `^4.0.0` | `^4.2.3` |

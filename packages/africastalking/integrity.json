@@ -58,6 +58,31 @@
       "status": "published",
       "timestamp": "2026-03-27T20:19:27.067Z",
       "version": "0.7.9-depup.2"
+    },
+    "3": {
+      "changes": {
+        "axios": {
+          "from": "1.13.5",
+          "to": "^1.14.0"
+        },
+        "dotenv": {
+          "from": "17.2.4",
+          "to": "^17.3.1"
+        },
+        "joi": {
+          "from": "18.0.2",
+          "to": "^18.1.2"
+        },
+        "lodash": {
+          "from": "4.17.23",
+          "to": "^4.18.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-31T20:21:46.707Z",
+      "version": "0.7.9-depup.3"
     }
   }
 }
