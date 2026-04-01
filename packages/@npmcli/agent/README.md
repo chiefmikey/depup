@@ -12,17 +12,17 @@ npm install @depup/npmcli__agent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.1 | **Updated**: 4/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| agent-base | `^7.1.0` | `^8.0.0` |
-| http-proxy-agent | `^7.0.0` | `^8.0.0` |
-| https-proxy-agent | `^7.0.1` | `^8.0.0` |
+| agent-base | `^7.1.0` | `^9.0.0` |
+| http-proxy-agent | `^7.0.0` | `^9.0.0` |
+| https-proxy-agent | `^7.0.1` | `^9.0.0` |
 | lru-cache | `^11.2.1` | `^11.2.7` |
-| socks-proxy-agent | `^8.0.3` | `^9.0.0` |
+| socks-proxy-agent | `^8.0.3` | `^10.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/npmcli__agent&labels=bug).
