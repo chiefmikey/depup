@@ -12,13 +12,13 @@ npm install @depup/node-fetch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.2 | **DepUp version**: 3.3.2-depup.1 | **Updated**: 3/15/2026 | **Import test**: unknown
+**Original version**: 3.3.2 | **DepUp version**: 3.3.2-depup.2 | **Updated**: 4/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| data-uri-to-buffer | `^4.0.0` | `^7.0.0` |
+| data-uri-to-buffer | `^4.0.0` | `^8.0.0` |
 | fetch-blob | `^3.1.4` | `^4.0.0` |
 
 
