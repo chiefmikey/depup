@@ -5,5 +5,24 @@
       "timestamp": "2026-03-09T08:18:51.909Z",
       "version": "9.1.0-depup.0"
     }
+  },
+  "9.1.1": {
+    "0": {
+      "changes": {
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "p-timeout": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-01T20:19:44.994Z",
+      "version": "9.1.1-depup.0"
+    }
   }
 }
