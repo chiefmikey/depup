@@ -40,5 +40,24 @@
       "timestamp": "2026-03-19T08:21:35.042Z",
       "version": "29.4.6-depup.1"
     }
+  },
+  "29.4.9": {
+    "0": {
+      "changes": {
+        "type-fest": {
+          "from": "^4.41.0",
+          "to": "^5.5.0"
+        },
+        "yargs-parser": {
+          "from": "^21.1.1",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-01T16:26:27.759Z",
+      "version": "29.4.9-depup.0"
+    }
   }
 }
