@@ -1,0 +1,67 @@
+{
+  "name": "@depup/vitefu",
+  "description": "Utilities for building frameworks with Vite (with updated dependencies)",
+  "version": "1.1.3-depup.0",
+  "license": "MIT",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs"
+    }
+  },
+  "files": [
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svitejs/vitefu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/svitejs/vitefu/issues"
+  },
+  "keywords": [
+    "vitefu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "framework",
+    "utilities"
+  ],
+  "peerDependencies": {
+    "vite": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^14.18.63",
+    "@types/pnpapi": "^0.0.5",
+    "uvu": "^0.5.6",
+    "vite": "^3.2.11"
+  },
+  "workspaces": [
+    "tests/deps/*",
+    "tests/projects/*",
+    "tests/projects/workspace/packages/*"
+  ],
+  "scripts": {
+    "test": "uvu tests \".*\\.test\\.js\""
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "vitefu",
+    "originalVersion": "1.1.3",
+    "processedAt": "2026-04-01T05:02:38.685Z",
+    "smokeTest": "passed"
+  }
+}
