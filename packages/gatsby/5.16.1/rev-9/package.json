@@ -1,7 +1,7 @@
 {
   "name": "@depup/gatsby",
   "description": "Blazing fast modern site generator for React (with updated dependencies)",
-  "version": "5.16.1-depup.4",
+  "version": "5.16.1-depup.9",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bin": {
     "gatsby": "./cli.js"
@@ -36,15 +36,15 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
     "@sigmacomputing/babel-plugin-lodash": "^3.3.5",
     "@types/http-proxy": "^1.17.17",
-    "@typescript-eslint/eslint-plugin": "^8.57.2",
-    "@typescript-eslint/parser": "^8.57.2",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
     "@vercel/webpack-asset-relocator-loader": "^1.10.0",
     "acorn-loose": "^8.5.2",
     "acorn-walk": "^8.3.5",
     "address": "^2.0.3",
     "anser": "^2.3.5",
     "autoprefixer": "^10.4.27",
-    "axios": "^1.13.6",
+    "axios": "^1.14.0",
     "babel-jsx-utils": "^1.1.0",
     "babel-loader": "^10.1.1",
     "babel-plugin-add-module-exports": "^1.0.4",
@@ -54,7 +54,7 @@
     "better-opn": "^3.0.2",
     "bluebird": "^3.7.2",
     "body-parser": "^2.2.2",
-    "browserslist": "^4.28.1",
+    "browserslist": "^4.28.2",
     "cache-manager": "^7.2.8",
     "chalk": "^5.6.2",
     "chokidar": "^5.0.0",
@@ -105,8 +105,8 @@
     "gatsby-script": "^2.16.0",
     "gatsby-worker": "^2.16.0",
     "glob": "^13.0.6",
-    "globby": "^16.1.1",
-    "got": "^14.6.6",
+    "globby": "^16.2.0",
+    "got": "^15.0.0",
     "graphql": "^16.13.2",
     "graphql-compose": "^9.1.0",
     "graphql-http": "^1.22.4",
@@ -115,7 +115,7 @@
     "invariant": "^2.2.4",
     "is-relative": "^1.0.0",
     "is-relative-url": "^4.1.0",
-    "joi": "^18.1.1",
+    "joi": "^18.1.2",
     "json-loader": "^0.5.7",
     "latest-version": "^9.0.0",
     "linkfs": "^2.1.0",
@@ -136,7 +136,7 @@
     "opentracing": "^0.14.7",
     "p-defer": "^4.0.1",
     "parseurl": "^1.3.3",
-    "path-to-regexp": "^8.4.0",
+    "path-to-regexp": "^8.4.1",
     "physical-cpu-count": "^2.0.0",
     "platform": "^1.3.6",
     "postcss": "^8.5.8",
@@ -174,7 +174,7 @@
     "webpack-merge": "^6.0.1",
     "webpack-stats-plugin": "^1.1.3",
     "webpack-virtual-modules": "^0.6.2",
-    "xstate": "^5.29.0",
+    "xstate": "^5.30.0",
     "yaml-loader": "^0.9.0"
   },
   "devDependencies": {
@@ -382,11 +382,11 @@
       },
       "@typescript-eslint/eslint-plugin": {
         "from": "^5.60.1",
-        "to": "^8.57.2"
+        "to": "^8.58.0"
       },
       "@typescript-eslint/parser": {
         "from": "^5.60.1",
-        "to": "^8.57.2"
+        "to": "^8.58.0"
       },
       "@vercel/webpack-asset-relocator-loader": {
         "from": "1.7.3",
@@ -414,7 +414,7 @@
       },
       "axios": {
         "from": "^1.6.4",
-        "to": "^1.13.6"
+        "to": "^1.14.0"
       },
       "babel-loader": {
         "from": "^8.3.0",
@@ -426,7 +426,7 @@
       },
       "browserslist": {
         "from": "^4.21.9",
-        "to": "^4.28.1"
+        "to": "^4.28.2"
       },
       "cache-manager": {
         "from": "^2.11.1",
@@ -546,11 +546,11 @@
       },
       "globby": {
         "from": "^11.1.0",
-        "to": "^16.1.1"
+        "to": "^16.2.0"
       },
       "got": {
         "from": "^11.8.6",
-        "to": "^14.6.6"
+        "to": "^15.0.0"
       },
       "graphql": {
         "from": "^16.7.1",
@@ -574,7 +574,7 @@
       },
       "joi": {
         "from": "^17.9.2",
-        "to": "^18.1.1"
+        "to": "^18.1.2"
       },
       "latest-version": {
         "from": "^7.0.0",
@@ -634,7 +634,7 @@
       },
       "path-to-regexp": {
         "from": "0.1.12",
-        "to": "^8.4.0"
+        "to": "^8.4.1"
       },
       "postcss": {
         "from": "^8.4.24",
@@ -730,7 +730,7 @@
       },
       "xstate": {
         "from": "^4.38.0",
-        "to": "^5.29.0"
+        "to": "^5.30.0"
       },
       "yaml-loader": {
         "from": "^0.8.0",
@@ -740,7 +740,7 @@
     "depsUpdated": 112,
     "originalPackage": "gatsby",
     "originalVersion": "5.16.1",
-    "processedAt": "2026-03-26T20:22:24.341Z",
+    "processedAt": "2026-04-01T20:26:26.120Z",
     "smokeTest": "failed"
   }
 }

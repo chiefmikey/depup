@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.8 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.9 | **Updated**: 4/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -83,7 +83,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `^11.2.0` | `^11.3.4` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
-| got | `^11.8.6` | `^14.6.6` |
+| got | `^11.8.6` | `^15.0.0` |
 | graphql | `^16.7.1` | `^16.13.2` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
@@ -92,7 +92,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | joi | `^17.9.2` | `^18.1.2` |
 | latest-version | `^7.0.0` | `^9.0.0` |
 | lmdb | `2.5.3` | `^3.5.2` |
-| lodash | `^4.17.21` | `^4.18.0` |
+| lodash | `^4.17.21` | `^4.17.23` |
 | meant | `^1.0.3` | `^2.0.1` |
 | memoizee | `^0.4.15` | `^0.4.17` |
 | micromatch | `^4.0.5` | `^4.0.8` |

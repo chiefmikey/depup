@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.57.2"
+      "to": "^8.58.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.57.2"
+      "to": "^8.58.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.13.6"
+      "to": "^1.14.0"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -138,7 +138,7 @@
     },
     "browserslist": {
       "from": "^4.21.9",
-      "to": "^4.28.1"
+      "to": "^4.28.2"
     },
     "cache-manager": {
       "from": "^2.11.1",
@@ -258,11 +258,11 @@
     },
     "globby": {
       "from": "^11.1.0",
-      "to": "^16.1.1"
+      "to": "^16.2.0"
     },
     "got": {
       "from": "^11.8.6",
-      "to": "^14.6.6"
+      "to": "^15.0.0"
     },
     "graphql": {
       "from": "^16.7.1",
@@ -286,7 +286,7 @@
     },
     "joi": {
       "from": "^17.9.2",
-      "to": "^18.1.1"
+      "to": "^18.1.2"
     },
     "latest-version": {
       "from": "^7.0.0",
@@ -346,7 +346,7 @@
     },
     "path-to-regexp": {
       "from": "0.1.12",
-      "to": "^8.4.0"
+      "to": "^8.4.1"
     },
     "postcss": {
       "from": "^8.4.24",
@@ -442,13 +442,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.29.0"
+      "to": "^5.30.0"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-03-26T20:18:54.805Z",
+  "timestamp": "2026-04-01T20:23:13.988Z",
   "totalUpdated": 112
 }
