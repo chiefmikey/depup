@@ -1,6 +1,6 @@
 {
   "name": "@depup/expo__cli",
-  "version": "55.0.19-depup.14",
+  "version": "55.0.19-depup.19",
   "description": "The Expo CLI (with updated dependencies)",
   "main": "build/bin/cli",
   "bin": {
@@ -283,7 +283,7 @@
     "depsUpdated": 28,
     "originalPackage": "@expo/cli",
     "originalVersion": "55.0.19",
-    "processedAt": "2026-03-31T08:32:20.681Z",
+    "processedAt": "2026-04-01T05:04:50.873Z",
     "smokeTest": "failed"
   }
 }
