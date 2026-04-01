@@ -127,6 +127,71 @@
       "status": "published",
       "timestamp": "2026-03-31T20:21:38.831Z",
       "version": "9.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@graphql-tools/url-loader": {
+          "from": "^9.0.0",
+          "to": "^9.0.6"
+        },
+        "@graphql-tools/utils": {
+          "from": "^10.5.6",
+          "to": "^11.0.0"
+        },
+        "@types/js-yaml": {
+          "from": "^4.0.0",
+          "to": "^4.0.9"
+        },
+        "@whatwg-node/fetch": {
+          "from": "^0.10.0",
+          "to": "^0.10.13"
+        },
+        "chalk": {
+          "from": "^4.1.0",
+          "to": "^5.6.2"
+        },
+        "debug": {
+          "from": "^4.3.1",
+          "to": "^4.4.3"
+        },
+        "dotenv": {
+          "from": "^16.0.0",
+          "to": "^17.3.1"
+        },
+        "graphql-request": {
+          "from": "^6.0.0",
+          "to": "^7.4.0"
+        },
+        "http-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.0.0"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.0.0"
+        },
+        "jose": {
+          "from": "^5.0.0",
+          "to": "^6.2.2"
+        },
+        "js-yaml": {
+          "from": "^4.0.0",
+          "to": "^4.1.1"
+        },
+        "lodash": {
+          "from": "^4.17.20",
+          "to": "^4.17.21"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 14,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-01T08:37:50.498Z",
+      "version": "9.0.1-depup.2"
     }
   }
 }

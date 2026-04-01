@@ -12,7 +12,7 @@ npm install @depup/web-push
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.7 | **DepUp version**: 3.6.7-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.6.7 | **DepUp version**: 3.6.7-depup.1 | **Updated**: 4/1/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | asn1.js | `^5.3.0` | `^5.4.1` |
 | http_ece | `1.2.0` | `^1.2.1` |
-| https-proxy-agent | `^7.0.0` | `^8.0.0` |
+| https-proxy-agent | `^7.0.0` | `^9.0.0` |
 | jws | `^4.0.0` | `^4.0.1` |
 | minimist | `^1.2.5` | `^1.2.8` |
 

@@ -1,10 +1,5 @@
 {
   "4.17.21": {
-    "15": {
-      "version": "4.17.21-depup.15",
-      "timestamp": "2025-09-12T13:16:59.691Z",
-      "status": "published"
-    },
     "16": {
       "version": "4.17.21-depup.16",
       "timestamp": "2025-09-15T02:15:02.623Z",
@@ -30,6 +25,14 @@
       "status": "skipped",
       "timestamp": "2026-04-01T05:05:05.121Z",
       "version": "4.17.21-depup.19"
+    },
+    "20": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-04-01T08:38:57.158Z",
+      "version": "4.17.21-depup.20"
     }
   },
   "1.0.0": {
