@@ -12,14 +12,14 @@ npm install @depup/got-scraping
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.1 | **Updated**: 4/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| got | `^14.2.1` | `^14.6.6` |
-| header-generator | `^2.1.41` | `^2.1.81` |
+| got | `^14.2.1` | `^15.0.0` |
+| header-generator | `^2.1.41` | `^2.1.82` |
 | http2-wrapper | `^2.2.0` | `^2.2.1` |
 | ow | `^1.1.1` | `^3.1.1` |
 | quick-lru | `^7.0.0` | `^7.3.0` |
