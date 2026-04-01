@@ -1,0 +1,34 @@
+{
+  "name": "@depup/lodash",
+  "version": "4.17.23-depup.1",
+  "description": "Lodash modular utilities. (with updated dependencies)",
+  "keywords": [
+    "lodash",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "homepage": "https://lodash.com/",
+  "repository": "lodash/lodash",
+  "icon": "https://lodash.com/icon.svg",
+  "license": "MIT",
+  "main": "lodash.js",
+  "author": "John-David Dalton <john.david.dalton@gmail.com>",
+  "contributors": [
+    "John-David Dalton <john.david.dalton@gmail.com>",
+    "Mathias Bynens <mathias@qiwi.be>"
+  ],
+  "scripts": {
+    "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "lodash",
+    "originalVersion": "4.17.23",
+    "processedAt": "2026-04-01T16:32:06.646Z",
+    "smokeTest": "passed"
+  }
+}

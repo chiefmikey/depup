@@ -1,6 +1,6 @@
 {
   "name": "@depup/expo__image-utils",
-  "version": "0.8.12-depup.17",
+  "version": "0.8.12-depup.22",
   "description": "A package used by Expo CLI for processing images (with updated dependencies)",
   "main": "build/index.js",
   "scripts": {
@@ -66,7 +66,7 @@
     "depsUpdated": 2,
     "originalPackage": "@expo/image-utils",
     "originalVersion": "0.8.12",
-    "processedAt": "2026-03-31T20:21:09.736Z",
+    "processedAt": "2026-04-01T16:30:52.236Z",
     "smokeTest": "passed"
   }
 }

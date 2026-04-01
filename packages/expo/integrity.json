@@ -107,31 +107,6 @@
     }
   },
   "55.0.9": {
-    "17": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.20.0",
-          "to": "^7.29.2"
-        },
-        "@expo/vector-icons": {
-          "from": "^15.0.2",
-          "to": "^15.1.1"
-        },
-        "pretty-format": {
-          "from": "^29.7.0",
-          "to": "^30.3.0"
-        },
-        "react-refresh": {
-          "from": "^0.14.2",
-          "to": "^0.18.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-03-31T20:22:43.085Z",
-      "version": "55.0.9-depup.17"
-    },
     "18": {
       "changes": {
         "@babel/runtime": {
@@ -231,6 +206,31 @@
       "status": "published",
       "timestamp": "2026-04-01T12:30:36.067Z",
       "version": "55.0.9-depup.21"
+    },
+    "22": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.0",
+          "to": "^7.29.2"
+        },
+        "@expo/vector-icons": {
+          "from": "^15.0.2",
+          "to": "^15.1.1"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.3.0"
+        },
+        "react-refresh": {
+          "from": "^0.14.2",
+          "to": "^0.18.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-01T16:32:01.037Z",
+      "version": "55.0.9-depup.22"
     }
   },
   "55.0.10-canary-20260327-0789fbc": {
