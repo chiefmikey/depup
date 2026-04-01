@@ -12,18 +12,13 @@ npm install @depup/got
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.6.6 | **DepUp version**: 14.6.6-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 15.0.0 | **DepUp version**: 15.0.0-depup.0 | **Updated**: 4/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @sindresorhus/is | `^7.0.1` | `^7.2.0` |
-| cacheable-request | `^13.0.12` | `^13.0.18` |
-| form-data-encoder | `^4.0.2` | `^4.1.0` |
-| keyv | `^5.5.3` | `^5.6.0` |
-| lowercase-keys | `^3.0.0` | `^4.0.1` |
-| type-fest | `^4.26.1` | `^5.5.0` |
+| type-fest | `^5.4.4` | `^5.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/got&labels=bug).

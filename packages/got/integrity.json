@@ -38,5 +38,20 @@
       "timestamp": "2026-03-19T08:21:11.191Z",
       "version": "14.6.6-depup.1"
     }
+  },
+  "15.0.0": {
+    "0": {
+      "changes": {
+        "type-fest": {
+          "from": "^5.4.4",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-01T20:19:40.095Z",
+      "version": "15.0.0-depup.0"
+    }
   }
 }
