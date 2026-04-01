@@ -12,14 +12,14 @@ npm install @depup/got-retry
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.1 | **Updated**: 4/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^2.2.0` | `^4.4.3` |
-| got | `^4.1.1` | `^14.6.6` |
+| got | `^4.1.1` | `^15.0.0` |
 | is-plain-obj | `^1.0.0` | `^4.1.0` |
 | is-stream | `^1.0.1` | `^4.0.1` |
 | object-assign | `^3.0.0` | `^4.1.1` |

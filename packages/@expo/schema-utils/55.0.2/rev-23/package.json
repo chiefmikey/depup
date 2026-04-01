@@ -1,6 +1,6 @@
 {
   "name": "@depup/expo__schema-utils",
-  "version": "55.0.2-depup.18",
+  "version": "55.0.2-depup.23",
   "description": "Reusable JSON Schema (Draft 04) validation library for Expo (with updated dependencies)",
   "license": "MIT",
   "main": "./build/index.js",
@@ -45,7 +45,7 @@
     "depsUpdated": 0,
     "originalPackage": "@expo/schema-utils",
     "originalVersion": "55.0.2",
-    "processedAt": "2026-04-01T00:46:45.594Z",
+    "processedAt": "2026-04-01T20:21:46.536Z",
     "smokeTest": "passed"
   }
 }
