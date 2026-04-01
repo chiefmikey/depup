@@ -1,6 +1,6 @@
 {
   "name": "@depup/expo",
-  "version": "55.0.9-depup.16",
+  "version": "55.0.9-depup.21",
   "description": "The Expo SDK (with updated dependencies)",
   "main": "src/Expo.ts",
   "module": "src/Expo.ts",
@@ -158,7 +158,7 @@
     "depsUpdated": 4,
     "originalPackage": "expo",
     "originalVersion": "55.0.9",
-    "processedAt": "2026-03-31T16:30:29.043Z",
+    "processedAt": "2026-04-01T12:30:28.961Z",
     "smokeTest": "failed"
   }
 }

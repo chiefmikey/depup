@@ -1,8 +1,15 @@
 {
   "name": "@depup/lodash",
-  "version": "4.17.21-depup.16",
-  "description": "Lodash modular utilities.",
-  "keywords": "modules, stdlib, util",
+  "version": "4.17.21-depup.21",
+  "description": "Lodash modular utilities. (with updated dependencies)",
+  "keywords": [
+    "lodash",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
   "homepage": "https://lodash.com/",
   "repository": "lodash/lodash",
   "icon": "https://lodash.com/icon.svg",
@@ -15,5 +22,13 @@
   ],
   "scripts": {
     "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "lodash",
+    "originalVersion": "4.17.21",
+    "processedAt": "2026-04-01T12:30:41.626Z",
+    "smokeTest": "passed"
   }
 }
