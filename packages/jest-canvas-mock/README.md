@@ -12,13 +12,13 @@ npm install @depup/jest-canvas-mock
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.5.2 | **DepUp version**: 2.5.2-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 2.5.2 | **DepUp version**: 2.5.2-depup.1 | **Updated**: 4/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| moo-color | `^1.0.2` | `^1.0.3` |
+| moo-color | `^1.0.2` | `^2.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jest-canvas-mock&labels=bug).
