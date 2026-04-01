@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:39:07.101Z",
       "version": "9.0.0-depup.0"
     }
+  },
+  "10.0.0": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "socks": {
+          "from": "^2.8.3",
+          "to": "^2.8.7"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-01T08:34:20.079Z",
+      "version": "10.0.0-depup.0"
+    }
   }
 }
