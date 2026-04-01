@@ -71,5 +71,24 @@
       "timestamp": "2026-03-29T00:42:55.762Z",
       "version": "62.8.1-depup.1"
     }
+  },
+  "62.9.0": {
+    "0": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-01T08:34:49.170Z",
+      "version": "62.9.0-depup.0"
+    }
   }
 }
