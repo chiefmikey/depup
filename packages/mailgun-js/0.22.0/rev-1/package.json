@@ -1,0 +1,103 @@
+{
+  "name": "@depup/mailgun-js",
+  "description": "Simple Node.js helper module for Mailgun API (with updated dependencies)",
+  "keywords": [
+    "mailgun-js",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "email",
+    "mailgun"
+  ],
+  "version": "0.22.0-depup.1",
+  "homepage": "https://github.com/bojand/mailgun-js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bojand/mailgun-js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/bojand/mailgun-js/issues"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/mailgun.js",
+  "dependencies": {
+    "async": "^3.2.6",
+    "debug": "^4.4.3",
+    "form-data": "^4.0.5",
+    "inflection": "^3.0.2",
+    "is-stream": "^4.0.1",
+    "path-proxy": "~1.0.0",
+    "promisify-call": "^2.0.4",
+    "proxy-agent": "^8.0.0",
+    "tsscmp": "^1.0.6"
+  },
+  "author": {
+    "name": "Bojan Djurkovic <dbojan@gmail.com>"
+  },
+  "devDependencies": {
+    "clone": "^2.1.2",
+    "mocha": "~5.2.0",
+    "nodemailer": "^4.6.8",
+    "request": "^2.88.0",
+    "sinon": "^7.1.0",
+    "standard": "^12.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha --ui exports --slow 1500ms --timeout 10000ms --reporter spec",
+    "lint": "standard lib/**/*.js && standard --env mocha test/**/*.js",
+    "lint:fix": "standard --fix lib/**/*.js && standard --env mocha --fix test/**/*.js",
+    "docs": "./bin/docs"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "standard": {
+    "env": {
+      "node": true,
+      "mocha": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "async": {
+        "from": "^2.6.1",
+        "to": "^3.2.6"
+      },
+      "debug": {
+        "from": "^4.1.0",
+        "to": "^4.4.3"
+      },
+      "form-data": {
+        "from": "^2.3.3",
+        "to": "^4.0.5"
+      },
+      "inflection": {
+        "from": "~1.12.0",
+        "to": "^3.0.2"
+      },
+      "is-stream": {
+        "from": "^1.1.0",
+        "to": "^4.0.1"
+      },
+      "promisify-call": {
+        "from": "^2.0.2",
+        "to": "^2.0.4"
+      },
+      "proxy-agent": {
+        "from": "^3.0.3",
+        "to": "^8.0.0"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "mailgun-js",
+    "originalVersion": "0.22.0",
+    "processedAt": "2026-04-01T08:37:58.443Z",
+    "smokeTest": "passed"
+  }
+}

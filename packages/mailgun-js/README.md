@@ -12,7 +12,7 @@ npm install @depup/mailgun-js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.22.0 | **DepUp version**: 0.22.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.22.0 | **DepUp version**: 0.22.0-depup.1 | **Updated**: 4/1/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | inflection | `~1.12.0` | `^3.0.2` |
 | is-stream | `^1.1.0` | `^4.0.1` |
 | promisify-call | `^2.0.2` | `^2.0.4` |
-| proxy-agent | `^3.0.3` | `^7.0.0` |
+| proxy-agent | `^3.0.3` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mailgun-js&labels=bug).
