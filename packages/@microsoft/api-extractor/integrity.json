@@ -170,6 +170,43 @@
       "status": "published",
       "timestamp": "2026-04-01T16:25:45.437Z",
       "version": "7.58.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "diff": {
+          "from": "~8.0.2",
+          "to": "^8.0.4"
+        },
+        "lodash": {
+          "from": "~4.17.23",
+          "to": "^4.18.1"
+        },
+        "minimatch": {
+          "from": "10.2.3",
+          "to": "^10.2.5"
+        },
+        "resolve": {
+          "from": "~1.22.1",
+          "to": "^1.22.11"
+        },
+        "semver": {
+          "from": "~7.5.4",
+          "to": "^7.7.4"
+        },
+        "source-map": {
+          "from": "~0.6.1",
+          "to": "^0.7.6"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-02T00:39:04.349Z",
+      "version": "7.58.0-depup.1"
     }
   }
 }
