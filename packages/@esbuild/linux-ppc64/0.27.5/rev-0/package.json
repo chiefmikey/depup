@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__linux-ppc64",
+  "version": "0.27.5-depup.0",
+  "description": "The Linux PowerPC 64-bit Little Endian binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "ppc64"
+  ],
+  "keywords": [
+    "@esbuild/linux-ppc64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/linux-ppc64",
+    "originalVersion": "0.27.5",
+    "processedAt": "2026-04-02T00:36:10.269Z",
+    "smokeTest": "failed"
+  }
+}
