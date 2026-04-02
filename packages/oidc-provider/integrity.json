@@ -53,6 +53,35 @@
       "status": "published",
       "timestamp": "2026-03-28T08:18:37.866Z",
       "version": "9.7.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@koa/router": {
+          "from": "^15.3.1",
+          "to": "^15.4.0"
+        },
+        "jose": {
+          "from": "^6.2.0",
+          "to": "^6.2.2"
+        },
+        "koa": {
+          "from": "^3.1.2",
+          "to": "^3.2.0"
+        },
+        "nanoid": {
+          "from": "^5.1.6",
+          "to": "^5.1.7"
+        },
+        "undici": {
+          "from": "^7.22.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-02T12:28:56.416Z",
+      "version": "9.7.1-depup.2"
     }
   }
 }
