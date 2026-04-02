@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__freebsd-arm64",
+  "version": "0.27.5-depup.0",
+  "description": "The FreeBSD ARM 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "freebsd"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "keywords": [
+    "@esbuild/freebsd-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/freebsd-arm64",
+    "originalVersion": "0.27.5",
+    "processedAt": "2026-04-02T00:36:04.637Z",
+    "smokeTest": "failed"
+  }
+}
