@@ -88,6 +88,35 @@
       "status": "published",
       "timestamp": "2026-03-31T16:31:46.835Z",
       "version": "21.0.3-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@sinonjs/commons": {
+          "from": "^3.0.1",
+          "to": "^4.0.0-alpha.0"
+        },
+        "@sinonjs/fake-timers": {
+          "from": "^15.1.1",
+          "to": "^15.3.0"
+        },
+        "@sinonjs/samsam": {
+          "from": "^9.0.3",
+          "to": "^10.0.0"
+        },
+        "diff": {
+          "from": "^8.0.3",
+          "to": "^8.0.4"
+        },
+        "supports-color": {
+          "from": "^7.2.0",
+          "to": "^10.2.2"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-02T04:50:55.797Z",
+      "version": "21.0.3-depup.3"
     }
   }
 }
