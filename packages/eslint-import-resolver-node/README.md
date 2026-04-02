@@ -12,15 +12,13 @@ npm install @depup/eslint-import-resolver-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.9 | **DepUp version**: 0.3.9-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.3.10 | **DepUp version**: 0.3.10-depup.0 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^3.2.7` | `^4.4.3` |
-| is-core-module | `^2.13.0` | `^2.16.1` |
-| resolve | `^1.22.4` | `^1.22.11` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-import-resolver-node&labels=bug).
