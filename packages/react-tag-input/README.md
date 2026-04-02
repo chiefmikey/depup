@@ -12,14 +12,14 @@ npm install @depup/react-tag-input
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.10.6 | **DepUp version**: 6.10.6-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 6.10.6 | **DepUp version**: 6.10.6-depup.1 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | classnames | `~2.3.1` | `^2.5.1` |
-| lodash-es | `^4.17.21` | `^4.17.23` |
+| lodash-es | `^4.17.21` | `^4.18.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-tag-input&labels=bug).

@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-18T22:42:30.369Z",
       "version": "6.10.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "classnames": {
+          "from": "~2.3.1",
+          "to": "^2.5.1"
+        },
+        "lodash-es": {
+          "from": "^4.17.21",
+          "to": "^4.18.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-02T00:44:04.371Z",
+      "version": "6.10.6-depup.1"
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "name": "@depup/lodash-es",
+  "version": "4.18.1-depup.0",
+  "description": "Lodash exported as ES modules. (with updated dependencies)",
+  "keywords": [
+    "lodash-es",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "homepage": "https://lodash.com/custom-builds",
+  "bugs": "https://github.com/lodash/lodash-cli/issues",
+  "repository": "lodash/lodash",
+  "license": "MIT",
+  "type": "module",
+  "jsnext:main": "lodash.js",
+  "main": "lodash.js",
+  "module": "lodash.js",
+  "sideEffects": false,
+  "author": "John-David Dalton <john.david.dalton@gmail.com>",
+  "contributors": [
+    "John-David Dalton <john.david.dalton@gmail.com>",
+    "Mathias Bynens <mathias@qiwi.be>"
+  ],
+  "scripts": {
+    "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "lodash-es",
+    "originalVersion": "4.18.1",
+    "processedAt": "2026-04-02T00:42:02.898Z",
+    "smokeTest": "passed"
+  }
+}
