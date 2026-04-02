@@ -41,5 +41,20 @@
       "timestamp": "2026-04-02T12:28:17.710Z",
       "version": "2.3.2-depup.1"
     }
+  },
+  "2.3.3": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-02T16:25:56.808Z",
+      "version": "2.3.3-depup.0"
+    }
   }
 }
