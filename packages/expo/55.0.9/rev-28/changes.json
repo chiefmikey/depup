@@ -4,6 +4,10 @@
       "from": "^7.20.0",
       "to": "^7.29.2"
     },
+    "@expo/metro": {
+      "from": "~54.2.0",
+      "to": "^55.0.0"
+    },
     "@expo/vector-icons": {
       "from": "^15.0.2",
       "to": "^15.1.1"
@@ -17,6 +21,6 @@
       "to": "^0.18.0"
     }
   },
-  "timestamp": "2026-04-01T20:22:06.138Z",
-  "totalUpdated": 4
+  "timestamp": "2026-04-02T16:28:48.001Z",
+  "totalUpdated": 5
 }
