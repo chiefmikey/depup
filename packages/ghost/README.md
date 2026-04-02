@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.25.1 | **DepUp version**: 6.25.1-depup.2 | **Updated**: 4/2/2026 | **Import test**: failed
+**Original version**: 6.25.1 | **DepUp version**: 6.25.1-depup.3 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1022.0` |
+| @aws-sdk/client-s3 | `3.864.0` | `^3.1023.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -39,11 +39,17 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/html-to-plaintext | `1.0.4` | `^1.0.8` |
 | @tryghost/http-cache-utils | `0.1.20` | `^2.0.3` |
 | @tryghost/job-manager | `1.0.3` | `^3.0.3` |
-| @tryghost/kg-clean-basic-html | `4.2.21` | `^4.2.22` |
-| @tryghost/kg-default-nodes | `2.0.17` | `^2.0.19` |
-| @tryghost/kg-default-transforms | `1.2.40` | `^1.2.42` |
-| @tryghost/kg-html-to-lexical | `1.2.41` | `^1.2.43` |
-| @tryghost/kg-lexical-html-renderer | `1.3.40` | `^1.3.42` |
+| @tryghost/kg-card-factory | `5.1.13` | `^5.1.14` |
+| @tryghost/kg-clean-basic-html | `4.2.21` | `^4.2.23` |
+| @tryghost/kg-converters | `1.1.20` | `^1.1.21` |
+| @tryghost/kg-default-atoms | `5.1.8` | `^5.1.9` |
+| @tryghost/kg-default-cards | `10.2.11` | `^10.2.13` |
+| @tryghost/kg-default-nodes | `2.0.17` | `^2.0.21` |
+| @tryghost/kg-default-transforms | `1.2.40` | `^1.2.44` |
+| @tryghost/kg-html-to-lexical | `1.2.41` | `^1.2.45` |
+| @tryghost/kg-lexical-html-renderer | `1.3.40` | `^1.3.44` |
+| @tryghost/kg-markdown-html-renderer | `7.1.16` | `^7.1.18` |
+| @tryghost/kg-mobiledoc-html-renderer | `7.1.16` | `^7.1.18` |
 | @tryghost/limit-service | `1.4.1` | `^1.5.2` |
 | @tryghost/logging | `2.5.0` | `^4.0.3` |
 | @tryghost/members-csv | `2.0.3` | `^2.0.5` |
