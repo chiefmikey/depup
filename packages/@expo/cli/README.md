@@ -12,7 +12,7 @@ npm install @depup/expo__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 55.0.20-canary-20260328-bdc6273 | **DepUp version**: 55.0.20-canary-20260328-bdc6273-depup.0 | **Updated**: 3/28/2026 | **Import test**: failed
+**Original version**: 55.0.21 | **DepUp version**: 55.0.21-depup.0 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -39,7 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | prompts | `^2.3.2` | `^2.4.2` |
 | semver | `^7.6.0` | `^7.7.4` |
 | send | `^0.19.0` | `^1.2.1` |
-| slugify | `^1.3.4` | `^1.6.8` |
+| slugify | `^1.3.4` | `^1.6.9` |
 | stacktrace-parser | `^0.1.10` | `^0.1.11` |
 | structured-headers | `^0.4.1` | `^2.0.2` |
 | terminal-link | `^2.1.1` | `^5.0.0` |
