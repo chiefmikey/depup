@@ -12,7 +12,7 @@ npm install @depup/strapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.2 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.3 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
@@ -29,7 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | configstore | `5.0.1` | `^8.0.0` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | debug | `^4.1.1` | `^4.4.3` |
-| dotenv | `8.2.0` | `^17.3.1` |
+| dotenv | `8.2.0` | `^17.4.0` |
 | execa | `^1.0.0` | `^9.6.1` |
 | fs-extra | `^9.1.0` | `^11.3.4` |
 | glob | `^7.1.2` | `^13.0.6` |
@@ -42,7 +42,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | koa-ip | `^2.0.0` | `^2.1.4` |
 | koa-router | `^7.4.0` | `^14.0.0` |
 | koa-session | `^6.2.0` | `^7.0.2` |
-| lodash | `4.17.21` | `^4.18.0` |
+| lodash | `4.17.21` | `^4.18.1` |
 | node-fetch | `2.6.1` | `^3.3.2` |
 | node-schedule | `1.3.2` | `^2.1.1` |
 | opn | `^5.3.0` | `^6.0.0` |

@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.11 | **Updated**: 4/1/2026 | **Import test**: failed
+**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.12 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -40,13 +40,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^6.2.1` |
 | dependency-tree | `^11.2.0` | `^11.4.0` |
-| dotenv | `^16.6.1` | `^17.3.1` |
-| esbuild-wasm | `^0.19.12` | `^0.27.4` |
+| dotenv | `^16.6.1` | `^17.4.0` |
+| esbuild-wasm | `^0.19.12` | `^0.27.5` |
 | fs-extra | `^11.3.3` | `^11.3.4` |
 | got | `^11.8.5` | `^15.0.0` |
 | joi | `^17.13.3` | `^18.1.2` |
 | js-yaml | `^3.14.1` | `^4.1.1` |
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.1` |
 | nanoid | `^3.3.4` | `^5.1.7` |
 | ora | `^4.0.4` | `^9.3.0` |
 | sqs-consumer | `6.0.2` | `^14.2.6` |

@@ -12,11 +12,14 @@ npm install @depup/dotenv-expand
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.3 | **DepUp version**: 12.0.3-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 12.0.3 | **DepUp version**: 12.0.3-depup.1 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| dotenv | `^16.4.5` | `^17.4.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/dotenv-expand&labels=bug).
 
