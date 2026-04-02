@@ -15,5 +15,20 @@
       "timestamp": "2026-03-17T22:58:01.958Z",
       "version": "2.20.4-depup.0"
     }
+  },
+  "2.20.6": {
+    "0": {
+      "changes": {
+        "mgrs": {
+          "from": "1.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-02T20:16:10.928Z",
+      "version": "2.20.6-depup.0"
+    }
   }
 }

@@ -12,14 +12,11 @@ npm install @depup/vite-plugin-svgr
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.0 | **Updated**: 4/2/2026 | **Import test**: passed
+**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.0 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @rollup/pluginutils | `^5.2.0` | `^5.3.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vite-plugin-svgr&labels=bug).
 
