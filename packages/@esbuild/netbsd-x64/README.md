@@ -12,7 +12,7 @@ npm install @depup/esbuild__netbsd-x64
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.27.5 | **DepUp version**: 0.27.5-depup.0 | **Updated**: 4/2/2026 | **Import test**: failed
+**Original version**: 0.27.6 | **DepUp version**: 0.27.6-depup.0 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
