@@ -12,7 +12,7 @@ npm install @depup/jotai-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.13.1 | **DepUp version**: 0.13.1-depup.2 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 0.13.1 | **DepUp version**: 0.13.1-depup.3 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -26,7 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-base16-styling | `^0.9.1` | `^0.10.0` |
 | react-error-boundary | `^5.0.0` | `^6.1.1` |
 | react-json-tree | `^0.18.0` | `^0.20.0` |
-| react-resizable-panels | `2.1.7` | `^4.8.0` |
+| react-resizable-panels | `2.1.7` | `^4.9.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jotai-devtools&labels=bug).
