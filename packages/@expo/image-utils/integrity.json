@@ -1,22 +1,5 @@
 {
   "0.8.12": {
-    "20": {
-      "changes": {
-        "chalk": {
-          "from": "^4.0.0",
-          "to": "^5.6.2"
-        },
-        "semver": {
-          "from": "^7.6.0",
-          "to": "^7.7.4"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-04-01T08:37:39.521Z",
-      "version": "0.8.12-depup.20"
-    },
     "21": {
       "changes": {
         "chalk": {
@@ -84,6 +67,23 @@
       "status": "published",
       "timestamp": "2026-04-02T00:39:11.898Z",
       "version": "0.8.12-depup.24"
+    },
+    "25": {
+      "changes": {
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "semver": {
+          "from": "^7.6.0",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-02T04:50:26.760Z",
+      "version": "0.8.12-depup.25"
     }
   },
   "0.8.13-canary-20260327-0789fbc": {
