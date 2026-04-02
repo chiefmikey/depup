@@ -12,15 +12,15 @@ npm install @depup/react-color
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.19.3 | **DepUp version**: 2.19.3-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 2.19.3 | **DepUp version**: 2.19.3-depup.2 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @icons/material | `^0.2.4` | `^0.4.1` |
-| lodash | `^4.17.15` | `^4.18.0` |
-| lodash-es | `^4.17.15` | `^4.17.23` |
+| lodash | `^4.17.15` | `^4.18.1` |
+| lodash-es | `^4.17.15` | `^4.18.1` |
 | material-colors | `^1.2.1` | `^1.2.6` |
 | prop-types | `^15.5.10` | `^15.8.1` |
 | reactcss | `^1.2.0` | `^1.2.3` |

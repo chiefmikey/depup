@@ -22,5 +22,20 @@
       "timestamp": "2026-03-31T20:25:07.326Z",
       "version": "7.3.1-depup.1"
     }
+  },
+  "7.3.2": {
+    "0": {
+      "changes": {
+        "validator": {
+          "from": "~13.15.23",
+          "to": "^13.15.26"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-02T00:41:41.189Z",
+      "version": "7.3.2-depup.0"
+    }
   }
 }

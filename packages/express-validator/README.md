@@ -12,13 +12,12 @@ npm install @depup/express-validator
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.1 | **DepUp version**: 7.3.1-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 7.3.2 | **DepUp version**: 7.3.2-depup.0 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| lodash | `^4.17.21` | `^4.18.0` |
 | validator | `~13.15.23` | `^13.15.26` |
 
 

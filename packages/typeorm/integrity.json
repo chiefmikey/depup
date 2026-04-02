@@ -37,6 +37,39 @@
       "status": "published",
       "timestamp": "2026-03-15T00:46:13.577Z",
       "version": "0.3.28-depup.37"
+    },
+    "38": {
+      "changes": {
+        "dayjs": {
+          "from": "^1.11.19",
+          "to": "^1.11.20"
+        },
+        "dedent": {
+          "from": "^1.7.0",
+          "to": "^1.7.2"
+        },
+        "dotenv": {
+          "from": "^16.6.1",
+          "to": "^17.4.0"
+        },
+        "glob": {
+          "from": "^10.5.0",
+          "to": "^13.0.6"
+        },
+        "uuid": {
+          "from": "^11.1.0",
+          "to": "^13.0.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-02T00:48:12.015Z",
+      "version": "0.3.28-depup.38"
     }
   }
 }

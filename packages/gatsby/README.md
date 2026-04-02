@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.9 | **Updated**: 4/1/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.10 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
@@ -65,7 +65,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | date-fns | `^2.30.0` | `^4.1.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
-| dotenv | `^8.6.0` | `^17.3.1` |
+| dotenv | `^8.6.0` | `^17.4.0` |
 | enhanced-resolve | `^5.15.0` | `^5.20.1` |
 | eslint | `^7.32.0` | `^10.1.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
@@ -92,7 +92,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | joi | `^17.9.2` | `^18.1.2` |
 | latest-version | `^7.0.0` | `^9.0.0` |
 | lmdb | `2.5.3` | `^3.5.2` |
-| lodash | `^4.17.21` | `^4.17.23` |
+| lodash | `^4.17.21` | `^4.18.1` |
 | meant | `^1.0.3` | `^2.0.1` |
 | memoizee | `^0.4.15` | `^0.4.17` |
 | micromatch | `^4.0.5` | `^4.0.8` |
@@ -104,7 +104,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-fetch | `^2.6.11` | `^3.3.2` |
 | node-html-parser | `^5.4.2` | `^7.1.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
-| path-to-regexp | `0.1.12` | `^8.4.1` |
+| path-to-regexp | `0.1.12` | `^8.4.2` |
 | postcss | `^8.4.24` | `^8.5.8` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.3.1` |
@@ -114,7 +114,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | redux-thunk | `^2.4.2` | `^3.1.0` |
 | semver | `^7.5.3` | `^7.7.4` |
 | signal-exit | `^3.0.7` | `^4.1.0` |
-| slugify | `^1.6.6` | `^1.6.8` |
+| slugify | `^1.6.6` | `^1.6.9` |
 | socket.io | `^4.8.1` | `^4.8.3` |
 | socket.io-client | `^4.8.1` | `^4.8.3` |
 | stack-trace | `^0.0.10` | `^1.0.0-pre2` |

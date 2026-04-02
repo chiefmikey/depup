@@ -1,0 +1,279 @@
+{
+  "name": "@depup/react-scripts",
+  "version": "5.0.1-depup.2",
+  "description": "Configuration and scripts for Create React App. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/create-react-app.git",
+    "directory": "packages/react-scripts"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/facebook/create-react-app/issues"
+  },
+  "files": [
+    "bin",
+    "config",
+    "lib",
+    "scripts",
+    "template",
+    "template-typescript",
+    "utils",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "react-scripts": "./bin/react-scripts.js"
+  },
+  "types": "./lib/react-app.d.ts",
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
+    "@svgr/webpack": "^8.1.0",
+    "babel-jest": "^30.3.0",
+    "babel-loader": "^10.1.1",
+    "babel-plugin-named-asset-import": "^0.3.8",
+    "babel-preset-react-app": "^10.1.0",
+    "bfj": "^9.1.3",
+    "browserslist": "^4.28.2",
+    "camelcase": "^9.0.0",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "css-loader": "^7.1.4",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "dotenv": "^17.4.0",
+    "dotenv-expand": "^12.0.3",
+    "eslint": "^10.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-webpack-plugin": "^5.0.3",
+    "file-loader": "^6.2.0",
+    "fs-extra": "^11.3.4",
+    "html-webpack-plugin": "^5.6.6",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.3.0",
+    "jest-resolve": "^30.3.0",
+    "jest-watch-typeahead": "^3.0.1",
+    "mini-css-extract-plugin": "^2.10.2",
+    "postcss": "^8.5.8",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^8.2.1",
+    "postcss-normalize": "^13.0.1",
+    "postcss-preset-env": "^11.2.0",
+    "prompts": "^2.4.2",
+    "react-app-polyfill": "^3.0.0",
+    "react-dev-utils": "^12.0.1",
+    "react-refresh": "^0.18.0",
+    "resolve": "^1.22.11",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^16.0.7",
+    "semver": "^7.7.4",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.2.2",
+    "terser-webpack-plugin": "^5.4.0",
+    "webpack": "^5.105.4",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-manifest-plugin": "^6.0.1",
+    "workbox-webpack-plugin": "^7.4.0"
+  },
+  "devDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
+  "peerDependencies": {
+    "react": ">= 16",
+    "typescript": "^3.2.1 || ^4"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "gitHead": "19fa58d527ae74f2b6baa0867463eea1d290f9a5",
+  "keywords": [
+    "react-scripts",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.16.0",
+        "to": "^7.29.0"
+      },
+      "@pmmmwh/react-refresh-webpack-plugin": {
+        "from": "^0.5.3",
+        "to": "^0.6.2"
+      },
+      "@svgr/webpack": {
+        "from": "^5.5.0",
+        "to": "^8.1.0"
+      },
+      "babel-jest": {
+        "from": "^27.4.2",
+        "to": "^30.3.0"
+      },
+      "babel-loader": {
+        "from": "^8.2.3",
+        "to": "^10.1.1"
+      },
+      "babel-preset-react-app": {
+        "from": "^10.0.1",
+        "to": "^10.1.0"
+      },
+      "bfj": {
+        "from": "^7.0.2",
+        "to": "^9.1.3"
+      },
+      "browserslist": {
+        "from": "^4.18.1",
+        "to": "^4.28.2"
+      },
+      "camelcase": {
+        "from": "^6.2.1",
+        "to": "^9.0.0"
+      },
+      "css-loader": {
+        "from": "^6.5.1",
+        "to": "^7.1.4"
+      },
+      "css-minimizer-webpack-plugin": {
+        "from": "^3.2.0",
+        "to": "^8.0.0"
+      },
+      "dotenv": {
+        "from": "^10.0.0",
+        "to": "^17.4.0"
+      },
+      "dotenv-expand": {
+        "from": "^5.1.0",
+        "to": "^12.0.3"
+      },
+      "eslint": {
+        "from": "^8.3.0",
+        "to": "^10.1.0"
+      },
+      "eslint-webpack-plugin": {
+        "from": "^3.1.1",
+        "to": "^5.0.3"
+      },
+      "fs-extra": {
+        "from": "^10.0.0",
+        "to": "^11.3.4"
+      },
+      "html-webpack-plugin": {
+        "from": "^5.5.0",
+        "to": "^5.6.6"
+      },
+      "jest": {
+        "from": "^27.4.3",
+        "to": "^30.3.0"
+      },
+      "jest-resolve": {
+        "from": "^27.4.2",
+        "to": "^30.3.0"
+      },
+      "jest-watch-typeahead": {
+        "from": "^1.0.0",
+        "to": "^3.0.1"
+      },
+      "mini-css-extract-plugin": {
+        "from": "^2.4.5",
+        "to": "^2.10.2"
+      },
+      "postcss": {
+        "from": "^8.4.4",
+        "to": "^8.5.8"
+      },
+      "postcss-loader": {
+        "from": "^6.2.1",
+        "to": "^8.2.1"
+      },
+      "postcss-normalize": {
+        "from": "^10.0.1",
+        "to": "^13.0.1"
+      },
+      "postcss-preset-env": {
+        "from": "^7.0.1",
+        "to": "^11.2.0"
+      },
+      "react-refresh": {
+        "from": "^0.11.0",
+        "to": "^0.18.0"
+      },
+      "resolve": {
+        "from": "^1.20.0",
+        "to": "^1.22.11"
+      },
+      "resolve-url-loader": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "sass-loader": {
+        "from": "^12.3.0",
+        "to": "^16.0.7"
+      },
+      "semver": {
+        "from": "^7.3.5",
+        "to": "^7.7.4"
+      },
+      "source-map-loader": {
+        "from": "^3.0.0",
+        "to": "^5.0.0"
+      },
+      "style-loader": {
+        "from": "^3.3.1",
+        "to": "^4.0.0"
+      },
+      "tailwindcss": {
+        "from": "^3.0.2",
+        "to": "^4.2.2"
+      },
+      "terser-webpack-plugin": {
+        "from": "^5.2.5",
+        "to": "^5.4.0"
+      },
+      "webpack": {
+        "from": "^5.64.4",
+        "to": "^5.105.4"
+      },
+      "webpack-dev-server": {
+        "from": "^4.6.0",
+        "to": "^5.2.3"
+      },
+      "webpack-manifest-plugin": {
+        "from": "^4.0.2",
+        "to": "^6.0.1"
+      },
+      "workbox-webpack-plugin": {
+        "from": "^6.4.1",
+        "to": "^7.4.0"
+      }
+    },
+    "depsUpdated": 38,
+    "originalPackage": "react-scripts",
+    "originalVersion": "5.0.1",
+    "processedAt": "2026-04-02T00:46:42.477Z",
+    "smokeTest": "failed"
+  }
+}

@@ -12,7 +12,7 @@ npm install @depup/typeorm
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.28 | **DepUp version**: 0.3.28-depup.37 | **Updated**: 3/15/2026 | **Import test**: unknown
+**Original version**: 0.3.28 | **DepUp version**: 0.3.28-depup.38 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | dayjs | `^1.11.19` | `^1.11.20` |
 | dedent | `^1.7.0` | `^1.7.2` |
-| dotenv | `^16.6.1` | `^17.3.1` |
+| dotenv | `^16.6.1` | `^17.4.0` |
 | glob | `^10.5.0` | `^13.0.6` |
 | uuid | `^11.1.0` | `^13.0.0` |
 | yargs | `^17.7.2` | `^18.0.0` |

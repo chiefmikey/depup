@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.1 | **Updated**: 3/20/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.2 | **Updated**: 4/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,11 +25,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-loader | `^8.2.3` | `^10.1.1` |
 | babel-preset-react-app | `^10.0.1` | `^10.1.0` |
 | bfj | `^7.0.2` | `^9.1.3` |
-| browserslist | `^4.18.1` | `^4.28.1` |
+| browserslist | `^4.18.1` | `^4.28.2` |
 | camelcase | `^6.2.1` | `^9.0.0` |
 | css-loader | `^6.5.1` | `^7.1.4` |
 | css-minimizer-webpack-plugin | `^3.2.0` | `^8.0.0` |
-| dotenv | `^10.0.0` | `^17.3.1` |
+| dotenv | `^10.0.0` | `^17.4.0` |
 | dotenv-expand | `^5.1.0` | `^12.0.3` |
 | eslint | `^8.3.0` | `^10.1.0` |
 | eslint-webpack-plugin | `^3.1.1` | `^5.0.3` |
@@ -38,7 +38,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jest | `^27.4.3` | `^30.3.0` |
 | jest-resolve | `^27.4.2` | `^30.3.0` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
-| mini-css-extract-plugin | `^2.4.5` | `^2.10.1` |
+| mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
 | postcss | `^8.4.4` | `^8.5.8` |
 | postcss-loader | `^6.2.1` | `^8.2.1` |
 | postcss-normalize | `^10.0.1` | `^13.0.1` |

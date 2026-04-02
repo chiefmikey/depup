@@ -12,13 +12,13 @@ npm install @depup/react-mosaic-component
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.0-beta0 | **DepUp version**: 7.0.0-beta0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 7.0.0-beta0 | **DepUp version**: 7.0.0-beta0-depup.1 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| lodash-es | `^4.17.21` | `^4.17.23` |
+| lodash-es | `^4.17.21` | `^4.18.1` |
 | uuid | `^11.1.0` | `^13.0.0` |
 
 
