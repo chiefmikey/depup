@@ -69,6 +69,23 @@
       "status": "published",
       "timestamp": "2026-04-01T00:44:27.396Z",
       "version": "4.33.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "rimraf": {
+          "from": "5.0.10",
+          "to": "^6.1.3"
+        },
+        "undici": {
+          "from": "6.24.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-02T12:30:43.430Z",
+      "version": "4.33.2-depup.1"
     }
   }
 }

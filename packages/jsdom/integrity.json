@@ -91,6 +91,31 @@
       "status": "published",
       "timestamp": "2026-03-29T16:15:06.790Z",
       "version": "29.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@asamuzakjp/css-color": {
+          "from": "^5.0.1",
+          "to": "^5.1.1"
+        },
+        "@asamuzakjp/dom-selector": {
+          "from": "^7.0.3",
+          "to": "^7.0.4"
+        },
+        "@csstools/css-syntax-patches-for-csstree": {
+          "from": "^1.1.1",
+          "to": "^1.1.2"
+        },
+        "undici": {
+          "from": "^7.24.5",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-02T12:30:20.852Z",
+      "version": "29.0.1-depup.2"
     }
   }
 }
