@@ -19,5 +19,28 @@
       "timestamp": "2026-03-17T18:40:37.882Z",
       "version": "6.2.3-depup.0"
     }
+  },
+  "6.2.4": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "^5.0.0",
+          "to": "^5.5.0"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "luxon": {
+          "from": "^3.2.1",
+          "to": "^3.7.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-02T16:25:47.676Z",
+      "version": "6.2.4-depup.0"
+    }
   }
 }
