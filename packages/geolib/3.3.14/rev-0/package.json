@@ -1,0 +1,94 @@
+{
+  "name": "@depup/geolib",
+  "version": "3.3.14-depup.0",
+  "description": "Library to provide basic geospatial operations like distance calculation, decoding of sexagesimal coordinates etc. (with updated dependencies)",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./es/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "default": "./es/index.js"
+    },
+    "./es/*": "./es/*.js",
+    "./lib/*": "./lib/*.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "es",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelbieh/geolib.git"
+  },
+  "author": "Manuel Bieh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manuelbieh/geolib/issues"
+  },
+  "homepage": "https://github.com/manuelbieh/geolib#readme",
+  "scripts": {
+    "babel": "babel",
+    "build": "yarn clean && yarn build:es && yarn build:types && yarn build:umd",
+    "build:es": "babel --minified --ignore **/*.test.js,**/*.test.ts --out-dir es --extensions .ts,.js --no-comments src",
+    "build:types": "tsc --outDir es --emitDeclarationOnly --noEmit false --declaration",
+    "build:umd": "webpack-cli --config webpack.config.js",
+    "clean": "rimraf lib es",
+    "lint": "eslint src/**/*.{js,ts}",
+    "release": "semantic-release",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.0",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.0",
+    "@semantic-release/npm": "^13.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "babel-jest": "^30.0.0",
+    "babel-loader": "^10.0.0",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.0",
+    "husky": "^9.1.0",
+    "jest": "^30.0.0",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.4.0",
+    "rimraf": "^6.0.0",
+    "semantic-release": "^25.0.0",
+    "typescript": "^5.9.0",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^7.0.0"
+  },
+  "keywords": [
+    "geolib",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "geolib",
+    "originalVersion": "3.3.14",
+    "processedAt": "2026-04-03T04:51:24.328Z",
+    "smokeTest": "passed"
+  }
+}
