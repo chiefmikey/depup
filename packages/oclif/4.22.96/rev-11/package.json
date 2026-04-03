@@ -1,19 +1,19 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "4.22.96-depup.6",
+  "version": "4.22.96-depup.11",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1020.0",
-    "@aws-sdk/client-s3": "^3.1020.0",
+    "@aws-sdk/client-cloudfront": "^3.1024.0",
+    "@aws-sdk/client-s3": "^3.1024.0",
     "@inquirer/confirm": "^6.0.10",
     "@inquirer/input": "^5.0.10",
     "@inquirer/select": "^5.1.2",
-    "@oclif/core": "^4.10.3",
+    "@oclif/core": "^4.10.4",
     "@oclif/plugin-help": "^6.2.41",
     "@oclif/plugin-not-found": "^3.2.78",
     "@oclif/plugin-warn-if-update-available": "^3.1.58",
@@ -25,8 +25,8 @@
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^11.3.4",
     "github-slugger": "^2",
-    "got": "^14.6.6",
-    "lodash": "^4.17.23",
+    "got": "^15.0.0",
+    "lodash": "^4.18.1",
     "normalize-package-data": "^8.0.0",
     "semver": "^7.7.4",
     "sort-package-json": "^3.6.1",
@@ -155,11 +155,11 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "3.1009.0",
-        "to": "^3.1020.0"
+        "to": "^3.1024.0"
       },
       "@aws-sdk/client-s3": {
         "from": "3.1014.0",
-        "to": "^3.1020.0"
+        "to": "^3.1024.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
@@ -175,7 +175,7 @@
       },
       "@oclif/core": {
         "from": "4.9.0",
-        "to": "^4.10.3"
+        "to": "^4.10.4"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.38",
@@ -211,7 +211,11 @@
       },
       "got": {
         "from": "^13",
-        "to": "^14.6.6"
+        "to": "^15.0.0"
+      },
+      "lodash": {
+        "from": "^4.17.23",
+        "to": "^4.18.1"
       },
       "normalize-package-data": {
         "from": "^6",
@@ -226,10 +230,10 @@
         "to": "^7.0.2"
       }
     },
-    "depsUpdated": 18,
+    "depsUpdated": 19,
     "originalPackage": "oclif",
     "originalVersion": "4.22.96",
-    "processedAt": "2026-03-30T20:24:28.206Z",
+    "processedAt": "2026-04-03T20:18:00.651Z",
     "smokeTest": "passed"
   }
 }

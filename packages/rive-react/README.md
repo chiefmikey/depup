@@ -12,16 +12,16 @@ npm install @depup/rive-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.24.0 | **DepUp version**: 4.24.0-depup.1 | **Updated**: 3/28/2026 | **Import test**: failed
+**Original version**: 4.24.0 | **DepUp version**: 4.24.0-depup.2 | **Updated**: 4/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @rive-app/canvas | `2.32.0` | `^2.36.0` |
-| @rive-app/canvas-lite | `2.32.0` | `^2.36.0` |
-| @rive-app/webgl | `2.32.0` | `^2.36.0` |
-| @rive-app/webgl2 | `2.32.0` | `^2.36.0` |
+| @rive-app/canvas | `2.32.0` | `^2.37.0` |
+| @rive-app/canvas-lite | `2.32.0` | `^2.37.0` |
+| @rive-app/webgl | `2.32.0` | `^2.37.0` |
+| @rive-app/webgl2 | `2.32.0` | `^2.37.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/rive-react&labels=bug).
