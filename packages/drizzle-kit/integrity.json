@@ -18,6 +18,27 @@
       "status": "failed",
       "timestamp": "2026-03-17T16:35:46.149Z",
       "version": "0.31.10-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@drizzle-team/brocli": {
+          "from": "^0.10.2",
+          "to": "^0.11.0"
+        },
+        "@esbuild-kit/esm-loader": {
+          "from": "^2.5.5",
+          "to": "^2.6.5"
+        },
+        "esbuild": {
+          "from": "^0.25.4",
+          "to": "^0.28.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-03T00:42:28.558Z",
+      "version": "0.31.10-depup.1"
     }
   }
 }

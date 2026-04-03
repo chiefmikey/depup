@@ -12,7 +12,7 @@ npm install @depup/playwright-test
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.1.13 | **DepUp version**: 14.1.13-depup.3 | **Updated**: 4/2/2026 | **Import test**: passed
+**Original version**: 14.1.13 | **DepUp version**: 14.1.13-depup.4 | **Updated**: 4/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | c8 | `^10.1.3` | `^11.0.0` |
 | camelcase | `^8.0.0` | `^9.0.0` |
 | chokidar | `^4.0.3` | `^5.0.0` |
-| esbuild | `0.25.11` | `^0.27.5` |
+| esbuild | `0.25.11` | `^0.28.0` |
 | execa | `^9.3.0` | `^9.6.1` |
 | exit-hook | `^4.0.0` | `^5.1.0` |
 | lodash | `^4.17.21` | `^4.18.1` |

@@ -12,7 +12,7 @@ npm install @depup/drizzle-kit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.31.10 | **DepUp version**: 0.31.10-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.31.10 | **DepUp version**: 0.31.10-depup.1 | **Updated**: 4/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @drizzle-team/brocli | `^0.10.2` | `^0.11.0` |
 | @esbuild-kit/esm-loader | `^2.5.5` | `^2.6.5` |
-| esbuild | `^0.25.4` | `^0.27.4` |
+| esbuild | `^0.25.4` | `^0.28.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/drizzle-kit&labels=bug).
