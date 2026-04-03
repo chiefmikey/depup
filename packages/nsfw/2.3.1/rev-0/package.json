@@ -1,0 +1,72 @@
+{
+  "name": "@depup/nsfw",
+  "version": "2.3.1-depup.0",
+  "description": "A simple file watcher for Node (with updated dependencies)",
+  "main": "js/src/index.js",
+  "scripts": {
+    "lint": "eslint js/src js/spec",
+    "test": "yarn lint && node js/scripts/test.js",
+    "test:nolint": "node js/scripts/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axosoft/node-simple-file-watcher.git"
+  },
+  "author": "Axosoft, LLC",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axosoft/node-simple-file-watcher/issues"
+  },
+  "engines": {
+    "node": ">=10.16.0"
+  },
+  "files": [
+    "index.d.ts",
+    "js/src",
+    "src",
+    "includes",
+    "binding.gyp",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/axosoft/node-simple-file-watcher",
+  "dependencies": {
+    "node-addon-api": "*"
+  },
+  "devDependencies": {
+    "eslint": "8.x",
+    "executive": "^1.6.3",
+    "fs-extra": "^11.2.0",
+    "globals": "^15.8.0",
+    "mocha": "^10.6.0"
+  },
+  "resolutions": {
+    "serialize-javascript": "^7.0.5",
+    "picomatch": "^2.3.2",
+    "flatted": "^3.4.2"
+  },
+  "keywords": [
+    "nsfw",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "FileWatcher",
+    "files",
+    "watch",
+    "filewatch",
+    "file",
+    "inotify",
+    "fsevents"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "nsfw",
+    "originalVersion": "2.3.1",
+    "processedAt": "2026-04-03T00:40:05.521Z",
+    "smokeTest": "passed"
+  }
+}
