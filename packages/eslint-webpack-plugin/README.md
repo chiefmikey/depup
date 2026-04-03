@@ -12,16 +12,11 @@ npm install @depup/eslint-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.3 | **DepUp version**: 5.0.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 4/3/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| flatted | `^3.3.3` | `^3.4.2` |
-| jest-worker | `^29.7.0` | `^30.3.0` |
-| schema-utils | `^4.3.2` | `^4.3.3` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-webpack-plugin&labels=bug).
 
