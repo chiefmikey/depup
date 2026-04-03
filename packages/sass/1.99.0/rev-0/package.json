@@ -1,0 +1,73 @@
+{
+  "name": "@depup/sass",
+  "description": "A pure JavaScript implementation of Sass. (with updated dependencies)",
+  "license": "MIT",
+  "bugs": "https://github.com/sass/dart-sass/issues",
+  "homepage": "https://github.com/sass/dart-sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sass/dart-sass"
+  },
+  "author": {
+    "name": "Natalie Weizenbaum",
+    "email": "nweiz@google.com",
+    "url": "https://github.com/nex3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "immutable": "^5.1.5",
+    "source-map-js": "^1.2.1"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher": "^2.4.1"
+  },
+  "keywords": [
+    "sass",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "style",
+    "scss",
+    "preprocessor",
+    "css"
+  ],
+  "types": "types/index.d.ts",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "node": {
+      "require": "./sass.node.js",
+      "default": "./sass.node.mjs"
+    },
+    "default": {
+      "require": "./sass.default.cjs",
+      "default": "./sass.default.js"
+    }
+  },
+  "version": "1.99.0-depup.0",
+  "bin": {
+    "sass": "sass.js"
+  },
+  "main": "sass.node.js",
+  "depup": {
+    "changes": {
+      "chokidar": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "source-map-js": {
+        "from": ">=0.6.2 <2.0.0",
+        "to": "^1.2.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "sass",
+    "originalVersion": "1.99.0",
+    "processedAt": "2026-04-03T00:42:35.498Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "@depup/lovable-tagger",
+  "version": "1.1.13-depup.1",
+  "description": "Vite plugins for component tagging and virtual file overrides with HMR support (with updated dependencies)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --outDir dist",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --ext .js,.ts --fix .",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "lovable-tagger",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "plugin",
+    "component",
+    "tagger",
+    "virtual",
+    "overrides",
+    "hmr"
+  ],
+  "author": "Emil Fagerholm",
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">=5.0.0 <8.0.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.0",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@lovable/eslint-config": "file:../../packages/eslint-config-lovable",
+    "@types/node": "^22.5.5",
+    "rimraf": "^5.0.10",
+    "tsup": "^7.3.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vitest": "catalog:"
+  },
+  "depup": {
+    "changes": {
+      "esbuild": {
+        "from": "^0.25.0",
+        "to": "^0.28.0"
+      },
+      "tailwindcss": {
+        "from": "^3.4.17",
+        "to": "^4.2.2"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "lovable-tagger",
+    "originalVersion": "1.1.13",
+    "processedAt": "2026-04-03T00:42:21.974Z",
+    "smokeTest": "failed"
+  }
+}

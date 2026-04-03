@@ -43,5 +43,24 @@
       "timestamp": "2026-03-14T20:38:34.265Z",
       "version": "1.98.0-depup.1"
     }
+  },
+  "1.99.0": {
+    "0": {
+      "changes": {
+        "chokidar": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "source-map-js": {
+          "from": ">=0.6.2 <2.0.0",
+          "to": "^1.2.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-03T00:42:38.728Z",
+      "version": "1.99.0-depup.0"
+    }
   }
 }
