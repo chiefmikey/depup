@@ -1,0 +1,128 @@
+{
+  "name": "@depup/react-email",
+  "version": "5.2.10-depup.1",
+  "description": "A live preview of your emails right in your browser. (with updated dependencies)",
+  "bin": {
+    "email": "./dist/index.mjs"
+  },
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resend/react-email.git",
+    "directory": "packages/react-email"
+  },
+  "keywords": [
+    "react-email",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "email"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.2",
+    "@babel/traverse": "^7.29.0",
+    "chokidar": "^5.0.0",
+    "commander": "^14.0.3",
+    "conf": "^15.1.0",
+    "debounce": "^3.0.0",
+    "esbuild": "^0.28.0",
+    "glob": "^13.0.6",
+    "jiti": "^2.6.1",
+    "log-symbols": "^7.0.1",
+    "mime-types": "^3.0.2",
+    "normalize-path": "^3.0.0",
+    "nypm": "^0.6.5",
+    "ora": "^9.3.0",
+    "prompts": "2.4.2",
+    "socket.io": "^4.8.3",
+    "tsconfig-paths": "4.2.0"
+  },
+  "devDependencies": {
+    "@types/babel__core": "7.20.5",
+    "@types/babel__traverse": "7.20.7",
+    "@types/mime-types": "2.1.4",
+    "@types/prompts": "2.4.9",
+    "next": "16.1.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "shlex": "3.0.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "@react-email/components": "1.0.10"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "build:watch": "tsdown --watch src",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "depup": {
+    "changes": {
+      "@babel/parser": {
+        "from": "7.27.0",
+        "to": "^7.29.2"
+      },
+      "@babel/traverse": {
+        "from": "7.27.0",
+        "to": "^7.29.0"
+      },
+      "chokidar": {
+        "from": "^4.0.3",
+        "to": "^5.0.0"
+      },
+      "commander": {
+        "from": "^13.0.0",
+        "to": "^14.0.3"
+      },
+      "conf": {
+        "from": "^15.0.2",
+        "to": "^15.1.0"
+      },
+      "debounce": {
+        "from": "^2.0.0",
+        "to": "^3.0.0"
+      },
+      "esbuild": {
+        "from": "0.27.3",
+        "to": "^0.28.0"
+      },
+      "jiti": {
+        "from": "2.4.2",
+        "to": "^2.6.1"
+      },
+      "log-symbols": {
+        "from": "^7.0.0",
+        "to": "^7.0.1"
+      },
+      "mime-types": {
+        "from": "^3.0.0",
+        "to": "^3.0.2"
+      },
+      "nypm": {
+        "from": "0.6.2",
+        "to": "^0.6.5"
+      },
+      "ora": {
+        "from": "^8.0.0",
+        "to": "^9.3.0"
+      },
+      "socket.io": {
+        "from": "^4.8.1",
+        "to": "^4.8.3"
+      }
+    },
+    "depsUpdated": 13,
+    "originalPackage": "react-email",
+    "originalVersion": "5.2.10",
+    "processedAt": "2026-04-03T00:45:49.488Z",
+    "smokeTest": "failed"
+  }
+}
