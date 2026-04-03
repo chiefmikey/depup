@@ -42,6 +42,51 @@
       "status": "published",
       "timestamp": "2026-03-17T16:36:24.933Z",
       "version": "5.1.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@graphql-tools/graphql-file-loader": {
+          "from": "^8.0.0",
+          "to": "^8.1.12"
+        },
+        "@graphql-tools/json-file-loader": {
+          "from": "^8.0.0",
+          "to": "^8.0.26"
+        },
+        "@graphql-tools/load": {
+          "from": "^8.1.0",
+          "to": "^8.1.8"
+        },
+        "@graphql-tools/merge": {
+          "from": "^9.0.0",
+          "to": "^9.1.7"
+        },
+        "@graphql-tools/url-loader": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "cosmiconfig": {
+          "from": "^8.1.0",
+          "to": "^9.0.1"
+        },
+        "jiti": {
+          "from": "^2.0.0",
+          "to": "^2.6.1"
+        },
+        "minimatch": {
+          "from": "^10.0.0",
+          "to": "^10.2.5"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-03T12:22:36.293Z",
+      "version": "5.1.6-depup.1"
     }
   }
 }
