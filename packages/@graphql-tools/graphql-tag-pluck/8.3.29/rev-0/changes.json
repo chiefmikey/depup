@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "^7.28.6",
+      "to": "^7.29.0"
+    },
+    "@babel/plugin-syntax-import-assertions": {
+      "from": "^7.26.0",
+      "to": "^7.28.6"
+    },
+    "@babel/traverse": {
+      "from": "^7.26.10",
+      "to": "^7.29.0"
+    },
+    "@babel/types": {
+      "from": "^7.26.10",
+      "to": "^7.29.0"
+    },
+    "tslib": {
+      "from": "^2.4.0",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-04-03T12:19:57.973Z",
+  "totalUpdated": 5
+}
