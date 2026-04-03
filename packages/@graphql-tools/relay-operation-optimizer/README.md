@@ -12,7 +12,7 @@ npm install @depup/graphql-tools__relay-operation-optimizer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.1 | **DepUp version**: 7.1.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 7.1.2 | **DepUp version**: 7.1.2-depup.0 | **Updated**: 4/3/2026 | **Import test**: passed
 
 ## What changed
 
