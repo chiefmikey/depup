@@ -36,5 +36,24 @@
       "timestamp": "2026-03-21T20:09:18.635Z",
       "version": "1.1.25-depup.1"
     }
+  },
+  "1.1.26": {
+    "0": {
+      "changes": {
+        "@types/ws": {
+          "from": "^8.0.0",
+          "to": "^8.18.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-03T12:19:56.042Z",
+      "version": "1.1.26-depup.0"
+    }
   }
 }
