@@ -12,13 +12,13 @@ npm install @depup/protobufjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.0 | **Updated**: 4/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `>=13.7.0` | `^25.5.0` |
+| @types/node | `>=13.7.0` | `^25.5.2` |
 | long | `^5.0.0` | `^5.3.2` |
 
 
