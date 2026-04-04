@@ -5,5 +5,56 @@
       "timestamp": "2026-03-09T08:18:51.904Z",
       "version": "11.0.2-depup.0"
     }
+  },
+  "11.0.3": {
+    "0": {
+      "changes": {
+        "clipboardy": {
+          "from": "^5.0.2",
+          "to": "^5.3.1"
+        },
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "exit-hook": {
+          "from": "^5.0.1",
+          "to": "^5.1.0"
+        },
+        "inquirer": {
+          "from": "^13.2.0",
+          "to": "^13.3.2"
+        },
+        "meow": {
+          "from": "^14.0.0",
+          "to": "^14.1.0"
+        },
+        "npm-name": {
+          "from": "^8.0.0",
+          "to": "^8.1.0"
+        },
+        "onetime": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "package-directory": {
+          "from": "^8.0.0",
+          "to": "^8.2.0"
+        },
+        "read-pkg": {
+          "from": "^10.0.0",
+          "to": "^10.1.0"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-04T20:12:31.617Z",
+      "version": "11.0.3-depup.0"
+    }
   }
 }
