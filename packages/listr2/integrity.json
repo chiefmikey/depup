@@ -27,6 +27,23 @@
       "status": "published",
       "timestamp": "2026-04-04T16:14:20.001Z",
       "version": "10.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "cli-truncate": {
+          "from": "^5.2.0",
+          "to": "^6.0.0"
+        },
+        "log-update": {
+          "from": "^6.1.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-05T08:18:46.366Z",
+      "version": "10.2.1-depup.2"
     }
   }
 }

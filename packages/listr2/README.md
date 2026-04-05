@@ -12,14 +12,14 @@ npm install @depup/listr2
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.2.1 | **DepUp version**: 10.2.1-depup.1 | **Updated**: 4/4/2026 | **Import test**: passed
+**Original version**: 10.2.1 | **DepUp version**: 10.2.1-depup.2 | **Updated**: 4/5/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | cli-truncate | `^5.2.0` | `^6.0.0` |
-| log-update | `^6.1.0` | `^7.2.0` |
+| log-update | `^6.1.0` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/listr2&labels=bug).
