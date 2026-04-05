@@ -12,7 +12,7 @@ npm install @depup/benny
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.1 | **DepUp version**: 3.7.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.7.1 | **DepUp version**: 3.7.1-depup.1 | **Updated**: 4/5/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `^10.0.0` | `^11.3.4` |
 | json2csv | `^5.0.6` | `^6.0.0-alpha.2` |
 | kleur | `^4.1.4` | `^4.1.5` |
-| log-update | `^4.0.0` | `^7.2.0` |
+| log-update | `^4.0.0` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/benny&labels=bug).
