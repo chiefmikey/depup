@@ -1,6 +1,6 @@
 {
   "name": "@depup/axios",
-  "version": "1.14.0-depup.25",
+  "version": "1.14.0-depup.30",
   "description": "Promise based HTTP client for the browser and node.js (with updated dependencies)",
   "main": "./dist/node/axios.cjs",
   "module": "./index.js",
@@ -194,7 +194,7 @@
     "depsUpdated": 0,
     "originalPackage": "axios",
     "originalVersion": "1.14.0",
-    "processedAt": "2026-04-04T04:41:43.890Z",
+    "processedAt": "2026-04-05T00:44:13.034Z",
     "smokeTest": "passed"
   }
 }
