@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-19T04:46:25.170Z",
       "version": "1.6.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.0",
+          "to": "^4.4.3"
+        },
+        "lru-cache": {
+          "from": "^4.0.3",
+          "to": "^11.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-06T00:42:40.630Z",
+      "version": "1.6.7-depup.1"
     }
   }
 }

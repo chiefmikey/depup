@@ -1,0 +1,66 @@
+{
+  "name": "@depup/memorystore",
+  "version": "1.6.7-depup.1",
+  "description": "express-session full featured MemoryStore layer without leaks! (with updated dependencies)",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha --check-leaks --bail --no-exit test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roccomuso/memorystore.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "keywords": [
+    "memorystore",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "express-session",
+    "session",
+    "memory",
+    "store",
+    "noleak",
+    "ram"
+  ],
+  "author": "Rocco Musolino (roccomuso)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roccomuso/memorystore/issues"
+  },
+  "homepage": "https://github.com/roccomuso/memorystore#readme",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "lru-cache": "^11.3.0"
+  },
+  "devDependencies": {
+    "mocha": "9.2.0"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.3.0",
+        "to": "^4.4.3"
+      },
+      "lru-cache": {
+        "from": "^4.0.3",
+        "to": "^11.3.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "memorystore",
+    "originalVersion": "1.6.7",
+    "processedAt": "2026-04-06T00:42:37.676Z",
+    "smokeTest": "passed"
+  }
+}

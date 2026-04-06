@@ -12,14 +12,14 @@ npm install @depup/memorystore
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.7 | **DepUp version**: 1.6.7-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.6.7 | **DepUp version**: 1.6.7-depup.1 | **Updated**: 4/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^4.3.0` | `^4.4.3` |
-| lru-cache | `^4.0.3` | `^11.2.7` |
+| lru-cache | `^4.0.3` | `^11.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/memorystore&labels=bug).
