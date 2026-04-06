@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.26.0 | **DepUp version**: 6.26.0-depup.1 | **Updated**: 4/3/2026 | **Import test**: failed
+**Original version**: 6.26.0 | **DepUp version**: 6.26.0-depup.2 | **Updated**: 4/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -86,16 +86,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ghost-storage-base | `1.0.0` | `^1.1.2` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.0` |
-| gscan | `5.4.0` | `^5.4.1` |
+| gscan | `5.4.0` | `^6.0.0` |
 | html-to-text | `5.1.1` | `^9.0.5` |
-| human-number | `2.0.7` | `^2.0.8` |
+| human-number | `2.0.7` | `^2.0.9` |
 | iconv-lite | `0.6.3` | `^0.7.2` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.0` |
 | js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
-| knex | `2.4.2` | `^3.2.8` |
+| knex | `2.4.2` | `^3.2.9` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | lodash | `4.17.21` | `^4.18.1` |
 | mailgun.js | `10.4.0` | `^12.7.1` |
