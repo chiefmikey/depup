@@ -1,0 +1,79 @@
+{
+  "name": "@depup/pac-proxy-agent",
+  "version": "9.0.1-depup.0",
+  "type": "module",
+  "description": "A PAC file proxy `http.Agent` implementation for HTTP (with updated dependencies)",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooTallNate/proxy-agents.git",
+    "directory": "packages/pac-proxy-agent"
+  },
+  "keywords": [
+    "pac-proxy-agent",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "pac",
+    "proxy",
+    "agent",
+    "http",
+    "https",
+    "socks",
+    "request",
+    "access"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "quickjs-wasi": "^2.2.0",
+    "agent-base": "9.0.0",
+    "get-uri": "8.0.0",
+    "http-proxy-agent": "9.0.0",
+    "pac-resolver": "9.0.1",
+    "socks-proxy-agent": "10.0.0",
+    "https-proxy-agent": "9.0.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^22.13.0",
+    "async-listen": "^3.0.0",
+    "socksv5": "github:TooTallNate/socksv5#d937368b28e929396166d77a06d387a4a902bd51",
+    "typescript": "^5.1.6",
+    "proxy": "4.0.0",
+    "tsconfig": "0.0.0"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint --ext .ts",
+    "pack": "node ../../scripts/pack.mjs"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.3.4",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "pac-proxy-agent",
+    "originalVersion": "9.0.1",
+    "processedAt": "2026-04-06T08:37:58.539Z",
+    "smokeTest": "failed"
+  }
+}
