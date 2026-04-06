@@ -12,7 +12,7 @@ npm install @depup/quasar
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.19.2 | **DepUp version**: 2.19.2-depup.0 | **Updated**: 3/26/2026 | **Import test**: failed
+**Original version**: 2.19.3 | **DepUp version**: 2.19.3-depup.0 | **Updated**: 4/6/2026 | **Import test**: failed
 
 ## What changed
 
