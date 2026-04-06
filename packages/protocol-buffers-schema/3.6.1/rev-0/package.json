@@ -1,0 +1,45 @@
+{
+  "name": "@depup/protocol-buffers-schema",
+  "version": "3.6.1-depup.0",
+  "description": "No nonsense protocol buffers schema parser written in Javascript (with updated dependencies)",
+  "main": "index.js",
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/protocol-buffers-schema"
+  },
+  "keywords": [
+    "protocol-buffers-schema",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "protobuf",
+    "protocol",
+    "buffers",
+    "schema",
+    "parser",
+    "parse"
+  ],
+  "author": "Mathias Buus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/protocol-buffers-schema/issues"
+  },
+  "homepage": "https://github.com/mafintosh/protocol-buffers-schema",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "protocol-buffers-schema",
+    "originalVersion": "3.6.1",
+    "processedAt": "2026-04-06T20:18:40.695Z",
+    "smokeTest": "passed"
+  }
+}
