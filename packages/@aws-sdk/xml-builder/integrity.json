@@ -97,6 +97,27 @@
       "status": "published",
       "timestamp": "2026-03-26T20:16:31.833Z",
       "version": "3.972.16-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/types": {
+          "from": "^4.13.1",
+          "to": "^4.14.0"
+        },
+        "fast-xml-parser": {
+          "from": "5.5.8",
+          "to": "^5.5.10"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-06T20:22:35.318Z",
+      "version": "3.972.16-depup.1"
     }
   }
 }
