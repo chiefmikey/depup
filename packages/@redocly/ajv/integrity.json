@@ -26,5 +26,20 @@
       "timestamp": "2026-03-26T16:31:42.479Z",
       "version": "8.18.1-depup.0"
     }
+  },
+  "8.18.2": {
+    "0": {
+      "changes": {
+        "fast-uri": {
+          "from": "^3.0.1",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-06T16:20:52.737Z",
+      "version": "8.18.2-depup.0"
+    }
   }
 }
