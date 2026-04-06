@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.3 | **Updated**: 3/23/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.4 | **Updated**: 4/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,14 +21,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @npmcli/arborist | `9.1.6` | `^9.4.2` |
 | @npmcli/package-json | `7.0.2` | `^7.0.5` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
-| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.6.1` |
+| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.6.4` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | aproba | `2.0.0` | `^2.1.0` |
 | byte-size | `8.1.1` | `^9.0.1` |
 | chalk | `4.1.0` | `^5.6.2` |
 | ci-info | `4.3.1` | `^4.4.0` |
 | cmd-shim | `6.0.3` | `^8.0.0` |
-| conventional-changelog-angular | `7.0.0` | `^8.3.0` |
+| conventional-changelog-angular | `7.0.0` | `^8.3.1` |
 | conventional-changelog-core | `5.0.1` | `^9.0.0` |
 | conventional-recommended-bump | `7.0.1` | `^11.2.0` |
 | cosmiconfig | `9.0.0` | `^9.0.1` |
@@ -47,15 +47,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | libnpmpublish | `11.1.2` | `^11.1.3` |
 | load-json-file | `6.2.0` | `^7.0.1` |
 | make-fetch-happen | `15.0.2` | `^15.0.5` |
-| minimatch | `3.1.4` | `^10.2.4` |
+| minimatch | `3.1.4` | `^10.2.5` |
 | npm-package-arg | `13.0.1` | `^13.0.2` |
 | npm-packlist | `10.0.3` | `^10.0.4` |
 | npm-registry-fetch | `19.1.0` | `^19.1.1` |
-| nx | `>=21.5.3 < 23.0.0` | `^22.6.1` |
+| nx | `>=21.5.3 < 23.0.0` | `^22.6.4` |
 | p-map | `4.0.0` | `^7.0.4` |
 | p-map-series | `2.1.0` | `^3.0.0` |
 | p-pipe | `3.1.0` | `^4.0.0` |
-| p-queue | `6.6.2` | `^9.1.0` |
+| p-queue | `6.6.2` | `^9.1.1` |
 | p-reduce | `2.1.0` | `^3.0.0` |
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^21.5.0` |
@@ -65,9 +65,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | slash | `3.0.0` | `^5.1.0` |
 | ssri | `12.0.0` | `^13.0.1` |
 | string-width | `^4.2.3` | `^8.2.0` |
-| tar | `7.5.11` | `^7.5.12` |
+| tar | `7.5.11` | `^7.5.13` |
 | tinyglobby | `0.2.12` | `^0.2.15` |
 | typescript | `>=3 < 6` | `^6.0.2` |
+| upath | `2.0.1` | `^3.0.0` |
 | validate-npm-package-name | `6.0.2` | `^7.0.2` |
 | write-file-atomic | `5.0.1` | `^7.0.1` |
 | yargs | `17.7.2` | `^18.0.0` |
