@@ -323,5 +323,32 @@
       "timestamp": "2026-04-03T20:15:34.258Z",
       "version": "3.1024.0-depup.0"
     }
+  },
+  "3.1025.0": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.13",
+          "to": "^3.23.14"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.8",
+          "to": "^4.12.9"
+        },
+        "@smithy/types": {
+          "from": "^4.13.1",
+          "to": "^4.14.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-06T20:22:31.781Z",
+      "version": "3.1025.0-depup.0"
+    }
   }
 }
