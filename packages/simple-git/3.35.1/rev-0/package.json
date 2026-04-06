@@ -1,0 +1,72 @@
+{
+  "name": "@depup/simple-git",
+  "description": "Simple GIT interface for node.js (with updated dependencies)",
+  "version": "3.35.1-depup.0",
+  "author": "Steve King <steve@mydev.co>",
+  "contributors": [
+    {
+      "name": "Steve King",
+      "email": "steve@mydev.co"
+    }
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/steveukx/git-js?sponsor=1"
+  },
+  "dependencies": {
+    "@kwsites/file-exists": "^1.1.1",
+    "@kwsites/promise-deferred": "^1.1.1",
+    "@simple-git/args-pathspec": "^1.0.1",
+    "@simple-git/argv-parser": "^1.0.2",
+    "debug": "^4.4.3"
+  },
+  "keywords": [
+    "simple-git",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "git",
+    "source control",
+    "vcs"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steveukx/git-js.git",
+    "directory": "simple-git"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/typings/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./promise": {
+      "require": "./promise.js"
+    }
+  },
+  "types": "./dist/typings/index.d.ts",
+  "files": [
+    "promise.*",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^4.4.0",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "simple-git",
+    "originalVersion": "3.35.1",
+    "processedAt": "2026-04-06T12:25:52.555Z",
+    "smokeTest": "passed"
+  }
+}
