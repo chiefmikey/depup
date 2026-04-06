@@ -30,6 +30,39 @@
       "status": "published",
       "timestamp": "2026-03-17T22:57:04.329Z",
       "version": "7.0.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "async": {
+          "from": "^3.2.4",
+          "to": "^3.2.6"
+        },
+        "launchdarkly-eventsource": {
+          "from": "1.4.4",
+          "to": "^2.2.0"
+        },
+        "lru-cache": {
+          "from": "^6.0.0",
+          "to": "^11.3.0"
+        },
+        "node-cache": {
+          "from": "^5.1.0",
+          "to": "^5.1.2"
+        },
+        "semver": {
+          "from": "^7.5.4",
+          "to": "^7.7.4"
+        },
+        "uuid": {
+          "from": "^8.3.2",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-06T00:43:34.733Z",
+      "version": "7.0.4-depup.1"
     }
   }
 }
