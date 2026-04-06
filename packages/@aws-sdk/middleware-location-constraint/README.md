@@ -12,12 +12,13 @@ npm install @depup/aws-sdk__middleware-location-constraint
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.8 | **DepUp version**: 3.972.8-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.972.8 | **DepUp version**: 3.972.8-depup.1 | **Updated**: 4/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @smithy/types | `^4.13.1` | `^4.14.0` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
