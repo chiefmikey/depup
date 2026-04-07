@@ -1,0 +1,82 @@
+{
+  "name": "@depup/hot-shots",
+  "description": "Node.js client for StatsD, DogStatsD, and Telegraf (with updated dependencies)",
+  "version": "14.3.1-depup.0",
+  "author": "Steve Ivy",
+  "main": "./index.js",
+  "types": "./types.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./types.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./*": "./*"
+  },
+  "contributors": [
+    "Russ Bradberry <rbradberry@gmail.com>",
+    "Brian Deitte <bdeitte@gmail.com>"
+  ],
+  "keywords": [
+    "hot-shots",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "statsd",
+    "dogstatsd",
+    "datadog",
+    "metrics",
+    "telegraf",
+    "backend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bdeitte/hot-shots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bdeitte/hot-shots/issues"
+  },
+  "directories": {
+    "lib": "./lib/"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "test": "mocha -R spec --timeout 5000 test/*.js && node test/esm-import.mjs",
+    "lint": "eslint \"./lib/**/*.js\" \"./test/**/*.{js,mjs}\" \"./*.mjs\"",
+    "perf": "node perfTest/test.js",
+    "pretest": "npm run lint"
+  },
+  "optionalDependencies": {
+    "unix-dgram": "2.x"
+  },
+  "devDependencies": {
+    "@types/node": "25.x",
+    "eslint": "8.x",
+    "mocha": "11.x",
+    "nyc": "15.x",
+    "sinon": "19.x",
+    "typescript": "5.x"
+  },
+  "license": "MIT",
+  "overrides": {
+    "serialize-javascript": "7.x"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "hot-shots",
+    "originalVersion": "14.3.1",
+    "processedAt": "2026-04-07T04:53:20.704Z",
+    "smokeTest": "passed"
+  }
+}
