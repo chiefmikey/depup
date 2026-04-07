@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.19.0 | **DepUp version**: 5.19.0-depup.1 | **Updated**: 4/2/2026 | **Import test**: failed
+**Original version**: 5.20.0 | **DepUp version**: 5.20.0-depup.0 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,6 +23,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
 | @mux/mux-player-react | `^3.10.2` | `^3.11.7` |
+| @portabletext/editor | `^6.6.0` | `^6.6.1` |
+| @portabletext/plugin-markdown-shortcuts | `^7.0.23` | `^7.0.24` |
+| @portabletext/plugin-one-line | `^6.0.23` | `^6.0.24` |
+| @portabletext/plugin-paste-link | `^3.0.23` | `^3.0.24` |
+| @portabletext/plugin-typography | `^7.0.23` | `^7.0.24` |
 | @sanity/client | `^7.18.0` | `^7.20.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/image-url | `^2.0.3` | `^2.1.1` |
@@ -35,7 +40,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | classnames | `^2.2.5` | `^2.5.1` |
 | i18next | `^25.8.17` | `^26.0.3` |
 | isomorphic-dompurify | `2.26.0` | `^3.7.1` |
-| lodash-es | `^4.17.22` | `^4.18.1` |
 | motion | `^12.27.1` | `^12.38.0` |
 | nanoid | `^3.3.11` | `^5.1.7` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
