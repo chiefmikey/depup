@@ -5,5 +5,36 @@
       "timestamp": "2026-03-09T20:08:02.811Z",
       "version": "2.2.9-depup.0"
     }
+  },
+  "2.2.10": {
+    "0": {
+      "changes": {
+        "@floating-ui/react": {
+          "from": "^0.26.16",
+          "to": "^0.27.19"
+        },
+        "@react-aria/focus": {
+          "from": "^3.20.2",
+          "to": "^3.21.5"
+        },
+        "@react-aria/interactions": {
+          "from": "^3.25.0",
+          "to": "^3.27.1"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.13.9",
+          "to": "^3.13.23"
+        },
+        "use-sync-external-store": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-07T20:20:40.492Z",
+      "version": "2.2.10-depup.0"
+    }
   }
 }
