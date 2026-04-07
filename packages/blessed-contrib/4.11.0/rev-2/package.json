@@ -1,0 +1,98 @@
+{
+  "name": "@depup/blessed-contrib",
+  "version": "4.11.0-depup.2",
+  "description": "blessed-contrib with all dependencies updated to latest",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint lib",
+    "lint:fix": "eslint lib --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaronn/blessed-contrib.git"
+  },
+  "author": "Yaron Naveh (yaronn01@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/blessed": "^0.1.6",
+    "blessed": "0.1.54",
+    "colors": "^1.1.2",
+    "eslint": "^5.11.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "dependencies": {
+    "ansi-term": ">=0.0.2",
+    "chalk": "^5.6.2",
+    "drawille-canvas-blessed-contrib": ">=0.1.3",
+    "lodash": "^4.18.1",
+    "map-canvas": ">=0.1.5",
+    "marked": "^18.0.0",
+    "marked-terminal": "^7.3.0",
+    "memory-streams": "^0.1.3",
+    "memorystream": "^0.3.1",
+    "picture-tuber": "^2.0.0",
+    "sparkline": "^0.2.0",
+    "strip-ansi": "^7.2.0",
+    "term-canvas": "0.0.5",
+    "x256": "^0.0.2"
+  },
+  "keywords": [
+    "blessed-contrib",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^1.1.0",
+        "to": "^5.6.2"
+      },
+      "lodash": {
+        "from": "~>=4.17.21",
+        "to": "^4.18.1"
+      },
+      "marked": {
+        "from": "^4.0.12",
+        "to": "^18.0.0"
+      },
+      "marked-terminal": {
+        "from": "^5.1.1",
+        "to": "^7.3.0"
+      },
+      "memory-streams": {
+        "from": "^0.1.0",
+        "to": "^0.1.3"
+      },
+      "picture-tuber": {
+        "from": "^1.0.1",
+        "to": "^2.0.0"
+      },
+      "sparkline": {
+        "from": "^0.1.1",
+        "to": "^0.2.0"
+      },
+      "strip-ansi": {
+        "from": "^3.0.0",
+        "to": "^7.2.0"
+      },
+      "x256": {
+        "from": ">=0.0.1",
+        "to": "^0.0.2"
+      }
+    },
+    "depsUpdated": 9,
+    "originalPackage": "blessed-contrib",
+    "originalVersion": "4.11.0",
+    "processedAt": "2026-04-07T08:34:18.423Z",
+    "smokeTest": "failed"
+  }
+}

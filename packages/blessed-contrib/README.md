@@ -12,15 +12,15 @@ npm install @depup/blessed-contrib
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.11.0 | **DepUp version**: 4.11.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 4.11.0 | **DepUp version**: 4.11.0-depup.2 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | chalk | `^1.1.0` | `^5.6.2` |
-| lodash | `~>=4.17.21` | `^4.18.0` |
-| marked | `^4.0.12` | `^17.0.5` |
+| lodash | `~>=4.17.21` | `^4.18.1` |
+| marked | `^4.0.12` | `^18.0.0` |
 | marked-terminal | `^5.1.1` | `^7.3.0` |
 | memory-streams | `^0.1.0` | `^0.1.3` |
 | picture-tuber | `^1.0.1` | `^2.0.0` |
