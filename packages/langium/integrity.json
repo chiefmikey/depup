@@ -36,5 +36,20 @@
       "timestamp": "2026-04-02T12:29:08.478Z",
       "version": "4.2.1-depup.1"
     }
+  },
+  "4.2.2": {
+    "0": {
+      "changes": {
+        "vscode-languageserver-textdocument": {
+          "from": "~1.0.11",
+          "to": "^1.0.12"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-07T08:32:35.598Z",
+      "version": "4.2.2-depup.0"
+    }
   }
 }
