@@ -12,7 +12,7 @@ npm install @depup/react-native__dev-middleware
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.1 | **Updated**: 3/21/2026 | **Import test**: failed
+**Original version**: 0.85.0 | **DepUp version**: 0.85.0-depup.0 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
 | chrome-launcher | `^0.15.2` | `^1.2.1` |
-| chromium-edge-launcher | `^0.2.0` | `^0.3.0` |
 | connect | `^3.6.5` | `^3.7.0` |
 | debug | `^4.4.0` | `^4.4.3` |
 | open | `^7.0.3` | `^11.0.0` |
