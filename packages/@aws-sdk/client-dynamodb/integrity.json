@@ -613,5 +613,20 @@
       "timestamp": "2026-04-06T20:17:29.446Z",
       "version": "3.1025.0-depup.0"
     }
+  },
+  "3.1026.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-07T20:16:57.456Z",
+      "version": "3.1026.0-depup.0"
+    }
   }
 }
