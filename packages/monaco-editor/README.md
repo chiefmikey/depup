@@ -12,13 +12,13 @@ npm install @depup/monaco-editor
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.55.1 | **DepUp version**: 0.55.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 0.55.1 | **DepUp version**: 0.55.1-depup.1 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| marked | `14.0.0` | `^17.0.4` |
+| marked | `14.0.0` | `^18.0.0` |
 | dompurify | `3.2.7` | `^3.3.3` |
 
 

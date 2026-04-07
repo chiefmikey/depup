@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@ioredis/commands": {
+      "from": "1.5.1",
+      "to": "^1.6.0"
+    },
+    "cluster-key-slot": {
+      "from": "^1.1.0",
+      "to": "^1.1.2"
+    },
+    "debug": {
+      "from": "^4.3.4",
+      "to": "^4.4.3"
+    }
+  },
+  "timestamp": "2026-04-07T08:34:42.367Z",
+  "totalUpdated": 3
+}
