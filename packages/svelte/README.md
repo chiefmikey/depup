@@ -12,7 +12,7 @@ npm install @depup/svelte
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.55.1 | **DepUp version**: 5.55.1-depup.0 | **Updated**: 3/30/2026 | **Import test**: passed
+**Original version**: 5.55.1 | **DepUp version**: 5.55.1-depup.1 | **Updated**: 4/7/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,6 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/estree | `^1.0.5` | `^1.0.8` |
 | acorn | `^8.12.1` | `^8.16.0` |
 | aria-query | `5.3.1` | `^5.3.2` |
+| devalue | `^5.6.4` | `^5.7.0` |
 | esm-env | `^1.2.1` | `^1.2.2` |
 | magic-string | `^0.30.11` | `^0.30.21` |
 | zimmerframe | `^1.1.2` | `^1.1.4` |
