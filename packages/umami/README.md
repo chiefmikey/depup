@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.6 | **Updated**: 4/2/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.7 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,10 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @clickhouse/client | `^0.2.2` | `^1.18.2` |
 | @fontsource/inter | `^4.5.15` | `^5.2.8` |
-| @prisma/client | `5.7.0` | `^7.6.0` |
+| @prisma/client | `5.7.0` | `^7.7.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.0.3` |
-| @tanstack/react-query | `^5.12.2` | `^5.96.1` |
+| @tanstack/react-query | `^5.12.2` | `^5.96.2` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^5.6.2` |
@@ -37,7 +37,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | del | `^6.0.0` | `^8.0.1` |
 | detect-browser | `^5.2.0` | `^5.3.0` |
-| dotenv | `^10.0.0` | `^17.4.0` |
+| dotenv | `^10.0.0` | `^17.4.1` |
 | fs-extra | `^10.0.1` | `^11.3.4` |
 | immer | `^9.0.12` | `^11.1.4` |
 | ipaddr.js | `^2.0.1` | `^2.3.0` |
@@ -51,7 +51,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | next | `14.0.4` | `^16.2.2` |
 | next-basics | `^0.39.0` | `^0.40.0` |
 | node-fetch | `^3.2.8` | `^3.3.2` |
-| prisma | `5.7.0` | `^7.6.0` |
+| prisma | `5.7.0` | `^7.7.0` |
 | react | `^18.2.0` | `^19.2.4` |
 | react-basics | `^0.122.0` | `^0.126.0` |
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
