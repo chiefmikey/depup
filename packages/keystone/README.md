@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.4 | **Updated**: 4/3/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.5 | **Updated**: 4/7/2026 | **Import test**: passed
 
 ## What changed
 
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
-| marked | `^0.6.2` | `^17.0.5` |
+| marked | `^0.6.2` | `^18.0.0` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
 | mongoose | `^4.13.14` | `^9.4.1` |

@@ -1,7 +1,7 @@
 {
   "name": "@depup/keystone",
-  "version": "4.2.1-depup.0",
-  "description": "[DepUp] Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose",
+  "version": "4.2.1-depup.5",
+  "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose (with updated dependencies)",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -63,12 +63,12 @@
     "knox-s3": "^0.9.5",
     "less-middleware": "^3.1.0",
     "list-to-array": "^1.1.0",
-    "lodash": "^4.17.23",
-    "marked": "^17.0.4",
+    "lodash": "^4.18.1",
+    "marked": "^18.0.0",
     "method-override": "^3.0.0",
     "mime-types": "^3.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^9.3.1",
+    "mongoose": "^9.4.1",
     "morgan": "^1.10.1",
     "multer": "^2.1.1",
     "numeral": "^2.0.6",
@@ -88,15 +88,15 @@
     "react-images": "^1.2.0-beta.7",
     "react-markdown": "^10.1.0",
     "react-redux": "^9.2.0",
-    "react-router": "^7.13.1",
+    "react-router": "^7.14.0",
     "react-router-redux": "^4.0.8",
     "redux": "^5.0.1",
     "redux-saga": "^1.4.2",
     "redux-thunk": "^3.1.0",
     "react-select": "^5.10.2",
-    "sanitize-filename": "^1.6.3",
-    "tinymce": "^8.3.2",
-    "sanitize-html": "^2.17.1",
+    "sanitize-filename": "^1.6.4",
+    "tinymce": "^8.4.0",
+    "sanitize-html": "^2.17.2",
     "scmp": "^2.1.0",
     "semver": "^7.7.4",
     "serve-favicon": "^2.5.1",
@@ -151,10 +151,12 @@
   "homepage": "http://keystonejs.com/",
   "license": "MIT",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "keystone",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "express",
     "web",
     "app",
@@ -330,11 +332,11 @@
       },
       "lodash": {
         "from": "^4.17.11",
-        "to": "^4.17.23"
+        "to": "^4.18.1"
       },
       "marked": {
         "from": "^0.6.2",
-        "to": "^17.0.4"
+        "to": "^18.0.0"
       },
       "mime-types": {
         "from": "^2.1.24",
@@ -346,7 +348,7 @@
       },
       "mongoose": {
         "from": "^4.13.14",
-        "to": "^9.3.1"
+        "to": "^9.4.1"
       },
       "morgan": {
         "from": "^1.9.1",
@@ -402,7 +404,7 @@
       },
       "react-router": {
         "from": "^3.0.2",
-        "to": "^7.13.1"
+        "to": "^7.14.0"
       },
       "redux": {
         "from": "^3.7.2",
@@ -422,15 +424,15 @@
       },
       "sanitize-filename": {
         "from": "^1.6.1",
-        "to": "^1.6.3"
+        "to": "^1.6.4"
       },
       "tinymce": {
         "from": "^4.9.2",
-        "to": "^8.3.2"
+        "to": "^8.4.0"
       },
       "sanitize-html": {
         "from": "^1.20.1",
-        "to": "^2.17.1"
+        "to": "^2.17.2"
       },
       "scmp": {
         "from": "^1.0.2",
@@ -460,7 +462,7 @@
     "depsUpdated": 65,
     "originalPackage": "keystone",
     "originalVersion": "4.2.1",
-    "processedAt": "2026-03-17T19:31:07.855Z",
+    "processedAt": "2026-04-07T08:35:10.789Z",
     "smokeTest": "passed"
   }
 }
