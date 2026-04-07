@@ -25,6 +25,19 @@
       "status": "published",
       "timestamp": "2026-04-01T05:03:55.426Z",
       "version": "2.4.57-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@clerk/shared": {
+          "from": "^3.47.2",
+          "to": "^4.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-07T04:54:16.146Z",
+      "version": "2.4.57-depup.2"
     }
   }
 }
