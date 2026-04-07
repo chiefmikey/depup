@@ -1,0 +1,46 @@
+{
+  "bumped": {
+    "cac": {
+      "from": "^6.7.14",
+      "to": "^7.0.0"
+    },
+    "chokidar": {
+      "from": "^4.0.3",
+      "to": "^5.0.0"
+    },
+    "consola": {
+      "from": "^3.4.0",
+      "to": "^3.4.2"
+    },
+    "debug": {
+      "from": "^4.4.0",
+      "to": "^4.4.3"
+    },
+    "esbuild": {
+      "from": "^0.27.0",
+      "to": "^0.28.0"
+    },
+    "fix-dts-default-cjs-exports": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "rollup": {
+      "from": "^4.34.8",
+      "to": "^4.60.1"
+    },
+    "sucrase": {
+      "from": "^3.35.0",
+      "to": "^3.35.1"
+    },
+    "tinyexec": {
+      "from": "^0.3.2",
+      "to": "^1.1.1"
+    },
+    "tinyglobby": {
+      "from": "^0.2.11",
+      "to": "^0.2.15"
+    }
+  },
+  "timestamp": "2026-04-07T16:33:04.143Z",
+  "totalUpdated": 10
+}

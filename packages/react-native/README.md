@@ -12,13 +12,20 @@ npm install @depup/react-native
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.2 | **Updated**: 3/21/2026 | **Import test**: failed
+**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.3 | **Updated**: 4/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @jest/create-cache-key-function | `^29.7.0` | `^30.3.0` |
+| @react-native/assets-registry | `0.84.1` | `^0.85.0` |
+| @react-native/codegen | `0.84.1` | `^0.85.0` |
+| @react-native/community-cli-plugin | `0.84.1` | `^0.85.0` |
+| @react-native/gradle-plugin | `0.84.1` | `^0.85.0` |
+| @react-native/js-polyfills | `0.84.1` | `^0.85.0` |
+| @react-native/normalize-colors | `0.84.1` | `^0.85.0` |
+| @react-native/virtualized-lists | `0.84.1` | `^0.85.0` |
 | anser | `^1.4.9` | `^2.3.5` |
 | ansi-regex | `^5.0.0` | `^6.2.2` |
 | babel-jest | `^29.7.0` | `^30.3.0` |
