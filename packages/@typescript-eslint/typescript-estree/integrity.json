@@ -78,5 +78,28 @@
       "timestamp": "2026-03-30T20:18:21.222Z",
       "version": "8.58.0-depup.0"
     }
+  },
+  "8.58.1": {
+    "0": {
+      "changes": {
+        "minimatch": {
+          "from": "^10.2.2",
+          "to": "^10.2.5"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.7.4"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T04:54:34.368Z",
+      "version": "8.58.1-depup.0"
+    }
   }
 }
