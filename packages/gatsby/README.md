@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.12 | **Updated**: 4/4/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.13 | **Updated**: 4/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^6.0.0` |
 | @graphql-codegen/core | `^2.6.8` | `^5.0.1` |
-| @graphql-codegen/plugin-helpers | `^2.7.2` | `^6.2.0` |
+| @graphql-codegen/plugin-helpers | `^2.7.2` | `^6.2.1` |
 | @graphql-codegen/typescript | `^2.8.8` | `^5.0.9` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^5.0.9` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.30` |
@@ -41,15 +41,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.58.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.58.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.58.1` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.58.1` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
 | address | `1.2.2` | `^2.0.3` |
 | anser | `^2.1.1` | `^2.3.5` |
 | autoprefixer | `^10.4.14` | `^10.4.27` |
-| axios | `^1.6.4` | `^1.14.0` |
+| axios | `^1.6.4` | `^1.15.0` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | browserslist | `^4.21.9` | `^4.28.2` |
@@ -65,7 +65,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | date-fns | `^2.30.0` | `^4.1.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
-| dotenv | `^8.6.0` | `^17.4.0` |
+| dotenv | `^8.6.0` | `^17.4.1` |
 | enhanced-resolve | `^5.15.0` | `^5.20.1` |
 | eslint | `^7.32.0` | `^10.2.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
@@ -83,7 +83,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `^11.2.0` | `^11.3.4` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
-| got | `^11.8.6` | `^15.0.0` |
+| got | `^11.8.6` | `^15.0.1` |
 | graphql | `^16.7.1` | `^16.13.2` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
@@ -105,7 +105,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^7.1.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.8` |
+| postcss | `^8.4.24` | `^8.5.9` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.3.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
@@ -125,8 +125,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.4.0` |
 | tmp | `^0.2.1` | `^0.2.5` |
 | uuid | `^8.3.2` | `^13.0.0` |
-| webpack | `~5.98.0` | `^5.105.4` |
-| webpack-dev-middleware | `^5.3.4` | `^8.0.2` |
+| webpack | `~5.98.0` | `^5.106.0` |
+| webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.30.0` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |

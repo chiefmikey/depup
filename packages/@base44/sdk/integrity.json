@@ -69,6 +69,23 @@
       "status": "published",
       "timestamp": "2026-03-30T12:26:02.071Z",
       "version": "0.8.24-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.2",
+          "to": "^1.15.0"
+        },
+        "socket.io-client": {
+          "from": "^4.7.5",
+          "to": "^4.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T16:34:27.362Z",
+      "version": "0.8.24-depup.1"
     }
   }
 }
