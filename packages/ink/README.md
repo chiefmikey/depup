@@ -12,25 +12,14 @@ npm install @depup/ink
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.8.0 | **DepUp version**: 6.8.0-depup.3 | **Updated**: 4/4/2026 | **Import test**: failed
+**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.0 | **Updated**: 4/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @alcalzone/ansi-tokenize | `^0.2.4` | `^0.3.0` |
-| ansi-styles | `^6.2.1` | `^6.2.3` |
-| chalk | `^5.6.0` | `^5.6.2` |
-| cli-boxes | `^3.0.0` | `^4.0.1` |
 | cli-cursor | `^4.0.0` | `^5.0.0` |
-| cli-truncate | `^5.1.1` | `^6.0.0` |
-| es-toolkit | `^1.39.10` | `^1.45.1` |
 | signal-exit | `^3.0.7` | `^4.1.0` |
-| slice-ansi | `^8.0.0` | `^9.0.0` |
-| string-width | `^8.1.1` | `^8.2.0` |
-| type-fest | `^5.4.1` | `^5.5.0` |
-| wrap-ansi | `^9.0.0` | `^10.0.0` |
-| ws | `^8.18.0` | `^8.20.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ink&labels=bug).

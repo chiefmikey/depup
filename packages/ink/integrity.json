@@ -230,5 +230,24 @@
       "timestamp": "2026-04-04T16:15:43.374Z",
       "version": "6.8.0-depup.3"
     }
+  },
+  "7.0.0": {
+    "0": {
+      "changes": {
+        "cli-cursor": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "signal-exit": {
+          "from": "^3.0.7",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-08T08:32:13.594Z",
+      "version": "7.0.0-depup.0"
+    }
   }
 }
