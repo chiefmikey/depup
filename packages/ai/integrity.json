@@ -193,5 +193,20 @@
       "timestamp": "2026-04-07T20:18:10.893Z",
       "version": "6.0.151-depup.0"
     }
+  },
+  "6.0.152": {
+    "0": {
+      "changes": {
+        "@opentelemetry/api": {
+          "from": "1.9.0",
+          "to": "^1.9.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-08T00:40:26.059Z",
+      "version": "6.0.152-depup.0"
+    }
   }
 }
