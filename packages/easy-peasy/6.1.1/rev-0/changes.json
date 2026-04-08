@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@babel/runtime": {
+      "from": "^7.22.6",
+      "to": "^7.29.2"
+    },
+    "immer": {
+      "from": "^9.0.21",
+      "to": "^11.1.4"
+    },
+    "use-sync-external-store": {
+      "from": "^1.4.0",
+      "to": "^1.6.0"
+    }
+  },
+  "timestamp": "2026-04-08T16:31:40.988Z",
+  "totalUpdated": 3
+}
