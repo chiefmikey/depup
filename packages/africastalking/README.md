@@ -12,14 +12,14 @@ npm install @depup/africastalking
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.7.9 | **DepUp version**: 0.7.9-depup.4 | **Updated**: 4/2/2026 | **Import test**: passed
+**Original version**: 0.7.9 | **DepUp version**: 0.7.9-depup.5 | **Updated**: 4/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| axios | `1.13.5` | `^1.14.0` |
-| dotenv | `17.2.4` | `^17.4.0` |
+| axios | `1.13.5` | `^1.15.0` |
+| dotenv | `17.2.4` | `^17.4.1` |
 | joi | `18.0.2` | `^18.1.2` |
 | lodash | `4.17.23` | `^4.18.1` |
 

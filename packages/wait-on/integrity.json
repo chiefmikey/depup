@@ -65,6 +65,27 @@
       "status": "published",
       "timestamp": "2026-03-31T20:26:26.142Z",
       "version": "9.0.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.15.0"
+        },
+        "joi": {
+          "from": "^18.0.2",
+          "to": "^18.1.2"
+        },
+        "lodash": {
+          "from": "^4.17.23",
+          "to": "^4.18.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T16:36:01.732Z",
+      "version": "9.0.4-depup.4"
     }
   }
 }

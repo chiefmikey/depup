@@ -1,22 +1,5 @@
 {
   "0.7.9": {
-    "0": {
-      "changes": {
-        "axios": {
-          "from": "1.13.5",
-          "to": "^1.13.6"
-        },
-        "dotenv": {
-          "from": "17.2.4",
-          "to": "^17.3.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-19T04:44:16.613Z",
-      "version": "0.7.9-depup.0"
-    },
     "1": {
       "changes": {
         "axios": {
@@ -108,6 +91,31 @@
       "status": "published",
       "timestamp": "2026-04-02T00:39:15.531Z",
       "version": "0.7.9-depup.4"
+    },
+    "5": {
+      "changes": {
+        "axios": {
+          "from": "1.13.5",
+          "to": "^1.15.0"
+        },
+        "dotenv": {
+          "from": "17.2.4",
+          "to": "^17.4.1"
+        },
+        "joi": {
+          "from": "18.0.2",
+          "to": "^18.1.2"
+        },
+        "lodash": {
+          "from": "4.17.23",
+          "to": "^4.18.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T16:35:25.435Z",
+      "version": "0.7.9-depup.5"
     }
   }
 }
