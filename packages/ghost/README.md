@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.26.0 | **DepUp version**: 6.26.0-depup.4 | **Updated**: 4/7/2026 | **Import test**: failed
+**Original version**: 6.27.0 | **DepUp version**: 6.27.0-depup.0 | **Updated**: 4/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.864.0` | `^3.1026.0` |
+| @aws-sdk/client-s3 | `3.1023.0` | `^3.1026.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -71,28 +71,24 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/validator | `0.2.17` | `^2.0.3` |
 | @tryghost/version | `0.1.33` | `^2.0.3` |
 | @tryghost/zip | `1.1.49` | `^3.0.3` |
-| body-parser | `1.20.3` | `^2.2.2` |
+| body-parser | `1.20.4` | `^2.2.2` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
-| cors | `2.8.5` | `^2.8.6` |
 | date-fns | `2.30.0` | `^4.1.0` |
 | dompurify | `3.3.0` | `^3.3.3` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.0` |
-| form-data | `4.0.4` | `^4.0.5` |
 | fs-extra | `11.3.0` | `^11.3.4` |
-| ghost-storage-base | `1.0.0` | `^1.1.2` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.0` |
 | gscan | `5.4.0` | `^6.0.0` |
 | html-to-text | `5.1.1` | `^9.0.5` |
-| human-number | `2.0.7` | `^2.0.10` |
+| human-number | `2.0.9` | `^2.0.10` |
 | iconv-lite | `0.6.3` | `^0.7.2` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.0` |
-| js-yaml | `4.1.0` | `^4.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.9` |
@@ -117,10 +113,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | nodemailer | `6.10.1` | `^8.0.5` |
 | otplib | `12.0.1` | `^13.4.0` |
 | sanitize-html | `2.17.0` | `^2.17.2` |
-| semver | `7.7.3` | `^7.7.4` |
 | stripe | `8.222.0` | `^22.0.0` |
 | superagent | `5.3.1` | `^10.3.0` |
-| terser | `5.44.0` | `^5.46.1` |
 | ua-parser-js | `1.0.41` | `^2.0.9` |
 
 
