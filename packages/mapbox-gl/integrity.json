@@ -48,6 +48,27 @@
       "status": "published",
       "timestamp": "2026-04-02T20:20:06.645Z",
       "version": "3.21.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@mapbox/tiny-sdf": {
+          "from": "^2.0.6",
+          "to": "^2.1.0"
+        },
+        "earcut": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "potpack": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T12:31:18.208Z",
+      "version": "3.21.0-depup.1"
     }
   }
 }
