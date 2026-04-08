@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@inquirer/confirm": {
+      "from": "^5.0.0",
+      "to": "^6.0.11"
+    },
+    "@mswjs/interceptors": {
+      "from": "^0.41.2",
+      "to": "^0.41.3"
+    },
+    "@open-draft/deferred-promise": {
+      "from": "^2.2.0",
+      "to": "^3.0.0"
+    },
+    "cookie": {
+      "from": "^1.0.2",
+      "to": "^1.1.1"
+    },
+    "graphql": {
+      "from": "^16.12.0",
+      "to": "^16.13.2"
+    },
+    "headers-polyfill": {
+      "from": "^4.0.2",
+      "to": "^5.0.1"
+    },
+    "path-to-regexp": {
+      "from": "^6.3.0",
+      "to": "^8.4.2"
+    },
+    "rettime": {
+      "from": "^0.10.1",
+      "to": "^0.11.7"
+    },
+    "tough-cookie": {
+      "from": "^6.0.0",
+      "to": "^6.0.1"
+    },
+    "type-fest": {
+      "from": "^5.2.0",
+      "to": "^5.5.0"
+    },
+    "yargs": {
+      "from": "^17.7.2",
+      "to": "^18.0.0"
+    }
+  },
+  "timestamp": "2026-04-08T12:26:32.967Z",
+  "totalUpdated": 11
+}
