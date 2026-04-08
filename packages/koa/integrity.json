@@ -27,6 +27,31 @@
       "status": "published",
       "timestamp": "2026-03-28T08:17:05.515Z",
       "version": "3.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "content-disposition": {
+          "from": "~1.0.1",
+          "to": "^1.1.0"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T00:42:12.278Z",
+      "version": "3.2.0-depup.1"
     }
   }
 }
