@@ -21,5 +21,15 @@
       "timestamp": "2026-03-09T20:13:27.618Z",
       "version": "19.2.4-depup.1"
     }
+  },
+  "19.2.5": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-08T20:19:49.677Z",
+      "version": "19.2.5-depup.0"
+    }
   }
 }

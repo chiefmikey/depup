@@ -12,7 +12,7 @@ npm install @depup/angular-devkit__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.6 | **DepUp version**: 21.2.6-depup.0 | **Updated**: 4/1/2026 | **Import test**: passed
+**Original version**: 21.2.7 | **DepUp version**: 21.2.7-depup.0 | **Updated**: 4/8/2026 | **Import test**: passed
 
 ## What changed
 
