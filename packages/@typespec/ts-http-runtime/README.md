@@ -12,7 +12,7 @@ npm install @depup/typespec__ts-http-runtime
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.4 | **DepUp version**: 0.3.4-depup.1 | **Updated**: 4/1/2026 | **Import test**: passed
+**Original version**: 0.3.5 | **DepUp version**: 0.3.5-depup.0 | **Updated**: 4/9/2026 | **Import test**: passed
 
 ## What changed
 
