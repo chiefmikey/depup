@@ -161,5 +161,28 @@
       "timestamp": "2026-04-09T08:38:42.498Z",
       "version": "5.73.2-depup.0"
     }
+  },
+  "5.73.3": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "msgpackr": {
+          "from": "1.11.5",
+          "to": "^1.11.9"
+        },
+        "uuid": {
+          "from": "11.1.0",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T16:37:00.003Z",
+      "version": "5.73.3-depup.0"
+    }
   }
 }
