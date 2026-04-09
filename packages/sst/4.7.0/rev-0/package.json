@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@depup/sst",
+  "type": "module",
+  "sideEffects": false,
+  "version": "4.7.0-depup.0",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anomalyco/sst.git"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js",
+    "./auth": "./dist/auth/index.js",
+    "./auth/adapter": "./dist/auth/adapter/index.js",
+    "./event": "./dist/event/index.js",
+    "./realtime": "./dist/realtime/index.js",
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "release": "./scripts/release.ts"
+  },
+  "devDependencies": {
+    "@aws/durable-execution-sdk-js-testing": "^1.1.1",
+    "@tsconfig/node20": "20.1.4",
+    "@types/aws-lambda": "^8.10.155",
+    "@types/node": "22.10.0",
+    "bun-types": "1.3.0",
+    "hono": "4.3.9",
+    "typescript": "5.7.2",
+    "valibot": "^1.0.0-rc.3",
+    "zod": "^3.24.2"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "sst": "./bin/sst.mjs"
+  },
+  "optionalDependencies": {
+    "sst-linux-x64": "4.7.0",
+    "sst-linux-x86": "4.7.0",
+    "sst-darwin-x64": "4.7.0",
+    "sst-linux-arm64": "4.7.0",
+    "sst-darwin-arm64": "4.7.0",
+    "sst-win32-x64": "4.7.0",
+    "sst-win32-x86": "4.7.0",
+    "sst-win32-arm64": "4.7.0"
+  },
+  "dependencies": {
+    "@aws/durable-execution-sdk-js": "^1.1.0",
+    "aws4fetch": "^1.0.20",
+    "jose": "^6.2.2",
+    "openid-client": "^6.8.2"
+  },
+  "description": "sst with all dependencies updated to latest",
+  "keywords": [
+    "sst",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@aws/durable-execution-sdk-js": {
+        "from": "1.0.2",
+        "to": "^1.1.0"
+      },
+      "aws4fetch": {
+        "from": "1.0.18",
+        "to": "^1.0.20"
+      },
+      "jose": {
+        "from": "5.2.3",
+        "to": "^6.2.2"
+      },
+      "openid-client": {
+        "from": "5.6.4",
+        "to": "^6.8.2"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "sst",
+    "originalVersion": "4.7.0",
+    "processedAt": "2026-04-09T16:37:12.344Z",
+    "smokeTest": "passed"
+  }
+}
