@@ -11,5 +11,20 @@
       "timestamp": "2026-03-17T16:31:47.289Z",
       "version": "9.1.7-depup.0"
     }
+  },
+  "9.1.8": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T12:29:06.106Z",
+      "version": "9.1.8-depup.0"
+    }
   }
 }
