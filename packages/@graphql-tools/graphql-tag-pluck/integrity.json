@@ -62,5 +62,36 @@
       "timestamp": "2026-04-03T12:20:04.741Z",
       "version": "8.3.29-depup.0"
     }
+  },
+  "8.3.30": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.28.6",
+          "to": "^7.29.0"
+        },
+        "@babel/plugin-syntax-import-assertions": {
+          "from": "^7.26.0",
+          "to": "^7.28.6"
+        },
+        "@babel/traverse": {
+          "from": "^7.26.10",
+          "to": "^7.29.0"
+        },
+        "@babel/types": {
+          "from": "^7.26.10",
+          "to": "^7.29.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T12:29:05.091Z",
+      "version": "8.3.30-depup.0"
+    }
   }
 }
