@@ -32,5 +32,24 @@
       "timestamp": "2026-03-27T20:18:39.756Z",
       "version": "8.0.26-depup.1"
     }
+  },
+  "8.0.27": {
+    "0": {
+      "changes": {
+        "globby": {
+          "from": "^11.0.3",
+          "to": "^16.2.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-09T12:29:26.575Z",
+      "version": "8.0.27-depup.0"
+    }
   }
 }
