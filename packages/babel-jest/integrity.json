@@ -14,6 +14,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:34:53.389Z",
       "version": "30.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "babel-plugin-istanbul": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "slash": {
+          "from": "^3.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T04:54:32.995Z",
+      "version": "30.3.0-depup.1"
     }
   }
 }
