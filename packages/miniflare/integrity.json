@@ -362,5 +362,28 @@
       "timestamp": "2026-04-09T04:55:00.506Z",
       "version": "4.20260405.0-depup.2"
     }
+  },
+  "4.20260409.0": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "7.24.4",
+          "to": "^8.0.2"
+        },
+        "ws": {
+          "from": "8.18.0",
+          "to": "^8.20.0"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-09T16:38:04.516Z",
+      "version": "4.20260409.0-depup.0"
+    }
   }
 }

@@ -475,5 +475,28 @@
       "timestamp": "2026-04-07T16:31:24.452Z",
       "version": "10.47.0-depup.1"
     }
+  },
+  "10.48.0": {
+    "0": {
+      "changes": {
+        "@prisma/instrumentation": {
+          "from": "7.6.0",
+          "to": "^7.7.0"
+        },
+        "@fastify/otel": {
+          "from": "0.18.0",
+          "to": "^0.18.1"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T16:37:31.385Z",
+      "version": "10.48.0-depup.0"
+    }
   }
 }
