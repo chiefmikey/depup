@@ -94,6 +94,19 @@
       "status": "published",
       "timestamp": "2026-04-03T12:23:00.368Z",
       "version": "5.96.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@tanstack/query-core": {
+          "from": "5.96.2",
+          "to": "^5.97.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-09T08:40:28.608Z",
+      "version": "5.96.2-depup.1"
     }
   }
 }
