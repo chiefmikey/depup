@@ -243,5 +243,40 @@
       "timestamp": "2026-04-04T00:35:53.001Z",
       "version": "7.58.1-depup.0"
     }
+  },
+  "7.58.2": {
+    "0": {
+      "changes": {
+        "diff": {
+          "from": "~8.0.2",
+          "to": "^8.0.4"
+        },
+        "minimatch": {
+          "from": "10.2.3",
+          "to": "^10.2.5"
+        },
+        "resolve": {
+          "from": "~1.22.1",
+          "to": "^1.22.11"
+        },
+        "semver": {
+          "from": "~7.5.4",
+          "to": "^7.7.4"
+        },
+        "source-map": {
+          "from": "~0.6.1",
+          "to": "^0.7.6"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-09T00:33:56.595Z",
+      "version": "7.58.2-depup.0"
+    }
   }
 }
