@@ -12,7 +12,7 @@ npm install @depup/eslint-plugin-cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.3 | **DepUp version**: 6.2.3-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.0 | **Updated**: 4/9/2026 | **Import test**: passed
 
 ## What changed
 
