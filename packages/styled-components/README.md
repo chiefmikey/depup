@@ -12,14 +12,11 @@ npm install @depup/styled-components
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.12 | **DepUp version**: 6.3.12-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 6.4.0 | **DepUp version**: 6.4.0-depup.0 | **Updated**: 4/9/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| postcss | `8.4.49` | `^8.5.8` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/styled-components&labels=bug).
 

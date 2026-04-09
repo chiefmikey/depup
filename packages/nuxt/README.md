@@ -12,26 +12,27 @@ npm install @depup/nuxt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.4.2 | **DepUp version**: 4.4.2-depup.11 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 4.4.2 | **DepUp version**: 4.4.2-depup.12 | **Updated**: 4/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @nuxt/devtools | `^3.2.3` | `^4.0.0-alpha.3` |
+| @nuxt/devtools | `^3.2.3` | `^4.0.0-alpha.4` |
 | @nuxt/telemetry | `^2.7.0` | `^2.8.0` |
-| @unhead/vue | `^2.1.12` | `^2.1.13` |
+| @unhead/vue | `^2.1.12` | `^3.0.0` |
 | @vue/shared | `^3.5.30` | `^3.5.32` |
 | c12 | `^3.3.3` | `^4.0.0-beta.4` |
 | cookie-es | `^2.0.0` | `^3.1.1` |
-| defu | `^6.1.4` | `^6.1.6` |
-| devalue | `^5.6.3` | `^5.7.0` |
+| defu | `^6.1.4` | `^6.1.7` |
+| devalue | `^5.6.3` | `^5.7.1` |
 | hookable | `^6.0.1` | `^6.1.0` |
 | mlly | `^1.8.1` | `^1.8.2` |
 | oxc-minify | `^0.117.0` | `^0.124.0` |
 | oxc-parser | `^0.117.0` | `^0.124.0` |
 | oxc-transform | `^0.117.0` | `^0.124.0` |
 | picomatch | `^4.0.3` | `^4.0.4` |
+| tinyglobby | `^0.2.15` | `^0.2.16` |
 | unimport | `^6.0.1` | `^6.0.2` |
 | unrouting | `^0.1.5` | `^0.1.7` |
 | vue | `^3.5.30` | `^3.5.32` |

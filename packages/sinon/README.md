@@ -12,17 +12,14 @@ npm install @depup/sinon
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.0.3 | **DepUp version**: 21.0.3-depup.3 | **Updated**: 4/2/2026 | **Import test**: passed
+**Original version**: 21.1.0 | **DepUp version**: 21.1.0-depup.0 | **Updated**: 4/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @sinonjs/commons | `^3.0.1` | `^4.0.0-alpha.0` |
-| @sinonjs/fake-timers | `^15.1.1` | `^15.3.0` |
-| @sinonjs/samsam | `^9.0.3` | `^10.0.0` |
-| diff | `^8.0.3` | `^8.0.4` |
-| supports-color | `^7.2.0` | `^10.2.2` |
+| @sinonjs/samsam | `^10.0.0` | `^10.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sinon&labels=bug).
