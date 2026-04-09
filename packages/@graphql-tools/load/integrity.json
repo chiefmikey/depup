@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:32:03.279Z",
       "version": "8.1.8-depup.0"
     }
+  },
+  "8.1.9": {
+    "0": {
+      "changes": {
+        "p-limit": {
+          "from": "3.1.0",
+          "to": "^7.3.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-09T12:29:00.107Z",
+      "version": "8.1.9-depup.0"
+    }
   }
 }
