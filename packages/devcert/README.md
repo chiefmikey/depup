@@ -12,7 +12,7 @@ npm install @depup/devcert
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.2 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.3 | **Updated**: 4/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/glob | `^5.0.34` | `^9.0.0` |
 | @types/lodash | `^4.14.92` | `^4.17.24` |
 | @types/mkdirp | `^0.5.2` | `^2.0.0` |
-| @types/node | `^8.5.7` | `^25.5.0` |
+| @types/node | `^8.5.7` | `^25.6.0` |
 | @types/rimraf | `^2.0.2` | `^4.0.5` |
 | @types/tmp | `^0.0.33` | `^0.2.6` |
 | application-config-path | `^0.1.0` | `^1.0.0` |
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eol | `^0.9.1` | `^0.10.0` |
 | get-port | `^3.2.0` | `^7.2.0` |
 | glob | `^7.1.2` | `^13.0.6` |
-| lodash | `^4.17.4` | `^4.18.0` |
+| lodash | `^4.17.4` | `^4.18.1` |
 | mkdirp | `^0.5.1` | `^3.0.1` |
 | password-prompt | `^1.0.4` | `^1.1.3` |
 | rimraf | `^2.6.2` | `^6.1.3` |
