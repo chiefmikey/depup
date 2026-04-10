@@ -12,13 +12,13 @@ npm install @depup/slack__web-api
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.15.0 | **DepUp version**: 7.15.0-depup.3 | **Updated**: 4/8/2026 | **Import test**: passed
+**Original version**: 7.15.0 | **DepUp version**: 7.15.0-depup.4 | **Updated**: 4/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `>=18` | `^25.5.2` |
+| @types/node | `>=18` | `^25.6.0` |
 | @types/retry | `0.12.0` | `^0.12.5` |
 | axios | `^1.13.5` | `^1.15.0` |
 | eventemitter3 | `^5.0.1` | `^5.0.4` |

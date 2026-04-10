@@ -12,13 +12,13 @@ npm install @depup/tanstack__react-form
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.28.6 | **DepUp version**: 1.28.6-depup.0 | **Updated**: 3/30/2026 | **Import test**: passed
+**Original version**: 1.28.6 | **DepUp version**: 1.28.6-depup.1 | **Updated**: 4/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @tanstack/react-store | `^0.9.1` | `^0.9.3` |
+| @tanstack/react-store | `^0.9.1` | `^0.10.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tanstack__react-form&labels=bug).
