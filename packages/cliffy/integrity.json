@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-18T00:37:11.767Z",
       "version": "2.5.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/node": {
+          "from": "^6.0.0",
+          "to": "^25.6.0"
+        },
+        "columnify": {
+          "from": "^1.5.4",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T05:04:26.458Z",
+      "version": "2.5.1-depup.1"
     }
   }
 }

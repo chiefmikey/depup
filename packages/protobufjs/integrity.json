@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-04-04T20:10:55.054Z",
       "version": "8.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/node": {
+          "from": ">=13.7.0",
+          "to": "^25.6.0"
+        },
+        "long": {
+          "from": "^5.0.0",
+          "to": "^5.3.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T05:05:19.475Z",
+      "version": "8.0.1-depup.1"
     }
   }
 }

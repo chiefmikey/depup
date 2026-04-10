@@ -1,0 +1,60 @@
+{
+  "name": "@depup/slack__logger",
+  "version": "4.0.1-depup.1",
+  "description": "Logging utility used by Node Slack SDK (with updated dependencies)",
+  "author": "Slack Technologies, LLC",
+  "license": "MIT",
+  "keywords": [
+    "@slack/logger",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "slack",
+    "logging"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 8.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slackapi/node-slack-sdk.git"
+  },
+  "homepage": "https://docs.slack.dev/tools/node-slack-sdk/",
+  "bugs": {
+    "url": "https://github.com/slackapi/node-slack-sdk/issues"
+  },
+  "scripts": {
+    "build": "npm run build:clean && tsc",
+    "build:clean": "shx rm -rf ./dist",
+    "docs": "npx typedoc --plugin typedoc-plugin-markdown",
+    "test": "npm run test:unit",
+    "test:node18": "npm run build && node --test --test-reporter=spec --import tsx --test src/index.test.ts",
+    "test:unit": "npm run build && node --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=lcov.info --test-reporter=junit --test-reporter-destination=test-results.xml --import tsx --test src/index.test.ts"
+  },
+  "dependencies": {
+    "@types/node": "^25.6.0"
+  },
+  "depup": {
+    "changes": {
+      "@types/node": {
+        "from": ">=18",
+        "to": "^25.6.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@slack/logger",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-04-10T05:04:11.891Z",
+    "smokeTest": "passed"
+  }
+}

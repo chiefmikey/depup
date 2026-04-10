@@ -12,14 +12,14 @@ npm install @depup/electron
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 41.2.0 | **DepUp version**: 41.2.0-depup.0 | **Updated**: 4/8/2026 | **Import test**: failed
+**Original version**: 41.2.0 | **DepUp version**: 41.2.0-depup.1 | **Updated**: 4/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @electron/get | `^2.0.0` | `^4.0.3` |
-| @types/node | `^24.9.0` | `^25.5.2` |
+| @types/node | `^24.9.0` | `^25.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/electron&labels=bug).
