@@ -150,6 +150,35 @@
       "status": "published",
       "timestamp": "2026-03-27T00:39:36.055Z",
       "version": "20.8.9-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^25.6.0"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "ws": {
+          "from": "^8.18.3",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T05:04:56.756Z",
+      "version": "20.8.9-depup.1"
     }
   }
 }
