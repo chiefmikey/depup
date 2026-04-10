@@ -101,5 +101,60 @@
       "timestamp": "2026-04-08T16:33:06.207Z",
       "version": "5.106.0-depup.0"
     }
+  },
+  "5.106.1": {
+    "0": {
+      "changes": {
+        "@types/eslint-scope": {
+          "from": "^3.7.7",
+          "to": "^9.1.0"
+        },
+        "acorn-import-phases": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "enhanced-resolve": {
+          "from": "^5.20.0",
+          "to": "^5.20.1"
+        },
+        "eslint-scope": {
+          "from": "5.1.1",
+          "to": "^9.1.2"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "json-parse-even-better-errors": {
+          "from": "^2.3.1",
+          "to": "^5.0.0"
+        },
+        "mime-types": {
+          "from": "^2.1.27",
+          "to": "^3.0.2"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.2"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.3.17",
+          "to": "^5.4.0"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T12:23:39.109Z",
+      "version": "5.106.1-depup.0"
+    }
   }
 }
