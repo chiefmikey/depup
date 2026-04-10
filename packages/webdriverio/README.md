@@ -12,13 +12,13 @@ npm install @depup/webdriverio
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.27.0 | **DepUp version**: 9.27.0-depup.0 | **Updated**: 3/23/2026 | **Import test**: passed
+**Original version**: 9.27.0 | **DepUp version**: 9.27.0-depup.1 | **Updated**: 4/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `^20.11.30` | `^25.5.0` |
+| @types/node | `^20.11.30` | `^25.6.0` |
 | @types/sinonjs__fake-timers | `^8.1.5` | `^15.0.1` |
 | aria-query | `^5.3.0` | `^5.3.2` |
 | cheerio | `^1.0.0-rc.12` | `^1.2.0` |
