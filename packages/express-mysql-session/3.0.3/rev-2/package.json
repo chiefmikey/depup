@@ -1,0 +1,58 @@
+{
+  "name": "@depup/express-mysql-session",
+  "description": "A MySQL session store for express.js (with updated dependencies)",
+  "version": "3.0.3-depup.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:integration",
+    "test:integration": "./node_modules/.bin/mocha test/integration/ --recursive --reporter spec --ui bdd",
+    "test:unit": "./node_modules/.bin/mocha test/unit/ --recursive --reporter spec --ui bdd --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chill117/express-mysql-session"
+  },
+  "author": {
+    "name": "Charles Hill",
+    "email": "chill@degreesofzero.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "mysql2": "^3.22.0"
+  },
+  "devDependencies": {
+    "express": "4.19.2",
+    "express-session": "1.18.0",
+    "mocha": "10.4.0"
+  },
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/chill117/express-mysql-session/issues"
+  },
+  "keywords": [
+    "express-mysql-session",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "4.3.4",
+        "to": "^4.4.3"
+      },
+      "mysql2": {
+        "from": "3.10.2",
+        "to": "^3.22.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "express-mysql-session",
+    "originalVersion": "3.0.3",
+    "processedAt": "2026-04-10T16:27:28.764Z",
+    "smokeTest": "passed"
+  }
+}

@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-04-09T12:30:53.660Z",
       "version": "3.0.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "debug": {
+          "from": "4.3.4",
+          "to": "^4.4.3"
+        },
+        "mysql2": {
+          "from": "3.10.2",
+          "to": "^3.22.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T16:27:32.385Z",
+      "version": "3.0.3-depup.2"
     }
   }
 }
