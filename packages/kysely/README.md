@@ -12,7 +12,7 @@ npm install @depup/kysely
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.28.15 | **DepUp version**: 0.28.15-depup.0 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 0.28.16 | **DepUp version**: 0.28.16-depup.0 | **Updated**: 4/10/2026 | **Import test**: passed
 
 ## What changed
 
