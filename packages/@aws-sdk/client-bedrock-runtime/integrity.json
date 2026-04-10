@@ -475,5 +475,28 @@
       "timestamp": "2026-04-09T20:21:56.727Z",
       "version": "3.1028.0-depup.0"
     }
+  },
+  "3.1029.0": {
+    "0": {
+      "changes": {
+        "@smithy/middleware-retry": {
+          "from": "^4.5.0",
+          "to": "^4.5.1"
+        },
+        "@smithy/util-retry": {
+          "from": "^4.3.0",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-10T20:14:36.652Z",
+      "version": "3.1029.0-depup.0"
+    }
   }
 }
