@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.28.0 | **DepUp version**: 6.28.0-depup.0 | **Updated**: 4/10/2026 | **Import test**: failed
+**Original version**: 6.28.0 | **DepUp version**: 6.28.0-depup.1 | **Updated**: 4/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1028.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1029.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -45,6 +45,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/logging | `2.5.5` | `^4.0.3` |
 | @tryghost/metrics | `1.0.43` | `^3.0.3` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.0.3` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.0.3` |
 | @tryghost/nodemailer | `0.3.48` | `^2.0.3` |
 | @tryghost/pretty-cli | `1.2.52` | `^3.0.3` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^3.0.3` |
