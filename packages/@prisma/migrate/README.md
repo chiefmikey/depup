@@ -12,11 +12,14 @@ npm install @depup/prisma__migrate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.7.0 | **DepUp version**: 7.7.0-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 7.7.0 | **DepUp version**: 7.7.0-depup.1 | **Updated**: 4/10/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @prisma/engines-version | `7.6.0-1.75cbdc1eb7150937890ad5465d861175c6624711` | `^7.8.0-1.7b80cc56c645c6e03c7541474e6a7c8d91b70d4e` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/prisma__migrate&labels=bug).
 
