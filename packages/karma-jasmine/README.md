@@ -12,13 +12,13 @@ npm install @depup/karma-jasmine
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.1 | **Updated**: 4/11/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| jasmine-core | `^4.1.0` | `^6.1.0` |
+| jasmine-core | `^4.1.0` | `^6.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/karma-jasmine&labels=bug).
