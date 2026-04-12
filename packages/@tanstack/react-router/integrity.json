@@ -373,5 +373,24 @@
       "timestamp": "2026-04-11T20:12:11.074Z",
       "version": "1.168.17-depup.0"
     }
+  },
+  "1.168.18": {
+    "0": {
+      "changes": {
+        "@tanstack/react-store": {
+          "from": "^0.9.3",
+          "to": "^0.10.0"
+        },
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.1.37"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-12T00:44:19.471Z",
+      "version": "1.168.18-depup.0"
+    }
   }
 }
