@@ -36,6 +36,23 @@
       "status": "published",
       "timestamp": "2026-03-27T20:15:11.753Z",
       "version": "64.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "globals": {
+          "from": "^17.4.0",
+          "to": "^17.5.0"
+        },
+        "regjsparser": {
+          "from": "^0.13.0",
+          "to": "^0.13.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-12T08:23:36.588Z",
+      "version": "64.0.0-depup.1"
     }
   }
 }
