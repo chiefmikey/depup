@@ -1,0 +1,68 @@
+{
+  "name": "@depup/better-sqlite3-helper",
+  "version": "3.1.7-depup.1",
+  "description": "A wrapper library that eases the work with better-sqlite3 with some new functions and a migration-system (with updated dependencies)",
+  "main": "src/database.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test ./node_modules/mocha/bin/_mocha --ui bdd --recursive ./test"
+  },
+  "author": "Markus Madeja",
+  "repository": "Kauto/better-sqlite3-helper",
+  "homepage": "http://intergenies.com/programs/nodejs/better-sqlite3-helper",
+  "license": "MIT",
+  "keywords": [
+    "better-sqlite3-helper",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "sqlite3",
+    "sqlite",
+    "sql",
+    "database",
+    "save",
+    "custom",
+    "helper",
+    "better-sqlite3"
+  ],
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "mkdirp": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "chai": "^4.3.10",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0"
+  },
+  "peerDependencies": {
+    "@types/better-sqlite3": "^7.6.3"
+  },
+  "peerDependenciesMeta": {
+    "@types/better-sqlite3": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "app-root-path": "^3.0.0"
+  },
+  "depup": {
+    "changes": {
+      "better-sqlite3": {
+        "from": "^9.2.0",
+        "to": "^12.9.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "better-sqlite3-helper",
+    "originalVersion": "3.1.7",
+    "processedAt": "2026-04-12T20:14:03.128Z",
+    "smokeTest": "passed"
+  }
+}
