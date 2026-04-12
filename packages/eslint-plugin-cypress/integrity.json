@@ -55,6 +55,19 @@
       "status": "published",
       "timestamp": "2026-04-09T04:52:38.225Z",
       "version": "6.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "globals": {
+          "from": "^17.4.0",
+          "to": "^17.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-12T08:23:37.211Z",
+      "version": "6.3.0-depup.1"
     }
   }
 }

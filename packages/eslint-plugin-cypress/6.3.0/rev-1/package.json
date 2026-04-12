@@ -1,0 +1,76 @@
+{
+  "name": "@depup/eslint-plugin-cypress",
+  "version": "6.3.0-depup.1",
+  "description": "An ESLint plugin for projects using Cypress (with updated dependencies)",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "CONTRIBUTING.md",
+    "changes.json",
+    "README.md"
+  ],
+  "author": "Cypress-io",
+  "license": "MIT",
+  "type": "commonjs",
+  "keywords": [
+    "eslint-plugin-cypress",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "eslint",
+    "eslintplugin",
+    "cypress"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypress-io/eslint-plugin-cypress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cypress-io/eslint-plugin-cypress/issues"
+  },
+  "homepage": "https://github.com/cypress-io/eslint-plugin-cypress#readme",
+  "peerDependencies": {
+    "eslint": ">=9"
+  },
+  "dependencies": {
+    "globals": "^17.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.9.0",
+    "eslint": "^10.0.2",
+    "eslint-plugin-eslint-plugin": "^7.3.1",
+    "eslint-plugin-mocha": "^11.2.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vitest": "^4.0.18"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run"
+  },
+  "depup": {
+    "changes": {
+      "globals": {
+        "from": "^17.4.0",
+        "to": "^17.5.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "eslint-plugin-cypress",
+    "originalVersion": "6.3.0",
+    "processedAt": "2026-04-12T08:23:33.482Z",
+    "smokeTest": "passed"
+  }
+}
