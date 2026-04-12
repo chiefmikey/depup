@@ -2724,6 +2724,139 @@
       "status": "published",
       "timestamp": "2026-04-09T20:22:51.107Z",
       "version": "24.11.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@fastify/static": {
+          "from": "9.0.0",
+          "to": "^9.1.0"
+        },
+        "@netlify/blobs": {
+          "from": "10.7.0",
+          "to": "^10.7.4"
+        },
+        "@netlify/dev": {
+          "from": "4.16.4",
+          "to": "^4.16.5"
+        },
+        "@netlify/edge-functions-bootstrap": {
+          "from": "2.17.1",
+          "to": "^3.1.0"
+        },
+        "@octokit/rest": {
+          "from": "22.0.0",
+          "to": "^22.0.1"
+        },
+        "@opentelemetry/api": {
+          "from": "1.8.0",
+          "to": "^1.9.1"
+        },
+        "chokidar": {
+          "from": "4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "12.1.0",
+          "to": "^14.0.3"
+        },
+        "comment-json": {
+          "from": "4.6.2",
+          "to": "^5.0.0"
+        },
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "dotenv": {
+          "from": "17.3.1",
+          "to": "^17.4.1"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^9.6.1"
+        },
+        "fastify": {
+          "from": "5.8.3",
+          "to": "^5.8.4"
+        },
+        "get-port": {
+          "from": "5.1.1",
+          "to": "^7.2.0"
+        },
+        "https-proxy-agent": {
+          "from": "8.0.0",
+          "to": "^9.0.0"
+        },
+        "inquirer": {
+          "from": "8.2.7",
+          "to": "^13.4.1"
+        },
+        "inquirer-autocomplete-prompt": {
+          "from": "1.4.0",
+          "to": "^3.0.1"
+        },
+        "is-wsl": {
+          "from": "3.1.0",
+          "to": "^3.1.1"
+        },
+        "lodash": {
+          "from": "4.17.23",
+          "to": "^4.18.1"
+        },
+        "log-update": {
+          "from": "7.2.0",
+          "to": "^8.0.0"
+        },
+        "modern-tar": {
+          "from": "0.7.5",
+          "to": "^0.7.6"
+        },
+        "normalize-package-data": {
+          "from": "7.0.1",
+          "to": "^8.0.0"
+        },
+        "p-map": {
+          "from": "7.0.3",
+          "to": "^7.0.4"
+        },
+        "parse-github-url": {
+          "from": "1.0.3",
+          "to": "^1.0.4"
+        },
+        "raw-body": {
+          "from": "3.0.1",
+          "to": "^3.0.2"
+        },
+        "readdirp": {
+          "from": "4.1.2",
+          "to": "^5.0.0"
+        },
+        "semver": {
+          "from": "7.7.2",
+          "to": "^7.7.4"
+        },
+        "toml": {
+          "from": "3.0.0",
+          "to": "^4.1.1"
+        },
+        "ulid": {
+          "from": "3.0.1",
+          "to": "^3.0.2"
+        },
+        "write-file-atomic": {
+          "from": "5.0.1",
+          "to": "^7.0.1"
+        },
+        "ws": {
+          "from": "8.19.0",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 31,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-12T05:03:53.298Z",
+      "version": "24.11.1-depup.1"
     }
   }
 }
