@@ -12,14 +12,14 @@ npm install @depup/memfs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.57.1 | **DepUp version**: 4.57.1-depup.7 | **Updated**: 4/11/2026 | **Import test**: passed
+**Original version**: 4.57.1 | **DepUp version**: 4.57.1-depup.8 | **Updated**: 4/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @jsonjoy.com/json-pack | `^1.11.0` | `^18.11.0` |
-| @jsonjoy.com/util | `^1.9.0` | `^18.11.0` |
+| @jsonjoy.com/json-pack | `^1.11.0` | `^18.12.0` |
+| @jsonjoy.com/util | `^1.9.0` | `^18.12.0` |
 | glob-to-regex.js | `^1.0.1` | `^1.2.0` |
 | thingies | `^2.5.0` | `^2.6.0` |
 | tree-dump | `^1.0.3` | `^1.1.0` |

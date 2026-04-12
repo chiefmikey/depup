@@ -12,7 +12,7 @@ npm install @depup/magicbell__magicbell-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.5.1 | **DepUp version**: 11.5.1-depup.3 | **Updated**: 4/4/2026 | **Import test**: failed
+**Original version**: 11.5.1 | **DepUp version**: 11.5.1-depup.4 | **Updated**: 4/12/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.17.21` | `^4.18.1` |
 | lodash-es | `^4.17.21` | `^4.18.1` |
 | ramda | `^0.28.0` | `^0.32.0` |
-| react-infinite-scroll-component | `^6.1.0` | `^7.0.0` |
+| react-infinite-scroll-component | `^6.1.0` | `^7.1.0` |
 | tiny-invariant | `^1.3.1` | `^1.3.3` |
 | tslib | `^2.8.0` | `^2.8.1` |
 | zustand | `^5.0.1` | `^5.0.12` |
