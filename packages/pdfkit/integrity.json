@@ -31,6 +31,23 @@
       "status": "published",
       "timestamp": "2026-04-11T20:12:41.426Z",
       "version": "0.18.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@noble/ciphers": {
+          "from": "^1.0.0",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "^1.6.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-04-12T00:45:10.786Z",
+      "version": "0.18.0-depup.2"
     }
   }
 }
