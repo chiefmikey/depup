@@ -33,5 +33,15 @@
       "timestamp": "2026-04-05T20:12:25.272Z",
       "version": "17.4.1-depup.0"
     }
+  },
+  "17.4.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-04-12T20:14:22.047Z",
+      "version": "17.4.2-depup.0"
+    }
   }
 }
