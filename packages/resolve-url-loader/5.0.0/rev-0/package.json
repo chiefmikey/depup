@@ -1,0 +1,81 @@
+{
+  "name": "@depup/resolve-url-loader",
+  "version": "5.0.0-depup.0",
+  "description": "Webpack loader that resolves relative paths in url() statements based on the original source file (with updated dependencies)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bholloway/resolve-url-loader.git",
+    "directory": "packages/resolve-url-loader"
+  },
+  "keywords": [
+    "resolve-url-loader",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webpack",
+    "loader",
+    "css",
+    "normalize",
+    "rewrite",
+    "resolve",
+    "url",
+    "sass",
+    "relative",
+    "file"
+  ],
+  "author": "bholloway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bholloway/resolve-url-loader/issues"
+  },
+  "homepage": "https://github.com/bholloway/resolve-url-loader/tree/v5/packages/resolve-url-loader",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "index.js",
+    "lib/**/+([a-z-]).js",
+    "docs/**/*.*",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "adjust-sourcemap-loader": "^5.0.0",
+    "convert-source-map": "^2.0.0",
+    "loader-utils": "^3.3.1",
+    "postcss": "^8.5.9",
+    "source-map": "^0.7.6"
+  },
+  "depup": {
+    "changes": {
+      "adjust-sourcemap-loader": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "convert-source-map": {
+        "from": "^1.7.0",
+        "to": "^2.0.0"
+      },
+      "loader-utils": {
+        "from": "^2.0.0",
+        "to": "^3.3.1"
+      },
+      "postcss": {
+        "from": "^8.2.14",
+        "to": "^8.5.9"
+      },
+      "source-map": {
+        "from": "0.6.1",
+        "to": "^0.7.6"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "resolve-url-loader",
+    "originalVersion": "5.0.0",
+    "processedAt": "2026-04-12T00:42:58.470Z",
+    "smokeTest": "passed"
+  }
+}
