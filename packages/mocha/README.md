@@ -12,7 +12,7 @@ npm install @depup/mocha
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.7.5 | **DepUp version**: 11.7.5-depup.29 | **Updated**: 3/14/2026 | **Import test**: unknown
+**Original version**: 11.7.5 | **DepUp version**: 11.7.5-depup.30 | **Updated**: 4/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,15 +20,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | chokidar | `^4.0.1` | `^5.0.0` |
 | debug | `^4.3.5` | `^4.4.3` |
-| diff | `^7.0.0` | `^8.0.3` |
+| diff | `^7.0.0` | `^9.0.0` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
 | find-up | `^5.0.0` | `^8.0.0` |
 | glob | `^10.4.5` | `^13.0.6` |
 | is-path-inside | `^3.0.3` | `^4.0.0` |
 | js-yaml | `^4.1.0` | `^4.1.1` |
 | log-symbols | `^4.1.0` | `^7.0.1` |
-| minimatch | `^9.0.5` | `^10.2.4` |
-| serialize-javascript | `^6.0.2` | `^7.0.4` |
+| minimatch | `^9.0.5` | `^10.2.5` |
+| serialize-javascript | `^6.0.2` | `^7.0.5` |
 | strip-json-comments | `^3.1.1` | `^5.0.3` |
 | supports-color | `^8.1.1` | `^10.2.2` |
 | workerpool | `^9.2.0` | `^10.0.1` |

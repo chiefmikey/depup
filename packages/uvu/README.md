@@ -12,14 +12,14 @@ npm install @depup/uvu
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.5.6 | **DepUp version**: 0.5.6-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.5.6 | **DepUp version**: 0.5.6-depup.1 | **Updated**: 4/13/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | dequal | `^2.0.0` | `^2.0.3` |
-| diff | `^5.0.0` | `^8.0.3` |
+| diff | `^5.0.0` | `^9.0.0` |
 | kleur | `^4.0.3` | `^4.1.5` |
 | sade | `^1.7.3` | `^1.8.1` |
 
