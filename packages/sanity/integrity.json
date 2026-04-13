@@ -2056,6 +2056,143 @@
       "status": "published",
       "timestamp": "2026-04-09T16:41:24.726Z",
       "version": "5.20.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@algorithm.ts/lcs": {
+          "from": "^4.0.5",
+          "to": "^4.0.6"
+        },
+        "@dnd-kit/modifiers": {
+          "from": "^6.0.1",
+          "to": "^9.0.0"
+        },
+        "@dnd-kit/sortable": {
+          "from": "^7.0.2",
+          "to": "^10.0.0"
+        },
+        "@isaacs/ttlcache": {
+          "from": "^1.4.1",
+          "to": "^2.1.4"
+        },
+        "@mux/mux-player-react": {
+          "from": "^3.10.2",
+          "to": "^3.11.7"
+        },
+        "@portabletext/editor": {
+          "from": "^6.6.0",
+          "to": "^6.6.2"
+        },
+        "@portabletext/plugin-markdown-shortcuts": {
+          "from": "^7.0.23",
+          "to": "^7.0.25"
+        },
+        "@portabletext/plugin-one-line": {
+          "from": "^6.0.23",
+          "to": "^6.0.25"
+        },
+        "@portabletext/plugin-paste-link": {
+          "from": "^3.0.23",
+          "to": "^3.0.25"
+        },
+        "@portabletext/plugin-typography": {
+          "from": "^7.0.23",
+          "to": "^7.0.25"
+        },
+        "@sanity/client": {
+          "from": "^7.18.0",
+          "to": "^7.21.0"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/image-url": {
+          "from": "^2.0.3",
+          "to": "^2.1.1"
+        },
+        "@sanity/migrate": {
+          "from": "^6.0.0",
+          "to": "^6.1.1"
+        },
+        "@sanity/sdk": {
+          "from": "2.1.2",
+          "to": "^2.8.0"
+        },
+        "@sanity/telemetry": {
+          "from": "^0.9.0",
+          "to": "^1.0.0"
+        },
+        "@sentry/react": {
+          "from": "^8.55.0",
+          "to": "^10.48.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.13.18",
+          "to": "^3.13.23"
+        },
+        "@xstate/react": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        },
+        "classnames": {
+          "from": "^2.2.5",
+          "to": "^2.5.1"
+        },
+        "i18next": {
+          "from": "^25.8.17",
+          "to": "^26.0.4"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.26.0",
+          "to": "^3.8.0"
+        },
+        "motion": {
+          "from": "^12.27.1",
+          "to": "^12.38.0"
+        },
+        "nanoid": {
+          "from": "^3.3.11",
+          "to": "^5.1.7"
+        },
+        "path-to-regexp": {
+          "from": "^6.3.0",
+          "to": "^8.4.2"
+        },
+        "player.style": {
+          "from": "^0.1.9",
+          "to": "^0.3.1"
+        },
+        "react-i18next": {
+          "from": "15.6.1",
+          "to": "^17.0.2"
+        },
+        "react-is": {
+          "from": "^19.2.4",
+          "to": "^19.2.5"
+        },
+        "semver": {
+          "from": "^7.7.2",
+          "to": "^7.7.4"
+        },
+        "uuid": {
+          "from": "^11.1.0",
+          "to": "^13.0.0"
+        },
+        "web-vitals": {
+          "from": "^5.1.0",
+          "to": "^5.2.0"
+        },
+        "xstate": {
+          "from": "^5.25.1",
+          "to": "^5.30.0"
+        }
+      },
+      "depsUpdated": 32,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-13T12:35:10.610Z",
+      "version": "5.20.0-depup.3"
     }
   }
 }
