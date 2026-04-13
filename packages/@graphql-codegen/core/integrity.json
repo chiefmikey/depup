@@ -19,5 +19,28 @@
       "timestamp": "2026-03-17T16:32:45.634Z",
       "version": "5.0.1-depup.0"
     }
+  },
+  "5.0.2": {
+    "0": {
+      "changes": {
+        "@graphql-tools/schema": {
+          "from": "^10.0.0",
+          "to": "^10.0.32"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.0.1"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-13T12:31:35.829Z",
+      "version": "5.0.2-depup.0"
+    }
   }
 }
