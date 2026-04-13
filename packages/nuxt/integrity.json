@@ -7,75 +7,6 @@
     }
   },
   "4.4.2": {
-    "8": {
-      "changes": {
-        "@nuxt/devtools": {
-          "from": "^3.2.3",
-          "to": "^4.0.0-alpha.3"
-        },
-        "@vue/shared": {
-          "from": "^3.5.30",
-          "to": "^3.5.31"
-        },
-        "c12": {
-          "from": "^3.3.3",
-          "to": "^4.0.0-beta.4"
-        },
-        "cookie-es": {
-          "from": "^2.0.0",
-          "to": "^3.1.1"
-        },
-        "devalue": {
-          "from": "^5.6.3",
-          "to": "^5.6.4"
-        },
-        "hookable": {
-          "from": "^6.0.1",
-          "to": "^6.1.0"
-        },
-        "mlly": {
-          "from": "^1.8.1",
-          "to": "^1.8.2"
-        },
-        "oxc-minify": {
-          "from": "^0.117.0",
-          "to": "^0.123.0"
-        },
-        "oxc-parser": {
-          "from": "^0.117.0",
-          "to": "^0.123.0"
-        },
-        "oxc-transform": {
-          "from": "^0.117.0",
-          "to": "^0.123.0"
-        },
-        "picomatch": {
-          "from": "^4.0.3",
-          "to": "^4.0.4"
-        },
-        "unimport": {
-          "from": "^6.0.1",
-          "to": "^6.0.2"
-        },
-        "unrouting": {
-          "from": "^0.1.5",
-          "to": "^0.1.7"
-        },
-        "vue": {
-          "from": "^3.5.30",
-          "to": "^3.5.31"
-        },
-        "vue-router": {
-          "from": "^5.0.3",
-          "to": "^5.0.4"
-        }
-      },
-      "depsUpdated": 15,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-31T12:32:18.983Z",
-      "version": "4.4.2-depup.8"
-    },
     "9": {
       "changes": {
         "@nuxt/devtools": {
@@ -395,6 +326,91 @@
       "status": "published",
       "timestamp": "2026-04-09T16:41:24.216Z",
       "version": "4.4.2-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.3",
+          "to": "^4.0.0-alpha.4"
+        },
+        "@nuxt/telemetry": {
+          "from": "^2.7.0",
+          "to": "^2.8.0"
+        },
+        "@unhead/vue": {
+          "from": "^2.1.12",
+          "to": "^3.0.3"
+        },
+        "@vue/shared": {
+          "from": "^3.5.30",
+          "to": "^3.5.32"
+        },
+        "c12": {
+          "from": "^3.3.3",
+          "to": "^4.0.0-beta.4"
+        },
+        "cookie-es": {
+          "from": "^2.0.0",
+          "to": "^3.1.1"
+        },
+        "defu": {
+          "from": "^6.1.4",
+          "to": "^6.1.7"
+        },
+        "devalue": {
+          "from": "^5.6.3",
+          "to": "^5.7.1"
+        },
+        "hookable": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "mlly": {
+          "from": "^1.8.1",
+          "to": "^1.8.2"
+        },
+        "oxc-minify": {
+          "from": "^0.117.0",
+          "to": "^0.124.0"
+        },
+        "oxc-parser": {
+          "from": "^0.117.0",
+          "to": "^0.124.0"
+        },
+        "oxc-transform": {
+          "from": "^0.117.0",
+          "to": "^0.124.0"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        },
+        "unimport": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "unrouting": {
+          "from": "^0.1.5",
+          "to": "^0.1.7"
+        },
+        "vue": {
+          "from": "^3.5.30",
+          "to": "^3.5.32"
+        },
+        "vue-router": {
+          "from": "^5.0.3",
+          "to": "^5.0.4"
+        }
+      },
+      "depsUpdated": 19,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-13T05:10:27.194Z",
+      "version": "4.4.2-depup.13"
     }
   }
 }
