@@ -19,5 +19,24 @@
       "timestamp": "2026-03-17T16:32:49.547Z",
       "version": "5.0.9-depup.0"
     }
+  },
+  "5.1.0": {
+    "0": {
+      "changes": {
+        "auto-bind": {
+          "from": "~4.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-13T12:30:20.764Z",
+      "version": "5.1.0-depup.0"
+    }
   }
 }
