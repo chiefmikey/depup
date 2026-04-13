@@ -1,12 +1,14 @@
 {
   "name": "@depup/cheerio",
-  "version": "1.2.0-depup.3",
-  "description": "[DepUp] The fast, flexible & elegant library for parsing and manipulating HTML and XML.",
+  "version": "1.2.0-depup.8",
+  "description": "The fast, flexible & elegant library for parsing and manipulating HTML and XML. (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "cheerio",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "htmlparser",
     "jquery",
     "selector",
@@ -124,15 +126,15 @@
   },
   "dependencies": {
     "cheerio-select": "^2.1.0",
-    "dom-serializer": "^2.0.0",
+    "dom-serializer": "^3.0.0",
     "domhandler": "^6.0.1",
-    "domutils": "^3.2.2",
-    "encoding-sniffer": "^1.0.0",
-    "htmlparser2": "^10.1.0",
+    "domutils": "^4.0.2",
+    "encoding-sniffer": "^1.0.2",
+    "htmlparser2": "^12.0.0",
     "parse5": "^8.0.0",
     "parse5-htmlparser2-tree-adapter": "^8.0.0",
     "parse5-parser-stream": "^8.0.0",
-    "undici": "^7.24.4",
+    "undici": "^8.1.0",
     "whatwg-mimetype": "^5.0.0"
   },
   "devDependencies": {
@@ -185,13 +187,25 @@
   },
   "depup": {
     "changes": {
+      "dom-serializer": {
+        "from": "^2.0.0",
+        "to": "^3.0.0"
+      },
       "domhandler": {
         "from": "^5.0.3",
         "to": "^6.0.1"
       },
+      "domutils": {
+        "from": "^3.2.2",
+        "to": "^4.0.2"
+      },
       "encoding-sniffer": {
         "from": "^0.2.1",
-        "to": "^1.0.0"
+        "to": "^1.0.2"
+      },
+      "htmlparser2": {
+        "from": "^10.1.0",
+        "to": "^12.0.0"
       },
       "parse5": {
         "from": "^7.3.0",
@@ -207,17 +221,17 @@
       },
       "undici": {
         "from": "^7.19.0",
-        "to": "^7.24.4"
+        "to": "^8.1.0"
       },
       "whatwg-mimetype": {
         "from": "^4.0.0",
         "to": "^5.0.0"
       }
     },
-    "depsUpdated": 7,
+    "depsUpdated": 10,
     "originalPackage": "cheerio",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-03-17T18:46:44.959Z",
+    "processedAt": "2026-04-13T16:35:59.703Z",
     "smokeTest": "passed"
   }
 }

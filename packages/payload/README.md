@@ -12,7 +12,7 @@ npm install @depup/payload
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.82.1 | **DepUp version**: 3.82.1-depup.0 | **Updated**: 4/9/2026 | **Import test**: passed
+**Original version**: 3.82.1 | **DepUp version**: 3.82.1-depup.1 | **Updated**: 4/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pino-pretty | `13.1.2` | `^13.1.3` |
 | sanitize-filename | `1.6.3` | `^1.6.4` |
 | ts-essentials | `10.0.3` | `^10.1.1` |
-| undici | `7.24.4` | `^8.0.2` |
+| undici | `7.24.4` | `^8.1.0` |
 | uuid | `10.0.0` | `^13.0.0` |
 | ws | `^8.16.0` | `^8.20.0` |
 
