@@ -12,16 +12,15 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.18.0 | **DepUp version**: 13.18.0-depup.2 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 13.19.0 | **DepUp version**: 13.19.0-depup.0 | **Updated**: 4/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @apm-js-collab/tracing-hooks | `^0.5.0` | `^0.6.0` |
 | @grpc/grpc-js | `^1.13.2` | `^1.14.3` |
 | @grpc/proto-loader | `^0.7.5` | `^0.8.0` |
-| @newrelic/security-agent | `^3.0.0` | `^3.0.2` |
+| @newrelic/security-agent | `^3.0.0` | `^3.0.3` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
 | @opentelemetry/api-logs | `^0.203.0` | `^0.214.0` |
 | @opentelemetry/core | `^2.0.0` | `^2.6.1` |
@@ -32,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.6.1` |
 | @tyriar/fibonacci-heap | `^2.0.7` | `^2.0.9` |
 | https-proxy-agent | `^7.0.1` | `^9.0.0` |
-| import-in-the-middle | `^1.13.0` | `^3.0.0` |
+| import-in-the-middle | `^1.13.0` | `^3.0.1` |
 | json-stringify-safe | `^5.0.0` | `^5.0.1` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | readable-stream | `^3.6.1` | `^4.7.0` |

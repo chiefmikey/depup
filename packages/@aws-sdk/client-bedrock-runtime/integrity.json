@@ -498,5 +498,40 @@
       "timestamp": "2026-04-10T20:14:36.652Z",
       "version": "3.1029.0-depup.0"
     }
+  },
+  "3.1030.0": {
+    "0": {
+      "changes": {
+        "@smithy/config-resolver": {
+          "from": "^4.4.14",
+          "to": "^4.4.15"
+        },
+        "@smithy/middleware-retry": {
+          "from": "^4.5.0",
+          "to": "^4.5.1"
+        },
+        "@smithy/util-defaults-mode-node": {
+          "from": "^4.2.49",
+          "to": "^4.2.50"
+        },
+        "@smithy/util-endpoints": {
+          "from": "^3.3.4",
+          "to": "^3.4.0"
+        },
+        "@smithy/util-retry": {
+          "from": "^4.3.0",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-13T20:24:27.073Z",
+      "version": "3.1030.0-depup.0"
+    }
   }
 }
