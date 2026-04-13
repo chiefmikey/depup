@@ -12,7 +12,7 @@ npm install @depup/documentation
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.2 | **Updated**: 4/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,14 +25,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/types | `^7.18.10` | `^7.29.0` |
 | chalk | `^5.0.1` | `^5.6.2` |
 | chokidar | `^3.5.3` | `^5.0.0` |
-| diff | `^5.1.0` | `^8.0.4` |
+| diff | `^5.1.0` | `^9.0.0` |
 | git-url-parse | `^13.1.0` | `^16.1.0` |
 | github-slugger | `1.4.0` | `^2.0.0` |
 | glob | `^8.0.3` | `^13.0.6` |
 | highlight.js | `^11.6.0` | `^11.11.1` |
 | ini | `^3.0.0` | `^6.0.0` |
 | js-yaml | `^4.1.0` | `^4.1.1` |
-| lodash | `^4.17.21` | `^4.18.0` |
+| lodash | `^4.17.21` | `^4.18.1` |
 | mdast-util-find-and-replace | `^2.2.1` | `^3.0.2` |
 | micromark-util-character | `^1.1.0` | `^2.1.1` |
 | pify | `^6.0.0` | `^6.1.0` |
@@ -42,7 +42,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | remark-html | `^15.0.1` | `^16.0.1` |
 | remark-reference-links | `^6.0.1` | `^7.0.0` |
 | remark-toc | `^8.0.1` | `^9.0.0` |
-| resolve | `^1.22.1` | `^1.22.11` |
+| resolve | `^1.22.1` | `^1.22.12` |
 | strip-json-comments | `^5.0.0` | `^5.0.3` |
 | unist-builder | `^3.0.0` | `^4.0.0` |
 | unist-util-visit | `^4.1.0` | `^5.1.0` |

@@ -12,13 +12,13 @@ npm install @depup/actions__http-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.1 | **Updated**: 4/2/2026 | **Import test**: passed
+**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.2 | **Updated**: 4/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| undici | `^6.23.0` | `^8.0.0` |
+| undici | `^6.23.0` | `^8.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/actions__http-client&labels=bug).
