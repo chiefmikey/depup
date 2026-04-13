@@ -166,6 +166,23 @@
       "status": "published",
       "timestamp": "2026-04-11T20:13:11.639Z",
       "version": "21.1.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@sinonjs/commons": {
+          "from": "^3.0.1",
+          "to": "^4.0.0-alpha.0"
+        },
+        "diff": {
+          "from": "^8.0.4",
+          "to": "^9.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-13T16:36:44.354Z",
+      "version": "21.1.2-depup.1"
     }
   }
 }

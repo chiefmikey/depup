@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@asamuzakjp/css-color": {
+      "from": "^5.1.5",
+      "to": "^5.1.10"
+    },
+    "@asamuzakjp/dom-selector": {
+      "from": "^7.0.6",
+      "to": "^7.0.9"
+    },
+    "@csstools/css-syntax-patches-for-csstree": {
+      "from": "^1.1.1",
+      "to": "^1.1.3"
+    },
+    "lru-cache": {
+      "from": "^11.2.7",
+      "to": "^11.3.5"
+    },
+    "undici": {
+      "from": "^7.24.5",
+      "to": "^8.1.0"
+    }
+  },
+  "timestamp": "2026-04-13T16:35:43.928Z",
+  "totalUpdated": 5
+}
