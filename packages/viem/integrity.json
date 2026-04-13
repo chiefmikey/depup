@@ -223,5 +223,36 @@
       "timestamp": "2026-04-13T05:11:01.275Z",
       "version": "2.47.14-depup.0"
     }
+  },
+  "2.47.16": {
+    "0": {
+      "changes": {
+        "@noble/curves": {
+          "from": "1.9.1",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "1.8.0",
+          "to": "^2.2.0"
+        },
+        "@scure/bip32": {
+          "from": "1.7.0",
+          "to": "^2.0.1"
+        },
+        "@scure/bip39": {
+          "from": "1.6.0",
+          "to": "^2.0.1"
+        },
+        "ws": {
+          "from": "8.18.3",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-13T08:50:36.582Z",
+      "version": "2.47.16-depup.0"
+    }
   }
 }
