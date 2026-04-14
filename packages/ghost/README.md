@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.30.0 | **DepUp version**: 6.30.0-depup.0 | **Updated**: 4/14/2026 | **Import test**: failed
+**Original version**: 6.30.0 | **DepUp version**: 6.30.0-depup.1 | **Updated**: 4/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -54,7 +54,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cheerio | `0.22.0` | `^1.2.0` |
 | countries-and-timezones | `3.8.0` | `^3.9.0` |
 | date-fns | `2.30.0` | `^4.1.0` |
-| dompurify | `3.3.0` | `^3.3.3` |
+| dompurify | `3.3.0` | `^3.4.0` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
@@ -62,6 +62,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | got | `13.0.0` | `^15.0.2` |
 | gscan | `5.4.3` | `^6.0.0` |
 | html-to-text | `5.1.1` | `^9.0.5` |
+| human-number | `2.0.10` | `^2.0.11` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.1` |
 | jsdom | `28.1.0` | `^29.0.2` |
