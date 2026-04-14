@@ -12,13 +12,14 @@ npm install @depup/expo
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 55.0.15 | **DepUp version**: 55.0.15-depup.0 | **Updated**: 4/13/2026 | **Import test**: failed
+**Original version**: 55.0.15 | **DepUp version**: 55.0.15-depup.1 | **Updated**: 4/14/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/runtime | `^7.20.0` | `^7.29.2` |
+| @expo/metro | `~55.0.0` | `^55.1.0` |
 | @expo/vector-icons | `^15.0.2` | `^15.1.1` |
 | pretty-format | `^29.7.0` | `^30.3.0` |
 | react-refresh | `^0.14.2` | `^0.18.0` |
