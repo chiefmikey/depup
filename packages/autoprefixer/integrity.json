@@ -5,5 +5,15 @@
       "timestamp": "2026-03-09T08:18:51.854Z",
       "version": "10.4.27-depup.0"
     }
+  },
+  "10.5.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-14T00:47:10.380Z",
+      "version": "10.5.0-depup.0"
+    }
   }
 }
