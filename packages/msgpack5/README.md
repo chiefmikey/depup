@@ -12,13 +12,13 @@ npm install @depup/msgpack5
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.1 | **Updated**: 4/14/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| bl | `^5.0.0` | `^6.1.6` |
+| bl | `^5.0.0` | `^7.0.0` |
 | inherits | `^2.0.3` | `^2.0.4` |
 | readable-stream | `^3.0.0` | `^4.7.0` |
 | safe-buffer | `^5.1.2` | `^5.2.1` |

@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T19:35:36.090Z",
       "version": "6.0.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "bl": {
+          "from": "^5.0.0",
+          "to": "^7.0.0"
+        },
+        "inherits": {
+          "from": "^2.0.3",
+          "to": "^2.0.4"
+        },
+        "readable-stream": {
+          "from": "^3.0.0",
+          "to": "^4.7.0"
+        },
+        "safe-buffer": {
+          "from": "^5.1.2",
+          "to": "^5.2.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-14T05:05:43.095Z",
+      "version": "6.0.2-depup.1"
     }
   }
 }
