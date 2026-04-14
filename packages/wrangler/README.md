@@ -12,7 +12,7 @@ npm install @depup/wrangler
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.82.2 | **DepUp version**: 4.82.2-depup.0 | **Updated**: 4/13/2026 | **Import test**: failed
+**Original version**: 4.82.2 | **DepUp version**: 4.82.2-depup.1 | **Updated**: 4/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | blake3-wasm | `2.1.5` | `^3.0.0` |
 | esbuild | `0.27.3` | `^0.28.0` |
 | path-to-regexp | `6.3.0` | `^8.4.2` |
-| workerd | `1.20260410.1` | `^1.20260413.1` |
+| workerd | `1.20260410.1` | `^1.20260414.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/wrangler&labels=bug).
