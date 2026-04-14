@@ -78,5 +78,28 @@
       "timestamp": "2026-04-14T16:32:23.940Z",
       "version": "8.18.0-depup.0"
     }
+  },
+  "8.18.1": {
+    "0": {
+      "changes": {
+        "@xmldom/xmldom": {
+          "from": "^0.8.12",
+          "to": "^0.9.9"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-14T20:25:44.340Z",
+      "version": "8.18.1-depup.0"
+    }
   }
 }
