@@ -12,13 +12,13 @@ npm install @depup/react-stately__toggle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.9.5 | **DepUp version**: 3.9.5-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 3.10.0 | **DepUp version**: 3.10.0-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @swc/helpers | `^0.5.0` | `^0.5.19` |
+| @swc/helpers | `^0.5.0` | `^0.5.21` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-stately__toggle&labels=bug).
