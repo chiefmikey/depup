@@ -12,6 +12,19 @@
       "status": "published",
       "timestamp": "2026-03-18T23:30:41.632Z",
       "version": "2.6.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "match-sorter": {
+          "from": "^4.1.0",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-15T08:42:59.388Z",
+      "version": "2.6.3-depup.1"
     }
   }
 }

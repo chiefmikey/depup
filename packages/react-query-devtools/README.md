@@ -12,13 +12,13 @@ npm install @depup/react-query-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.6.3 | **DepUp version**: 2.6.3-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 2.6.3 | **DepUp version**: 2.6.3-depup.1 | **Updated**: 4/15/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| match-sorter | `^4.1.0` | `^8.2.0` |
+| match-sorter | `^4.1.0` | `^8.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-query-devtools&labels=bug).
