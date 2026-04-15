@@ -10,6 +10,19 @@
       "status": "published",
       "timestamp": "2026-03-17T16:35:56.519Z",
       "version": "0.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "get-tsconfig": {
+          "from": "^4.10.1",
+          "to": "^4.14.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-15T05:03:35.136Z",
+      "version": "0.2.0-depup.1"
     }
   }
 }

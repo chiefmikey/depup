@@ -1,0 +1,61 @@
+{
+  "name": "@depup/eslint-import-context",
+  "version": "0.2.0-depup.1",
+  "type": "commonjs",
+  "description": "Provide context info for eslint-plugin-import-x, so no extra arguments need to be added. (with updated dependencies)",
+  "repository": "git+https://github.com/un-ts/eslint-import-context.git",
+  "author": "JounQin <admin@1stg.me> (https://www.1stG.me)",
+  "funding": "https://opencollective.com/eslint-import-context",
+  "license": "MIT",
+  "engines": {
+    "node": "^12.20.0 || ^14.18.0 || >=16.0.0"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "!**/*.tsbuildinfo",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "oxc-resolver": "^11.0.0"
+  },
+  "peerDependenciesMeta": {
+    "oxc-resolver": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "get-tsconfig": "^4.14.0",
+    "stable-hash-x": "^0.2.0"
+  },
+  "keywords": [
+    "eslint-import-context",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "get-tsconfig": {
+        "from": "^4.10.1",
+        "to": "^4.14.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "eslint-import-context",
+    "originalVersion": "0.2.0",
+    "processedAt": "2026-04-15T05:03:33.756Z",
+    "smokeTest": "passed"
+  }
+}
