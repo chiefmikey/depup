@@ -12,11 +12,14 @@ npm install @depup/react-stately
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.45.0 | **DepUp version**: 3.45.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
+**Original version**: 3.46.0 | **DepUp version**: 3.46.0-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @swc/helpers | `^0.5.0` | `^0.5.21` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-stately&labels=bug).
 
