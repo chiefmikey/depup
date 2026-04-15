@@ -23,6 +23,27 @@
       "status": "published",
       "timestamp": "2026-03-16T23:30:25.511Z",
       "version": "3.39.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.5.5",
+          "to": "^7.29.2"
+        },
+        "broadcast-channel": {
+          "from": "^3.4.1",
+          "to": "^7.3.0"
+        },
+        "match-sorter": {
+          "from": "^6.0.2",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-15T08:42:48.525Z",
+      "version": "3.39.3-depup.2"
     }
   }
 }
