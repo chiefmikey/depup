@@ -12,13 +12,13 @@ npm install @depup/react-aria__toolbar
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0-beta.24 | **DepUp version**: 3.0.0-beta.24-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 3.0.0-beta.25 | **DepUp version**: 3.0.0-beta.25-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @swc/helpers | `^0.5.0` | `^0.5.19` |
+| @swc/helpers | `^0.5.0` | `^0.5.21` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-aria__toolbar&labels=bug).
