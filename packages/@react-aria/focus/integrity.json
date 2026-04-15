@@ -15,5 +15,20 @@
       "timestamp": "2026-03-17T16:33:18.033Z",
       "version": "3.21.5-depup.0"
     }
+  },
+  "3.22.0": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.21"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-15T00:44:35.665Z",
+      "version": "3.22.0-depup.0"
+    }
   }
 }
