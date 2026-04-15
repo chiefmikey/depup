@@ -12,13 +12,13 @@ npm install @depup/mssql
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.2.2 | **DepUp version**: 12.2.2-depup.1 | **Updated**: 4/15/2026 | **Import test**: passed
+**Original version**: 12.2.3 | **DepUp version**: 12.2.3-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @tediousjs/connection-string | `^0.6.0` | `^1.1.0` |
+| @tediousjs/connection-string | `^1.0.0` | `^1.1.0` |
 | commander | `^11.0.0` | `^14.0.3` |
 | debug | `^4.3.3` | `^4.4.3` |
 | tedious | `^19.0.0` | `^19.2.1` |
