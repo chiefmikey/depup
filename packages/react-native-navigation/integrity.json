@@ -95,5 +95,24 @@
       "timestamp": "2026-03-31T20:25:08.914Z",
       "version": "8.8.1-depup.1"
     }
+  },
+  "8.8.2": {
+    "0": {
+      "changes": {
+        "prop-types": {
+          "from": "15.x.x",
+          "to": "^15.8.1"
+        },
+        "tslib": {
+          "from": "1.9.3",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-15T08:41:15.427Z",
+      "version": "8.8.2-depup.0"
+    }
   }
 }
