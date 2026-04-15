@@ -12,7 +12,7 @@ npm install @depup/nanoid
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.7 | **DepUp version**: 5.1.7-depup.0 | **Updated**: 3/15/2026 | **Import test**: unknown
+**Original version**: 5.1.9 | **DepUp version**: 5.1.9-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
