@@ -28,5 +28,15 @@
       "timestamp": "2026-04-14T12:28:53.814Z",
       "version": "5.32.3-depup.0"
     }
+  },
+  "5.32.4": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-15T12:29:17.596Z",
+      "version": "5.32.4-depup.0"
+    }
   }
 }
