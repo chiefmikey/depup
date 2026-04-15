@@ -22,27 +22,31 @@
     },
     "@portabletext/editor": {
       "from": "^6.6.0",
-      "to": "^6.6.1"
+      "to": "^6.6.2"
     },
     "@portabletext/plugin-markdown-shortcuts": {
       "from": "^7.0.23",
-      "to": "^7.0.24"
+      "to": "^7.0.25"
     },
     "@portabletext/plugin-one-line": {
       "from": "^6.0.23",
-      "to": "^6.0.24"
+      "to": "^6.0.25"
     },
     "@portabletext/plugin-paste-link": {
       "from": "^3.0.23",
-      "to": "^3.0.24"
+      "to": "^3.0.25"
     },
     "@portabletext/plugin-typography": {
       "from": "^7.0.23",
-      "to": "^7.0.24"
+      "to": "^7.0.25"
+    },
+    "@sanity/cli": {
+      "from": "^6.3.1",
+      "to": "^6.3.2"
     },
     "@sanity/client": {
       "from": "^7.18.0",
-      "to": "^7.20.0"
+      "to": "^7.21.0"
     },
     "@sanity/diff-patch": {
       "from": "^5.0.0",
@@ -52,9 +56,21 @@
       "from": "^2.0.3",
       "to": "^2.1.1"
     },
+    "@sanity/insert-menu": {
+      "from": "^3.0.4",
+      "to": "^3.0.5"
+    },
+    "@sanity/message-protocol": {
+      "from": "^0.19.0",
+      "to": "^0.23.0"
+    },
     "@sanity/migrate": {
       "from": "^6.0.0",
       "to": "^6.1.1"
+    },
+    "@sanity/preview-url-secret": {
+      "from": "^4.0.4",
+      "to": "^4.0.5"
     },
     "@sanity/sdk": {
       "from": "2.1.2",
@@ -66,7 +82,7 @@
     },
     "@sentry/react": {
       "from": "^8.55.0",
-      "to": "^10.47.0"
+      "to": "^10.48.0"
     },
     "@tanstack/react-virtual": {
       "from": "^3.13.18",
@@ -82,11 +98,11 @@
     },
     "i18next": {
       "from": "^25.8.17",
-      "to": "^26.0.3"
+      "to": "^26.0.5"
     },
     "isomorphic-dompurify": {
       "from": "2.26.0",
-      "to": "^3.7.1"
+      "to": "^3.9.0"
     },
     "motion": {
       "from": "^12.27.1",
@@ -106,7 +122,11 @@
     },
     "react-i18next": {
       "from": "15.6.1",
-      "to": "^17.0.2"
+      "to": "^17.0.3"
+    },
+    "react-is": {
+      "from": "^19.2.4",
+      "to": "^19.2.5"
     },
     "semver": {
       "from": "^7.7.2",
@@ -125,6 +145,6 @@
       "to": "^5.30.0"
     }
   },
-  "timestamp": "2026-04-07T16:28:35.628Z",
-  "totalUpdated": 31
+  "timestamp": "2026-04-15T12:31:19.334Z",
+  "totalUpdated": 36
 }
