@@ -12,7 +12,7 @@ npm install @depup/sst
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.7.3 | **DepUp version**: 4.7.3-depup.0 | **Updated**: 4/14/2026 | **Import test**: passed
+**Original version**: 4.7.4 | **DepUp version**: 4.7.4-depup.0 | **Updated**: 4/15/2026 | **Import test**: passed
 
 ## What changed
 
