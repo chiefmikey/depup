@@ -1,6 +1,6 @@
 {
   "name": "@depup/nuxt",
-  "version": "4.4.2-depup.11",
+  "version": "4.4.2-depup.16",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuxt/nuxt.git",
@@ -53,21 +53,21 @@
   "dependencies": {
     "@dxup/nuxt": "^0.4.0",
     "@nuxt/cli": "^3.34.0",
-    "@nuxt/devtools": "^4.0.0-alpha.3",
+    "@nuxt/devtools": "^4.0.0-alpha.4",
     "@nuxt/telemetry": "^2.8.0",
-    "@unhead/vue": "^2.1.13",
+    "@unhead/vue": "^3.0.4",
     "@vue/shared": "^3.5.32",
     "c12": "^4.0.0-beta.4",
     "chokidar": "^5.0.0",
     "compatx": "^0.2.0",
     "consola": "^3.4.2",
     "cookie-es": "^3.1.1",
-    "defu": "^6.1.6",
-    "devalue": "^5.7.0",
+    "defu": "^6.1.7",
+    "devalue": "^5.7.1",
     "errx": "^0.1.0",
     "escape-string-regexp": "^5.0.0",
     "exsolve": "^1.0.8",
-    "hookable": "^6.1.0",
+    "hookable": "^6.1.1",
     "ignore": "^7.0.5",
     "impound": "^1.1.5",
     "jiti": "^2.6.1",
@@ -80,9 +80,9 @@
     "ofetch": "^1.5.1",
     "ohash": "^2.0.11",
     "on-change": "^6.0.2",
-    "oxc-minify": "^0.124.0",
-    "oxc-parser": "^0.124.0",
-    "oxc-transform": "^0.124.0",
+    "oxc-minify": "^0.126.0",
+    "oxc-parser": "^0.126.0",
+    "oxc-transform": "^0.126.0",
     "oxc-walker": "^0.7.0",
     "pathe": "^2.0.3",
     "perfect-debounce": "^2.1.0",
@@ -91,13 +91,13 @@
     "rou3": "^0.8.1",
     "scule": "^1.3.0",
     "semver": "^7.7.4",
-    "std-env": "^4.0.0",
-    "tinyglobby": "^0.2.15",
+    "std-env": "^4.1.0",
+    "tinyglobby": "^0.2.16",
     "ufo": "^1.6.3",
     "ultrahtml": "^1.6.0",
     "uncrypto": "^0.1.3",
     "unctx": "^2.5.0",
-    "unimport": "^6.0.2",
+    "unimport": "^6.1.0",
     "unplugin": "^3.0.0",
     "unrouting": "^0.1.7",
     "untyped": "^2.0.0",
@@ -153,7 +153,7 @@
     "changes": {
       "@nuxt/devtools": {
         "from": "^3.2.3",
-        "to": "^4.0.0-alpha.3"
+        "to": "^4.0.0-alpha.4"
       },
       "@nuxt/telemetry": {
         "from": "^2.7.0",
@@ -161,7 +161,7 @@
       },
       "@unhead/vue": {
         "from": "^2.1.12",
-        "to": "^2.1.13"
+        "to": "^3.0.4"
       },
       "@vue/shared": {
         "from": "^3.5.30",
@@ -177,15 +177,15 @@
       },
       "defu": {
         "from": "^6.1.4",
-        "to": "^6.1.6"
+        "to": "^6.1.7"
       },
       "devalue": {
         "from": "^5.6.3",
-        "to": "^5.7.0"
+        "to": "^5.7.1"
       },
       "hookable": {
         "from": "^6.0.1",
-        "to": "^6.1.0"
+        "to": "^6.1.1"
       },
       "mlly": {
         "from": "^1.8.1",
@@ -193,23 +193,31 @@
       },
       "oxc-minify": {
         "from": "^0.117.0",
-        "to": "^0.124.0"
+        "to": "^0.126.0"
       },
       "oxc-parser": {
         "from": "^0.117.0",
-        "to": "^0.124.0"
+        "to": "^0.126.0"
       },
       "oxc-transform": {
         "from": "^0.117.0",
-        "to": "^0.124.0"
+        "to": "^0.126.0"
       },
       "picomatch": {
         "from": "^4.0.3",
         "to": "^4.0.4"
       },
+      "std-env": {
+        "from": "^4.0.0",
+        "to": "^4.1.0"
+      },
+      "tinyglobby": {
+        "from": "^0.2.15",
+        "to": "^0.2.16"
+      },
       "unimport": {
         "from": "^6.0.1",
-        "to": "^6.0.2"
+        "to": "^6.1.0"
       },
       "unrouting": {
         "from": "^0.1.5",
@@ -224,10 +232,10 @@
         "to": "^5.0.4"
       }
     },
-    "depsUpdated": 18,
+    "depsUpdated": 20,
     "originalPackage": "nuxt",
     "originalVersion": "4.4.2",
-    "processedAt": "2026-04-07T04:56:01.177Z",
+    "processedAt": "2026-04-16T05:07:27.433Z",
     "smokeTest": "passed"
   }
 }
