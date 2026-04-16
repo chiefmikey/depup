@@ -18,7 +18,7 @@
     },
     "@sentry/node": {
       "from": "7.120.4",
-      "to": "^10.48.0"
+      "to": "^10.49.0"
     },
     "@slack/webhook": {
       "from": "7.0.8",
@@ -146,7 +146,7 @@
     },
     "dompurify": {
       "from": "3.3.0",
-      "to": "^3.3.3"
+      "to": "^3.4.0"
     },
     "entities": {
       "from": "4.5.0",
@@ -170,11 +170,15 @@
     },
     "gscan": {
       "from": "5.4.3",
-      "to": "^6.0.0"
+      "to": "^6.0.1"
     },
     "html-to-text": {
       "from": "5.1.1",
       "to": "^9.0.5"
+    },
+    "human-number": {
+      "from": "2.0.10",
+      "to": "^2.0.11"
     },
     "image-size": {
       "from": "1.2.1",
@@ -210,43 +214,43 @@
     },
     "mailgun.js": {
       "from": "10.4.0",
-      "to": "^12.7.1"
+      "to": "^13.0.0"
     },
     "metascraper": {
       "from": "5.45.15",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-author": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-description": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-image": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-logo": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-logo-favicon": {
       "from": "5.42.0",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-publisher": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-title": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "metascraper-url": {
       "from": "5.45.10",
-      "to": "^5.50.0"
+      "to": "^5.50.1"
     },
     "mime-types": {
       "from": "2.1.35",
@@ -286,11 +290,11 @@
     },
     "sanitize-html": {
       "from": "2.17.0",
-      "to": "^2.17.2"
+      "to": "^2.17.3"
     },
     "stripe": {
       "from": "8.222.0",
-      "to": "^22.0.1"
+      "to": "^22.0.2"
     },
     "superagent": {
       "from": "5.3.1",
@@ -301,6 +305,6 @@
       "to": "^2.0.9"
     }
   },
-  "timestamp": "2026-04-14T05:01:45.899Z",
-  "totalUpdated": 75
+  "timestamp": "2026-04-16T16:41:14.279Z",
+  "totalUpdated": 76
 }

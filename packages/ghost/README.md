@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.30.0 | **DepUp version**: 6.30.0-depup.4 | **Updated**: 4/16/2026 | **Import test**: failed
+**Original version**: 6.30.0 | **DepUp version**: 6.30.0-depup.5 | **Updated**: 4/16/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.48.0` |
+| @sentry/node | `7.120.4` | `^10.49.0` |
 | @slack/webhook | `7.0.8` | `^7.0.9` |
 | @tryghost/api-framework | `1.0.7` | `^3.0.3` |
 | @tryghost/database-info | `0.3.35` | `^2.0.3` |
@@ -60,7 +60,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | file-type | `16.5.4` | `^22.0.1` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.2` |
-| gscan | `5.4.3` | `^6.0.0` |
+| gscan | `5.4.3` | `^6.0.1` |
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.10` | `^2.0.11` |
 | image-size | `1.2.1` | `^2.0.2` |
@@ -91,7 +91,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | nodemailer | `6.10.1` | `^8.0.5` |
 | otplib | `12.0.1` | `^13.4.0` |
 | sanitize-html | `2.17.0` | `^2.17.3` |
-| stripe | `8.222.0` | `^22.0.1` |
+| stripe | `8.222.0` | `^22.0.2` |
 | superagent | `5.3.1` | `^10.3.0` |
 | ua-parser-js | `1.0.41` | `^2.0.9` |
 
