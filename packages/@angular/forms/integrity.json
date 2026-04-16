@@ -91,5 +91,24 @@
       "timestamp": "2026-04-08T20:17:49.309Z",
       "version": "21.2.8-depup.0"
     }
+  },
+  "21.2.9": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        },
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-16T00:45:35.749Z",
+      "version": "21.2.9-depup.0"
+    }
   }
 }
