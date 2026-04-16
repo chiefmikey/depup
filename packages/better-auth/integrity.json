@@ -324,5 +324,44 @@
       "timestamp": "2026-04-15T12:29:04.967Z",
       "version": "1.6.4-depup.0"
     }
+  },
+  "1.6.5": {
+    "0": {
+      "changes": {
+        "@noble/ciphers": {
+          "from": "^2.1.1",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "^2.0.1",
+          "to": "^2.2.0"
+        },
+        "better-call": {
+          "from": "1.3.5",
+          "to": "^2.0.3"
+        },
+        "defu": {
+          "from": "^6.1.4",
+          "to": "^6.1.7"
+        },
+        "jose": {
+          "from": "^6.1.3",
+          "to": "^6.2.2"
+        },
+        "kysely": {
+          "from": "^0.28.14",
+          "to": "^0.28.16"
+        },
+        "nanostores": {
+          "from": "^1.1.1",
+          "to": "^1.2.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-16T12:30:41.662Z",
+      "version": "1.6.5-depup.0"
+    }
   }
 }
