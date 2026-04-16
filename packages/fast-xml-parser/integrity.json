@@ -167,6 +167,19 @@
       "status": "failed",
       "timestamp": "2026-04-15T20:25:53.636Z",
       "version": "5.6.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@nodable/entities": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-16T08:41:47.188Z",
+      "version": "5.6.0-depup.2"
     }
   }
 }
