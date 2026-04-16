@@ -1,34 +1,5 @@
 {
   "2.1.3": {
-    "0": {
-      "changes": {
-        "@sentry/browser": {
-          "from": "^8.51.0",
-          "to": "^10.44.0"
-        },
-        "@sentry/core": {
-          "from": "^8.51.0",
-          "to": "^10.44.0"
-        },
-        "@sentry/react": {
-          "from": "^8.51.0",
-          "to": "^10.44.0"
-        },
-        "@sentry/types": {
-          "from": "^8.51.0",
-          "to": "^10.44.0"
-        },
-        "fmrs": {
-          "from": "^2.0.3",
-          "to": "^2.1.2"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-03-18T22:42:59.639Z",
-      "version": "2.1.3-depup.0"
-    },
     "1": {
       "changes": {
         "@sentry/browser": {
@@ -144,6 +115,35 @@
       "status": "failed",
       "timestamp": "2026-04-09T16:43:42.431Z",
       "version": "2.1.3-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@sentry/browser": {
+          "from": "^8.51.0",
+          "to": "^10.49.0"
+        },
+        "@sentry/core": {
+          "from": "^8.51.0",
+          "to": "^10.49.0"
+        },
+        "@sentry/react": {
+          "from": "^8.51.0",
+          "to": "^10.49.0"
+        },
+        "@sentry/types": {
+          "from": "^8.51.0",
+          "to": "^10.49.0"
+        },
+        "fmrs": {
+          "from": "^2.0.3",
+          "to": "^2.1.2"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-16T16:41:51.369Z",
+      "version": "2.1.3-depup.5"
     }
   }
 }
