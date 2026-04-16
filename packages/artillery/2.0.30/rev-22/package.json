@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.30-depup.17",
+  "version": "2.0.30-depup.22",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "types": "./types.d.ts",
   "exports": {
@@ -113,22 +113,22 @@
   "dependencies": {
     "@artilleryio/int-commons": "2.21.0",
     "@artilleryio/int-core": "2.25.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1026.0",
-    "@aws-sdk/client-ec2": "^3.1026.0",
-    "@aws-sdk/client-ecs": "^3.1026.0",
-    "@aws-sdk/client-iam": "^3.1026.0",
-    "@aws-sdk/client-lambda": "^3.1026.0",
-    "@aws-sdk/client-s3": "^3.1026.0",
-    "@aws-sdk/client-sqs": "^3.1026.0",
-    "@aws-sdk/client-ssm": "^3.1026.0",
-    "@aws-sdk/client-sts": "^3.1026.0",
-    "@aws-sdk/credential-providers": "^3.1026.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1031.0",
+    "@aws-sdk/client-ec2": "^3.1031.0",
+    "@aws-sdk/client-ecs": "^3.1031.0",
+    "@aws-sdk/client-iam": "^3.1031.0",
+    "@aws-sdk/client-lambda": "^3.1031.0",
+    "@aws-sdk/client-s3": "^3.1031.0",
+    "@aws-sdk/client-sqs": "^3.1031.0",
+    "@aws-sdk/client-ssm": "^3.1031.0",
+    "@aws-sdk/client-sts": "^3.1031.0",
+    "@aws-sdk/credential-providers": "^3.1031.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.1",
     "@azure/storage-blob": "^12.31.0",
     "@azure/storage-queue": "^12.29.0",
     "@oclif/core": "^4.10.5",
-    "@oclif/plugin-help": "^6.2.43",
+    "@oclif/plugin-help": "^6.2.44",
     "@oclif/plugin-not-found": "^3.2.80",
     "@upstash/redis": "^1.37.0",
     "artillery-engine-playwright": "1.27.0",
@@ -149,18 +149,18 @@
     "debug": "^4.4.3",
     "dependency-tree": "^11.4.0",
     "detective-es6": "^5.0.1",
-    "dotenv": "^17.4.1",
+    "dotenv": "^17.4.2",
     "driftless": "^2.0.3",
     "esbuild-wasm": "^0.28.0",
     "eventemitter3": "^5.0.4",
     "fs-extra": "^11.3.4",
-    "got": "^15.0.0",
+    "got": "^15.0.2",
     "joi": "^18.1.2",
     "js-yaml": "^4.1.1",
     "jsonwebtoken": "^9.0.3",
     "lodash": "^4.18.1",
     "moment": "^2.30.1",
-    "nanoid": "^5.1.7",
+    "nanoid": "^5.1.9",
     "ora": "^9.3.0",
     "rc": "^1.2.8",
     "sqs-consumer": "^14.2.6",
@@ -183,43 +183,43 @@
     "changes": {
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.972.0",
-        "to": "^3.1026.0"
+        "to": "^3.1031.0"
       },
       "@azure/identity": {
         "from": "^4.13.0",
@@ -235,7 +235,7 @@
       },
       "@oclif/plugin-help": {
         "from": "^6.2.36",
-        "to": "^6.2.43"
+        "to": "^6.2.44"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.73",
@@ -271,7 +271,7 @@
       },
       "dotenv": {
         "from": "^16.6.1",
-        "to": "^17.4.1"
+        "to": "^17.4.2"
       },
       "esbuild-wasm": {
         "from": "^0.19.12",
@@ -283,7 +283,7 @@
       },
       "got": {
         "from": "^11.8.5",
-        "to": "^15.0.0"
+        "to": "^15.0.2"
       },
       "joi": {
         "from": "^17.13.3",
@@ -299,7 +299,7 @@
       },
       "nanoid": {
         "from": "^3.3.4",
-        "to": "^5.1.7"
+        "to": "^5.1.9"
       },
       "ora": {
         "from": "^4.0.4",
@@ -321,7 +321,7 @@
     "depsUpdated": 34,
     "originalPackage": "artillery",
     "originalVersion": "2.0.30",
-    "processedAt": "2026-04-07T20:21:00.776Z",
+    "processedAt": "2026-04-16T20:24:07.656Z",
     "smokeTest": "failed"
   }
 }
