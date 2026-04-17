@@ -28,6 +28,19 @@
       "status": "published",
       "timestamp": "2026-03-26T00:40:11.495Z",
       "version": "0.62.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@opentelemetry/instrumentation": {
+          "from": "^0.214.0",
+          "to": "^0.215.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T12:28:57.878Z",
+      "version": "0.62.0-depup.1"
     }
   }
 }
