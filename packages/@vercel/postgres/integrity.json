@@ -41,6 +41,27 @@
       "status": "published",
       "timestamp": "2026-03-21T20:10:00.529Z",
       "version": "0.10.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@neondatabase/serverless": {
+          "from": "^0.9.3",
+          "to": "^1.1.0"
+        },
+        "bufferutil": {
+          "from": "^4.0.8",
+          "to": "^4.1.0"
+        },
+        "ws": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-17T16:27:35.504Z",
+      "version": "0.10.0-depup.2"
     }
   }
 }
