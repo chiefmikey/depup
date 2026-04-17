@@ -173,6 +173,23 @@
       "status": "failed",
       "timestamp": "2026-04-16T20:20:40.136Z",
       "version": "3.972.18-depup.0"
+    },
+    "1": {
+      "changes": {
+        "fast-xml-parser": {
+          "from": "5.5.8",
+          "to": "^5.7.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T16:26:45.494Z",
+      "version": "3.972.18-depup.1"
     }
   }
 }
