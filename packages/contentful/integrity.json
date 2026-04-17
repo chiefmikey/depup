@@ -265,6 +265,35 @@
       "status": "failed",
       "timestamp": "2026-04-13T20:25:13.437Z",
       "version": "11.12.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.1"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.7"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^1.9.8"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^9.4.5"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T08:42:17.954Z",
+      "version": "11.12.1-depup.1"
     }
   }
 }
