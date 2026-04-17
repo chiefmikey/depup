@@ -31,6 +31,23 @@
       "status": "published",
       "timestamp": "2026-03-19T08:20:18.137Z",
       "version": "11.0.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "conf": {
+          "from": "^15.0.2",
+          "to": "^15.1.0"
+        },
+        "type-fest": {
+          "from": "^5.0.1",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-17T08:42:19.636Z",
+      "version": "11.0.2-depup.2"
     }
   }
 }
