@@ -12,7 +12,7 @@ npm install @depup/html-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.6.6 | **DepUp version**: 5.6.6-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 5.6.7 | **DepUp version**: 5.6.7-depup.0 | **Updated**: 4/17/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/html-minifier-terser | `^6.0.0` | `^7.0.2` |
 | html-minifier-terser | `^6.0.2` | `^7.2.0` |
-| lodash | `^4.17.21` | `^4.18.0` |
+| lodash | `^4.17.21` | `^4.18.1` |
 | tapable | `^2.0.0` | `^2.3.2` |
 
 

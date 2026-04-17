@@ -30,5 +30,32 @@
       "timestamp": "2026-03-31T20:26:35.185Z",
       "version": "5.6.6-depup.1"
     }
+  },
+  "5.6.7": {
+    "0": {
+      "changes": {
+        "@types/html-minifier-terser": {
+          "from": "^6.0.0",
+          "to": "^7.0.2"
+        },
+        "html-minifier-terser": {
+          "from": "^6.0.2",
+          "to": "^7.2.0"
+        },
+        "lodash": {
+          "from": "^4.17.21",
+          "to": "^4.18.1"
+        },
+        "tapable": {
+          "from": "^2.0.0",
+          "to": "^2.3.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T16:25:35.707Z",
+      "version": "5.6.7-depup.0"
+    }
   }
 }
