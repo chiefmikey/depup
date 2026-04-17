@@ -18,6 +18,19 @@
       "status": "published",
       "timestamp": "2026-03-19T08:21:13.417Z",
       "version": "10.1.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "type-fest": {
+          "from": "^5.4.4",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T08:42:59.642Z",
+      "version": "10.1.0-depup.2"
     }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/yup
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.7.1 | **DepUp version**: 1.7.1-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.7.1 | **DepUp version**: 1.7.1-depup.2 | **Updated**: 4/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | property-expr | `^2.0.5` | `^2.0.6` |
-| type-fest | `^2.19.0` | `^5.5.0` |
+| type-fest | `^2.19.0` | `^5.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/yup&labels=bug).

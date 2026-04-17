@@ -12,13 +12,13 @@ npm install @depup/read-pkg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.2 | **Updated**: 4/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| type-fest | `^5.4.4` | `^5.5.0` |
+| type-fest | `^5.4.4` | `^5.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/read-pkg&labels=bug).
