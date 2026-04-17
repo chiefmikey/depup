@@ -108,5 +108,20 @@
       "timestamp": "2026-04-15T20:23:42.921Z",
       "version": "9.8.1-depup.0"
     }
+  },
+  "9.8.2": {
+    "0": {
+      "changes": {
+        "nanoid": {
+          "from": "^5.1.7",
+          "to": "^5.1.9"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T12:27:51.798Z",
+      "version": "9.8.2-depup.0"
+    }
   }
 }
