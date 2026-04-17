@@ -249,5 +249,28 @@
       "timestamp": "2026-04-08T08:32:13.594Z",
       "version": "7.0.0-depup.0"
     }
+  },
+  "7.0.1": {
+    "0": {
+      "changes": {
+        "cli-cursor": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "signal-exit": {
+          "from": "^3.0.7",
+          "to": "^4.1.0"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-17T08:40:35.563Z",
+      "version": "7.0.1-depup.0"
+    }
   }
 }
