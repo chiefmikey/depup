@@ -60,6 +60,27 @@
       "status": "published",
       "timestamp": "2026-03-19T08:21:21.483Z",
       "version": "11.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "find-up-simple": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "read-pkg": {
+          "from": "^9.0.0",
+          "to": "^10.1.0"
+        },
+        "type-fest": {
+          "from": "^4.6.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T08:43:08.029Z",
+      "version": "11.0.0-depup.2"
     }
   }
 }
