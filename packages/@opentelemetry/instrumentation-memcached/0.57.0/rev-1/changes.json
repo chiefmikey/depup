@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@opentelemetry/instrumentation": {
+      "from": "^0.214.0",
+      "to": "^0.215.0"
+    },
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.33.0",
+      "to": "^1.40.0"
+    },
+    "@types/memcached": {
+      "from": "^2.2.6",
+      "to": "^2.2.10"
+    }
+  },
+  "timestamp": "2026-04-17T12:29:06.881Z",
+  "totalUpdated": 3
+}
