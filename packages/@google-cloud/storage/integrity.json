@@ -116,6 +116,63 @@
       "status": "failed",
       "timestamp": "2026-04-15T05:03:45.438Z",
       "version": "7.19.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@google-cloud/paginator": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@google-cloud/projectify": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "@google-cloud/promisify": {
+          "from": "<4.1.0",
+          "to": "^5.0.0"
+        },
+        "fast-xml-parser": {
+          "from": "^5.3.4",
+          "to": "^5.7.0"
+        },
+        "gaxios": {
+          "from": "^6.0.2",
+          "to": "^7.1.4"
+        },
+        "google-auth-library": {
+          "from": "^9.6.3",
+          "to": "^10.6.2"
+        },
+        "html-entities": {
+          "from": "^2.5.2",
+          "to": "^2.6.0"
+        },
+        "mime": {
+          "from": "^3.0.0",
+          "to": "^4.1.0"
+        },
+        "p-limit": {
+          "from": "^3.0.1",
+          "to": "^7.3.0"
+        },
+        "retry-request": {
+          "from": "^7.0.0",
+          "to": "^8.0.2"
+        },
+        "teeny-request": {
+          "from": "^9.0.0",
+          "to": "^10.1.2"
+        },
+        "uuid": {
+          "from": "^8.0.0",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-17T16:27:08.538Z",
+      "version": "7.19.0-depup.3"
     }
   }
 }
