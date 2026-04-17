@@ -12,14 +12,13 @@ npm install @depup/opentelemetry__instrumentation-mongoose
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.60.0 | **DepUp version**: 0.60.0-depup.1 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 0.61.0 | **DepUp version**: 0.61.0-depup.0 | **Updated**: 4/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @opentelemetry/core | `^2.0.0` | `^2.7.0` |
-| @opentelemetry/instrumentation | `^0.214.0` | `^0.215.0` |
 | @opentelemetry/semantic-conventions | `^1.33.0` | `^1.40.0` |
 
 
