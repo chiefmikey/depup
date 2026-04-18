@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.5 | **Updated**: 4/8/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.6 | **Updated**: 4/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,22 +29,22 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | camelcase | `^6.2.1` | `^9.0.0` |
 | css-loader | `^6.5.1` | `^7.1.4` |
 | css-minimizer-webpack-plugin | `^3.2.0` | `^8.0.0` |
-| dotenv | `^10.0.0` | `^17.4.1` |
-| dotenv-expand | `^5.1.0` | `^12.0.3` |
-| eslint | `^8.3.0` | `^10.2.0` |
+| dotenv | `^10.0.0` | `^17.4.2` |
+| dotenv-expand | `^5.1.0` | `^13.0.0` |
+| eslint | `^8.3.0` | `^10.2.1` |
 | eslint-webpack-plugin | `^3.1.1` | `^6.0.0` |
 | fs-extra | `^10.0.0` | `^11.3.4` |
-| html-webpack-plugin | `^5.5.0` | `^5.6.6` |
+| html-webpack-plugin | `^5.5.0` | `^5.6.7` |
 | jest | `^27.4.3` | `^30.3.0` |
 | jest-resolve | `^27.4.2` | `^30.3.0` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
 | mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
-| postcss | `^8.4.4` | `^8.5.9` |
+| postcss | `^8.4.4` | `^8.5.10` |
 | postcss-loader | `^6.2.1` | `^8.2.1` |
 | postcss-normalize | `^10.0.1` | `^13.0.1` |
-| postcss-preset-env | `^7.0.1` | `^11.2.0` |
+| postcss-preset-env | `^7.0.1` | `^11.2.1` |
 | react-refresh | `^0.11.0` | `^0.18.0` |
-| resolve | `^1.20.0` | `^1.22.11` |
+| resolve | `^1.20.0` | `^1.22.12` |
 | resolve-url-loader | `^4.0.0` | `^5.0.0` |
 | sass-loader | `^12.3.0` | `^16.0.7` |
 | semver | `^7.3.5` | `^7.7.4` |
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | style-loader | `^3.3.1` | `^4.0.0` |
 | tailwindcss | `^3.0.2` | `^4.2.2` |
 | terser-webpack-plugin | `^5.2.5` | `^5.4.0` |
-| webpack | `^5.64.4` | `^5.106.0` |
+| webpack | `^5.64.4` | `^5.106.2` |
 | webpack-dev-server | `^4.6.0` | `^5.2.3` |
 | webpack-manifest-plugin | `^4.0.2` | `^6.0.1` |
 | workbox-webpack-plugin | `^6.4.1` | `^7.4.0` |

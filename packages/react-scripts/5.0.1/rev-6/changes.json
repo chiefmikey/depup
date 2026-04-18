@@ -30,7 +30,7 @@
     },
     "browserslist": {
       "from": "^4.18.1",
-      "to": "^4.28.1"
+      "to": "^4.28.2"
     },
     "camelcase": {
       "from": "^6.2.1",
@@ -46,19 +46,19 @@
     },
     "dotenv": {
       "from": "^10.0.0",
-      "to": "^17.3.1"
+      "to": "^17.4.2"
     },
     "dotenv-expand": {
       "from": "^5.1.0",
-      "to": "^12.0.3"
+      "to": "^13.0.0"
     },
     "eslint": {
       "from": "^8.3.0",
-      "to": "^10.1.0"
+      "to": "^10.2.1"
     },
     "eslint-webpack-plugin": {
       "from": "^3.1.1",
-      "to": "^5.0.3"
+      "to": "^6.0.0"
     },
     "fs-extra": {
       "from": "^10.0.0",
@@ -66,7 +66,7 @@
     },
     "html-webpack-plugin": {
       "from": "^5.5.0",
-      "to": "^5.6.6"
+      "to": "^5.6.7"
     },
     "jest": {
       "from": "^27.4.3",
@@ -82,11 +82,11 @@
     },
     "mini-css-extract-plugin": {
       "from": "^2.4.5",
-      "to": "^2.10.1"
+      "to": "^2.10.2"
     },
     "postcss": {
       "from": "^8.4.4",
-      "to": "^8.5.8"
+      "to": "^8.5.10"
     },
     "postcss-loader": {
       "from": "^6.2.1",
@@ -98,7 +98,7 @@
     },
     "postcss-preset-env": {
       "from": "^7.0.1",
-      "to": "^11.2.0"
+      "to": "^11.2.1"
     },
     "react-refresh": {
       "from": "^0.11.0",
@@ -106,7 +106,7 @@
     },
     "resolve": {
       "from": "^1.20.0",
-      "to": "^1.22.11"
+      "to": "^1.22.12"
     },
     "resolve-url-loader": {
       "from": "^4.0.0",
@@ -138,7 +138,7 @@
     },
     "webpack": {
       "from": "^5.64.4",
-      "to": "^5.105.4"
+      "to": "^5.106.2"
     },
     "webpack-dev-server": {
       "from": "^4.6.0",
@@ -153,6 +153,6 @@
       "to": "^7.4.0"
     }
   },
-  "timestamp": "2026-03-20T16:24:12.546Z",
+  "timestamp": "2026-04-18T00:42:54.925Z",
   "totalUpdated": 38
 }
