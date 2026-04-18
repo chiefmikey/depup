@@ -346,5 +346,36 @@
       "timestamp": "2026-04-17T16:25:14.055Z",
       "version": "7.58.3-depup.0"
     }
+  },
+  "7.58.4": {
+    "0": {
+      "changes": {
+        "diff": {
+          "from": "~8.0.2",
+          "to": "^9.0.0"
+        },
+        "minimatch": {
+          "from": "10.2.3",
+          "to": "^10.2.5"
+        },
+        "resolve": {
+          "from": "~1.22.1",
+          "to": "^1.22.12"
+        },
+        "source-map": {
+          "from": "~0.6.1",
+          "to": "^0.7.6"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-18T00:39:42.100Z",
+      "version": "7.58.4-depup.0"
+    }
   }
 }
