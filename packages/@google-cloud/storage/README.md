@@ -12,7 +12,7 @@ npm install @depup/google-cloud__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.19.0 | **DepUp version**: 7.19.0-depup.3 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 7.19.0 | **DepUp version**: 7.19.0-depup.4 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @google-cloud/paginator | `^5.0.0` | `^6.0.0` |
 | @google-cloud/projectify | `^4.0.0` | `^5.0.0` |
 | @google-cloud/promisify | `<4.1.0` | `^5.0.0` |
-| fast-xml-parser | `^5.3.4` | `^5.7.0` |
+| fast-xml-parser | `^5.3.4` | `^5.7.1` |
 | gaxios | `^6.0.2` | `^7.1.4` |
 | google-auth-library | `^9.6.3` | `^10.6.2` |
 | html-entities | `^2.5.2` | `^2.6.0` |
@@ -29,7 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-limit | `^3.0.1` | `^7.3.0` |
 | retry-request | `^7.0.0` | `^8.0.2` |
 | teeny-request | `^9.0.0` | `^10.1.2` |
-| uuid | `^8.0.0` | `^13.0.0` |
+| uuid | `^8.0.0` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/google-cloud__storage&labels=bug).
