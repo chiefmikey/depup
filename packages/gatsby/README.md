@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.16 | **Updated**: 4/17/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.17 | **Updated**: 4/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -67,13 +67,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
 | enhanced-resolve | `^5.15.0` | `^5.20.1` |
-| eslint | `^7.32.0` | `^10.2.0` |
+| eslint | `^7.32.0` | `^10.2.1` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
 | eslint-plugin-jsx-a11y | `^6.8.0` | `^6.10.2` |
 | eslint-plugin-react | `^7.32.2` | `^7.37.5` |
-| eslint-plugin-react-hooks | `^4.6.0` | `^7.1.0` |
+| eslint-plugin-react-hooks | `^4.6.0` | `^7.1.1` |
 | eslint-webpack-plugin | `^2.7.0` | `^6.0.0` |
 | execa | `^5.1.1` | `^9.6.1` |
 | express | `^4.18.2` | `^5.2.1` |
@@ -124,7 +124,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | style-to-object | `^0.4.1` | `^1.0.14` |
 | terser-webpack-plugin | `^5.3.9` | `^5.4.0` |
 | tmp | `^0.2.1` | `^0.2.5` |
-| uuid | `^8.3.2` | `^13.0.0` |
+| uuid | `^8.3.2` | `^14.0.0` |
 | webpack | `~5.98.0` | `^5.106.2` |
 | webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |

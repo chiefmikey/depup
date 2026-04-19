@@ -12,7 +12,7 @@ npm install @depup/nightwatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.15.0 | **DepUp version**: 3.15.0-depup.4 | **Updated**: 4/10/2026 | **Import test**: failed
+**Original version**: 3.15.0 | **DepUp version**: 3.15.0-depup.5 | **Updated**: 4/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,9 +27,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.2` | `^5.6.2` |
 | ci-info | `3.3.0` | `^4.4.0` |
 | cli-table3 | `^0.6.3` | `^0.6.5` |
-| devtools-protocol | `^0.0.1140464` | `^0.0.1608973` |
-| dotenv | `16.3.1` | `^17.4.1` |
-| ejs | `^3.1.10` | `^5.0.1` |
+| devtools-protocol | `^0.0.1140464` | `^0.0.1617013` |
+| dotenv | `16.3.1` | `^17.4.2` |
+| ejs | `^3.1.10` | `^5.0.2` |
 | envinfo | `7.11.0` | `^7.21.0` |
 | glob | `7.2.3` | `^13.0.6` |
 | jsdom | `^24.1.0` | `^29.0.2` |
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | stacktrace-parser | `0.1.10` | `^0.1.11` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | untildify | `4.0.0` | `^6.0.0` |
-| uuid | `8.3.2` | `^13.0.0` |
+| uuid | `8.3.2` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nightwatch&labels=bug).
