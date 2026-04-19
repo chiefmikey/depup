@@ -12,7 +12,7 @@ npm install @depup/exceljs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.4.0 | **DepUp version**: 4.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.4.0 | **DepUp version**: 4.4.0-depup.1 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | saxes | `^5.0.1` | `^6.0.0` |
 | tmp | `^0.2.0` | `^0.2.5` |
 | unzipper | `^0.10.11` | `^0.12.3` |
-| uuid | `^8.3.0` | `^13.0.0` |
+| uuid | `^8.3.0` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/exceljs&labels=bug).

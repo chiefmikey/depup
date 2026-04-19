@@ -12,7 +12,7 @@ npm install @depup/jaeger-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.19.0 | **DepUp version**: 3.19.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.19.0 | **DepUp version**: 3.19.0-depup.1 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | opentracing | `^0.14.4` | `^0.14.7` |
 | thriftrw | `^3.5.0` | `^3.11.4` |
-| uuid | `^8.3.2` | `^13.0.0` |
+| uuid | `^8.3.2` | `^14.0.0` |
 | xorshift | `^1.1.1` | `^1.2.0` |
 
 

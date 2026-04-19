@@ -1,7 +1,7 @@
 {
   "name": "@depup/typeorm",
-  "version": "0.3.28-depup.34",
-  "description": "[DepUp] Data-Mapper ORM for TypeScript and ES2021+. Supports MySQL/MariaDB, PostgreSQL, MS SQL Server, Oracle, SAP HANA, SQLite, MongoDB databases.",
+  "version": "0.3.28-depup.39",
+  "description": "Data-Mapper ORM for TypeScript and ES2021+. Supports MySQL/MariaDB, PostgreSQL, MS SQL Server, Oracle, SAP HANA, SQLite, MongoDB databases. (with updated dependencies)",
   "homepage": "https://typeorm.io",
   "bugs": {
     "url": "https://github.com/typeorm/typeorm/issues"
@@ -86,7 +86,6 @@
     "pack": "gulp pack",
     "package": "gulp package",
     "pre-commit": "lint-staged",
-    "prepare": "is-ci || husky",
     "publish:preview": "pkg-pr-new publish './build/package' --template='./sample/playground'",
     "test": "npm run compile && npm run test:fast --",
     "test:ci": "mocha --bail",
@@ -102,13 +101,13 @@
     "dayjs": "^1.11.20",
     "debug": "^4.4.3",
     "dedent": "^1.7.2",
-    "dotenv": "^17.3.1",
+    "dotenv": "^17.4.2",
     "glob": "^13.0.6",
     "reflect-metadata": "^0.2.2",
     "sha.js": "^2.4.12",
     "sql-highlight": "^6.1.0",
     "tslib": "^2.8.1",
-    "uuid": "^13.0.0",
+    "uuid": "^14.0.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
@@ -280,10 +279,12 @@
     "sql-server-orm"
   ],
   "keywords": [
+    "typeorm",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "typeorm"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
@@ -297,7 +298,7 @@
       },
       "dotenv": {
         "from": "^16.6.1",
-        "to": "^17.3.1"
+        "to": "^17.4.2"
       },
       "glob": {
         "from": "^10.5.0",
@@ -305,7 +306,7 @@
       },
       "uuid": {
         "from": "^11.1.0",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
       },
       "yargs": {
         "from": "^17.7.2",
@@ -315,7 +316,7 @@
     "depsUpdated": 6,
     "originalPackage": "typeorm",
     "originalVersion": "0.3.28",
-    "processedAt": "2026-03-14T12:20:27.245Z",
+    "processedAt": "2026-04-19T16:22:25.525Z",
     "smokeTest": "passed"
   }
 }

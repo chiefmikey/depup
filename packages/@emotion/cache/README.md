@@ -12,13 +12,13 @@ npm install @depup/emotion__cache
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.14.0 | **DepUp version**: 11.14.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 11.14.0 | **DepUp version**: 11.14.0-depup.1 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| stylis | `4.2.0` | `^4.3.6` |
+| stylis | `4.2.0` | `^4.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/emotion__cache&labels=bug).

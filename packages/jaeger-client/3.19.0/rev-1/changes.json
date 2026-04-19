@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "opentracing": {
+      "from": "^0.14.4",
+      "to": "^0.14.7"
+    },
+    "thriftrw": {
+      "from": "^3.5.0",
+      "to": "^3.11.4"
+    },
+    "uuid": {
+      "from": "^8.3.2",
+      "to": "^14.0.0"
+    },
+    "xorshift": {
+      "from": "^1.1.1",
+      "to": "^1.2.0"
+    }
+  },
+  "timestamp": "2026-04-19T16:19:06.227Z",
+  "totalUpdated": 4
+}

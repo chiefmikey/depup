@@ -12,7 +12,7 @@ npm install @depup/sequelize
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.25 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.26 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,15 +23,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | dottie | `^2.0.6` | `^2.0.7` |
 | inflection | `^1.13.4` | `^3.0.2` |
-| lodash | `^4.17.21` | `^4.18.0` |
+| lodash | `^4.17.21` | `^4.18.1` |
 | moment | `^2.29.4` | `^2.30.1` |
 | moment-timezone | `^0.5.43` | `^0.6.1` |
 | pg-connection-string | `^2.6.1` | `^2.12.0` |
 | retry-as-promised | `^7.0.4` | `^7.1.1` |
 | semver | `^7.5.4` | `^7.7.4` |
 | sequelize-pool | `^7.1.0` | `^8.0.1` |
-| uuid | `^8.3.2` | `^13.0.0` |
-| validator | `^13.9.0` | `^13.15.26` |
+| uuid | `^8.3.2` | `^14.0.0` |
+| validator | `^13.9.0` | `^13.15.35` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sequelize&labels=bug).
