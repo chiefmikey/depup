@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:39:18.092Z",
       "version": "0.3.24-depup.0"
+    },
+    "1": {
+      "changes": {
+        "faye-websocket": {
+          "from": "^0.11.3",
+          "to": "^0.11.4"
+        },
+        "uuid": {
+          "from": "^8.3.2",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-19T16:18:16.002Z",
+      "version": "0.3.24-depup.1"
     }
   }
 }

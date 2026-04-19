@@ -12,14 +12,14 @@ npm install @depup/sockjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.24 | **DepUp version**: 0.3.24-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.3.24 | **DepUp version**: 0.3.24-depup.1 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | faye-websocket | `^0.11.3` | `^0.11.4` |
-| uuid | `^8.3.2` | `^13.0.0` |
+| uuid | `^8.3.2` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sockjs&labels=bug).
