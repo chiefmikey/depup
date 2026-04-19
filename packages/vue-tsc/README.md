@@ -12,7 +12,7 @@ npm install @depup/vue-tsc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.6 | **DepUp version**: 3.2.6-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.2.7 | **DepUp version**: 3.2.7-depup.0 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
