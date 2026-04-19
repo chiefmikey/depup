@@ -12,13 +12,13 @@ npm install @depup/libsodium-wrappers
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.8.3 | **DepUp version**: 0.8.3-depup.0 | **Updated**: 4/10/2026 | **Import test**: passed
+**Original version**: 0.8.4 | **DepUp version**: 0.8.4-depup.0 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| libsodium | `^0.8.0` | `^0.8.3` |
+| libsodium | `^0.8.0` | `^0.8.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/libsodium-wrappers&labels=bug).
