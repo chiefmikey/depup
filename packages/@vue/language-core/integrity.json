@@ -23,5 +23,24 @@
       "timestamp": "2026-03-17T16:34:39.267Z",
       "version": "3.2.6-depup.0"
     }
+  },
+  "3.2.7": {
+    "0": {
+      "changes": {
+        "@vue/compiler-dom": {
+          "from": "^3.5.0",
+          "to": "^3.5.32"
+        },
+        "@vue/shared": {
+          "from": "^3.5.0",
+          "to": "^3.5.32"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-19T12:17:45.124Z",
+      "version": "3.2.7-depup.0"
+    }
   }
 }
