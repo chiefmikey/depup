@@ -12,7 +12,7 @@ npm install @depup/aws-sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1693.0 | **DepUp version**: 2.1693.0-depup.1 | **Updated**: 3/16/2026 | **Import test**: unknown
+**Original version**: 2.1693.0 | **DepUp version**: 2.1693.0-depup.2 | **Updated**: 4/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | sax | `1.2.1` | `^1.6.0` |
 | url | `0.10.3` | `^0.11.4` |
 | util | `^0.12.4` | `^0.12.5` |
-| uuid | `8.0.0` | `^13.0.0` |
+| uuid | `8.0.0` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/aws-sdk&labels=bug).
