@@ -183,5 +183,24 @@
       "timestamp": "2026-04-17T20:18:51.538Z",
       "version": "3.974.9-depup.0"
     }
+  },
+  "3.974.10": {
+    "0": {
+      "changes": {
+        "@smithy/util-stream": {
+          "from": "^4.5.23",
+          "to": "^4.5.24"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-20T20:19:14.105Z",
+      "version": "3.974.10-depup.0"
+    }
   }
 }
