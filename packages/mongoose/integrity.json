@@ -103,5 +103,20 @@
       "timestamp": "2026-04-20T16:35:54.822Z",
       "version": "9.4.1-depup.2"
     }
+  },
+  "9.5.0": {
+    "0": {
+      "changes": {
+        "mongodb": {
+          "from": "~7.1",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-20T20:19:58.483Z",
+      "version": "9.5.0-depup.0"
+    }
   }
 }
