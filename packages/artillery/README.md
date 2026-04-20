@@ -12,22 +12,22 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.23 | **Updated**: 4/17/2026 | **Import test**: failed
+**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.24 | **Updated**: 4/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-ecs | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-iam | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-lambda | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-s3 | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-sqs | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-ssm | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/client-sts | `^3.972.0` | `^3.1032.0` |
-| @aws-sdk/credential-providers | `^3.972.0` | `^3.1032.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-ecs | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-iam | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-lambda | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-s3 | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-sqs | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-ssm | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-sts | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/credential-providers | `^3.972.0` | `^3.1033.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.10.5` |
@@ -39,7 +39,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chokidar | `^3.6.0` | `^5.0.0` |
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^6.2.1` |
-| dependency-tree | `^11.2.0` | `^11.4.0` |
+| dependency-tree | `^11.2.0` | `^11.4.3` |
+| detective-es6 | `^5.0.1` | `^5.0.2` |
 | dotenv | `^16.6.1` | `^17.4.2` |
 | esbuild-wasm | `^0.19.12` | `^0.28.0` |
 | fs-extra | `^11.3.3` | `^11.3.4` |
@@ -49,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.17.21` | `^4.18.1` |
 | nanoid | `^3.3.4` | `^5.1.9` |
 | ora | `^4.0.4` | `^9.3.0` |
-| sqs-consumer | `6.0.2` | `^14.2.6` |
+| sqs-consumer | `6.0.2` | `^14.2.8` |
 | tempy | `3.1.0` | `^3.2.0` |
 | walk-sync | `^0.2.3` | `^4.0.1` |
 
