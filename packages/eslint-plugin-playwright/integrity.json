@@ -39,5 +39,20 @@
       "timestamp": "2026-04-12T08:23:36.720Z",
       "version": "2.10.1-depup.1"
     }
+  },
+  "2.10.2": {
+    "0": {
+      "changes": {
+        "globals": {
+          "from": "^17.3.0",
+          "to": "^17.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-20T05:08:20.326Z",
+      "version": "2.10.2-depup.0"
+    }
   }
 }
