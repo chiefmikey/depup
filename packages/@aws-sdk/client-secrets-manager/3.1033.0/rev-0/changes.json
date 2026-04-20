@@ -1,0 +1,54 @@
+{
+  "bumped": {
+    "@smithy/config-resolver": {
+      "from": "^4.4.16",
+      "to": "^4.4.17"
+    },
+    "@smithy/core": {
+      "from": "^3.23.15",
+      "to": "^3.23.16"
+    },
+    "@smithy/middleware-endpoint": {
+      "from": "^4.4.30",
+      "to": "^4.4.31"
+    },
+    "@smithy/middleware-retry": {
+      "from": "^4.5.3",
+      "to": "^4.5.4"
+    },
+    "@smithy/middleware-serde": {
+      "from": "^4.2.18",
+      "to": "^4.2.19"
+    },
+    "@smithy/node-http-handler": {
+      "from": "^4.5.3",
+      "to": "^4.6.0"
+    },
+    "@smithy/smithy-client": {
+      "from": "^4.12.11",
+      "to": "^4.12.12"
+    },
+    "@smithy/util-defaults-mode-browser": {
+      "from": "^4.3.47",
+      "to": "^4.3.48"
+    },
+    "@smithy/util-defaults-mode-node": {
+      "from": "^4.2.52",
+      "to": "^4.2.53"
+    },
+    "@smithy/util-endpoints": {
+      "from": "^3.4.1",
+      "to": "^3.4.2"
+    },
+    "@smithy/util-retry": {
+      "from": "^4.3.2",
+      "to": "^4.3.3"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-04-20T20:19:09.307Z",
+  "totalUpdated": 12
+}
