@@ -85,6 +85,23 @@
       "status": "failed",
       "timestamp": "2026-04-14T16:37:03.878Z",
       "version": "9.4.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "kareem": {
+          "from": "3.2.0",
+          "to": "^3.3.0"
+        },
+        "mongodb": {
+          "from": "~7.1",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-20T16:35:54.822Z",
+      "version": "9.4.1-depup.2"
     }
   }
 }
