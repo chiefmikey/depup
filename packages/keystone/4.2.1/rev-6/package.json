@@ -1,6 +1,6 @@
 {
   "name": "@depup/keystone",
-  "version": "4.2.1-depup.1",
+  "version": "4.2.1-depup.6",
   "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose (with updated dependencies)",
   "main": "index.js",
   "repository": {
@@ -43,7 +43,7 @@
     "debug": "^4.4.3",
     "display-name": "^1.0.1",
     "dumb-passwords": "^0.2.1",
-    "ejs": "^5.0.1",
+    "ejs": "^5.0.2",
     "elemental": "^0.6.1",
     "embedly": "^2.1.1",
     "errorhandler": "^1.5.2",
@@ -63,32 +63,32 @@
     "knox-s3": "^0.9.5",
     "less-middleware": "^3.1.0",
     "list-to-array": "^1.1.0",
-    "lodash": "^4.17.23",
-    "marked": "^17.0.5",
+    "lodash": "^4.18.1",
+    "marked": "^18.0.2",
     "method-override": "^3.0.0",
     "mime-types": "^3.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^9.3.3",
+    "mongoose": "^9.5.0",
     "morgan": "^1.10.1",
     "multer": "^2.1.1",
     "numeral": "^2.0.6",
     "object-assign": "^4.1.1",
-    "qs": "^6.15.0",
+    "qs": "^6.15.1",
     "queryfilter": "^0.0.4",
     "range_check": "^4.1.0",
-    "react": "^19.2.4",
+    "react": "^19.2.5",
     "react-addons-css-transition-group": "^15.6.2",
     "react-alt-text": "^2.0.0",
     "react-color": "^2.19.3",
     "react-day-picker": "^9.14.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^19.2.4",
+    "react-dom": "^19.2.5",
     "react-domify": "^0.2.6",
     "react-images": "^1.2.0-beta.7",
     "react-markdown": "^10.1.0",
     "react-redux": "^9.2.0",
-    "react-router": "^7.13.2",
+    "react-router": "^7.14.1",
     "react-router-redux": "^4.0.8",
     "redux": "^5.0.1",
     "redux-saga": "^1.4.2",
@@ -96,7 +96,7 @@
     "react-select": "^5.10.2",
     "sanitize-filename": "^1.6.4",
     "tinymce": "^8.4.0",
-    "sanitize-html": "^2.17.2",
+    "sanitize-html": "^2.17.3",
     "scmp": "^2.1.0",
     "semver": "^7.7.4",
     "serve-favicon": "^2.5.1",
@@ -300,7 +300,7 @@
       },
       "ejs": {
         "from": "^2.6.1",
-        "to": "^5.0.1"
+        "to": "^5.0.2"
       },
       "errorhandler": {
         "from": "^1.5.1",
@@ -332,11 +332,11 @@
       },
       "lodash": {
         "from": "^4.17.11",
-        "to": "^4.17.23"
+        "to": "^4.18.1"
       },
       "marked": {
         "from": "^0.6.2",
-        "to": "^17.0.5"
+        "to": "^18.0.2"
       },
       "mime-types": {
         "from": "^2.1.24",
@@ -348,7 +348,7 @@
       },
       "mongoose": {
         "from": "^4.13.14",
-        "to": "^9.3.3"
+        "to": "^9.5.0"
       },
       "morgan": {
         "from": "^1.9.1",
@@ -360,7 +360,7 @@
       },
       "qs": {
         "from": "^6.7.0",
-        "to": "^6.15.0"
+        "to": "^6.15.1"
       },
       "range_check": {
         "from": "^1.4.0",
@@ -368,7 +368,7 @@
       },
       "react": {
         "from": "^15.4.2",
-        "to": "^19.2.4"
+        "to": "^19.2.5"
       },
       "react-color": {
         "from": "^2.14.1",
@@ -388,7 +388,7 @@
       },
       "react-dom": {
         "from": "^15.4.2",
-        "to": "^19.2.4"
+        "to": "^19.2.5"
       },
       "react-images": {
         "from": "^0.5.6",
@@ -404,7 +404,7 @@
       },
       "react-router": {
         "from": "^3.0.2",
-        "to": "^7.13.2"
+        "to": "^7.14.1"
       },
       "redux": {
         "from": "^3.7.2",
@@ -432,7 +432,7 @@
       },
       "sanitize-html": {
         "from": "^1.20.1",
-        "to": "^2.17.2"
+        "to": "^2.17.3"
       },
       "scmp": {
         "from": "^1.0.2",
@@ -462,7 +462,7 @@
     "depsUpdated": 65,
     "originalPackage": "keystone",
     "originalVersion": "4.2.1",
-    "processedAt": "2026-03-31T08:32:30.124Z",
+    "processedAt": "2026-04-20T20:23:00.512Z",
     "smokeTest": "passed"
   }
 }

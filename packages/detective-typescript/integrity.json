@@ -43,6 +43,19 @@
       "status": "failed",
       "timestamp": "2026-04-19T08:25:36.039Z",
       "version": "14.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@typescript-eslint/typescript-estree": {
+          "from": "^8.58.2",
+          "to": "^8.59.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-20T20:21:51.242Z",
+      "version": "14.1.1-depup.1"
     }
   }
 }
