@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.30.0-depup.3",
+  "version": "6.30.0-depup.8",
   "description": "The professional publishing platform (with updated dependencies)",
   "author": "Ghost Foundation",
   "homepage": "https://ghost.org",
@@ -67,11 +67,11 @@
     "cli": "^1.29.1"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1030.0",
+    "@aws-sdk/client-s3": "^3.1032.0",
     "@extractus/oembed-extractor": "^4.0.9",
     "@faker-js/faker": "^10.4.0",
     "@isaacs/ttlcache": "^2.1.4",
-    "@sentry/node": "^10.48.0",
+    "@sentry/node": "^10.49.0",
     "@slack/webhook": "^7.0.9",
     "@tryghost/adapter-base-cache": "0.1.23",
     "@tryghost/admin-api-schema": "4.7.2",
@@ -166,12 +166,12 @@
     "ghost-storage-base": "1.1.2",
     "glob": "^13.0.6",
     "got": "^15.0.2",
-    "gscan": "^6.0.0",
+    "gscan": "^6.0.1",
     "handlebars": "4.7.9",
     "heic-convert": "2.1.0",
     "html-to-text": "^9.0.5",
     "html5parser": "2.0.2",
-    "human-number": "^2.0.11",
+    "human-number": "^3.0.0",
     "iconv-lite": "0.7.2",
     "image-size": "^2.0.2",
     "intl": "1.2.5",
@@ -187,7 +187,7 @@
     "leaky-bucket": "^4.1.4",
     "lodash": "^4.18.1",
     "luxon": "3.7.2",
-    "mailgun.js": "^12.9.0",
+    "mailgun.js": "^13.0.0",
     "metascraper": "^5.50.1",
     "metascraper-author": "^5.50.1",
     "metascraper-description": "^5.50.1",
@@ -202,7 +202,7 @@
     "moment": "^2.30.1",
     "moment-timezone": "^0.6.1",
     "multer": "^2.1.1",
-    "mysql2": "^3.22.0",
+    "mysql2": "^3.22.1",
     "nconf": "0.13.0",
     "node-fetch": "^3.3.2",
     "node-jose": "2.2.0",
@@ -214,11 +214,11 @@
     "probability-distributions": "0.9.1",
     "probe-image-size": "7.2.3",
     "rss": "1.2.2",
-    "sanitize-html": "^2.17.2",
+    "sanitize-html": "^2.17.3",
     "semver": "7.7.4",
     "simple-dom": "1.4.0",
     "stoppable": "1.1.0",
-    "stripe": "^22.0.1",
+    "stripe": "^22.0.2",
     "superagent": "^10.3.0",
     "superagent-throttle": "1.0.1",
     "terser": "5.46.1",
@@ -385,7 +385,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1025.0",
-        "to": "^3.1030.0"
+        "to": "^3.1032.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -401,7 +401,7 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^10.48.0"
+        "to": "^10.49.0"
       },
       "@slack/webhook": {
         "from": "7.0.8",
@@ -553,7 +553,7 @@
       },
       "gscan": {
         "from": "5.4.3",
-        "to": "^6.0.0"
+        "to": "^6.0.1"
       },
       "html-to-text": {
         "from": "5.1.1",
@@ -561,7 +561,7 @@
       },
       "human-number": {
         "from": "2.0.10",
-        "to": "^2.0.11"
+        "to": "^3.0.0"
       },
       "image-size": {
         "from": "1.2.1",
@@ -597,7 +597,7 @@
       },
       "mailgun.js": {
         "from": "10.4.0",
-        "to": "^12.9.0"
+        "to": "^13.0.0"
       },
       "metascraper": {
         "from": "5.45.15",
@@ -657,7 +657,7 @@
       },
       "mysql2": {
         "from": "3.18.1",
-        "to": "^3.22.0"
+        "to": "^3.22.1"
       },
       "node-fetch": {
         "from": "2.7.0",
@@ -673,11 +673,11 @@
       },
       "sanitize-html": {
         "from": "2.17.0",
-        "to": "^2.17.2"
+        "to": "^2.17.3"
       },
       "stripe": {
         "from": "8.222.0",
-        "to": "^22.0.1"
+        "to": "^22.0.2"
       },
       "superagent": {
         "from": "5.3.1",
@@ -691,7 +691,7 @@
     "depsUpdated": 76,
     "originalPackage": "ghost",
     "originalVersion": "6.30.0",
-    "processedAt": "2026-04-15T08:43:52.885Z",
+    "processedAt": "2026-04-20T12:37:04.278Z",
     "smokeTest": "failed"
   }
 }
