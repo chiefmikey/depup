@@ -12,7 +12,7 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.19.1 | **DepUp version**: 13.19.1-depup.1 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 13.19.2 | **DepUp version**: 13.19.2-depup.0 | **Updated**: 4/20/2026 | **Import test**: passed
 
 ## What changed
 

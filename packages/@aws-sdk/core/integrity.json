@@ -203,5 +203,28 @@
       "timestamp": "2026-04-17T20:18:53.127Z",
       "version": "3.974.1-depup.0"
     }
+  },
+  "3.974.2": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.15",
+          "to": "^3.23.16"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.11",
+          "to": "^4.12.12"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-20T20:19:25.608Z",
+      "version": "3.974.2-depup.0"
+    }
   }
 }
