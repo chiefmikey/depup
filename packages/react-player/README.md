@@ -12,20 +12,20 @@ npm install @depup/react-player
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.1 | **Updated**: 4/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mux/mux-player-react | `^3.8.0` | `^3.11.5` |
+| @mux/mux-player-react | `^3.8.0` | `^3.11.8` |
 | cloudflare-video-element | `^1.3.4` | `^1.3.5` |
-| dash-video-element | `^0.3.0` | `^0.3.1` |
-| hls-video-element | `^1.5.9` | `^1.5.10` |
+| dash-video-element | `^0.3.0` | `^0.3.2` |
+| hls-video-element | `^1.5.9` | `^1.5.11` |
 | spotify-audio-element | `^1.0.3` | `^1.0.4` |
 | tiktok-video-element | `^0.1.1` | `^0.1.2` |
-| twitch-video-element | `^0.1.5` | `^0.1.6` |
-| vimeo-video-element | `^1.6.1` | `^1.7.0` |
+| twitch-video-element | `^0.1.5` | `^0.2.0` |
+| vimeo-video-element | `^1.6.1` | `^1.7.1` |
 | wistia-video-element | `^1.3.5` | `^1.3.6` |
 | youtube-video-element | `^1.8.0` | `^1.9.0` |
 
