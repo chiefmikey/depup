@@ -12,7 +12,7 @@ npm install @depup/better-auth
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.5 | **DepUp version**: 1.6.5-depup.1 | **Updated**: 4/18/2026 | **Import test**: failed
+**Original version**: 1.6.6 | **DepUp version**: 1.6.6-depup.0 | **Updated**: 4/21/2026 | **Import test**: passed
 
 ## What changed
 
