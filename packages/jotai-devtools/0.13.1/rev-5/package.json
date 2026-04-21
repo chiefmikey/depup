@@ -1,6 +1,6 @@
 {
   "name": "@depup/jotai-devtools",
-  "version": "0.13.1-depup.0",
+  "version": "0.13.1-depup.5",
   "description": "A powerful toolkit to enhance your development experience with Jotai (with updated dependencies)",
   "author": {
     "name": "Arjun Vegda",
@@ -167,9 +167,9 @@
     "react": ">=17.0.0"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^8.3.18",
-    "@mantine/core": "^8.3.18",
-    "@mantine/hooks": "^8.3.18",
+    "@mantine/code-highlight": "^9.1.0",
+    "@mantine/core": "^9.1.0",
+    "@mantine/hooks": "^9.1.0",
     "@redux-devtools/extension": "^4.0.0",
     "clsx": "^2.1.1",
     "javascript-stringify": "^2.1.0",
@@ -177,22 +177,22 @@
     "react-base16-styling": "^0.10.0",
     "react-error-boundary": "^6.1.1",
     "react-json-tree": "^0.20.0",
-    "react-resizable-panels": "^4.7.6"
+    "react-resizable-panels": "^4.10.0"
   },
   "packageManager": "pnpm@10.17.1",
   "depup": {
     "changes": {
       "@mantine/code-highlight": {
         "from": "7.17.4",
-        "to": "^8.3.18"
+        "to": "^9.1.0"
       },
       "@mantine/core": {
         "from": "7.17.4",
-        "to": "^8.3.18"
+        "to": "^9.1.0"
       },
       "@mantine/hooks": {
         "from": "7.17.4",
-        "to": "^8.3.18"
+        "to": "^9.1.0"
       },
       "@redux-devtools/extension": {
         "from": "^3.3.0",
@@ -216,13 +216,13 @@
       },
       "react-resizable-panels": {
         "from": "2.1.7",
-        "to": "^4.7.6"
+        "to": "^4.10.0"
       }
     },
     "depsUpdated": 9,
     "originalPackage": "jotai-devtools",
     "originalVersion": "0.13.1",
-    "processedAt": "2026-03-28T00:36:22.266Z",
+    "processedAt": "2026-04-21T16:32:31.981Z",
     "smokeTest": "failed"
   }
 }
