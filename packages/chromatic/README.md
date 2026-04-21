@@ -12,11 +12,14 @@ npm install @depup/chromatic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.3.0 | **DepUp version**: 16.3.0-depup.0 | **Updated**: 4/14/2026 | **Import test**: passed
+**Original version**: 16.4.0 | **DepUp version**: 16.4.0-depup.0 | **Updated**: 4/21/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| semver | `^7.3.5` | `^7.7.4` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/chromatic&labels=bug).
 
