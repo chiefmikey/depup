@@ -71,5 +71,20 @@
       "timestamp": "2026-04-21T16:30:04.726Z",
       "version": "16.4.0-depup.0"
     }
+  },
+  "16.5.0": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-21T20:23:15.867Z",
+      "version": "16.5.0-depup.0"
+    }
   }
 }
