@@ -41,5 +41,20 @@
       "timestamp": "2026-04-09T20:22:18.613Z",
       "version": "2.11.0-depup.0"
     }
+  },
+  "2.11.1": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-21T00:44:26.915Z",
+      "version": "2.11.1-depup.0"
+    }
   }
 }
