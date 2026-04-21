@@ -251,5 +251,44 @@
       "timestamp": "2026-04-15T08:44:30.822Z",
       "version": "4.1.4-depup.1"
     }
+  },
+  "4.1.5": {
+    "0": {
+      "changes": {
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.1.0"
+        },
+        "tinybench": {
+          "from": "^2.9.0",
+          "to": "^6.0.0"
+        },
+        "tinyexec": {
+          "from": "^1.0.2",
+          "to": "^1.1.1"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        },
+        "vite": {
+          "from": "^6.0.0 || ^7.0.0 || ^8.0.0",
+          "to": "^8.0.9"
+        },
+        "why-is-node-running": {
+          "from": "^2.3.0",
+          "to": "^3.2.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-21T12:30:24.819Z",
+      "version": "4.1.5-depup.0"
+    }
   }
 }
