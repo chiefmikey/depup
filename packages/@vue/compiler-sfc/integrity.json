@@ -48,5 +48,20 @@
       "timestamp": "2026-04-03T08:23:09.423Z",
       "version": "3.5.32-depup.0"
     }
+  },
+  "3.5.33": {
+    "0": {
+      "changes": {
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-22T08:41:53.492Z",
+      "version": "3.5.33-depup.0"
+    }
   }
 }
