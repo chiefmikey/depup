@@ -12,7 +12,7 @@ npm install @depup/aws-sdk__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.974.3 | **DepUp version**: 3.974.3-depup.0 | **Updated**: 4/22/2026 | **Import test**: failed
+**Original version**: 3.974.4 | **DepUp version**: 3.974.4-depup.0 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
