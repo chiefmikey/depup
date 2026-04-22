@@ -12,7 +12,7 @@ npm install @depup/vue__reactivity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.5.32 | **DepUp version**: 3.5.32-depup.0 | **Updated**: 4/3/2026 | **Import test**: passed
+**Original version**: 3.5.33 | **DepUp version**: 3.5.33-depup.0 | **Updated**: 4/22/2026 | **Import test**: passed
 
 ## What changed
 
