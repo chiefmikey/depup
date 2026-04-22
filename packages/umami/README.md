@@ -12,15 +12,15 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.12 | **Updated**: 4/19/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.13 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @clickhouse/client | `^0.2.2` | `^1.18.2` |
+| @clickhouse/client | `^0.2.2` | `^1.18.3` |
 | @fontsource/inter | `^4.5.15` | `^5.2.8` |
-| @prisma/client | `5.7.0` | `^7.7.0` |
+| @prisma/client | `5.7.0` | `^7.8.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.0.3` |
 | @tanstack/react-query | `^5.12.2` | `^5.99.2` |
@@ -51,7 +51,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | next | `14.0.4` | `^16.2.4` |
 | next-basics | `^0.39.0` | `^0.40.0` |
 | node-fetch | `^3.2.8` | `^3.3.2` |
-| prisma | `5.7.0` | `^7.7.0` |
+| prisma | `5.7.0` | `^7.8.0` |
 | react | `^18.2.0` | `^19.2.5` |
 | react-basics | `^0.122.0` | `^0.126.0` |
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
@@ -62,7 +62,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-use-measure | `^2.0.4` | `^2.1.7` |
 | react-window | `^1.8.6` | `^2.2.7` |
 | semver | `^7.5.4` | `^7.7.4` |
-| thenby | `^1.3.4` | `^1.4.0` |
+| thenby | `^1.3.4` | `^1.4.1` |
 | timezone-support | `^2.0.2` | `^3.1.0` |
 | uuid | `^9.0.0` | `^14.0.0` |
 | yup | `^0.32.11` | `^1.7.1` |
