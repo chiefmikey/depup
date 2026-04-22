@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.6.5 | **DepUp version**: 22.6.5-depup.1 | **Updated**: 4/18/2026 | **Import test**: failed
+**Original version**: 22.6.5 | **DepUp version**: 22.6.5-depup.2 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,6 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @napi-rs/wasm-runtime | `0.2.4` | `^1.1.4` |
 | @yarnpkg/parsers | `3.0.2` | `^3.0.3` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
+| axios | `1.15.0` | `^1.15.2` |
 | picocolors | `^1.1.0` | `^1.1.1` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
 | cli-spinners | `2.6.1` | `^3.4.0` |
@@ -37,7 +38,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | minimatch | `10.2.4` | `^10.2.5` |
 | npm-run-path | `^4.0.1` | `^6.0.0` |
 | open | `^8.4.0` | `^11.0.0` |
-| ora | `5.3.0` | `^9.3.0` |
+| ora | `5.3.0` | `^9.4.0` |
 | semver | `^7.6.3` | `^7.7.4` |
 | string-width | `^4.2.3` | `^8.2.0` |
 | tar-stream | `~2.2.0` | `^3.1.8` |
