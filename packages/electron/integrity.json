@@ -169,6 +169,23 @@
       "status": "failed",
       "timestamp": "2026-04-21T16:31:50.803Z",
       "version": "41.2.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@electron/get": {
+          "from": "^2.0.0",
+          "to": "^5.0.0"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-22T05:03:49.585Z",
+      "version": "41.2.2-depup.1"
     }
   }
 }
