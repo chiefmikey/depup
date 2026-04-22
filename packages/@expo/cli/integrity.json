@@ -2593,6 +2593,115 @@
       "status": "failed",
       "timestamp": "2026-04-22T04:00:33.649Z",
       "version": "55.0.26-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@expo/ws-tunnel": {
+          "from": "^1.0.1",
+          "to": "^1.0.6"
+        },
+        "@expo/xcpretty": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "@react-native/dev-middleware": {
+          "from": "0.83.6",
+          "to": "^0.85.2"
+        },
+        "bplist-creator": {
+          "from": "0.1.0",
+          "to": "^0.1.1"
+        },
+        "bplist-parser": {
+          "from": "^0.3.1",
+          "to": "^0.3.2"
+        },
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "ci-info": {
+          "from": "^3.3.0",
+          "to": "^4.4.0"
+        },
+        "compression": {
+          "from": "^1.7.4",
+          "to": "^1.8.1"
+        },
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        },
+        "node-forge": {
+          "from": "^1.3.3",
+          "to": "^1.4.0"
+        },
+        "npm-package-arg": {
+          "from": "^11.0.0",
+          "to": "^13.0.2"
+        },
+        "ora": {
+          "from": "^3.4.0",
+          "to": "^9.4.0"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.3.0"
+        },
+        "prompts": {
+          "from": "^2.3.2",
+          "to": "^2.4.2"
+        },
+        "semver": {
+          "from": "^7.6.0",
+          "to": "^7.7.4"
+        },
+        "send": {
+          "from": "^0.19.0",
+          "to": "^1.2.1"
+        },
+        "slugify": {
+          "from": "^1.3.4",
+          "to": "^1.6.9"
+        },
+        "stacktrace-parser": {
+          "from": "^0.1.10",
+          "to": "^0.1.11"
+        },
+        "structured-headers": {
+          "from": "^0.4.1",
+          "to": "^2.0.2"
+        },
+        "terminal-link": {
+          "from": "^2.1.1",
+          "to": "^5.0.0"
+        },
+        "wrap-ansi": {
+          "from": "^7.0.0",
+          "to": "^10.0.0"
+        },
+        "ws": {
+          "from": "^8.12.1",
+          "to": "^8.20.0"
+        },
+        "zod": {
+          "from": "^3.25.76",
+          "to": "^4.3.6"
+        }
+      },
+      "depsUpdated": 25,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-22T08:44:43.859Z",
+      "version": "55.0.26-depup.1"
     }
   }
 }
