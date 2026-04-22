@@ -12,22 +12,22 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.24 | **Updated**: 4/20/2026 | **Import test**: failed
+**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.25 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-ecs | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-iam | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-lambda | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-s3 | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-sqs | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-ssm | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/client-sts | `^3.972.0` | `^3.1033.0` |
-| @aws-sdk/credential-providers | `^3.972.0` | `^3.1033.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-ecs | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-iam | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-lambda | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-s3 | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-sqs | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-ssm | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/client-sts | `^3.972.0` | `^3.1034.0` |
+| @aws-sdk/credential-providers | `^3.972.0` | `^3.1034.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.10.5` |
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv | `^16.6.1` | `^17.4.2` |
 | esbuild-wasm | `^0.19.12` | `^0.28.0` |
 | fs-extra | `^11.3.3` | `^11.3.4` |
-| got | `^11.8.5` | `^15.0.2` |
+| got | `^11.8.5` | `^15.0.3` |
 | joi | `^17.13.3` | `^18.1.2` |
 | js-yaml | `^3.14.1` | `^4.1.1` |
 | lodash | `^4.17.21` | `^4.18.1` |

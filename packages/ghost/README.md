@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.0 | **Updated**: 4/21/2026 | **Import test**: failed
+**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.1 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1033.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1034.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -64,12 +64,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cheerio | `0.22.0` | `^1.2.0` |
 | countries-and-timezones | `3.8.0` | `^3.9.0` |
 | date-fns | `2.30.0` | `^4.1.0` |
-| dompurify | `3.3.0` | `^3.4.0` |
+| dompurify | `3.3.0` | `^3.4.1` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
 | glob | `8.1.0` | `^13.0.6` |
-| got | `13.0.0` | `^15.0.2` |
+| got | `13.0.0` | `^15.0.3` |
 | gscan | `5.4.3` | `^6.0.1` |
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.10` | `^3.0.0` |
@@ -96,7 +96,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.1` |
 | multer | `2.0.2` | `^2.1.1` |
-| mysql2 | `3.18.1` | `^3.22.1` |
+| mysql2 | `3.18.1` | `^3.22.2` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `6.10.1` | `^8.0.5` |
 | otplib | `12.0.1` | `^13.4.0` |
