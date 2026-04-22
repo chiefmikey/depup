@@ -57,5 +57,20 @@
       "timestamp": "2026-04-20T20:21:51.242Z",
       "version": "14.1.1-depup.1"
     }
+  },
+  "14.1.2": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/typescript-estree": {
+          "from": "^8.58.2",
+          "to": "^8.59.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-22T20:24:42.453Z",
+      "version": "14.1.2-depup.0"
+    }
   }
 }
