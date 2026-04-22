@@ -1,0 +1,17 @@
+{
+  "2.1.15": {
+    "0": {
+      "changes": {
+        "use-sync-external-store": {
+          "from": "^1.2.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:36:32.798Z",
+      "version": "2.1.15-depup.0"
+    }
+  }
+}

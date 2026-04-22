@@ -1,0 +1,88 @@
+{
+  "name": "@depup/micromark-factory-whitespace",
+  "version": "2.0.1-depup.0",
+  "description": "[DepUp] micromark factory to parse markdown whitespace (found in lots of places)",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "micromark-factory-whitespace",
+    "micromark",
+    "factory",
+    "whitespace"
+  ],
+  "repository": "https://github.com/micromark/micromark/tree/main/packages/micromark-factory-whitespace",
+  "bugs": "https://github.com/micromark/micromark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/unifiedjs"
+    },
+    {
+      "type": "OpenCollective",
+      "url": "https://opencollective.com/unified"
+    }
+  ],
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dev/",
+    "index.d.ts.map",
+    "index.d.ts",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    "development": "./dev/index.js",
+    "default": "./index.js"
+  },
+  "dependencies": {
+    "micromark-factory-space": "^2.0.1",
+    "micromark-util-character": "^2.1.1",
+    "micromark-util-symbol": "^2.0.1",
+    "micromark-util-types": "^2.0.2"
+  },
+  "scripts": {
+    "build": "micromark-build"
+  },
+  "xo": {
+    "envs": [
+      "shared-node-browser"
+    ],
+    "prettier": true,
+    "rules": {
+      "unicorn/prefer-code-point": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "micromark-factory-space": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "micromark-util-character": {
+        "from": "^2.0.0",
+        "to": "^2.1.1"
+      },
+      "micromark-util-symbol": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "micromark-util-types": {
+        "from": "^2.0.0",
+        "to": "^2.0.2"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "micromark-factory-whitespace",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-17T16:37:33.390Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "name": "@depup/http2-wrapper",
+  "version": "2.2.1-depup.0",
+  "description": "[DepUp] HTTP2 client, just with the familiar `https` API",
+  "main": "source",
+  "types": "index.d.ts",
+  "engines": {
+    "node": ">=10.19.0"
+  },
+  "scripts": {
+    "test": "xo && nyc --reporter=lcovonly --reporter=text --reporter=html ava && tsd"
+  },
+  "files": [
+    "source",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "http2-wrapper",
+    "http2",
+    "https",
+    "http",
+    "request"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szmarczak/http2-wrapper.git"
+  },
+  "author": "Szymon Marczak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/szmarczak/http2-wrapper/issues"
+  },
+  "homepage": "https://github.com/szmarczak/http2-wrapper#readme",
+  "dependencies": {
+    "quick-lru": "^7.3.0",
+    "resolve-alpn": "^1.2.1"
+  },
+  "devDependencies": {
+    "@sindresorhus/is": "^4.0.1",
+    "ava": "^3.15.0",
+    "benchmark": "^2.1.4",
+    "get-stream": "^6.0.1",
+    "got": "^11.8.2",
+    "http2-proxy": "^5.0.53",
+    "https-proxy-agent": "^5.0.0",
+    "lolex": "^6.0.0",
+    "many-keys-map": "^1.0.3",
+    "nyc": "^15.1.0",
+    "p-event": "^4.2.0",
+    "tempy": "^1.0.1",
+    "to-readable-stream": "^2.1.0",
+    "tsd": "^0.17.0",
+    "websocket-stream": "^5.5.2",
+    "ws": "^7.5.3",
+    "xo": "0.39.1"
+  },
+  "ava": {
+    "timeout": "10s"
+  },
+  "nyc": {
+    "include": [
+      "source"
+    ]
+  },
+  "xo": {
+    "rules": {
+      "unicorn/no-for-loop": "off",
+      "unicorn/prefer-module": "off",
+      "comma-dangle": "off",
+      "@typescript-eslint/comma-dangle": "off",
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ],
+      "operator-linebreak": [
+        "error",
+        "before"
+      ]
+    }
+  },
+  "depup": {
+    "changes": {
+      "quick-lru": {
+        "from": "^5.1.1",
+        "to": "^7.3.0"
+      },
+      "resolve-alpn": {
+        "from": "^1.2.0",
+        "to": "^1.2.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "http2-wrapper",
+    "originalVersion": "2.2.1",
+    "processedAt": "2026-03-17T16:37:06.559Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "1.13.2": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T04:40:30.988Z",
+      "version": "1.13.2-depup.0"
+    }
+  },
+  "1.13.6": {
+    "32": {
+      "changes": {
+        "proxy-from-env": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-15T00:40:30.144Z",
+      "version": "1.13.6-depup.32"
+    }
+  }
+}

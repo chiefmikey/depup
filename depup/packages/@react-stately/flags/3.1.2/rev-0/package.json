@@ -1,0 +1,53 @@
+{
+  "name": "@depup/react-stately__flags",
+  "version": "3.1.2-depup.0",
+  "description": "[DepUp] Spectrum UI components in React",
+  "license": "Apache-2.0",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "exports": {
+    "source": "./src/index.ts",
+    "types": [
+      "./dist/types.d.ts",
+      "./src/index.ts"
+    ],
+    "import": "./dist/import.mjs",
+    "require": "./dist/main.js"
+  },
+  "source": "src/index.ts",
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.5.19"
+  },
+  "gitHead": "265b4d7f107905ee1c6e87a8af1613ab440a6849",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@react-stately/flags"
+  ],
+  "depup": {
+    "changes": {
+      "@swc/helpers": {
+        "from": "^0.5.0",
+        "to": "^0.5.19"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@react-stately/flags",
+    "originalVersion": "3.1.2",
+    "processedAt": "2026-03-17T16:33:42.887Z",
+    "smokeTest": "passed"
+  }
+}

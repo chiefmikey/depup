@@ -1,0 +1,49 @@
+{
+  "name": "@depup/flush-write-stream",
+  "version": "2.0.0-depup.0",
+  "description": "[DepUp] A write stream constructor that supports a flush function that is called before finish is emitted",
+  "main": "index.js",
+  "dependencies": {
+    "inherits": "^2.0.4",
+    "readable-stream": "^4.7.0"
+  },
+  "devDependencies": {
+    "tape": "^4.2.2"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/flush-write-stream.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/flush-write-stream/issues"
+  },
+  "homepage": "https://github.com/mafintosh/flush-write-stream",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "flush-write-stream"
+  ],
+  "depup": {
+    "changes": {
+      "inherits": {
+        "from": "^2.0.3",
+        "to": "^2.0.4"
+      },
+      "readable-stream": {
+        "from": "^3.1.1",
+        "to": "^4.7.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "flush-write-stream",
+    "originalVersion": "2.0.0",
+    "processedAt": "2026-03-17T16:36:29.123Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "5.0.4": {
+    "0": {
+      "changes": {
+        "babel-runtime": {
+          "from": "^6.11.6",
+          "to": "^6.26.0"
+        },
+        "chance": {
+          "from": "^1.0.4",
+          "to": "^1.1.13"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:29:35.342Z",
+      "version": "5.0.4-depup.0"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "10.2.19": {
+    "0": {
+      "changes": {
+        "magic-string": {
+          "from": "^0.30.5",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^7.1.1",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.11"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.7.4"
+        },
+        "webpack": {
+          "from": "5",
+          "to": "^5.105.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:34:40.762Z",
+      "version": "10.2.19-depup.0"
+    }
+  },
+  "10.3.0": {
+    "0": {
+      "changes": {
+        "magic-string": {
+          "from": "^0.30.5",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^7.1.1",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.11"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.7.4"
+        },
+        "webpack": {
+          "from": "5",
+          "to": "^5.105.4"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-18T16:28:56.754Z",
+      "version": "10.3.0-depup.0"
+    }
+  }
+}

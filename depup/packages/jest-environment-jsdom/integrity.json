@@ -1,0 +1,17 @@
+{
+  "30.3.0": {
+    "0": {
+      "changes": {
+        "jsdom": {
+          "from": "^26.1.0",
+          "to": "^29.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:28:58.709Z",
+      "version": "30.3.0-depup.0"
+    }
+  }
+}

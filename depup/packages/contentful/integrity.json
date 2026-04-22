@@ -1,0 +1,103 @@
+{
+  "11.10.7": {
+    "0": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.1"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.5"
+        },
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.13.6"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^1.9.7"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^9.4.5"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.4.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T22:56:47.266Z",
+      "version": "11.10.7-depup.0"
+    }
+  },
+  "11.11.0": {
+    "0": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.1"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.5"
+        },
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.13.6"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^1.9.8"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^9.4.5"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.4.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:38:19.418Z",
+      "version": "11.11.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.1"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.5"
+        },
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.13.6"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^1.9.8"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^9.4.5"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T08:20:16.848Z",
+      "version": "11.11.0-depup.1"
+    }
+  }
+}

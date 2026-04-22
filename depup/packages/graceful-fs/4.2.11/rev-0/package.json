@@ -1,0 +1,69 @@
+{
+  "name": "@depup/graceful-fs",
+  "description": "A drop-in replacement for fs, making various improvements. (with updated dependencies)",
+  "version": "4.2.11-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaacs/node-graceful-fs"
+  },
+  "main": "graceful-fs.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --follow-tags",
+    "test": "nyc --silent node test.js | tap -c -",
+    "posttest": "nyc report"
+  },
+  "keywords": [
+    "graceful-fs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "fs",
+    "module",
+    "reading",
+    "retry",
+    "retries",
+    "queue",
+    "error",
+    "errors",
+    "handling",
+    "EMFILE",
+    "EAGAIN",
+    "EINVAL",
+    "EPERM",
+    "EACCESS"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "import-fresh": "^2.0.0",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8",
+    "tap": "^16.3.4"
+  },
+  "files": [
+    "fs.js",
+    "graceful-fs.js",
+    "legacy-streams.js",
+    "polyfills.js",
+    "clone.js",
+    "changes.json",
+    "README.md"
+  ],
+  "tap": {
+    "reporter": "classic"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "graceful-fs",
+    "originalVersion": "4.2.11",
+    "processedAt": "2026-03-19T04:46:00.079Z",
+    "smokeTest": "passed"
+  }
+}

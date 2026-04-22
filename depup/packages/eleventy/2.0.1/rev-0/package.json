@@ -1,0 +1,29 @@
+{
+  "name": "@depup/eleventy",
+  "version": "2.0.1-depup.0",
+  "description": "[DepUp] To help folks find @11ty/eleventy",
+  "main": "index.js",
+  "bin": {
+    "eleventy": "cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/11ty/npm-bare-error.git"
+  },
+  "homepage": "https://www.11ty.dev/",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "eleventy"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "eleventy",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-17T19:30:40.166Z",
+    "smokeTest": "failed"
+  }
+}

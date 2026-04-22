@@ -1,0 +1,61 @@
+{
+  "name": "@depup/vanilla-extract__recipes",
+  "version": "0.5.7-depup.0",
+  "description": "Create multi-variant styles with a type-safe runtime API, heavily inspired by https://stitches.dev (with updated dependencies)",
+  "sideEffects": false,
+  "main": "dist/vanilla-extract-recipes.cjs.js",
+  "module": "dist/vanilla-extract-recipes.esm.js",
+  "types": "dist/vanilla-extract-recipes.cjs.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "module": "./dist/vanilla-extract-recipes.esm.js",
+      "default": "./dist/vanilla-extract-recipes.cjs.js"
+    },
+    "./createRuntimeFn": {
+      "module": "./createRuntimeFn/dist/vanilla-extract-recipes-createRuntimeFn.esm.js",
+      "default": "./createRuntimeFn/dist/vanilla-extract-recipes-createRuntimeFn.cjs.js"
+    }
+  },
+  "files": [
+    "/dist",
+    "/createRuntimeFn",
+    "changes.json",
+    "README.md"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "createRuntimeFn.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanilla-extract-css/vanilla-extract.git",
+    "directory": "packages/recipes"
+  },
+  "author": "SEEK",
+  "license": "MIT",
+  "peerDependencies": {
+    "@vanilla-extract/css": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vanilla-extract/css": "^1.17.4"
+  },
+  "keywords": [
+    "@vanilla-extract/recipes",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vanilla-extract/recipes",
+    "originalVersion": "0.5.7",
+    "processedAt": "2026-03-18T23:29:37.097Z",
+    "smokeTest": "failed"
+  }
+}

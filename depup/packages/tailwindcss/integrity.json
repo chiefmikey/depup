@@ -1,0 +1,27 @@
+{
+  "4.1.13": {
+    "0": {
+      "version": "4.1.13-depup.0",
+      "timestamp": "2026-01-10T16:45:34.062Z",
+      "status": "created"
+    }
+  },
+  "4.2.1": {
+    "1": {
+      "changes": {},
+      "status": "skipped",
+      "timestamp": "2026-03-09T08:18:46.673Z",
+      "version": "4.2.1-depup.1"
+    }
+  },
+  "4.2.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T16:38:46.238Z",
+      "version": "4.2.2-depup.0"
+    }
+  }
+}

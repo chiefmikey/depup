@@ -1,0 +1,64 @@
+{
+  "name": "@depup/read-pkg",
+  "version": "10.1.0-depup.0",
+  "description": "[DepUp] Read a package.json file",
+  "license": "MIT",
+  "repository": "sindresorhus/read-pkg",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && cd test && node --test test.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "read-pkg",
+    "json",
+    "read",
+    "parse",
+    "file",
+    "fs",
+    "graceful",
+    "load",
+    "package",
+    "normalize"
+  ],
+  "dependencies": {
+    "@types/normalize-package-data": "^2.4.4",
+    "normalize-package-data": "^8.0.0",
+    "parse-json": "^8.3.0",
+    "type-fest": "^5.4.4",
+    "unicorn-magic": "^0.4.0"
+  },
+  "devDependencies": {
+    "xo": "^1.2.3"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "read-pkg",
+    "originalVersion": "10.1.0",
+    "processedAt": "2026-03-17T19:36:38.661Z",
+    "smokeTest": "passed"
+  }
+}

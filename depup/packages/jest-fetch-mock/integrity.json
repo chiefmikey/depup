@@ -1,0 +1,21 @@
+{
+  "3.0.3": {
+    "0": {
+      "changes": {
+        "cross-fetch": {
+          "from": "^3.0.4",
+          "to": "^4.1.0"
+        },
+        "promise-polyfill": {
+          "from": "^8.1.3",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:29:15.528Z",
+      "version": "3.0.3-depup.0"
+    }
+  }
+}

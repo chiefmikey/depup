@@ -1,0 +1,38 @@
+{
+  "2.8.5": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T04:40:30.991Z",
+      "version": "2.8.5-depup.0"
+    }
+  },
+  "2.8.6": {
+    "0": {
+      "changes": {},
+      "status": "published",
+      "timestamp": "2026-03-09T05:42:01.403Z",
+      "version": "2.8.6-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "status": "skipped",
+      "timestamp": "2026-03-09T20:09:46.361Z",
+      "version": "2.8.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "object-assign": {
+          "from": "^4",
+          "to": "^4.1.1"
+        },
+        "vary": {
+          "from": "^1",
+          "to": "^1.1.2"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-14T20:33:23.117Z",
+      "version": "2.8.6-depup.2"
+    }
+  }
+}

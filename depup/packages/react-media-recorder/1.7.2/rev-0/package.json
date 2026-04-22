@@ -1,0 +1,70 @@
+{
+  "name": "@depup/react-media-recorder",
+  "version": "1.7.2-depup.0",
+  "description": "A React component based on MediaRecorder() API to record audio/video streams (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && jsmin -o ./lib/index.js ./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giridharangm/react-media-recorder.git"
+  },
+  "keywords": [
+    "react-media-recorder",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "recorder",
+    "voice recording",
+    "video recording",
+    "media recording",
+    "getusermedia",
+    "MediaRecorder",
+    "getDisplayMedia",
+    "screen recorder",
+    "video recorder",
+    "audio recorder"
+  ],
+  "author": "Giridharan GM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giridharangm/react-media-recorder/issues"
+  },
+  "homepage": "https://github.com/giridharangm/react-media-recorder#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "jsmin": "^1.0.1",
+    "typescript": "^4.4.3"
+  },
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "extendable-media-recorder": "^9.2.37",
+    "extendable-media-recorder-wav-encoder": "^7.0.137"
+  },
+  "depup": {
+    "changes": {
+      "extendable-media-recorder": {
+        "from": "^6.6.5",
+        "to": "^9.2.37"
+      },
+      "extendable-media-recorder-wav-encoder": {
+        "from": "^7.0.68",
+        "to": "^7.0.137"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "react-media-recorder",
+    "originalVersion": "1.7.2",
+    "processedAt": "2026-03-19T00:38:20.037Z",
+    "smokeTest": "failed"
+  }
+}

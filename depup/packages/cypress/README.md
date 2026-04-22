@@ -1,0 +1,60 @@
+# @depup/cypress
+
+> [cypress](https://www.npmjs.com/package/cypress) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/cypress
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 15.12.0 | **DepUp version**: 15.12.0-depup.4 | **Updated**: 3/14/2026 | **Import test**: unknown
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @types/sinonjs__fake-timers | `8.1.1` | `^15.0.1` |
+| @types/sizzle | `^2.3.2` | `^2.3.10` |
+| @types/tmp | `^0.2.3` | `^0.2.6` |
+| arch | `^2.2.0` | `^3.0.0` |
+| buffer | `^5.7.1` | `^6.0.3` |
+| cachedir | `^2.3.0` | `^2.4.0` |
+| chalk | `^4.1.0` | `^5.6.2` |
+| ci-info | `^4.1.0` | `^4.4.0` |
+| cli-cursor | `^3.1.0` | `^5.0.0` |
+| cli-table3 | `0.6.1` | `^0.6.5` |
+| commander | `^6.2.1` | `^14.0.3` |
+| common-tags | `^1.8.0` | `^1.8.2` |
+| dayjs | `^1.10.4` | `^1.11.20` |
+| debug | `^4.3.4` | `^4.4.3` |
+| enquirer | `^2.3.6` | `^2.4.1` |
+| eventemitter2 | `6.4.7` | `^6.4.9` |
+| execa | `4.1.0` | `^9.6.1` |
+| figures | `^3.2.0` | `^6.1.0` |
+| fs-extra | `^9.1.0` | `^11.3.4` |
+| hasha | `5.2.2` | `^7.0.0` |
+| is-installed-globally | `~0.4.0` | `^1.0.0` |
+| listr2 | `^3.8.3` | `^10.2.1` |
+| log-symbols | `^4.0.0` | `^7.0.1` |
+| pretty-bytes | `^5.6.0` | `^7.1.0` |
+| proxy-from-env | `1.0.0` | `^2.1.0` |
+| supports-color | `^8.1.1` | `^10.2.2` |
+| systeminformation | `^5.31.1` | `^5.31.4` |
+| tmp | `~0.2.4` | `^0.2.5` |
+| tslib | `1.14.1` | `^2.8.1` |
+| untildify | `^4.0.0` | `^6.0.0` |
+| yauzl | `^2.10.0` | `^3.2.1` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cypress&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [cypress](https://www.npmjs.com/package/cypress).

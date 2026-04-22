@@ -1,0 +1,49 @@
+{
+  "3.972.11": {
+    "0": {
+      "changes": {
+        "fast-xml-parser": {
+          "from": "5.4.1",
+          "to": "^5.5.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:46.034Z",
+      "version": "3.972.11-depup.0"
+    }
+  },
+  "3.972.12": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T20:16:15.370Z",
+      "version": "3.972.12-depup.0"
+    }
+  },
+  "3.972.13": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:36:44.849Z",
+      "version": "3.972.13-depup.0"
+    }
+  }
+}

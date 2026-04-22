@@ -1,0 +1,68 @@
+{
+  "name": "@depup/parent-module",
+  "version": "3.2.0-depup.0",
+  "description": "[DepUp] Get the path of the parent module",
+  "license": "MIT",
+  "repository": "sindresorhus/parent-module",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "parent-module",
+    "parent",
+    "module",
+    "package",
+    "caller",
+    "calling",
+    "path",
+    "callsites",
+    "callsite",
+    "stacktrace",
+    "stack",
+    "trace",
+    "function",
+    "file"
+  ],
+  "dependencies": {
+    "callsites": "^4.2.0"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "execa": "^5.1.1",
+    "tsd": "^0.17.0",
+    "xo": "^0.45.0"
+  },
+  "depup": {
+    "changes": {
+      "callsites": {
+        "from": "^4.1.0",
+        "to": "^4.2.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "parent-module",
+    "originalVersion": "3.2.0",
+    "processedAt": "2026-03-17T20:16:18.785Z",
+    "smokeTest": "passed"
+  }
+}

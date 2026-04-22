@@ -1,0 +1,41 @@
+{
+  "name": "@depup/firebase__auth-interop-types",
+  "version": "0.2.4-depup.0",
+  "description": "[DepUp] @firebase/auth interop Types",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "directory": "packages/auth-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@firebase/auth-interop-types"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/auth-interop-types",
+    "originalVersion": "0.2.4",
+    "processedAt": "2026-03-17T16:30:59.781Z",
+    "smokeTest": "failed"
+  }
+}

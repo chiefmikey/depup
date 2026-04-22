@@ -1,0 +1,211 @@
+{
+  "5.1.0": {
+    "0": {
+      "version": "5.1.0-depup.0",
+      "timestamp": "2025-09-12T03:28:30.155Z",
+      "status": "published"
+    },
+    "1": {
+      "version": "5.1.0-depup.1",
+      "timestamp": "2025-09-12T03:34:45.371Z",
+      "status": "published"
+    },
+    "2": {
+      "version": "5.1.0-depup.2",
+      "timestamp": "2025-09-12T03:37:06.074Z",
+      "status": "published"
+    },
+    "3": {
+      "version": "5.1.0-depup.3",
+      "timestamp": "2025-09-12T03:39:16.517Z",
+      "status": "published"
+    },
+    "4": {
+      "version": "5.1.0-depup.4",
+      "timestamp": "2025-09-12T03:42:40.511Z",
+      "status": "published"
+    },
+    "5": {
+      "version": "5.1.0-depup.5",
+      "timestamp": "2025-09-12T03:44:52.451Z",
+      "status": "published"
+    },
+    "6": {
+      "version": "5.1.0-depup.6",
+      "timestamp": "2025-09-12T03:47:03.735Z",
+      "status": "published"
+    },
+    "7": {
+      "version": "5.1.0-depup.7",
+      "timestamp": "2025-09-12T03:49:38.730Z",
+      "status": "published"
+    },
+    "8": {
+      "version": "5.1.0-depup.8",
+      "timestamp": "2025-09-12T03:52:23.760Z",
+      "status": "published"
+    },
+    "9": {
+      "version": "5.1.0-depup.9",
+      "timestamp": "2025-09-12T03:55:08.520Z",
+      "status": "published"
+    },
+    "10": {
+      "version": "5.1.0-depup.10",
+      "timestamp": "2025-09-12T03:58:00.887Z",
+      "status": "published"
+    },
+    "11": {
+      "version": "5.1.0-depup.11",
+      "timestamp": "2025-09-12T04:01:22.567Z",
+      "status": "published"
+    },
+    "12": {
+      "version": "5.1.0-depup.12",
+      "timestamp": "2025-09-12T04:03:43.082Z",
+      "status": "published"
+    },
+    "13": {
+      "version": "5.1.0-depup.13",
+      "timestamp": "2025-09-12T13:09:37.007Z",
+      "status": "published"
+    },
+    "14": {
+      "version": "5.1.0-depup.14",
+      "timestamp": "2025-09-12T13:15:46.447Z",
+      "status": "published"
+    },
+    "15": {
+      "version": "5.1.0-depup.15",
+      "timestamp": "2025-09-12T13:17:22.146Z",
+      "status": "published"
+    }
+  },
+  "1.0.0": {
+    "0": {
+      "integrity": {
+        "score": 67,
+        "totalVotes": 45,
+        "upVotes": 30,
+        "downVotes": 0,
+        "neutralVotes": 15,
+        "lastUpdated": "2025-09-12T13:17:22.780Z"
+      },
+      "timestamp": "2026-01-10T16:45:34.046Z",
+      "status": "unknown",
+      "version": "1.0.0-depup.0"
+    }
+  },
+  "5.2.1": {
+    "5": {
+      "changes": {
+        "body-parser": {
+          "from": "^2.2.1",
+          "to": "^2.2.2"
+        },
+        "content-disposition": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "cookie": {
+          "from": "^0.7.1",
+          "to": "^1.1.1"
+        },
+        "cookie-signature": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "finalhandler": {
+          "from": "^2.1.0",
+          "to": "^2.1.1"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "qs": {
+          "from": "^6.14.0",
+          "to": "^6.15.0"
+        },
+        "send": {
+          "from": "^1.1.0",
+          "to": "^1.2.1"
+        },
+        "serve-static": {
+          "from": "^2.2.0",
+          "to": "^2.2.1"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        }
+      },
+      "status": "prepared",
+      "timestamp": "2026-03-09T02:52:57.314Z",
+      "version": "5.2.1-depup.5"
+    },
+    "6": {
+      "changes": {
+        "body-parser": {
+          "from": "^2.2.1",
+          "to": "^2.2.2"
+        },
+        "content-disposition": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "cookie": {
+          "from": "^0.7.1",
+          "to": "^1.1.1"
+        },
+        "cookie-signature": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "finalhandler": {
+          "from": "^2.1.0",
+          "to": "^2.1.1"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "qs": {
+          "from": "^6.14.0",
+          "to": "^6.15.0"
+        },
+        "send": {
+          "from": "^1.1.0",
+          "to": "^1.2.1"
+        },
+        "serve-static": {
+          "from": "^2.2.0",
+          "to": "^2.2.1"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        }
+      },
+      "status": "prepared",
+      "timestamp": "2026-03-09T20:09:37.547Z",
+      "version": "5.2.1-depup.6"
+    }
+  }
+}

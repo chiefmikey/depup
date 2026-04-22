@@ -1,0 +1,108 @@
+{
+  "name": "@depup/yargs-interactive",
+  "version": "3.0.1-depup.0",
+  "description": "Build interactive command line tools without worring to parse the arguments (or ask them). (with updated dependencies)",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint src test --fix",
+    "test": "jest --collectCoverage",
+    "publish-coverage": "cat ./coverage/lcov.info | coveralls",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanovazquez/yargs-interactive.git"
+  },
+  "keywords": [
+    "yargs-interactive",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "yargs",
+    "interactive",
+    "cli",
+    "arguments",
+    "args",
+    "prompt",
+    "inquirer"
+  ],
+  "author": "nanovazquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanovazquez/yargs-interactive/issues"
+  },
+  "homepage": "https://github.com/nanovazquez/yargs-interactive#readme",
+  "dependencies": {
+    "inquirer": "^13.3.2",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/inquirer": "^6.5.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "12.7.2",
+    "@types/yargs": "^13.0.2",
+    "babel-eslint": "^10.0.2",
+    "coveralls": "^3.0.6",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.2.1",
+    "eslint-config-google": "^0.13.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "jest-matcher-one-of": "^1.0.2",
+    "lint-staged": "^9.2.3",
+    "proxyquire": "^2.1.3",
+    "semantic-release": "^15.13.24"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "inquirer": {
+        "from": "^7.0.0",
+        "to": "^13.3.2"
+      },
+      "yargs": {
+        "from": "^14.0.0",
+        "to": "^18.0.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "yargs-interactive",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-03-19T03:37:06.799Z",
+    "smokeTest": "passed"
+  }
+}

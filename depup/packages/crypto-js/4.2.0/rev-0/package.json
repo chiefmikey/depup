@@ -1,0 +1,54 @@
+{
+  "name": "@depup/crypto-js",
+  "version": "4.2.0-depup.0",
+  "description": "[DepUp] JavaScript library of crypto standards.",
+  "license": "MIT",
+  "author": {
+    "name": "Evan Vosberg",
+    "url": "http://github.com/evanvosberg"
+  },
+  "homepage": "http://github.com/brix/crypto-js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/brix/crypto-js.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "crypto-js",
+    "security",
+    "crypto",
+    "Hash",
+    "MD5",
+    "SHA1",
+    "SHA-1",
+    "SHA256",
+    "SHA-256",
+    "RC4",
+    "Rabbit",
+    "AES",
+    "DES",
+    "PBKDF2",
+    "HMAC",
+    "OFB",
+    "CFB",
+    "CTR",
+    "CBC",
+    "Base64",
+    "Base64url"
+  ],
+  "main": "index.js",
+  "dependencies": {},
+  "browser": {
+    "crypto": false
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "crypto-js",
+    "originalVersion": "4.2.0",
+    "processedAt": "2026-03-17T16:35:25.545Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "4.1.1": {
+    "0": {
+      "changes": {
+        "lodash.flattendeep": {
+          "from": "^4.0.0",
+          "to": "^4.4.0"
+        },
+        "methods": {
+          "from": "^1.0.0",
+          "to": "^1.1.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:02:06.980Z",
+      "version": "4.1.1-depup.0"
+    }
+  }
+}

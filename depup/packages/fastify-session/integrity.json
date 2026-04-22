@@ -1,0 +1,21 @@
+{
+  "5.2.1": {
+    "0": {
+      "changes": {
+        "cookie-signature": {
+          "from": "^1.1.0",
+          "to": "^1.2.2"
+        },
+        "fastify-plugin": {
+          "from": "^3.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:05:13.764Z",
+      "version": "5.2.1-depup.0"
+    }
+  }
+}

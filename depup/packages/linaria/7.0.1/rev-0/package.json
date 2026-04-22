@@ -1,0 +1,68 @@
+{
+  "name": "@depup/linaria",
+  "version": "7.0.1-depup.0",
+  "description": "[DepUp] Blazing fast zero-runtime CSS in JS library",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "linaria",
+    "babel",
+    "babel-plugin",
+    "css",
+    "css-in-js",
+    "react",
+    "styled-components"
+  ],
+  "homepage": "https://github.com/callstack/linaria#readme",
+  "bugs": "https://github.com/callstack/linaria/issues",
+  "repository": "git@github.com:callstack/linaria.git",
+  "license": "MIT",
+  "main": "lib/core.js",
+  "module": "esm/core.js",
+  "types": "types/core.d.ts",
+  "files": [
+    "babel",
+    "evaluators",
+    "loader",
+    "react",
+    "rollup",
+    "server",
+    "stylelint-config",
+    "types/",
+    "lib/",
+    "esm/",
+    "changes.json",
+    "README.md"
+  ],
+  "wyw-in-js": {
+    "tags": {
+      "css": "@linaria/core/processors/css",
+      "styled": "@linaria/react/processors/styled"
+    }
+  },
+  "dependencies": {
+    "@linaria/core": "^7.0.0",
+    "@linaria/react": "^7.0.1",
+    "@linaria/server": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "pnpm build:lib && pnpm build:esm && pnpm build:declarations",
+    "build:declarations": "tsc --emitDeclarationOnly --outDir types",
+    "build:esm": "babel src --out-dir esm --extensions '.js,.jsx,.ts,.tsx' --source-maps --delete-dir-on-start",
+    "build:lib": "cross-env NODE_ENV=legacy babel src --out-dir lib --extensions '.js,.jsx,.ts,.tsx' --source-maps --delete-dir-on-start",
+    "typecheck": "tsc --noEmit --composite false",
+    "watch": "pnpm build:lib --watch & pnpm build:esm --watch & pnpm build:declarations --watch"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "linaria",
+    "originalVersion": "7.0.1",
+    "processedAt": "2026-03-17T18:41:15.680Z",
+    "smokeTest": "passed"
+  }
+}

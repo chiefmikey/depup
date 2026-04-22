@@ -1,0 +1,25 @@
+{
+  "2.1.2": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "^3.0.1",
+          "to": "^4.4.3"
+        },
+        "es6-promise": {
+          "from": "^4.1.1",
+          "to": "^4.2.8"
+        },
+        "raw-body": {
+          "from": "^2.3.0",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T04:45:47.656Z",
+      "version": "2.1.2-depup.0"
+    }
+  }
+}

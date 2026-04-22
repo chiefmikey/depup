@@ -1,0 +1,75 @@
+{
+  "name": "@depup/winston-cloudwatch",
+  "version": "6.3.0-depup.0",
+  "description": "Send logs to Amazon Cloudwatch using Winston. (with updated dependencies)",
+  "keywords": [
+    "winston-cloudwatch",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "amazon",
+    "cloudwatch",
+    "winston",
+    "logging",
+    "log"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "make test",
+    "coveralls": "coveralls < ./coverage/lcov.info",
+    "update-dependencies": "npm-check-updates -ua && npm install"
+  },
+  "repository": "https://github.com/lazywithclass/winston-cloudwatch",
+  "author": "me@lazywithclass.com",
+  "license": "MIT",
+  "typings": "typescript/winston-cloudwatch.d.ts",
+  "peerDependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
+    "winston": "^3.0.0"
+  },
+  "dependencies": {
+    "async": "^3.2.6",
+    "chalk": "^5.6.2",
+    "fast-safe-stringify": "^2.1.1",
+    "lodash.assign": "^4.2.0",
+    "lodash.find": "^4.6.0",
+    "lodash.isempty": "^4.4.0",
+    "lodash.iserror": "^3.1.1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
+    "@types/node": "13.11.0",
+    "@types/winston": "2.4.4",
+    "clarify": "^2.1.0",
+    "coveralls": "^3.0.7",
+    "istanbul": "^0.4.5",
+    "mocha": "^9.1.3",
+    "mockery": "^2.1.0",
+    "npm-check-updates": "^4.1.1",
+    "should": "^13.2.3",
+    "sinon": "^11.1.2"
+  },
+  "depup": {
+    "changes": {
+      "async": {
+        "from": "^3.1.0",
+        "to": "^3.2.6"
+      },
+      "chalk": {
+        "from": "^4.0.0",
+        "to": "^5.6.2"
+      },
+      "fast-safe-stringify": {
+        "from": "^2.0.7",
+        "to": "^2.1.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "winston-cloudwatch",
+    "originalVersion": "6.3.0",
+    "processedAt": "2026-03-19T04:46:16.603Z",
+    "smokeTest": "failed"
+  }
+}

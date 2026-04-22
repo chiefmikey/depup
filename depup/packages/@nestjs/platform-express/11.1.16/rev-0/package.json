@@ -1,0 +1,50 @@
+{
+  "name": "@depup/@nestjs/platform-express",
+  "version": "11.1.16-depup.0",
+  "description": "[DepUp] Nest - modern, fast, powerful node.js web framework (@platform-express)",
+  "author": "Kamil Mysliwiec",
+  "license": "MIT",
+  "homepage": "https://nestjs.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/nest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestjs/nest.git",
+    "directory": "packages/platform-express"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "multer": "2.1.1",
+    "path-to-regexp": "8.3.0",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/common": "11.1.16",
+    "@nestjs/core": "11.1.16"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0"
+  },
+  "gitHead": "315e698096208868b43dda25f2db9ac9d7c1d822",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@nestjs/platform-express"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nestjs/platform-express",
+    "originalVersion": "11.1.16",
+    "processedAt": "2026-03-09T04:14:37.434Z",
+    "smokeTest": "failed"
+  }
+}

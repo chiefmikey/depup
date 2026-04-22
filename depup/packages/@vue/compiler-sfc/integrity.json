@@ -1,0 +1,22 @@
+{
+  "3.5.29": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T20:08:02.820Z",
+      "version": "3.5.29-depup.0"
+    }
+  },
+  "3.5.30": {
+    "0": {
+      "changes": {
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-09T20:26:42.815Z",
+      "version": "3.5.30-depup.0"
+    }
+  }
+}

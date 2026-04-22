@@ -1,0 +1,85 @@
+{
+  "name": "@depup/vuepress",
+  "version": "1.9.10-depup.0",
+  "description": "[DepUp] Minimalistic doc generator with Vue component based layout system",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "vuepress",
+    "documentation",
+    "generator",
+    "vue"
+  ],
+  "homepage": "https://github.com/vuejs/vuepress#readme",
+  "bugs": {
+    "url": "https://github.com/vuejs/vuepress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vuepress.git",
+    "directory": "packages/vuepress"
+  },
+  "license": "MIT",
+  "author": "Evan You",
+  "maintainers": [
+    {
+      "name": "ULIVZ",
+      "email": "chl814@foxmail.com"
+    }
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./config": "./config.js"
+  },
+  "main": "index.js",
+  "bin": {
+    "vuepress": "cli.js"
+  },
+  "scripts": {},
+  "browserslist": [
+    ">1%"
+  ],
+  "dependencies": {
+    "@vuepress/core": "1.9.10",
+    "@vuepress/theme-default": "1.9.10",
+    "@vuepress/types": "1.9.10",
+    "cac": "^7.0.0",
+    "envinfo": "^7.21.0",
+    "opencollective-postinstall": "^2.0.3",
+    "update-notifier": "^7.3.1"
+  },
+  "engines": {
+    "node": ">=8.6"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/vuepress"
+  },
+  "gitHead": "a3e4bbab8df198b8b18d55031ff0b6f0bf190fdb",
+  "depup": {
+    "changes": {
+      "cac": {
+        "from": "^6.5.6",
+        "to": "^7.0.0"
+      },
+      "envinfo": {
+        "from": "^7.2.0",
+        "to": "^7.21.0"
+      },
+      "opencollective-postinstall": {
+        "from": "^2.0.2",
+        "to": "^2.0.3"
+      },
+      "update-notifier": {
+        "from": "^4.0.0",
+        "to": "^7.3.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "vuepress",
+    "originalVersion": "1.9.10",
+    "processedAt": "2026-03-17T18:43:56.010Z",
+    "smokeTest": "passed"
+  }
+}

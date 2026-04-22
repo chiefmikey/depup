@@ -1,0 +1,57 @@
+# @depup/react-native__babel-preset
+
+> [@react-native/babel-preset](https://www.npmjs.com/package/@react-native/babel-preset) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/react-native__babel-preset
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 0.84.1 | **DepUp version**: 0.84.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @babel/core | `^7.25.2` | `^7.29.0` |
+| @babel/plugin-proposal-export-default-from | `^7.24.7` | `^7.27.1` |
+| @babel/plugin-syntax-export-default-from | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-async-generator-functions | `^7.25.4` | `^7.29.0` |
+| @babel/plugin-transform-async-to-generator | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-block-scoping | `^7.25.0` | `^7.28.6` |
+| @babel/plugin-transform-class-properties | `^7.25.4` | `^7.28.6` |
+| @babel/plugin-transform-classes | `^7.25.4` | `^7.28.6` |
+| @babel/plugin-transform-destructuring | `^7.24.8` | `^7.28.5` |
+| @babel/plugin-transform-flow-strip-types | `^7.25.2` | `^7.27.1` |
+| @babel/plugin-transform-for-of | `^7.24.7` | `^7.27.1` |
+| @babel/plugin-transform-modules-commonjs | `^7.24.8` | `^7.28.6` |
+| @babel/plugin-transform-named-capturing-groups-regex | `^7.24.7` | `^7.29.0` |
+| @babel/plugin-transform-nullish-coalescing-operator | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-optional-catch-binding | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-optional-chaining | `^7.24.8` | `^7.28.6` |
+| @babel/plugin-transform-private-methods | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-private-property-in-object | `^7.24.7` | `^7.28.6` |
+| @babel/plugin-transform-react-display-name | `^7.24.7` | `^7.28.0` |
+| @babel/plugin-transform-react-jsx | `^7.25.2` | `^7.28.6` |
+| @babel/plugin-transform-react-jsx-self | `^7.24.7` | `^7.27.1` |
+| @babel/plugin-transform-react-jsx-source | `^7.24.7` | `^7.27.1` |
+| @babel/plugin-transform-regenerator | `^7.24.7` | `^7.29.0` |
+| @babel/plugin-transform-runtime | `^7.24.7` | `^7.29.0` |
+| @babel/plugin-transform-typescript | `^7.25.2` | `^7.28.6` |
+| @babel/plugin-transform-unicode-regex | `^7.24.7` | `^7.27.1` |
+| babel-plugin-syntax-hermes-parser | `0.32.0` | `^0.34.0` |
+| react-refresh | `^0.14.0` | `^0.18.0` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native__babel-preset&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [@react-native/babel-preset](https://www.npmjs.com/package/@react-native/babel-preset).

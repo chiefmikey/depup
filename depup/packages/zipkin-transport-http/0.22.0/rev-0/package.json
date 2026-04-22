@@ -1,0 +1,43 @@
+{
+  "name": "@depup/zipkin-transport-http",
+  "version": "0.22.0-depup.0",
+  "description": "Transports Zipkin trace data via HTTP (with updated dependencies)",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha --exit --require ../../test/helper.js",
+    "test-debug": "mocha --inspect-brk --exit --require ../../test/helper.js"
+  },
+  "author": "Openzipkin <openzipkin.alt@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/openzipkin/zipkin-js",
+  "dependencies": {
+    "zipkin": "^0.22.0"
+  },
+  "peerDependencies": {
+    "node-fetch": ">=1.4.0 <3.0.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "fetch-retry": "3.1.0",
+    "noop-logger": "^0.1.1"
+  },
+  "gitHead": "bc590b2957b4c1e0c434de3c6fb7b4feeb406f8b",
+  "keywords": [
+    "zipkin-transport-http",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "zipkin-transport-http",
+    "originalVersion": "0.22.0",
+    "processedAt": "2026-03-19T04:47:36.114Z",
+    "smokeTest": "passed"
+  }
+}

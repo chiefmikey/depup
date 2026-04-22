@@ -1,0 +1,70 @@
+{
+  "name": "@depup/passport-github2",
+  "version": "0.1.12-depup.0",
+  "description": "GitHub authentication strategy for Passport. (with updated dependencies)",
+  "keywords": [
+    "passport-github2",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "passport",
+    "github",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "contributors": [
+    {
+      "name": "Fred Chien",
+      "email": "cfsghost@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cfsghost/passport-github.git"
+  },
+  "bugs": {
+    "url": "http://github.com/cfsghost/passport-github/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "passport-oauth2": "^1.8.0"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  },
+  "depup": {
+    "changes": {
+      "passport-oauth2": {
+        "from": "1.x.x",
+        "to": "^1.8.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "passport-github2",
+    "originalVersion": "0.1.12",
+    "processedAt": "2026-03-19T03:03:10.299Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@oclif/command": {
+      "from": "^1.5.2",
+      "to": "^1.8.36"
+    },
+    "@oclif/config": {
+      "from": "^1.8.6",
+      "to": "^1.18.17"
+    },
+    "@oclif/plugin-help": {
+      "from": "^2.1.2",
+      "to": "^6.2.38"
+    },
+    "conf": {
+      "from": "^4.1.0",
+      "to": "^15.1.0"
+    },
+    "tslib": {
+      "from": "^1.9.3",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-03-19T04:44:08.854Z",
+  "totalUpdated": 5
+}

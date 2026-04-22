@@ -1,0 +1,48 @@
+{
+  "name": "@depup/debug-logger",
+  "version": "0.4.1-depup.0",
+  "description": "A wrapper for visionmedia/debug logger, adding levels and colored output (with updated dependencies)",
+  "main": "debug-logger.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:appscot/debug-logger.git"
+  },
+  "keywords": [
+    "debug-logger",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "debug",
+    "logger",
+    "levels",
+    "colors",
+    "console",
+    "log",
+    "info",
+    "warn",
+    "error"
+  ],
+  "author": {
+    "name": "Dario Marcelino",
+    "email": "dario@appscot.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.4.3"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^2.1.0",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "debug-logger",
+    "originalVersion": "0.4.1",
+    "processedAt": "2026-03-19T04:45:23.484Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,38 @@
+# @depup/astro
+
+> [astro](https://www.npmjs.com/package/astro) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/astro
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 6.0.6 | **DepUp version**: 6.0.6-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @astrojs/compiler | `^3.0.0` | `^3.0.1` |
+| @clack/prompts | `^1.0.1` | `^1.1.0` |
+| devalue | `^5.6.3` | `^5.6.4` |
+| esbuild | `^0.27.3` | `^0.27.4` |
+| shiki | `^4.0.0` | `^4.0.2` |
+| svgo | `^4.0.0` | `^4.0.1` |
+| tinyclip | `^0.1.6` | `^0.1.12` |
+| tinyexec | `^1.0.2` | `^1.0.4` |
+| vite | `^7.3.1` | `^8.0.0` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/astro&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [astro](https://www.npmjs.com/package/astro).

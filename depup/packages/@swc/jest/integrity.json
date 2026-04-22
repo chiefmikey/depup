@@ -1,0 +1,19 @@
+{
+  "0.2.39": {
+    "0": {
+      "changes": {
+        "@jest/create-cache-key-function": {
+          "from": "^30.0.0",
+          "to": "^30.3.0"
+        },
+        "jsonc-parser": {
+          "from": "^3.2.0",
+          "to": "^3.3.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:33:42.062Z",
+      "version": "0.2.39-depup.0"
+    }
+  }
+}

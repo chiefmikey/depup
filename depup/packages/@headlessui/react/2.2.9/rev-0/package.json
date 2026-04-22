@@ -1,0 +1,100 @@
+{
+  "name": "@depup/@headlessui/react",
+  "version": "2.2.9-depup.0",
+  "description": "[DepUp] A set of completely unstyled, fully accessible UI components for React, designed to integrate beautifully with Tailwind CSS.",
+  "main": "dist/index.cjs",
+  "typings": "dist/index.d.ts",
+  "module": "dist/headlessui.esm.js",
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    "types": {
+      "import": "./dist/index.d.ts",
+      "require": "./dist/index.d.cts"
+    },
+    "import": "./dist/headlessui.esm.js",
+    "require": "./dist/index.cjs"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailwindlabs/headlessui.git",
+    "directory": "packages/@headlessui-react"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "../../scripts/build.sh --external:react --external:react-dom --external:use-sync-external-store",
+    "watch": "../../scripts/watch.sh --external:react --external:react-dom --external:use-sync-external-store",
+    "test": "../../scripts/test.sh",
+    "lint": "../../scripts/lint.sh",
+    "lint-types": "npm run attw -P --workspaces --if-present",
+    "playground": "npm run dev --workspace=playground-react",
+    "clean": "rimraf ./dist"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19 || ^19.0.0-rc",
+    "react-dom": "^18 || ^19 || ^19.0.0-rc"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^15.0.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/use-sync-external-store": "^1.5.0",
+    "jsdom-testing-mocks": "^1.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "snapshot-diff": "^0.10.0"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.19",
+    "@react-aria/focus": "^3.21.5",
+    "@react-aria/interactions": "^3.27.1",
+    "@tanstack/react-virtual": "^3.13.21",
+    "use-sync-external-store": "^1.6.0"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@headlessui/react"
+  ],
+  "depup": {
+    "changes": {
+      "@floating-ui/react": {
+        "from": "^0.26.16",
+        "to": "^0.27.19"
+      },
+      "@react-aria/focus": {
+        "from": "^3.20.2",
+        "to": "^3.21.5"
+      },
+      "@react-aria/interactions": {
+        "from": "^3.25.0",
+        "to": "^3.27.1"
+      },
+      "@tanstack/react-virtual": {
+        "from": "^3.13.9",
+        "to": "^3.13.21"
+      },
+      "use-sync-external-store": {
+        "from": "^1.5.0",
+        "to": "^1.6.0"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "@headlessui/react",
+    "originalVersion": "2.2.9",
+    "processedAt": "2026-03-09T04:40:58.899Z",
+    "smokeTest": "failed"
+  }
+}

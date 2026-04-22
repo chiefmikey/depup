@@ -1,0 +1,51 @@
+{
+  "name": "@depup/loader-utils",
+  "version": "3.3.1-depup.0",
+  "author": "Tobias Koppers @sokra",
+  "description": "[DepUp] utils for webpack loaders",
+  "dependencies": {},
+  "scripts": {
+    "lint": "prettier --list-different . && eslint .",
+    "pretest": "yarn lint",
+    "test": "jest",
+    "test:only": "jest --coverage",
+    "test:ci": "yarn test:only",
+    "release": "yarn test && standard-version"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webpack/loader-utils.git"
+  },
+  "engines": {
+    "node": ">= 12.13.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.1",
+    "eslint": "^8.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "standard-version": "^9.3.2"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "loader-utils"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "loader-utils",
+    "originalVersion": "3.3.1",
+    "processedAt": "2026-03-17T16:37:28.538Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "@depup/basic-auth",
+  "description": "[DepUp] node.js basic auth parser",
+  "version": "2.0.1-depup.0",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "basic-auth",
+    "basic",
+    "auth",
+    "authorization",
+    "basicauth"
+  ],
+  "repository": "jshttp/basic-auth",
+  "dependencies": {
+    "safe-buffer": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "5.6.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-markdown": "1.0.0-beta.6",
+    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "istanbul": "0.4.5",
+    "mocha": "5.2.0"
+  },
+  "files": [
+    "HISTORY.md",
+    "LICENSE",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "scripts": {
+    "lint": "eslint --plugin markdown --ext js,md .",
+    "test": "mocha --check-leaks --reporter spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  },
+  "depup": {
+    "changes": {
+      "safe-buffer": {
+        "from": "5.1.2",
+        "to": "^5.2.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "basic-auth",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-17T16:35:10.437Z",
+    "smokeTest": "passed"
+  }
+}

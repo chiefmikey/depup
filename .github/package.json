@@ -1,0 +1,20 @@
+{
+  "name": "depup",
+  "version": "0.0.0",
+  "description": "DepUp",
+  "scripts": {
+    "fix": "eslint --fix '**/*'"
+  },
+  "devDependencies": {
+    "mikey-pro": "^6.6.6"
+  },
+  "author": "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)",
+  "funding": "https://github.com/sponsors/chiefmikey",
+  "prettier": "@mikey-pro/prettier-config",
+  "eslintConfig": {
+    "extends": "@mikey-pro/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@mikey-pro/stylelint-config"
+  }
+}

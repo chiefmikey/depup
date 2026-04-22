@@ -1,0 +1,85 @@
+{
+  "name": "@depup/pg-types",
+  "version": "4.1.0-depup.0",
+  "description": "[DepUp] Query result type converters for node-postgres",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc --reporter=html npm test && open-cli coverage/index.html",
+    "coverage-ci": "nyc --reporter=lcov npm test && codecov",
+    "generate": "docker compose --project-directory generator run --rm generator",
+    "lint": "standard",
+    "test": "npm run test-js && npm run test-ts && npm run lint",
+    "test-js": "tape test/*.js | tap-spec",
+    "test-ts": "tsd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianc/node-pg-types.git"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "pg-types",
+    "postgres",
+    "PostgreSQL",
+    "pg"
+  ],
+  "author": "Brian M. Carlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianc/node-pg-types/issues"
+  },
+  "homepage": "https://github.com/brianc/node-pg-types",
+  "devDependencies": {
+    "@types/node": "^14.14.33",
+    "codecov": "^3.8.1",
+    "nyc": "^15.1.0",
+    "open-cli": "^6.0.1",
+    "pg": "^8.11.3",
+    "standard": "^16.0.3",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.2.2",
+    "tsd": "^0.14.0"
+  },
+  "dependencies": {
+    "pg-int8": "1.0.1",
+    "pg-numeric": "1.0.2",
+    "postgres-array": "^3.0.4",
+    "postgres-bytea": "~3.0.0",
+    "postgres-date": "~2.1.0",
+    "postgres-interval": "^4.0.2",
+    "postgres-range": "^1.1.4"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "depup": {
+    "changes": {
+      "postgres-array": {
+        "from": "~3.0.1",
+        "to": "^3.0.4"
+      },
+      "postgres-interval": {
+        "from": "^3.0.0",
+        "to": "^4.0.2"
+      },
+      "postgres-range": {
+        "from": "^1.1.1",
+        "to": "^1.1.4"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "pg-types",
+    "originalVersion": "4.1.0",
+    "processedAt": "2026-03-17T16:37:24.126Z",
+    "smokeTest": "passed"
+  }
+}

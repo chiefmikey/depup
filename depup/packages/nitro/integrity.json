@@ -1,0 +1,19 @@
+{
+  "3.0.260311-beta": {
+    "0": {
+      "changes": {
+        "hookable": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "srvx": {
+          "from": "^0.11.9",
+          "to": "^0.11.12"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T18:44:00.569Z",
+      "version": "3.0.260311-beta-depup.0"
+    }
+  }
+}

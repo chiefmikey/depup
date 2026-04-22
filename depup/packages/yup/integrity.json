@@ -1,0 +1,26 @@
+{
+  "1.7.1": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T08:18:51.946Z",
+      "version": "1.7.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "property-expr": {
+          "from": "^2.0.5",
+          "to": "^2.0.6"
+        },
+        "type-fest": {
+          "from": "^2.19.0",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T08:20:52.262Z",
+      "version": "1.7.1-depup.1"
+    }
+  }
+}

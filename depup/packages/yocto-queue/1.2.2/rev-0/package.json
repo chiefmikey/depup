@@ -1,0 +1,62 @@
+{
+  "name": "@depup/yocto-queue",
+  "version": "1.2.2-depup.0",
+  "description": "[DepUp] Tiny queue data structure",
+  "license": "MIT",
+  "repository": "sindresorhus/yocto-queue",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=12.20"
+  },
+  "scripts": {
+    "//test": "xo && ava && tsd",
+    "test": "ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "yocto-queue",
+    "queue",
+    "data",
+    "structure",
+    "algorithm",
+    "queues",
+    "queuing",
+    "list",
+    "array",
+    "linkedlist",
+    "fifo",
+    "enqueue",
+    "dequeue",
+    "data-structure"
+  ],
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "tsd": "^0.17.0",
+    "xo": "^0.44.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "yocto-queue",
+    "originalVersion": "1.2.2",
+    "processedAt": "2026-03-17T16:40:05.481Z",
+    "smokeTest": "passed"
+  }
+}

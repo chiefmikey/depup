@@ -1,0 +1,55 @@
+{
+  "name": "@depup/rosie",
+  "version": "2.1.1-depup.0",
+  "description": "factory for building JavaScript objects, mostly useful for setting up test data. Inspired by factory_girl (with updated dependencies)",
+  "keywords": [
+    "rosie",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "factory",
+    "test"
+  ],
+  "author": "Brandon Keepers <brandon@opensoul.org>",
+  "contributors": [
+    "Brian Donovan"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.0",
+    "prettier-check": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rosiejs/rosie.git"
+  },
+  "main": "src/rosie.js",
+  "scripts": {
+    "pretest": "eslint src && prettier-check src/rosie.js src/__tests__/rosie.test.js README.md",
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "files": [
+    "src/rosie.js",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "rosie",
+    "originalVersion": "2.1.1",
+    "processedAt": "2026-03-19T04:47:15.657Z",
+    "smokeTest": "passed"
+  }
+}

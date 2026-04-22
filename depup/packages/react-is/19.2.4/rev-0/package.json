@@ -1,0 +1,39 @@
+{
+  "name": "@depup/react-is",
+  "version": "19.2.4-depup.0",
+  "description": "[DepUp] Brand checking of React Elements.",
+  "main": "index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/react.git",
+    "directory": "packages/react-is"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "react-is",
+    "react"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facebook/react/issues"
+  },
+  "homepage": "https://react.dev/",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "cjs/",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-is",
+    "originalVersion": "19.2.4",
+    "processedAt": "2026-03-17T16:38:28.916Z",
+    "smokeTest": "passed"
+  }
+}

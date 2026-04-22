@@ -1,0 +1,35 @@
+# @depup/got
+
+> [got](https://www.npmjs.com/package/got) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/got
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 14.6.6 | **DepUp version**: 14.6.6-depup.1 | **Updated**: 3/19/2026 | **Import test**: passed
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @sindresorhus/is | `^7.0.1` | `^7.2.0` |
+| cacheable-request | `^13.0.12` | `^13.0.18` |
+| form-data-encoder | `^4.0.2` | `^4.1.0` |
+| keyv | `^5.5.3` | `^5.6.0` |
+| lowercase-keys | `^3.0.0` | `^4.0.1` |
+| type-fest | `^4.26.1` | `^5.5.0` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/got&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [got](https://www.npmjs.com/package/got).

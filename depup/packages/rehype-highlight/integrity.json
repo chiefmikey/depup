@@ -1,0 +1,31 @@
+{
+  "7.0.2": {
+    "0": {
+      "changes": {
+        "@types/hast": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "hast-util-to-text": {
+          "from": "^4.0.0",
+          "to": "^4.0.2"
+        },
+        "lowlight": {
+          "from": "^3.0.0",
+          "to": "^3.3.0"
+        },
+        "unist-util-visit": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "vfile": {
+          "from": "^6.0.0",
+          "to": "^6.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-18T00:38:49.462Z",
+      "version": "7.0.2-depup.0"
+    }
+  }
+}

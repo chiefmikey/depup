@@ -1,0 +1,19 @@
+{
+  "9.5.0": {
+    "0": {
+      "changes": {
+        "fast-querystring": {
+          "from": "^1.0.0",
+          "to": "^1.1.2"
+        },
+        "safe-regex2": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:36:40.323Z",
+      "version": "9.5.0-depup.0"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# @depup/exceljs
+
+> [exceljs](https://www.npmjs.com/package/exceljs) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/exceljs
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 4.4.0 | **DepUp version**: 4.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| archiver | `^5.0.0` | `^7.0.1` |
+| dayjs | `^1.8.34` | `^1.11.20` |
+| fast-csv | `^4.3.1` | `^5.0.5` |
+| readable-stream | `^3.6.0` | `^4.7.0` |
+| saxes | `^5.0.1` | `^6.0.0` |
+| tmp | `^0.2.0` | `^0.2.5` |
+| unzipper | `^0.10.11` | `^0.12.3` |
+| uuid | `^8.3.0` | `^13.0.0` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/exceljs&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [exceljs](https://www.npmjs.com/package/exceljs).

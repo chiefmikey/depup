@@ -1,0 +1,37 @@
+{
+  "21.2.1": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T20:08:02.806Z",
+      "version": "21.2.1-depup.0"
+    }
+  },
+  "21.2.2": {
+    "19": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-14T20:27:05.866Z",
+      "version": "21.2.2-depup.19"
+    }
+  },
+  "21.2.3": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:41:35.334Z",
+      "version": "21.2.3-depup.0"
+    }
+  }
+}

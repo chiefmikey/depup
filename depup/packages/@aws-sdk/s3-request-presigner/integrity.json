@@ -1,0 +1,59 @@
+{
+  "3.1010.0": {
+    "0": {
+      "changes": {
+        "@smithy/middleware-endpoint": {
+          "from": "^4.4.25",
+          "to": "^4.4.26"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:47.309Z",
+      "version": "3.1010.0-depup.0"
+    }
+  },
+  "3.1011.0": {
+    "0": {
+      "changes": {
+        "@smithy/middleware-endpoint": {
+          "from": "^4.4.25",
+          "to": "^4.4.26"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T20:18:40.124Z",
+      "version": "3.1011.0-depup.0"
+    }
+  },
+  "3.1012.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T20:16:26.481Z",
+      "version": "3.1012.0-depup.0"
+    }
+  }
+}

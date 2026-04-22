@@ -1,0 +1,111 @@
+{
+  "name": "@depup/fastify-multipart",
+  "version": "5.3.1-depup.0",
+  "description": "Multipart plugin for Fastify (with updated dependencies)",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "dependencies": {
+    "@fastify/busboy": "^3.2.0",
+    "deepmerge": "^4.3.1",
+    "end-of-stream": "^1.4.5",
+    "fastify-error": "^1.2.0",
+    "fastify-plugin": "^5.1.0",
+    "hexoid": "^2.0.0",
+    "secure-json-parse": "^4.1.0",
+    "stream-wormhole": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.1",
+    "@typescript-eslint/parser": "^4.33.0",
+    "climem": "^1.0.3",
+    "eslint": "^7.7.0",
+    "eslint-config-standard": "^16.0.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "fastify": "^3.24.1",
+    "form-data": "^4.0.0",
+    "h2url": "^0.2.0",
+    "noop-stream": "^0.1.0",
+    "pre-commit": "^1.2.2",
+    "pump": "^3.0.0",
+    "readable-stream": "^3.6.0",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.1",
+    "tap": "^15.0.1",
+    "tsd": "^0.19.0",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "coverage": "tap \"test/**/*.test.js\" --coverage-report=html",
+    "climem": "climem 8999 localhost",
+    "lint": "standard | snazzy",
+    "start": "CLIMEM=8999 node -r climem ./examples/example",
+    "test": "npm run lint && npm run unit && npm run typescript",
+    "typescript": "tsd",
+    "unit": "tap \"test/**/*.test.js\" -t 90"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastify/fastify-multipart.git"
+  },
+  "keywords": [
+    "fastify-multipart",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "fastify",
+    "multipart",
+    "form"
+  ],
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "tsd": {
+    "directory": "test"
+  },
+  "depup": {
+    "changes": {
+      "@fastify/busboy": {
+        "from": "^1.0.0",
+        "to": "^3.2.0"
+      },
+      "deepmerge": {
+        "from": "^4.2.2",
+        "to": "^4.3.1"
+      },
+      "end-of-stream": {
+        "from": "^1.4.4",
+        "to": "^1.4.5"
+      },
+      "fastify-error": {
+        "from": "^0.3.0",
+        "to": "^1.2.0"
+      },
+      "fastify-plugin": {
+        "from": "^3.0.0",
+        "to": "^5.1.0"
+      },
+      "hexoid": {
+        "from": "^1.0.0",
+        "to": "^2.0.0"
+      },
+      "secure-json-parse": {
+        "from": "^2.4.0",
+        "to": "^4.1.0"
+      },
+      "stream-wormhole": {
+        "from": "^1.1.0",
+        "to": "^2.0.1"
+      }
+    },
+    "depsUpdated": 8,
+    "originalPackage": "fastify-multipart",
+    "originalVersion": "5.3.1",
+    "processedAt": "2026-03-19T03:10:46.067Z",
+    "smokeTest": "passed"
+  }
+}

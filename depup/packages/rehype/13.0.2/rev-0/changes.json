@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@types/hast": {
+      "from": "^3.0.0",
+      "to": "^3.0.4"
+    },
+    "rehype-parse": {
+      "from": "^9.0.0",
+      "to": "^9.0.1"
+    },
+    "rehype-stringify": {
+      "from": "^10.0.0",
+      "to": "^10.0.1"
+    },
+    "unified": {
+      "from": "^11.0.0",
+      "to": "^11.0.5"
+    }
+  },
+  "timestamp": "2026-03-09T05:02:37.686Z",
+  "totalUpdated": 4
+}

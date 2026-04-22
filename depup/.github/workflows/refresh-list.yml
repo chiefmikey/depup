@@ -1,0 +1,52 @@
+name: Refresh Curated Package List
+
+on:
+  schedule:
+    # Weekly on Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
+
+      - name: Refresh Curated Package List
+        run: node scripts/refresh-curated-list.mjs
+
+      - name: Commit and Push
+        run: |
+          git add config/curated-packages.json
+          if git diff --cached --quiet; then
+            echo "No changes to package list"
+            exit 0
+          fi
+          git commit -m "chore: refresh curated package list from npm popularity data"
+          git push origin main

@@ -1,0 +1,78 @@
+{
+  "9.35.0": {
+    "0": {
+      "version": "9.35.0-depup.0",
+      "timestamp": "2026-01-10T16:45:34.056Z",
+      "status": "created"
+    }
+  },
+  "10.0.3": {
+    "36": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.8.0",
+          "to": "^4.9.1"
+        },
+        "@eslint/config-helpers": {
+          "from": "^0.5.2",
+          "to": "^0.5.3"
+        },
+        "@humanfs/node": {
+          "from": "^0.16.6",
+          "to": "^0.16.7"
+        },
+        "@humanwhocodes/retry": {
+          "from": "^0.4.2",
+          "to": "^0.4.3"
+        },
+        "@types/estree": {
+          "from": "^1.0.6",
+          "to": "^1.0.8"
+        },
+        "ajv": {
+          "from": "^6.14.0",
+          "to": "^8.18.0"
+        },
+        "debug": {
+          "from": "^4.3.2",
+          "to": "^4.4.3"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "espree": {
+          "from": "^11.1.1",
+          "to": "^11.2.0"
+        },
+        "esutils": {
+          "from": "^2.0.2",
+          "to": "^2.0.3"
+        },
+        "file-entry-cache": {
+          "from": "^8.0.0",
+          "to": "^11.1.2"
+        },
+        "find-up": {
+          "from": "^5.0.0",
+          "to": "^8.0.0"
+        },
+        "ignore": {
+          "from": "^5.2.0",
+          "to": "^7.0.5"
+        },
+        "is-glob": {
+          "from": "^4.0.0",
+          "to": "^4.0.3"
+        },
+        "optionator": {
+          "from": "^0.9.3",
+          "to": "^0.9.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-14T20:34:04.504Z",
+      "version": "10.0.3-depup.36"
+    }
+  }
+}

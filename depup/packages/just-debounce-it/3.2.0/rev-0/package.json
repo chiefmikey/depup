@@ -1,0 +1,46 @@
+{
+  "name": "@depup/just-debounce-it",
+  "version": "3.2.0-depup.0",
+  "description": "return a debounced function (with updated dependencies)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.cjs",
+      "import": "./index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "repository": "https://github.com/angus-c/just",
+  "keywords": [
+    "just-debounce-it",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "function",
+    "debounce",
+    "no-dependencies",
+    "just"
+  ],
+  "author": "Eric Nolte and Angus Croll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angus-c/just/issues"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "just-debounce-it",
+    "originalVersion": "3.2.0",
+    "processedAt": "2026-03-18T15:45:41.705Z",
+    "smokeTest": "passed"
+  }
+}

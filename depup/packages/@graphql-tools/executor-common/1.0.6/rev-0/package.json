@@ -1,0 +1,71 @@
+{
+  "name": "@depup/graphql-tools__executor-common",
+  "version": "1.0.6-depup.0",
+  "type": "module",
+  "description": "[DepUp] A set of utils for faster development of GraphQL tools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphql-hive/gateway.git",
+    "directory": "packages/executors/graphql-ws"
+  },
+  "author": "Arda TANRIKULU <ardatanrikulu@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "pkgroll --clean-dist",
+    "prepack": "yarn build"
+  },
+  "peerDependencies": {
+    "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "@envelop/core": "^5.5.1",
+    "@graphql-tools/utils": "^11.0.0"
+  },
+  "devDependencies": {
+    "graphql": "^16.12.0",
+    "pkgroll": "2.21.5"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "@graphql-tools/executor-common"
+  ],
+  "depup": {
+    "changes": {
+      "@envelop/core": {
+        "from": "^5.4.0",
+        "to": "^5.5.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@graphql-tools/executor-common",
+    "originalVersion": "1.0.6",
+    "processedAt": "2026-03-17T16:31:52.557Z",
+    "smokeTest": "passed"
+  }
+}

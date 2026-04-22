@@ -1,0 +1,95 @@
+name: "Sync All Packages"
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+  workflow_dispatch: {}
+
+concurrency:
+  group: depup-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Sync Packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # Skip if the push was from an automated workflow (De Pup or github-actions)
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.head_commit.author.name != 'De Pup' &&
+       github.event.head_commit.author.name != 'github-actions[bot]')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
+
+      - name: Sync All Packages
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm run cron:sync
+
+      - name: Commit Changes
+        run: |
+          # Exclude temporary files, only add package directories
+          git add packages/ 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync packages"
+            for attempt in 1 2 3; do
+              git fetch origin main
+              # Clean unstaged changes before rebase (case-different files from packages)
+              git checkout -- . 2>/dev/null || true
+              if ! git rebase origin/main; then
+                echo "Rebase failed on attempt $attempt, aborting..."
+                git rebase --abort 2>/dev/null || true
+                sleep 2
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Rebase failed after 3 attempts"
+                  exit 1
+                fi
+              elif git push origin main; then
+                echo "Push successful on attempt $attempt"
+                break
+              else
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Push failed after 3 attempts"
+                  exit 1
+                fi
+                echo "Push failed on attempt $attempt, retrying..."
+                sleep 2
+              fi
+            done
+          fi

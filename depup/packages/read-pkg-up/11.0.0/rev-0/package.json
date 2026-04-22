@@ -1,0 +1,96 @@
+{
+  "name": "@depup/read-pkg-up",
+  "version": "11.0.0-depup.0",
+  "description": "[DepUp] Read the closest package.json file",
+  "license": "MIT",
+  "repository": "sindresorhus/read-pkg-up",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "read-pkg-up",
+    "json",
+    "read",
+    "parse",
+    "file",
+    "fs",
+    "graceful",
+    "load",
+    "package",
+    "find",
+    "up",
+    "find-up",
+    "findup",
+    "look-up",
+    "look",
+    "search",
+    "match",
+    "resolve",
+    "parent",
+    "parents",
+    "folder",
+    "directory",
+    "walk",
+    "walking",
+    "path"
+  ],
+  "dependencies": {
+    "find-up-simple": "^1.0.1",
+    "read-pkg": "^10.1.0",
+    "type-fest": "^5.4.4"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "tsd": "^0.29.0",
+    "xo": "^0.56.0"
+  },
+  "xo": {
+    "rules": {
+      "@typescript-eslint/no-redundant-type-constituents": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "find-up-simple": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      },
+      "read-pkg": {
+        "from": "^9.0.0",
+        "to": "^10.1.0"
+      },
+      "type-fest": {
+        "from": "^4.6.0",
+        "to": "^5.4.4"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "read-pkg-up",
+    "originalVersion": "11.0.0",
+    "processedAt": "2026-03-17T20:16:27.576Z",
+    "smokeTest": "passed"
+  }
+}

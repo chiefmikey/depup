@@ -1,0 +1,30 @@
+{
+  "24.38.0": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T08:18:51.916Z",
+      "version": "24.38.0-depup.0"
+    }
+  },
+  "24.39.1": {
+    "8": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "14.0.0",
+          "to": "^15.0.0"
+        },
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1581282",
+          "to": "^0.0.1596832"
+        }
+      },
+      "status": "skipped",
+      "timestamp": "2026-03-15T00:40:17.911Z",
+      "version": "24.39.1-depup.8"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@depup/slugify",
+  "version": "1.6.6-depup.0",
+  "description": "[DepUp] Slugifies a String",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "slugify",
+    "slug",
+    "url",
+    "urlify"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/simov/slugify",
+  "author": "Simeon Velichkov <simeonvelichkov@gmail.com> (https://simov.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simov/slugify.git"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "github-changes": "^2.0.3",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0"
+  },
+  "main": "./slugify.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "slugify.d.ts",
+    "slugify.js"
+  ],
+  "types": "slugify.d.ts",
+  "scripts": {
+    "build": "node bin/build",
+    "build:changelog": "github-changes --owner simov --repository slugify --only-pulls --use-commit-body --date-format '(YYYY-MM-DD)' --file CHANGELOG.md --verbose",
+    "test:ci": "npx mocha --recursive",
+    "test:cov": "npx nyc --reporter=lcov --reporter=text-summary mocha -- --recursive",
+    "test": "npm run build && npm run test:ci"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "slugify",
+    "originalVersion": "1.6.6",
+    "processedAt": "2026-03-09T04:47:04.184Z",
+    "smokeTest": "passed"
+  }
+}

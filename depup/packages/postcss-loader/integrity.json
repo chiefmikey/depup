@@ -1,0 +1,23 @@
+{
+  "8.2.1": {
+    "0": {
+      "changes": {
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "jiti": {
+          "from": "^2.5.1",
+          "to": "^2.6.1"
+        },
+        "semver": {
+          "from": "^7.6.2",
+          "to": "^7.7.4"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:37:36.525Z",
+      "version": "8.2.1-depup.0"
+    }
+  }
+}

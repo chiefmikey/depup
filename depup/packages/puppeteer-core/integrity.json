@@ -1,0 +1,19 @@
+{
+  "24.39.1": {
+    "0": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "14.0.0",
+          "to": "^15.0.0"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1581282",
+          "to": "^0.0.1596832"
+        }
+      },
+      "status": "failed",
+      "timestamp": "2026-03-17T19:31:30.959Z",
+      "version": "24.39.1-depup.0"
+    }
+  }
+}

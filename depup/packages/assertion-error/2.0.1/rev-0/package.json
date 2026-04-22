@@ -1,0 +1,45 @@
+{
+  "name": "@depup/assertion-error",
+  "version": "2.0.1-depup.0",
+  "description": "[DepUp] Error constructor for test and validation frameworks that implements standardized AssertionError specification.",
+  "author": "Jake Luer <jake@qualiancy.com> (http://qualiancy.com)",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "assertion-error",
+    "test",
+    "assertion"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chaijs/assertion-error.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "module": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "deno bundle mod.ts > index.js",
+    "pretest": "rm -rf coverage/",
+    "test": "deno test --coverage=coverage",
+    "posttest": "deno coverage coverage --lcov > coverage/lcov.info && lcov --summary coverage/lcov.info"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "assertion-error",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-03-17T16:35:07.717Z",
+    "smokeTest": "passed"
+  }
+}

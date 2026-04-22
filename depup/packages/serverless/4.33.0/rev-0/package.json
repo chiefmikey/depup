@@ -1,0 +1,54 @@
+{
+  "name": "@depup/serverless",
+  "version": "4.33.0-depup.0",
+  "description": "[DepUp] Dependency-bumped version of serverless",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prettier": "prettier -c . --ignore-path ../../.prettierignore",
+    "prettier:fix": "prettier -w . --ignore-path ../../.prettierignore"
+  },
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "serverless"
+  ],
+  "author": "Serverless Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serverless/serverless.git"
+  },
+  "bin": {
+    "serverless": "run.js",
+    "sls": "run.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "axios-proxy-builder": "^0.1.2",
+    "rimraf": "^6.1.3",
+    "xml2js": "0.6.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "depup": {
+    "changes": {
+      "axios": {
+        "from": "^1.13.5",
+        "to": "^1.13.6"
+      },
+      "rimraf": {
+        "from": "^5.0.10",
+        "to": "^6.1.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "serverless",
+    "originalVersion": "4.33.0",
+    "processedAt": "2026-03-17T18:44:30.856Z",
+    "smokeTest": "failed"
+  }
+}

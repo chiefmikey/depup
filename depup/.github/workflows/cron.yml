@@ -1,0 +1,341 @@
+name: "Automated Discovery & Sync"
+
+on:
+  schedule:
+    # Run every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+    inputs:
+      discover_only:
+        description: 'Only run discovery (skip sync)'
+        required: false
+        type: boolean
+        default: false
+      sync_only:
+        description: 'Only run sync (skip discovery)'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: depup-cron
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Discover (shard ${{ matrix.shard }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    if: ${{ !inputs.sync_only }}
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
+
+      - name: Discover Packages
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '5'
+        run: |
+          echo "Starting package discovery (shard ${{ matrix.shard }}/5)..."
+          npm run cron:discover
+
+      - name: Commit and Push Changes
+        run: |
+          git add packages/
+          # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
+          if [ "${{ matrix.shard }}" = "0" ]; then
+            git add scripts/cron-discover.mjs
+          fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            # Clean any unstaged changes before rebase (e.g., case-different
+            # README files from original packages that git sees as modified)
+            git checkout -- . 2>/dev/null || true
+            if ! git rebase origin/main; then
+              # Check for content conflicts (another shard pushed same package data)
+              conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+              if [ -n "$conflicted" ]; then
+                echo "Rebase conflict on attempt $attempt, auto-resolving by keeping upstream..."
+                echo "$conflicted" | while IFS= read -r file; do
+                  git checkout --ours -- "$file" 2>/dev/null || true
+                done
+                git add packages/
+                if [ "${{ matrix.shard }}" = "0" ]; then
+                  git add scripts/cron-discover.mjs
+                fi
+                GIT_EDITOR=true git rebase --continue 2>/dev/null || {
+                  # Check if commit became empty after conflict resolution
+                  if git diff --cached --quiet 2>/dev/null; then
+                    echo "Commit became empty after conflict resolution, skipping..."
+                    git rebase --skip 2>/dev/null || {
+                      git rebase --abort 2>/dev/null || true
+                    }
+                  else
+                    git rebase --abort 2>/dev/null || true
+                  fi
+                  sleep $((attempt * 2))
+                  if [ "$attempt" -eq 5 ]; then
+                    echo "Rebase failed after 5 attempts"
+                    exit 1
+                  fi
+                  continue
+                }
+              else
+                echo "Rebase failed on attempt $attempt, aborting and retrying..."
+                git rebase --abort 2>/dev/null || true
+                sleep $((attempt * 2))
+                if [ "$attempt" -eq 5 ]; then
+                  echo "Rebase failed after 5 attempts"
+                  exit 1
+                fi
+                continue
+              fi
+            fi
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            else
+              if [ "$attempt" -eq 5 ]; then
+                echo "Push failed after 5 attempts"
+                exit 1
+              fi
+              echo "Push failed on attempt $attempt, retrying..."
+              sleep $((attempt * 2))
+            fi
+          done
+
+      - name: Shard Summary
+        if: always()
+        run: |
+          echo "## Discovery Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+
+  sync:
+    name: Sync (shard ${{ matrix.shard }})
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: ${{ !cancelled() && !inputs.discover_only && (needs.discover.result == 'success' || needs.discover.result == 'skipped') }}
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+
+    steps:
+      - name: Checkout (latest main, including discover pushes)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
+
+      - name: Sync Packages
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '5'
+        run: |
+          echo "Starting package sync (shard ${{ matrix.shard }}/5)..."
+          npm run cron:sync
+
+      - name: Commit and Push Changes
+        run: |
+          git add packages/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            # Clean any unstaged changes before rebase (e.g., case-different
+            # README files from original packages that git sees as modified)
+            git checkout -- . 2>/dev/null || true
+            if ! git rebase origin/main; then
+              # Check for content conflicts (another shard pushed same package data)
+              conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+              if [ -n "$conflicted" ]; then
+                echo "Rebase conflict on attempt $attempt, auto-resolving by keeping upstream..."
+                echo "$conflicted" | while IFS= read -r file; do
+                  git checkout --ours -- "$file" 2>/dev/null || true
+                done
+                git add packages/
+                GIT_EDITOR=true git rebase --continue 2>/dev/null || {
+                  # Check if commit became empty after conflict resolution
+                  if git diff --cached --quiet 2>/dev/null; then
+                    echo "Commit became empty after conflict resolution, skipping..."
+                    git rebase --skip 2>/dev/null || {
+                      git rebase --abort 2>/dev/null || true
+                    }
+                  else
+                    git rebase --abort 2>/dev/null || true
+                  fi
+                  sleep $((attempt * 2))
+                  if [ "$attempt" -eq 5 ]; then
+                    echo "Rebase failed after 5 attempts"
+                    exit 1
+                  fi
+                  continue
+                }
+              else
+                echo "Rebase failed on attempt $attempt, aborting and retrying..."
+                git rebase --abort 2>/dev/null || true
+                sleep $((attempt * 2))
+                if [ "$attempt" -eq 5 ]; then
+                  echo "Rebase failed after 5 attempts"
+                  exit 1
+                fi
+                continue
+              fi
+            fi
+            if git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            else
+              if [ "$attempt" -eq 5 ]; then
+                echo "Push failed after 5 attempts"
+                exit 1
+              fi
+              echo "Push failed on attempt $attempt, retrying..."
+              sleep $((attempt * 2))
+            fi
+          done
+
+      - name: Shard Summary
+        if: always()
+        run: |
+          echo "## Sync Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+
+  heal:
+    name: Self-Healing
+    needs: sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: ${{ !cancelled() && !inputs.discover_only }}
+
+    steps:
+      - name: Checkout (latest main after all syncs)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Import GPG Key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "De Pup"
+          git config --global user.email "devdepup@gmail.com"
+          git config --global commit.gpgsign true
+          git config --global gpg.program gpg
+          git config --global user.signingkey 5A5141965C39129D
+
+      - name: Run Self-Healing
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "Running self-healing checks..."
+          npm run heal:auto
+
+      - name: Commit and Push
+        run: |
+          git add packages/
+          if git diff --cached --quiet; then
+            echo "No heal changes needed"
+            exit 0
+          fi
+          git commit -m "chore: self-healing repairs"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            # Clean unstaged changes before rebase (case-different files from packages)
+            git checkout -- . 2>/dev/null || true
+            if ! git rebase origin/main; then
+              git rebase --abort 2>/dev/null || true
+              sleep 2
+              if [ "$attempt" -eq 3 ]; then
+                echo "Rebase failed after 3 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            else
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts"
+                exit 1
+              fi
+              sleep 2
+            fi
+          done

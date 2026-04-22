@@ -1,0 +1,54 @@
+{
+  "name": "@depup/faye-websocket",
+  "description": "[DepUp] Standards-compliant WebSocket server and client",
+  "homepage": "https://github.com/faye/faye-websocket-node",
+  "author": "James Coglan <jcoglan@gmail.com> (http://jcoglan.com/)",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "faye-websocket",
+    "websocket",
+    "eventsource"
+  ],
+  "license": "Apache-2.0",
+  "version": "0.11.4-depup.0",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./lib/faye/websocket",
+  "dependencies": {
+    "websocket-driver": "^0.7.4"
+  },
+  "devDependencies": {
+    "jstest": "*",
+    "pace": "*",
+    "permessage-deflate": "*"
+  },
+  "scripts": {
+    "test": "jstest spec/runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/faye/faye-websocket-node.git"
+  },
+  "bugs": "https://github.com/faye/faye-websocket-node/issues",
+  "depup": {
+    "changes": {
+      "websocket-driver": {
+        "from": ">=0.5.1",
+        "to": "^0.7.4"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "faye-websocket",
+    "originalVersion": "0.11.4",
+    "processedAt": "2026-03-17T16:36:28.821Z",
+    "smokeTest": "passed"
+  }
+}

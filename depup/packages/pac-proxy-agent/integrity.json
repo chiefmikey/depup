@@ -1,0 +1,34 @@
+{
+  "8.0.0": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "quickjs-wasi": {
+          "from": "^0.0.1",
+          "to": "^1.3.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:38:04.219Z",
+      "version": "8.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "quickjs-wasi": {
+          "from": "^0.0.1",
+          "to": "^2.0.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T20:25:35.218Z",
+      "version": "8.0.0-depup.1"
+    }
+  }
+}

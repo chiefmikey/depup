@@ -1,0 +1,143 @@
+{
+  "3.1004.0": {
+    "0": {
+      "status": "created",
+      "timestamp": "2026-03-09T20:08:02.809Z",
+      "version": "3.1004.0-depup.0"
+    }
+  },
+  "3.1005.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-09T20:26:29.967Z",
+      "version": "3.1005.0-depup.0"
+    }
+  },
+  "3.1006.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-10T20:14:17.853Z",
+      "version": "3.1006.0-depup.0"
+    }
+  },
+  "3.1007.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-11T20:12:47.509Z",
+      "version": "3.1007.0-depup.0"
+    }
+  },
+  "3.1008.0": {
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.9",
+          "to": "^3.23.11"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.3",
+          "to": "^4.12.5"
+        },
+        "@smithy/types": {
+          "from": "^4.13.0",
+          "to": "^4.13.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-13T04:38:36.227Z",
+      "version": "3.1008.0-depup.1"
+    }
+  },
+  "3.1009.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-13T20:12:29.116Z",
+      "version": "3.1009.0-depup.0"
+    }
+  },
+  "3.1010.0": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.11",
+          "to": "^3.23.12"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-16T19:27:06.025Z",
+      "version": "3.1010.0-depup.0"
+    }
+  },
+  "3.1011.0": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.11",
+          "to": "^3.23.12"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.5",
+          "to": "^4.12.6"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T20:24:57.400Z",
+      "version": "3.1011.0-depup.0"
+    }
+  },
+  "3.1012.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T20:19:22.752Z",
+      "version": "3.1012.0-depup.0"
+    }
+  }
+}

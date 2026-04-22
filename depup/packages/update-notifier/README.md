@@ -1,0 +1,35 @@
+# @depup/update-notifier
+
+> [update-notifier](https://www.npmjs.com/package/update-notifier) with all dependencies updated to latest versions.
+
+Drop-in replacement. Same API. Fresher dependencies.
+
+```bash
+npm install @depup/update-notifier
+```
+
+## Why?
+
+Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
+
+**Original version**: 7.3.1 | **DepUp version**: 7.3.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+
+## What changed
+
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| chalk | `^5.3.0` | `^5.6.2` |
+| configstore | `^7.0.0` | `^8.0.0` |
+| is-in-ci | `^1.0.0` | `^2.0.0` |
+| is-npm | `^6.0.0` | `^6.1.0` |
+| pupa | `^3.1.0` | `^3.3.0` |
+| semver | `^7.6.3` | `^7.7.4` |
+
+
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/update-notifier&labels=bug).
+
+## About DepUp
+
+[DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
+
+This package inherits the license from [update-notifier](https://www.npmjs.com/package/update-notifier).

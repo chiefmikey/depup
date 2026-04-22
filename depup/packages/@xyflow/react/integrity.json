@@ -1,0 +1,19 @@
+{
+  "12.10.1": {
+    "0": {
+      "changes": {
+        "classcat": {
+          "from": "^5.0.3",
+          "to": "^5.0.5"
+        },
+        "zustand": {
+          "from": "^4.4.0",
+          "to": "^5.0.12"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:34:58.373Z",
+      "version": "12.10.1-depup.0"
+    }
+  }
+}

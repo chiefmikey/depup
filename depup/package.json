@@ -1,0 +1,49 @@
+{
+  "name": "depup-npm",
+  "version": "0.0.0",
+  "description": "npm packages with updated dependencies",
+  "type": "module",
+  "scripts": {
+    "depup": "node scripts/depup.mjs",
+    "depup:publish": "node scripts/depup.mjs --bump-deps --test --publish",
+    "cron:discover": "node scripts/cron-discover.mjs",
+    "cron:sync": "node scripts/cron-sync.mjs",
+    "heal": "node scripts/heal.mjs",
+    "refresh-list": "node scripts/refresh-curated-list.mjs",
+    "lint": "eslint scripts/**/*.mjs",
+    "lint:fix": "eslint scripts/**/*.mjs --fix",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit --testTimeout=120000",
+    "test:unit": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/unit.test.js --forceExit",
+    "test:integration": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/integration.test.js --forceExit --testTimeout=120000",
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000"
+  },
+  "dependencies": {
+    "chalk": "5.6.2",
+    "commander": "11.1.0",
+    "inquirer": "9.3.8",
+    "npm-registry-fetch": "19.1.1",
+    "ora": "8.2.0",
+    "pacote": "21.0.1",
+    "semver": "7.7.4"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "mikey-pro": "10.1.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "homepage": "https://github.com/depup/npm",
+  "repository": "https://github.com/depup/npm",
+  "bugs": "https://github.com/depup/npm/issues",
+  "license": "MIT",
+  "keywords": [
+    "depup",
+    "npm",
+    "dependencies",
+    "security",
+    "automation"
+  ],
+  "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
+  "prettier": "mikey-pro/prettier"
+}

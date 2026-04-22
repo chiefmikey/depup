@@ -1,0 +1,68 @@
+{
+  "name": "@depup/referrer-policy",
+  "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
+  "description": "Middleware to set the Referrer-Policy HTTP header (with updated dependencies)",
+  "version": "1.2.0-depup.0",
+  "license": "MIT",
+  "keywords": [
+    "referrer-policy",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "helmet",
+    "express",
+    "connect",
+    "referer",
+    "referrer",
+    "privacy"
+  ],
+  "homepage": "https://helmetjs.github.io/docs/referrer-policy/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/helmetjs/referrer-policy.git"
+  },
+  "bugs": "https://github.com/helmetjs/referrer-policy/issues",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "dist/index.js",
+    "dist/index.d.ts",
+    "changes.json"
+  ],
+  "scripts": {
+    "pretest": "npm run lint",
+    "lint": "eslint --fix '**/*.ts'",
+    "test": "jest --config test/jest-config.json",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
+  },
+  "devDependencies": {
+    "@types/connect": "^3.4.32",
+    "@types/jest": "^24.0.11",
+    "@types/supertest": "^2.0.7",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "connect": "^3.6.6",
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1",
+    "supertest": "^3.4.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "referrer-policy",
+    "originalVersion": "1.2.0",
+    "processedAt": "2026-03-19T03:02:55.034Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "3.996.8": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:36.534Z",
+      "version": "3.996.8-depup.0"
+    }
+  },
+  "3.996.9": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T20:16:10.694Z",
+      "version": "3.996.9-depup.0"
+    }
+  }
+}

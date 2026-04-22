@@ -1,0 +1,38 @@
+{
+  "1.0.0-rc.9": {
+    "0": {
+      "changes": {
+        "@oxc-project/types": {
+          "from": "=0.115.0",
+          "to": "^0.120.0"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:38:29.086Z",
+      "version": "1.0.0-rc.9-depup.0"
+    }
+  },
+  "1.0.0-rc.10": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T16:29:22.283Z",
+      "version": "1.0.0-rc.10-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@oxc-project/types": {
+          "from": "=0.120.0",
+          "to": "^0.121.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T08:21:36.468Z",
+      "version": "1.0.0-rc.10-depup.1"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "1.1.1": {
+    "0": {
+      "changes": {
+        "@radix-ui/react-compose-refs": {
+          "from": "^1.1.1",
+          "to": "^1.1.2"
+        },
+        "@radix-ui/react-dialog": {
+          "from": "^1.1.6",
+          "to": "^1.1.15"
+        },
+        "@radix-ui/react-id": {
+          "from": "^1.1.0",
+          "to": "^1.1.1"
+        },
+        "@radix-ui/react-primitive": {
+          "from": "^2.0.2",
+          "to": "^2.1.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-18T22:03:01.639Z",
+      "version": "1.1.1-depup.0"
+    }
+  }
+}

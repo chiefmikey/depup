@@ -1,0 +1,53 @@
+{
+  "name": "@depup/type-graphql-utils",
+  "version": "2.1.0-depup.0",
+  "description": "utilities to transform type-graphql types (with updated dependencies)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:ChrisLahaye/type-graphql-utils"
+  },
+  "keywords": [
+    "type-graphql-utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "type-graphql"
+  ],
+  "author": "Chris Lahaye <mail@chrislahaye.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChrisLahaye/type-graphql-utils/issues"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "install-peers-cli": "^2.2.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "graphql": "^15",
+    "type-graphql": "^1"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "type-graphql-utils",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-03-19T03:04:42.344Z",
+    "smokeTest": "failed"
+  }
+}

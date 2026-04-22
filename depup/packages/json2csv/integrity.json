@@ -1,0 +1,19 @@
+{
+  "6.0.0-alpha.2": {
+    "0": {
+      "changes": {
+        "@streamparser/json": {
+          "from": "^0.0.6",
+          "to": "^0.0.22"
+        },
+        "commander": {
+          "from": "^6.2.0",
+          "to": "^14.0.3"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T19:32:55.036Z",
+      "version": "6.0.0-alpha.2-depup.0"
+    }
+  }
+}

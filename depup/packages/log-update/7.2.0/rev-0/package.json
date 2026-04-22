@@ -1,0 +1,85 @@
+{
+  "name": "@depup/log-update",
+  "version": "7.2.0-depup.0",
+  "description": "Log by overwriting the previous output in the terminal. Useful for rendering progress bars, animations, etc. (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/log-update",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && node --test && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "log-update",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "log",
+    "logger",
+    "logging",
+    "cli",
+    "terminal",
+    "term",
+    "console",
+    "shell",
+    "update",
+    "refresh",
+    "overwrite",
+    "output",
+    "stdout",
+    "progress",
+    "bar",
+    "animation"
+  ],
+  "dependencies": {
+    "ansi-escapes": "^7.3.0",
+    "cli-cursor": "^5.0.0",
+    "slice-ansi": "^8.0.0",
+    "strip-ansi": "^7.2.0",
+    "wrap-ansi": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "string-width": "^8.2.0",
+    "terminal.js": "^1.0.11",
+    "tsd": "^0.33.0",
+    "wcwidth": "^1.0.1",
+    "xo": "^1.2.3"
+  },
+  "xo": {
+    "rules": {
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "import-x/no-extraneous-dependencies": "off",
+      "n/no-extraneous-import": "off"
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "log-update",
+    "originalVersion": "7.2.0",
+    "processedAt": "2026-03-18T00:37:23.963Z",
+    "smokeTest": "passed"
+  }
+}

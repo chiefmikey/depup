@@ -1,0 +1,30 @@
+{
+  "21.2.4": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "status": "published",
+      "timestamp": "2026-03-17T16:30:54.934Z",
+      "version": "21.2.4-depup.0"
+    }
+  },
+  "21.2.5": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-03-19T00:36:19.239Z",
+      "version": "21.2.5-depup.0"
+    }
+  }
+}

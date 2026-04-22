@@ -1,0 +1,21 @@
+{
+  "8.5.1": {
+    "0": {
+      "changes": {
+        "@types/jsonwebtoken": {
+          "from": "^9",
+          "to": "^9.0.10"
+        },
+        "jsonwebtoken": {
+          "from": "^9.0.0",
+          "to": "^9.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-03-19T03:02:19.481Z",
+      "version": "8.5.1-depup.0"
+    }
+  }
+}

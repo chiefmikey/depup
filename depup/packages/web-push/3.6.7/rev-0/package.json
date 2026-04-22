@@ -1,0 +1,90 @@
+{
+  "name": "@depup/web-push",
+  "version": "3.6.7-depup.0",
+  "description": "Web Push library for Node.js (with updated dependencies)",
+  "main": "src/index.js",
+  "bin": {
+    "web-push": "src/cli.js"
+  },
+  "scripts": {
+    "download-browser": "node --harmony ./test/helpers/download-test-browsers.js",
+    "lint": "node ./node_modules/eslint/bin/eslint --ignore-path .gitignore '.'",
+    "pretest": "npm run lint && npm run download-browser",
+    "test": "nyc --reporter=lcov --reporter=text mocha -- --ui tdd test/test*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-push-libs/web-push.git"
+  },
+  "keywords": [
+    "web-push",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "web push",
+    "push",
+    "notifications",
+    "push notifications"
+  ],
+  "author": "Marco Castelluccio",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/web-push-libs/web-push/issues"
+  },
+  "homepage": "https://github.com/web-push-libs/web-push#readme",
+  "dependencies": {
+    "asn1.js": "^5.4.1",
+    "http_ece": "^1.2.1",
+    "https-proxy-agent": "^8.0.0",
+    "jws": "^4.0.1",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "chromedriver": "120.0.1",
+    "del": "6.0.0",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "2.29.1",
+    "geckodriver": "4.3.0",
+    "nyc": "15.1.0",
+    "mkdirp": "3.0.1",
+    "mocha": "10.2.0",
+    "portfinder": "1.0.32",
+    "selenium-assistant": "5.4.0",
+    "sinon": "17.0.1"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "depup": {
+    "changes": {
+      "asn1.js": {
+        "from": "^5.3.0",
+        "to": "^5.4.1"
+      },
+      "http_ece": {
+        "from": "1.2.0",
+        "to": "^1.2.1"
+      },
+      "https-proxy-agent": {
+        "from": "^7.0.0",
+        "to": "^8.0.0"
+      },
+      "jws": {
+        "from": "^4.0.0",
+        "to": "^4.0.1"
+      },
+      "minimist": {
+        "from": "^1.2.5",
+        "to": "^1.2.8"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "web-push",
+    "originalVersion": "3.6.7",
+    "processedAt": "2026-03-19T03:32:28.298Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@depup/tunnel",
+  "version": "0.0.6-depup.0",
+  "description": "[DepUp] Node HTTP/HTTPS Agents for tunneling proxies",
+  "keywords": [
+    "depup",
+    "dependency-bumped",
+    "updated-deps",
+    "tunnel",
+    "http",
+    "https",
+    "agent",
+    "proxy"
+  ],
+  "homepage": "https://github.com/koichik/node-tunnel/",
+  "bugs": "https://github.com/koichik/node-tunnel/issues",
+  "license": "MIT",
+  "author": "Koichi Kobayashi <koichik@improvement.jp>",
+  "main": "./index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koichik/node-tunnel.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
+  },
+  "engines": {
+    "node": ">=0.6.11 <=0.7.0 || >=0.7.3"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "tunnel",
+    "originalVersion": "0.0.6",
+    "processedAt": "2026-03-17T16:39:02.696Z",
+    "smokeTest": "passed"
+  }
+}
