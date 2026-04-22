@@ -12,15 +12,15 @@ npm install @depup/zod-prisma-types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.11 | **DepUp version**: 3.3.11-depup.3 | **Updated**: 4/7/2026 | **Import test**: failed
+**Original version**: 3.3.11 | **DepUp version**: 3.3.11-depup.4 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @prisma/client-runtime-utils | `^7.3.0` | `^7.7.0` |
-| @prisma/dmmf | `^7.3.0` | `^7.7.0` |
-| @prisma/generator-helper | `^7.3.0` | `^7.7.0` |
+| @prisma/client-runtime-utils | `^7.3.0` | `^7.8.0` |
+| @prisma/dmmf | `^7.3.0` | `^7.8.0` |
+| @prisma/generator-helper | `^7.3.0` | `^7.8.0` |
 | lodash | `^4.17.23` | `^4.18.1` |
 
 
