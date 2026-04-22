@@ -12,7 +12,7 @@ npm install @depup/shadcn__ui
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.0.4 | **DepUp version**: 0.0.4-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 0.0.4 | **DepUp version**: 0.0.4-depup.1 | **Updated**: 4/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | execa | `^7.0.0` | `^9.6.1` |
 | fs-extra | `^11.1.0` | `^11.3.4` |
 | node-fetch | `^3.3.0` | `^3.3.2` |
-| ora | `^6.1.2` | `^9.3.0` |
+| ora | `^6.1.2` | `^9.4.0` |
 | zod | `^3.20.2` | `^4.3.6` |
 
 
