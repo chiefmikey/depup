@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@inquirer/confirm": {
+      "from": "^6.0.11",
+      "to": "^6.0.12"
+    },
+    "@mswjs/interceptors": {
+      "from": "^0.41.3",
+      "to": "^0.41.5"
+    },
+    "path-to-regexp": {
+      "from": "^6.3.0",
+      "to": "^8.4.2"
+    },
+    "rettime": {
+      "from": "^0.11.7",
+      "to": "^0.11.8"
+    },
+    "type-fest": {
+      "from": "^5.5.0",
+      "to": "^5.6.0"
+    },
+    "yargs": {
+      "from": "^17.7.2",
+      "to": "^18.0.0"
+    }
+  },
+  "timestamp": "2026-04-23T05:05:15.239Z",
+  "totalUpdated": 6
+}
