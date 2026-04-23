@@ -1,7 +1,7 @@
 {
   "name": "@depup/gatsby",
   "description": "Blazing fast modern site generator for React (with updated dependencies)",
-  "version": "5.16.1-depup.14",
+  "version": "5.16.1-depup.19",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bin": {
     "gatsby": "./cli.js"
@@ -27,8 +27,8 @@
     "@graphql-codegen/plugin-helpers": "^6.3.0",
     "@graphql-codegen/typescript": "^5.0.10",
     "@graphql-codegen/typescript-operations": "^5.1.0",
-    "@graphql-tools/code-file-loader": "^8.1.31",
-    "@graphql-tools/load": "^8.1.9",
+    "@graphql-tools/code-file-loader": "^8.1.32",
+    "@graphql-tools/load": "^8.1.10",
     "@jridgewell/trace-mapping": "^0.3.31",
     "@nodelib/fs.walk": "^3.0.1",
     "@parcel/cache": "^2.16.4",
@@ -36,15 +36,15 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
     "@sigmacomputing/babel-plugin-lodash": "^3.3.5",
     "@types/http-proxy": "^1.17.17",
-    "@typescript-eslint/eslint-plugin": "^8.58.1",
-    "@typescript-eslint/parser": "^8.58.1",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
     "@vercel/webpack-asset-relocator-loader": "^1.10.0",
     "acorn-loose": "^8.5.2",
     "acorn-walk": "^8.3.5",
     "address": "^2.0.3",
     "anser": "^2.3.5",
-    "autoprefixer": "^10.4.27",
-    "axios": "^1.15.0",
+    "autoprefixer": "^10.5.0",
+    "axios": "^1.15.2",
     "babel-jsx-utils": "^1.1.0",
     "babel-loader": "^10.1.1",
     "babel-plugin-add-module-exports": "^1.0.4",
@@ -71,15 +71,15 @@
     "deepmerge": "^4.3.1",
     "detect-port": "^2.1.0",
     "dotenv": "^17.4.2",
-    "enhanced-resolve": "^5.20.1",
+    "enhanced-resolve": "^5.21.0",
     "error-stack-parser": "^2.1.4",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-webpack-plugin": "^6.0.0",
     "event-source-polyfill": "1.0.31",
     "execa": "^9.6.1",
@@ -106,7 +106,7 @@
     "gatsby-worker": "^2.16.0",
     "glob": "^13.0.6",
     "globby": "^16.2.0",
-    "got": "^15.0.1",
+    "got": "^15.0.3",
     "graphql": "^16.13.2",
     "graphql-compose": "^9.1.0",
     "graphql-http": "^1.22.4",
@@ -119,7 +119,7 @@
     "json-loader": "^0.5.7",
     "latest-version": "^9.0.0",
     "linkfs": "^2.1.0",
-    "lmdb": "^3.5.3",
+    "lmdb": "^3.5.4",
     "lodash": "^4.18.1",
     "meant": "^2.0.1",
     "memoizee": "^0.4.17",
@@ -139,7 +139,7 @@
     "path-to-regexp": "^8.4.2",
     "physical-cpu-count": "^2.0.0",
     "platform": "^1.3.6",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^8.2.1",
     "prompts": "^2.4.2",
@@ -168,8 +168,8 @@
     "true-case-path": "^2.2.1",
     "type-of": "^2.0.1",
     "url-loader": "^4.1.1",
-    "uuid": "^13.0.0",
-    "webpack": "^5.106.1",
+    "uuid": "^14.0.0",
+    "webpack": "^5.106.2",
     "webpack-dev-middleware": "^8.0.3",
     "webpack-merge": "^6.0.1",
     "webpack-stats-plugin": "^1.1.3",
@@ -350,11 +350,11 @@
       },
       "@graphql-tools/code-file-loader": {
         "from": "^7.3.23",
-        "to": "^8.1.31"
+        "to": "^8.1.32"
       },
       "@graphql-tools/load": {
         "from": "^7.8.14",
-        "to": "^8.1.9"
+        "to": "^8.1.10"
       },
       "@jridgewell/trace-mapping": {
         "from": "^0.3.18",
@@ -382,11 +382,11 @@
       },
       "@typescript-eslint/eslint-plugin": {
         "from": "^5.60.1",
-        "to": "^8.58.1"
+        "to": "^8.59.0"
       },
       "@typescript-eslint/parser": {
         "from": "^5.60.1",
-        "to": "^8.58.1"
+        "to": "^8.59.0"
       },
       "@vercel/webpack-asset-relocator-loader": {
         "from": "1.7.3",
@@ -410,11 +410,11 @@
       },
       "autoprefixer": {
         "from": "^10.4.14",
-        "to": "^10.4.27"
+        "to": "^10.5.0"
       },
       "axios": {
         "from": "^1.6.4",
-        "to": "^1.15.0"
+        "to": "^1.15.2"
       },
       "babel-loader": {
         "from": "^8.3.0",
@@ -482,11 +482,11 @@
       },
       "enhanced-resolve": {
         "from": "^5.15.0",
-        "to": "^5.20.1"
+        "to": "^5.21.0"
       },
       "eslint": {
         "from": "^7.32.0",
-        "to": "^10.2.0"
+        "to": "^10.2.1"
       },
       "eslint-config-react-app": {
         "from": "^6.0.0",
@@ -510,7 +510,7 @@
       },
       "eslint-plugin-react-hooks": {
         "from": "^4.6.0",
-        "to": "^7.0.1"
+        "to": "^7.1.1"
       },
       "eslint-webpack-plugin": {
         "from": "^2.7.0",
@@ -550,7 +550,7 @@
       },
       "got": {
         "from": "^11.8.6",
-        "to": "^15.0.1"
+        "to": "^15.0.3"
       },
       "graphql": {
         "from": "^16.7.1",
@@ -582,7 +582,7 @@
       },
       "lmdb": {
         "from": "2.5.3",
-        "to": "^3.5.3"
+        "to": "^3.5.4"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -638,7 +638,7 @@
       },
       "postcss": {
         "from": "^8.4.24",
-        "to": "^8.5.9"
+        "to": "^8.5.10"
       },
       "postcss-loader": {
         "from": "^5.3.0",
@@ -714,11 +714,11 @@
       },
       "uuid": {
         "from": "^8.3.2",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
       },
       "webpack": {
         "from": "~5.98.0",
-        "to": "^5.106.1"
+        "to": "^5.106.2"
       },
       "webpack-dev-middleware": {
         "from": "^5.3.4",
@@ -740,7 +740,7 @@
     "depsUpdated": 112,
     "originalPackage": "gatsby",
     "originalVersion": "5.16.1",
-    "processedAt": "2026-04-13T12:36:15.310Z",
+    "processedAt": "2026-04-23T20:31:04.820Z",
     "smokeTest": "failed"
   }
 }

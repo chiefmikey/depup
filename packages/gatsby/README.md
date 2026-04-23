@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.18 | **Updated**: 4/20/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.19 | **Updated**: 4/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,8 +33,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^6.3.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^5.0.10` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^5.1.0` |
-| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.31` |
-| @graphql-tools/load | `^7.8.14` | `^8.1.9` |
+| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
+| @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
 | @nodelib/fs.walk | `^1.2.8` | `^3.0.1` |
 | @parcel/cache | `2.8.3` | `^2.16.4` |
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | address | `1.2.2` | `^2.0.3` |
 | anser | `^2.1.1` | `^2.3.5` |
 | autoprefixer | `^10.4.14` | `^10.5.0` |
-| axios | `^1.6.4` | `^1.15.1` |
+| axios | `^1.6.4` | `^1.15.2` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | browserslist | `^4.21.9` | `^4.28.2` |
@@ -66,7 +66,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
-| enhanced-resolve | `^5.15.0` | `^5.20.1` |
+| enhanced-resolve | `^5.15.0` | `^5.21.0` |
 | eslint | `^7.32.0` | `^10.2.1` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
@@ -83,7 +83,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `^11.2.0` | `^11.3.4` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
-| got | `^11.8.6` | `^15.0.2` |
+| got | `^11.8.6` | `^15.0.3` |
 | graphql | `^16.7.1` | `^16.13.2` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
