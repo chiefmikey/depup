@@ -57,6 +57,35 @@
       "status": "failed",
       "timestamp": "2026-04-13T12:30:20.501Z",
       "version": "5.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/helper-plugin-utils": {
+          "from": "^7.20.2",
+          "to": "^7.28.6"
+        },
+        "@babel/template": {
+          "from": "^7.20.7",
+          "to": "^7.28.6"
+        },
+        "@graphql-tools/documents": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-23T12:30:19.970Z",
+      "version": "5.3.0-depup.1"
     }
   }
 }
