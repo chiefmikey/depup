@@ -1,0 +1,97 @@
+{
+  "name": "@depup/angular__forms",
+  "version": "21.2.10-depup.0",
+  "description": "Angular - directives and services for creating forms (with updated dependencies)",
+  "author": "angular",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1",
+    "@standard-schema/spec": "^1.1.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "21.2.10",
+    "@angular/common": "21.2.10",
+    "@angular/platform-browser": "21.2.10",
+    "rxjs": "^6.5.3 || ^7.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular.git",
+    "directory": "packages/forms"
+  },
+  "angular": {
+    "examples": {
+      "format": "sqlite",
+      "path": "./resources/code-examples.db"
+    }
+  },
+  "ng-update": {
+    "packageGroup": [
+      "@angular/core",
+      "@angular/bazel",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/compiler-cli",
+      "@angular/animations",
+      "@angular/elements",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/forms",
+      "@angular/platform-server",
+      "@angular/upgrade",
+      "@angular/router",
+      "@angular/language-service",
+      "@angular/localize",
+      "@angular/service-worker"
+    ]
+  },
+  "sideEffects": false,
+  "module": "./fesm2022/forms.mjs",
+  "typings": "./types/forms.d.ts",
+  "type": "module",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/forms.d.ts",
+      "default": "./fesm2022/forms.mjs"
+    },
+    "./signals": {
+      "types": "./types/signals.d.ts",
+      "default": "./fesm2022/signals.mjs"
+    },
+    "./signals/compat": {
+      "types": "./types/signals-compat.d.ts",
+      "default": "./fesm2022/signals-compat.mjs"
+    }
+  },
+  "keywords": [
+    "@angular/forms",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.3.0",
+        "to": "^2.8.1"
+      },
+      "@standard-schema/spec": {
+        "from": "^1.0.0",
+        "to": "^1.1.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@angular/forms",
+    "originalVersion": "21.2.10",
+    "processedAt": "2026-04-23T00:45:58.262Z",
+    "smokeTest": "failed"
+  }
+}
