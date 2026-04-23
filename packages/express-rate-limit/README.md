@@ -12,7 +12,7 @@ npm install @depup/express-rate-limit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.3.2 | **DepUp version**: 8.3.2-depup.0 | **Updated**: 3/30/2026 | **Import test**: passed
+**Original version**: 8.4.0 | **DepUp version**: 8.4.0-depup.0 | **Updated**: 4/23/2026 | **Import test**: passed
 
 ## What changed
 
