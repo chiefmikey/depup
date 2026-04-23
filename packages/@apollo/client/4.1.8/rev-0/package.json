@@ -1,0 +1,386 @@
+{
+  "name": "@depup/apollo__client",
+  "version": "4.1.8-depup.0",
+  "description": "A fully-featured caching GraphQL client. (with updated dependencies)",
+  "keywords": [
+    "@apollo/client",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "apollo",
+    "graphql",
+    "react",
+    "hooks",
+    "client",
+    "cache",
+    "tanstack-intent"
+  ],
+  "author": "packages@apollographql.com",
+  "license": "MIT",
+  "type": "module",
+  "main": "./__cjs/core/index.cjs",
+  "module": "./core/index.js",
+  "types": "./core/index.d.ts",
+  "sideEffects": false,
+  "react-native": {
+    "react-dom/server": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollographql/apollo-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apollographql/apollo-client/issues"
+  },
+  "homepage": "https://www.apollographql.com/docs/react/",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*.js": "./legacyEntryPoints/*.js",
+    "./*.cjs": "./legacyEntryPoints/*.cjs",
+    "./*.d.ts": "./legacyEntryPoints/*.d.ts",
+    "./*.d.cts": "./legacyEntryPoints/*.d.cts",
+    ".": {
+      "module": "./core/index.js",
+      "module-sync": "./core/index.js",
+      "require": "./__cjs/core/index.cjs",
+      "default": "./core/index.js"
+    },
+    "./cache": {
+      "module": "./cache/index.js",
+      "module-sync": "./cache/index.js",
+      "require": "./__cjs/cache/index.cjs",
+      "default": "./cache/index.js"
+    },
+    "./core": {
+      "module": "./core/index.js",
+      "module-sync": "./core/index.js",
+      "require": "./__cjs/core/index.cjs",
+      "default": "./core/index.js"
+    },
+    "./dev": {
+      "module": "./dev/index.js",
+      "module-sync": "./dev/index.js",
+      "require": "./__cjs/dev/index.cjs",
+      "default": "./dev/index.js"
+    },
+    "./errors": {
+      "module": "./errors/index.js",
+      "module-sync": "./errors/index.js",
+      "require": "./__cjs/errors/index.cjs",
+      "default": "./errors/index.js"
+    },
+    "./incremental": {
+      "module": "./incremental/index.js",
+      "module-sync": "./incremental/index.js",
+      "require": "./__cjs/incremental/index.cjs",
+      "default": "./incremental/index.js"
+    },
+    "./link": {
+      "module": "./link/index.js",
+      "module-sync": "./link/index.js",
+      "require": "./__cjs/link/index.cjs",
+      "default": "./link/index.js"
+    },
+    "./link/batch": {
+      "module": "./link/batch/index.js",
+      "module-sync": "./link/batch/index.js",
+      "require": "./__cjs/link/batch/index.cjs",
+      "default": "./link/batch/index.js"
+    },
+    "./link/batch-http": {
+      "module": "./link/batch-http/index.js",
+      "module-sync": "./link/batch-http/index.js",
+      "require": "./__cjs/link/batch-http/index.cjs",
+      "default": "./link/batch-http/index.js"
+    },
+    "./link/client-awareness": {
+      "module": "./link/client-awareness/index.js",
+      "module-sync": "./link/client-awareness/index.js",
+      "require": "./__cjs/link/client-awareness/index.cjs",
+      "default": "./link/client-awareness/index.js"
+    },
+    "./link/context": {
+      "module": "./link/context/index.js",
+      "module-sync": "./link/context/index.js",
+      "require": "./__cjs/link/context/index.cjs",
+      "default": "./link/context/index.js"
+    },
+    "./link/error": {
+      "module": "./link/error/index.js",
+      "module-sync": "./link/error/index.js",
+      "require": "./__cjs/link/error/index.cjs",
+      "default": "./link/error/index.js"
+    },
+    "./link/http": {
+      "module": "./link/http/index.js",
+      "module-sync": "./link/http/index.js",
+      "require": "./__cjs/link/http/index.cjs",
+      "default": "./link/http/index.js"
+    },
+    "./link/persisted-queries": {
+      "module": "./link/persisted-queries/index.js",
+      "module-sync": "./link/persisted-queries/index.js",
+      "require": "./__cjs/link/persisted-queries/index.cjs",
+      "default": "./link/persisted-queries/index.js"
+    },
+    "./link/retry": {
+      "module": "./link/retry/index.js",
+      "module-sync": "./link/retry/index.js",
+      "require": "./__cjs/link/retry/index.cjs",
+      "default": "./link/retry/index.js"
+    },
+    "./link/remove-typename": {
+      "module": "./link/remove-typename/index.js",
+      "module-sync": "./link/remove-typename/index.js",
+      "require": "./__cjs/link/remove-typename/index.cjs",
+      "default": "./link/remove-typename/index.js"
+    },
+    "./link/schema": {
+      "module": "./link/schema/index.js",
+      "module-sync": "./link/schema/index.js",
+      "require": "./__cjs/link/schema/index.cjs",
+      "default": "./link/schema/index.js"
+    },
+    "./link/subscriptions": {
+      "module": "./link/subscriptions/index.js",
+      "module-sync": "./link/subscriptions/index.js",
+      "require": "./__cjs/link/subscriptions/index.cjs",
+      "default": "./link/subscriptions/index.js"
+    },
+    "./link/utils": {
+      "module": "./link/utils/index.js",
+      "module-sync": "./link/utils/index.js",
+      "require": "./__cjs/link/utils/index.cjs",
+      "default": "./link/utils/index.js"
+    },
+    "./link/ws": {
+      "module": "./link/ws/index.js",
+      "module-sync": "./link/ws/index.js",
+      "require": "./__cjs/link/ws/index.cjs",
+      "default": "./link/ws/index.js"
+    },
+    "./local-state": {
+      "module": "./local-state/index.js",
+      "module-sync": "./local-state/index.js",
+      "require": "./__cjs/local-state/index.cjs",
+      "default": "./local-state/index.js"
+    },
+    "./masking": {
+      "module": "./masking/index.js",
+      "module-sync": "./masking/index.js",
+      "require": "./__cjs/masking/index.cjs",
+      "default": "./masking/index.js"
+    },
+    "./react": {
+      "react-server": {
+        "module": "./react/index.react-server.js",
+        "module-sync": "./react/index.react-server.js",
+        "require": "./__cjs/react/index.react-server.cjs",
+        "default": "./react/index.react-server.js"
+      },
+      "default": {
+        "module": "./react/index.js",
+        "module-sync": "./react/index.js",
+        "require": "./__cjs/react/index.cjs",
+        "default": "./react/index.js"
+      }
+    },
+    "./react/internal": {
+      "module": "./react/internal/index.js",
+      "module-sync": "./react/internal/index.js",
+      "require": "./__cjs/react/internal/index.cjs",
+      "default": "./react/internal/index.js"
+    },
+    "./react/internal/compiler-runtime": {
+      "module": "./react/internal/compiler-runtime/index.js",
+      "module-sync": "./react/internal/compiler-runtime/index.js",
+      "require": "./__cjs/react/internal/compiler-runtime/index.cjs",
+      "default": "./react/internal/compiler-runtime/index.js"
+    },
+    "./react/ssr": {
+      "module": "./react/ssr/index.js",
+      "module-sync": "./react/ssr/index.js",
+      "require": "./__cjs/react/ssr/index.cjs",
+      "default": "./react/ssr/index.js"
+    },
+    "./testing": {
+      "module": "./testing/index.js",
+      "module-sync": "./testing/index.js",
+      "require": "./__cjs/testing/index.cjs",
+      "default": "./testing/index.js"
+    },
+    "./testing/react": {
+      "module": "./testing/react/index.js",
+      "module-sync": "./testing/react/index.js",
+      "require": "./__cjs/testing/react/index.cjs",
+      "default": "./testing/react/index.js"
+    },
+    "./utilities": {
+      "module": "./utilities/index.js",
+      "module-sync": "./utilities/index.js",
+      "require": "./__cjs/utilities/index.cjs",
+      "default": "./utilities/index.js"
+    },
+    "./utilities/internal": {
+      "production": {
+        "module": "./utilities/internal/index.production.js",
+        "module-sync": "./utilities/internal/index.production.js",
+        "require": "./__cjs/utilities/internal/index.production.cjs",
+        "default": "./utilities/internal/index.production.js"
+      },
+      "default": {
+        "module": "./utilities/internal/index.js",
+        "module-sync": "./utilities/internal/index.js",
+        "require": "./__cjs/utilities/internal/index.cjs",
+        "default": "./utilities/internal/index.js"
+      }
+    },
+    "./utilities/internal/ponyfills": {
+      "react-native": {
+        "module": "./utilities/internal/ponyfills/index.react-native.js",
+        "module-sync": "./utilities/internal/ponyfills/index.react-native.js",
+        "require": "./__cjs/utilities/internal/ponyfills/index.react-native.cjs",
+        "default": "./utilities/internal/ponyfills/index.react-native.js"
+      },
+      "default": {
+        "module": "./utilities/internal/ponyfills/index.js",
+        "module-sync": "./utilities/internal/ponyfills/index.js",
+        "require": "./__cjs/utilities/internal/ponyfills/index.cjs",
+        "default": "./utilities/internal/ponyfills/index.js"
+      }
+    },
+    "./utilities/internal/globals": {
+      "module": "./utilities/internal/globals/index.js",
+      "module-sync": "./utilities/internal/globals/index.js",
+      "require": "./__cjs/utilities/internal/globals/index.cjs",
+      "default": "./utilities/internal/globals/index.js"
+    },
+    "./utilities/subscriptions/relay": {
+      "module": "./utilities/subscriptions/relay/index.js",
+      "module-sync": "./utilities/subscriptions/relay/index.js",
+      "require": "./__cjs/utilities/subscriptions/relay/index.cjs",
+      "default": "./utilities/subscriptions/relay/index.js"
+    },
+    "./utilities/invariant": {
+      "development": {
+        "module": "./utilities/invariant/index.development.js",
+        "module-sync": "./utilities/invariant/index.development.js",
+        "require": "./__cjs/utilities/invariant/index.development.cjs",
+        "default": "./utilities/invariant/index.development.js"
+      },
+      "default": {
+        "module": "./utilities/invariant/index.js",
+        "module-sync": "./utilities/invariant/index.js",
+        "require": "./__cjs/utilities/invariant/index.cjs",
+        "default": "./utilities/invariant/index.js"
+      }
+    },
+    "./utilities/environment": {
+      "production": {
+        "module": "./utilities/environment/index.production.js",
+        "module-sync": "./utilities/environment/index.production.js",
+        "require": "./__cjs/utilities/environment/index.production.cjs",
+        "default": "./utilities/environment/index.production.js"
+      },
+      "development": {
+        "module": "./utilities/environment/index.development.js",
+        "module-sync": "./utilities/environment/index.development.js",
+        "require": "./__cjs/utilities/environment/index.development.cjs",
+        "default": "./utilities/environment/index.development.js"
+      },
+      "default": {
+        "module": "./utilities/environment/index.js",
+        "module-sync": "./utilities/environment/index.js",
+        "require": "./__cjs/utilities/environment/index.cjs",
+        "default": "./utilities/environment/index.js"
+      }
+    },
+    "./v4-migration": {
+      "module": "./v4-migration.js",
+      "module-sync": "./v4-migration.js",
+      "require": "./__cjs/v4-migration.cjs",
+      "default": "./v4-migration.js"
+    },
+    "./react/compiled": "./react/index.compiled.js"
+  },
+  "peerDependencies": {
+    "graphql": "^16.0.0",
+    "graphql-ws": "^5.5.5 || ^6.0.3",
+    "react": "^17.0.0 || ^18.0.0 || >=19.0.0-rc",
+    "react-dom": "^17.0.0 || ^18.0.0 || >=19.0.0-rc",
+    "rxjs": "^7.3.0",
+    "subscriptions-transport-ws": "^0.9.0 || ^0.11.0"
+  },
+  "peerDependenciesMeta": {
+    "graphql-ws": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "subscriptions-transport-ws": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@wry/caches": "^1.0.1",
+    "@wry/equality": "^0.5.7",
+    "@wry/trie": "^0.5.0",
+    "graphql-tag": "^2.12.6",
+    "optimism": "^0.18.1",
+    "tslib": "^2.8.1"
+  },
+  "files": [
+    "VERSIONING_POLICY.md",
+    "**/*.md",
+    "**/*.cjs",
+    "**/*.cjs.map",
+    "**/*.d.cts",
+    "**/*.js",
+    "**/*.js.map",
+    "**/*.d.ts",
+    "**/*.json",
+    "changes.json",
+    "README.md"
+  ],
+  "workspaces": [
+    "dist",
+    "codegen",
+    "scripts/codemods/ac3-to-ac4"
+  ],
+  "depup": {
+    "changes": {
+      "@graphql-typed-document-node/core": {
+        "from": "^3.1.1",
+        "to": "^3.2.0"
+      },
+      "@wry/caches": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      },
+      "@wry/equality": {
+        "from": "^0.5.6",
+        "to": "^0.5.7"
+      },
+      "optimism": {
+        "from": "^0.18.0",
+        "to": "^0.18.1"
+      },
+      "tslib": {
+        "from": "^2.3.0",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "@apollo/client",
+    "originalVersion": "4.1.8",
+    "processedAt": "2026-04-23T08:42:39.767Z",
+    "smokeTest": "failed"
+  }
+}
