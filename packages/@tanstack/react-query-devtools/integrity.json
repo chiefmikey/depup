@@ -118,5 +118,20 @@
       "timestamp": "2026-04-19T12:17:44.821Z",
       "version": "5.99.2-depup.0"
     }
+  },
+  "5.100.0": {
+    "0": {
+      "changes": {
+        "@tanstack/query-devtools": {
+          "from": "5.100.0",
+          "to": "^5.100.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-23T16:39:24.463Z",
+      "version": "5.100.0-depup.0"
+    }
   }
 }
