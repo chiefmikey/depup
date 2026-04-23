@@ -2,11 +2,11 @@
   "bumped": {
     "@graphql-tools/url-loader": {
       "from": "^9.0.0",
-      "to": "^9.0.6"
+      "to": "^9.1.2"
     },
     "@graphql-tools/utils": {
       "from": "^10.5.6",
-      "to": "^11.0.0"
+      "to": "^11.1.0"
     },
     "@types/js-yaml": {
       "from": "^4.0.0",
@@ -26,7 +26,7 @@
     },
     "dotenv": {
       "from": "^16.0.0",
-      "to": "^17.3.1"
+      "to": "^17.4.2"
     },
     "graphql-request": {
       "from": "^6.0.0",
@@ -34,15 +34,15 @@
     },
     "http-proxy-agent": {
       "from": "^7.0.0",
-      "to": "^8.0.0"
+      "to": "^9.0.0"
     },
     "https-proxy-agent": {
       "from": "^7.0.0",
-      "to": "^8.0.0"
+      "to": "^9.0.0"
     },
     "jose": {
       "from": "^5.0.0",
-      "to": "^6.2.1"
+      "to": "^6.2.2"
     },
     "js-yaml": {
       "from": "^4.0.0",
@@ -50,13 +50,13 @@
     },
     "lodash": {
       "from": "^4.17.20",
-      "to": "^4.17.23"
+      "to": "^4.18.1"
     },
     "tslib": {
       "from": "^2.4.0",
       "to": "^2.8.1"
     }
   },
-  "timestamp": "2026-03-17T16:32:51.859Z",
+  "timestamp": "2026-04-23T12:30:18.619Z",
   "totalUpdated": 14
 }
