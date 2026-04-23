@@ -12,13 +12,13 @@ npm install @depup/graphql-codegen__gql-tag-operations
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.0 | **Updated**: 4/13/2026 | **Import test**: passed
+**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @graphql-tools/utils | `^11.0.0` | `^11.0.1` |
+| @graphql-tools/utils | `^11.0.0` | `^11.1.0` |
 | auto-bind | `~4.0.0` | `^5.0.1` |
 | tslib | `^2.8.0` | `^2.8.1` |
 
