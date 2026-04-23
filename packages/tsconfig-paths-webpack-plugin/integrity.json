@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T16:39:26.524Z",
       "version": "4.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.0",
+          "to": "^5.6.2"
+        },
+        "enhanced-resolve": {
+          "from": "^5.7.0",
+          "to": "^5.21.0"
+        },
+        "tapable": {
+          "from": "^2.2.1",
+          "to": "^2.3.3"
+        },
+        "tsconfig-paths": {
+          "from": "^4.1.2",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-23T20:28:58.544Z",
+      "version": "4.2.0-depup.1"
     }
   }
 }
