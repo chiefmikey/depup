@@ -12,22 +12,22 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.27 | **Updated**: 4/22/2026 | **Import test**: failed
+**Original version**: 2.0.30 | **DepUp version**: 2.0.30-depup.28 | **Updated**: 4/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-ecs | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-iam | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-lambda | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-s3 | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-sqs | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-ssm | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/client-sts | `^3.972.0` | `^3.1035.0` |
-| @aws-sdk/credential-providers | `^3.972.0` | `^3.1035.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-ec2 | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-ecs | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-iam | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-lambda | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-s3 | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-sqs | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-ssm | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/client-sts | `^3.972.0` | `^3.1036.0` |
+| @aws-sdk/credential-providers | `^3.972.0` | `^3.1036.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.10.5` |
