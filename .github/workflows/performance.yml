@@ -111,7 +111,7 @@ jobs:
           path: |
             performance-metrics.json
             memory-metrics.json
-          retention-days: 90
+          retention-days: 7
 
       - name: Performance Summary
         if: always()

@@ -195,7 +195,7 @@ jobs:
         with:
           name: security-reports-${{ steps.sanitize.outputs.safe_name || needs.security-validation.outputs.package_safe }}
           path: security-reports/
-          retention-days: 30
+          retention-days: 7
 
       - name: Security validation summary
         env:
@@ -410,7 +410,7 @@ jobs:
         with:
           name: processing-reports-${{ needs.security-validation.outputs.package_safe }}
           path: security-reports/
-          retention-days: 30
+          retention-days: 7
 
   final-validation:
     name: Final Security Validation
@@ -510,7 +510,7 @@ jobs:
         with:
           name: final-security-report-${{ needs.security-validation.outputs.package_safe }}
           path: final-reports/
-          retention-days: 90
+          retention-days: 7
 
       - name: Final summary
         if: always()
