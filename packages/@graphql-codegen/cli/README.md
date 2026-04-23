@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.0 | **Updated**: 4/18/2026 | **Import test**: passed
+**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,17 +21,17 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/generator | `^7.18.13` | `^7.29.1` |
 | @babel/template | `^7.18.10` | `^7.28.6` |
 | @babel/types | `^7.18.13` | `^7.29.0` |
-| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.29` |
-| @graphql-tools/code-file-loader | `^8.1.28` | `^8.1.31` |
-| @graphql-tools/git-loader | `^8.0.32` | `^8.0.35` |
-| @graphql-tools/github-loader | `^9.0.6` | `^9.1.1` |
-| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.13` |
-| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.27` |
-| @graphql-tools/load | `^8.1.8` | `^8.1.9` |
-| @graphql-tools/merge | `^9.0.6` | `^9.1.8` |
-| @graphql-tools/url-loader | `^9.0.6` | `^9.1.1` |
-| @graphql-tools/utils | `^11.0.0` | `^11.0.1` |
-| @inquirer/prompts | `^7.8.2` | `^8.4.1` |
+| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.30` |
+| @graphql-tools/code-file-loader | `^8.1.28` | `^8.1.32` |
+| @graphql-tools/git-loader | `^8.0.32` | `^8.0.36` |
+| @graphql-tools/github-loader | `^9.0.6` | `^9.1.2` |
+| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.14` |
+| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.28` |
+| @graphql-tools/load | `^8.1.8` | `^8.1.10` |
+| @graphql-tools/merge | `^9.0.6` | `^9.1.9` |
+| @graphql-tools/url-loader | `^9.0.6` | `^9.1.2` |
+| @graphql-tools/utils | `^11.0.0` | `^11.1.0` |
+| @inquirer/prompts | `^7.8.2` | `^8.4.2` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.10.13` |
 | chalk | `^4.1.0` | `^5.6.2` |
 | cosmiconfig | `^9.0.0` | `^9.0.1` |

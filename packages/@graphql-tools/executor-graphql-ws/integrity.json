@@ -31,6 +31,27 @@
       "status": "published",
       "timestamp": "2026-03-21T20:09:23.402Z",
       "version": "3.1.5-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "graphql-ws": {
+          "from": "^6.0.6",
+          "to": "^6.0.8"
+        },
+        "ws": {
+          "from": "^8.18.3",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-23T12:30:18.323Z",
+      "version": "3.1.5-depup.2"
     }
   }
 }
