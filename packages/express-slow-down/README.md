@@ -12,13 +12,13 @@ npm install @depup/express-slow-down
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| express-rate-limit | `8` | `^8.3.1` |
+| express-rate-limit | `8` | `^8.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/express-slow-down&labels=bug).
