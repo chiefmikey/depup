@@ -12,12 +12,13 @@ npm install @depup/angular__cdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.7 | **DepUp version**: 21.2.7-depup.0 | **Updated**: 4/16/2026 | **Import test**: passed
+**Original version**: 21.2.8 | **DepUp version**: 21.2.8-depup.0 | **Updated**: 4/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| parse5 | `^8.0.0` | `^8.0.1` |
 | tslib | `^2.3.0` | `^2.8.1` |
 
 
