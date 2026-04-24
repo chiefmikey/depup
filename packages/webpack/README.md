@@ -12,7 +12,7 @@ npm install @depup/webpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.106.2 | **DepUp version**: 5.106.2-depup.2 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 5.106.2 | **DepUp version**: 5.106.2-depup.3 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
@@ -26,7 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eslint-scope | `5.1.1` | `^9.1.2` |
 | events | `^3.2.0` | `^3.3.0` |
 | tapable | `^2.3.0` | `^2.3.3` |
-| terser-webpack-plugin | `^5.3.17` | `^5.4.0` |
+| terser-webpack-plugin | `^5.3.17` | `^5.5.0` |
 | webpack-sources | `^3.3.4` | `^3.4.0` |
 
 

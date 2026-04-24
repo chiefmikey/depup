@@ -300,6 +300,55 @@
       "status": "failed",
       "timestamp": "2026-04-23T20:34:01.960Z",
       "version": "5.106.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/eslint-scope": {
+          "from": "^3.7.7",
+          "to": "^9.1.0"
+        },
+        "acorn-import-phases": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "enhanced-resolve": {
+          "from": "^5.20.0",
+          "to": "^5.21.0"
+        },
+        "eslint-scope": {
+          "from": "5.1.1",
+          "to": "^9.1.2"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.3"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.3.17",
+          "to": "^5.5.0"
+        },
+        "webpack-sources": {
+          "from": "^3.3.4",
+          "to": "^3.4.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T00:51:21.026Z",
+      "version": "5.106.2-depup.3"
     }
   }
 }
