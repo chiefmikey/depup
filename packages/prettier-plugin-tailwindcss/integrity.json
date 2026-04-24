@@ -50,5 +50,15 @@
       "timestamp": "2026-04-24T16:30:17.877Z",
       "version": "0.0.0-insiders.f7d2598-depup.7"
     }
+  },
+  "0.7.3": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T20:20:36.881Z",
+      "version": "0.7.3-depup.0"
+    }
   }
 }
