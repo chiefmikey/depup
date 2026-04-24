@@ -12,7 +12,7 @@ npm install @depup/loader-runner
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.3.1 | **DepUp version**: 4.3.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.3.2 | **DepUp version**: 4.3.2-depup.0 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
