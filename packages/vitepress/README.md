@@ -12,28 +12,28 @@ npm install @depup/vitepress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.1 | **Updated**: 4/24/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @docsearch/css | `3.8.2` | `^4.6.0` |
-| @docsearch/js | `3.8.2` | `^4.6.0` |
-| @iconify-json/simple-icons | `^1.2.21` | `^1.2.74` |
+| @docsearch/css | `3.8.2` | `^4.6.2` |
+| @docsearch/js | `3.8.2` | `^4.6.2` |
+| @iconify-json/simple-icons | `^1.2.21` | `^1.2.79` |
 | @shikijs/core | `^2.1.0` | `^4.0.2` |
 | @shikijs/transformers | `^2.1.0` | `^4.0.2` |
 | @shikijs/types | `^2.1.0` | `^4.0.2` |
-| @vitejs/plugin-vue | `^5.2.1` | `^6.0.5` |
-| @vue/devtools-api | `^7.7.0` | `^8.1.0` |
-| @vue/shared | `^3.5.13` | `^3.5.30` |
+| @vitejs/plugin-vue | `^5.2.1` | `^6.0.6` |
+| @vue/devtools-api | `^7.7.0` | `^8.1.1` |
+| @vue/shared | `^3.5.13` | `^3.5.33` |
 | @vueuse/core | `^12.4.0` | `^14.2.1` |
 | @vueuse/integrations | `^12.4.0` | `^14.2.1` |
-| focus-trap | `^7.6.4` | `^8.0.0` |
+| focus-trap | `^7.6.4` | `^8.1.0` |
 | minisearch | `^7.1.1` | `^7.2.0` |
 | shiki | `^2.1.0` | `^4.0.2` |
-| vite | `^5.4.14` | `^8.0.0` |
-| vue | `^3.5.13` | `^3.5.30` |
+| vite | `^5.4.14` | `^8.0.10` |
+| vue | `^3.5.13` | `^3.5.33` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitepress&labels=bug).
