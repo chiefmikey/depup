@@ -4,6 +4,23 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.906Z",
       "version": "3.1.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        },
+        "ajv-formats": {
+          "from": "^2.1.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T16:30:04.005Z",
+      "version": "3.1.5-depup.1"
     }
   }
 }

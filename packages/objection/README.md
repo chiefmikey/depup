@@ -12,11 +12,15 @@ npm install @depup/objection
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.5 | **DepUp version**: 3.1.5-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 3.1.5 | **DepUp version**: 3.1.5-depup.1 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| ajv | `^8.17.1` | `^8.20.0` |
+| ajv-formats | `^2.1.1` | `^3.0.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/objection&labels=bug).
 
