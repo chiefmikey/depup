@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.5 | **Updated**: 4/24/2026 | **Import test**: failed
+**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.6 | **Updated**: 4/24/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1036.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1037.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.1` |
+| intl-messageformat | `5.4.3` | `^11.2.2` |
 | jsdom | `28.1.0` | `^29.0.2` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
@@ -99,7 +99,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | multer | `2.0.2` | `^2.1.1` |
 | mysql2 | `3.18.1` | `^3.22.2` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `6.10.1` | `^8.0.5` |
+| nodemailer | `6.10.1` | `^8.0.6` |
 | otplib | `12.0.1` | `^13.4.0` |
 | sanitize-html | `2.17.0` | `^2.17.3` |
 | stripe | `8.222.0` | `^22.1.0` |

@@ -12,13 +12,13 @@ npm install @depup/datadog-metrics
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.12.1 | **DepUp version**: 0.12.1-depup.1 | **Updated**: 4/16/2026 | **Import test**: passed
+**Original version**: 0.12.1 | **DepUp version**: 0.12.1-depup.2 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @datadog/datadog-api-client | `^1.17.0` | `^1.56.0` |
+| @datadog/datadog-api-client | `^1.17.0` | `^1.57.0` |
 | debug | `^4.1.0` | `^4.4.3` |
 
 
