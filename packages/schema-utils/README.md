@@ -12,14 +12,14 @@ npm install @depup/schema-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.3.3 | **DepUp version**: 4.3.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.3.3 | **DepUp version**: 4.3.3-depup.1 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @types/json-schema | `^7.0.9` | `^7.0.15` |
-| ajv | `^8.9.0` | `^8.18.0` |
+| ajv | `^8.9.0` | `^8.20.0` |
 | ajv-formats | `^2.1.1` | `^3.0.1` |
 
 

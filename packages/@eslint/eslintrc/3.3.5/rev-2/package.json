@@ -1,0 +1,123 @@
+{
+  "name": "@depup/eslint__eslintrc",
+  "version": "3.3.5-depup.2",
+  "description": "The legacy ESLintRC config file format for ESLint (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/eslintrc.cjs",
+  "types": "./dist/eslintrc.d.cts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./dist/eslintrc.cjs",
+      "types": "./lib/types/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./universal": {
+      "import": "./lib/index-universal.js",
+      "require": "./dist/eslintrc-universal.cjs"
+    }
+  },
+  "files": [
+    "lib",
+    "conf",
+    "LICENSE",
+    "dist",
+    "universal.js",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
+    "lint": "eslint . --report-unused-disable-directives",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+    "test:types": "tsc -p tests/lib/types/tsconfig.json"
+  },
+  "repository": "eslint/eslintrc",
+  "funding": "https://opencollective.com/eslint",
+  "keywords": [
+    "@eslint/eslintrc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ESLint",
+    "ESLintRC",
+    "Configuration"
+  ],
+  "author": "Nicholas C. Zakas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eslint/eslintrc/issues"
+  },
+  "homepage": "https://github.com/eslint/eslintrc#readme",
+  "devDependencies": {
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
+    "eslint": "^9.20.1",
+    "eslint-config-eslint": "^11.0.0",
+    "fs-teardown": "^0.1.3",
+    "mocha": "^9.0.3",
+    "rollup": "^2.70.1",
+    "shelljs": "^0.8.5",
+    "sinon": "^11.1.2",
+    "temp-dir": "^2.0.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "debug": "^4.4.3",
+    "espree": "^11.2.0",
+    "globals": "^17.5.0",
+    "ignore": "^7.0.5",
+    "import-fresh": "^4.0.0",
+    "js-yaml": "^4.1.1",
+    "minimatch": "^10.2.5",
+    "strip-json-comments": "^5.0.3"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "depup": {
+    "changes": {
+      "ajv": {
+        "from": "^6.14.0",
+        "to": "^8.20.0"
+      },
+      "debug": {
+        "from": "^4.3.2",
+        "to": "^4.4.3"
+      },
+      "espree": {
+        "from": "^10.0.1",
+        "to": "^11.2.0"
+      },
+      "globals": {
+        "from": "^14.0.0",
+        "to": "^17.5.0"
+      },
+      "ignore": {
+        "from": "^5.2.0",
+        "to": "^7.0.5"
+      },
+      "import-fresh": {
+        "from": "^3.2.1",
+        "to": "^4.0.0"
+      },
+      "minimatch": {
+        "from": "^3.1.5",
+        "to": "^10.2.5"
+      },
+      "strip-json-comments": {
+        "from": "^3.1.1",
+        "to": "^5.0.3"
+      }
+    },
+    "depsUpdated": 8,
+    "originalPackage": "@eslint/eslintrc",
+    "originalVersion": "3.3.5",
+    "processedAt": "2026-04-24T16:28:36.751Z",
+    "smokeTest": "failed"
+  }
+}

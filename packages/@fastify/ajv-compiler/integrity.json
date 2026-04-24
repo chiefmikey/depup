@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:32:16.808Z",
       "version": "4.0.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "ajv": {
+          "from": "^8.12.0",
+          "to": "^8.20.0"
+        },
+        "fast-uri": {
+          "from": "^3.0.0",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T16:28:47.650Z",
+      "version": "4.0.5-depup.1"
     }
   }
 }

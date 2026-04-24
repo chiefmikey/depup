@@ -12,13 +12,13 @@ npm install @depup/fastify__ajv-compiler
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.1 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ajv | `^8.12.0` | `^8.18.0` |
+| ajv | `^8.12.0` | `^8.20.0` |
 | fast-uri | `^3.0.0` | `^3.1.0` |
 
 
