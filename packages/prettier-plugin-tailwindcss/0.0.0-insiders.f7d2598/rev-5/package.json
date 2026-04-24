@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@depup/prettier-plugin-tailwindcss",
-  "version": "0.0.0-insiders.f7d2598-depup.0",
+  "version": "0.0.0-insiders.f7d2598-depup.5",
   "description": "A Prettier plugin for sorting Tailwind CSS classes. (with updated dependencies)",
   "license": "MIT",
   "main": "dist/index.mjs",
@@ -182,7 +182,7 @@
     "depsUpdated": 0,
     "originalPackage": "prettier-plugin-tailwindcss",
     "originalVersion": "0.0.0-insiders.f7d2598",
-    "processedAt": "2026-04-23T12:29:06.248Z",
+    "processedAt": "2026-04-24T08:49:06.995Z",
     "smokeTest": "passed"
   }
 }
