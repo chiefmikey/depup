@@ -7,6 +7,19 @@
       "status": "published",
       "timestamp": "2026-03-18T23:31:13.288Z",
       "version": "12.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "focus-trap": {
+          "from": "^8.0.0",
+          "to": "^8.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-24T16:29:47.131Z",
+      "version": "12.0.0-depup.1"
     }
   }
 }
