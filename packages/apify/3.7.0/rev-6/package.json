@@ -1,6 +1,6 @@
 {
   "name": "@depup/apify",
-  "version": "3.7.0-depup.1",
+  "version": "3.7.0-depup.6",
   "description": "The scalable web crawling and scraping library for JavaScript/Node.js. Enables development of data extraction and web automation jobs (not only) with headless Chrome and Puppeteer. (with updated dependencies)",
   "engines": {
     "node": ">=16.0.0"
@@ -81,15 +81,15 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@apify/consts": "^2.51.1",
-    "@apify/input_secrets": "^1.2.26",
-    "@apify/log": "^2.5.33",
-    "@apify/timeout": "^0.3.2",
-    "@apify/utilities": "^2.25.5",
+    "@apify/consts": "^2.52.1",
+    "@apify/input_secrets": "^1.2.32",
+    "@apify/log": "^2.5.35",
+    "@apify/timeout": "^0.3.3",
+    "@apify/utilities": "^2.29.0",
     "@crawlee/core": "^3.16.0",
     "@crawlee/types": "^3.16.0",
     "@crawlee/utils": "^3.16.0",
-    "apify-client": "^2.22.3",
+    "apify-client": "^2.23.0",
     "fs-extra": "^11.3.4",
     "ow": "^3.1.1",
     "semver": "^7.7.4",
@@ -130,23 +130,23 @@
     "changes": {
       "@apify/consts": {
         "from": "^2.51.0",
-        "to": "^2.51.1"
+        "to": "^2.52.1"
       },
       "@apify/input_secrets": {
         "from": "^1.2.0",
-        "to": "^1.2.26"
+        "to": "^1.2.32"
       },
       "@apify/log": {
         "from": "^2.4.3",
-        "to": "^2.5.33"
+        "to": "^2.5.35"
       },
       "@apify/timeout": {
         "from": "^0.3.0",
-        "to": "^0.3.2"
+        "to": "^0.3.3"
       },
       "@apify/utilities": {
         "from": "^2.13.0",
-        "to": "^2.25.5"
+        "to": "^2.29.0"
       },
       "@crawlee/core": {
         "from": "^3.14.1",
@@ -162,7 +162,7 @@
       },
       "apify-client": {
         "from": "^2.17.0",
-        "to": "^2.22.3"
+        "to": "^2.23.0"
       },
       "fs-extra": {
         "from": "^11.2.0",
@@ -188,7 +188,7 @@
     "depsUpdated": 14,
     "originalPackage": "apify",
     "originalVersion": "3.7.0",
-    "processedAt": "2026-03-21T20:10:18.286Z",
+    "processedAt": "2026-04-24T16:29:43.794Z",
     "smokeTest": "passed"
   }
 }
