@@ -33,5 +33,15 @@
       "timestamp": "2026-04-23T05:05:37.905Z",
       "version": "8.4.0-depup.0"
     }
+  },
+  "8.4.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T20:21:01.355Z",
+      "version": "8.4.1-depup.0"
+    }
   }
 }
