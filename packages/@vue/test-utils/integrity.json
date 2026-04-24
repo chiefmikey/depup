@@ -17,5 +17,24 @@
       "timestamp": "2026-03-22T00:39:22.415Z",
       "version": "2.4.6-depup.0"
     }
+  },
+  "2.4.7": {
+    "0": {
+      "changes": {
+        "js-beautify": {
+          "from": "^1.14.9",
+          "to": "^1.15.4"
+        },
+        "vue-component-type-helpers": {
+          "from": "^3.0.0",
+          "to": "^3.2.7"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-24T08:47:12.232Z",
+      "version": "2.4.7-depup.0"
+    }
   }
 }
