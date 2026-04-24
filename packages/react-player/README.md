@@ -12,13 +12,13 @@ npm install @depup/react-player
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.1 | **Updated**: 4/21/2026 | **Import test**: passed
+**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.2 | **Updated**: 4/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mux/mux-player-react | `^3.8.0` | `^3.11.8` |
+| @mux/mux-player-react | `^3.8.0` | `^3.12.0` |
 | cloudflare-video-element | `^1.3.4` | `^1.3.5` |
 | dash-video-element | `^0.3.0` | `^0.3.2` |
 | hls-video-element | `^1.5.9` | `^1.5.11` |
