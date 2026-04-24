@@ -12,16 +12,16 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.5 | **Updated**: 4/6/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.6 | **Updated**: 4/24/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `9.1.6` | `^9.4.2` |
+| @npmcli/arborist | `9.1.6` | `^9.4.3` |
 | @npmcli/package-json | `7.0.2` | `^7.0.5` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
-| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.6.4` |
+| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.0` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | aproba | `2.0.0` | `^2.1.0` |
 | byte-size | `8.1.1` | `^9.0.1` |
@@ -41,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | import-local | `3.1.0` | `^3.2.0` |
 | ini | `^1.3.8` | `^6.0.0` |
 | init-package-json | `8.2.2` | `^8.2.5` |
-| inquirer | `12.9.6` | `^13.4.0` |
+| inquirer | `12.9.6` | `^13.4.2` |
 | is-ci | `3.0.1` | `^4.1.0` |
 | jest-diff | `>=30.0.0 < 31` | `^30.3.0` |
 | libnpmpublish | `11.1.2` | `^11.1.3` |
@@ -51,11 +51,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `13.0.1` | `^13.0.2` |
 | npm-packlist | `10.0.3` | `^10.0.4` |
 | npm-registry-fetch | `19.1.0` | `^19.1.1` |
-| nx | `>=21.5.3 < 23.0.0` | `^22.6.4` |
+| nx | `>=21.5.3 < 23.0.0` | `^22.7.0` |
 | p-map | `4.0.0` | `^7.0.4` |
 | p-map-series | `2.1.0` | `^3.0.0` |
 | p-pipe | `3.1.0` | `^4.0.0` |
-| p-queue | `6.6.2` | `^9.1.1` |
+| p-queue | `6.6.2` | `^9.1.2` |
 | p-reduce | `2.1.0` | `^3.0.0` |
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^21.5.0` |
@@ -66,9 +66,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ssri | `12.0.0` | `^13.0.1` |
 | string-width | `^4.2.3` | `^8.2.0` |
 | tar | `7.5.11` | `^7.5.13` |
-| tinyglobby | `0.2.12` | `^0.2.15` |
-| typescript | `>=3 < 6` | `^6.0.2` |
-| upath | `2.0.1` | `^3.0.5` |
+| tinyglobby | `0.2.12` | `^0.2.16` |
+| typescript | `>=3 < 6` | `^6.0.3` |
+| upath | `2.0.1` | `^3.0.7` |
 | validate-npm-package-name | `6.0.2` | `^7.0.2` |
 | write-file-atomic | `5.0.1` | `^7.0.1` |
 | yargs | `17.7.2` | `^18.0.0` |
