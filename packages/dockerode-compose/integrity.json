@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-19T04:45:29.625Z",
       "version": "1.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "dockerode": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "js-yaml": {
+          "from": "^4.0.0",
+          "to": "^4.1.1"
+        },
+        "tar-fs": {
+          "from": "^2.1.1",
+          "to": "^3.1.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-24T00:48:25.953Z",
+      "version": "1.4.0-depup.1"
     }
   }
 }

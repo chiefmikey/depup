@@ -1,6 +1,6 @@
 {
   "name": "@depup/react-scripts",
-  "version": "5.0.1-depup.2",
+  "version": "5.0.1-depup.7",
   "description": "Configuration and scripts for Create React App. (with updated dependencies)",
   "repository": {
     "type": "git",
@@ -43,37 +43,37 @@
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "css-loader": "^7.1.4",
     "css-minimizer-webpack-plugin": "^8.0.0",
-    "dotenv": "^17.4.0",
-    "dotenv-expand": "^12.0.3",
-    "eslint": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "dotenv-expand": "^13.0.0",
+    "eslint": "^10.2.1",
     "eslint-config-react-app": "^7.0.1",
-    "eslint-webpack-plugin": "^5.0.3",
+    "eslint-webpack-plugin": "^6.0.0",
     "file-loader": "^6.2.0",
     "fs-extra": "^11.3.4",
-    "html-webpack-plugin": "^5.6.6",
+    "html-webpack-plugin": "^5.6.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.3.0",
     "jest-resolve": "^30.3.0",
     "jest-watch-typeahead": "^3.0.1",
     "mini-css-extract-plugin": "^2.10.2",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.10",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^8.2.1",
     "postcss-normalize": "^13.0.1",
-    "postcss-preset-env": "^11.2.0",
+    "postcss-preset-env": "^11.2.1",
     "prompts": "^2.4.2",
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
     "react-refresh": "^0.18.0",
-    "resolve": "^1.22.11",
+    "resolve": "^1.22.12",
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^16.0.7",
     "semver": "^7.7.4",
     "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^4.2.2",
-    "terser-webpack-plugin": "^5.4.0",
-    "webpack": "^5.105.4",
+    "tailwindcss": "^4.2.4",
+    "terser-webpack-plugin": "^5.5.0",
+    "webpack": "^5.106.2",
     "webpack-dev-server": "^5.2.3",
     "webpack-manifest-plugin": "^6.0.1",
     "workbox-webpack-plugin": "^7.4.0"
@@ -163,19 +163,19 @@
       },
       "dotenv": {
         "from": "^10.0.0",
-        "to": "^17.4.0"
+        "to": "^17.4.2"
       },
       "dotenv-expand": {
         "from": "^5.1.0",
-        "to": "^12.0.3"
+        "to": "^13.0.0"
       },
       "eslint": {
         "from": "^8.3.0",
-        "to": "^10.1.0"
+        "to": "^10.2.1"
       },
       "eslint-webpack-plugin": {
         "from": "^3.1.1",
-        "to": "^5.0.3"
+        "to": "^6.0.0"
       },
       "fs-extra": {
         "from": "^10.0.0",
@@ -183,7 +183,7 @@
       },
       "html-webpack-plugin": {
         "from": "^5.5.0",
-        "to": "^5.6.6"
+        "to": "^5.6.7"
       },
       "jest": {
         "from": "^27.4.3",
@@ -203,7 +203,7 @@
       },
       "postcss": {
         "from": "^8.4.4",
-        "to": "^8.5.8"
+        "to": "^8.5.10"
       },
       "postcss-loader": {
         "from": "^6.2.1",
@@ -215,7 +215,7 @@
       },
       "postcss-preset-env": {
         "from": "^7.0.1",
-        "to": "^11.2.0"
+        "to": "^11.2.1"
       },
       "react-refresh": {
         "from": "^0.11.0",
@@ -223,7 +223,7 @@
       },
       "resolve": {
         "from": "^1.20.0",
-        "to": "^1.22.11"
+        "to": "^1.22.12"
       },
       "resolve-url-loader": {
         "from": "^4.0.0",
@@ -247,15 +247,15 @@
       },
       "tailwindcss": {
         "from": "^3.0.2",
-        "to": "^4.2.2"
+        "to": "^4.2.4"
       },
       "terser-webpack-plugin": {
         "from": "^5.2.5",
-        "to": "^5.4.0"
+        "to": "^5.5.0"
       },
       "webpack": {
         "from": "^5.64.4",
-        "to": "^5.105.4"
+        "to": "^5.106.2"
       },
       "webpack-dev-server": {
         "from": "^4.6.0",
@@ -273,7 +273,7 @@
     "depsUpdated": 38,
     "originalPackage": "react-scripts",
     "originalVersion": "5.0.1",
-    "processedAt": "2026-04-02T00:46:42.477Z",
+    "processedAt": "2026-04-24T00:49:20.088Z",
     "smokeTest": "failed"
   }
 }

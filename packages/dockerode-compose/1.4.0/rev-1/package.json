@@ -1,0 +1,60 @@
+{
+  "name": "@depup/dockerode-compose",
+  "version": "1.4.0-depup.1",
+  "description": "docker-compose in nodejs using dockerode (with updated dependencies)",
+  "main": "./compose.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha.js -R spec --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apocas/dockerode-compose.git"
+  },
+  "author": "Pedro Dias <petermdias@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/apocas/dockerode-compose/issues"
+  },
+  "keywords": [
+    "dockerode-compose",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "docker",
+    "docker-compose"
+  ],
+  "homepage": "https://github.com/apocas/dockerode-compose#readme",
+  "dependencies": {
+    "dockerode": "^5.0.0",
+    "js-yaml": "^4.1.1",
+    "tar-fs": "^3.1.2"
+  },
+  "devDependencies": {
+    "chai": "~4.2.0",
+    "memorystream": "~0.3.0",
+    "mocha": "^10.2.0"
+  },
+  "depup": {
+    "changes": {
+      "dockerode": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "js-yaml": {
+        "from": "^4.0.0",
+        "to": "^4.1.1"
+      },
+      "tar-fs": {
+        "from": "^2.1.1",
+        "to": "^3.1.2"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "dockerode-compose",
+    "originalVersion": "1.4.0",
+    "processedAt": "2026-04-24T00:48:22.807Z",
+    "smokeTest": "passed"
+  }
+}
