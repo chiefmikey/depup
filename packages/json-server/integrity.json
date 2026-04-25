@@ -66,6 +66,27 @@
       "status": "published",
       "timestamp": "2026-03-23T20:17:44.513Z",
       "version": "1.0.0-beta.15-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@tinyhttp/app": {
+          "from": "^3.0.1",
+          "to": "^3.0.7"
+        },
+        "eta": {
+          "from": "^4.5.0",
+          "to": "^4.6.0"
+        },
+        "milliparsec": {
+          "from": "^5.1.0",
+          "to": "^5.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-25T20:18:41.122Z",
+      "version": "1.0.0-beta.15-depup.1"
     }
   }
 }
