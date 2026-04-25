@@ -50,6 +50,14 @@ export default [
     },
   },
   {
+    // generate-readme.mjs contains a GitHub issue URL template with URL-encoded body text.
+    // The high-entropy string detection flags it as a false positive -- it is a static template.
+    files: ['scripts/generate-readme.mjs'],
+    rules: {
+      'no-secrets/no-secrets': 'off',
+    },
+  },
+  {
     // heal.mjs repairIntegrityData has nested validation for version/revision/field data
     files: ['scripts/heal.mjs'],
     rules: {

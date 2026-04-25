@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: 'node',
   testMatch: ['**/scripts/__tests__/**/*.test.js'],
-  testPathIgnorePatterns: ['/node_modules/', '/.*\\.test-temp/', '/.*/rev-.*/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.*\\.test-temp/', '/.*/rev-.*/', '<rootDir>/depup/'],
   collectCoverageFrom: [
     'scripts/**/*.mjs',
     '!scripts/**/*.test.js',

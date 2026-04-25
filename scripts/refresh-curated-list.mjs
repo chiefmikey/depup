@@ -120,6 +120,23 @@ class CuratedListRefresher {
 
   outputPath = path.resolve(process.cwd(), 'config', 'curated-packages.json');
 
+  collectResults(results, seen, packages) {
+    for (const object of results) {
+      const { name } = object.package;
+      if (
+        !seen.has(name) &&
+        object.downloads?.monthly >= this.minimumMonthlyDownloads &&
+        !this.shouldSkip(name)
+      ) {
+        seen.add(name);
+        packages.push({
+          downloads: object.downloads.monthly,
+          name,
+        });
+      }
+    }
+  }
+
   async main() {
     const spinner = ora('Refreshing curated package list...').start();
     const seen = new Set();
@@ -129,21 +146,7 @@ class CuratedListRefresher {
       try {
         spinner.text = `Searching: ${query}...`;
         const results = await this.searchPackages(query);
-
-        for (const object of results) {
-          const { name } = object.package;
-          if (
-            !seen.has(name) &&
-            object.downloads?.monthly >= this.minimumMonthlyDownloads &&
-            !this.shouldSkip(name)
-          ) {
-            seen.add(name);
-            packages.push({
-              downloads: object.downloads.monthly,
-              name,
-            });
-          }
-        }
+        this.collectResults(results, seen, packages);
 
         // Rate limit courtesy -- npm returns 429 without delay
         await new Promise((resolve) => {

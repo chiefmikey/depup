@@ -72,7 +72,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add packages/
+          git add -A packages/
           # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
           if [ "${{ matrix.shard }}" = "0" ]; then
             git add scripts/cron-discover.mjs
@@ -95,7 +95,7 @@ jobs:
                 echo "$conflicted" | while IFS= read -r file; do
                   git checkout --ours -- "$file" 2>/dev/null || true
                 done
-                git add packages/
+                git add -A packages/
                 if [ "${{ matrix.shard }}" = "0" ]; then
                   git add scripts/cron-discover.mjs
                 fi
@@ -198,7 +198,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add packages/
+          git add -A packages/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
@@ -217,7 +217,7 @@ jobs:
                 echo "$conflicted" | while IFS= read -r file; do
                   git checkout --ours -- "$file" 2>/dev/null || true
                 done
-                git add packages/
+                git add -A packages/
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
                   # Check if commit became empty after conflict resolution
                   if git diff --cached --quiet 2>/dev/null; then
@@ -307,11 +307,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Running self-healing checks..."
-          npm run heal:auto
+          npm run heal
 
       - name: Commit and Push
         run: |
-          git add packages/
+          git add -A packages/
           if git diff --cached --quiet; then
             echo "No heal changes needed"
             exit 0
