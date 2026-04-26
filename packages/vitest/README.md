@@ -12,18 +12,19 @@ npm install @depup/vitest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.5 | **DepUp version**: 4.1.5-depup.0 | **Updated**: 4/21/2026 | **Import test**: passed
+**Original version**: 4.1.5 | **DepUp version**: 4.1.5-depup.1 | **Updated**: 4/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| es-module-lexer | `^2.0.0` | `^2.1.0` |
 | picomatch | `^4.0.3` | `^4.0.4` |
 | std-env | `^4.0.0-rc.1` | `^4.1.0` |
 | tinybench | `^2.9.0` | `^6.0.0` |
 | tinyexec | `^1.0.2` | `^1.1.1` |
 | tinyglobby | `^0.2.15` | `^0.2.16` |
-| vite | `^6.0.0 || ^7.0.0 || ^8.0.0` | `^8.0.9` |
+| vite | `^6.0.0 || ^7.0.0 || ^8.0.0` | `^8.0.10` |
 | why-is-node-running | `^2.3.0` | `^3.2.2` |
 
 
