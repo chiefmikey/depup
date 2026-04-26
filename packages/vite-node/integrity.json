@@ -5,6 +5,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:39:30.599Z",
       "version": "6.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "es-module-lexer": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "vite": {
+          "from": "^8.0.0",
+          "to": "^8.0.10"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-26T00:48:57.315Z",
+      "version": "6.0.0-depup.1"
     }
   }
 }

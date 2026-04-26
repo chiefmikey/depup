@@ -12,11 +12,15 @@ npm install @depup/vite-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.1 | **Updated**: 4/26/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| es-module-lexer | `^2.0.0` | `^2.1.0` |
+| vite | `^8.0.0` | `^8.0.10` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vite-node&labels=bug).
 
