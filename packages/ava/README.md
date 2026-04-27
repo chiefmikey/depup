@@ -12,21 +12,11 @@ npm install @depup/ava
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.5 | **Updated**: 4/4/2026 | **Import test**: failed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.0 | **Updated**: 4/27/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @vercel/nft | `^1.3.2` | `^1.5.0` |
-| cbor | `^10.0.11` | `^10.0.12` |
-| cli-truncate | `^5.1.1` | `^6.0.0` |
-| emittery | `^1.2.0` | `^2.0.0` |
-| globby | `^16.1.1` | `^16.2.0` |
-| memoize | `^10.2.0` | `^11.0.0` |
-| picomatch | `^4.0.3` | `^4.0.4` |
-| write-file-atomic | `^7.0.0` | `^7.0.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ava&labels=bug).
 
