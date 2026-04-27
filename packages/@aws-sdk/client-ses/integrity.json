@@ -864,6 +864,31 @@
       "status": "failed",
       "timestamp": "2026-04-24T20:22:26.435Z",
       "version": "3.1037.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/middleware-retry": {
+          "from": "^4.5.5",
+          "to": "^4.5.6"
+        },
+        "@smithy/util-retry": {
+          "from": "^4.3.4",
+          "to": "^4.3.5"
+        },
+        "@smithy/util-waiter": {
+          "from": "^4.2.16",
+          "to": "^4.3.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-27T16:39:56.111Z",
+      "version": "3.1037.0-depup.1"
     }
   }
 }
