@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.8 | **Updated**: 4/27/2026 | **Import test**: failed
+**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.9 | **Updated**: 4/27/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1037.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1038.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -40,17 +40,17 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/http-cache-utils | `0.1.25` | `^2.2.0` |
 | @tryghost/image-transform | `1.4.13` | `^1.4.14` |
 | @tryghost/job-manager | `1.0.9` | `^3.2.0` |
-| @tryghost/kg-card-factory | `5.1.14` | `^5.2.0` |
-| @tryghost/kg-clean-basic-html | `4.2.23` | `^4.3.0` |
-| @tryghost/kg-converters | `1.1.21` | `^1.2.0` |
-| @tryghost/kg-default-atoms | `5.1.9` | `^5.2.0` |
-| @tryghost/kg-default-cards | `10.2.13` | `^10.3.0` |
-| @tryghost/kg-default-nodes | `2.0.21` | `^2.1.0` |
-| @tryghost/kg-default-transforms | `1.2.44` | `^1.3.0` |
-| @tryghost/kg-html-to-lexical | `1.2.45` | `^1.3.0` |
-| @tryghost/kg-lexical-html-renderer | `1.3.44` | `^1.4.0` |
-| @tryghost/kg-markdown-html-renderer | `7.1.18` | `^7.2.0` |
-| @tryghost/kg-mobiledoc-html-renderer | `7.1.18` | `^7.2.0` |
+| @tryghost/kg-card-factory | `5.1.14` | `^5.2.1` |
+| @tryghost/kg-clean-basic-html | `4.2.23` | `^4.3.1` |
+| @tryghost/kg-converters | `1.1.21` | `^1.2.1` |
+| @tryghost/kg-default-atoms | `5.1.9` | `^5.2.1` |
+| @tryghost/kg-default-cards | `10.2.13` | `^10.3.1` |
+| @tryghost/kg-default-nodes | `2.0.21` | `^2.1.1` |
+| @tryghost/kg-default-transforms | `1.2.44` | `^1.3.1` |
+| @tryghost/kg-html-to-lexical | `1.2.45` | `^1.3.1` |
+| @tryghost/kg-lexical-html-renderer | `1.3.44` | `^1.4.1` |
+| @tryghost/kg-markdown-html-renderer | `7.1.18` | `^7.2.1` |
+| @tryghost/kg-mobiledoc-html-renderer | `7.1.18` | `^7.2.1` |
 | @tryghost/limit-service | `1.5.2` | `^1.5.3` |
 | @tryghost/logging | `2.5.5` | `^4.2.0` |
 | @tryghost/members-csv | `2.0.5` | `^2.0.7` |

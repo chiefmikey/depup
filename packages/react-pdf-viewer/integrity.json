@@ -86,6 +86,35 @@
       "status": "published",
       "timestamp": "2026-04-08T16:38:51.587Z",
       "version": "0.1.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "pdfjs-dist": {
+          "from": "^2.0.197",
+          "to": "^5.7.284"
+        },
+        "react": {
+          "from": "^16.2.0",
+          "to": "^19.2.5"
+        },
+        "react-dom": {
+          "from": "^16.2.0",
+          "to": "^19.2.5"
+        },
+        "webpack": {
+          "from": "^3.10.0",
+          "to": "^5.106.2"
+        },
+        "webpack-dev-server": {
+          "from": "^2.9.7",
+          "to": "^5.2.3"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-27T20:34:39.042Z",
+      "version": "0.1.0-depup.3"
     }
   }
 }
