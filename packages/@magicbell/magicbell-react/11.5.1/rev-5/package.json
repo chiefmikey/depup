@@ -1,6 +1,6 @@
 {
   "name": "@depup/magicbell__magicbell-react",
-  "version": "11.5.1-depup.0",
+  "version": "11.5.1-depup.5",
   "description": "React components for building a notification inbox for your app (with updated dependencies)",
   "author": "MagicBell <bot@magicbell.io> (https://magicbell.com/)",
   "contributors": [
@@ -78,10 +78,10 @@
     "@magicbell/webpush": "2.2.0",
     "dayjs": "^1.11.20",
     "humps": "^2.0.1",
-    "lodash": "^4.17.23",
-    "lodash-es": "^4.17.23",
+    "lodash": "^4.18.1",
+    "lodash-es": "^4.18.1",
     "ramda": "^0.32.0",
-    "react-infinite-scroll-component": "^6.1.1",
+    "react-infinite-scroll-component": "^7.2.0",
     "react-use": "^17.6.0",
     "timeago.js": "^4.0.2",
     "tiny-invariant": "^1.3.3",
@@ -122,11 +122,11 @@
       },
       "lodash": {
         "from": "^4.17.21",
-        "to": "^4.17.23"
+        "to": "^4.18.1"
       },
       "lodash-es": {
         "from": "^4.17.21",
-        "to": "^4.17.23"
+        "to": "^4.18.1"
       },
       "ramda": {
         "from": "^0.28.0",
@@ -134,7 +134,7 @@
       },
       "react-infinite-scroll-component": {
         "from": "^6.1.0",
-        "to": "^6.1.1"
+        "to": "^7.2.0"
       },
       "tiny-invariant": {
         "from": "^1.3.1",
@@ -152,7 +152,7 @@
     "depsUpdated": 9,
     "originalPackage": "@magicbell/magicbell-react",
     "originalVersion": "11.5.1",
-    "processedAt": "2026-03-20T12:17:02.690Z",
+    "processedAt": "2026-04-27T16:40:19.845Z",
     "smokeTest": "passed"
   }
 }
