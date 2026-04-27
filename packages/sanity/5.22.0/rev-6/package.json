@@ -1,6 +1,6 @@
 {
   "name": "@depup/sanity",
-  "version": "5.22.0-depup.1",
+  "version": "5.22.0-depup.6",
   "description": "Sanity is a real-time content infrastructure with a scalable, hosted backend featuring a Graph Oriented Query Language (GROQ), asset pipelines and fast edge caches (with updated dependencies)",
   "keywords": [
     "sanity",
@@ -94,7 +94,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@isaacs/ttlcache": "^2.1.4",
-    "@mux/mux-player-react": "^3.11.8",
+    "@mux/mux-player-react": "^3.12.0",
     "@portabletext/editor": "^6.6.2",
     "@portabletext/html": "^1.0.1",
     "@portabletext/patches": "^2.0.4",
@@ -110,7 +110,7 @@
     "@sanity/asset-utils": "^2.3.0",
     "@sanity/bifur-client": "^1.0.0",
     "@sanity/cli": "^6.4.0",
-    "@sanity/client": "^7.21.0",
+    "@sanity/client": "^7.22.0",
     "@sanity/color": "^3.0.6",
     "@sanity/comlink": "^4.0.1",
     "@sanity/diff-match-patch": "^3.2.0",
@@ -129,10 +129,10 @@
     "@sanity/preview-url-secret": "^4.0.5",
     "@sanity/prism-groq": "^1.1.2",
     "@sanity/sdk": "^2.9.0",
-    "@sanity/telemetry": "^1.0.0",
+    "@sanity/telemetry": "^1.1.0",
     "@sanity/ui": "^3.1.14",
     "@sanity/uuid": "^3.0.2",
-    "@sentry/react": "^10.49.0",
+    "@sentry/react": "^10.50.0",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.24",
     "@xstate/react": "^6.1.0",
@@ -143,9 +143,9 @@
     "debug": "^4.4.3",
     "exif-component": "^1.0.1",
     "fast-deep-equal": "3.1.3",
-    "groq-js": "^1.30.0",
+    "groq-js": "^1.30.1",
     "history": "^5.3.0",
-    "i18next": "^26.0.6",
+    "i18next": "^26.0.8",
     "is-hotkey-esm": "^1.0.0",
     "isomorphic-dompurify": "^3.10.0",
     "json-reduce": "^3.0.0",
@@ -163,7 +163,7 @@
     "raf": "^3.4.1",
     "react-fast-compare": "^3.2.2",
     "react-focus-lock": "^2.13.7",
-    "react-i18next": "^17.0.4",
+    "react-i18next": "^17.0.6",
     "react-is": "^19.2.5",
     "react-refractor": "^4.0.0",
     "react-rx": "^4.2.2",
@@ -182,7 +182,7 @@
     "use-sync-external-store": "^1.6.0",
     "uuid": "^14.0.0",
     "web-vitals": "^5.2.0",
-    "xstate": "^5.30.0",
+    "xstate": "^5.31.0",
     "@sanity/mutator": "5.22.0",
     "@sanity/types": "5.22.0",
     "@sanity/schema": "5.22.0",
@@ -284,7 +284,11 @@
       },
       "@mux/mux-player-react": {
         "from": "^3.10.2",
-        "to": "^3.11.8"
+        "to": "^3.12.0"
+      },
+      "@sanity/client": {
+        "from": "^7.21.0",
+        "to": "^7.22.0"
       },
       "@sanity/diff-patch": {
         "from": "^5.0.0",
@@ -300,11 +304,11 @@
       },
       "@sanity/telemetry": {
         "from": "^0.9.0",
-        "to": "^1.0.0"
+        "to": "^1.1.0"
       },
       "@sentry/react": {
         "from": "^8.55.0",
-        "to": "^10.49.0"
+        "to": "^10.50.0"
       },
       "@tanstack/react-virtual": {
         "from": "^3.13.18",
@@ -320,11 +324,11 @@
       },
       "groq-js": {
         "from": "^1.29.0",
-        "to": "^1.30.0"
+        "to": "^1.30.1"
       },
       "i18next": {
         "from": "^25.8.17",
-        "to": "^26.0.6"
+        "to": "^26.0.8"
       },
       "isomorphic-dompurify": {
         "from": "2.26.0",
@@ -348,7 +352,7 @@
       },
       "react-i18next": {
         "from": "15.6.1",
-        "to": "^17.0.4"
+        "to": "^17.0.6"
       },
       "react-is": {
         "from": "^19.2.4",
@@ -368,13 +372,13 @@
       },
       "xstate": {
         "from": "^5.25.1",
-        "to": "^5.30.0"
+        "to": "^5.31.0"
       }
     },
-    "depsUpdated": 26,
+    "depsUpdated": 27,
     "originalPackage": "sanity",
     "originalVersion": "5.22.0",
-    "processedAt": "2026-04-22T20:33:54.148Z",
+    "processedAt": "2026-04-27T16:41:31.042Z",
     "smokeTest": "failed"
   }
 }
