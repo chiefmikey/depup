@@ -12,7 +12,7 @@ npm install @depup/typebox
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.33 | **DepUp version**: 1.1.33-depup.0 | **Updated**: 4/24/2026 | **Import test**: passed
+**Original version**: 1.1.34 | **DepUp version**: 1.1.34-depup.0 | **Updated**: 4/27/2026 | **Import test**: passed
 
 ## What changed
 
