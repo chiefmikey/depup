@@ -247,5 +247,20 @@
       "timestamp": "2026-04-23T20:25:11.739Z",
       "version": "3.974.13-depup.0"
     }
+  },
+  "3.974.14": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-27T20:29:34.909Z",
+      "version": "3.974.14-depup.0"
+    }
   }
 }
