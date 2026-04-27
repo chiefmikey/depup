@@ -140,5 +140,28 @@
       "timestamp": "2026-04-25T20:18:50.387Z",
       "version": "9.8.2-depup.1"
     }
+  },
+  "9.8.3": {
+    "0": {
+      "changes": {
+        "eta": {
+          "from": "^4.5.1",
+          "to": "^4.6.0"
+        },
+        "jose": {
+          "from": "^6.2.2",
+          "to": "^6.2.3"
+        },
+        "nanoid": {
+          "from": "^5.1.7",
+          "to": "^5.1.9"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-27T16:37:53.262Z",
+      "version": "9.8.3-depup.0"
+    }
   }
 }

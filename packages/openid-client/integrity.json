@@ -25,5 +25,24 @@
       "timestamp": "2026-04-13T16:32:59.987Z",
       "version": "6.8.3-depup.0"
     }
+  },
+  "6.8.4": {
+    "0": {
+      "changes": {
+        "jose": {
+          "from": "^6.2.2",
+          "to": "^6.2.3"
+        },
+        "oauth4webapi": {
+          "from": "^3.8.5",
+          "to": "^3.8.6"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-27T16:37:54.302Z",
+      "version": "6.8.4-depup.0"
+    }
   }
 }
