@@ -12,13 +12,12 @@ npm install @depup/p-queue
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.2 | **DepUp version**: 9.1.2-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 9.2.0 | **DepUp version**: 9.2.0-depup.0 | **Updated**: 4/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| eventemitter3 | `^5.0.1` | `^5.0.4` |
 | p-timeout | `^7.0.0` | `^7.0.1` |
 
 
