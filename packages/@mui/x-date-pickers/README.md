@@ -12,14 +12,11 @@ npm install @depup/mui__x-date-pickers
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.2 | **DepUp version**: 9.0.2-depup.0 | **Updated**: 4/15/2026 | **Import test**: failed
+**Original version**: 9.0.3 | **DepUp version**: 9.0.3-depup.0 | **Updated**: 4/27/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @babel/runtime | `^7.28.6` | `^7.29.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mui__x-date-pickers&labels=bug).
 
