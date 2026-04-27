@@ -1,7 +1,7 @@
 {
   "name": "@depup/nightwatch",
   "description": "Easy to use Node.js based end-to-end testing solution for web applications using the W3C WebDriver API. (with updated dependencies)",
-  "version": "3.15.0-depup.2",
+  "version": "3.15.0-depup.7",
   "author": "Andrei Rusu",
   "homepage": "https://nightwatchjs.org",
   "main": "./lib/index.js",
@@ -28,27 +28,27 @@
     "chalk": "^5.6.2",
     "ci-info": "^4.4.0",
     "cli-table3": "^0.6.5",
-    "devtools-protocol": "^0.0.1604597",
+    "devtools-protocol": "^0.0.1619965",
     "didyoumean": "^1.2.2",
-    "dotenv": "^17.4.0",
-    "ejs": "^5.0.1",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
     "envinfo": "^7.21.0",
     "glob": "^13.0.6",
-    "jsdom": "^29.0.1",
+    "jsdom": "^29.1.0",
     "lodash": "^4.18.1",
     "minimatch": "^10.2.5",
     "minimist": "^1.2.8",
     "mocha": "^11.7.5",
     "nightwatch-axe-verbose": "^2.5.1",
     "open": "^11.0.0",
-    "ora": "^9.3.0",
+    "ora": "^9.4.0",
     "piscina": "^5.1.4",
-    "selenium-webdriver": "^4.41.0",
+    "selenium-webdriver": "^4.43.0",
     "semver": "^7.7.4",
     "stacktrace-parser": "^0.1.11",
     "strip-ansi": "^7.2.0",
     "untildify": "^6.0.0",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^8.2.1",
@@ -210,15 +210,15 @@
       },
       "devtools-protocol": {
         "from": "^0.0.1140464",
-        "to": "^0.0.1604597"
+        "to": "^0.0.1619965"
       },
       "dotenv": {
         "from": "16.3.1",
-        "to": "^17.4.0"
+        "to": "^17.4.2"
       },
       "ejs": {
         "from": "^3.1.10",
-        "to": "^5.0.1"
+        "to": "^5.0.2"
       },
       "envinfo": {
         "from": "7.11.0",
@@ -230,7 +230,7 @@
       },
       "jsdom": {
         "from": "^24.1.0",
-        "to": "^29.0.1"
+        "to": "^29.1.0"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -258,7 +258,7 @@
       },
       "ora": {
         "from": "5.4.1",
-        "to": "^9.3.0"
+        "to": "^9.4.0"
       },
       "piscina": {
         "from": "^4.3.1",
@@ -266,7 +266,7 @@
       },
       "selenium-webdriver": {
         "from": "4.27.0",
-        "to": "^4.41.0"
+        "to": "^4.43.0"
       },
       "semver": {
         "from": "7.5.4",
@@ -286,13 +286,13 @@
       },
       "uuid": {
         "from": "8.3.2",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
       }
     },
     "depsUpdated": 29,
     "originalPackage": "nightwatch",
     "originalVersion": "3.15.0",
-    "processedAt": "2026-04-02T00:42:36.942Z",
+    "processedAt": "2026-04-27T05:12:14.728Z",
     "smokeTest": "failed"
   }
 }
