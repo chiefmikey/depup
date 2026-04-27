@@ -12,13 +12,13 @@ npm install @depup/flat-cache
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.22 | **DepUp version**: 6.1.22-depup.0 | **Updated**: 3/27/2026 | **Import test**: passed
+**Original version**: 6.1.22 | **DepUp version**: 6.1.22-depup.1 | **Updated**: 4/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| hookified | `^1.15.0` | `^2.1.0` |
+| hookified | `^1.15.0` | `^2.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/flat-cache&labels=bug).
