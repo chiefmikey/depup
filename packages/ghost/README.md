@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.6 | **Updated**: 4/24/2026 | **Import test**: failed
+**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.7 | **Updated**: 4/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -76,7 +76,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.2` |
-| jsdom | `28.1.0` | `^29.0.2` |
+| jsdom | `28.1.0` | `^29.1.0` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.9` |
@@ -95,9 +95,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.1` |
 | moment | `2.24.0` | `^2.30.1` |
-| moment-timezone | `0.5.45` | `^0.6.1` |
+| moment-timezone | `0.5.45` | `^0.6.2` |
 | multer | `2.0.2` | `^2.1.1` |
-| mysql2 | `3.18.1` | `^3.22.2` |
+| mysql2 | `3.18.1` | `^3.22.3` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `6.10.1` | `^8.0.6` |
 | otplib | `12.0.1` | `^13.4.0` |

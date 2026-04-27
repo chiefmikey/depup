@@ -2,7 +2,7 @@
   "bumped": {
     "@aws-sdk/client-s3": {
       "from": "3.1025.0",
-      "to": "^3.1034.0"
+      "to": "^3.1037.0"
     },
     "@extractus/oembed-extractor": {
       "from": "3.2.1",
@@ -18,11 +18,11 @@
     },
     "@sentry/node": {
       "from": "7.120.4",
-      "to": "^10.49.0"
+      "to": "^10.50.0"
     },
     "@tryghost/api-framework": {
       "from": "1.0.7",
-      "to": "^3.1.0"
+      "to": "^3.1.1"
     },
     "@tryghost/bookshelf-plugins": {
       "from": "2.0.3",
@@ -38,7 +38,7 @@
     },
     "@tryghost/domain-events": {
       "from": "1.0.8",
-      "to": "^3.1.0"
+      "to": "^3.1.1"
     },
     "@tryghost/email-mock-receiver": {
       "from": "0.3.16",
@@ -54,7 +54,7 @@
     },
     "@tryghost/job-manager": {
       "from": "1.0.9",
-      "to": "^3.1.0"
+      "to": "^3.1.1"
     },
     "@tryghost/kg-card-factory": {
       "from": "5.1.14",
@@ -102,7 +102,7 @@
     },
     "@tryghost/logging": {
       "from": "2.5.5",
-      "to": "^4.1.0"
+      "to": "^4.1.1"
     },
     "@tryghost/metrics": {
       "from": "1.0.43",
@@ -126,7 +126,7 @@
     },
     "@tryghost/prometheus-metrics": {
       "from": "1.0.8",
-      "to": "^3.1.0"
+      "to": "^3.1.1"
     },
     "@tryghost/promise": {
       "from": "0.3.20",
@@ -134,7 +134,7 @@
     },
     "@tryghost/request": {
       "from": "1.0.12",
-      "to": "^3.1.0"
+      "to": "^3.1.1"
     },
     "@tryghost/root-utils": {
       "from": "0.3.38",
@@ -154,7 +154,7 @@
     },
     "@tryghost/validator": {
       "from": "0.2.22",
-      "to": "^2.1.0"
+      "to": "^3.0.0"
     },
     "@tryghost/version": {
       "from": "0.1.38",
@@ -230,11 +230,11 @@
     },
     "intl-messageformat": {
       "from": "5.4.3",
-      "to": "^11.2.1"
+      "to": "^11.2.2"
     },
     "jsdom": {
       "from": "28.1.0",
-      "to": "^29.0.2"
+      "to": "^29.1.0"
     },
     "jsonwebtoken": {
       "from": "8.5.1",
@@ -310,7 +310,7 @@
     },
     "moment-timezone": {
       "from": "0.5.45",
-      "to": "^0.6.1"
+      "to": "^0.6.2"
     },
     "multer": {
       "from": "2.0.2",
@@ -318,7 +318,7 @@
     },
     "mysql2": {
       "from": "3.18.1",
-      "to": "^3.22.2"
+      "to": "^3.22.3"
     },
     "node-fetch": {
       "from": "2.7.0",
@@ -326,7 +326,7 @@
     },
     "nodemailer": {
       "from": "6.10.1",
-      "to": "^8.0.5"
+      "to": "^8.0.6"
     },
     "otplib": {
       "from": "12.0.1",
@@ -338,17 +338,21 @@
     },
     "stripe": {
       "from": "8.222.0",
-      "to": "^22.0.2"
+      "to": "^22.1.0"
     },
     "superagent": {
       "from": "5.3.1",
       "to": "^10.3.0"
+    },
+    "terser": {
+      "from": "5.46.1",
+      "to": "^5.46.2"
     },
     "ua-parser-js": {
       "from": "1.0.41",
       "to": "^2.0.9"
     }
   },
-  "timestamp": "2026-04-22T16:32:05.462Z",
-  "totalUpdated": 87
+  "timestamp": "2026-04-27T05:11:57.629Z",
+  "totalUpdated": 88
 }
