@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.32.0 | **DepUp version**: 6.32.0-depup.9 | **Updated**: 4/27/2026 | **Import test**: failed
+**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.0 | **Updated**: 4/28/2026 | **Import test**: failed
 
 ## What changed
 
@@ -31,54 +31,42 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/config-url-helpers | `1.0.23` | `^1.0.24` |
 | @tryghost/custom-fonts | `1.0.8` | `^1.0.9` |
 | @tryghost/database-info | `0.3.35` | `^2.2.0` |
-| @tryghost/debug | `0.1.40` | `^2.2.0` |
+| @tryghost/debug | `2.1.0` | `^2.2.0` |
 | @tryghost/domain-events | `1.0.8` | `^3.2.0` |
-| @tryghost/email-mock-receiver | `0.3.16` | `^2.2.0` |
+| @tryghost/email-mock-receiver | `2.1.0` | `^2.2.0` |
 | @tryghost/errors | `1.3.13` | `^3.2.0` |
 | @tryghost/helpers | `1.1.103` | `^1.1.104` |
 | @tryghost/html-to-plaintext | `1.0.8` | `^1.0.9` |
 | @tryghost/http-cache-utils | `0.1.25` | `^2.2.0` |
 | @tryghost/image-transform | `1.4.13` | `^1.4.14` |
 | @tryghost/job-manager | `1.0.9` | `^3.2.0` |
-| @tryghost/kg-card-factory | `5.1.14` | `^5.2.1` |
-| @tryghost/kg-clean-basic-html | `4.2.23` | `^4.3.1` |
-| @tryghost/kg-converters | `1.1.21` | `^1.2.1` |
-| @tryghost/kg-default-atoms | `5.1.9` | `^5.2.1` |
-| @tryghost/kg-default-cards | `10.2.13` | `^10.3.1` |
-| @tryghost/kg-default-nodes | `2.0.21` | `^2.1.1` |
-| @tryghost/kg-default-transforms | `1.2.44` | `^1.3.1` |
-| @tryghost/kg-html-to-lexical | `1.2.45` | `^1.3.1` |
-| @tryghost/kg-lexical-html-renderer | `1.3.44` | `^1.4.1` |
-| @tryghost/kg-markdown-html-renderer | `7.1.18` | `^7.2.1` |
-| @tryghost/kg-mobiledoc-html-renderer | `7.1.18` | `^7.2.1` |
 | @tryghost/limit-service | `1.5.2` | `^1.5.3` |
-| @tryghost/logging | `2.5.5` | `^4.2.0` |
+| @tryghost/logging | `4.1.0` | `^4.2.0` |
 | @tryghost/members-csv | `2.0.5` | `^2.0.7` |
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.0` |
 | @tryghost/mw-vhost | `1.0.6` | `^3.2.0` |
 | @tryghost/nodemailer | `0.3.48` | `^2.2.0` |
-| @tryghost/pretty-cli | `1.2.52` | `^3.2.0` |
+| @tryghost/pretty-cli | `3.1.0` | `^3.2.0` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^3.2.0` |
-| @tryghost/promise | `0.3.20` | `^2.2.0` |
+| @tryghost/promise | `2.1.0` | `^2.2.0` |
 | @tryghost/referrer-parser | `0.1.15` | `^0.1.16` |
 | @tryghost/request | `1.0.12` | `^3.2.0` |
-| @tryghost/root-utils | `0.3.38` | `^2.2.0` |
+| @tryghost/root-utils | `2.1.0` | `^2.2.0` |
 | @tryghost/security | `1.0.6` | `^3.2.0` |
 | @tryghost/social-urls | `0.1.60` | `^0.1.61` |
 | @tryghost/string | `0.3.2` | `^0.3.3` |
-| @tryghost/tpl | `0.1.40` | `^2.2.0` |
+| @tryghost/tpl | `2.1.0` | `^2.2.0` |
 | @tryghost/url-utils | `5.1.2` | `^5.2.3` |
 | @tryghost/validator | `0.2.22` | `^3.1.0` |
-| @tryghost/version | `0.1.38` | `^2.2.0` |
-| @tryghost/zip | `1.1.54` | `^3.2.0` |
+| @tryghost/version | `2.1.0` | `^2.2.0` |
+| @tryghost/zip | `3.1.0` | `^3.2.0` |
 | body-parser | `1.20.4` | `^2.2.2` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | countries-and-timezones | `3.8.0` | `^3.9.0` |
 | date-fns | `2.30.0` | `^4.1.0` |
-| dompurify | `3.3.0` | `^3.4.1` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
@@ -94,7 +82,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.9` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
-| lodash | `4.17.23` | `^4.18.1` |
 | mailgun.js | `10.4.0` | `^13.0.0` |
 | metascraper | `5.45.15` | `^5.50.1` |
 | metascraper-author | `5.45.10` | `^5.50.1` |
@@ -109,7 +96,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.1` |
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
-| multer | `2.0.2` | `^2.1.1` |
 | mysql2 | `3.18.1` | `^3.22.3` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `6.10.1` | `^8.0.7` |
