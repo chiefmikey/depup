@@ -907,5 +907,120 @@
       "timestamp": "2026-04-23T16:38:59.093Z",
       "version": "10.50.0-depup.0"
     }
+  },
+  "10.51.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/core": {
+          "from": "^2.6.1",
+          "to": "^2.7.0"
+        },
+        "@opentelemetry/instrumentation": {
+          "from": "^0.214.0",
+          "to": "^0.215.0"
+        },
+        "@opentelemetry/instrumentation-amqplib": {
+          "from": "0.61.0",
+          "to": "^0.62.0"
+        },
+        "@opentelemetry/instrumentation-connect": {
+          "from": "0.57.0",
+          "to": "^0.58.0"
+        },
+        "@opentelemetry/instrumentation-dataloader": {
+          "from": "0.31.0",
+          "to": "^0.32.0"
+        },
+        "@opentelemetry/instrumentation-fs": {
+          "from": "0.33.0",
+          "to": "^0.34.0"
+        },
+        "@opentelemetry/instrumentation-generic-pool": {
+          "from": "0.57.0",
+          "to": "^0.58.0"
+        },
+        "@opentelemetry/instrumentation-graphql": {
+          "from": "0.62.0",
+          "to": "^0.63.0"
+        },
+        "@opentelemetry/instrumentation-hapi": {
+          "from": "0.60.0",
+          "to": "^0.61.0"
+        },
+        "@opentelemetry/instrumentation-http": {
+          "from": "0.214.0",
+          "to": "^0.215.0"
+        },
+        "@opentelemetry/instrumentation-ioredis": {
+          "from": "0.62.0",
+          "to": "^0.63.0"
+        },
+        "@opentelemetry/instrumentation-kafkajs": {
+          "from": "0.23.0",
+          "to": "^0.24.0"
+        },
+        "@opentelemetry/instrumentation-knex": {
+          "from": "0.58.0",
+          "to": "^0.59.0"
+        },
+        "@opentelemetry/instrumentation-koa": {
+          "from": "0.62.0",
+          "to": "^0.63.0"
+        },
+        "@opentelemetry/instrumentation-lru-memoizer": {
+          "from": "0.58.0",
+          "to": "^0.59.0"
+        },
+        "@opentelemetry/instrumentation-mongodb": {
+          "from": "0.67.0",
+          "to": "^0.68.0"
+        },
+        "@opentelemetry/instrumentation-mongoose": {
+          "from": "0.60.0",
+          "to": "^0.61.0"
+        },
+        "@opentelemetry/instrumentation-mysql": {
+          "from": "0.60.0",
+          "to": "^0.61.0"
+        },
+        "@opentelemetry/instrumentation-mysql2": {
+          "from": "0.60.0",
+          "to": "^0.61.0"
+        },
+        "@opentelemetry/instrumentation-pg": {
+          "from": "0.66.0",
+          "to": "^0.67.0"
+        },
+        "@opentelemetry/instrumentation-redis": {
+          "from": "0.62.0",
+          "to": "^0.63.0"
+        },
+        "@opentelemetry/instrumentation-tedious": {
+          "from": "0.33.0",
+          "to": "^0.34.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.6.1",
+          "to": "^2.7.0"
+        },
+        "@prisma/instrumentation": {
+          "from": "7.6.0",
+          "to": "^7.8.0"
+        },
+        "@fastify/otel": {
+          "from": "0.18.0",
+          "to": "^0.18.1"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 26,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T16:37:42.190Z",
+      "version": "10.51.0-depup.0"
+    }
   }
 }
