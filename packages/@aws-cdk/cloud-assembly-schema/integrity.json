@@ -193,5 +193,20 @@
       "timestamp": "2026-04-23T08:45:34.139Z",
       "version": "53.18.0-depup.0"
     }
+  },
+  "53.19.0": {
+    "0": {
+      "changes": {
+        "jsonschema": {
+          "from": "~1.4.1",
+          "to": "^1.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T16:41:47.515Z",
+      "version": "53.19.0-depup.0"
+    }
   }
 }

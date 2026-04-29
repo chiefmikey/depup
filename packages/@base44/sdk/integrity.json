@@ -146,5 +146,28 @@
       "timestamp": "2026-04-19T16:17:00.849Z",
       "version": "0.8.26-depup.1"
     }
+  },
+  "0.8.27": {
+    "0": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.2",
+          "to": "^1.15.2"
+        },
+        "socket.io-client": {
+          "from": "^4.7.5",
+          "to": "^4.8.3"
+        },
+        "uuid": {
+          "from": "^13.0.0",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T16:42:04.066Z",
+      "version": "0.8.27-depup.0"
+    }
   }
 }

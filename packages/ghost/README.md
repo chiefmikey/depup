@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.0 | **Updated**: 4/28/2026 | **Import test**: failed
+**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.1 | **Updated**: 4/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.50.0` |
+| @sentry/node | `7.120.4` | `^10.51.0` |
 | @tryghost/adapter-base-cache | `0.1.23` | `^0.1.24` |
 | @tryghost/admin-api-schema | `4.7.2` | `^4.7.3` |
 | @tryghost/api-framework | `1.0.7` | `^3.2.0` |
@@ -76,7 +76,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html-to-text | `5.1.1` | `^9.0.5` |
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.2` |
+| intl-messageformat | `5.4.3` | `^11.2.3` |
 | jsdom | `28.1.0` | `^29.1.0` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
