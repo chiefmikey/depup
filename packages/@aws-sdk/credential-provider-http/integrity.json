@@ -290,5 +290,20 @@
       "timestamp": "2026-04-27T20:29:27.212Z",
       "version": "3.972.34-depup.0"
     }
+  },
+  "3.972.35": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T20:31:01.210Z",
+      "version": "3.972.35-depup.0"
+    }
   }
 }
