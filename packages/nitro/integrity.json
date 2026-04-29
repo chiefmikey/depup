@@ -25,5 +25,15 @@
       "timestamp": "2026-04-15T08:41:07.998Z",
       "version": "3.0.260415-beta-depup.0"
     }
+  },
+  "3.0.260429-beta": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T16:39:37.264Z",
+      "version": "3.0.260429-beta-depup.0"
+    }
   }
 }
