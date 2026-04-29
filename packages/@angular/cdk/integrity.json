@@ -105,5 +105,24 @@
       "timestamp": "2026-04-23T00:46:00.215Z",
       "version": "21.2.8-depup.0"
     }
+  },
+  "21.2.9": {
+    "0": {
+      "changes": {
+        "parse5": {
+          "from": "^8.0.0",
+          "to": "^8.0.1"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-29T12:40:19.045Z",
+      "version": "21.2.9-depup.0"
+    }
   }
 }
