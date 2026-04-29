@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.7.0 | **DepUp version**: 22.7.0-depup.0 | **Updated**: 4/24/2026 | **Import test**: failed
+**Original version**: 22.7.1 | **DepUp version**: 22.7.1-depup.0 | **Updated**: 4/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | asynckit | `0.4.0` | `^0.5.0` |
 | axios | `1.15.0` | `^1.15.2` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.0` |
+| bl | `4.1.0` | `^7.0.1` |
 | brace-expansion | `5.0.2` | `^5.0.5` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^5.6.2` |
@@ -73,7 +73,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | readable-stream | `3.6.2` | `^4.7.0` |
 | restore-cursor | `3.1.0` | `^5.1.0` |
 | signal-exit | `3.0.7` | `^4.1.0` |
-| string-width | `4.2.3` | `^8.2.0` |
+| string-width | `4.2.3` | `^8.2.1` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^10.2.2` |
