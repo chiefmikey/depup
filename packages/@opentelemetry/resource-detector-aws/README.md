@@ -12,14 +12,14 @@ npm install @depup/opentelemetry__resource-detector-aws
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.15.0 | **DepUp version**: 2.15.0-depup.0 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 2.16.0 | **DepUp version**: 2.16.0-depup.0 | **Updated**: 4/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @opentelemetry/core | `^2.0.0` | `^2.7.0` |
-| @opentelemetry/resources | `^2.0.0` | `^2.7.0` |
+| @opentelemetry/core | `^2.0.0` | `^2.7.1` |
+| @opentelemetry/resources | `^2.0.0` | `^2.7.1` |
 | @opentelemetry/semantic-conventions | `^1.27.0` | `^1.40.0` |
 
 
