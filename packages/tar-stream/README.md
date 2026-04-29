@@ -12,14 +12,14 @@ npm install @depup/tar-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.8 | **DepUp version**: 3.1.8-depup.4 | **Updated**: 4/9/2026 | **Import test**: passed
+**Original version**: 3.2.0 | **DepUp version**: 3.2.0-depup.0 | **Updated**: 4/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | b4a | `^1.6.4` | `^1.8.0` |
-| bare-fs | `^4.5.5` | `^4.7.0` |
+| bare-fs | `^4.5.5` | `^4.7.1` |
 | fast-fifo | `^1.2.0` | `^1.3.2` |
 | streamx | `^2.15.0` | `^2.25.0` |
 
