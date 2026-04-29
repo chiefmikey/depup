@@ -12,14 +12,14 @@ npm install @depup/storybook
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.5 | **DepUp version**: 10.3.5-depup.0 | **Updated**: 4/7/2026 | **Import test**: failed
+**Original version**: 10.3.6 | **DepUp version**: 10.3.6-depup.0 | **Updated**: 4/29/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vitest/expect | `3.2.4` | `^4.1.3` |
-| @vitest/spy | `3.2.4` | `^4.1.3` |
+| @vitest/expect | `3.2.4` | `^4.1.5` |
+| @vitest/spy | `3.2.4` | `^4.1.5` |
 | esbuild | `^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0 || ^0.26.0 || ^0.27.0` | `^0.28.0` |
 | open | `^10.2.0` | `^11.0.0` |
 | recast | `^0.23.5` | `^0.23.11` |
