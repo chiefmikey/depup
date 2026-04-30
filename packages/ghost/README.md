@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.2 | **Updated**: 4/29/2026 | **Import test**: failed
+**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.3 | **Updated**: 4/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -73,11 +73,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | glob | `8.1.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.3` |
 | gscan | `5.4.3` | `^6.0.1` |
-| html-to-text | `5.1.1` | `^9.0.5` |
+| html-to-text | `5.1.1` | `^10.0.0` |
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.3` |
-| jsdom | `28.1.0` | `^29.1.0` |
+| jsdom | `28.1.0` | `^29.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.9` |
