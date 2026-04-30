@@ -12,14 +12,14 @@ npm install @depup/serverless
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.34.0 | **DepUp version**: 4.34.0-depup.1 | **Updated**: 4/13/2026 | **Import test**: failed
+**Original version**: 4.35.0 | **DepUp version**: 4.35.0-depup.0 | **Updated**: 4/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | rimraf | `5.0.10` | `^6.1.3` |
-| undici | `6.24.1` | `^8.1.0` |
+| undici | `6.25.0` | `^8.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/serverless&labels=bug).

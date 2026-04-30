@@ -12,14 +12,13 @@ npm install @depup/graphql-codegen__typed-document-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.8 | **DepUp version**: 6.1.8-depup.0 | **Updated**: 4/13/2026 | **Import test**: passed
+**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| auto-bind | `~4.0.0` | `^5.0.1` |
-| change-case-all | `1.0.15` | `^2.1.0` |
+| auto-bind | `^5.0.0` | `^5.0.1` |
 | tslib | `^2.8.0` | `^2.8.1` |
 
 
