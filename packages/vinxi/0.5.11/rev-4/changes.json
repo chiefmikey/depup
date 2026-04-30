@@ -1,0 +1,114 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "^7.22.11",
+      "to": "^7.29.0"
+    },
+    "@babel/plugin-syntax-jsx": {
+      "from": "^7.22.5",
+      "to": "^7.28.6"
+    },
+    "@babel/plugin-syntax-typescript": {
+      "from": "^7.22.5",
+      "to": "^7.28.6"
+    },
+    "@types/micromatch": {
+      "from": "^4.0.2",
+      "to": "^4.0.10"
+    },
+    "chokidar": {
+      "from": "^4.0.3",
+      "to": "^5.0.0"
+    },
+    "citty": {
+      "from": "^0.1.6",
+      "to": "^0.2.2"
+    },
+    "crossws": {
+      "from": "^0.3.4",
+      "to": "^0.4.5"
+    },
+    "dax-sh": {
+      "from": "^0.43.0",
+      "to": "^0.44.1"
+    },
+    "defu": {
+      "from": "^6.1.4",
+      "to": "^6.1.7"
+    },
+    "es-module-lexer": {
+      "from": "^1.7.0",
+      "to": "^2.1.0"
+    },
+    "esbuild": {
+      "from": "^0.25.3",
+      "to": "^0.28.0"
+    },
+    "get-port-please": {
+      "from": "^3.1.2",
+      "to": "^3.2.0"
+    },
+    "h3": {
+      "from": "1.15.3",
+      "to": "^2.0.1-rc.21"
+    },
+    "hookable": {
+      "from": "^5.5.3",
+      "to": "^6.1.1"
+    },
+    "nitropack": {
+      "from": "^2.11.10",
+      "to": "^2.13.4"
+    },
+    "node-fetch-native": {
+      "from": "^1.6.6",
+      "to": "^1.6.7"
+    },
+    "path-to-regexp": {
+      "from": "^6.2.1",
+      "to": "^8.4.2"
+    },
+    "pathe": {
+      "from": "^1.1.1",
+      "to": "^2.0.3"
+    },
+    "resolve": {
+      "from": "^1.22.10",
+      "to": "^1.22.12"
+    },
+    "serve-placeholder": {
+      "from": "^2.0.1",
+      "to": "^2.0.2"
+    },
+    "serve-static": {
+      "from": "^1.15.0",
+      "to": "^2.2.1"
+    },
+    "tinyglobby": {
+      "from": "^0.2.14",
+      "to": "^0.2.16"
+    },
+    "ufo": {
+      "from": "^1.6.1",
+      "to": "^1.6.4"
+    },
+    "unctx": {
+      "from": "^2.4.1",
+      "to": "^2.5.0"
+    },
+    "unstorage": {
+      "from": "^1.16.0",
+      "to": "^1.17.5"
+    },
+    "vite": {
+      "from": "^6.4.1",
+      "to": "^8.0.10"
+    },
+    "zod": {
+      "from": "^4.0.0",
+      "to": "^4.4.1"
+    }
+  },
+  "timestamp": "2026-04-30T00:54:16.471Z",
+  "totalUpdated": 27
+}
