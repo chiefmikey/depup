@@ -1,6 +1,6 @@
 {
   "name": "@depup/zod-prisma-types",
-  "version": "3.3.11-depup.0",
+  "version": "3.3.11-depup.5",
   "description": "Generates zod schemas from Prisma models with advanced validation (with updated dependencies)",
   "author": "Chris Hörmann",
   "license": "MIT",
@@ -56,12 +56,12 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@prisma/client-runtime-utils": "^7.5.0",
-    "@prisma/dmmf": "^7.5.0",
-    "@prisma/generator-helper": "^7.5.0",
+    "@prisma/client-runtime-utils": "^7.8.0",
+    "@prisma/dmmf": "^7.8.0",
+    "@prisma/generator-helper": "^7.8.0",
     "code-block-writer": "^13.0.3",
-    "lodash": "^4.17.23",
-    "zod": "^4.3.6"
+    "lodash": "^4.18.1",
+    "zod": "^4.4.1"
   },
   "peerDependencies": {
     "@prisma/client": "^4.x.x || ^5.x.x || ^6.x.x || ^7.x.x",
@@ -72,21 +72,29 @@
     "changes": {
       "@prisma/client-runtime-utils": {
         "from": "^7.3.0",
-        "to": "^7.5.0"
+        "to": "^7.8.0"
       },
       "@prisma/dmmf": {
         "from": "^7.3.0",
-        "to": "^7.5.0"
+        "to": "^7.8.0"
       },
       "@prisma/generator-helper": {
         "from": "^7.3.0",
-        "to": "^7.5.0"
+        "to": "^7.8.0"
+      },
+      "lodash": {
+        "from": "^4.17.23",
+        "to": "^4.18.1"
+      },
+      "zod": {
+        "from": "^4.3.6",
+        "to": "^4.4.1"
       }
     },
-    "depsUpdated": 3,
+    "depsUpdated": 5,
     "originalPackage": "zod-prisma-types",
     "originalVersion": "3.3.11",
-    "processedAt": "2026-03-19T00:38:28.144Z",
+    "processedAt": "2026-04-30T00:53:57.982Z",
     "smokeTest": "failed"
   }
 }
