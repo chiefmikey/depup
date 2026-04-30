@@ -16,5 +16,20 @@
       "timestamp": "2026-03-30T20:17:56.672Z",
       "version": "1.1.1-depup.0"
     }
+  },
+  "1.1.2": {
+    "0": {
+      "changes": {
+        "@datadog/flagging-core": {
+          "from": "0.3.3",
+          "to": "^1.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-30T00:50:13.848Z",
+      "version": "1.1.2-depup.0"
+    }
   }
 }
