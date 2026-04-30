@@ -483,6 +483,23 @@
       "status": "failed",
       "timestamp": "2026-04-29T20:31:02.547Z",
       "version": "3.972.37-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1039.0",
+          "to": "^3.1040.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-04-30T20:33:13.898Z",
+      "version": "3.972.37-depup.1"
     }
   }
 }
