@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
 
 ## What changed
 
@@ -31,22 +31,19 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-tools/merge | `^9.0.6` | `^9.1.9` |
 | @graphql-tools/url-loader | `^9.0.6` | `^9.1.2` |
 | @graphql-tools/utils | `^11.0.0` | `^11.1.0` |
-| @inquirer/prompts | `^7.8.2` | `^8.4.2` |
+| @inquirer/prompts | `^8.3.2` | `^8.4.2` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.10.13` |
-| chalk | `^4.1.0` | `^5.6.2` |
+| chalk | `^5.6.0` | `^5.6.2` |
 | cosmiconfig | `^9.0.0` | `^9.0.1` |
-| debounce | `^2.0.0` | `^3.0.0` |
-| detect-indent | `^6.0.0` | `^7.0.2` |
+| detect-indent | `^7.0.0` | `^7.0.2` |
 | is-glob | `^4.0.1` | `^4.0.3` |
 | jiti | `^2.3.0` | `^2.6.1` |
-| listr2 | `^9.0.0` | `^10.2.1` |
-| log-symbols | `^4.0.0` | `^7.0.1` |
+| log-symbols | `^7.0.0` | `^7.0.1` |
 | micromatch | `^4.0.5` | `^4.0.8` |
 | shell-quote | `^1.7.3` | `^1.8.3` |
-| ts-log | `^2.2.3` | `^3.0.0` |
+| ts-log | `^3.0.0` | `^3.0.2` |
 | tslib | `^2.4.0` | `^2.8.1` |
 | yaml | `^2.3.1` | `^2.8.3` |
-| yargs | `^17.0.0` | `^18.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/graphql-codegen__cli&labels=bug).
