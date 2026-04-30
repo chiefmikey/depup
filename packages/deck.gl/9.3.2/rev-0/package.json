@@ -1,0 +1,91 @@
+{
+  "name": "@depup/deck.gl",
+  "description": "A suite of 3D-enabled data visualization overlays, suitable for react-map-gl (with updated dependencies)",
+  "license": "MIT",
+  "type": "module",
+  "version": "9.3.2-depup.0",
+  "keywords": [
+    "deck.gl",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webgl",
+    "visualization",
+    "overlay",
+    "layer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visgl/deck.gl.git"
+  },
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./stylesheet.css": {
+      "import": "./dist/stylesheet.css"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "dist.min.js",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build-bundle && mkdir -p ./dist && cp ../widgets/src/stylesheet.css ./dist",
+    "build-bundle": "ocular-bundle ./bundle.ts"
+  },
+  "dependencies": {
+    "@deck.gl/aggregation-layers": "9.3.2",
+    "@deck.gl/arcgis": "9.3.2",
+    "@deck.gl/carto": "9.3.2",
+    "@deck.gl/core": "9.3.2",
+    "@deck.gl/extensions": "9.3.2",
+    "@deck.gl/geo-layers": "9.3.2",
+    "@deck.gl/google-maps": "9.3.2",
+    "@deck.gl/json": "9.3.2",
+    "@deck.gl/layers": "9.3.2",
+    "@deck.gl/mapbox": "9.3.2",
+    "@deck.gl/mesh-layers": "9.3.2",
+    "@deck.gl/react": "9.3.2",
+    "@deck.gl/widgets": "9.3.2",
+    "@loaders.gl/core": "^4.4.1",
+    "@luma.gl/core": "^9.3.3",
+    "@luma.gl/engine": "^9.3.3"
+  },
+  "peerDependencies": {
+    "@arcgis/core": "^4.0.0",
+    "react": ">=16.3.0",
+    "react-dom": ">=16.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@arcgis/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "gitHead": "09af8de8d18a9cb9a31d064cae8f9e7239df7f53",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "deck.gl",
+    "originalVersion": "9.3.2",
+    "processedAt": "2026-04-30T08:52:49.294Z",
+    "smokeTest": "passed"
+  }
+}
