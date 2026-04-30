@@ -12,20 +12,11 @@ npm install @depup/vite-plugin-dts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.4 | **DepUp version**: 4.5.4-depup.1 | **Updated**: 4/1/2026 | **Import test**: failed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @microsoft/api-extractor | `^7.50.1` | `^7.58.0` |
-| @rollup/pluginutils | `^5.1.4` | `^5.3.0` |
-| @volar/typescript | `^2.4.11` | `^2.4.28` |
-| @vue/language-core | `2.2.0` | `^3.2.6` |
-| debug | `^4.4.0` | `^4.4.3` |
-| local-pkg | `^1.0.0` | `^1.1.2` |
-| magic-string | `^0.30.17` | `^0.30.21` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vite-plugin-dts&labels=bug).
 
