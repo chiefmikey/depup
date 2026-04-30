@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "^7.24.4",
+      "to": "^7.29.0"
+    },
+    "@babel/parser": {
+      "from": "^7.24.4",
+      "to": "^7.29.2"
+    },
+    "hermes-parser": {
+      "from": "^0.25.1",
+      "to": "^0.36.0"
+    },
+    "zod": {
+      "from": "^3.25.0 || ^4.0.0",
+      "to": "^4.4.1"
+    },
+    "zod-validation-error": {
+      "from": "^3.5.0 || ^4.0.0",
+      "to": "^5.0.0"
+    }
+  },
+  "timestamp": "2026-04-30T00:52:30.057Z",
+  "totalUpdated": 5
+}
