@@ -101,5 +101,20 @@
       "timestamp": "2026-04-23T00:46:05.841Z",
       "version": "21.2.10-depup.0"
     }
+  },
+  "21.2.11": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-04-30T00:49:55.555Z",
+      "version": "21.2.11-depup.0"
+    }
   }
 }
