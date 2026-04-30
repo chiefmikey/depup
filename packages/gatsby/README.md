@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.21 | **Updated**: 4/27/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.22 | **Updated**: 4/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,11 +28,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/types | `^7.20.7` | `^7.29.0` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
-| @graphql-codegen/add | `^3.2.3` | `^6.0.1` |
-| @graphql-codegen/core | `^2.6.8` | `^5.0.2` |
-| @graphql-codegen/plugin-helpers | `^2.7.2` | `^6.3.0` |
-| @graphql-codegen/typescript | `^2.8.8` | `^5.0.10` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^5.1.0` |
+| @graphql-codegen/add | `^3.2.3` | `^7.0.0` |
+| @graphql-codegen/core | `^2.6.8` | `^6.0.0` |
+| @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.0` |
+| @graphql-codegen/typescript | `^2.8.8` | `^6.0.0` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.0` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.59.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.59.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.59.1` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.59.1` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
