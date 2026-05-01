@@ -143,6 +143,79 @@
       "status": "failed",
       "timestamp": "2026-04-24T16:30:20.071Z",
       "version": "1.6.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@docsearch/css": {
+          "from": "3.8.2",
+          "to": "^4.6.3"
+        },
+        "@docsearch/js": {
+          "from": "3.8.2",
+          "to": "^4.6.3"
+        },
+        "@iconify-json/simple-icons": {
+          "from": "^1.2.21",
+          "to": "^1.2.80"
+        },
+        "@shikijs/core": {
+          "from": "^2.1.0",
+          "to": "^4.0.2"
+        },
+        "@shikijs/transformers": {
+          "from": "^2.1.0",
+          "to": "^4.0.2"
+        },
+        "@shikijs/types": {
+          "from": "^2.1.0",
+          "to": "^4.0.2"
+        },
+        "@vitejs/plugin-vue": {
+          "from": "^5.2.1",
+          "to": "^6.0.6"
+        },
+        "@vue/devtools-api": {
+          "from": "^7.7.0",
+          "to": "^8.1.1"
+        },
+        "@vue/shared": {
+          "from": "^3.5.13",
+          "to": "^3.5.33"
+        },
+        "@vueuse/core": {
+          "from": "^12.4.0",
+          "to": "^14.3.0"
+        },
+        "@vueuse/integrations": {
+          "from": "^12.4.0",
+          "to": "^14.3.0"
+        },
+        "focus-trap": {
+          "from": "^7.6.4",
+          "to": "^8.1.0"
+        },
+        "minisearch": {
+          "from": "^7.1.1",
+          "to": "^7.2.0"
+        },
+        "shiki": {
+          "from": "^2.1.0",
+          "to": "^4.0.2"
+        },
+        "vite": {
+          "from": "^5.4.14",
+          "to": "^8.0.10"
+        },
+        "vue": {
+          "from": "^3.5.13",
+          "to": "^3.5.33"
+        }
+      },
+      "depsUpdated": 16,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-01T05:23:58.481Z",
+      "version": "1.6.4-depup.2"
     }
   }
 }
