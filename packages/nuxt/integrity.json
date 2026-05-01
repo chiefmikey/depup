@@ -514,6 +514,31 @@
       "status": "failed",
       "timestamp": "2026-04-30T00:53:54.688Z",
       "version": "4.4.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.4",
+          "to": "^4.0.0-alpha.4"
+        },
+        "@unhead/vue": {
+          "from": "^2.1.13",
+          "to": "^3.1.0"
+        },
+        "cookie-es": {
+          "from": "^2.0.1",
+          "to": "^3.1.1"
+        },
+        "devalue": {
+          "from": "^5.7.1",
+          "to": "^5.8.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-01T00:57:28.389Z",
+      "version": "4.4.4-depup.1"
     }
   }
 }

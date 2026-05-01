@@ -12,7 +12,7 @@ npm install @depup/dataform__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.53 | **DepUp version**: 3.0.53-depup.0 | **Updated**: 4/27/2026 | **Import test**: passed
+**Original version**: 3.0.54 | **DepUp version**: 3.0.54-depup.0 | **Updated**: 5/1/2026 | **Import test**: passed
 
 ## What changed
 
