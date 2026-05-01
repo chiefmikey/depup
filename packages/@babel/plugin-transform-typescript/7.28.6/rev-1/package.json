@@ -1,0 +1,57 @@
+{
+  "name": "@depup/babel__plugin-transform-typescript",
+  "version": "7.28.6-depup.1",
+  "description": "Transform TypeScript into ES.next (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-typescript"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "keywords": [
+    "@babel/plugin-transform-typescript",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin",
+    "typescript"
+  ],
+  "dependencies": {
+    "@babel/helper-annotate-as-pure": "^7.27.3",
+    "@babel/helper-create-class-features-plugin": "^7.29.3",
+    "@babel/helper-plugin-utils": "^7.28.6",
+    "@babel/helper-skip-transparent-expression-wrappers": "^7.27.1",
+    "@babel/plugin-syntax-typescript": "^7.28.6"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/helper-plugin-test-runner": "^7.27.1",
+    "@babel/traverse": "^7.28.6",
+    "@babel/types": "^7.28.6"
+  },
+  "homepage": "https://babel.dev/docs/en/next/babel-plugin-transform-typescript",
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "type": "commonjs",
+  "depup": {
+    "changes": {
+      "@babel/helper-create-class-features-plugin": {
+        "from": "^7.28.6",
+        "to": "^7.29.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@babel/plugin-transform-typescript",
+    "originalVersion": "7.28.6",
+    "processedAt": "2026-05-01T00:55:43.925Z",
+    "smokeTest": "passed"
+  }
+}
