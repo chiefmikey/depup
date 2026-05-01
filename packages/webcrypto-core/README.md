@@ -12,11 +12,15 @@ npm install @depup/webcrypto-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.9.0 | **DepUp version**: 1.9.0-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
+**Original version**: 1.9.0 | **DepUp version**: 1.9.0-depup.1 | **Updated**: 5/1/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @peculiar/asn1-schema | `^2.6.0` | `^2.7.0` |
+| @peculiar/utils | `^2.0.1` | `^2.0.2` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webcrypto-core&labels=bug).
 
