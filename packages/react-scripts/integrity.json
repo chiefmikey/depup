@@ -1,166 +1,5 @@
 {
   "5.0.1": {
-    "3": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.16.0",
-          "to": "^7.29.0"
-        },
-        "@pmmmwh/react-refresh-webpack-plugin": {
-          "from": "^0.5.3",
-          "to": "^0.6.2"
-        },
-        "@svgr/webpack": {
-          "from": "^5.5.0",
-          "to": "^8.1.0"
-        },
-        "babel-jest": {
-          "from": "^27.4.2",
-          "to": "^30.3.0"
-        },
-        "babel-loader": {
-          "from": "^8.2.3",
-          "to": "^10.1.1"
-        },
-        "babel-preset-react-app": {
-          "from": "^10.0.1",
-          "to": "^10.1.0"
-        },
-        "bfj": {
-          "from": "^7.0.2",
-          "to": "^9.1.3"
-        },
-        "browserslist": {
-          "from": "^4.18.1",
-          "to": "^4.28.2"
-        },
-        "camelcase": {
-          "from": "^6.2.1",
-          "to": "^9.0.0"
-        },
-        "css-loader": {
-          "from": "^6.5.1",
-          "to": "^7.1.4"
-        },
-        "css-minimizer-webpack-plugin": {
-          "from": "^3.2.0",
-          "to": "^8.0.0"
-        },
-        "dotenv": {
-          "from": "^10.0.0",
-          "to": "^17.4.0"
-        },
-        "dotenv-expand": {
-          "from": "^5.1.0",
-          "to": "^12.0.3"
-        },
-        "eslint": {
-          "from": "^8.3.0",
-          "to": "^10.1.0"
-        },
-        "eslint-webpack-plugin": {
-          "from": "^3.1.1",
-          "to": "^6.0.0"
-        },
-        "fs-extra": {
-          "from": "^10.0.0",
-          "to": "^11.3.4"
-        },
-        "html-webpack-plugin": {
-          "from": "^5.5.0",
-          "to": "^5.6.6"
-        },
-        "jest": {
-          "from": "^27.4.3",
-          "to": "^30.3.0"
-        },
-        "jest-resolve": {
-          "from": "^27.4.2",
-          "to": "^30.3.0"
-        },
-        "jest-watch-typeahead": {
-          "from": "^1.0.0",
-          "to": "^3.0.1"
-        },
-        "mini-css-extract-plugin": {
-          "from": "^2.4.5",
-          "to": "^2.10.2"
-        },
-        "postcss": {
-          "from": "^8.4.4",
-          "to": "^8.5.8"
-        },
-        "postcss-loader": {
-          "from": "^6.2.1",
-          "to": "^8.2.1"
-        },
-        "postcss-normalize": {
-          "from": "^10.0.1",
-          "to": "^13.0.1"
-        },
-        "postcss-preset-env": {
-          "from": "^7.0.1",
-          "to": "^11.2.0"
-        },
-        "react-refresh": {
-          "from": "^0.11.0",
-          "to": "^0.18.0"
-        },
-        "resolve": {
-          "from": "^1.20.0",
-          "to": "^1.22.11"
-        },
-        "resolve-url-loader": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        },
-        "sass-loader": {
-          "from": "^12.3.0",
-          "to": "^16.0.7"
-        },
-        "semver": {
-          "from": "^7.3.5",
-          "to": "^7.7.4"
-        },
-        "source-map-loader": {
-          "from": "^3.0.0",
-          "to": "^5.0.0"
-        },
-        "style-loader": {
-          "from": "^3.3.1",
-          "to": "^4.0.0"
-        },
-        "tailwindcss": {
-          "from": "^3.0.2",
-          "to": "^4.2.2"
-        },
-        "terser-webpack-plugin": {
-          "from": "^5.2.5",
-          "to": "^5.4.0"
-        },
-        "webpack": {
-          "from": "^5.64.4",
-          "to": "^5.105.4"
-        },
-        "webpack-dev-server": {
-          "from": "^4.6.0",
-          "to": "^5.2.3"
-        },
-        "webpack-manifest-plugin": {
-          "from": "^4.0.2",
-          "to": "^6.0.1"
-        },
-        "workbox-webpack-plugin": {
-          "from": "^6.4.1",
-          "to": "^7.4.0"
-        }
-      },
-      "depsUpdated": 38,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-04-03T12:26:04.094Z",
-      "version": "5.0.1-depup.3"
-    },
     "4": {
       "changes": {
         "@babel/core": {
@@ -804,6 +643,167 @@
       "status": "failed",
       "timestamp": "2026-04-24T00:49:23.289Z",
       "version": "5.0.1-depup.7"
+    },
+    "8": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.16.0",
+          "to": "^7.29.0"
+        },
+        "@pmmmwh/react-refresh-webpack-plugin": {
+          "from": "^0.5.3",
+          "to": "^0.6.2"
+        },
+        "@svgr/webpack": {
+          "from": "^5.5.0",
+          "to": "^8.1.0"
+        },
+        "babel-jest": {
+          "from": "^27.4.2",
+          "to": "^30.3.0"
+        },
+        "babel-loader": {
+          "from": "^8.2.3",
+          "to": "^10.1.1"
+        },
+        "babel-preset-react-app": {
+          "from": "^10.0.1",
+          "to": "^10.1.0"
+        },
+        "bfj": {
+          "from": "^7.0.2",
+          "to": "^9.1.3"
+        },
+        "browserslist": {
+          "from": "^4.18.1",
+          "to": "^4.28.2"
+        },
+        "camelcase": {
+          "from": "^6.2.1",
+          "to": "^9.0.0"
+        },
+        "css-loader": {
+          "from": "^6.5.1",
+          "to": "^7.1.4"
+        },
+        "css-minimizer-webpack-plugin": {
+          "from": "^3.2.0",
+          "to": "^8.0.0"
+        },
+        "dotenv": {
+          "from": "^10.0.0",
+          "to": "^17.4.2"
+        },
+        "dotenv-expand": {
+          "from": "^5.1.0",
+          "to": "^13.0.0"
+        },
+        "eslint": {
+          "from": "^8.3.0",
+          "to": "^10.3.0"
+        },
+        "eslint-webpack-plugin": {
+          "from": "^3.1.1",
+          "to": "^6.0.0"
+        },
+        "fs-extra": {
+          "from": "^10.0.0",
+          "to": "^11.3.4"
+        },
+        "html-webpack-plugin": {
+          "from": "^5.5.0",
+          "to": "^5.6.7"
+        },
+        "jest": {
+          "from": "^27.4.3",
+          "to": "^30.3.0"
+        },
+        "jest-resolve": {
+          "from": "^27.4.2",
+          "to": "^30.3.0"
+        },
+        "jest-watch-typeahead": {
+          "from": "^1.0.0",
+          "to": "^3.0.1"
+        },
+        "mini-css-extract-plugin": {
+          "from": "^2.4.5",
+          "to": "^2.10.2"
+        },
+        "postcss": {
+          "from": "^8.4.4",
+          "to": "^8.5.13"
+        },
+        "postcss-loader": {
+          "from": "^6.2.1",
+          "to": "^8.2.1"
+        },
+        "postcss-normalize": {
+          "from": "^10.0.1",
+          "to": "^13.0.1"
+        },
+        "postcss-preset-env": {
+          "from": "^7.0.1",
+          "to": "^11.2.1"
+        },
+        "react-refresh": {
+          "from": "^0.11.0",
+          "to": "^0.18.0"
+        },
+        "resolve": {
+          "from": "^1.20.0",
+          "to": "^1.22.12"
+        },
+        "resolve-url-loader": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "sass-loader": {
+          "from": "^12.3.0",
+          "to": "^16.0.7"
+        },
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.7.4"
+        },
+        "source-map-loader": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "style-loader": {
+          "from": "^3.3.1",
+          "to": "^4.0.0"
+        },
+        "tailwindcss": {
+          "from": "^3.0.2",
+          "to": "^4.2.4"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.2.5",
+          "to": "^5.5.0"
+        },
+        "webpack": {
+          "from": "^5.64.4",
+          "to": "^5.106.2"
+        },
+        "webpack-dev-server": {
+          "from": "^4.6.0",
+          "to": "^5.2.3"
+        },
+        "webpack-manifest-plugin": {
+          "from": "^4.0.2",
+          "to": "^6.0.1"
+        },
+        "workbox-webpack-plugin": {
+          "from": "^6.4.1",
+          "to": "^7.4.0"
+        }
+      },
+      "depsUpdated": 38,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:55:21.277Z",
+      "version": "5.0.1-depup.8"
     }
   }
 }

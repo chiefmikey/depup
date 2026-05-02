@@ -12,16 +12,17 @@ npm install @depup/contentful
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.12.1 | **DepUp version**: 11.12.1-depup.1 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 11.12.1 | **DepUp version**: 11.12.1-depup.2 | **Updated**: 5/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @contentful/content-source-maps | `^0.11.33` | `^0.12.1` |
+| @contentful/content-source-maps | `^0.11.33` | `^0.12.2` |
 | @contentful/rich-text-types | `^16.6.1` | `^17.2.7` |
+| axios | `^1.15.0` | `^1.15.2` |
 | contentful-resolve-response | `^1.9.4` | `^1.9.8` |
-| contentful-sdk-core | `^9.4.4` | `^9.4.5` |
+| contentful-sdk-core | `^9.4.4` | `^10.0.0` |
 | type-fest | `^4.0.0` | `^5.6.0` |
 
 
