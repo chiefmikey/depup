@@ -1,0 +1,134 @@
+{
+  "bumped": {
+    "@algorithm.ts/lcs": {
+      "from": "^4.0.5",
+      "to": "^4.0.6"
+    },
+    "@dnd-kit/modifiers": {
+      "from": "^6.0.1",
+      "to": "^9.0.0"
+    },
+    "@dnd-kit/sortable": {
+      "from": "^7.0.2",
+      "to": "^10.0.0"
+    },
+    "@isaacs/ttlcache": {
+      "from": "^1.4.1",
+      "to": "^2.1.4"
+    },
+    "@mux/mux-player-react": {
+      "from": "^3.10.2",
+      "to": "^3.13.0"
+    },
+    "@portabletext/editor": {
+      "from": "^6.6.2",
+      "to": "^6.6.4"
+    },
+    "@portabletext/plugin-markdown-shortcuts": {
+      "from": "^7.0.25",
+      "to": "^7.0.27"
+    },
+    "@portabletext/plugin-one-line": {
+      "from": "^6.0.25",
+      "to": "^6.0.27"
+    },
+    "@portabletext/plugin-paste-link": {
+      "from": "^3.0.25",
+      "to": "^3.0.27"
+    },
+    "@portabletext/plugin-typography": {
+      "from": "^7.0.25",
+      "to": "^7.0.27"
+    },
+    "@sanity/client": {
+      "from": "^7.21.0",
+      "to": "^7.22.0"
+    },
+    "@sanity/diff-patch": {
+      "from": "^5.0.0",
+      "to": "^6.0.0"
+    },
+    "@sanity/image-url": {
+      "from": "^2.0.3",
+      "to": "^2.1.1"
+    },
+    "@sanity/migrate": {
+      "from": "^6.1.1",
+      "to": "^6.1.2"
+    },
+    "@sanity/sdk": {
+      "from": "^2.8.0",
+      "to": "^2.10.0"
+    },
+    "@sentry/react": {
+      "from": "^8.55.0",
+      "to": "^10.51.0"
+    },
+    "@tanstack/react-virtual": {
+      "from": "^3.13.18",
+      "to": "^3.13.24"
+    },
+    "@xstate/react": {
+      "from": "^6.0.0",
+      "to": "^6.1.0"
+    },
+    "classnames": {
+      "from": "^2.2.5",
+      "to": "^2.5.1"
+    },
+    "groq-js": {
+      "from": "^1.29.0",
+      "to": "^1.30.1"
+    },
+    "i18next": {
+      "from": "^25.8.17",
+      "to": "^26.0.8"
+    },
+    "isomorphic-dompurify": {
+      "from": "2.26.0",
+      "to": "^3.12.0"
+    },
+    "motion": {
+      "from": "^12.27.1",
+      "to": "^12.38.0"
+    },
+    "nanoid": {
+      "from": "^3.3.11",
+      "to": "^5.1.11"
+    },
+    "path-to-regexp": {
+      "from": "^6.3.0",
+      "to": "^8.4.2"
+    },
+    "player.style": {
+      "from": "^0.1.9",
+      "to": "^0.3.4"
+    },
+    "react-i18next": {
+      "from": "15.6.1",
+      "to": "^17.0.6"
+    },
+    "react-is": {
+      "from": "^19.2.4",
+      "to": "^19.2.5"
+    },
+    "semver": {
+      "from": "^7.7.2",
+      "to": "^7.7.4"
+    },
+    "uuid": {
+      "from": "^11.1.0",
+      "to": "^14.0.0"
+    },
+    "web-vitals": {
+      "from": "^5.1.0",
+      "to": "^5.2.0"
+    },
+    "xstate": {
+      "from": "^5.25.1",
+      "to": "^5.31.0"
+    }
+  },
+  "timestamp": "2026-05-02T06:54:41.772Z",
+  "totalUpdated": 32
+}

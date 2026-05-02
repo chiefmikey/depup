@@ -1080,87 +1080,6 @@
     }
   },
   "4.23.0": {
-    "11": {
-      "changes": {
-        "@aws-sdk/client-cloudfront": {
-          "from": "3.1009.0",
-          "to": "^3.1036.0"
-        },
-        "@aws-sdk/client-s3": {
-          "from": "3.1014.0",
-          "to": "^3.1036.0"
-        },
-        "@inquirer/confirm": {
-          "from": "^3.1.22",
-          "to": "^6.0.12"
-        },
-        "@inquirer/input": {
-          "from": "^2.2.4",
-          "to": "^5.0.12"
-        },
-        "@inquirer/select": {
-          "from": "^2.5.0",
-          "to": "^5.1.4"
-        },
-        "@oclif/core": {
-          "from": "4.9.0",
-          "to": "^4.10.5"
-        },
-        "@oclif/plugin-help": {
-          "from": "^6.2.38",
-          "to": "^6.2.44"
-        },
-        "@oclif/plugin-not-found": {
-          "from": "^3.2.76",
-          "to": "^3.2.80"
-        },
-        "@oclif/plugin-warn-if-update-available": {
-          "from": "^3.1.57",
-          "to": "^3.1.60"
-        },
-        "ansis": {
-          "from": "^3.16.0",
-          "to": "^4.2.0"
-        },
-        "change-case": {
-          "from": "^4",
-          "to": "^5.4.4"
-        },
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "ejs": {
-          "from": "^3.1.10",
-          "to": "^5.0.2"
-        },
-        "fs-extra": {
-          "from": "^8.1",
-          "to": "^11.3.4"
-        },
-        "got": {
-          "from": "^13",
-          "to": "^15.0.3"
-        },
-        "normalize-package-data": {
-          "from": "^6",
-          "to": "^8.0.0"
-        },
-        "sort-package-json": {
-          "from": "^2.15.1",
-          "to": "^3.6.1"
-        },
-        "validate-npm-package-name": {
-          "from": "^5.0.1",
-          "to": "^7.0.2"
-        }
-      },
-      "depsUpdated": 18,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-04-23T20:31:13.080Z",
-      "version": "4.23.0-depup.11"
-    },
     "12": {
       "changes": {
         "@aws-sdk/client-cloudfront": {
@@ -1484,6 +1403,87 @@
       "status": "failed",
       "timestamp": "2026-04-30T20:34:07.975Z",
       "version": "4.23.0-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@aws-sdk/client-cloudfront": {
+          "from": "3.1009.0",
+          "to": "^3.1041.0"
+        },
+        "@aws-sdk/client-s3": {
+          "from": "3.1014.0",
+          "to": "^3.1041.0"
+        },
+        "@inquirer/confirm": {
+          "from": "^3.1.22",
+          "to": "^6.0.12"
+        },
+        "@inquirer/input": {
+          "from": "^2.2.4",
+          "to": "^5.0.12"
+        },
+        "@inquirer/select": {
+          "from": "^2.5.0",
+          "to": "^5.1.4"
+        },
+        "@oclif/core": {
+          "from": "4.9.0",
+          "to": "^4.11.0"
+        },
+        "@oclif/plugin-help": {
+          "from": "^6.2.38",
+          "to": "^6.2.45"
+        },
+        "@oclif/plugin-not-found": {
+          "from": "^3.2.76",
+          "to": "^3.2.81"
+        },
+        "@oclif/plugin-warn-if-update-available": {
+          "from": "^3.1.57",
+          "to": "^3.1.61"
+        },
+        "ansis": {
+          "from": "^3.16.0",
+          "to": "^4.2.0"
+        },
+        "change-case": {
+          "from": "^4",
+          "to": "^5.4.4"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "ejs": {
+          "from": "^3.1.10",
+          "to": "^5.0.2"
+        },
+        "fs-extra": {
+          "from": "^8.1",
+          "to": "^11.3.4"
+        },
+        "got": {
+          "from": "^13",
+          "to": "^15.0.3"
+        },
+        "normalize-package-data": {
+          "from": "^6",
+          "to": "^8.0.0"
+        },
+        "sort-package-json": {
+          "from": "^2.15.1",
+          "to": "^3.6.1"
+        },
+        "validate-npm-package-name": {
+          "from": "^5.0.1",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 18,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:54:31.434Z",
+      "version": "4.23.0-depup.16"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.23.0 | **DepUp version**: 5.23.0-depup.1 | **Updated**: 4/29/2026 | **Import test**: failed
+**Original version**: 5.23.0 | **DepUp version**: 5.23.0-depup.2 | **Updated**: 5/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,24 +23,25 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
 | @mux/mux-player-react | `^3.10.2` | `^3.13.0` |
-| @portabletext/editor | `^6.6.2` | `^6.6.3` |
-| @portabletext/plugin-markdown-shortcuts | `^7.0.25` | `^7.0.26` |
-| @portabletext/plugin-one-line | `^6.0.25` | `^6.0.26` |
-| @portabletext/plugin-paste-link | `^3.0.25` | `^3.0.26` |
-| @portabletext/plugin-typography | `^7.0.25` | `^7.0.26` |
+| @portabletext/editor | `^6.6.2` | `^6.6.4` |
+| @portabletext/plugin-markdown-shortcuts | `^7.0.25` | `^7.0.27` |
+| @portabletext/plugin-one-line | `^6.0.25` | `^6.0.27` |
+| @portabletext/plugin-paste-link | `^3.0.25` | `^3.0.27` |
+| @portabletext/plugin-typography | `^7.0.25` | `^7.0.27` |
 | @sanity/client | `^7.21.0` | `^7.22.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/image-url | `^2.0.3` | `^2.1.1` |
-| @sanity/sdk | `^2.8.0` | `^2.9.0` |
+| @sanity/migrate | `^6.1.1` | `^6.1.2` |
+| @sanity/sdk | `^2.8.0` | `^2.10.0` |
 | @sentry/react | `^8.55.0` | `^10.51.0` |
 | @tanstack/react-virtual | `^3.13.18` | `^3.13.24` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
 | groq-js | `^1.29.0` | `^1.30.1` |
 | i18next | `^25.8.17` | `^26.0.8` |
-| isomorphic-dompurify | `2.26.0` | `^3.11.0` |
+| isomorphic-dompurify | `2.26.0` | `^3.12.0` |
 | motion | `^12.27.1` | `^12.38.0` |
-| nanoid | `^3.3.11` | `^5.1.9` |
+| nanoid | `^3.3.11` | `^5.1.11` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
 | player.style | `^0.1.9` | `^0.3.4` |
 | react-i18next | `15.6.1` | `^17.0.6` |
