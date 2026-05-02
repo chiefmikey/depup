@@ -126,6 +126,23 @@
       "status": "failed",
       "timestamp": "2026-04-24T00:51:58.690Z",
       "version": "11.14.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "dockerode": {
+          "from": "^4.0.10",
+          "to": "^5.0.0"
+        },
+        "undici": {
+          "from": "^7.24.5",
+          "to": "^8.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:54:00.176Z",
+      "version": "11.14.0-depup.3"
     }
   }
 }

@@ -53,6 +53,19 @@
       "status": "failed",
       "timestamp": "2026-04-20T05:08:20.326Z",
       "version": "2.10.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "globals": {
+          "from": "^17.3.0",
+          "to": "^17.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:53:29.069Z",
+      "version": "2.10.2-depup.1"
     }
   }
 }
