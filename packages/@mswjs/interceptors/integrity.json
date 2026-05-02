@@ -104,5 +104,24 @@
       "timestamp": "2026-04-29T12:40:44.373Z",
       "version": "0.41.7-depup.0"
     }
+  },
+  "0.41.8": {
+    "0": {
+      "changes": {
+        "@open-draft/deferred-promise": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        },
+        "@open-draft/until": {
+          "from": "^2.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:48:02.534Z",
+      "version": "0.41.8-depup.0"
+    }
   }
 }
