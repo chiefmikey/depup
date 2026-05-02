@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.35.0 | **DepUp version**: 6.35.0-depup.4 | **Updated**: 4/30/2026 | **Import test**: failed
+**Original version**: 6.36.0 | **DepUp version**: 6.36.0-depup.0 | **Updated**: 5/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1040.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1041.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.0.9` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -42,7 +42,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/job-manager | `1.0.9` | `^3.2.0` |
 | @tryghost/limit-service | `1.5.2` | `^1.5.3` |
 | @tryghost/logging | `4.1.0` | `^4.2.0` |
-| @tryghost/members-csv | `2.0.5` | `^2.0.7` |
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.0` |
 | @tryghost/mw-vhost | `1.0.6` | `^3.2.0` |
@@ -99,7 +98,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment-timezone | `0.5.45` | `^0.6.2` |
 | mysql2 | `3.18.1` | `^3.22.3` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `6.10.1` | `^8.0.7` |
+| nodemailer | `8.0.5` | `^8.0.7` |
 | otplib | `12.0.1` | `^13.4.0` |
 | sanitize-html | `2.17.0` | `^2.17.3` |
 | stripe | `8.222.0` | `^22.1.0` |
