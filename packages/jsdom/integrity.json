@@ -264,6 +264,19 @@
       "status": "failed",
       "timestamp": "2026-04-30T08:54:20.822Z",
       "version": "29.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "undici": {
+          "from": "^7.25.0",
+          "to": "^8.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:53:57.384Z",
+      "version": "29.1.1-depup.1"
     }
   }
 }
