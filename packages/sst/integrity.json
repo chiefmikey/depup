@@ -1031,5 +1031,32 @@
       "timestamp": "2026-04-29T20:31:54.920Z",
       "version": "4.12.10-depup.0"
     }
+  },
+  "4.12.11": {
+    "0": {
+      "changes": {
+        "@aws/durable-execution-sdk-js": {
+          "from": "1.0.2",
+          "to": "^1.1.2"
+        },
+        "aws4fetch": {
+          "from": "1.0.18",
+          "to": "^1.0.20"
+        },
+        "jose": {
+          "from": "5.2.3",
+          "to": "^6.2.3"
+        },
+        "openid-client": {
+          "from": "5.6.4",
+          "to": "^6.8.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-02T06:48:39.669Z",
+      "version": "4.12.11-depup.0"
+    }
   }
 }
