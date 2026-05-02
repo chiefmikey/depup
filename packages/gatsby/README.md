@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.22 | **Updated**: 4/30/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.23 | **Updated**: 5/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/core | `^7.20.12` | `^7.29.0` |
 | @babel/eslint-parser | `^7.19.1` | `^7.28.6` |
 | @babel/helper-plugin-utils | `^7.20.2` | `^7.28.6` |
-| @babel/parser | `^7.20.13` | `^7.29.2` |
+| @babel/parser | `^7.20.13` | `^7.29.3` |
 | @babel/runtime | `^7.20.13` | `^7.29.2` |
 | @babel/traverse | `^7.20.13` | `^7.29.0` |
 | @babel/types | `^7.20.7` | `^7.29.0` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
 | enhanced-resolve | `^5.15.0` | `^5.21.0` |
-| eslint | `^7.32.0` | `^10.2.1` |
+| eslint | `^7.32.0` | `^10.3.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
@@ -105,7 +105,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^7.1.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.12` |
+| postcss | `^8.4.24` | `^8.5.13` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.3.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |

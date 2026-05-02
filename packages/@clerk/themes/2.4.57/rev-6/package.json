@@ -1,6 +1,6 @@
 {
   "name": "@depup/clerk__themes",
-  "version": "2.4.57-depup.1",
+  "version": "2.4.57-depup.6",
   "description": "Themes for the Clerk auth components (with updated dependencies)",
   "keywords": [
     "@clerk/themes",
@@ -48,7 +48,7 @@
   ],
   "dependencies": {
     "tslib": "2.8.1",
-    "@clerk/shared": "^4.4.0"
+    "@clerk/shared": "^4.9.0"
   },
   "devDependencies": {
     "tsup": "8.5.0"
@@ -69,13 +69,13 @@
     "changes": {
       "@clerk/shared": {
         "from": "^3.47.2",
-        "to": "^4.4.0"
+        "to": "^4.9.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "@clerk/themes",
     "originalVersion": "2.4.57",
-    "processedAt": "2026-04-01T05:03:52.525Z",
+    "processedAt": "2026-05-02T06:52:54.091Z",
     "smokeTest": "passed"
   }
 }

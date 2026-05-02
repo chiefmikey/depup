@@ -12,7 +12,7 @@ npm install @depup/eslint-config-next
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.2.4 | **DepUp version**: 16.2.4-depup.2 | **Updated**: 4/20/2026 | **Import test**: failed
+**Original version**: 16.2.4 | **DepUp version**: 16.2.4-depup.3 | **Updated**: 5/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,8 +23,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eslint-plugin-jsx-a11y | `^6.10.0` | `^6.10.2` |
 | eslint-plugin-react | `^7.37.0` | `^7.37.5` |
 | eslint-plugin-react-hooks | `^7.0.0` | `^7.1.1` |
-| globals | `16.4.0` | `^17.5.0` |
-| typescript-eslint | `^8.46.0` | `^8.59.0` |
+| globals | `16.4.0` | `^17.6.0` |
+| typescript-eslint | `^8.46.0` | `^8.59.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-config-next&labels=bug).
