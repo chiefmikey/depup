@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.23 | **Updated**: 5/2/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.24 | **Updated**: 5/3/2026 | **Import test**: failed
 
 ## What changed
 
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | address | `1.2.2` | `^2.0.3` |
 | anser | `^2.1.1` | `^2.3.5` |
 | autoprefixer | `^10.4.14` | `^10.5.0` |
-| axios | `^1.6.4` | `^1.15.2` |
+| axios | `^1.6.4` | `^1.16.0` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | browserslist | `^4.21.9` | `^4.28.2` |
@@ -117,7 +117,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | slugify | `^1.6.6` | `^1.6.9` |
 | socket.io | `^4.8.1` | `^4.8.3` |
 | socket.io-client | `^4.8.1` | `^4.8.3` |
-| stack-trace | `^0.0.10` | `^1.0.0-pre2` |
+| stack-trace | `^0.0.10` | `^1.0.0` |
 | string-similarity | `^1.2.2` | `^4.0.4` |
 | strip-ansi | `^6.0.1` | `^7.2.0` |
 | style-loader | `^2.0.0` | `^4.0.0` |

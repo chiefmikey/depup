@@ -18,7 +18,7 @@
     },
     "@babel/parser": {
       "from": "^7.20.13",
-      "to": "^7.29.2"
+      "to": "^7.29.3"
     },
     "@babel/runtime": {
       "from": "^7.20.13",
@@ -42,23 +42,23 @@
     },
     "@graphql-codegen/add": {
       "from": "^3.2.3",
-      "to": "^6.0.1"
+      "to": "^7.0.0"
     },
     "@graphql-codegen/core": {
       "from": "^2.6.8",
-      "to": "^5.0.2"
+      "to": "^6.0.0"
     },
     "@graphql-codegen/plugin-helpers": {
       "from": "^2.7.2",
-      "to": "^6.3.0"
+      "to": "^7.0.0"
     },
     "@graphql-codegen/typescript": {
       "from": "^2.8.8",
-      "to": "^5.0.10"
+      "to": "^6.0.0"
     },
     "@graphql-codegen/typescript-operations": {
       "from": "^2.5.13",
-      "to": "^5.1.0"
+      "to": "^6.0.0"
     },
     "@graphql-tools/code-file-loader": {
       "from": "^7.3.23",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.59.0"
+      "to": "^8.59.1"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.59.0"
+      "to": "^8.59.1"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.15.2"
+      "to": "^1.16.0"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -198,7 +198,7 @@
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.2.1"
+      "to": "^10.3.0"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -350,7 +350,7 @@
     },
     "postcss": {
       "from": "^8.4.24",
-      "to": "^8.5.10"
+      "to": "^8.5.13"
     },
     "postcss-loader": {
       "from": "^5.3.0",
@@ -398,7 +398,7 @@
     },
     "stack-trace": {
       "from": "^0.0.10",
-      "to": "^1.0.0-pre2"
+      "to": "^1.0.0"
     },
     "string-similarity": {
       "from": "^1.2.2",
@@ -418,7 +418,7 @@
     },
     "terser-webpack-plugin": {
       "from": "^5.3.9",
-      "to": "^5.4.0"
+      "to": "^5.5.0"
     },
     "tmp": {
       "from": "^0.2.1",
@@ -442,13 +442,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.30.0"
+      "to": "^5.31.0"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-04-23T20:27:46.837Z",
+  "timestamp": "2026-05-03T07:02:03.630Z",
   "totalUpdated": 112
 }
