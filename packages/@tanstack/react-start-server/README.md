@@ -1,27 +1,27 @@
-# @depup/bignumber.js
+# @depup/tanstack__react-start-server
 
-> [bignumber.js](https://www.npmjs.com/package/bignumber.js) with all dependencies updated to latest versions.
+> [@tanstack/react-start-server](https://www.npmjs.com/package/@tanstack/react-start-server) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/bignumber.js
+npm install @depup/tanstack__react-start-server
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.1.1 | **DepUp version**: 11.1.1-depup.0 | **Updated**: 5/3/2026 | **Import test**: passed
+**Original version**: 1.166.50 | **DepUp version**: 1.166.50-depup.0 | **Updated**: 5/3/2026 | **Import test**: passed
 
 ## What changed
 
 No dependencies were updated (all already at latest).
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/bignumber.js&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tanstack__react-start-server&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [bignumber.js](https://www.npmjs.com/package/bignumber.js).
+This package inherits the license from [@tanstack/react-start-server](https://www.npmjs.com/package/@tanstack/react-start-server).
