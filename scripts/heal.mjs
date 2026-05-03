@@ -9,6 +9,8 @@ import semver from 'semver';
 
 import { listPackageDirectories } from './utilities.mjs';
 
+const INTEGRITY_JSON = 'integrity.json';
+
 class SelfHealer {
   constructor() {
     this.rootDirectory = process.cwd();
@@ -22,21 +24,25 @@ class SelfHealer {
         await this.autoHeal();
         break;
       }
-      case 'missing-readmes': {
-        await this.fixMissingReadmes();
-        break;
-      }
       case 'integrity-data': {
         await this.fixIntegrityData();
+        break;
+      }
+      case 'missing-readmes': {
+        await this.fixMissingReadmes();
         break;
       }
       case 'package-structure': {
         await this.fixPackageStructure();
         break;
       }
+      case 'prune-revisions': {
+        await this.pruneAllRevisions();
+        break;
+      }
       default: {
         console.error(
-          'Usage: node scripts/heal.mjs [auto|missing-readmes|integrity-data|package-structure]',
+          'Usage: node scripts/heal.mjs [auto|missing-readmes|integrity-data|package-structure|prune-revisions]',
         );
         process.exit(1);
       }
@@ -81,6 +87,11 @@ class SelfHealer {
       fixes.push(`${flagged} package structures flagged for review`);
     }
 
+    const pruned = await this.pruneAllRevisions();
+    if (pruned > 0) {
+      fixes.push(`${pruned} excess revisions pruned`);
+    }
+
     if (fixes.length === 0) {
       console.log(chalk.green('✅ System is healthy - no issues found'));
     } else {
@@ -102,7 +113,7 @@ class SelfHealer {
 
     for (const package_ of packages) {
       const readmePath = path.join(package_.path, 'README.md');
-      const integrityPath = path.join(package_.path, 'integrity.json');
+      const integrityPath = path.join(package_.path, INTEGRITY_JSON);
 
       // Check for missing README
       try {
@@ -182,7 +193,7 @@ class SelfHealer {
     const spinner = ora('Repairing integrity data...').start();
 
     for (const package_ of packages) {
-      const integrityPath = path.join(package_.path, 'integrity.json');
+      const integrityPath = path.join(package_.path, INTEGRITY_JSON);
 
       try {
         const data = await fs.readFile(integrityPath);
@@ -256,7 +267,7 @@ class SelfHealer {
     const spinner = ora('Creating missing integrity files...').start();
 
     for (const package_ of packages) {
-      const integrityPath = path.join(package_.path, 'integrity.json');
+      const integrityPath = path.join(package_.path, INTEGRITY_JSON);
 
       let integrityExists = false;
       try {
@@ -283,6 +294,112 @@ class SelfHealer {
 
     spinner.succeed(`Created ${created} integrity files`);
     return created;
+  }
+
+  async pruneVersionDirectory(packagePath, versionEntry, keepCount) {
+    const versionDirectory = path.join(packagePath, versionEntry.name);
+    let revEntries;
+    try {
+      revEntries = await fs.readdir(versionDirectory, { withFileTypes: true });
+    } catch {
+      return 0;
+    }
+
+    const revDirectories = revEntries
+      .filter((entry) => entry.isDirectory() && /^rev-\d+$/u.test(entry.name))
+      .map((entry) => ({
+        name: entry.name,
+        number: Number.parseInt(entry.name.split('-')[1], 10),
+      }))
+      .toSorted((a, b) => a.number - b.number);
+
+    if (revDirectories.length <= keepCount) {
+      return 0;
+    }
+
+    const toRemove = revDirectories.slice(0, -keepCount);
+    let pruned = 0;
+    for (const directory of toRemove) {
+      try {
+        await fs.rm(path.join(versionDirectory, directory.name), {
+          force: true,
+          recursive: true,
+        });
+        pruned++;
+      } catch (error) {
+        console.warn(
+          `Failed to prune ${directory.name} in ${versionDirectory}:`,
+          error.message,
+        );
+      }
+    }
+
+    // Prune corresponding integrity.json entries
+    try {
+      const integrityFile = path.join(packagePath, INTEGRITY_JSON);
+      const data = await fs.readFile(integrityFile);
+      const integrity = JSON.parse(data);
+      if (
+        typeof integrity === 'object' &&
+        integrity !== null &&
+        integrity[versionEntry.name]
+      ) {
+        for (const directory of toRemove) {
+          delete integrity[versionEntry.name][String(directory.number)];
+        }
+
+        await fs.writeFile(
+          integrityFile,
+          JSON.stringify(integrity, undefined, 2),
+        );
+      }
+    } catch {
+      // Non-fatal -- integrity pruning failure doesn't block rev cleanup
+    }
+
+    return pruned;
+  }
+
+  async prunePackageRevisions(package_, keepCount) {
+    let versionEntries;
+    try {
+      versionEntries = await fs.readdir(package_.path, { withFileTypes: true });
+    } catch {
+      return 0;
+    }
+
+    const versionDirectories = versionEntries.filter(
+      (entry) => entry.isDirectory() && /^\d+\.\d+\.\d+/u.test(entry.name),
+    );
+
+    let total = 0;
+    for (const versionEntry of versionDirectories) {
+      total += await this.pruneVersionDirectory(
+        package_.path,
+        versionEntry,
+        keepCount,
+      );
+    }
+
+    return total;
+  }
+
+  async pruneAllRevisions(keepCount = 5) {
+    const packages = await this.getAllPackages();
+    let totalPruned = 0;
+
+    const spinner = ora('Pruning excess revisions...').start();
+
+    for (const package_ of packages) {
+      const pruned = await this.prunePackageRevisions(package_, keepCount);
+      totalPruned += pruned;
+      if (pruned > 0) {
+        spinner.text = `Pruned ${totalPruned} excess revisions so far...`;
+      }
+    }
+
+    spinner.succeed(`Pruned ${totalPruned} excess revisions`);
+    return totalPruned;
   }
 
   async getAllPackages() {
@@ -375,7 +492,7 @@ class SelfHealer {
   }
 
   async createBasicIntegrity(package_) {
-    const integrityPath = path.join(package_.path, 'integrity.json');
+    const integrityPath = path.join(package_.path, INTEGRITY_JSON);
 
     // Try to infer version from directory structure
     let latestVersion = '1.0.0';
