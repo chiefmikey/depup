@@ -98,6 +98,39 @@
       "status": "published",
       "timestamp": "2026-04-08T16:35:22.407Z",
       "version": "1.3.4-depup.2"
+    },
+    "3": {
+      "changes": {
+        "axios": {
+          "from": "0.26.0",
+          "to": "^1.16.0"
+        },
+        "debug": {
+          "from": "4.1.1",
+          "to": "^4.4.3"
+        },
+        "handlebars": {
+          "from": "^4.7.7",
+          "to": "^4.7.9"
+        },
+        "on-headers": {
+          "from": "1.0.2",
+          "to": "^1.1.0"
+        },
+        "pidusage": {
+          "from": "2.0.18",
+          "to": "^4.0.1"
+        },
+        "socket.io": {
+          "from": "^2.4.1",
+          "to": "^4.8.3"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-03T07:02:34.184Z",
+      "version": "1.3.4-depup.3"
     }
   }
 }
