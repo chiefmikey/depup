@@ -1,0 +1,17 @@
+{
+  "1.35.0": {
+    "0": {
+      "changes": {
+        "ws": {
+          "from": "8.18.0",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-03T06:59:22.072Z",
+      "version": "1.35.0-depup.0"
+    }
+  }
+}
