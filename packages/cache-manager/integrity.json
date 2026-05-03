@@ -1,0 +1,21 @@
+{
+  "7.2.8": {
+    "0": {
+      "changes": {
+        "keyv": {
+          "from": "^5.5.5",
+          "to": "^5.6.0"
+        },
+        "@cacheable/utils": {
+          "from": "^2.3.3",
+          "to": "^2.4.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-03T06:59:39.192Z",
+      "version": "7.2.8-depup.0"
+    }
+  }
+}
