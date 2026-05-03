@@ -1,6 +1,6 @@
 {
   "name": "@depup/cheerio",
-  "version": "1.2.0-depup.5",
+  "version": "1.2.0-depup.10",
   "description": "The fast, flexible & elegant library for parsing and manipulating HTML and XML. (with updated dependencies)",
   "keywords": [
     "cheerio",
@@ -126,15 +126,15 @@
   },
   "dependencies": {
     "cheerio-select": "^2.1.0",
-    "dom-serializer": "^3.0.0",
+    "dom-serializer": "^3.1.1",
     "domhandler": "^6.0.1",
     "domutils": "^4.0.2",
     "encoding-sniffer": "^1.0.2",
-    "htmlparser2": "^11.0.0",
-    "parse5": "^8.0.0",
-    "parse5-htmlparser2-tree-adapter": "^8.0.0",
+    "htmlparser2": "^12.0.0",
+    "parse5": "^8.0.1",
+    "parse5-htmlparser2-tree-adapter": "^8.0.1",
     "parse5-parser-stream": "^8.0.0",
-    "undici": "^7.24.4",
+    "undici": "^8.2.0",
     "whatwg-mimetype": "^5.0.0"
   },
   "devDependencies": {
@@ -189,7 +189,7 @@
     "changes": {
       "dom-serializer": {
         "from": "^2.0.0",
-        "to": "^3.0.0"
+        "to": "^3.1.1"
       },
       "domhandler": {
         "from": "^5.0.3",
@@ -205,15 +205,15 @@
       },
       "htmlparser2": {
         "from": "^10.1.0",
-        "to": "^11.0.0"
+        "to": "^12.0.0"
       },
       "parse5": {
         "from": "^7.3.0",
-        "to": "^8.0.0"
+        "to": "^8.0.1"
       },
       "parse5-htmlparser2-tree-adapter": {
         "from": "^7.1.0",
-        "to": "^8.0.0"
+        "to": "^8.0.1"
       },
       "parse5-parser-stream": {
         "from": "^7.1.2",
@@ -221,7 +221,7 @@
       },
       "undici": {
         "from": "^7.19.0",
-        "to": "^7.24.4"
+        "to": "^8.2.0"
       },
       "whatwg-mimetype": {
         "from": "^4.0.0",
@@ -231,7 +231,7 @@
     "depsUpdated": 10,
     "originalPackage": "cheerio",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-03-19T12:23:39.004Z",
+    "processedAt": "2026-05-03T07:01:48.280Z",
     "smokeTest": "passed"
   }
 }

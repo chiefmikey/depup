@@ -12,13 +12,13 @@ npm install @depup/twilio
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 4/20/2026 | **Import test**: passed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.1 | **Updated**: 5/3/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| axios | `^1.13.5` | `^1.15.1` |
+| axios | `^1.13.5` | `^1.16.0` |
 | dayjs | `^1.11.9` | `^1.11.20` |
 | https-proxy-agent | `^5.0.0` | `^9.0.0` |
 | qs | `^6.14.1` | `^6.15.1` |
