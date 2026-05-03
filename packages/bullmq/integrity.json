@@ -446,5 +446,24 @@
       "timestamp": "2026-04-29T12:41:06.807Z",
       "version": "5.76.4-depup.0"
     }
+  },
+  "5.76.5": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "msgpackr": {
+          "from": "1.11.12",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-03T06:59:39.260Z",
+      "version": "5.76.5-depup.0"
+    }
   }
 }
