@@ -277,6 +277,27 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:53:57.384Z",
       "version": "29.1.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@asamuzakjp/css-color": {
+          "from": "^5.1.11",
+          "to": "^6.0.1"
+        },
+        "@asamuzakjp/dom-selector": {
+          "from": "^7.1.1",
+          "to": "^8.0.1"
+        },
+        "undici": {
+          "from": "^7.25.0",
+          "to": "^8.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-03T07:02:08.413Z",
+      "version": "29.1.1-depup.2"
     }
   }
 }

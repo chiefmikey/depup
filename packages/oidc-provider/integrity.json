@@ -162,6 +162,31 @@
       "status": "failed",
       "timestamp": "2026-04-27T16:37:53.262Z",
       "version": "9.8.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@koa/router": {
+          "from": "^15.4.0",
+          "to": "^15.5.0"
+        },
+        "eta": {
+          "from": "^4.5.1",
+          "to": "^4.6.0"
+        },
+        "jose": {
+          "from": "^6.2.2",
+          "to": "^6.2.3"
+        },
+        "nanoid": {
+          "from": "^5.1.7",
+          "to": "^5.1.11"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-03T07:02:23.944Z",
+      "version": "9.8.3-depup.1"
     }
   }
 }
