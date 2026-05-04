@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.14 | **Updated**: 4/23/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.15 | **Updated**: 5/4/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @prisma/client | `5.7.0` | `^7.8.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.0.3` |
-| @tanstack/react-query | `^5.12.2` | `^5.100.1` |
+| @tanstack/react-query | `^5.12.2` | `^5.100.9` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^5.6.2` |
@@ -40,14 +40,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv | `^10.0.0` | `^17.4.2` |
 | fs-extra | `^10.0.1` | `^11.3.4` |
 | immer | `^9.0.12` | `^11.1.4` |
-| ipaddr.js | `^2.0.1` | `^2.3.0` |
+| ipaddr.js | `^2.0.1` | `^2.4.0` |
 | is-ci | `^3.0.1` | `^4.1.0` |
 | is-docker | `^3.0.0` | `^4.0.0` |
 | is-localhost-ip | `^1.4.0` | `^3.0.1` |
 | isbot | `^3.4.5` | `^5.1.39` |
 | kafkajs | `^2.1.0` | `^2.2.4` |
 | maxmind | `^4.3.6` | `^5.0.6` |
-| moment-timezone | `^0.5.35` | `^0.6.1` |
+| moment-timezone | `^0.5.35` | `^0.6.2` |
 | next | `14.0.4` | `^16.2.4` |
 | next-basics | `^0.39.0` | `^0.40.0` |
 | node-fetch | `^3.2.8` | `^3.3.2` |
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
 | react-dom | `^18.2.0` | `^19.2.5` |
 | react-error-boundary | `^4.0.4` | `^6.1.1` |
-| react-intl | `^6.5.5` | `^10.1.2` |
+| react-intl | `^6.5.5` | `^10.1.4` |
 | react-simple-maps | `^2.3.0` | `^3.0.0` |
 | react-use-measure | `^2.0.4` | `^2.1.7` |
 | react-window | `^1.8.6` | `^2.2.7` |
