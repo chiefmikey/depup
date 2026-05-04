@@ -12,6 +12,19 @@
       "status": "published",
       "timestamp": "2026-03-19T03:02:47.626Z",
       "version": "2.0.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "ipaddr.js": {
+          "from": "1.9.1",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-04T07:14:46.488Z",
+      "version": "2.0.7-depup.1"
     }
   }
 }
