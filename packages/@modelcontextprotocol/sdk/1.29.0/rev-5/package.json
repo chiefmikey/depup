@@ -1,6 +1,6 @@
 {
   "name": "@depup/modelcontextprotocol__sdk",
-  "version": "1.29.0-depup.0",
+  "version": "1.29.0-depup.5",
   "description": "Model Context Protocol implementation for TypeScript (with updated dependencies)",
   "license": "MIT",
   "author": "Anthropic, PBC (https://anthropic.com)",
@@ -107,22 +107,22 @@
     "test:conformance:client:all": "npx @modelcontextprotocol/conformance client --command 'npx tsx test/conformance/src/everythingClient.ts' --suite all --expected-failures test/conformance/conformance-baseline.yml"
   },
   "dependencies": {
-    "@hono/node-server": "^1.19.12",
-    "ajv": "^8.18.0",
+    "@hono/node-server": "^2.0.1",
+    "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "content-type": "^1.0.5",
     "cors": "^2.8.6",
     "cross-spawn": "^7.0.6",
     "eventsource": "^4.1.0",
-    "eventsource-parser": "^3.0.6",
+    "eventsource-parser": "^3.0.8",
     "express": "^5.2.1",
-    "express-rate-limit": "^8.3.2",
-    "hono": "^4.12.9",
-    "jose": "^6.2.2",
+    "express-rate-limit": "^8.5.0",
+    "hono": "^4.12.16",
+    "jose": "^6.2.3",
     "json-schema-typed": "^8.0.2",
     "pkce-challenge": "^6.0.0",
     "raw-body": "^3.0.2",
-    "zod": "^4.3.6",
+    "zod": "^4.4.3",
     "zod-to-json-schema": "^3.25.2"
   },
   "peerDependencies": {
@@ -172,11 +172,11 @@
     "changes": {
       "@hono/node-server": {
         "from": "^1.19.9",
-        "to": "^1.19.12"
+        "to": "^2.0.1"
       },
       "ajv": {
         "from": "^8.17.1",
-        "to": "^8.18.0"
+        "to": "^8.20.0"
       },
       "cors": {
         "from": "^2.8.5",
@@ -192,19 +192,19 @@
       },
       "eventsource-parser": {
         "from": "^3.0.0",
-        "to": "^3.0.6"
+        "to": "^3.0.8"
       },
       "express-rate-limit": {
         "from": "^8.2.1",
-        "to": "^8.3.2"
+        "to": "^8.5.0"
       },
       "hono": {
         "from": "^4.11.4",
-        "to": "^4.12.9"
+        "to": "^4.12.16"
       },
       "jose": {
         "from": "^6.1.3",
-        "to": "^6.2.2"
+        "to": "^6.2.3"
       },
       "pkce-challenge": {
         "from": "^5.0.0",
@@ -216,7 +216,7 @@
       },
       "zod": {
         "from": "^3.25 || ^4.0",
-        "to": "^4.3.6"
+        "to": "^4.4.3"
       },
       "zod-to-json-schema": {
         "from": "^3.25.1",
@@ -226,7 +226,7 @@
     "depsUpdated": 13,
     "originalPackage": "@modelcontextprotocol/sdk",
     "originalVersion": "1.29.0",
-    "processedAt": "2026-03-30T20:18:08.499Z",
+    "processedAt": "2026-05-05T06:59:49.149Z",
     "smokeTest": "failed"
   }
 }
