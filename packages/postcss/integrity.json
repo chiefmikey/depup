@@ -65,5 +65,20 @@
       "timestamp": "2026-04-30T20:34:11.536Z",
       "version": "8.5.13-depup.0"
     }
+  },
+  "8.5.14": {
+    "0": {
+      "changes": {
+        "nanoid": {
+          "from": "^3.3.11",
+          "to": "^5.1.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-05T07:01:42.860Z",
+      "version": "8.5.14-depup.0"
+    }
   }
 }

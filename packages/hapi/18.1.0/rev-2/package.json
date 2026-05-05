@@ -1,0 +1,134 @@
+{
+  "name": "@depup/hapi",
+  "description": "HTTP Server framework (with updated dependencies)",
+  "homepage": "https://hapijs.com",
+  "version": "18.1.0-depup.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hapijs/hapi"
+  },
+  "main": "lib/index.js",
+  "keywords": [
+    "hapi",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "framework",
+    "http",
+    "api",
+    "web"
+  ],
+  "dependencies": {
+    "accept": "^3.1.3",
+    "ammo": "^3.0.3",
+    "boom": "^7.3.0",
+    "bounce": "^1.2.3",
+    "call": "^5.0.3",
+    "catbox": "^10.0.6",
+    "catbox-memory": "^4.0.1",
+    "heavy": "^6.1.2",
+    "hoek": "^6.1.3",
+    "joi": "^18.2.1",
+    "mimos": "^4.0.2",
+    "podium": "^3.2.0",
+    "shot": "^4.0.7",
+    "somever": "2.x.x",
+    "statehood": "^6.0.9",
+    "subtext": "^6.0.12",
+    "teamwork": "^3.2.0",
+    "topo": "^3.0.3"
+  },
+  "devDependencies": {
+    "code": "5.x.x",
+    "handlebars": "4.x.x",
+    "inert": "5.x.x",
+    "lab": "18.x.x",
+    "vision": "5.x.x",
+    "wreck": "14.x.x"
+  },
+  "scripts": {
+    "test": "lab -a code -t 100 -L -m 3000",
+    "test-tap": "lab -a code -r tap -o tests.tap -m 3000",
+    "test-cov-html": "lab -a code -r html -o coverage.html -m 3000"
+  },
+  "license": "BSD-3-Clause",
+  "depup": {
+    "changes": {
+      "accept": {
+        "from": "3.x.x",
+        "to": "^3.1.3"
+      },
+      "ammo": {
+        "from": "3.x.x",
+        "to": "^3.0.3"
+      },
+      "boom": {
+        "from": "7.x.x",
+        "to": "^7.3.0"
+      },
+      "bounce": {
+        "from": "1.x.x",
+        "to": "^1.2.3"
+      },
+      "call": {
+        "from": "5.x.x",
+        "to": "^5.0.3"
+      },
+      "catbox": {
+        "from": "10.x.x",
+        "to": "^10.0.6"
+      },
+      "catbox-memory": {
+        "from": "4.x.x",
+        "to": "^4.0.1"
+      },
+      "heavy": {
+        "from": "6.x.x",
+        "to": "^6.1.2"
+      },
+      "hoek": {
+        "from": "6.x.x",
+        "to": "^6.1.3"
+      },
+      "joi": {
+        "from": "14.x.x",
+        "to": "^18.2.1"
+      },
+      "mimos": {
+        "from": "4.x.x",
+        "to": "^4.0.2"
+      },
+      "podium": {
+        "from": "3.x.x",
+        "to": "^3.2.0"
+      },
+      "shot": {
+        "from": "4.x.x",
+        "to": "^4.0.7"
+      },
+      "statehood": {
+        "from": "6.x.x",
+        "to": "^6.0.9"
+      },
+      "subtext": {
+        "from": "6.x.x",
+        "to": "^6.0.12"
+      },
+      "teamwork": {
+        "from": "3.x.x",
+        "to": "^3.2.0"
+      },
+      "topo": {
+        "from": "3.x.x",
+        "to": "^3.0.3"
+      }
+    },
+    "depsUpdated": 17,
+    "originalPackage": "hapi",
+    "originalVersion": "18.1.0",
+    "processedAt": "2026-05-05T07:01:10.469Z",
+    "smokeTest": "failed"
+  }
+}
