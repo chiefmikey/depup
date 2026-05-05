@@ -12,7 +12,7 @@ npm install @depup/rollup__rollup-android-arm64
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.60.2 | **DepUp version**: 4.60.2-depup.0 | **Updated**: 4/18/2026 | **Import test**: failed
+**Original version**: 4.60.3 | **DepUp version**: 4.60.3-depup.0 | **Updated**: 5/5/2026 | **Import test**: failed
 
 ## What changed
 
