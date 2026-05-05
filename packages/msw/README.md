@@ -12,16 +12,15 @@ npm install @depup/msw
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.14.2 | **DepUp version**: 2.14.2-depup.0 | **Updated**: 4/29/2026 | **Import test**: passed
+**Original version**: 2.14.3 | **DepUp version**: 2.14.3-depup.0 | **Updated**: 5/5/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @inquirer/confirm | `^6.0.11` | `^6.0.12` |
-| @mswjs/interceptors | `^0.41.3` | `^0.41.7` |
+| @mswjs/interceptors | `^0.41.3` | `^0.41.8` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
-| rettime | `^0.11.7` | `^0.11.8` |
 | type-fest | `^5.5.0` | `^5.6.0` |
 | yargs | `^17.7.2` | `^18.0.0` |
 
