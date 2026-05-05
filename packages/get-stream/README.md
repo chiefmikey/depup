@@ -12,13 +12,13 @@ npm install @depup/get-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.1 | **Updated**: 5/5/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @sec-ant/readable-stream | `^0.4.1` | `^0.6.0` |
+| @sec-ant/readable-stream | `^0.4.1` | `^0.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/get-stream&labels=bug).
