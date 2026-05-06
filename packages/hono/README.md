@@ -12,7 +12,7 @@ npm install @depup/hono
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.12.16 | **DepUp version**: 4.12.16-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
+**Original version**: 4.12.17 | **DepUp version**: 4.12.17-depup.0 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
