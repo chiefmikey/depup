@@ -12,13 +12,14 @@ npm install @depup/nuxt__kit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.4.4 | **DepUp version**: 4.4.4-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
+**Original version**: 4.4.4 | **DepUp version**: 4.4.4-depup.1 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | c12 | `^3.3.4` | `^4.0.0-beta.4` |
+| jiti | `^2.6.1` | `^2.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nuxt__kit&labels=bug).

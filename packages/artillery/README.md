@@ -12,29 +12,29 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.31 | **DepUp version**: 2.0.31-depup.7 | **Updated**: 5/5/2026 | **Import test**: failed
+**Original version**: 2.0.31 | **DepUp version**: 2.0.31-depup.8 | **Updated**: 5/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-iam | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/client-sts | `^3.1034.0` | `^3.1042.0` |
-| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1042.0` |
+| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-iam | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/client-sts | `^3.1034.0` | `^3.1043.0` |
+| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1043.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.11.0` |
 | @oclif/plugin-help | `^6.2.36` | `^6.2.46` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.82` |
-| @upstash/redis | `^1.36.1` | `^1.37.0` |
+| @upstash/redis | `^1.36.1` | `^1.38.0` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^2.4.2` | `^5.6.2` |
 | chokidar | `^3.6.0` | `^5.0.0` |

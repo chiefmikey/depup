@@ -25,6 +25,23 @@
       "status": "failed",
       "timestamp": "2026-04-30T00:50:38.504Z",
       "version": "4.4.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.4"
+        },
+        "jiti": {
+          "from": "^2.6.1",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:10:16.912Z",
+      "version": "4.4.4-depup.1"
     }
   }
 }
