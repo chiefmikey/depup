@@ -1,7 +1,7 @@
 {
   "name": "@depup/webpack-dev-server",
-  "version": "5.2.3-depup.0",
-  "description": "[DepUp] Serves a webpack app. Updates the browser on changes.",
+  "version": "5.2.3-depup.5",
+  "description": "Serves a webpack app. Updates the browser on changes. (with updated dependencies)",
   "homepage": "https://github.com/webpack/webpack-dev-server#readme",
   "bugs": "https://github.com/webpack/webpack-dev-server/issues",
   "repository": "https://github.com/webpack/webpack-dev-server",
@@ -18,7 +18,9 @@
     "bin",
     "lib",
     "client",
-    "types"
+    "types",
+    "changes.json",
+    "README.md"
   ],
   "scripts": {
     "fmt:check": "prettier \"{**/*,*}.{js,json,md,yml,css,ts}\" --list-different",
@@ -40,7 +42,6 @@
     "test:watch": "npm run test:coverage --watch",
     "test": "npm run test:coverage",
     "pretest": "npm run lint",
-    "prepare": "husky && npm run build",
     "release": "standard-version"
   },
   "dependencies": {
@@ -60,18 +61,18 @@
     "connect-history-api-fallback": "^2.0.0",
     "express": "^5.2.1",
     "graceful-fs": "^4.2.11",
-    "http-proxy-middleware": "^3.0.5",
-    "ipaddr.js": "^2.3.0",
-    "launch-editor": "^2.13.1",
+    "http-proxy-middleware": "^4.0.0",
+    "ipaddr.js": "^2.4.0",
+    "launch-editor": "^2.13.2",
     "open": "^11.0.0",
-    "p-retry": "^7.1.1",
+    "p-retry": "^8.0.0",
     "schema-utils": "^4.3.3",
     "selfsigned": "^5.5.0",
     "serve-index": "^1.9.2",
     "sockjs": "^0.3.24",
     "spdy": "^4.0.2",
-    "webpack-dev-middleware": "^7.4.5",
-    "ws": "^8.19.0"
+    "webpack-dev-middleware": "^8.0.3",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
@@ -151,10 +152,12 @@
     "node": ">= 18.12.0"
   },
   "keywords": [
+    "webpack-dev-server",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "webpack-dev-server"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
@@ -196,15 +199,15 @@
       },
       "http-proxy-middleware": {
         "from": "^2.0.9",
-        "to": "^3.0.5"
+        "to": "^4.0.0"
       },
       "ipaddr.js": {
         "from": "^2.1.0",
-        "to": "^2.3.0"
+        "to": "^2.4.0"
       },
       "launch-editor": {
         "from": "^2.6.1",
-        "to": "^2.13.1"
+        "to": "^2.13.2"
       },
       "open": {
         "from": "^10.0.3",
@@ -212,7 +215,7 @@
       },
       "p-retry": {
         "from": "^6.2.0",
-        "to": "^7.1.1"
+        "to": "^8.0.0"
       },
       "schema-utils": {
         "from": "^4.2.0",
@@ -224,17 +227,17 @@
       },
       "webpack-dev-middleware": {
         "from": "^7.4.2",
-        "to": "^7.4.5"
+        "to": "^8.0.3"
       },
       "ws": {
         "from": "^8.18.0",
-        "to": "^8.19.0"
+        "to": "^8.20.0"
       }
     },
     "depsUpdated": 18,
     "originalPackage": "webpack-dev-server",
     "originalVersion": "5.2.3",
-    "processedAt": "2026-03-09T03:53:12.671Z",
+    "processedAt": "2026-05-06T07:10:35.720Z",
     "smokeTest": "passed"
   }
 }
