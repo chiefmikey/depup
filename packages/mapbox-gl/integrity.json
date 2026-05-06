@@ -138,6 +138,27 @@
       "status": "failed",
       "timestamp": "2026-05-05T07:01:14.269Z",
       "version": "3.23.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@mapbox/tiny-sdf": {
+          "from": "^2.0.6",
+          "to": "^2.2.0"
+        },
+        "earcut": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "potpack": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:10:59.726Z",
+      "version": "3.23.1-depup.1"
     }
   }
 }

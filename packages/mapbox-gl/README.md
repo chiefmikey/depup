@@ -12,13 +12,13 @@ npm install @depup/mapbox-gl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.23.1 | **DepUp version**: 3.23.1-depup.0 | **Updated**: 5/5/2026 | **Import test**: passed
+**Original version**: 3.23.1 | **DepUp version**: 3.23.1-depup.1 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mapbox/tiny-sdf | `^2.0.6` | `^2.1.0` |
+| @mapbox/tiny-sdf | `^2.0.6` | `^2.2.0` |
 | earcut | `^3.0.1` | `^3.0.2` |
 | potpack | `^2.0.0` | `^2.1.0` |
 
