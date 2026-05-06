@@ -12,13 +12,13 @@ npm install @depup/vercel__kv
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.1 | **Updated**: 5/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @upstash/redis | `^1.34.0` | `^1.37.0` |
+| @upstash/redis | `^1.34.0` | `^1.38.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vercel__kv&labels=bug).

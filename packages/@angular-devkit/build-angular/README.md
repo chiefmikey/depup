@@ -12,24 +12,25 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.9 | **DepUp version**: 21.2.9-depup.1 | **Updated**: 5/4/2026 | **Import test**: passed
+**Original version**: 21.2.9 | **DepUp version**: 21.2.9-depup.2 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/preset-env | `7.29.2` | `^7.29.3` |
+| @babel/preset-env | `7.29.2` | `^7.29.5` |
 | @discoveryjs/json-ext | `0.6.3` | `^1.1.0` |
 | autoprefixer | `10.4.27` | `^10.5.0` |
 | babel-loader | `10.0.0` | `^10.1.1` |
 | browserslist | `^4.26.0` | `^4.28.2` |
 | css-loader | `7.1.3` | `^7.1.4` |
 | esbuild-wasm | `0.27.3` | `^0.28.0` |
+| http-proxy-middleware | `3.0.5` | `^4.0.0` |
 | less | `4.4.2` | `^4.6.4` |
 | less-loader | `12.3.1` | `^12.3.2` |
 | mini-css-extract-plugin | `2.10.0` | `^2.10.2` |
 | ora | `9.3.0` | `^9.4.0` |
-| postcss | `8.5.12` | `^8.5.13` |
+| postcss | `8.5.12` | `^8.5.14` |
 | postcss-loader | `8.2.0` | `^8.2.1` |
 | sass | `1.97.3` | `^1.99.0` |
 | terser | `5.46.0` | `^5.46.2` |

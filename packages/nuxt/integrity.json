@@ -539,6 +539,47 @@
       "status": "failed",
       "timestamp": "2026-05-01T00:57:28.389Z",
       "version": "4.4.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.4",
+          "to": "^4.0.0-alpha.4"
+        },
+        "@unhead/vue": {
+          "from": "^2.1.13",
+          "to": "^3.1.0"
+        },
+        "cookie-es": {
+          "from": "^2.0.1",
+          "to": "^3.1.1"
+        },
+        "devalue": {
+          "from": "^5.7.1",
+          "to": "^5.8.0"
+        },
+        "jiti": {
+          "from": "^2.6.1",
+          "to": "^2.7.0"
+        },
+        "oxc-minify": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        },
+        "oxc-parser": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        },
+        "oxc-transform": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:14:00.333Z",
+      "version": "4.4.4-depup.2"
     }
   }
 }

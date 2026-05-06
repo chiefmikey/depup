@@ -12,7 +12,7 @@ npm install @depup/graphql-config
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.6 | **DepUp version**: 5.1.6-depup.2 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 5.1.6 | **DepUp version**: 5.1.6-depup.3 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-tools/url-loader | `^9.0.0` | `^9.1.2` |
 | @graphql-tools/utils | `^11.0.0` | `^11.1.0` |
 | cosmiconfig | `^8.1.0` | `^9.0.1` |
-| jiti | `^2.0.0` | `^2.6.1` |
+| jiti | `^2.0.0` | `^2.7.0` |
 | minimatch | `^10.0.0` | `^10.2.5` |
 | tslib | `^2.4.0` | `^2.8.1` |
 

@@ -12,14 +12,14 @@ npm install @depup/nise
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.5 | **DepUp version**: 6.1.5-depup.0 | **Updated**: 4/11/2026 | **Import test**: failed
+**Original version**: 6.1.5 | **DepUp version**: 6.1.5-depup.1 | **Updated**: 5/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @sinonjs/commons | `^3.0.1` | `^4.0.0-alpha.0` |
-| @sinonjs/fake-timers | `^15.1.1` | `^15.3.2` |
+| @sinonjs/fake-timers | `^15.1.1` | `^15.4.0` |
 | path-to-regexp | `^8.3.0` | `^8.4.2` |
 
 
