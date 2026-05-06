@@ -12,7 +12,7 @@ npm install @depup/expo__schema-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 55.0.3 | **DepUp version**: 55.0.3-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 55.0.4 | **DepUp version**: 55.0.4-depup.0 | **Updated**: 5/6/2026 | **Import test**: passed
 
 ## What changed
 
