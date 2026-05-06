@@ -15,6 +15,19 @@
       "status": "published",
       "timestamp": "2026-04-09T04:52:27.560Z",
       "version": "6.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "jiti": {
+          "from": "2.6.1",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:10:21.944Z",
+      "version": "6.3.0-depup.1"
     }
   }
 }

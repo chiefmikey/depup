@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:37:36.525Z",
       "version": "8.2.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "jiti": {
+          "from": "^2.5.1",
+          "to": "^2.7.0"
+        },
+        "semver": {
+          "from": "^7.6.2",
+          "to": "^7.7.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:11:43.372Z",
+      "version": "8.2.1-depup.1"
     }
   }
 }

@@ -232,6 +232,87 @@
       "status": "published",
       "timestamp": "2026-04-03T00:44:09.118Z",
       "version": "3.6.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@rollup/plugin-alias": {
+          "from": "^5.1.1",
+          "to": "^6.0.0"
+        },
+        "@rollup/plugin-commonjs": {
+          "from": "^28.0.6",
+          "to": "^29.0.2"
+        },
+        "@rollup/plugin-node-resolve": {
+          "from": "^16.0.1",
+          "to": "^16.0.3"
+        },
+        "@rollup/plugin-replace": {
+          "from": "^6.0.2",
+          "to": "^6.0.3"
+        },
+        "@rollup/pluginutils": {
+          "from": "^5.2.0",
+          "to": "^5.3.0"
+        },
+        "citty": {
+          "from": "^0.1.6",
+          "to": "^0.2.2"
+        },
+        "defu": {
+          "from": "^6.1.4",
+          "to": "^6.1.7"
+        },
+        "esbuild": {
+          "from": "^0.25.9",
+          "to": "^0.28.0"
+        },
+        "hookable": {
+          "from": "^5.5.3",
+          "to": "^6.1.1"
+        },
+        "jiti": {
+          "from": "^2.5.1",
+          "to": "^2.7.0"
+        },
+        "magic-string": {
+          "from": "^0.30.17",
+          "to": "^0.30.21"
+        },
+        "mkdist": {
+          "from": "^2.3.0",
+          "to": "^2.4.1"
+        },
+        "mlly": {
+          "from": "^1.7.4",
+          "to": "^1.8.2"
+        },
+        "pkg-types": {
+          "from": "^2.2.0",
+          "to": "^2.3.1"
+        },
+        "pretty-bytes": {
+          "from": "^7.0.1",
+          "to": "^7.1.0"
+        },
+        "rollup": {
+          "from": "^4.46.2",
+          "to": "^4.60.3"
+        },
+        "rollup-plugin-dts": {
+          "from": "^6.2.1",
+          "to": "^6.4.1"
+        },
+        "tinyglobby": {
+          "from": "^0.2.14",
+          "to": "^0.2.16"
+        }
+      },
+      "depsUpdated": 18,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:12:05.291Z",
+      "version": "3.6.1-depup.3"
     }
   }
 }
