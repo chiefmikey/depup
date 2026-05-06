@@ -12,7 +12,7 @@ npm install @depup/react-native__virtualized-lists
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.85.2 | **DepUp version**: 0.85.2-depup.0 | **Updated**: 4/20/2026 | **Import test**: failed
+**Original version**: 0.85.3 | **DepUp version**: 0.85.3-depup.0 | **Updated**: 5/6/2026 | **Import test**: failed
 
 ## What changed
 
