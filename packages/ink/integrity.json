@@ -297,5 +297,36 @@
       "timestamp": "2026-04-22T05:04:09.769Z",
       "version": "7.0.1-depup.1"
     }
+  },
+  "7.0.2": {
+    "0": {
+      "changes": {
+        "cli-cursor": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "es-toolkit": {
+          "from": "^1.45.1",
+          "to": "^1.46.1"
+        },
+        "signal-exit": {
+          "from": "^3.0.7",
+          "to": "^4.1.0"
+        },
+        "string-width": {
+          "from": "^8.2.0",
+          "to": "^8.2.1"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-06T07:07:21.246Z",
+      "version": "7.0.2-depup.0"
+    }
   }
 }
