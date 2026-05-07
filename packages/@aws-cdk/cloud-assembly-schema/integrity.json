@@ -223,5 +223,20 @@
       "timestamp": "2026-04-30T12:42:25.599Z",
       "version": "53.20.0-depup.0"
     }
+  },
+  "53.22.0": {
+    "0": {
+      "changes": {
+        "jsonschema": {
+          "from": "~1.4.1",
+          "to": "^1.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:16:11.349Z",
+      "version": "53.22.0-depup.0"
+    }
   }
 }

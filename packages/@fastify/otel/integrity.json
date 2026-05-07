@@ -97,6 +97,31 @@
       "status": "failed",
       "timestamp": "2026-04-29T20:34:59.464Z",
       "version": "0.18.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.7.1"
+        },
+        "@opentelemetry/instrumentation": {
+          "from": "^0.214.0",
+          "to": "^0.217.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.28.0",
+          "to": "^1.40.0"
+        },
+        "minimatch": {
+          "from": "^10.2.4",
+          "to": "^10.2.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:16:30.347Z",
+      "version": "0.18.1-depup.3"
     }
   }
 }

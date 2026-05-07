@@ -12,11 +12,16 @@ npm install @depup/fs-extra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.3.4 | **DepUp version**: 11.3.4-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 11.3.5 | **DepUp version**: 11.3.5-depup.0 | **Updated**: 5/7/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| graceful-fs | `^4.2.0` | `^4.2.11` |
+| jsonfile | `^6.0.1` | `^6.2.1` |
+| universalify | `^2.0.0` | `^2.0.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fs-extra&labels=bug).
 
