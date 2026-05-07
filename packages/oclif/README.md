@@ -12,18 +12,18 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.23.0 | **DepUp version**: 4.23.0-depup.18 | **Updated**: 5/6/2026 | **Import test**: passed
+**Original version**: 4.23.0 | **DepUp version**: 4.23.0-depup.19 | **Updated**: 5/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudfront | `3.1009.0` | `^3.1043.0` |
-| @aws-sdk/client-s3 | `3.1014.0` | `^3.1043.0` |
+| @aws-sdk/client-cloudfront | `3.1009.0` | `^3.1044.0` |
+| @aws-sdk/client-s3 | `3.1014.0` | `^3.1044.0` |
 | @inquirer/confirm | `^3.1.22` | `^6.0.12` |
 | @inquirer/input | `^2.2.4` | `^5.0.12` |
 | @inquirer/select | `^2.5.0` | `^5.1.4` |
-| @oclif/core | `4.9.0` | `^4.11.0` |
+| @oclif/core | `4.9.0` | `^4.11.1` |
 | @oclif/plugin-help | `^6.2.38` | `^6.2.46` |
 | @oclif/plugin-not-found | `^3.2.76` | `^3.2.82` |
 | @oclif/plugin-warn-if-update-available | `^3.1.57` | `^3.1.62` |
@@ -31,8 +31,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
 | ejs | `^3.1.10` | `^5.0.2` |
-| fs-extra | `^8.1` | `^11.3.4` |
-| got | `^13` | `^15.0.3` |
+| fs-extra | `^8.1` | `^11.3.5` |
+| got | `^13` | `^15.0.5` |
 | normalize-package-data | `^6` | `^8.0.0` |
 | sort-package-json | `^2.15.1` | `^3.6.1` |
 | validate-npm-package-name | `^5.0.1` | `^7.0.2` |

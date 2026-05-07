@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.25 | **Updated**: 5/5/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.26 | **Updated**: 5/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -31,8 +31,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/add | `^3.2.3` | `^7.0.0` |
 | @graphql-codegen/core | `^2.6.8` | `^6.0.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.0` |
-| @graphql-codegen/typescript | `^2.8.8` | `^6.0.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.0` |
+| @graphql-codegen/typescript | `^2.8.8` | `^6.0.1` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.1` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -80,11 +80,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express-http-proxy | `^1.6.3` | `^2.1.2` |
 | fastq | `^1.15.0` | `^1.20.1` |
 | find-cache-dir | `^3.3.2` | `^6.0.0` |
-| fs-extra | `^11.2.0` | `^11.3.4` |
+| fs-extra | `^11.2.0` | `^11.3.5` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
-| got | `^11.8.6` | `^15.0.3` |
-| graphql | `^16.7.1` | `^16.13.2` |
+| got | `^11.8.6` | `^15.0.5` |
+| graphql | `^16.7.1` | `^16.14.0` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
 | hasha | `^5.2.2` | `^7.0.0` |
@@ -109,7 +109,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.3.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
-| react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.5` |
+| react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.6` |
 | redux | `4.2.1` | `^5.0.1` |
 | redux-thunk | `^2.4.2` | `^3.1.0` |
 | semver | `^7.5.3` | `^7.7.4` |
