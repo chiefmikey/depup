@@ -12,7 +12,7 @@ npm install @depup/fastify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.8.5 | **DepUp version**: 5.8.5-depup.1 | **Updated**: 5/6/2026 | **Import test**: passed
+**Original version**: 5.8.5 | **DepUp version**: 5.8.5-depup.2 | **Updated**: 5/7/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @fastify/proxy-addr | `^5.0.0` | `^5.1.0` |
 | avvio | `^9.0.0` | `^9.2.0` |
 | fast-json-stringify | `^6.0.0` | `^6.4.0` |
-| find-my-way | `^9.0.0` | `^9.5.0` |
+| find-my-way | `^9.0.0` | `^9.6.0` |
 | light-my-request | `^6.0.0` | `^6.6.0` |
 | pino | `^9.14.0 || ^10.1.0` | `^10.3.1` |
 | rfdc | `^1.3.1` | `^1.4.1` |

@@ -12,13 +12,13 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.4 | **Updated**: 4/26/2026 | **Import test**: failed
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.5 | **Updated**: 5/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `^2.6.4` | `^9.4.3` |
+| @npmcli/arborist | `^2.6.4` | `^9.5.0` |
 | bufferutil | `^4.0.2` | `^4.1.0` |
 | cachedir | `^2.3.0` | `^2.4.0` |
 | cheerio | `1.0.0-rc.10` | `^1.2.0` |
@@ -49,11 +49,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pacote | `^11.3.4` | `^21.5.0` |
 | periscopic | `^2.0.3` | `^4.0.3` |
 | picomatch | `^2.3.0` | `^4.0.4` |
-| postcss | `^8.3.5` | `^8.5.10` |
+| postcss | `^8.3.5` | `^8.5.14` |
 | postcss-modules | `^4.0.0` | `^6.0.1` |
 | resolve | `^1.20.0` | `^1.22.12` |
 | rimraf | `^3.0.0` | `^6.1.3` |
-| rollup | `~2.37.1` | `^4.60.2` |
+| rollup | `~2.37.1` | `^4.60.3` |
 | signal-exit | `^3.0.3` | `^4.1.0` |
 | slash | `~3.0.0` | `^5.1.0` |
 | source-map | `^0.7.3` | `^0.7.6` |
