@@ -2,7 +2,7 @@
   "bumped": {
     "@npmcli/arborist": {
       "from": "9.1.6",
-      "to": "^9.4.2"
+      "to": "^9.5.0"
     },
     "@npmcli/package-json": {
       "from": "7.0.2",
@@ -14,7 +14,7 @@
     },
     "@nx/devkit": {
       "from": ">=21.5.2 < 23.0.0",
-      "to": "^22.6.1"
+      "to": "^22.7.1"
     },
     "@octokit/rest": {
       "from": "20.1.2",
@@ -42,7 +42,7 @@
     },
     "conventional-changelog-angular": {
       "from": "7.0.0",
-      "to": "^8.3.0"
+      "to": "^8.3.1"
     },
     "conventional-changelog-core": {
       "from": "5.0.1",
@@ -70,7 +70,7 @@
     },
     "fs-extra": {
       "from": "^11.2.0",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "get-stream": {
       "from": "6.0.0",
@@ -94,7 +94,7 @@
     },
     "inquirer": {
       "from": "12.9.6",
-      "to": "^13.3.2"
+      "to": "^13.4.2"
     },
     "is-ci": {
       "from": "3.0.1",
@@ -118,7 +118,7 @@
     },
     "minimatch": {
       "from": "3.1.4",
-      "to": "^10.2.4"
+      "to": "^10.2.5"
     },
     "npm-package-arg": {
       "from": "13.0.1",
@@ -134,7 +134,7 @@
     },
     "nx": {
       "from": ">=21.5.3 < 23.0.0",
-      "to": "^22.6.1"
+      "to": "^22.7.1"
     },
     "p-map": {
       "from": "4.0.0",
@@ -150,7 +150,7 @@
     },
     "p-queue": {
       "from": "6.6.2",
-      "to": "^9.1.0"
+      "to": "^9.2.0"
     },
     "p-reduce": {
       "from": "2.1.0",
@@ -186,19 +186,23 @@
     },
     "string-width": {
       "from": "^4.2.3",
-      "to": "^8.2.0"
+      "to": "^8.2.1"
     },
     "tar": {
       "from": "7.5.11",
-      "to": "^7.5.12"
+      "to": "^7.5.14"
     },
     "tinyglobby": {
       "from": "0.2.12",
-      "to": "^0.2.15"
+      "to": "^0.2.16"
     },
     "typescript": {
       "from": ">=3 < 6",
-      "to": "^6.0.2"
+      "to": "^6.0.3"
+    },
+    "upath": {
+      "from": "2.0.1",
+      "to": "^3.0.7"
     },
     "validate-npm-package-name": {
       "from": "6.0.2",
@@ -217,6 +221,6 @@
       "to": "^22.0.0"
     }
   },
-  "timestamp": "2026-03-23T16:29:22.707Z",
-  "totalUpdated": 54
+  "timestamp": "2026-05-07T07:16:53.598Z",
+  "totalUpdated": 55
 }

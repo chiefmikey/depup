@@ -12,16 +12,16 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.7 | **Updated**: 4/27/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.8 | **Updated**: 5/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `9.1.6` | `^9.4.3` |
+| @npmcli/arborist | `9.1.6` | `^9.5.0` |
 | @npmcli/package-json | `7.0.2` | `^7.0.5` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
-| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.0` |
+| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.1` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | aproba | `2.0.0` | `^2.1.0` |
 | byte-size | `8.1.1` | `^9.0.1` |
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dedent | `1.5.3` | `^1.7.2` |
 | envinfo | `7.13.0` | `^7.21.0` |
 | execa | `5.0.0` | `^9.6.1` |
-| fs-extra | `^11.2.0` | `^11.3.4` |
+| fs-extra | `^11.2.0` | `^11.3.5` |
 | get-stream | `6.0.0` | `^9.0.1` |
 | git-url-parse | `14.0.0` | `^16.1.0` |
 | import-local | `3.1.0` | `^3.2.0` |
@@ -51,7 +51,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `13.0.1` | `^13.0.2` |
 | npm-packlist | `10.0.3` | `^10.0.4` |
 | npm-registry-fetch | `19.1.0` | `^19.1.1` |
-| nx | `>=21.5.3 < 23.0.0` | `^22.7.0` |
+| nx | `>=21.5.3 < 23.0.0` | `^22.7.1` |
 | p-map | `4.0.0` | `^7.0.4` |
 | p-map-series | `2.1.0` | `^3.0.0` |
 | p-pipe | `3.1.0` | `^4.0.0` |
@@ -64,8 +64,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | signal-exit | `3.0.7` | `^4.1.0` |
 | slash | `3.0.0` | `^5.1.0` |
 | ssri | `12.0.0` | `^13.0.1` |
-| string-width | `^4.2.3` | `^8.2.0` |
-| tar | `7.5.11` | `^7.5.13` |
+| string-width | `^4.2.3` | `^8.2.1` |
+| tar | `7.5.11` | `^7.5.14` |
 | tinyglobby | `0.2.12` | `^0.2.16` |
 | typescript | `>=3 < 6` | `^6.0.3` |
 | upath | `2.0.1` | `^3.0.7` |

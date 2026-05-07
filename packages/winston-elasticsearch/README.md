@@ -12,13 +12,13 @@ npm install @depup/winston-elasticsearch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.19.0 | **DepUp version**: 0.19.0-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 0.19.0 | **DepUp version**: 0.19.0-depup.2 | **Updated**: 5/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @elastic/elasticsearch | `^8.13.1` | `^9.3.4` |
+| @elastic/elasticsearch | `^8.13.1` | `^9.4.0` |
 | dayjs | `^1.11.11` | `^1.11.20` |
 | debug | `^4.3.4` | `^4.4.3` |
 | lodash.omit | `^4.5.0` | `^4.18.0` |
