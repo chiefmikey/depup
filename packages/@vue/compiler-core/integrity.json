@@ -76,5 +76,24 @@
       "timestamp": "2026-04-22T08:41:45.464Z",
       "version": "3.5.33-depup.0"
     }
+  },
+  "3.5.34": {
+    "0": {
+      "changes": {
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:11:35.772Z",
+      "version": "3.5.34-depup.0"
+    }
   }
 }

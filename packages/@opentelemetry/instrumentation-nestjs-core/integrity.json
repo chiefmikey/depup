@@ -90,5 +90,20 @@
       "timestamp": "2026-04-29T20:31:25.507Z",
       "version": "0.62.0-depup.0"
     }
+  },
+  "0.63.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.30.0",
+          "to": "^1.40.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:11:16.936Z",
+      "version": "0.63.0-depup.0"
+    }
   }
 }
