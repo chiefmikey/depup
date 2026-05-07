@@ -12,13 +12,13 @@ npm install @depup/svg-captcha
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.1 | **Updated**: 5/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| opentype.js | `^0.7.3` | `^1.3.4` |
+| opentype.js | `^0.7.3` | `^2.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/svg-captcha&labels=bug).
