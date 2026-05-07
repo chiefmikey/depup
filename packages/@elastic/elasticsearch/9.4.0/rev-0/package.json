@@ -1,0 +1,146 @@
+{
+  "name": "@depup/elastic__elasticsearch",
+  "version": "9.4.0-depup.0",
+  "versionCanary": "9.3.4-canary.0",
+  "description": "The official Elasticsearch client for Node.js (with updated dependencies)",
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./lib/*": {
+      "import": "./esm/*.js",
+      "require": "./lib/*.js",
+      "types": "./lib/*.d.ts"
+    },
+    "./*": {
+      "import": "./esm/*.js",
+      "require": "./lib/*.js",
+      "types": "./lib/*.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "npm run build && npm run lint && c8 --exclude='**/api/**' --exclude='**/test/**' --check-coverage --statements=96 --branches=90 --lines=96 --functions=91 tap --disable-coverage",
+    "test:unit": "npm run build && tap",
+    "test:unit-bun": "bun run build && bunx tap",
+    "test:bundler": "npm run build && cd test/bundlers/repro && npm install file:../../.. && npx esbuild@0.24 --bundle --platform=node repro.mjs --outfile=bundled.js && node bundled.js",
+    "test:esm": "npm run build:esm && tap test/esm/",
+    "test:coverage-100": "npm run build && tap --coverage --100",
+    "test:coverage-report": "npm run build && tap --coverage && nyc report --reporter=text-lcov > coverage.lcov",
+    "test:coverage-ui": "npm run build && tap --coverage --coverage-report=html",
+    "test:integration-build": "npm run build && node test/integration/index.js",
+    "test:integration": "npm run test:integration-build && env tap run --jobs=1 --reporter=junit --reporter-file=report-junit.xml generated-tests/",
+    "lint": "eslint",
+    "lint:fix": "eslint . --fix ",
+    "license-checker": "license-checker --production --onlyAllow='MIT;Apache-2.0;Apache1.1;ISC;BSD-3-Clause;BSD-2-Clause;0BSD'",
+    "license-header": "./scripts/check-spdx",
+    "generate-version": "node scripts/generate-version.js",
+    "prebuild": "npm run clean-build && npm run generate-version && npm run lint",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc && rm -f lib/package.json lib/index.js lib/index.d.ts",
+    "build:esm": "tsc -p tsconfig.esm.json && npm run build:esm-fix && npm run build:esm-package",
+    "build:esm-fix": "tsc-esm-fix --target=esm && node scripts/fix-esm-require.js",
+    "build:esm-package": "node -e \"require('fs').writeFileSync('esm/package.json', JSON.stringify({type:'module'}, null, 2))\"",
+    "clean-build": "rimraf ./lib && mkdir lib && rimraf ./esm && mkdir esm"
+  },
+  "keywords": [
+    "@elastic/elasticsearch",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "elasticsearch",
+    "elastic",
+    "kibana",
+    "mapping",
+    "REST",
+    "search",
+    "client",
+    "index"
+  ],
+  "contributors": [
+    {
+      "name": "Elastic Client Library Maintainers",
+      "company": "Elastic BV"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elastic/elasticsearch-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elastic/elasticsearch-js/issues"
+  },
+  "homepage": "http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@elastic/request-converter": "9.3.0",
+    "@opentelemetry/sdk-trace-base": "1.30.1",
+    "@sinonjs/fake-timers": "14.0.0",
+    "@types/debug": "4.1.12",
+    "@types/ms": "2.1.0",
+    "@types/node": "22.19.11",
+    "@types/sinonjs__fake-timers": "8.1.5",
+    "@types/split2": "4.2.3",
+    "@types/stoppable": "1.1.3",
+    "c8": "10.1.3",
+    "cross-zip": "4.0.1",
+    "desm": "1.3.1",
+    "eslint": "^9.39.3",
+    "inly": "5.0.1",
+    "js-yaml": "4.1.1",
+    "license-checker": "25.0.1",
+    "minimist": "1.2.8",
+    "ms": "2.1.3",
+    "neostandard": "^0.13.0",
+    "node-abort-controller": "3.1.1",
+    "ora": "9.0.0",
+    "proxy": "2.2.0",
+    "rimraf": "6.1.2",
+    "semver": "7.7.3",
+    "split2": "4.2.0",
+    "stoppable": "1.1.0",
+    "tap": "21.5.0",
+    "ts-node": "10.9.2",
+    "tsc-esm-fix": "3.1.2",
+    "typescript": "5.9.3",
+    "workq": "3.0.0",
+    "xmlbuilder2": "4.0.3",
+    "zx": "8.8.5",
+    "apache-arrow": "18.x - 21.x"
+  },
+  "dependencies": {
+    "@elastic/transport": "^9.3.5",
+    "tslib": "^2.8.1"
+  },
+  "peerDependencies": {
+    "apache-arrow": "18.x - 21.x"
+  },
+  "peerDependenciesMeta": {
+    "apache-arrow": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.4.0",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@elastic/elasticsearch",
+    "originalVersion": "9.4.0",
+    "processedAt": "2026-05-07T07:10:59.270Z",
+    "smokeTest": "passed"
+  }
+}

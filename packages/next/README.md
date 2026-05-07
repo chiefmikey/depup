@@ -12,16 +12,16 @@ npm install @depup/next
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.2.4 | **DepUp version**: 16.2.4-depup.0 | **Updated**: 4/16/2026 | **Import test**: failed
+**Original version**: 16.2.5 | **DepUp version**: 16.2.5-depup.0 | **Updated**: 5/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @swc/helpers | `0.5.15` | `^0.5.21` |
-| baseline-browser-mapping | `^2.9.19` | `^2.10.19` |
-| caniuse-lite | `^1.0.30001579` | `^1.0.30001788` |
-| postcss | `8.4.31` | `^8.5.10` |
+| baseline-browser-mapping | `^2.9.19` | `^2.10.27` |
+| caniuse-lite | `^1.0.30001579` | `^1.0.30001792` |
+| postcss | `8.4.31` | `^8.5.14` |
 | styled-jsx | `5.1.6` | `^5.1.7` |
 
 

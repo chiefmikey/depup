@@ -702,5 +702,64 @@
       "timestamp": "2026-05-02T06:52:30.027Z",
       "version": "21.2.9-depup.1"
     }
+  },
+  "21.2.10": {
+    "0": {
+      "changes": {
+        "@inquirer/confirm": {
+          "from": "5.1.21",
+          "to": "^6.0.12"
+        },
+        "@vitejs/plugin-basic-ssl": {
+          "from": "2.1.4",
+          "to": "^2.3.0"
+        },
+        "beasties": {
+          "from": "0.4.1",
+          "to": "^0.4.2"
+        },
+        "browserslist": {
+          "from": "^4.26.0",
+          "to": "^4.28.2"
+        },
+        "esbuild": {
+          "from": "0.27.3",
+          "to": "^0.28.0"
+        },
+        "https-proxy-agent": {
+          "from": "7.0.6",
+          "to": "^9.0.0"
+        },
+        "listr2": {
+          "from": "9.0.5",
+          "to": "^10.2.1"
+        },
+        "parse5-html-rewriting-stream": {
+          "from": "8.0.0",
+          "to": "^8.0.1"
+        },
+        "sass": {
+          "from": "1.97.3",
+          "to": "^1.99.0"
+        },
+        "tinyglobby": {
+          "from": "0.2.15",
+          "to": "^0.2.16"
+        },
+        "undici": {
+          "from": "7.24.4",
+          "to": "^8.2.0"
+        },
+        "vite": {
+          "from": "7.3.2",
+          "to": "^8.0.11"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:10:13.726Z",
+      "version": "21.2.10-depup.0"
+    }
   }
 }
