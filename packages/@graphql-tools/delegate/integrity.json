@@ -118,5 +118,28 @@
       "timestamp": "2026-05-02T06:47:40.680Z",
       "version": "12.0.15-depup.0"
     }
+  },
+  "12.0.16": {
+    "0": {
+      "changes": {
+        "@graphql-tools/executor": {
+          "from": "^1.4.13",
+          "to": "^1.5.3"
+        },
+        "@graphql-tools/schema": {
+          "from": "^10.0.29",
+          "to": "^10.0.33"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-07T07:10:52.490Z",
+      "version": "12.0.16-depup.0"
+    }
   }
 }
