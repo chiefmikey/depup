@@ -12,7 +12,7 @@ npm install @depup/jest-watch-typeahead
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.1 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | ansi-escapes | `^7.0.0` | `^7.3.0` |
 | chalk | `^5.2.0` | `^5.6.2` |
-| jest-regex-util | `^30.0.0` | `^30.0.1` |
-| jest-watcher | `^30.0.0` | `^30.3.0` |
+| jest-regex-util | `^30.0.0` | `^30.4.0` |
+| jest-watcher | `^30.0.0` | `^30.4.0` |
 | slash | `^5.0.0` | `^5.1.0` |
 | string-length | `^6.0.0` | `^7.0.1` |
 | strip-ansi | `^7.0.1` | `^7.2.0` |

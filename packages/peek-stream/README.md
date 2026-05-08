@@ -12,7 +12,7 @@ npm install @depup/peek-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.3 | **DepUp version**: 1.1.3-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 1.1.3 | **DepUp version**: 1.1.3-depup.1 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | buffer-from | `^1.0.0` | `^1.1.2` |
 | duplexify | `^3.5.0` | `^4.1.3` |
-| through2 | `^2.0.3` | `^4.0.2` |
+| through2 | `^2.0.3` | `^5.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/peek-stream&labels=bug).
