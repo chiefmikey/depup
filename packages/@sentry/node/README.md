@@ -12,7 +12,7 @@ npm install @depup/sentry__node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.51.0 | **DepUp version**: 10.51.0-depup.2 | **Updated**: 5/7/2026 | **Import test**: passed
+**Original version**: 10.52.0 | **DepUp version**: 10.52.0-depup.0 | **Updated**: 5/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -28,7 +28,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/instrumentation-graphql | `0.62.0` | `^0.65.0` |
 | @opentelemetry/instrumentation-hapi | `0.60.0` | `^0.63.0` |
 | @opentelemetry/instrumentation-http | `0.214.0` | `^0.217.0` |
-| @opentelemetry/instrumentation-ioredis | `0.62.0` | `^0.65.0` |
 | @opentelemetry/instrumentation-kafkajs | `0.23.0` | `^0.26.0` |
 | @opentelemetry/instrumentation-knex | `0.58.0` | `^0.61.0` |
 | @opentelemetry/instrumentation-koa | `0.62.0` | `^0.65.0` |
@@ -38,7 +37,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/instrumentation-mysql | `0.60.0` | `^0.63.0` |
 | @opentelemetry/instrumentation-mysql2 | `0.60.0` | `^0.63.0` |
 | @opentelemetry/instrumentation-pg | `0.66.0` | `^0.69.0` |
-| @opentelemetry/instrumentation-redis | `0.62.0` | `^0.65.0` |
 | @opentelemetry/instrumentation-tedious | `0.33.0` | `^0.36.0` |
 | @opentelemetry/sdk-trace-base | `^2.6.1` | `^2.7.1` |
 | @prisma/instrumentation | `7.6.0` | `^7.8.0` |

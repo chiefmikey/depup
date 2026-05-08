@@ -34,5 +34,24 @@
       "timestamp": "2026-03-19T16:24:23.000Z",
       "version": "0.12.25-depup.0"
     }
+  },
+  "0.12.26": {
+    "0": {
+      "changes": {
+        "idb": {
+          "from": "7.1.1",
+          "to": "^8.0.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-08T06:45:25.154Z",
+      "version": "0.12.26-depup.0"
+    }
   }
 }

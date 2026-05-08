@@ -12,17 +12,17 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.36.0 | **DepUp version**: 6.36.0-depup.5 | **Updated**: 5/7/2026 | **Import test**: failed
+**Original version**: 6.37.0 | **DepUp version**: 6.37.0-depup.0 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1044.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1045.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.51.0` |
+| @sentry/node | `7.120.4` | `^10.52.0` |
 | @tryghost/adapter-base-cache | `0.1.23` | `^0.1.24` |
 | @tryghost/admin-api-schema | `4.7.2` | `^4.7.3` |
 | @tryghost/api-framework | `1.0.7` | `^3.2.0` |
@@ -37,7 +37,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/errors | `1.3.13` | `^3.2.0` |
 | @tryghost/helpers | `1.1.103` | `^1.1.104` |
 | @tryghost/html-to-plaintext | `1.0.8` | `^1.0.9` |
-| @tryghost/http-cache-utils | `0.1.25` | `^2.2.0` |
 | @tryghost/image-transform | `1.4.13` | `^1.4.14` |
 | @tryghost/job-manager | `1.0.9` | `^3.2.0` |
 | @tryghost/limit-service | `1.5.2` | `^1.5.3` |
@@ -45,7 +44,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.0` |
 | @tryghost/mw-vhost | `1.0.6` | `^3.2.0` |
-| @tryghost/nodemailer | `0.3.48` | `^2.2.0` |
 | @tryghost/pretty-cli | `3.1.0` | `^3.2.0` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^3.2.0` |
 | @tryghost/promise | `2.1.0` | `^2.2.0` |
@@ -95,7 +93,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-url | `5.45.10` | `^5.50.1` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.1` |
-| moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
 | mysql2 | `3.18.1` | `^3.22.3` |
 | node-fetch | `2.7.0` | `^3.3.2` |
@@ -105,7 +102,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | sanitize-html | `2.17.0` | `^2.17.3` |
 | stripe | `8.222.0` | `^22.1.1` |
 | superagent | `5.3.1` | `^10.3.0` |
-| terser | `5.46.1` | `^5.46.2` |
+| terser | `5.46.1` | `^5.47.1` |
 | ua-parser-js | `1.0.41` | `^2.0.9` |
 
 
