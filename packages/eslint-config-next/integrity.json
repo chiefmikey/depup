@@ -454,5 +454,44 @@
       "timestamp": "2026-05-07T07:12:41.690Z",
       "version": "16.2.5-depup.0"
     }
+  },
+  "16.2.6": {
+    "0": {
+      "changes": {
+        "eslint-import-resolver-node": {
+          "from": "^0.3.6",
+          "to": "^0.3.10"
+        },
+        "eslint-import-resolver-typescript": {
+          "from": "^3.5.2",
+          "to": "^4.4.4"
+        },
+        "eslint-plugin-jsx-a11y": {
+          "from": "^6.10.0",
+          "to": "^6.10.2"
+        },
+        "eslint-plugin-react": {
+          "from": "^7.37.0",
+          "to": "^7.37.5"
+        },
+        "eslint-plugin-react-hooks": {
+          "from": "^7.0.0",
+          "to": "^7.1.1"
+        },
+        "globals": {
+          "from": "16.4.0",
+          "to": "^17.6.0"
+        },
+        "typescript-eslint": {
+          "from": "^8.46.0",
+          "to": "^8.59.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-08T06:48:31.966Z",
+      "version": "16.2.6-depup.0"
+    }
   }
 }
