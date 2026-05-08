@@ -12,14 +12,14 @@ npm install @depup/firebase__firestore
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.14.0 | **DepUp version**: 4.14.0-depup.0 | **Updated**: 4/9/2026 | **Import test**: failed
+**Original version**: 4.14.1 | **DepUp version**: 4.14.1-depup.0 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @grpc/grpc-js | `~1.9.0` | `^1.14.3` |
-| @grpc/proto-loader | `^0.7.8` | `^0.8.0` |
+| @grpc/proto-loader | `^0.7.8` | `^0.8.1` |
 | tslib | `^2.1.0` | `^2.8.1` |
 
 

@@ -12,7 +12,7 @@ npm install @depup/rolldown__binding-linux-x64-musl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.0-rc.18 | **DepUp version**: 1.0.0-rc.18-depup.0 | **Updated**: 4/29/2026 | **Import test**: failed
+**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.0 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
