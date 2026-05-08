@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@fastify/busboy": {
+      "from": "^3.0.0",
+      "to": "^3.2.0"
+    },
+    "@firebase/database-compat": {
+      "from": "^2.0.0",
+      "to": "^2.1.4"
+    },
+    "@firebase/database-types": {
+      "from": "^1.0.6",
+      "to": "^1.0.20"
+    },
+    "fast-deep-equal": {
+      "from": "^3.1.1",
+      "to": "^3.1.3"
+    },
+    "google-auth-library": {
+      "from": "^10.6.1",
+      "to": "^10.6.2"
+    },
+    "jsonwebtoken": {
+      "from": "^9.0.0",
+      "to": "^9.0.3"
+    },
+    "jwks-rsa": {
+      "from": "^3.1.0",
+      "to": "^4.0.1"
+    },
+    "uuid": {
+      "from": "^11.0.2",
+      "to": "^14.0.0"
+    }
+  },
+  "timestamp": "2026-05-08T06:46:40.229Z",
+  "totalUpdated": 8
+}

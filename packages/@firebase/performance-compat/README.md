@@ -12,7 +12,7 @@ npm install @depup/firebase__performance-compat
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.24 | **DepUp version**: 0.2.24-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 0.2.25 | **DepUp version**: 0.2.25-depup.0 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
