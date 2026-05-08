@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-04-03T00:44:22.594Z",
       "version": "0.3.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "esbuild": {
+          "from": "^0.25.12",
+          "to": "^0.28.0"
+        },
+        "terser": {
+          "from": "^5.44.1",
+          "to": "^5.47.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-08T06:54:44.513Z",
+      "version": "0.3.1-depup.2"
     }
   }
 }

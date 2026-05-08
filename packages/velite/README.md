@@ -12,14 +12,14 @@ npm install @depup/velite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.1 | **DepUp version**: 0.3.1-depup.1 | **Updated**: 4/3/2026 | **Import test**: passed
+**Original version**: 0.3.1 | **DepUp version**: 0.3.1-depup.2 | **Updated**: 5/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | esbuild | `^0.25.12` | `^0.28.0` |
-| terser | `^5.44.1` | `^5.46.1` |
+| terser | `^5.44.1` | `^5.47.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/velite&labels=bug).

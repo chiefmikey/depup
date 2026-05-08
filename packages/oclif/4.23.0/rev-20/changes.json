@@ -2,11 +2,11 @@
   "bumped": {
     "@aws-sdk/client-cloudfront": {
       "from": "3.1009.0",
-      "to": "^3.1040.0"
+      "to": "^3.1045.0"
     },
     "@aws-sdk/client-s3": {
       "from": "3.1014.0",
-      "to": "^3.1040.0"
+      "to": "^3.1045.0"
     },
     "@inquirer/confirm": {
       "from": "^3.1.22",
@@ -22,19 +22,19 @@
     },
     "@oclif/core": {
       "from": "4.9.0",
-      "to": "^4.11.0"
+      "to": "^4.11.1"
     },
     "@oclif/plugin-help": {
       "from": "^6.2.38",
-      "to": "^6.2.45"
+      "to": "^6.2.46"
     },
     "@oclif/plugin-not-found": {
       "from": "^3.2.76",
-      "to": "^3.2.81"
+      "to": "^3.2.82"
     },
     "@oclif/plugin-warn-if-update-available": {
       "from": "^3.1.57",
-      "to": "^3.1.61"
+      "to": "^3.1.62"
     },
     "ansis": {
       "from": "^3.16.0",
@@ -54,11 +54,11 @@
     },
     "fs-extra": {
       "from": "^8.1",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "got": {
       "from": "^13",
-      "to": "^15.0.3"
+      "to": "^15.0.5"
     },
     "normalize-package-data": {
       "from": "^6",
@@ -73,6 +73,6 @@
       "to": "^7.0.2"
     }
   },
-  "timestamp": "2026-04-30T20:33:38.698Z",
+  "timestamp": "2026-05-08T06:53:44.076Z",
   "totalUpdated": 18
 }
