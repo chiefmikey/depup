@@ -12,13 +12,14 @@ npm install @depup/fast-xml-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.7.3 | **DepUp version**: 5.7.3-depup.0 | **Updated**: 5/5/2026 | **Import test**: passed
+**Original version**: 5.7.3 | **DepUp version**: 5.7.3-depup.1 | **Updated**: 5/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fast-xml-builder | `^1.1.7` | `^1.1.8` |
+| fast-xml-builder | `^1.1.7` | `^1.1.9` |
+| strnum | `^2.2.3` | `^2.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fast-xml-parser&labels=bug).

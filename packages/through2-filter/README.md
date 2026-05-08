@@ -12,11 +12,14 @@ npm install @depup/through2-filter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.1 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| through2 | `^4.0.2` | `^5.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/through2-filter&labels=bug).
 

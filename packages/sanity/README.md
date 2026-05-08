@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.24.0 | **DepUp version**: 5.24.0-depup.1 | **Updated**: 5/7/2026 | **Import test**: failed
+**Original version**: 5.24.0 | **DepUp version**: 5.24.0-depup.2 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,15 +29,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @portabletext/plugin-paste-link | `^3.0.25` | `^3.0.27` |
 | @portabletext/plugin-typography | `^7.0.25` | `^7.0.27` |
 | @portabletext/react | `^6.0.3` | `^6.2.0` |
+| @sanity/cli | `^6.5.0` | `^6.5.1` |
 | @sanity/client | `^7.21.0` | `^7.22.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/image-url | `^2.0.3` | `^2.1.1` |
 | @sanity/insert-menu | `^3.0.5` | `^3.0.6` |
 | @sanity/migrate | `^6.1.1` | `^6.1.2` |
 | @sanity/preview-url-secret | `^4.0.5` | `^4.0.6` |
-| @sanity/sdk | `^2.8.0` | `^2.10.0` |
+| @sanity/sdk | `^2.8.0` | `^2.11.0` |
 | @sanity/ui | `^3.1.14` | `^3.2.0` |
-| @sentry/react | `^8.55.0` | `^10.51.0` |
+| @sentry/react | `^8.55.0` | `^10.52.0` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
 | groq-js | `^1.29.0` | `^1.30.1` |

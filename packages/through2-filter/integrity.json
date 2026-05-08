@@ -7,6 +7,19 @@
       "status": "published",
       "timestamp": "2026-03-19T03:34:51.706Z",
       "version": "4.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "through2": {
+          "from": "^4.0.2",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-08T06:57:38.693Z",
+      "version": "4.0.0-depup.1"
     }
   }
 }
