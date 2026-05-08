@@ -12,7 +12,7 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.5 | **Updated**: 4/14/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.6 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-transform-flow-strip-types | `^7.12.10` | `^7.27.1` |
 | @babel/plugin-transform-react-jsx | `^7.12.11` | `^7.28.6` |
 | @babel/plugin-transform-regenerator | `^7.12.1` | `^7.29.0` |
-| @babel/preset-env | `^7.12.11` | `^7.29.2` |
+| @babel/preset-env | `^7.12.11` | `^7.29.5` |
 | @babel/preset-flow | `^7.12.1` | `^7.27.1` |
 | @babel/preset-react | `^7.12.10` | `^7.28.5` |
 | @rollup/plugin-alias | `^3.1.1` | `^6.0.0` |
@@ -38,20 +38,20 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | builtin-modules | `^3.1.0` | `^5.1.0` |
 | camelcase | `^6.2.0` | `^9.0.0` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
-| filesize | `^6.1.0` | `^11.0.15` |
+| filesize | `^6.1.0` | `^11.0.17` |
 | gzip-size | `^6.0.0` | `^7.0.0` |
 | kleur | `^4.1.3` | `^4.1.5` |
-| postcss | `^8.2.1` | `^8.5.9` |
+| postcss | `^8.2.1` | `^8.5.14` |
 | pretty-bytes | `^5.4.1` | `^7.1.0` |
-| rollup | `^2.35.1` | `^4.60.1` |
+| rollup | `^2.35.1` | `^4.60.3` |
 | rollup-plugin-postcss | `^4.0.0` | `^4.0.2` |
 | rollup-plugin-typescript2 | `^0.32.0` | `^0.37.0` |
 | rollup-plugin-visualizer | `^5.6.0` | `^7.0.1` |
 | sade | `^1.7.4` | `^1.8.1` |
-| terser | `^5.7.0` | `^5.46.1` |
+| terser | `^5.7.0` | `^5.47.1` |
 | tiny-glob | `^0.2.8` | `^0.2.9` |
 | tslib | `^2.0.3` | `^2.8.1` |
-| typescript | `^4.1.3` | `^6.0.2` |
+| typescript | `^4.1.3` | `^6.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/microbundle&labels=bug).

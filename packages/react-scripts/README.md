@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.8 | **Updated**: 5/2/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.9 | **Updated**: 5/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/core | `^7.16.0` | `^7.29.0` |
 | @pmmmwh/react-refresh-webpack-plugin | `^0.5.3` | `^0.6.2` |
 | @svgr/webpack | `^5.5.0` | `^8.1.0` |
-| babel-jest | `^27.4.2` | `^30.3.0` |
+| babel-jest | `^27.4.2` | `^30.4.0` |
 | babel-loader | `^8.2.3` | `^10.1.1` |
 | babel-preset-react-app | `^10.0.1` | `^10.1.0` |
 | bfj | `^7.0.2` | `^9.1.3` |
@@ -33,13 +33,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv-expand | `^5.1.0` | `^13.0.0` |
 | eslint | `^8.3.0` | `^10.3.0` |
 | eslint-webpack-plugin | `^3.1.1` | `^6.0.0` |
-| fs-extra | `^10.0.0` | `^11.3.4` |
+| fs-extra | `^10.0.0` | `^11.3.5` |
 | html-webpack-plugin | `^5.5.0` | `^5.6.7` |
-| jest | `^27.4.3` | `^30.3.0` |
-| jest-resolve | `^27.4.2` | `^30.3.0` |
+| jest | `^27.4.3` | `^30.4.0` |
+| jest-resolve | `^27.4.2` | `^30.4.0` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
 | mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
-| postcss | `^8.4.4` | `^8.5.13` |
+| postcss | `^8.4.4` | `^8.5.14` |
 | postcss-loader | `^6.2.1` | `^8.2.1` |
 | postcss-normalize | `^10.0.1` | `^13.0.1` |
 | postcss-preset-env | `^7.0.1` | `^11.2.1` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | webpack | `^5.64.4` | `^5.106.2` |
 | webpack-dev-server | `^4.6.0` | `^5.2.3` |
 | webpack-manifest-plugin | `^4.0.2` | `^6.0.1` |
-| workbox-webpack-plugin | `^6.4.1` | `^7.4.0` |
+| workbox-webpack-plugin | `^6.4.1` | `^7.4.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-scripts&labels=bug).
