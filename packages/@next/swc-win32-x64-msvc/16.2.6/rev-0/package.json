@@ -1,0 +1,42 @@
+{
+  "name": "@depup/next__swc-win32-x64-msvc",
+  "version": "16.2.6-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel/next.js",
+    "directory": "crates/next-napi-bindings/npm/win32-x64-msvc"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "next-swc.win32-x64-msvc.node",
+  "files": [
+    "next-swc.win32-x64-msvc.node",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "description": "@next/swc-win32-x64-msvc with all dependencies updated to latest",
+  "keywords": [
+    "@next/swc-win32-x64-msvc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@next/swc-win32-x64-msvc",
+    "originalVersion": "16.2.6",
+    "processedAt": "2026-05-08T06:46:07.057Z",
+    "smokeTest": "failed"
+  }
+}

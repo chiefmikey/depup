@@ -1011,5 +1011,24 @@
       "timestamp": "2026-05-07T07:10:27.622Z",
       "version": "3.1044.0-depup.0"
     }
+  },
+  "3.1045.0": {
+    "0": {
+      "changes": {
+        "@smithy/util-retry": {
+          "from": "^4.3.6",
+          "to": "^4.3.8"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-08T06:45:01.450Z",
+      "version": "3.1045.0-depup.0"
+    }
   }
 }
