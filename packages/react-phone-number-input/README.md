@@ -12,14 +12,14 @@ npm install @depup/react-phone-number-input
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.4.16 | **DepUp version**: 3.4.16-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 3.4.16 | **DepUp version**: 3.4.16-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| country-flag-icons | `^1.6.14` | `^1.6.15` |
-| libphonenumber-js | `^1.12.37` | `^1.12.40` |
+| country-flag-icons | `^1.6.14` | `^1.6.17` |
+| libphonenumber-js | `^1.12.37` | `^1.13.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-phone-number-input&labels=bug).

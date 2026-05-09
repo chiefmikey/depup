@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-09T05:08:24.085Z",
       "version": "4.2.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "emitter-listener": {
+          "from": "^1.0.1",
+          "to": "^1.1.2"
+        },
+        "semver": {
+          "from": "^5.4.1",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:59:17.774Z",
+      "version": "4.2.2-depup.1"
     }
   }
 }

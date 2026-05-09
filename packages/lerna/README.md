@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.9 | **Updated**: 5/8/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.10 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | byte-size | `8.1.1` | `^9.0.1` |
 | chalk | `4.1.0` | `^5.6.2` |
 | ci-info | `4.3.1` | `^4.4.0` |
-| cmd-shim | `6.0.3` | `^8.0.0` |
+| cmd-shim | `6.0.3` | `^9.0.0` |
 | conventional-changelog-angular | `7.0.0` | `^8.3.1` |
 | conventional-changelog-core | `5.0.1` | `^9.0.0` |
 | conventional-recommended-bump | `7.0.1` | `^11.2.0` |
@@ -39,11 +39,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | get-stream | `6.0.0` | `^9.0.1` |
 | git-url-parse | `14.0.0` | `^16.1.0` |
 | import-local | `3.1.0` | `^3.2.0` |
-| ini | `^1.3.8` | `^6.0.0` |
+| ini | `^1.3.8` | `^7.0.0` |
 | init-package-json | `8.2.2` | `^8.2.5` |
 | inquirer | `12.9.6` | `^13.4.2` |
 | is-ci | `3.0.1` | `^4.1.0` |
-| jest-diff | `>=30.0.0 < 31` | `^30.4.0` |
+| jest-diff | `>=30.0.0 < 31` | `^30.4.1` |
 | libnpmpublish | `11.1.2` | `^11.1.3` |
 | load-json-file | `6.2.0` | `^7.0.1` |
 | make-fetch-happen | `15.0.2` | `^15.0.5` |
@@ -59,18 +59,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-reduce | `2.1.0` | `^3.0.0` |
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^21.5.0` |
-| read-cmd-shim | `4.0.0` | `^6.0.0` |
-| semver | `7.7.2` | `^7.7.4` |
+| read-cmd-shim | `4.0.0` | `^7.0.0` |
+| semver | `7.7.2` | `^7.8.0` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | slash | `3.0.0` | `^5.1.0` |
-| ssri | `12.0.0` | `^13.0.1` |
+| ssri | `12.0.0` | `^14.0.0` |
 | string-width | `^4.2.3` | `^8.2.1` |
 | tar | `7.5.11` | `^7.5.15` |
 | tinyglobby | `0.2.12` | `^0.2.16` |
 | typescript | `>=3 < 6` | `^6.0.3` |
 | upath | `2.0.1` | `^3.0.7` |
-| validate-npm-package-name | `6.0.2` | `^7.0.2` |
-| write-file-atomic | `5.0.1` | `^7.0.1` |
+| validate-npm-package-name | `6.0.2` | `^8.0.0` |
+| write-file-atomic | `5.0.1` | `^8.0.0` |
 | yargs | `17.7.2` | `^18.0.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |
 

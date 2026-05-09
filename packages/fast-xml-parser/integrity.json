@@ -242,6 +242,23 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:55:23.601Z",
       "version": "5.7.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "fast-xml-builder": {
+          "from": "^1.1.7",
+          "to": "^1.2.0"
+        },
+        "strnum": {
+          "from": "^2.2.3",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T07:00:26.243Z",
+      "version": "5.7.3-depup.2"
     }
   }
 }

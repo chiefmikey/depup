@@ -12,7 +12,7 @@ npm install @depup/autocannon
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.1 | **Updated**: 4/24/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.2 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -29,7 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | on-net-listen | `^1.1.1` | `^1.1.2` |
 | pretty-bytes | `^5.4.1` | `^7.1.0` |
 | retimer | `^3.0.0` | `^4.0.0` |
-| semver | `^7.3.2` | `^7.7.4` |
+| semver | `^7.3.2` | `^7.8.0` |
 | timestring | `^6.0.0` | `^7.0.0` |
 
 

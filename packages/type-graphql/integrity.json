@@ -10,6 +10,19 @@
       "status": "published",
       "timestamp": "2026-03-17T18:45:16.457Z",
       "version": "2.0.0-rc.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T07:06:33.464Z",
+      "version": "2.0.0-rc.3-depup.1"
     }
   }
 }

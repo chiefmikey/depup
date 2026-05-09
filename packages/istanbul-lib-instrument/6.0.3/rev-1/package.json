@@ -1,0 +1,87 @@
+{
+  "name": "@depup/istanbul-lib-instrument",
+  "version": "6.0.3-depup.1",
+  "description": "Core istanbul API for JS code coverage (with updated dependencies)",
+  "author": "Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/parser": "^7.29.3",
+    "@istanbuljs/schema": "^0.1.6",
+    "istanbul-lib-coverage": "^3.2.2",
+    "semver": "^7.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "chai": "^4.2.0",
+    "clone": "^2.1.2",
+    "debug": "^4.1.1",
+    "documentation": "^12.1.4",
+    "js-yaml": "^3.13.1",
+    "mocha": "^6.2.3",
+    "nopt": "^4.0.1",
+    "nyc": "^15.1.0"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/istanbuljs/istanbuljs/issues"
+  },
+  "homepage": "https://istanbul.js.org/",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/istanbuljs/istanbuljs.git",
+    "directory": "packages/istanbul-lib-instrument"
+  },
+  "keywords": [
+    "istanbul-lib-instrument",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "coverage",
+    "istanbul",
+    "js",
+    "instrumentation"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.23.9",
+        "to": "^7.29.0"
+      },
+      "@babel/parser": {
+        "from": "^7.23.9",
+        "to": "^7.29.3"
+      },
+      "@istanbuljs/schema": {
+        "from": "^0.1.3",
+        "to": "^0.1.6"
+      },
+      "istanbul-lib-coverage": {
+        "from": "^3.2.0",
+        "to": "^3.2.2"
+      },
+      "semver": {
+        "from": "^7.5.4",
+        "to": "^7.8.0"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "istanbul-lib-instrument",
+    "originalVersion": "6.0.3",
+    "processedAt": "2026-05-09T07:00:36.088Z",
+    "smokeTest": "passed"
+  }
+}

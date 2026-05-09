@@ -12,13 +12,13 @@ npm install @depup/type-graphql
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0-rc.3 | **DepUp version**: 2.0.0-rc.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.0.0-rc.3 | **DepUp version**: 2.0.0-rc.3-depup.1 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| semver | `^7.7.3` | `^7.7.4` |
+| semver | `^7.7.3` | `^7.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/type-graphql&labels=bug).
