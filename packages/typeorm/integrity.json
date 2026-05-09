@@ -104,5 +104,32 @@
       "timestamp": "2026-04-19T16:22:26.159Z",
       "version": "0.3.28-depup.39"
     }
+  },
+  "0.3.29": {
+    "0": {
+      "changes": {
+        "dotenv": {
+          "from": "^16.6.1",
+          "to": "^17.4.2"
+        },
+        "glob": {
+          "from": "^10.5.0",
+          "to": "^13.0.6"
+        },
+        "uuid": {
+          "from": "^11.1.1",
+          "to": "^14.0.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:53:46.901Z",
+      "version": "0.3.29-depup.0"
+    }
   }
 }

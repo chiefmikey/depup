@@ -34,5 +34,24 @@
       "timestamp": "2026-04-14T16:31:17.569Z",
       "version": "5.15.1-depup.0"
     }
+  },
+  "5.15.2": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^3.1.2",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.3",
+          "to": "^0.3.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:53:24.458Z",
+      "version": "5.15.2-depup.0"
+    }
   }
 }
