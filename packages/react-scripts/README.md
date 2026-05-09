@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.9 | **Updated**: 5/8/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.10 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/core | `^7.16.0` | `^7.29.0` |
 | @pmmmwh/react-refresh-webpack-plugin | `^0.5.3` | `^0.6.2` |
 | @svgr/webpack | `^5.5.0` | `^8.1.0` |
-| babel-jest | `^27.4.2` | `^30.4.0` |
+| babel-jest | `^27.4.2` | `^30.4.1` |
 | babel-loader | `^8.2.3` | `^10.1.1` |
 | babel-preset-react-app | `^10.0.1` | `^10.1.0` |
 | bfj | `^7.0.2` | `^9.1.3` |
@@ -35,8 +35,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eslint-webpack-plugin | `^3.1.1` | `^6.0.0` |
 | fs-extra | `^10.0.0` | `^11.3.5` |
 | html-webpack-plugin | `^5.5.0` | `^5.6.7` |
-| jest | `^27.4.3` | `^30.4.0` |
-| jest-resolve | `^27.4.2` | `^30.4.0` |
+| jest | `^27.4.3` | `^30.4.2` |
+| jest-resolve | `^27.4.2` | `^30.4.1` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
 | mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
 | postcss | `^8.4.4` | `^8.5.14` |
@@ -46,12 +46,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-refresh | `^0.11.0` | `^0.18.0` |
 | resolve | `^1.20.0` | `^1.22.12` |
 | resolve-url-loader | `^4.0.0` | `^5.0.0` |
-| sass-loader | `^12.3.0` | `^16.0.7` |
-| semver | `^7.3.5` | `^7.7.4` |
+| sass-loader | `^12.3.0` | `^16.0.8` |
+| semver | `^7.3.5` | `^7.8.0` |
 | source-map-loader | `^3.0.0` | `^5.0.0` |
 | style-loader | `^3.3.1` | `^4.0.0` |
-| tailwindcss | `^3.0.2` | `^4.2.4` |
-| terser-webpack-plugin | `^5.2.5` | `^5.5.0` |
+| tailwindcss | `^3.0.2` | `^4.3.0` |
+| terser-webpack-plugin | `^5.2.5` | `^5.6.0` |
 | webpack | `^5.64.4` | `^5.106.2` |
 | webpack-dev-server | `^4.6.0` | `^5.2.3` |
 | webpack-manifest-plugin | `^4.0.2` | `^6.0.1` |

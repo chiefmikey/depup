@@ -12,14 +12,14 @@ npm install @depup/paypal-rest-sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.8.1 | **DepUp version**: 1.8.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: unknown
+**Original version**: 1.8.1 | **DepUp version**: 1.8.1-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | buffer-crc32 | `^0.2.3` | `^1.0.0` |
-| semver | `^5.0.3` | `^7.7.4` |
+| semver | `^5.0.3` | `^7.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/paypal-rest-sdk&labels=bug).

@@ -1,0 +1,113 @@
+{
+  "name": "@depup/inquirer",
+  "version": "13.4.2-depup.1",
+  "description": "A collection of common interactive command line user interfaces. (with updated dependencies)",
+  "keywords": [
+    "inquirer",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "answer",
+    "answers",
+    "ask",
+    "base",
+    "cli",
+    "command",
+    "command-line",
+    "confirm",
+    "enquirer",
+    "generate",
+    "generator",
+    "hyper",
+    "input",
+    "inquire",
+    "interface",
+    "iterm",
+    "javascript",
+    "menu",
+    "node",
+    "nodejs",
+    "prompt",
+    "promptly",
+    "prompts",
+    "question",
+    "readline",
+    "scaffold",
+    "scaffolder",
+    "scaffolding",
+    "stdin",
+    "stdout",
+    "terminal",
+    "tty",
+    "ui",
+    "yeoman",
+    "yo",
+    "zsh"
+  ],
+  "homepage": "https://github.com/SBoudrias/Inquirer.js/blob/main/packages/inquirer/README.md",
+  "license": "MIT",
+  "author": "Simon Boudrias <admin@simonboudrias.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SBoudrias/Inquirer.js.git"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@inquirer/ansi": "^2.0.5",
+    "@inquirer/core": "^11.1.9",
+    "@inquirer/prompts": "^8.4.2",
+    "@inquirer/type": "^4.0.5",
+    "mute-stream": "^4.0.0",
+    "run-async": "^4.0.6",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/mute-stream": "^0.0.4",
+    "typescript": "^6.0.2"
+  },
+  "peerDependencies": {
+    "@types/node": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "gitHead": "35bda2afd31b4acca8f800259b9f7ca4e95a1d9d",
+  "depup": {
+    "changes": {
+      "mute-stream": {
+        "from": "^3.0.0",
+        "to": "^4.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "inquirer",
+    "originalVersion": "13.4.2",
+    "processedAt": "2026-05-09T07:00:15.129Z",
+    "smokeTest": "passed"
+  }
+}

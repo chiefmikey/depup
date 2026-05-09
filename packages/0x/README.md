@@ -12,7 +12,7 @@ npm install @depup/0x
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.2 | **Updated**: 5/8/2026 | **Import test**: failed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.3 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,12 +34,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | on-net-listen | `^1.1.0` | `^1.1.2` |
 | opn | `^5.4.0` | `^6.0.0` |
 | pump | `^3.0.0` | `^3.0.4` |
-| semver | `^7.3.5` | `^7.7.4` |
+| semver | `^7.3.5` | `^7.8.0` |
 | single-line-log | `^1.0.1` | `^1.1.2` |
 | split2 | `^4.0.0` | `^4.2.0` |
 | tachyons | `^4.9.1` | `^4.12.0` |
 | through2 | `^4.0.0` | `^5.0.0` |
-| which | `^2.0.2` | `^6.0.1` |
+| which | `^2.0.2` | `^7.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/0x&labels=bug).

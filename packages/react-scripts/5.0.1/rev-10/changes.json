@@ -14,7 +14,7 @@
     },
     "babel-jest": {
       "from": "^27.4.2",
-      "to": "^30.3.0"
+      "to": "^30.4.1"
     },
     "babel-loader": {
       "from": "^8.2.3",
@@ -46,15 +46,15 @@
     },
     "dotenv": {
       "from": "^10.0.0",
-      "to": "^17.4.1"
+      "to": "^17.4.2"
     },
     "dotenv-expand": {
       "from": "^5.1.0",
-      "to": "^12.0.3"
+      "to": "^13.0.0"
     },
     "eslint": {
       "from": "^8.3.0",
-      "to": "^10.2.0"
+      "to": "^10.3.0"
     },
     "eslint-webpack-plugin": {
       "from": "^3.1.1",
@@ -62,19 +62,19 @@
     },
     "fs-extra": {
       "from": "^10.0.0",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "html-webpack-plugin": {
       "from": "^5.5.0",
-      "to": "^5.6.6"
+      "to": "^5.6.7"
     },
     "jest": {
       "from": "^27.4.3",
-      "to": "^30.3.0"
+      "to": "^30.4.2"
     },
     "jest-resolve": {
       "from": "^27.4.2",
-      "to": "^30.3.0"
+      "to": "^30.4.1"
     },
     "jest-watch-typeahead": {
       "from": "^1.0.0",
@@ -86,7 +86,7 @@
     },
     "postcss": {
       "from": "^8.4.4",
-      "to": "^8.5.9"
+      "to": "^8.5.14"
     },
     "postcss-loader": {
       "from": "^6.2.1",
@@ -98,7 +98,7 @@
     },
     "postcss-preset-env": {
       "from": "^7.0.1",
-      "to": "^11.2.0"
+      "to": "^11.2.1"
     },
     "react-refresh": {
       "from": "^0.11.0",
@@ -106,7 +106,7 @@
     },
     "resolve": {
       "from": "^1.20.0",
-      "to": "^1.22.11"
+      "to": "^1.22.12"
     },
     "resolve-url-loader": {
       "from": "^4.0.0",
@@ -114,11 +114,11 @@
     },
     "sass-loader": {
       "from": "^12.3.0",
-      "to": "^16.0.7"
+      "to": "^16.0.8"
     },
     "semver": {
       "from": "^7.3.5",
-      "to": "^7.7.4"
+      "to": "^7.8.0"
     },
     "source-map-loader": {
       "from": "^3.0.0",
@@ -130,15 +130,15 @@
     },
     "tailwindcss": {
       "from": "^3.0.2",
-      "to": "^4.2.2"
+      "to": "^4.3.0"
     },
     "terser-webpack-plugin": {
       "from": "^5.2.5",
-      "to": "^5.4.0"
+      "to": "^5.6.0"
     },
     "webpack": {
       "from": "^5.64.4",
-      "to": "^5.106.0"
+      "to": "^5.106.2"
     },
     "webpack-dev-server": {
       "from": "^4.6.0",
@@ -150,9 +150,9 @@
     },
     "workbox-webpack-plugin": {
       "from": "^6.4.1",
-      "to": "^7.4.0"
+      "to": "^7.4.1"
     }
   },
-  "timestamp": "2026-04-08T16:38:53.773Z",
+  "timestamp": "2026-05-09T07:01:55.243Z",
   "totalUpdated": 38
 }

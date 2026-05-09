@@ -12,7 +12,7 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.19.2 | **DepUp version**: 13.19.2-depup.3 | **Updated**: 5/7/2026 | **Import test**: passed
+**Original version**: 13.19.2 | **DepUp version**: 13.19.2-depup.4 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @apm-js-collab/tracing-hooks | `^0.6.0` | `^0.7.0` |
 | @grpc/grpc-js | `^1.13.2` | `^1.14.3` |
-| @grpc/proto-loader | `^0.7.5` | `^0.8.0` |
+| @grpc/proto-loader | `^0.7.5` | `^0.8.1` |
 | @newrelic/security-agent | `^3.0.0` | `^3.0.3` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
 | @opentelemetry/api-logs | `^0.203.0` | `^0.217.0` |
@@ -37,7 +37,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | readable-stream | `^3.6.1` | `^4.7.0` |
 | require-in-the-middle | `^7.4.0` | `^8.0.1` |
-| semver | `^7.5.2` | `^7.7.4` |
+| semver | `^7.5.2` | `^7.8.0` |
 | winston-transport | `^4.5.0` | `^4.9.0` |
 
 

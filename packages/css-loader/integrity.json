@@ -4,6 +4,31 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.864Z",
       "version": "7.1.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "postcss": {
+          "from": "^8.4.40",
+          "to": "^8.5.14"
+        },
+        "postcss-modules-local-by-default": {
+          "from": "^4.0.5",
+          "to": "^4.2.0"
+        },
+        "postcss-modules-scope": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:59:33.944Z",
+      "version": "7.1.4-depup.1"
     }
   }
 }
