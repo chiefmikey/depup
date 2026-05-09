@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.37.0 | **DepUp version**: 6.37.0-depup.0 | **Updated**: 5/8/2026 | **Import test**: failed
+**Original version**: 6.37.1 | **DepUp version**: 6.37.1-depup.0 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.10` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
-| mailgun.js | `10.4.0` | `^13.0.0` |
+| mailgun.js | `10.4.0` | `^13.0.1` |
 | metascraper | `5.45.15` | `^5.50.1` |
 | metascraper-author | `5.45.10` | `^5.50.1` |
 | metascraper-description | `5.45.10` | `^5.50.1` |
@@ -100,6 +100,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | otplib | `12.0.1` | `^13.4.0` |
 | probe-image-size | `7.2.3` | `^7.3.0` |
 | sanitize-html | `2.17.0` | `^2.17.3` |
+| semver | `7.7.4` | `^7.8.0` |
 | stripe | `8.222.0` | `^22.1.1` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.46.1` | `^5.47.1` |
