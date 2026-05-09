@@ -84,5 +84,20 @@
       "timestamp": "2026-04-28T16:40:58.857Z",
       "version": "9.0.4-depup.0"
     }
+  },
+  "9.1.0": {
+    "0": {
+      "changes": {
+        "@mui/utils": {
+          "from": "9.0.0",
+          "to": "^9.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:51:30.540Z",
+      "version": "9.1.0-depup.0"
+    }
   }
 }

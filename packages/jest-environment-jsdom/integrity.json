@@ -41,5 +41,20 @@
       "timestamp": "2026-05-08T06:47:12.069Z",
       "version": "30.4.0-depup.0"
     }
+  },
+  "30.4.1": {
+    "0": {
+      "changes": {
+        "jsdom": {
+          "from": "^26.1.0",
+          "to": "^29.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:52:49.874Z",
+      "version": "30.4.1-depup.0"
+    }
   }
 }

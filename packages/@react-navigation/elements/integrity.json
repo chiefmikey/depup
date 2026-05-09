@@ -157,5 +157,28 @@
       "timestamp": "2026-05-08T06:46:05.495Z",
       "version": "2.9.16-depup.0"
     }
+  },
+  "2.9.17": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.3"
+        },
+        "use-sync-external-store": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:51:49.027Z",
+      "version": "2.9.17-depup.0"
+    }
   }
 }
