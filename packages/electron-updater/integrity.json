@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T22:55:34.716Z",
       "version": "6.8.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.5"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.1.1"
+        },
+        "semver": {
+          "from": "~7.7.3",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:58:37.781Z",
+      "version": "6.8.3-depup.1"
     }
   }
 }

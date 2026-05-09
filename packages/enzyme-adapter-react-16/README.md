@@ -12,18 +12,18 @@ npm install @depup/enzyme-adapter-react-16
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.15.8 | **DepUp version**: 1.15.8-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 1.15.8 | **DepUp version**: 1.15.8-depup.1 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| hasown | `^2.0.0` | `^2.0.2` |
+| hasown | `^2.0.0` | `^2.0.3` |
 | object.assign | `^4.1.5` | `^4.1.7` |
 | object.values | `^1.1.7` | `^1.2.1` |
-| react-is | `^16.13.1` | `^19.2.4` |
-| react-test-renderer | `^16.0.0-0` | `^19.2.4` |
-| semver | `^5.7.2` | `^7.7.4` |
+| react-is | `^16.13.1` | `^19.2.6` |
+| react-test-renderer | `^16.0.0-0` | `^19.2.6` |
+| semver | `^5.7.2` | `^7.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/enzyme-adapter-react-16&labels=bug).
