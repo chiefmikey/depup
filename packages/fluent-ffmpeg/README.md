@@ -12,14 +12,14 @@ npm install @depup/fluent-ffmpeg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.3 | **DepUp version**: 2.1.3-depup.0 | **Updated**: 3/18/2026 | **Import test**: unknown
+**Original version**: 2.1.3 | **DepUp version**: 2.1.3-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | async | `^0.2.9` | `^3.2.6` |
-| which | `^1.1.1` | `^6.0.1` |
+| which | `^1.1.1` | `^7.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fluent-ffmpeg&labels=bug).

@@ -12,13 +12,13 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.15 | **Updated**: 5/4/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.16 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @clickhouse/client | `^0.2.2` | `^1.18.3` |
+| @clickhouse/client | `^0.2.2` | `^1.18.4` |
 | @fontsource/inter | `^4.5.15` | `^5.2.8` |
 | @prisma/client | `5.7.0` | `^7.8.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
@@ -38,35 +38,35 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | del | `^6.0.0` | `^8.0.1` |
 | detect-browser | `^5.2.0` | `^5.3.0` |
 | dotenv | `^10.0.0` | `^17.4.2` |
-| fs-extra | `^10.0.1` | `^11.3.4` |
-| immer | `^9.0.12` | `^11.1.4` |
+| fs-extra | `^10.0.1` | `^11.3.5` |
+| immer | `^9.0.12` | `^11.1.8` |
 | ipaddr.js | `^2.0.1` | `^2.4.0` |
 | is-ci | `^3.0.1` | `^4.1.0` |
 | is-docker | `^3.0.0` | `^4.0.0` |
 | is-localhost-ip | `^1.4.0` | `^3.0.1` |
-| isbot | `^3.4.5` | `^5.1.39` |
+| isbot | `^3.4.5` | `^5.1.40` |
 | kafkajs | `^2.1.0` | `^2.2.4` |
 | maxmind | `^4.3.6` | `^5.0.6` |
 | moment-timezone | `^0.5.35` | `^0.6.2` |
-| next | `14.0.4` | `^16.2.4` |
+| next | `14.0.4` | `^16.2.6` |
 | next-basics | `^0.39.0` | `^0.40.0` |
 | node-fetch | `^3.2.8` | `^3.3.2` |
 | prisma | `5.7.0` | `^7.8.0` |
-| react | `^18.2.0` | `^19.2.5` |
+| react | `^18.2.0` | `^19.2.6` |
 | react-basics | `^0.122.0` | `^0.126.0` |
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
-| react-dom | `^18.2.0` | `^19.2.5` |
+| react-dom | `^18.2.0` | `^19.2.6` |
 | react-error-boundary | `^4.0.4` | `^6.1.1` |
-| react-intl | `^6.5.5` | `^10.1.4` |
+| react-intl | `^6.5.5` | `^10.1.5` |
 | react-simple-maps | `^2.3.0` | `^3.0.0` |
 | react-use-measure | `^2.0.4` | `^2.1.7` |
 | react-window | `^1.8.6` | `^2.2.7` |
-| semver | `^7.5.4` | `^7.7.4` |
+| semver | `^7.5.4` | `^7.8.0` |
 | thenby | `^1.3.4` | `^1.4.1` |
 | timezone-support | `^2.0.2` | `^3.1.0` |
 | uuid | `^9.0.0` | `^14.0.0` |
 | yup | `^0.32.11` | `^1.7.1` |
-| zustand | `^4.3.8` | `^5.0.12` |
+| zustand | `^4.3.8` | `^5.0.13` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/umami&labels=bug).

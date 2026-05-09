@@ -12,11 +12,16 @@ npm install @depup/class-validator
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @types/validator | `^13.15.3` | `^13.15.10` |
+| libphonenumber-js | `^1.11.1` | `^1.13.0` |
+| validator | `^13.15.22` | `^13.15.35` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/class-validator&labels=bug).
 

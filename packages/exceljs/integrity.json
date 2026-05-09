@@ -79,6 +79,47 @@
       "status": "failed",
       "timestamp": "2026-04-19T16:18:55.869Z",
       "version": "4.4.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "archiver": {
+          "from": "^5.0.0",
+          "to": "^8.0.0"
+        },
+        "dayjs": {
+          "from": "^1.8.34",
+          "to": "^1.11.20"
+        },
+        "fast-csv": {
+          "from": "^4.3.1",
+          "to": "^5.0.7"
+        },
+        "readable-stream": {
+          "from": "^3.6.0",
+          "to": "^4.7.0"
+        },
+        "saxes": {
+          "from": "^5.0.1",
+          "to": "^6.0.0"
+        },
+        "tmp": {
+          "from": "^0.2.0",
+          "to": "^0.2.5"
+        },
+        "unzipper": {
+          "from": "^0.10.11",
+          "to": "^0.12.3"
+        },
+        "uuid": {
+          "from": "^8.3.0",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:59:44.400Z",
+      "version": "4.4.0-depup.2"
     }
   }
 }

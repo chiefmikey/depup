@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T19:35:00.530Z",
       "version": "8.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "hosted-git-info": {
+          "from": "^9.0.0",
+          "to": "^10.0.0"
+        },
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T07:00:49.776Z",
+      "version": "8.0.0-depup.1"
     }
   }
 }

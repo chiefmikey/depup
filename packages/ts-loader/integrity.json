@@ -86,6 +86,35 @@
       "status": "failed",
       "timestamp": "2026-04-23T20:32:27.282Z",
       "version": "9.5.7-depup.1"
+    },
+    "2": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.0",
+          "to": "^5.6.2"
+        },
+        "enhanced-resolve": {
+          "from": "^5.0.0",
+          "to": "^5.21.2"
+        },
+        "micromatch": {
+          "from": "^4.0.0",
+          "to": "^4.0.8"
+        },
+        "semver": {
+          "from": "^7.3.4",
+          "to": "^7.8.0"
+        },
+        "source-map": {
+          "from": "^0.7.4",
+          "to": "^0.7.6"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T07:01:39.609Z",
+      "version": "9.5.7-depup.2"
     }
   }
 }

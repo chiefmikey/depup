@@ -50,6 +50,35 @@
       "status": "published",
       "timestamp": "2026-03-16T23:25:33.161Z",
       "version": "7.29.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.29.0",
+          "to": "^7.29.1"
+        },
+        "@babel/helpers": {
+          "from": "^7.28.6",
+          "to": "^7.29.2"
+        },
+        "@babel/parser": {
+          "from": "^7.29.0",
+          "to": "^7.29.3"
+        },
+        "debug": {
+          "from": "^4.1.0",
+          "to": "^4.4.3"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:57:10.315Z",
+      "version": "7.29.0-depup.3"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@depup/webpack",
-  "version": "5.106.2-depup.0",
+  "version": "5.106.2-depup.5",
   "description": "Packs ECMAScript/CommonJs/AMD modules for the browser. Allows you to split your codebase into multiple bundles, which can be loaded on demand. Supports loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. (with updated dependencies)",
   "homepage": "https://github.com/webpack/webpack",
   "bugs": "https://github.com/webpack/webpack/issues",
@@ -88,7 +88,7 @@
   },
   "dependencies": {
     "@types/eslint-scope": "^9.1.0",
-    "@types/estree": "^1.0.8",
+    "@types/estree": "^1.0.9",
     "@types/json-schema": "^7.0.15",
     "@webassemblyjs/ast": "^1.14.1",
     "@webassemblyjs/wasm-edit": "^1.14.1",
@@ -97,20 +97,20 @@
     "acorn-import-phases": "^1.0.4",
     "browserslist": "^4.28.2",
     "chrome-trace-event": "^1.0.4",
-    "enhanced-resolve": "^5.20.1",
-    "es-module-lexer": "^2.0.0",
+    "enhanced-resolve": "^5.21.2",
+    "es-module-lexer": "^2.1.0",
     "eslint-scope": "^9.1.2",
     "events": "^3.3.0",
     "glob-to-regexp": "^0.4.1",
     "graceful-fs": "^4.2.11",
-    "loader-runner": "^4.3.1",
+    "loader-runner": "^4.3.2",
     "mime-db": "^1.54.0",
     "neo-async": "^2.6.2",
     "schema-utils": "^4.3.3",
-    "tapable": "^2.3.2",
-    "terser-webpack-plugin": "^5.4.0",
+    "tapable": "^2.3.3",
+    "terser-webpack-plugin": "^5.6.0",
     "watchpack": "^2.5.1",
-    "webpack-sources": "^3.3.4"
+    "webpack-sources": "^3.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
@@ -224,6 +224,10 @@
         "from": "^3.7.7",
         "to": "^9.1.0"
       },
+      "@types/estree": {
+        "from": "^1.0.8",
+        "to": "^1.0.9"
+      },
       "acorn-import-phases": {
         "from": "^1.0.3",
         "to": "^1.0.4"
@@ -238,7 +242,11 @@
       },
       "enhanced-resolve": {
         "from": "^5.20.0",
-        "to": "^5.20.1"
+        "to": "^5.21.2"
+      },
+      "es-module-lexer": {
+        "from": "^2.0.0",
+        "to": "^2.1.0"
       },
       "eslint-scope": {
         "from": "5.1.1",
@@ -248,19 +256,27 @@
         "from": "^3.2.0",
         "to": "^3.3.0"
       },
+      "loader-runner": {
+        "from": "^4.3.1",
+        "to": "^4.3.2"
+      },
       "tapable": {
         "from": "^2.3.0",
-        "to": "^2.3.2"
+        "to": "^2.3.3"
       },
       "terser-webpack-plugin": {
         "from": "^5.3.17",
-        "to": "^5.4.0"
+        "to": "^5.6.0"
+      },
+      "webpack-sources": {
+        "from": "^3.3.4",
+        "to": "^3.4.1"
       }
     },
-    "depsUpdated": 9,
+    "depsUpdated": 13,
     "originalPackage": "webpack",
     "originalVersion": "5.106.2",
-    "processedAt": "2026-04-15T12:29:51.199Z",
+    "processedAt": "2026-05-09T07:03:18.828Z",
     "smokeTest": "passed"
   }
 }

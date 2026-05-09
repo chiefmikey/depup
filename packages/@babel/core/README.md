@@ -12,7 +12,7 @@ npm install @depup/babel__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.29.0 | **DepUp version**: 7.29.0-depup.2 | **Updated**: 3/16/2026 | **Import test**: unknown
+**Original version**: 7.29.0 | **DepUp version**: 7.29.0-depup.3 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,9 +20,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/generator | `^7.29.0` | `^7.29.1` |
 | @babel/helpers | `^7.28.6` | `^7.29.2` |
-| @babel/parser | `^7.29.0` | `^7.29.2` |
+| @babel/parser | `^7.29.0` | `^7.29.3` |
 | debug | `^4.1.0` | `^4.4.3` |
-| semver | `^6.3.1` | `^7.7.4` |
+| semver | `^6.3.1` | `^7.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel__core&labels=bug).

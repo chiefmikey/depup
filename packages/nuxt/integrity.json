@@ -580,6 +580,63 @@
       "status": "failed",
       "timestamp": "2026-05-06T07:14:00.333Z",
       "version": "4.4.4-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.4",
+          "to": "^4.0.0-alpha.4"
+        },
+        "@unhead/vue": {
+          "from": "^2.1.13",
+          "to": "^3.1.0"
+        },
+        "@vue/shared": {
+          "from": "^3.5.33",
+          "to": "^3.5.34"
+        },
+        "cookie-es": {
+          "from": "^2.0.1",
+          "to": "^3.1.1"
+        },
+        "devalue": {
+          "from": "^5.7.1",
+          "to": "^5.8.0"
+        },
+        "jiti": {
+          "from": "^2.6.1",
+          "to": "^2.7.0"
+        },
+        "oxc-minify": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        },
+        "oxc-parser": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        },
+        "oxc-transform": {
+          "from": "^0.128.0",
+          "to": "^0.129.0"
+        },
+        "oxc-walker": {
+          "from": "^0.7.0",
+          "to": "^1.0.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.0"
+        },
+        "vue": {
+          "from": "^3.5.33",
+          "to": "^3.5.34"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T07:01:10.517Z",
+      "version": "4.4.4-depup.3"
     }
   }
 }

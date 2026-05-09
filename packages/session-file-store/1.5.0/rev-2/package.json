@@ -1,0 +1,114 @@
+{
+  "name": "@depup/session-file-store",
+  "version": "1.5.0-depup.2",
+  "description": "Session file store is a provision for storing session data in the session file (with updated dependencies)",
+  "keywords": [
+    "session-file-store",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "session",
+    "file",
+    "store",
+    "express",
+    "connect"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valery-barysok/session-file-store"
+  },
+  "bugs": {
+    "url": "https://github.com/valery-barysok/session-file-store/issues"
+  },
+  "homepage": "https://github.com/valery-barysok/session-file-store",
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "changes.json"
+  ],
+  "author": "Valery Barysok <valery.barysok@gmail.com>",
+  "contributors": [
+    {
+      "name": "Igor Svehla (wespen)"
+    },
+    {
+      "name": "Bill Christo (bchr02)"
+    },
+    {
+      "name": "Ryan Murphy (r-murphy)"
+    },
+    {
+      "name": "Norberth Danson (ndanson)"
+    },
+    {
+      "name": "Arnaud Bétrémieux (arnoo)"
+    },
+    {
+      "name": "Guson (gusonyang)"
+    },
+    {
+      "name": "Philipp Sporrer (PhilippSpo)"
+    },
+    {
+      "name": "Tyler Young (tyoung86)"
+    },
+    {
+      "name": "Mikko Kaistinen (Laastine)"
+    }
+  ],
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "nyc mocha --reporter spec --check-leaks test/",
+    "test-tap": "mocha --reporter tap --check-leaks test/"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 6"
+  },
+  "dependencies": {
+    "bagpipe": "^0.3.5",
+    "fs-extra": "^11.3.5",
+    "kruptein": "^3.3.0",
+    "object-assign": "^4.1.1",
+    "retry": "^0.13.1",
+    "write-file-atomic": "^8.0.0"
+  },
+  "devDependencies": {
+    "cbor-sync": "^1.0.2",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.4",
+    "nyc": "^14.1.1",
+    "lodash.clone": "^4.3.1",
+    "mocha": "^6.1.4"
+  },
+  "depup": {
+    "changes": {
+      "fs-extra": {
+        "from": "^8.0.1",
+        "to": "^11.3.5"
+      },
+      "kruptein": {
+        "from": "^2.0.4",
+        "to": "^3.3.0"
+      },
+      "retry": {
+        "from": "^0.12.0",
+        "to": "^0.13.1"
+      },
+      "write-file-atomic": {
+        "from": "3.0.3",
+        "to": "^8.0.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "session-file-store",
+    "originalVersion": "1.5.0",
+    "processedAt": "2026-05-09T07:01:23.665Z",
+    "smokeTest": "passed"
+  }
+}

@@ -237,6 +237,23 @@
       "status": "failed",
       "timestamp": "2026-05-07T07:16:11.349Z",
       "version": "53.22.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "jsonschema": {
+          "from": "~1.4.1",
+          "to": "^1.5.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:57:01.496Z",
+      "version": "53.22.0-depup.1"
     }
   }
 }
