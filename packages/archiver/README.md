@@ -12,17 +12,18 @@ npm install @depup/archiver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.1 | **Updated**: 4/29/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.0 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | async | `^3.2.4` | `^3.2.6` |
+| is-stream | `^4.0.0` | `^4.0.1` |
+| lazystream | `^1.0.0` | `^1.0.1` |
 | readable-stream | `^4.0.0` | `^4.7.0` |
-| readdir-glob | `^1.1.2` | `^3.0.0` |
 | tar-stream | `^3.0.0` | `^3.2.0` |
-| zip-stream | `^6.0.1` | `^7.0.2` |
+| zip-stream | `^7.0.2` | `^7.0.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/archiver&labels=bug).
