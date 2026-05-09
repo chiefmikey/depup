@@ -12,7 +12,7 @@ npm install @depup/eslint-config-airbnb-base
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.0.0 | **DepUp version**: 15.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 15.0.0 | **DepUp version**: 15.0.0-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | confusing-browser-globals | `^1.0.10` | `^1.0.11` |
 | object.assign | `^4.1.2` | `^4.1.7` |
 | object.entries | `^1.1.5` | `^1.1.9` |
-| semver | `^6.3.0` | `^7.7.4` |
+| semver | `^6.3.0` | `^7.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-config-airbnb-base&labels=bug).

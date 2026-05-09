@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.10 | **Updated**: 5/6/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.11 | **Updated**: 5/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -48,24 +48,24 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | es6-promise | `^4.2.6` | `^4.2.8` |
 | express | `^4.17.0` | `^5.2.1` |
 | express-session | `^1.16.1` | `^1.19.0` |
-| fs-extra | `^8.0.1` | `^11.3.4` |
+| fs-extra | `^8.0.1` | `^11.3.5` |
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
 | marked | `^0.6.2` | `^18.0.3` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
-| mongoose | `^4.13.14` | `^9.6.1` |
+| mongoose | `^4.13.14` | `^9.6.2` |
 | morgan | `^1.9.1` | `^1.10.1` |
 | multer | `^1.4.1` | `^2.1.1` |
 | qs | `^6.7.0` | `^6.15.1` |
 | range_check | `^1.4.0` | `^4.1.0` |
-| react | `^15.4.2` | `^19.2.5` |
+| react | `^15.4.2` | `^19.2.6` |
 | react-color | `^2.14.1` | `^2.19.3` |
-| react-day-picker | `^2.5.0` | `^9.14.0` |
+| react-day-picker | `^2.5.0` | `^10.0.0` |
 | react-dnd | `^2.5.3` | `^16.0.1` |
 | react-dnd-html5-backend | `^2.5.3` | `^16.0.1` |
-| react-dom | `^15.4.2` | `^19.2.5` |
+| react-dom | `^15.4.2` | `^19.2.6` |
 | react-images | `^0.5.6` | `^1.2.0-beta.7` |
 | react-markdown | `^2.5.0` | `^10.1.0` |
 | react-redux | `^5.0.6` | `^9.2.0` |
@@ -78,7 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinymce | `^4.9.2` | `^8.5.0` |
 | sanitize-html | `^1.20.1` | `^2.17.3` |
 | scmp | `^1.0.2` | `^2.1.0` |
-| semver | `^6.0.0` | `^7.7.4` |
+| semver | `^6.0.0` | `^7.8.0` |
 | serve-favicon | `^2.5.0` | `^2.5.1` |
 | string-to-stream | `^1.1.1` | `^3.0.1` |
 | watchify | `^3.11.1` | `^4.0.0` |

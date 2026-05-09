@@ -186,6 +186,19 @@
       "status": "failed",
       "timestamp": "2026-04-27T20:30:05.409Z",
       "version": "8.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:58:18.906Z",
+      "version": "8.0.0-depup.1"
     }
   }
 }

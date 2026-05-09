@@ -12,7 +12,7 @@ npm install @depup/storybook__preset-react-webpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.6 | **DepUp version**: 10.3.6-depup.0 | **Updated**: 4/29/2026 | **Import test**: failed
+**Original version**: 10.3.6 | **DepUp version**: 10.3.6-depup.1 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | magic-string | `^0.30.5` | `^0.30.21` |
 | react-docgen | `^7.1.1` | `^8.0.3` |
 | resolve | `^1.22.8` | `^1.22.12` |
-| semver | `^7.7.3` | `^7.7.4` |
+| semver | `^7.7.3` | `^7.8.0` |
 | webpack | `5` | `^5.106.2` |
 
 

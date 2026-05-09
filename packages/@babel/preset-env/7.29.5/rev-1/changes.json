@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@babel/plugin-proposal-private-property-in-object": {
+      "from": "7.21.0-placeholder-for-preset-env.2",
+      "to": "^7.21.11"
+    },
+    "babel-plugin-polyfill-corejs2": {
+      "from": "^0.4.15",
+      "to": "^0.4.17"
+    },
+    "babel-plugin-polyfill-corejs3": {
+      "from": "^0.14.0",
+      "to": "^0.14.2"
+    },
+    "babel-plugin-polyfill-regenerator": {
+      "from": "^0.6.6",
+      "to": "^0.6.8"
+    },
+    "core-js-compat": {
+      "from": "^3.48.0",
+      "to": "^3.49.0"
+    },
+    "semver": {
+      "from": "^6.3.1",
+      "to": "^7.8.0"
+    }
+  },
+  "timestamp": "2026-05-09T06:56:36.838Z",
+  "totalUpdated": 6
+}

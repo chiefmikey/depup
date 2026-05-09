@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T16:35:31.467Z",
       "version": "15.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "confusing-browser-globals": {
+          "from": "^1.0.10",
+          "to": "^1.0.11"
+        },
+        "object.assign": {
+          "from": "^4.1.2",
+          "to": "^4.1.7"
+        },
+        "object.entries": {
+          "from": "^1.1.5",
+          "to": "^1.1.9"
+        },
+        "semver": {
+          "from": "^6.3.0",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:58:58.882Z",
+      "version": "15.0.0-depup.1"
     }
   }
 }

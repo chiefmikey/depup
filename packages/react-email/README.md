@@ -12,7 +12,7 @@ npm install @depup/react-email
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.1 | **DepUp version**: 6.1.1-depup.0 | **Updated**: 5/7/2026 | **Import test**: failed
+**Original version**: 6.1.1 | **DepUp version**: 6.1.1-depup.1 | **Updated**: 5/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,7 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | marked | `^15.0.12` | `^18.0.3` |
 | mime-types | `^3.0.0` | `^3.0.2` |
 | socket.io | `^4.8.1` | `^4.8.3` |
-| tailwindcss | `^4.1.18` | `^4.2.4` |
+| tailwindcss | `^4.1.18` | `^4.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-email&labels=bug).

@@ -274,6 +274,35 @@
       "status": "failed",
       "timestamp": "2026-05-07T07:10:05.089Z",
       "version": "21.2.12-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@jridgewell/sourcemap-codec": {
+          "from": "^1.4.14",
+          "to": "^1.5.5"
+        },
+        "reflect-metadata": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "convert-source-map": {
+          "from": "^1.5.1",
+          "to": "^2.0.0"
+        },
+        "semver": {
+          "from": "^7.0.0",
+          "to": "^7.8.0"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-09T06:56:33.393Z",
+      "version": "21.2.12-depup.1"
     }
   }
 }
