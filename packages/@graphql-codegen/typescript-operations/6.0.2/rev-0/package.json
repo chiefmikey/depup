@@ -1,0 +1,87 @@
+{
+  "name": "@depup/graphql-codegen__typescript-operations",
+  "version": "6.0.2-depup.0",
+  "description": "GraphQL Code Generator plugin for generating TypeScript types for GraphQL queries, mutations, subscriptions and fragments (with updated dependencies)",
+  "peerDependenciesMeta": {
+    "graphql-sock": {
+      "optional": true
+    }
+  },
+  "peerDependencies": {
+    "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0",
+    "graphql-sock": "^1.0.0"
+  },
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "^7.0.1",
+    "@graphql-codegen/schema-ast": "^6.0.0",
+    "@graphql-codegen/visitor-plugin-common": "^7.0.2",
+    "auto-bind": "^5.0.1",
+    "tslib": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotansimha/graphql-code-generator.git",
+    "directory": "packages/plugins/typescript/operations"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "typings": "typings/index.d.ts",
+  "typescript": {
+    "definition": "typings/index.d.ts"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./typings/index.d.cts",
+        "default": "./cjs/index.js"
+      },
+      "import": {
+        "types": "./typings/index.d.ts",
+        "default": "./esm/index.js"
+      },
+      "default": {
+        "types": "./typings/index.d.ts",
+        "default": "./esm/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "@graphql-codegen/typescript-operations",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@graphql-codegen/plugin-helpers": {
+        "from": "^7.0.0",
+        "to": "^7.0.1"
+      },
+      "@graphql-codegen/visitor-plugin-common": {
+        "from": "^7.0.1",
+        "to": "^7.0.2"
+      },
+      "auto-bind": {
+        "from": "^5.0.0",
+        "to": "^5.0.1"
+      },
+      "tslib": {
+        "from": "^2.8.0",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@graphql-codegen/typescript-operations",
+    "originalVersion": "6.0.2",
+    "processedAt": "2026-05-10T07:02:46.814Z",
+    "smokeTest": "passed"
+  }
+}
