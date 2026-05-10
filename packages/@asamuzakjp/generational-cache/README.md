@@ -1,27 +1,27 @@
-# @depup/vercel__edge
+# @depup/asamuzakjp__generational-cache
 
-> [@vercel/edge](https://www.npmjs.com/package/@vercel/edge) with all dependencies updated to latest versions.
+> [@asamuzakjp/generational-cache](https://www.npmjs.com/package/@asamuzakjp/generational-cache) with all dependencies updated to latest versions.
 
 Drop-in replacement. Same API. Fresher dependencies.
 
 ```bash
-npm install @depup/vercel__edge
+npm install @depup/asamuzakjp__generational-cache
 ```
 
 ## Why?
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.1 | **DepUp version**: 1.3.1-depup.0 | **Updated**: 5/10/2026 | **Import test**: passed
+**Original version**: 2.0.1 | **DepUp version**: 2.0.1-depup.0 | **Updated**: 5/10/2026 | **Import test**: passed
 
 ## What changed
 
 No dependencies were updated (all already at latest).
 
-Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vercel__edge&labels=bug).
+Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/asamuzakjp__generational-cache&labels=bug).
 
 ## About DepUp
 
 [DepUp](https://github.com/depup/npm) is an automated package factory that publishes dependency-bumped versions of 1000+ popular npm packages. [Request a package](https://github.com/depup/npm/issues/new?labels=package-request&title=Add+package:+PACKAGE_NAME&body=%23%23%23+Package+Name%0A%60PACKAGE_NAME%60) to be added.
 
-This package inherits the license from [@vercel/edge](https://www.npmjs.com/package/@vercel/edge).
+This package inherits the license from [@asamuzakjp/generational-cache](https://www.npmjs.com/package/@asamuzakjp/generational-cache).
