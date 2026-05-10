@@ -12,11 +12,14 @@ npm install @depup/redux-saga
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.2 | **DepUp version**: 1.4.2-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 1.4.3 | **DepUp version**: 1.4.3-depup.0 | **Updated**: 5/10/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @babel/runtime | `^7.28.4` | `^7.29.2` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/redux-saga&labels=bug).
 
