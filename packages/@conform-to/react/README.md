@@ -12,7 +12,7 @@ npm install @depup/conform-to__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.19.1 | **DepUp version**: 1.19.1-depup.0 | **Updated**: 4/28/2026 | **Import test**: failed
+**Original version**: 1.19.2 | **DepUp version**: 1.19.2-depup.0 | **Updated**: 5/11/2026 | **Import test**: failed
 
 ## What changed
 
