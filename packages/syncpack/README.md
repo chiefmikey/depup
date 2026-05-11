@@ -12,7 +12,7 @@ npm install @depup/syncpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.0.0 | **DepUp version**: 15.0.0-depup.0 | **Updated**: 5/5/2026 | **Import test**: failed
+**Original version**: 15.1.2 | **DepUp version**: 15.1.2-depup.0 | **Updated**: 5/11/2026 | **Import test**: failed
 
 ## What changed
 
