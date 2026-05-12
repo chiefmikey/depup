@@ -76,6 +76,23 @@
       "status": "failed",
       "timestamp": "2026-04-16T20:20:34.277Z",
       "version": "3.972.14-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/eventstream-codec": {
+          "from": "^4.2.14",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:19.522Z",
+      "version": "3.972.14-depup.1"
     }
   }
 }

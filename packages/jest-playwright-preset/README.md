@@ -12,14 +12,14 @@ npm install @depup/jest-playwright-preset
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.2 | **Updated**: 4/19/2026 | **Import test**: passed
+**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.3 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | nyc | `^15.1.0` | `^18.0.0` |
-| playwright-core | `>=1.2.0` | `^1.59.1` |
+| playwright-core | `>=1.2.0` | `^1.60.0` |
 | rimraf | `^3.0.2` | `^6.1.3` |
 | uuid | `^8.3.2` | `^14.0.0` |
 
