@@ -68,6 +68,31 @@
       "status": "published",
       "timestamp": "2026-04-03T00:43:30.005Z",
       "version": "2.27.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@rollup/plugin-commonjs": {
+          "from": "^29.0.0",
+          "to": "^29.0.2"
+        },
+        "esbuild": {
+          "from": "^0.26.0",
+          "to": "^0.28.0"
+        },
+        "rollup": {
+          "from": "^4.53.5",
+          "to": "^4.60.3"
+        },
+        "yaml": {
+          "from": "^2.8.2",
+          "to": "^2.9.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:15:15.829Z",
+      "version": "2.27.0-depup.3"
     }
   }
 }

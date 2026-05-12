@@ -23,6 +23,19 @@
       "status": "published",
       "timestamp": "2026-04-10T05:04:14.600Z",
       "version": "4.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/node": {
+          "from": ">=18",
+          "to": "^25.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:13:32.086Z",
+      "version": "4.0.1-depup.2"
     }
   }
 }

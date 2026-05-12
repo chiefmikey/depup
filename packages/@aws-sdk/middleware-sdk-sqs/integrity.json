@@ -140,6 +140,31 @@
       "status": "failed",
       "timestamp": "2026-04-23T20:25:29.314Z",
       "version": "3.972.22-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/smithy-client": {
+          "from": "^4.12.13",
+          "to": "^4.13.1"
+        },
+        "@smithy/util-hex-encoding": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "@smithy/util-utf8": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:30.338Z",
+      "version": "3.972.22-depup.1"
     }
   }
 }

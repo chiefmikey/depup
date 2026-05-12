@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:29:56.861Z",
       "version": "5.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@aws-sdk/types": {
+          "from": "^3.222.0",
+          "to": "^3.973.8"
+        },
+        "@smithy/util-utf8": {
+          "from": "^2.0.0",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:11:54.030Z",
+      "version": "5.2.0-depup.1"
     }
   }
 }

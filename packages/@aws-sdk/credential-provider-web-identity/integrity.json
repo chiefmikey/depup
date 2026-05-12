@@ -305,6 +305,27 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:47:26.344Z",
       "version": "3.972.38-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/property-provider": {
+          "from": "^4.2.14",
+          "to": "^4.3.1"
+        },
+        "@smithy/shared-ini-file-loader": {
+          "from": "^4.4.9",
+          "to": "^4.5.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:31.012Z",
+      "version": "3.972.38-depup.1"
     }
   }
 }
