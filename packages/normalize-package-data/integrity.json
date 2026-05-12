@@ -31,6 +31,23 @@
       "status": "failed",
       "timestamp": "2026-05-09T07:00:49.776Z",
       "version": "8.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "hosted-git-info": {
+          "from": "^9.0.0",
+          "to": "^10.1.0"
+        },
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:15:09.343Z",
+      "version": "8.0.0-depup.2"
     }
   }
 }

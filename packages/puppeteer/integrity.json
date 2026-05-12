@@ -118,5 +118,28 @@
       "timestamp": "2026-05-07T07:17:21.490Z",
       "version": "24.43.0-depup.0"
     }
+  },
+  "24.43.1": {
+    "0": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "14.0.0",
+          "to": "^15.0.0"
+        },
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1608973",
+          "to": "^0.0.1628107"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:15:53.900Z",
+      "version": "24.43.1-depup.0"
+    }
   }
 }

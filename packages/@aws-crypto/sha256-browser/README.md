@@ -12,15 +12,15 @@ npm install @depup/aws-crypto__sha256-browser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.2.0 | **DepUp version**: 5.2.0-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/types | `^3.222.0` | `^3.973.6` |
+| @aws-sdk/types | `^3.222.0` | `^3.973.8` |
 | @aws-sdk/util-locate-window | `^3.0.0` | `^3.965.5` |
-| @smithy/util-utf8 | `^2.0.0` | `^4.2.2` |
+| @smithy/util-utf8 | `^2.0.0` | `^4.3.1` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

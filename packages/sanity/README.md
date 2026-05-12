@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.24.0 | **DepUp version**: 5.24.0-depup.3 | **Updated**: 5/9/2026 | **Import test**: failed
+**Original version**: 5.24.0 | **DepUp version**: 5.24.0-depup.4 | **Updated**: 5/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -42,7 +42,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
 | groq-js | `^1.29.0` | `^1.30.1` |
-| i18next | `^25.8.17` | `^26.0.10` |
+| i18next | `^25.8.17` | `^26.1.0` |
 | isomorphic-dompurify | `2.26.0` | `^3.12.0` |
 | motion | `^12.27.1` | `^12.38.0` |
 | nanoid | `^3.3.11` | `^5.1.11` |
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | semver | `^7.7.2` | `^7.8.0` |
 | uuid | `^11.1.0` | `^14.0.0` |
 | web-vitals | `^5.1.0` | `^5.2.0` |
-| xstate | `^5.25.1` | `^5.31.0` |
+| xstate | `^5.25.1` | `^5.31.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

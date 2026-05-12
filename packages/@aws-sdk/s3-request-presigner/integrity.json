@@ -581,6 +581,31 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:45:14.196Z",
       "version": "3.1045.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/middleware-endpoint": {
+          "from": "^4.4.32",
+          "to": "^4.5.1"
+        },
+        "@smithy/protocol-http": {
+          "from": "^5.3.14",
+          "to": "^5.4.1"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.13",
+          "to": "^4.13.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:36.261Z",
+      "version": "3.1045.0-depup.1"
     }
   }
 }

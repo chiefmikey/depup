@@ -1,0 +1,110 @@
+{
+  "bumped": {
+    "@smithy/config-resolver": {
+      "from": "^4.4.17",
+      "to": "^4.5.1"
+    },
+    "@smithy/core": {
+      "from": "^3.23.17",
+      "to": "^3.24.1"
+    },
+    "@smithy/fetch-http-handler": {
+      "from": "^5.3.17",
+      "to": "^5.4.1"
+    },
+    "@smithy/hash-node": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/invalid-dependency": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/middleware-content-length": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/middleware-endpoint": {
+      "from": "^4.4.32",
+      "to": "^4.5.1"
+    },
+    "@smithy/middleware-retry": {
+      "from": "^4.5.7",
+      "to": "^4.6.1"
+    },
+    "@smithy/middleware-serde": {
+      "from": "^4.2.20",
+      "to": "^4.3.1"
+    },
+    "@smithy/middleware-stack": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/node-config-provider": {
+      "from": "^4.3.14",
+      "to": "^4.4.1"
+    },
+    "@smithy/node-http-handler": {
+      "from": "^4.6.1",
+      "to": "^4.7.1"
+    },
+    "@smithy/protocol-http": {
+      "from": "^5.3.14",
+      "to": "^5.4.1"
+    },
+    "@smithy/smithy-client": {
+      "from": "^4.12.13",
+      "to": "^4.13.1"
+    },
+    "@smithy/url-parser": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-base64": {
+      "from": "^4.3.2",
+      "to": "^4.4.1"
+    },
+    "@smithy/util-body-length-browser": {
+      "from": "^4.2.2",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-body-length-node": {
+      "from": "^4.2.3",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-defaults-mode-browser": {
+      "from": "^4.3.49",
+      "to": "^4.4.1"
+    },
+    "@smithy/util-defaults-mode-node": {
+      "from": "^4.2.54",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-endpoints": {
+      "from": "^3.4.2",
+      "to": "^3.5.1"
+    },
+    "@smithy/util-middleware": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-retry": {
+      "from": "^4.3.6",
+      "to": "^4.4.1"
+    },
+    "@smithy/util-utf8": {
+      "from": "^4.2.2",
+      "to": "^4.3.1"
+    },
+    "@smithy/util-waiter": {
+      "from": "^4.3.0",
+      "to": "^4.4.1"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-05-12T07:11:52.887Z",
+  "totalUpdated": 26
+}
