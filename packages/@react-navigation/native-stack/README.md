@@ -12,7 +12,7 @@ npm install @depup/react-navigation__native-stack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.14.14 | **DepUp version**: 7.14.14-depup.0 | **Updated**: 5/9/2026 | **Import test**: failed
+**Original version**: 7.15.0 | **DepUp version**: 7.15.0-depup.0 | **Updated**: 5/12/2026 | **Import test**: failed
 
 ## What changed
 
