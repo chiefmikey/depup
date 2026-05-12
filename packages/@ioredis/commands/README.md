@@ -12,7 +12,7 @@ npm install @depup/ioredis__commands
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.7.0 | **DepUp version**: 1.7.0-depup.0 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 1.8.0 | **DepUp version**: 1.8.0-depup.0 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
