@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@aws-sdk/token-providers": {
+      "from": "3.1041.0",
+      "to": "^3.1045.0"
+    },
+    "@smithy/property-provider": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/shared-ini-file-loader": {
+      "from": "^4.4.9",
+      "to": "^4.5.1"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-05-12T07:12:06.107Z",
+  "totalUpdated": 4
+}

@@ -291,6 +291,43 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:47:40.270Z",
       "version": "3.974.16-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/is-array-buffer": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "@smithy/node-config-provider": {
+          "from": "^4.3.14",
+          "to": "^4.4.1"
+        },
+        "@smithy/protocol-http": {
+          "from": "^5.3.14",
+          "to": "^5.4.1"
+        },
+        "@smithy/util-middleware": {
+          "from": "^4.2.14",
+          "to": "^4.3.1"
+        },
+        "@smithy/util-stream": {
+          "from": "^4.5.25",
+          "to": "^4.6.1"
+        },
+        "@smithy/util-utf8": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:21.504Z",
+      "version": "3.974.16-depup.1"
     }
   }
 }

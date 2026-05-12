@@ -12,12 +12,18 @@ npm install @depup/aws-sdk__middleware-flexible-checksums
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.974.16 | **DepUp version**: 3.974.16-depup.0 | **Updated**: 5/2/2026 | **Import test**: passed
+**Original version**: 3.974.16 | **DepUp version**: 3.974.16-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @smithy/is-array-buffer | `^4.2.2` | `^4.3.1` |
+| @smithy/node-config-provider | `^4.3.14` | `^4.4.1` |
+| @smithy/protocol-http | `^5.3.14` | `^5.4.1` |
+| @smithy/util-middleware | `^4.2.14` | `^4.3.1` |
+| @smithy/util-stream | `^4.5.25` | `^4.6.1` |
+| @smithy/util-utf8 | `^4.2.2` | `^4.3.1` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

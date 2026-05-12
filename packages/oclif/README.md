@@ -12,7 +12,7 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.23.0 | **DepUp version**: 4.23.0-depup.21 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 4.23.0 | **DepUp version**: 4.23.0-depup.22 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,14 +20,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @aws-sdk/client-cloudfront | `3.1009.0` | `^3.1045.0` |
 | @aws-sdk/client-s3 | `3.1014.0` | `^3.1045.0` |
-| @inquirer/confirm | `^3.1.22` | `^6.0.12` |
-| @inquirer/input | `^2.2.4` | `^5.0.12` |
-| @inquirer/select | `^2.5.0` | `^5.1.4` |
-| @oclif/core | `4.9.0` | `^4.11.1` |
-| @oclif/plugin-help | `^6.2.38` | `^6.2.47` |
-| @oclif/plugin-not-found | `^3.2.76` | `^3.2.83` |
-| @oclif/plugin-warn-if-update-available | `^3.1.57` | `^3.1.63` |
-| ansis | `^3.16.0` | `^4.2.0` |
+| @inquirer/confirm | `^3.1.22` | `^6.0.13` |
+| @inquirer/input | `^2.2.4` | `^5.0.13` |
+| @inquirer/select | `^2.5.0` | `^5.1.5` |
+| @oclif/core | `4.9.0` | `^4.11.2` |
+| @oclif/plugin-help | `^6.2.38` | `^6.2.48` |
+| @oclif/plugin-not-found | `^3.2.76` | `^3.2.85` |
+| @oclif/plugin-warn-if-update-available | `^3.1.57` | `^3.1.64` |
+| ansis | `^3.16.0` | `^4.3.0` |
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
 | ejs | `^3.1.10` | `^5.0.2` |

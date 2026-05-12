@@ -12,14 +12,14 @@ npm install @depup/effect
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.21.2 | **DepUp version**: 3.21.2-depup.0 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 3.21.2 | **DepUp version**: 3.21.2-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @standard-schema/spec | `^1.0.0` | `^1.1.0` |
-| fast-check | `^3.23.1` | `^4.7.0` |
+| fast-check | `^3.23.1` | `^4.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/effect&labels=bug).
