@@ -512,5 +512,20 @@
       "timestamp": "2026-05-11T07:25:14.544Z",
       "version": "5.76.7-depup.0"
     }
+  },
+  "5.76.8": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:09:08.434Z",
+      "version": "5.76.8-depup.0"
+    }
   }
 }
