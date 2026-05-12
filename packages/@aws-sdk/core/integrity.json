@@ -319,6 +319,59 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:47:43.349Z",
       "version": "3.974.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.17",
+          "to": "^3.24.1"
+        },
+        "@smithy/node-config-provider": {
+          "from": "^4.3.14",
+          "to": "^4.4.1"
+        },
+        "@smithy/property-provider": {
+          "from": "^4.2.14",
+          "to": "^4.3.1"
+        },
+        "@smithy/protocol-http": {
+          "from": "^5.3.14",
+          "to": "^5.4.1"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.3.14",
+          "to": "^5.4.1"
+        },
+        "@smithy/smithy-client": {
+          "from": "^4.12.13",
+          "to": "^4.13.1"
+        },
+        "@smithy/util-base64": {
+          "from": "^4.3.2",
+          "to": "^4.4.1"
+        },
+        "@smithy/util-middleware": {
+          "from": "^4.2.14",
+          "to": "^4.3.1"
+        },
+        "@smithy/util-retry": {
+          "from": "^4.3.6",
+          "to": "^4.4.1"
+        },
+        "@smithy/util-utf8": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:11:57.401Z",
+      "version": "3.974.8-depup.1"
     }
   }
 }

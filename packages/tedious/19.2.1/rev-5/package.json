@@ -13,12 +13,14 @@
     "Zach Aller"
   ],
   "name": "@depup/tedious",
-  "description": "[DepUp] A TDS driver, for connecting to MS SQLServer databases.",
+  "description": "A TDS driver, for connecting to MS SQLServer databases. (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "tedious",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "sql",
     "database",
     "mssql",
@@ -31,7 +33,7 @@
   "homepage": "https://github.com/tediousjs/tedious",
   "bugs": "https://github.com/tediousjs/tedious/issues",
   "license": "MIT",
-  "version": "19.2.1-depup.0",
+  "version": "19.2.1-depup.5",
   "main": "./lib/tedious.js",
   "types": "./lib/tedious.d.ts",
   "repository": {
@@ -41,17 +43,13 @@
   "engines": {
     "node": ">=18.17"
   },
-  "publishConfig": {
-    "tag": "next",
-    "provenance": true
-  },
   "dependencies": {
     "@azure/core-auth": "^1.10.1",
-    "@azure/identity": "^4.13.0",
+    "@azure/identity": "^4.13.1",
     "@azure/keyvault-keys": "^4.10.0",
-    "@js-joda/core": "^5.7.0",
-    "@types/node": ">=18",
-    "bl": "^6.1.6",
+    "@js-joda/core": "^6.0.1",
+    "@types/node": "^25.7.0",
+    "bl": "^7.0.2",
     "iconv-lite": "^0.7.2",
     "js-md4": "^0.3.2",
     "native-duplexpair": "^1.0.0",
@@ -97,7 +95,6 @@
     "test-all": "mocha --forbid-only test/unit/ test/unit/token/ test/unit/tracking-buffer test/integration/",
     "build:types": "tsc --project tsconfig.build-types.json",
     "build": "rimraf lib && babel src --out-dir lib --extensions .js,.ts && npm run build:types",
-    "prepublish": "npm run build",
     "semantic-release": "semantic-release"
   },
   "babel": {
@@ -153,7 +150,7 @@
       },
       "@azure/identity": {
         "from": "^4.2.1",
-        "to": "^4.13.0"
+        "to": "^4.13.1"
       },
       "@azure/keyvault-keys": {
         "from": "^4.4.0",
@@ -161,21 +158,25 @@
       },
       "@js-joda/core": {
         "from": "^5.6.5",
-        "to": "^5.7.0"
+        "to": "^6.0.1"
+      },
+      "@types/node": {
+        "from": ">=18",
+        "to": "^25.7.0"
       },
       "bl": {
         "from": "^6.1.4",
-        "to": "^6.1.6"
+        "to": "^7.0.2"
       },
       "iconv-lite": {
         "from": "^0.7.0",
         "to": "^0.7.2"
       }
     },
-    "depsUpdated": 6,
+    "depsUpdated": 7,
     "originalPackage": "tedious",
     "originalVersion": "19.2.1",
-    "processedAt": "2026-03-09T05:20:51.494Z",
-    "smokeTest": "passed"
+    "processedAt": "2026-05-12T07:14:22.376Z",
+    "smokeTest": "failed"
   }
 }

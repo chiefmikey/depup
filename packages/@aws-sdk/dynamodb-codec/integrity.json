@@ -121,6 +121,27 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:47:43.060Z",
       "version": "3.973.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.23.17",
+          "to": "^3.24.1"
+        },
+        "@smithy/util-base64": {
+          "from": "^4.3.2",
+          "to": "^4.4.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:22.265Z",
+      "version": "3.973.8-depup.1"
     }
   }
 }

@@ -110,6 +110,27 @@
       "status": "failed",
       "timestamp": "2026-04-22T00:41:44.604Z",
       "version": "3.972.13-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/config-resolver": {
+          "from": "^4.4.17",
+          "to": "^4.5.1"
+        },
+        "@smithy/node-config-provider": {
+          "from": "^4.3.14",
+          "to": "^4.4.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-12T07:12:31.925Z",
+      "version": "3.972.13-depup.1"
     }
   }
 }

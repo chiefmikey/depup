@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@smithy/property-provider": {
+      "from": "^4.2.14",
+      "to": "^4.3.1"
+    },
+    "@smithy/protocol-http": {
+      "from": "^5.3.14",
+      "to": "^5.4.1"
+    },
+    "@smithy/shared-ini-file-loader": {
+      "from": "^4.4.9",
+      "to": "^4.5.1"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-05-12T07:12:09.834Z",
+  "totalUpdated": 4
+}
