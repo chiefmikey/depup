@@ -293,5 +293,32 @@
       "timestamp": "2026-05-13T07:12:59.742Z",
       "version": "1.0.15-depup.0"
     }
+  },
+  "1.0.16": {
+    "0": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.5",
+          "to": "^7.29.1"
+        },
+        "@babel/parser": {
+          "from": "^7.28.5",
+          "to": "^7.29.3"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.5",
+          "to": "^7.29.0"
+        },
+        "@babel/types": {
+          "from": "^7.28.5",
+          "to": "^7.29.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-13T14:49:25.391Z",
+      "version": "1.0.16-depup.0"
+    }
   }
 }

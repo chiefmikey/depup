@@ -150,5 +150,24 @@
       "timestamp": "2026-05-13T07:16:02.030Z",
       "version": "0.69.0-depup.1"
     }
+  },
+  "0.70.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.41.1"
+        },
+        "@types/aws-lambda": {
+          "from": "^8.10.155",
+          "to": "^8.10.161"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-13T14:52:07.352Z",
+      "version": "0.70.0-depup.0"
+    }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/angular-eslint__eslint-plugin-template
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.3.1 | **DepUp version**: 21.3.1-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 21.4.0 | **DepUp version**: 21.4.0-depup.0 | **Updated**: 5/13/2026 | **Import test**: passed
 
 ## What changed
 

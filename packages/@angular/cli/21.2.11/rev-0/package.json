@@ -1,0 +1,121 @@
+{
+  "name": "@depup/angular__cli",
+  "version": "21.2.11-depup.0",
+  "description": "CLI tool for Angular (with updated dependencies)",
+  "main": "lib/cli/index.js",
+  "bin": {
+    "ng": "bin/ng.js"
+  },
+  "keywords": [
+    "@angular/cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Angular CLI",
+    "Angular DevKit",
+    "angular",
+    "angular-cli",
+    "devkit",
+    "sdk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-cli.git"
+  },
+  "author": "Angular Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular-cli/issues"
+  },
+  "homepage": "https://github.com/angular/angular-cli",
+  "dependencies": {
+    "@angular-devkit/architect": "0.2102.11",
+    "@angular-devkit/core": "21.2.11",
+    "@angular-devkit/schematics": "21.2.11",
+    "@inquirer/prompts": "^8.4.3",
+    "@listr2/prompt-adapter-inquirer": "^4.2.3",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@schematics/angular": "21.2.11",
+    "@yarnpkg/lockfile": "1.1.0",
+    "algoliasearch": "^5.52.1",
+    "ini": "^7.0.0",
+    "jsonc-parser": "3.3.1",
+    "listr2": "^10.2.1",
+    "npm-package-arg": "13.0.2",
+    "pacote": "^21.5.0",
+    "parse5-html-rewriting-stream": "^8.0.1",
+    "semver": "^7.8.0",
+    "yargs": "18.0.0",
+    "zod": "^4.4.3"
+  },
+  "ng-update": {
+    "migrations": "@schematics/angular/migrations/migration-collection.json",
+    "packageGroup": {
+      "@angular/cli": "21.2.11",
+      "@angular/build": "21.2.11",
+      "@angular/ssr": "21.2.11",
+      "@angular-devkit/architect": "0.2102.11",
+      "@angular-devkit/build-angular": "21.2.11",
+      "@angular-devkit/build-webpack": "0.2102.11",
+      "@angular-devkit/core": "21.2.11",
+      "@angular-devkit/schematics": "21.2.11"
+    }
+  },
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+    "yarn": ">= 1.13.0"
+  },
+  "depup": {
+    "changes": {
+      "@inquirer/prompts": {
+        "from": "7.10.1",
+        "to": "^8.4.3"
+      },
+      "@listr2/prompt-adapter-inquirer": {
+        "from": "3.0.5",
+        "to": "^4.2.3"
+      },
+      "@modelcontextprotocol/sdk": {
+        "from": "1.26.0",
+        "to": "^1.29.0"
+      },
+      "algoliasearch": {
+        "from": "5.48.1",
+        "to": "^5.52.1"
+      },
+      "ini": {
+        "from": "6.0.0",
+        "to": "^7.0.0"
+      },
+      "listr2": {
+        "from": "9.0.5",
+        "to": "^10.2.1"
+      },
+      "pacote": {
+        "from": "21.3.1",
+        "to": "^21.5.0"
+      },
+      "parse5-html-rewriting-stream": {
+        "from": "8.0.0",
+        "to": "^8.0.1"
+      },
+      "semver": {
+        "from": "7.7.4",
+        "to": "^7.8.0"
+      },
+      "zod": {
+        "from": "4.3.6",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 10,
+    "originalPackage": "@angular/cli",
+    "originalVersion": "21.2.11",
+    "processedAt": "2026-05-13T14:49:02.449Z",
+    "smokeTest": "passed"
+  }
+}
