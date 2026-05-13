@@ -12,13 +12,13 @@ npm install @depup/opentelemetry__instrumentation-tedious
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.36.0 | **DepUp version**: 0.36.0-depup.0 | **Updated**: 5/7/2026 | **Import test**: passed
+**Original version**: 0.36.0 | **DepUp version**: 0.36.0-depup.1 | **Updated**: 5/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @opentelemetry/semantic-conventions | `^1.33.0` | `^1.40.0` |
+| @opentelemetry/semantic-conventions | `^1.33.0` | `^1.41.1` |
 | @types/tedious | `^4.0.14` | `^18.0.0` |
 
 
