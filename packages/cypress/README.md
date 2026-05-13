@@ -12,13 +12,12 @@ npm install @depup/cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.14.2 | **DepUp version**: 15.14.2-depup.1 | **Updated**: 4/30/2026 | **Import test**: failed
+**Original version**: 15.15.0 | **DepUp version**: 15.15.0-depup.0 | **Updated**: 5/13/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @cypress/request | `^3.0.10` | `^4.0.0` |
 | @types/sinonjs__fake-timers | `8.1.1` | `^15.0.1` |
 | @types/sizzle | `^2.3.2` | `^2.3.10` |
 | @types/tmp | `^0.2.3` | `^0.2.6` |
@@ -33,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | eventemitter2 | `6.4.7` | `^6.4.9` |
 | execa | `4.1.0` | `^9.6.1` |
-| fs-extra | `^9.1.0` | `^11.3.4` |
+| fs-extra | `^9.1.0` | `^11.3.5` |
 | hasha | `5.2.2` | `^7.0.0` |
 | is-installed-globally | `~0.4.0` | `^1.0.0` |
 | listr2 | `^9.0.5` | `^10.2.1` |
@@ -42,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pretty-bytes | `^5.6.0` | `^7.1.0` |
 | proxy-from-env | `1.0.0` | `^2.1.0` |
 | supports-color | `^8.1.1` | `^10.2.2` |
-| systeminformation | `^5.31.1` | `^5.31.5` |
+| systeminformation | `^5.31.1` | `^5.31.6` |
 | tmp | `~0.2.4` | `^0.2.5` |
 | tslib | `1.14.1` | `^2.8.1` |
 | untildify | `^4.0.0` | `^6.0.0` |
