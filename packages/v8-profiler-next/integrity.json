@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-19T03:30:31.876Z",
       "version": "1.10.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@xprofiler/node-pre-gyp": {
+          "from": "^1.0.9",
+          "to": "^1.0.11"
+        },
+        "nan": {
+          "from": "^2.18.0",
+          "to": "^2.27.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-13T07:21:47.210Z",
+      "version": "1.10.0-depup.1"
     }
   }
 }
