@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.37.1 | **DepUp version**: 6.37.1-depup.0 | **Updated**: 5/9/2026 | **Import test**: failed
+**Original version**: 6.37.1 | **DepUp version**: 6.37.1-depup.1 | **Updated**: 5/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,24 +22,24 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
-| @sentry/node | `7.120.4` | `^10.52.0` |
-| @tryghost/adapter-base-cache | `0.1.23` | `^0.1.24` |
-| @tryghost/admin-api-schema | `4.7.2` | `^4.7.3` |
+| @sentry/node | `7.120.4` | `^10.53.1` |
+| @tryghost/adapter-base-cache | `0.1.23` | `^0.1.25` |
+| @tryghost/admin-api-schema | `4.7.2` | `^4.7.4` |
 | @tryghost/api-framework | `1.0.7` | `^3.2.0` |
 | @tryghost/bookshelf-plugins | `2.0.3` | `^2.2.0` |
-| @tryghost/color-utils | `0.2.16` | `^0.2.17` |
-| @tryghost/config-url-helpers | `1.0.23` | `^1.0.24` |
-| @tryghost/custom-fonts | `1.0.8` | `^1.0.9` |
+| @tryghost/color-utils | `0.2.16` | `^0.2.18` |
+| @tryghost/config-url-helpers | `1.0.23` | `^1.0.25` |
+| @tryghost/custom-fonts | `1.0.8` | `^1.0.10` |
 | @tryghost/database-info | `0.3.35` | `^2.2.0` |
 | @tryghost/debug | `2.1.0` | `^2.2.0` |
 | @tryghost/domain-events | `1.0.8` | `^3.2.0` |
 | @tryghost/email-mock-receiver | `2.1.0` | `^2.2.0` |
 | @tryghost/errors | `1.3.13` | `^3.2.0` |
-| @tryghost/helpers | `1.1.103` | `^1.1.104` |
-| @tryghost/html-to-plaintext | `1.0.8` | `^1.0.9` |
-| @tryghost/image-transform | `1.4.13` | `^1.4.14` |
+| @tryghost/helpers | `1.1.103` | `^1.1.105` |
+| @tryghost/html-to-plaintext | `1.0.8` | `^1.0.10` |
+| @tryghost/image-transform | `1.4.13` | `^1.4.15` |
 | @tryghost/job-manager | `1.0.9` | `^3.2.0` |
-| @tryghost/limit-service | `1.5.2` | `^1.5.3` |
+| @tryghost/limit-service | `1.5.2` | `^1.5.4` |
 | @tryghost/logging | `4.1.0` | `^4.2.0` |
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.0` |
@@ -47,14 +47,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/pretty-cli | `3.1.0` | `^3.2.0` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^3.2.0` |
 | @tryghost/promise | `2.1.0` | `^2.2.0` |
-| @tryghost/referrer-parser | `0.1.15` | `^0.1.16` |
+| @tryghost/referrer-parser | `0.1.15` | `^0.1.17` |
 | @tryghost/request | `1.0.12` | `^3.2.0` |
 | @tryghost/root-utils | `2.1.0` | `^2.2.0` |
 | @tryghost/security | `1.0.6` | `^3.2.0` |
-| @tryghost/social-urls | `0.1.60` | `^0.1.61` |
-| @tryghost/string | `0.3.2` | `^0.3.3` |
+| @tryghost/social-urls | `0.1.60` | `^0.1.62` |
+| @tryghost/string | `0.3.2` | `^0.3.4` |
 | @tryghost/tpl | `2.1.0` | `^2.2.0` |
-| @tryghost/url-utils | `5.1.2` | `^5.2.3` |
+| @tryghost/url-utils | `5.1.2` | `^5.2.4` |
 | @tryghost/validator | `0.2.22` | `^3.1.0` |
 | @tryghost/version | `2.1.0` | `^2.2.0` |
 | @tryghost/zip | `3.1.0` | `^3.2.0` |
@@ -71,23 +71,23 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `11.3.4` | `^11.3.5` |
 | glob | `8.1.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.5` |
-| gscan | `5.4.3` | `^6.0.1` |
+| gscan | `5.4.3` | `^6.0.2` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.4` |
+| intl-messageformat | `5.4.3` | `^11.2.5` |
 | jsdom | `28.1.0` | `^29.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^11.1.1` |
 | knex | `2.4.2` | `^3.2.10` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.0.1` |
-| metascraper | `5.45.15` | `^5.50.1` |
+| metascraper | `5.45.15` | `^5.50.3` |
 | metascraper-author | `5.45.10` | `^5.50.1` |
 | metascraper-description | `5.45.10` | `^5.50.1` |
 | metascraper-image | `5.45.10` | `^5.50.1` |
 | metascraper-logo | `5.45.10` | `^5.50.1` |
-| metascraper-logo-favicon | `5.42.0` | `^5.50.1` |
+| metascraper-logo-favicon | `5.42.0` | `^5.50.3` |
 | metascraper-publisher | `5.45.10` | `^5.50.1` |
 | metascraper-title | `5.45.10` | `^5.50.1` |
 | metascraper-url | `5.45.10` | `^5.50.1` |

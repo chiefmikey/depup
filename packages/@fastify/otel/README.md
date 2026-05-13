@@ -12,7 +12,7 @@ npm install @depup/fastify__otel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.18.1 | **DepUp version**: 0.18.1-depup.3 | **Updated**: 5/7/2026 | **Import test**: passed
+**Original version**: 0.18.1 | **DepUp version**: 0.18.1-depup.4 | **Updated**: 5/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @opentelemetry/core | `^2.0.0` | `^2.7.1` |
 | @opentelemetry/instrumentation | `^0.214.0` | `^0.217.0` |
-| @opentelemetry/semantic-conventions | `^1.28.0` | `^1.40.0` |
+| @opentelemetry/semantic-conventions | `^1.28.0` | `^1.41.1` |
 | minimatch | `^10.2.4` | `^10.2.5` |
 
 

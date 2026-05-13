@@ -12,13 +12,13 @@ npm install @depup/opentelemetry__instrumentation-oracledb
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.42.0 | **DepUp version**: 0.42.0-depup.0 | **Updated**: 5/7/2026 | **Import test**: passed
+**Original version**: 0.42.0 | **DepUp version**: 0.42.0-depup.1 | **Updated**: 5/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @opentelemetry/semantic-conventions | `^1.34.0` | `^1.40.0` |
+| @opentelemetry/semantic-conventions | `^1.34.0` | `^1.41.1` |
 | @types/oracledb | `6.5.2` | `^6.10.3` |
 
 

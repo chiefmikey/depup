@@ -140,6 +140,27 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:15:53.900Z",
       "version": "24.43.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "14.0.0",
+          "to": "^16.0.1"
+        },
+        "cosmiconfig": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1608973",
+          "to": "^0.0.1629771"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-13T07:19:04.393Z",
+      "version": "24.43.1-depup.1"
     }
   }
 }
