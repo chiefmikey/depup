@@ -12,13 +12,12 @@ npm install @depup/postcss-preset-env
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.1 | **DepUp version**: 11.2.1-depup.1 | **Updated**: 4/14/2026 | **Import test**: passed
+**Original version**: 11.3.0 | **DepUp version**: 11.3.0-depup.0 | **Updated**: 5/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| autoprefixer | `^10.4.24` | `^10.5.0` |
 | browserslist | `^4.28.1` | `^4.28.2` |
 
 

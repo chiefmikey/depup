@@ -12,13 +12,13 @@ npm install @depup/aws-sdk__credential-provider-cognito-identity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.31 | **DepUp version**: 3.972.31-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
+**Original version**: 3.972.32 | **DepUp version**: 3.972.32-depup.0 | **Updated**: 5/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/property-provider | `^4.2.14` | `^4.3.1` |
+| @smithy/core | `^3.24.1` | `^3.24.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
