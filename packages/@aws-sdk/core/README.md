@@ -12,22 +12,14 @@ npm install @depup/aws-sdk__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.974.8 | **DepUp version**: 3.974.8-depup.1 | **Updated**: 5/12/2026 | **Import test**: failed
+**Original version**: 3.974.9 | **DepUp version**: 3.974.9-depup.0 | **Updated**: 5/14/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.23.17` | `^3.24.1` |
-| @smithy/node-config-provider | `^4.3.14` | `^4.4.1` |
-| @smithy/property-provider | `^4.2.14` | `^4.3.1` |
-| @smithy/protocol-http | `^5.3.14` | `^5.4.1` |
-| @smithy/signature-v4 | `^5.3.14` | `^5.4.1` |
-| @smithy/smithy-client | `^4.12.13` | `^4.13.1` |
-| @smithy/util-base64 | `^4.3.2` | `^4.4.1` |
-| @smithy/util-middleware | `^4.2.14` | `^4.3.1` |
-| @smithy/util-retry | `^4.3.6` | `^4.4.1` |
-| @smithy/util-utf8 | `^4.2.2` | `^4.3.1` |
+| @smithy/core | `^3.24.1` | `^3.24.2` |
+| @smithy/signature-v4 | `^5.4.1` | `^5.4.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
