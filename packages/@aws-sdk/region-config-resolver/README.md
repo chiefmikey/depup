@@ -12,14 +12,13 @@ npm install @depup/aws-sdk__region-config-resolver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.13 | **DepUp version**: 3.972.13-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
+**Original version**: 3.972.14 | **DepUp version**: 3.972.14-depup.0 | **Updated**: 5/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/config-resolver | `^4.4.17` | `^4.5.1` |
-| @smithy/node-config-provider | `^4.3.14` | `^4.4.1` |
+| @smithy/core | `^3.24.1` | `^3.24.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
