@@ -12,14 +12,14 @@ npm install @depup/hpp
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.3 | **DepUp version**: 0.2.3-depup.1 | **Updated**: 3/31/2026 | **Import test**: passed
+**Original version**: 0.2.3 | **DepUp version**: 0.2.3-depup.2 | **Updated**: 5/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| lodash | `^4.17.12` | `^4.18.0` |
-| type-is | `^1.6.12` | `^2.0.1` |
+| lodash | `^4.17.12` | `^4.18.1` |
+| type-is | `^1.6.12` | `^2.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/hpp&labels=bug).

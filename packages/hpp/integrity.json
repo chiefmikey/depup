@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-03-31T20:26:29.476Z",
       "version": "0.2.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "lodash": {
+          "from": "^4.17.12",
+          "to": "^4.18.1"
+        },
+        "type-is": {
+          "from": "^1.6.12",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-14T07:15:31.634Z",
+      "version": "0.2.3-depup.2"
     }
   }
 }

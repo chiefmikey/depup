@@ -1,37 +1,37 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "4.23.0-depup.18",
+  "version": "4.23.0-depup.23",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1043.0",
-    "@aws-sdk/client-s3": "^3.1043.0",
-    "@inquirer/confirm": "^6.0.12",
-    "@inquirer/input": "^5.0.12",
-    "@inquirer/select": "^5.1.4",
-    "@oclif/core": "^4.11.0",
-    "@oclif/plugin-help": "^6.2.46",
-    "@oclif/plugin-not-found": "^3.2.82",
-    "@oclif/plugin-warn-if-update-available": "^3.1.62",
-    "ansis": "^4.2.0",
+    "@aws-sdk/client-cloudfront": "^3.1046.0",
+    "@aws-sdk/client-s3": "^3.1046.0",
+    "@inquirer/confirm": "^6.0.13",
+    "@inquirer/input": "^5.0.13",
+    "@inquirer/select": "^5.1.5",
+    "@oclif/core": "^4.11.2",
+    "@oclif/plugin-help": "^6.2.48",
+    "@oclif/plugin-not-found": "^3.2.85",
+    "@oclif/plugin-warn-if-update-available": "^3.1.64",
+    "ansis": "^4.3.0",
     "async-retry": "^1.3.3",
     "change-case": "^5.4.4",
     "debug": "^4.4.3",
     "ejs": "^5.0.2",
     "find-yarn-workspace-root": "^2.0.0",
-    "fs-extra": "^11.3.4",
+    "fs-extra": "^11.3.5",
     "github-slugger": "^2",
-    "got": "^15.0.3",
+    "got": "^15.0.5",
     "lodash": "^4.18.1",
     "normalize-package-data": "^8.0.0",
-    "semver": "^7.7.4",
+    "semver": "^7.8.0",
     "sort-package-json": "^3.6.1",
     "tiny-jsonc": "^1.0.2",
-    "validate-npm-package-name": "^7.0.2"
+    "validate-npm-package-name": "^8.0.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19",
@@ -155,43 +155,43 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "3.1009.0",
-        "to": "^3.1043.0"
+        "to": "^3.1046.0"
       },
       "@aws-sdk/client-s3": {
         "from": "3.1014.0",
-        "to": "^3.1043.0"
+        "to": "^3.1046.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
-        "to": "^6.0.12"
+        "to": "^6.0.13"
       },
       "@inquirer/input": {
         "from": "^2.2.4",
-        "to": "^5.0.12"
+        "to": "^5.0.13"
       },
       "@inquirer/select": {
         "from": "^2.5.0",
-        "to": "^5.1.4"
+        "to": "^5.1.5"
       },
       "@oclif/core": {
         "from": "4.9.0",
-        "to": "^4.11.0"
+        "to": "^4.11.2"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.38",
-        "to": "^6.2.46"
+        "to": "^6.2.48"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.76",
-        "to": "^3.2.82"
+        "to": "^3.2.85"
       },
       "@oclif/plugin-warn-if-update-available": {
         "from": "^3.1.57",
-        "to": "^3.1.62"
+        "to": "^3.1.64"
       },
       "ansis": {
         "from": "^3.16.0",
-        "to": "^4.2.0"
+        "to": "^4.3.0"
       },
       "change-case": {
         "from": "^4",
@@ -207,15 +207,19 @@
       },
       "fs-extra": {
         "from": "^8.1",
-        "to": "^11.3.4"
+        "to": "^11.3.5"
       },
       "got": {
         "from": "^13",
-        "to": "^15.0.3"
+        "to": "^15.0.5"
       },
       "normalize-package-data": {
         "from": "^6",
         "to": "^8.0.0"
+      },
+      "semver": {
+        "from": "^7.7.4",
+        "to": "^7.8.0"
       },
       "sort-package-json": {
         "from": "^2.15.1",
@@ -223,13 +227,13 @@
       },
       "validate-npm-package-name": {
         "from": "^5.0.1",
-        "to": "^7.0.2"
+        "to": "^8.0.0"
       }
     },
-    "depsUpdated": 18,
+    "depsUpdated": 19,
     "originalPackage": "oclif",
     "originalVersion": "4.23.0",
-    "processedAt": "2026-05-06T07:11:04.126Z",
+    "processedAt": "2026-05-14T07:16:07.793Z",
     "smokeTest": "passed"
   }
 }
