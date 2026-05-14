@@ -12,7 +12,7 @@ npm install @depup/body-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.2 | **DepUp version**: 2.2.2-depup.1 | **Updated**: 5/12/2026 | **Import test**: passed
+**Original version**: 2.2.2 | **DepUp version**: 2.2.2-depup.2 | **Updated**: 5/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,6 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | iconv-lite | `^0.7.0` | `^0.7.2` |
 | qs | `^6.14.1` | `^6.15.1` |
 | raw-body | `^3.0.1` | `^3.0.2` |
+| type-is | `^2.0.1` | `^2.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/body-parser&labels=bug).
