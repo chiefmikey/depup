@@ -12,15 +12,11 @@ npm install @depup/tsx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.21.0 | **DepUp version**: 4.21.0-depup.2 | **Updated**: 4/15/2026 | **Import test**: passed
+**Original version**: 4.22.0 | **DepUp version**: 4.22.0-depup.0 | **Updated**: 5/15/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| esbuild | `~0.27.0` | `^0.28.0` |
-| get-tsconfig | `^4.7.5` | `^4.14.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tsx&labels=bug).
 
