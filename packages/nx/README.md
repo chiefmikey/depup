@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.7.1 | **DepUp version**: 22.7.1-depup.5 | **Updated**: 5/12/2026 | **Import test**: failed
+**Original version**: 22.7.2 | **DepUp version**: 22.7.2-depup.0 | **Updated**: 5/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,10 +28,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ansi-regex | `5.0.1` | `^6.2.2` |
 | ansi-styles | `4.3.0` | `^6.2.3` |
 | asynckit | `0.4.0` | `^0.5.0` |
-| axios | `1.15.0` | `^1.16.0` |
+| axios | `1.16.0` | `^1.16.1` |
 | balanced-match | `4.0.3` | `^4.0.4` |
 | bl | `4.1.0` | `^7.0.2` |
-| brace-expansion | `5.0.2` | `^5.0.6` |
+| brace-expansion | `5.0.5` | `^5.0.6` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -50,7 +50,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | escape-string-regexp | `1.0.5` | `^5.0.0` |
 | figures | `3.2.0` | `^6.1.0` |
 | flat | `5.0.2` | `^6.0.1` |
-| follow-redirects | `1.15.11` | `^1.16.0` |
 | has-flag | `4.0.0` | `^5.0.1` |
 | hasown | `2.0.2` | `^2.0.3` |
 | is-docker | `2.2.1` | `^4.0.0` |
@@ -64,7 +63,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-db | `1.52.0` | `^1.54.0` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mimic-fn | `2.1.0` | `^5.0.0` |
-| minimatch | `10.2.4` | `^10.2.5` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
 | open | `8.4.2` | `^11.0.0` |
