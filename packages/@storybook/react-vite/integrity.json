@@ -241,5 +241,36 @@
       "timestamp": "2026-04-29T16:38:09.603Z",
       "version": "10.3.6-depup.0"
     }
+  },
+  "10.4.0": {
+    "0": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.0.2",
+          "to": "^5.3.0"
+        },
+        "empathic": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "magic-string": {
+          "from": "^0.30.0",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^8.0.0",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-15T07:18:05.843Z",
+      "version": "10.4.0-depup.0"
+    }
   }
 }

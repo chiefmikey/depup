@@ -1,0 +1,42 @@
+{
+  "bumped": {
+    "@slack/types": {
+      "from": "^2.21.0",
+      "to": "^2.21.1"
+    },
+    "@types/node": {
+      "from": ">=18",
+      "to": "^25.8.0"
+    },
+    "@types/retry": {
+      "from": "0.12.0",
+      "to": "^0.12.5"
+    },
+    "axios": {
+      "from": "^1.16.0",
+      "to": "^1.16.1"
+    },
+    "eventemitter3": {
+      "from": "^5.0.1",
+      "to": "^5.0.4"
+    },
+    "form-data": {
+      "from": "^4.0.4",
+      "to": "^4.0.5"
+    },
+    "is-stream": {
+      "from": "^2",
+      "to": "^4.0.1"
+    },
+    "p-queue": {
+      "from": "^6",
+      "to": "^9.2.0"
+    },
+    "p-retry": {
+      "from": "^4",
+      "to": "^8.0.0"
+    }
+  },
+  "timestamp": "2026-05-15T07:17:48.539Z",
+  "totalUpdated": 9
+}
