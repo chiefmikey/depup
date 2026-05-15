@@ -12,7 +12,7 @@ npm install @depup/react-intl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.1.6 | **DepUp version**: 10.1.6-depup.0 | **Updated**: 5/13/2026 | **Import test**: passed
+**Original version**: 10.1.7 | **DepUp version**: 10.1.7-depup.0 | **Updated**: 5/15/2026 | **Import test**: passed
 
 ## What changed
 

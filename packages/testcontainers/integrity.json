@@ -84,19 +84,6 @@
     }
   },
   "11.14.0": {
-    "0": {
-      "changes": {
-        "undici": {
-          "from": "^7.24.5",
-          "to": "^8.0.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-04-08T12:31:10.130Z",
-      "version": "11.14.0-depup.0"
-    },
     "1": {
       "changes": {
         "undici": {
@@ -164,6 +151,27 @@
       "status": "failed",
       "timestamp": "2026-05-09T07:02:50.443Z",
       "version": "11.14.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "dockerode": {
+          "from": "^4.0.10",
+          "to": "^5.0.0"
+        },
+        "undici": {
+          "from": "^7.24.5",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-15T07:25:04.421Z",
+      "version": "11.14.0-depup.5"
     }
   }
 }

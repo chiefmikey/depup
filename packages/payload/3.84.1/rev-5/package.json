@@ -1,6 +1,6 @@
 {
   "name": "@depup/payload",
-  "version": "3.84.1-depup.0",
+  "version": "3.84.1-depup.5",
   "description": "Node, React, Headless CMS and Application Framework built on Next.js (with updated dependencies)",
   "keywords": [
     "payload",
@@ -92,9 +92,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@next/env": "^16.2.4",
+    "@next/env": "^16.2.6",
     "@types/busboy": "1.5.4",
-    "ajv": "8.18.0",
+    "ajv": "^8.20.0",
     "bson-objectid": "2.0.4",
     "busboy": "^1.6.0",
     "ci-info": "^4.4.0",
@@ -106,8 +106,8 @@
     "get-tsconfig": "^4.14.0",
     "http-status": "2.1.0",
     "image-size": "2.0.2",
-    "ipaddr.js": "^2.3.0",
-    "jose": "^6.2.2",
+    "ipaddr.js": "^2.4.0",
+    "jose": "^6.2.3",
     "json-schema-to-typescript": "^15.0.4",
     "minimist": "1.2.8",
     "path-to-regexp": "^8.4.2",
@@ -117,11 +117,11 @@
     "qs-esm": "8.0.1",
     "range-parser": "1.2.1",
     "sanitize-filename": "^1.6.4",
-    "ts-essentials": "^10.1.1",
-    "tsx": "4.21.0",
-    "undici": "^8.1.0",
+    "ts-essentials": "^10.2.0",
+    "tsx": "^4.22.0",
+    "undici": "^8.3.0",
     "uuid": "^14.0.0",
-    "ws": "^8.20.0",
+    "ws": "^8.20.1",
     "@payloadcms/translations": "3.84.1"
   },
   "devDependencies": {
@@ -168,7 +168,11 @@
     "changes": {
       "@next/env": {
         "from": "^15.1.5",
-        "to": "^16.2.4"
+        "to": "^16.2.6"
+      },
+      "ajv": {
+        "from": "8.18.0",
+        "to": "^8.20.0"
       },
       "ci-info": {
         "from": "^4.1.0",
@@ -188,11 +192,11 @@
       },
       "ipaddr.js": {
         "from": "2.2.0",
-        "to": "^2.3.0"
+        "to": "^2.4.0"
       },
       "jose": {
         "from": "5.10.0",
-        "to": "^6.2.2"
+        "to": "^6.2.3"
       },
       "json-schema-to-typescript": {
         "from": "15.0.3",
@@ -216,11 +220,15 @@
       },
       "ts-essentials": {
         "from": "10.0.3",
-        "to": "^10.1.1"
+        "to": "^10.2.0"
+      },
+      "tsx": {
+        "from": "4.21.0",
+        "to": "^4.22.0"
       },
       "undici": {
         "from": "7.24.4",
-        "to": "^8.1.0"
+        "to": "^8.3.0"
       },
       "uuid": {
         "from": "11.1.0",
@@ -228,13 +236,13 @@
       },
       "ws": {
         "from": "^8.16.0",
-        "to": "^8.20.0"
+        "to": "^8.20.1"
       }
     },
-    "depsUpdated": 16,
+    "depsUpdated": 18,
     "originalPackage": "payload",
     "originalVersion": "3.84.1",
-    "processedAt": "2026-04-23T16:39:48.259Z",
+    "processedAt": "2026-05-15T07:24:31.064Z",
     "smokeTest": "passed"
   }
 }

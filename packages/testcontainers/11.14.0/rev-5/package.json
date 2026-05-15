@@ -1,6 +1,6 @@
 {
   "name": "@depup/testcontainers",
-  "version": "11.14.0-depup.0",
+  "version": "11.14.0-depup.5",
   "author": "Cristian Greco",
   "license": "MIT",
   "keywords": [
@@ -35,19 +35,19 @@
   "dependencies": {
     "@balena/dockerignore": "^1.0.2",
     "@types/dockerode": "^4.0.1",
-    "archiver": "^7.0.1",
+    "archiver": "^8.0.0",
     "async-lock": "^1.4.1",
     "byline": "^5.0.0",
     "debug": "^4.4.3",
     "docker-compose": "^1.4.2",
-    "dockerode": "^4.0.10",
+    "dockerode": "^5.0.0",
     "get-port": "^7.2.0",
     "proper-lockfile": "^4.1.2",
     "properties-reader": "^3.0.1",
     "ssh-remote-port-forward": "^1.0.4",
     "tar-fs": "^3.1.2",
     "tmp": "^0.2.5",
-    "undici": "^8.0.2"
+    "undici": "^8.3.0"
   },
   "devDependencies": {
     "@types/archiver": "^7.0.0",
@@ -61,15 +61,23 @@
   },
   "depup": {
     "changes": {
+      "archiver": {
+        "from": "^7.0.1",
+        "to": "^8.0.0"
+      },
+      "dockerode": {
+        "from": "^4.0.10",
+        "to": "^5.0.0"
+      },
       "undici": {
         "from": "^7.24.5",
-        "to": "^8.0.2"
+        "to": "^8.3.0"
       }
     },
-    "depsUpdated": 1,
+    "depsUpdated": 3,
     "originalPackage": "testcontainers",
     "originalVersion": "11.14.0",
-    "processedAt": "2026-04-08T12:31:06.264Z",
+    "processedAt": "2026-05-15T07:25:02.414Z",
     "smokeTest": "passed"
   }
 }

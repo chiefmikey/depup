@@ -48,6 +48,23 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:13:42.317Z",
       "version": "2.5.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/node": {
+          "from": "^6.0.0",
+          "to": "^25.8.0"
+        },
+        "columnify": {
+          "from": "^1.5.4",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-15T07:23:41.682Z",
+      "version": "2.5.1-depup.3"
     }
   }
 }

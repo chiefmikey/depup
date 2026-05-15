@@ -2,47 +2,47 @@
   "bumped": {
     "@aws-sdk/client-cloudwatch": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-cloudwatch-logs": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-ec2": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-ecs": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-iam": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-lambda": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-sqs": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-ssm": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/client-sts": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@aws-sdk/credential-providers": {
       "from": "^3.1034.0",
-      "to": "^3.1042.0"
+      "to": "^3.1047.0"
     },
     "@azure/identity": {
       "from": "^4.13.0",
@@ -54,19 +54,19 @@
     },
     "@oclif/core": {
       "from": "^4.8.0",
-      "to": "^4.11.0"
+      "to": "^4.11.2"
     },
     "@oclif/plugin-help": {
       "from": "^6.2.36",
-      "to": "^6.2.46"
+      "to": "^6.2.48"
     },
     "@oclif/plugin-not-found": {
       "from": "^3.2.73",
-      "to": "^3.2.82"
+      "to": "^3.2.85"
     },
     "@upstash/redis": {
       "from": "^1.36.1",
-      "to": "^1.37.0"
+      "to": "^1.38.0"
     },
     "async": {
       "from": "^2.6.4",
@@ -90,7 +90,7 @@
     },
     "dependency-tree": {
       "from": "^11.2.0",
-      "to": "^11.4.3"
+      "to": "^11.5.0"
     },
     "detective-es6": {
       "from": "^5.0.1",
@@ -106,11 +106,11 @@
     },
     "fs-extra": {
       "from": "^11.3.3",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "got": {
       "from": "^14.6.6",
-      "to": "^15.0.3"
+      "to": "^15.0.5"
     },
     "joi": {
       "from": "^17.13.3",
@@ -145,6 +145,6 @@
       "to": "^4.0.1"
     }
   },
-  "timestamp": "2026-05-05T07:00:11.342Z",
+  "timestamp": "2026-05-15T07:22:32.046Z",
   "totalUpdated": 36
 }

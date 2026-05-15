@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "archiver": {
+      "from": "^7.0.1",
+      "to": "^8.0.0"
+    },
+    "dockerode": {
+      "from": "^4.0.10",
+      "to": "^5.0.0"
+    },
+    "undici": {
+      "from": "^7.24.5",
+      "to": "^8.3.0"
+    }
+  },
+  "timestamp": "2026-05-15T07:24:52.912Z",
+  "totalUpdated": 3
+}
