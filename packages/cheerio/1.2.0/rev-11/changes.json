@@ -2,7 +2,7 @@
   "bumped": {
     "dom-serializer": {
       "from": "^2.0.0",
-      "to": "^3.0.0"
+      "to": "^3.1.1"
     },
     "domhandler": {
       "from": "^5.0.3",
@@ -22,11 +22,11 @@
     },
     "parse5": {
       "from": "^7.3.0",
-      "to": "^8.0.0"
+      "to": "^8.0.1"
     },
     "parse5-htmlparser2-tree-adapter": {
       "from": "^7.1.0",
-      "to": "^8.0.0"
+      "to": "^8.0.1"
     },
     "parse5-parser-stream": {
       "from": "^7.1.2",
@@ -34,13 +34,13 @@
     },
     "undici": {
       "from": "^7.19.0",
-      "to": "^7.24.5"
+      "to": "^8.3.0"
     },
     "whatwg-mimetype": {
       "from": "^4.0.0",
       "to": "^5.0.0"
     }
   },
-  "timestamp": "2026-03-21T00:36:15.970Z",
+  "timestamp": "2026-05-15T07:22:19.282Z",
   "totalUpdated": 10
 }
