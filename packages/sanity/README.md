@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.25.1 | **DepUp version**: 5.25.1-depup.0 | **Updated**: 5/14/2026 | **Import test**: failed
+**Original version**: 5.25.1 | **DepUp version**: 5.25.1-depup.1 | **Updated**: 5/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/image-url | `^2.0.3` | `^2.1.1` |
 | @sanity/insert-menu | `^3.0.5` | `^3.0.6` |
 | @sanity/migrate | `^6.1.1` | `^6.1.2` |
-| @sanity/mutate | `^0.16.1` | `^0.17.0` |
+| @sanity/mutate | `^0.16.1` | `^0.17.1` |
 | @sanity/preview-url-secret | `^4.0.5` | `^4.0.6` |
 | @sanity/sdk | `^2.8.0` | `^2.11.1` |
 | @sanity/ui | `^3.1.14` | `^3.2.0` |
@@ -38,13 +38,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
 | groq-js | `^1.29.0` | `^1.30.1` |
-| i18next | `^25.8.17` | `^26.1.0` |
-| isomorphic-dompurify | `2.26.0` | `^3.12.0` |
+| i18next | `^25.8.17` | `^26.2.0` |
+| isomorphic-dompurify | `2.26.0` | `^3.13.0` |
 | motion | `^12.27.1` | `^12.38.0` |
 | nanoid | `^3.3.11` | `^5.1.11` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
 | player.style | `^0.1.9` | `^0.3.4` |
-| react-i18next | `15.6.1` | `^17.0.7` |
+| react-i18next | `15.6.1` | `^17.0.8` |
 | react-is | `^19.2.4` | `^19.2.6` |
 | semver | `^7.7.2` | `^7.8.0` |
 | uuid | `^11.1.0` | `^14.0.0` |
