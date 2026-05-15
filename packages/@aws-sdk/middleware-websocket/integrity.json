@@ -165,5 +165,32 @@
       "timestamp": "2026-05-14T07:11:04.289Z",
       "version": "3.972.17-depup.0"
     }
+  },
+  "3.972.18": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.24.1",
+          "to": "^3.24.2"
+        },
+        "@smithy/fetch-http-handler": {
+          "from": "^5.4.1",
+          "to": "^5.4.2"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.4.1",
+          "to": "^5.4.2"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-15T07:17:45.793Z",
+      "version": "3.972.18-depup.0"
+    }
   }
 }
