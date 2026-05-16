@@ -24,5 +24,20 @@
       "timestamp": "2026-05-09T06:57:14.574Z",
       "version": "5.0.0-depup.1"
     }
+  },
+  "6.0.0": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-16T06:59:23.041Z",
+      "version": "6.0.0-depup.0"
+    }
   }
 }

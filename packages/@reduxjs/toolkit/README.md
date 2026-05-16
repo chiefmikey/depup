@@ -12,11 +12,16 @@ npm install @depup/reduxjs__toolkit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.11.2 | **DepUp version**: 2.11.2-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 2.12.0 | **DepUp version**: 2.12.0-depup.0 | **Updated**: 5/16/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @standard-schema/spec | `^1.0.0` | `^1.1.0` |
+| immer | `^11.0.0` | `^11.1.8` |
+| reselect | `^5.1.0` | `^5.2.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/reduxjs__toolkit&labels=bug).
 
