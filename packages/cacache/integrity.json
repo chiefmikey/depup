@@ -188,6 +188,51 @@
       "status": "failed",
       "timestamp": "2026-05-09T06:58:53.603Z",
       "version": "20.0.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@npmcli/fs": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "fs-minipass": {
+          "from": "^3.0.0",
+          "to": "^3.0.3"
+        },
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        },
+        "lru-cache": {
+          "from": "^11.1.0",
+          "to": "^11.3.6"
+        },
+        "minipass": {
+          "from": "^7.0.3",
+          "to": "^7.1.3"
+        },
+        "minipass-flush": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "minipass-pipeline": {
+          "from": "^1.2.4",
+          "to": "^3.0.0"
+        },
+        "p-map": {
+          "from": "^7.0.2",
+          "to": "^7.0.4"
+        },
+        "ssri": {
+          "from": "^13.0.0",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-16T07:00:50.559Z",
+      "version": "20.0.4-depup.4"
     }
   }
 }
