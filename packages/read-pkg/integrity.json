@@ -31,6 +31,23 @@
       "status": "failed",
       "timestamp": "2026-04-17T08:42:59.642Z",
       "version": "10.1.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "normalize-package-data": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        },
+        "type-fest": {
+          "from": "^5.4.4",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-16T07:01:45.629Z",
+      "version": "10.1.0-depup.3"
     }
   }
 }
