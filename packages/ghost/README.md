@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.38.0 | **DepUp version**: 6.38.0-depup.1 | **Updated**: 5/15/2026 | **Import test**: failed
+**Original version**: 6.39.0 | **DepUp version**: 6.39.0-depup.0 | **Updated**: 5/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1047.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1048.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -33,10 +33,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/email-mock-receiver | `2.1.0` | `^2.2.0` |
 | @tryghost/errors | `1.3.13` | `^3.2.1` |
 | @tryghost/helpers | `1.1.103` | `^1.1.105` |
-| @tryghost/html-to-plaintext | `1.0.8` | `^1.0.10` |
 | @tryghost/image-transform | `1.4.13` | `^1.4.15` |
 | @tryghost/job-manager | `1.0.9` | `^3.2.1` |
-| @tryghost/limit-service | `1.5.2` | `^1.5.4` |
 | @tryghost/logging | `4.2.0` | `^4.2.1` |
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.1` |
@@ -60,10 +58,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
 | fs-extra | `11.3.4` | `^11.3.5` |
-| glob | `8.1.0` | `^13.0.6` |
+| glob | `10.5.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.5` |
-| gscan | `6.0.2` | `^6.1.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
+| html5parser | `2.0.2` | `^3.0.0` |
 | human-number | `2.0.10` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.6` |
@@ -96,6 +94,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.46.1` | `^5.47.1` |
 | ua-parser-js | `1.0.41` | `^2.0.9` |
+| zod | `4.1.12` | `^4.4.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ghost&labels=bug).
