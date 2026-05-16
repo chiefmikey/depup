@@ -12,14 +12,12 @@ npm install @depup/aws-sdk__middleware-recursion-detection
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.12 | **DepUp version**: 3.972.12-depup.0 | **Updated**: 5/14/2026 | **Import test**: passed
+**Original version**: 3.972.13 | **DepUp version**: 3.972.13-depup.0 | **Updated**: 5/16/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws/lambda-invoke-store | `^0.2.2` | `^0.2.4` |
-| @smithy/core | `^3.24.1` | `^3.24.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
