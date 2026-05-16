@@ -12,13 +12,12 @@ npm install @depup/normalize-package-data
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.2 | **Updated**: 5/12/2026 | **Import test**: passed
+**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.0 | **Updated**: 5/16/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| hosted-git-info | `^9.0.0` | `^10.1.0` |
 | semver | `^7.3.5` | `^7.8.0` |
 
 
