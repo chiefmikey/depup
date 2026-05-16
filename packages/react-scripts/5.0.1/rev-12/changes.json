@@ -14,7 +14,7 @@
     },
     "babel-jest": {
       "from": "^27.4.2",
-      "to": "^30.3.0"
+      "to": "^30.4.1"
     },
     "babel-loader": {
       "from": "^8.2.3",
@@ -54,7 +54,7 @@
     },
     "eslint": {
       "from": "^8.3.0",
-      "to": "^10.2.1"
+      "to": "^10.4.0"
     },
     "eslint-webpack-plugin": {
       "from": "^3.1.1",
@@ -62,7 +62,7 @@
     },
     "fs-extra": {
       "from": "^10.0.0",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "html-webpack-plugin": {
       "from": "^5.5.0",
@@ -70,11 +70,11 @@
     },
     "jest": {
       "from": "^27.4.3",
-      "to": "^30.3.0"
+      "to": "^30.4.2"
     },
     "jest-resolve": {
       "from": "^27.4.2",
-      "to": "^30.3.0"
+      "to": "^30.4.1"
     },
     "jest-watch-typeahead": {
       "from": "^1.0.0",
@@ -86,7 +86,7 @@
     },
     "postcss": {
       "from": "^8.4.4",
-      "to": "^8.5.10"
+      "to": "^8.5.14"
     },
     "postcss-loader": {
       "from": "^6.2.1",
@@ -98,7 +98,7 @@
     },
     "postcss-preset-env": {
       "from": "^7.0.1",
-      "to": "^11.2.1"
+      "to": "^11.3.0"
     },
     "react-refresh": {
       "from": "^0.11.0",
@@ -114,11 +114,11 @@
     },
     "sass-loader": {
       "from": "^12.3.0",
-      "to": "^16.0.7"
+      "to": "^16.0.8"
     },
     "semver": {
       "from": "^7.3.5",
-      "to": "^7.7.4"
+      "to": "^7.8.0"
     },
     "source-map-loader": {
       "from": "^3.0.0",
@@ -130,11 +130,11 @@
     },
     "tailwindcss": {
       "from": "^3.0.2",
-      "to": "^4.2.4"
+      "to": "^4.3.0"
     },
     "terser-webpack-plugin": {
       "from": "^5.2.5",
-      "to": "^5.5.0"
+      "to": "^5.6.0"
     },
     "webpack": {
       "from": "^5.64.4",
@@ -142,7 +142,7 @@
     },
     "webpack-dev-server": {
       "from": "^4.6.0",
-      "to": "^5.2.3"
+      "to": "^5.2.4"
     },
     "webpack-manifest-plugin": {
       "from": "^4.0.2",
@@ -150,9 +150,9 @@
     },
     "workbox-webpack-plugin": {
       "from": "^6.4.1",
-      "to": "^7.4.0"
+      "to": "^7.4.1"
     }
   },
-  "timestamp": "2026-04-24T00:48:43.355Z",
+  "timestamp": "2026-05-16T07:01:38.772Z",
   "totalUpdated": 38
 }
