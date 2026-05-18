@@ -12,7 +12,7 @@ npm install @depup/redbird
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.2 | **DepUp version**: 1.0.2-depup.2 | **Updated**: 4/6/2026 | **Import test**: passed
+**Original version**: 1.0.2 | **DepUp version**: 1.0.2-depup.3 | **Updated**: 5/18/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | http-proxy | `^1.18.0` | `^1.18.1` |
 | le-store-certbot | `^2.2.3` | `^2.2.4` |
 | lodash | `^4.17.21` | `^4.18.1` |
-| lru-cache | `^11.0.1` | `^11.3.0` |
+| lru-cache | `^11.0.1` | `^11.4.0` |
 | pino | `^9.4.0` | `^10.3.1` |
 
 

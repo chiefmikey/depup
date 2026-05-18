@@ -1,0 +1,143 @@
+{
+  "name": "@depup/redbird",
+  "version": "1.0.2-depup.3",
+  "description": "A reverse proxy with support for dynamic tables (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./lib/index.ts",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc",
+    "format": "prettier --write *.js \"{samples,lib,test,hl-tests}/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OptimalBits/redbird.git"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "redbird",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "proxy",
+    "reverse",
+    "docker",
+    "etcd"
+  ],
+  "author": "Manuel Astudillo",
+  "license": "BSD-3-Clause-Attribution",
+  "bugs": {
+    "url": "https://github.com/OptimalBits/redbird/issues"
+  },
+  "homepage": "https://github.com/OptimalBits/redbird",
+  "dependencies": {
+    "dolphin": "*",
+    "greenlock": "^2.8.9",
+    "http-proxy": "^1.18.1",
+    "le-challenge-fs": "^2.0.9",
+    "le-store-certbot": "^2.2.4",
+    "lodash": "^4.18.1",
+    "lru-cache": "^11.4.0",
+    "mkdirp": "^3.0.1",
+    "node-etcd": "^7.0.0",
+    "object-hash": "^3.0.0",
+    "pino": "^10.3.1",
+    "safe-timers": "^1.1.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.4",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@types/http-proxy": "^1.17.15",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^22.5.4",
+    "@types/object-hash": "^3.0.6",
+    "@types/safe-timers": "^1.1.2",
+    "@types/valid-url": "^1.0.7",
+    "gulp": "^5.0.0",
+    "gulp-eslint": "^6.0.0",
+    "node-fetch": "^3.3.2",
+    "prettier": "^2.0.1",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer"
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.MD"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": true
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "yarn.lock",
+            "docs/CHANGELOG.MD"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "depup": {
+    "changes": {
+      "http-proxy": {
+        "from": "^1.18.0",
+        "to": "^1.18.1"
+      },
+      "le-store-certbot": {
+        "from": "^2.2.3",
+        "to": "^2.2.4"
+      },
+      "lodash": {
+        "from": "^4.17.21",
+        "to": "^4.18.1"
+      },
+      "lru-cache": {
+        "from": "^11.0.1",
+        "to": "^11.4.0"
+      },
+      "pino": {
+        "from": "^9.4.0",
+        "to": "^10.3.1"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "redbird",
+    "originalVersion": "1.0.2",
+    "processedAt": "2026-05-18T07:39:34.585Z",
+    "smokeTest": "passed"
+  }
+}

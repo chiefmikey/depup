@@ -12,7 +12,7 @@ npm install @depup/pg-mem
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.14 | **DepUp version**: 3.0.14-depup.1 | **Updated**: 4/6/2026 | **Import test**: failed
+**Original version**: 3.0.14 | **DepUp version**: 3.0.14-depup.2 | **Updated**: 5/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | immutable | `^4.3.4` | `^5.1.5` |
 | json-stable-stringify | `^1.0.1` | `^1.3.0` |
-| lru-cache | `^6.0.0` | `^11.3.0` |
+| lru-cache | `^6.0.0` | `^11.4.0` |
 | moment | `^2.27.0` | `^2.30.1` |
 | object-hash | `^2.0.3` | `^3.0.0` |
 
