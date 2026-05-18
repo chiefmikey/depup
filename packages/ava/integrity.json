@@ -200,5 +200,20 @@
       "timestamp": "2026-05-09T06:58:18.906Z",
       "version": "8.0.0-depup.1"
     }
+  },
+  "8.0.1": {
+    "0": {
+      "changes": {
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-18T07:35:53.811Z",
+      "version": "8.0.1-depup.0"
+    }
   }
 }

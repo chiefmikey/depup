@@ -12,7 +12,7 @@ npm install @depup/mikro-orm
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.16 | **DepUp version**: 7.0.16-depup.0 | **Updated**: 5/15/2026 | **Import test**: passed
+**Original version**: 7.0.17 | **DepUp version**: 7.0.17-depup.0 | **Updated**: 5/18/2026 | **Import test**: passed
 
 ## What changed
 
