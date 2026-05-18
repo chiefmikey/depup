@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@panva/hkdf": {
+      "from": "^1.1.1",
+      "to": "^1.2.1"
+    },
+    "@types/cookie": {
+      "from": "0.6.0",
+      "to": "^1.0.0"
+    },
+    "cookie": {
+      "from": "0.6.0",
+      "to": "^1.1.1"
+    },
+    "jose": {
+      "from": "^5.1.3",
+      "to": "^6.2.3"
+    },
+    "oauth4webapi": {
+      "from": "^2.10.4",
+      "to": "^3.8.6"
+    },
+    "preact": {
+      "from": "10.11.3",
+      "to": "^10.29.2"
+    },
+    "preact-render-to-string": {
+      "from": "5.2.3",
+      "to": "^6.7.0"
+    }
+  },
+  "timestamp": "2026-05-18T07:36:56.478Z",
+  "totalUpdated": 7
+}

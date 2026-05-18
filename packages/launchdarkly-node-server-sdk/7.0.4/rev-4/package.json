@@ -1,0 +1,107 @@
+{
+  "name": "@depup/launchdarkly-node-server-sdk",
+  "version": "7.0.4-depup.4",
+  "description": "LaunchDarkly Server-Side SDK for Node.js (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --ci --coverage --runInBand",
+    "check-typescript": "node_modules/typescript/bin/tsc",
+    "lint": "eslint --format 'node_modules/eslint-formatter-pretty' --ignore-path .eslintignore .",
+    "lint-fix": "eslint --fix --format 'node_modules/eslint-formatter-pretty' --ignore-path .eslintignore .",
+    "contract-test-service": "npm --prefix contract-tests install && npm --prefix contract-tests start",
+    "contract-test-harness": "curl -s https://raw.githubusercontent.com/launchdarkly/sdk-test-harness/master/downloader/run.sh \\ | VERSION=v2 PARAMS=\"-url http://localhost:8000 -debug -stop-service-at-end $TEST_HARNESS_PARAMS\" sh",
+    "contract-tests": "npm run contract-test-service & npm run contract-test-harness"
+  },
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/launchdarkly/node-server-sdk.git"
+  },
+  "keywords": [
+    "launchdarkly-node-server-sdk",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "launchdarkly",
+    "analytics",
+    "client"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/launchdarkly/node-server-sdk/issues"
+  },
+  "homepage": "https://github.com/launchdarkly/node-server-sdk",
+  "dependencies": {
+    "async": "^3.2.6",
+    "launchdarkly-eventsource": "^2.2.0",
+    "lru-cache": "^11.4.0",
+    "node-cache": "^5.1.2",
+    "semver": "^7.8.0",
+    "tunnel": "0.0.6",
+    "uuid": "^14.0.0"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^15.12.2",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.4",
+    "jest-junit": "^12.2.0",
+    "launchdarkly-js-test-helpers": "^2.2.0",
+    "prettier": "^2.3.1",
+    "tmp": "^0.2.1",
+    "typescript": "~4.4.4",
+    "yaml": "^1.10.2"
+  },
+  "jest": {
+    "rootDir": ".",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*-test.js"
+    ],
+    "testResultsProcessor": "jest-junit"
+  },
+  "depup": {
+    "changes": {
+      "async": {
+        "from": "^3.2.4",
+        "to": "^3.2.6"
+      },
+      "launchdarkly-eventsource": {
+        "from": "1.4.4",
+        "to": "^2.2.0"
+      },
+      "lru-cache": {
+        "from": "^6.0.0",
+        "to": "^11.4.0"
+      },
+      "node-cache": {
+        "from": "^5.1.0",
+        "to": "^5.1.2"
+      },
+      "semver": {
+        "from": "^7.5.4",
+        "to": "^7.8.0"
+      },
+      "uuid": {
+        "from": "^8.3.2",
+        "to": "^14.0.0"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "launchdarkly-node-server-sdk",
+    "originalVersion": "7.0.4",
+    "processedAt": "2026-05-18T07:38:16.338Z",
+    "smokeTest": "passed"
+  }
+}

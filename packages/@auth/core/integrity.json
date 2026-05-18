@@ -36,6 +36,43 @@
       "status": "published",
       "timestamp": "2026-03-18T23:27:59.012Z",
       "version": "0.34.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@panva/hkdf": {
+          "from": "^1.1.1",
+          "to": "^1.2.1"
+        },
+        "@types/cookie": {
+          "from": "0.6.0",
+          "to": "^1.0.0"
+        },
+        "cookie": {
+          "from": "0.6.0",
+          "to": "^1.1.1"
+        },
+        "jose": {
+          "from": "^5.1.3",
+          "to": "^6.2.3"
+        },
+        "oauth4webapi": {
+          "from": "^2.10.4",
+          "to": "^3.8.6"
+        },
+        "preact": {
+          "from": "10.11.3",
+          "to": "^10.29.2"
+        },
+        "preact-render-to-string": {
+          "from": "5.2.3",
+          "to": "^6.7.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-18T07:37:05.443Z",
+      "version": "0.34.3-depup.1"
     }
   }
 }
