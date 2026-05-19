@@ -173,5 +173,24 @@
       "timestamp": "2026-05-15T07:25:04.421Z",
       "version": "11.14.0-depup.5"
     }
+  },
+  "12.0.0": {
+    "0": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "undici": {
+          "from": "^7.24.7",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T18:01:25.790Z",
+      "version": "12.0.0-depup.0"
+    }
   }
 }
