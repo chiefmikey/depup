@@ -92,6 +92,39 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:13:24.945Z",
       "version": "7.0.5-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@npmcli/git": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        },
+        "hosted-git-info": {
+          "from": "^9.0.0",
+          "to": "^10.1.1"
+        },
+        "json-parse-even-better-errors": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "proc-log": {
+          "from": "^6.0.0",
+          "to": "^7.0.0"
+        },
+        "semver": {
+          "from": "^7.5.3",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T18:09:01.269Z",
+      "version": "7.0.5-depup.3"
     }
   }
 }
