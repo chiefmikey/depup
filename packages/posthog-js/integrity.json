@@ -2884,5 +2884,56 @@
       "timestamp": "2026-05-16T06:56:23.947Z",
       "version": "1.373.5-depup.0"
     }
+  },
+  "1.374.2": {
+    "0": {
+      "changes": {
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/api-logs": {
+          "from": "^0.208.0",
+          "to": "^0.218.0"
+        },
+        "@opentelemetry/exporter-logs-otlp-http": {
+          "from": "^0.208.0",
+          "to": "^0.218.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.2.0",
+          "to": "^2.7.1"
+        },
+        "@opentelemetry/sdk-logs": {
+          "from": "^0.208.0",
+          "to": "^0.218.0"
+        },
+        "core-js": {
+          "from": "^3.38.1",
+          "to": "^3.49.0"
+        },
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.5"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.28.2",
+          "to": "^10.29.2"
+        },
+        "web-vitals": {
+          "from": "^5.1.0",
+          "to": "^5.2.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T03:43:23.581Z",
+      "version": "1.374.2-depup.0"
+    }
   }
 }

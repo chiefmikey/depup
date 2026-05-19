@@ -95,5 +95,20 @@
       "timestamp": "2026-05-15T07:23:13.448Z",
       "version": "2.3.3-depup.3"
     }
+  },
+  "2.4.0": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-19T03:43:13.427Z",
+      "version": "2.4.0-depup.0"
+    }
   }
 }
