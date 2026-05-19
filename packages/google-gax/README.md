@@ -12,7 +12,7 @@ npm install @depup/google-gax
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.6 | **DepUp version**: 5.0.6-depup.2 | **Updated**: 5/14/2026 | **Import test**: passed
+**Original version**: 5.0.6 | **DepUp version**: 5.0.6-depup.3 | **Updated**: 5/18/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | google-auth-library | `^10.1.0` | `^10.6.2` |
 | google-logging-utils | `^1.1.1` | `^1.1.3` |
 | proto3-json-serializer | `^3.0.0` | `^3.0.4` |
-| protobufjs | `^7.5.3` | `^8.3.0` |
+| protobufjs | `^7.5.3` | `^8.4.0` |
 | retry-request | `^8.0.0` | `^8.0.2` |
 | rimraf | `^5.0.1` | `^6.1.3` |
 

@@ -888,5 +888,36 @@
       "timestamp": "2026-05-16T07:00:54.338Z",
       "version": "4.4.5-depup.3"
     }
+  },
+  "4.4.6": {
+    "0": {
+      "changes": {
+        "@nuxt/devtools": {
+          "from": "^3.2.4",
+          "to": "^4.0.0-alpha.4"
+        },
+        "@unhead/vue": {
+          "from": "^2.1.15",
+          "to": "^3.1.0"
+        },
+        "oxc-minify": {
+          "from": "^0.131.0",
+          "to": "^0.132.0"
+        },
+        "oxc-parser": {
+          "from": "^0.131.0",
+          "to": "^0.132.0"
+        },
+        "oxc-transform": {
+          "from": "^0.131.0",
+          "to": "^0.132.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:49:47.600Z",
+      "version": "4.4.6-depup.0"
+    }
   }
 }

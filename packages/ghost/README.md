@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.39.0 | **DepUp version**: 6.39.0-depup.0 | **Updated**: 5/16/2026 | **Import test**: failed
+**Original version**: 6.39.0 | **DepUp version**: 6.39.0-depup.1 | **Updated**: 5/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1048.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1049.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.4` |
@@ -29,18 +29,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/config-url-helpers | `1.0.23` | `^1.0.25` |
 | @tryghost/custom-fonts | `1.0.8` | `^1.0.10` |
 | @tryghost/database-info | `0.3.35` | `^2.2.0` |
-| @tryghost/domain-events | `1.0.8` | `^3.2.1` |
+| @tryghost/domain-events | `1.0.8` | `^3.2.2` |
 | @tryghost/email-mock-receiver | `2.1.0` | `^2.2.0` |
 | @tryghost/errors | `1.3.13` | `^3.2.1` |
 | @tryghost/helpers | `1.1.103` | `^1.1.105` |
 | @tryghost/image-transform | `1.4.13` | `^1.4.15` |
-| @tryghost/job-manager | `1.0.9` | `^3.2.1` |
-| @tryghost/logging | `4.2.0` | `^4.2.1` |
+| @tryghost/job-manager | `1.0.9` | `^4.0.0` |
+| @tryghost/logging | `4.2.0` | `^5.0.0` |
 | @tryghost/metrics | `1.0.43` | `^3.2.0` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.1` |
 | @tryghost/mw-vhost | `1.0.6` | `^3.2.0` |
 | @tryghost/nodemailer | `2.2.0` | `^2.2.1` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^3.2.1` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^4.0.0` |
 | @tryghost/request | `1.0.12` | `^3.2.1` |
 | @tryghost/security | `1.0.6` | `^3.2.0` |
 | @tryghost/string | `0.3.2` | `^0.3.4` |
@@ -52,8 +52,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | countries-and-timezones | `3.8.0` | `^3.9.0` |
-| date-fns | `2.30.0` | `^4.1.0` |
-| dompurify | `3.4.1` | `^3.4.3` |
+| date-fns | `2.30.0` | `^4.2.1` |
+| dompurify | `3.4.1` | `^3.4.5` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.21.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |

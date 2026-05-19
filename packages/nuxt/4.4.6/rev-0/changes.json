@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@nuxt/devtools": {
+      "from": "^3.2.4",
+      "to": "^4.0.0-alpha.4"
+    },
+    "@unhead/vue": {
+      "from": "^2.1.15",
+      "to": "^3.1.0"
+    },
+    "oxc-minify": {
+      "from": "^0.131.0",
+      "to": "^0.132.0"
+    },
+    "oxc-parser": {
+      "from": "^0.131.0",
+      "to": "^0.132.0"
+    },
+    "oxc-transform": {
+      "from": "^0.131.0",
+      "to": "^0.132.0"
+    }
+  },
+  "timestamp": "2026-05-19T04:49:32.674Z",
+  "totalUpdated": 5
+}
