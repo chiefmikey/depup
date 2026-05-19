@@ -1,5 +1,6 @@
 name: Performance Monitoring
 
+# scheduled trigger disabled 2026-05-19 — runs on wolfe personal-jobs container (0 6 * * 0)
 on:
   workflow_dispatch:
     inputs:

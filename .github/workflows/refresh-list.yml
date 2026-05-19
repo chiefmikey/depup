@@ -1,5 +1,6 @@
 name: Refresh Curated Package List
 
+# scheduled trigger disabled 2026-05-19 — runs on wolfe personal-jobs container (0 7 * * 0)
 on:
   workflow_dispatch: {}
 
