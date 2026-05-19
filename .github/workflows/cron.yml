@@ -1,9 +1,6 @@
 name: "Automated Discovery & Sync"
 
 on:
-  schedule:
-    # Run once daily at 06:00 UTC
-    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       discover_only:
