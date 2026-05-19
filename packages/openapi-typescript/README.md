@@ -12,13 +12,13 @@ npm install @depup/openapi-typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.13.0 | **DepUp version**: 7.13.0-depup.6 | **Updated**: 4/24/2026 | **Import test**: failed
+**Original version**: 7.13.0 | **DepUp version**: 7.13.0-depup.7 | **Updated**: 5/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @redocly/openapi-core | `^1.34.6` | `^2.30.0` |
+| @redocly/openapi-core | `^1.34.6` | `^2.31.1` |
 | yargs-parser | `^21.1.1` | `^22.0.0` |
 
 
