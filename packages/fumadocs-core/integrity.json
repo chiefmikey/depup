@@ -300,6 +300,19 @@
       "status": "failed",
       "timestamp": "2026-05-15T07:20:16.617Z",
       "version": "16.8.11-depup.0"
+    },
+    "1": {
+      "changes": {
+        "shiki": {
+          "from": "^4.0.2",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-19T10:04:29.451Z",
+      "version": "16.8.11-depup.1"
     }
   }
 }
