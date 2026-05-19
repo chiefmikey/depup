@@ -97,5 +97,24 @@
       "timestamp": "2026-05-09T07:05:59.717Z",
       "version": "29.4.9-depup.2"
     }
+  },
+  "29.4.10": {
+    "0": {
+      "changes": {
+        "type-fest": {
+          "from": "^4.41.0",
+          "to": "^5.6.0"
+        },
+        "yargs-parser": {
+          "from": "^21.1.1",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T10:02:13.236Z",
+      "version": "29.4.10-depup.0"
+    }
   }
 }

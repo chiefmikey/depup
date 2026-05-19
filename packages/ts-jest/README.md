@@ -12,13 +12,12 @@ npm install @depup/ts-jest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 29.4.9 | **DepUp version**: 29.4.9-depup.2 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 29.4.10 | **DepUp version**: 29.4.10-depup.0 | **Updated**: 5/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| semver | `^7.7.4` | `^7.8.0` |
 | type-fest | `^4.41.0` | `^5.6.0` |
 | yargs-parser | `^21.1.1` | `^22.0.0` |
 
