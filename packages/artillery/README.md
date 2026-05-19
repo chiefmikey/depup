@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.31 | **DepUp version**: 2.0.31-depup.14 | **Updated**: 5/18/2026 | **Import test**: failed
+**Original version**: 2.0.32 | **DepUp version**: 2.0.32-depup.0 | **Updated**: 5/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,14 +34,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @oclif/core | `^4.8.0` | `^4.11.3` |
 | @oclif/plugin-help | `^6.2.36` | `^6.2.49` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.86` |
+| @smithy/core | `^3.24.0` | `^3.24.3` |
 | @upstash/redis | `^1.36.1` | `^1.38.0` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^2.4.2` | `^5.6.2` |
 | chokidar | `^3.6.0` | `^5.0.0` |
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^6.2.1` |
-| dependency-tree | `^11.2.0` | `^11.5.0` |
-| detective-es6 | `^5.0.1` | `^5.0.2` |
 | dotenv | `^16.6.1` | `^17.4.2` |
 | esbuild-wasm | `^0.19.12` | `^0.28.0` |
 | fs-extra | `^11.3.3` | `^11.3.5` |
