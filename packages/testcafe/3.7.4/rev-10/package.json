@@ -2,7 +2,7 @@
   "name": "@depup/testcafe",
   "description": "Automated browser testing for the modern web development stack. (with updated dependencies)",
   "license": "MIT",
-  "version": "3.7.4-depup.5",
+  "version": "3.7.4-depup.10",
   "author": {
     "name": "Developer Express Inc.",
     "url": "https://www.devexpress.com/"
@@ -81,13 +81,13 @@
     "@babel/plugin-transform-object-rest-spread": "^7.28.6",
     "@babel/plugin-transform-private-methods": "^7.28.6",
     "@babel/plugin-transform-runtime": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-env": "^7.29.5",
     "@babel/preset-flow": "^7.27.1",
     "@babel/preset-react": "^7.28.5",
     "@babel/runtime": "^7.29.2",
     "@devexpress/bin-v8-flags-filter": "^1.3.0",
     "@devexpress/callsite-record": "^4.1.7",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.9.0",
     "address": "^2.0.3",
     "async-exit-hook": "^2.0.1",
     "babel-plugin-module-resolver": "^5.0.3",
@@ -103,8 +103,8 @@
     "dedent": "^1.7.2",
     "del": "^8.0.1",
     "device-specs": "^1.0.1",
-    "devtools-protocol": "^0.0.1608973",
-    "diff": "^8.0.4",
+    "devtools-protocol": "^0.0.1629771",
+    "diff": "^9.0.0",
     "elegant-spinner": "^3.0.0",
     "email-validator": "^2.0.4",
     "emittery": "^2.0.0",
@@ -131,9 +131,9 @@
     "moment": "^2.30.1",
     "moment-duration-format-commonjs": "^1.0.1",
     "mustache": "^4.2.0",
-    "nanoid": "^5.1.7",
+    "nanoid": "^5.1.11",
     "os-family": "^1.1.0",
-    "parse5": "^8.0.0",
+    "parse5": "^8.0.1",
     "pify": "^6.1.0",
     "pinkie": "^2.0.4",
     "pngjs": "^7.0.0",
@@ -146,7 +146,7 @@
     "resolve-cwd": "^3.0.0",
     "resolve-from": "^5.0.0",
     "sanitize-filename": "^1.6.4",
-    "semver": "^7.7.4",
+    "semver": "^7.8.0",
     "set-cookie-parser": "^3.1.0",
     "source-map-support": "^0.5.21",
     "strip-bom": "^5.0.0",
@@ -162,7 +162,7 @@
     "time-limit-promise": "^1.0.4",
     "tmp": "0.2.5",
     "tree-kill": "^1.2.2",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "unquote": "^1.1.1",
     "url-to-options": "^2.0.0"
   },
@@ -291,7 +291,7 @@
       },
       "@babel/preset-env": {
         "from": "^7.23.2",
-        "to": "^7.29.2"
+        "to": "^7.29.5"
       },
       "@babel/preset-flow": {
         "from": "^7.22.15",
@@ -311,7 +311,7 @@
       },
       "@types/node": {
         "from": "20.14.5",
-        "to": "^25.6.0"
+        "to": "^25.9.0"
       },
       "address": {
         "from": "^2.0.2",
@@ -367,11 +367,11 @@
       },
       "devtools-protocol": {
         "from": "0.0.1109433",
-        "to": "^0.0.1608973"
+        "to": "^0.0.1629771"
       },
       "diff": {
         "from": "^8.0.3",
-        "to": "^8.0.4"
+        "to": "^9.0.0"
       },
       "elegant-spinner": {
         "from": "^1.0.1",
@@ -459,7 +459,7 @@
       },
       "nanoid": {
         "from": "^3.1.31",
-        "to": "^5.1.7"
+        "to": "^5.1.11"
       },
       "os-family": {
         "from": "^1.0.0",
@@ -467,7 +467,7 @@
       },
       "parse5": {
         "from": "^1.5.0",
-        "to": "^8.0.0"
+        "to": "^8.0.1"
       },
       "pify": {
         "from": "^2.3.0",
@@ -495,7 +495,7 @@
       },
       "semver": {
         "from": "^7.5.3",
-        "to": "^7.7.4"
+        "to": "^7.8.0"
       },
       "set-cookie-parser": {
         "from": "^2.5.1",
@@ -527,13 +527,13 @@
       },
       "typescript": {
         "from": "4.7.4",
-        "to": "^6.0.2"
+        "to": "^6.0.3"
       }
     },
     "depsUpdated": 71,
     "originalPackage": "testcafe",
     "originalVersion": "3.7.4",
-    "processedAt": "2026-04-10T05:05:49.635Z",
+    "processedAt": "2026-05-19T04:46:43.327Z",
     "smokeTest": "passed"
   }
 }

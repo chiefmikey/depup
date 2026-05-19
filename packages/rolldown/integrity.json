@@ -259,6 +259,23 @@
       "status": "failed",
       "timestamp": "2026-05-16T07:02:23.711Z",
       "version": "1.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@oxc-project/types": {
+          "from": "=0.130.0",
+          "to": "^0.132.0"
+        },
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:46:15.376Z",
+      "version": "1.0.1-depup.2"
     }
   }
 }
