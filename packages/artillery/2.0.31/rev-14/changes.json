@@ -2,47 +2,47 @@
   "bumped": {
     "@aws-sdk/client-cloudwatch": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-cloudwatch-logs": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-ec2": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-ecs": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-iam": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-lambda": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-sqs": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-ssm": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/client-sts": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@aws-sdk/credential-providers": {
       "from": "^3.1034.0",
-      "to": "^3.1044.0"
+      "to": "^3.1049.0"
     },
     "@azure/identity": {
       "from": "^4.13.0",
@@ -54,15 +54,15 @@
     },
     "@oclif/core": {
       "from": "^4.8.0",
-      "to": "^4.11.1"
+      "to": "^4.11.3"
     },
     "@oclif/plugin-help": {
       "from": "^6.2.36",
-      "to": "^6.2.46"
+      "to": "^6.2.49"
     },
     "@oclif/plugin-not-found": {
       "from": "^3.2.73",
-      "to": "^3.2.82"
+      "to": "^3.2.86"
     },
     "@upstash/redis": {
       "from": "^1.36.1",
@@ -90,7 +90,7 @@
     },
     "dependency-tree": {
       "from": "^11.2.0",
-      "to": "^11.4.3"
+      "to": "^11.5.0"
     },
     "detective-es6": {
       "from": "^5.0.1",
@@ -142,9 +142,9 @@
     },
     "walk-sync": {
       "from": "^0.2.3",
-      "to": "^4.0.1"
+      "to": "^4.0.2"
     }
   },
-  "timestamp": "2026-05-07T07:16:29.723Z",
+  "timestamp": "2026-05-19T04:35:43.568Z",
   "totalUpdated": 36
 }

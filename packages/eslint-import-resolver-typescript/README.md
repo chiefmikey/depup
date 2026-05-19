@@ -12,7 +12,7 @@ npm install @depup/eslint-import-resolver-typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.4.4 | **DepUp version**: 4.4.4-depup.1 | **Updated**: 4/14/2026 | **Import test**: passed
+**Original version**: 4.4.4 | **DepUp version**: 4.4.4-depup.2 | **Updated**: 5/18/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eslint-import-context | `^0.1.8` | `^0.2.0` |
 | get-tsconfig | `^4.10.1` | `^4.14.0` |
 | tinyglobby | `^0.2.14` | `^0.2.16` |
-| unrs-resolver | `^1.7.11` | `^1.11.1` |
+| unrs-resolver | `^1.7.11` | `^1.12.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-import-resolver-typescript&labels=bug).

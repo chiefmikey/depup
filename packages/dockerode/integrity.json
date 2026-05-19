@@ -163,6 +163,31 @@
       "status": "failed",
       "timestamp": "2026-05-14T07:16:31.121Z",
       "version": "5.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.11.1",
+          "to": "^1.14.3"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.7.13",
+          "to": "^0.8.1"
+        },
+        "protobufjs": {
+          "from": "^7.3.2",
+          "to": "^8.4.0"
+        },
+        "tar-fs": {
+          "from": "^2.1.4",
+          "to": "^3.1.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:36:24.850Z",
+      "version": "5.0.0-depup.3"
     }
   }
 }

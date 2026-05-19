@@ -301,6 +301,19 @@
       "status": "failed",
       "timestamp": "2026-05-15T07:23:47.678Z",
       "version": "42.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.9.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:36:28.303Z",
+      "version": "42.1.0-depup.1"
     }
   }
 }

@@ -33,7 +33,7 @@
   "homepage": "https://github.com/tediousjs/tedious",
   "bugs": "https://github.com/tediousjs/tedious/issues",
   "license": "MIT",
-  "version": "19.2.1-depup.2",
+  "version": "19.2.1-depup.7",
   "main": "./lib/tedious.js",
   "types": "./lib/tedious.d.ts",
   "repository": {
@@ -47,9 +47,9 @@
     "@azure/core-auth": "^1.10.1",
     "@azure/identity": "^4.13.1",
     "@azure/keyvault-keys": "^4.10.0",
-    "@js-joda/core": "^6.0.0",
-    "@types/node": "^25.5.0",
-    "bl": "^6.1.6",
+    "@js-joda/core": "^6.0.1",
+    "@types/node": "^25.9.0",
+    "bl": "^7.0.2",
     "iconv-lite": "^0.7.2",
     "js-md4": "^0.3.2",
     "native-duplexpair": "^1.0.0",
@@ -158,15 +158,15 @@
       },
       "@js-joda/core": {
         "from": "^5.6.5",
-        "to": "^6.0.0"
+        "to": "^6.0.1"
       },
       "@types/node": {
         "from": ">=18",
-        "to": "^25.5.0"
+        "to": "^25.9.0"
       },
       "bl": {
         "from": "^6.1.4",
-        "to": "^6.1.6"
+        "to": "^7.0.2"
       },
       "iconv-lite": {
         "from": "^0.7.0",
@@ -176,7 +176,7 @@
     "depsUpdated": 7,
     "originalPackage": "tedious",
     "originalVersion": "19.2.1",
-    "processedAt": "2026-03-27T08:23:45.098Z",
-    "smokeTest": "passed"
+    "processedAt": "2026-05-19T04:37:41.988Z",
+    "smokeTest": "failed"
   }
 }
