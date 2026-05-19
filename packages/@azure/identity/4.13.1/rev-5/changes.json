@@ -30,7 +30,11 @@
     },
     "@azure/msal-browser": {
       "from": "^5.5.0",
-      "to": "^5.6.1"
+      "to": "^5.11.0"
+    },
+    "@azure/msal-node": {
+      "from": "^5.1.0",
+      "to": "^5.2.2"
     },
     "open": {
       "from": "^10.1.0",
@@ -41,6 +45,6 @@
       "to": "^2.8.1"
     }
   },
-  "timestamp": "2026-03-20T04:38:21.448Z",
-  "totalUpdated": 10
+  "timestamp": "2026-05-19T22:08:32.975Z",
+  "totalUpdated": 11
 }
