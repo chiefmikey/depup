@@ -160,5 +160,36 @@
       "timestamp": "2026-05-12T07:17:06.218Z",
       "version": "0.3.29-depup.1"
     }
+  },
+  "0.3.30": {
+    "0": {
+      "changes": {
+        "ansis": {
+          "from": "^4.2.0",
+          "to": "^4.3.0"
+        },
+        "dotenv": {
+          "from": "^16.6.1",
+          "to": "^17.4.2"
+        },
+        "glob": {
+          "from": "^10.5.0",
+          "to": "^13.0.6"
+        },
+        "uuid": {
+          "from": "^11.1.1",
+          "to": "^14.0.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:34:11.971Z",
+      "version": "0.3.30-depup.0"
+    }
   }
 }
