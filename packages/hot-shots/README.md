@@ -12,7 +12,7 @@ npm install @depup/hot-shots
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.3.1 | **DepUp version**: 14.3.1-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 14.3.1 | **DepUp version**: 14.3.1-depup.0 | **Updated**: 4/6/2026 | **Import test**: passed
 
 ## What changed
 
