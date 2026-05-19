@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.28 | **Updated**: 5/16/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.29 | **Updated**: 5/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.59.3` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.59.3` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.59.4` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.59.4` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -62,11 +62,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cors | `^2.8.5` | `^2.8.6` |
 | css-loader | `^5.2.7` | `^7.1.4` |
 | css-minimizer-webpack-plugin | `^2.0.0` | `^8.0.0` |
-| date-fns | `^2.30.0` | `^4.1.0` |
+| date-fns | `^2.30.0` | `^4.2.1` |
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
-| enhanced-resolve | `^5.15.0` | `^5.21.3` |
+| enhanced-resolve | `^5.15.0` | `^5.21.4` |
 | eslint | `^7.32.0` | `^10.4.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |

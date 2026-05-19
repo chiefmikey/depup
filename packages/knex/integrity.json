@@ -467,6 +467,43 @@
       "status": "failed",
       "timestamp": "2026-05-03T07:05:33.434Z",
       "version": "3.2.10-depup.0"
+    },
+    "1": {
+      "changes": {
+        "colorette": {
+          "from": "2.0.19",
+          "to": "^2.0.20"
+        },
+        "commander": {
+          "from": "^10.0.0",
+          "to": "^14.0.3"
+        },
+        "debug": {
+          "from": "4.3.4",
+          "to": "^4.4.3"
+        },
+        "escalade": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "interpret": {
+          "from": "^2.2.0",
+          "to": "^3.1.1"
+        },
+        "pg-connection-string": {
+          "from": "2.6.2",
+          "to": "^2.13.0"
+        },
+        "tildify": {
+          "from": "2.0.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:39:41.897Z",
+      "version": "3.2.10-depup.1"
     }
   }
 }

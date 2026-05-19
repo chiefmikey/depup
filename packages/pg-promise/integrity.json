@@ -4,6 +4,19 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.912Z",
       "version": "12.6.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "pg": {
+          "from": "8.20.0",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T04:40:59.101Z",
+      "version": "12.6.2-depup.1"
     }
   }
 }

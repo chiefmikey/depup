@@ -12,7 +12,7 @@ npm install @depup/sequelize
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.27 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 6.37.8 | **DepUp version**: 6.37.8-depup.28 | **Updated**: 5/18/2026 | **Import test**: passed
 
 ## What changed
 
@@ -26,7 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.17.21` | `^4.18.1` |
 | moment | `^2.29.4` | `^2.30.1` |
 | moment-timezone | `^0.5.43` | `^0.6.2` |
-| pg-connection-string | `^2.6.1` | `^2.12.0` |
+| pg-connection-string | `^2.6.1` | `^2.13.0` |
 | retry-as-promised | `^7.0.4` | `^7.1.1` |
 | semver | `^7.5.4` | `^7.8.0` |
 | sequelize-pool | `^7.1.0` | `^8.0.1` |
