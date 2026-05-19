@@ -196,6 +196,27 @@
       "status": "failed",
       "timestamp": "2026-05-09T06:57:41.177Z",
       "version": "0.8.14-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@expo/spawn-async": {
+          "from": "^1.7.2",
+          "to": "^1.8.0"
+        },
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "semver": {
+          "from": "^7.6.0",
+          "to": "^7.8.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T18:06:38.841Z",
+      "version": "0.8.14-depup.2"
     }
   }
 }
