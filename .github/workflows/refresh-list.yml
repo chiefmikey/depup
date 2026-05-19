@@ -1,9 +1,6 @@
 name: Refresh Curated Package List
 
 on:
-  schedule:
-    # Weekly on Sunday at 00:00 UTC
-    - cron: '0 0 * * 0'
   workflow_dispatch: {}
 
 jobs:
