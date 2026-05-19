@@ -1,0 +1,84 @@
+{
+  "name": "@depup/tiptap__starter-kit",
+  "description": "starter kit for tiptap (with updated dependencies)",
+  "version": "3.23.5-depup.0",
+  "homepage": "https://tiptap.dev",
+  "keywords": [
+    "@tiptap/starter-kit",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "tiptap",
+    "tiptap starter kit"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ueberdosis"
+  },
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "src",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@tiptap/core": "^3.23.5",
+    "@tiptap/extension-blockquote": "^3.23.5",
+    "@tiptap/extension-bold": "^3.23.5",
+    "@tiptap/extension-bullet-list": "^3.23.5",
+    "@tiptap/extension-code": "^3.23.5",
+    "@tiptap/extension-code-block": "^3.23.5",
+    "@tiptap/extension-document": "^3.23.5",
+    "@tiptap/extension-dropcursor": "^3.23.5",
+    "@tiptap/extension-gapcursor": "^3.23.5",
+    "@tiptap/extension-hard-break": "^3.23.5",
+    "@tiptap/extension-heading": "^3.23.5",
+    "@tiptap/extension-horizontal-rule": "^3.23.5",
+    "@tiptap/extension-italic": "^3.23.5",
+    "@tiptap/extension-link": "^3.23.5",
+    "@tiptap/extension-list": "^3.23.5",
+    "@tiptap/extension-list-item": "^3.23.5",
+    "@tiptap/extension-list-keymap": "^3.23.5",
+    "@tiptap/extension-ordered-list": "^3.23.5",
+    "@tiptap/extension-paragraph": "^3.23.5",
+    "@tiptap/extension-strike": "^3.23.5",
+    "@tiptap/extension-text": "^3.23.5",
+    "@tiptap/extension-underline": "^3.23.5",
+    "@tiptap/extensions": "^3.23.5",
+    "@tiptap/pm": "^3.23.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "directory": "packages/starter-kit"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "prettier ./src/ --check && eslint --cache --quiet --no-error-on-unmatched-pattern ./src/"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@tiptap/starter-kit",
+    "originalVersion": "3.23.5",
+    "processedAt": "2026-05-19T14:00:54.325Z",
+    "smokeTest": "passed"
+  }
+}
