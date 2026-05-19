@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.12 | **Updated**: 5/16/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.13 | **Updated**: 5/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -39,14 +39,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jest-resolve | `^27.4.2` | `^30.4.1` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
 | mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
-| postcss | `^8.4.4` | `^8.5.14` |
+| postcss | `^8.4.4` | `^8.5.15` |
 | postcss-loader | `^6.2.1` | `^8.2.1` |
 | postcss-normalize | `^10.0.1` | `^13.0.1` |
 | postcss-preset-env | `^7.0.1` | `^11.3.0` |
 | react-refresh | `^0.11.0` | `^0.18.0` |
 | resolve | `^1.20.0` | `^1.22.12` |
 | resolve-url-loader | `^4.0.0` | `^5.0.0` |
-| sass-loader | `^12.3.0` | `^16.0.8` |
+| sass-loader | `^12.3.0` | `^17.0.0` |
 | semver | `^7.3.5` | `^7.8.0` |
 | source-map-loader | `^3.0.0` | `^5.0.0` |
 | style-loader | `^3.3.1` | `^4.0.0` |

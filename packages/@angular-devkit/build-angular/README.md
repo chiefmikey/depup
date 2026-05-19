@@ -12,7 +12,7 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.11 | **DepUp version**: 21.2.11-depup.0 | **Updated**: 5/13/2026 | **Import test**: passed
+**Original version**: 21.2.11 | **DepUp version**: 21.2.11-depup.1 | **Updated**: 5/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -27,13 +27,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild-wasm | `0.27.3` | `^0.28.0` |
 | http-proxy-middleware | `3.0.5` | `^4.0.0` |
 | less | `4.4.2` | `^4.6.4` |
-| less-loader | `12.3.1` | `^12.3.2` |
+| less-loader | `12.3.1` | `^12.3.3` |
 | mini-css-extract-plugin | `2.10.0` | `^2.10.2` |
 | ora | `9.3.0` | `^9.4.0` |
-| postcss | `8.5.12` | `^8.5.14` |
+| postcss | `8.5.12` | `^8.5.15` |
 | postcss-loader | `8.2.0` | `^8.2.1` |
 | sass | `1.97.3` | `^1.99.0` |
-| sass-loader | `16.0.7` | `^16.0.8` |
+| sass-loader | `16.0.7` | `^17.0.0` |
 | semver | `7.7.4` | `^7.8.0` |
 | terser | `5.46.0` | `^5.47.1` |
 | tinyglobby | `0.2.15` | `^0.2.16` |

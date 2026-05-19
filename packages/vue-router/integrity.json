@@ -261,6 +261,47 @@
       "status": "failed",
       "timestamp": "2026-05-14T07:12:04.174Z",
       "version": "5.0.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@vue-macros/common": {
+          "from": "^3.1.1",
+          "to": "^3.1.2"
+        },
+        "@vue/devtools-api": {
+          "from": "^8.1.1",
+          "to": "^8.1.2"
+        },
+        "ast-walker-scope": {
+          "from": "^0.8.3",
+          "to": "^0.9.0"
+        },
+        "local-pkg": {
+          "from": "^1.1.2",
+          "to": "^1.2.0"
+        },
+        "mlly": {
+          "from": "^1.8.0",
+          "to": "^1.8.2"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        },
+        "yaml": {
+          "from": "^2.8.2",
+          "to": "^2.9.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-19T22:04:32.527Z",
+      "version": "5.0.7-depup.1"
     }
   }
 }
