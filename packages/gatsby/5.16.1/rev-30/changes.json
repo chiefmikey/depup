@@ -50,15 +50,15 @@
     },
     "@graphql-codegen/plugin-helpers": {
       "from": "^2.7.2",
-      "to": "^7.0.0"
+      "to": "^7.0.1"
     },
     "@graphql-codegen/typescript": {
       "from": "^2.8.8",
-      "to": "^6.0.0"
+      "to": "^6.0.1"
     },
     "@graphql-codegen/typescript-operations": {
       "from": "^2.5.13",
-      "to": "^6.0.0"
+      "to": "^6.0.2"
     },
     "@graphql-tools/code-file-loader": {
       "from": "^7.3.23",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.59.2"
+      "to": "^8.59.4"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.59.2"
+      "to": "^8.59.4"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.16.0"
+      "to": "^1.16.1"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -178,7 +178,7 @@
     },
     "date-fns": {
       "from": "^2.30.0",
-      "to": "^4.1.0"
+      "to": "^4.2.1"
     },
     "debug": {
       "from": "^4.3.4",
@@ -194,11 +194,11 @@
     },
     "enhanced-resolve": {
       "from": "^5.15.0",
-      "to": "^5.21.0"
+      "to": "^5.21.5"
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.3.0"
+      "to": "^10.4.0"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -250,7 +250,7 @@
     },
     "fs-extra": {
       "from": "^11.2.0",
-      "to": "^11.3.4"
+      "to": "^11.3.5"
     },
     "glob": {
       "from": "^7.2.3",
@@ -262,11 +262,11 @@
     },
     "got": {
       "from": "^11.8.6",
-      "to": "^15.0.3"
+      "to": "^15.0.5"
     },
     "graphql": {
       "from": "^16.7.1",
-      "to": "^16.13.2"
+      "to": "^16.14.0"
     },
     "graphql-compose": {
       "from": "^9.0.10",
@@ -350,7 +350,7 @@
     },
     "postcss": {
       "from": "^8.4.24",
-      "to": "^8.5.14"
+      "to": "^8.5.15"
     },
     "postcss-loader": {
       "from": "^5.3.0",
@@ -366,7 +366,7 @@
     },
     "react-server-dom-webpack": {
       "from": "0.0.0-experimental-c8b778b7f-20220825",
-      "to": "^19.2.5"
+      "to": "^19.2.6"
     },
     "redux": {
       "from": "4.2.1",
@@ -378,7 +378,7 @@
     },
     "semver": {
       "from": "^7.5.3",
-      "to": "^7.7.4"
+      "to": "^7.8.0"
     },
     "signal-exit": {
       "from": "^3.0.7",
@@ -418,7 +418,7 @@
     },
     "terser-webpack-plugin": {
       "from": "^5.3.9",
-      "to": "^5.5.0"
+      "to": "^5.6.0"
     },
     "tmp": {
       "from": "^0.2.1",
@@ -430,7 +430,7 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.106.2"
+      "to": "^5.107.0"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
@@ -442,13 +442,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.31.0"
+      "to": "^5.31.1"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-05-05T07:00:49.538Z",
+  "timestamp": "2026-05-20T10:06:35.512Z",
   "totalUpdated": 112
 }
