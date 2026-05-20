@@ -112,6 +112,19 @@
       "status": "failed",
       "timestamp": "2026-05-18T07:37:31.241Z",
       "version": "5.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "lru-cache": {
+          "from": "^11.2.1",
+          "to": "^11.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-20T02:03:54.900Z",
+      "version": "5.0.0-depup.2"
     }
   }
 }
