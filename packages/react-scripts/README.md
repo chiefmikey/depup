@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.13 | **Updated**: 5/19/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.14 | **Updated**: 5/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | style-loader | `^3.3.1` | `^4.0.0` |
 | tailwindcss | `^3.0.2` | `^4.3.0` |
 | terser-webpack-plugin | `^5.2.5` | `^5.6.0` |
-| webpack | `^5.64.4` | `^5.106.2` |
+| webpack | `^5.64.4` | `^5.107.0` |
 | webpack-dev-server | `^4.6.0` | `^5.2.4` |
 | webpack-manifest-plugin | `^4.0.2` | `^6.0.1` |
 | workbox-webpack-plugin | `^6.4.1` | `^7.4.1` |

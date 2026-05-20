@@ -12,17 +12,17 @@ npm install @depup/react-pdf-viewer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.1.0 | **DepUp version**: 0.1.0-depup.3 | **Updated**: 4/27/2026 | **Import test**: failed
+**Original version**: 0.1.0 | **DepUp version**: 0.1.0-depup.4 | **Updated**: 5/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | pdfjs-dist | `^2.0.197` | `^5.7.284` |
-| react | `^16.2.0` | `^19.2.5` |
-| react-dom | `^16.2.0` | `^19.2.5` |
-| webpack | `^3.10.0` | `^5.106.2` |
-| webpack-dev-server | `^2.9.7` | `^5.2.3` |
+| react | `^16.2.0` | `^19.2.6` |
+| react-dom | `^16.2.0` | `^19.2.6` |
+| webpack | `^3.10.0` | `^5.107.0` |
+| webpack-dev-server | `^2.9.7` | `^5.2.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-pdf-viewer&labels=bug).
