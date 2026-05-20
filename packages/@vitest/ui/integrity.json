@@ -99,5 +99,24 @@
       "timestamp": "2026-05-12T07:09:37.934Z",
       "version": "4.1.6-depup.0"
     }
+  },
+  "4.1.7": {
+    "0": {
+      "changes": {
+        "fflate": {
+          "from": "^0.8.2",
+          "to": "^0.8.3"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-20T10:02:39.156Z",
+      "version": "4.1.7-depup.0"
+    }
   }
 }
