@@ -12,25 +12,21 @@ npm install @depup/webpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.106.2 | **DepUp version**: 5.106.2-depup.5 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 5.107.0 | **DepUp version**: 5.107.0-depup.0 | **Updated**: 5/20/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/eslint-scope | `^3.7.7` | `^9.1.0` |
 | @types/estree | `^1.0.8` | `^1.0.9` |
 | acorn-import-phases | `^1.0.3` | `^1.0.4` |
 | browserslist | `^4.28.1` | `^4.28.2` |
 | chrome-trace-event | `^1.0.2` | `^1.0.4` |
-| enhanced-resolve | `^5.20.0` | `^5.21.2` |
-| es-module-lexer | `^2.0.0` | `^2.1.0` |
+| enhanced-resolve | `^5.21.4` | `^5.21.5` |
 | eslint-scope | `5.1.1` | `^9.1.2` |
 | events | `^3.2.0` | `^3.3.0` |
-| loader-runner | `^4.3.1` | `^4.3.2` |
 | tapable | `^2.3.0` | `^2.3.3` |
-| terser-webpack-plugin | `^5.3.17` | `^5.6.0` |
-| webpack-sources | `^3.3.4` | `^3.4.1` |
+| terser-webpack-plugin | `^5.5.0` | `^5.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack&labels=bug).

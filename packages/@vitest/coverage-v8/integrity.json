@@ -99,5 +99,24 @@
       "timestamp": "2026-05-12T07:09:00.997Z",
       "version": "4.1.6-depup.0"
     }
+  },
+  "4.1.7": {
+    "0": {
+      "changes": {
+        "magicast": {
+          "from": "^0.5.2",
+          "to": "^0.5.3"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-20T10:01:22.312Z",
+      "version": "4.1.7-depup.0"
+    }
   }
 }
