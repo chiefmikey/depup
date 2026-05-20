@@ -1,6 +1,6 @@
 {
   "name": "@depup/elastic-apm-node",
-  "version": "4.15.0-depup.0",
+  "version": "4.15.0-depup.5",
   "description": "The official Elastic APM agent for Node.js (with updated dependencies)",
   "type": "commonjs",
   "main": "index.js",
@@ -95,9 +95,9 @@
   "homepage": "https://github.com/elastic/apm-agent-nodejs",
   "dependencies": {
     "@elastic/ecs-pino-format": "^1.5.0",
-    "@opentelemetry/api": "^1.9.0",
-    "@opentelemetry/core": "^2.6.0",
-    "@opentelemetry/sdk-metrics": "^2.6.0",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/core": "^2.7.1",
+    "@opentelemetry/sdk-metrics": "^2.7.1",
     "after-all-results": "^2.0.0",
     "agentkeepalive": "^4.6.0",
     "async-value-promise": "^1.1.1",
@@ -112,9 +112,9 @@
     "fast-safe-stringify": "^2.1.1",
     "fast-stream-to-buffer": "^1.0.0",
     "http-headers": "^3.0.2",
-    "import-in-the-middle": "^3.0.0",
+    "import-in-the-middle": "^3.0.1",
     "json-bigint": "^1.0.0",
-    "lru-cache": "^11.2.7",
+    "lru-cache": "^11.5.0",
     "measured-reporting": "^2.0.0",
     "module-details-from-path": "^1.0.4",
     "monitor-event-loop-delay": "^1.0.0",
@@ -125,7 +125,7 @@
     "readable-stream": "^4.7.0",
     "relative-microtime": "^2.0.0",
     "require-in-the-middle": "^8.0.1",
-    "semver": "^7.7.4",
+    "semver": "^7.8.0",
     "shallow-clone-shim": "^2.0.0",
     "source-map": "^0.8.0-beta.0",
     "sql-summary": "^1.0.1",
@@ -219,15 +219,15 @@
     "changes": {
       "@opentelemetry/api": {
         "from": "^1.4.1",
-        "to": "^1.9.0"
+        "to": "^1.9.1"
       },
       "@opentelemetry/core": {
         "from": "^1.11.0",
-        "to": "^2.6.0"
+        "to": "^2.7.1"
       },
       "@opentelemetry/sdk-metrics": {
         "from": "^1.12.0",
-        "to": "^2.6.0"
+        "to": "^2.7.1"
       },
       "agentkeepalive": {
         "from": "^4.2.1",
@@ -259,11 +259,11 @@
       },
       "import-in-the-middle": {
         "from": "1.14.4",
-        "to": "^3.0.0"
+        "to": "^3.0.1"
       },
       "lru-cache": {
         "from": "10.2.0",
-        "to": "^11.2.7"
+        "to": "^11.5.0"
       },
       "measured-reporting": {
         "from": "^1.51.1",
@@ -287,13 +287,13 @@
       },
       "semver": {
         "from": "^7.5.4",
-        "to": "^7.7.4"
+        "to": "^7.8.0"
       }
     },
     "depsUpdated": 18,
     "originalPackage": "elastic-apm-node",
     "originalVersion": "4.15.0",
-    "processedAt": "2026-03-19T03:31:07.781Z",
+    "processedAt": "2026-05-20T02:07:07.229Z",
     "smokeTest": "failed"
   }
 }

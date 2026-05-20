@@ -164,6 +164,39 @@
       "status": "failed",
       "timestamp": "2026-05-18T07:38:25.017Z",
       "version": "5.15.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/readable-stream": {
+          "from": "^4.0.21",
+          "to": "^4.0.23"
+        },
+        "debug": {
+          "from": "^4.4.1",
+          "to": "^4.4.3"
+        },
+        "lru-cache": {
+          "from": "^10.4.3",
+          "to": "^11.5.0"
+        },
+        "socks": {
+          "from": "^2.8.6",
+          "to": "^2.8.9"
+        },
+        "worker-timers": {
+          "from": "^8.0.23",
+          "to": "^8.0.31"
+        },
+        "ws": {
+          "from": "^8.18.3",
+          "to": "^8.20.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-20T02:07:42.346Z",
+      "version": "5.15.1-depup.3"
     }
   }
 }
