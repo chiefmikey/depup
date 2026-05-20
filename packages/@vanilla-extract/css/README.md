@@ -12,7 +12,7 @@ npm install @depup/vanilla-extract__css
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.20.1 | **DepUp version**: 1.20.1-depup.2 | **Updated**: 5/18/2026 | **Import test**: passed
+**Original version**: 1.20.1 | **DepUp version**: 1.20.1-depup.3 | **Updated**: 5/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | css-what | `^6.1.0` | `^8.0.0` |
 | dedent | `^1.5.3` | `^1.7.2` |
 | deepmerge | `^4.2.2` | `^4.3.1` |
-| lru-cache | `^10.4.3` | `^11.4.0` |
+| lru-cache | `^10.4.3` | `^11.5.0` |
 | media-query-parser | `^2.0.2` | `^3.0.2` |
 | modern-ahocorasick | `^1.0.0` | `^2.0.4` |
 | picocolors | `^1.0.0` | `^1.1.1` |

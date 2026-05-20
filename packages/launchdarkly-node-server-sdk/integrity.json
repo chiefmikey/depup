@@ -1,36 +1,5 @@
 {
   "7.0.4": {
-    "0": {
-      "changes": {
-        "async": {
-          "from": "^3.2.4",
-          "to": "^3.2.6"
-        },
-        "launchdarkly-eventsource": {
-          "from": "1.4.4",
-          "to": "^2.2.0"
-        },
-        "lru-cache": {
-          "from": "^6.0.0",
-          "to": "^11.2.7"
-        },
-        "node-cache": {
-          "from": "^5.1.0",
-          "to": "^5.1.2"
-        },
-        "semver": {
-          "from": "^7.5.4",
-          "to": "^7.7.4"
-        },
-        "uuid": {
-          "from": "^8.3.2",
-          "to": "^13.0.0"
-        }
-      },
-      "status": "published",
-      "timestamp": "2026-03-17T22:57:04.329Z",
-      "version": "7.0.4-depup.0"
-    },
     "1": {
       "changes": {
         "async": {
@@ -162,6 +131,39 @@
       "status": "failed",
       "timestamp": "2026-05-18T07:38:22.084Z",
       "version": "7.0.4-depup.4"
+    },
+    "5": {
+      "changes": {
+        "async": {
+          "from": "^3.2.4",
+          "to": "^3.2.6"
+        },
+        "launchdarkly-eventsource": {
+          "from": "1.4.4",
+          "to": "^2.2.0"
+        },
+        "lru-cache": {
+          "from": "^6.0.0",
+          "to": "^11.5.0"
+        },
+        "node-cache": {
+          "from": "^5.1.0",
+          "to": "^5.1.2"
+        },
+        "semver": {
+          "from": "^7.5.4",
+          "to": "^7.8.0"
+        },
+        "uuid": {
+          "from": "^8.3.2",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-20T02:02:54.931Z",
+      "version": "7.0.4-depup.5"
     }
   }
 }

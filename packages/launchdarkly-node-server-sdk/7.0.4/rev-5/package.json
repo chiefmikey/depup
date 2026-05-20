@@ -1,7 +1,7 @@
 {
   "name": "@depup/launchdarkly-node-server-sdk",
-  "version": "7.0.4-depup.0",
-  "description": "[DepUp] LaunchDarkly Server-Side SDK for Node.js",
+  "version": "7.0.4-depup.5",
+  "description": "LaunchDarkly Server-Side SDK for Node.js (with updated dependencies)",
   "main": "index.js",
   "scripts": {
     "test": "jest --ci --coverage --runInBand",
@@ -18,10 +18,12 @@
     "url": "https://github.com/launchdarkly/node-server-sdk.git"
   },
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "launchdarkly-node-server-sdk",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "launchdarkly",
     "analytics",
     "client"
@@ -34,11 +36,11 @@
   "dependencies": {
     "async": "^3.2.6",
     "launchdarkly-eventsource": "^2.2.0",
-    "lru-cache": "^11.2.7",
+    "lru-cache": "^11.5.0",
     "node-cache": "^5.1.2",
-    "semver": "^7.7.4",
+    "semver": "^7.8.0",
     "tunnel": "0.0.6",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "engines": {
     "node": ">= 12.0.0"
@@ -81,7 +83,7 @@
       },
       "lru-cache": {
         "from": "^6.0.0",
-        "to": "^11.2.7"
+        "to": "^11.5.0"
       },
       "node-cache": {
         "from": "^5.1.0",
@@ -89,17 +91,17 @@
       },
       "semver": {
         "from": "^7.5.4",
-        "to": "^7.7.4"
+        "to": "^7.8.0"
       },
       "uuid": {
         "from": "^8.3.2",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
       }
     },
     "depsUpdated": 6,
     "originalPackage": "launchdarkly-node-server-sdk",
     "originalVersion": "7.0.4",
-    "processedAt": "2026-03-17T22:56:56.202Z",
+    "processedAt": "2026-05-20T02:02:52.829Z",
     "smokeTest": "passed"
   }
 }
