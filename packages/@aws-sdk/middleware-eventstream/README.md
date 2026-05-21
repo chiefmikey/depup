@@ -12,14 +12,13 @@ npm install @depup/aws-sdk__middleware-eventstream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.12 | **DepUp version**: 3.972.12-depup.0 | **Updated**: 5/16/2026 | **Import test**: passed
+**Original version**: 3.972.13 | **DepUp version**: 3.972.13-depup.0 | **Updated**: 5/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.24.2` | `^3.24.3` |
-| @smithy/types | `^4.14.1` | `^4.14.2` |
+| @smithy/core | `^3.24.3` | `^3.24.4` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
