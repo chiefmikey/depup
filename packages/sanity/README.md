@@ -12,13 +12,14 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.1 | **Updated**: 5/20/2026 | **Import test**: failed
+**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.2 | **Updated**: 5/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @algorithm.ts/lcs | `^4.0.5` | `^4.0.6` |
+| @date-fns/tz | `^1.4.1` | `^1.5.0` |
 | @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
@@ -41,13 +42,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/sdk | `^2.8.0` | `^2.11.1` |
 | @sanity/ui | `^3.1.14` | `^3.2.0` |
 | @sentry/react | `^8.55.0` | `^10.53.1` |
+| @tanstack/react-virtual | `^3.13.24` | `^3.13.25` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
 | date-fns | `^4.1.0` | `^4.2.1` |
 | groq-js | `^1.29.0` | `^1.30.1` |
 | i18next | `^25.8.17` | `^26.2.0` |
 | isomorphic-dompurify | `2.26.0` | `^3.14.0` |
-| motion | `^12.27.1` | `^12.39.0` |
+| motion | `^12.27.1` | `^12.40.0` |
 | nanoid | `^3.3.11` | `^5.1.11` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
 | player.style | `^0.1.9` | `^0.3.4` |
