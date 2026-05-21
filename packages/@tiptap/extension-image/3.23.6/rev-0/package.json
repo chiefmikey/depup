@@ -1,0 +1,64 @@
+{
+  "name": "@depup/tiptap__extension-image",
+  "description": "image extension for tiptap (with updated dependencies)",
+  "version": "3.23.6-depup.0",
+  "homepage": "https://tiptap.dev",
+  "keywords": [
+    "@tiptap/extension-image",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "tiptap",
+    "tiptap extension"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ueberdosis"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@tiptap/core": "^3.23.6"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "3.23.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "directory": "packages/extension-image"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "prettier ./src/ --check && eslint --cache --quiet --no-error-on-unmatched-pattern ./src/"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@tiptap/extension-image",
+    "originalVersion": "3.23.6",
+    "processedAt": "2026-05-21T22:03:31.949Z",
+    "smokeTest": "failed"
+  }
+}
