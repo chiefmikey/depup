@@ -1,0 +1,97 @@
+{
+  "name": "@depup/stream-json",
+  "version": "2.1.0-depup.1",
+  "description": "stream-json is the micro-library of Node.js stream components for creating custom JSON processing pipelines with a minimal memory footprint. It can parse JSON files far exceeding available memory streaming individual primitives using a SAX-inspired API. Includes utilities to stream JSON database dumps. (with updated dependencies)",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "test": "tape6 --flags FO",
+    "test:bun": "tape6-bun --flags FO",
+    "test:deno": "tape6-deno --flags FO",
+    "test:seq": "tape6-seq --flags FO",
+    "test:seq:bun": "bun run `tape6-seq --self` --flags FO",
+    "test:seq:deno": "deno run -A `tape6-seq --self` --flags FO",
+    "test:proc": "tape6-proc --flags FO",
+    "test:proc:bun": "bun run `tape6-proc --self` --flags FO",
+    "test:proc:deno": "deno run -A `tape6-proc --self` -r -A --flags FO",
+    "ts-check": "tsc --noEmit",
+    "ts-test": "tape6 --flags FO 'tests/test-*.*ts'",
+    "ts-test:bun": "tape6-bun --flags FO 'tests/test-*.*ts'",
+    "ts-test:deno": "tape6-deno --flags FO 'tests/test-*.*ts'",
+    "bench": "nano-bench",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "keywords": [
+    "stream-json",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json",
+    "parser",
+    "stream",
+    "streaming",
+    "SAX",
+    "tokenizer",
+    "filter",
+    "pipeline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uhop/stream-json.git"
+  },
+  "author": "Eugene Lazutkin <eugene.lazutkin@gmail.com> (https://www.lazutkin.com/)",
+  "funding": "https://github.com/sponsors/uhop",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/uhop/stream-json#readme",
+  "bugs": {
+    "url": "https://github.com/uhop/stream-json/issues"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md",
+    "llms.txt",
+    "llms-full.txt",
+    "changes.json"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "stream-chain": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "nano-benchmark": "^1.0.15",
+    "prettier": "^3.8.1",
+    "tape-six": "^1.7.13",
+    "tape-six-proc": "^1.2.8",
+    "typescript": "^6.0.2"
+  },
+  "tape6": {
+    "tests": [
+      "/tests/test-*.*js"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "stream-chain": {
+        "from": "^3.6.1",
+        "to": "^4.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "stream-json",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-05-21T02:17:41.740Z",
+    "smokeTest": "passed"
+  }
+}
