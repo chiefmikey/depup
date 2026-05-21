@@ -53,5 +53,24 @@
       "timestamp": "2026-05-19T04:32:25.487Z",
       "version": "4.25.1-depup.0"
     }
+  },
+  "4.25.2": {
+    "0": {
+      "changes": {
+        "react-freeze": {
+          "from": "^1.0.0",
+          "to": "^1.0.4"
+        },
+        "warn-once": {
+          "from": "^0.1.0",
+          "to": "^0.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-21T18:04:38.530Z",
+      "version": "4.25.2-depup.0"
+    }
   }
 }
