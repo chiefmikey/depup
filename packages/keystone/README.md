@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.12 | **Updated**: 5/16/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.13 | **Updated**: 5/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -52,13 +52,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
-| marked | `^0.6.2` | `^18.0.3` |
+| marked | `^0.6.2` | `^18.0.4` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
 | mongoose | `^4.13.14` | `^9.6.2` |
 | morgan | `^1.9.1` | `^1.10.1` |
 | multer | `^1.4.1` | `^2.1.1` |
-| qs | `^6.7.0` | `^6.15.1` |
+| qs | `^6.7.0` | `^6.15.2` |
 | range_check | `^1.4.0` | `^4.1.0` |
 | react | `^15.4.2` | `^19.2.6` |
 | react-color | `^2.14.1` | `^2.19.3` |
@@ -71,11 +71,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-redux | `^5.0.6` | `^9.3.0` |
 | react-router | `^3.0.2` | `^7.15.1` |
 | redux | `^3.7.2` | `^5.0.1` |
-| redux-saga | `^0.15.6` | `^1.4.3` |
+| redux-saga | `^0.15.6` | `^1.5.0` |
 | redux-thunk | `^2.2.0` | `^3.1.0` |
 | react-select | `^1.2.4` | `^5.10.2` |
 | sanitize-filename | `^1.6.1` | `^1.6.4` |
-| tinymce | `^4.9.2` | `^8.5.0` |
+| tinymce | `^4.9.2` | `^8.5.1` |
 | sanitize-html | `^1.20.1` | `^2.17.4` |
 | scmp | `^1.0.2` | `^2.1.0` |
 | semver | `^6.0.0` | `^7.8.0` |
