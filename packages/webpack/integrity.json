@@ -470,5 +470,52 @@
       "timestamp": "2026-05-20T10:01:50.671Z",
       "version": "5.107.0-depup.0"
     }
+  },
+  "5.107.1": {
+    "0": {
+      "changes": {
+        "@types/estree": {
+          "from": "^1.0.8",
+          "to": "^1.0.9"
+        },
+        "acorn-import-phases": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "enhanced-resolve": {
+          "from": "^5.21.4",
+          "to": "^5.21.6"
+        },
+        "eslint-scope": {
+          "from": "5.1.1",
+          "to": "^9.1.2"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.3"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.5.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-21T18:03:19.249Z",
+      "version": "5.107.1-depup.0"
+    }
   }
 }
