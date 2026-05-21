@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.41.0 | **DepUp version**: 6.41.0-depup.0 | **Updated**: 5/21/2026 | **Import test**: failed
+**Original version**: 6.41.0 | **DepUp version**: 6.41.0-depup.1 | **Updated**: 5/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1051.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1052.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
@@ -59,6 +59,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `11.3.4` | `^11.3.5` |
 | glob | `10.5.0` | `^13.0.6` |
 | got | `13.0.0` | `^15.0.5` |
+| gscan | `6.1.0` | `^6.2.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | html5parser | `2.0.2` | `^3.0.0` |
 | human-number | `2.0.12` | `^3.0.0` |
@@ -87,10 +88,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | otplib | `12.0.1` | `^13.4.0` |
 | probe-image-size | `7.2.3` | `^7.3.0` |
 | sanitize-html | `2.17.0` | `^2.17.4` |
-| semver | `7.7.4` | `^7.8.0` |
+| semver | `7.7.4` | `^7.8.1` |
 | stripe | `8.222.0` | `^22.1.1` |
 | superagent | `5.3.1` | `^10.3.0` |
-| terser | `5.46.1` | `^5.47.1` |
+| terser | `5.46.1` | `^5.48.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
 | zod | `4.1.12` | `^4.4.3` |
 
