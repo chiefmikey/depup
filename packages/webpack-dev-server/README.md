@@ -12,7 +12,7 @@ npm install @depup/webpack-dev-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.4 | **DepUp version**: 5.2.4-depup.0 | **Updated**: 5/12/2026 | **Import test**: passed
+**Original version**: 5.2.4 | **DepUp version**: 5.2.4-depup.1 | **Updated**: 5/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/express-serve-static-core | `^4.17.21` | `^5.1.1` |
 | @types/serve-static | `^1.15.5` | `^2.2.0` |
 | @types/ws | `^8.5.10` | `^8.18.1` |
-| bonjour-service | `^1.2.1` | `^1.3.0` |
+| bonjour-service | `^1.2.1` | `^1.4.0` |
 | chokidar | `^3.6.0` | `^5.0.0` |
 | colorette | `^2.0.10` | `^2.0.20` |
 | express | `^4.22.1` | `^5.2.1` |
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | schema-utils | `^4.2.0` | `^4.3.3` |
 | serve-index | `^1.9.1` | `^1.9.2` |
 | webpack-dev-middleware | `^7.4.2` | `^8.0.3` |
-| ws | `^8.18.0` | `^8.20.0` |
+| ws | `^8.18.0` | `^8.20.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-dev-server&labels=bug).
