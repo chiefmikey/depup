@@ -20,5 +20,20 @@
       "timestamp": "2026-05-10T07:06:33.266Z",
       "version": "1.4.3-depup.0"
     }
+  },
+  "1.5.0": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.4",
+          "to": "^7.29.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-21T18:09:30.128Z",
+      "version": "1.5.0-depup.0"
+    }
   }
 }
