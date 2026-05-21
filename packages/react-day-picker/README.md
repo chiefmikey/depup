@@ -12,12 +12,13 @@ npm install @depup/react-day-picker
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.1 | **Updated**: 5/18/2026 | **Import test**: passed
+**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.2 | **Updated**: 5/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @date-fns/tz | `^1.4.1` | `^1.5.0` |
 | date-fns | `^4.1.0` | `^4.2.1` |
 
 
