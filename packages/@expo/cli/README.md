@@ -12,16 +12,14 @@ npm install @depup/expo__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 55.0.32 | **DepUp version**: 55.0.32-depup.0 | **Updated**: 5/21/2026 | **Import test**: failed
+**Original version**: 56.1.10 | **DepUp version**: 56.1.10-depup.0 | **Updated**: 5/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @expo/spawn-async | `^1.7.2` | `^1.8.0` |
+| @expo/schema-utils | `^56.0.0` | `^56.0.1` |
 | @expo/ws-tunnel | `^1.0.1` | `^1.0.6` |
-| @expo/xcpretty | `^4.4.0` | `^4.4.4` |
-| @react-native/dev-middleware | `0.83.6` | `^0.85.3` |
 | bplist-creator | `0.1.0` | `^0.1.1` |
 | bplist-parser | `^0.3.1` | `^0.3.2` |
 | chalk | `^4.0.0` | `^5.6.2` |
@@ -32,7 +30,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-forge | `^1.3.3` | `^1.4.0` |
 | npm-package-arg | `^11.0.0` | `^14.0.0` |
 | ora | `^3.4.0` | `^9.4.0` |
-| picomatch | `^4.0.3` | `^4.0.4` |
 | pretty-format | `^29.7.0` | `^30.4.1` |
 | prompts | `^2.3.2` | `^2.4.2` |
 | semver | `^7.6.0` | `^7.8.0` |
