@@ -12,16 +12,15 @@ npm install @depup/sveltejs__kit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.60.1 | **DepUp version**: 2.60.1-depup.0 | **Updated**: 5/15/2026 | **Import test**: passed
+**Original version**: 2.61.0 | **DepUp version**: 2.61.0-depup.0 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @standard-schema/spec | `^1.0.0` | `^1.1.0` |
-| @sveltejs/acorn-typescript | `^1.0.5` | `^1.0.9` |
+| @sveltejs/acorn-typescript | `^1.0.9` | `^1.0.10` |
 | @types/cookie | `^0.6.0` | `^1.0.0` |
-| acorn | `^8.14.1` | `^8.16.0` |
 | cookie | `^0.6.0` | `^1.1.1` |
 | magic-string | `^0.30.5` | `^0.30.21` |
 | mrmime | `^2.0.0` | `^2.0.1` |
