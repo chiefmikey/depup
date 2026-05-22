@@ -12,13 +12,13 @@ npm install @depup/express-ws
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.1 | **Updated**: 3/21/2026 | **Import test**: failed
+**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.2 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ws | `^7.4.6` | `^8.20.0` |
+| ws | `^7.4.6` | `^8.21.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/express-ws&labels=bug).

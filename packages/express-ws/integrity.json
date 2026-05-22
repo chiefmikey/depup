@@ -25,6 +25,19 @@
       "status": "published",
       "timestamp": "2026-03-21T20:09:49.943Z",
       "version": "5.0.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "ws": {
+          "from": "^7.4.6",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-22T18:08:23.740Z",
+      "version": "5.0.2-depup.2"
     }
   }
 }
