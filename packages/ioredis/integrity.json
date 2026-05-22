@@ -7,23 +7,6 @@
     }
   },
   "5.10.1": {
-    "0": {
-      "changes": {
-        "cluster-key-slot": {
-          "from": "^1.1.0",
-          "to": "^1.1.2"
-        },
-        "debug": {
-          "from": "^4.3.4",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-19T16:25:34.516Z",
-      "version": "5.10.1-depup.0"
-    },
     "1": {
       "changes": {
         "@ioredis/commands": {
@@ -107,6 +90,27 @@
       "status": "failed",
       "timestamp": "2026-05-20T10:08:28.602Z",
       "version": "5.10.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@ioredis/commands": {
+          "from": "1.5.1",
+          "to": "^1.10.0"
+        },
+        "cluster-key-slot": {
+          "from": "^1.1.0",
+          "to": "^1.1.2"
+        },
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T10:07:54.765Z",
+      "version": "5.10.1-depup.5"
     }
   }
 }
