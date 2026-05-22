@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.2 | **Updated**: 5/21/2026 | **Import test**: failed
+**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.3 | **Updated**: 5/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @date-fns/tz | `^1.4.1` | `^1.5.0` |
 | @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
-| @isaacs/ttlcache | `^1.4.1` | `^2.1.4` |
+| @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
 | @mux/mux-player-react | `^3.10.2` | `^3.13.0` |
 | @portabletext/editor | `^6.6.4` | `^7.0.0` |
 | @portabletext/html | `^1.0.1` | `^1.0.2` |
@@ -39,7 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/migrate | `^6.1.1` | `^6.1.2` |
 | @sanity/mutate | `^0.16.1` | `^0.17.1` |
 | @sanity/preview-url-secret | `^4.0.5` | `^4.0.6` |
-| @sanity/sdk | `^2.8.0` | `^2.11.1` |
+| @sanity/sdk | `^2.8.0` | `^2.12.0` |
 | @sanity/ui | `^3.1.14` | `^3.2.0` |
 | @sentry/react | `^8.55.0` | `^10.53.1` |
 | @tanstack/react-virtual | `^3.13.24` | `^3.13.25` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | player.style | `^0.1.9` | `^0.3.4` |
 | react-i18next | `15.6.1` | `^17.0.8` |
 | react-is | `^19.2.4` | `^19.2.6` |
-| semver | `^7.7.2` | `^7.8.0` |
+| semver | `^7.7.2` | `^7.8.1` |
 | uuid | `^11.1.0` | `^14.0.0` |
 | web-vitals | `^5.1.0` | `^5.2.0` |
 | xstate | `^5.25.1` | `^5.31.1` |

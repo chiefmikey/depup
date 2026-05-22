@@ -1,0 +1,62 @@
+{
+  "bumped": {
+    "@inquirer/confirm": {
+      "from": "5.1.21",
+      "to": "^6.0.13"
+    },
+    "@vitejs/plugin-basic-ssl": {
+      "from": "2.1.4",
+      "to": "^2.3.0"
+    },
+    "beasties": {
+      "from": "0.4.1",
+      "to": "^0.4.2"
+    },
+    "browserslist": {
+      "from": "^4.26.0",
+      "to": "^4.28.2"
+    },
+    "esbuild": {
+      "from": "0.27.3",
+      "to": "^0.28.0"
+    },
+    "https-proxy-agent": {
+      "from": "7.0.6",
+      "to": "^9.0.0"
+    },
+    "listr2": {
+      "from": "9.0.5",
+      "to": "^10.2.1"
+    },
+    "parse5-html-rewriting-stream": {
+      "from": "8.0.0",
+      "to": "^8.0.1"
+    },
+    "rolldown": {
+      "from": "1.0.0-rc.4",
+      "to": "^1.0.2"
+    },
+    "sass": {
+      "from": "1.97.3",
+      "to": "^1.100.0"
+    },
+    "semver": {
+      "from": "7.7.4",
+      "to": "^7.8.1"
+    },
+    "tinyglobby": {
+      "from": "0.2.15",
+      "to": "^0.2.16"
+    },
+    "undici": {
+      "from": "7.24.4",
+      "to": "^8.3.0"
+    },
+    "vite": {
+      "from": "7.3.2",
+      "to": "^8.0.14"
+    }
+  },
+  "timestamp": "2026-05-22T02:04:04.251Z",
+  "totalUpdated": 14
+}
