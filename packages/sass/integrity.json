@@ -62,5 +62,20 @@
       "timestamp": "2026-04-03T00:42:38.728Z",
       "version": "1.99.0-depup.0"
     }
+  },
+  "1.100.0": {
+    "0": {
+      "changes": {
+        "source-map-js": {
+          "from": ">=0.6.2 <2.0.0",
+          "to": "^1.2.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T02:06:59.864Z",
+      "version": "1.100.0-depup.0"
+    }
   }
 }

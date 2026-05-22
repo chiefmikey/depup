@@ -12,13 +12,12 @@ npm install @depup/sass
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.99.0 | **DepUp version**: 1.99.0-depup.0 | **Updated**: 4/3/2026 | **Import test**: passed
+**Original version**: 1.100.0 | **DepUp version**: 1.100.0-depup.0 | **Updated**: 5/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chokidar | `^4.0.0` | `^5.0.0` |
 | source-map-js | `>=0.6.2 <2.0.0` | `^1.2.1` |
 
 
