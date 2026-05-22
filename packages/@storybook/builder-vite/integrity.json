@@ -131,5 +131,20 @@
       "timestamp": "2026-05-15T07:18:15.437Z",
       "version": "10.4.0-depup.0"
     }
+  },
+  "10.4.1": {
+    "0": {
+      "changes": {
+        "ts-dedent": {
+          "from": "^2.0.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T10:01:40.290Z",
+      "version": "10.4.1-depup.0"
+    }
   }
 }
