@@ -113,5 +113,15 @@
       "timestamp": "2026-05-21T14:03:30.479Z",
       "version": "1.37.3-depup.0"
     }
+  },
+  "1.38.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-22T14:02:59.538Z",
+      "version": "1.38.0-depup.0"
+    }
   }
 }
