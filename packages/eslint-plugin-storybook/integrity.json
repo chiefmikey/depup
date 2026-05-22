@@ -157,5 +157,20 @@
       "timestamp": "2026-05-15T07:18:36.079Z",
       "version": "10.4.0-depup.0"
     }
+  },
+  "10.4.1": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/utils": {
+          "from": "^8.48.0",
+          "to": "^8.59.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T10:00:40.065Z",
+      "version": "10.4.1-depup.0"
+    }
   }
 }
