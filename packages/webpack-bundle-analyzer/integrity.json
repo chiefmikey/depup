@@ -151,6 +151,39 @@
       "status": "failed",
       "timestamp": "2026-05-04T07:16:03.281Z",
       "version": "5.3.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@discoveryjs/json-ext": {
+          "from": "^0.6.3",
+          "to": "^1.1.0"
+        },
+        "acorn": {
+          "from": "^8.0.4",
+          "to": "^8.16.0"
+        },
+        "acorn-walk": {
+          "from": "^8.0.0",
+          "to": "^8.3.5"
+        },
+        "commander": {
+          "from": "^14.0.2",
+          "to": "^14.0.3"
+        },
+        "picocolors": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T18:07:32.184Z",
+      "version": "5.3.0-depup.2"
     }
   }
 }

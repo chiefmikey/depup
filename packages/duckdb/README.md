@@ -12,14 +12,14 @@ npm install @depup/duckdb
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.4 | **DepUp version**: 1.4.4-depup.2 | **Updated**: 4/21/2026 | **Import test**: failed
+**Original version**: 1.4.4 | **DepUp version**: 1.4.4-depup.3 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @mapbox/node-pre-gyp | `^2.0.0` | `^2.0.3` |
-| node-addon-api | `^7.0.0` | `^8.7.0` |
+| node-addon-api | `^7.0.0` | `^8.8.0` |
 | node-gyp | `^9.4.1` | `^12.3.0` |
 
 
