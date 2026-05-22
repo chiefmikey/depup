@@ -1,6 +1,6 @@
 {
   "name": "@depup/multer-s3",
-  "version": "3.0.1-depup.37",
+  "version": "3.0.1-depup.42",
   "description": "Streaming multer storage engine for AWS S3 (with updated dependencies)",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/badunk/multer-s3#readme",
   "dependencies": {
-    "@aws-sdk/lib-storage": "^3.1048.0",
+    "@aws-sdk/lib-storage": "^3.1053.0",
     "file-type": "^22.0.1",
     "html-comment-regex": "^1.1.2",
     "run-parallel": "^1.2.0"
@@ -53,7 +53,7 @@
     "changes": {
       "@aws-sdk/lib-storage": {
         "from": "^3.46.0",
-        "to": "^3.1048.0"
+        "to": "^3.1053.0"
       },
       "file-type": {
         "from": "^3.3.0",
@@ -67,7 +67,7 @@
     "depsUpdated": 3,
     "originalPackage": "multer-s3",
     "originalVersion": "3.0.1",
-    "processedAt": "2026-05-16T07:01:25.927Z",
+    "processedAt": "2026-05-22T22:04:54.582Z",
     "smokeTest": "passed"
   }
 }
