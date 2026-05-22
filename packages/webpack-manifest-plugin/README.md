@@ -12,14 +12,14 @@ npm install @depup/webpack-manifest-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.2 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | tapable | `^2.0.0` | `^2.3.3` |
-| webpack-sources | `^3.3.3` | `^3.4.0` |
+| webpack-sources | `^3.3.3` | `^3.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-manifest-plugin&labels=bug).

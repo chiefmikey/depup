@@ -47,6 +47,31 @@
       "status": "failed",
       "timestamp": "2026-04-23T20:28:58.544Z",
       "version": "4.2.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.0",
+          "to": "^5.6.2"
+        },
+        "enhanced-resolve": {
+          "from": "^5.7.0",
+          "to": "^5.22.0"
+        },
+        "tapable": {
+          "from": "^2.2.1",
+          "to": "^2.3.3"
+        },
+        "tsconfig-paths": {
+          "from": "^4.1.2",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-22T10:06:55.282Z",
+      "version": "4.2.0-depup.2"
     }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/tsconfig-paths-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.2 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | chalk | `^4.1.0` | `^5.6.2` |
-| enhanced-resolve | `^5.7.0` | `^5.21.0` |
+| enhanced-resolve | `^5.7.0` | `^5.22.0` |
 | tapable | `^2.2.1` | `^2.3.3` |
 | tsconfig-paths | `^4.1.2` | `^4.2.0` |
 

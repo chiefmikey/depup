@@ -2,11 +2,11 @@
   "bumped": {
     "@formatjs/intl-localematcher": {
       "from": "^0.6.0",
-      "to": "^0.8.2"
+      "to": "^0.8.8"
     },
     "@headlessui/react": {
       "from": "^2.1.2",
-      "to": "^2.2.9"
+      "to": "^2.2.10"
     },
     "@mdx-js/mdx": {
       "from": "^3.0.0",
@@ -18,7 +18,7 @@
     },
     "@shikijs/twoslash": {
       "from": "^3.2.1",
-      "to": "^4.0.2"
+      "to": "^4.1.0"
     },
     "@theguild/remark-npm2yarn": {
       "from": "^0.3.2",
@@ -26,7 +26,7 @@
     },
     "better-react-mathjax": {
       "from": "^2.3.0",
-      "to": "^3.0.0"
+      "to": "^3.0.1"
     },
     "clsx": {
       "from": "^2.1.0",
@@ -46,7 +46,7 @@
     },
     "katex": {
       "from": "^0.16.21",
-      "to": "^0.16.38"
+      "to": "^0.17.0"
     },
     "mdast-util-from-markdown": {
       "from": "^2.0.1",
@@ -62,7 +62,7 @@
     },
     "react-medium-image-zoom": {
       "from": "^5.2.12",
-      "to": "^5.4.1"
+      "to": "^5.4.5"
     },
     "rehype-katex": {
       "from": "^7.0.0",
@@ -86,11 +86,11 @@
     },
     "shiki": {
       "from": "^3.2.1",
-      "to": "^4.0.2"
+      "to": "^4.1.0"
     },
     "ts-morph": {
       "from": "^27.0.0",
-      "to": "^27.0.2"
+      "to": "^28.0.0"
     },
     "unist-util-visit": {
       "from": "^5.0.0",
@@ -98,13 +98,13 @@
     },
     "yaml": {
       "from": "^2.3.2",
-      "to": "^2.8.2"
+      "to": "^2.9.0"
     },
     "zod": {
       "from": "^4.1.12",
-      "to": "^4.3.6"
+      "to": "^4.4.3"
     }
   },
-  "timestamp": "2026-03-18T22:02:46.534Z",
+  "timestamp": "2026-05-22T10:05:27.780Z",
   "totalUpdated": 26
 }
