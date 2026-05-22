@@ -38,6 +38,23 @@
       "status": "published",
       "timestamp": "2026-03-26T05:00:44.651Z",
       "version": "6.0.1-depup.32"
+    },
+    "33": {
+      "changes": {
+        "node-addon-api": {
+          "from": "^8.0.0",
+          "to": "^8.8.0"
+        },
+        "tar": {
+          "from": "^7.5.10",
+          "to": "^7.5.15"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-22T18:15:50.979Z",
+      "version": "6.0.1-depup.33"
     }
   }
 }

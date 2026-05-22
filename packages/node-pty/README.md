@@ -12,13 +12,13 @@ npm install @depup/node-pty
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.1 | **Updated**: 3/25/2026 | **Import test**: passed
+**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.2 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| node-addon-api | `^7.1.0` | `^8.7.0` |
+| node-addon-api | `^7.1.0` | `^8.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/node-pty&labels=bug).
