@@ -12,7 +12,7 @@ npm install @depup/intl-messageformat
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.6 | **DepUp version**: 11.2.6-depup.0 | **Updated**: 5/15/2026 | **Import test**: passed
+**Original version**: 11.2.7 | **DepUp version**: 11.2.7-depup.0 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
