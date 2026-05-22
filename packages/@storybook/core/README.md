@@ -12,7 +12,7 @@ npm install @depup/storybook__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.4 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.5 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,8 +22,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild-register | `^3.5.0` | `^3.6.0` |
 | jsdoc-type-pratt-parser | `^4.0.0` | `^7.2.0` |
 | recast | `^0.23.5` | `^0.23.11` |
-| semver | `^7.6.2` | `^7.8.0` |
-| ws | `^8.2.3` | `^8.20.0` |
+| semver | `^7.6.2` | `^7.8.1` |
+| ws | `^8.2.3` | `^8.21.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/storybook__core&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/webpack-dev-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.4 | **DepUp version**: 5.2.4-depup.1 | **Updated**: 5/21/2026 | **Import test**: passed
+**Original version**: 5.2.4 | **DepUp version**: 5.2.4-depup.2 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | schema-utils | `^4.2.0` | `^4.3.3` |
 | serve-index | `^1.9.1` | `^1.9.2` |
 | webpack-dev-middleware | `^7.4.2` | `^8.0.3` |
-| ws | `^8.18.0` | `^8.20.1` |
+| ws | `^8.18.0` | `^8.21.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-dev-server&labels=bug).

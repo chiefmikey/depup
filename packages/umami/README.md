@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.17 | **Updated**: 5/18/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.18 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @fontsource/inter | `^4.5.15` | `^5.2.8` |
 | @prisma/client | `5.7.0` | `^7.8.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
-| @react-spring/web | `^9.7.3` | `^10.0.3` |
+| @react-spring/web | `^9.7.3` | `^10.1.0` |
 | @tanstack/react-query | `^5.12.2` | `^5.100.11` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
@@ -57,11 +57,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
 | react-dom | `^18.2.0` | `^19.2.6` |
 | react-error-boundary | `^4.0.4` | `^6.1.1` |
-| react-intl | `^6.5.5` | `^10.1.7` |
+| react-intl | `^6.5.5` | `^10.1.9` |
 | react-simple-maps | `^2.3.0` | `^3.0.0` |
 | react-use-measure | `^2.0.4` | `^2.1.7` |
 | react-window | `^1.8.6` | `^2.2.7` |
-| semver | `^7.5.4` | `^7.8.0` |
+| semver | `^7.5.4` | `^7.8.1` |
 | thenby | `^1.3.4` | `^1.4.1` |
 | timezone-support | `^2.0.2` | `^3.1.0` |
 | uuid | `^9.0.0` | `^14.0.0` |

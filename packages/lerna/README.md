@@ -12,14 +12,14 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.14 | **Updated**: 5/20/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.15 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @npmcli/arborist | `9.1.6` | `^9.6.0` |
-| @npmcli/package-json | `7.0.2` | `^7.0.5` |
+| @npmcli/package-json | `7.0.2` | `^8.0.0` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
 | @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.2` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
@@ -40,7 +40,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | git-url-parse | `14.0.0` | `^16.1.0` |
 | import-local | `3.1.0` | `^3.2.0` |
 | ini | `^1.3.8` | `^7.0.0` |
-| init-package-json | `8.2.2` | `^8.2.5` |
+| init-package-json | `8.2.2` | `^9.0.0` |
 | inquirer | `12.9.6` | `^13.4.3` |
 | is-ci | `3.0.1` | `^4.1.0` |
 | jest-diff | `>=30.0.0 < 31` | `^30.4.1` |
@@ -49,8 +49,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | make-fetch-happen | `15.0.2` | `^16.0.0` |
 | minimatch | `3.1.4` | `^10.2.5` |
 | npm-package-arg | `13.0.1` | `^14.0.0` |
-| npm-packlist | `10.0.3` | `^11.0.0` |
-| npm-registry-fetch | `19.1.0` | `^19.1.1` |
+| npm-packlist | `10.0.3` | `^11.1.0` |
+| npm-registry-fetch | `19.1.0` | `^20.0.0` |
 | nx | `>=21.5.3 < 23.0.0` | `^22.7.2` |
 | p-map | `4.0.0` | `^7.0.4` |
 | p-map-series | `2.1.0` | `^3.0.0` |
@@ -60,7 +60,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^21.5.0` |
 | read-cmd-shim | `4.0.0` | `^7.0.0` |
-| semver | `7.7.2` | `^7.8.0` |
+| semver | `7.7.2` | `^7.8.1` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | slash | `3.0.0` | `^5.1.0` |
 | ssri | `12.0.0` | `^14.0.0` |
