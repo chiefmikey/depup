@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.18 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.19 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @prisma/client | `5.7.0` | `^7.8.0` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.1.0` |
-| @tanstack/react-query | `^5.12.2` | `^5.100.11` |
+| @tanstack/react-query | `^5.12.2` | `^5.100.13` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^5.6.2` |
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | colord | `^2.9.2` | `^2.9.3` |
 | cors | `^2.8.5` | `^2.8.6` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
-| date-fns | `^2.23.0` | `^4.2.1` |
+| date-fns | `^2.23.0` | `^4.3.0` |
 | date-fns-tz | `^1.1.4` | `^3.2.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | del | `^6.0.0` | `^8.0.1` |
