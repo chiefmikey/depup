@@ -12,14 +12,11 @@ npm install @depup/stream-json
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.1 | **Updated**: 5/22/2026 | **Import test**: passed
+**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.0 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| stream-chain | `^4.0.2` | `^4.1.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/stream-json&labels=bug).
 
