@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.4 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 5.26.0 | **DepUp version**: 5.26.0-depup.5 | **Updated**: 5/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,12 +24,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
 | @mux/mux-player-react | `^3.10.2` | `^3.13.0` |
-| @portabletext/editor | `^6.6.4` | `^7.0.0` |
+| @portabletext/editor | `^6.6.4` | `^7.0.1` |
 | @portabletext/html | `^1.0.1` | `^1.0.2` |
-| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.0` |
-| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.0` |
-| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.0` |
-| @portabletext/plugin-typography | `^7.0.27` | `^8.0.0` |
+| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.1` |
+| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.1` |
+| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.1` |
+| @portabletext/plugin-typography | `^7.0.27` | `^8.0.1` |
 | @portabletext/react | `^6.1.0` | `^6.2.0` |
 | @portabletext/sanity-bridge | `^3.0.0` | `^3.1.0` |
 | @sanity/client | `^7.21.0` | `^7.22.0` |
@@ -38,6 +38,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/insert-menu | `^3.0.5` | `^3.0.7` |
 | @sanity/migrate | `^6.1.1` | `^6.1.2` |
 | @sanity/mutate | `^0.16.1` | `^0.18.0` |
+| @sanity/presentation-comlink | `^2.0.1` | `^2.0.2` |
 | @sanity/preview-url-secret | `^4.0.5` | `^4.0.6` |
 | @sanity/sdk | `^2.8.0` | `^2.12.0` |
 | @sanity/ui | `^3.1.14` | `^3.2.0` |
@@ -45,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tanstack/react-virtual | `^3.13.24` | `^3.13.25` |
 | @xstate/react | `^6.0.0` | `^6.1.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
-| date-fns | `^4.1.0` | `^4.2.1` |
+| date-fns | `^4.1.0` | `^4.3.0` |
 | groq-js | `^1.29.0` | `^1.30.1` |
 | i18next | `^25.8.17` | `^26.2.0` |
 | isomorphic-dompurify | `2.26.0` | `^3.14.0` |

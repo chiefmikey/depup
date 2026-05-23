@@ -4,6 +4,10 @@
       "from": "^4.0.5",
       "to": "^4.0.6"
     },
+    "@date-fns/tz": {
+      "from": "^1.4.1",
+      "to": "^1.5.0"
+    },
     "@dnd-kit/modifiers": {
       "from": "^6.0.1",
       "to": "^9.0.0"
@@ -14,15 +18,43 @@
     },
     "@isaacs/ttlcache": {
       "from": "^1.4.1",
-      "to": "^2.1.4"
+      "to": "^2.1.5"
     },
     "@mux/mux-player-react": {
       "from": "^3.10.2",
       "to": "^3.13.0"
     },
+    "@portabletext/editor": {
+      "from": "^6.6.4",
+      "to": "^7.0.1"
+    },
+    "@portabletext/html": {
+      "from": "^1.0.1",
+      "to": "^1.0.2"
+    },
+    "@portabletext/plugin-markdown-shortcuts": {
+      "from": "^7.0.27",
+      "to": "^8.0.1"
+    },
+    "@portabletext/plugin-one-line": {
+      "from": "^6.0.27",
+      "to": "^7.0.1"
+    },
+    "@portabletext/plugin-paste-link": {
+      "from": "^3.0.27",
+      "to": "^4.0.1"
+    },
+    "@portabletext/plugin-typography": {
+      "from": "^7.0.27",
+      "to": "^8.0.1"
+    },
     "@portabletext/react": {
       "from": "^6.1.0",
       "to": "^6.2.0"
+    },
+    "@portabletext/sanity-bridge": {
+      "from": "^3.0.0",
+      "to": "^3.1.0"
     },
     "@sanity/client": {
       "from": "^7.21.0",
@@ -46,7 +78,11 @@
     },
     "@sanity/mutate": {
       "from": "^0.16.1",
-      "to": "^0.17.1"
+      "to": "^0.18.0"
+    },
+    "@sanity/presentation-comlink": {
+      "from": "^2.0.1",
+      "to": "^2.0.2"
     },
     "@sanity/preview-url-secret": {
       "from": "^4.0.5",
@@ -54,7 +90,7 @@
     },
     "@sanity/sdk": {
       "from": "^2.8.0",
-      "to": "^2.11.1"
+      "to": "^2.12.0"
     },
     "@sanity/ui": {
       "from": "^3.1.14",
@@ -63,6 +99,10 @@
     "@sentry/react": {
       "from": "^8.55.0",
       "to": "^10.53.1"
+    },
+    "@tanstack/react-virtual": {
+      "from": "^3.13.24",
+      "to": "^3.13.25"
     },
     "@xstate/react": {
       "from": "^6.0.0",
@@ -74,7 +114,7 @@
     },
     "date-fns": {
       "from": "^4.1.0",
-      "to": "^4.2.1"
+      "to": "^4.3.0"
     },
     "groq-js": {
       "from": "^1.29.0",
@@ -90,7 +130,7 @@
     },
     "motion": {
       "from": "^12.27.1",
-      "to": "^12.39.0"
+      "to": "^12.40.0"
     },
     "nanoid": {
       "from": "^3.3.11",
@@ -114,7 +154,7 @@
     },
     "semver": {
       "from": "^7.7.2",
-      "to": "^7.8.0"
+      "to": "^7.8.1"
     },
     "uuid": {
       "from": "^11.1.0",
@@ -129,6 +169,6 @@
       "to": "^5.31.1"
     }
   },
-  "timestamp": "2026-05-19T18:00:30.021Z",
-  "totalUpdated": 32
+  "timestamp": "2026-05-23T02:05:29.709Z",
+  "totalUpdated": 42
 }

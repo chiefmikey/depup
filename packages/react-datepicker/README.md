@@ -12,14 +12,14 @@ npm install @depup/react-datepicker
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.1 | **Updated**: 5/18/2026 | **Import test**: passed
+**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.2 | **Updated**: 5/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @floating-ui/react | `^0.27.15` | `^0.27.19` |
-| date-fns | `^4.1.0` | `^4.2.1` |
+| date-fns | `^4.1.0` | `^4.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-datepicker&labels=bug).
