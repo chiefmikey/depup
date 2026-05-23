@@ -416,6 +416,47 @@
       "status": "failed",
       "timestamp": "2026-05-20T10:03:24.447Z",
       "version": "4.1.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "es-module-lexer": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.1.0"
+        },
+        "tinybench": {
+          "from": "^2.9.0",
+          "to": "^6.0.2"
+        },
+        "tinyexec": {
+          "from": "^1.0.2",
+          "to": "^1.2.2"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.16"
+        },
+        "vite": {
+          "from": "^6.0.0 || ^7.0.0 || ^8.0.0",
+          "to": "^8.0.14"
+        },
+        "why-is-node-running": {
+          "from": "^2.3.0",
+          "to": "^3.2.2"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-23T18:04:27.297Z",
+      "version": "4.1.7-depup.1"
     }
   }
 }
