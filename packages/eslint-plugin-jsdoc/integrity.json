@@ -133,6 +133,39 @@
       "status": "failed",
       "timestamp": "2026-05-20T10:00:47.365Z",
       "version": "63.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@es-joy/jsdoccomment": {
+          "from": "~0.86.0",
+          "to": "^0.87.0"
+        },
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "comment-parser": {
+          "from": "1.4.6",
+          "to": "^1.4.7"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "object-deep-merge": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "semver": {
+          "from": "^7.8.0",
+          "to": "^7.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-23T14:08:50.562Z",
+      "version": "63.0.0-depup.1"
     }
   }
 }
