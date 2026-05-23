@@ -344,5 +344,20 @@
       "timestamp": "2026-05-21T10:02:39.158Z",
       "version": "16.9.0-depup.0"
     }
+  },
+  "16.9.1": {
+    "0": {
+      "changes": {
+        "shiki": {
+          "from": "^4.0.2",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-23T14:01:42.240Z",
+      "version": "16.9.1-depup.0"
+    }
   }
 }
