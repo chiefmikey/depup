@@ -60,6 +60,23 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:15:01.295Z",
       "version": "0.28.19-depup.1"
+    },
+    "2": {
+      "changes": {
+        "markdown-it": {
+          "from": "^14.1.1",
+          "to": "^14.2.0"
+        },
+        "yaml": {
+          "from": "^2.8.3",
+          "to": "^2.9.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-24T02:22:58.348Z",
+      "version": "0.28.19-depup.2"
     }
   }
 }
