@@ -67,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-04-27T00:48:04.172Z",
       "version": "6.1.22-depup.1"
+    },
+    "2": {
+      "changes": {
+        "hookified": {
+          "from": "^1.15.0",
+          "to": "^3.0.0"
+        },
+        "cacheable": {
+          "from": "^2.3.4",
+          "to": "^2.3.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-24T18:04:47.762Z",
+      "version": "6.1.22-depup.2"
     }
   }
 }
