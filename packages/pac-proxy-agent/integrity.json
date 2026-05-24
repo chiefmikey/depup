@@ -80,6 +80,23 @@
       "status": "published",
       "timestamp": "2026-04-06T08:38:01.118Z",
       "version": "9.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "quickjs-wasi": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-24T10:06:15.724Z",
+      "version": "9.0.1-depup.1"
     }
   }
 }
