@@ -1,0 +1,17 @@
+{
+  "0.85.3": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-24T14:01:09.426Z",
+      "version": "0.85.3-depup.0"
+    }
+  }
+}
