@@ -12,13 +12,13 @@ npm install @depup/eslint-plugin-storybook
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.4.1 | **DepUp version**: 10.4.1-depup.0 | **Updated**: 5/22/2026 | **Import test**: passed
+**Original version**: 10.4.1 | **DepUp version**: 10.4.1-depup.1 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @typescript-eslint/utils | `^8.48.0` | `^8.59.4` |
+| @typescript-eslint/utils | `^8.48.0` | `^8.60.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-plugin-storybook&labels=bug).
