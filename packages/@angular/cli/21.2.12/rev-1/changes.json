@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@inquirer/prompts": {
+      "from": "7.10.1",
+      "to": "^8.5.0"
+    },
+    "@listr2/prompt-adapter-inquirer": {
+      "from": "3.0.5",
+      "to": "^4.2.3"
+    },
+    "@modelcontextprotocol/sdk": {
+      "from": "1.26.0",
+      "to": "^1.29.0"
+    },
+    "algoliasearch": {
+      "from": "5.48.1",
+      "to": "^5.52.1"
+    },
+    "ini": {
+      "from": "6.0.0",
+      "to": "^7.0.0"
+    },
+    "listr2": {
+      "from": "9.0.5",
+      "to": "^10.2.1"
+    },
+    "npm-package-arg": {
+      "from": "13.0.2",
+      "to": "^14.0.0"
+    },
+    "pacote": {
+      "from": "21.3.1",
+      "to": "^21.5.0"
+    },
+    "parse5-html-rewriting-stream": {
+      "from": "8.0.0",
+      "to": "^8.0.1"
+    },
+    "semver": {
+      "from": "7.7.4",
+      "to": "^7.8.1"
+    },
+    "zod": {
+      "from": "4.3.6",
+      "to": "^4.4.3"
+    }
+  },
+  "timestamp": "2026-05-25T22:06:58.905Z",
+  "totalUpdated": 11
+}
