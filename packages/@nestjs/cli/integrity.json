@@ -365,59 +365,6 @@
     }
   },
   "11.0.21": {
-    "0": {
-      "changes": {
-        "@angular-devkit/core": {
-          "from": "19.2.24",
-          "to": "^21.2.7"
-        },
-        "@angular-devkit/schematics": {
-          "from": "19.2.24",
-          "to": "^21.2.7"
-        },
-        "@angular-devkit/schematics-cli": {
-          "from": "19.2.24",
-          "to": "^21.2.7"
-        },
-        "@inquirer/prompts": {
-          "from": "7.10.1",
-          "to": "^8.4.1"
-        },
-        "@nestjs/schematics": {
-          "from": "^11.0.1",
-          "to": "^11.0.10"
-        },
-        "chokidar": {
-          "from": "4.0.3",
-          "to": "^5.0.0"
-        },
-        "commander": {
-          "from": "4.1.1",
-          "to": "^14.0.3"
-        },
-        "node-emoji": {
-          "from": "1.11.0",
-          "to": "^2.2.0"
-        },
-        "ora": {
-          "from": "5.4.1",
-          "to": "^9.3.0"
-        },
-        "typescript": {
-          "from": "5.9.3",
-          "to": "^6.0.2"
-        },
-        "webpack": {
-          "from": "5.106.0",
-          "to": "^5.106.2"
-        }
-      },
-      "depsUpdated": 11,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-04-15T12:29:07.407Z",
-      "version": "11.0.21-depup.0"
-    },
     "1": {
       "changes": {
         "@angular-devkit/core": {
@@ -637,6 +584,63 @@
       "status": "failed",
       "timestamp": "2026-05-20T10:10:34.243Z",
       "version": "11.0.21-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@angular-devkit/core": {
+          "from": "19.2.24",
+          "to": "^21.2.12"
+        },
+        "@angular-devkit/schematics": {
+          "from": "19.2.24",
+          "to": "^21.2.12"
+        },
+        "@angular-devkit/schematics-cli": {
+          "from": "19.2.24",
+          "to": "^21.2.12"
+        },
+        "@inquirer/prompts": {
+          "from": "7.10.1",
+          "to": "^8.5.0"
+        },
+        "@nestjs/schematics": {
+          "from": "^11.0.1",
+          "to": "^11.1.0"
+        },
+        "ansis": {
+          "from": "4.2.0",
+          "to": "^4.3.0"
+        },
+        "chokidar": {
+          "from": "4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "4.1.1",
+          "to": "^14.0.3"
+        },
+        "node-emoji": {
+          "from": "1.11.0",
+          "to": "^2.2.0"
+        },
+        "ora": {
+          "from": "5.4.1",
+          "to": "^9.4.0"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.3"
+        },
+        "webpack": {
+          "from": "5.106.0",
+          "to": "^5.107.2"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-25T22:09:06.118Z",
+      "version": "11.0.21-depup.5"
     }
   }
 }

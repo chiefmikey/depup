@@ -1,6 +1,6 @@
 {
   "name": "@depup/nestjs__cli",
-  "version": "11.0.21-depup.0",
+  "version": "11.0.21-depup.5",
   "description": "Nest - modern, fast, powerful node.js web framework (@cli) (with updated dependencies)",
   "engines": {
     "node": ">= 20.11"
@@ -33,23 +33,23 @@
   },
   "homepage": "https://github.com/nestjs/nest-cli#readme",
   "dependencies": {
-    "@angular-devkit/core": "^21.2.7",
-    "@angular-devkit/schematics": "^21.2.7",
-    "@angular-devkit/schematics-cli": "^21.2.7",
-    "@inquirer/prompts": "^8.4.1",
-    "@nestjs/schematics": "^11.0.10",
-    "ansis": "4.2.0",
+    "@angular-devkit/core": "^21.2.12",
+    "@angular-devkit/schematics": "^21.2.12",
+    "@angular-devkit/schematics-cli": "^21.2.12",
+    "@inquirer/prompts": "^8.5.0",
+    "@nestjs/schematics": "^11.1.0",
+    "ansis": "^4.3.0",
     "chokidar": "^5.0.0",
     "cli-table3": "0.6.5",
     "commander": "^14.0.3",
     "fork-ts-checker-webpack-plugin": "9.1.0",
     "glob": "13.0.6",
     "node-emoji": "^2.2.0",
-    "ora": "^9.3.0",
+    "ora": "^9.4.0",
     "tsconfig-paths": "4.2.0",
     "tsconfig-paths-webpack-plugin": "4.2.0",
-    "typescript": "^6.0.2",
-    "webpack": "^5.106.2",
+    "typescript": "^6.0.3",
+    "webpack": "^5.107.2",
     "webpack-node-externals": "3.0.0"
   },
   "devDependencies": {
@@ -105,23 +105,27 @@
     "changes": {
       "@angular-devkit/core": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^21.2.12"
       },
       "@angular-devkit/schematics": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^21.2.12"
       },
       "@angular-devkit/schematics-cli": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^21.2.12"
       },
       "@inquirer/prompts": {
         "from": "7.10.1",
-        "to": "^8.4.1"
+        "to": "^8.5.0"
       },
       "@nestjs/schematics": {
         "from": "^11.0.1",
-        "to": "^11.0.10"
+        "to": "^11.1.0"
+      },
+      "ansis": {
+        "from": "4.2.0",
+        "to": "^4.3.0"
       },
       "chokidar": {
         "from": "4.0.3",
@@ -137,21 +141,21 @@
       },
       "ora": {
         "from": "5.4.1",
-        "to": "^9.3.0"
+        "to": "^9.4.0"
       },
       "typescript": {
         "from": "5.9.3",
-        "to": "^6.0.2"
+        "to": "^6.0.3"
       },
       "webpack": {
         "from": "5.106.0",
-        "to": "^5.106.2"
+        "to": "^5.107.2"
       }
     },
-    "depsUpdated": 11,
+    "depsUpdated": 12,
     "originalPackage": "@nestjs/cli",
     "originalVersion": "11.0.21",
-    "processedAt": "2026-04-15T12:29:04.902Z",
+    "processedAt": "2026-05-25T22:09:03.948Z",
     "smokeTest": "failed"
   }
 }

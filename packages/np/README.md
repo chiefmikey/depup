@@ -12,17 +12,17 @@ npm install @depup/np
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.1 | **DepUp version**: 11.2.1-depup.0 | **Updated**: 5/13/2026 | **Import test**: failed
+**Original version**: 11.2.1 | **DepUp version**: 11.2.1-depup.1 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| hosted-git-info | `^9.0.2` | `^10.1.0` |
+| hosted-git-info | `^9.0.2` | `^10.1.1` |
 | ignore-walk | `^8.0.0` | `^9.0.0` |
-| inquirer | `^13.4.1` | `^13.4.3` |
+| inquirer | `^13.4.1` | `^14.0.0` |
 | onetime | `^7.0.0` | `^8.0.0` |
-| semver | `^7.7.4` | `^7.8.0` |
+| semver | `^7.7.4` | `^7.8.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/np&labels=bug).
