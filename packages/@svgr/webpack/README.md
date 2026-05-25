@@ -12,17 +12,17 @@ npm install @depup/svgr__webpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.1 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.21.3` | `^7.29.0` |
-| @babel/plugin-transform-react-constant-elements | `^7.21.3` | `^7.27.1` |
-| @babel/preset-env | `^7.20.2` | `^7.29.2` |
-| @babel/preset-react | `^7.18.6` | `^7.28.5` |
-| @babel/preset-typescript | `^7.21.0` | `^7.28.5` |
+| @babel/core | `^7.21.3` | `^7.29.7` |
+| @babel/plugin-transform-react-constant-elements | `^7.21.3` | `^7.29.7` |
+| @babel/preset-env | `^7.20.2` | `^7.29.7` |
+| @babel/preset-react | `^7.18.6` | `^7.29.7` |
+| @babel/preset-typescript | `^7.21.0` | `^7.29.7` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/svgr__webpack&labels=bug).
