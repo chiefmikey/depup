@@ -2,35 +2,35 @@
   "bumped": {
     "@babel/code-frame": {
       "from": "^7.18.6",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/core": {
       "from": "^7.20.12",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/eslint-parser": {
       "from": "^7.19.1",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/helper-plugin-utils": {
       "from": "^7.20.2",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/parser": {
       "from": "^7.20.13",
-      "to": "^7.29.3"
+      "to": "^7.29.7"
     },
     "@babel/runtime": {
       "from": "^7.20.13",
-      "to": "^7.29.2"
+      "to": "^7.29.7"
     },
     "@babel/traverse": {
       "from": "^7.20.13",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/types": {
       "from": "^7.20.7",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@builder.io/partytown": {
       "from": "^0.7.5",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.59.4"
+      "to": "^8.60.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.59.4"
+      "to": "^8.60.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -178,7 +178,7 @@
     },
     "date-fns": {
       "from": "^2.30.0",
-      "to": "^4.2.1"
+      "to": "^4.3.0"
     },
     "debug": {
       "from": "^4.3.4",
@@ -194,7 +194,7 @@
     },
     "enhanced-resolve": {
       "from": "^5.15.0",
-      "to": "^5.21.4"
+      "to": "^5.22.0"
     },
     "eslint": {
       "from": "^7.32.0",
@@ -350,7 +350,7 @@
     },
     "postcss": {
       "from": "^8.4.24",
-      "to": "^8.5.14"
+      "to": "^8.5.15"
     },
     "postcss-loader": {
       "from": "^5.3.0",
@@ -378,7 +378,7 @@
     },
     "semver": {
       "from": "^7.5.3",
-      "to": "^7.8.0"
+      "to": "^7.8.1"
     },
     "signal-exit": {
       "from": "^3.0.7",
@@ -430,7 +430,7 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.106.2"
+      "to": "^5.107.2"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
@@ -449,6 +449,6 @@
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-05-19T04:38:51.303Z",
+  "timestamp": "2026-05-25T18:05:04.644Z",
   "totalUpdated": 112
 }

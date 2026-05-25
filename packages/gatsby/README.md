@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.33 | **Updated**: 5/25/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.34 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.59.4` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.59.4` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.60.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.60.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -125,7 +125,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.0` |
 | tmp | `^0.2.1` | `^0.2.5` |
 | uuid | `^8.3.2` | `^14.0.0` |
-| webpack | `~5.98.0` | `^5.107.1` |
+| webpack | `~5.98.0` | `^5.107.2` |
 | webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.31.1` |
