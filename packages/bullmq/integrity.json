@@ -610,5 +610,24 @@
       "timestamp": "2026-05-24T10:03:51.907Z",
       "version": "5.77.2-depup.0"
     }
+  },
+  "5.77.3": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "semver": {
+          "from": "7.8.0",
+          "to": "^7.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-25T10:01:26.769Z",
+      "version": "5.77.3-depup.0"
+    }
   }
 }
