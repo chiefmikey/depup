@@ -12,14 +12,11 @@ npm install @depup/babel__plugin-transform-react-jsx-development
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.27.1 | **DepUp version**: 7.27.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 7.29.7 | **DepUp version**: 7.29.7-depup.0 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @babel/plugin-transform-react-jsx | `^7.27.1` | `^7.28.6` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel__plugin-transform-react-jsx-development&labels=bug).
 

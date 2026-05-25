@@ -12,15 +12,15 @@ npm install @depup/vinxi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.5.11 | **DepUp version**: 0.5.11-depup.4 | **Updated**: 4/29/2026 | **Import test**: failed
+**Original version**: 0.5.11 | **DepUp version**: 0.5.11-depup.5 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.22.11` | `^7.29.0` |
-| @babel/plugin-syntax-jsx | `^7.22.5` | `^7.28.6` |
-| @babel/plugin-syntax-typescript | `^7.22.5` | `^7.28.6` |
+| @babel/core | `^7.22.11` | `^7.29.7` |
+| @babel/plugin-syntax-jsx | `^7.22.5` | `^7.29.7` |
+| @babel/plugin-syntax-typescript | `^7.22.5` | `^7.29.7` |
 | @types/micromatch | `^4.0.2` | `^4.0.10` |
 | chokidar | `^4.0.3` | `^5.0.0` |
 | citty | `^0.1.6` | `^0.2.2` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | es-module-lexer | `^1.7.0` | `^2.1.0` |
 | esbuild | `^0.25.3` | `^0.28.0` |
 | get-port-please | `^3.1.2` | `^3.2.0` |
-| h3 | `1.15.3` | `^2.0.1-rc.21` |
+| h3 | `1.15.3` | `^2.0.1-rc.22` |
 | hookable | `^5.5.3` | `^6.1.1` |
 | nitropack | `^2.11.10` | `^2.13.4` |
 | node-fetch-native | `^1.6.6` | `^1.6.7` |
@@ -43,8 +43,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ufo | `^1.6.1` | `^1.6.4` |
 | unctx | `^2.4.1` | `^2.5.0` |
 | unstorage | `^1.16.0` | `^1.17.5` |
-| vite | `^6.4.1` | `^8.0.10` |
-| zod | `^4.0.0` | `^4.4.1` |
+| vite | `^6.4.1` | `^8.0.14` |
+| zod | `^4.0.0` | `^4.4.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vinxi&labels=bug).

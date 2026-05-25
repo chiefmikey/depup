@@ -12,20 +12,20 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.32 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.33 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/code-frame | `^7.18.6` | `^7.29.0` |
-| @babel/core | `^7.20.12` | `^7.29.0` |
-| @babel/eslint-parser | `^7.19.1` | `^7.28.6` |
-| @babel/helper-plugin-utils | `^7.20.2` | `^7.28.6` |
-| @babel/parser | `^7.20.13` | `^7.29.3` |
-| @babel/runtime | `^7.20.13` | `^7.29.2` |
-| @babel/traverse | `^7.20.13` | `^7.29.0` |
-| @babel/types | `^7.20.7` | `^7.29.0` |
+| @babel/code-frame | `^7.18.6` | `^7.29.7` |
+| @babel/core | `^7.20.12` | `^7.29.7` |
+| @babel/eslint-parser | `^7.19.1` | `^7.29.7` |
+| @babel/helper-plugin-utils | `^7.20.2` | `^7.29.7` |
+| @babel/parser | `^7.20.13` | `^7.29.7` |
+| @babel/runtime | `^7.20.13` | `^7.29.7` |
+| @babel/traverse | `^7.20.13` | `^7.29.7` |
+| @babel/types | `^7.20.7` | `^7.29.7` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^7.0.0` |
