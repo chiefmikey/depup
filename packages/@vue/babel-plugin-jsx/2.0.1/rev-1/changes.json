@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@babel/helper-module-imports": {
+      "from": "^7.27.1",
+      "to": "^7.29.7"
+    },
+    "@babel/helper-plugin-utils": {
+      "from": "^7.27.1",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-syntax-jsx": {
+      "from": "^7.27.1",
+      "to": "^7.29.7"
+    },
+    "@babel/template": {
+      "from": "^7.27.2",
+      "to": "^7.29.7"
+    },
+    "@babel/traverse": {
+      "from": "^7.28.4",
+      "to": "^7.29.7"
+    },
+    "@babel/types": {
+      "from": "^7.28.4",
+      "to": "^7.29.7"
+    },
+    "@vue/shared": {
+      "from": "^3.5.22",
+      "to": "^3.5.34"
+    }
+  },
+  "timestamp": "2026-05-25T14:08:21.854Z",
+  "totalUpdated": 7
+}

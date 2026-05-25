@@ -117,6 +117,51 @@
       "status": "failed",
       "timestamp": "2026-04-30T16:36:37.792Z",
       "version": "6.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/helper-plugin-utils": {
+          "from": "^7.20.2",
+          "to": "^7.29.7"
+        },
+        "@babel/template": {
+          "from": "^7.20.7",
+          "to": "^7.29.7"
+        },
+        "@graphql-codegen/plugin-helpers": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        },
+        "@graphql-codegen/typescript": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        },
+        "@graphql-codegen/typescript-operations": {
+          "from": "^6.0.0",
+          "to": "^6.0.2"
+        },
+        "@graphql-codegen/visitor-plugin-common": {
+          "from": "^7.0.0",
+          "to": "^7.0.2"
+        },
+        "@graphql-tools/documents": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-25T14:08:09.111Z",
+      "version": "6.0.0-depup.1"
     }
   }
 }

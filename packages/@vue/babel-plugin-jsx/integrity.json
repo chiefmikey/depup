@@ -36,6 +36,43 @@
       "status": "published",
       "timestamp": "2026-03-22T00:38:42.277Z",
       "version": "2.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/helper-module-imports": {
+          "from": "^7.27.1",
+          "to": "^7.29.7"
+        },
+        "@babel/helper-plugin-utils": {
+          "from": "^7.27.1",
+          "to": "^7.29.7"
+        },
+        "@babel/plugin-syntax-jsx": {
+          "from": "^7.27.1",
+          "to": "^7.29.7"
+        },
+        "@babel/template": {
+          "from": "^7.27.2",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.4",
+          "to": "^7.29.7"
+        },
+        "@babel/types": {
+          "from": "^7.28.4",
+          "to": "^7.29.7"
+        },
+        "@vue/shared": {
+          "from": "^3.5.22",
+          "to": "^3.5.34"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-25T14:08:24.955Z",
+      "version": "2.0.1-depup.1"
     }
   }
 }

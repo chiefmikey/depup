@@ -12,7 +12,7 @@ npm install @depup/babel__preset-env
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.29.5 | **DepUp version**: 7.29.5-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 7.29.7 | **DepUp version**: 7.29.7-depup.0 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-plugin-polyfill-corejs3 | `^0.14.0` | `^0.14.2` |
 | babel-plugin-polyfill-regenerator | `^0.6.6` | `^0.6.8` |
 | core-js-compat | `^3.48.0` | `^3.49.0` |
-| semver | `^6.3.1` | `^7.8.0` |
+| semver | `^6.3.1` | `^7.8.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel__preset-env&labels=bug).
