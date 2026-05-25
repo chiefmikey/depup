@@ -86,6 +86,23 @@
       "status": "failed",
       "timestamp": "2026-04-20T20:22:35.642Z",
       "version": "7.16.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@typescript-eslint/scope-manager": {
+          "from": "^8.56.0",
+          "to": "^8.60.0"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.56.0",
+          "to": "^8.60.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-25T18:10:40.813Z",
+      "version": "7.16.2-depup.3"
     }
   }
 }

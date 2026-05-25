@@ -109,6 +109,19 @@
       "status": "failed",
       "timestamp": "2026-05-22T02:00:39.134Z",
       "version": "6.1.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "html-dom-parser": {
+          "from": "7.1.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-25T18:10:56.929Z",
+      "version": "6.1.2-depup.1"
     }
   }
 }
