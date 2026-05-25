@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-04-06T20:24:37.401Z",
       "version": "3.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "inquirer": {
+          "from": "^7.0.0",
+          "to": "^14.0.0"
+        },
+        "yargs": {
+          "from": "^14.0.0",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-25T22:04:32.378Z",
+      "version": "3.0.1-depup.2"
     }
   }
 }

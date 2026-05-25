@@ -12,13 +12,13 @@ npm install @depup/yargs-interactive
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.1 | **Updated**: 4/6/2026 | **Import test**: passed
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.2 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| inquirer | `^7.0.0` | `^13.4.0` |
+| inquirer | `^7.0.0` | `^14.0.0` |
 | yargs | `^14.0.0` | `^18.0.0` |
 
 
