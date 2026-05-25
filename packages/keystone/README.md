@@ -12,26 +12,26 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.13 | **Updated**: 5/21/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.14 | **Updated**: 5/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.4.4` | `^7.29.0` |
+| @babel/core | `^7.4.4` | `^7.29.7` |
 | @babel/plugin-proposal-class-properties | `^7.4.4` | `^7.18.6` |
-| @babel/plugin-proposal-decorators | `^7.4.4` | `^7.29.0` |
+| @babel/plugin-proposal-decorators | `^7.4.4` | `^7.29.7` |
 | @babel/plugin-proposal-export-namespace-from | `^7.2.0` | `^7.18.9` |
-| @babel/plugin-proposal-function-sent | `^7.2.0` | `^7.27.1` |
+| @babel/plugin-proposal-function-sent | `^7.2.0` | `^7.29.7` |
 | @babel/plugin-proposal-json-strings | `^7.2.0` | `^7.18.6` |
 | @babel/plugin-proposal-numeric-separator | `^7.2.0` | `^7.18.6` |
-| @babel/plugin-proposal-throw-expressions | `^7.2.0` | `^7.27.1` |
+| @babel/plugin-proposal-throw-expressions | `^7.2.0` | `^7.29.7` |
 | @babel/plugin-syntax-dynamic-import | `^7.2.0` | `^7.8.3` |
 | @babel/plugin-syntax-import-meta | `^7.2.0` | `^7.10.4` |
-| @babel/plugin-transform-object-assign | `^7.2.0` | `^7.27.1` |
+| @babel/plugin-transform-object-assign | `^7.2.0` | `^7.29.7` |
 | @babel/polyfill | `^7.4.4` | `^7.12.1` |
-| @babel/preset-env | `^7.4.4` | `^7.29.5` |
-| @babel/preset-react | `^7.0.0` | `^7.28.5` |
+| @babel/preset-env | `^7.4.4` | `^7.29.7` |
+| @babel/preset-react | `^7.0.0` | `^7.29.7` |
 | async | `^2.6.2` | `^3.2.6` |
 | body-parser | `^1.19.0` | `^2.2.2` |
 | browserify | `^16.2.3` | `^17.0.1` |
@@ -78,7 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinymce | `^4.9.2` | `^8.5.1` |
 | sanitize-html | `^1.20.1` | `^2.17.4` |
 | scmp | `^1.0.2` | `^2.1.0` |
-| semver | `^6.0.0` | `^7.8.0` |
+| semver | `^6.0.0` | `^7.8.1` |
 | serve-favicon | `^2.5.0` | `^2.5.1` |
 | string-to-stream | `^1.1.1` | `^3.0.1` |
 | watchify | `^3.11.1` | `^4.0.0` |

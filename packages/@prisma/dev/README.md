@@ -12,23 +12,23 @@ npm install @depup/prisma__dev
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.24.8 | **DepUp version**: 0.24.8-depup.0 | **Updated**: 5/21/2026 | **Import test**: failed
+**Original version**: 0.24.8 | **DepUp version**: 0.24.8-depup.1 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @electric-sql/pglite | `0.4.3` | `^0.4.5` |
-| @electric-sql/pglite-socket | `0.1.3` | `^0.1.5` |
-| @electric-sql/pglite-tools | `0.3.3` | `^0.3.5` |
-| @hono/node-server | `1.19.11` | `^2.0.3` |
+| @electric-sql/pglite | `0.4.3` | `^0.4.6` |
+| @electric-sql/pglite-socket | `0.1.3` | `^0.1.6` |
+| @electric-sql/pglite-tools | `0.3.3` | `^0.3.6` |
+| @hono/node-server | `1.19.11` | `^2.0.4` |
 | @prisma/get-platform | `7.2.0` | `^7.8.0` |
 | @prisma/query-plan-executor | `7.2.0` | `^7.8.0` |
 | foreground-child | `3.3.1` | `^4.0.3` |
-| hono | `^4.12.8` | `^4.12.21` |
-| remeda | `2.33.4` | `^2.34.1` |
+| hono | `^4.12.8` | `^4.12.23` |
+| remeda | `2.33.4` | `^2.35.0` |
 | std-env | `3.10.0` | `^4.1.0` |
-| valibot | `1.2.0` | `^1.4.0` |
+| valibot | `1.2.0` | `^1.4.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/prisma__dev&labels=bug).
