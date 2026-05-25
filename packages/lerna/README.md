@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.15 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.16 | **Updated**: 5/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @npmcli/arborist | `9.1.6` | `^9.6.0` |
 | @npmcli/package-json | `7.0.2` | `^8.0.0` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
-| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.2` |
+| @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.4` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | aproba | `2.0.0` | `^2.1.0` |
 | byte-size | `8.1.1` | `^9.0.1` |
@@ -41,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | import-local | `3.1.0` | `^3.2.0` |
 | ini | `^1.3.8` | `^7.0.0` |
 | init-package-json | `8.2.2` | `^9.0.0` |
-| inquirer | `12.9.6` | `^13.4.3` |
+| inquirer | `12.9.6` | `^14.0.0` |
 | is-ci | `3.0.1` | `^4.1.0` |
 | jest-diff | `>=30.0.0 < 31` | `^30.4.1` |
 | libnpmpublish | `11.1.2` | `^11.2.0` |
@@ -51,7 +51,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `13.0.1` | `^14.0.0` |
 | npm-packlist | `10.0.3` | `^11.1.0` |
 | npm-registry-fetch | `19.1.0` | `^20.0.0` |
-| nx | `>=21.5.3 < 23.0.0` | `^22.7.2` |
+| nx | `>=21.5.3 < 23.0.0` | `^22.7.4` |
 | p-map | `4.0.0` | `^7.0.4` |
 | p-map-series | `2.1.0` | `^3.0.0` |
 | p-pipe | `3.1.0` | `^4.0.0` |
