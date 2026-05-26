@@ -1206,5 +1206,64 @@
       "timestamp": "2026-05-25T14:03:05.491Z",
       "version": "6.3.3-depup.0"
     }
+  },
+  "6.4.0": {
+    "0": {
+      "changes": {
+        "@babel/parser": {
+          "from": "7.27.0",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "7.27.0",
+          "to": "^7.29.7"
+        },
+        "chokidar": {
+          "from": "^4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "^13.0.0",
+          "to": "^14.0.3"
+        },
+        "conf": {
+          "from": "^15.0.2",
+          "to": "^15.1.0"
+        },
+        "debounce": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        },
+        "log-symbols": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        },
+        "marked": {
+          "from": "^15.0.12",
+          "to": "^18.0.4"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "socket.io": {
+          "from": "^4.8.1",
+          "to": "^4.8.3"
+        },
+        "tailwindcss": {
+          "from": "^4.1.18",
+          "to": "^4.3.0"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-26T22:02:51.320Z",
+      "version": "6.4.0-depup.0"
+    }
   }
 }
