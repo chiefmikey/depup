@@ -1763,6 +1763,35 @@
       "status": "failed",
       "timestamp": "2026-05-25T02:06:04.592Z",
       "version": "4.94.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "esbuild": {
+          "from": "0.27.3",
+          "to": "^0.28.0"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        },
+        "rosie-skills": {
+          "from": "^0.6.3",
+          "to": "^0.7.6"
+        },
+        "workerd": {
+          "from": "1.20260521.1",
+          "to": "^1.20260526.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-26T02:04:37.668Z",
+      "version": "4.94.0-depup.4"
     }
   }
 }
