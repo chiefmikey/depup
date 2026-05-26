@@ -50,6 +50,23 @@
       "status": "published",
       "timestamp": "2026-03-19T12:25:14.964Z",
       "version": "4.0.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "iconv-lite": {
+          "from": "^0.6.3",
+          "to": "^0.7.2"
+        },
+        "streamx": {
+          "from": "^2.14.0",
+          "to": "^2.26.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-26T18:08:22.914Z",
+      "version": "4.0.2-depup.3"
     }
   }
 }
