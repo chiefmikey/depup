@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.7.4 | **DepUp version**: 22.7.4-depup.0 | **Updated**: 5/25/2026 | **Import test**: failed
+**Original version**: 22.7.4 | **DepUp version**: 22.7.4-depup.1 | **Updated**: 5/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -43,7 +43,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | define-lazy-prop | `2.0.0` | `^3.0.0` |
 | dotenv | `16.4.7` | `^17.4.2` |
 | dotenv-expand | `12.0.3` | `^13.0.0` |
-| ejs | `5.0.1` | `^5.0.2` |
+| ejs | `5.0.1` | `^6.0.1` |
 | emoji-regex | `8.0.0` | `^10.6.0` |
 | enquirer | `2.3.6` | `^2.4.1` |
 | es-object-atoms | `1.1.1` | `^1.1.2` |
