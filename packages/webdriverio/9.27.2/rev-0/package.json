@@ -1,0 +1,163 @@
+{
+  "name": "@depup/webdriverio",
+  "description": "Next-gen browser and mobile automation test framework for Node.js (with updated dependencies)",
+  "version": "9.27.2-depup.0",
+  "homepage": "https://webdriver.io",
+  "author": "Christian Bromann <mail@bromann.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdriverio/webdriverio.git",
+    "directory": "packages/webdriverio"
+  },
+  "bugs": {
+    "url": "https://github.com/webdriverio/webdriverio/issues"
+  },
+  "engines": {
+    "node": ">=18.20.0"
+  },
+  "tags": [
+    "webdriver",
+    "selenium",
+    "test",
+    "automation",
+    "browser",
+    "javascript",
+    "node"
+  ],
+  "keywords": [
+    "webdriverio",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webdriver",
+    "selenium",
+    "appium",
+    "saucelabs",
+    "sauce",
+    "labs",
+    "mocha",
+    "nodeUnit",
+    "buster",
+    "puppeteer",
+    "vows",
+    "jasmine",
+    "assert",
+    "cucumber",
+    "testingbot"
+  ],
+  "main": "./build/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "browser": "./build/index.js",
+      "importSource": "./src/node.ts",
+      "import": "./build/node.js",
+      "requireSource": "./src/index.cts",
+      "require": "./build/index.cjs"
+    },
+    "./scripts/*": {
+      "source": "./src/scripts/*.ts",
+      "import": "./build/scripts/*"
+    },
+    "./protocol-stub": {
+      "source": "./src/protocol-stub.ts",
+      "import": "./build/protocol-stub.js"
+    }
+  },
+  "types": "./build/index.d.ts",
+  "typeScriptVersion": "3.8.3",
+  "devDependencies": {
+    "@sinonjs/fake-timers": "^14.0.0",
+    "@types/archiver": "^6.0.2",
+    "@types/aria-query": "^5.0.4",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "@types/lodash.zip": "^4.2.9",
+    "puppeteer-core": "^24.12.1",
+    "safe-stable-stringify": "^2.4.3"
+  },
+  "dependencies": {
+    "@types/node": "^25.9.1",
+    "@types/sinonjs__fake-timers": "^15.0.1",
+    "@wdio/config": "9.27.2",
+    "@wdio/logger": "9.18.0",
+    "@wdio/protocols": "9.27.2",
+    "@wdio/repl": "9.16.2",
+    "@wdio/types": "9.27.2",
+    "@wdio/utils": "9.27.2",
+    "archiver": "^8.0.0",
+    "aria-query": "^5.3.2",
+    "cheerio": "^1.2.0",
+    "css-shorthand-properties": "^1.1.2",
+    "css-value": "^0.0.1",
+    "grapheme-splitter": "^1.0.4",
+    "htmlfy": "^1.0.1",
+    "is-plain-obj": "^4.1.0",
+    "jszip": "^3.10.1",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.zip": "^4.2.0",
+    "query-selector-shadow-dom": "^1.0.1",
+    "resq": "^1.11.0",
+    "rgb2hex": "0.2.5",
+    "serialize-error": "^13.0.1",
+    "urlpattern-polyfill": "^10.1.0",
+    "webdriver": "9.27.2"
+  },
+  "peerDependencies": {
+    "puppeteer-core": ">=22.x || <=24.x"
+  },
+  "peerDependenciesMeta": {
+    "puppeteer-core": {
+      "optional": true
+    }
+  },
+  "gitHead": "a95ab41f3ac1fd9510341a21d365a359528212ac",
+  "depup": {
+    "changes": {
+      "@types/node": {
+        "from": "^20.11.30",
+        "to": "^25.9.1"
+      },
+      "@types/sinonjs__fake-timers": {
+        "from": "^8.1.5",
+        "to": "^15.0.1"
+      },
+      "archiver": {
+        "from": "^7.0.1",
+        "to": "^8.0.0"
+      },
+      "aria-query": {
+        "from": "^5.3.0",
+        "to": "^5.3.2"
+      },
+      "cheerio": {
+        "from": "^1.0.0-rc.12",
+        "to": "^1.2.0"
+      },
+      "css-shorthand-properties": {
+        "from": "^1.1.1",
+        "to": "^1.1.2"
+      },
+      "htmlfy": {
+        "from": "^0.8.1",
+        "to": "^1.0.1"
+      },
+      "serialize-error": {
+        "from": "^12.0.0",
+        "to": "^13.0.1"
+      },
+      "urlpattern-polyfill": {
+        "from": "^10.0.0",
+        "to": "^10.1.0"
+      }
+    },
+    "depsUpdated": 9,
+    "originalPackage": "webdriverio",
+    "originalVersion": "9.27.2",
+    "processedAt": "2026-05-26T14:07:25.739Z",
+    "smokeTest": "failed"
+  }
+}
