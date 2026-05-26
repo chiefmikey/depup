@@ -129,5 +129,20 @@
       "timestamp": "2026-05-11T07:24:54.543Z",
       "version": "1.32.0-depup.0"
     }
+  },
+  "1.32.1": {
+    "0": {
+      "changes": {
+        "@tanstack/react-store": {
+          "from": "^0.9.1",
+          "to": "^0.11.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-26T18:02:39.059Z",
+      "version": "1.32.1-depup.0"
+    }
   }
 }
