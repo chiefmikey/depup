@@ -12,40 +12,46 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.41.1 | **DepUp version**: 6.41.1-depup.1 | **Updated**: 5/26/2026 | **Import test**: failed
+**Original version**: 6.41.1 | **DepUp version**: 6.41.1-depup.2 | **Updated**: 5/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1025.0` | `^3.1053.0` |
+| @aws-sdk/client-s3 | `3.1025.0` | `^3.1054.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.54.0` |
-| @tryghost/api-framework | `1.0.7` | `^3.2.1` |
-| @tryghost/bookshelf-plugins | `2.2.0` | `^2.2.1` |
+| @tryghost/api-framework | `1.0.7` | `^3.2.2` |
+| @tryghost/bookshelf-plugins | `2.2.0` | `^2.2.2` |
 | @tryghost/color-utils | `0.2.16` | `^0.2.18` |
 | @tryghost/config-url-helpers | `1.0.23` | `^1.0.25` |
 | @tryghost/custom-fonts | `1.0.8` | `^1.0.10` |
-| @tryghost/database-info | `0.3.35` | `^2.2.0` |
-| @tryghost/domain-events | `1.0.8` | `^3.2.2` |
-| @tryghost/email-mock-receiver | `2.1.0` | `^2.2.0` |
-| @tryghost/errors | `1.3.13` | `^3.2.1` |
+| @tryghost/database-info | `0.3.35` | `^2.2.1` |
+| @tryghost/debug | `2.2.0` | `^2.2.1` |
+| @tryghost/domain-events | `1.0.8` | `^3.2.3` |
+| @tryghost/email-mock-receiver | `2.1.0` | `^2.2.1` |
+| @tryghost/errors | `1.3.13` | `^3.2.2` |
 | @tryghost/helpers | `1.1.103` | `^1.1.105` |
-| @tryghost/job-manager | `1.0.9` | `^4.0.1` |
-| @tryghost/logging | `4.2.0` | `^5.0.0` |
-| @tryghost/metrics | `1.0.43` | `^3.2.0` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.2.1` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.2.0` |
-| @tryghost/nodemailer | `2.2.0` | `^2.2.1` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^4.0.0` |
-| @tryghost/request | `1.0.12` | `^3.2.1` |
-| @tryghost/security | `1.0.6` | `^3.2.0` |
+| @tryghost/job-manager | `1.0.9` | `^4.0.2` |
+| @tryghost/logging | `4.2.0` | `^5.0.1` |
+| @tryghost/metrics | `1.0.43` | `^3.2.1` |
+| @tryghost/mw-error-handler | `1.0.13` | `^3.2.2` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.2.1` |
+| @tryghost/nodemailer | `2.2.0` | `^2.2.2` |
+| @tryghost/pretty-cli | `3.2.0` | `^3.2.1` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^4.0.1` |
+| @tryghost/promise | `2.2.0` | `^2.2.1` |
+| @tryghost/request | `1.0.12` | `^3.2.2` |
+| @tryghost/root-utils | `2.2.0` | `^2.2.1` |
+| @tryghost/security | `1.0.6` | `^3.2.1` |
 | @tryghost/string | `0.3.2` | `^0.3.4` |
+| @tryghost/tpl | `2.2.0` | `^2.2.1` |
 | @tryghost/url-utils | `5.1.2` | `^5.2.4` |
-| @tryghost/validator | `0.2.22` | `^3.1.1` |
-| @tryghost/zip | `3.2.0` | `^3.3.1` |
+| @tryghost/validator | `0.2.22` | `^3.1.2` |
+| @tryghost/version | `2.2.0` | `^2.2.1` |
+| @tryghost/zip | `3.2.0` | `^3.3.2` |
 | body-parser | `1.20.5` | `^2.2.2` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
@@ -81,9 +87,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.1` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
-| mysql2 | `3.18.1` | `^3.22.3` |
+| mysql2 | `3.18.1` | `^3.22.4` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.7` | `^8.0.8` |
+| nodemailer | `8.0.7` | `^8.0.9` |
 | otplib | `12.0.1` | `^13.4.0` |
 | probe-image-size | `7.2.3` | `^7.3.0` |
 | semver | `7.7.4` | `^7.8.1` |
