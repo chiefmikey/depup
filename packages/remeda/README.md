@@ -12,7 +12,7 @@ npm install @depup/remeda
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.35.0 | **DepUp version**: 2.35.0-depup.0 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 2.36.0 | **DepUp version**: 2.36.0-depup.0 | **Updated**: 5/26/2026 | **Import test**: passed
 
 ## What changed
 
