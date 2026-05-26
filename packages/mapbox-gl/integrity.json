@@ -252,6 +252,47 @@
       "status": "failed",
       "timestamp": "2026-05-26T18:10:36.345Z",
       "version": "3.24.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@mapbox/tiny-sdf": {
+          "from": "^2.0.6",
+          "to": "^2.2.0"
+        },
+        "@mapbox/unitbezier": {
+          "from": "^0.0.1",
+          "to": "^1.0.0"
+        },
+        "@mapbox/vector-tile": {
+          "from": "^2.0.4",
+          "to": "^2.0.5"
+        },
+        "earcut": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "geojson-vt": {
+          "from": "^4.0.2",
+          "to": "^4.0.3"
+        },
+        "kdbush": {
+          "from": "^4.0.2",
+          "to": "^4.1.0"
+        },
+        "pbf": {
+          "from": "^4.0.1",
+          "to": "^5.0.0"
+        },
+        "potpack": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-26T22:10:55.160Z",
+      "version": "3.24.0-depup.3"
     }
   }
 }

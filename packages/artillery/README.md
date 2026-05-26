@@ -12,26 +12,26 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.32 | **DepUp version**: 2.0.32-depup.4 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 2.0.32 | **DepUp version**: 2.0.32-depup.5 | **Updated**: 5/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-iam | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/client-sts | `^3.1034.0` | `^3.1053.0` |
-| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1053.0` |
+| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-iam | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/client-sts | `^3.1034.0` | `^3.1054.0` |
+| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1054.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.31.0` |
-| @oclif/core | `^4.8.0` | `^4.11.3` |
+| @oclif/core | `^4.8.0` | `^4.11.4` |
 | @oclif/plugin-help | `^6.2.36` | `^6.2.49` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.86` |
 | @smithy/core | `^3.24.0` | `^3.24.4` |
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.18.0` | `^4.18.1` |
 | nanoid | `^3.3.4` | `^5.1.11` |
 | ora | `^4.0.4` | `^9.4.0` |
-| sqs-consumer | `6.0.2` | `^15.0.1` |
+| sqs-consumer | `6.0.2` | `^15.0.2` |
 | tempy | `3.1.0` | `^3.2.0` |
 | walk-sync | `^0.2.3` | `^4.0.2` |
 
