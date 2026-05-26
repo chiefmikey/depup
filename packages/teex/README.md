@@ -12,13 +12,13 @@ npm install @depup/teex
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.1 | **DepUp version**: 1.0.1-depup.2 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.0.1 | **DepUp version**: 1.0.1-depup.3 | **Updated**: 5/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| streamx | `^2.12.5` | `^2.25.0` |
+| streamx | `^2.12.5` | `^2.26.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/teex&labels=bug).
