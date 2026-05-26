@@ -249,5 +249,20 @@
       "timestamp": "2026-05-19T18:03:41.790Z",
       "version": "17.0.0-depup.0"
     }
+  },
+  "17.0.1": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-26T18:01:44.737Z",
+      "version": "17.0.1-depup.0"
+    }
   }
 }

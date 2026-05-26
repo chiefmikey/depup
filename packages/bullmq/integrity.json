@@ -654,5 +654,32 @@
       "timestamp": "2026-05-26T14:03:47.513Z",
       "version": "5.77.3-depup.1"
     }
+  },
+  "5.77.4": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "ioredis": {
+          "from": "5.10.1",
+          "to": "^5.11.0"
+        },
+        "msgpackr": {
+          "from": "2.0.1",
+          "to": "^2.0.2"
+        },
+        "semver": {
+          "from": "7.8.0",
+          "to": "^7.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-26T18:01:12.204Z",
+      "version": "5.77.4-depup.0"
+    }
   }
 }
