@@ -1,6 +1,6 @@
 {
   "name": "@depup/keystone",
-  "version": "4.2.1-depup.10",
+  "version": "4.2.1-depup.15",
   "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose (with updated dependencies)",
   "main": "index.js",
   "repository": {
@@ -8,20 +8,20 @@
     "url": "https://github.com/keystonejs/keystone.git"
   },
   "dependencies": {
-    "@babel/core": "^7.29.0",
+    "@babel/core": "^7.29.7",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-decorators": "^7.29.0",
+    "@babel/plugin-proposal-decorators": "^7.29.7",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-    "@babel/plugin-proposal-function-sent": "^7.27.1",
+    "@babel/plugin-proposal-function-sent": "^7.29.7",
     "@babel/plugin-proposal-json-strings": "^7.18.6",
     "@babel/plugin-proposal-numeric-separator": "^7.18.6",
-    "@babel/plugin-proposal-throw-expressions": "^7.27.1",
+    "@babel/plugin-proposal-throw-expressions": "^7.29.7",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-syntax-import-meta": "^7.10.4",
-    "@babel/plugin-transform-object-assign": "^7.27.1",
+    "@babel/plugin-transform-object-assign": "^7.29.7",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.29.5",
-    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
     "async": "^3.2.6",
     "asyncdi": "^1.1.0",
     "babelify": "^10.0.0",
@@ -43,7 +43,7 @@
     "debug": "^4.4.3",
     "display-name": "^1.0.1",
     "dumb-passwords": "^0.2.1",
-    "ejs": "^5.0.2",
+    "ejs": "^6.0.1",
     "elemental": "^0.6.1",
     "embedly": "^2.1.1",
     "errorhandler": "^1.5.2",
@@ -52,7 +52,7 @@
     "express-request-language": "^1.1.15",
     "express-session": "^1.19.0",
     "expression-match": "^0.0.17",
-    "fs-extra": "^11.3.4",
+    "fs-extra": "^11.3.5",
     "glamor": "^2.20.40",
     "grappling-hook": "^3.0.0",
     "greenlock-express": "^4.0.3",
@@ -64,41 +64,41 @@
     "less-middleware": "^3.1.0",
     "list-to-array": "^1.1.0",
     "lodash": "^4.18.1",
-    "marked": "^18.0.3",
+    "marked": "^18.0.4",
     "method-override": "^3.0.0",
     "mime-types": "^3.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^9.6.1",
+    "mongoose": "^9.6.2",
     "morgan": "^1.10.1",
     "multer": "^2.1.1",
     "numeral": "^2.0.6",
     "object-assign": "^4.1.1",
-    "qs": "^6.15.1",
+    "qs": "^6.15.2",
     "queryfilter": "^0.0.4",
     "range_check": "^4.1.0",
-    "react": "^19.2.5",
+    "react": "^19.2.6",
     "react-addons-css-transition-group": "^15.6.2",
     "react-alt-text": "^2.0.0",
     "react-color": "^2.19.3",
-    "react-day-picker": "^9.14.0",
+    "react-day-picker": "^10.0.1",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^19.2.5",
+    "react-dom": "^19.2.6",
     "react-domify": "^0.2.6",
     "react-images": "^1.2.0-beta.7",
     "react-markdown": "^10.1.0",
-    "react-redux": "^9.2.0",
-    "react-router": "^7.15.0",
+    "react-redux": "^9.3.0",
+    "react-router": "^7.15.1",
     "react-router-redux": "^4.0.8",
     "redux": "^5.0.1",
-    "redux-saga": "^1.4.2",
+    "redux-saga": "^1.5.0",
     "redux-thunk": "^3.1.0",
     "react-select": "^5.10.2",
     "sanitize-filename": "^1.6.4",
-    "tinymce": "^8.5.0",
-    "sanitize-html": "^2.17.3",
+    "tinymce": "^8.5.1",
+    "sanitize-html": "^2.17.4",
     "scmp": "^2.1.0",
-    "semver": "^7.7.4",
+    "semver": "^7.8.1",
     "serve-favicon": "^2.5.1",
     "string-to-stream": "^3.0.1",
     "vkey": "^1.0.1",
@@ -200,7 +200,7 @@
     "changes": {
       "@babel/core": {
         "from": "^7.4.4",
-        "to": "^7.29.0"
+        "to": "^7.29.7"
       },
       "@babel/plugin-proposal-class-properties": {
         "from": "^7.4.4",
@@ -208,7 +208,7 @@
       },
       "@babel/plugin-proposal-decorators": {
         "from": "^7.4.4",
-        "to": "^7.29.0"
+        "to": "^7.29.7"
       },
       "@babel/plugin-proposal-export-namespace-from": {
         "from": "^7.2.0",
@@ -216,7 +216,7 @@
       },
       "@babel/plugin-proposal-function-sent": {
         "from": "^7.2.0",
-        "to": "^7.27.1"
+        "to": "^7.29.7"
       },
       "@babel/plugin-proposal-json-strings": {
         "from": "^7.2.0",
@@ -228,7 +228,7 @@
       },
       "@babel/plugin-proposal-throw-expressions": {
         "from": "^7.2.0",
-        "to": "^7.27.1"
+        "to": "^7.29.7"
       },
       "@babel/plugin-syntax-dynamic-import": {
         "from": "^7.2.0",
@@ -240,7 +240,7 @@
       },
       "@babel/plugin-transform-object-assign": {
         "from": "^7.2.0",
-        "to": "^7.27.1"
+        "to": "^7.29.7"
       },
       "@babel/polyfill": {
         "from": "^7.4.4",
@@ -248,11 +248,11 @@
       },
       "@babel/preset-env": {
         "from": "^7.4.4",
-        "to": "^7.29.5"
+        "to": "^7.29.7"
       },
       "@babel/preset-react": {
         "from": "^7.0.0",
-        "to": "^7.28.5"
+        "to": "^7.29.7"
       },
       "async": {
         "from": "^2.6.2",
@@ -300,7 +300,7 @@
       },
       "ejs": {
         "from": "^2.6.1",
-        "to": "^5.0.2"
+        "to": "^6.0.1"
       },
       "errorhandler": {
         "from": "^1.5.1",
@@ -320,7 +320,7 @@
       },
       "fs-extra": {
         "from": "^8.0.1",
-        "to": "^11.3.4"
+        "to": "^11.3.5"
       },
       "greenlock-express": {
         "from": "^2.7.8",
@@ -336,7 +336,7 @@
       },
       "marked": {
         "from": "^0.6.2",
-        "to": "^18.0.3"
+        "to": "^18.0.4"
       },
       "mime-types": {
         "from": "^2.1.24",
@@ -348,7 +348,7 @@
       },
       "mongoose": {
         "from": "^4.13.14",
-        "to": "^9.6.1"
+        "to": "^9.6.2"
       },
       "morgan": {
         "from": "^1.9.1",
@@ -360,7 +360,7 @@
       },
       "qs": {
         "from": "^6.7.0",
-        "to": "^6.15.1"
+        "to": "^6.15.2"
       },
       "range_check": {
         "from": "^1.4.0",
@@ -368,7 +368,7 @@
       },
       "react": {
         "from": "^15.4.2",
-        "to": "^19.2.5"
+        "to": "^19.2.6"
       },
       "react-color": {
         "from": "^2.14.1",
@@ -376,7 +376,7 @@
       },
       "react-day-picker": {
         "from": "^2.5.0",
-        "to": "^9.14.0"
+        "to": "^10.0.1"
       },
       "react-dnd": {
         "from": "^2.5.3",
@@ -388,7 +388,7 @@
       },
       "react-dom": {
         "from": "^15.4.2",
-        "to": "^19.2.5"
+        "to": "^19.2.6"
       },
       "react-images": {
         "from": "^0.5.6",
@@ -400,11 +400,11 @@
       },
       "react-redux": {
         "from": "^5.0.6",
-        "to": "^9.2.0"
+        "to": "^9.3.0"
       },
       "react-router": {
         "from": "^3.0.2",
-        "to": "^7.15.0"
+        "to": "^7.15.1"
       },
       "redux": {
         "from": "^3.7.2",
@@ -412,7 +412,7 @@
       },
       "redux-saga": {
         "from": "^0.15.6",
-        "to": "^1.4.2"
+        "to": "^1.5.0"
       },
       "redux-thunk": {
         "from": "^2.2.0",
@@ -428,11 +428,11 @@
       },
       "tinymce": {
         "from": "^4.9.2",
-        "to": "^8.5.0"
+        "to": "^8.5.1"
       },
       "sanitize-html": {
         "from": "^1.20.1",
-        "to": "^2.17.3"
+        "to": "^2.17.4"
       },
       "scmp": {
         "from": "^1.0.2",
@@ -440,7 +440,7 @@
       },
       "semver": {
         "from": "^6.0.0",
-        "to": "^7.7.4"
+        "to": "^7.8.1"
       },
       "serve-favicon": {
         "from": "^2.5.0",
@@ -462,7 +462,7 @@
     "depsUpdated": 65,
     "originalPackage": "keystone",
     "originalVersion": "4.2.1",
-    "processedAt": "2026-05-06T07:10:26.152Z",
+    "processedAt": "2026-05-26T06:08:15.486Z",
     "smokeTest": "passed"
   }
 }
