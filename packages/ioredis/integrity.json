@@ -112,5 +112,20 @@
       "timestamp": "2026-05-22T10:07:54.765Z",
       "version": "5.10.1-depup.5"
     }
+  },
+  "5.11.0": {
+    "0": {
+      "changes": {
+        "cluster-key-slot": {
+          "from": "1.1.1",
+          "to": "^1.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-26T14:03:02.654Z",
+      "version": "5.11.0-depup.0"
+    }
   }
 }
