@@ -1,6 +1,6 @@
 {
   "name": "@depup/bull",
-  "version": "4.16.5-depup.1",
+  "version": "4.16.5-depup.6",
   "description": "Job manager (with updated dependencies)",
   "engines": {
     "node": ">=12"
@@ -29,11 +29,11 @@
   "dependencies": {
     "cron-parser": "^5.5.0",
     "get-port": "^7.2.0",
-    "ioredis": "^5.10.1",
-    "lodash": "^4.17.23",
-    "msgpackr": "^1.11.9",
-    "semver": "^7.7.4",
-    "uuid": "^13.0.0"
+    "ioredis": "^5.11.0",
+    "lodash": "^4.18.1",
+    "msgpackr": "^2.0.2",
+    "semver": "^7.8.1",
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
@@ -143,29 +143,29 @@
       },
       "ioredis": {
         "from": "^5.3.2",
-        "to": "^5.10.1"
+        "to": "^5.11.0"
       },
       "lodash": {
         "from": "^4.17.21",
-        "to": "^4.17.23"
+        "to": "^4.18.1"
       },
       "msgpackr": {
         "from": "^1.11.2",
-        "to": "^1.11.9"
+        "to": "^2.0.2"
       },
       "semver": {
         "from": "^7.5.2",
-        "to": "^7.7.4"
+        "to": "^7.8.1"
       },
       "uuid": {
         "from": "^8.3.0",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
       }
     },
     "depsUpdated": 7,
     "originalPackage": "bull",
     "originalVersion": "4.16.5",
-    "processedAt": "2026-03-22T08:14:18.815Z",
+    "processedAt": "2026-05-26T14:10:17.723Z",
     "smokeTest": "passed"
   }
 }

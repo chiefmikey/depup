@@ -12,13 +12,13 @@ npm install @depup/sliding-window-rate-limiter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.1 | **Updated**: 5/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ioredis | `^5.4.1` | `^5.10.0` |
+| ioredis | `^5.4.1` | `^5.11.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sliding-window-rate-limiter&labels=bug).
