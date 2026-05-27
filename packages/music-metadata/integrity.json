@@ -48,6 +48,31 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:14:51.991Z",
       "version": "11.12.3-depup.2"
+    },
+    "3": {
+      "changes": {
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "file-type": {
+          "from": "^21.3.1",
+          "to": "^22.0.1"
+        },
+        "media-typer": {
+          "from": "^1.1.0",
+          "to": "^2.0.0"
+        },
+        "strtok3": {
+          "from": "^10.3.4",
+          "to": "^10.3.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-27T22:11:25.096Z",
+      "version": "11.12.3-depup.3"
     }
   }
 }
