@@ -109,5 +109,28 @@
       "timestamp": "2026-05-27T14:02:47.171Z",
       "version": "6.0.1-depup.0"
     }
+  },
+  "6.1.0": {
+    "0": {
+      "changes": {
+        "@graphql-tools/schema": {
+          "from": "^10.0.0",
+          "to": "^10.0.33"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-27T18:02:29.849Z",
+      "version": "6.1.0-depup.0"
+    }
   }
 }
