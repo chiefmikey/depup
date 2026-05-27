@@ -12,13 +12,13 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.7 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.8 | **Updated**: 5/27/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `^2.6.4` | `^9.6.0` |
+| @npmcli/arborist | `^2.6.4` | `^9.7.0` |
 | bufferutil | `^4.0.2` | `^4.1.0` |
 | cachedir | `^2.3.0` | `^2.4.0` |
 | cheerio | `1.0.0-rc.10` | `^1.2.0` |
