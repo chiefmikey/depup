@@ -128,5 +128,28 @@
       "timestamp": "2026-05-24T18:00:39.824Z",
       "version": "9.7.0-depup.0"
     }
+  },
+  "9.7.1": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^25.2.3",
+          "to": "^25.9.1"
+        },
+        "nanoid": {
+          "from": "^5.1.3",
+          "to": "^5.1.11"
+        },
+        "xml-js": {
+          "from": "^1.6.8",
+          "to": "^1.6.11"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-27T18:00:57.320Z",
+      "version": "9.7.1-depup.0"
+    }
   }
 }
