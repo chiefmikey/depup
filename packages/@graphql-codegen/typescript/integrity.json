@@ -76,5 +76,28 @@
       "timestamp": "2026-05-07T07:10:52.335Z",
       "version": "6.0.1-depup.0"
     }
+  },
+  "6.0.2": {
+    "0": {
+      "changes": {
+        "auto-bind": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "~2.8.0",
+          "to": "^2.8.1"
+        },
+        "@graphql-codegen/visitor-plugin-common": {
+          "from": "^7.0.3",
+          "to": "^7.0.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-27T14:02:50.356Z",
+      "version": "6.0.2-depup.0"
+    }
   }
 }
