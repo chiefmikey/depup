@@ -353,5 +353,24 @@
       "timestamp": "2026-05-25T22:07:35.109Z",
       "version": "2.9.14-depup.1"
     }
+  },
+  "2.9.15": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.0"
+        },
+        "esbuild": {
+          "from": "^0.25.0",
+          "to": "^0.28.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-27T02:02:30.560Z",
+      "version": "2.9.15-depup.0"
+    }
   }
 }
