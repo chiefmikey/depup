@@ -12,13 +12,13 @@ npm install @depup/relay-runtime
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.0.0 | **DepUp version**: 21.0.0-depup.0 | **Updated**: 5/18/2026 | **Import test**: passed
+**Original version**: 21.0.1 | **DepUp version**: 21.0.1-depup.0 | **Updated**: 5/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.25.0` | `^7.29.2` |
+| @babel/runtime | `^7.25.0` | `^7.29.7` |
 | fbjs | `^3.0.2` | `^3.0.5` |
 
 
