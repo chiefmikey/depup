@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.34 | **Updated**: 5/25/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.35 | **Updated**: 5/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,11 +28,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/types | `^7.20.7` | `^7.29.7` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
-| @graphql-codegen/add | `^3.2.3` | `^7.0.0` |
-| @graphql-codegen/core | `^2.6.8` | `^6.0.0` |
+| @graphql-codegen/add | `^3.2.3` | `^7.0.1` |
+| @graphql-codegen/core | `^2.6.8` | `^6.1.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.1` |
-| @graphql-codegen/typescript | `^2.8.8` | `^6.0.1` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.2` |
+| @graphql-codegen/typescript | `^2.8.8` | `^6.0.2` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.3` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -122,8 +122,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | strip-ansi | `^6.0.1` | `^7.2.0` |
 | style-loader | `^2.0.0` | `^4.0.0` |
 | style-to-object | `^0.4.1` | `^1.0.14` |
-| terser-webpack-plugin | `^5.3.9` | `^5.6.0` |
-| tmp | `^0.2.1` | `^0.2.5` |
+| terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
+| tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.0` |
 | webpack | `~5.98.0` | `^5.107.2` |
 | webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
