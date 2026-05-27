@@ -1,0 +1,46 @@
+{
+  "name": "@depup/turbo",
+  "version": "2.9.15-depup.0",
+  "description": "Turborepo is a high-performance build system for JavaScript and TypeScript codebases. (with updated dependencies)",
+  "homepage": "https://turborepo.dev",
+  "bugs": "https://github.com/vercel/turborepo/issues",
+  "license": "MIT",
+  "repository": "https://github.com/vercel/turborepo",
+  "bin": {
+    "turbo": "./bin/turbo"
+  },
+  "files": [
+    "bin",
+    "schema.json",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./bin/turbo",
+  "optionalDependencies": {
+    "@turbo/darwin-64": "2.9.15",
+    "@turbo/darwin-arm64": "2.9.15",
+    "@turbo/linux-64": "2.9.15",
+    "@turbo/linux-arm64": "2.9.15",
+    "@turbo/windows-64": "2.9.15",
+    "@turbo/windows-arm64": "2.9.15"
+  },
+  "scripts": {
+    "postversion": "node bump-version.js"
+  },
+  "keywords": [
+    "turbo",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "turbo",
+    "originalVersion": "2.9.15",
+    "processedAt": "2026-05-27T02:06:51.576Z",
+    "smokeTest": "failed"
+  }
+}
