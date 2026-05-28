@@ -12,11 +12,17 @@ npm install @depup/react-types__overlays
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.10.0 | **DepUp version**: 3.10.0-depup.0 | **Updated**: 4/14/2026 | **Import test**: failed
+**Original version**: 3.10.0 | **DepUp version**: 3.10.0-depup.1 | **Updated**: 5/28/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @react-aria/overlays | `^3.32.0` | `^3.32.1` |
+| @react-spectrum/overlays | `^5.10.0` | `^5.10.1` |
+| @react-stately/overlays | `^3.7.0` | `^3.7.1` |
+| @react-types/shared | `^3.34.0` | `^3.35.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-types__overlays&labels=bug).
 
