@@ -39,6 +39,27 @@
       "status": "failed",
       "timestamp": "2026-04-14T12:30:38.679Z",
       "version": "2.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "p-finally": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        },
+        "promise-callbacks": {
+          "from": "^3.8.1",
+          "to": "^3.8.2"
+        },
+        "redis": {
+          "from": "^3.1.2",
+          "to": "^6.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-28T18:08:00.719Z",
+      "version": "2.0.0-depup.2"
     }
   }
 }
