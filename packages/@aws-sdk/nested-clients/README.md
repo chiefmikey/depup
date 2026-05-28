@@ -12,15 +12,12 @@ npm install @depup/aws-sdk__nested-clients
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.997.12 | **DepUp version**: 3.997.12-depup.0 | **Updated**: 5/26/2026 | **Import test**: failed
+**Original version**: 3.997.13 | **DepUp version**: 3.997.13-depup.0 | **Updated**: 5/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.24.3` | `^3.24.4` |
-| @smithy/fetch-http-handler | `^5.4.3` | `^5.4.4` |
-| @smithy/node-http-handler | `^4.7.3` | `^4.7.4` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

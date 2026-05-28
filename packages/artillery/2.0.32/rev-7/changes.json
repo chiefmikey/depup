@@ -2,47 +2,47 @@
   "bumped": {
     "@aws-sdk/client-cloudwatch": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-cloudwatch-logs": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-ec2": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-ecs": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-iam": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-lambda": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-sqs": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-ssm": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/client-sts": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@aws-sdk/credential-providers": {
       "from": "^3.1034.0",
-      "to": "^3.1051.0"
+      "to": "^3.1056.0"
     },
     "@azure/identity": {
       "from": "^4.13.0",
@@ -54,7 +54,7 @@
     },
     "@oclif/core": {
       "from": "^4.8.0",
-      "to": "^4.11.3"
+      "to": "^4.11.4"
     },
     "@oclif/plugin-help": {
       "from": "^6.2.36",
@@ -66,7 +66,7 @@
     },
     "@smithy/core": {
       "from": "^3.24.0",
-      "to": "^3.24.3"
+      "to": "^3.24.5"
     },
     "@upstash/redis": {
       "from": "^1.36.1",
@@ -130,7 +130,7 @@
     },
     "sqs-consumer": {
       "from": "6.0.2",
-      "to": "^15.0.1"
+      "to": "^15.0.2"
     },
     "tempy": {
       "from": "3.1.0",
@@ -141,6 +141,6 @@
       "to": "^4.0.2"
     }
   },
-  "timestamp": "2026-05-20T22:03:19.451Z",
+  "timestamp": "2026-05-28T22:11:19.758Z",
   "totalUpdated": 35
 }
