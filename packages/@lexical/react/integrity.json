@@ -74,5 +74,20 @@
       "timestamp": "2026-04-27T16:37:55.874Z",
       "version": "0.44.0-depup.0"
     }
+  },
+  "0.45.0": {
+    "0": {
+      "changes": {
+        "react-error-boundary": {
+          "from": "^6.1.1",
+          "to": "^6.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-28T22:03:45.207Z",
+      "version": "0.45.0-depup.0"
+    }
   }
 }
