@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.28.0 | **DepUp version**: 5.28.0-depup.0 | **Updated**: 5/28/2026 | **Import test**: failed
+**Original version**: 5.28.0 | **DepUp version**: 5.28.0-depup.1 | **Updated**: 5/28/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,12 +24,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
 | @mux/mux-player-react | `^3.10.2` | `^3.13.0` |
-| @portabletext/editor | `^6.6.4` | `^7.0.3` |
+| @portabletext/editor | `^6.6.4` | `^7.0.4` |
 | @portabletext/html | `^1.0.1` | `^1.0.2` |
-| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.3` |
-| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.3` |
-| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.3` |
-| @portabletext/plugin-typography | `^7.0.27` | `^8.0.3` |
+| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.4` |
+| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.4` |
+| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.4` |
+| @portabletext/plugin-typography | `^7.0.27` | `^8.0.4` |
 | @portabletext/react | `^6.1.0` | `^6.2.0` |
 | @portabletext/sanity-bridge | `^3.0.0` | `^3.1.0` |
 | @sanity/client | `^7.22.0` | `^7.22.1` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | date-fns | `^4.1.0` | `^4.3.0` |
 | groq-js | `^1.29.0` | `^1.30.2` |
 | i18next | `^26.2.0` | `^26.3.0` |
-| isomorphic-dompurify | `2.26.0` | `^3.14.0` |
+| isomorphic-dompurify | `2.26.0` | `^3.15.0` |
 | motion | `^12.27.1` | `^12.40.0` |
 | nanoid | `^3.3.11` | `^5.1.11` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
