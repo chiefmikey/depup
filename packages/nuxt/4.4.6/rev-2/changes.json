@@ -1,0 +1,42 @@
+{
+  "bumped": {
+    "@nuxt/devtools": {
+      "from": "^3.2.4",
+      "to": "^4.0.0-alpha.4"
+    },
+    "@unhead/vue": {
+      "from": "^2.1.15",
+      "to": "^3.1.1"
+    },
+    "@vue/shared": {
+      "from": "^3.5.34",
+      "to": "^3.5.35"
+    },
+    "oxc-minify": {
+      "from": "^0.131.0",
+      "to": "^0.133.0"
+    },
+    "oxc-parser": {
+      "from": "^0.131.0",
+      "to": "^0.133.0"
+    },
+    "oxc-transform": {
+      "from": "^0.131.0",
+      "to": "^0.133.0"
+    },
+    "semver": {
+      "from": "^7.8.0",
+      "to": "^7.8.1"
+    },
+    "vue": {
+      "from": "^3.5.34",
+      "to": "^3.5.35"
+    },
+    "vue-router": {
+      "from": "^5.0.7",
+      "to": "^5.1.0"
+    }
+  },
+  "timestamp": "2026-05-28T18:11:20.682Z",
+  "totalUpdated": 9
+}
