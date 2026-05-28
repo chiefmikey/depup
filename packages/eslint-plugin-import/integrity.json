@@ -86,6 +86,51 @@
       "status": "failed",
       "timestamp": "2026-05-16T07:00:10.018Z",
       "version": "2.32.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "debug": {
+          "from": "^3.2.7",
+          "to": "^4.4.3"
+        },
+        "doctrine": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        },
+        "eslint-import-resolver-node": {
+          "from": "^0.3.9",
+          "to": "^0.4.0"
+        },
+        "eslint-module-utils": {
+          "from": "^2.12.1",
+          "to": "^2.13.0"
+        },
+        "hasown": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        },
+        "is-core-module": {
+          "from": "^2.16.1",
+          "to": "^2.16.2"
+        },
+        "minimatch": {
+          "from": "^3.1.2",
+          "to": "^10.2.5"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.1"
+        },
+        "tsconfig-paths": {
+          "from": "^3.15.0",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-28T22:06:43.289Z",
+      "version": "2.32.0-depup.3"
     }
   }
 }
