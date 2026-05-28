@@ -1,6 +1,6 @@
 {
   "name": "@depup/umami",
-  "version": "2.10.0-depup.15",
+  "version": "2.10.0-depup.20",
   "description": "A simple, fast, privacy-focused alternative to Google Analytics. (with updated dependencies)",
   "author": "Mike Cao <mike@mikecao.com>",
   "license": "MIT",
@@ -60,12 +60,12 @@
     ".next/cache"
   ],
   "dependencies": {
-    "@clickhouse/client": "^1.18.3",
+    "@clickhouse/client": "^1.19.0",
     "@fontsource/inter": "^5.2.8",
     "@prisma/client": "^7.8.0",
     "@prisma/extension-read-replicas": "^0.5.0",
-    "@react-spring/web": "^10.0.3",
-    "@tanstack/react-query": "^5.100.9",
+    "@react-spring/web": "^10.1.0",
+    "@tanstack/react-query": "^5.100.14",
     "@umami/prisma-client": "^0.20.0",
     "@umami/redis-client": "^0.30.0",
     "chalk": "^5.6.2",
@@ -75,45 +75,45 @@
     "colord": "^2.9.3",
     "cors": "^2.8.6",
     "cross-spawn": "^7.0.6",
-    "date-fns": "^4.1.0",
+    "date-fns": "^4.3.0",
     "date-fns-tz": "^3.2.0",
     "dateformat": "^5.0.3",
     "debug": "^4.4.3",
     "del": "^8.0.1",
     "detect-browser": "^5.3.0",
     "dotenv": "^17.4.2",
-    "fs-extra": "^11.3.4",
-    "immer": "^11.1.4",
+    "fs-extra": "^11.3.5",
+    "immer": "^11.1.8",
     "ipaddr.js": "^2.4.0",
     "is-ci": "^4.1.0",
     "is-docker": "^4.0.0",
     "is-localhost-ip": "^3.0.1",
-    "isbot": "^5.1.39",
+    "isbot": "^5.1.40",
     "kafkajs": "^2.2.4",
     "maxmind": "^5.0.6",
     "md5": "^2.3.0",
     "moment-timezone": "^0.6.2",
-    "next": "^16.2.4",
+    "next": "^16.2.6",
     "next-basics": "^0.40.0",
     "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
     "prisma": "^7.8.0",
-    "react": "^19.2.5",
+    "react": "^19.2.6",
     "react-basics": "^0.126.0",
     "react-beautiful-dnd": "^13.1.1",
-    "react-dom": "^19.2.5",
-    "react-error-boundary": "^6.1.1",
-    "react-intl": "^10.1.4",
+    "react-dom": "^19.2.6",
+    "react-error-boundary": "^6.1.2",
+    "react-intl": "^10.1.11",
     "react-simple-maps": "^3.0.0",
     "react-use-measure": "^2.1.7",
     "react-window": "^2.2.7",
     "request-ip": "^3.3.0",
-    "semver": "^7.7.4",
+    "semver": "^7.8.1",
     "thenby": "^1.4.1",
     "timezone-support": "^3.1.0",
     "uuid": "^14.0.0",
     "yup": "^1.7.1",
-    "zustand": "^5.0.12"
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@formatjs/cli": "^4.2.29",
@@ -177,7 +177,7 @@
     "changes": {
       "@clickhouse/client": {
         "from": "^0.2.2",
-        "to": "^1.18.3"
+        "to": "^1.19.0"
       },
       "@fontsource/inter": {
         "from": "^4.5.15",
@@ -193,11 +193,11 @@
       },
       "@react-spring/web": {
         "from": "^9.7.3",
-        "to": "^10.0.3"
+        "to": "^10.1.0"
       },
       "@tanstack/react-query": {
         "from": "^5.12.2",
-        "to": "^5.100.9"
+        "to": "^5.100.14"
       },
       "@umami/prisma-client": {
         "from": "^0.13.0",
@@ -233,7 +233,7 @@
       },
       "date-fns": {
         "from": "^2.23.0",
-        "to": "^4.1.0"
+        "to": "^4.3.0"
       },
       "date-fns-tz": {
         "from": "^1.1.4",
@@ -257,11 +257,11 @@
       },
       "fs-extra": {
         "from": "^10.0.1",
-        "to": "^11.3.4"
+        "to": "^11.3.5"
       },
       "immer": {
         "from": "^9.0.12",
-        "to": "^11.1.4"
+        "to": "^11.1.8"
       },
       "ipaddr.js": {
         "from": "^2.0.1",
@@ -281,7 +281,7 @@
       },
       "isbot": {
         "from": "^3.4.5",
-        "to": "^5.1.39"
+        "to": "^5.1.40"
       },
       "kafkajs": {
         "from": "^2.1.0",
@@ -297,7 +297,7 @@
       },
       "next": {
         "from": "14.0.4",
-        "to": "^16.2.4"
+        "to": "^16.2.6"
       },
       "next-basics": {
         "from": "^0.39.0",
@@ -313,7 +313,7 @@
       },
       "react": {
         "from": "^18.2.0",
-        "to": "^19.2.5"
+        "to": "^19.2.6"
       },
       "react-basics": {
         "from": "^0.122.0",
@@ -325,15 +325,15 @@
       },
       "react-dom": {
         "from": "^18.2.0",
-        "to": "^19.2.5"
+        "to": "^19.2.6"
       },
       "react-error-boundary": {
         "from": "^4.0.4",
-        "to": "^6.1.1"
+        "to": "^6.1.2"
       },
       "react-intl": {
         "from": "^6.5.5",
-        "to": "^10.1.4"
+        "to": "^10.1.11"
       },
       "react-simple-maps": {
         "from": "^2.3.0",
@@ -349,7 +349,7 @@
       },
       "semver": {
         "from": "^7.5.4",
-        "to": "^7.7.4"
+        "to": "^7.8.1"
       },
       "thenby": {
         "from": "^1.3.4",
@@ -369,13 +369,13 @@
       },
       "zustand": {
         "from": "^4.3.8",
-        "to": "^5.0.12"
+        "to": "^5.0.14"
       }
     },
     "depsUpdated": 49,
     "originalPackage": "umami",
     "originalVersion": "2.10.0",
-    "processedAt": "2026-05-04T07:17:32.868Z",
+    "processedAt": "2026-05-28T18:10:20.411Z",
     "smokeTest": "failed"
   }
 }
