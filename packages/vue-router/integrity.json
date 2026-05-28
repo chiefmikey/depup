@@ -303,5 +303,28 @@
       "timestamp": "2026-05-19T22:04:32.527Z",
       "version": "5.0.7-depup.1"
     }
+  },
+  "5.1.0": {
+    "0": {
+      "changes": {
+        "@vue-macros/common": {
+          "from": "^3.1.1",
+          "to": "^3.1.2"
+        },
+        "local-pkg": {
+          "from": "^1.1.2",
+          "to": "^1.2.1"
+        },
+        "picomatch": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-28T18:03:23.423Z",
+      "version": "5.1.0-depup.0"
+    }
   }
 }
