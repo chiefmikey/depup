@@ -12,7 +12,7 @@ npm install @depup/angular__platform-browser-dynamic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.14 | **DepUp version**: 21.2.14-depup.0 | **Updated**: 5/20/2026 | **Import test**: passed
+**Original version**: 21.2.15 | **DepUp version**: 21.2.15-depup.0 | **Updated**: 5/28/2026 | **Import test**: passed
 
 ## What changed
 
