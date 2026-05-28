@@ -28,5 +28,24 @@
       "timestamp": "2026-04-15T00:46:23.259Z",
       "version": "3.15.0-depup.0"
     }
+  },
+  "3.15.1": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-28T18:05:01.801Z",
+      "version": "3.15.1-depup.0"
+    }
   }
 }
