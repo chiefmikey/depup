@@ -1,6 +1,6 @@
 {
   "name": "@depup/novu__node",
-  "version": "2.6.6-depup.0",
+  "version": "2.6.6-depup.5",
   "description": "Notification Management Framework (with updated dependencies)",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -19,13 +19,13 @@
     "node": ">=10"
   },
   "dependencies": {
-    "axios": "^1.13.6",
+    "axios": "^1.16.1",
     "axios-retry": "^4.5.0",
-    "handlebars": "^4.7.8",
+    "handlebars": "^4.7.9",
     "lodash.get": "^4.4.2",
     "lodash.merge": "^4.6.2",
-    "uuid": "^13.0.0",
-    "@novu/shared": "2.6.6"
+    "uuid": "^14.0.0",
+    "@novu/shared": "^2.7.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.2",
@@ -89,7 +89,7 @@
     "changes": {
       "axios": {
         "from": "^1.6.8",
-        "to": "^1.13.6"
+        "to": "^1.16.1"
       },
       "axios-retry": {
         "from": "^3.8.0",
@@ -97,17 +97,21 @@
       },
       "handlebars": {
         "from": "^4.7.7",
-        "to": "^4.7.8"
+        "to": "^4.7.9"
       },
       "uuid": {
         "from": "^9.0.1",
-        "to": "^13.0.0"
+        "to": "^14.0.0"
+      },
+      "@novu/shared": {
+        "from": "2.6.6",
+        "to": "^2.7.0"
       }
     },
-    "depsUpdated": 4,
+    "depsUpdated": 5,
     "originalPackage": "@novu/node",
     "originalVersion": "2.6.6",
-    "processedAt": "2026-03-18T23:29:01.749Z",
+    "processedAt": "2026-05-28T14:03:58.569Z",
     "smokeTest": "passed"
   }
 }
