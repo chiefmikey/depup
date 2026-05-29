@@ -12,11 +12,15 @@ npm install @depup/rollup__plugin-typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.3.0 | **DepUp version**: 12.3.0-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 12.3.0 | **DepUp version**: 12.3.0-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @rollup/pluginutils | `^5.1.0` | `^5.4.0` |
+| resolve | `^1.22.1` | `^1.22.12` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/rollup__plugin-typescript&labels=bug).
 
