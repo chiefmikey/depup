@@ -12,11 +12,14 @@ npm install @depup/inquirer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.0 | **DepUp version**: 14.0.0-depup.0 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 14.0.1 | **DepUp version**: 14.0.1-depup.0 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| mute-stream | `^3.0.0` | `^4.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/inquirer&labels=bug).
 
