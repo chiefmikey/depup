@@ -12,7 +12,7 @@ npm install @depup/date-fns-jalali
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.0-0 | **DepUp version**: 4.1.0-0-depup.0 | **Updated**: 3/21/2026 | **Import test**: passed
+**Original version**: 4.2.0-0 | **DepUp version**: 4.2.0-0-depup.0 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
