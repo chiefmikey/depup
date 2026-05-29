@@ -12,14 +12,14 @@ npm install @depup/turbo__workspaces
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.9.16 | **DepUp version**: 2.9.16-depup.0 | **Updated**: 5/28/2026 | **Import test**: failed
+**Original version**: 2.9.16 | **DepUp version**: 2.9.16-depup.1 | **Updated**: 5/29/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @inquirer/prompts | `^7.10.1` | `^8.5.0` |
-| commander | `10.0.0` | `^14.0.3` |
+| commander | `10.0.0` | `^15.0.0` |
 | execa | `5.1.1` | `^9.6.1` |
 | fast-glob | `3.2.12` | `^3.3.3` |
 | fs-extra | `10.1.0` | `^11.3.5` |

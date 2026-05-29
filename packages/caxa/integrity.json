@@ -96,6 +96,39 @@
       "status": "failed",
       "timestamp": "2026-05-09T06:59:08.215Z",
       "version": "3.0.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "archiver": {
+          "from": "^5.3.1",
+          "to": "^8.0.0"
+        },
+        "commander": {
+          "from": "^9.4.1",
+          "to": "^15.0.0"
+        },
+        "dedent": {
+          "from": "^0.7.0",
+          "to": "^1.7.2"
+        },
+        "execa": {
+          "from": "^6.1.0",
+          "to": "^9.6.1"
+        },
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.5"
+        },
+        "globby": {
+          "from": "^13.1.2",
+          "to": "^16.2.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-29T10:10:53.309Z",
+      "version": "3.0.1-depup.3"
     }
   }
 }

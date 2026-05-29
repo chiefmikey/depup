@@ -12,11 +12,15 @@ npm install @depup/env-cmd
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.0.0 | **DepUp version**: 11.0.0-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 11.0.0 | **DepUp version**: 11.0.0-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @commander-js/extra-typings | `^13.1.0` | `^14.0.0` |
+| commander | `^13.1.0` | `^15.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/env-cmd&labels=bug).
 

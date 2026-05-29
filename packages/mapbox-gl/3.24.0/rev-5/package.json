@@ -1,7 +1,7 @@
 {
   "name": "@depup/mapbox-gl",
   "description": "A WebGL interactive maps library (with updated dependencies)",
-  "version": "3.24.0-depup.0",
+  "version": "3.24.0-depup.5",
   "main": "dist/mapbox-gl.js",
   "style": "dist/mapbox-gl.css",
   "types": "dist/mapbox-gl.d.ts",
@@ -32,11 +32,11 @@
     "test/build/typings"
   ],
   "dependencies": {
-    "@mapbox/mapbox-gl-supported": "^3.0.0",
+    "@mapbox/mapbox-gl-supported": "^4.0.0",
     "@mapbox/point-geometry": "^1.1.0",
     "@mapbox/tiny-sdf": "^2.2.0",
-    "@mapbox/unitbezier": "^0.0.1",
-    "@mapbox/vector-tile": "^2.0.4",
+    "@mapbox/unitbezier": "^1.0.0",
+    "@mapbox/vector-tile": "^3.0.0",
     "@types/geojson": "^7946.0.16",
     "@types/geojson-vt": "^3.2.5",
     "@types/pbf": "^3.0.5",
@@ -46,10 +46,10 @@
     "earcut": "^3.0.2",
     "geojson-vt": "^4.0.3",
     "gl-matrix": "^3.4.4",
-    "kdbush": "^4.0.2",
+    "kdbush": "^4.1.0",
     "martinez-polygon-clipping": "^0.8.1",
     "murmurhash-js": "^1.0.0",
-    "pbf": "^4.0.1",
+    "pbf": "^5.1.0",
     "potpack": "^2.1.0",
     "quickselect": "^3.0.0",
     "supercluster": "^8.0.1",
@@ -240,9 +240,21 @@
   ],
   "depup": {
     "changes": {
+      "@mapbox/mapbox-gl-supported": {
+        "from": "^3.0.0",
+        "to": "^4.0.0"
+      },
       "@mapbox/tiny-sdf": {
         "from": "^2.0.6",
         "to": "^2.2.0"
+      },
+      "@mapbox/unitbezier": {
+        "from": "^0.0.1",
+        "to": "^1.0.0"
+      },
+      "@mapbox/vector-tile": {
+        "from": "^2.0.4",
+        "to": "^3.0.0"
       },
       "earcut": {
         "from": "^3.0.1",
@@ -252,15 +264,23 @@
         "from": "^4.0.2",
         "to": "^4.0.3"
       },
+      "kdbush": {
+        "from": "^4.0.2",
+        "to": "^4.1.0"
+      },
+      "pbf": {
+        "from": "^4.0.1",
+        "to": "^5.1.0"
+      },
       "potpack": {
         "from": "^2.0.0",
         "to": "^2.1.0"
       }
     },
-    "depsUpdated": 4,
+    "depsUpdated": 9,
     "originalPackage": "mapbox-gl",
     "originalVersion": "3.24.0",
-    "processedAt": "2026-05-19T04:36:57.187Z",
+    "processedAt": "2026-05-29T10:11:30.987Z",
     "smokeTest": "passed"
   }
 }

@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@discoveryjs/json-ext": {
+      "from": "^0.6.3",
+      "to": "^1.1.0"
+    },
+    "acorn": {
+      "from": "^8.0.4",
+      "to": "^8.16.0"
+    },
+    "acorn-walk": {
+      "from": "^8.0.0",
+      "to": "^8.3.5"
+    },
+    "commander": {
+      "from": "^14.0.2",
+      "to": "^15.0.0"
+    },
+    "picocolors": {
+      "from": "^1.0.0",
+      "to": "^1.1.1"
+    },
+    "ws": {
+      "from": "^8.19.0",
+      "to": "^8.21.0"
+    }
+  },
+  "timestamp": "2026-05-29T10:11:56.670Z",
+  "totalUpdated": 6
+}

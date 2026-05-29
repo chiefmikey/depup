@@ -12,13 +12,13 @@ npm install @depup/d3-dsv
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| commander | `7` | `^14.0.3` |
+| commander | `7` | `^15.0.0` |
 | iconv-lite | `0.6` | `^0.7.2` |
 | rw | `1` | `^1.3.3` |
 
