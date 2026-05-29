@@ -2,63 +2,63 @@
   "bumped": {
     "@babel/core": {
       "from": "^7.23.2",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/plugin-proposal-decorators": {
       "from": "^7.23.2",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-async-generator-functions": {
       "from": "^7.25.4",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-async-to-generator": {
       "from": "^7.22.5",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-class-properties": {
       "from": "^7.25.4",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-class-static-block": {
       "from": "^7.24.7",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-exponentiation-operator": {
       "from": "^7.22.5",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-for-of": {
       "from": "^7.22.15",
-      "to": "^7.27.1"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-object-rest-spread": {
       "from": "^7.24.7",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-private-methods": {
       "from": "^7.25.4",
-      "to": "^7.28.6"
+      "to": "^7.29.7"
     },
     "@babel/plugin-transform-runtime": {
       "from": "7.23.3",
-      "to": "^7.29.0"
+      "to": "^7.29.7"
     },
     "@babel/preset-env": {
       "from": "^7.23.2",
-      "to": "^7.29.5"
+      "to": "^7.29.7"
     },
     "@babel/preset-flow": {
       "from": "^7.22.15",
-      "to": "^7.27.1"
+      "to": "^7.29.7"
     },
     "@babel/preset-react": {
       "from": "^7.22.15",
-      "to": "^7.28.5"
+      "to": "^7.29.7"
     },
     "@babel/runtime": {
       "from": "^7.23.2",
-      "to": "^7.29.2"
+      "to": "^7.29.7"
     },
     "@devexpress/callsite-record": {
       "from": "^4.1.6",
@@ -66,7 +66,7 @@
     },
     "@types/node": {
       "from": "20.14.5",
-      "to": "^25.6.2"
+      "to": "^25.9.1"
     },
     "address": {
       "from": "^2.0.2",
@@ -102,7 +102,7 @@
     },
     "commander": {
       "from": "^8.3.0",
-      "to": "^14.0.3"
+      "to": "^15.0.0"
     },
     "debug": {
       "from": "^4.3.1",
@@ -122,7 +122,7 @@
     },
     "devtools-protocol": {
       "from": "0.0.1109433",
-      "to": "^0.0.1628107"
+      "to": "^0.0.1638241"
     },
     "diff": {
       "from": "^8.0.3",
@@ -250,7 +250,7 @@
     },
     "semver": {
       "from": "^7.5.3",
-      "to": "^7.8.0"
+      "to": "^7.8.1"
     },
     "set-cookie-parser": {
       "from": "^2.5.1",
@@ -263,6 +263,10 @@
     "strip-bom": {
       "from": "^2.0.0",
       "to": "^5.0.0"
+    },
+    "testcafe-hammerhead": {
+      "from": "31.7.7",
+      "to": "^31.7.8"
     },
     "testcafe-legacy-api": {
       "from": "5.1.8",
@@ -280,11 +284,15 @@
       "from": "^1.0.2",
       "to": "^1.0.4"
     },
+    "tmp": {
+      "from": "0.2.5",
+      "to": "^0.2.7"
+    },
     "typescript": {
       "from": "4.7.4",
       "to": "^6.0.3"
     }
   },
-  "timestamp": "2026-05-09T07:01:33.449Z",
-  "totalUpdated": 71
+  "timestamp": "2026-05-29T10:07:51.072Z",
+  "totalUpdated": 73
 }

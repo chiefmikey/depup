@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.4 | **DepUp version**: 3.7.4-depup.11 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 3.7.4 | **DepUp version**: 3.7.4-depup.12 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
@@ -43,12 +43,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^2.3.0` | `^5.6.2` |
 | chrome-remote-interface | `^0.32.2` | `^0.34.0` |
 | coffeescript | `^2.3.1` | `^2.7.0` |
-| commander | `^8.3.0` | `^14.0.3` |
+| commander | `^8.3.0` | `^15.0.0` |
 | debug | `^4.3.1` | `^4.4.3` |
 | dedent | `^0.4.0` | `^1.7.2` |
 | del | `^3.0.0` | `^8.0.1` |
 | device-specs | `^1.0.0` | `^1.0.1` |
-| devtools-protocol | `0.0.1109433` | `^0.0.1635485` |
+| devtools-protocol | `0.0.1109433` | `^0.0.1638241` |
 | diff | `^8.0.3` | `^9.0.0` |
 | elegant-spinner | `^1.0.1` | `^3.0.0` |
 | emittery | `^0.4.1` | `^2.0.0` |
@@ -89,6 +89,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | testcafe-reporter-json | `^2.1.0` | `^2.2.0` |
 | testcafe-reporter-xunit | `^2.2.1` | `^2.2.3` |
 | time-limit-promise | `^1.0.2` | `^1.0.4` |
+| tmp | `0.2.5` | `^0.2.7` |
 | typescript | `4.7.4` | `^6.0.3` |
 
 

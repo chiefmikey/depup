@@ -4,6 +4,27 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.904Z",
       "version": "3.2.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "a-sync-waterfall": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "asap": {
+          "from": "^2.0.3",
+          "to": "^2.0.6"
+        },
+        "commander": {
+          "from": "^5.1.0",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-29T10:07:25.493Z",
+      "version": "3.2.4-depup.1"
     }
   }
 }
