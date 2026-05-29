@@ -12,7 +12,7 @@ npm install @depup/nodemailer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.9 | **DepUp version**: 8.0.9-depup.0 | **Updated**: 5/26/2026 | **Import test**: passed
+**Original version**: 8.0.10 | **DepUp version**: 8.0.10-depup.0 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
