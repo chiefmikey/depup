@@ -12,13 +12,13 @@ npm install @depup/module-federation__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.5.0 | **DepUp version**: 2.5.0-depup.0 | **Updated**: 5/21/2026 | **Import test**: passed
+**Original version**: 2.5.0 | **DepUp version**: 2.5.0-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| commander | `11.1.0` | `^14.0.3` |
+| commander | `11.1.0` | `^15.0.0` |
 | jiti | `2.4.2` | `^2.7.0` |
 
 

@@ -180,6 +180,23 @@
       "status": "failed",
       "timestamp": "2026-05-21T14:02:39.136Z",
       "version": "2.5.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "commander": {
+          "from": "11.1.0",
+          "to": "^15.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-29T10:08:58.130Z",
+      "version": "2.5.0-depup.1"
     }
   }
 }
