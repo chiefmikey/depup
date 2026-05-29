@@ -12,12 +12,13 @@ npm install @depup/webpack-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.3 | **DepUp version**: 7.0.3-depup.0 | **Updated**: 5/27/2026 | **Import test**: passed
+**Original version**: 7.0.3 | **DepUp version**: 7.0.3-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| commander | `^14.0.3` | `^15.0.0` |
 | envinfo | `^7.14.0` | `^7.21.0` |
 | import-local | `^3.0.2` | `^3.2.0` |
 

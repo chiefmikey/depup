@@ -12,7 +12,7 @@ npm install @depup/anime
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.1.2 | **DepUp version**: 0.1.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.1.2 | **DepUp version**: 0.1.2-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | request | `^2.34.0` | `^2.88.2` |
 | xml2js | `^0.4.1` | `^0.6.2` |
 | prompt | `^0.2.12` | `^1.3.0` |
-| commander | `^2.1.0` | `^14.0.3` |
+| commander | `^2.1.0` | `^15.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/anime&labels=bug).

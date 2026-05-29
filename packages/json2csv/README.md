@@ -12,14 +12,14 @@ npm install @depup/json2csv
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0-alpha.2 | **DepUp version**: 6.0.0-alpha.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.0.0-alpha.2 | **DepUp version**: 6.0.0-alpha.2-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @streamparser/json | `^0.0.6` | `^0.0.22` |
-| commander | `^6.2.0` | `^14.0.3` |
+| commander | `^6.2.0` | `^15.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/json2csv&labels=bug).

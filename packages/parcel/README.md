@@ -12,14 +12,14 @@ npm install @depup/parcel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.16.4 | **DepUp version**: 2.16.4-depup.1 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 2.16.4 | **DepUp version**: 2.16.4-depup.2 | **Updated**: 5/29/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | chalk | `^4.1.2` | `^5.6.2` |
-| commander | `^12.1.0` | `^14.0.3` |
+| commander | `^12.1.0` | `^15.0.0` |
 | get-port | `^4.2.0` | `^7.2.0` |
 
 

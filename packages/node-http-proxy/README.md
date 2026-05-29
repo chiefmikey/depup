@@ -12,7 +12,7 @@ npm install @depup/node-http-proxy
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.4 | **DepUp version**: 0.2.4-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 0.2.4 | **DepUp version**: 0.2.4-depup.1 | **Updated**: 5/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pm | `2.2.5` | `^2.2.6` |
 | bufferhelper | `0.2.0` | `^0.2.1` |
 | request | `2.51.0` | `^2.88.2` |
-| commander | `2.6.0` | `^14.0.3` |
+| commander | `2.6.0` | `^15.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/node-http-proxy&labels=bug).

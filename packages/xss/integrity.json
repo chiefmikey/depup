@@ -4,6 +4,23 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.946Z",
       "version": "1.0.15-depup.0"
+    },
+    "1": {
+      "changes": {
+        "commander": {
+          "from": "^2.20.3",
+          "to": "^15.0.0"
+        },
+        "cssfilter": {
+          "from": "0.0.10",
+          "to": "^0.0.11"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-29T10:05:09.936Z",
+      "version": "1.0.15-depup.1"
     }
   }
 }

@@ -1,0 +1,87 @@
+{
+  "name": "@depup/xss",
+  "main": "./lib/index.js",
+  "typings": "./typings/xss.d.ts",
+  "version": "1.0.15-depup.1",
+  "description": "Sanitize untrusted HTML (to prevent XSS) with a configuration specified by a Whitelist (with updated dependencies)",
+  "author": "Zongmin Lei <leizongmin@gmail.com> (http://ucdok.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leizongmin/js-xss.git"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "cssfilter": "^0.0.11"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "coveralls": "^3.1.1",
+    "debug": "^4.3.4",
+    "eslint": "^8.16.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "uglify-js": "^3.15.5"
+  },
+  "files": [
+    "lib",
+    "bin/xss",
+    "dist",
+    "typings/*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "xss": "./bin/xss"
+  },
+  "scripts": {
+    "lint": "eslint lib/**",
+    "test": "export DEBUG=xss:* && mocha -t 5000",
+    "test-cov": "nyc --reporter=lcov mocha --exit \"test/*.js\" && nyc report",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "build": "./bin/build"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leizongmin/js-xss/issues"
+  },
+  "homepage": "https://github.com/leizongmin/js-xss",
+  "keywords": [
+    "xss",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "sanitization",
+    "sanitize",
+    "sanitisation",
+    "input",
+    "escape",
+    "encode",
+    "filter",
+    "validator",
+    "html",
+    "injection",
+    "whitelist"
+  ],
+  "depup": {
+    "changes": {
+      "commander": {
+        "from": "^2.20.3",
+        "to": "^15.0.0"
+      },
+      "cssfilter": {
+        "from": "0.0.10",
+        "to": "^0.0.11"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "xss",
+    "originalVersion": "1.0.15",
+    "processedAt": "2026-05-29T10:05:08.657Z",
+    "smokeTest": "passed"
+  }
+}
