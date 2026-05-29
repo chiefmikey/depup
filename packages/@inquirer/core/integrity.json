@@ -69,5 +69,24 @@
       "timestamp": "2026-05-25T22:00:55.343Z",
       "version": "11.2.0-depup.0"
     }
+  },
+  "11.2.1": {
+    "0": {
+      "changes": {
+        "fast-wrap-ansi": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-29T22:01:07.408Z",
+      "version": "11.2.1-depup.0"
+    }
   }
 }
