@@ -112,6 +112,19 @@
       "status": "failed",
       "timestamp": "2026-05-27T22:02:04.535Z",
       "version": "3.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "stream-chain": {
+          "from": "^4.1.1",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-29T03:14:16.908Z",
+      "version": "3.2.0-depup.1"
     }
   }
 }
