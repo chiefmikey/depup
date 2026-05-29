@@ -12,7 +12,7 @@ npm install @depup/ai-sdk__openai
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.66 | **DepUp version**: 3.0.66-depup.0 | **Updated**: 5/27/2026 | **Import test**: failed
+**Original version**: 3.0.67 | **DepUp version**: 3.0.67-depup.0 | **Updated**: 5/29/2026 | **Import test**: failed
 
 ## What changed
 
