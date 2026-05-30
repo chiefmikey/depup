@@ -65,6 +65,23 @@
       "status": "failed",
       "timestamp": "2026-05-05T07:02:29.494Z",
       "version": "2.4.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@napi-rs/canvas": {
+          "from": "0.1.80",
+          "to": "^1.0.0"
+        },
+        "pdfjs-dist": {
+          "from": "5.4.296",
+          "to": "^6.0.227"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-30T14:03:24.487Z",
+      "version": "2.4.5-depup.4"
     }
   }
 }
