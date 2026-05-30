@@ -44,6 +44,23 @@
       "status": "failed",
       "timestamp": "2026-05-23T02:05:19.687Z",
       "version": "9.1.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@floating-ui/react": {
+          "from": "^0.27.15",
+          "to": "^0.27.19"
+        },
+        "date-fns": {
+          "from": "^4.1.0",
+          "to": "^4.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-30T02:22:17.039Z",
+      "version": "9.1.0-depup.3"
     }
   }
 }
