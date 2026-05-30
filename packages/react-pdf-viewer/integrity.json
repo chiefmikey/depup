@@ -1,34 +1,5 @@
 {
   "0.1.0": {
-    "0": {
-      "changes": {
-        "pdfjs-dist": {
-          "from": "^2.0.197",
-          "to": "^5.5.207"
-        },
-        "react": {
-          "from": "^16.2.0",
-          "to": "^19.2.4"
-        },
-        "react-dom": {
-          "from": "^16.2.0",
-          "to": "^19.2.4"
-        },
-        "webpack": {
-          "from": "^3.10.0",
-          "to": "^5.105.4"
-        },
-        "webpack-dev-server": {
-          "from": "^2.9.7",
-          "to": "^5.2.3"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-03-19T00:40:00.925Z",
-      "version": "0.1.0-depup.0"
-    },
     "1": {
       "changes": {
         "pdfjs-dist": {
@@ -144,6 +115,35 @@
       "status": "failed",
       "timestamp": "2026-05-20T10:04:38.939Z",
       "version": "0.1.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "pdfjs-dist": {
+          "from": "^2.0.197",
+          "to": "^6.0.227"
+        },
+        "react": {
+          "from": "^16.2.0",
+          "to": "^19.2.6"
+        },
+        "react-dom": {
+          "from": "^16.2.0",
+          "to": "^19.2.6"
+        },
+        "webpack": {
+          "from": "^3.10.0",
+          "to": "^5.107.2"
+        },
+        "webpack-dev-server": {
+          "from": "^2.9.7",
+          "to": "^5.2.4"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-30T14:08:19.345Z",
+      "version": "0.1.0-depup.5"
     }
   }
 }

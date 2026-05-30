@@ -1,6 +1,6 @@
 {
   "name": "@depup/react-pdf-viewer",
-  "version": "0.1.0-depup.0",
+  "version": "0.1.0-depup.5",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,11 +8,11 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
-    "pdfjs-dist": "^5.5.207",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "webpack": "^5.105.4",
-    "webpack-dev-server": "^5.2.3"
+    "pdfjs-dist": "^6.0.227",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "webpack": "^5.107.2",
+    "webpack-dev-server": "^5.2.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,29 +33,29 @@
     "changes": {
       "pdfjs-dist": {
         "from": "^2.0.197",
-        "to": "^5.5.207"
+        "to": "^6.0.227"
       },
       "react": {
         "from": "^16.2.0",
-        "to": "^19.2.4"
+        "to": "^19.2.6"
       },
       "react-dom": {
         "from": "^16.2.0",
-        "to": "^19.2.4"
+        "to": "^19.2.6"
       },
       "webpack": {
         "from": "^3.10.0",
-        "to": "^5.105.4"
+        "to": "^5.107.2"
       },
       "webpack-dev-server": {
         "from": "^2.9.7",
-        "to": "^5.2.3"
+        "to": "^5.2.4"
       }
     },
     "depsUpdated": 5,
     "originalPackage": "react-pdf-viewer",
     "originalVersion": "0.1.0",
-    "processedAt": "2026-03-19T00:39:57.266Z",
+    "processedAt": "2026-05-30T14:08:18.407Z",
     "smokeTest": "failed"
   }
 }
