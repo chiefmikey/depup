@@ -12,7 +12,7 @@ npm install @depup/ultra-runner
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.10.5 | **DepUp version**: 3.10.5-depup.2 | **Updated**: 4/17/2026 | **Import test**: failed
+**Original version**: 3.10.5 | **DepUp version**: 3.10.5-depup.3 | **Updated**: 5/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,9 +27,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | ps-list | `^7.2.0` | `^9.0.0` |
 | shellwords-ts | `^3.0.0` | `^3.0.1` |
-| string-width | `^4.2.0` | `^8.2.0` |
+| string-width | `^4.2.0` | `^8.2.1` |
 | tslib | `2.1.0` | `^2.8.1` |
-| type-fest | `^0.21.2` | `^5.6.0` |
+| type-fest | `^0.21.2` | `^5.7.0` |
 | wrap-ansi | `^7.0.0` | `^10.0.0` |
 | yargs | `^16.2.0` | `^18.0.0` |
 
