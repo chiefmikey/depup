@@ -1,0 +1,25 @@
+{
+  "4.13.0": {
+    "0": {
+      "changes": {
+        "@formatjs/fast-memoize": {
+          "from": "^3.1.0",
+          "to": "^3.1.5"
+        },
+        "@schummar/icu-type-parser": {
+          "from": "1.21.5",
+          "to": "^1.26.1"
+        },
+        "intl-messageformat": {
+          "from": "^11.1.0",
+          "to": "^11.2.7"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-05-31T14:01:30.332Z",
+      "version": "4.13.0-depup.0"
+    }
+  }
+}
