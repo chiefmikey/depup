@@ -12,7 +12,7 @@ npm install @depup/boxen
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.2 | **Updated**: 4/17/2026 | **Import test**: passed
+**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.3 | **Updated**: 5/31/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,8 +21,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | camelcase | `^8.0.0` | `^9.0.0` |
 | chalk | `^5.3.0` | `^5.6.2` |
 | cli-boxes | `^3.0.0` | `^4.0.1` |
-| string-width | `^7.2.0` | `^8.2.0` |
-| type-fest | `^4.21.0` | `^5.6.0` |
+| string-width | `^7.2.0` | `^8.2.1` |
+| type-fest | `^4.21.0` | `^5.7.0` |
 | widest-line | `^5.0.0` | `^6.0.0` |
 | wrap-ansi | `^9.0.0` | `^10.0.0` |
 
