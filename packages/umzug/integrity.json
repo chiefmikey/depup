@@ -113,6 +113,35 @@
       "status": "failed",
       "timestamp": "2026-05-02T06:49:03.941Z",
       "version": "3.8.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@rushstack/ts-command-line": {
+          "from": "4.19.1",
+          "to": "^5.3.9"
+        },
+        "emittery": {
+          "from": "^0.13.0",
+          "to": "^2.0.0"
+        },
+        "pony-cause": {
+          "from": "^2.1.4",
+          "to": "^2.1.11"
+        },
+        "tinyglobby": {
+          "from": "^0.2.16",
+          "to": "^0.2.17"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.7.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-05-31T22:04:50.340Z",
+      "version": "3.8.3-depup.1"
     }
   }
 }
