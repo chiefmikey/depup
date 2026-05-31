@@ -12,23 +12,19 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 26.0.2 | **DepUp version**: 26.0.2-depup.6 | **Updated**: 5/29/2026 | **Import test**: failed
+**Original version**: 26.1.0 | **DepUp version**: 26.1.0-depup.0 | **Updated**: 5/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @fastify/static | `^9.1.1` | `^9.1.3` |
-| @netlify/blobs | `^10.7.5` | `^10.7.8` |
-| @netlify/build | `^35.13.6` | `^35.13.9` |
-| @netlify/config | `^24.5.1` | `^24.6.0` |
-| @netlify/dev | `^4.18.4` | `^4.18.6` |
-| @netlify/dev-utils | `^4.4.3` | `^4.4.5` |
-| @netlify/edge-bundler | `^14.10.2` | `^14.10.3` |
-| @netlify/edge-functions | `^3.0.6` | `^3.0.7` |
+| @netlify/blobs | `^10.7.7` | `^10.7.9` |
+| @netlify/dev | `^4.18.4` | `^4.18.7` |
+| @netlify/dev-utils | `^4.4.3` | `^4.4.6` |
+| @netlify/edge-functions | `^3.0.6` | `^3.0.8` |
 | @netlify/edge-functions-bootstrap | `^2.17.1` | `^3.1.0` |
-| @netlify/images | `^1.3.7` | `^1.3.9` |
-| @netlify/zip-it-and-ship-it | `^14.5.6` | `^14.7.0` |
+| @netlify/images | `^1.3.7` | `^1.3.10` |
 | @octokit/rest | `^22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `^1.8.0` | `^1.9.1` |
 | chokidar | `^4.0.3` | `^5.0.0` |
@@ -41,7 +37,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | get-port | `^5.1.1` | `^7.2.0` |
 | http-proxy-middleware | `^3.0.5` | `^4.0.0` |
 | https-proxy-agent | `^8.0.0` | `^9.0.0` |
-| inquirer | `^8.2.7` | `^14.0.0` |
+| inquirer | `^8.2.7` | `^14.0.1` |
 | inquirer-autocomplete-prompt | `^1.4.0` | `^3.0.1` |
 | is-wsl | `^3.1.0` | `^3.1.1` |
 | log-update | `^7.2.0` | `^8.0.0` |
@@ -56,7 +52,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | semver | `^7.7.2` | `^7.8.1` |
 | toml | `^3.0.0` | `^4.1.1` |
 | ulid | `^3.0.1` | `^3.0.2` |
-| uuid | `^13.0.1` | `^14.0.0` |
 | write-file-atomic | `^5.0.1` | `^8.0.0` |
 | ws | `^8.19.0` | `^8.21.0` |
 
