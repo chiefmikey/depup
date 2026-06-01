@@ -1,7 +1,7 @@
 {
   "name": "@depup/pm2",
   "preferGlobal": true,
-  "version": "7.0.1-depup.0",
+  "version": "7.0.1-depup.5",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -182,24 +182,24 @@
     "@pm2/pm2-version-check": "1.0.4",
     "amp": "0.3.1",
     "amp-message": "0.1.2",
-    "ansis": "^4.2.0",
+    "ansis": "^4.3.1",
     "async": "3.2.6",
     "@pm2/blessed": "0.1.81",
     "chokidar": "^5.0.0",
     "cli-tableau": "2.0.1",
-    "commander": "^14.0.3",
+    "commander": "^15.0.0",
     "croner": "^10.0.1",
-    "dayjs": "^1.11.20",
+    "dayjs": "^1.11.21",
     "debug": "4.4.3",
     "eventemitter2": "6.4.9",
     "fast-json-patch": "3.1.1",
     "pidusage": "4.0.1",
     "pm2-deploy": "1.0.2",
     "proxy-agent": "^8.0.1",
-    "semver": "^7.7.4",
+    "semver": "^7.8.1",
     "vizion": "2.2.1",
-    "ws": "8.20.0",
-    "js-yaml": "4.1.1"
+    "ws": "^8.21.0",
+    "js-yaml": "^4.2.0"
   },
   "overrides": {
     "debug": "4.4.3"
@@ -224,7 +224,7 @@
     "changes": {
       "ansis": {
         "from": "4.0.0-node10",
-        "to": "^4.2.0"
+        "to": "^4.3.1"
       },
       "chokidar": {
         "from": "3.6.0",
@@ -232,7 +232,7 @@
       },
       "commander": {
         "from": "2.15.1",
-        "to": "^14.0.3"
+        "to": "^15.0.0"
       },
       "croner": {
         "from": "4.1.97",
@@ -240,7 +240,7 @@
       },
       "dayjs": {
         "from": "1.11.15",
-        "to": "^1.11.20"
+        "to": "^1.11.21"
       },
       "proxy-agent": {
         "from": "6.5.0",
@@ -248,13 +248,21 @@
       },
       "semver": {
         "from": "7.7.2",
-        "to": "^7.7.4"
+        "to": "^7.8.1"
+      },
+      "ws": {
+        "from": "8.20.0",
+        "to": "^8.21.0"
+      },
+      "js-yaml": {
+        "from": "4.1.1",
+        "to": "^4.2.0"
       }
     },
-    "depsUpdated": 7,
+    "depsUpdated": 9,
     "originalPackage": "pm2",
     "originalVersion": "7.0.1",
-    "processedAt": "2026-05-03T07:06:49.729Z",
+    "processedAt": "2026-06-01T02:17:39.272Z",
     "smokeTest": "passed"
   }
 }

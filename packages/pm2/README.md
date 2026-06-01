@@ -12,13 +12,13 @@ npm install @depup/pm2
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.4 | **Updated**: 5/29/2026 | **Import test**: passed
+**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.5 | **Updated**: 5/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ansis | `4.0.0-node10` | `^4.3.0` |
+| ansis | `4.0.0-node10` | `^4.3.1` |
 | chokidar | `3.6.0` | `^5.0.0` |
 | commander | `2.15.1` | `^15.0.0` |
 | croner | `4.1.97` | `^10.0.1` |
@@ -26,6 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | proxy-agent | `6.5.0` | `^8.0.1` |
 | semver | `7.7.2` | `^7.8.1` |
 | ws | `8.20.0` | `^8.21.0` |
+| js-yaml | `4.1.1` | `^4.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pm2&labels=bug).

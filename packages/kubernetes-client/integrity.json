@@ -132,6 +132,51 @@
       "status": "failed",
       "timestamp": "2026-05-22T18:06:33.982Z",
       "version": "9.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@kubernetes/client-node": {
+          "from": "0.10.2",
+          "to": "^1.4.0"
+        },
+        "camelcase": {
+          "from": "^6.0.0",
+          "to": "^9.0.0"
+        },
+        "deepmerge": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^4.2.0"
+        },
+        "openid-client": {
+          "from": "^3.14.0",
+          "to": "^6.8.4"
+        },
+        "pump": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "qs": {
+          "from": "^6.9.0",
+          "to": "^6.15.2"
+        },
+        "url-join": {
+          "from": "^4.0.1",
+          "to": "^5.0.0"
+        },
+        "ws": {
+          "from": "^7.2.3",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-01T02:17:28.455Z",
+      "version": "9.0.0-depup.3"
     }
   }
 }

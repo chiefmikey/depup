@@ -5,6 +5,19 @@
       "status": "published",
       "timestamp": "2026-03-17T16:38:51.814Z",
       "version": "3.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.1.1",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-01T02:17:46.463Z",
+      "version": "3.0.0-depup.1"
     }
   }
 }

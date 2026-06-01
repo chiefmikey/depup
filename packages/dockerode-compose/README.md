@@ -12,14 +12,14 @@ npm install @depup/dockerode-compose
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.1 | **Updated**: 4/23/2026 | **Import test**: passed
+**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.2 | **Updated**: 5/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | dockerode | `^4.0.0` | `^5.0.0` |
-| js-yaml | `^4.0.0` | `^4.1.1` |
+| js-yaml | `^4.0.0` | `^4.2.0` |
 | tar-fs | `^2.1.1` | `^3.1.2` |
 
 
