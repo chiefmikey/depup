@@ -280,5 +280,36 @@
       "timestamp": "2026-05-08T06:50:46.977Z",
       "version": "16.2.6-depup.0"
     }
+  },
+  "16.2.7": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "0.5.15",
+          "to": "^0.5.23"
+        },
+        "baseline-browser-mapping": {
+          "from": "^2.9.19",
+          "to": "^2.10.33"
+        },
+        "caniuse-lite": {
+          "from": "^1.0.30001579",
+          "to": "^1.0.30001793"
+        },
+        "postcss": {
+          "from": "8.4.31",
+          "to": "^8.5.15"
+        },
+        "styled-jsx": {
+          "from": "5.1.6",
+          "to": "^5.1.7"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-01T22:03:25.226Z",
+      "version": "16.2.7-depup.0"
+    }
   }
 }
