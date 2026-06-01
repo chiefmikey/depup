@@ -118,5 +118,28 @@
       "timestamp": "2026-05-20T10:01:22.312Z",
       "version": "4.1.7-depup.0"
     }
+  },
+  "4.1.8": {
+    "0": {
+      "changes": {
+        "ast-v8-to-istanbul": {
+          "from": "^1.0.0",
+          "to": "^1.0.3"
+        },
+        "magicast": {
+          "from": "^0.5.2",
+          "to": "^0.5.3"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-01T10:01:13.098Z",
+      "version": "4.1.8-depup.0"
+    }
   }
 }
