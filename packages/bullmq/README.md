@@ -12,7 +12,7 @@ npm install @depup/bullmq
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.77.6 | **DepUp version**: 5.77.6-depup.0 | **Updated**: 5/27/2026 | **Import test**: passed
+**Original version**: 5.77.7 | **DepUp version**: 5.77.7-depup.0 | **Updated**: 6/1/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | cron-parser | `4.9.0` | `^5.5.0` |
 | ioredis | `5.10.1` | `^5.11.0` |
-| msgpackr | `2.0.1` | `^2.0.2` |
 | semver | `7.8.0` | `^7.8.1` |
 
 
