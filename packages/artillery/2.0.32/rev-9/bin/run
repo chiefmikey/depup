@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+ const oclif = require('@oclif/core');
+ const { createGlobalObject } = require('../lib/artillery-global');
+
+ const { rainbow } = require('../util');
+ const banner = require('../lib/cli/banner');
+ const setupConsoleCapture = require('../lib/console-capture');
+
+ async function main() {
+   await createGlobalObject();
+   await setupConsoleCapture();
+
+   if (!process.argv.slice(2).length) {
+     console.log(Math.random() * 100 > 34 ?
+                 banner :
+                 rainbow(banner));
+   } else if (process.argv.slice(2).length === 1 && process.argv.slice(2)[0] === '-V') {
+     process.argv[2] = 'version';
+   }
+
+   oclif.run().then(require('@oclif/core/flush')).catch(require('@oclif/core/handle'));
+ }
+
+ main();
