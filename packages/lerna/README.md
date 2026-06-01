@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.17 | **Updated**: 5/27/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.18 | **Updated**: 5/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,9 +41,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | import-local | `3.1.0` | `^3.2.0` |
 | ini | `^1.3.8` | `^7.0.0` |
 | init-package-json | `8.2.2` | `^9.0.0` |
-| inquirer | `12.9.6` | `^14.0.0` |
+| inquirer | `12.9.6` | `^14.0.2` |
 | is-ci | `3.0.1` | `^4.1.0` |
 | jest-diff | `>=30.0.0 < 31` | `^30.4.1` |
+| js-yaml | `4.1.1` | `^4.2.0` |
 | libnpmpublish | `11.1.2` | `^11.2.0` |
 | load-json-file | `6.2.0` | `^7.0.1` |
 | make-fetch-happen | `15.0.2` | `^15.0.6` |
@@ -66,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ssri | `12.0.0` | `^14.0.0` |
 | string-width | `^4.2.3` | `^8.2.1` |
 | tar | `7.5.11` | `^7.5.15` |
-| tinyglobby | `0.2.12` | `^0.2.16` |
+| tinyglobby | `0.2.12` | `^0.2.17` |
 | typescript | `>=3 < 6` | `^6.0.3` |
 | upath | `2.0.1` | `^3.0.7` |
 | validate-npm-package-name | `6.0.2` | `^8.0.0` |

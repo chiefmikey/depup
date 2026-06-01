@@ -12,7 +12,7 @@ npm install @depup/hexo
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.1.2 | **DepUp version**: 8.1.2-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 8.1.2 | **DepUp version**: 8.1.2-depup.2 | **Updated**: 5/31/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | abbrev | `^3.0.0` | `^5.0.0` |
 | hexo-front-matter | `^4.2.1` | `^5.0.0` |
 | hexo-fs | `^5.0.0` | `^5.0.1` |
-| js-yaml | `^4.1.0` | `^4.1.1` |
+| js-yaml | `^4.1.0` | `^4.2.0` |
 | moize | `^6.1.6` | `^6.1.7` |
 | moment-timezone | `^0.5.46` | `^0.6.2` |
 | strip-ansi | `^7.1.0` | `^7.2.0` |
