@@ -1,7 +1,7 @@
 {
   "name": "@depup/tsup",
-  "version": "8.5.1-depup.0",
-  "description": "[DepUp] Bundle your TypeScript library with no config, powered by esbuild",
+  "version": "8.5.1-depup.5",
+  "description": "Bundle your TypeScript library with no config, powered by esbuild (with updated dependencies)",
   "license": "MIT",
   "homepage": "https://tsup.egoist.dev/",
   "repository": {
@@ -12,7 +12,9 @@
   "files": [
     "/assets",
     "/dist",
-    "/schema.json"
+    "/schema.json",
+    "changes.json",
+    "README.md"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -46,17 +48,17 @@
     "chokidar": "^5.0.0",
     "consola": "^3.4.2",
     "debug": "^4.4.3",
-    "esbuild": "^0.27.3",
+    "esbuild": "^0.28.0",
     "fix-dts-default-cjs-exports": "^1.0.1",
     "joycon": "^3.1.1",
     "picocolors": "^1.1.1",
     "postcss-load-config": "^6.0.1",
     "resolve-from": "^5.0.0",
-    "rollup": "^4.59.0",
+    "rollup": "^4.61.0",
     "source-map": "^0.7.6",
     "sucrase": "^3.35.1",
-    "tinyexec": "^1.0.2",
-    "tinyglobby": "^0.2.15",
+    "tinyexec": "^1.2.4",
+    "tinyglobby": "^0.2.17",
     "tree-kill": "^1.2.2"
   },
   "devDependencies": {
@@ -97,10 +99,12 @@
     "release": "bumpp"
   },
   "keywords": [
+    "tsup",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "tsup"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
@@ -122,7 +126,7 @@
       },
       "esbuild": {
         "from": "^0.27.0",
-        "to": "^0.27.3"
+        "to": "^0.28.0"
       },
       "fix-dts-default-cjs-exports": {
         "from": "^1.0.0",
@@ -130,7 +134,7 @@
       },
       "rollup": {
         "from": "^4.34.8",
-        "to": "^4.59.0"
+        "to": "^4.61.0"
       },
       "sucrase": {
         "from": "^3.35.0",
@@ -138,17 +142,17 @@
       },
       "tinyexec": {
         "from": "^0.3.2",
-        "to": "^1.0.2"
+        "to": "^1.2.4"
       },
       "tinyglobby": {
         "from": "^0.2.11",
-        "to": "^0.2.15"
+        "to": "^0.2.17"
       }
     },
     "depsUpdated": 10,
     "originalPackage": "tsup",
     "originalVersion": "8.5.1",
-    "processedAt": "2026-03-09T04:40:55.308Z",
+    "processedAt": "2026-06-01T06:05:07.840Z",
     "smokeTest": "passed"
   }
 }
