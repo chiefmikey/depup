@@ -12,14 +12,14 @@ npm install @depup/xyflow__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.10.2 | **DepUp version**: 12.10.2-depup.0 | **Updated**: 3/27/2026 | **Import test**: failed
+**Original version**: 12.11.0 | **DepUp version**: 12.11.0-depup.0 | **Updated**: 6/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | classcat | `^5.0.3` | `^5.0.5` |
-| zustand | `^4.4.0` | `^5.0.12` |
+| zustand | `^4.4.0` | `^5.0.14` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/xyflow__react&labels=bug).
