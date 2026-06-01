@@ -1,6 +1,6 @@
 {
   "name": "@depup/microbundle",
-  "version": "0.15.1-depup.6",
+  "version": "0.15.1-depup.11",
   "description": "Zero-configuration bundler for tiny JS libs, powered by Rollup. (with updated dependencies)",
   "main": "dist/microbundle.js",
   "source": "src/index.js",
@@ -75,19 +75,19 @@
     }
   },
   "dependencies": {
-    "@babel/core": "^7.29.0",
+    "@babel/core": "^7.29.7",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-syntax-import-meta": "^7.10.4",
-    "@babel/plugin-syntax-jsx": "^7.28.6",
-    "@babel/plugin-transform-flow-strip-types": "^7.27.1",
-    "@babel/plugin-transform-react-jsx": "^7.28.6",
-    "@babel/plugin-transform-regenerator": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
-    "@babel/preset-flow": "^7.27.1",
-    "@babel/preset-react": "^7.28.5",
+    "@babel/plugin-syntax-jsx": "^7.29.7",
+    "@babel/plugin-transform-flow-strip-types": "^7.29.7",
+    "@babel/plugin-transform-react-jsx": "^7.29.7",
+    "@babel/plugin-transform-regenerator": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-flow": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
     "@rollup/plugin-alias": "^6.0.0",
-    "@rollup/plugin-babel": "^7.0.0",
-    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@surma/rollup-plugin-off-main-thread": "^2.2.3",
@@ -97,23 +97,23 @@
     "babel-plugin-transform-async-to-promises": "^0.8.18",
     "babel-plugin-transform-replace-expressions": "^0.2.0",
     "brotli-size": "^4.0.0",
-    "builtin-modules": "^5.1.0",
+    "builtin-modules": "^5.2.0",
     "camelcase": "^9.0.0",
     "escape-string-regexp": "^5.0.0",
     "filesize": "^11.0.17",
     "gzip-size": "^7.0.0",
     "kleur": "^4.1.5",
     "lodash.merge": "^4.6.2",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "pretty-bytes": "^7.1.0",
-    "rollup": "^4.60.3",
+    "rollup": "^4.61.0",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.37.0",
     "rollup-plugin-visualizer": "^7.0.1",
     "sade": "^1.8.1",
-    "terser": "^5.47.1",
+    "terser": "^5.48.0",
     "tiny-glob": "^0.2.9",
     "tslib": "^2.8.1",
     "typescript": "^6.0.3"
@@ -147,7 +147,7 @@
     "changes": {
       "@babel/core": {
         "from": "^7.12.10",
-        "to": "^7.29.0"
+        "to": "^7.29.7"
       },
       "@babel/plugin-proposal-class-properties": {
         "from": "7.12.1",
@@ -155,31 +155,31 @@
       },
       "@babel/plugin-syntax-jsx": {
         "from": "^7.12.1",
-        "to": "^7.28.6"
+        "to": "^7.29.7"
       },
       "@babel/plugin-transform-flow-strip-types": {
         "from": "^7.12.10",
-        "to": "^7.27.1"
+        "to": "^7.29.7"
       },
       "@babel/plugin-transform-react-jsx": {
         "from": "^7.12.11",
-        "to": "^7.28.6"
+        "to": "^7.29.7"
       },
       "@babel/plugin-transform-regenerator": {
         "from": "^7.12.1",
-        "to": "^7.29.0"
+        "to": "^7.29.7"
       },
       "@babel/preset-env": {
         "from": "^7.12.11",
-        "to": "^7.29.5"
+        "to": "^7.29.7"
       },
       "@babel/preset-flow": {
         "from": "^7.12.1",
-        "to": "^7.27.1"
+        "to": "^7.29.7"
       },
       "@babel/preset-react": {
         "from": "^7.12.10",
-        "to": "^7.28.5"
+        "to": "^7.29.7"
       },
       "@rollup/plugin-alias": {
         "from": "^3.1.1",
@@ -187,11 +187,11 @@
       },
       "@rollup/plugin-babel": {
         "from": "^5.2.2",
-        "to": "^7.0.0"
+        "to": "^7.1.0"
       },
       "@rollup/plugin-commonjs": {
         "from": "^17.0.0",
-        "to": "^29.0.2"
+        "to": "^29.0.3"
       },
       "@rollup/plugin-json": {
         "from": "^4.1.0",
@@ -215,7 +215,7 @@
       },
       "builtin-modules": {
         "from": "^3.1.0",
-        "to": "^5.1.0"
+        "to": "^5.2.0"
       },
       "camelcase": {
         "from": "^6.2.0",
@@ -239,7 +239,7 @@
       },
       "postcss": {
         "from": "^8.2.1",
-        "to": "^8.5.14"
+        "to": "^8.5.15"
       },
       "pretty-bytes": {
         "from": "^5.4.1",
@@ -247,7 +247,7 @@
       },
       "rollup": {
         "from": "^2.35.1",
-        "to": "^4.60.3"
+        "to": "^4.61.0"
       },
       "rollup-plugin-postcss": {
         "from": "^4.0.0",
@@ -267,7 +267,7 @@
       },
       "terser": {
         "from": "^5.7.0",
-        "to": "^5.47.1"
+        "to": "^5.48.0"
       },
       "tiny-glob": {
         "from": "^0.2.8",
@@ -285,7 +285,7 @@
     "depsUpdated": 34,
     "originalPackage": "microbundle",
     "originalVersion": "0.15.1",
-    "processedAt": "2026-05-08T06:55:16.341Z",
+    "processedAt": "2026-06-01T06:06:08.375Z",
     "smokeTest": "failed"
   }
 }

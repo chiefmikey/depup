@@ -12,7 +12,7 @@ npm install @depup/unbuild
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.1 | **DepUp version**: 3.6.1-depup.4 | **Updated**: 5/29/2026 | **Import test**: passed
+**Original version**: 3.6.1 | **DepUp version**: 3.6.1-depup.5 | **Updated**: 6/1/2026 | **Import test**: passed
 
 ## What changed
 
@@ -33,9 +33,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mlly | `^1.7.4` | `^1.8.2` |
 | pkg-types | `^2.2.0` | `^2.3.1` |
 | pretty-bytes | `^7.0.1` | `^7.1.0` |
-| rollup | `^4.46.2` | `^4.60.4` |
+| rollup | `^4.46.2` | `^4.61.0` |
 | rollup-plugin-dts | `^6.2.1` | `^6.4.1` |
-| tinyglobby | `^0.2.14` | `^0.2.16` |
+| tinyglobby | `^0.2.14` | `^0.2.17` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/unbuild&labels=bug).

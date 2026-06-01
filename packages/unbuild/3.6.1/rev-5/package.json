@@ -1,7 +1,7 @@
 {
   "name": "@depup/unbuild",
-  "version": "3.6.1-depup.0",
-  "description": "[DepUp] A unified JavaScript build system",
+  "version": "3.6.1-depup.5",
+  "description": "A unified JavaScript build system (with updated dependencies)",
   "repository": "unjs/unbuild",
   "license": "MIT",
   "type": "module",
@@ -23,7 +23,6 @@
     "dev": "pnpm unbuild test/fixture",
     "lint": "eslint . && prettier -c src test examples",
     "lint:fix": "automd && eslint --fix . && prettier -w src test examples",
-    "prepack": "pnpm unbuild",
     "release": "pnpm test && changelogen --release --publish && git push --follow-tags",
     "stub": "pnpm unbuild --stub",
     "test": "pnpm lint && pnpm test:types && vitest run --coverage",
@@ -32,28 +31,28 @@
   },
   "dependencies": {
     "@rollup/plugin-alias": "^6.0.0",
-    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-replace": "^6.0.3",
-    "@rollup/pluginutils": "^5.3.0",
-    "citty": "^0.2.1",
+    "@rollup/pluginutils": "^5.4.0",
+    "citty": "^0.2.2",
     "consola": "^3.4.2",
-    "defu": "^6.1.4",
-    "esbuild": "^0.27.4",
+    "defu": "^6.1.7",
+    "esbuild": "^0.28.0",
     "fix-dts-default-cjs-exports": "^1.0.1",
-    "hookable": "^6.1.0",
-    "jiti": "^2.6.1",
+    "hookable": "^6.1.1",
+    "jiti": "^2.7.0",
     "magic-string": "^0.30.21",
     "mkdist": "^2.4.1",
-    "mlly": "^1.8.1",
+    "mlly": "^1.8.2",
     "pathe": "^2.0.3",
-    "pkg-types": "^2.3.0",
+    "pkg-types": "^2.3.1",
     "pretty-bytes": "^7.1.0",
-    "rollup": "^4.59.0",
-    "rollup-plugin-dts": "^6.4.0",
+    "rollup": "^4.61.0",
+    "rollup-plugin-dts": "^6.4.1",
     "scule": "^1.3.0",
-    "tinyglobby": "^0.2.15",
+    "tinyglobby": "^0.2.17",
     "untyped": "^2.0.0"
   },
   "devDependencies": {
@@ -78,10 +77,12 @@
   },
   "packageManager": "pnpm@10.14.0",
   "keywords": [
+    "unbuild",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "unbuild"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
@@ -91,7 +92,7 @@
       },
       "@rollup/plugin-commonjs": {
         "from": "^28.0.6",
-        "to": "^29.0.2"
+        "to": "^29.0.3"
       },
       "@rollup/plugin-node-resolve": {
         "from": "^16.0.1",
@@ -103,23 +104,27 @@
       },
       "@rollup/pluginutils": {
         "from": "^5.2.0",
-        "to": "^5.3.0"
+        "to": "^5.4.0"
       },
       "citty": {
         "from": "^0.1.6",
-        "to": "^0.2.1"
+        "to": "^0.2.2"
+      },
+      "defu": {
+        "from": "^6.1.4",
+        "to": "^6.1.7"
       },
       "esbuild": {
         "from": "^0.25.9",
-        "to": "^0.27.4"
+        "to": "^0.28.0"
       },
       "hookable": {
         "from": "^5.5.3",
-        "to": "^6.1.0"
+        "to": "^6.1.1"
       },
       "jiti": {
         "from": "^2.5.1",
-        "to": "^2.6.1"
+        "to": "^2.7.0"
       },
       "magic-string": {
         "from": "^0.30.17",
@@ -131,11 +136,11 @@
       },
       "mlly": {
         "from": "^1.7.4",
-        "to": "^1.8.1"
+        "to": "^1.8.2"
       },
       "pkg-types": {
         "from": "^2.2.0",
-        "to": "^2.3.0"
+        "to": "^2.3.1"
       },
       "pretty-bytes": {
         "from": "^7.0.1",
@@ -143,21 +148,21 @@
       },
       "rollup": {
         "from": "^4.46.2",
-        "to": "^4.59.0"
+        "to": "^4.61.0"
       },
       "rollup-plugin-dts": {
         "from": "^6.2.1",
-        "to": "^6.4.0"
+        "to": "^6.4.1"
       },
       "tinyglobby": {
         "from": "^0.2.14",
-        "to": "^0.2.15"
+        "to": "^0.2.17"
       }
     },
-    "depsUpdated": 17,
+    "depsUpdated": 18,
     "originalPackage": "unbuild",
     "originalVersion": "3.6.1",
-    "processedAt": "2026-03-17T18:44:18.772Z",
+    "processedAt": "2026-06-01T06:06:31.465Z",
     "smokeTest": "passed"
   }
 }
