@@ -12,7 +12,7 @@ npm install @depup/cosmiconfig
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.1 | **Updated**: 5/31/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | env-paths | `^2.2.1` | `^4.0.0` |
 | import-fresh | `^3.3.0` | `^4.0.0` |
-| js-yaml | `^4.1.0` | `^4.1.1` |
+| js-yaml | `^4.1.0` | `^4.2.0` |
 | parse-json | `^5.2.0` | `^8.3.0` |
 
 
