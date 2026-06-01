@@ -464,5 +464,40 @@
       "timestamp": "2026-05-31T22:02:34.910Z",
       "version": "11.12.3-depup.1"
     }
+  },
+  "11.12.4": {
+    "0": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.2"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.7"
+        },
+        "axios": {
+          "from": "^1.15.0",
+          "to": "^1.16.1"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^1.9.8"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^10.0.0"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.7.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-01T18:02:05.055Z",
+      "version": "11.12.4-depup.0"
+    }
   }
 }
