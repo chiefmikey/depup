@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.43.1-depup.2",
+  "version": "6.43.1-depup.7",
   "description": "The professional publishing platform (with updated dependencies)",
   "author": "Ghost Foundation",
   "homepage": "https://ghost.org",
@@ -85,63 +85,63 @@
     "cli": "^1.29.1"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1057.0",
+    "@aws-sdk/client-s3": "^3.1059.0",
     "@extractus/oembed-extractor": "^4.1.0",
     "@faker-js/faker": "^10.4.0",
     "@isaacs/ttlcache": "^2.1.5",
-    "@sentry/node": "^10.55.0",
+    "@sentry/node": "^10.56.0",
     "@tryghost/adapter-base-cache": "0.1.25",
     "@tryghost/admin-api-schema": "4.7.4",
-    "@tryghost/api-framework": "^3.2.2",
-    "@tryghost/bookshelf-plugins": "2.2.2",
+    "@tryghost/api-framework": "^3.2.3",
+    "@tryghost/bookshelf-plugins": "^2.2.3",
     "@tryghost/color-utils": "0.2.18",
     "@tryghost/config-url-helpers": "1.0.25",
     "@tryghost/custom-fonts": "1.0.10",
-    "@tryghost/database-info": "^2.2.1",
-    "@tryghost/debug": "2.2.1",
-    "@tryghost/domain-events": "3.2.3",
-    "@tryghost/email-mock-receiver": "^2.2.1",
-    "@tryghost/errors": "^3.2.2",
+    "@tryghost/database-info": "^2.2.2",
+    "@tryghost/debug": "^2.2.2",
+    "@tryghost/domain-events": "^3.2.4",
+    "@tryghost/email-mock-receiver": "^2.2.2",
+    "@tryghost/errors": "^3.2.3",
     "@tryghost/helpers": "1.1.105",
     "@tryghost/html-to-plaintext": "1.0.10",
     "@tryghost/i18n": "file:components/tryghost-i18n-0.0.0.tgz",
     "@tryghost/image-transform": "1.4.15",
-    "@tryghost/job-manager": "^4.0.2",
-    "@tryghost/kg-card-factory": "5.2.1",
-    "@tryghost/kg-clean-basic-html": "4.3.1",
-    "@tryghost/kg-converters": "1.2.1",
-    "@tryghost/kg-default-atoms": "5.2.1",
-    "@tryghost/kg-default-cards": "10.3.1",
-    "@tryghost/kg-default-nodes": "2.1.1",
-    "@tryghost/kg-html-to-lexical": "1.3.1",
-    "@tryghost/kg-lexical-html-renderer": "1.4.1",
-    "@tryghost/kg-markdown-html-renderer": "7.2.1",
-    "@tryghost/kg-mobiledoc-html-renderer": "7.2.1",
+    "@tryghost/job-manager": "^4.0.3",
+    "@tryghost/kg-card-factory": "^5.2.2",
+    "@tryghost/kg-clean-basic-html": "^4.3.2",
+    "@tryghost/kg-converters": "^1.2.2",
+    "@tryghost/kg-default-atoms": "^5.2.2",
+    "@tryghost/kg-default-cards": "^10.3.2",
+    "@tryghost/kg-default-nodes": "^2.1.2",
+    "@tryghost/kg-html-to-lexical": "^1.3.2",
+    "@tryghost/kg-lexical-html-renderer": "^1.4.2",
+    "@tryghost/kg-markdown-html-renderer": "^7.2.2",
+    "@tryghost/kg-mobiledoc-html-renderer": "^7.2.2",
     "@tryghost/limit-service": "1.5.5",
-    "@tryghost/logging": "^5.0.1",
+    "@tryghost/logging": "^5.0.2",
     "@tryghost/members-csv": "2.0.7",
-    "@tryghost/metrics": "^3.2.1",
+    "@tryghost/metrics": "^3.2.2",
     "@tryghost/mongo-utils": "^0.6.4",
-    "@tryghost/mw-error-handler": "^3.2.2",
-    "@tryghost/mw-vhost": "^3.2.1",
-    "@tryghost/nodemailer": "2.2.2",
+    "@tryghost/mw-error-handler": "^3.2.3",
+    "@tryghost/mw-vhost": "^3.2.2",
+    "@tryghost/nodemailer": "^2.2.3",
     "@tryghost/nql": "0.12.11",
     "@tryghost/nql-lang": "0.6.5",
     "@tryghost/parse-email-address": "file:components/tryghost-parse-email-address-0.0.0.tgz",
-    "@tryghost/pretty-cli": "3.2.1",
-    "@tryghost/prometheus-metrics": "^4.0.1",
-    "@tryghost/promise": "2.2.1",
+    "@tryghost/pretty-cli": "^3.2.2",
+    "@tryghost/prometheus-metrics": "^4.0.2",
+    "@tryghost/promise": "^2.2.2",
     "@tryghost/referrer-parser": "0.1.17",
-    "@tryghost/request": "^3.2.2",
-    "@tryghost/root-utils": "2.2.1",
-    "@tryghost/security": "^3.2.1",
+    "@tryghost/request": "^3.2.3",
+    "@tryghost/root-utils": "^2.2.2",
+    "@tryghost/security": "^3.2.2",
     "@tryghost/social-urls": "0.1.62",
     "@tryghost/string": "0.3.4",
-    "@tryghost/tpl": "2.2.1",
+    "@tryghost/tpl": "^2.2.2",
     "@tryghost/url-utils": "5.2.4",
-    "@tryghost/validator": "^3.1.2",
-    "@tryghost/version": "2.2.1",
-    "@tryghost/zip": "3.3.2",
+    "@tryghost/validator": "^3.1.3",
+    "@tryghost/version": "^2.2.2",
+    "@tryghost/zip": "^3.3.3",
     "body-parser": "^2.2.2",
     "bookshelf": "1.2.0",
     "bookshelf-relations": "2.8.0",
@@ -190,7 +190,7 @@
     "image-size": "^2.0.2",
     "intl": "1.2.5",
     "intl-messageformat": "^11.2.7",
-    "js-yaml": "4.1.1",
+    "js-yaml": "^4.2.0",
     "jsdom": "29.1.1",
     "jsonc-parser": "3.3.1",
     "jsonwebtoken": "^9.0.3",
@@ -201,7 +201,7 @@
     "leaky-bucket": "^4.1.4",
     "lodash": "4.18.1",
     "luxon": "3.7.2",
-    "mailgun.js": "^13.1.0",
+    "mailgun.js": "^13.2.0",
     "metascraper": "^5.50.3",
     "metascraper-author": "^5.50.1",
     "metascraper-description": "^5.50.1",
@@ -373,7 +373,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1053.0",
-        "to": "^3.1057.0"
+        "to": "^3.1059.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -389,35 +389,87 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^10.55.0"
+        "to": "^10.56.0"
       },
       "@tryghost/api-framework": {
         "from": "1.0.7",
-        "to": "^3.2.2"
+        "to": "^3.2.3"
+      },
+      "@tryghost/bookshelf-plugins": {
+        "from": "2.2.2",
+        "to": "^2.2.3"
       },
       "@tryghost/database-info": {
         "from": "0.3.35",
-        "to": "^2.2.1"
+        "to": "^2.2.2"
+      },
+      "@tryghost/debug": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/domain-events": {
+        "from": "3.2.3",
+        "to": "^3.2.4"
       },
       "@tryghost/email-mock-receiver": {
         "from": "2.1.0",
-        "to": "^2.2.1"
+        "to": "^2.2.2"
       },
       "@tryghost/errors": {
         "from": "1.3.13",
-        "to": "^3.2.2"
+        "to": "^3.2.3"
       },
       "@tryghost/job-manager": {
         "from": "1.0.9",
-        "to": "^4.0.2"
+        "to": "^4.0.3"
+      },
+      "@tryghost/kg-card-factory": {
+        "from": "5.2.1",
+        "to": "^5.2.2"
+      },
+      "@tryghost/kg-clean-basic-html": {
+        "from": "4.3.1",
+        "to": "^4.3.2"
+      },
+      "@tryghost/kg-converters": {
+        "from": "1.2.1",
+        "to": "^1.2.2"
+      },
+      "@tryghost/kg-default-atoms": {
+        "from": "5.2.1",
+        "to": "^5.2.2"
+      },
+      "@tryghost/kg-default-cards": {
+        "from": "10.3.1",
+        "to": "^10.3.2"
+      },
+      "@tryghost/kg-default-nodes": {
+        "from": "2.1.1",
+        "to": "^2.1.2"
+      },
+      "@tryghost/kg-html-to-lexical": {
+        "from": "1.3.1",
+        "to": "^1.3.2"
+      },
+      "@tryghost/kg-lexical-html-renderer": {
+        "from": "1.4.1",
+        "to": "^1.4.2"
+      },
+      "@tryghost/kg-markdown-html-renderer": {
+        "from": "7.2.1",
+        "to": "^7.2.2"
+      },
+      "@tryghost/kg-mobiledoc-html-renderer": {
+        "from": "7.2.1",
+        "to": "^7.2.2"
       },
       "@tryghost/logging": {
         "from": "4.2.1",
-        "to": "^5.0.1"
+        "to": "^5.0.2"
       },
       "@tryghost/metrics": {
         "from": "1.0.43",
-        "to": "^3.2.1"
+        "to": "^3.2.2"
       },
       "@tryghost/mongo-utils": {
         "from": "0.6.3",
@@ -425,27 +477,55 @@
       },
       "@tryghost/mw-error-handler": {
         "from": "1.0.13",
-        "to": "^3.2.2"
+        "to": "^3.2.3"
       },
       "@tryghost/mw-vhost": {
         "from": "1.0.6",
-        "to": "^3.2.1"
+        "to": "^3.2.2"
+      },
+      "@tryghost/nodemailer": {
+        "from": "2.2.2",
+        "to": "^2.2.3"
+      },
+      "@tryghost/pretty-cli": {
+        "from": "3.2.1",
+        "to": "^3.2.2"
       },
       "@tryghost/prometheus-metrics": {
         "from": "1.0.8",
-        "to": "^4.0.1"
+        "to": "^4.0.2"
+      },
+      "@tryghost/promise": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
       },
       "@tryghost/request": {
         "from": "1.0.17",
-        "to": "^3.2.2"
+        "to": "^3.2.3"
+      },
+      "@tryghost/root-utils": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
       },
       "@tryghost/security": {
         "from": "1.0.6",
-        "to": "^3.2.1"
+        "to": "^3.2.2"
+      },
+      "@tryghost/tpl": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
       },
       "@tryghost/validator": {
         "from": "0.2.22",
-        "to": "^3.1.2"
+        "to": "^3.1.3"
+      },
+      "@tryghost/version": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/zip": {
+        "from": "3.3.2",
+        "to": "^3.3.3"
       },
       "body-parser": {
         "from": "1.20.5",
@@ -515,6 +595,10 @@
         "from": "5.4.3",
         "to": "^11.2.7"
       },
+      "js-yaml": {
+        "from": "4.1.1",
+        "to": "^4.2.0"
+      },
       "jsonwebtoken": {
         "from": "8.5.1",
         "to": "^9.0.3"
@@ -533,7 +617,7 @@
       },
       "mailgun.js": {
         "from": "10.4.0",
-        "to": "^13.1.0"
+        "to": "^13.2.0"
       },
       "metascraper": {
         "from": "5.45.15",
@@ -628,10 +712,10 @@
         "to": "^4.4.3"
       }
     },
-    "depsUpdated": 64,
+    "depsUpdated": 85,
     "originalPackage": "ghost",
     "originalVersion": "6.43.1",
-    "processedAt": "2026-05-31T22:06:26.073Z",
+    "processedAt": "2026-06-02T22:09:29.834Z",
     "smokeTest": "failed"
   }
 }
