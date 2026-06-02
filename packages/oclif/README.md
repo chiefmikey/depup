@@ -12,7 +12,7 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.23.10 | **DepUp version**: 4.23.10-depup.1 | **Updated**: 6/1/2026 | **Import test**: passed
+**Original version**: 4.23.10 | **DepUp version**: 4.23.10-depup.2 | **Updated**: 6/2/2026 | **Import test**: passed
 
 ## What changed
 
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | got | `^13` | `^15.0.5` |
 | normalize-package-data | `^6` | `^9.0.0` |
 | semver | `^7.7.4` | `^7.8.1` |
-| sort-package-json | `^2.15.1` | `^3.6.1` |
+| sort-package-json | `^2.15.1` | `^3.7.0` |
 | validate-npm-package-name | `^5.0.1` | `^8.0.0` |
 
 
