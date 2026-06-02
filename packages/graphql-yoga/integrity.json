@@ -103,39 +103,6 @@
     }
   },
   "5.21.0": {
-    "0": {
-      "changes": {
-        "@graphql-tools/executor": {
-          "from": "^1.5.0",
-          "to": "^1.5.1"
-        },
-        "@graphql-tools/schema": {
-          "from": "^10.0.11",
-          "to": "^10.0.31"
-        },
-        "@graphql-tools/utils": {
-          "from": "^10.11.0",
-          "to": "^11.0.0"
-        },
-        "@whatwg-node/fetch": {
-          "from": "^0.10.6",
-          "to": "^0.10.13"
-        },
-        "@whatwg-node/server": {
-          "from": "^0.10.14",
-          "to": "^0.10.18"
-        },
-        "lru-cache": {
-          "from": "^10.0.0",
-          "to": "^11.2.7"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-04-04T20:10:32.485Z",
-      "version": "5.21.0-depup.0"
-    },
     "1": {
       "changes": {
         "@graphql-tools/executor": {
@@ -267,6 +234,39 @@
       "status": "failed",
       "timestamp": "2026-05-20T02:02:41.243Z",
       "version": "5.21.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@graphql-tools/executor": {
+          "from": "^1.5.0",
+          "to": "^1.5.3"
+        },
+        "@graphql-tools/schema": {
+          "from": "^10.0.11",
+          "to": "^10.0.33"
+        },
+        "@graphql-tools/utils": {
+          "from": "^10.11.0",
+          "to": "^11.1.0"
+        },
+        "@whatwg-node/fetch": {
+          "from": "^0.10.6",
+          "to": "^0.10.13"
+        },
+        "@whatwg-node/server": {
+          "from": "^0.10.14",
+          "to": "^0.11.0"
+        },
+        "lru-cache": {
+          "from": "^10.0.0",
+          "to": "^11.5.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-02T14:08:35.655Z",
+      "version": "5.21.0-depup.5"
     }
   }
 }
