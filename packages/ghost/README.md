@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.43.1 | **DepUp version**: 6.43.1-depup.5 | **Updated**: 6/1/2026 | **Import test**: failed
+**Original version**: 6.43.1 | **DepUp version**: 6.43.1-depup.6 | **Updated**: 6/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `7.6.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.55.0` |
+| @sentry/node | `7.120.4` | `^10.56.0` |
 | @tryghost/api-framework | `1.0.7` | `^3.2.3` |
 | @tryghost/bookshelf-plugins | `2.2.2` | `^2.2.3` |
 | @tryghost/database-info | `0.3.35` | `^2.2.2` |
@@ -31,6 +31,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/email-mock-receiver | `2.1.0` | `^2.2.2` |
 | @tryghost/errors | `1.3.13` | `^3.2.3` |
 | @tryghost/job-manager | `1.0.9` | `^4.0.3` |
+| @tryghost/kg-card-factory | `5.2.1` | `^5.2.2` |
+| @tryghost/kg-clean-basic-html | `4.3.1` | `^4.3.2` |
+| @tryghost/kg-converters | `1.2.1` | `^1.2.2` |
+| @tryghost/kg-default-atoms | `5.2.1` | `^5.2.2` |
+| @tryghost/kg-default-cards | `10.3.1` | `^10.3.2` |
+| @tryghost/kg-default-nodes | `2.1.1` | `^2.1.2` |
+| @tryghost/kg-html-to-lexical | `1.3.1` | `^1.3.2` |
+| @tryghost/kg-lexical-html-renderer | `1.4.1` | `^1.4.2` |
+| @tryghost/kg-markdown-html-renderer | `7.2.1` | `^7.2.2` |
+| @tryghost/kg-mobiledoc-html-renderer | `7.2.1` | `^7.2.2` |
 | @tryghost/logging | `4.2.1` | `^5.0.2` |
 | @tryghost/metrics | `1.0.43` | `^3.2.2` |
 | @tryghost/mongo-utils | `0.6.3` | `^0.6.4` |
