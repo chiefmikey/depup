@@ -182,5 +182,24 @@
       "timestamp": "2026-05-22T10:01:17.248Z",
       "version": "10.4.1-depup.0"
     }
+  },
+  "10.4.2": {
+    "0": {
+      "changes": {
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "react-docgen-typescript": {
+          "from": "^2.2.2",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-02T14:02:03.087Z",
+      "version": "10.4.2-depup.0"
+    }
   }
 }
