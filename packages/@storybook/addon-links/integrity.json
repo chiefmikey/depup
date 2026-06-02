@@ -88,5 +88,15 @@
       "timestamp": "2026-05-22T10:00:23.931Z",
       "version": "10.4.1-depup.0"
     }
+  },
+  "10.4.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-02T14:02:29.656Z",
+      "version": "10.4.2-depup.0"
+    }
   }
 }
