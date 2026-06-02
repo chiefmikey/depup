@@ -401,5 +401,32 @@
       "timestamp": "2026-05-24T14:04:13.059Z",
       "version": "1.0.20-depup.0"
     }
+  },
+  "1.0.21": {
+    "0": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/parser": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/types": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-02T10:00:26.936Z",
+      "version": "1.0.21-depup.0"
+    }
   }
 }
