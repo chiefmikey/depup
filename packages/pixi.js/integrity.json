@@ -100,6 +100,35 @@
       "status": "failed",
       "timestamp": "2026-04-14T20:25:44.340Z",
       "version": "8.18.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@webgpu/types": {
+          "from": "^0.1.69",
+          "to": "^0.1.70"
+        },
+        "@xmldom/xmldom": {
+          "from": "^0.8.12",
+          "to": "^0.9.10"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "parse-svg-path": {
+          "from": "^0.1.2",
+          "to": "^0.2.0"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-02T06:04:17.347Z",
+      "version": "8.18.1-depup.1"
     }
   }
 }
