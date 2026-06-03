@@ -12,17 +12,17 @@ npm install @depup/nextra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.5 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.6 | **Updated**: 6/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @formatjs/intl-localematcher | `^0.6.0` | `^0.8.8` |
+| @formatjs/intl-localematcher | `^0.6.0` | `^0.8.9` |
 | @headlessui/react | `^2.1.2` | `^2.2.10` |
 | @mdx-js/mdx | `^3.0.0` | `^3.1.1` |
 | @napi-rs/simple-git | `^0.1.9` | `^0.1.22` |
-| @shikijs/twoslash | `^3.2.1` | `^4.1.0` |
+| @shikijs/twoslash | `^3.2.1` | `^4.2.0` |
 | @theguild/remark-npm2yarn | `^0.3.2` | `^0.3.3` |
 | better-react-mathjax | `^2.3.0` | `^3.0.1` |
 | clsx | `^2.1.0` | `^2.1.1` |
@@ -39,7 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | remark-gfm | `^4.0.0` | `^4.0.1` |
 | remark-reading-time | `^2.0.2` | `^2.1.0` |
 | remark-smartypants | `^3.0.0` | `^3.0.2` |
-| shiki | `^3.2.1` | `^4.1.0` |
+| shiki | `^3.2.1` | `^4.2.0` |
 | ts-morph | `^27.0.0` | `^28.0.0` |
 | unist-util-visit | `^5.0.0` | `^5.1.0` |
 | yaml | `^2.3.2` | `^2.9.0` |
