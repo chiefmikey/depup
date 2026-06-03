@@ -12,7 +12,7 @@ npm install @depup/apidevtools__json-schema-ref-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.3.5 | **DepUp version**: 15.3.5-depup.1 | **Updated**: 5/31/2026 | **Import test**: passed
+**Original version**: 15.3.5 | **DepUp version**: 15.3.5-depup.1 | **Updated**: 6/1/2026 | **Import test**: passed
 
 ## What changed
 

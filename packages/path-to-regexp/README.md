@@ -12,7 +12,7 @@ npm install @depup/path-to-regexp
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.4.2 | **DepUp version**: 8.4.2-depup.0 | **Updated**: 4/1/2026 | **Import test**: passed
+**Original version**: 8.4.2 | **DepUp version**: 8.4.2-depup.0 | **Updated**: 4/2/2026 | **Import test**: passed
 
 ## What changed
 
