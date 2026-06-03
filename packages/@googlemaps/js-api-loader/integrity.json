@@ -37,5 +37,20 @@
       "timestamp": "2026-05-30T02:29:08.074Z",
       "version": "2.0.2-depup.2"
     }
+  },
+  "2.1.0": {
+    "0": {
+      "changes": {
+        "@types/google.maps": {
+          "from": "^3.53.1",
+          "to": "^3.65.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-03T14:04:03.049Z",
+      "version": "2.1.0-depup.0"
+    }
   }
 }
