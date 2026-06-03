@@ -1,12 +1,14 @@
 {
   "name": "@depup/vitepress",
-  "version": "1.6.4-depup.0",
-  "description": "[DepUp] Vite & Vue powered static site generator",
+  "version": "1.6.4-depup.5",
+  "description": "Vite & Vue powered static site generator (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "vitepress",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "vite",
     "vue"
   ],
@@ -62,24 +64,24 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@docsearch/css": "^4.6.0",
-    "@docsearch/js": "^4.6.0",
-    "@iconify-json/simple-icons": "^1.2.74",
-    "@shikijs/core": "^4.0.2",
-    "@shikijs/transformers": "^4.0.2",
-    "@shikijs/types": "^4.0.2",
+    "@docsearch/css": "^4.6.3",
+    "@docsearch/js": "^4.6.3",
+    "@iconify-json/simple-icons": "^1.2.85",
+    "@shikijs/core": "^4.2.0",
+    "@shikijs/transformers": "^4.2.0",
+    "@shikijs/types": "^4.2.0",
     "@types/markdown-it": "^14.1.2",
-    "@vitejs/plugin-vue": "^6.0.5",
-    "@vue/devtools-api": "^8.1.0",
-    "@vue/shared": "^3.5.30",
-    "@vueuse/core": "^14.2.1",
-    "@vueuse/integrations": "^14.2.1",
-    "focus-trap": "^8.0.0",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/devtools-api": "^8.1.2",
+    "@vue/shared": "^3.5.35",
+    "@vueuse/core": "^14.3.0",
+    "@vueuse/integrations": "^14.3.0",
+    "focus-trap": "^8.2.1",
     "mark.js": "8.11.1",
     "minisearch": "^7.2.0",
-    "shiki": "^4.0.2",
-    "vite": "^8.0.0",
-    "vue": "^3.5.30"
+    "shiki": "^4.2.0",
+    "vite": "^8.0.16",
+    "vue": "^3.5.35"
   },
   "devDependencies": {
     "@clack/prompts": "^0.9.1",
@@ -211,51 +213,51 @@
     "changes": {
       "@docsearch/css": {
         "from": "3.8.2",
-        "to": "^4.6.0"
+        "to": "^4.6.3"
       },
       "@docsearch/js": {
         "from": "3.8.2",
-        "to": "^4.6.0"
+        "to": "^4.6.3"
       },
       "@iconify-json/simple-icons": {
         "from": "^1.2.21",
-        "to": "^1.2.74"
+        "to": "^1.2.85"
       },
       "@shikijs/core": {
         "from": "^2.1.0",
-        "to": "^4.0.2"
+        "to": "^4.2.0"
       },
       "@shikijs/transformers": {
         "from": "^2.1.0",
-        "to": "^4.0.2"
+        "to": "^4.2.0"
       },
       "@shikijs/types": {
         "from": "^2.1.0",
-        "to": "^4.0.2"
+        "to": "^4.2.0"
       },
       "@vitejs/plugin-vue": {
         "from": "^5.2.1",
-        "to": "^6.0.5"
+        "to": "^6.0.7"
       },
       "@vue/devtools-api": {
         "from": "^7.7.0",
-        "to": "^8.1.0"
+        "to": "^8.1.2"
       },
       "@vue/shared": {
         "from": "^3.5.13",
-        "to": "^3.5.30"
+        "to": "^3.5.35"
       },
       "@vueuse/core": {
         "from": "^12.4.0",
-        "to": "^14.2.1"
+        "to": "^14.3.0"
       },
       "@vueuse/integrations": {
         "from": "^12.4.0",
-        "to": "^14.2.1"
+        "to": "^14.3.0"
       },
       "focus-trap": {
         "from": "^7.6.4",
-        "to": "^8.0.0"
+        "to": "^8.2.1"
       },
       "minisearch": {
         "from": "^7.1.1",
@@ -263,21 +265,21 @@
       },
       "shiki": {
         "from": "^2.1.0",
-        "to": "^4.0.2"
+        "to": "^4.2.0"
       },
       "vite": {
         "from": "^5.4.14",
-        "to": "^8.0.0"
+        "to": "^8.0.16"
       },
       "vue": {
         "from": "^3.5.13",
-        "to": "^3.5.30"
+        "to": "^3.5.35"
       }
     },
     "depsUpdated": 16,
     "originalPackage": "vitepress",
     "originalVersion": "1.6.4",
-    "processedAt": "2026-03-17T18:45:35.448Z",
+    "processedAt": "2026-06-03T02:08:03.583Z",
     "smokeTest": "failed"
   }
 }
