@@ -80,6 +80,27 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:09:32.207Z",
       "version": "4.2.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "vscode-jsonrpc": {
+          "from": "~8.2.0",
+          "to": "^9.0.0"
+        },
+        "vscode-languageserver-protocol": {
+          "from": "~3.17.5",
+          "to": "^3.18.0"
+        },
+        "vscode-languageserver-types": {
+          "from": "~3.17.5",
+          "to": "^3.18.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-03T14:09:57.423Z",
+      "version": "4.2.4-depup.1"
     }
   }
 }
