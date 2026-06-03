@@ -50,5 +50,20 @@
       "timestamp": "2026-05-22T18:03:26.289Z",
       "version": "3.0.260522-beta-depup.0"
     }
+  },
+  "3.0.260603-beta": {
+    "0": {
+      "changes": {
+        "rolldown": {
+          "from": "^1.0.3",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-03T18:03:09.661Z",
+      "version": "3.0.260603-beta-depup.0"
+    }
   }
 }
