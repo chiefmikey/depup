@@ -12,7 +12,7 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.2.14 | **DepUp version**: 21.2.14-depup.0 | **Updated**: 6/3/2026 | **Import test**: passed
+**Original version**: 22.0.0 | **DepUp version**: 22.0.0-depup.0 | **Updated**: 6/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,28 +24,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-transform-async-generator-functions | `7.29.0` | `^7.29.7` |
 | @babel/plugin-transform-async-to-generator | `7.28.6` | `^7.29.7` |
 | @babel/plugin-transform-runtime | `7.29.0` | `^7.29.7` |
-| @babel/preset-env | `7.29.2` | `^7.29.7` |
+| @babel/preset-env | `7.29.3` | `^7.29.7` |
 | @babel/runtime | `7.29.2` | `^7.29.7` |
-| @discoveryjs/json-ext | `0.6.3` | `^1.1.0` |
-| autoprefixer | `10.4.27` | `^10.5.0` |
-| babel-loader | `10.0.0` | `^10.1.1` |
 | browserslist | `^4.26.0` | `^4.28.2` |
-| css-loader | `7.1.3` | `^7.1.4` |
-| esbuild-wasm | `0.27.3` | `^0.28.0` |
 | http-proxy-middleware | `3.0.5` | `^4.0.0` |
-| less | `4.4.2` | `^4.6.4` |
-| less-loader | `12.3.1` | `^13.0.0` |
-| mini-css-extract-plugin | `2.10.0` | `^2.10.2` |
-| ora | `9.3.0` | `^9.4.0` |
-| postcss | `8.5.12` | `^8.5.15` |
-| postcss-loader | `8.2.0` | `^8.2.1` |
-| sass | `1.97.3` | `^1.100.0` |
+| less-loader | `12.3.2` | `^13.0.0` |
+| postcss | `8.5.13` | `^8.5.15` |
+| sass | `1.99.0` | `^1.100.0` |
 | sass-loader | `16.0.7` | `^17.0.0` |
 | semver | `7.7.4` | `^7.8.1` |
-| terser | `5.46.0` | `^5.48.0` |
-| tinyglobby | `0.2.15` | `^0.2.17` |
-| webpack | `5.105.2` | `^5.107.2` |
-| webpack-dev-middleware | `7.4.5` | `^8.0.3` |
+| terser | `5.46.2` | `^5.48.0` |
+| tinyglobby | `0.2.16` | `^0.2.17` |
+| webpack | `5.106.2` | `^5.107.2` |
 | webpack-dev-server | `5.2.3` | `^5.2.4` |
 | webpack-subresource-integrity | `5.1.0` | `^5.2.0-rc.1` |
 
