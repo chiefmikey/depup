@@ -12,18 +12,18 @@ npm install @depup/nestjs__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.0.21 | **DepUp version**: 11.0.21-depup.6 | **Updated**: 5/29/2026 | **Import test**: failed
+**Original version**: 11.0.21 | **DepUp version**: 11.0.21-depup.7 | **Updated**: 6/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @angular-devkit/core | `19.2.24` | `^21.2.13` |
-| @angular-devkit/schematics | `19.2.24` | `^21.2.13` |
-| @angular-devkit/schematics-cli | `19.2.24` | `^21.2.13` |
-| @inquirer/prompts | `7.10.1` | `^8.5.0` |
+| @angular-devkit/core | `19.2.24` | `^22.0.0` |
+| @angular-devkit/schematics | `19.2.24` | `^22.0.0` |
+| @angular-devkit/schematics-cli | `19.2.24` | `^22.0.0` |
+| @inquirer/prompts | `7.10.1` | `^8.5.2` |
 | @nestjs/schematics | `^11.0.1` | `^11.1.0` |
-| ansis | `4.2.0` | `^4.3.0` |
+| ansis | `4.2.0` | `^4.3.1` |
 | chokidar | `4.0.3` | `^5.0.0` |
 | commander | `4.1.1` | `^15.0.0` |
 | node-emoji | `1.11.0` | `^2.2.0` |

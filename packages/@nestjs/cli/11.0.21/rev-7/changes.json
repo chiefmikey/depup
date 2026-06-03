@@ -2,23 +2,27 @@
   "bumped": {
     "@angular-devkit/core": {
       "from": "19.2.24",
-      "to": "^21.2.7"
+      "to": "^22.0.0"
     },
     "@angular-devkit/schematics": {
       "from": "19.2.24",
-      "to": "^21.2.7"
+      "to": "^22.0.0"
     },
     "@angular-devkit/schematics-cli": {
       "from": "19.2.24",
-      "to": "^21.2.7"
+      "to": "^22.0.0"
     },
     "@inquirer/prompts": {
       "from": "7.10.1",
-      "to": "^8.4.2"
+      "to": "^8.5.2"
     },
     "@nestjs/schematics": {
       "from": "^11.0.1",
       "to": "^11.1.0"
+    },
+    "ansis": {
+      "from": "4.2.0",
+      "to": "^4.3.1"
     },
     "chokidar": {
       "from": "4.0.3",
@@ -26,7 +30,7 @@
     },
     "commander": {
       "from": "4.1.1",
-      "to": "^14.0.3"
+      "to": "^15.0.0"
     },
     "node-emoji": {
       "from": "1.11.0",
@@ -42,9 +46,9 @@
     },
     "webpack": {
       "from": "5.106.0",
-      "to": "^5.106.2"
+      "to": "^5.107.2"
     }
   },
-  "timestamp": "2026-04-22T08:43:13.803Z",
-  "totalUpdated": 11
+  "timestamp": "2026-06-03T18:05:16.924Z",
+  "totalUpdated": 12
 }

@@ -1,6 +1,6 @@
 {
   "name": "@depup/nestjs__cli",
-  "version": "11.0.21-depup.2",
+  "version": "11.0.21-depup.7",
   "description": "Nest - modern, fast, powerful node.js web framework (@cli) (with updated dependencies)",
   "engines": {
     "node": ">= 20.11"
@@ -33,15 +33,15 @@
   },
   "homepage": "https://github.com/nestjs/nest-cli#readme",
   "dependencies": {
-    "@angular-devkit/core": "^21.2.7",
-    "@angular-devkit/schematics": "^21.2.7",
-    "@angular-devkit/schematics-cli": "^21.2.7",
-    "@inquirer/prompts": "^8.4.2",
+    "@angular-devkit/core": "^22.0.0",
+    "@angular-devkit/schematics": "^22.0.0",
+    "@angular-devkit/schematics-cli": "^22.0.0",
+    "@inquirer/prompts": "^8.5.2",
     "@nestjs/schematics": "^11.1.0",
-    "ansis": "4.2.0",
+    "ansis": "^4.3.1",
     "chokidar": "^5.0.0",
     "cli-table3": "0.6.5",
-    "commander": "^14.0.3",
+    "commander": "^15.0.0",
     "fork-ts-checker-webpack-plugin": "9.1.0",
     "glob": "13.0.6",
     "node-emoji": "^2.2.0",
@@ -49,7 +49,7 @@
     "tsconfig-paths": "4.2.0",
     "tsconfig-paths-webpack-plugin": "4.2.0",
     "typescript": "^6.0.3",
-    "webpack": "^5.106.2",
+    "webpack": "^5.107.2",
     "webpack-node-externals": "3.0.0"
   },
   "devDependencies": {
@@ -105,23 +105,27 @@
     "changes": {
       "@angular-devkit/core": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^22.0.0"
       },
       "@angular-devkit/schematics": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^22.0.0"
       },
       "@angular-devkit/schematics-cli": {
         "from": "19.2.24",
-        "to": "^21.2.7"
+        "to": "^22.0.0"
       },
       "@inquirer/prompts": {
         "from": "7.10.1",
-        "to": "^8.4.2"
+        "to": "^8.5.2"
       },
       "@nestjs/schematics": {
         "from": "^11.0.1",
         "to": "^11.1.0"
+      },
+      "ansis": {
+        "from": "4.2.0",
+        "to": "^4.3.1"
       },
       "chokidar": {
         "from": "4.0.3",
@@ -129,7 +133,7 @@
       },
       "commander": {
         "from": "4.1.1",
-        "to": "^14.0.3"
+        "to": "^15.0.0"
       },
       "node-emoji": {
         "from": "1.11.0",
@@ -145,13 +149,13 @@
       },
       "webpack": {
         "from": "5.106.0",
-        "to": "^5.106.2"
+        "to": "^5.107.2"
       }
     },
-    "depsUpdated": 11,
+    "depsUpdated": 12,
     "originalPackage": "@nestjs/cli",
     "originalVersion": "11.0.21",
-    "processedAt": "2026-04-22T08:43:39.499Z",
+    "processedAt": "2026-06-03T18:05:29.612Z",
     "smokeTest": "failed"
   }
 }
