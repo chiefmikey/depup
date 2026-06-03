@@ -2,7 +2,7 @@
   "name": "@depup/acme-client",
   "description": "Simple and unopinionated ACME client (with updated dependencies)",
   "author": "nmorsman",
-  "version": "5.4.0-depup.1",
+  "version": "5.4.0-depup.6",
   "main": "src/index.js",
   "types": "types/index.d.ts",
   "license": "MIT",
@@ -18,10 +18,10 @@
   ],
   "dependencies": {
     "@peculiar/x509": "^2.0.0",
-    "asn1js": "^3.0.7",
-    "axios": "^1.13.6",
+    "asn1js": "^3.0.10",
+    "axios": "^1.17.0",
     "debug": "^4.4.3",
-    "node-forge": "^1.3.3"
+    "node-forge": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
@@ -70,11 +70,11 @@
       },
       "asn1js": {
         "from": "^3.0.5",
-        "to": "^3.0.7"
+        "to": "^3.0.10"
       },
       "axios": {
         "from": "^1.7.2",
-        "to": "^1.13.6"
+        "to": "^1.17.0"
       },
       "debug": {
         "from": "^4.3.5",
@@ -82,13 +82,13 @@
       },
       "node-forge": {
         "from": "^1.3.1",
-        "to": "^1.3.3"
+        "to": "^1.4.0"
       }
     },
     "depsUpdated": 5,
     "originalPackage": "acme-client",
     "originalVersion": "5.4.0",
-    "processedAt": "2026-03-23T16:28:41.223Z",
+    "processedAt": "2026-06-03T10:08:01.342Z",
     "smokeTest": "failed"
   }
 }
