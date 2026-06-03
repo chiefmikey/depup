@@ -268,6 +268,35 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:48:57.993Z",
       "version": "6.0.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.17.0"
+        },
+        "dayjs": {
+          "from": "^1.11.9",
+          "to": "^1.11.21"
+        },
+        "https-proxy-agent": {
+          "from": "^5.0.0",
+          "to": "^9.0.0"
+        },
+        "qs": {
+          "from": "^6.14.1",
+          "to": "^6.15.2"
+        },
+        "xmlbuilder": {
+          "from": "^13.0.2",
+          "to": "^15.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-03T10:06:59.839Z",
+      "version": "6.0.2-depup.1"
     }
   }
 }

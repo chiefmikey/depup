@@ -2,7 +2,7 @@
   "bumped": {
     "axios": {
       "from": "^1.6.8",
-      "to": "^1.14.0"
+      "to": "^1.17.0"
     },
     "axios-retry": {
       "from": "^3.8.0",
@@ -14,9 +14,13 @@
     },
     "uuid": {
       "from": "^9.0.1",
-      "to": "^13.0.0"
+      "to": "^14.0.0"
+    },
+    "@novu/shared": {
+      "from": "2.6.6",
+      "to": "^2.7.0"
     }
   },
-  "timestamp": "2026-03-27T20:18:44.496Z",
-  "totalUpdated": 4
+  "timestamp": "2026-06-03T10:05:17.275Z",
+  "totalUpdated": 5
 }
