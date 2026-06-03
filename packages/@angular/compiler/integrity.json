@@ -176,5 +176,20 @@
       "timestamp": "2026-05-28T18:00:23.897Z",
       "version": "21.2.15-depup.0"
     }
+  },
+  "21.2.16": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-03T14:00:21.294Z",
+      "version": "21.2.16-depup.0"
+    }
   }
 }
