@@ -224,5 +224,24 @@
       "timestamp": "2026-05-28T18:03:34.468Z",
       "version": "21.2.15-depup.0"
     }
+  },
+  "21.2.16": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        },
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-03T14:02:13.493Z",
+      "version": "21.2.16-depup.0"
+    }
   }
 }
