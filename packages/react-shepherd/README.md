@@ -12,7 +12,7 @@ npm install @depup/react-shepherd
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
 
 ## What changed
 
