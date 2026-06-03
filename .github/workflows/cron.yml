@@ -1,7 +1,8 @@
 name: "Automated Discovery & Sync"
 
-# scheduled trigger disabled 2026-05-19 — runs on wolfe personal-jobs container (0 */4 * * *)
 on:
+  schedule:
+    - cron: "0 */4 * * *"
   workflow_dispatch:
     inputs:
       discover_only:
