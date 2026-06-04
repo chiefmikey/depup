@@ -12,14 +12,14 @@ npm install @depup/email-templates
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.0.1 | **DepUp version**: 13.0.1-depup.3 | **Updated**: 6/4/2026 | **Import test**: passed
+**Original version**: 13.0.1 | **DepUp version**: 13.0.1-depup.4 | **Updated**: 6/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | html-to-text | `^9.0.5` | `^10.0.0` |
-| juice | `^11.0.3` | `^12.0.0` |
+| juice | `^11.0.3` | `^12.1.0` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | nodemailer | `^7.0.12` | `^8.0.10` |
 
