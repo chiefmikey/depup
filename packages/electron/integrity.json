@@ -375,5 +375,20 @@
       "timestamp": "2026-06-02T18:09:13.272Z",
       "version": "42.3.2-depup.0"
     }
+  },
+  "42.3.3": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.9.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-04T00:52:47.231Z",
+      "version": "42.3.3-depup.0"
+    }
   }
 }
