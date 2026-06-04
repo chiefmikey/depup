@@ -198,5 +198,24 @@
       "timestamp": "2026-05-29T10:08:58.130Z",
       "version": "2.5.0-depup.1"
     }
+  },
+  "2.5.1": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "11.1.0",
+          "to": "^15.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-04T13:03:27.923Z",
+      "version": "2.5.1-depup.0"
+    }
   }
 }

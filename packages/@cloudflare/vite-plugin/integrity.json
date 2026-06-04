@@ -181,5 +181,20 @@
       "timestamp": "2026-06-02T18:02:00.239Z",
       "version": "1.39.2-depup.0"
     }
+  },
+  "1.40.0": {
+    "0": {
+      "changes": {
+        "ws": {
+          "from": "8.20.1",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-04T13:03:21.372Z",
+      "version": "1.40.0-depup.0"
+    }
   }
 }
