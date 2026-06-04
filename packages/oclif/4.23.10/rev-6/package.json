@@ -1,15 +1,15 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "4.23.10-depup.1",
+  "version": "4.23.10-depup.6",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1058.0",
-    "@aws-sdk/client-s3": "^3.1058.0",
+    "@aws-sdk/client-cloudfront": "^3.1062.0",
+    "@aws-sdk/client-s3": "^3.1062.0",
     "@inquirer/confirm": "^6.1.1",
     "@inquirer/input": "^5.1.2",
     "@inquirer/select": "^5.2.1",
@@ -28,8 +28,8 @@
     "got": "^15.0.5",
     "lodash": "^4.18.1",
     "normalize-package-data": "^9.0.0",
-    "semver": "^7.8.1",
-    "sort-package-json": "^3.6.1",
+    "semver": "^7.8.2",
+    "sort-package-json": "^4.0.0",
     "tiny-jsonc": "^1.0.2",
     "validate-npm-package-name": "^8.0.0"
   },
@@ -155,11 +155,11 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "^3.1009.0",
-        "to": "^3.1058.0"
+        "to": "^3.1062.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1053.0",
-        "to": "^3.1058.0"
+        "to": "^3.1062.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
@@ -211,11 +211,11 @@
       },
       "semver": {
         "from": "^7.7.4",
-        "to": "^7.8.1"
+        "to": "^7.8.2"
       },
       "sort-package-json": {
         "from": "^2.15.1",
-        "to": "^3.6.1"
+        "to": "^4.0.0"
       },
       "validate-npm-package-name": {
         "from": "^5.0.1",
@@ -225,7 +225,7 @@
     "depsUpdated": 17,
     "originalPackage": "oclif",
     "originalVersion": "4.23.10",
-    "processedAt": "2026-06-01T22:08:29.433Z",
+    "processedAt": "2026-06-04T20:46:08.624Z",
     "smokeTest": "passed"
   }
 }
