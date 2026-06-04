@@ -2,11 +2,11 @@
   "bumped": {
     "@aws-sdk/client-cloudfront": {
       "from": "^3.1009.0",
-      "to": "^3.1057.0"
+      "to": "^3.1061.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1053.0",
-      "to": "^3.1057.0"
+      "to": "^3.1061.0"
     },
     "@inquirer/confirm": {
       "from": "^3.1.22",
@@ -14,7 +14,7 @@
     },
     "@inquirer/input": {
       "from": "^2.2.4",
-      "to": "^5.1.1"
+      "to": "^5.1.2"
     },
     "@inquirer/select": {
       "from": "^2.5.0",
@@ -30,7 +30,7 @@
     },
     "ansis": {
       "from": "^3.16.0",
-      "to": "^4.3.0"
+      "to": "^4.3.1"
     },
     "change-case": {
       "from": "^4",
@@ -62,13 +62,13 @@
     },
     "sort-package-json": {
       "from": "^2.15.1",
-      "to": "^3.6.1"
+      "to": "^4.0.0"
     },
     "validate-npm-package-name": {
       "from": "^5.0.1",
       "to": "^8.0.0"
     }
   },
-  "timestamp": "2026-05-31T14:01:55.478Z",
+  "timestamp": "2026-06-04T00:53:06.746Z",
   "totalUpdated": 17
 }
