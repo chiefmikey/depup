@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.60.0"
+      "to": "^8.60.1"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.60.0"
+      "to": "^8.60.1"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.16.1"
+      "to": "^1.17.0"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -178,7 +178,7 @@
     },
     "date-fns": {
       "from": "^2.30.0",
-      "to": "^4.3.0"
+      "to": "^4.4.0"
     },
     "debug": {
       "from": "^4.3.4",
@@ -194,11 +194,11 @@
     },
     "enhanced-resolve": {
       "from": "^5.15.0",
-      "to": "^5.22.0"
+      "to": "^5.23.0"
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.4.0"
+      "to": "^10.4.1"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -266,7 +266,7 @@
     },
     "graphql": {
       "from": "^16.7.1",
-      "to": "^16.14.0"
+      "to": "^16.14.1"
     },
     "graphql-compose": {
       "from": "^9.0.10",
@@ -294,7 +294,7 @@
     },
     "lmdb": {
       "from": "2.5.3",
-      "to": "^3.5.4"
+      "to": "^3.5.5"
     },
     "lodash": {
       "from": "^4.17.21",
@@ -358,7 +358,7 @@
     },
     "query-string": {
       "from": "^6.14.1",
-      "to": "^9.3.1"
+      "to": "^9.4.0"
     },
     "react-refresh": {
       "from": "^0.14.1",
@@ -366,7 +366,7 @@
     },
     "react-server-dom-webpack": {
       "from": "0.0.0-experimental-c8b778b7f-20220825",
-      "to": "^19.2.6"
+      "to": "^19.2.7"
     },
     "redux": {
       "from": "4.2.1",
@@ -378,7 +378,7 @@
     },
     "semver": {
       "from": "^7.5.3",
-      "to": "^7.8.1"
+      "to": "^7.8.2"
     },
     "signal-exit": {
       "from": "^3.0.7",
@@ -442,13 +442,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.31.1"
+      "to": "^5.32.0"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-05-27T18:05:05.642Z",
+  "timestamp": "2026-06-05T16:53:43.407Z",
   "totalUpdated": 112
 }
