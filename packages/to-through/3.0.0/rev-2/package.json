@@ -1,0 +1,72 @@
+{
+  "name": "@depup/to-through",
+  "version": "3.0.0-depup.2",
+  "description": "Wrap a Readable stream in a Transform stream. (with updated dependencies)",
+  "author": "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)",
+  "contributors": [
+    "Blaine Bublitz <blaine.bublitz@gmail.com>"
+  ],
+  "repository": "gulpjs/to-through",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "nyc mocha --async-only"
+  },
+  "dependencies": {
+    "streamx": "^2.27.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-gulp": "^5.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "expect": "^27.4.2",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "readable-stream": "^3.6.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "keywords": [
+    "to-through",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "transform",
+    "readable",
+    "through",
+    "wrap"
+  ],
+  "depup": {
+    "changes": {
+      "streamx": {
+        "from": "^2.12.5",
+        "to": "^2.27.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "to-through",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-06-05T00:44:02.415Z",
+    "smokeTest": "passed"
+  }
+}
