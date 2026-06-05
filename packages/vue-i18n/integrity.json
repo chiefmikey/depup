@@ -88,5 +88,20 @@
       "timestamp": "2026-05-18T07:38:59.856Z",
       "version": "11.4.4-depup.0"
     }
+  },
+  "11.4.5": {
+    "0": {
+      "changes": {
+        "@vue/devtools-api": {
+          "from": "^6.5.0",
+          "to": "^8.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-05T20:41:54.761Z",
+      "version": "11.4.5-depup.0"
+    }
   }
 }
