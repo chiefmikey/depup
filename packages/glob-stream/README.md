@@ -12,14 +12,14 @@ npm install @depup/glob-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.3 | **DepUp version**: 8.0.3-depup.3 | **Updated**: 5/26/2026 | **Import test**: passed
+**Original version**: 8.0.3 | **DepUp version**: 8.0.3-depup.4 | **Updated**: 6/5/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | fastq | `^1.13.0` | `^1.20.1` |
-| streamx | `^2.12.5` | `^2.26.0` |
+| streamx | `^2.12.5` | `^2.27.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/glob-stream&labels=bug).
