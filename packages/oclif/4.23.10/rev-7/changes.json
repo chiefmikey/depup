@@ -2,11 +2,11 @@
   "bumped": {
     "@aws-sdk/client-cloudfront": {
       "from": "^3.1009.0",
-      "to": "^3.1058.0"
+      "to": "^3.1063.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1053.0",
-      "to": "^3.1058.0"
+      "to": "^3.1063.0"
     },
     "@inquirer/confirm": {
       "from": "^3.1.22",
@@ -58,17 +58,17 @@
     },
     "semver": {
       "from": "^7.7.4",
-      "to": "^7.8.1"
+      "to": "^7.8.2"
     },
     "sort-package-json": {
       "from": "^2.15.1",
-      "to": "^3.7.0"
+      "to": "^4.0.0"
     },
     "validate-npm-package-name": {
       "from": "^5.0.1",
       "to": "^8.0.0"
     }
   },
-  "timestamp": "2026-06-02T18:06:54.610Z",
+  "timestamp": "2026-06-05T20:39:30.405Z",
   "totalUpdated": 17
 }
