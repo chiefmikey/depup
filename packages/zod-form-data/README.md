@@ -12,13 +12,13 @@ npm install @depup/zod-form-data
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 3.0.2 | **DepUp version**: 3.0.2-depup.0 | **Updated**: 6/5/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @rvf/set-get | `^7.0.0` | `^7.0.1` |
+| @rvf/set-get | `^7.0.0` | `^7.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/zod-form-data&labels=bug).
