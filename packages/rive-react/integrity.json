@@ -74,6 +74,31 @@
       "status": "published",
       "timestamp": "2026-04-03T20:18:44.261Z",
       "version": "4.24.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@rive-app/canvas": {
+          "from": "2.32.0",
+          "to": "^2.38.0"
+        },
+        "@rive-app/canvas-lite": {
+          "from": "2.32.0",
+          "to": "^2.38.0"
+        },
+        "@rive-app/webgl": {
+          "from": "2.32.0",
+          "to": "^2.37.0"
+        },
+        "@rive-app/webgl2": {
+          "from": "2.32.0",
+          "to": "^2.38.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-05T20:40:16.936Z",
+      "version": "4.24.0-depup.3"
     }
   }
 }
