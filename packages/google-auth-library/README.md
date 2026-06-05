@@ -12,13 +12,16 @@ npm install @depup/google-auth-library
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.6.2 | **DepUp version**: 10.6.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 10.7.0 | **DepUp version**: 10.7.0-depup.0 | **Updated**: 6/5/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | base64-js | `^1.3.0` | `^1.5.1` |
+| gaxios | `^7.1.4` | `^7.1.5` |
+| gcp-metadata | `8.1.2` | `^8.1.3` |
+| google-logging-utils | `1.1.3` | `^1.1.4` |
 | jws | `^4.0.0` | `^4.0.1` |
 
 
