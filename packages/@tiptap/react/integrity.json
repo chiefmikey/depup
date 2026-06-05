@@ -387,5 +387,28 @@
       "timestamp": "2026-06-03T10:01:58.311Z",
       "version": "3.25.0-depup.0"
     }
+  },
+  "3.26.0": {
+    "0": {
+      "changes": {
+        "@types/use-sync-external-store": {
+          "from": "^0.0.6",
+          "to": "^1.5.0"
+        },
+        "fast-equals": {
+          "from": "^5.3.3",
+          "to": "^6.0.0"
+        },
+        "use-sync-external-store": {
+          "from": "^1.4.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-05T13:00:28.632Z",
+      "version": "3.26.0-depup.0"
+    }
   }
 }
