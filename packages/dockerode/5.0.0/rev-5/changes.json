@@ -2,21 +2,21 @@
   "bumped": {
     "@grpc/grpc-js": {
       "from": "^1.11.1",
-      "to": "^1.14.3"
+      "to": "^1.14.4"
     },
     "@grpc/proto-loader": {
       "from": "^0.7.13",
-      "to": "^0.8.0"
+      "to": "^0.8.1"
     },
     "protobufjs": {
       "from": "^7.3.2",
-      "to": "^8.0.1"
+      "to": "^8.6.0"
     },
     "tar-fs": {
       "from": "^2.1.4",
       "to": "^3.1.2"
     }
   },
-  "timestamp": "2026-04-24T00:46:19.336Z",
+  "timestamp": "2026-06-05T00:43:12.018Z",
   "totalUpdated": 4
 }
