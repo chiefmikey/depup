@@ -12,7 +12,7 @@ npm install @depup/azure__core-rest-pipeline
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.23.0 | **DepUp version**: 1.23.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.24.0 | **DepUp version**: 1.24.0-depup.0 | **Updated**: 6/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,6 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/core-auth | `^1.10.0` | `^1.10.1` |
 | @azure/core-tracing | `^1.3.0` | `^1.3.1` |
 | @azure/core-util | `^1.13.0` | `^1.13.1` |
+| @typespec/ts-http-runtime | `^0.3.4` | `^0.3.6` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

@@ -218,5 +218,15 @@
       "timestamp": "2026-06-05T20:37:38.808Z",
       "version": "1.168.21-depup.0"
     }
+  },
+  "1.168.22": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-06T00:41:05.438Z",
+      "version": "1.168.22-depup.0"
+    }
   }
 }
