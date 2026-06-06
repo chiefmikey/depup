@@ -107,3 +107,4 @@ npm run heal                # Self-healing repairs
 - `execFileSync` inside async serializes -- use `promisify(execFile)` or `spawn`
 - Cleanup only runs when `shouldPublish=true` -- security pipeline needs files preserved
 - `add-package.mjs` writes to JSON (`config/user-packages.json`), not source code
+- jest `testMatch` also matches `unit.test.js` copies inside `.claude/worktrees/` -- local `test:unit`/`test:coverage` run extra suites and report inflated numbers. Use `jest --runTestsByPath scripts/__tests__/unit.test.js --coverage` for an accurate single-file read; CI is unaffected
