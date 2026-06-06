@@ -1,0 +1,86 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "7.29.0",
+      "to": "^7.29.7"
+    },
+    "@babel/generator": {
+      "from": "7.29.1",
+      "to": "^7.29.7"
+    },
+    "@babel/helper-annotate-as-pure": {
+      "from": "7.27.3",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-async-generator-functions": {
+      "from": "7.29.0",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-async-to-generator": {
+      "from": "7.28.6",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-runtime": {
+      "from": "7.29.0",
+      "to": "^7.29.7"
+    },
+    "@babel/preset-env": {
+      "from": "7.29.3",
+      "to": "^7.29.7"
+    },
+    "@babel/runtime": {
+      "from": "7.29.2",
+      "to": "^7.29.7"
+    },
+    "browserslist": {
+      "from": "^4.26.0",
+      "to": "^4.28.2"
+    },
+    "http-proxy-middleware": {
+      "from": "3.0.5",
+      "to": "^4.1.0"
+    },
+    "less-loader": {
+      "from": "12.3.2",
+      "to": "^13.0.0"
+    },
+    "postcss": {
+      "from": "8.5.13",
+      "to": "^8.5.15"
+    },
+    "sass": {
+      "from": "1.99.0",
+      "to": "^1.100.0"
+    },
+    "sass-loader": {
+      "from": "16.0.7",
+      "to": "^17.0.0"
+    },
+    "semver": {
+      "from": "7.7.4",
+      "to": "^7.8.2"
+    },
+    "terser": {
+      "from": "5.46.2",
+      "to": "^5.48.0"
+    },
+    "tinyglobby": {
+      "from": "0.2.16",
+      "to": "^0.2.17"
+    },
+    "webpack": {
+      "from": "5.106.2",
+      "to": "^5.107.2"
+    },
+    "webpack-dev-server": {
+      "from": "5.2.3",
+      "to": "^5.2.4"
+    },
+    "webpack-subresource-integrity": {
+      "from": "5.1.0",
+      "to": "^5.2.0-rc.1"
+    }
+  },
+  "timestamp": "2026-06-06T15:36:37.701Z",
+  "totalUpdated": 20
+}
