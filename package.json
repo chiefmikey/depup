@@ -27,8 +27,11 @@
     "semver": "7.7.4"
   },
   "devDependencies": {
+    "eslint": "10.4.1",
     "jest": "30.4.2",
-    "mikey-pro": "10.3.3"
+    "mikey-pro": "10.3.3",
+    "prettier": "3.8.3",
+    "stylelint": "16.26.1"
   },
   "engines": {
     "node": ">=24.0.0"
