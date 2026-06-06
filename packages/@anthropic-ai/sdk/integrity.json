@@ -256,5 +256,15 @@
       "timestamp": "2026-06-05T20:36:56.174Z",
       "version": "0.101.0-depup.0"
     }
+  },
+  "0.102.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-06T23:27:24.153Z",
+      "version": "0.102.0-depup.0"
+    }
   }
 }
