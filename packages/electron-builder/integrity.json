@@ -5,5 +5,32 @@
       "timestamp": "2026-03-09T08:18:51.869Z",
       "version": "26.8.1-depup.0"
     }
+  },
+  "26.15.0": {
+    "0": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "ci-info": {
+          "from": "^4.2.0",
+          "to": "^4.4.0"
+        },
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.5"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-06T09:02:11.814Z",
+      "version": "26.15.0-depup.0"
+    }
   }
 }
