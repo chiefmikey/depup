@@ -1260,7 +1260,7 @@ describe('packageDiscoverer class', () => {
           process.env.SHARD_TOTAL = originalTotal;
         }
       }
-    }, 30000);
+    }, 30_000);
   });
 });
 
