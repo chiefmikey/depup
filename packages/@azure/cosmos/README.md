@@ -12,14 +12,14 @@ npm install @depup/azure__cosmos
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.9.3 | **DepUp version**: 4.9.3-depup.0 | **Updated**: 4/20/2026 | **Import test**: failed
+**Original version**: 4.9.3 | **DepUp version**: 4.9.3-depup.1 | **Updated**: 6/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @azure/core-auth | `^1.9.0` | `^1.10.1` |
-| @azure/core-rest-pipeline | `^1.19.1` | `^1.23.0` |
+| @azure/core-rest-pipeline | `^1.19.1` | `^1.24.0` |
 | @azure/core-tracing | `^1.2.0` | `^1.3.1` |
 | @azure/core-util | `^1.11.0` | `^1.13.1` |
 | @azure/keyvault-keys | `^4.9.0` | `^4.10.0` |
