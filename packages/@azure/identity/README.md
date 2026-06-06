@@ -12,7 +12,7 @@ npm install @depup/azure__identity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.13.1 | **DepUp version**: 4.13.1-depup.5 | **Updated**: 5/19/2026 | **Import test**: failed
+**Original version**: 4.13.1 | **DepUp version**: 4.13.1-depup.6 | **Updated**: 6/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,13 +20,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @azure/abort-controller | `^2.0.0` | `^2.1.2` |
 | @azure/core-auth | `^1.9.0` | `^1.10.1` |
-| @azure/core-client | `^1.9.2` | `^1.10.1` |
-| @azure/core-rest-pipeline | `^1.17.0` | `^1.23.0` |
+| @azure/core-client | `^1.9.2` | `^1.10.2` |
+| @azure/core-rest-pipeline | `^1.17.0` | `^1.24.0` |
 | @azure/core-tracing | `^1.0.0` | `^1.3.1` |
 | @azure/core-util | `^1.11.0` | `^1.13.1` |
 | @azure/logger | `^1.0.0` | `^1.3.0` |
-| @azure/msal-browser | `^5.5.0` | `^5.11.0` |
-| @azure/msal-node | `^5.1.0` | `^5.2.2` |
+| @azure/msal-browser | `^5.5.0` | `^5.12.0` |
+| @azure/msal-node | `^5.1.0` | `^5.2.3` |
 | open | `^10.1.0` | `^11.0.0` |
 | tslib | `^2.2.0` | `^2.8.1` |
 
