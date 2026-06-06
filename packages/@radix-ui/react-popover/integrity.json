@@ -5,5 +5,20 @@
       "timestamp": "2026-03-09T20:08:02.815Z",
       "version": "1.1.15-depup.0"
     }
+  },
+  "1.1.16": {
+    "0": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-06T05:19:39.906Z",
+      "version": "1.1.16-depup.0"
+    }
   }
 }

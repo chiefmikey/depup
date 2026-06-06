@@ -12,15 +12,11 @@ npm install @depup/radix-ui__react-tabs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.13 | **DepUp version**: 1.1.13-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 1.1.14 | **DepUp version**: 1.1.14-depup.0 | **Updated**: 6/6/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @radix-ui/react-primitive | `2.1.3` | `^2.1.4` |
-| @radix-ui/react-context | `1.1.2` | `^1.1.3` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/radix-ui__react-tabs&labels=bug).
 

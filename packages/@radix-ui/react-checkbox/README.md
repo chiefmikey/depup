@@ -12,15 +12,11 @@ npm install @depup/radix-ui__react-checkbox
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.3 | **DepUp version**: 1.3.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 1.3.4 | **DepUp version**: 1.3.4-depup.0 | **Updated**: 6/6/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @radix-ui/react-context | `1.1.2` | `^1.1.3` |
-| @radix-ui/react-primitive | `2.1.3` | `^2.1.4` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/radix-ui__react-checkbox&labels=bug).
 
