@@ -186,5 +186,24 @@
       "timestamp": "2026-06-01T02:02:20.067Z",
       "version": "63.0.1-depup.0"
     }
+  },
+  "63.0.2": {
+    "0": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-06T09:00:23.471Z",
+      "version": "63.0.2-depup.0"
+    }
   }
 }
