@@ -12,7 +12,7 @@ npm install @depup/jasmine-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.0 | **Updated**: 4/11/2026 | **Import test**: passed
+**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.0 | **Updated**: 6/7/2026 | **Import test**: passed
 
 ## What changed
 
