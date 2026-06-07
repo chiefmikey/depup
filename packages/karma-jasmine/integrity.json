@@ -25,6 +25,19 @@
       "status": "published",
       "timestamp": "2026-04-11T20:13:08.135Z",
       "version": "5.1.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "jasmine-core": {
+          "from": "^4.1.0",
+          "to": "^6.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-07T01:07:00.594Z",
+      "version": "5.1.0-depup.2"
     }
   }
 }
