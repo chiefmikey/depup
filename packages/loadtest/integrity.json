@@ -49,6 +49,31 @@
       "status": "published",
       "timestamp": "2026-04-01T08:39:44.951Z",
       "version": "8.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "agentkeepalive": {
+          "from": "^2.0.3",
+          "to": "^4.6.0"
+        },
+        "https-proxy-agent": {
+          "from": "^2.2.1",
+          "to": "^9.1.0"
+        },
+        "stdio": {
+          "from": "0.2.7",
+          "to": "^2.1.3"
+        },
+        "websocket": {
+          "from": "^1.0.34",
+          "to": "^1.0.35"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T17:18:36.954Z",
+      "version": "8.2.1-depup.2"
     }
   }
 }
