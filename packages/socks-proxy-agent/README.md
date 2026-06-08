@@ -12,14 +12,14 @@ npm install @depup/socks-proxy-agent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.0 | **Updated**: 4/1/2026 | **Import test**: passed
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.0 | **Updated**: 6/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^4.3.4` | `^4.4.3` |
-| socks | `^2.8.3` | `^2.8.7` |
+| socks | `^2.8.3` | `^2.8.9` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/socks-proxy-agent&labels=bug).
