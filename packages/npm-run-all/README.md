@@ -12,7 +12,7 @@ npm install @depup/npm-run-all
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.5 | **DepUp version**: 4.1.5-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.1.5 | **DepUp version**: 4.1.5-depup.1 | **Updated**: 6/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,10 +21,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ansi-styles | `^3.2.1` | `^6.2.3` |
 | chalk | `^2.4.1` | `^5.6.2` |
 | cross-spawn | `^6.0.5` | `^7.0.6` |
-| minimatch | `^3.0.4` | `^10.2.4` |
-| pidtree | `^0.3.0` | `^0.6.0` |
+| minimatch | `^3.0.4` | `^10.2.5` |
+| pidtree | `^0.3.0` | `^1.0.0` |
 | read-pkg | `^3.0.0` | `^10.1.0` |
-| shell-quote | `^1.6.1` | `^1.8.3` |
+| shell-quote | `^1.6.1` | `^1.8.4` |
 | string.prototype.padend | `^3.0.0` | `^3.1.6` |
 
 
