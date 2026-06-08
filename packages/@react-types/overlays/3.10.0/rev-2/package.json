@@ -1,0 +1,56 @@
+{
+  "name": "@depup/react-types__overlays",
+  "version": "3.10.0-depup.2",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/overlays": "^3.32.1",
+    "@react-spectrum/overlays": "^5.10.1",
+    "@react-stately/overlays": "^3.7.1",
+    "@react-types/shared": "^3.35.0"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "a6999bdf494a2e9c0381a5881908328bdd22ddae",
+  "keywords": [
+    "@react-types/overlays",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@react-aria/overlays": {
+        "from": "^3.32.0",
+        "to": "^3.32.1"
+      },
+      "@react-spectrum/overlays": {
+        "from": "^5.10.0",
+        "to": "^5.10.1"
+      },
+      "@react-stately/overlays": {
+        "from": "^3.7.0",
+        "to": "^3.7.1"
+      },
+      "@react-types/shared": {
+        "from": "^3.34.0",
+        "to": "^3.35.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@react-types/overlays",
+    "originalVersion": "3.10.0",
+    "processedAt": "2026-06-08T21:08:23.342Z",
+    "smokeTest": "failed"
+  }
+}

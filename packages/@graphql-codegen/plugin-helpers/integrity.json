@@ -140,6 +140,23 @@
       "status": "failed",
       "timestamp": "2026-05-10T07:05:35.964Z",
       "version": "7.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T20:59:04.072Z",
+      "version": "7.0.1-depup.1"
     }
   }
 }

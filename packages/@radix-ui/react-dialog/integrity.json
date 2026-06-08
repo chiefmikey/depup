@@ -19,6 +19,19 @@
       "status": "failed",
       "timestamp": "2026-06-06T05:19:28.849Z",
       "version": "1.1.16-depup.0"
+    },
+    "1": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-08T21:05:44.011Z",
+      "version": "1.1.16-depup.1"
     }
   }
 }

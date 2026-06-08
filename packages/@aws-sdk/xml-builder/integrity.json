@@ -382,5 +382,24 @@
       "timestamp": "2026-06-05T20:37:14.965Z",
       "version": "3.972.28-depup.0"
     }
+  },
+  "3.972.29": {
+    "0": {
+      "changes": {
+        "fast-xml-parser": {
+          "from": "5.7.3",
+          "to": "^5.8.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T20:52:19.283Z",
+      "version": "3.972.29-depup.0"
+    }
   }
 }

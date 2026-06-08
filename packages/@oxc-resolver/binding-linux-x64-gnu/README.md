@@ -12,7 +12,7 @@ npm install @depup/oxc-resolver__binding-linux-x64-gnu
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.20.0 | **DepUp version**: 11.20.0-depup.0 | **Updated**: 5/28/2026 | **Import test**: failed
+**Original version**: 11.20.0 | **DepUp version**: 11.20.0-depup.1 | **Updated**: 6/8/2026 | **Import test**: failed
 
 ## What changed
 

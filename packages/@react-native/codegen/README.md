@@ -12,16 +12,16 @@ npm install @depup/react-native__codegen
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.85.3 | **DepUp version**: 0.85.3-depup.0 | **Updated**: 5/6/2026 | **Import test**: failed
+**Original version**: 0.85.3 | **DepUp version**: 0.85.3-depup.1 | **Updated**: 6/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.25.2` | `^7.29.0` |
-| @babel/parser | `^7.29.0` | `^7.29.3` |
-| hermes-parser | `0.33.3` | `^0.36.0` |
-| tinyglobby | `^0.2.15` | `^0.2.16` |
+| @babel/core | `^7.25.2` | `^7.29.7` |
+| @babel/parser | `^7.29.0` | `^7.29.7` |
+| hermes-parser | `0.33.3` | `^0.36.1` |
+| tinyglobby | `^0.2.15` | `^0.2.17` |
 | yargs | `^17.6.2` | `^18.0.0` |
 
 

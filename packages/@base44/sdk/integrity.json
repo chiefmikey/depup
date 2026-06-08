@@ -302,6 +302,27 @@
       "status": "failed",
       "timestamp": "2026-06-03T10:07:27.165Z",
       "version": "0.8.31-depup.1"
+    },
+    "2": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.2",
+          "to": "^1.17.0"
+        },
+        "socket.io-client": {
+          "from": "^4.7.5",
+          "to": "^4.8.3"
+        },
+        "uuid": {
+          "from": "^13.0.0",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T20:53:34.250Z",
+      "version": "0.8.31-depup.2"
     }
   }
 }

@@ -165,6 +165,31 @@
       "status": "failed",
       "timestamp": "2026-06-08T17:17:54.835Z",
       "version": "5.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "http-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "https-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "lru-cache": {
+          "from": "^11.2.1",
+          "to": "^11.5.1"
+        },
+        "socks-proxy-agent": {
+          "from": "^10.0.0",
+          "to": "^10.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T21:03:03.673Z",
+      "version": "5.0.1-depup.2"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/google-cloud__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.19.0 | **DepUp version**: 7.19.0-depup.6 | **Updated**: 6/5/2026 | **Import test**: passed
+**Original version**: 7.21.0 | **DepUp version**: 7.21.0-depup.0 | **Updated**: 6/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -29,7 +29,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-limit | `^3.0.1` | `^7.3.0` |
 | retry-request | `^7.0.0` | `^8.0.3` |
 | teeny-request | `^9.0.0` | `^10.1.3` |
-| uuid | `^8.0.0` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/google-cloud__storage&labels=bug).

@@ -12,13 +12,13 @@ npm install @depup/googlemaps__js-api-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.0 | **DepUp version**: 2.1.0-depup.0 | **Updated**: 6/3/2026 | **Import test**: failed
+**Original version**: 2.1.0 | **DepUp version**: 2.1.0-depup.1 | **Updated**: 6/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/google.maps | `^3.53.1` | `^3.65.0` |
+| @types/google.maps | `^3.53.1` | `^3.65.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/googlemaps__js-api-loader&labels=bug).

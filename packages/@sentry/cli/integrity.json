@@ -305,6 +305,27 @@
       "status": "failed",
       "timestamp": "2026-06-06T16:32:21.461Z",
       "version": "3.5.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "proxy-from-env": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        },
+        "undici": {
+          "from": "^6.22.0",
+          "to": "^8.4.1"
+        },
+        "which": {
+          "from": "^2.0.2",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T21:09:53.997Z",
+      "version": "3.5.0-depup.2"
     }
   }
 }

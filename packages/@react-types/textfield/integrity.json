@@ -17,6 +17,23 @@
       "status": "failed",
       "timestamp": "2026-04-15T00:46:44.625Z",
       "version": "3.13.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@react-aria/textfield": {
+          "from": "^3.19.0",
+          "to": "^3.19.1"
+        },
+        "@react-spectrum/textfield": {
+          "from": "^3.15.0",
+          "to": "^3.15.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-08T21:08:43.032Z",
+      "version": "3.13.0-depup.1"
     }
   }
 }
