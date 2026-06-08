@@ -12,7 +12,7 @@ npm install @depup/graphql-tools__delegate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.17 | **DepUp version**: 12.0.17-depup.0 | **Updated**: 6/1/2026 | **Import test**: passed
+**Original version**: 12.0.17 | **DepUp version**: 12.0.17-depup.1 | **Updated**: 6/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,6 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-tools/executor | `^1.4.13` | `^1.5.3` |
 | @graphql-tools/schema | `^10.0.29` | `^10.0.33` |
 | @graphql-tools/utils | `^11.0.0` | `^11.1.0` |
+| @repeaterjs/repeater | `^3.0.6` | `^3.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/graphql-tools__delegate&labels=bug).

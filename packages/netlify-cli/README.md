@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 26.1.0 | **DepUp version**: 26.1.0-depup.3 | **Updated**: 6/7/2026 | **Import test**: failed
+**Original version**: 26.1.0 | **DepUp version**: 26.1.0-depup.4 | **Updated**: 6/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -37,7 +37,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | execa | `^5.1.1` | `^9.6.1` |
 | get-port | `^5.1.1` | `^7.2.0` |
 | http-proxy-middleware | `^3.0.5` | `^4.1.0` |
-| https-proxy-agent | `^8.0.0` | `^9.0.0` |
+| https-proxy-agent | `^8.0.0` | `^9.1.0` |
 | inquirer | `^8.2.7` | `^14.0.2` |
 | inquirer-autocomplete-prompt | `^1.4.0` | `^3.0.1` |
 | is-wsl | `^3.1.0` | `^3.1.1` |
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pg | `^8.20.0` | `^8.21.0` |
 | raw-body | `^3.0.1` | `^3.0.2` |
 | readdirp | `^4.1.2` | `^5.0.0` |
-| semver | `^7.7.2` | `^7.8.2` |
+| semver | `^7.7.2` | `^7.8.3` |
 | toml | `^3.0.0` | `^4.1.1` |
 | ulid | `^3.0.1` | `^3.0.2` |
 | write-file-atomic | `^5.0.1` | `^8.0.0` |
