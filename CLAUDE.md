@@ -100,6 +100,10 @@ npm run heal                # Self-healing repairs
 - Dependencies pinned to exact versions (no `^`)
 - All classes exported: `export { ClassName }` before entry point guard
 
+## Dev Tooling (bumping depup's own devDeps)
+- Validate bumps with `npm ci` (NOT `npm install --legacy-peer-deps`) before declaring green -- CI runs strict `npm ci` and `--legacy-peer-deps` masks peer conflicts that then fail in CI
+- `mikey-pro` 10.3.x requires explicit `eslint@^10`, `prettier`, and `stylelint@^16` peer deps declared in `package.json` (exact-pinned) -- transitive resolution lands eslint 9 and breaks `npm ci`
+
 ## Common Mistakes
 - `mikey-pro` sets `noInlineConfig: true` -- use eslint.config.js overrides, not inline comments
 - `chalk.orange` does not exist -- use `chalk.hex('#FFA500')`
