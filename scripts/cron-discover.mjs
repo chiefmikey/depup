@@ -99,6 +99,9 @@ class PackageDiscoverer {
       const { failedPackages, processedPackages } =
         await this.processBatches(packagesToProcess);
 
+      const attempted = processedPackages.length + failedPackages.length;
+      const skipped = packagesToProcess.length - attempted;
+
       console.log(chalk.green(`\n✅ Discovery completed`));
       console.log(
         chalk.cyan(`Processed: ${processedPackages.length} packages`),
@@ -117,6 +120,20 @@ class PackageDiscoverer {
           console.log(chalk.gray(`  - ${package_.name}: ${package_.error}`));
         }
       }
+
+      // Systemic failure detection: >50% failure rate on 10+ attempts signals
+      // a dead NPM_TOKEN or registry outage rather than individual package bugs
+      if (attempted >= 10 && failedPackages.length / attempted > 0.5) {
+        console.error(
+          `SYSTEMIC FAILURE: ${failedPackages.length}/${attempted} packages failed (>${Math.round((failedPackages.length / attempted) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
+        );
+        process.exit(1);
+      }
+
+      // Machine-readable summary for GitHub step summary (FIX 6)
+      console.log(
+        `DEPUP_SUMMARY processed=${processedPackages.length} failed=${failedPackages.length} skipped=${skipped}`,
+      );
     } catch (error) {
       spinner.fail('Discovery failed');
       console.error(chalk.red('Error:'), error.message);
@@ -331,7 +348,32 @@ class PackageDiscoverer {
 
       // Check if we have this version (use `in` to handle null/falsy entries)
       if (latestVersion in integrityData) {
-        console.log(`  ✅ ${package_.name} is up to date`);
+        // Version key exists -- but only treat as up-to-date if at least one
+        // revision has status === 'published'. If every revision failed, the
+        // publish never actually landed, so we must retry.
+        const versionEntry = integrityData[latestVersion];
+        const hasPublished =
+          versionEntry !== null &&
+          typeof versionEntry === 'object' &&
+          !Array.isArray(versionEntry) &&
+          Object.values(versionEntry).some(
+            (rev) =>
+              rev !== null &&
+              typeof rev === 'object' &&
+              rev.status === 'published',
+          );
+        if (hasPublished) {
+          console.log(`  ✅ ${package_.name} is up to date`);
+        } else {
+          console.log(
+            `  🔄 ${package_.name}@${latestVersion} has only failed revisions — retrying`,
+          );
+          await this.createNewPackage(
+            package_,
+            packageDirectory,
+            latestVersion,
+          );
+        }
       } else {
         console.log(`  🔄 New version available: ${latestVersion}`);
         await this.createNewPackage(package_, packageDirectory, latestVersion);

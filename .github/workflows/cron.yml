@@ -67,7 +67,8 @@ jobs:
           SHARD_TOTAL: '3'
         run: |
           echo "Starting package discovery (shard ${{ matrix.shard }}/3)..."
-          npm run cron:discover
+          npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
+          exit "${PIPESTATUS[0]}"
 
       - name: Commit and Push Changes
         run: |
@@ -144,6 +145,12 @@ jobs:
         run: |
           echo "## Discovery Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+          summary_line=$(grep '^DEPUP_SUMMARY' /tmp/depup-discover.log 2>/dev/null || true)
+          if [ -n "$summary_line" ]; then
+            echo "- **Counts**: $summary_line" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Counts**: (no summary line found -- script may have errored)" >> $GITHUB_STEP_SUMMARY
+          fi
 
   sync:
     name: Sync (shard ${{ matrix.shard }})
@@ -193,7 +200,8 @@ jobs:
           SHARD_TOTAL: '3'
         run: |
           echo "Starting package sync (shard ${{ matrix.shard }}/3)..."
-          npm run cron:sync
+          npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
+          exit "${PIPESTATUS[0]}"
 
       - name: Commit and Push Changes
         run: |
@@ -263,6 +271,12 @@ jobs:
         run: |
           echo "## Sync Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+          summary_line=$(grep '^DEPUP_SUMMARY' /tmp/depup-sync.log 2>/dev/null || true)
+          if [ -n "$summary_line" ]; then
+            echo "- **Counts**: $summary_line" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Counts**: (no summary line found -- script may have errored)" >> $GITHUB_STEP_SUMMARY
+          fi
 
   heal:
     name: Self-Healing

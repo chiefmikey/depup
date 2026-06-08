@@ -5,9 +5,14 @@ on:
     - cron: "0 7 * * 0"
   workflow_dispatch: {}
 
+concurrency:
+  cancel-in-progress: false
+  group: depup-refresh-list
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
 
@@ -48,4 +53,25 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh curated package list from npm popularity data"
-          git push origin main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            # Clean any unstaged changes before rebase (case-different files from packages)
+            git checkout -- . 2>/dev/null || true
+            if ! git rebase origin/main; then
+              git rebase --abort 2>/dev/null || true
+              sleep 2
+              if [ "$attempt" -eq 3 ]; then
+                echo "Rebase failed after 3 attempts"
+                exit 1
+              fi
+            elif git push origin main; then
+              echo "Push successful on attempt $attempt"
+              break
+            else
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts"
+                exit 1
+              fi
+              sleep 2
+            fi
+          done
