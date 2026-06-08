@@ -48,5 +48,32 @@
       "timestamp": "2026-06-01T02:05:37.850Z",
       "version": "9.0.1-depup.1"
     }
+  },
+  "9.0.2": {
+    "0": {
+      "changes": {
+        "env-paths": {
+          "from": "^2.2.1",
+          "to": "^4.0.0"
+        },
+        "import-fresh": {
+          "from": "^3.3.0",
+          "to": "^4.0.0"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.2.0"
+        },
+        "parse-json": {
+          "from": "^5.2.0",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T01:05:55.171Z",
+      "version": "9.0.2-depup.0"
+    }
   }
 }
