@@ -13,7 +13,7 @@
     "lint": "eslint scripts/**/*.mjs",
     "lint:fix": "eslint scripts/**/*.mjs --fix",
     "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit --testTimeout=120000",
-    "test:unit": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/unit.test.js --forceExit",
+    "test:unit": "node --experimental-vm-modules node_modules/.bin/jest --testPathIgnorePatterns \"/node_modules/\" \"/\\.test-temp/\" \"/rev-\" \"<rootDir>/depup/\" \"/\\.claude/\" \"integration\\.test\\.js\" --forceExit --testTimeout=120000",
     "test:integration": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/integration.test.js --forceExit --testTimeout=120000",
     "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000"
   },
