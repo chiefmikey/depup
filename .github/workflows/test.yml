@@ -1,7 +1,7 @@
 name: "Unit Tests"
 
 # Runs the unit suite (no integration tests — those hit the live npm registry).
-# Scoped to source paths so the every-4h De Pup package-data commits do not
+# Scoped to source paths so the every-8h De Pup package-data commits do not
 # trigger redundant test runs.
 on:
   push:
