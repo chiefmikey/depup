@@ -7138,6 +7138,177 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         'inner sync error',
       );
     });
+
+    it('emits DEPUP_SUMMARY line at end of successful run', async () => {
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce([]);
+
+      await syncer.main();
+
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringMatching(/^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u),
+      );
+    });
+
+    it('exits with 1 and logs SYSTEMIC FAILURE when >50% of 10+ attempts fail', async () => {
+      // Build 12 packages that will all fail
+      const packages = Array.from({ length: 12 }, (_, index) => ({
+        integrityData: {},
+        name: `fail-pkg-${index}`,
+        path: temporaryDirectory,
+        version: '1.0.0',
+      }));
+      jestInstance
+        .spyOn(syncer, 'getExistingPackages')
+        .mockResolvedValueOnce(packages);
+      jestInstance
+        .spyOn(syncer, 'syncPackage')
+        .mockRejectedValue(new Error('boom'));
+      const exitSpy = jestInstance
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+      syncer.rateLimitDelay = 0;
+
+      await syncer.main();
+
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining('SYSTEMIC FAILURE'),
+      );
+      expect(exitSpy).toHaveBeenCalledWith(1);
+    });
+
+    it('does NOT trigger systemic failure when fewer than 10 packages attempted', async () => {
+      const packages = Array.from({ length: 3 }, (_, index) => ({
+        integrityData: {},
+        name: `small-fail-${index}`,
+        path: temporaryDirectory,
+        version: '1.0.0',
+      }));
+      jestInstance
+        .spyOn(syncer, 'getExistingPackages')
+        .mockResolvedValueOnce(packages);
+      jestInstance
+        .spyOn(syncer, 'syncPackage')
+        .mockRejectedValue(new Error('small fail'));
+      const exitSpy = jestInstance
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+      syncer.rateLimitDelay = 0;
+
+      await syncer.main();
+
+      expect(exitSpy).not.toHaveBeenCalledWith(1);
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // hasOnlyFailedRevisions (new helper for FIX 2)
+  // ─────────────────────────────────────────────────────────────────
+  describe('hasOnlyFailedRevisions', () => {
+    it('returns false when integrityData is null', () => {
+      expect(syncer.hasOnlyFailedRevisions(null, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when version is not in integrityData', () => {
+      expect(syncer.hasOnlyFailedRevisions({ '2.0.0': {} }, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when versionEntry is null', () => {
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': null }, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when versionEntry is an array', () => {
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': [] }, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when versionEntry has no revisions', () => {
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': {} }, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when at least one revision has status published', () => {
+      const integrityData = {
+        '1.0.0': {
+          'rev-1': { status: 'failed' },
+          'rev-2': { status: 'published' },
+        },
+      };
+      expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(false);
+    });
+
+    it('returns true when all revisions have status failed', () => {
+      const integrityData = {
+        '1.0.0': {
+          'rev-1': { status: 'failed' },
+          'rev-2': { status: 'failed' },
+        },
+      };
+      expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(true);
+    });
+
+    it('returns true when revisions exist but none have status published', () => {
+      const integrityData = {
+        '1.0.0': {
+          'rev-1': { status: 'pending' },
+        },
+      };
+      expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(true);
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // syncPackage -- retry when only failed revisions (FIX 2)
+  // ─────────────────────────────────────────────────────────────────
+  describe('syncPackage -- retry on all-failed revisions', () => {
+    it('retries when version matches but all revisions are failed', async () => {
+      const integrityData = {
+        '1.0.0': { 'rev-1': { status: 'failed' } },
+      };
+      const package_ = {
+        integrityData,
+        name: 'retry-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
+      jestInstance.spyOn(fetchModule.default, 'json').mockResolvedValueOnce({
+        'dist-tags': { latest: '1.0.0' },
+      });
+      const updateSpy = jestInstance
+        .spyOn(syncer, 'updatePackage')
+        .mockResolvedValueOnce();
+      jestInstance.spyOn(syncer, 'generateReadme').mockResolvedValueOnce();
+
+      const result = await syncer.syncPackage(package_);
+
+      expect(updateSpy).toHaveBeenCalledWith(package_, '1.0.0');
+      expect(result).toBe(true);
+    });
+
+    it('does NOT retry when version matches and at least one revision is published', async () => {
+      const integrityData = {
+        '1.0.0': { 'rev-1': { status: 'published' } },
+      };
+      const package_ = {
+        integrityData,
+        name: 'ok-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
+      jestInstance.spyOn(fetchModule.default, 'json').mockResolvedValueOnce({
+        'dist-tags': { latest: '1.0.0' },
+      });
+      jestInstance
+        .spyOn(syncer, 'checkDependencyUpdates')
+        .mockResolvedValueOnce(false);
+
+      const result = await syncer.syncPackage(package_);
+
+      expect(result).toBe(false);
+    });
   });
 });
 
@@ -7449,9 +7620,12 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory);
     });
 
-    it('logs up-to-date when version already in integrity data', async () => {
+    it('logs up-to-date when version already in integrity data with a published revision', async () => {
       const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      await fsPromises.writeFile(integrityFile, JSON.stringify({ '1.0.0': { status: 'published' } }));
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': { 'rev-1': { status: 'published' } } }),
+      );
       const pkg = { name: 'my-pkg', version: '1.0.0' };
 
       await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
@@ -7461,7 +7635,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
     it('calls createNewPackage with latestVersion when not in integrity data', async () => {
       const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      await fsPromises.writeFile(integrityFile, JSON.stringify({ '1.0.0': { status: 'published' } }));
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': { 'rev-1': { status: 'published' } } }),
+      );
       const pkg = { name: 'my-pkg', version: '2.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
@@ -7712,6 +7889,175 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       } else {
         delete process.env.NPM_TOKEN;
       }
+    });
+
+    it('emits DEPUP_SUMMARY line at end of successful run', async () => {
+      const originalToken = process.env.NPM_TOKEN;
+      process.env.NPM_TOKEN = 'fake-token';
+
+      jestInstance
+        .spyOn(discoverer, 'getTopPackages')
+        .mockResolvedValueOnce([{ name: 'express', version: '4.0.0' }]);
+      jestInstance.spyOn(discoverer, 'processPackage').mockResolvedValue();
+      discoverer.maxPackages = 1;
+      discoverer.rateLimitDelay = 0;
+
+      await discoverer.main();
+
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringMatching(/^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u),
+      );
+
+      if (originalToken !== undefined) {
+        process.env.NPM_TOKEN = originalToken;
+      } else {
+        delete process.env.NPM_TOKEN;
+      }
+    });
+
+    it('exits with 1 and logs SYSTEMIC FAILURE when >50% of 10+ attempts fail', async () => {
+      const originalToken = process.env.NPM_TOKEN;
+      process.env.NPM_TOKEN = 'fake-token';
+
+      const packages = Array.from({ length: 12 }, (_, index) => ({
+        name: `fail-pkg-${index}`,
+        version: '1.0.0',
+      }));
+      jestInstance
+        .spyOn(discoverer, 'getTopPackages')
+        .mockResolvedValueOnce(packages);
+      jestInstance
+        .spyOn(discoverer, 'processPackage')
+        .mockRejectedValue(new Error('publish exploded'));
+      discoverer.maxPackages = 12;
+      discoverer.rateLimitDelay = 0;
+      const exitSpy = jestInstance
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await discoverer.main();
+
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining('SYSTEMIC FAILURE'),
+      );
+      expect(exitSpy).toHaveBeenCalledWith(1);
+
+      if (originalToken !== undefined) {
+        process.env.NPM_TOKEN = originalToken;
+      } else {
+        delete process.env.NPM_TOKEN;
+      }
+    });
+
+    it('does NOT trigger systemic failure when fewer than 10 packages attempted', async () => {
+      const originalToken = process.env.NPM_TOKEN;
+      process.env.NPM_TOKEN = 'fake-token';
+
+      const packages = Array.from({ length: 3 }, (_, index) => ({
+        name: `small-fail-${index}`,
+        version: '1.0.0',
+      }));
+      jestInstance
+        .spyOn(discoverer, 'getTopPackages')
+        .mockResolvedValueOnce(packages);
+      jestInstance
+        .spyOn(discoverer, 'processPackage')
+        .mockRejectedValue(new Error('small fail'));
+      discoverer.maxPackages = 3;
+      discoverer.rateLimitDelay = 0;
+      const exitSpy = jestInstance
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await discoverer.main();
+
+      expect(exitSpy).not.toHaveBeenCalledWith(1);
+
+      if (originalToken !== undefined) {
+        process.env.NPM_TOKEN = originalToken;
+      } else {
+        delete process.env.NPM_TOKEN;
+      }
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // checkForUpdates -- retry when all revisions failed (FIX 2)
+  // ─────────────────────────────────────────────────────────────────
+  describe('checkForUpdates -- retry on all-failed revisions', () => {
+    let temporaryDirectory2;
+
+    beforeEach(async () => {
+      temporaryDirectory2 = await fsPromises.mkdtemp(
+        pathModule.default.join(os.default.tmpdir(), 'depup-chk2-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fsPromises.rm(temporaryDirectory2, { force: true, recursive: true });
+    });
+
+    it('retries when version key exists but all revisions have status failed', async () => {
+      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({
+          '1.0.0': { 'rev-1': { status: 'failed' }, 'rev-2': { status: 'failed' } },
+        }),
+      );
+      const pkg = { name: 'retry-pkg', version: '1.0.0' };
+      const createSpy = jestInstance
+        .spyOn(discoverer, 'createNewPackage')
+        .mockResolvedValueOnce();
+
+      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+
+      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory2, '1.0.0');
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining('only failed revisions'),
+      );
+    });
+
+    it('treats as up-to-date when at least one revision has status published', async () => {
+      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({
+          '1.0.0': {
+            'rev-1': { status: 'failed' },
+            'rev-2': { status: 'published' },
+          },
+        }),
+      );
+      const pkg = { name: 'ok-pkg', version: '1.0.0' };
+      const createSpy = jestInstance
+        .spyOn(discoverer, 'createNewPackage')
+        .mockResolvedValueOnce();
+
+      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+
+      expect(createSpy).not.toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining('up to date'),
+      );
+    });
+
+    it('retries when versionEntry is a non-object scalar (no published revisions)', async () => {
+      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      // Shape where the version key maps to a non-object value (old/corrupt data)
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': 'old-format' }),
+      );
+      const pkg = { name: 'old-fmt-pkg', version: '1.0.0' };
+      const createSpy = jestInstance
+        .spyOn(discoverer, 'createNewPackage')
+        .mockResolvedValueOnce();
+
+      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+
+      // Non-object versionEntry → hasPublished = false → treated as "only failed" → retry
+      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory2, '1.0.0');
     });
   });
 })

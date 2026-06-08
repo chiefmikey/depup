@@ -13,75 +13,107 @@ import {
 } from './utilities.mjs';
 
 class PackageSyncer {
+  async processBatches(packagesToProcess) {
+    const syncedPackages = [];
+    let failedCount = 0;
+    let skippedCount = 0;
+
+    for (
+      let index = 0;
+      index < packagesToProcess.length;
+      index += this.concurrentPackages
+    ) {
+      const batch = packagesToProcess.slice(
+        index,
+        index + this.concurrentPackages,
+      );
+      console.log(
+        `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+      );
+
+      const batchResults = await Promise.allSettled(
+        batch.map(async (package_) => {
+          try {
+            console.log(`Syncing ${package_.name}...`);
+            const synced = await this.syncPackage(package_);
+            return {
+              name: package_.name,
+              skipped: !synced,
+              success: true,
+              synced,
+            };
+          } catch (error) {
+            console.warn(`Failed to sync ${package_.name}:`, error.message);
+            return {
+              error: error.message,
+              name: package_.name,
+              skipped: false,
+              success: false,
+              synced: false,
+            };
+          }
+        }),
+      );
+
+      for (const result of batchResults) {
+        if (result.status === 'fulfilled') {
+          if (result.value.synced) {
+            syncedPackages.push(result.value.name);
+          } else if (result.value.success && result.value.skipped) {
+            skippedCount++;
+          } else if (!result.value.success) {
+            failedCount++;
+          }
+        } else if (result.status === 'rejected') {
+          failedCount++;
+          console.warn(
+            `Sync failed: ${result.reason?.message || 'Unknown error'}`,
+          );
+        }
+      }
+
+      if (index + this.concurrentPackages < packagesToProcess.length) {
+        await sleep(this.rateLimitDelay);
+      }
+    }
+
+    return { failedCount, skippedCount, syncedPackages };
+  }
+
   async main() {
     console.log('🔄 Starting package sync...');
 
     try {
-      // Get all existing packages
       const existingPackages = await this.getExistingPackages();
       console.log(`Found ${existingPackages.length} existing packages`);
 
-      // Process packages in parallel batches
       const packagesToProcess = existingPackages.slice(
         0,
         this.maxPackagesPerRun,
       );
-      const syncedPackages = [];
-
-      // Process in batches to avoid overwhelming the system
-      for (
-        let index = 0;
-        index < packagesToProcess.length;
-        index += this.concurrentPackages
-      ) {
-        const batch = packagesToProcess.slice(
-          index,
-          index + this.concurrentPackages,
-        );
-        console.log(
-          `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
-        );
-
-        // Process batch in parallel
-        const batchResults = await Promise.allSettled(
-          batch.map(async (package_) => {
-            try {
-              console.log(`Syncing ${package_.name}...`);
-              const synced = await this.syncPackage(package_);
-              return { name: package_.name, success: true, synced };
-            } catch (error) {
-              console.warn(`Failed to sync ${package_.name}:`, error.message);
-              return {
-                error: error.message,
-                name: package_.name,
-                success: false,
-                synced: false,
-              };
-            }
-          }),
-        );
-
-        // Collect successful syncs
-        for (const result of batchResults) {
-          if (result.status === 'fulfilled' && result.value.synced) {
-            syncedPackages.push(result.value.name);
-          } else if (result.status === 'rejected') {
-            console.warn(
-              `Sync failed: ${result.reason?.message || 'Unknown error'}`,
-            );
-          }
-        }
-
-        // Rate limiting between batches (not between individual packages)
-        if (index + this.concurrentPackages < packagesToProcess.length) {
-          await sleep(this.rateLimitDelay);
-        }
-      }
+      const { failedCount, skippedCount, syncedPackages } =
+        await this.processBatches(packagesToProcess);
 
       console.log(`✅ Synced ${syncedPackages.length} packages`);
       if (syncedPackages.length > 0) {
         console.log('Synced packages:', syncedPackages.join(', '));
       }
+
+      const attemptedCount = syncedPackages.length + failedCount;
+
+      // Systemic failure detection: >50% failure rate on 10+ attempts signals a
+      // dead NPM_TOKEN or registry outage rather than individual package failures
+      if (attemptedCount >= 10 && failedCount / attemptedCount > 0.5) {
+        console.error(
+          `SYSTEMIC FAILURE: ${failedCount}/${attemptedCount} packages failed (>${Math.round((failedCount / attemptedCount) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
+        );
+        process.exit(1);
+      }
+
+      // Machine-readable summary for GitHub step summary (FIX 6)
+      console.log(
+        `DEPUP_SUMMARY processed=${syncedPackages.length} failed=${failedCount} skipped=${skippedCount}`,
+      );
     } catch (error) {
       console.error('Sync failed:', error.message);
       process.exit(1);
@@ -186,6 +218,21 @@ class PackageSyncer {
         await this.generateReadme(package_.name);
         return true;
       }
+
+      // Even if version matches, check whether the current version only has
+      // failed revisions -- meaning the publish never actually landed.
+      // If so, re-process rather than treating it as up-to-date.
+      if (
+        this.hasOnlyFailedRevisions(package_.integrityData, package_.version)
+      ) {
+        console.log(
+          `  🔄 ${package_.name}@${package_.version} has only failed revisions — retrying`,
+        );
+        await this.updatePackage(package_, package_.version);
+        await this.generateReadme(package_.name);
+        return true;
+      }
+
       // Check if dependencies need updating
       const needsDependencyUpdate = await this.checkDependencyUpdates(package_);
       if (needsDependencyUpdate) {
@@ -419,6 +466,32 @@ class PackageSyncer {
       diff === 'minor' ||
       diff === 'premajor' ||
       diff === 'preminor'
+    );
+  }
+
+  hasOnlyFailedRevisions(integrityData, version) {
+    if (
+      !integrityData ||
+      typeof integrityData !== 'object' ||
+      !(version in integrityData)
+    ) {
+      return false;
+    }
+    const versionEntry = integrityData[version];
+    if (
+      versionEntry === null ||
+      typeof versionEntry !== 'object' ||
+      Array.isArray(versionEntry)
+    ) {
+      return false;
+    }
+    const revisions = Object.values(versionEntry);
+    if (revisions.length === 0) {
+      return false;
+    }
+    return !revisions.some(
+      (rev) =>
+        rev !== null && typeof rev === 'object' && rev.status === 'published',
     );
   }
 

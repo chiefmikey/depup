@@ -136,6 +136,20 @@ jobs:
             exit 1
           fi
 
+          # Check config/curated-packages.json (shape: { "packages": [...] })
+          if jq -e --arg p "$PACKAGE_NAME" '.packages | index($p) != null' config/curated-packages.json >/dev/null 2>&1; then
+            echo "Package $PACKAGE_NAME is already in the curated list"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          # Check config/user-packages.json (shape: { "packages": [...] })
+          if jq -e --arg p "$PACKAGE_NAME" '.packages | index($p) != null' config/user-packages.json >/dev/null 2>&1; then
+            echo "Package $PACKAGE_NAME is already in the user-submitted list"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
           echo "Package $PACKAGE_NAME is not already processed"
           echo "exists=false" >> $GITHUB_OUTPUT
 
@@ -205,9 +219,7 @@ jobs:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
         run: |
           echo "Processing and publishing $PACKAGE_NAME..."
-          node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish || {
-            echo "Publish failed -- will be retried by cron"
-          }
+          node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish
 
       - name: Import GPG Key
         run: |
@@ -258,6 +270,48 @@ jobs:
             sleep $((RANDOM % 10 + attempt * 3))
             if [ "$attempt" -eq 10 ]; then
               echo "Push failed after 10 attempts"
+              exit 1
+            fi
+          done
+
+      - name: Queue for Retry on Failure
+        if: failure()
+        env:
+          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "De Pup"
+          git config user.email "devdepup@gmail.com"
+          git config commit.gpgsign true
+          git config gpg.program gpg
+          git config user.signingkey 5A5141965C39129D
+
+          # Persist the package into user-packages.json so the next cron
+          # cycle picks it up and retries the publish.
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Re-add package to list (idempotent)
+            node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null || true
+
+            # Stage only the config list (no package data -- publish failed)
+            git add config/user-packages.json
+            if git diff --cached --quiet; then
+              echo "Package already in list (another workflow beat us)"
+              exit 0
+            fi
+
+            git commit -m "chore: queue ${PACKAGE_NAME} for retry (publish failed in #${ISSUE_NUMBER})"
+            if git push origin main; then
+              echo "Queue push successful on attempt $attempt"
+              break
+            fi
+
+            echo "Push race on attempt $attempt, retrying..."
+            sleep $((RANDOM % 10 + attempt * 3))
+            if [ "$attempt" -eq 10 ]; then
+              echo "Queue push failed after 10 attempts"
               exit 1
             fi
           done
@@ -325,9 +379,10 @@ jobs:
               comment += 'Dependencies bumped to latest versions. Install with:\n';
               comment += '```\nnpm install @depup/' + flatName + '\n```';
             } else {
-              comment += 'Request Failed: An unexpected error occurred.\n\n';
+              comment += 'Request Received: Package queued for automatic retry.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
-              comment += 'Please check the workflow logs for details. If this persists, please open a new issue.';
+              comment += 'Your package passed validation but could not be published in this run. DepUp has queued it and will retry automatically on the next cron cycle (within 8 hours).\n\n';
+              comment += 'This issue is left open for tracking. No action is needed on your part.';
             }
 
             comment += '\n\n---\n*This is an automated response*';
