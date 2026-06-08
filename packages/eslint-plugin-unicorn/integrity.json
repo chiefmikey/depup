@@ -117,5 +117,32 @@
       "timestamp": "2026-05-25T14:04:10.548Z",
       "version": "64.0.0-depup.4"
     }
+  },
+  "65.0.0": {
+    "0": {
+      "changes": {
+        "@babel/helper-validator-identifier": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "globals": {
+          "from": "^17.4.0",
+          "to": "^17.6.0"
+        },
+        "regjsparser": {
+          "from": "^0.13.0",
+          "to": "^0.13.1"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T01:05:41.932Z",
+      "version": "65.0.0-depup.0"
+    }
   }
 }
