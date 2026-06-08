@@ -12,15 +12,15 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.7.5 | **DepUp version**: 22.7.5-depup.1 | **Updated**: 6/3/2026 | **Import test**: failed
+**Original version**: 22.7.5 | **DepUp version**: 22.7.5-depup.2 | **Updated**: 6/8/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @emnapi/core | `1.4.5` | `^1.10.0` |
-| @emnapi/runtime | `1.4.5` | `^1.10.0` |
-| @emnapi/wasi-threads | `1.0.4` | `^1.2.1` |
+| @emnapi/core | `1.4.5` | `^1.11.0` |
+| @emnapi/runtime | `1.4.5` | `^1.11.0` |
+| @emnapi/wasi-threads | `1.0.4` | `^2.0.0` |
 | @jest/diff-sequences | `30.0.1` | `^30.4.0` |
 | @napi-rs/wasm-runtime | `0.2.4` | `^1.1.4` |
 | @tybys/wasm-util | `0.9.0` | `^0.10.2` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | asynckit | `0.4.0` | `^0.5.0` |
 | axios | `1.16.0` | `^1.17.0` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.2` |
+| bl | `4.1.0` | `^7.0.3` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -70,7 +70,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
 | restore-cursor | `3.1.0` | `^5.1.0` |
-| semver | `7.7.4` | `^7.8.1` |
+| semver | `7.7.4` | `^7.8.2` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | string-width | `4.2.3` | `^8.2.1` |
 | strip-ansi | `6.0.1` | `^7.2.0` |

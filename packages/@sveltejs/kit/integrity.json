@@ -714,5 +714,48 @@
       "timestamp": "2026-06-04T05:39:03.447Z",
       "version": "2.63.0-depup.0"
     }
+  },
+  "2.63.1": {
+    "0": {
+      "changes": {
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "@sveltejs/acorn-typescript": {
+          "from": "^1.0.9",
+          "to": "^1.0.10"
+        },
+        "@types/cookie": {
+          "from": "^0.6.0",
+          "to": "^1.0.0"
+        },
+        "cookie": {
+          "from": "^0.6.0",
+          "to": "^1.1.1"
+        },
+        "magic-string": {
+          "from": "^0.30.5",
+          "to": "^0.30.21"
+        },
+        "mrmime": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "set-cookie-parser": {
+          "from": "^3.0.0",
+          "to": "^3.1.0"
+        },
+        "sirv": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-08T09:46:51.194Z",
+      "version": "2.63.1-depup.0"
+    }
   }
 }
