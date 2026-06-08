@@ -222,6 +222,7 @@ jobs:
           node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish
 
       - name: Import GPG Key
+        if: always()
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
 
@@ -275,7 +276,7 @@ jobs:
           done
 
       - name: Queue for Retry on Failure
-        if: failure()
+        if: failure() && steps.npm-info.outcome == 'success' && steps.check-existing.outputs.exists == 'false'
         env:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
