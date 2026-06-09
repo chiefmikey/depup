@@ -68,6 +68,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T03:06:15.339Z",
       "version": "3.6.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@react-aria/switch": {
+          "from": "^3.8.0",
+          "to": "^3.8.1"
+        },
+        "@react-spectrum/switch": {
+          "from": "^3.7.0",
+          "to": "^3.7.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:45:13.228Z",
+      "version": "3.6.0-depup.4"
     }
   }
 }

@@ -25,6 +25,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:56:35.616Z",
       "version": "11.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "default-browser": {
+          "from": "^5.4.0",
+          "to": "^5.5.0"
+        },
+        "powershell-utils": {
+          "from": "^0.1.0",
+          "to": "^0.2.0"
+        },
+        "wsl-utils": {
+          "from": "^0.3.0",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:54:39.343Z",
+      "version": "11.0.0-depup.2"
     }
   }
 }
