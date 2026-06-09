@@ -87,6 +87,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:58:55.262Z",
       "version": "8.1.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "universal-cookie": {
+          "from": "^8.0.0",
+          "to": "^8.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:33:21.602Z",
+      "version": "8.1.2-depup.3"
     }
   }
 }

@@ -349,6 +349,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:36:52.415Z",
       "version": "8.61.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "minimatch": {
+          "from": "^10.2.2",
+          "to": "^10.2.5"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.3"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:23:02.585Z",
+      "version": "8.61.0-depup.2"
     }
   }
 }

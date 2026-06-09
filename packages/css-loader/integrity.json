@@ -79,6 +79,31 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:41:41.030Z",
       "version": "7.1.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "postcss": {
+          "from": "^8.4.40",
+          "to": "^8.5.15"
+        },
+        "postcss-modules-local-by-default": {
+          "from": "^4.0.5",
+          "to": "^4.2.0"
+        },
+        "postcss-modules-scope": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:26:54.204Z",
+      "version": "7.1.4-depup.4"
     }
   }
 }

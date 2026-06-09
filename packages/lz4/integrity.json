@@ -65,6 +65,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:48:15.424Z",
       "version": "0.6.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "buffer": {
+          "from": "^5.2.1",
+          "to": "^6.0.3"
+        },
+        "nan": {
+          "from": "^2.13.2",
+          "to": "^2.27.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:30:43.567Z",
+      "version": "0.6.5-depup.4"
     }
   }
 }

@@ -125,23 +125,6 @@
     }
   },
   "0.41.9": {
-    "0": {
-      "changes": {
-        "@open-draft/deferred-promise": {
-          "from": "^2.2.0",
-          "to": "^3.0.0"
-        },
-        "@open-draft/until": {
-          "from": "^2.0.0",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-12T07:08:46.918Z",
-      "version": "0.41.9-depup.0"
-    },
     "1": {
       "changes": {
         "@open-draft/deferred-promise": {
@@ -209,6 +192,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T02:58:57.457Z",
       "version": "0.41.9-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@open-draft/deferred-promise": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        },
+        "@open-draft/until": {
+          "from": "^2.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:19:51.268Z",
+      "version": "0.41.9-depup.5"
     }
   }
 }

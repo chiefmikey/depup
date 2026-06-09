@@ -12,7 +12,7 @@ npm install @depup/firebase__ai
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.13.0 | **DepUp version**: 2.13.0-depup.4 | **Updated**: 6/9/2026 | **Import test**: failed
+**Original version**: 2.13.0 | **DepUp version**: 2.13.0-depup.5 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
