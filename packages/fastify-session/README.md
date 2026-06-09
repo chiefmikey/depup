@@ -12,14 +12,14 @@ npm install @depup/fastify-session
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.1 | **DepUp version**: 5.2.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 5.2.1 | **DepUp version**: 5.2.1-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | cookie-signature | `^1.1.0` | `^1.2.2` |
-| fastify-plugin | `^3.0.0` | `^5.1.0` |
+| fastify-plugin | `^3.0.0` | `^6.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-session&labels=bug).

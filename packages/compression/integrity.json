@@ -38,6 +38,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:46:19.012Z",
       "version": "1.8.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "debug": {
+          "from": "2.6.9",
+          "to": "^4.4.3"
+        },
+        "negotiator": {
+          "from": "~0.6.4",
+          "to": "^1.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:33:53.890Z",
+      "version": "1.8.1-depup.4"
     }
   }
 }

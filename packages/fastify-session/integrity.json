@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-19T03:05:13.764Z",
       "version": "5.2.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cookie-signature": {
+          "from": "^1.1.0",
+          "to": "^1.2.2"
+        },
+        "fastify-plugin": {
+          "from": "^3.0.0",
+          "to": "^6.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:35:59.375Z",
+      "version": "5.2.1-depup.1"
     }
   }
 }

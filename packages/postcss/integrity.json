@@ -120,6 +120,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:51:51.172Z",
       "version": "8.5.15-depup.2"
+    },
+    "3": {
+      "changes": {
+        "nanoid": {
+          "from": "^3.3.12",
+          "to": "^5.1.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:40:39.726Z",
+      "version": "8.5.15-depup.3"
     }
   }
 }

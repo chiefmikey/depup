@@ -30,6 +30,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:47:03.989Z",
       "version": "0.1.13-depup.2"
+    },
+    "3": {
+      "changes": {
+        "iconv-lite": {
+          "from": "^0.6.2",
+          "to": "^0.7.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:34:49.649Z",
+      "version": "0.1.13-depup.3"
     }
   }
 }

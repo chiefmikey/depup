@@ -346,14 +346,6 @@
     }
   },
   "54.2.0": {
-    "0": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-03T18:06:40.702Z",
-      "version": "54.2.0-depup.0"
-    },
     "1": {
       "changes": {
         "semver": {
@@ -405,6 +397,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:42:49.481Z",
       "version": "54.2.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "semver": {
+          "from": "^7.8.1",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:29:55.115Z",
+      "version": "54.2.0-depup.5"
     }
   }
 }
