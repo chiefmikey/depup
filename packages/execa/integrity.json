@@ -25,6 +25,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:45:07.985Z",
       "version": "9.6.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "get-stream": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "pretty-ms": {
+          "from": "^9.2.0",
+          "to": "^9.3.0"
+        },
+        "yoctocolors": {
+          "from": "^2.1.1",
+          "to": "^2.1.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:47:46.397Z",
+      "version": "9.6.1-depup.2"
     }
   }
 }
