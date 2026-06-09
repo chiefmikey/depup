@@ -1,0 +1,54 @@
+{
+  "name": "@depup/oxc-parser__binding-linux-x64-gnu",
+  "version": "0.135.0-depup.5",
+  "cpu": [
+    "x64"
+  ],
+  "main": "parser.linux-x64-gnu.node",
+  "files": [
+    "parser.linux-x64-gnu.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Oxc Parser Node API (with updated dependencies)",
+  "keywords": [
+    "@oxc-parser/binding-linux-x64-gnu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ast",
+    "estree",
+    "javascript",
+    "oxc",
+    "parser",
+    "typescript"
+  ],
+  "author": "Boshen and oxc contributors",
+  "homepage": "https://oxc.rs/docs/guide/usage/parser",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxc-project/oxc.git",
+    "directory": "napi/parser"
+  },
+  "bugs": "https://github.com/oxc-project/oxc/issues",
+  "os": [
+    "linux"
+  ],
+  "libc": [
+    "glibc"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@oxc-parser/binding-linux-x64-gnu",
+    "originalVersion": "0.135.0",
+    "processedAt": "2026-06-09T09:21:05.696Z",
+    "smokeTest": "failed"
+  }
+}

@@ -82,6 +82,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:59:22.890Z",
       "version": "3.4.17-depup.2"
+    },
+    "3": {
+      "changes": {
+        "country-flag-icons": {
+          "from": "^1.6.14",
+          "to": "^1.6.17"
+        },
+        "libphonenumber-js": {
+          "from": "^1.13.4",
+          "to": "^1.13.6"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:36:50.743Z",
+      "version": "3.4.17-depup.3"
     }
   }
 }

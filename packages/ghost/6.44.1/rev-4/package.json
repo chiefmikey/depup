@@ -1,0 +1,720 @@
+{
+  "name": "@depup/ghost",
+  "version": "6.44.1-depup.4",
+  "description": "The professional publishing platform (with updated dependencies)",
+  "author": "Ghost Foundation",
+  "homepage": "https://ghost.org",
+  "keywords": [
+    "ghost",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "blog",
+    "cms",
+    "headless",
+    "content",
+    "markdown"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TryGhost/Ghost.git"
+  },
+  "bugs": "https://github.com/TryGhost/Ghost/issues",
+  "contributors": "https://github.com/TryGhost/Ghost/graphs/contributors",
+  "license": "MIT",
+  "files": [
+    "core/",
+    "!core/built/**/*.map",
+    "!core/built/**/test-*",
+    "!core/built/**/tests-*",
+    "content/*/README.md",
+    "content/themes/casper/",
+    "!content/themes/casper/pnpm-lock.yaml",
+    "content/themes/source/",
+    "!content/themes/source/pnpm-lock.yaml",
+    "bin/",
+    "types/",
+    "index.js",
+    "ghost.js",
+    "loggingrc.js",
+    "MigratorConfig.js",
+    "nodemon.json",
+    "tsconfig.json",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "archive": "node scripts/pack.js",
+    "dev": "nodemon index.js",
+    "build:assets": "pnpm build:assets:css && pnpm build:assets:js",
+    "build:assets:js": "node bin/minify-assets.js",
+    "generate-golden-email": "node bin/generate-golden-email.js",
+    "migrate:create": "node bin/create-migration.js",
+    "build:assets:css": "postcss core/frontend/public/ghost.css --no-map --use cssnano -o core/frontend/public/ghost.min.css",
+    "build:tsc": "tsc",
+    "pretest": "pnpm build:assets",
+    "test": "pnpm test:unit",
+    "test:base": "mocha --reporter dot --node-option import=tsx --require=./test/utils/overrides.js --exit --trace-warnings --recursive --extension=test.js,test.ts",
+    "test:vitest": "vitest run",
+    "test:watch": "vitest --reporter=default",
+    "test:single": "f() { q=$(echo \"$1\" | sed 's/\\.test\\.[jt]s$//'); case \"$q\" in */*) pnpm test:base --timeout=60000 \"$1\" ;; *) pnpm test:base --timeout=60000 \"test/**/*$q*.test.{js,ts}\" ;; esac; }; f",
+    "test:all": "pnpm test:unit && pnpm test:integration && pnpm test:e2e && pnpm lint",
+    "test:debug": "DEBUG=ghost:test* pnpm test",
+    "test:unit": "pnpm test:vitest",
+    "test:integration": "pnpm test:base './test/integration' --timeout=10000",
+    "test:e2e": "pnpm test:base ./test/e2e-* --timeout=15000",
+    "test:legacy": "pnpm test:base './test/legacy' --timeout=60000",
+    "test:ci:e2e": "c8 -c ./.c8rc.e2e.json -o coverage-e2e pnpm test:e2e -b",
+    "test:ci:legacy": "pnpm test:legacy -b",
+    "test:ci:integration": "c8 -c ./.c8rc.e2e.json -o coverage-integration --lines 52 --functions 47 --branches 73 --statements 52 pnpm test:integration -b",
+    "test:int:slow": "pnpm test:integration --reporter=mocha-slow-test-reporter",
+    "test:e2e:slow": "pnpm test:e2e --reporter=mocha-slow-test-reporter",
+    "test:leg:slow": "mocha --reporter dot --require=./test/utils/overrides.js --exit --trace-warnings --recursive --extension=test.js  './test/legacy' --timeout=60000 --reporter=mocha-slow-test-reporter",
+    "lint:server": "eslint --ignore-path .eslintignore 'core/server/**/*.js' 'core/*.js' '*.js' --cache",
+    "lint:shared": "eslint --ignore-path .eslintignore 'core/shared/**/*.js' --cache",
+    "lint:frontend": "eslint --ignore-path .eslintignore 'core/frontend/**/*.js' --cache",
+    "lint:test": "eslint -c test/.eslintrc.js --ignore-path test/.eslintignore 'test/**/*.js' --cache",
+    "lint:code": "pnpm lint:server && pnpm lint:shared && pnpm lint:frontend",
+    "lint:types": "eslint --ignore-path .eslintignore '**/*.ts' --cache && tsc --noEmit",
+    "lint": "pnpm lint:server && pnpm lint:shared && pnpm lint:frontend && pnpm lint:test && pnpm lint:types"
+  },
+  "engines": {
+    "node": "^22.13.1",
+    "cli": "^1.29.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1064.0",
+    "@extractus/oembed-extractor": "^4.1.0",
+    "@faker-js/faker": "^10.4.0",
+    "@isaacs/ttlcache": "^2.1.5",
+    "@sentry/node": "^10.56.0",
+    "@tryghost/adapter-base-cache": "^0.1.26",
+    "@tryghost/admin-api-schema": "^4.7.5",
+    "@tryghost/api-framework": "3.2.3",
+    "@tryghost/bookshelf-plugins": "^2.2.3",
+    "@tryghost/color-utils": "^0.2.19",
+    "@tryghost/config-url-helpers": "^1.0.26",
+    "@tryghost/custom-fonts": "^1.0.11",
+    "@tryghost/database-info": "^2.2.2",
+    "@tryghost/debug": "^2.2.2",
+    "@tryghost/domain-events": "^3.2.4",
+    "@tryghost/email-mock-receiver": "^2.2.2",
+    "@tryghost/errors": "^3.2.3",
+    "@tryghost/helpers": "^1.1.106",
+    "@tryghost/html-to-plaintext": "^1.0.11",
+    "@tryghost/i18n": "file:components/tryghost-i18n-0.0.0.tgz",
+    "@tryghost/image-transform": "^1.4.16",
+    "@tryghost/job-manager": "^4.0.3",
+    "@tryghost/kg-card-factory": "5.2.2",
+    "@tryghost/kg-clean-basic-html": "4.3.2",
+    "@tryghost/kg-converters": "1.2.2",
+    "@tryghost/kg-default-atoms": "5.2.2",
+    "@tryghost/kg-default-cards": "10.3.2",
+    "@tryghost/kg-default-nodes": "2.1.2",
+    "@tryghost/kg-html-to-lexical": "1.3.2",
+    "@tryghost/kg-lexical-html-renderer": "1.4.2",
+    "@tryghost/kg-markdown-html-renderer": "7.2.2",
+    "@tryghost/kg-mobiledoc-html-renderer": "7.2.2",
+    "@tryghost/limit-service": "^1.5.6",
+    "@tryghost/logging": "^5.0.2",
+    "@tryghost/members-csv": "2.0.7",
+    "@tryghost/metrics": "^3.2.2",
+    "@tryghost/mongo-utils": "^0.6.4",
+    "@tryghost/mw-error-handler": "^3.2.3",
+    "@tryghost/mw-vhost": "^3.2.2",
+    "@tryghost/nodemailer": "^2.2.3",
+    "@tryghost/nql": "0.12.11",
+    "@tryghost/nql-lang": "0.6.5",
+    "@tryghost/parse-email-address": "file:components/tryghost-parse-email-address-0.0.0.tgz",
+    "@tryghost/pretty-cli": "^3.2.2",
+    "@tryghost/prometheus-metrics": "^4.0.2",
+    "@tryghost/promise": "^2.2.2",
+    "@tryghost/referrer-parser": "^0.1.18",
+    "@tryghost/request": "^3.2.3",
+    "@tryghost/root-utils": "^2.2.2",
+    "@tryghost/security": "^3.2.2",
+    "@tryghost/social-urls": "^0.1.63",
+    "@tryghost/string": "^0.3.5",
+    "@tryghost/tpl": "^2.2.2",
+    "@tryghost/url-utils": "^5.2.5",
+    "@tryghost/validator": "^3.1.3",
+    "@tryghost/version": "^2.2.2",
+    "@tryghost/zip": "^3.3.3",
+    "body-parser": "^2.2.2",
+    "bookshelf": "1.2.0",
+    "bookshelf-relations": "2.8.0",
+    "brute-knex": "4.0.1",
+    "bson-objectid": "2.0.4",
+    "cache-manager": "^7.2.8",
+    "cache-manager-ioredis": "2.1.0",
+    "chalk": "^5.6.2",
+    "charset": "1.0.1",
+    "cheerio": "^1.2.0",
+    "clsx": "2.1.1",
+    "common-tags": "1.8.2",
+    "compression": "1.8.1",
+    "connect-slashes": "1.4.0",
+    "cookie-session": "2.1.1",
+    "cookies": "0.9.1",
+    "cors": "2.8.6",
+    "countries-and-timezones": "3.9.0",
+    "csso": "5.0.5",
+    "csv-writer": "1.6.0",
+    "date-fns": "^4.4.0",
+    "dequal": "2.0.3",
+    "dompurify": "^3.4.8",
+    "downsize": "0.0.8",
+    "entities": "^8.0.0",
+    "express": "^5.2.1",
+    "express-brute": "1.0.1",
+    "express-hbs": "2.5.0",
+    "express-jwt": "8.5.1",
+    "express-lazy-router": "1.0.6",
+    "express-query-boolean": "2.0.0",
+    "express-queue": "0.0.13",
+    "express-session": "1.19.0",
+    "file-type": "^22.0.1",
+    "form-data": "4.0.5",
+    "fs-extra": "11.3.5",
+    "ghost-storage-base": "1.1.2",
+    "glob": "13.0.6",
+    "got": "^15.0.5",
+    "gscan": "^6.2.1",
+    "handlebars": "4.7.9",
+    "heic-convert": "2.1.0",
+    "html-to-text": "^10.0.0",
+    "html5parser": "^3.0.0",
+    "human-number": "3.0.0",
+    "iconv-lite": "0.7.2",
+    "image-size": "^2.0.2",
+    "intl": "1.2.5",
+    "intl-messageformat": "^11.2.8",
+    "js-yaml": "^4.2.0",
+    "jsdom": "29.1.1",
+    "jsonc-parser": "3.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "juice": "^12.1.0",
+    "keypair": "1.0.4",
+    "knex": "^3.2.10",
+    "knex-migrator": "5.3.2",
+    "leaky-bucket": "^4.1.4",
+    "lodash": "4.18.1",
+    "luxon": "3.7.2",
+    "mailgun.js": "^13.2.0",
+    "metascraper": "^5.50.3",
+    "metascraper-author": "^5.50.1",
+    "metascraper-description": "^5.50.1",
+    "metascraper-image": "^5.50.1",
+    "metascraper-logo": "^5.50.1",
+    "metascraper-logo-favicon": "^5.50.3",
+    "metascraper-publisher": "^5.50.1",
+    "metascraper-title": "^5.50.1",
+    "metascraper-url": "^5.50.1",
+    "mime-types": "^3.0.2",
+    "mingo": "^7.2.1",
+    "moment": "2.30.1",
+    "moment-timezone": "^0.6.2",
+    "multer": "2.1.1",
+    "mysql2": "^3.22.5",
+    "nconf": "0.13.0",
+    "node-fetch": "^3.3.2",
+    "node-html-markdown": "2.0.0",
+    "node-jose": "2.2.0",
+    "nodemailer": "^8.0.10",
+    "on-headers": "1.1.0",
+    "otplib": "^13.4.1",
+    "papaparse": "5.5.3",
+    "path-match": "1.2.4",
+    "probability-distributions": "0.9.1",
+    "probe-image-size": "7.3.0",
+    "rss": "1.2.2",
+    "sanitize-html": "2.17.4",
+    "semver": "^7.8.3",
+    "sharp": "0.34.5",
+    "simple-dom": "1.4.0",
+    "stoppable": "1.1.0",
+    "stripe": "^22.2.0",
+    "superagent": "^10.3.0",
+    "superagent-throttle": "1.0.1",
+    "terser": "^5.48.0",
+    "tiny-glob": "0.2.9",
+    "type-fest": "^5.7.0",
+    "ua-parser-js": "^2.0.10",
+    "xml": "1.0.1",
+    "zod": "^4.4.3"
+  },
+  "optionalDependencies": {
+    "@tryghost/html-to-mobiledoc": "3.3.2",
+    "sqlite3": "5.1.7"
+  },
+  "devDependencies": {
+    "@actions/core": "3.0.1",
+    "@prettier/sync": "0.6.1",
+    "@tryghost/express-test": "2.1.0",
+    "@tryghost/webhook-mock-receiver": "2.1.0",
+    "@types/bookshelf": "1.2.9",
+    "@types/common-tags": "1.8.4",
+    "@types/express": "4.17.25",
+    "@types/fs-extra": "11.0.4",
+    "@types/js-yaml": "4.0.9",
+    "@types/jsdom": "28.0.3",
+    "@types/jsonwebtoken": "9.0.10",
+    "@types/lodash": "4.17.24",
+    "@types/lodash-es": "4.17.12",
+    "@types/mime-types": "3.0.1",
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.19.19",
+    "@types/node-fetch": "2.6.13",
+    "@types/node-jose": "1.1.13",
+    "@types/nodemailer": "6.4.23",
+    "@types/on-headers": "1.0.4",
+    "@types/papaparse": "5.5.2",
+    "@types/sanitize-html": "2.16.1",
+    "@types/sinon": "17.0.4",
+    "@types/supertest": "6.0.3",
+    "@typescript-eslint/parser": "8.49.0",
+    "@vitest/coverage-v8": "4.1.7",
+    "bunyan": "1.8.15",
+    "c8": "11.0.0",
+    "chai": "4.5.0",
+    "cli-progress": "3.12.0",
+    "cssnano": "7.1.1",
+    "esbuild": "0.28.0",
+    "eslint": "8.57.1",
+    "expect": "29.7.0",
+    "html-minifier": "4.0.0",
+    "html-validate": "11.4.0",
+    "inquirer": "8.2.7",
+    "jwk-to-pem": "2.0.7",
+    "jwks-rsa": "3.2.2",
+    "lodash-es": "4.18.1",
+    "mocha": "11.7.6",
+    "mocha-slow-test-reporter": "0.1.2",
+    "mock-knex": "https://codeload.github.com/TryGhost/mock-knex/tar.gz/68948e11b0ea4fe63456098dfdc169bea7f62009",
+    "nock": "13.5.6",
+    "nodemon": "3.1.14",
+    "postcss": "8.5.10",
+    "postcss-cli": "11.0.1",
+    "qs": "6.15.2",
+    "rewire": "9.0.1",
+    "sinon": "22.0.0",
+    "supertest": "6.3.4",
+    "tmp": "0.2.6",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "validator": "13.12.0",
+    "vitest": "4.1.7"
+  },
+  "nx": {
+    "tags": [
+      "i18n"
+    ],
+    "targets": {
+      "build:tsc": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "archive": {
+        "dependsOn": [
+          "build:assets",
+          "build:tsc",
+          {
+            "projects": [
+              "@tryghost/admin"
+            ],
+            "target": "build"
+          }
+        ]
+      },
+      "dev": {
+        "dependsOn": [
+          "build:assets"
+        ]
+      },
+      "lint": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test:all": {
+        "dependsOn": [
+          "build:assets"
+        ]
+      },
+      "test:unit": {
+        "dependsOn": [
+          "build:assets",
+          "^build"
+        ]
+      },
+      "test:ci:e2e": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test:ci:legacy": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test:ci:integration": {
+        "dependsOn": [
+          "^build"
+        ]
+      }
+    }
+  },
+  "packageManager": "pnpm@11.4.0+sha512.f0febc7e37552ab485494a914241b338e0b3580b93d54ce31f00933015880863129038a1b4ae4e414a0ee63ac35bf21197e990172c4a68256450b5636310968f",
+  "depup": {
+    "changes": {
+      "@aws-sdk/client-s3": {
+        "from": "3.1053.0",
+        "to": "^3.1064.0"
+      },
+      "@extractus/oembed-extractor": {
+        "from": "3.2.1",
+        "to": "^4.1.0"
+      },
+      "@faker-js/faker": {
+        "from": "9.9.0",
+        "to": "^10.4.0"
+      },
+      "@isaacs/ttlcache": {
+        "from": "1.4.1",
+        "to": "^2.1.5"
+      },
+      "@sentry/node": {
+        "from": "7.120.4",
+        "to": "^10.56.0"
+      },
+      "@tryghost/adapter-base-cache": {
+        "from": "0.1.25",
+        "to": "^0.1.26"
+      },
+      "@tryghost/admin-api-schema": {
+        "from": "4.7.4",
+        "to": "^4.7.5"
+      },
+      "@tryghost/bookshelf-plugins": {
+        "from": "2.2.2",
+        "to": "^2.2.3"
+      },
+      "@tryghost/color-utils": {
+        "from": "0.2.18",
+        "to": "^0.2.19"
+      },
+      "@tryghost/config-url-helpers": {
+        "from": "1.0.25",
+        "to": "^1.0.26"
+      },
+      "@tryghost/custom-fonts": {
+        "from": "1.0.10",
+        "to": "^1.0.11"
+      },
+      "@tryghost/database-info": {
+        "from": "0.3.35",
+        "to": "^2.2.2"
+      },
+      "@tryghost/debug": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/domain-events": {
+        "from": "3.2.3",
+        "to": "^3.2.4"
+      },
+      "@tryghost/email-mock-receiver": {
+        "from": "2.1.0",
+        "to": "^2.2.2"
+      },
+      "@tryghost/errors": {
+        "from": "1.3.13",
+        "to": "^3.2.3"
+      },
+      "@tryghost/helpers": {
+        "from": "1.1.105",
+        "to": "^1.1.106"
+      },
+      "@tryghost/html-to-plaintext": {
+        "from": "1.0.10",
+        "to": "^1.0.11"
+      },
+      "@tryghost/image-transform": {
+        "from": "1.4.15",
+        "to": "^1.4.16"
+      },
+      "@tryghost/job-manager": {
+        "from": "1.0.9",
+        "to": "^4.0.3"
+      },
+      "@tryghost/limit-service": {
+        "from": "1.5.5",
+        "to": "^1.5.6"
+      },
+      "@tryghost/logging": {
+        "from": "4.2.1",
+        "to": "^5.0.2"
+      },
+      "@tryghost/metrics": {
+        "from": "1.0.43",
+        "to": "^3.2.2"
+      },
+      "@tryghost/mongo-utils": {
+        "from": "0.6.3",
+        "to": "^0.6.4"
+      },
+      "@tryghost/mw-error-handler": {
+        "from": "1.0.13",
+        "to": "^3.2.3"
+      },
+      "@tryghost/mw-vhost": {
+        "from": "1.0.6",
+        "to": "^3.2.2"
+      },
+      "@tryghost/nodemailer": {
+        "from": "2.2.2",
+        "to": "^2.2.3"
+      },
+      "@tryghost/pretty-cli": {
+        "from": "3.2.1",
+        "to": "^3.2.2"
+      },
+      "@tryghost/prometheus-metrics": {
+        "from": "1.0.8",
+        "to": "^4.0.2"
+      },
+      "@tryghost/promise": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/referrer-parser": {
+        "from": "0.1.17",
+        "to": "^0.1.18"
+      },
+      "@tryghost/request": {
+        "from": "1.0.17",
+        "to": "^3.2.3"
+      },
+      "@tryghost/root-utils": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/security": {
+        "from": "1.0.6",
+        "to": "^3.2.2"
+      },
+      "@tryghost/social-urls": {
+        "from": "0.1.62",
+        "to": "^0.1.63"
+      },
+      "@tryghost/string": {
+        "from": "0.3.4",
+        "to": "^0.3.5"
+      },
+      "@tryghost/tpl": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/url-utils": {
+        "from": "5.2.4",
+        "to": "^5.2.5"
+      },
+      "@tryghost/validator": {
+        "from": "0.2.22",
+        "to": "^3.1.3"
+      },
+      "@tryghost/version": {
+        "from": "2.2.1",
+        "to": "^2.2.2"
+      },
+      "@tryghost/zip": {
+        "from": "3.3.2",
+        "to": "^3.3.3"
+      },
+      "body-parser": {
+        "from": "1.20.5",
+        "to": "^2.2.2"
+      },
+      "cache-manager": {
+        "from": "4.1.0",
+        "to": "^7.2.8"
+      },
+      "chalk": {
+        "from": "4.1.2",
+        "to": "^5.6.2"
+      },
+      "cheerio": {
+        "from": "0.22.0",
+        "to": "^1.2.0"
+      },
+      "date-fns": {
+        "from": "2.30.0",
+        "to": "^4.4.0"
+      },
+      "dompurify": {
+        "from": "3.4.5",
+        "to": "^3.4.8"
+      },
+      "entities": {
+        "from": "4.5.0",
+        "to": "^8.0.0"
+      },
+      "express": {
+        "from": "4.22.2",
+        "to": "^5.2.1"
+      },
+      "file-type": {
+        "from": "16.5.4",
+        "to": "^22.0.1"
+      },
+      "got": {
+        "from": "13.0.0",
+        "to": "^15.0.5"
+      },
+      "gscan": {
+        "from": "6.2.0",
+        "to": "^6.2.1"
+      },
+      "html-to-text": {
+        "from": "5.1.1",
+        "to": "^10.0.0"
+      },
+      "html5parser": {
+        "from": "2.0.2",
+        "to": "^3.0.0"
+      },
+      "image-size": {
+        "from": "1.2.1",
+        "to": "^2.0.2"
+      },
+      "intl-messageformat": {
+        "from": "5.4.3",
+        "to": "^11.2.8"
+      },
+      "js-yaml": {
+        "from": "4.1.1",
+        "to": "^4.2.0"
+      },
+      "jsonwebtoken": {
+        "from": "8.5.1",
+        "to": "^9.0.3"
+      },
+      "juice": {
+        "from": "9.1.0",
+        "to": "^12.1.0"
+      },
+      "knex": {
+        "from": "2.4.2",
+        "to": "^3.2.10"
+      },
+      "leaky-bucket": {
+        "from": "2.2.0",
+        "to": "^4.1.4"
+      },
+      "mailgun.js": {
+        "from": "10.4.0",
+        "to": "^13.2.0"
+      },
+      "metascraper": {
+        "from": "5.45.15",
+        "to": "^5.50.3"
+      },
+      "metascraper-author": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-description": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-image": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-logo": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-logo-favicon": {
+        "from": "5.42.0",
+        "to": "^5.50.3"
+      },
+      "metascraper-publisher": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-title": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "metascraper-url": {
+        "from": "5.45.10",
+        "to": "^5.50.1"
+      },
+      "mime-types": {
+        "from": "2.1.35",
+        "to": "^3.0.2"
+      },
+      "mingo": {
+        "from": "2.5.3",
+        "to": "^7.2.1"
+      },
+      "moment-timezone": {
+        "from": "0.5.45",
+        "to": "^0.6.2"
+      },
+      "mysql2": {
+        "from": "3.22.3",
+        "to": "^3.22.5"
+      },
+      "node-fetch": {
+        "from": "2.7.0",
+        "to": "^3.3.2"
+      },
+      "nodemailer": {
+        "from": "8.0.8",
+        "to": "^8.0.10"
+      },
+      "otplib": {
+        "from": "12.0.1",
+        "to": "^13.4.1"
+      },
+      "semver": {
+        "from": "7.7.4",
+        "to": "^7.8.3"
+      },
+      "stripe": {
+        "from": "8.222.0",
+        "to": "^22.2.0"
+      },
+      "superagent": {
+        "from": "5.3.1",
+        "to": "^10.3.0"
+      },
+      "terser": {
+        "from": "5.46.1",
+        "to": "^5.48.0"
+      },
+      "type-fest": {
+        "from": "5.6.0",
+        "to": "^5.7.0"
+      },
+      "ua-parser-js": {
+        "from": "1.0.41",
+        "to": "^2.0.10"
+      },
+      "zod": {
+        "from": "4.1.12",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 85,
+    "originalPackage": "ghost",
+    "originalVersion": "6.44.1",
+    "processedAt": "2026-06-09T09:30:33.409Z",
+    "smokeTest": "failed"
+  }
+}
