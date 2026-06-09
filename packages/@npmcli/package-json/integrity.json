@@ -195,6 +195,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:31:56.106Z",
       "version": "8.0.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        },
+        "semver": {
+          "from": "^7.5.3",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:00:11.287Z",
+      "version": "8.0.0-depup.4"
     }
   }
 }

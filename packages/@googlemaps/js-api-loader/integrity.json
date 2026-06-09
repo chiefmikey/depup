@@ -90,6 +90,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:31:03.597Z",
       "version": "2.1.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@types/google.maps": {
+          "from": "^3.53.1",
+          "to": "^3.65.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:55:52.763Z",
+      "version": "2.1.0-depup.4"
     }
   }
 }

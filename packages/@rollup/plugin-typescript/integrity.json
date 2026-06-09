@@ -55,6 +55,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:35:14.695Z",
       "version": "12.3.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.1.0",
+          "to": "^5.4.0"
+        },
+        "resolve": {
+          "from": "^1.22.1",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:06:50.637Z",
+      "version": "12.3.0-depup.4"
     }
   }
 }

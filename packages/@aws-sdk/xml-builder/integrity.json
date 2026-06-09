@@ -434,6 +434,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:28:52.408Z",
       "version": "3.972.29-depup.2"
+    },
+    "3": {
+      "changes": {
+        "fast-xml-parser": {
+          "from": "5.7.3",
+          "to": "^5.8.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:48:56.847Z",
+      "version": "3.972.29-depup.3"
     }
   }
 }

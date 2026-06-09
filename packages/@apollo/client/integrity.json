@@ -301,6 +301,35 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:27:57.308Z",
       "version": "4.2.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@graphql-typed-document-node/core": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "@wry/caches": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@wry/equality": {
+          "from": "^0.5.6",
+          "to": "^0.5.7"
+        },
+        "optimism": {
+          "from": "^0.18.0",
+          "to": "^0.18.1"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:44:18.980Z",
+      "version": "4.2.3-depup.2"
     }
   }
 }

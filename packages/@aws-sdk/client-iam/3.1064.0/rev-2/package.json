@@ -1,0 +1,106 @@
+{
+  "name": "@depup/aws-sdk__client-iam",
+  "description": "AWS SDK for JavaScript Iam Client for Node.js, Browser and React Native (with updated dependencies)",
+  "version": "3.1064.0-depup.2",
+  "scripts": {
+    "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+    "build:cjs": "node ../../scripts/compilation/inline",
+    "build:es": "tsc -p tsconfig.es.json",
+    "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4",
+    "clean": "premove dist-cjs dist-es dist-types tsconfig.cjs.tsbuildinfo tsconfig.es.tsbuildinfo tsconfig.types.tsbuildinfo",
+    "extract:docs": "api-extractor run --local",
+    "generate:client": "node ../../scripts/generate-clients/single-service --solo iam",
+    "test": "yarn g:vitest run --passWithNoTests",
+    "test:e2e": "yarn g:vitest run -c vitest.config.e2e.mts --mode development",
+    "test:e2e:watch": "yarn g:vitest watch -c vitest.config.e2e.mts",
+    "test:index": "tsc --noEmit ./test/index-types.ts && node ./test/index-objects.spec.mjs",
+    "test:integration": "yarn g:vitest run --passWithNoTests -c vitest.config.integ.mts",
+    "test:integration:watch": "yarn g:vitest run --passWithNoTests -c vitest.config.integ.mts",
+    "test:watch": "yarn g:vitest watch --passWithNoTests"
+  },
+  "main": "./dist-cjs/index.js",
+  "types": "./dist-types/index.d.ts",
+  "module": "./dist-es/index.js",
+  "sideEffects": false,
+  "dependencies": {
+    "@aws-crypto/sha256-browser": "5.2.0",
+    "@aws-crypto/sha256-js": "5.2.0",
+    "@aws-sdk/core": "^3.974.19",
+    "@aws-sdk/credential-provider-node": "^3.972.53",
+    "@aws-sdk/types": "^3.973.12",
+    "@smithy/core": "^3.24.6",
+    "@smithy/fetch-http-handler": "^5.4.6",
+    "@smithy/node-http-handler": "^4.7.7",
+    "@smithy/types": "^4.14.3",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@smithy/snapshot-testing": "^2.1.7",
+    "@tsconfig/node20": "20.1.8",
+    "@types/node": "^20.14.8",
+    "concurrently": "7.0.0",
+    "downlevel-dts": "0.10.1",
+    "premove": "4.0.0",
+    "typescript": "~5.8.3",
+    "vitest": "^4.0.17"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "typesVersions": {
+    "<4.5": {
+      "dist-types/*": [
+        "dist-types/ts3.4/*"
+      ]
+    }
+  },
+  "files": [
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "author": {
+    "name": "AWS SDK for JavaScript Team",
+    "url": "https://aws.amazon.com/sdk-for-javascript/"
+  },
+  "license": "Apache-2.0",
+  "browser": {
+    "./dist-es/runtimeConfig": "./dist-es/runtimeConfig.browser"
+  },
+  "react-native": {
+    "./dist-es/runtimeConfig": "./dist-es/runtimeConfig.native"
+  },
+  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-iam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws/aws-sdk-js-v3.git",
+    "directory": "clients/client-iam"
+  },
+  "keywords": [
+    "@aws-sdk/client-iam",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@smithy/node-http-handler": {
+        "from": "^4.7.6",
+        "to": "^4.7.7"
+      },
+      "tslib": {
+        "from": "^2.6.2",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@aws-sdk/client-iam",
+    "originalVersion": "3.1064.0",
+    "processedAt": "2026-06-09T02:45:21.031Z",
+    "smokeTest": "passed"
+  }
+}

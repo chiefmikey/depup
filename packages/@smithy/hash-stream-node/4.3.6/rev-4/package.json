@@ -1,0 +1,62 @@
+{
+  "name": "@depup/smithy__hash-stream-node",
+  "version": "4.3.6-depup.4",
+  "scripts": {
+    "build": "yarn g:tsc -p tsconfig.cjs.json && yarn g:tsc -p tsconfig.es.json && yarn g:tsc -p tsconfig.types.json",
+    "build:types": "yarn g:tsc -p tsconfig.types.json",
+    "clean": "rm -rf dist-cjs dist-es dist-types *.tsbuildinfo",
+    "stage-release": "rm -rf .release && yarn pack && mkdir ./.release && tar zxvf ./package.tgz --directory ./.release && rm ./package.tgz"
+  },
+  "main": "./dist-cjs/index.js",
+  "module": "./dist-es/index.js",
+  "types": "./dist-types/index.d.ts",
+  "author": {
+    "name": "AWS SDK for JavaScript Team",
+    "url": "https://aws.amazon.com/javascript/"
+  },
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@smithy/core": "^3.24.6",
+    "tslib": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/smithy-lang/smithy-typescript/tree/main/packages/hash-stream-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smithy-lang/smithy-typescript.git",
+    "directory": "packages/hash-stream-node"
+  },
+  "typedoc": {
+    "entryPoint": "src/index.ts"
+  },
+  "description": "@smithy/hash-stream-node with all dependencies updated to latest",
+  "keywords": [
+    "@smithy/hash-stream-node",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.6.2",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@smithy/hash-stream-node",
+    "originalVersion": "4.3.6",
+    "processedAt": "2026-06-09T03:07:58.242Z",
+    "smokeTest": "passed"
+  }
+}

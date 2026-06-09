@@ -74,6 +74,31 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:33:35.577Z",
       "version": "5.1.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.13",
+          "to": "^7.29.7"
+        },
+        "@noble/ciphers": {
+          "from": "^1.0.0",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "^1.6.0",
+          "to": "^2.2.0"
+        },
+        "fontkit": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:04:55.775Z",
+      "version": "5.1.1-depup.3"
     }
   }
 }

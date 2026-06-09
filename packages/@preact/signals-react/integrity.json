@@ -81,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:33:50.832Z",
       "version": "3.10.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "use-sync-external-store": {
+          "from": "^1.2.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:02:24.444Z",
+      "version": "3.10.1-depup.4"
     }
   }
 }

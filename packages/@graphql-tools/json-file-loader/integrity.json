@@ -120,6 +120,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:31:52.436Z",
       "version": "8.0.28-depup.3"
+    },
+    "4": {
+      "changes": {
+        "globby": {
+          "from": "^11.0.3",
+          "to": "^16.2.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:56:33.376Z",
+      "version": "8.0.28-depup.4"
     }
   }
 }

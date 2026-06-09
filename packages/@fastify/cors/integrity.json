@@ -63,6 +63,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:30:27.438Z",
       "version": "11.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "fastify-plugin": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "toad-cache": {
+          "from": "^3.7.0",
+          "to": "^3.7.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:53:17.613Z",
+      "version": "11.2.0-depup.4"
     }
   }
 }

@@ -59,6 +59,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:33:55.884Z",
       "version": "3.9.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@react-aria/calendar": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        },
+        "@react-spectrum/calendar": {
+          "from": "^3.8.0",
+          "to": "^3.8.1"
+        },
+        "@react-stately/calendar": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:05:37.105Z",
+      "version": "3.9.0-depup.3"
     }
   }
 }

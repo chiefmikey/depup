@@ -248,47 +248,6 @@
     }
   },
   "0.85.3": {
-    "0": {
-      "changes": {
-        "@isaacs/ttlcache": {
-          "from": "^1.4.1",
-          "to": "^2.1.4"
-        },
-        "chrome-launcher": {
-          "from": "^0.15.2",
-          "to": "^1.2.1"
-        },
-        "chromium-edge-launcher": {
-          "from": "^0.3.0",
-          "to": "^2.0.1"
-        },
-        "connect": {
-          "from": "^3.6.5",
-          "to": "^3.7.0"
-        },
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "open": {
-          "from": "^7.0.3",
-          "to": "^11.0.0"
-        },
-        "serve-static": {
-          "from": "^1.16.2",
-          "to": "^2.2.1"
-        },
-        "ws": {
-          "from": "^7.5.10",
-          "to": "^8.20.0"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-05-06T07:05:19.530Z",
-      "version": "0.85.3-depup.0"
-    },
     "1": {
       "changes": {
         "@isaacs/ttlcache": {
@@ -452,6 +411,47 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:34:26.382Z",
       "version": "0.85.3-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@isaacs/ttlcache": {
+          "from": "^1.4.1",
+          "to": "^2.1.5"
+        },
+        "chrome-launcher": {
+          "from": "^0.15.2",
+          "to": "^1.2.1"
+        },
+        "chromium-edge-launcher": {
+          "from": "^0.3.0",
+          "to": "^2.0.1"
+        },
+        "connect": {
+          "from": "^3.6.5",
+          "to": "^3.7.0"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "open": {
+          "from": "^7.0.3",
+          "to": "^11.0.0"
+        },
+        "serve-static": {
+          "from": "^1.16.2",
+          "to": "^2.2.1"
+        },
+        "ws": {
+          "from": "^7.5.10",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T03:04:32.683Z",
+      "version": "0.85.3-depup.5"
     }
   }
 }

@@ -53,6 +53,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:30:26.581Z",
       "version": "4.0.4-depup.2"
+    },
+    "3": {
+      "changes": {
+        "rxjs": {
+          "from": "^7.8.1",
+          "to": "^7.8.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T02:55:20.480Z",
+      "version": "4.0.4-depup.3"
     }
   }
 }

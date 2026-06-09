@@ -12,7 +12,7 @@ npm install @depup/base44__sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.8.31 | **DepUp version**: 0.8.31-depup.4 | **Updated**: 6/9/2026 | **Import test**: passed
+**Original version**: 0.8.31 | **DepUp version**: 0.8.31-depup.5 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
