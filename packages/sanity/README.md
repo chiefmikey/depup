@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.30.0 | **DepUp version**: 5.30.0-depup.2 | **Updated**: 6/5/2026 | **Import test**: failed
+**Original version**: 5.30.0 | **DepUp version**: 5.30.0-depup.3 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,15 +24,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
 | @mux/mux-player-react | `^3.10.2` | `^3.13.0` |
-| @portabletext/editor | `^6.6.4` | `^7.3.1` |
+| @portabletext/editor | `^6.6.4` | `^7.3.2` |
 | @portabletext/html | `^1.0.1` | `^1.0.2` |
-| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.11` |
-| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.11` |
-| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.11` |
-| @portabletext/plugin-typography | `^7.0.27` | `^8.0.11` |
+| @portabletext/plugin-markdown-shortcuts | `^7.0.27` | `^8.0.12` |
+| @portabletext/plugin-one-line | `^6.0.27` | `^7.0.12` |
+| @portabletext/plugin-paste-link | `^3.0.27` | `^4.0.12` |
+| @portabletext/plugin-typography | `^7.0.27` | `^8.0.12` |
 | @portabletext/react | `^6.1.0` | `^6.2.0` |
 | @portabletext/sanity-bridge | `^3.0.0` | `^3.1.0` |
-| @sanity/cli | `^6.7.1` | `^7.0.2` |
+| @sanity/cli | `^6.7.1` | `^7.1.0` |
 | @sanity/client | `^7.22.0` | `^7.22.1` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/image-url | `^2.0.3` | `^2.1.1` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
 | player.style | `^0.1.9` | `^0.3.4` |
 | react-is | `^19.2.4` | `^19.2.7` |
-| semver | `^7.7.2` | `^7.8.2` |
+| semver | `^7.7.2` | `^7.8.3` |
 | uuid | `^11.1.0` | `^14.0.0` |
 | web-vitals | `^5.1.0` | `^5.3.0` |
 | xstate | `^5.25.1` | `^5.32.0` |

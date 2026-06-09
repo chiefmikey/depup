@@ -12,13 +12,13 @@ npm install @depup/nextra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.6 | **Updated**: 6/3/2026 | **Import test**: failed
+**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.7 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @formatjs/intl-localematcher | `^0.6.0` | `^0.8.9` |
+| @formatjs/intl-localematcher | `^0.6.0` | `^0.8.10` |
 | @headlessui/react | `^2.1.2` | `^2.2.10` |
 | @mdx-js/mdx | `^3.0.0` | `^3.1.1` |
 | @napi-rs/simple-git | `^0.1.9` | `^0.1.22` |
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mdast-util-from-markdown | `^2.0.1` | `^2.0.3` |
 | mdast-util-gfm | `^3.0.0` | `^3.1.0` |
 | mdast-util-to-hast | `^13.2.0` | `^13.2.1` |
-| react-medium-image-zoom | `^5.2.12` | `^5.4.5` |
+| react-medium-image-zoom | `^5.2.12` | `^5.4.6` |
 | rehype-katex | `^7.0.0` | `^7.0.1` |
 | rehype-pretty-code | `0.14.1` | `^0.14.3` |
 | remark-gfm | `^4.0.0` | `^4.0.1` |

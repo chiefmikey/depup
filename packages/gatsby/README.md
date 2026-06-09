@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.40 | **Updated**: 6/5/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.41 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.60.1` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.60.1` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.61.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.61.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -112,7 +112,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.7` |
 | redux | `4.2.1` | `^5.0.1` |
 | redux-thunk | `^2.4.2` | `^3.1.0` |
-| semver | `^7.5.3` | `^7.8.2` |
+| semver | `^7.5.3` | `^7.8.3` |
 | signal-exit | `^3.0.7` | `^4.1.0` |
 | slugify | `^1.6.6` | `^1.6.9` |
 | socket.io | `^4.8.1` | `^4.8.3` |

@@ -116,6 +116,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T17:13:54.952Z",
       "version": "9.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "quickjs-wasi": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:15:03.572Z",
+      "version": "9.1.0-depup.1"
     }
   }
 }

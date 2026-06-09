@@ -39,6 +39,27 @@
       "status": "failed",
       "timestamp": "2026-05-29T10:10:58.851Z",
       "version": "3.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "commander": {
+          "from": "7",
+          "to": "^15.0.0"
+        },
+        "iconv-lite": {
+          "from": "0.6",
+          "to": "^0.7.2"
+        },
+        "rw": {
+          "from": "1",
+          "to": "^1.3.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:06:14.430Z",
+      "version": "3.0.1-depup.2"
     }
   }
 }

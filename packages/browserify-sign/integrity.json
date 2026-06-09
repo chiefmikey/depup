@@ -29,6 +29,19 @@
       "status": "failed",
       "timestamp": "2026-05-24T10:01:26.951Z",
       "version": "4.2.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "readable-stream": {
+          "from": "^2.3.8",
+          "to": "^4.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:05:35.563Z",
+      "version": "4.2.6-depup.1"
     }
   }
 }

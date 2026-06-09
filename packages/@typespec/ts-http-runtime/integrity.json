@@ -106,6 +106,27 @@
       "status": "failed",
       "timestamp": "2026-06-08T17:17:53.409Z",
       "version": "0.3.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "http-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:04:05.807Z",
+      "version": "0.3.6-depup.2"
     }
   }
 }

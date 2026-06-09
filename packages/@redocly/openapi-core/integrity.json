@@ -792,6 +792,27 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:08:54.389Z",
       "version": "2.31.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:02:34.863Z",
+      "version": "2.31.6-depup.2"
     }
   }
 }

@@ -86,6 +86,23 @@
       "status": "failed",
       "timestamp": "2026-05-20T02:02:59.331Z",
       "version": "1.6.8-depup.2"
+    },
+    "3": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.0",
+          "to": "^4.4.3"
+        },
+        "lru-cache": {
+          "from": "^4.0.3",
+          "to": "^11.5.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:12:21.515Z",
+      "version": "1.6.8-depup.3"
     }
   }
 }

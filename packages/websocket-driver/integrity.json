@@ -41,6 +41,27 @@
       "status": "failed",
       "timestamp": "2026-06-04T17:03:33.785Z",
       "version": "0.7.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "http-parser-js": {
+          "from": ">=0.5.1",
+          "to": "^0.5.10"
+        },
+        "safe-buffer": {
+          "from": ">=5.1.0",
+          "to": "^5.2.1"
+        },
+        "websocket-extensions": {
+          "from": ">=0.1.1",
+          "to": "^0.1.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:23:42.690Z",
+      "version": "0.7.5-depup.1"
     }
   }
 }

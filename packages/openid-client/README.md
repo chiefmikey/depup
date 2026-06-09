@@ -12,7 +12,7 @@ npm install @depup/openid-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.8.4 | **DepUp version**: 6.8.4-depup.0 | **Updated**: 4/27/2026 | **Import test**: passed
+**Original version**: 6.8.4 | **DepUp version**: 6.8.4-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 

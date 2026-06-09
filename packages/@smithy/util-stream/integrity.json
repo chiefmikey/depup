@@ -188,6 +188,19 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:10:19.347Z",
       "version": "4.6.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:02:50.466Z",
+      "version": "4.6.6-depup.2"
     }
   }
 }

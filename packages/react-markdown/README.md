@@ -12,11 +12,23 @@ npm install @depup/react-markdown
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.1 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @types/hast | `^3.0.0` | `^3.0.4` |
+| @types/mdast | `^4.0.0` | `^4.0.4` |
+| devlop | `^1.0.0` | `^1.1.0` |
+| hast-util-to-jsx-runtime | `^2.0.0` | `^2.3.6` |
+| html-url-attributes | `^3.0.0` | `^3.0.1` |
+| mdast-util-to-hast | `^13.0.0` | `^13.2.1` |
+| remark-rehype | `^11.0.0` | `^11.1.2` |
+| unified | `^11.0.0` | `^11.0.5` |
+| unist-util-visit | `^5.0.0` | `^5.1.0` |
+| vfile | `^6.0.0` | `^6.0.3` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-markdown&labels=bug).
 

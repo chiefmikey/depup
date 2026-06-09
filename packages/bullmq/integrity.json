@@ -780,6 +780,31 @@
       "status": "failed",
       "timestamp": "2026-06-02T06:00:41.825Z",
       "version": "5.78.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "ioredis": {
+          "from": "5.10.1",
+          "to": "^5.11.1"
+        },
+        "msgpackr": {
+          "from": "2.0.2",
+          "to": "^2.0.3"
+        },
+        "semver": {
+          "from": "7.8.0",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:05:46.676Z",
+      "version": "5.78.0-depup.1"
     }
   }
 }
