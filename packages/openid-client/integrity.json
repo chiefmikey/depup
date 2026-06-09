@@ -94,6 +94,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:33:25.555Z",
       "version": "6.8.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "jose": {
+          "from": "^6.2.2",
+          "to": "^6.2.3"
+        },
+        "oauth4webapi": {
+          "from": "^3.8.5",
+          "to": "^3.8.6"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:18:42.249Z",
+      "version": "6.8.4-depup.4"
     }
   }
 }

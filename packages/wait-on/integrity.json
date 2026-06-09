@@ -185,6 +185,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:40:41.686Z",
       "version": "9.0.10-depup.3"
+    },
+    "4": {
+      "changes": {
+        "axios": {
+          "from": "^1.16.0",
+          "to": "^1.17.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:25:24.035Z",
+      "version": "9.0.10-depup.4"
     }
   }
 }

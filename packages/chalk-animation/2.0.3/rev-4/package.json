@@ -1,0 +1,100 @@
+{
+  "name": "@depup/chalk-animation",
+  "description": "Colorful animations in terminal output (with updated dependencies)",
+  "version": "2.0.3-depup.4",
+  "license": "MIT",
+  "author": "Boris K",
+  "bin": "./cli.js",
+  "main": "index.js",
+  "files": [
+    "cli.js",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "coverage": "c8 report --reporter=text-lcov > coverage.lcov",
+    "lint": "xo",
+    "fix": "xo --fix",
+    "test": "c8 ava --serial"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "gradient-string": "^3.0.0",
+    "meow": "^14.1.0"
+  },
+  "devDependencies": {
+    "ava": "^4.2.0",
+    "c8": "^7.11.0",
+    "xo": "^0.48.0",
+    "husky": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "type": "module",
+  "homepage": "https://github.com/bokub/chalk-animation",
+  "bugs": "https://github.com/bokub/chalk-animation/issues",
+  "repository": "bokub/chalk-animation",
+  "keywords": [
+    "chalk-animation",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "animation",
+    "chalk",
+    "cli",
+    "color",
+    "colors",
+    "colour",
+    "command-line",
+    "console",
+    "formatting",
+    "gradient",
+    "log",
+    "logging",
+    "rainbow",
+    "shell",
+    "string",
+    "style",
+    "styles",
+    "terminal"
+  ],
+  "xo": {
+    "rules": {
+      "comma-dangle": "off",
+      "operator-linebreak": "off",
+      "prefer-destructuring": "off",
+      "prefer-rest-params": "off",
+      "padding-line-between-statements": "off",
+      "unicorn/no-this-assignment": "off",
+      "unicorn/prefer-includes": "off",
+      "unicorn/prefer-number-properties": "off",
+      "unicorn/prefer-string-slice": "off",
+      "unicorn/prevent-abbreviations": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^5.6.2"
+      },
+      "gradient-string": {
+        "from": "^2.0.2",
+        "to": "^3.0.0"
+      },
+      "meow": {
+        "from": "^10.1.2",
+        "to": "^14.1.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "chalk-animation",
+    "originalVersion": "2.0.3",
+    "processedAt": "2026-06-09T17:10:45.582Z",
+    "smokeTest": "passed"
+  }
+}

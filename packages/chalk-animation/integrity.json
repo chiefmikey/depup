@@ -81,6 +81,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:25:16.253Z",
       "version": "2.0.3-depup.3"
+    },
+    "4": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "gradient-string": {
+          "from": "^2.0.2",
+          "to": "^3.0.0"
+        },
+        "meow": {
+          "from": "^10.1.2",
+          "to": "^14.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:10:47.108Z",
+      "version": "2.0.3-depup.4"
     }
   }
 }

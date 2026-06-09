@@ -81,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:35:07.902Z",
       "version": "1.18.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:20:15.447Z",
+      "version": "1.18.0-depup.4"
     }
   }
 }

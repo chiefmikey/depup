@@ -2070,5 +2070,28 @@
       "timestamp": "2026-06-09T09:31:56.153Z",
       "version": "4.20260603.0-depup.8"
     }
+  },
+  "4.20260609.0": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "7.24.8",
+          "to": "^8.4.1"
+        },
+        "ws": {
+          "from": "8.20.1",
+          "to": "^8.21.0"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:17:19.852Z",
+      "version": "4.20260609.0-depup.0"
+    }
   }
 }

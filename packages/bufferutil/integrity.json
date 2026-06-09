@@ -49,6 +49,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:25:03.281Z",
       "version": "4.1.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "node-gyp-build": {
+          "from": "^4.3.0",
+          "to": "^4.8.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:10:35.747Z",
+      "version": "4.1.0-depup.4"
     }
   }
 }

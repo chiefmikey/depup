@@ -106,6 +106,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:38:57.898Z",
       "version": "1.9.13-depup.2"
+    },
+    "3": {
+      "changes": {
+        "csstype": {
+          "from": "^3.1.0",
+          "to": "^3.2.3"
+        },
+        "seroval": {
+          "from": "~1.5.0",
+          "to": "^1.5.4"
+        },
+        "seroval-plugins": {
+          "from": "~1.5.0",
+          "to": "^1.5.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:23:49.366Z",
+      "version": "1.9.13-depup.3"
     }
   }
 }
