@@ -17,6 +17,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:45:59.621Z",
       "version": "0.15.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "make-plural": {
+          "from": "^7.4.0",
+          "to": "^8.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:48:10.990Z",
+      "version": "0.15.3-depup.2"
     }
   }
 }

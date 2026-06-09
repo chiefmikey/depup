@@ -1,0 +1,51 @@
+{
+  "name": "@depup/react-types__menu",
+  "version": "3.11.0-depup.4",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/menu": "^3.22.1",
+    "@react-spectrum/menu": "^3.23.1",
+    "@react-stately/menu": "^3.10.1"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "a6999bdf494a2e9c0381a5881908328bdd22ddae",
+  "keywords": [
+    "@react-types/menu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@react-aria/menu": {
+        "from": "^3.22.0",
+        "to": "^3.22.1"
+      },
+      "@react-spectrum/menu": {
+        "from": "^3.23.0",
+        "to": "^3.23.1"
+      },
+      "@react-stately/menu": {
+        "from": "^3.10.0",
+        "to": "^3.10.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@react-types/menu",
+    "originalVersion": "3.11.0",
+    "processedAt": "2026-06-09T09:44:07.628Z",
+    "smokeTest": "failed"
+  }
+}
