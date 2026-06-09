@@ -30,6 +30,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:38:34.114Z",
       "version": "6.0.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "flat": {
+          "from": "^5.0.2",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:24:59.880Z",
+      "version": "6.0.1-depup.3"
     }
   }
 }

@@ -122,6 +122,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:33:48.934Z",
       "version": "5.15.3-depup.3"
+    },
+    "4": {
+      "changes": {
+        "color": {
+          "from": "^3.1.2",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.3",
+          "to": "^0.3.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:19:33.468Z",
+      "version": "5.15.3-depup.4"
     }
   }
 }

@@ -103,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:31:58.454Z",
       "version": "3.0.260603-beta-depup.3"
+    },
+    "4": {
+      "changes": {
+        "crossws": {
+          "from": "^0.4.5",
+          "to": "^0.4.6"
+        },
+        "rolldown": {
+          "from": "^1.0.3",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:17:41.797Z",
+      "version": "3.0.260603-beta-depup.4"
     }
   }
 }

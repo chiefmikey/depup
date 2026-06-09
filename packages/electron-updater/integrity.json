@@ -146,6 +146,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:27:06.963Z",
       "version": "6.8.9-depup.3"
+    },
+    "4": {
+      "changes": {
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.5"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.2.0"
+        },
+        "semver": {
+          "from": "~7.7.3",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:12:38.837Z",
+      "version": "6.8.9-depup.4"
     }
   }
 }

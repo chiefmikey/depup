@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@grpc/grpc-js": {
+      "from": "^1.12.6",
+      "to": "^1.14.4"
+    },
+    "@grpc/proto-loader": {
+      "from": "^0.8.0",
+      "to": "^0.8.1"
+    },
+    "google-auth-library": {
+      "from": "10.5.0",
+      "to": "^10.7.0"
+    },
+    "google-logging-utils": {
+      "from": "1.1.3",
+      "to": "^1.1.4"
+    },
+    "proto3-json-serializer": {
+      "from": "3.0.4",
+      "to": "^3.0.5"
+    },
+    "protobufjs": {
+      "from": "^7.5.4",
+      "to": "^8.6.1"
+    },
+    "retry-request": {
+      "from": "^8.0.2",
+      "to": "^8.0.3"
+    },
+    "rimraf": {
+      "from": "^5.0.1",
+      "to": "^6.1.3"
+    }
+  },
+  "timestamp": "2026-06-09T17:13:55.954Z",
+  "totalUpdated": 8
+}
