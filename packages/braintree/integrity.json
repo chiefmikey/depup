@@ -104,6 +104,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:24:39.766Z",
       "version": "3.37.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@braintree/wrap-promise": {
+          "from": "2.1.0",
+          "to": "^3.0.4"
+        },
+        "dateformat": {
+          "from": "4.5.1",
+          "to": "^5.0.3"
+        },
+        "xml2js": {
+          "from": "0.5.0",
+          "to": "^0.6.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:09:58.915Z",
+      "version": "3.37.0-depup.4"
     }
   }
 }

@@ -100,6 +100,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:35:50.952Z",
       "version": "11.3.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:22:57.968Z",
+      "version": "11.3.0-depup.4"
     }
   }
 }

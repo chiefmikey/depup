@@ -1,0 +1,64 @@
+{
+  "name": "@depup/amqplib",
+  "homepage": "http://amqp-node.github.io/amqplib/",
+  "main": "./channel_api.js",
+  "version": "2.0.1-depup.4",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./channel_api.js"
+    },
+    "./callback_api": {
+      "types": "./callback_api.d.ts",
+      "default": "./callback_api.js"
+    }
+  },
+  "description": "An AMQP 0-9-1 (e.g., RabbitMQ) library and client. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amqp-node/amqplib.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.2",
+    "@types/node": "^25.6.0",
+    "claire": "0.4.1",
+    "lefthook": "^1.12.3",
+    "typescript": "^5.9.3",
+    "uglify-js": "2.8.x"
+  },
+  "scripts": {
+    "test": "node --test --test-timeout=1000",
+    "test:only": "node --test --test-only --test-timeout=1000",
+    "rabbitmq-3": "docker run -d --rm --name rabbitmq -p 5672:5672 rabbitmq:3.12-alpine",
+    "rabbitmq-4": "docker run -d --rm --name rabbitmq -p 5672:5672 rabbitmq:4.2-alpine",
+    "format": "biome format . --write",
+    "lint": "biome lint --max-diagnostics=1000 .",
+    "typecheck": "tsc --noEmit -p tsconfig.types.json"
+  },
+  "keywords": [
+    "amqplib",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "AMQP",
+    "AMQP 0-9-1",
+    "RabbitMQ"
+  ],
+  "author": "Michael Bridgen <mikeb@squaremobius.net>",
+  "license": "MIT",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "amqplib",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-06-09T17:09:07.380Z",
+    "smokeTest": "passed"
+  }
+}

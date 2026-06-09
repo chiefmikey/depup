@@ -103,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:23:40.066Z",
       "version": "0.0.77-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@types/d3-selection": {
+          "from": "^3.0.10",
+          "to": "^3.0.11"
+        },
+        "@types/d3-transition": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:08:58.246Z",
+      "version": "0.0.77-depup.4"
     }
   }
 }

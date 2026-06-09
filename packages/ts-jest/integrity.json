@@ -197,6 +197,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:38:45.170Z",
       "version": "29.4.11-depup.3"
+    },
+    "4": {
+      "changes": {
+        "semver": {
+          "from": "^7.8.0",
+          "to": "^7.8.3"
+        },
+        "type-fest": {
+          "from": "^4.41.0",
+          "to": "^5.7.0"
+        },
+        "yargs-parser": {
+          "from": "^21.1.1",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:26:14.669Z",
+      "version": "29.4.11-depup.4"
     }
   }
 }

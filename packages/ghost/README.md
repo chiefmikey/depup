@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.4 | **Updated**: 6/9/2026 | **Import test**: failed
+**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.5 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `9.9.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.56.0` |
+| @sentry/node | `7.120.4` | `^10.57.0` |
 | @tryghost/adapter-base-cache | `0.1.25` | `^0.1.26` |
 | @tryghost/admin-api-schema | `4.7.4` | `^4.7.5` |
 | @tryghost/bookshelf-plugins | `2.2.2` | `^2.2.3` |
@@ -48,14 +48,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/pretty-cli | `3.2.1` | `^3.2.2` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^4.0.2` |
 | @tryghost/promise | `2.2.1` | `^2.2.2` |
-| @tryghost/referrer-parser | `0.1.17` | `^0.1.18` |
+| @tryghost/referrer-parser | `0.1.17` | `^0.1.19` |
 | @tryghost/request | `1.0.17` | `^3.2.3` |
 | @tryghost/root-utils | `2.2.1` | `^2.2.2` |
 | @tryghost/security | `1.0.6` | `^3.2.2` |
 | @tryghost/social-urls | `0.1.62` | `^0.1.63` |
 | @tryghost/string | `0.3.4` | `^0.3.5` |
 | @tryghost/tpl | `2.2.1` | `^2.2.2` |
-| @tryghost/url-utils | `5.2.4` | `^5.2.5` |
+| @tryghost/url-utils | `5.2.4` | `^5.2.6` |
 | @tryghost/validator | `0.2.22` | `^3.1.3` |
 | @tryghost/version | `2.2.1` | `^2.2.2` |
 | @tryghost/zip | `3.3.2` | `^3.3.3` |
