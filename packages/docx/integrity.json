@@ -192,6 +192,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:46:36.419Z",
       "version": "9.7.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/node": {
+          "from": "^25.2.3",
+          "to": "^25.9.2"
+        },
+        "nanoid": {
+          "from": "^5.1.3",
+          "to": "^5.1.11"
+        },
+        "xml-js": {
+          "from": "^1.6.8",
+          "to": "^1.6.11"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:26:04.731Z",
+      "version": "9.7.1-depup.3"
     }
   }
 }

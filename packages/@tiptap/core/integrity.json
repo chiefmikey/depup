@@ -193,6 +193,14 @@
       "status": "skipped",
       "timestamp": "2026-06-09T01:36:19.509Z",
       "version": "3.26.0-depup.2"
+    },
+    "3": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-09T09:22:54.853Z",
+      "version": "3.26.0-depup.3"
     }
   }
 }

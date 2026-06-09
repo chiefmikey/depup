@@ -132,6 +132,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:57:26.203Z",
       "version": "4.4.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:36:46.911Z",
+      "version": "4.4.1-depup.3"
     }
   }
 }

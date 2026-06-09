@@ -434,6 +434,31 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:52:13.034Z",
       "version": "20.10.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^25.9.2"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:29:45.069Z",
+      "version": "20.10.2-depup.3"
     }
   }
 }

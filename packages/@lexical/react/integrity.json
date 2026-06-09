@@ -76,19 +76,6 @@
     }
   },
   "0.45.0": {
-    "0": {
-      "changes": {
-        "react-error-boundary": {
-          "from": "^6.1.1",
-          "to": "^6.1.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-05-28T22:03:45.207Z",
-      "version": "0.45.0-depup.0"
-    },
     "1": {
       "changes": {
         "react-error-boundary": {
@@ -140,6 +127,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T02:58:02.624Z",
       "version": "0.45.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "react-error-boundary": {
+          "from": "^6.1.1",
+          "to": "^6.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:20:39.358Z",
+      "version": "0.45.0-depup.5"
     }
   }
 }

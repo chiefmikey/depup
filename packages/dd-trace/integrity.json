@@ -206,6 +206,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:46:09.162Z",
       "version": "5.106.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "import-in-the-middle": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T09:25:46.846Z",
+      "version": "5.106.0-depup.3"
     }
   }
 }
