@@ -422,8 +422,18 @@ class SecurityApprovalWorkflow {
       }
 
       return parsed;
-    } catch {
-      return { allowlisted: [], version: '1.0.0' };
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        // File does not exist yet -- return empty allowlist (first-run case)
+        return { allowlisted: [], version: '1.0.0' };
+      }
+      // Any other error (permission denied, corrupt file, parse error) must propagate.
+      // Swallowing I/O errors here was fail-open for the admin tool: a read failure
+      // during approvePackage would cause the entire existing allowlist to be
+      // silently overwritten with only the newly approved package.
+      throw new Error(`Failed to load allowlist: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 

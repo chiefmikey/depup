@@ -262,8 +262,11 @@ class SecurityScanner {
 
       return findings;
     } catch (error) {
-      console.warn('Advanced malware check failed:', error.message);
-      return [];
+      // Re-throw so the outer performMalwareScan sets status:'error' and rethrows.
+      // Returning [] here was fail-open: a broken check would silently report "clean".
+      throw new Error(`Advanced malware check failed: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 

@@ -1987,18 +1987,14 @@ describe('securityScanner coverage gaps', () => {
       );
     });
 
-    it('returns empty array when getAllFiles throws', async () => {
+    it('throws when getAllFiles throws (fail-closed: broken scan must not report clean)', async () => {
       jestInstance
         .spyOn(scanner, 'getAllFiles')
         .mockRejectedValueOnce(new Error('permission denied'));
-      const findings =
-        await scanner.performAdvancedMalwareChecks(temporaryDirectory);
 
-      expect(findings).toStrictEqual([]);
-      expect(console.warn).toHaveBeenCalledWith(
-        'Advanced malware check failed:',
-        'permission denied',
-      );
+      await expect(
+        scanner.performAdvancedMalwareChecks(temporaryDirectory),
+      ).rejects.toThrow('Advanced malware check failed: permission denied');
     });
 
     it('detects multiple suspicious items in one scan', async () => {
@@ -3486,8 +3482,42 @@ describe('secureDepUp coverage gaps', () => {
   });
 
   describe('runSnykScan', () => {
-    it('does not throw when snyk is not available', () => {
+    it('does not throw when snyk is not available (ENOENT)', () => {
+      // On this machine snyk is not installed -- spawnSnyk throws ENOENT which
+      // is caught and treated as graceful degradation (tool not present)
       expect(() => secure.runSnykScan('/nonexistent/path')).not.toThrow();
+    });
+
+    it('throws "Snyk found vulnerabilities" when snyk exits status 1', () => {
+      // Spy on spawnSnyk to simulate snyk finding vulnerabilities (exit 1)
+      const vulnError = new Error('snyk found issues');
+      vulnError.status = 1;
+      vulnError.code = undefined;
+      jest.spyOn(secure, 'spawnSnyk').mockImplementationOnce(() => {
+        throw vulnError;
+      });
+
+      expect(() => secure.runSnykScan('/some/path')).toThrow(
+        'Snyk found vulnerabilities',
+      );
+
+      jest.restoreAllMocks();
+    });
+
+    it('throws "Snyk scan failed unexpectedly" on non-ENOENT non-1 error', () => {
+      // Spy on spawnSnyk to simulate a crash/timeout (not ENOENT, not exit 1)
+      const crashError = new Error('process timed out');
+      crashError.code = 'ETIMEDOUT';
+      crashError.status = undefined;
+      jest.spyOn(secure, 'spawnSnyk').mockImplementationOnce(() => {
+        throw crashError;
+      });
+
+      expect(() => secure.runSnykScan('/some/path')).toThrow(
+        'Snyk scan failed unexpectedly',
+      );
+
+      jest.restoreAllMocks();
     });
   });
 
@@ -4270,13 +4300,12 @@ describe('securityApprovalWorkflow coverage gaps', () => {
       expect(result.allowlisted).toStrictEqual([]);
     });
 
-    it('returns default version when file contains malformed JSON', async () => {
+    it('throws when file contains malformed JSON (non-ENOENT errors must not silently return empty allowlist)', async () => {
       await fs.writeFile(workflow.allowlistPath, 'not-valid-json');
 
-      const result = await workflow.loadAllowlist();
-
-      expect(result.version).toBe('1.0.0');
-      expect(result.allowlisted).toStrictEqual([]);
+      await expect(workflow.loadAllowlist()).rejects.toThrow(
+        'Failed to load allowlist',
+      );
     });
   });
 
