@@ -326,17 +326,35 @@ class SecureDepUp {
     }
   }
 
+  spawnSnyk(packagePath) {
+    execFileSync('snyk', ['test', '--severity-threshold=high'], {
+      cwd: packagePath,
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 120_000,
+    });
+  }
+
   runSnykScan(packagePath) {
     try {
-      execFileSync('snyk', ['test', '--severity-threshold=high'], {
-        cwd: packagePath,
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: 120_000,
+      this.spawnSnyk(packagePath);
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        // Snyk not installed in this environment -- acceptable degradation
+        console.warn(chalk.yellow('Snyk scan skipped (not installed)'));
+        return;
+      }
+      if (error.status === 1) {
+        // Snyk exited 1 = vulnerabilities found -- propagate as a real failure
+        throw new Error(`Snyk found vulnerabilities: ${error.message}`, {
+          cause: error,
+        });
+      }
+      // Any other failure (crash, timeout, network) -- propagate so the
+      // vulnerability scan does not silently record as "completed"
+      throw new Error(`Snyk scan failed unexpectedly: ${error.message}`, {
+        cause: error,
       });
-    } catch {
-      // Snyk may not be installed in all environments -- non-fatal
-      console.warn(chalk.yellow('Snyk scan skipped or unavailable'));
     }
   }
 
