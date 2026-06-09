@@ -52,6 +52,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T17:14:07.331Z",
       "version": "10.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "socks": {
+          "from": "^2.8.3",
+          "to": "^2.8.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:23:51.989Z",
+      "version": "10.1.0-depup.1"
     }
   }
 }

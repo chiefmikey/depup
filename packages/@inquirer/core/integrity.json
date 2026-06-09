@@ -104,6 +104,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:00:20.513Z",
       "version": "11.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "fast-wrap-ansi": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:01:02.113Z",
+      "version": "11.2.1-depup.2"
     }
   }
 }

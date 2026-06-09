@@ -75,6 +75,14 @@
       "status": "skipped",
       "timestamp": "2026-06-08T20:53:51.156Z",
       "version": "1.19.4-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-09T00:58:52.089Z",
+      "version": "1.19.4-depup.2"
     }
   }
 }

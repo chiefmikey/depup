@@ -61,6 +61,19 @@
       "status": "failed",
       "timestamp": "2026-05-14T07:11:25.264Z",
       "version": "11.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:21:04.351Z",
+      "version": "11.3.0-depup.1"
     }
   }
 }

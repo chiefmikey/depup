@@ -12,7 +12,7 @@ npm install @depup/nightwatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.1 | **Updated**: 5/26/2026 | **Import test**: failed
+**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.2 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,14 +20,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @nightwatch/nightwatch-inspector | `^1.0.1` | `^3.1.0` |
 | @types/chai | `^4.3.5` | `^5.2.3` |
-| @types/selenium-webdriver | `^4.1.14` | `^4.35.5` |
+| @types/selenium-webdriver | `^4.1.14` | `^4.35.6` |
 | aria-query | `5.1.3` | `^5.3.2` |
 | assertion-error | `1.1.0` | `^2.0.1` |
 | boxen | `5.1.2` | `^8.0.1` |
 | chalk | `^4.1.2` | `^5.6.2` |
 | ci-info | `3.3.0` | `^4.4.0` |
 | cli-table3 | `^0.6.3` | `^0.6.5` |
-| devtools-protocol | `^0.0.1140464` | `^0.0.1635485` |
+| devtools-protocol | `^0.0.1140464` | `^0.0.1642743` |
 | dotenv | `16.3.1` | `^17.4.2` |
 | ejs | `^3.1.10` | `^6.0.1` |
 | envinfo | `7.11.0` | `^7.21.0` |
@@ -42,7 +42,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ora | `5.4.1` | `^9.4.0` |
 | piscina | `^4.3.1` | `^5.1.4` |
 | selenium-webdriver | `4.27.0` | `^4.44.0` |
-| semver | `7.5.4` | `^7.8.1` |
+| semver | `7.5.4` | `^7.8.3` |
 | stacktrace-parser | `0.1.10` | `^0.1.11` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | untildify | `4.0.0` | `^6.0.0` |

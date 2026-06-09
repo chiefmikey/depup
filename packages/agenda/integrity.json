@@ -64,6 +64,27 @@
       "status": "failed",
       "timestamp": "2026-05-10T07:02:53.335Z",
       "version": "6.2.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cron-parser": {
+          "from": "^5.0.0",
+          "to": "^5.5.0"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "luxon": {
+          "from": "^3.2.1",
+          "to": "^3.7.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:05:21.548Z",
+      "version": "6.2.5-depup.1"
     }
   }
 }

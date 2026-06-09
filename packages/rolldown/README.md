@@ -12,12 +12,13 @@ npm install @depup/rolldown
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.0 | **Updated**: 6/3/2026 | **Import test**: passed
+**Original version**: 1.1.0 | **DepUp version**: 1.1.0-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @oxc-project/types | `=0.134.0` | `^0.135.0` |
 | @rolldown/pluginutils | `^1.0.0` | `^1.0.1` |
 
 
