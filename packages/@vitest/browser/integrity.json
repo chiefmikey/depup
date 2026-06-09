@@ -206,6 +206,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:45:41.415Z",
       "version": "4.1.8-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@blazediff/core": {
+          "from": "1.9.1",
+          "to": "^1.9.3"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:32:54.238Z",
+      "version": "4.1.8-depup.3"
     }
   }
 }
