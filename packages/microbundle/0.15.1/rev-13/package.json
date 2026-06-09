@@ -1,0 +1,291 @@
+{
+  "name": "@depup/microbundle",
+  "version": "0.15.1-depup.13",
+  "description": "Zero-configuration bundler for tiny JS libs, powered by Rollup. (with updated dependencies)",
+  "main": "dist/microbundle.js",
+  "source": "src/index.js",
+  "bin": "dist/cli.js",
+  "repository": "developit/microbundle",
+  "keywords": [
+    "microbundle",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "bundle",
+    "rollup",
+    "micro library"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "author": "Jason Miller <jason@developit.ca> (http://jasonformat.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run -s build:babel && npm run -s build:self",
+    "build:babel": "babel-node src/cli.js --target=node --format cjs src/{cli,index}.js",
+    "build:self": "node dist/cli.js --target=node --format cjs src/{cli,index}.js",
+    "prepare:babel": "babel src/*.js -d dist && npm t",
+    "lint": "eslint src",
+    "test": "npm run -s lint && npm run -s build && cross-env BABEL_ENV=test jest",
+    "jest": "cross-env BABEL_ENV=test jest",
+    "format": "prettier --write \"{*,{src,test}/**/*}.+(js|css)\"",
+    "changeset": "changeset",
+    "release": "npm run -s prepare && npm test && changeset publish"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "useTabs": true,
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "package.json",
+        "options": {
+          "useTabs": false,
+          "parser": "json-stringify"
+        }
+      }
+    ]
+  },
+  "lint-staged": {
+    "{src,test}/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{*,{src,test}/**/*}.+(js|css)": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testURL": "http://localhost"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-syntax-jsx": "^7.29.7",
+    "@babel/plugin-transform-flow-strip-types": "^7.29.7",
+    "@babel/plugin-transform-react-jsx": "^7.29.7",
+    "@babel/plugin-transform-regenerator": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-flow": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@rollup/plugin-alias": "^6.0.0",
+    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@surma/rollup-plugin-off-main-thread": "^2.2.3",
+    "asyncro": "^3.0.0",
+    "autoprefixer": "^10.5.0",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-transform-async-to-promises": "^0.8.18",
+    "babel-plugin-transform-replace-expressions": "^0.2.0",
+    "brotli-size": "^4.0.0",
+    "builtin-modules": "^5.2.0",
+    "camelcase": "^9.0.0",
+    "escape-string-regexp": "^5.0.0",
+    "filesize": "^11.0.17",
+    "gzip-size": "^7.0.0",
+    "kleur": "^4.1.5",
+    "lodash.merge": "^4.6.2",
+    "postcss": "^8.5.15",
+    "pretty-bytes": "^7.1.0",
+    "rollup": "^4.61.1",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.37.0",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "sade": "^1.8.1",
+    "terser": "^5.48.0",
+    "tiny-glob": "^0.2.9",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-throw-expressions": "^7.12.1",
+    "@changesets/changelog-github": "^0.2.7",
+    "@changesets/cli": "^2.12.0",
+    "babel-jest": "^26.6.3",
+    "cross-env": "^7.0.3",
+    "directory-tree": "^2.2.5",
+    "eslint": "^7.15.0",
+    "eslint-config-developit": "^1.2.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "esm": "^3.2.25",
+    "fs-extra": "^9.0.1",
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.3",
+    "npm-merge-driver-install": "^1.1.1",
+    "prettier": "^2.2.1",
+    "regenerator-runtime": "^0.13.7",
+    "rimraf": "^3.0.2",
+    "shell-quote": "^1.7.2",
+    "strip-ansi": "^6.0.0"
+  },
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.12.10",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-proposal-class-properties": {
+        "from": "7.12.1",
+        "to": "^7.18.6"
+      },
+      "@babel/plugin-syntax-jsx": {
+        "from": "^7.12.1",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-flow-strip-types": {
+        "from": "^7.12.10",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-react-jsx": {
+        "from": "^7.12.11",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-regenerator": {
+        "from": "^7.12.1",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-env": {
+        "from": "^7.12.11",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-flow": {
+        "from": "^7.12.1",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-react": {
+        "from": "^7.12.10",
+        "to": "^7.29.7"
+      },
+      "@rollup/plugin-alias": {
+        "from": "^3.1.1",
+        "to": "^6.0.0"
+      },
+      "@rollup/plugin-babel": {
+        "from": "^5.2.2",
+        "to": "^7.1.0"
+      },
+      "@rollup/plugin-commonjs": {
+        "from": "^17.0.0",
+        "to": "^29.0.3"
+      },
+      "@rollup/plugin-json": {
+        "from": "^4.1.0",
+        "to": "^6.1.0"
+      },
+      "@rollup/plugin-node-resolve": {
+        "from": "^11.0.1",
+        "to": "^16.0.3"
+      },
+      "@surma/rollup-plugin-off-main-thread": {
+        "from": "^2.2.2",
+        "to": "^2.2.3"
+      },
+      "autoprefixer": {
+        "from": "^10.1.0",
+        "to": "^10.5.0"
+      },
+      "babel-plugin-macros": {
+        "from": "^3.0.1",
+        "to": "^3.1.0"
+      },
+      "builtin-modules": {
+        "from": "^3.1.0",
+        "to": "^5.2.0"
+      },
+      "camelcase": {
+        "from": "^6.2.0",
+        "to": "^9.0.0"
+      },
+      "escape-string-regexp": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "filesize": {
+        "from": "^6.1.0",
+        "to": "^11.0.17"
+      },
+      "gzip-size": {
+        "from": "^6.0.0",
+        "to": "^7.0.0"
+      },
+      "kleur": {
+        "from": "^4.1.3",
+        "to": "^4.1.5"
+      },
+      "postcss": {
+        "from": "^8.2.1",
+        "to": "^8.5.15"
+      },
+      "pretty-bytes": {
+        "from": "^5.4.1",
+        "to": "^7.1.0"
+      },
+      "rollup": {
+        "from": "^2.35.1",
+        "to": "^4.61.1"
+      },
+      "rollup-plugin-postcss": {
+        "from": "^4.0.0",
+        "to": "^4.0.2"
+      },
+      "rollup-plugin-typescript2": {
+        "from": "^0.32.0",
+        "to": "^0.37.0"
+      },
+      "rollup-plugin-visualizer": {
+        "from": "^5.6.0",
+        "to": "^7.0.1"
+      },
+      "sade": {
+        "from": "^1.7.4",
+        "to": "^1.8.1"
+      },
+      "terser": {
+        "from": "^5.7.0",
+        "to": "^5.48.0"
+      },
+      "tiny-glob": {
+        "from": "^0.2.8",
+        "to": "^0.2.9"
+      },
+      "tslib": {
+        "from": "^2.0.3",
+        "to": "^2.8.1"
+      },
+      "typescript": {
+        "from": "^4.1.3",
+        "to": "^6.0.3"
+      }
+    },
+    "depsUpdated": 34,
+    "originalPackage": "microbundle",
+    "originalVersion": "0.15.1",
+    "processedAt": "2026-06-09T01:51:06.839Z",
+    "smokeTest": "failed"
+  }
+}

@@ -141,6 +141,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:10:33.640Z",
       "version": "3.21.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "fast-check": {
+          "from": "^3.23.1",
+          "to": "^4.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:43:54.379Z",
+      "version": "3.21.3-depup.2"
     }
   }
 }

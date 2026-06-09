@@ -77,6 +77,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:12:38.472Z",
       "version": "3.0.260603-beta-depup.1"
+    },
+    "2": {
+      "changes": {
+        "rolldown": {
+          "from": "^1.0.3",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:52:36.278Z",
+      "version": "3.0.260603-beta-depup.2"
     }
   }
 }

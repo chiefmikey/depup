@@ -49,6 +49,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:02:04.929Z",
       "version": "3.16.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@react-aria/button": {
+          "from": "^3.15.0",
+          "to": "^3.15.1"
+        },
+        "@react-spectrum/button": {
+          "from": "^3.18.0",
+          "to": "^3.18.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:34:53.677Z",
+      "version": "3.16.0-depup.3"
     }
   }
 }

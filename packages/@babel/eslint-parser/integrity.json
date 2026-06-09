@@ -84,6 +84,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T00:58:13.899Z",
       "version": "7.29.7-depup.2"
+    },
+    "3": {
+      "changes": {
+        "eslint-visitor-keys": {
+          "from": "^2.1.0",
+          "to": "^5.0.1"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:29:35.519Z",
+      "version": "7.29.7-depup.3"
     }
   }
 }

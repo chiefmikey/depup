@@ -1,0 +1,71 @@
+{
+  "name": "@depup/whatwg-node__node-fetch",
+  "version": "0.8.6-depup.1",
+  "description": "Fetch API implementation for Node (with updated dependencies)",
+  "sideEffects": false,
+  "dependencies": {
+    "@fastify/busboy": "^3.2.0",
+    "@whatwg-node/disposablestack": "^0.0.6",
+    "@whatwg-node/promise-helpers": "^1.3.2",
+    "tslib": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ardatan/whatwg-node",
+    "directory": "packages/node-fetch"
+  },
+  "author": "Arda TANRIKULU <ardatanrikulu@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "typings": "typings/index.d.ts",
+  "typescript": {
+    "definition": "typings/index.d.ts"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./typings/index.d.cts",
+        "default": "./cjs/index.js"
+      },
+      "import": {
+        "types": "./typings/index.d.ts",
+        "default": "./esm/index.js"
+      },
+      "default": {
+        "types": "./typings/index.d.ts",
+        "default": "./esm/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "@whatwg-node/node-fetch",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@fastify/busboy": {
+        "from": "^3.1.1",
+        "to": "^3.2.0"
+      },
+      "tslib": {
+        "from": "^2.6.3",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@whatwg-node/node-fetch",
+    "originalVersion": "0.8.6",
+    "processedAt": "2026-06-09T01:37:15.191Z",
+    "smokeTest": "passed"
+  }
+}

@@ -88,6 +88,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T00:58:02.872Z",
       "version": "3.972.7-depup.1"
+    },
+    "2": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:29:04.637Z",
+      "version": "3.972.7-depup.2"
     }
   }
 }

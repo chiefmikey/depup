@@ -12,6 +12,19 @@
       "status": "failed",
       "timestamp": "2026-05-03T07:00:05.469Z",
       "version": "2.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "mime-types": {
+          "from": "^2.1.35",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:40:19.840Z",
+      "version": "2.1.0-depup.1"
     }
   }
 }

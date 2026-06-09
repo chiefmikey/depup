@@ -94,6 +94,19 @@
       "status": "failed",
       "timestamp": "2026-05-19T10:06:10.682Z",
       "version": "8.5.15-depup.0"
+    },
+    "1": {
+      "changes": {
+        "nanoid": {
+          "from": "^3.3.12",
+          "to": "^5.1.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:54:45.466Z",
+      "version": "8.5.15-depup.1"
     }
   }
 }

@@ -81,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T00:58:22.947Z",
       "version": "2.0.9-depup.3"
+    },
+    "4": {
+      "changes": {
+        "hookified": {
+          "from": "^1.15.1",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:29:54.112Z",
+      "version": "2.0.9-depup.4"
     }
   }
 }
