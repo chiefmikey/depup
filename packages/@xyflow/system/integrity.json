@@ -69,6 +69,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:05:14.483Z",
       "version": "0.0.77-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/d3-selection": {
+          "from": "^3.0.10",
+          "to": "^3.0.11"
+        },
+        "@types/d3-transition": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:36:04.553Z",
+      "version": "0.0.77-depup.2"
     }
   }
 }

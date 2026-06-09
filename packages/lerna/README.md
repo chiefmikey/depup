@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.19 | **Updated**: 6/5/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.20 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,11 +27,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | byte-size | `8.1.1` | `^9.0.1` |
 | chalk | `4.1.0` | `^5.6.2` |
 | ci-info | `4.3.1` | `^4.4.0` |
-| cmd-shim | `6.0.3` | `^9.0.0` |
+| cmd-shim | `6.0.3` | `^9.0.1` |
 | conventional-changelog-angular | `7.0.0` | `^8.3.1` |
 | conventional-changelog-core | `5.0.1` | `^9.0.0` |
 | conventional-recommended-bump | `7.0.1` | `^11.2.0` |
-| cosmiconfig | `9.0.0` | `^9.0.1` |
+| cosmiconfig | `9.0.0` | `^9.0.2` |
 | dedent | `1.5.3` | `^1.7.2` |
 | envinfo | `7.13.0` | `^7.21.0` |
 | execa | `5.0.0` | `^9.6.1` |
@@ -61,7 +61,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^21.5.0` |
 | read-cmd-shim | `4.0.0` | `^7.0.0` |
-| semver | `7.7.2` | `^7.8.2` |
+| semver | `7.7.2` | `^7.8.3` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | slash | `3.0.0` | `^5.1.0` |
 | ssri | `12.0.0` | `^14.0.0` |

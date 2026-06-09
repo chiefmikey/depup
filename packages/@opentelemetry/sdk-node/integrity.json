@@ -124,6 +124,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:01:06.902Z",
       "version": "0.218.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.29.0",
+          "to": "^1.41.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:32:28.253Z",
+      "version": "0.218.0-depup.3"
     }
   }
 }

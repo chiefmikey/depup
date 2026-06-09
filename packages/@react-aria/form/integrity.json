@@ -63,6 +63,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:06:14.779Z",
       "version": "3.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:33:04.475Z",
+      "version": "3.2.1-depup.2"
     }
   }
 }

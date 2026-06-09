@@ -1,0 +1,125 @@
+{
+  "name": "@depup/cacache",
+  "version": "21.0.0-depup.3",
+  "cache-version": {
+    "content": "2",
+    "index": "5"
+  },
+  "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache. (with updated dependencies)",
+  "main": "lib/index.js",
+  "files": [
+    "bin/",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "tap",
+    "snap": "tap",
+    "coverage": "tap",
+    "test-docker": "docker run -it --rm --name pacotest -v \"$PWD\":/tmp -w /tmp node:latest npm test",
+    "lint": "npm run eslint",
+    "npmclilint": "npmcli-lint",
+    "lintfix": "npm run eslint -- --fix",
+    "postsnap": "npm run lintfix --",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "template-oss-apply": "template-oss-apply --force",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/cacache.git"
+  },
+  "keywords": [
+    "cacache",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cache",
+    "caching",
+    "content-addressable",
+    "sri",
+    "sri hash",
+    "subresource integrity",
+    "storage",
+    "store",
+    "file store",
+    "filesystem",
+    "disk cache",
+    "disk storage"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@npmcli/fs": "^6.0.0",
+    "fs-minipass": "^3.0.3",
+    "glob": "^13.0.6",
+    "lru-cache": "^11.5.1",
+    "minipass": "^7.1.3",
+    "minipass-collect": "^2.0.1",
+    "minipass-flush": "^2.0.1",
+    "minipass-pipeline": "^3.0.1",
+    "p-map": "^7.0.4",
+    "ssri": "^14.0.0"
+  },
+  "devDependencies": {
+    "@npmcli/eslint-config": "^6.0.1",
+    "@npmcli/template-oss": "5.1.0",
+    "tap": "^16.0.0"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "windowsCI": false,
+    "version": "5.1.0",
+    "publish": "true"
+  },
+  "author": "GitHub Inc.",
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "fs-minipass": {
+        "from": "^3.0.0",
+        "to": "^3.0.3"
+      },
+      "glob": {
+        "from": "^13.0.0",
+        "to": "^13.0.6"
+      },
+      "lru-cache": {
+        "from": "^11.1.0",
+        "to": "^11.5.1"
+      },
+      "minipass": {
+        "from": "^7.0.3",
+        "to": "^7.1.3"
+      },
+      "minipass-flush": {
+        "from": "^1.0.5",
+        "to": "^2.0.1"
+      },
+      "minipass-pipeline": {
+        "from": "^1.2.4",
+        "to": "^3.0.1"
+      },
+      "p-map": {
+        "from": "^7.0.2",
+        "to": "^7.0.4"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "cacache",
+    "originalVersion": "21.0.0",
+    "processedAt": "2026-06-09T01:38:57.742Z",
+    "smokeTest": "failed"
+  }
+}

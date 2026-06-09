@@ -63,6 +63,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:07:36.619Z",
       "version": "3.17.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-stately": {
+          "from": "^3.46.0",
+          "to": "^3.47.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:33:36.618Z",
+      "version": "3.17.1-depup.2"
     }
   }
 }

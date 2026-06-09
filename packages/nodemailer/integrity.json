@@ -100,6 +100,14 @@
       "status": "failed",
       "timestamp": "2026-05-29T14:04:31.059Z",
       "version": "8.0.10-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-06-09T01:51:56.544Z",
+      "version": "8.0.10-depup.1"
     }
   }
 }

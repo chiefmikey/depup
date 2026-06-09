@@ -265,6 +265,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:13:59.593Z",
       "version": "25.1.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "devtools-protocol": {
+          "from": "0.0.1624250",
+          "to": "^0.0.1642743"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:53:54.797Z",
+      "version": "25.1.0-depup.2"
     }
   }
 }

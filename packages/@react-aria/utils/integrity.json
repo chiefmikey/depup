@@ -94,6 +94,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:01:39.670Z",
       "version": "3.34.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        },
+        "react-stately": {
+          "from": "^3.46.0",
+          "to": "^3.47.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:33:17.369Z",
+      "version": "3.34.1-depup.3"
     }
   }
 }

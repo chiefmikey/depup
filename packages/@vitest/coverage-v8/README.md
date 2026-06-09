@@ -12,7 +12,7 @@ npm install @depup/vitest__coverage-v8
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.8 | **DepUp version**: 4.1.8-depup.0 | **Updated**: 6/1/2026 | **Import test**: passed
+**Original version**: 4.1.8 | **DepUp version**: 4.1.8-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,6 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | ast-v8-to-istanbul | `^1.0.0` | `^1.0.3` |
 | magicast | `^0.5.2` | `^0.5.3` |
+| obug | `^2.1.1` | `^2.1.2` |
 | std-env | `^4.0.0-rc.1` | `^4.1.0` |
 
 

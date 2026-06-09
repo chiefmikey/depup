@@ -12,11 +12,16 @@ npm install @depup/log4js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.9.1 | **DepUp version**: 6.9.1-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 6.9.1 | **DepUp version**: 6.9.1-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| debug | `^4.3.4` | `^4.4.3` |
+| flatted | `^3.2.7` | `^3.4.2` |
+| rfdc | `^1.3.0` | `^1.4.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/log4js&labels=bug).
 

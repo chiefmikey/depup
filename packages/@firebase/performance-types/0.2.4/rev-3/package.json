@@ -1,0 +1,43 @@
+{
+  "name": "@depup/firebase__performance-types",
+  "version": "0.2.4-depup.3",
+  "description": "@firebase/performance Types (with updated dependencies)",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "repository": {
+    "directory": "packages/performance-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "keywords": [
+    "@firebase/performance-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/performance-types",
+    "originalVersion": "0.2.4",
+    "processedAt": "2026-06-09T01:30:06.905Z",
+    "smokeTest": "failed"
+  }
+}

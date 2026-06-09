@@ -66,6 +66,39 @@
       "status": "failed",
       "timestamp": "2026-05-14T07:14:57.573Z",
       "version": "2.2.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "iconv-lite": {
+          "from": "^0.7.0",
+          "to": "^0.7.2"
+        },
+        "qs": {
+          "from": "^6.14.1",
+          "to": "^6.15.2"
+        },
+        "raw-body": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "type-is": {
+          "from": "^2.0.1",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:38:19.744Z",
+      "version": "2.2.2-depup.3"
     }
   }
 }

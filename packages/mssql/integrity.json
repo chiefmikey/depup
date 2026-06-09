@@ -351,6 +351,31 @@
       "status": "failed",
       "timestamp": "2026-05-29T22:08:29.037Z",
       "version": "12.5.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@tediousjs/connection-string": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "commander": {
+          "from": "^11.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "^4.3.3",
+          "to": "^4.4.3"
+        },
+        "tedious": {
+          "from": "^19.0.0",
+          "to": "^19.2.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:50:06.276Z",
+      "version": "12.5.5-depup.1"
     }
   }
 }

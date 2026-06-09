@@ -58,6 +58,31 @@
       "status": "failed",
       "timestamp": "2026-06-08T01:08:08.816Z",
       "version": "26.15.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "ci-info": {
+          "from": "^4.2.0",
+          "to": "^4.4.0"
+        },
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.5"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:41:45.200Z",
+      "version": "26.15.2-depup.1"
     }
   }
 }
