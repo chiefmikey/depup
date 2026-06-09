@@ -55,6 +55,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T09:50:30.097Z",
       "version": "3.1.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        },
+        "ajv-formats": {
+          "from": "^2.1.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T17:41:02.383Z",
+      "version": "3.1.5-depup.4"
     }
   }
 }
