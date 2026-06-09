@@ -12,11 +12,11 @@ npm install @depup/clsx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.1 | **DepUp version**: 2.1.1-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 2.1.1 | **DepUp version**: 2.1.1-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/clsx&labels=bug).
 

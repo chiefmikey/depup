@@ -53,6 +53,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:01:58.040Z",
       "version": "2.7.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "asn1js": {
+          "from": "^3.0.6",
+          "to": "^3.0.10"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:33:40.195Z",
+      "version": "2.7.0-depup.3"
     }
   }
 }

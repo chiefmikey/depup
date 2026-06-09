@@ -23,6 +23,23 @@
       "status": "failed",
       "timestamp": "2026-04-22T08:45:16.876Z",
       "version": "9.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cli-spinners": {
+          "from": "^3.2.0",
+          "to": "^3.4.0"
+        },
+        "string-width": {
+          "from": "^8.1.0",
+          "to": "^8.2.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:56:54.416Z",
+      "version": "9.4.0-depup.1"
     }
   }
 }

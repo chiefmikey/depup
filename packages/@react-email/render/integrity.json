@@ -121,6 +121,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:02:09.521Z",
       "version": "2.0.8-depup.3"
+    },
+    "4": {
+      "changes": {
+        "html-to-text": {
+          "from": "^9.0.5",
+          "to": "^10.0.0"
+        },
+        "prettier": {
+          "from": "^3.5.3",
+          "to": "^3.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:34:34.737Z",
+      "version": "2.0.8-depup.4"
     }
   }
 }

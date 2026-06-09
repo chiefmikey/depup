@@ -138,6 +138,19 @@
       "status": "failed",
       "timestamp": "2026-06-01T10:01:59.438Z",
       "version": "4.1.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/chai": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:36:56.745Z",
+      "version": "4.1.8-depup.1"
     }
   }
 }

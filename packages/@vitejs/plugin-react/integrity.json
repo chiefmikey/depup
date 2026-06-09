@@ -33,6 +33,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T01:04:06.502Z",
       "version": "6.0.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:36:58.871Z",
+      "version": "6.0.2-depup.2"
     }
   }
 }

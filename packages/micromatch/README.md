@@ -12,11 +12,14 @@ npm install @depup/micromatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.8 | **DepUp version**: 4.0.8-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 4.0.8 | **DepUp version**: 4.0.8-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| picomatch | `^2.3.1` | `^4.0.4` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/micromatch&labels=bug).
 

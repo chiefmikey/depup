@@ -4,6 +4,14 @@
       "version": "11.0.0-depup.0",
       "timestamp": "2026-01-10T16:45:34.055Z",
       "status": "created"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-09T01:47:45.879Z",
+      "version": "11.0.0-depup.1"
     }
   }
 }

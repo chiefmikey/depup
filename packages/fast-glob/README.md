@@ -12,11 +12,17 @@ npm install @depup/fast-glob
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.3 | **DepUp version**: 3.3.3-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 3.3.3 | **DepUp version**: 3.3.3-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @nodelib/fs.stat | `^2.0.2` | `^4.0.0` |
+| @nodelib/fs.walk | `^1.2.3` | `^3.0.1` |
+| glob-parent | `^5.1.2` | `^6.0.2` |
+| merge2 | `^1.3.0` | `^1.4.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fast-glob&labels=bug).
 

@@ -38,6 +38,19 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:00:47.945Z",
       "version": "1.6.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "zod": {
+          "from": "^3.23.8",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:31:45.830Z",
+      "version": "1.6.1-depup.3"
     }
   }
 }

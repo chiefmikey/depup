@@ -46,6 +46,35 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:08:07.825Z",
       "version": "3.11.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@react-aria/checkbox": {
+          "from": "^3.17.0",
+          "to": "^3.17.1"
+        },
+        "@react-aria/toggle": {
+          "from": "^3.13.0",
+          "to": "^3.13.1"
+        },
+        "@react-spectrum/checkbox": {
+          "from": "^3.11.0",
+          "to": "^3.11.1"
+        },
+        "@react-stately/checkbox": {
+          "from": "^3.8.0",
+          "to": "^3.8.1"
+        },
+        "@react-stately/toggle": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:35:01.153Z",
+      "version": "3.11.0-depup.2"
     }
   }
 }
