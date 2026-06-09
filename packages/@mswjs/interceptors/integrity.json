@@ -158,6 +158,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:01:55.180Z",
       "version": "0.41.9-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@open-draft/deferred-promise": {
+          "from": "^2.2.0",
+          "to": "^3.0.0"
+        },
+        "@open-draft/until": {
+          "from": "^2.0.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:00:13.455Z",
+      "version": "0.41.9-depup.2"
     }
   }
 }

@@ -12,13 +12,13 @@ npm install @depup/react-virtualized
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.22.6 | **DepUp version**: 9.22.6-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 9.22.6 | **DepUp version**: 9.22.6-depup.1 | **Updated**: 6/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.7.2` | `^7.29.2` |
+| @babel/runtime | `^7.7.2` | `^7.29.7` |
 | clsx | `^1.0.4` | `^2.1.1` |
 | dom-helpers | `^5.1.3` | `^6.0.1` |
 | prop-types | `^15.7.2` | `^15.8.1` |

@@ -128,6 +128,19 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:11:10.843Z",
       "version": "6.6.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "prop-types": {
+          "from": "^15.7.2",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:02:55.632Z",
+      "version": "6.6.0-depup.2"
     }
   }
 }

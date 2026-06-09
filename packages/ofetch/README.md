@@ -12,13 +12,13 @@ npm install @depup/ofetch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.5.1 | **DepUp version**: 1.5.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.5.1 | **DepUp version**: 1.5.1-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ufo | `^1.6.1` | `^1.6.3` |
+| ufo | `^1.6.1` | `^1.6.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ofetch&labels=bug).

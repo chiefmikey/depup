@@ -135,6 +135,23 @@
       "status": "failed",
       "timestamp": "2026-06-08T21:03:25.508Z",
       "version": "4.4.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.5"
+        },
+        "semver": {
+          "from": "^7.8.1",
+          "to": "^7.8.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:00:43.132Z",
+      "version": "4.4.8-depup.1"
     }
   }
 }

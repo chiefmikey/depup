@@ -44,6 +44,23 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:54:29.129Z",
       "version": "8.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "get-east-asian-width": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        },
+        "strip-ansi": {
+          "from": "^7.1.2",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:16:13.329Z",
+      "version": "8.2.1-depup.2"
     }
   }
 }

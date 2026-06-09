@@ -12,7 +12,7 @@ npm install @depup/node-addon-api
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.8.0 | **DepUp version**: 8.8.0-depup.0 | **Updated**: 5/22/2026 | **Import test**: passed
+**Original version**: 8.8.0 | **DepUp version**: 8.8.0-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 

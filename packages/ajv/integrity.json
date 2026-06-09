@@ -19,6 +19,19 @@
       "status": "failed",
       "timestamp": "2026-04-24T16:25:57.854Z",
       "version": "8.20.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "fast-uri": {
+          "from": "^3.0.1",
+          "to": "^3.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-09T01:04:28.980Z",
+      "version": "8.20.0-depup.1"
     }
   }
 }

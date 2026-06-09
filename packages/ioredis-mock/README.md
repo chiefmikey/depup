@@ -12,7 +12,7 @@ npm install @depup/ioredis-mock
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.13.1 | **DepUp version**: 8.13.1-depup.6 | **Updated**: 5/22/2026 | **Import test**: passed
+**Original version**: 8.13.1 | **DepUp version**: 8.13.1-depup.7 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @ioredis/commands | `^1.4.0` | `^1.10.0` |
 | fengari | `^0.1.4` | `^0.1.5` |
 | fengari-interop | `^0.1.3` | `^0.1.4` |
-| semver | `^7.7.2` | `^7.8.1` |
+| semver | `^7.7.2` | `^7.8.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ioredis-mock&labels=bug).

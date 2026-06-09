@@ -12,7 +12,7 @@ npm install @depup/metro-cache-key
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.84.4 | **DepUp version**: 0.84.4-depup.0 | **Updated**: 4/30/2026 | **Import test**: passed
+**Original version**: 0.84.4 | **DepUp version**: 0.84.4-depup.1 | **Updated**: 6/9/2026 | **Import test**: passed
 
 ## What changed
 
