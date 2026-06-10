@@ -1,30 +1,5 @@
 {
   "16.0.3": {
-    "2": {
-      "changes": {
-        "@rollup/pluginutils": {
-          "from": "^5.0.1",
-          "to": "^5.4.0"
-        },
-        "@types/resolve": {
-          "from": "1.20.2",
-          "to": "^1.20.6"
-        },
-        "deepmerge": {
-          "from": "^4.2.2",
-          "to": "^4.3.1"
-        },
-        "resolve": {
-          "from": "^1.22.1",
-          "to": "^1.22.12"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-08T21:09:14.217Z",
-      "version": "16.0.3-depup.2"
-    },
     "3": {
       "changes": {
         "@rollup/pluginutils": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:32:29.697Z",
       "version": "16.0.3-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.0.1",
+          "to": "^5.4.0"
+        },
+        "@types/resolve": {
+          "from": "1.20.2",
+          "to": "^1.20.6"
+        },
+        "deepmerge": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "resolve": {
+          "from": "^1.22.1",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:32:00.961Z",
+      "version": "16.0.3-depup.7"
     }
   }
 }

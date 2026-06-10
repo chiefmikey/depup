@@ -1,0 +1,46 @@
+{
+  "name": "@depup/angular-eslint__template-parser",
+  "version": "22.0.0-depup.6",
+  "description": "Angular Template parser for ESLint (with updated dependencies)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-eslint/angular-eslint.git",
+    "directory": "packages/template-parser"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "dependencies": {
+    "eslint-scope": "9.1.2",
+    "@angular-eslint/bundled-angular-compiler": "22.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0 || ^10.0.0",
+    "typescript": "*"
+  },
+  "gitHead": "e2006e5e9c99e5a943d1a999e0efa5247d29ec24",
+  "keywords": [
+    "@angular-eslint/template-parser",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@angular-eslint/template-parser",
+    "originalVersion": "22.0.0",
+    "processedAt": "2026-06-10T01:28:21.985Z",
+    "smokeTest": "passed"
+  }
+}
