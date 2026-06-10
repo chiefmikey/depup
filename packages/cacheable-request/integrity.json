@@ -21,19 +21,6 @@
     }
   },
   "13.0.19": {
-    "1": {
-      "changes": {
-        "normalize-url": {
-          "from": "^8.1.1",
-          "to": "^9.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:06:44.582Z",
-      "version": "13.0.19-depup.1"
-    },
     "2": {
       "changes": {
         "normalize-url": {
@@ -85,6 +72,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:13:59.746Z",
       "version": "13.0.19-depup.5"
+    },
+    "6": {
+      "changes": {
+        "normalize-url": {
+          "from": "^8.1.1",
+          "to": "^9.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:31:21.621Z",
+      "version": "13.0.19-depup.6"
     }
   }
 }

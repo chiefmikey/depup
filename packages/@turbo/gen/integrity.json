@@ -477,6 +477,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:10:58.637Z",
       "version": "2.9.17-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "esbuild": {
+          "from": "^0.25.0",
+          "to": "^0.28.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:28:34.637Z",
+      "version": "2.9.17-depup.2"
     }
   }
 }

@@ -65,5 +65,24 @@
       "timestamp": "2026-04-02T08:27:46.477Z",
       "version": "1.41.8-depup.0"
     }
+  },
+  "1.41.9": {
+    "0": {
+      "changes": {
+        "prosemirror-state": {
+          "from": "^1.0.0",
+          "to": "^1.4.4"
+        },
+        "prosemirror-transform": {
+          "from": "^1.1.0",
+          "to": "^1.12.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:37:42.469Z",
+      "version": "1.41.9-depup.0"
+    }
   }
 }

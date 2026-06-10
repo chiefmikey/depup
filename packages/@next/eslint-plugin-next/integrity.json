@@ -197,6 +197,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:07:14.614Z",
       "version": "16.2.9-depup.0"
+    },
+    "1": {
+      "changes": {
+        "fast-glob": {
+          "from": "3.3.1",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:25:16.306Z",
+      "version": "16.2.9-depup.1"
     }
   }
 }

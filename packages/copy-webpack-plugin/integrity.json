@@ -1,30 +1,5 @@
 {
   "14.0.0": {
-    "1": {
-      "changes": {
-        "glob-parent": {
-          "from": "^6.0.1",
-          "to": "^6.0.2"
-        },
-        "schema-utils": {
-          "from": "^4.2.0",
-          "to": "^4.3.3"
-        },
-        "serialize-javascript": {
-          "from": "^7.0.3",
-          "to": "^7.0.5"
-        },
-        "tinyglobby": {
-          "from": "^0.2.12",
-          "to": "^0.2.17"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:07:18.527Z",
-      "version": "14.0.0-depup.1"
-    },
     "2": {
       "changes": {
         "glob-parent": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:14:34.081Z",
       "version": "14.0.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "glob-parent": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.3.3"
+        },
+        "serialize-javascript": {
+          "from": "^7.0.3",
+          "to": "^7.0.5"
+        },
+        "tinyglobby": {
+          "from": "^0.2.12",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:31:50.748Z",
+      "version": "14.0.0-depup.6"
     }
   }
 }
