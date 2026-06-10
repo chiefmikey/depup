@@ -1,0 +1,75 @@
+{
+  "name": "@depup/npmcli__fs",
+  "version": "6.0.0-depup.7",
+  "description": "filesystem utilities for the npm cli (with updated dependencies)",
+  "main": "lib/index.js",
+  "files": [
+    "bin/",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "snap": "tap",
+    "test": "tap",
+    "npmclilint": "npmcli-lint",
+    "lint": "npm run eslint",
+    "lintfix": "npm run eslint -- --fix",
+    "posttest": "npm run lint",
+    "postsnap": "npm run lintfix --",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/fs.git"
+  },
+  "keywords": [
+    "@npmcli/fs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "npm",
+    "oss"
+  ],
+  "author": "GitHub Inc.",
+  "license": "ISC",
+  "devDependencies": {
+    "@npmcli/eslint-config": "^6.0.0",
+    "@npmcli/template-oss": "5.1.0",
+    "tap": "^16.0.1"
+  },
+  "dependencies": {
+    "semver": "^7.8.4"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "5.1.0",
+    "publish": true
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "semver": {
+        "from": "^7.3.5",
+        "to": "^7.8.4"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@npmcli/fs",
+    "originalVersion": "6.0.0",
+    "processedAt": "2026-06-10T01:08:11.616Z",
+    "smokeTest": "passed"
+  }
+}

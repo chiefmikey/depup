@@ -111,27 +111,6 @@
     }
   },
   "6.1.0": {
-    "2": {
-      "changes": {
-        "@graphql-tools/schema": {
-          "from": "^10.0.0",
-          "to": "^10.0.33"
-        },
-        "@graphql-tools/utils": {
-          "from": "^11.0.0",
-          "to": "^11.1.0"
-        },
-        "tslib": {
-          "from": "^2.8.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:00:50.403Z",
-      "version": "6.1.0-depup.2"
-    },
     "3": {
       "changes": {
         "@graphql-tools/schema": {
@@ -215,6 +194,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:04:46.332Z",
       "version": "6.1.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@graphql-tools/schema": {
+          "from": "^10.0.0",
+          "to": "^10.0.33"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:07:26.284Z",
+      "version": "6.1.0-depup.7"
     }
   }
 }

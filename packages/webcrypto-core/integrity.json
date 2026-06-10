@@ -103,6 +103,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:27:05.113Z",
       "version": "1.9.2-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@peculiar/utils": {
+          "from": "^2.0.2",
+          "to": "^2.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:27:01.738Z",
+      "version": "1.9.2-depup.4"
     }
   }
 }

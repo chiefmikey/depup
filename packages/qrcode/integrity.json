@@ -1,24 +1,5 @@
 {
   "1.5.4": {
-    "0": {
-      "changes": {
-        "dijkstrajs": {
-          "from": "^1.0.1",
-          "to": "^1.0.3"
-        },
-        "pngjs": {
-          "from": "^5.0.0",
-          "to": "^7.0.0"
-        },
-        "yargs": {
-          "from": "^15.3.1",
-          "to": "^18.0.0"
-        }
-      },
-      "status": "prepared",
-      "timestamp": "2026-03-17T19:36:37.333Z",
-      "version": "1.5.4-depup.0"
-    },
     "1": {
       "changes": {
         "dijkstrajs": {
@@ -102,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:23:16.085Z",
       "version": "1.5.4-depup.4"
+    },
+    "5": {
+      "changes": {
+        "dijkstrajs": {
+          "from": "^1.0.1",
+          "to": "^1.0.3"
+        },
+        "pngjs": {
+          "from": "^5.0.0",
+          "to": "^7.0.0"
+        },
+        "yargs": {
+          "from": "^15.3.1",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:23:40.381Z",
+      "version": "1.5.4-depup.5"
     }
   }
 }

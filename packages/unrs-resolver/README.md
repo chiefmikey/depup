@@ -12,7 +12,7 @@ npm install @depup/unrs-resolver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.12.2 | **DepUp version**: 1.12.2-depup.3 | **Updated**: 6/9/2026 | **Import test**: passed
+**Original version**: 1.12.2 | **DepUp version**: 1.12.2-depup.4 | **Updated**: 6/10/2026 | **Import test**: passed
 
 ## What changed
 

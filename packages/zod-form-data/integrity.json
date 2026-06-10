@@ -66,6 +66,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:27:49.877Z",
       "version": "3.0.2-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@rvf/set-get": {
+          "from": "^7.0.0",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:27:39.908Z",
+      "version": "3.0.2-depup.4"
     }
   }
 }

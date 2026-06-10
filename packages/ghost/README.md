@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.5 | **Updated**: 6/9/2026 | **Import test**: failed
+**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.6 | **Updated**: 6/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1053.0` | `^3.1064.0` |
+| @aws-sdk/client-s3 | `3.1053.0` | `^3.1065.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `9.9.0` | `^10.4.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
@@ -80,15 +80,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex | `2.4.2` | `^3.2.10` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.2.0` |
-| metascraper | `5.45.15` | `^5.50.3` |
-| metascraper-author | `5.45.10` | `^5.50.1` |
-| metascraper-description | `5.45.10` | `^5.50.1` |
-| metascraper-image | `5.45.10` | `^5.50.1` |
-| metascraper-logo | `5.45.10` | `^5.50.1` |
-| metascraper-logo-favicon | `5.42.0` | `^5.50.3` |
-| metascraper-publisher | `5.45.10` | `^5.50.1` |
-| metascraper-title | `5.45.10` | `^5.50.1` |
-| metascraper-url | `5.45.10` | `^5.50.1` |
+| metascraper | `5.45.15` | `^5.50.6` |
+| metascraper-author | `5.45.10` | `^5.50.6` |
+| metascraper-description | `5.45.10` | `^5.50.6` |
+| metascraper-image | `5.45.10` | `^5.50.6` |
+| metascraper-logo | `5.45.10` | `^5.50.6` |
+| metascraper-logo-favicon | `5.42.0` | `^5.50.6` |
+| metascraper-publisher | `5.45.10` | `^5.50.6` |
+| metascraper-title | `5.45.10` | `^5.50.6` |
+| metascraper-url | `5.45.10` | `^5.50.6` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.1` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
@@ -96,7 +96,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `8.0.8` | `^8.0.10` |
 | otplib | `12.0.1` | `^13.4.1` |
-| semver | `7.7.4` | `^7.8.3` |
+| semver | `7.7.4` | `^7.8.4` |
 | stripe | `8.222.0` | `^22.2.0` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.46.1` | `^5.48.0` |

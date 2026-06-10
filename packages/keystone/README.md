@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.22 | **Updated**: 6/9/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.23 | **Updated**: 6/10/2026 | **Import test**: passed
 
 ## What changed
 
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | marked | `^0.6.2` | `^18.0.5` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
-| mongoose | `^4.13.14` | `^9.6.3` |
+| mongoose | `^4.13.14` | `^9.7.0` |
 | morgan | `^1.9.1` | `^1.11.0` |
 | multer | `^1.4.1` | `^2.1.1` |
 | qs | `^6.7.0` | `^6.15.2` |
@@ -78,7 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinymce | `^4.9.2` | `^8.6.0` |
 | sanitize-html | `^1.20.1` | `^2.17.4` |
 | scmp | `^1.0.2` | `^2.1.0` |
-| semver | `^6.0.0` | `^7.8.3` |
+| semver | `^6.0.0` | `^7.8.4` |
 | serve-favicon | `^2.5.0` | `^2.5.1` |
 | string-to-stream | `^1.1.1` | `^3.0.1` |
 | watchify | `^3.11.1` | `^4.0.0` |
