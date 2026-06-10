@@ -95,39 +95,6 @@
     }
   },
   "8.3.31": {
-    "4": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.28.6",
-          "to": "^7.29.7"
-        },
-        "@babel/parser": {
-          "from": "^7.29.2",
-          "to": "^7.29.7"
-        },
-        "@babel/plugin-syntax-import-assertions": {
-          "from": "^7.26.0",
-          "to": "^7.29.7"
-        },
-        "@babel/traverse": {
-          "from": "^7.26.10",
-          "to": "^7.29.7"
-        },
-        "@babel/types": {
-          "from": "^7.26.10",
-          "to": "^7.29.7"
-        },
-        "tslib": {
-          "from": "^2.4.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:30:46.508Z",
-      "version": "8.3.31-depup.4"
-    },
     "5": {
       "changes": {
         "@babel/core": {
@@ -259,6 +226,39 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:07:26.600Z",
       "version": "8.3.31-depup.8"
+    },
+    "9": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.28.6",
+          "to": "^7.29.7"
+        },
+        "@babel/parser": {
+          "from": "^7.29.2",
+          "to": "^7.29.7"
+        },
+        "@babel/plugin-syntax-import-assertions": {
+          "from": "^7.26.0",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "^7.26.10",
+          "to": "^7.29.7"
+        },
+        "@babel/types": {
+          "from": "^7.26.10",
+          "to": "^7.29.7"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:25:48.192Z",
+      "version": "8.3.31-depup.9"
     }
   }
 }

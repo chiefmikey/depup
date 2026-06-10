@@ -4023,5 +4023,36 @@
       "timestamp": "2026-06-10T01:21:35.883Z",
       "version": "1.383.3-depup.0"
     }
+  },
+  "1.384.1": {
+    "0": {
+      "changes": {
+        "core-js": {
+          "from": "^3.38.1",
+          "to": "^3.49.0"
+        },
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.9"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.28.2",
+          "to": "^10.29.2"
+        },
+        "web-vitals": {
+          "from": "^5.1.0",
+          "to": "^5.3.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:39:51.660Z",
+      "version": "1.384.1-depup.0"
+    }
   }
 }

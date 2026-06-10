@@ -568,51 +568,6 @@
     }
   },
   "5.107.2": {
-    "1": {
-      "changes": {
-        "@types/estree": {
-          "from": "^1.0.8",
-          "to": "^1.0.9"
-        },
-        "acorn-import-phases": {
-          "from": "^1.0.3",
-          "to": "^1.0.4"
-        },
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.2"
-        },
-        "chrome-trace-event": {
-          "from": "^1.0.2",
-          "to": "^1.0.4"
-        },
-        "enhanced-resolve": {
-          "from": "^5.22.0",
-          "to": "^5.23.0"
-        },
-        "eslint-scope": {
-          "from": "5.1.1",
-          "to": "^9.1.2"
-        },
-        "events": {
-          "from": "^3.2.0",
-          "to": "^3.3.0"
-        },
-        "tapable": {
-          "from": "^2.3.0",
-          "to": "^2.3.3"
-        },
-        "terser-webpack-plugin": {
-          "from": "^5.5.0",
-          "to": "^5.6.1"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-05T16:54:47.061Z",
-      "version": "5.107.2-depup.1"
-    },
     "2": {
       "changes": {
         "@types/estree": {
@@ -792,6 +747,51 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:27:20.247Z",
       "version": "5.107.2-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@types/estree": {
+          "from": "^1.0.8",
+          "to": "^1.0.9"
+        },
+        "acorn-import-phases": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "enhanced-resolve": {
+          "from": "^5.22.0",
+          "to": "^5.23.0"
+        },
+        "eslint-scope": {
+          "from": "5.1.1",
+          "to": "^9.1.2"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.3"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.5.0",
+          "to": "^5.6.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:45:29.802Z",
+      "version": "5.107.2-depup.6"
     }
   }
 }
