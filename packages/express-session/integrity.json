@@ -67,6 +67,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:35:46.539Z",
       "version": "1.19.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "cookie": {
+          "from": "~0.7.2",
+          "to": "^1.1.1"
+        },
+        "cookie-signature": {
+          "from": "~1.0.7",
+          "to": "^1.2.2"
+        },
+        "debug": {
+          "from": "~2.6.9",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:34:32.923Z",
+      "version": "1.19.0-depup.4"
     }
   }
 }

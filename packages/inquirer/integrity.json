@@ -157,6 +157,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:36:36.122Z",
       "version": "14.0.2-depup.3"
+    },
+    "4": {
+      "changes": {
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:35:17.425Z",
+      "version": "14.0.2-depup.4"
     }
   }
 }

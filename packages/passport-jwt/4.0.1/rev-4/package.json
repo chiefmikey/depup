@@ -1,0 +1,58 @@
+{
+  "name": "@depup/passport-jwt",
+  "version": "4.0.1-depup.4",
+  "description": "Passport authentication strategy using JSON Web Tokens (with updated dependencies)",
+  "main": "./lib",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --require test/bootstrap test/*test.js",
+    "testcov": "nyc npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikenicholson/passport-jwt.git"
+  },
+  "keywords": [
+    "passport-jwt",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Passport",
+    "Strategy",
+    "JSON",
+    "Web",
+    "Token",
+    "JWT"
+  ],
+  "author": "Mike Nicholson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikenicholson/passport-jwt/issues"
+  },
+  "homepage": "https://github.com/mikenicholson/passport-jwt",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-passport-strategy": "^1.0.0",
+    "mocha": "^9.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^1.0.0"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3",
+    "passport-strategy": "^1.0.0"
+  },
+  "depup": {
+    "changes": {
+      "jsonwebtoken": {
+        "from": "^9.0.0",
+        "to": "^9.0.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "passport-jwt",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-06-10T01:38:16.042Z",
+    "smokeTest": "passed"
+  }
+}

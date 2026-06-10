@@ -1,10 +1,5 @@
 {
   "1.8.1": {
-    "0": {
-      "version": "1.8.1-depup.0",
-      "timestamp": "2026-01-10T16:45:34.054Z",
-      "status": "created"
-    },
     "2": {
       "changes": {
         "debug": {
@@ -55,6 +50,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:33:53.890Z",
       "version": "1.8.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "debug": {
+          "from": "2.6.9",
+          "to": "^4.4.3"
+        },
+        "negotiator": {
+          "from": "~0.6.4",
+          "to": "^1.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:32:58.710Z",
+      "version": "1.8.1-depup.5"
     }
   }
 }

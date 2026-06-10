@@ -1,0 +1,52 @@
+{
+  "dependencies": {},
+  "resolutions": {
+    "**/object-path": "^0.11.5",
+    "**/http-proxy": "^1.18.1",
+    "**/serialize-javascript": "^3.1.0",
+    "**/ssri": "^7.1.1",
+    "**/glob-parent": "^5.1.2",
+    "**/node-forge": "^1.0.0",
+    "**/json-bigint": "^1.0.0",
+    "**/y18n": "^5.0.5",
+    "**/underscore": "^1.12.1",
+    "**/protobufjs": "^7.0.0",
+    "**/ansi-regex": "^3.0.1",
+    "**/json-schema": "^0.4.0",
+    "**/nth-check": "^2.0.1",
+    "**/node-fetch": "^2.6.7",
+    "**/markdown-it": "^12.3.2",
+    "**/wrap-ansi": "7.0.0",
+    "**/string-width": "4.1.0"
+  },
+  "homepage": "https://github.com/dataform-co/dataform",
+  "license": "Apache-2.0",
+  "keywords": [
+    "@dataform/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "dataform",
+    "etl",
+    "data-pipeline",
+    "big-data",
+    "data-modelling",
+    "sql",
+    "bigquery",
+    "dataops"
+  ],
+  "version": "3.0.59-depup.6",
+  "name": "@depup/dataform__core",
+  "description": "Dataform core API. (with updated dependencies)",
+  "main": "bundle.js",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@dataform/core",
+    "originalVersion": "3.0.59",
+    "processedAt": "2026-06-10T01:29:35.972Z",
+    "smokeTest": "passed"
+  }
+}
