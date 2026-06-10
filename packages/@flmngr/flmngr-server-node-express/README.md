@@ -12,7 +12,7 @@ npm install @depup/flmngr__flmngr-server-node-express
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.5.3 | **DepUp version**: 1.5.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.5.3 | **DepUp version**: 1.5.3-depup.1 | **Updated**: 6/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | body-parser | `^1` | `^2.2.2` |
 | cors | `^2` | `^2.8.6` |
 | express | `^4` | `^5.2.1` |
-| sharp | `^0.32.1` | `^0.34.5` |
+| sharp | `^0.32.1` | `^0.35.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/flmngr__flmngr-server-node-express&labels=bug).

@@ -7,23 +7,6 @@
     }
   },
   "9.4.0": {
-    "1": {
-      "changes": {
-        "cli-spinners": {
-          "from": "^3.2.0",
-          "to": "^3.4.0"
-        },
-        "string-width": {
-          "from": "^8.1.0",
-          "to": "^8.2.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:56:54.416Z",
-      "version": "9.4.0-depup.1"
-    },
     "2": {
       "changes": {
         "cli-spinners": {
@@ -91,6 +74,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T10:00:34.402Z",
       "version": "9.4.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "cli-spinners": {
+          "from": "^3.2.0",
+          "to": "^3.4.0"
+        },
+        "string-width": {
+          "from": "^8.1.0",
+          "to": "^8.2.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:52:41.110Z",
+      "version": "9.4.0-depup.6"
     }
   }
 }
