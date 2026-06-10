@@ -33,6 +33,11 @@ on:
         type: boolean
         default: true
 
+# Default read-only; only the secure-processing job (which commits package
+# data and pushes to main) is granted contents: write at the job level.
+permissions:
+  contents: read
+
 concurrency:
   group: depup-secure-${{ inputs.package }}
   cancel-in-progress: false
@@ -63,12 +68,15 @@ jobs:
           echo "safe_name=$SAFE_NAME" >> $GITHUB_OUTPUT
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0
+          # This job npm-installs the (untrusted) package under analysis --
+          # never leave the repo token on disk where install scripts could read it
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
           cache: 'npm'
@@ -191,7 +199,7 @@ jobs:
           fi
 
       - name: Upload security reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: security-reports-${{ steps.sanitize.outputs.safe_name || needs.security-validation.outputs.package_safe }}
           path: security-reports/
@@ -229,13 +237,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
 
       - name: Build security sandbox
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@ca052bb54ab0790a636c9b5f226502c73d547a25 # v5.4.0
         with:
           context: .
           file: ./Dockerfile
@@ -245,7 +255,7 @@ jobs:
           outputs: type=docker,dest=/tmp/depup-sandbox.tar
 
       - name: Upload container image
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: depup-security-sandbox
           path: /tmp/depup-sandbox.tar
@@ -256,15 +266,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: [security-validation, container-build]
     timeout-minutes: 45
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0
 
       - name: Download security container
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: depup-security-sandbox
           path: /tmp/
@@ -406,7 +418,7 @@ jobs:
           fi
 
       - name: Upload processing reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: processing-reports-${{ needs.security-validation.outputs.package_safe }}
           path: security-reports/
@@ -421,11 +433,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
 
       - name: Download all reports
         continue-on-error: true
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: "*-${{ needs.security-validation.outputs.package_safe }}"
           path: final-reports/
@@ -506,7 +520,7 @@ jobs:
           fi
 
       - name: Upload final report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: final-security-report-${{ needs.security-validation.outputs.package_safe }}
           path: final-reports/

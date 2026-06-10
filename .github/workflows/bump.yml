@@ -10,6 +10,10 @@ on:
       - 'CONTRIBUTING.md'
   workflow_dispatch: {}
 
+# Commits synced package data and pushes to main
+permissions:
+  contents: write
+
 concurrency:
   group: depup-sync-${{ github.ref }}
   cancel-in-progress: false
@@ -26,12 +30,12 @@ jobs:
        github.event.head_commit.author.name != 'github-actions[bot]')
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
           cache: 'npm'
