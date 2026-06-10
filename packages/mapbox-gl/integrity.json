@@ -162,51 +162,6 @@
     }
   },
   "3.24.0": {
-    "5": {
-      "changes": {
-        "@mapbox/mapbox-gl-supported": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        },
-        "@mapbox/tiny-sdf": {
-          "from": "^2.0.6",
-          "to": "^2.2.0"
-        },
-        "@mapbox/unitbezier": {
-          "from": "^0.0.1",
-          "to": "^1.0.0"
-        },
-        "@mapbox/vector-tile": {
-          "from": "^2.0.4",
-          "to": "^3.0.0"
-        },
-        "earcut": {
-          "from": "^3.0.1",
-          "to": "^3.0.2"
-        },
-        "geojson-vt": {
-          "from": "^4.0.2",
-          "to": "^4.0.3"
-        },
-        "kdbush": {
-          "from": "^4.0.2",
-          "to": "^4.1.0"
-        },
-        "pbf": {
-          "from": "^4.0.1",
-          "to": "^5.1.0"
-        },
-        "potpack": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-29T10:11:36.010Z",
-      "version": "3.24.0-depup.5"
-    },
     "6": {
       "changes": {
         "@mapbox/mapbox-gl-supported": {
@@ -386,6 +341,55 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:37:33.923Z",
       "version": "3.24.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@mapbox/mapbox-gl-supported": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        },
+        "@mapbox/tiny-sdf": {
+          "from": "^2.0.6",
+          "to": "^2.2.0"
+        },
+        "@mapbox/unitbezier": {
+          "from": "^0.0.1",
+          "to": "^1.0.0"
+        },
+        "@mapbox/vector-tile": {
+          "from": "^2.0.4",
+          "to": "^3.0.0"
+        },
+        "cheap-ruler": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "earcut": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "geojson-vt": {
+          "from": "^4.0.2",
+          "to": "^4.0.3"
+        },
+        "kdbush": {
+          "from": "^4.0.2",
+          "to": "^4.1.0"
+        },
+        "pbf": {
+          "from": "^4.0.1",
+          "to": "^5.1.0"
+        },
+        "potpack": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:56:12.844Z",
+      "version": "3.24.0-depup.10"
     }
   }
 }

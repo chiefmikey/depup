@@ -10,27 +10,6 @@
     }
   },
   "3.9.0": {
-    "2": {
-      "changes": {
-        "@react-aria/slider": {
-          "from": "^3.9.0",
-          "to": "^3.9.1"
-        },
-        "@react-spectrum/slider": {
-          "from": "^3.9.0",
-          "to": "^3.9.1"
-        },
-        "@react-stately/slider": {
-          "from": "^3.8.0",
-          "to": "^3.8.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:33:55.982Z",
-      "version": "3.9.0-depup.2"
-    },
     "3": {
       "changes": {
         "@react-aria/slider": {
@@ -114,6 +93,27 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:31:17.539Z",
       "version": "3.9.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@react-aria/slider": {
+          "from": "^3.9.0",
+          "to": "^3.9.1"
+        },
+        "@react-spectrum/slider": {
+          "from": "^3.9.0",
+          "to": "^3.9.1"
+        },
+        "@react-stately/slider": {
+          "from": "^3.8.0",
+          "to": "^3.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:49:45.002Z",
+      "version": "3.9.0-depup.7"
     }
   }
 }

@@ -16,6 +16,27 @@
       "status": "published",
       "timestamp": "2026-03-19T00:37:00.678Z",
       "version": "8.6.14-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@storybook/test": {
+          "from": "8.6.14",
+          "to": "^8.6.15"
+        },
+        "polished": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "ts-dedent": {
+          "from": "^2.2.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:50:20.877Z",
+      "version": "8.6.14-depup.1"
     }
   }
 }

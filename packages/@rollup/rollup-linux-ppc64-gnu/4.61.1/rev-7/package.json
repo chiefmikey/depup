@@ -1,0 +1,43 @@
+{
+  "name": "@depup/rollup__rollup-linux-ppc64-gnu",
+  "version": "4.61.1-depup.7",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "ppc64"
+  ],
+  "files": [
+    "rollup.linux-ppc64-gnu.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Native bindings for Rollup (with updated dependencies)",
+  "author": "Lukas Taegert-Atkinson",
+  "homepage": "https://rollupjs.org/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollup/rollup.git"
+  },
+  "libc": [
+    "glibc"
+  ],
+  "main": "./rollup.linux-ppc64-gnu.node",
+  "keywords": [
+    "@rollup/rollup-linux-ppc64-gnu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rollup/rollup-linux-ppc64-gnu",
+    "originalVersion": "4.61.1",
+    "processedAt": "2026-06-10T09:50:03.784Z",
+    "smokeTest": "failed"
+  }
+}
