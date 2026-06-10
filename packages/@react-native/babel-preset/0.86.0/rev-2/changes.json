@@ -1,0 +1,118 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "^7.25.2",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-proposal-export-default-from": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-syntax-export-default-from": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-async-generator-functions": {
+      "from": "^7.25.4",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-async-to-generator": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-block-scoping": {
+      "from": "^7.25.0",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-class-properties": {
+      "from": "^7.25.4",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-classes": {
+      "from": "^7.25.4",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-destructuring": {
+      "from": "^7.24.8",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-flow-strip-types": {
+      "from": "^7.25.2",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-for-of": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-modules-commonjs": {
+      "from": "^7.24.8",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-named-capturing-groups-regex": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-nullish-coalescing-operator": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-optional-catch-binding": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-optional-chaining": {
+      "from": "^7.24.8",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-private-methods": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-private-property-in-object": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-react-display-name": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-react-jsx": {
+      "from": "^7.25.2",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-react-jsx-self": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-react-jsx-source": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-regenerator": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-runtime": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-typescript": {
+      "from": "^7.25.2",
+      "to": "^7.29.7"
+    },
+    "@babel/plugin-transform-unicode-regex": {
+      "from": "^7.24.7",
+      "to": "^7.29.7"
+    },
+    "babel-plugin-syntax-hermes-parser": {
+      "from": "0.36.0",
+      "to": "^0.36.1"
+    },
+    "react-refresh": {
+      "from": "^0.14.0",
+      "to": "^0.18.0"
+    }
+  },
+  "timestamp": "2026-06-10T09:27:34.613Z",
+  "totalUpdated": 28
+}

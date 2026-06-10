@@ -414,51 +414,6 @@
     }
   },
   "7.16.0": {
-    "6": {
-      "changes": {
-        "@slack/types": {
-          "from": "^2.21.0",
-          "to": "^2.21.1"
-        },
-        "@types/node": {
-          "from": ">=18",
-          "to": "^25.9.2"
-        },
-        "@types/retry": {
-          "from": "0.12.0",
-          "to": "^0.12.5"
-        },
-        "axios": {
-          "from": "^1.16.0",
-          "to": "^1.17.0"
-        },
-        "eventemitter3": {
-          "from": "^5.0.1",
-          "to": "^5.0.4"
-        },
-        "form-data": {
-          "from": "^4.0.4",
-          "to": "^4.0.5"
-        },
-        "is-stream": {
-          "from": "^2",
-          "to": "^4.0.1"
-        },
-        "p-queue": {
-          "from": "^6",
-          "to": "^9.3.0"
-        },
-        "p-retry": {
-          "from": "^4",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:35:49.785Z",
-      "version": "7.16.0-depup.6"
-    },
     "7": {
       "changes": {
         "@slack/types": {
@@ -638,6 +593,51 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:09:58.988Z",
       "version": "7.16.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "@slack/types": {
+          "from": "^2.21.0",
+          "to": "^2.21.1"
+        },
+        "@types/node": {
+          "from": ">=18",
+          "to": "^25.9.2"
+        },
+        "@types/retry": {
+          "from": "0.12.0",
+          "to": "^0.12.5"
+        },
+        "axios": {
+          "from": "^1.16.0",
+          "to": "^1.17.0"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "form-data": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        },
+        "is-stream": {
+          "from": "^2",
+          "to": "^4.0.1"
+        },
+        "p-queue": {
+          "from": "^6",
+          "to": "^9.3.0"
+        },
+        "p-retry": {
+          "from": "^4",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:28:26.475Z",
+      "version": "7.16.0-depup.11"
     }
   }
 }
