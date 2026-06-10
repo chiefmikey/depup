@@ -1,7 +1,7 @@
 # DepUp -- Project CLAUDE.md
 
 ## Project Overview
-Automated npm package factory. Downloads npm packages, bumps all dependencies to latest, tests, publishes as `@depup/package-name`. 1000+ packages managed, processed every 8 hours, user submissions publish immediately.
+Automated npm package factory. Downloads npm packages, bumps all dependencies to latest, tests, publishes as `@depup/package-name`. 1000+ packages managed, processed every 12 hours, user submissions publish immediately.
 
 ## Tech Stack
 - **Runtime:** Node.js 24 LTS, ESM (`"type": "module"`)
@@ -34,7 +34,7 @@ config/
   user-packages.json     # User-submitted packages (via GitHub issues)
   security-allowlist.json
 .github/workflows/
-  cron.yml               # Every 8h: discover + sync (3 shards) + heal
+  cron.yml               # Every 12h: discover + sync (3 shards) + heal
   process-package-request.yml # Issue-triggered: validate, publish, commit, close
   refresh-list.yml       # Weekly: refresh curated list from npm popularity
   bump.yml               # On push: re-sync (skips De Pup commits)
@@ -68,7 +68,7 @@ npm run heal                # Self-healing repairs
 6. Trigger: `labeled` only (not `opened` -- prevents duplicate runs)
 
 ## Cron Architecture
-- **Every 8h:** discover (curated + user lists) + sync (dep bump check) + heal
+- **Every 12h:** discover (curated + user lists) + sync (dep bump check) + heal
 - **3 shards** parallel, 5 concurrent packages per shard (async child processes)
 - **Weekly:** refresh curated list from npm search API (1000 packages)
 - **Dep checking:** batches of 10, abort-on-first-match, minor/major only

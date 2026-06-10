@@ -2,7 +2,10 @@ name: "Automated Discovery & Sync"
 
 on:
   schedule:
-    - cron: "0 */8 * * *"
+    # Every 12h (was 8h). Twice-daily re-bump keeps dependency-update freshness
+    # within ~12h while cutting CI minute burn ~33%. User submissions publish
+    # immediately via process-package-request.yml and are unaffected by cadence.
+    - cron: "0 */12 * * *"
   workflow_dispatch:
     inputs:
       discover_only:
