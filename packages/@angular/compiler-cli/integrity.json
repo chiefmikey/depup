@@ -438,39 +438,6 @@
     }
   },
   "22.0.0": {
-    "1": {
-      "changes": {
-        "@babel/core": {
-          "from": "7.29.0",
-          "to": "^7.29.7"
-        },
-        "@jridgewell/sourcemap-codec": {
-          "from": "^1.4.14",
-          "to": "^1.5.5"
-        },
-        "reflect-metadata": {
-          "from": "^0.2.0",
-          "to": "^0.2.2"
-        },
-        "convert-source-map": {
-          "from": "^1.5.1",
-          "to": "^2.0.0"
-        },
-        "semver": {
-          "from": "^7.0.0",
-          "to": "^7.8.3"
-        },
-        "tslib": {
-          "from": "^2.3.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-08T20:47:39.764Z",
-      "version": "22.0.0-depup.1"
-    },
     "2": {
       "changes": {
         "@babel/core": {
@@ -602,6 +569,39 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:01:17.359Z",
       "version": "22.0.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@babel/core": {
+          "from": "7.29.0",
+          "to": "^7.29.7"
+        },
+        "@jridgewell/sourcemap-codec": {
+          "from": "^1.4.14",
+          "to": "^1.5.5"
+        },
+        "reflect-metadata": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "convert-source-map": {
+          "from": "^1.5.1",
+          "to": "^2.0.0"
+        },
+        "semver": {
+          "from": "^7.0.0",
+          "to": "^7.8.4"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:04:25.893Z",
+      "version": "22.0.0-depup.6"
     }
   }
 }

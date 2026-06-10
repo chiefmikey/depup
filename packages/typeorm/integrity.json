@@ -268,6 +268,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:22:31.759Z",
       "version": "1.0.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ansis": {
+          "from": "^4.2.0",
+          "to": "^4.3.1"
+        },
+        "dayjs": {
+          "from": "^1.11.20",
+          "to": "^1.11.21"
+        },
+        "tinyglobby": {
+          "from": "^0.2.16",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:24:21.564Z",
+      "version": "1.0.0-depup.4"
     }
   }
 }
