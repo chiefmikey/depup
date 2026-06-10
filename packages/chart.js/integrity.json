@@ -43,6 +43,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:34:21.714Z",
       "version": "4.5.1-depup.8"
+    },
+    "9": {
+      "changes": {
+        "@kurkle/color": {
+          "from": "^0.3.0",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:33:19.045Z",
+      "version": "4.5.1-depup.9"
     }
   }
 }
