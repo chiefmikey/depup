@@ -750,5 +750,28 @@
       "timestamp": "2026-06-09T17:03:28.353Z",
       "version": "3.974.19-depup.5"
     }
+  },
+  "3.974.20": {
+    "0": {
+      "changes": {
+        "@aws/lambda-invoke-store": {
+          "from": "^0.2.2",
+          "to": "^0.2.4"
+        },
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:04:43.649Z",
+      "version": "3.974.20-depup.0"
+    }
   }
 }

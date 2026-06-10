@@ -32,19 +32,6 @@
     }
   },
   "2.1.0": {
-    "0": {
-      "changes": {
-        "mime-types": {
-          "from": "^3.0.0",
-          "to": "^3.0.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-14T07:11:54.284Z",
-      "version": "2.1.0-depup.0"
-    },
     "1": {
       "changes": {
         "media-typer": {
@@ -112,6 +99,23 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:25:08.113Z",
       "version": "2.1.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "media-typer": {
+          "from": "^1.1.0",
+          "to": "^2.0.0"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:26:51.657Z",
+      "version": "2.1.0-depup.5"
     }
   }
 }

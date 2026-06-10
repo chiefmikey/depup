@@ -37,19 +37,6 @@
     }
   },
   "18.2.1": {
-    "0": {
-      "changes": {
-        "@hapi/tlds": {
-          "from": "^1.1.1",
-          "to": "^1.1.6"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-05T06:56:40.294Z",
-      "version": "18.2.1-depup.0"
-    },
     "1": {
       "changes": {
         "@hapi/tlds": {
@@ -101,6 +88,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:15:59.011Z",
       "version": "18.2.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@hapi/tlds": {
+          "from": "^1.1.1",
+          "to": "^1.1.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:17:18.807Z",
+      "version": "18.2.1-depup.5"
     }
   }
 }

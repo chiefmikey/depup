@@ -104,6 +104,27 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:25:39.334Z",
       "version": "0.7.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "http-parser-js": {
+          "from": ">=0.5.1",
+          "to": "^0.5.10"
+        },
+        "safe-buffer": {
+          "from": ">=5.1.0",
+          "to": "^5.2.1"
+        },
+        "websocket-extensions": {
+          "from": ">=0.1.1",
+          "to": "^0.1.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T01:27:23.946Z",
+      "version": "0.7.5-depup.4"
     }
   }
 }
