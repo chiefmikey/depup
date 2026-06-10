@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.7 | **Updated**: 6/10/2026 | **Import test**: failed
+**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.8 | **Updated**: 6/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
 | got | `13.0.0` | `^15.0.5` |
-| gscan | `6.2.0` | `^6.2.1` |
+| gscan | `6.2.0` | `^6.3.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | html5parser | `2.0.2` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
@@ -94,9 +94,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment-timezone | `0.5.45` | `^0.6.2` |
 | mysql2 | `3.22.3` | `^3.22.5` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.8` | `^8.0.10` |
+| nodemailer | `8.0.8` | `^8.0.11` |
 | otplib | `12.0.1` | `^13.4.1` |
+| sanitize-html | `2.17.4` | `^2.17.5` |
 | semver | `7.7.4` | `^7.8.4` |
+| sharp | `0.34.5` | `^0.35.0` |
 | stripe | `8.222.0` | `^22.2.0` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.46.1` | `^5.48.0` |
