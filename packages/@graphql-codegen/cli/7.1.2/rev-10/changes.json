@@ -1,0 +1,110 @@
+{
+  "bumped": {
+    "@babel/generator": {
+      "from": "^7.18.13",
+      "to": "^7.29.7"
+    },
+    "@babel/template": {
+      "from": "^7.18.10",
+      "to": "^7.29.7"
+    },
+    "@babel/types": {
+      "from": "^7.18.13",
+      "to": "^7.29.7"
+    },
+    "@graphql-tools/apollo-engine-loader": {
+      "from": "^8.0.28",
+      "to": "^8.0.30"
+    },
+    "@graphql-tools/code-file-loader": {
+      "from": "^8.1.28",
+      "to": "^8.1.32"
+    },
+    "@graphql-tools/git-loader": {
+      "from": "^8.0.32",
+      "to": "^8.0.36"
+    },
+    "@graphql-tools/github-loader": {
+      "from": "^9.0.6",
+      "to": "^9.1.2"
+    },
+    "@graphql-tools/graphql-file-loader": {
+      "from": "^8.1.11",
+      "to": "^8.1.14"
+    },
+    "@graphql-tools/json-file-loader": {
+      "from": "^8.0.26",
+      "to": "^8.0.28"
+    },
+    "@graphql-tools/load": {
+      "from": "^8.1.8",
+      "to": "^8.1.10"
+    },
+    "@graphql-tools/merge": {
+      "from": "^9.0.6",
+      "to": "^9.1.9"
+    },
+    "@graphql-tools/url-loader": {
+      "from": "^9.0.6",
+      "to": "^9.1.2"
+    },
+    "@graphql-tools/utils": {
+      "from": "^11.0.0",
+      "to": "^11.1.0"
+    },
+    "@inquirer/prompts": {
+      "from": "^8.3.2",
+      "to": "^8.5.2"
+    },
+    "@whatwg-node/fetch": {
+      "from": "^0.10.0",
+      "to": "^0.10.13"
+    },
+    "chalk": {
+      "from": "^5.6.0",
+      "to": "^5.6.2"
+    },
+    "cosmiconfig": {
+      "from": "^9.0.0",
+      "to": "^9.0.2"
+    },
+    "detect-indent": {
+      "from": "^7.0.0",
+      "to": "^7.0.2"
+    },
+    "is-glob": {
+      "from": "^4.0.1",
+      "to": "^4.0.3"
+    },
+    "jiti": {
+      "from": "^2.3.0",
+      "to": "^2.7.0"
+    },
+    "log-symbols": {
+      "from": "^7.0.0",
+      "to": "^7.0.1"
+    },
+    "micromatch": {
+      "from": "^4.0.5",
+      "to": "^4.0.8"
+    },
+    "shell-quote": {
+      "from": "^1.7.3",
+      "to": "^1.8.4"
+    },
+    "ts-log": {
+      "from": "^3.0.0",
+      "to": "^3.0.2"
+    },
+    "tslib": {
+      "from": "^2.4.0",
+      "to": "^2.8.1"
+    },
+    "yaml": {
+      "from": "^2.3.1",
+      "to": "^2.9.0"
+    }
+  },
+  "timestamp": "2026-06-10T21:20:32.957Z",
+  "totalUpdated": 26
+}

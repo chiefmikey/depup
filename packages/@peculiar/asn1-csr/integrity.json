@@ -1,18 +1,5 @@
 {
   "2.7.0": {
-    "6": {
-      "changes": {
-        "asn1js": {
-          "from": "^3.0.6",
-          "to": "^3.0.10"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:07:13.442Z",
-      "version": "2.7.0-depup.6"
-    },
     "7": {
       "changes": {
         "asn1js": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:17:12.436Z",
       "version": "2.7.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "asn1js": {
+          "from": "^3.0.6",
+          "to": "^3.0.10"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T21:26:34.269Z",
+      "version": "2.7.0-depup.11"
     }
   }
 }

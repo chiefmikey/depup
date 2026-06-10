@@ -10,27 +10,6 @@
     }
   },
   "3.6.0": {
-    "5": {
-      "changes": {
-        "@react-aria/tooltip": {
-          "from": "^3.10.0",
-          "to": "^3.10.1"
-        },
-        "@react-spectrum/tooltip": {
-          "from": "^3.9.0",
-          "to": "^3.9.1"
-        },
-        "@react-stately/tooltip": {
-          "from": "^3.6.0",
-          "to": "^3.6.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:32:07.013Z",
-      "version": "3.6.0-depup.5"
-    },
     "6": {
       "changes": {
         "@react-aria/tooltip": {
@@ -114,6 +93,27 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:41:56.690Z",
       "version": "3.6.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@react-aria/tooltip": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        },
+        "@react-spectrum/tooltip": {
+          "from": "^3.9.0",
+          "to": "^3.9.1"
+        },
+        "@react-stately/tooltip": {
+          "from": "^3.6.0",
+          "to": "^3.6.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T21:30:13.207Z",
+      "version": "3.6.0-depup.10"
     }
   }
 }

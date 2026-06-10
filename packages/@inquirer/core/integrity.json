@@ -71,23 +71,6 @@
     }
   },
   "11.2.1": {
-    "6": {
-      "changes": {
-        "fast-wrap-ansi": {
-          "from": "^0.2.0",
-          "to": "^0.2.2"
-        },
-        "mute-stream": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:04:57.657Z",
-      "version": "11.2.1-depup.6"
-    },
     "7": {
       "changes": {
         "fast-wrap-ansi": {
@@ -155,6 +138,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:16:16.253Z",
       "version": "11.2.1-depup.10"
+    },
+    "11": {
+      "changes": {
+        "fast-wrap-ansi": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T21:22:08.995Z",
+      "version": "11.2.1-depup.11"
     }
   }
 }

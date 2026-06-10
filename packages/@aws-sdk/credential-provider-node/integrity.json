@@ -763,5 +763,24 @@
       "timestamp": "2026-06-10T17:13:19.460Z",
       "version": "3.972.54-depup.3"
     }
+  },
+  "3.972.55": {
+    "0": {
+      "changes": {
+        "@smithy/credential-provider-imds": {
+          "from": "^4.3.7",
+          "to": "^4.3.8"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T21:12:23.611Z",
+      "version": "3.972.55-depup.0"
+    }
   }
 }
