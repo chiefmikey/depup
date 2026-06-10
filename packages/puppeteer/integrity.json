@@ -221,19 +221,6 @@
     }
   },
   "25.1.0": {
-    "1": {
-      "changes": {
-        "devtools-protocol": {
-          "from": "0.0.1624250",
-          "to": "^0.0.1642743"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:55:38.930Z",
-      "version": "25.1.0-depup.1"
-    },
     "2": {
       "changes": {
         "devtools-protocol": {
@@ -285,6 +272,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:57:04.914Z",
       "version": "25.1.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "devtools-protocol": {
+          "from": "0.0.1624250",
+          "to": "^0.0.1643702"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:50:42.211Z",
+      "version": "25.1.0-depup.6"
     }
   }
 }
