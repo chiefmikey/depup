@@ -1,10 +1,5 @@
 {
   "9.1.7": {
-    "0": {
-      "status": "created",
-      "timestamp": "2026-03-09T08:18:51.884Z",
-      "version": "9.1.7-depup.0"
-    },
     "1": {
       "changes": {},
       "depsUpdated": 0,
@@ -36,6 +31,14 @@
       "status": "skipped",
       "timestamp": "2026-06-10T01:35:08.713Z",
       "version": "9.1.7-depup.4"
+    },
+    "5": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-06-10T09:53:34.480Z",
+      "version": "9.1.7-depup.5"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/storybook__addon-essentials
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.1 | **Updated**: 5/15/2026 | **Import test**: failed
+**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.2 | **Updated**: 6/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,12 +21,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @storybook/addon-actions | `8.6.14` | `^9.0.8` |
 | @storybook/addon-backgrounds | `8.6.14` | `^9.0.8` |
 | @storybook/addon-controls | `8.6.14` | `^9.0.8` |
-| @storybook/addon-docs | `8.6.14` | `^10.4.0` |
+| @storybook/addon-docs | `8.6.14` | `^10.4.3` |
 | @storybook/addon-measure | `8.6.14` | `^9.0.8` |
 | @storybook/addon-outline | `8.6.14` | `^9.0.8` |
 | @storybook/addon-toolbars | `8.6.14` | `^9.0.8` |
 | @storybook/addon-viewport | `8.6.14` | `^9.0.8` |
-| ts-dedent | `^2.0.0` | `^2.2.0` |
+| ts-dedent | `^2.0.0` | `^2.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/storybook__addon-essentials&labels=bug).

@@ -1,10 +1,5 @@
 {
   "4.0.1": {
-    "0": {
-      "status": "created",
-      "timestamp": "2026-03-09T08:18:51.910Z",
-      "version": "4.0.1-depup.0"
-    },
     "1": {
       "changes": {
         "jsonwebtoken": {
@@ -56,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:38:19.057Z",
       "version": "4.0.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "jsonwebtoken": {
+          "from": "^9.0.0",
+          "to": "^9.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:56:44.537Z",
+      "version": "4.0.1-depup.5"
     }
   }
 }

@@ -1,22 +1,5 @@
 {
   "11.0.0": {
-    "2": {
-      "changes": {
-        "@commander-js/extra-typings": {
-          "from": "^13.1.0",
-          "to": "^15.0.0"
-        },
-        "commander": {
-          "from": "^13.1.0",
-          "to": "^15.0.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-29T14:09:52.777Z",
-      "version": "11.0.0-depup.2"
-    },
     "3": {
       "changes": {
         "@commander-js/extra-typings": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:33:47.388Z",
       "version": "11.0.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@commander-js/extra-typings": {
+          "from": "^13.1.0",
+          "to": "^15.0.0"
+        },
+        "commander": {
+          "from": "^13.1.0",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T09:52:15.634Z",
+      "version": "11.0.0-depup.7"
     }
   }
 }
