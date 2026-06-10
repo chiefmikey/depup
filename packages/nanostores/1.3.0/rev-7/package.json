@@ -1,0 +1,48 @@
+{
+  "name": "@depup/nanostores",
+  "version": "1.3.0-depup.7",
+  "description": "A tiny (294 bytes) state manager for React/Preact/Vue/Svelte with many atomic tree-shakable stores (with updated dependencies)",
+  "keywords": [
+    "nanostores",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "preact",
+    "react",
+    "react native",
+    "state",
+    "state manager",
+    "store",
+    "svelte",
+    "vue"
+  ],
+  "license": "MIT",
+  "author": "Andrey Sitnik <andrey@sitnik.es>",
+  "repository": "nanostores/nanostores",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ai"
+    }
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^20.0.0 || >=22.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "nanostores",
+    "originalVersion": "1.3.0",
+    "processedAt": "2026-06-10T17:27:52.065Z",
+    "smokeTest": "passed"
+  }
+}

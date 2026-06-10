@@ -210,6 +210,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T15:28:45.420Z",
       "version": "16.2.9-depup.2"
+    },
+    "3": {
+      "changes": {
+        "source-map": {
+          "from": "^0.7.0",
+          "to": "^0.7.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:16:48.244Z",
+      "version": "16.2.9-depup.3"
     }
   }
 }

@@ -62,19 +62,6 @@
     }
   },
   "2.20.9": {
-    "2": {
-      "changes": {
-        "mgrs": {
-          "from": "1.0.0",
-          "to": "^2.1.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:58:34.824Z",
-      "version": "2.20.9-depup.2"
-    },
     "3": {
       "changes": {
         "mgrs": {
@@ -126,6 +113,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:39:46.724Z",
       "version": "2.20.9-depup.6"
+    },
+    "7": {
+      "changes": {
+        "mgrs": {
+          "from": "1.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:30:27.746Z",
+      "version": "2.20.9-depup.7"
     }
   }
 }

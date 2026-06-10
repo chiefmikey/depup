@@ -1,0 +1,93 @@
+{
+  "name": "@depup/sentry__cli",
+  "version": "3.5.0-depup.11",
+  "description": "A command line utility to work with Sentry. https://docs.sentry.io/hosted/learn/cli/ (with updated dependencies)",
+  "repository": "git://github.com/getsentry/sentry-cli.git",
+  "homepage": "https://docs.sentry.io/hosted/learn/cli/",
+  "author": "Sentry",
+  "license": "FSL-1.1-MIT",
+  "engines": {
+    "node": ">= 18"
+  },
+  "main": "js/index.js",
+  "types": "js/index.d.ts",
+  "bin": {
+    "sentry-cli": "bin/sentry-cli"
+  },
+  "dependencies": {
+    "progress": "^2.0.3",
+    "proxy-from-env": "^2.1.0",
+    "undici": "^8.4.1",
+    "which": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vercel/nft": "^1.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "jest": "^30.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.8.8",
+    "ts-jest": "^29.4.6",
+    "typescript": "5.8.3"
+  },
+  "optionalDependencies": {
+    "@sentry/cli-darwin": "3.5.0",
+    "@sentry/cli-linux-arm": "3.5.0",
+    "@sentry/cli-linux-arm64": "3.5.0",
+    "@sentry/cli-linux-i686": "3.5.0",
+    "@sentry/cli-linux-x64": "3.5.0",
+    "@sentry/cli-win32-i686": "3.5.0",
+    "@sentry/cli-win32-x64": "3.5.0",
+    "@sentry/cli-win32-arm64": "3.5.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "fix": "npm-run-all fix:eslint fix:prettier",
+    "fix:eslint": "eslint --fix bin/* scripts/**/*.js lib/**/*.js",
+    "fix:prettier": "prettier --write bin/* scripts/**/*.js lib/**/*.js",
+    "test": "npm-run-all test:jest test:eslint test:prettier test:vercel-nft",
+    "test:jest": "jest",
+    "test:watch": "jest --watch --notify",
+    "test:eslint": "eslint bin/* scripts/**/*.js lib/**/*.js",
+    "test:prettier": "prettier --check  bin/* scripts/**/*.js lib/**/*.js",
+    "check:types": "tsc --noEmit",
+    "test:vercel-nft": "node scripts/test-vercel-nft.js"
+  },
+  "volta": {
+    "node": "24.8.0",
+    "npm": "11.6.0"
+  },
+  "overrides": {
+    "browserslist": "<4.26.0 || >4.26.0"
+  },
+  "keywords": [
+    "@sentry/cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "proxy-from-env": {
+        "from": "^1.1.0",
+        "to": "^2.1.0"
+      },
+      "undici": {
+        "from": "^6.22.0",
+        "to": "^8.4.1"
+      },
+      "which": {
+        "from": "^2.0.2",
+        "to": "^7.0.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@sentry/cli",
+    "originalVersion": "3.5.0",
+    "processedAt": "2026-06-10T17:18:10.676Z",
+    "smokeTest": "passed"
+  }
+}
