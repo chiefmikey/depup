@@ -380,6 +380,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T15:19:38.952Z",
       "version": "0.8.32-depup.0"
+    },
+    "1": {
+      "changes": {
+        "uuid": {
+          "from": "^13.0.2",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:13:42.452Z",
+      "version": "0.8.32-depup.1"
     }
   }
 }

@@ -1,0 +1,49 @@
+{
+  "name": "@depup/vue-tsc",
+  "version": "3.3.4-depup.6",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "index.d.ts",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuejs/language-tools.git",
+    "directory": "packages/tsc"
+  },
+  "bin": {
+    "vue-tsc": "./bin/vue-tsc.js"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "dependencies": {
+    "@volar/typescript": "2.4.28",
+    "@vue/language-core": "3.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  },
+  "gitHead": "043a77b6182db32f4076f84a767c1c674ef2b149",
+  "description": "vue-tsc with all dependencies updated to latest",
+  "keywords": [
+    "vue-tsc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "vue-tsc",
+    "originalVersion": "3.3.4",
+    "processedAt": "2026-06-10T17:33:33.173Z",
+    "smokeTest": "passed"
+  }
+}
