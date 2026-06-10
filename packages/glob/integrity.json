@@ -1,18 +1,5 @@
 {
   "13.0.6": {
-    "1": {
-      "changes": {
-        "minimatch": {
-          "from": "^10.2.2",
-          "to": "^10.2.5"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T01:44:50.827Z",
-      "version": "13.0.6-depup.1"
-    },
     "2": {
       "changes": {
         "minimatch": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:54:41.296Z",
       "version": "13.0.6-depup.5"
+    },
+    "6": {
+      "changes": {
+        "minimatch": {
+          "from": "^10.2.2",
+          "to": "^10.2.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T17:46:58.934Z",
+      "version": "13.0.6-depup.6"
     }
   }
 }

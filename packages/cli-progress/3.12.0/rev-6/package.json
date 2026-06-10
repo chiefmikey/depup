@@ -1,0 +1,66 @@
+{
+  "name": "@depup/cli-progress",
+  "version": "3.12.0-depup.6",
+  "description": "easy to use progress-bar for command-line/terminal applications (with updated dependencies)",
+  "keywords": [
+    "cli-progress",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "tty",
+    "terminal",
+    "progress",
+    "progressbar",
+    "multibar",
+    "bar",
+    "status",
+    "statusbar",
+    "utility",
+    "widget"
+  ],
+  "homepage": "https://github.com/npkgz/cli-progress",
+  "bugs": "https://github.com/npkgz/cli-progress/issues",
+  "repository": "npkgz/cli-progress",
+  "files": [
+    "cli-progress.js",
+    "lib/",
+    "presets/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint lib/**.js",
+    "pretest": "npm run lint",
+    "test": "mocha test/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "./cli-progress.js",
+  "author": "Andi Dittrich (https://andidittrich.com)",
+  "license": "MIT",
+  "dependencies": {
+    "string-width": "^8.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-aenondynamics": "^0.2.0",
+    "mocha": "^9.2.2"
+  },
+  "depup": {
+    "changes": {
+      "string-width": {
+        "from": "^4.2.3",
+        "to": "^8.2.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "cli-progress",
+    "originalVersion": "3.12.0",
+    "processedAt": "2026-06-10T17:44:13.680Z",
+    "smokeTest": "passed"
+  }
+}
