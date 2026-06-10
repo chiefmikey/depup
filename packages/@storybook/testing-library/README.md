@@ -12,7 +12,7 @@ npm install @depup/storybook__testing-library
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.2 | **DepUp version**: 0.2.2-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 0.2.2 | **DepUp version**: 0.2.2-depup.1 | **Updated**: 6/10/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,6 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @testing-library/dom | `^9.0.0` | `^10.4.1` |
 | @testing-library/user-event | `^14.4.0` | `^14.6.1` |
+| ts-dedent | `^2.2.0` | `^2.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/storybook__testing-library&labels=bug).

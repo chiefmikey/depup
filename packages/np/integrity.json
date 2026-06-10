@@ -199,35 +199,6 @@
     }
   },
   "11.2.1": {
-    "1": {
-      "changes": {
-        "hosted-git-info": {
-          "from": "^9.0.2",
-          "to": "^10.1.1"
-        },
-        "ignore-walk": {
-          "from": "^8.0.0",
-          "to": "^9.0.0"
-        },
-        "inquirer": {
-          "from": "^13.4.1",
-          "to": "^14.0.0"
-        },
-        "onetime": {
-          "from": "^7.0.0",
-          "to": "^8.0.0"
-        },
-        "semver": {
-          "from": "^7.7.4",
-          "to": "^7.8.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-05-25T22:09:58.825Z",
-      "version": "11.2.1-depup.1"
-    },
     "2": {
       "changes": {
         "cosmiconfig": {
@@ -359,6 +330,39 @@
       "status": "failed",
       "timestamp": "2026-06-10T01:41:24.932Z",
       "version": "11.2.1-depup.5"
+    },
+    "6": {
+      "changes": {
+        "cosmiconfig": {
+          "from": "^9.0.1",
+          "to": "^9.0.2"
+        },
+        "hosted-git-info": {
+          "from": "^9.0.2",
+          "to": "^10.1.1"
+        },
+        "ignore-walk": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        },
+        "inquirer": {
+          "from": "^13.4.1",
+          "to": "^14.0.2"
+        },
+        "onetime": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-10T10:00:09.752Z",
+      "version": "11.2.1-depup.6"
     }
   }
 }

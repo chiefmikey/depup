@@ -1,10 +1,5 @@
 {
   "4.2.1": {
-    "0": {
-      "status": "created",
-      "timestamp": "2026-03-09T08:18:51.903Z",
-      "version": "4.2.1-depup.0"
-    },
     "1": {
       "changes": {},
       "depsUpdated": 0,
@@ -36,6 +31,14 @@
       "status": "skipped",
       "timestamp": "2026-06-10T01:41:02.559Z",
       "version": "4.2.1-depup.4"
+    },
+    "5": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-06-10T09:59:46.562Z",
+      "version": "4.2.1-depup.5"
     }
   }
 }
