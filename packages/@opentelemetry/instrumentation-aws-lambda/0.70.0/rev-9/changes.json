@@ -1,0 +1,14 @@
+{
+  "bumped": {
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.27.0",
+      "to": "^1.41.1"
+    },
+    "@types/aws-lambda": {
+      "from": "^8.10.155",
+      "to": "^8.10.162"
+    }
+  },
+  "timestamp": "2026-06-10T15:29:53.165Z",
+  "totalUpdated": 2
+}

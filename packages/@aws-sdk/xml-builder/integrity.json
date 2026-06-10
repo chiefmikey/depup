@@ -384,23 +384,6 @@
     }
   },
   "3.972.29": {
-    "3": {
-      "changes": {
-        "fast-xml-parser": {
-          "from": "5.7.3",
-          "to": "^5.8.0"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T02:48:56.847Z",
-      "version": "3.972.29-depup.3"
-    },
     "4": {
       "changes": {
         "fast-xml-parser": {
@@ -468,6 +451,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:23:31.638Z",
       "version": "3.972.29-depup.7"
+    },
+    "8": {
+      "changes": {
+        "fast-xml-parser": {
+          "from": "5.7.3",
+          "to": "^5.8.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T15:18:24.380Z",
+      "version": "3.972.29-depup.8"
     }
   }
 }

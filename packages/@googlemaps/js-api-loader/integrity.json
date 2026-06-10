@@ -157,6 +157,19 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:24:35.535Z",
       "version": "2.1.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@types/google.maps": {
+          "from": "^3.53.1",
+          "to": "^3.65.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T15:25:11.023Z",
+      "version": "2.1.1-depup.4"
     }
   }
 }

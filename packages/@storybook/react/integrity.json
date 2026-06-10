@@ -321,6 +321,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T09:28:09.755Z",
       "version": "10.4.3-depup.2"
+    },
+    "3": {
+      "changes": {
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "react-docgen-typescript": {
+          "from": "^2.2.2",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-10T15:37:06.574Z",
+      "version": "10.4.3-depup.3"
     }
   }
 }
