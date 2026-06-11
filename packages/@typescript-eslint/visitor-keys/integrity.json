@@ -178,19 +178,6 @@
     }
   },
   "8.61.0": {
-    "3": {
-      "changes": {
-        "eslint-visitor-keys": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:08:58.954Z",
-      "version": "8.61.0-depup.3"
-    },
     "4": {
       "changes": {
         "eslint-visitor-keys": {
@@ -242,6 +229,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:09:44.374Z",
       "version": "8.61.0-depup.7"
+    },
+    "8": {
+      "changes": {
+        "eslint-visitor-keys": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T09:44:03.187Z",
+      "version": "8.61.0-depup.8"
     }
   }
 }

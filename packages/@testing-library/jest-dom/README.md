@@ -12,7 +12,7 @@ npm install @depup/testing-library__jest-dom
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.9.1 | **DepUp version**: 6.9.1-depup.9 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 6.9.1 | **DepUp version**: 6.9.1-depup.10 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
