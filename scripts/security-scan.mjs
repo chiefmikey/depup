@@ -106,7 +106,7 @@ class SecurityScanner {
       // Try ClamAV scan first
       let clamavAvailable = false;
       try {
-        execFileSync('which', ['clamscan'], { stdio: 'pipe' });
+        this.checkClamAvAvailable();
         clamavAvailable = true;
       } catch {
         // ClamAV not available
@@ -119,20 +119,7 @@ class SecurityScanner {
         // ClamAV scan -- use unique log path to prevent symlink attacks
         const clamLogPath = `/tmp/clamav-${randomUUID()}.log`;
         try {
-          execFileSync(
-            'clamscan',
-            [
-              '--recursive',
-              '--infected',
-              '--quiet',
-              `--log=${clamLogPath}`,
-              scanPath,
-            ],
-            {
-              stdio: debug ? 'inherit' : 'pipe',
-              timeout: 300_000, // 5 minutes
-            },
-          );
+          this.runClamScanCommand(scanPath, clamLogPath, debug);
 
           this.results.malware = {
             details: ['No malware detected by ClamAV'],
@@ -350,6 +337,23 @@ class SecurityScanner {
     };
   }
 
+  runClamScanCommand(scanPath, clamLogPath, debug) {
+    execFileSync(
+      'clamscan',
+      [
+        '--recursive',
+        '--infected',
+        '--quiet',
+        `--log=${clamLogPath}`,
+        scanPath,
+      ],
+      {
+        stdio: debug ? 'inherit' : 'pipe',
+        timeout: 300_000,
+      },
+    );
+  }
+
   async runNpmAudit(scanPath) {
     try {
       // Check if npm is available
@@ -365,16 +369,7 @@ class SecurityScanner {
         return;
       }
 
-      const result = execFileSync(
-        'npm',
-        ['audit', '--audit-level=moderate', '--json'],
-        {
-          cwd: scanPath,
-          encoding: 'utf8',
-          stdio: 'pipe',
-          timeout: 120_000,
-        },
-      );
+      const result = this.runNpmAuditCommand(scanPath);
 
       const auditData = JSON.parse(result);
 
@@ -420,14 +415,18 @@ class SecurityScanner {
     }
   }
 
+  runSnykCommand(scanPath) {
+    return execFileSync('snyk', ['test', '--json'], {
+      cwd: scanPath,
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 180_000,
+    });
+  }
+
   async runSnykScan(scanPath) {
     try {
-      const result = execFileSync('snyk', ['test', '--json'], {
-        cwd: scanPath,
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: 180_000,
-      });
+      const result = this.runSnykCommand(scanPath);
 
       const snykData = JSON.parse(result);
 
@@ -466,6 +465,15 @@ class SecurityScanner {
         console.warn('Snyk scan unavailable or failed:', error.message);
       }
     }
+  }
+
+  runNpmAuditCommand(scanPath) {
+    return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
+      cwd: scanPath,
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 120_000,
+    });
   }
 
   async runOwaspDependencyCheck() {
@@ -561,6 +569,10 @@ class SecurityScanner {
       this.results.compatibility.details.push(...compatibilityIssues);
       this.results.compatibility.status = 'warning';
     }
+  }
+
+  checkClamAvAvailable() {
+    execFileSync('which', ['clamscan'], { stdio: 'pipe' });
   }
 
   async fileExists(filePath) {

@@ -6,7 +6,14 @@ import { promises as fs } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals';
+import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest,
+} from '@jest/globals';
 
 import { CompatibilityTester } from '../compatibility-test.mjs';
 import { PackageDiscoverer } from '../cron-discover.mjs';
@@ -2082,6 +2089,137 @@ describe('securityScanner coverage gaps', () => {
   });
 
   // ─────────────────────────────────────────────────────────────────
+  // runNpmAudit -- seam-driven branches (success vuln, error.stdout vuln, parseError)
+  // ─────────────────────────────────────────────────────────────────
+  describe('runNpmAudit -- seam-driven', () => {
+    it('sets failed status when audit succeeds and reports critical vulns (success path)', async () => {
+      // Simulate runNpmAuditCommand returning JSON with critical vulns (success path: no throw)
+      const auditJson = JSON.stringify({
+        metadata: {
+          vulnerabilities: {
+            critical: 1,
+            high: 0,
+            low: 0,
+            moderate: 0,
+            total: 1,
+          },
+        },
+      });
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockReturnValueOnce(auditJson);
+
+      await scanner.runNpmAudit('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('failed');
+      expect(scanner.results.vulnerabilities.details).toContain('Critical: 1');
+    });
+
+    it('sets passed status when audit succeeds and reports zero vulns (success path)', async () => {
+      const auditJson = JSON.stringify({
+        metadata: {
+          vulnerabilities: {
+            critical: 0,
+            high: 0,
+            low: 0,
+            moderate: 0,
+            total: 0,
+          },
+        },
+      });
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockReturnValueOnce(auditJson);
+
+      await scanner.runNpmAudit('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('passed');
+    });
+
+    it('sets failed status when audit exits non-zero with critical vulns in stdout (error.stdout path)', async () => {
+      // npm audit exits 1 when vulns found; execFileSync throws with error.stdout set
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        metadata: {
+          vulnerabilities: {
+            critical: 2,
+            high: 1,
+            low: 0,
+            moderate: 0,
+            total: 3,
+          },
+        },
+      });
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw auditError;
+        });
+
+      await scanner.runNpmAudit('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('failed');
+    });
+
+    it('sets warning when audit exits non-zero with zero total in stdout (error.stdout path)', async () => {
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        metadata: {
+          vulnerabilities: {
+            critical: 0,
+            high: 0,
+            low: 0,
+            moderate: 0,
+            total: 0,
+          },
+        },
+      });
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw auditError;
+        });
+
+      await scanner.runNpmAudit('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('warning');
+    });
+
+    it('sets warning when audit exits non-zero with unparseable stdout (parseError branch)', async () => {
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = 'not-valid-json-at-all';
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw auditError;
+        });
+
+      await scanner.runNpmAudit('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('warning');
+      expect(
+        scanner.results.vulnerabilities.details.some((d) =>
+          d.includes('not parseable'),
+        ),
+      ).toBe(true);
+    });
+
+    it('throws when audit fails with no stdout (fail-closed propagation)', async () => {
+      const auditError = new Error('spawn failed');
+      // no error.stdout property
+      jestInstance
+        .spyOn(scanner, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw auditError;
+        });
+
+      await expect(scanner.runNpmAudit('/fake/path')).rejects.toThrow(
+        'npm audit failed',
+      );
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
   // runNpmAudit -- real execution and buildVulnerabilityResult branches
   // ─────────────────────────────────────────────────────────────────
   describe('runNpmAudit', () => {
@@ -2222,6 +2360,95 @@ describe('securityScanner coverage gaps', () => {
 
       expect(result.status).toBe('warning');
       expect(result.details[0]).toContain('8');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // runSnykScan -- seam-driven detection branches
+  // ─────────────────────────────────────────────────────────────────
+  describe('runSnykScan -- seam-driven', () => {
+    beforeEach(() => {
+      scanner.results.vulnerabilities = { details: [], status: 'pending' };
+    });
+
+    it('sets failed status when Snyk returns critical/high vulns (success-path JSON)', async () => {
+      // runSnykCommand returns JSON with high-severity vulns (no throw -- Snyk exit 0 with data)
+      const snykJson = JSON.stringify({
+        vulnerabilities: [
+          { severity: 'critical' },
+          { severity: 'high' },
+          { severity: 'low' },
+        ],
+      });
+      jestInstance
+        .spyOn(scanner, 'runSnykCommand')
+        .mockReturnValueOnce(snykJson);
+
+      await scanner.runSnykScan('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('failed');
+      expect(
+        scanner.results.vulnerabilities.details.some((d) =>
+          d.includes('Snyk found'),
+        ),
+      ).toBe(true);
+    });
+
+    it('adds passed detail when Snyk returns no vulnerabilities (success-path)', async () => {
+      const snykJson = JSON.stringify({ vulnerabilities: [] });
+      jestInstance
+        .spyOn(scanner, 'runSnykCommand')
+        .mockReturnValueOnce(snykJson);
+
+      await scanner.runSnykScan('/fake/path');
+
+      expect(
+        scanner.results.vulnerabilities.details.some((d) =>
+          d.includes('Snyk scan passed'),
+        ),
+      ).toBe(true);
+    });
+
+    it('sets failed status when Snyk exits 1 with parseable vuln stdout (fail-closed: exit-1 path)', async () => {
+      const snykError = new Error('snyk test failed');
+      snykError.status = 1;
+      snykError.stdout = JSON.stringify({
+        vulnerabilities: [{ severity: 'high' }, { severity: 'high' }],
+      });
+      jestInstance
+        .spyOn(scanner, 'runSnykCommand')
+        .mockImplementationOnce(() => {
+          throw snykError;
+        });
+
+      await scanner.runSnykScan('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('failed');
+      expect(
+        scanner.results.vulnerabilities.details.some((d) =>
+          d.includes('Snyk found'),
+        ),
+      ).toBe(true);
+    });
+
+    it('sets failed status when Snyk exits 1 with unparseable stdout (fail-closed: exit-1 unparseable)', async () => {
+      const snykError = new Error('snyk test failed');
+      snykError.status = 1;
+      snykError.stdout = 'not-json-garbage';
+      jestInstance
+        .spyOn(scanner, 'runSnykCommand')
+        .mockImplementationOnce(() => {
+          throw snykError;
+        });
+
+      await scanner.runSnykScan('/fake/path');
+
+      expect(scanner.results.vulnerabilities.status).toBe('failed');
+      expect(
+        scanner.results.vulnerabilities.details.some((d) =>
+          d.includes('could not parse output'),
+        ),
+      ).toBe(true);
     });
   });
 
@@ -2487,6 +2714,73 @@ describe('securityScanner coverage gaps', () => {
   });
 
   // ─────────────────────────────────────────────────────────────────
+  // performMalwareScan -- ClamAV present path (seam-driven)
+  // ─────────────────────────────────────────────────────────────────
+  describe('performMalwareScan -- ClamAV present (seam-driven)', () => {
+    // Scan commands are fully mocked -- path is never accessed on disk
+    const fakeScanPath = '/tmp/depup-fake-pkg-scan';
+
+    beforeEach(() => {
+      // Simulate ClamAV being available: checkClamAvAvailable returns without throwing
+      jestInstance
+        .spyOn(scanner, 'checkClamAvAvailable')
+        .mockImplementation(() => {});
+    });
+
+    it('sets passed status when ClamAV finds no malware (clean scan)', async () => {
+      // runClamScanCommand returns normally (no throw) = clean
+      jestInstance
+        .spyOn(scanner, 'runClamScanCommand')
+        .mockImplementation(() => {});
+
+      await scanner.performMalwareScan(fakeScanPath, false);
+
+      expect(scanner.results.malware.status).toBe('passed');
+      expect(scanner.results.malware.details).toContain(
+        'No malware detected by ClamAV',
+      );
+    });
+
+    it('sets failed status when ClamAV reports infected files (status 1 -- fail-closed)', async () => {
+      // runClamScanCommand throws with status=1 = infected
+      const infectedError = new Error(
+        'INFECTED: /tmp/evil.js: Malware.FOUND FOUND',
+      );
+      infectedError.status = 1;
+      jestInstance
+        .spyOn(scanner, 'runClamScanCommand')
+        .mockImplementationOnce(() => {
+          throw infectedError;
+        });
+
+      await scanner.performMalwareScan(fakeScanPath, false);
+
+      expect(scanner.results.malware.status).toBe('failed');
+      expect(
+        scanner.results.malware.details.some((d) =>
+          d.includes('Malware detected'),
+        ),
+      ).toBe(true);
+    });
+
+    it('throws and sets error status when ClamAV fails with unexpected error (fail-closed)', async () => {
+      const crashError = new Error('clamscan process timed out');
+      crashError.status = 2;
+      jestInstance
+        .spyOn(scanner, 'runClamScanCommand')
+        .mockImplementationOnce(() => {
+          throw crashError;
+        });
+
+      await expect(
+        scanner.performMalwareScan(fakeScanPath, false),
+      ).rejects.toThrow('ClamAV scan failed');
+
+      expect(scanner.results.malware.status).toBe('error');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
   // generateSecurityReport -- .json file path branch
   // ─────────────────────────────────────────────────────────────────
   describe('generateSecurityReport -- .json file path', () => {
@@ -2631,7 +2925,10 @@ describe('securityScanner coverage gaps', () => {
         vulnOnly: false,
       });
 
-      expect(performMalwareScan).toHaveBeenCalledWith(temporaryDirectory, false);
+      expect(performMalwareScan).toHaveBeenCalledWith(
+        temporaryDirectory,
+        false,
+      );
       expect(performVulnerabilityScan).not.toHaveBeenCalled();
       expect(performCompatibilityAnalysis).not.toHaveBeenCalled();
     });
@@ -2662,7 +2959,9 @@ describe('securityScanner coverage gaps', () => {
 
       expect(performMalwareScan).not.toHaveBeenCalled();
       expect(performVulnerabilityScan).not.toHaveBeenCalled();
-      expect(performCompatibilityAnalysis).toHaveBeenCalledWith(temporaryDirectory);
+      expect(performCompatibilityAnalysis).toHaveBeenCalledWith(
+        temporaryDirectory,
+      );
     });
 
     it('calls generateErrorReport and rethrows on scan failure', async () => {
@@ -3715,6 +4014,229 @@ describe('secureDepUp coverage gaps', () => {
     });
   });
 
+  // ─────────────────────────────────────────────────────────────────
+  // performPostExtractionScan -- seam-driven (clamscan present path)
+  // ─────────────────────────────────────────────────────────────────
+  describe('performPostExtractionScan -- seam-driven', () => {
+    let jestInstance;
+
+    beforeEach(async () => {
+      const globals = await import('@jest/globals');
+      jestInstance = globals.jest;
+      jestInstance.spyOn(console, 'log').mockImplementation(() => {});
+      jestInstance.spyOn(console, 'warn').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+      jestInstance.restoreAllMocks();
+    });
+
+    it('resolves without throwing when clamscan reports clean (status 0)', async () => {
+      // runClamScanCommand returns normally = no malware
+      jestInstance
+        .spyOn(secure, 'runClamScanCommand')
+        .mockImplementation(() => {});
+
+      await expect(
+        secure.performPostExtractionScan('/fake/pkg/path'),
+      ).resolves.toBeUndefined();
+    });
+
+    it('throws "Malware detected" when clamscan exits 1 (fail-closed: infected)', async () => {
+      const infectedError = new Error('clamscan found infected files');
+      infectedError.status = 1;
+      jestInstance
+        .spyOn(secure, 'runClamScanCommand')
+        .mockImplementationOnce(() => {
+          throw infectedError;
+        });
+
+      await expect(
+        secure.performPostExtractionScan('/fake/pkg/path'),
+      ).rejects.toThrow('Malware detected in package files');
+    });
+
+    it('throws "Malware scan failed" on unexpected clamscan error (fail-closed: propagate)', async () => {
+      const crashError = new Error('clamscan timed out');
+      crashError.status = 2;
+      jestInstance
+        .spyOn(secure, 'runClamScanCommand')
+        .mockImplementationOnce(() => {
+          throw crashError;
+        });
+
+      await expect(
+        secure.performPostExtractionScan('/fake/pkg/path'),
+      ).rejects.toThrow('Malware scan failed');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // performVulnerabilityScan -- seam-driven (npm audit present path)
+  // ─────────────────────────────────────────────────────────────────
+  describe('performVulnerabilityScan -- seam-driven', () => {
+    let jestInstance;
+
+    beforeEach(async () => {
+      const globals = await import('@jest/globals');
+      jestInstance = globals.jest;
+      jestInstance.spyOn(console, 'log').mockImplementation(() => {});
+      jestInstance.spyOn(console, 'warn').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+      jestInstance.restoreAllMocks();
+    });
+
+    it('sets completedScans.vulnerability when npm audit and snyk both pass', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '1.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const auditJson = JSON.stringify({
+        metadata: { vulnerabilities: { critical: 0, high: 0, total: 0 } },
+      });
+      jestInstance
+        .spyOn(secure, 'runNpmAuditCommand')
+        .mockReturnValueOnce(auditJson);
+      // Snyk not installed on this machine -- runSnykScan ENOENT path is a no-op
+      // Use spyOn to make it explicitly pass (no-op)
+      jestInstance.spyOn(secure, 'runSnykScan').mockImplementation(() => {});
+
+      await secure.performVulnerabilityScan(temporaryDirectory);
+
+      expect(secure.completedScans.vulnerability).toBe(true);
+    });
+
+    it('sets completedScans.vulnerability when audit exits non-zero but stdout has no critical (non-critical path)', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '2.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        metadata: { vulnerabilities: { critical: 0, high: 0, total: 3 } },
+      });
+      jestInstance
+        .spyOn(secure, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw auditError;
+        });
+
+      await secure.performVulnerabilityScan(temporaryDirectory);
+
+      expect(secure.completedScans.vulnerability).toBe(true);
+    });
+
+    it('throws when audit finds critical vulnerabilities (fail-closed: checkAuditForCritical)', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '3.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const auditJson = JSON.stringify({
+        metadata: { vulnerabilities: { critical: 1, high: 2, total: 3 } },
+      });
+      jestInstance
+        .spyOn(secure, 'runNpmAuditCommand')
+        .mockReturnValueOnce(auditJson);
+
+      await expect(
+        secure.performVulnerabilityScan(temporaryDirectory),
+      ).rejects.toThrow('Critical vulnerabilities found');
+    });
+
+    it('throws when runNpmAuditCommand throws without stdout (fail-closed: propagate)', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '4.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const spawnError = new Error('spawn npm ENOENT');
+      // no .stdout property
+      jestInstance
+        .spyOn(secure, 'runNpmAuditCommand')
+        .mockImplementationOnce(() => {
+          throw spawnError;
+        });
+
+      await expect(
+        secure.performVulnerabilityScan(temporaryDirectory),
+      ).rejects.toThrow('spawn npm ENOENT');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // publishWithSecurityAttestation -- seam-driven (npm publish path)
+  // ─────────────────────────────────────────────────────────────────
+  describe('publishWithSecurityAttestation -- seam-driven', () => {
+    let jestInstance;
+
+    beforeEach(async () => {
+      const globals = await import('@jest/globals');
+      jestInstance = globals.jest;
+      jestInstance.spyOn(console, 'log').mockImplementation(() => {});
+      jestInstance.spyOn(console, 'warn').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+      jestInstance.restoreAllMocks();
+    });
+
+    it('writes attestation file and resolves when npm publish succeeds', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '1.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      // npm publish is a no-op (spy) -- test that addSecurityAttestation still runs
+      jestInstance.spyOn(secure, 'runNpmPublish').mockImplementation(() => {});
+
+      await secure.publishWithSecurityAttestation(
+        'express',
+        { name: 'express', path: temporaryDirectory },
+        { debug: false },
+      );
+
+      // addSecurityAttestation writes the file to the revision dir
+      const attestationFile = path.join(
+        revisionPath,
+        'security-attestation.json',
+      );
+      const content = JSON.parse(await fs.readFile(attestationFile));
+
+      expect(content.version).toBe('1.0.0');
+      expect(typeof content.timestamp).toBe('string');
+    });
+
+    it('throws "Secure publish failed" when runNpmPublish throws (fail-closed: propagate)', async () => {
+      const revisionPath = await makeRevisionDirectory(
+        temporaryDirectory,
+        '2.0.0',
+        'rev-1',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jestInstance.spyOn(secure, 'runNpmPublish').mockImplementationOnce(() => {
+        throw new Error('E403 Forbidden');
+      });
+
+      await expect(
+        secure.publishWithSecurityAttestation(
+          'express',
+          { name: 'express', path: temporaryDirectory },
+          { debug: false },
+        ),
+      ).rejects.toThrow('Secure publish failed');
+    });
+  });
+
   describe('performVulnerabilityScan real execution', () => {
     it('throws when findLatestRevisionDirectory fails inside scan', async () => {
       secure.findLatestRevisionDirectory = async () => {
@@ -4543,12 +5065,14 @@ describe('add-package.mjs -- coverage gap fill', () => {
   describe('loadUserPackages', () => {
     it('returns empty array when file does not exist', async () => {
       const result = await adder.loadUserPackages();
+
       expect(result).toStrictEqual([]);
     });
 
     it('returns packages array from valid JSON', async () => {
       await writePackages(adder.userPackagesPath, ['express', 'lodash']);
       const result = await adder.loadUserPackages();
+
       expect(result).toStrictEqual(['express', 'lodash']);
     });
 
@@ -4559,6 +5083,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
         JSON.stringify({ packages: 'not-an-array' }),
       );
       const result = await adder.loadUserPackages();
+
       expect(result).toStrictEqual([]);
     });
 
@@ -4566,6 +5091,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       await fs.writeFile(adder.userPackagesPath, 'not valid json {{{');
       const result = await adder.loadUserPackages();
+
       expect(result).toStrictEqual([]);
     });
 
@@ -4573,6 +5099,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       await fs.writeFile(adder.userPackagesPath, JSON.stringify({ count: 0 }));
       const result = await adder.loadUserPackages();
+
       expect(result).toStrictEqual([]);
     });
   });
@@ -4583,7 +5110,8 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('writes valid JSON with count, packages, and updatedAt', async () => {
       const { promises: fs } = await import('node:fs');
       await adder.saveUserPackages(['express', 'lodash']);
-      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath, 'utf8'));
+      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath));
+
       expect(raw.count).toBe(2);
       expect(raw.packages).toStrictEqual(['express', 'lodash']);
       expect(typeof raw.updatedAt).toBe('string');
@@ -4600,7 +5128,8 @@ describe('add-package.mjs -- coverage gap fill', () => {
       );
       adder.userPackagesPath = deepPath;
       await adder.saveUserPackages(['react']);
-      const raw = JSON.parse(await fs.readFile(deepPath, 'utf8'));
+      const raw = JSON.parse(await fs.readFile(deepPath));
+
       expect(raw.packages).toStrictEqual(['react']);
     });
   });
@@ -4622,6 +5151,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('adds a simple unscoped package', async () => {
       const result = await adder.addPackage('express');
+
       expect(result.added).toBe(true);
       expect(result.packageName).toBe('express');
       expect(result.totalPackages).toBe(1);
@@ -4632,6 +5162,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('adds a scoped package', async () => {
       const result = await adder.addPackage('@babel/core');
+
       expect(result.added).toBe(true);
       expect(result.packageName).toBe('@babel/core');
       expect(result.totalPackages).toBe(1);
@@ -4639,6 +5170,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('logs total package count after add', async () => {
       await adder.addPackage('react');
+
       expect(consoleLogSpy).toHaveBeenCalledWith(
         'Total user-submitted packages: 1',
       );
@@ -4682,6 +5214,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('throws when package already exists (exact match)', async () => {
       await adder.addPackage('express');
+
       await expect(adder.addPackage('express')).rejects.toThrow(
         'already in the user list',
       );
@@ -4689,6 +5222,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('throws when package already exists (case-insensitive)', async () => {
       await adder.addPackage('Express');
+
       await expect(adder.addPackage('express')).rejects.toThrow(
         'already in the user list',
       );
@@ -4696,6 +5230,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('throws when same scoped package already exists', async () => {
       await adder.addPackage('@babel/core');
+
       await expect(adder.addPackage('@babel/core')).rejects.toThrow(
         'already in the user list',
       );
@@ -4705,7 +5240,8 @@ describe('add-package.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       await adder.addPackage('zlib');
       await adder.addPackage('axios');
-      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath, 'utf8'));
+      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath));
+
       expect(raw.packages[0]).toBe('axios');
       expect(raw.packages[1]).toBe('zlib');
     });
@@ -4713,16 +5249,19 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('returns correct totalPackages when adding to existing list', async () => {
       await writePackages(adder.userPackagesPath, ['react', 'vue']);
       const result = await adder.addPackage('angular');
+
       expect(result.totalPackages).toBe(3);
     });
 
     it('allows package name with dots and hyphens', async () => {
       const result = await adder.addPackage('some-pkg.js');
+
       expect(result.added).toBe(true);
     });
 
     it('allows package name with underscores', async () => {
       const result = await adder.addPackage('my_package');
+
       expect(result.added).toBe(true);
     });
   });
@@ -4751,6 +5290,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('removes a package that exists', async () => {
       await adder.addPackage('express');
       const result = await adder.removePackage('express');
+
       expect(result.removed).toBe(true);
       expect(result.packageName).toBe('express');
       expect(result.totalPackages).toBe(0);
@@ -4759,6 +5299,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('removes case-insensitively (added as uppercase, removed as lowercase)', async () => {
       await adder.addPackage('Express');
       const result = await adder.removePackage('express');
+
       expect(result.removed).toBe(true);
     });
 
@@ -4766,6 +5307,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
       await adder.addPackage('express');
       consoleLogSpy.mockClear();
       await adder.removePackage('express');
+
       expect(consoleLogSpy).toHaveBeenCalledWith(
         "Removed package 'express' from user-packages.json",
       );
@@ -4776,6 +5318,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
       await adder.addPackage('lodash');
       consoleLogSpy.mockClear();
       await adder.removePackage('express');
+
       expect(consoleLogSpy).toHaveBeenCalledWith(
         'Total user-submitted packages: 1',
       );
@@ -4787,7 +5330,8 @@ describe('add-package.mjs -- coverage gap fill', () => {
       await adder.addPackage('express');
       await adder.addPackage('lodash');
       await adder.removePackage('express');
-      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath, 'utf8'));
+      const raw = JSON.parse(await fs.readFile(adder.userPackagesPath));
+
       expect(raw.packages).not.toContain('express');
       expect(raw.packages).toContain('axios');
       expect(raw.packages).toContain('lodash');
@@ -4799,6 +5343,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
   describe('listPackages', () => {
     it('returns count 0 and empty array when no file exists', async () => {
       const result = await adder.listPackages();
+
       expect(result.count).toBe(0);
       expect(result.packages).toStrictEqual([]);
     });
@@ -4806,6 +5351,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('returns count and sorted packages', async () => {
       await writePackages(adder.userPackagesPath, ['zlib', 'axios', 'express']);
       const result = await adder.listPackages();
+
       expect(result.count).toBe(3);
       expect(result.packages[0]).toBe('axios');
       expect(result.packages[1]).toBe('express');
@@ -4815,6 +5361,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
     it('sorts case-insensitively', async () => {
       await writePackages(adder.userPackagesPath, ['Zlib', 'axios']);
       const result = await adder.listPackages();
+
       expect(result.packages[0]).toBe('axios');
       expect(result.packages[1]).toBe('Zlib');
     });
@@ -4824,6 +5371,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
       await adder.addPackage('vue');
       await adder.addPackage('angular');
       const result = await adder.listPackages();
+
       expect(result.count).toBe(3);
       expect(result.packages).toContain('react');
       expect(result.packages).toContain('vue');
@@ -4831,7 +5379,6 @@ describe('add-package.mjs -- coverage gap fill', () => {
     });
   });
 });
-
 
 // ═══════════════════════════════════════════════════════════════════
 // integrity-meter.mjs -- coverage gap fill (PR: raise core pipeline coverage)
@@ -5063,7 +5610,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       await meter.vote('mypkg', '1.0.0', '0', 'up', 'works great');
 
       const votesFile = pathModule.join(packageDir, 'votes.json');
-      const raw = await fsPromises.readFile(votesFile, 'utf8');
+      const raw = await fsPromises.readFile(votesFile);
       const votes = JSON.parse(raw);
 
       expect(votes['1.0.0']['0'].up).toBe(1);
@@ -5082,7 +5629,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       await meter.vote('mypkg', '1.0.0', '0', 'down', '');
 
       const votesFile = pathModule.join(packageDir, 'votes.json');
-      const raw = await fsPromises.readFile(votesFile, 'utf8');
+      const raw = await fsPromises.readFile(votesFile);
       const votes = JSON.parse(raw);
 
       expect(votes['1.0.0']['0'].down).toBe(1);
@@ -5099,7 +5646,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       await meter.vote('mypkg', '1.0.0', '0', 'neutral', '');
 
       const votesFile = pathModule.join(packageDir, 'votes.json');
-      const raw = await fsPromises.readFile(votesFile, 'utf8');
+      const raw = await fsPromises.readFile(votesFile);
       const votes = JSON.parse(raw);
 
       expect(votes['1.0.0']['0'].neutral).toBe(1);
@@ -5117,7 +5664,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       await meter.vote('mypkg', '1.0.0', '0', 'up', '');
 
       const votesFile = pathModule.join(packageDir, 'votes.json');
-      const raw = await fsPromises.readFile(votesFile, 'utf8');
+      const raw = await fsPromises.readFile(votesFile);
       const votes = JSON.parse(raw);
 
       expect(votes['1.0.0']['0'].up).toBe(2);
@@ -5143,7 +5690,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'votes.json'),
-        'utf8',
       );
       const votes = JSON.parse(raw);
 
@@ -5166,7 +5712,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       process.env.USER = savedUser;
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'votes.json'),
-        'utf8',
       );
       const votes = JSON.parse(raw);
 
@@ -5181,11 +5726,10 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
       );
       await fsPromises.mkdir(packageDir, { recursive: true });
 
-      await meter.vote('mypkg', '1.0.0', '0', 'up', undefined);
+      await meter.vote('mypkg', '1.0.0', '0', 'up');
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'votes.json'),
-        'utf8',
       );
       const votes = JSON.parse(raw);
 
@@ -5212,7 +5756,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5236,9 +5779,9 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
+
       // score = ((3-1)/5)*100 = 40, Math.round = 40
       expect(integrity['1.0.0']['0'].integrity.score).toBe(40);
     });
@@ -5259,7 +5802,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5282,7 +5824,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5312,7 +5853,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5340,7 +5880,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5367,7 +5906,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5394,7 +5932,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5421,7 +5958,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
       const raw = await fsPromises.readFile(
         pathModule.join(packageDir, 'integrity.json'),
-        'utf8',
       );
       const integrity = JSON.parse(raw);
 
@@ -5629,7 +6165,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
 
     it('shows all three vote emojis in report output', () => {
       const logLines = [];
-      console.log = (...args) => logLines.push(args.join(' '));
+      console.log = (...arguments_) => logLines.push(arguments_.join(' '));
 
       meter.printRevisionReport('0', {
         details: [
@@ -5740,7 +6276,6 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
   });
 });
 
-
 // ═══════════════════════════════════════════════════════════════════
 // generate-readme.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
@@ -5766,21 +6301,25 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
   describe('generateChangesTable', () => {
     it('returns no-changes message for empty integrity data', () => {
       const result = generator.generateChangesTable({});
+
       expect(result).toBe('No changes recorded yet.');
     });
 
     it('returns no-version message when all keys are non-semver', () => {
       const result = generator.generateChangesTable({ metadata: {} });
+
       expect(result).toBe('No version data available.');
     });
 
     it('returns no-revision message when version data is null', () => {
       const result = generator.generateChangesTable({ '1.0.0': null });
+
       expect(result).toBe('No revision data available.');
     });
 
     it('returns no-revision message when version data is not an object', () => {
       const result = generator.generateChangesTable({ '1.0.0': 'bad' });
+
       expect(result).toBe('No revision data available.');
     });
 
@@ -5788,6 +6327,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       const result = generator.generateChangesTable({
         '1.0.0': { meta: 'data' },
       });
+
       expect(result).toContain('No dependency changes');
     });
 
@@ -5795,6 +6335,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       const result = generator.generateChangesTable({
         '1.0.0': { 0: { smokeTest: 'passed' } },
       });
+
       expect(result).toContain('No dependency changes');
     });
 
@@ -5802,6 +6343,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       const result = generator.generateChangesTable({
         '1.0.0': { 0: { changes: 'bad' } },
       });
+
       expect(result).toContain('No dependency changes');
     });
 
@@ -5809,6 +6351,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       const result = generator.generateChangesTable({
         '1.0.0': { 0: { changes: {} } },
       });
+
       expect(result).toContain('No dependencies were updated');
     });
 
@@ -5817,12 +6360,13 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         '1.0.0': {
           0: {
             changes: {
-              lodash: { from: '4.17.20', to: '4.17.21' },
               express: { from: '4.17.0', to: '4.18.0' },
+              lodash: { from: '4.17.20', to: '4.17.21' },
             },
           },
         },
       });
+
       expect(result).toContain('| Dependency | Original | Updated |');
       expect(result).toContain('lodash');
       expect(result).toContain('4.17.20');
@@ -5837,6 +6381,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
           },
         },
       });
+
       expect(result).toContain('| somelib | `?` | `?` |');
     });
 
@@ -5845,6 +6390,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         '1.0.0': { 0: { changes: { lib: { from: '1.0', to: '1.1' } } } },
         '2.0.0': { 0: { changes: { lib: { from: '2.0', to: '2.1' } } } },
       });
+
       expect(result).toContain('2.0');
       expect(result).toContain('2.1');
     });
@@ -5857,6 +6403,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
           5: { changes: { lib: { from: 'old', to: 'v5' } } },
         },
       });
+
       expect(result).toContain('v5');
     });
   });
@@ -5866,6 +6413,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
   describe('generateIntegrityTable', () => {
     it('returns no-data message for empty integrity data', () => {
       const result = generator.generateIntegrityTable({}, {});
+
       expect(result).toBe('No integrity data available yet.');
     });
 
@@ -5874,8 +6422,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         { '1.0.0': null, '2.0.0': 'bad' },
         {},
       );
+
       // Header still present but no rows
-      expect(result).toContain('| Version | Revision | Status | Score | Votes |');
+      expect(result).toContain(
+        '| Version | Revision | Status | Score | Votes |',
+      );
       expect(result).not.toContain('1.0.0');
       expect(result).not.toContain('2.0.0');
     });
@@ -5890,6 +6441,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateIntegrityTable(integrityData, {});
+
       expect(result).toContain('1.0.0');
       expect(result).toContain('90%');
       expect(result).toContain('5');
@@ -5910,6 +6462,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateIntegrityTable(integrityData, votesData);
+
       expect(result).toContain('4');
     });
 
@@ -5927,6 +6480,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       );
       // Count rows by counting '1.0.0' occurrences in data rows
       const rowMatches = result.match(/\| 1\.0\.0 \|/gu);
+
       expect(rowMatches).toHaveLength(10);
     });
 
@@ -5942,6 +6496,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       };
       const result = generator.generateIntegrityTable(integrityData, {});
       const rowMatches = result.match(/\| 1\.0\.0 \|/gu);
+
       expect(rowMatches).toHaveLength(1);
     });
 
@@ -5952,6 +6507,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateIntegrityTable(integrityData, {});
+
       expect(result).toContain('0%');
     });
   });
@@ -5961,6 +6517,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
   describe('generateVersionHistory', () => {
     it('returns no-history message for empty integrity data', () => {
       const result = generator.generateVersionHistory({}, {});
+
       expect(result).toBe('No version history available yet.');
     });
 
@@ -5969,6 +6526,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         { '1.0.0': null, '2.0.0': 'bad' },
         {},
       );
+
       expect(result).toBe('');
     });
 
@@ -5982,6 +6540,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateVersionHistory(integrityData, {});
+
       expect(result).toContain('### Version 1.0.0');
       expect(result).toContain('Revision 0');
     });
@@ -6001,6 +6560,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateVersionHistory(integrityData, votesData);
+
       expect(result).toContain('(6 votes)');
     });
 
@@ -6014,6 +6574,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateVersionHistory(integrityData, {});
+
       expect(result).not.toContain('votes)');
     });
 
@@ -6030,6 +6591,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateVersionHistory(integrityData, {});
+
       expect(result).toContain('Last updated:');
     });
 
@@ -6043,6 +6605,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         },
       };
       const result = generator.generateVersionHistory(integrityData, {});
+
       expect(result).not.toContain('Last updated:');
     });
 
@@ -6059,6 +6622,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         {},
       );
       const revisionMatches = result.match(/Revision \d+/gu);
+
       expect(revisionMatches).toHaveLength(10);
     });
 
@@ -6074,6 +6638,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       };
       const result = generator.generateVersionHistory(integrityData, {});
       const revisionMatches = result.match(/Revision \d+/gu);
+
       expect(revisionMatches).toHaveLength(1);
     });
   });
@@ -6097,6 +6662,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
           2: 'bad',
         },
       };
+
       expect(generator.getVersionVoteCount(votes, '1.0.0')).toBe(3);
     });
   });
@@ -6106,7 +6672,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
   describe('generateReadme', () => {
     it('writes README.md from valid integrity data', async () => {
       const packageName = 'test-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6134,6 +6704,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         path.join(packageDirectory, 'README.md'),
         'utf8',
       );
+
       expect(readme).toContain('@depup/test-pkg');
       expect(readme).toContain('test-pkg');
       expect(readme).toContain('lodash');
@@ -6141,7 +6712,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
     it('throws when no valid version exists in integrity data', async () => {
       const packageName = 'empty-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6149,6 +6724,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       );
 
       jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
+
       await expect(generator.generateReadme(packageName)).rejects.toThrow(
         'No version data found for empty-pkg',
       );
@@ -6156,7 +6732,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
     it('throws when version entry is null (corrupt data)', async () => {
       const packageName = 'corrupt-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6164,6 +6744,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       );
 
       jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
+
       await expect(generator.generateReadme(packageName)).rejects.toThrow(
         'Corrupt version data',
       );
@@ -6171,11 +6752,16 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
     it('handles missing integrity.json (no revisions, still writes)', async () => {
       const packageName = 'no-integrity-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       // No integrity.json -- loadJsonSafe returns {}
 
       jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
+
       await expect(generator.generateReadme(packageName)).rejects.toThrow(
         'No version data found',
       );
@@ -6183,7 +6769,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
     it('generates README when revision data is missing (no revisions under version)', async () => {
       const packageName = 'no-rev-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6197,13 +6787,18 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         path.join(packageDirectory, 'README.md'),
         'utf8',
       );
+
       expect(readme).toContain('no-rev-pkg');
       expect(readme).toContain('unknown');
     });
 
     it('picks latest version when multiple semver versions exist (exercises sort comparator)', async () => {
       const packageName = 'multi-ver-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6212,8 +6807,16 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
             0: { changes: {}, smokeTest: 'passed', version: '1.0.0-depup.0' },
           },
           '2.0.0': {
-            0: { changes: { lib: { from: '1.0', to: '2.0' } }, smokeTest: 'passed', version: '2.0.0-depup.0' },
-            1: { changes: { lib: { from: '1.0', to: '2.1' } }, smokeTest: 'passed', version: '2.0.0-depup.1' },
+            0: {
+              changes: { lib: { from: '1.0', to: '2.0' } },
+              smokeTest: 'passed',
+              version: '2.0.0-depup.0',
+            },
+            1: {
+              changes: { lib: { from: '1.0', to: '2.1' } },
+              smokeTest: 'passed',
+              version: '2.0.0-depup.1',
+            },
           },
         }),
       );
@@ -6225,13 +6828,18 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         path.join(packageDirectory, 'README.md'),
         'utf8',
       );
+
       // Should use 2.0.0 as the latest version (exercises toSorted semver comparator)
       expect(readme).toContain('2.0.0');
     });
 
     it('handles scoped package names with flattenPackageName', async () => {
       const packageName = '@myorg/mypkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6254,6 +6862,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
         path.join(packageDirectory, 'README.md'),
         'utf8',
       );
+
       expect(readme).toContain('@depup/myorg__mypkg');
     });
   });
@@ -6264,10 +6873,12 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
     it('calls process.exit(1) when no package name argument given', async () => {
       const originalArgv = process.argv;
       process.argv = ['node', 'generate-readme.mjs'];
-      const exitSpy = jest
-        .spyOn(process, 'exit')
-        .mockImplementation(() => { throw new Error('process.exit called'); });
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const exitSpy = jest.spyOn(process, 'exit').mockImplementation(() => {
+        throw new Error('process.exit called');
+      });
+      const errorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
 
       let thrownError;
       try {
@@ -6280,6 +6891,7 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
       expect(thrownError?.message).toBe('process.exit called');
       expect(exitSpy).toHaveBeenCalledWith(1);
+
       exitSpy.mockRestore();
       errorSpy.mockRestore();
     });
@@ -6289,10 +6901,12 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       process.argv = ['node', 'generate-readme.mjs', 'nonexistent-pkg'];
       jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
       // nonexistent-pkg has no integrity.json, loadJsonSafe returns {} -> throws
-      const exitSpy = jest
-        .spyOn(process, 'exit')
-        .mockImplementation(() => { throw new Error('process.exit called'); });
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const exitSpy = jest.spyOn(process, 'exit').mockImplementation(() => {
+        throw new Error('process.exit called');
+      });
+      const errorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
 
       let thrownError;
       try {
@@ -6305,13 +6919,18 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
 
       expect(thrownError?.message).toBe('process.exit called');
       expect(exitSpy).toHaveBeenCalledWith(1);
+
       exitSpy.mockRestore();
       errorSpy.mockRestore();
     });
 
     it('logs success message when generateReadme succeeds', async () => {
       const packageName = 'main-success-pkg';
-      const packageDirectory = path.join(temporaryDirectory, 'packages', packageName);
+      const packageDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        packageName,
+      );
       await fs.mkdir(packageDirectory, { recursive: true });
       await fs.writeFile(
         path.join(packageDirectory, 'integrity.json'),
@@ -6338,11 +6957,11 @@ describe('generate-readme.mjs -- coverage gap fill', () => {
       }
 
       expect(logSpy).toHaveBeenCalledWith(expect.stringContaining(packageName));
+
       logSpy.mockRestore();
     });
   });
 });
-
 
 // ═══════════════════════════════════════════════════════════════════
 // cron-sync.mjs -- coverage gap fill (PR: raise core pipeline coverage)
@@ -6470,11 +7089,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
     it('kills the child and rejects with timeout message when the process hangs', async () => {
       await expect(
-        syncer.spawnAsync(
-          'node',
-          ['-e', 'setTimeout(() => {}, 60000)'],
-          { timeout: 100 },
-        ),
+        syncer.spawnAsync('node', ['-e', 'setTimeout(() => {}, 60000)'], {
+          timeout: 100,
+        }),
       ).rejects.toThrow('Process timed out');
     }, 10_000);
   });
@@ -6488,13 +7105,23 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .spyOn(syncer, 'spawnAsync')
         .mockResolvedValueOnce();
 
-      const package_ = { name: 'express', path: temporaryDirectory, version: '4.18.2' };
+      const package_ = {
+        name: 'express',
+        path: temporaryDirectory,
+        version: '4.18.2',
+      };
 
       await syncer.updatePackage(package_, '5.0.0');
 
       expect(spawnSpy).toHaveBeenCalledWith(
         'node',
-        ['scripts/depup.mjs', 'express@5.0.0', '--bump-deps', '--test', '--publish'],
+        [
+          'scripts/depup.mjs',
+          'express@5.0.0',
+          '--bump-deps',
+          '--test',
+          '--publish',
+        ],
         expect.objectContaining({ timeout: 300_000 }),
       );
     });
@@ -6502,7 +7129,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     it('logs success message after spawnAsync resolves', async () => {
       jestInstance.spyOn(syncer, 'spawnAsync').mockResolvedValueOnce();
 
-      const package_ = { name: 'lodash', path: temporaryDirectory, version: '4.17.21' };
+      const package_ = {
+        name: 'lodash',
+        path: temporaryDirectory,
+        version: '4.17.21',
+      };
       await syncer.updatePackage(package_, '5.0.0');
 
       expect(console.log).toHaveBeenCalledWith(
@@ -6515,7 +7146,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .spyOn(syncer, 'spawnAsync')
         .mockRejectedValueOnce(new Error('child failed'));
 
-      const package_ = { name: 'express', path: temporaryDirectory, version: '4.18.2' };
+      const package_ = {
+        name: 'express',
+        path: temporaryDirectory,
+        version: '4.18.2',
+      };
 
       await expect(syncer.updatePackage(package_, '5.0.0')).rejects.toThrow(
         'child failed',
@@ -6532,13 +7167,23 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .spyOn(syncer, 'spawnAsync')
         .mockResolvedValueOnce();
 
-      const package_ = { name: 'lodash', path: temporaryDirectory, version: '4.17.21' };
+      const package_ = {
+        name: 'lodash',
+        path: temporaryDirectory,
+        version: '4.17.21',
+      };
 
       await syncer.updateDependencies(package_);
 
       expect(spawnSpy).toHaveBeenCalledWith(
         'node',
-        ['scripts/depup.mjs', 'lodash@4.17.21', '--bump-deps', '--test', '--publish'],
+        [
+          'scripts/depup.mjs',
+          'lodash@4.17.21',
+          '--bump-deps',
+          '--test',
+          '--publish',
+        ],
         expect.objectContaining({ timeout: 300_000 }),
       );
     });
@@ -6546,7 +7191,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     it('logs success message after spawnAsync resolves', async () => {
       jestInstance.spyOn(syncer, 'spawnAsync').mockResolvedValueOnce();
 
-      const package_ = { name: 'lodash', path: temporaryDirectory, version: '4.17.21' };
+      const package_ = {
+        name: 'lodash',
+        path: temporaryDirectory,
+        version: '4.17.21',
+      };
       await syncer.updateDependencies(package_);
 
       expect(console.log).toHaveBeenCalledWith(
@@ -6559,7 +7208,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .spyOn(syncer, 'spawnAsync')
         .mockRejectedValueOnce(new Error('dep update failed'));
 
-      const package_ = { name: 'lodash', path: temporaryDirectory, version: '4.17.21' };
+      const package_ = {
+        name: 'lodash',
+        path: temporaryDirectory,
+        version: '4.17.21',
+      };
 
       await expect(syncer.updateDependencies(package_)).rejects.toThrow(
         'dep update failed',
@@ -6572,26 +7225,44 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('checkDependencyUpdates', () => {
     it('returns false when version directory does not exist', async () => {
-      const package_ = { name: 'no-such-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'no-such-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when no rev directories exist in version dir', async () => {
       const versionDirectory = pathModule.join(temporaryDirectory, '1.0.0');
       await fs.mkdir(versionDirectory);
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when package.json is missing from rev directory', async () => {
       const versionDirectory = pathModule.join(temporaryDirectory, '1.0.0');
       await fs.mkdir(versionDirectory);
       await fs.mkdir(pathModule.join(versionDirectory, 'rev-0'));
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when dependencies object is empty', async () => {
@@ -6603,9 +7274,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         pathModule.join(revDirectory, 'package.json'),
         JSON.stringify({ dependencies: {}, name: 'my-pkg', version: '1.0.0' }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when package.json has no dependencies field', async () => {
@@ -6617,9 +7294,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         pathModule.join(revDirectory, 'package.json'),
         JSON.stringify({ name: 'my-pkg', version: '1.0.0' }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when fetch.json fails for all dependencies', async () => {
@@ -6633,11 +7316,21 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.mkdir(revDirectory);
       await fs.writeFile(
         pathModule.join(revDirectory, 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^4.17.21' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^4.17.21' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns true when fetch.json reports a significant update', async () => {
@@ -6651,9 +7344,17 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.mkdir(revDirectory);
       await fs.writeFile(
         pathModule.join(revDirectory, 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^1.0.0' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^1.0.0' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
       await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(true);
     });
@@ -6669,11 +7370,21 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.mkdir(revDirectory);
       await fs.writeFile(
         pathModule.join(revDirectory, 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^1.0.0' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^1.0.0' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('returns false when dist-tags.latest is missing from fetch response', async () => {
@@ -6687,11 +7398,21 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.mkdir(revDirectory);
       await fs.writeFile(
         pathModule.join(revDirectory, 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^1.0.0' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^1.0.0' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('uses the latest rev directory when multiple revisions exist', async () => {
@@ -6705,28 +7426,44 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.mkdir(pathModule.join(versionDirectory, 'rev-0'));
       await fs.writeFile(
         pathModule.join(versionDirectory, 'rev-0', 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^0.1.0' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^0.1.0' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
       const rev1 = pathModule.join(versionDirectory, 'rev-1');
       await fs.mkdir(rev1);
       await fs.writeFile(
         pathModule.join(rev1, 'package.json'),
-        JSON.stringify({ dependencies: { lodash: '^1.0.0' }, name: 'my-pkg', version: '1.0.0' }),
+        JSON.stringify({
+          dependencies: { lodash: '^1.0.0' },
+          name: 'my-pkg',
+          version: '1.0.0',
+        }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
       // rev-1 is used; 1.0.2 vs ^1.0.0 is patch only => false
-      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(false);
+      await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
+        false,
+      );
     });
 
     it('finds update in second batch of dependencies (batching path)', async () => {
       // First 10 calls return patch-only; 11th call returns a major bump
       let callCount = 0;
-      jestInstance.spyOn(fetchModule.default, 'json').mockImplementation(async () => {
-        callCount++;
-        const version = callCount === 11 ? '2.0.0' : '1.0.1';
-        return { 'dist-tags': { latest: version } };
-      });
+      jestInstance
+        .spyOn(fetchModule.default, 'json')
+        .mockImplementation(async () => {
+          callCount++;
+          const version = callCount === 11 ? '2.0.0' : '1.0.1';
+          return { 'dist-tags': { latest: version } };
+        });
 
       const versionDirectory = pathModule.join(temporaryDirectory, '1.0.0');
       await fs.mkdir(versionDirectory);
@@ -6740,7 +7477,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         pathModule.join(revDirectory, 'package.json'),
         JSON.stringify({ dependencies, name: 'my-pkg', version: '1.0.0' }),
       );
-      const package_ = { name: 'my-pkg', path: temporaryDirectory, version: '1.0.0' };
+      const package_ = {
+        name: 'my-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
 
       await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(true);
     });
@@ -6766,7 +7507,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('returns false when registry returns no latest version', async () => {
-      jestInstance.spyOn(syncer, 'wasRecentlyProcessed').mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockResolvedValueOnce({ 'dist-tags': {} });
@@ -6782,7 +7525,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('calls updatePackage and generateReadme when version differs', async () => {
-      jestInstance.spyOn(syncer, 'wasRecentlyProcessed').mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockResolvedValueOnce({ 'dist-tags': { latest: '5.0.0' } });
@@ -6806,7 +7551,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('calls updateDependencies and generateReadme when only deps need update', async () => {
-      jestInstance.spyOn(syncer, 'wasRecentlyProcessed').mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockResolvedValueOnce({ 'dist-tags': { latest: '4.18.2' } });
@@ -6833,7 +7580,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('returns false when same version and no dep updates needed', async () => {
-      jestInstance.spyOn(syncer, 'wasRecentlyProcessed').mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockResolvedValueOnce({ 'dist-tags': { latest: '4.18.2' } });
@@ -6852,7 +7601,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('returns false (catches error) when registry fetch throws', async () => {
-      jestInstance.spyOn(syncer, 'wasRecentlyProcessed').mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockRejectedValueOnce(new Error('registry unavailable'));
@@ -6879,6 +7630,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(Array.isArray(packages)).toBe(true);
         expect(packages).toHaveLength(0);
       } finally {
@@ -6889,11 +7641,16 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     it('skips directories without integrity.json', async () => {
       const savedCwd = process.cwd;
       process.cwd = () => temporaryDirectory;
-      await fs.mkdir(pathModule.join(temporaryDirectory, 'packages'), { recursive: true });
-      await fs.mkdir(pathModule.join(temporaryDirectory, 'packages', 'express'));
+      await fs.mkdir(pathModule.join(temporaryDirectory, 'packages'), {
+        recursive: true,
+      });
+      await fs.mkdir(
+        pathModule.join(temporaryDirectory, 'packages', 'express'),
+      );
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(0);
       } finally {
         process.cwd = savedCwd;
@@ -6909,6 +7666,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(0);
       } finally {
         process.cwd = savedCwd;
@@ -6924,6 +7682,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(0);
       } finally {
         process.cwd = savedCwd;
@@ -6942,6 +7701,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(0);
       } finally {
         process.cwd = savedCwd;
@@ -6960,6 +7720,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(1);
         expect(packages[0].name).toBe('express');
         expect(packages[0].version).toBe('4.18.2');
@@ -6976,14 +7737,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       await fs.writeFile(
         pathModule.join(pkgDir, 'integrity.json'),
         JSON.stringify({
+          '3.0.0': { 0: { status: 'published' } },
           '4.18.2': { 0: { status: 'published' } },
           '5.0.0': { 0: { status: 'published' } },
-          '3.0.0': { 0: { status: 'published' } },
         }),
       );
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(1);
         expect(packages[0].version).toBe('5.0.0');
       } finally {
@@ -7010,6 +7772,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(packages).toHaveLength(1);
       } finally {
         process.cwd = savedCwd;
@@ -7033,6 +7796,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       try {
         const packages = await syncer.getExistingPackages();
+
         expect(Array.isArray(packages)).toBe(true);
       } finally {
         process.cwd = savedCwd;
@@ -7045,7 +7809,9 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('main', () => {
     it('logs starting message and calls getExistingPackages', async () => {
-      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce([]);
+      jestInstance
+        .spyOn(syncer, 'getExistingPackages')
+        .mockResolvedValueOnce([]);
 
       await syncer.main();
 
@@ -7169,12 +7935,16 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('emits DEPUP_SUMMARY line at end of successful run', async () => {
-      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce([]);
+      jestInstance
+        .spyOn(syncer, 'getExistingPackages')
+        .mockResolvedValueOnce([]);
 
       await syncer.main();
 
       expect(console.log).toHaveBeenCalledWith(
-        expect.stringMatching(/^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u),
+        expect.stringMatching(
+          /^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u,
+        ),
       );
     });
 
@@ -7238,19 +8008,27 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('returns false when version is not in integrityData', () => {
-      expect(syncer.hasOnlyFailedRevisions({ '2.0.0': {} }, '1.0.0')).toBe(false);
+      expect(syncer.hasOnlyFailedRevisions({ '2.0.0': {} }, '1.0.0')).toBe(
+        false,
+      );
     });
 
     it('returns false when versionEntry is null', () => {
-      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': null }, '1.0.0')).toBe(false);
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': null }, '1.0.0')).toBe(
+        false,
+      );
     });
 
     it('returns false when versionEntry is an array', () => {
-      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': [] }, '1.0.0')).toBe(false);
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': [] }, '1.0.0')).toBe(
+        false,
+      );
     });
 
     it('returns false when versionEntry has no revisions', () => {
-      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': {} }, '1.0.0')).toBe(false);
+      expect(syncer.hasOnlyFailedRevisions({ '1.0.0': {} }, '1.0.0')).toBe(
+        false,
+      );
     });
 
     it('returns false when at least one revision has status published', () => {
@@ -7260,6 +8038,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
           'rev-2': { status: 'published' },
         },
       };
+
       expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(false);
     });
 
@@ -7270,6 +8049,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
           'rev-2': { status: 'failed' },
         },
       };
+
       expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(true);
     });
 
@@ -7279,6 +8059,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
           'rev-1': { status: 'pending' },
         },
       };
+
       expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(true);
     });
   });
@@ -7341,7 +8122,6 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   });
 });
 
-
 // ═══════════════════════════════════════════════════════════════════
 // cron-discover.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
@@ -7377,9 +8157,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     it('returns null for deprecated package (line 235-237)', async () => {
       const { createRequire } = await import('node:module');
       const npmregfetch = createRequire(import.meta.url)('npm-registry-fetch');
-      jestInstance
-        .spyOn(npmregfetch, 'json')
-        .mockResolvedValueOnce({ deprecated: 'use something else', 'dist-tags': { latest: '1.0.0' } });
+      jestInstance.spyOn(npmregfetch, 'json').mockResolvedValueOnce({
+        deprecated: 'use something else',
+        'dist-tags': { latest: '1.0.0' },
+      });
 
       const result = await discoverer.fetchPackageVersion('some-pkg');
 
@@ -7396,7 +8177,11 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       const result = await discoverer.fetchPackageVersion('my-pkg');
 
-      expect(result).toStrictEqual({ downloads: 0, name: 'my-pkg', version: '2.3.4' });
+      expect(result).toStrictEqual({
+        downloads: 0,
+        name: 'my-pkg',
+        version: '2.3.4',
+      });
     });
 
     it('falls back to manifest.version when dist-tags absent', async () => {
@@ -7408,7 +8193,11 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       const result = await discoverer.fetchPackageVersion('my-pkg');
 
-      expect(result).toStrictEqual({ downloads: 0, name: 'my-pkg', version: '1.1.1' });
+      expect(result).toStrictEqual({
+        downloads: 0,
+        name: 'my-pkg',
+        version: '1.1.1',
+      });
     });
 
     it('wraps fetch errors with { cause: error }', async () => {
@@ -7444,7 +8233,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('warns when a version fetch is rejected (lines 217-218)', async () => {
-      const configData = JSON.stringify({ packages: ['my-pkg'], refreshedAt: '2025-01-01' });
+      const configData = JSON.stringify({
+        packages: ['my-pkg'],
+        refreshedAt: '2025-01-01',
+      });
       jestInstance
         .spyOn(fsPromises, 'readFile')
         .mockResolvedValueOnce(configData)
@@ -7461,7 +8253,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('merges and deduplicates curated + user packages', async () => {
-      const curatedData = JSON.stringify({ packages: ['express', 'lodash'], refreshedAt: '2025-01-01' });
+      const curatedData = JSON.stringify({
+        packages: ['express', 'lodash'],
+        refreshedAt: '2025-01-01',
+      });
       const userData = JSON.stringify({ packages: ['lodash', 'react'] });
       jestInstance
         .spyOn(fsPromises, 'readFile')
@@ -7470,7 +8265,11 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       jestInstance
         .spyOn(discoverer, 'fetchPackageVersion')
-        .mockImplementation(async (name) => ({ downloads: 0, name, version: '1.0.0' }));
+        .mockImplementation(async (name) => ({
+          downloads: 0,
+          name,
+          version: '1.0.0',
+        }));
 
       const packages = await discoverer.getCuratedPackages();
       const names = packages.map((p) => p.name);
@@ -7482,7 +8281,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('logs added count when user packages are added (lines 176-178)', async () => {
-      const curatedData = JSON.stringify({ packages: ['express'], refreshedAt: '2025-01-01' });
+      const curatedData = JSON.stringify({
+        packages: ['express'],
+        refreshedAt: '2025-01-01',
+      });
       const userData = JSON.stringify({ packages: ['new-pkg'] });
       jestInstance
         .spyOn(fsPromises, 'readFile')
@@ -7491,11 +8293,17 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       jestInstance
         .spyOn(discoverer, 'fetchPackageVersion')
-        .mockImplementation(async (name) => ({ downloads: 0, name, version: '1.0.0' }));
+        .mockImplementation(async (name) => ({
+          downloads: 0,
+          name,
+          version: '1.0.0',
+        }));
 
       await discoverer.getCuratedPackages();
 
-      expect(console.log).toHaveBeenCalledWith(expect.stringContaining('user-submitted'));
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining('user-submitted'),
+      );
     });
 
     it('ignores non-array packages in curated config (Array.isArray guard)', async () => {
@@ -7515,7 +8323,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('ignores non-array packages in user config', async () => {
-      const curatedData = JSON.stringify({ packages: ['express'], refreshedAt: '2025-01-01' });
+      const curatedData = JSON.stringify({
+        packages: ['express'],
+        refreshedAt: '2025-01-01',
+      });
       const userData = JSON.stringify({ packages: 'oops' });
       jestInstance
         .spyOn(fsPromises, 'readFile')
@@ -7532,7 +8343,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('filters out null results (deprecated-package path)', async () => {
-      const curatedData = JSON.stringify({ packages: ['deprecated-pkg'], refreshedAt: '2025-01-01' });
+      const curatedData = JSON.stringify({
+        packages: ['deprecated-pkg'],
+        refreshedAt: '2025-01-01',
+      });
       jestInstance
         .spyOn(fsPromises, 'readFile')
         .mockResolvedValueOnce(curatedData)
@@ -7553,44 +8367,54 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('processPackage branching (lines 268-288)', () => {
     it('calls createNewPackage for non-existing package directory', async () => {
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
-      jestInstance.spyOn(discoverer, 'packageExists').mockResolvedValueOnce(false);
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
+      jestInstance
+        .spyOn(discoverer, 'packageExists')
+        .mockResolvedValueOnce(false);
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
       jestInstance.spyOn(discoverer, 'generateReadme').mockResolvedValueOnce();
 
-      await discoverer.processPackage(pkg);
+      await discoverer.processPackage(package_);
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, expect.any(String));
+      expect(createSpy).toHaveBeenCalledWith(package_, expect.any(String));
     });
 
     it('calls checkForUpdates when package directory exists', async () => {
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
-      jestInstance.spyOn(discoverer, 'packageExists').mockResolvedValueOnce(true);
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
+      jestInstance
+        .spyOn(discoverer, 'packageExists')
+        .mockResolvedValueOnce(true);
       const updateSpy = jestInstance
         .spyOn(discoverer, 'checkForUpdates')
         .mockResolvedValueOnce();
       jestInstance.spyOn(discoverer, 'generateReadme').mockResolvedValueOnce();
 
-      await discoverer.processPackage(pkg);
+      await discoverer.processPackage(package_);
 
       expect(updateSpy).toHaveBeenCalledWith(
-        pkg,
+        package_,
         expect.any(String),
         expect.any(String),
       );
     });
 
     it('warns but does not throw when generateReadme fails (lines 281-287)', async () => {
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
-      jestInstance.spyOn(discoverer, 'packageExists').mockResolvedValueOnce(false);
-      jestInstance.spyOn(discoverer, 'createNewPackage').mockResolvedValueOnce();
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
+      jestInstance
+        .spyOn(discoverer, 'packageExists')
+        .mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(discoverer, 'createNewPackage')
+        .mockResolvedValueOnce();
       jestInstance
         .spyOn(discoverer, 'generateReadme')
         .mockRejectedValueOnce(new Error('readme failed'));
 
-      await expect(discoverer.processPackage(pkg)).resolves.toBeUndefined();
+      await expect(
+        discoverer.processPackage(package_),
+      ).resolves.toBeUndefined();
       expect(console.warn).toHaveBeenCalled();
     });
   });
@@ -7612,101 +8436,176 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('calls createNewPackage when integrity.json is missing', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      const pkg = { name: 'my-pkg', version: '2.0.0' };
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
+      const package_ = { name: 'my-pkg', version: '2.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory);
+      expect(createSpy).toHaveBeenCalledWith(package_, temporaryDirectory);
     });
 
     it('calls createNewPackage when integrity.json is an array (invalid format)', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
       await fsPromises.writeFile(integrityFile, JSON.stringify([1, 2, 3]));
-      const pkg = { name: 'my-pkg', version: '2.0.0' };
+      const package_ = { name: 'my-pkg', version: '2.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory);
+      expect(createSpy).toHaveBeenCalledWith(package_, temporaryDirectory);
     });
 
     it('calls createNewPackage when integrity.json parsed as null', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
       await fsPromises.writeFile(integrityFile, 'null');
-      const pkg = { name: 'my-pkg', version: '2.0.0' };
+      const package_ = { name: 'my-pkg', version: '2.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory);
+      expect(createSpy).toHaveBeenCalledWith(package_, temporaryDirectory);
     });
 
     it('logs up-to-date when version already in integrity data with a published revision', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
       await fsPromises.writeFile(
         integrityFile,
         JSON.stringify({ '1.0.0': { 'rev-1': { status: 'published' } } }),
       );
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(console.log).toHaveBeenCalledWith(expect.stringContaining('up to date'));
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining('up to date'),
+      );
     });
 
     it('calls createNewPackage with latestVersion when not in integrity data', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
       await fsPromises.writeFile(
         integrityFile,
         JSON.stringify({ '1.0.0': { 'rev-1': { status: 'published' } } }),
       );
-      const pkg = { name: 'my-pkg', version: '2.0.0' };
+      const package_ = { name: 'my-pkg', version: '2.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory, '2.0.0');
+      expect(createSpy).toHaveBeenCalledWith(
+        package_,
+        temporaryDirectory,
+        '2.0.0',
+      );
     });
 
     it('warns and returns early when version is 0.0.0 (lines 327-330)', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      await fsPromises.writeFile(integrityFile, JSON.stringify({ '1.0.0': true }));
-      const pkg = { name: 'my-pkg', version: '0.0.0' };
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': true }),
+      );
+      const package_ = { name: 'my-pkg', version: '0.0.0' };
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('No version found'));
+      expect(console.warn).toHaveBeenCalledWith(
+        expect.stringContaining('No version found'),
+      );
     });
 
     it('warns and returns early when version is empty string', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      await fsPromises.writeFile(integrityFile, JSON.stringify({ '1.0.0': true }));
-      const pkg = { name: 'my-pkg', version: '' };
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': true }),
+      );
+      const package_ = { name: 'my-pkg', version: '' };
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
-      expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('No version found'));
+      expect(console.warn).toHaveBeenCalledWith(
+        expect.stringContaining('No version found'),
+      );
     });
 
     it('catches and warns on outer error (lines 339-344)', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory, 'integrity.json');
-      await fsPromises.writeFile(integrityFile, JSON.stringify({ '1.0.0': true }));
-      const pkg = { name: 'my-pkg', version: '2.0.0' };
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory,
+        'integrity.json',
+      );
+      await fsPromises.writeFile(
+        integrityFile,
+        JSON.stringify({ '1.0.0': true }),
+      );
+      const package_ = { name: 'my-pkg', version: '2.0.0' };
       jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockRejectedValueOnce(new Error('unexpected write error'));
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory,
+        integrityFile,
+      );
 
       expect(console.warn).toHaveBeenCalledWith(
         expect.stringContaining('Could not check updates'),
@@ -7721,29 +8620,28 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('createNewPackage', () => {
     it('throws when targetVersion is undefined', async () => {
-      const pkg = { name: 'my-pkg', version: undefined };
+      const package_ = { name: 'my-pkg', version: undefined };
 
       await expect(
-        discoverer.createNewPackage(pkg, '/fake/dir', undefined),
+        discoverer.createNewPackage(package_, '/fake/dir'),
       ).rejects.toThrow('Invalid version');
     });
 
     it('throws when version contains path traversal (lines 358-361)', async () => {
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
 
       await expect(
-        discoverer.createNewPackage(pkg, '/fake/dir', '../bad/path'),
+        discoverer.createNewPackage(package_, '/fake/dir', '../bad/path'),
       ).rejects.toThrow('Invalid version format');
     });
 
     it('throws when version has invalid characters (lines 362-365)', async () => {
-      const pkg = { name: 'my-pkg', version: '1.0.0' };
+      const package_ = { name: 'my-pkg', version: '1.0.0' };
 
       await expect(
-        discoverer.createNewPackage(pkg, '/fake/dir', '1.0.0;rm -rf'),
+        discoverer.createNewPackage(package_, '/fake/dir', '1.0.0;rm -rf'),
       ).rejects.toThrow('Invalid version format');
     });
-
   });
 
   // ─────────────────────────────────────────────────────────────────
@@ -7757,7 +8655,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       ];
       jestInstance.spyOn(discoverer, 'processPackage').mockResolvedValue();
 
-      const { processedPackages, failedPackages } =
+      const { failedPackages, processedPackages } =
         await discoverer.processBatches(packages);
 
       expect(processedPackages).toContain('pkg-a');
@@ -7780,8 +8678,8 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('processes multiple batches respecting concurrentPackages limit', async () => {
-      const packages = Array.from({ length: 6 }, (_, i) => ({
-        name: `pkg-${i}`,
+      const packages = Array.from({ length: 6 }, (_, index) => ({
+        name: `pkg-${index}`,
         version: '1.0.0',
       }));
       jestInstance.spyOn(discoverer, 'processPackage').mockResolvedValue();
@@ -7807,7 +8705,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       Promise.allSettled = async (promises) => {
         const results = await originalAllSettled(promises);
         // Force the first result to look like a rejected allSettled entry
-        return [{ reason: { message: 'allSettled rejected' }, status: 'rejected' }, ...results.slice(1)];
+        return [
+          { reason: { message: 'allSettled rejected' }, status: 'rejected' },
+          ...results.slice(1),
+        ];
       };
 
       const packages = [{ name: 'some-pkg', version: '1.0.0' }];
@@ -7842,6 +8743,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       await expect(discoverer.main()).rejects.toThrow('process.exit:1');
 
       expect(processExit).toHaveBeenCalledWith(1);
+
       if (originalToken !== undefined) {
         process.env.NPM_TOKEN = originalToken;
       }
@@ -7851,12 +8753,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       const originalToken = process.env.NPM_TOKEN;
       process.env.NPM_TOKEN = 'fake-token';
 
-      jestInstance
-        .spyOn(discoverer, 'getTopPackages')
-        .mockResolvedValueOnce([
-          { name: 'express', version: '4.0.0' },
-          { name: 'lodash', version: '4.17.0' },
-        ]);
+      jestInstance.spyOn(discoverer, 'getTopPackages').mockResolvedValueOnce([
+        { name: 'express', version: '4.0.0' },
+        { name: 'lodash', version: '4.17.0' },
+      ]);
       jestInstance.spyOn(discoverer, 'processPackage').mockResolvedValue();
       discoverer.maxPackages = 2;
       discoverer.rateLimitDelay = 0;
@@ -7867,10 +8767,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
         expect.stringContaining('Discovery completed'),
       );
 
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
 
@@ -7888,10 +8788,11 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       await discoverer.main();
 
       expect(processExit).toHaveBeenCalledWith(1);
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
 
@@ -7913,10 +8814,11 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       expect(console.log).toHaveBeenCalledWith(
         expect.stringContaining('Failed packages:'),
       );
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
 
@@ -7934,13 +8836,15 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       await discoverer.main();
 
       expect(console.log).toHaveBeenCalledWith(
-        expect.stringMatching(/^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u),
+        expect.stringMatching(
+          /^DEPUP_SUMMARY processed=\d+ failed=\d+ skipped=\d+$/u,
+        ),
       );
 
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
 
@@ -7971,10 +8875,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       );
       expect(exitSpy).toHaveBeenCalledWith(1);
 
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
 
@@ -8002,10 +8906,10 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       expect(exitSpy).not.toHaveBeenCalledWith(1);
 
-      if (originalToken !== undefined) {
-        process.env.NPM_TOKEN = originalToken;
-      } else {
+      if (originalToken === undefined) {
         delete process.env.NPM_TOKEN;
+      } else {
+        process.env.NPM_TOKEN = originalToken;
       }
     });
   });
@@ -8023,32 +8927,52 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     afterEach(async () => {
-      await fsPromises.rm(temporaryDirectory2, { force: true, recursive: true });
+      await fsPromises.rm(temporaryDirectory2, {
+        force: true,
+        recursive: true,
+      });
     });
 
     it('retries when version key exists but all revisions have status failed', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory2,
+        'integrity.json',
+      );
       await fsPromises.writeFile(
         integrityFile,
         JSON.stringify({
-          '1.0.0': { 'rev-1': { status: 'failed' }, 'rev-2': { status: 'failed' } },
+          '1.0.0': {
+            'rev-1': { status: 'failed' },
+            'rev-2': { status: 'failed' },
+          },
         }),
       );
-      const pkg = { name: 'retry-pkg', version: '1.0.0' };
+      const package_ = { name: 'retry-pkg', version: '1.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory2,
+        integrityFile,
+      );
 
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory2, '1.0.0');
+      expect(createSpy).toHaveBeenCalledWith(
+        package_,
+        temporaryDirectory2,
+        '1.0.0',
+      );
       expect(console.log).toHaveBeenCalledWith(
         expect.stringContaining('only failed revisions'),
       );
     });
 
     it('treats as up-to-date when at least one revision has status published', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory2,
+        'integrity.json',
+      );
       await fsPromises.writeFile(
         integrityFile,
         JSON.stringify({
@@ -8058,12 +8982,16 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
           },
         }),
       );
-      const pkg = { name: 'ok-pkg', version: '1.0.0' };
+      const package_ = { name: 'ok-pkg', version: '1.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory2,
+        integrityFile,
+      );
 
       expect(createSpy).not.toHaveBeenCalled();
       expect(console.log).toHaveBeenCalledWith(
@@ -8072,25 +9000,35 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('retries when versionEntry is a non-object scalar (no published revisions)', async () => {
-      const integrityFile = pathModule.default.join(temporaryDirectory2, 'integrity.json');
+      const integrityFile = pathModule.default.join(
+        temporaryDirectory2,
+        'integrity.json',
+      );
       // Shape where the version key maps to a non-object value (old/corrupt data)
       await fsPromises.writeFile(
         integrityFile,
         JSON.stringify({ '1.0.0': 'old-format' }),
       );
-      const pkg = { name: 'old-fmt-pkg', version: '1.0.0' };
+      const package_ = { name: 'old-fmt-pkg', version: '1.0.0' };
       const createSpy = jestInstance
         .spyOn(discoverer, 'createNewPackage')
         .mockResolvedValueOnce();
 
-      await discoverer.checkForUpdates(pkg, temporaryDirectory2, integrityFile);
+      await discoverer.checkForUpdates(
+        package_,
+        temporaryDirectory2,
+        integrityFile,
+      );
 
       // Non-object versionEntry → hasPublished = false → treated as "only failed" → retry
-      expect(createSpy).toHaveBeenCalledWith(pkg, temporaryDirectory2, '1.0.0');
+      expect(createSpy).toHaveBeenCalledWith(
+        package_,
+        temporaryDirectory2,
+        '1.0.0',
+      );
     });
   });
-})
-
+});
 
 // ═══════════════════════════════════════════════════════════════════
 // compatibility-test.mjs -- coverage gap fill (PR: raise core pipeline coverage)
@@ -8135,12 +9073,14 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       await fs.writeFile(
         nodePath.join(temporaryDirectory, 'package.json'),
-        JSON.stringify({ name: 'test-pkg', version: '1.0.0', dependencies: {} }),
+        JSON.stringify({
+          dependencies: {},
+          name: 'test-pkg',
+          version: '1.0.0',
+        }),
       );
 
-      jestInstance
-        .spyOn(tester, 'testCompatibility')
-        .mockResolvedValueOnce(undefined);
+      jestInstance.spyOn(tester, 'testCompatibility').mockResolvedValueOnce();
 
       await tester.main();
 
@@ -8231,7 +9171,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       const performDeepAnalysis = jestInstance
         .spyOn(tester, 'performDeepAnalysis')
-        .mockResolvedValueOnce(undefined);
+        .mockResolvedValueOnce();
 
       await tester.testCompatibility(temporaryDirectory, {
         deep: true,
@@ -8245,7 +9185,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     it('saves report when reportPath is specified', async () => {
       await fs.writeFile(
         nodePath.join(temporaryDirectory, 'package.json'),
-        JSON.stringify({ name: 'test-pkg', version: '1.0.0', dependencies: {} }),
+        JSON.stringify({
+          dependencies: {},
+          name: 'test-pkg',
+          version: '1.0.0',
+        }),
       );
 
       const reportPath = nodePath.join(temporaryDirectory, 'report.json');
@@ -8256,7 +9200,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         strict: false,
       });
 
-      const reportContent = await fs.readFile(reportPath, 'utf8');
+      const reportContent = await fs.readFile(reportPath);
       const report = JSON.parse(reportContent);
 
       expect(report.package).toBe('test-pkg');
@@ -8275,7 +9219,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       const attemptFixes = jestInstance
         .spyOn(tester, 'attemptCompatibilityFixes')
-        .mockResolvedValueOnce(undefined);
+        .mockResolvedValueOnce();
 
       await tester.testCompatibility(temporaryDirectory, {
         deep: false,
@@ -8314,7 +9258,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     it('does not exit 1 in strict mode when no issues or warnings', async () => {
       await fs.writeFile(
         nodePath.join(temporaryDirectory, 'package.json'),
-        JSON.stringify({ name: 'test-pkg', version: '1.0.0', dependencies: {} }),
+        JSON.stringify({
+          dependencies: {},
+          name: 'test-pkg',
+          version: '1.0.0',
+        }),
       );
 
       const processExit = jestInstance
@@ -8361,7 +9309,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     it('processes dependencies and dev dependencies', async () => {
       const packageJson = {
         dependencies: { react: '^18.0.0', 'react-dom': '^18.0.0' },
-        devDependencies: { jest: '^29.0.0', 'babel-jest': '^29.0.0' },
+        devDependencies: { 'babel-jest': '^29.0.0', jest: '^29.0.0' },
         name: 'test-pkg',
         version: '1.0.0',
       };
@@ -8443,13 +9391,13 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     });
 
     it('adds warning for unsafe version range wildcard', async () => {
-      const result = await tester.checkDependencyCompatibility(
-        'lodash',
-        '*',
-        { lodash: '*' },
-      );
+      const result = await tester.checkDependencyCompatibility('lodash', '*', {
+        lodash: '*',
+      });
 
-      expect(result.warnings.some((w) => w.includes('Unsafe version range'))).toBe(true);
+      expect(
+        result.warnings.some((w) => w.includes('Unsafe version range')),
+      ).toBe(true);
     });
 
     it('adds warning for latest version specifier', async () => {
@@ -8459,7 +9407,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         { express: 'latest' },
       );
 
-      expect(result.warnings.some((w) => w.includes('Unsafe version range'))).toBe(true);
+      expect(
+        result.warnings.some((w) => w.includes('Unsafe version range')),
+      ).toBe(true);
     });
 
     it('adds warning for open-ended range', async () => {
@@ -8469,7 +9419,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         { express: '>=4.0.0' },
       );
 
-      expect(result.warnings.some((w) => w.includes('Unsafe version range'))).toBe(true);
+      expect(
+        result.warnings.some((w) => w.includes('Unsafe version range')),
+      ).toBe(true);
     });
 
     it('does not add issue when related dep is absent from allDeps', async () => {
@@ -8497,7 +9449,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       const result = await tester.checkDependencyCompatibility(
         'typescript',
         '^5.0.0',
-        { typescript: '^5.0.0', '@types/react': '^17.0.0' },
+        { '@types/react': '^17.0.0', typescript: '^5.0.0' },
       );
 
       expect(result.compatible).toBe(false);
@@ -8507,7 +9459,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       const result = await tester.checkDependencyCompatibility(
         'jest',
         '^29.0.0',
-        { jest: '^29.0.0', 'babel-jest': '^29.0.0' },
+        { 'babel-jest': '^29.0.0', jest: '^29.0.0' },
       );
 
       expect(result.compatible).toBe(true);
@@ -8521,22 +9473,30 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     it('runs deep analysis sub-steps successfully', async () => {
       const testInstallation = jestInstance
         .spyOn(tester, 'testInstallation')
-        .mockResolvedValueOnce(undefined);
+        .mockResolvedValueOnce();
       const checkPeerDependencies = jestInstance
         .spyOn(tester, 'checkPeerDependencies')
-        .mockResolvedValueOnce(undefined);
+        .mockResolvedValueOnce();
       const analyzePackageComplexity = jestInstance
         .spyOn(tester, 'analyzePackageComplexity')
-        .mockResolvedValueOnce(undefined);
+        .mockResolvedValueOnce();
 
-      const packageJson = { name: 'test-pkg', version: '1.0.0', dependencies: {} };
+      const packageJson = {
+        dependencies: {},
+        name: 'test-pkg',
+        version: '1.0.0',
+      };
       const results = {
         analysis: {},
         compatibility: { issues: [], warnings: [] },
         dependencies: {},
       };
 
-      await tester.performDeepAnalysis(temporaryDirectory, packageJson, results);
+      await tester.performDeepAnalysis(
+        temporaryDirectory,
+        packageJson,
+        results,
+      );
 
       expect(testInstallation).toHaveBeenCalled();
       expect(checkPeerDependencies).toHaveBeenCalled();
@@ -8548,14 +9508,22 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         .spyOn(tester, 'testInstallation')
         .mockRejectedValueOnce(new Error('install failed'));
 
-      const packageJson = { name: 'test-pkg', version: '1.0.0', dependencies: {} };
+      const packageJson = {
+        dependencies: {},
+        name: 'test-pkg',
+        version: '1.0.0',
+      };
       const results = {
         analysis: {},
         compatibility: { issues: [], warnings: [] },
         dependencies: {},
       };
 
-      await tester.performDeepAnalysis(temporaryDirectory, packageJson, results);
+      await tester.performDeepAnalysis(
+        temporaryDirectory,
+        packageJson,
+        results,
+      );
 
       expect(results.analysis.deep_analysis_error).toBe('install failed');
     });
@@ -8569,7 +9537,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       // Write a minimal package.json so npm install --dry-run exits 0
       await fs.writeFile(
         nodePath.join(temporaryDirectory, 'package.json'),
-        JSON.stringify({ name: 'test-pkg', version: '1.0.0', dependencies: {} }),
+        JSON.stringify({
+          dependencies: {},
+          name: 'test-pkg',
+          version: '1.0.0',
+        }),
       );
 
       const results = {
@@ -8592,7 +9564,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       await tester.testInstallation('/nonexistent/path/xyz123', results);
 
       expect(results.analysis.install_test).toBe('failed');
-      expect(results.compatibility.issues.some((i) => i.includes('Installation test failed'))).toBe(true);
+      expect(
+        results.compatibility.issues.some((index) =>
+          index.includes('Installation test failed'),
+        ),
+      ).toBe(true);
     });
   });
 
@@ -8601,7 +9577,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('checkPeerDependencies', () => {
     it('does nothing when no peerDependencies in manifest', async () => {
-      const packageJson = { name: 'no-peer', version: '1.0.0', dependencies: {} };
+      const packageJson = {
+        dependencies: {},
+        name: 'no-peer',
+        version: '1.0.0',
+      };
       const results = { compatibility: { issues: [], warnings: [] } };
 
       await tester.checkPeerDependencies(packageJson, results);
@@ -8621,7 +9601,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       await tester.checkPeerDependencies(packageJson, results);
 
       expect(
-        results.compatibility.warnings.some((w) => w.includes('Missing peer dependency')),
+        results.compatibility.warnings.some((w) =>
+          w.includes('Missing peer dependency'),
+        ),
       ).toBe(true);
     });
 
@@ -8637,7 +9619,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       await tester.checkPeerDependencies(packageJson, results);
 
       expect(
-        results.compatibility.issues.some((i) => i.includes('Peer dependency version mismatch')),
+        results.compatibility.issues.some((index) =>
+          index.includes('Peer dependency version mismatch'),
+        ),
       ).toBe(true);
     });
 
@@ -8716,7 +9700,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       await tester.analyzePackageComplexity(temporaryDirectory, results);
 
       expect(
-        results.compatibility.warnings.some((w) => w.includes('install scripts')),
+        results.compatibility.warnings.some((w) =>
+          w.includes('install scripts'),
+        ),
       ).toBe(true);
     });
 
@@ -8767,7 +9753,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       const files = await tester.collectFiles(temporaryDirectory);
 
-      expect(files.length).toBe(2);
+      expect(files).toHaveLength(2);
     });
 
     it('skips node_modules directory', async () => {
@@ -8821,7 +9807,10 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
           version: '1.0.0',
         }),
       );
-      await fs.writeFile(nodePath.join(temporaryDirectory, 'index.js'), 'hello');
+      await fs.writeFile(
+        nodePath.join(temporaryDirectory, 'index.js'),
+        'hello',
+      );
 
       const stats = await tester.getPackageStats(temporaryDirectory);
 
@@ -8911,7 +9900,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       expect(results.analysis.node_compatibility.compatible).toBe(false);
       expect(
-        results.compatibility.issues.some((i) => i.includes('Node.js version')),
+        results.compatibility.issues.some((index) =>
+          index.includes('Node.js version'),
+        ),
       ).toBe(true);
     });
 
@@ -8987,7 +9978,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       // 2 issues = -40, 1 warning = -5 -> score = 55 -> fair
       const results = {
         analysis: {},
-        compatibility: { issues: ['i1', 'i2'], recommendations: [], warnings: ['w1'] },
+        compatibility: {
+          issues: ['i1', 'i2'],
+          recommendations: [],
+          warnings: ['w1'],
+        },
       };
       tester.calculateCompatibilityScore(results);
 
@@ -9021,7 +10016,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       tester.generateRecommendations(results);
 
       expect(
-        results.compatibility.recommendations.some((r) => r.includes('critical')),
+        results.compatibility.recommendations.some((r) =>
+          r.includes('critical'),
+        ),
       ).toBe(true);
     });
 
@@ -9037,7 +10034,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       tester.generateRecommendations(results);
 
       expect(
-        results.compatibility.recommendations.some((r) => r.includes('warnings')),
+        results.compatibility.recommendations.some((r) =>
+          r.includes('warnings'),
+        ),
       ).toBe(true);
     });
 
@@ -9049,7 +10048,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       tester.generateRecommendations(results);
 
       expect(
-        results.compatibility.recommendations.some((r) => r.includes('installation')),
+        results.compatibility.recommendations.some((r) =>
+          r.includes('installation'),
+        ),
       ).toBe(true);
     });
 
@@ -9063,7 +10064,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       tester.generateRecommendations(results);
 
       expect(
-        results.compatibility.recommendations.some((r) => r.includes('Node.js')),
+        results.compatibility.recommendations.some((r) =>
+          r.includes('Node.js'),
+        ),
       ).toBe(true);
     });
 
@@ -9081,7 +10084,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       };
       tester.generateRecommendations(results);
 
-      expect(results.compatibility.recommendations.length).toBe(4);
+      expect(results.compatibility.recommendations).toHaveLength(4);
     });
   });
 
@@ -9093,7 +10096,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       const packageJson = { name: 'test-pkg', version: '1.0.0' };
       const results = { compatibility: {} };
 
-      await tester.attemptCompatibilityFixes(temporaryDirectory, packageJson, results);
+      await tester.attemptCompatibilityFixes(
+        temporaryDirectory,
+        packageJson,
+        results,
+      );
 
       expect(results.compatibility.fixes_attempted).toBe(true);
       expect(results.compatibility.fixes_applied).toStrictEqual([]);
@@ -9190,7 +10197,10 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('saveReport', () => {
     it('writes JSON report to the specified path', async () => {
-      const reportPath = nodePath.join(temporaryDirectory, 'compat-report.json');
+      const reportPath = nodePath.join(
+        temporaryDirectory,
+        'compat-report.json',
+      );
       const results = {
         compatibility: {
           issues: [],
@@ -9205,7 +10215,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       await tester.saveReport(results, reportPath);
 
-      const content = await fs.readFile(reportPath, 'utf8');
+      const content = await fs.readFile(reportPath);
       const parsed = JSON.parse(content);
 
       expect(parsed.package).toBe('test-pkg');
@@ -9245,7 +10255,6 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     });
   });
 });
-
 
 // ═══════════════════════════════════════════════════════════════════
 // heal.mjs -- coverage gap fill (PR: raise core pipeline coverage)
@@ -9295,6 +10304,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(autoHealSpy).toHaveBeenCalledTimes(1);
     });
 
@@ -9308,6 +10318,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
@@ -9321,6 +10332,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
@@ -9334,6 +10346,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
@@ -9347,6 +10360,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
@@ -9360,6 +10374,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.main();
 
       process.argv = savedArgv;
+
       expect(exitSpy).toHaveBeenCalledWith(1);
     });
   });
@@ -9460,7 +10475,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'has-readme-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'has-readme-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '2.0.0'), { recursive: true });
       await fs.writeFile(path.join(pkgDir, 'README.md'), '# Hello');
 
@@ -9478,7 +10497,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'fail-readme-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'fail-readme-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
 
       jestInstance
@@ -9496,6 +10519,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('returns 0 when no packages', async () => {
       const count = await healer.fixMissingReadmes();
+
       expect(count).toBe(0);
     });
   });
@@ -9508,16 +10532,22 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'null-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'null-integrity-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
       await fs.writeFile(path.join(pkgDir, 'integrity.json'), 'null');
 
       const count = await healer.fixIntegrityData();
 
       expect(count).toBe(1);
+
       const rebuilt = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       expect(typeof rebuilt).toBe('object');
       expect(rebuilt).not.toBeNull();
     });
@@ -9526,7 +10556,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'array-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'array-integrity-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
       await fs.writeFile(path.join(pkgDir, 'integrity.json'), '[1,2,3]');
 
@@ -9539,7 +10573,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'repair-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'repair-integrity-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '2.0.0'), { recursive: true });
       // Missing status and timestamp in revision entry - repairIntegrityData will fix it
       await fs.writeFile(
@@ -9550,9 +10588,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const count = await healer.fixIntegrityData();
 
       expect(count).toBe(1);
+
       const repaired = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       expect(repaired['2.0.0']['0'].timestamp).toBeTruthy();
     });
 
@@ -9565,7 +10605,9 @@ describe('heal.mjs -- coverage gap fill', () => {
       await fs.writeFile(
         path.join(pkgDir, 'integrity.json'),
         JSON.stringify({
-          '1.0.0': { 0: { status: 'published', timestamp: 'ts', version: 'v' } },
+          '1.0.0': {
+            0: { status: 'published', timestamp: 'ts', version: 'v' },
+          },
         }),
       );
 
@@ -9579,7 +10621,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const path = await import('node:path');
 
       // Package dir exists but no integrity.json
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'no-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'no-integrity-pkg',
+      );
       await fs.mkdir(pkgDir, { recursive: true });
 
       const count = await healer.fixIntegrityData();
@@ -9595,7 +10641,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'corrupt-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'corrupt-integrity-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
       await fs.writeFile(path.join(pkgDir, 'integrity.json'), 'not json {{{');
 
@@ -9612,9 +10662,16 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'string-integrity-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'string-integrity-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
-      await fs.writeFile(path.join(pkgDir, 'integrity.json'), '"just-a-string"');
+      await fs.writeFile(
+        path.join(pkgDir, 'integrity.json'),
+        '"just-a-string"',
+      );
 
       const count = await healer.fixIntegrityData();
 
@@ -9631,7 +10688,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const path = await import('node:path');
 
       // Empty package dir (no version subdirs) = invalid structure
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'invalid-struct-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'invalid-struct-pkg',
+      );
       await fs.mkdir(pkgDir, { recursive: true });
 
       const count = await healer.fixPackageStructure();
@@ -9646,7 +10707,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'valid-struct-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'valid-struct-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
 
       const count = await healer.fixPackageStructure();
@@ -9656,6 +10721,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('returns 0 when no packages', async () => {
       const count = await healer.fixPackageStructure();
+
       expect(count).toBe(0);
     });
   });
@@ -9668,15 +10734,21 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'missing-int-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'missing-int-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
 
       const count = await healer.generateMissingIntegrity();
 
       expect(count).toBe(1);
+
       const created = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       expect(typeof created).toBe('object');
     });
 
@@ -9700,7 +10772,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'create-fail-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'create-fail-pkg',
+      );
       await fs.mkdir(pkgDir, { recursive: true });
       // No integrity.json
 
@@ -9719,6 +10795,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('returns 0 when no packages', async () => {
       const count = await healer.generateMissingIntegrity();
+
       expect(count).toBe(0);
     });
   });
@@ -9733,6 +10810,7 @@ describe('heal.mjs -- coverage gap fill', () => {
         { name: '1.0.0' },
         5,
       );
+
       expect(result).toBe(0);
     });
 
@@ -9750,6 +10828,7 @@ describe('heal.mjs -- coverage gap fill', () => {
         { name: '1.0.0' },
         5,
       );
+
       expect(result).toBe(0);
     });
 
@@ -9759,8 +10838,10 @@ describe('heal.mjs -- coverage gap fill', () => {
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-excess');
       const versionDir = path.join(pkgDir, '1.0.0');
-      for (let i = 0; i < 8; i++) {
-        await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+      for (let index = 0; index < 8; index++) {
+        await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+          recursive: true,
+        });
       }
 
       const result = await healer.pruneVersionDirectory(
@@ -9768,11 +10849,13 @@ describe('heal.mjs -- coverage gap fill', () => {
         { name: '1.0.0' },
         5,
       );
+
       expect(result).toBe(3);
 
       const remaining = await fs.readdir(versionDir);
-      const revDirs = remaining.filter((n) => /^rev-\d+$/u.test(n));
-      expect(revDirs).toHaveLength(5);
+      const revDirectories = remaining.filter((n) => /^rev-\d+$/u.test(n));
+
+      expect(revDirectories).toHaveLength(5);
     });
 
     it('prunes integrity.json entries for removed revisions', async () => {
@@ -9781,15 +10864,21 @@ describe('heal.mjs -- coverage gap fill', () => {
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-integrity');
       const versionDir = path.join(pkgDir, '1.0.0');
-      for (let i = 0; i < 7; i++) {
-        await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+      for (let index = 0; index < 7; index++) {
+        await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+          recursive: true,
+        });
       }
 
       const integrityData = {
         '1.0.0': Object.fromEntries(
-          Array.from({ length: 7 }, (_, i) => [
-            String(i),
-            { status: 'published', timestamp: 'ts', version: `1.0.0-depup.${i}` },
+          Array.from({ length: 7 }, (_, index) => [
+            String(index),
+            {
+              status: 'published',
+              timestamp: 'ts',
+              version: `1.0.0-depup.${index}`,
+            },
           ]),
         ),
       };
@@ -9801,8 +10890,9 @@ describe('heal.mjs -- coverage gap fill', () => {
       await healer.pruneVersionDirectory(pkgDir, { name: '1.0.0' }, 5);
 
       const rebuilt = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       // Keys 0 and 1 should be gone
       expect(rebuilt['1.0.0']['0']).toBeUndefined();
       expect(rebuilt['1.0.0']['1']).toBeUndefined();
@@ -9815,8 +10905,10 @@ describe('heal.mjs -- coverage gap fill', () => {
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-no-integrity');
       const versionDir = path.join(pkgDir, '1.0.0');
-      for (let i = 0; i < 7; i++) {
-        await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+      for (let index = 0; index < 7; index++) {
+        await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+          recursive: true,
+        });
       }
       // No integrity.json
 
@@ -9825,6 +10917,7 @@ describe('heal.mjs -- coverage gap fill', () => {
         { name: '1.0.0' },
         5,
       );
+
       expect(result).toBe(2);
     });
 
@@ -9835,7 +10928,9 @@ describe('heal.mjs -- coverage gap fill', () => {
       const pkgDir = path.join(temporaryDirectory, 'pkg-non-rev');
       const versionDir = path.join(pkgDir, '1.0.0');
       await fs.mkdir(path.join(versionDir, 'rev-0'), { recursive: true });
-      await fs.mkdir(path.join(versionDir, 'node_modules'), { recursive: true });
+      await fs.mkdir(path.join(versionDir, 'node_modules'), {
+        recursive: true,
+      });
       await fs.mkdir(path.join(versionDir, 'rev-abc'), { recursive: true });
 
       const result = await healer.pruneVersionDirectory(
@@ -9843,6 +10938,7 @@ describe('heal.mjs -- coverage gap fill', () => {
         { name: '1.0.0' },
         5,
       );
+
       expect(result).toBe(0);
     });
   });
@@ -9856,6 +10952,7 @@ describe('heal.mjs -- coverage gap fill', () => {
         { path: '/no/such/pkg' },
         5,
       );
+
       expect(result).toBe(0);
     });
 
@@ -9864,14 +10961,17 @@ describe('heal.mjs -- coverage gap fill', () => {
       const path = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'multi-ver-pkg');
-      for (const ver of ['1.0.0', '2.0.0']) {
-        const versionDir = path.join(pkgDir, ver);
-        for (let i = 0; i < 7; i++) {
-          await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+      for (const version of ['1.0.0', '2.0.0']) {
+        const versionDir = path.join(pkgDir, version);
+        for (let index = 0; index < 7; index++) {
+          await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+            recursive: true,
+          });
         }
       }
 
       const result = await healer.prunePackageRevisions({ path: pkgDir }, 5);
+
       expect(result).toBe(4); // 2 per version * 2 versions
     });
 
@@ -9884,6 +10984,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       await fs.mkdir(path.join(pkgDir, '.hidden'), { recursive: true });
 
       const result = await healer.prunePackageRevisions({ path: pkgDir }, 5);
+
       expect(result).toBe(0);
     });
   });
@@ -9894,6 +10995,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('pruneAllRevisions', () => {
     it('returns 0 when no packages', async () => {
       const result = await healer.pruneAllRevisions();
+
       expect(result).toBe(0);
     });
 
@@ -9901,15 +11003,18 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      for (const pkgName of ['pkg-a', 'pkg-b']) {
-        const pkgDir = path.join(temporaryDirectory, 'packages', pkgName);
+      for (const packageName of ['pkg-a', 'pkg-b']) {
+        const pkgDir = path.join(temporaryDirectory, 'packages', packageName);
         const versionDir = path.join(pkgDir, '1.0.0');
-        for (let i = 0; i < 7; i++) {
-          await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+        for (let index = 0; index < 7; index++) {
+          await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+            recursive: true,
+          });
         }
       }
 
       const result = await healer.pruneAllRevisions(5);
+
       expect(result).toBe(4); // 2 per package * 2 packages
     });
 
@@ -9917,13 +11022,20 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'default-keep-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'default-keep-pkg',
+      );
       const versionDir = path.join(pkgDir, '1.0.0');
-      for (let i = 0; i < 6; i++) {
-        await fs.mkdir(path.join(versionDir, `rev-${i}`), { recursive: true });
+      for (let index = 0; index < 6; index++) {
+        await fs.mkdir(path.join(versionDir, `rev-${index}`), {
+          recursive: true,
+        });
       }
 
       const result = await healer.pruneAllRevisions();
+
       expect(result).toBe(1);
     });
   });
@@ -9936,15 +11048,20 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'create-int-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'create-int-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, '2.5.0'), { recursive: true });
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
 
       await healer.createBasicIntegrity({ path: pkgDir });
 
       const data = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       // Should use latest semver version (2.5.0)
       expect(data['2.5.0']).toBeDefined();
       expect(data['2.5.0']['0'].status).toBe('created');
@@ -9955,15 +11072,20 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'no-ver-dir-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'no-ver-dir-pkg',
+      );
       await fs.mkdir(pkgDir, { recursive: true });
       // No version directories
 
       await healer.createBasicIntegrity({ path: pkgDir });
 
       const data = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']).toBeDefined();
     });
 
@@ -9971,15 +11093,20 @@ describe('heal.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
       const path = await import('node:path');
 
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'non-semver-dirs-pkg');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'non-semver-dirs-pkg',
+      );
       await fs.mkdir(path.join(pkgDir, 'not-a-version'), { recursive: true });
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
 
       await healer.createBasicIntegrity({ path: pkgDir });
 
       const data = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json'), 'utf8'),
+        await fs.readFile(path.join(pkgDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']).toBeDefined();
     });
   });
@@ -10014,7 +11141,10 @@ describe('heal.mjs -- coverage gap fill', () => {
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
       await fs.writeFile(path.join(pkgDir, 'README.md'), '# readme');
       // Integrity file exists but JSON is corrupt
-      await fs.writeFile(path.join(pkgDir, 'integrity.json'), '{ bad json }}}}');
+      await fs.writeFile(
+        path.join(pkgDir, 'integrity.json'),
+        '{ bad json }}}}',
+      );
 
       const issues = await healer.diagnoseIssues();
 
@@ -10028,7 +11158,11 @@ describe('heal.mjs -- coverage gap fill', () => {
       const path = await import('node:path');
 
       // Package dir with no version subdirs -> hasValidStructure returns false
-      const pkgDir = path.join(temporaryDirectory, 'packages', 'diag-noVersion');
+      const pkgDir = path.join(
+        temporaryDirectory,
+        'packages',
+        'diag-noVersion',
+      );
       await fs.mkdir(pkgDir, { recursive: true });
 
       const issues = await healer.diagnoseIssues();
@@ -10065,7 +11199,11 @@ describe('heal.mjs -- coverage gap fill', () => {
         path.join(pkgDir, 'integrity.json'),
         JSON.stringify({
           '1.0.0': {
-            0: { status: 'published', timestamp: '2026-01-01', version: '1.0.0-depup.0' },
+            0: {
+              status: 'published',
+              timestamp: '2026-01-01',
+              version: '1.0.0-depup.0',
+            },
           },
         }),
       );
@@ -10083,9 +11221,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('isValidIntegrityData null revision branch', () => {
     it('rejects null revision entry', () => {
-      expect(
-        healer.isValidIntegrityData({ '1.0.0': { 0: null } }),
-      ).toBe(false);
+      expect(healer.isValidIntegrityData({ '1.0.0': { 0: null } })).toBe(false);
     });
   });
 
@@ -10131,7 +11267,6 @@ describe('heal.mjs -- coverage gap fill', () => {
   });
 });
 
-
 // ═══════════════════════════════════════════════════════════════════
 // refresh-curated-list.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
@@ -10147,11 +11282,14 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     const globals = await import('@jest/globals');
     jestInstance = globals.jest;
 
-    const { CuratedListRefresher } = await import('../refresh-curated-list.mjs');
+    const { CuratedListRefresher } =
+      await import('../refresh-curated-list.mjs');
     refresher = new CuratedListRefresher();
 
     // Point output to a real tmpdir so fs.mkdir/writeFile work hermetically
-    tmpDir = await fs.mkdtemp(path.default.join(os.default.tmpdir(), 'depup-curated-'));
+    tmpDir = await fs.mkdtemp(
+      path.default.join(os.default.tmpdir(), 'depup-curated-'),
+    );
     refresher.outputPath = path.default.join(tmpDir, 'curated-packages.json');
 
     // Silence console output
@@ -10160,10 +11298,12 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     jestInstance.spyOn(console, 'error').mockImplementation(() => {});
 
     // Speed up setTimeout (rate-limit delays)
-    jestInstance.spyOn(global, 'setTimeout').mockImplementation((fn) => {
-      fn();
-      return 0;
-    });
+    jestInstance
+      .spyOn(globalThis, 'setTimeout')
+      .mockImplementation((function_) => {
+        function_();
+        return 0;
+      });
   });
 
   afterEach(async () => {
@@ -10370,9 +11510,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     it('handles results with missing downloads field gracefully', () => {
       const seen = new Set();
       const packages = [];
-      const results = [
-        { package: { name: 'no-downloads' } },
-      ];
+      const results = [{ package: { name: 'no-downloads' } }];
 
       refresher.collectResults(results, seen, packages);
 
@@ -10412,12 +11550,12 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
   describe('searchPackages', () => {
     it('returns objects array from registry response with objects field', async () => {
       const { createRequire } = await import('node:module');
-      const req = createRequire(import.meta.url);
+      const request = createRequire(import.meta.url);
       // Patch the CJS cached module so npmregfetch.json returns canned data
-      const nrfCacheKey = Object.keys(req.cache).find(
+      const nrfCacheKey = Object.keys(request.cache).find(
         (k) => k.includes('npm-registry-fetch') && k.endsWith('index.js'),
       );
-      const nrfModule = req.cache[nrfCacheKey];
+      const nrfModule = request.cache[nrfCacheKey];
       const originalJson = nrfModule.exports.json;
 
       nrfModule.exports.json = async () => ({
@@ -10436,11 +11574,11 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
     it('returns empty array when registry response has no objects field', async () => {
       const { createRequire } = await import('node:module');
-      const req = createRequire(import.meta.url);
-      const nrfCacheKey = Object.keys(req.cache).find(
+      const request = createRequire(import.meta.url);
+      const nrfCacheKey = Object.keys(request.cache).find(
         (k) => k.includes('npm-registry-fetch') && k.endsWith('index.js'),
       );
-      const nrfModule = req.cache[nrfCacheKey];
+      const nrfModule = request.cache[nrfCacheKey];
       const originalJson = nrfModule.exports.json;
 
       // Return response without objects -- triggers the || [] branch
@@ -10455,18 +11593,20 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
     it('propagates errors thrown by npmregfetch.json', async () => {
       const { createRequire } = await import('node:module');
-      const req = createRequire(import.meta.url);
-      const nrfCacheKey = Object.keys(req.cache).find(
+      const request = createRequire(import.meta.url);
+      const nrfCacheKey = Object.keys(request.cache).find(
         (k) => k.includes('npm-registry-fetch') && k.endsWith('index.js'),
       );
-      const nrfModule = req.cache[nrfCacheKey];
+      const nrfModule = request.cache[nrfCacheKey];
       const originalJson = nrfModule.exports.json;
 
       nrfModule.exports.json = async () => {
         throw new Error('registry unreachable');
       };
 
-      await expect(refresher.searchPackages('failing')).rejects.toThrow('registry unreachable');
+      await expect(refresher.searchPackages('failing')).rejects.toThrow(
+        'registry unreachable',
+      );
 
       nrfModule.exports.json = originalJson;
     });
@@ -10491,7 +11631,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toContain('react');
       expect(content.packages).toContain('express');
@@ -10517,7 +11657,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toHaveLength(3);
       expect(content.packages[0]).toBe('pkg-a');
@@ -10531,7 +11671,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toHaveLength(0);
       expect(content.count).toBe(0);
@@ -10550,7 +11690,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toContain('axios');
     });
@@ -10571,7 +11711,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toContain('commander');
     });
@@ -10592,7 +11732,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       const reactCount = content.packages.filter((p) => p === 'react').length;
 
@@ -10611,7 +11751,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).not.toContain('@types/node');
       expect(content.packages).toContain('express');
@@ -10621,13 +11761,15 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
       const { promises: fs } = await import('node:fs');
 
       refresher.searchQueries = ['single'];
-      jestInstance.spyOn(refresher, 'searchPackages').mockResolvedValueOnce([
-        { downloads: { monthly: 75_000 }, package: { name: 'only-pkg' } },
-      ]);
+      jestInstance
+        .spyOn(refresher, 'searchPackages')
+        .mockResolvedValueOnce([
+          { downloads: { monthly: 75_000 }, package: { name: 'only-pkg' } },
+        ]);
 
       await refresher.main();
 
-      const content = JSON.parse(await fs.readFile(refresher.outputPath, 'utf8'));
+      const content = JSON.parse(await fs.readFile(refresher.outputPath));
 
       expect(content.packages).toContain('only-pkg');
     });
@@ -10657,7 +11799,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     it('forwards to processPackageCore with parsed options', async () => {
       const coreSpy = jest
         .spyOn(depup, 'processPackageCore')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -10680,13 +11822,14 @@ describe('depup.mjs -- coverage gap fill', () => {
           timeout: 5000,
         }),
       );
+
       consoleSpy.mockRestore();
     });
 
     it('uses default timeout when invalid value provided', async () => {
       const coreSpy = jest
         .spyOn(depup, 'processPackageCore')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       await depup.processPackage('express', {
         bumpDeps: false,
@@ -10703,7 +11846,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('logs debug info when debug=true', async () => {
-      jest.spyOn(depup, 'processPackageCore').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'processPackageCore').mockResolvedValue();
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -10721,8 +11864,8 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('re-throws and logs error when processPackageCore throws', async () => {
-      const err = new Error('core failure');
-      jest.spyOn(depup, 'processPackageCore').mockRejectedValue(err);
+      const error = new Error('core failure');
+      jest.spyOn(depup, 'processPackageCore').mockRejectedValue(error);
       const errorSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
@@ -10742,9 +11885,9 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('logs stack trace when debug=true and processPackageCore throws', async () => {
-      const err = new Error('debug failure');
-      err.stack = 'stack trace here';
-      jest.spyOn(depup, 'processPackageCore').mockRejectedValue(err);
+      const error = new Error('debug failure');
+      error.stack = 'stack trace here';
+      jest.spyOn(depup, 'processPackageCore').mockRejectedValue(error);
       const errorSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
@@ -10817,6 +11960,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       expect(result).toBeUndefined();
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
 
@@ -10825,10 +11969,11 @@ describe('depup.mjs -- coverage gap fill', () => {
         name: 'testpkg',
         version: '1.0.0',
       });
-      jest.spyOn(depup, 'downloadPackage').mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'preparePackageJson')
-        .mockResolvedValue({ name: '@depup/testpkg', version: '1.0.0-depup.0' });
+      jest.spyOn(depup, 'downloadPackage').mockResolvedValue();
+      jest.spyOn(depup, 'preparePackageJson').mockResolvedValue({
+        name: '@depup/testpkg',
+        version: '1.0.0-depup.0',
+      });
       jest
         .spyOn(depup, 'maybeBumpDeps')
         .mockResolvedValue({ changes: [], updatedCount: 0 });
@@ -10838,18 +11983,14 @@ describe('depup.mjs -- coverage gap fill', () => {
         totalUpdated: 0,
       });
       jest.spyOn(depup, 'maybeTest').mockResolvedValue('skipped');
-      jest
-        .spyOn(depup, 'preparePublishArtifacts')
-        .mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'publishAndFinalize')
-        .mockResolvedValue(undefined);
+      jest.spyOn(depup, 'preparePublishArtifacts').mockResolvedValue();
+      jest.spyOn(depup, 'publishAndFinalize').mockResolvedValue();
       jest.spyOn(depup, 'determineRevision').mockResolvedValue(0);
 
       // Mock all fs operations so nothing touches the real filesystem
-      jest.spyOn(fs, 'mkdir').mockResolvedValue(undefined);
-      jest.spyOn(fs, 'rm').mockResolvedValue(undefined);
-      jest.spyOn(fs, 'writeFile').mockResolvedValue(undefined);
+      jest.spyOn(fs, 'mkdir').mockResolvedValue();
+      jest.spyOn(fs, 'rm').mockResolvedValue();
+      jest.spyOn(fs, 'writeFile').mockResolvedValue();
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -10866,6 +12007,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       expect(depup.maybeBumpDeps).toHaveBeenCalled();
       expect(depup.writeChangesJson).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -10878,7 +12020,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         .mockResolvedValue(true);
       const finalizeSpy = jest
         .spyOn(depup, 'finalizePackage')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       await depup.publishAndFinalize({
         baseVersion: '1.0.0',
@@ -10900,11 +12042,11 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('still calls finalizePackage even when handlePublishStep throws', async () => {
-      const pubErr = new Error('publish failed');
-      jest.spyOn(depup, 'handlePublishStep').mockRejectedValue(pubErr);
+      const pubError = new Error('publish failed');
+      jest.spyOn(depup, 'handlePublishStep').mockRejectedValue(pubError);
       const finalizeSpy = jest
         .spyOn(depup, 'finalizePackage')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       await expect(
         depup.publishAndFinalize({
@@ -10995,10 +12137,10 @@ describe('depup.mjs -- coverage gap fill', () => {
           scripts: {
             build: 'tsc',
             postinstall: 'node setup.js',
-            preinstall: 'check.js',
-            prepare: 'npm run build',
-            prepack: 'npm run build',
             postpack: 'cleanup.js',
+            preinstall: 'check.js',
+            prepack: 'npm run build',
+            prepare: 'npm run build',
           },
           version: '1.0.0',
         }),
@@ -11092,8 +12234,11 @@ describe('depup.mjs -- coverage gap fill', () => {
         'testpkg',
       );
 
-      const countChanges = result.files.filter((f) => f === 'changes.json').length;
+      const countChanges = result.files.filter(
+        (f) => f === 'changes.json',
+      ).length;
       const countReadme = result.files.filter((f) => f === 'README.md').length;
+
       expect(countChanges).toBe(1);
       expect(countReadme).toBe(1);
     });
@@ -11228,9 +12373,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
     it('returns failed and warns when test fails', async () => {
       jest.spyOn(depup, 'testPackage').mockResolvedValue(false);
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       const result = await depup.maybeTest(
         { debug: false, shouldTest: true, timeout: 1000 },
@@ -11272,7 +12415,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     it('calls retryWithBackoff for extraction', async () => {
       const retrySpy = jest
         .spyOn(depup, 'retryWithBackoff')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       await depup.downloadPackage('express', tmpDir, 5000);
 
@@ -11309,7 +12452,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     it('publishes when revision is 0', async () => {
       const publishSpy = jest
         .spyOn(depup, 'publishPackage')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       const result = await depup.handlePublishStep({
         debug: false,
@@ -11328,7 +12471,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     it('publishes when dependenciesUpdated > 0', async () => {
       const publishSpy = jest
         .spyOn(depup, 'publishPackage')
-        .mockResolvedValue(undefined);
+        .mockResolvedValue();
 
       const result = await depup.handlePublishStep({
         debug: false,
@@ -11361,6 +12504,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       expect(result).toBe(false);
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -11380,9 +12524,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       jest
         .spyOn(depup, 'generateReadme')
         .mockRejectedValue(new Error('readme gen failed'));
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       await depup.safeGenerateReadme('testpkg', true);
 
@@ -11390,7 +12532,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('does not throw when generateReadme succeeds', async () => {
-      jest.spyOn(depup, 'generateReadme').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'generateReadme').mockResolvedValue();
 
       await depup.safeGenerateReadme('testpkg', false);
     });
@@ -11434,9 +12576,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       jest.spyOn(depup, 'updateSingleDependency').mockResolvedValue({
         result: 'error',
       });
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       const packageJson = {
         dependencies: { express: '^4.0.0' },
@@ -11445,6 +12585,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.bumpDependencies(tmpDir, packageJson, false, 5000);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
 
@@ -11452,9 +12593,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       jest
         .spyOn(depup, 'updateSingleDependency')
         .mockRejectedValue(new Error('net fail'));
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       const packageJson = {
         dependencies: { express: '^4.0.0' },
@@ -11463,6 +12602,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.bumpDependencies(tmpDir, packageJson, false, 5000);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
 
@@ -11572,7 +12712,9 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('skips when latest manifest has no version', async () => {
-      jest.spyOn(depup, 'retryWithBackoff').mockResolvedValue({ version: null });
+      jest
+        .spyOn(depup, 'retryWithBackoff')
+        .mockResolvedValue({ version: null });
 
       const result = await depup.updateSingleDependency(
         'express',
@@ -11605,18 +12747,19 @@ describe('depup.mjs -- coverage gap fill', () => {
       jest
         .spyOn(depup, 'retryWithBackoff')
         .mockRejectedValue(new Error('network error'));
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       await depup.updateSingleDependency('express', '^4.0.0', {}, true, 5000);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
 
     it('logs debug update message when debug=true and update found', async () => {
-      jest.spyOn(depup, 'retryWithBackoff').mockResolvedValue({ version: '5.0.0' });
+      jest
+        .spyOn(depup, 'retryWithBackoff')
+        .mockResolvedValue({ version: '5.0.0' });
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -11630,6 +12773,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       );
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -11637,12 +12781,8 @@ describe('depup.mjs -- coverage gap fill', () => {
   // ─── testPackage ─────────────────────────────────────────────────
   describe('testPackage', () => {
     it('returns true when install and run succeed', async () => {
-      jest
-        .spyOn(depup, 'installProductionDeps')
-        .mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'runTestInTempDir')
-        .mockResolvedValue(true);
+      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue();
+      jest.spyOn(depup, 'runTestInTempDir').mockResolvedValue(true);
 
       const result = await depup.testPackage(
         tmpDir,
@@ -11655,9 +12795,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('returns false when runTestInTempDir throws', async () => {
-      jest
-        .spyOn(depup, 'installProductionDeps')
-        .mockResolvedValue(undefined);
+      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue();
       jest
         .spyOn(depup, 'runTestInTempDir')
         .mockRejectedValue(new Error('test failed'));
@@ -11673,14 +12811,10 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('logs error details when debug=true and test throws', async () => {
-      jest
-        .spyOn(depup, 'installProductionDeps')
-        .mockResolvedValue(undefined);
-      const testErr = new Error('test failed');
-      testErr.stack = 'some stack';
-      jest
-        .spyOn(depup, 'runTestInTempDir')
-        .mockRejectedValue(testErr);
+      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue();
+      const testError = new Error('test failed');
+      testError.stack = 'some stack';
+      jest.spyOn(depup, 'runTestInTempDir').mockRejectedValue(testError);
       const errorSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
@@ -11705,9 +12839,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
     it('warns when all install methods fail', async () => {
       jest.spyOn(depup, 'tryInstallMethods').mockReturnValue(false);
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       await depup.installProductionDeps(tmpDir, false, 5000);
 
@@ -11730,6 +12862,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.installProductionDeps(tmpDir, true, 5000);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -11769,6 +12902,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       depup.tryInstallMethods(methods, tmpDir, true, 5000);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -11776,18 +12910,10 @@ describe('depup.mjs -- coverage gap fill', () => {
   // ─── runTestInTempDir ────────────────────────────────────────────
   describe('runTestInTempDir', () => {
     it('creates temp dir, runs test, cleans up', async () => {
-      jest
-        .spyOn(depup, 'writeTestFiles')
-        .mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'installTestDeps')
-        .mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'executeImportTest')
-        .mockResolvedValue(undefined);
-      jest
-        .spyOn(depup, 'cleanupDirectory')
-        .mockResolvedValue(undefined);
+      jest.spyOn(depup, 'writeTestFiles').mockResolvedValue();
+      jest.spyOn(depup, 'installTestDeps').mockResolvedValue();
+      jest.spyOn(depup, 'executeImportTest').mockResolvedValue();
+      jest.spyOn(depup, 'cleanupDirectory').mockResolvedValue();
 
       const result = await depup.runTestInTempDir(
         tmpDir,
@@ -11801,14 +12927,12 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('cleans up even when executeImportTest throws', async () => {
-      jest.spyOn(depup, 'writeTestFiles').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'installTestDeps').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'writeTestFiles').mockResolvedValue();
+      jest.spyOn(depup, 'installTestDeps').mockResolvedValue();
       jest
         .spyOn(depup, 'executeImportTest')
         .mockRejectedValue(new Error('import test failed'));
-      jest
-        .spyOn(depup, 'cleanupDirectory')
-        .mockResolvedValue(undefined);
+      jest.spyOn(depup, 'cleanupDirectory').mockResolvedValue();
 
       await expect(
         depup.runTestInTempDir(tmpDir, '@depup/testpkg', false, 5000),
@@ -11826,16 +12950,18 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.writeTestFiles(testDir, tmpDir, '@depup/testpkg');
 
-      const pkgJson = JSON.parse(
+      const packageJson = JSON.parse(
         await fs.readFile(path.join(testDir, 'package.json')),
       );
-      expect(pkgJson.name).toBe('depup-test');
-      expect(pkgJson.dependencies['@depup/testpkg']).toContain('file:');
+
+      expect(packageJson.name).toBe('depup-test');
+      expect(packageJson.dependencies['@depup/testpkg']).toContain('file:');
 
       const testContent = await fs.readFile(
         path.join(testDir, 'test.mjs'),
         'utf8',
       );
+
       expect(testContent).toContain('import');
       expect(testContent).toContain('@depup/testpkg');
     });
@@ -11873,6 +12999,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.installTestDeps(tmpDir, true, 5000);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -11883,10 +13010,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       // Use a test directory with invalid test.mjs
       const testDir = path.join(tmpDir, 'exec-test');
       await fs.mkdir(testDir, { recursive: true });
-      await fs.writeFile(
-        path.join(testDir, 'test.mjs'),
-        'process.exit(1);',
-      );
+      await fs.writeFile(path.join(testDir, 'test.mjs'), 'process.exit(1);');
 
       await expect(
         depup.executeImportTest(testDir, false, 5000),
@@ -11896,10 +13020,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     it('succeeds with valid test.mjs', async () => {
       const testDir = path.join(tmpDir, 'exec-test-ok');
       await fs.mkdir(testDir, { recursive: true });
-      await fs.writeFile(
-        path.join(testDir, 'test.mjs'),
-        'console.log("ok");',
-      );
+      await fs.writeFile(path.join(testDir, 'test.mjs'), 'console.log("ok");');
 
       await depup.executeImportTest(testDir, false, 5000);
     });
@@ -11922,9 +13043,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
     it('warns on failure in debug mode', async () => {
       // Can't easily force rm to fail, so just test non-existent in debug
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       // Force an error by mocking fs.rm
       jest.spyOn(fs, 'rm').mockRejectedValueOnce(new Error('rm failed'));
@@ -11932,20 +13051,21 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.cleanupDirectory(tmpDir, true);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
   });
 
   // ─── publishPackage ──────────────────────────────────────────────
   describe('publishPackage', () => {
-    const originalEnv = process.env;
+    const originalEnvironment = process.env;
 
     afterEach(() => {
-      process.env = originalEnv;
+      process.env = originalEnvironment;
     });
 
     it('throws when NPM_TOKEN is missing', async () => {
-      process.env = { ...originalEnv };
+      process.env = { ...originalEnvironment };
       delete process.env.NPM_TOKEN;
 
       await expect(
@@ -11954,7 +13074,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('calls validateNpmToken, installBuildDeps, executePublish in sequence', async () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       const validateSpy = jest.spyOn(depup, 'validateNpmToken');
       const installSpy = jest
         .spyOn(depup, 'installBuildDeps')
@@ -11976,13 +13096,11 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('calls handlePublishError on failure', async () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
-      jest
-        .spyOn(depup, 'executePublish')
-        .mockImplementation(() => {
-          throw new Error('publish failed');
-        });
+      jest.spyOn(depup, 'executePublish').mockImplementation(() => {
+        throw new Error('publish failed');
+      });
       const handleSpy = jest
         .spyOn(depup, 'handlePublishError')
         .mockImplementation(() => {});
@@ -11998,7 +13116,7 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('stops spinner in debug mode', async () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
       jest.spyOn(depup, 'executePublish').mockImplementation(() => {});
 
@@ -12013,20 +13131,20 @@ describe('depup.mjs -- coverage gap fill', () => {
 
   // ─── validateNpmToken ────────────────────────────────────────────
   describe('validateNpmToken', () => {
-    const originalEnv = process.env;
+    const originalEnvironment = process.env;
 
     afterEach(() => {
-      process.env = originalEnv;
+      process.env = originalEnvironment;
     });
 
     it('does not throw when NPM_TOKEN is set', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'mytoken' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'mytoken' };
 
       expect(() => depup.validateNpmToken()).not.toThrow();
     });
 
     it('throws when NPM_TOKEN is missing', () => {
-      process.env = { ...originalEnv };
+      process.env = { ...originalEnvironment };
       delete process.env.NPM_TOKEN;
 
       expect(() => depup.validateNpmToken()).toThrow('NPM_TOKEN');
@@ -12039,45 +13157,40 @@ describe('depup.mjs -- coverage gap fill', () => {
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       // This will fail (no package.json in tmpDir) and warn
       depup.installBuildDeps(tmpDir, true);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
       warnSpy.mockRestore();
     });
 
     it('warns when install fails', () => {
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
       depup.installBuildDeps('/nonexistent/dir/xyz', false);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
   });
 
   // ─── executePublish ──────────────────────────────────────────────
   describe('executePublish', () => {
-    const originalEnv = process.env;
+    const originalEnvironment = process.env;
 
     afterEach(() => {
-      process.env = originalEnv;
+      process.env = originalEnvironment;
     });
 
     it('uses latest tag for depup prerelease versions', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       const execSpy = jest
-        .spyOn(
-          { execFileSync: () => {} },
-          'execFileSync',
-        )
+        .spyOn({ execFileSync: () => {} }, 'execFileSync')
         .mockImplementation(() => {});
 
       // Mock execFileSync at the module level via spying on the imported module
@@ -12088,21 +13201,21 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
 
     it('uses beta tag for non-depup prerelease versions', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+
       expect(() =>
         depup.executePublish(tmpDir, '1.0.0-alpha.0', false),
       ).toThrow();
     });
 
     it('uses no extra tag for stable versions', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
-      expect(() =>
-        depup.executePublish(tmpDir, '1.0.0', false),
-      ).toThrow();
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+
+      expect(() => depup.executePublish(tmpDir, '1.0.0', false)).toThrow();
     });
 
     it('logs depup tag in debug mode', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -12114,11 +13227,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       }
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
 
     it('logs beta tag in debug mode', () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'test-token' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -12130,6 +13244,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       }
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -12140,7 +13255,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       const error = new Error('EPUBLISHCONFLICT');
 
       expect(() =>
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', false),
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          false,
+        ),
       ).not.toThrow();
     });
 
@@ -12148,7 +13268,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       const error = new Error('Scope not found @depup');
 
       expect(() =>
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', false),
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          false,
+        ),
       ).toThrow('does not exist');
     });
 
@@ -12156,7 +13281,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       const error = new Error('is not in this registry');
 
       expect(() =>
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', false),
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          false,
+        ),
       ).toThrow();
     });
 
@@ -12164,7 +13294,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       const error = new Error('network timeout');
 
       expect(() =>
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', false),
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          false,
+        ),
       ).toThrow('Failed to publish');
     });
 
@@ -12176,12 +13311,18 @@ describe('depup.mjs -- coverage gap fill', () => {
         .mockImplementation(() => {});
 
       try {
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', true);
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          true,
+        );
       } catch {
         // expected throw
       }
 
       expect(errorSpy).toHaveBeenCalled();
+
       errorSpy.mockRestore();
     });
 
@@ -12238,17 +13379,15 @@ describe('depup.mjs -- coverage gap fill', () => {
       );
 
       // Should not throw
-      await depup.updateIntegrityData(
-        tmpDir,
-        '2.0.0',
-        0,
-        '2.0.0-depup.0',
-        { changes: {}, status: 'published' },
-      );
+      await depup.updateIntegrityData(tmpDir, '2.0.0', 0, '2.0.0-depup.0', {
+        changes: {},
+        status: 'published',
+      });
 
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['2.0.0']['0'].status).toBe('published');
     });
 
@@ -12258,17 +13397,15 @@ describe('depup.mjs -- coverage gap fill', () => {
         JSON.stringify([1, 2, 3]),
       );
 
-      await depup.updateIntegrityData(
-        tmpDir,
-        '1.0.0',
-        0,
-        '1.0.0-depup.0',
-        { changes: {}, status: 'published' },
-      );
+      await depup.updateIntegrityData(tmpDir, '1.0.0', 0, '1.0.0-depup.0', {
+        changes: {},
+        status: 'published',
+      });
 
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
     });
 
@@ -12278,6 +13415,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']['5'].status).toBe('published');
       expect(data['1.0.0']['5'].smokeTest).toBe('skipped');
       expect(data['1.0.0']['5'].depsUpdated).toBe(0);
@@ -12297,6 +13435,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.pruneOldRevisions(tmpDir, true, 5);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
   });
@@ -12320,6 +13459,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0']).toBeUndefined();
       expect(data['1.0.0']['1']).toBeUndefined();
       expect(data['1.0.0']['2']).toBeDefined();
@@ -12365,19 +13505,21 @@ describe('depup.mjs -- coverage gap fill', () => {
         testResult: 'passed',
       });
 
-      const writtenPkg = JSON.parse(
+      const writtenPackage = JSON.parse(
         await fs.readFile(path.join(targetDir, 'package.json')),
       );
-      expect(writtenPkg.depup).toBeDefined();
-      expect(writtenPkg.depup.originalPackage).toBe('testpkg');
-      expect(writtenPkg.depup.originalVersion).toBe('1.0.0');
-      expect(writtenPkg.depup.depsUpdated).toBe(1);
-      expect(writtenPkg.depup.smokeTest).toBe('passed');
+
+      expect(writtenPackage.depup).toBeDefined();
+      expect(writtenPackage.depup.originalPackage).toBe('testpkg');
+      expect(writtenPackage.depup.originalVersion).toBe('1.0.0');
+      expect(writtenPackage.depup.depsUpdated).toBe(1);
+      expect(writtenPackage.depup.smokeTest).toBe('passed');
 
       const readme = await fs.readFile(
         path.join(targetDir, 'README.md'),
         'utf8',
       );
+
       expect(readme).toContain('@depup/testpkg');
       expect(readme).toContain('testpkg');
     });
@@ -12393,8 +13535,8 @@ describe('depup.mjs -- coverage gap fill', () => {
         baseVersion: '1.0.0',
         changesData: {
           bumped: {
-            lodash: { from: '^4.0.0', to: '^4.17.21' },
             express: { from: '^4.0.0', to: '^5.0.0' },
+            lodash: { from: '^4.0.0', to: '^4.17.21' },
           },
           totalUpdated: 2,
         },
@@ -12407,6 +13549,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         path.join(targetDir, 'README.md'),
         'utf8',
       );
+
       expect(content).toContain('Dependency Changes');
       expect(content).toContain('lodash');
       expect(content).toContain('express');
@@ -12429,6 +13572,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         path.join(targetDir, 'README.md'),
         'utf8',
       );
+
       expect(content).not.toContain('Dependency Changes');
       expect(content).toContain('@depup/testpkg');
     });
@@ -12455,6 +13599,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         path.join(targetDir, 'README.md'),
         'utf8',
       );
+
       expect(content).toContain('valid');
       expect(content).not.toContain('null');
     });
@@ -12467,10 +13612,10 @@ describe('depup.mjs -- coverage gap fill', () => {
       const targetDir = path.join(versionDir, 'rev-0');
       await fs.mkdir(targetDir, { recursive: true });
 
-      jest.spyOn(depup, 'cleanupAfterPublish').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'updateIntegrityData').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'pruneOldRevisions').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'safeGenerateReadme').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'cleanupAfterPublish').mockResolvedValue();
+      jest.spyOn(depup, 'updateIntegrityData').mockResolvedValue();
+      jest.spyOn(depup, 'pruneOldRevisions').mockResolvedValue();
+      jest.spyOn(depup, 'safeGenerateReadme').mockResolvedValue();
       const consoleSpy = jest
         .spyOn(console, 'log')
         .mockImplementation(() => {});
@@ -12505,10 +13650,10 @@ describe('depup.mjs -- coverage gap fill', () => {
       const targetDir = path.join(versionDir, 'rev-0');
       await fs.mkdir(targetDir, { recursive: true });
 
-      jest.spyOn(depup, 'cleanupAfterPublish').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'updateIntegrityData').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'pruneOldRevisions').mockResolvedValue(undefined);
-      jest.spyOn(depup, 'safeGenerateReadme').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'cleanupAfterPublish').mockResolvedValue();
+      jest.spyOn(depup, 'updateIntegrityData').mockResolvedValue();
+      jest.spyOn(depup, 'pruneOldRevisions').mockResolvedValue();
+      jest.spyOn(depup, 'safeGenerateReadme').mockResolvedValue();
       jest.spyOn(console, 'log').mockImplementation(() => {});
 
       await depup.finalizePackage({
@@ -12547,13 +13692,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.cleanupAfterPublish(cleanDir, true);
 
       expect(consoleSpy).toHaveBeenCalled();
+
       consoleSpy.mockRestore();
     });
 
     it('handles error gracefully in debug mode', async () => {
-      const warnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       jest
         .spyOn(fs, 'readdir')
         .mockRejectedValueOnce(new Error('readdir failed'));
@@ -12561,6 +13705,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.cleanupAfterPublish('/nonexistent/xyz', true);
 
       expect(warnSpy).toHaveBeenCalled();
+
       warnSpy.mockRestore();
     });
   });
@@ -12568,9 +13713,9 @@ describe('depup.mjs -- coverage gap fill', () => {
   // ─── generateReadme ──────────────────────────────────────────────
   describe('generateReadme', () => {
     it('throws with cause when execFileSync fails', async () => {
-      await expect(
-        depup.generateReadme('nonexistent-pkg-xyz'),
-      ).rejects.toThrow('Failed to generate README');
+      await expect(depup.generateReadme('nonexistent-pkg-xyz')).rejects.toThrow(
+        'Failed to generate README',
+      );
     });
   });
 
@@ -12593,7 +13738,10 @@ describe('depup.mjs -- coverage gap fill', () => {
 
     it('covers reserved key check with name=constructor (reserved)', () => {
       expect(() =>
-        depup.validateManifest({ name: 'constructor', version: '1.0.0' }, 'test'),
+        depup.validateManifest(
+          { name: 'constructor', version: '1.0.0' },
+          'test',
+        ),
       ).toThrow('reserved key');
     });
   });
@@ -12601,10 +13749,7 @@ describe('depup.mjs -- coverage gap fill', () => {
   describe('writeChangesJson -- null changes branch', () => {
     it('handles bumpResult with no changes property (undefined)', async () => {
       // bumpResult.changes || [] - hits the falsy branch
-      const result = await depup.writeChangesJson(
-        { updatedCount: 0 },
-        tmpDir,
-      );
+      const result = await depup.writeChangesJson({ updatedCount: 0 }, tmpDir);
 
       expect(result.totalUpdated).toBe(0);
       expect(result.bumped).toStrictEqual({});
@@ -12693,12 +13838,12 @@ describe('depup.mjs -- coverage gap fill', () => {
         });
       // The inner operation calls pacote.extract + rejectAfterTimeout
       // Mock rejectAfterTimeout to return a never-resolving promise
-      jest.spyOn(depup, 'rejectAfterTimeout').mockReturnValue(
-        new Promise(() => {}),
-      );
+      jest
+        .spyOn(depup, 'rejectAfterTimeout')
+        .mockReturnValue(new Promise(() => {}));
       // But we need pacote.extract to work - mock the whole retryWithBackoff instead
       jest.restoreAllMocks();
-      jest.spyOn(depup, 'retryWithBackoff').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'retryWithBackoff').mockResolvedValue();
 
       await depup.downloadPackage('express@4.0.0', tmpDir, 10_000);
 
@@ -12735,7 +13880,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
   describe('updateSingleDependency -- dep not in packageJson branch', () => {
     it('handles case where dep is not in packageJson.dependencies', async () => {
-      jest.spyOn(depup, 'retryWithBackoff').mockResolvedValue({ version: '5.0.0' });
+      jest
+        .spyOn(depup, 'retryWithBackoff')
+        .mockResolvedValue({ version: '5.0.0' });
 
       // packageJson.dependencies exists but doesn't include the dep
       const result = await depup.updateSingleDependency(
@@ -12774,20 +13921,21 @@ describe('depup.mjs -- coverage gap fill', () => {
         .spyOn(depup, 'installProductionDeps')
         .mockRejectedValue(new Error('install failed'));
 
-      const result = await depup.testPackage(tmpDir, '@depup/testpkg', false, 5000);
+      const result = await depup.testPackage(
+        tmpDir,
+        '@depup/testpkg',
+        false,
+        5000,
+      );
 
       expect(result).toBe(false);
     });
 
     it('logs error without stack when debug=true and error has no stack', async () => {
-      jest
-        .spyOn(depup, 'installProductionDeps')
-        .mockResolvedValue(undefined);
-      const errNoStack = new Error('test failed');
-      errNoStack.stack = undefined;
-      jest
-        .spyOn(depup, 'runTestInTempDir')
-        .mockRejectedValue(errNoStack);
+      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue();
+      const errorNoStack = new Error('test failed');
+      errorNoStack.stack = undefined;
+      jest.spyOn(depup, 'runTestInTempDir').mockRejectedValue(errorNoStack);
       const errorSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
@@ -12795,6 +13943,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.testPackage(tmpDir, '@depup/testpkg', true, 5000);
 
       expect(errorSpy).toHaveBeenCalled();
+
       errorSpy.mockRestore();
     });
   });
@@ -12843,19 +13992,23 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.cleanupAfterPublish(cleanDir, false);
 
       const remaining = await fs.readdir(cleanDir);
-      expect(remaining.toSorted()).toStrictEqual(['changes.json', 'package.json']);
+
+      expect(remaining.toSorted()).toStrictEqual([
+        'changes.json',
+        'package.json',
+      ]);
     });
   });
 
   describe('publishPackage -- debug=false default path', () => {
-    const originalEnv = process.env;
+    const originalEnvironment = process.env;
 
     afterEach(() => {
-      process.env = originalEnv;
+      process.env = originalEnvironment;
     });
 
     it('validateNpmToken default arg (publishPackage debug=false)', async () => {
-      process.env = { ...originalEnv, NPM_TOKEN: 'tok' };
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'tok' };
       jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
       jest.spyOn(depup, 'executePublish').mockImplementation(() => {});
 
@@ -12870,7 +14023,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       error.message = '';
 
       expect(() =>
-        depup.handlePublishError(error, '@depup/testpkg', '1.0.0-depup.0', false),
+        depup.handlePublishError(
+          error,
+          '@depup/testpkg',
+          '1.0.0-depup.0',
+          false,
+        ),
       ).toThrow('Failed to publish');
     });
   });
@@ -12894,17 +14052,17 @@ describe('depup.mjs -- coverage gap fill', () => {
         JSON.stringify(existing),
       );
 
-      await depup.updateIntegrityData(
-        tmpDir,
-        '1.0.0',
-        1,
-        '1.0.0-depup.1',
-        { changes: {}, depsUpdated: 1, smokeTest: 'passed', status: 'published' },
-      );
+      await depup.updateIntegrityData(tmpDir, '1.0.0', 1, '1.0.0-depup.1', {
+        changes: {},
+        depsUpdated: 1,
+        smokeTest: 'passed',
+        status: 'published',
+      });
 
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['1.0.0']['0'].status).toBe('published');
       expect(data['1.0.0']['1'].status).toBe('published');
       expect(data['1.0.0']['1'].depsUpdated).toBe(1);
@@ -12923,6 +14081,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['3.0.0']['0'].status).toBe('published');
     });
 
@@ -12939,6 +14098,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const data = JSON.parse(
         await fs.readFile(path.join(tmpDir, 'integrity.json')),
       );
+
       expect(data['2.0.0']['0'].status).toBe('published');
     });
   });
@@ -12955,6 +14115,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       await depup.pruneOldRevisions(versionDir, false, 5);
 
       const remaining = await fs.readdir(versionDir);
+
       expect(remaining).toHaveLength(3);
     });
 
@@ -12986,6 +14147,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       // Should have kept rev-2 through rev-6
       const remaining = await fs.readdir(versionDir);
+
       expect(remaining.toSorted()).toStrictEqual([
         'rev-2',
         'rev-3',
@@ -13014,6 +14176,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const written = JSON.parse(
         await fs.readFile(path.join(targetDir, 'package.json')),
       );
+
       expect(written.depup.changes).toStrictEqual({});
     });
 
@@ -13034,6 +14197,7 @@ describe('depup.mjs -- coverage gap fill', () => {
       const written = JSON.parse(
         await fs.readFile(path.join(targetDir, 'package.json')),
       );
+
       expect(written.depup.depsUpdated).toBe(0);
     });
   });
@@ -13067,6 +14231,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         path.join(targetDir, 'README.md'),
         'utf8',
       );
+
       expect(content).toContain('testpkg');
     });
   });
@@ -13099,7 +14264,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
   describe('testPackage -- default arg branches', () => {
     it('uses default debug=false and timeout=300_000', async () => {
-      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue(undefined);
+      jest.spyOn(depup, 'installProductionDeps').mockResolvedValue();
       jest.spyOn(depup, 'runTestInTempDir').mockResolvedValue(true);
 
       // Covers default-arg branches
@@ -13118,4 +14283,3 @@ describe('depup.mjs -- coverage gap fill', () => {
     });
   });
 });
-
