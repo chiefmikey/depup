@@ -1512,6 +1512,23 @@
       "status": "failed",
       "timestamp": "2026-06-10T21:11:05.410Z",
       "version": "3.1066.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/node-http-handler": {
+          "from": "^4.7.6",
+          "to": "^4.7.7"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:04:17.634Z",
+      "version": "3.1066.0-depup.1"
     }
   }
 }

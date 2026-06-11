@@ -32,31 +32,6 @@
     }
   },
   "5.6.7": {
-    "3": {
-      "changes": {
-        "@types/html-minifier-terser": {
-          "from": "^6.0.0",
-          "to": "^7.0.2"
-        },
-        "html-minifier-terser": {
-          "from": "^6.0.2",
-          "to": "^7.2.0"
-        },
-        "lodash": {
-          "from": "^4.17.21",
-          "to": "^4.18.1"
-        },
-        "tapable": {
-          "from": "^2.0.0",
-          "to": "^2.3.3"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T09:31:23.544Z",
-      "version": "5.6.7-depup.3"
-    },
     "4": {
       "changes": {
         "@types/html-minifier-terser": {
@@ -156,6 +131,31 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:28:33.565Z",
       "version": "5.6.7-depup.7"
+    },
+    "8": {
+      "changes": {
+        "@types/html-minifier-terser": {
+          "from": "^6.0.0",
+          "to": "^7.0.2"
+        },
+        "html-minifier-terser": {
+          "from": "^6.0.2",
+          "to": "^7.2.0"
+        },
+        "lodash": {
+          "from": "^4.17.21",
+          "to": "^4.18.1"
+        },
+        "tapable": {
+          "from": "^2.0.0",
+          "to": "^2.3.3"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:21:20.637Z",
+      "version": "5.6.7-depup.8"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/clerk__themes
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.4.57 | **DepUp version**: 2.4.57-depup.23 | **Updated**: 6/10/2026 | **Import test**: passed
+**Original version**: 2.4.57 | **DepUp version**: 2.4.57-depup.24 | **Updated**: 6/11/2026 | **Import test**: passed
 
 ## What changed
 
