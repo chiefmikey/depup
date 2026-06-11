@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.10 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.11 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -68,6 +68,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
+| ghost-storage-base | `1.1.2` | `^2.0.0` |
 | got | `13.0.0` | `^15.0.5` |
 | gscan | `6.2.0` | `^6.3.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
@@ -98,7 +99,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | otplib | `12.0.1` | `^13.4.1` |
 | sanitize-html | `2.17.4` | `^2.17.5` |
 | semver | `7.7.4` | `^7.8.4` |
-| sharp | `0.34.5` | `^0.35.0` |
+| sharp | `0.34.5` | `^0.35.1` |
 | stripe | `8.222.0` | `^22.2.0` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.46.1` | `^5.48.0` |

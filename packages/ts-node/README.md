@@ -12,7 +12,7 @@ npm install @depup/ts-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.9 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.10 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tsconfig/node12 | `^1.0.7` | `^12.1.7` |
 | @tsconfig/node14 | `^1.0.0` | `^14.1.8` |
 | @tsconfig/node16 | `^1.0.2` | `^16.1.8` |
-| acorn | `^8.4.1` | `^8.16.0` |
+| acorn | `^8.4.1` | `^8.17.0` |
 | acorn-walk | `^8.1.1` | `^8.3.5` |
 | arg | `^4.1.0` | `^5.0.2` |
 | create-require | `^1.1.0` | `^1.1.1` |

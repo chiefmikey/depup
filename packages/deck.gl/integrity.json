@@ -61,19 +61,6 @@
     }
   },
   "9.3.3": {
-    "5": {
-      "changes": {
-        "@loaders.gl/core": {
-          "from": "^4.4.1",
-          "to": "^4.4.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:13:37.806Z",
-      "version": "9.3.3-depup.5"
-    },
     "6": {
       "changes": {
         "@loaders.gl/core": {
@@ -125,6 +112,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:47:19.400Z",
       "version": "9.3.3-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@loaders.gl/core": {
+          "from": "^4.4.1",
+          "to": "^4.4.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T17:31:41.456Z",
+      "version": "9.3.3-depup.10"
     }
   }
 }

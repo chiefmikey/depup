@@ -12,7 +12,7 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.4.6 | **DepUp version**: 6.4.6-depup.1 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 6.4.6 | **DepUp version**: 6.4.6-depup.2 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,6 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild | `^0.27.3` | `^0.28.0` |
 | js-yaml | `^4.1.1` | `^4.2.0` |
 | magicast | `^0.5.2` | `^0.5.3` |
+| neotraverse | `^0.6.18` | `^1.0.1` |
 | obug | `^2.1.1` | `^2.1.2` |
 | p-queue | `^9.1.0` | `^9.3.0` |
 | semver | `^7.7.4` | `^7.8.4` |
