@@ -1,18 +1,5 @@
 {
   "5.0.3": {
-    "3": {
-      "changes": {
-        "color-string": {
-          "from": "^2.1.3",
-          "to": "^2.1.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:33:58.044Z",
-      "version": "5.0.3-depup.3"
-    },
     "4": {
       "changes": {
         "color-string": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:37:20.251Z",
       "version": "5.0.3-depup.7"
+    },
+    "8": {
+      "changes": {
+        "color-string": {
+          "from": "^2.1.3",
+          "to": "^2.1.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T10:06:48.488Z",
+      "version": "5.0.3-depup.8"
     }
   }
 }

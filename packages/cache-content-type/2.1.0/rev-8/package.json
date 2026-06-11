@@ -1,0 +1,93 @@
+{
+  "name": "@depup/cache-content-type",
+  "version": "2.1.0-depup.8",
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "description": "Create a full Content-Type header given a MIME type or extension and cache the result (with updated dependencies)",
+  "scripts": {
+    "clean": "tsc --build --clean",
+    "pretest": "npm run clean && npm run lint -- --fix",
+    "test": "egg-bin test",
+    "preci": "npm run clean && npm run lint",
+    "ci": "egg-bin cov",
+    "postci": "npm run prepublishOnly && npm run clean",
+    "lint": "eslint src test"
+  },
+  "dependencies": {
+    "mime-types": "^3.0.2",
+    "ylru": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "2",
+    "@types/mime-types": "2",
+    "@types/mocha": "10",
+    "@types/node": "^22",
+    "@eggjs/bin": "7",
+    "eslint": "8",
+    "eslint-config-egg": "14",
+    "mm": "4",
+    "tshy": "3",
+    "tshy-after": "1",
+    "typescript": "5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-modules/cache-content-type.git"
+  },
+  "keywords": [
+    "cache-content-type",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "mime",
+    "content-type",
+    "lru"
+  ],
+  "author": "dead_horse",
+  "license": "MIT",
+  "type": "module",
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "depup": {
+    "changes": {
+      "mime-types": {
+        "from": "^2.1.35",
+        "to": "^3.0.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "cache-content-type",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-06-11T10:06:20.414Z",
+    "smokeTest": "passed"
+  }
+}
