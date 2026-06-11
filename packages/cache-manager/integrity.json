@@ -1,22 +1,5 @@
 {
   "7.2.8": {
-    "3": {
-      "changes": {
-        "keyv": {
-          "from": "^5.5.5",
-          "to": "^5.6.0"
-        },
-        "@cacheable/utils": {
-          "from": "^2.3.3",
-          "to": "^2.4.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:39:19.214Z",
-      "version": "7.2.8-depup.3"
-    },
     "4": {
       "changes": {
         "keyv": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:43:29.432Z",
       "version": "7.2.8-depup.7"
+    },
+    "8": {
+      "changes": {
+        "keyv": {
+          "from": "^5.5.5",
+          "to": "^5.6.0"
+        },
+        "@cacheable/utils": {
+          "from": "^2.3.3",
+          "to": "^2.4.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T10:12:32.615Z",
+      "version": "7.2.8-depup.8"
     }
   }
 }

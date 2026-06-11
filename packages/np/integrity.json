@@ -199,39 +199,6 @@
     }
   },
   "11.2.1": {
-    "4": {
-      "changes": {
-        "cosmiconfig": {
-          "from": "^9.0.1",
-          "to": "^9.0.2"
-        },
-        "hosted-git-info": {
-          "from": "^9.0.2",
-          "to": "^10.1.1"
-        },
-        "ignore-walk": {
-          "from": "^8.0.0",
-          "to": "^9.0.0"
-        },
-        "inquirer": {
-          "from": "^13.4.1",
-          "to": "^14.0.2"
-        },
-        "onetime": {
-          "from": "^7.0.0",
-          "to": "^8.0.0"
-        },
-        "semver": {
-          "from": "^7.7.4",
-          "to": "^7.8.3"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:42:10.607Z",
-      "version": "11.2.1-depup.4"
-    },
     "5": {
       "changes": {
         "cosmiconfig": {
@@ -363,6 +330,39 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:54:53.323Z",
       "version": "11.2.1-depup.8"
+    },
+    "9": {
+      "changes": {
+        "cosmiconfig": {
+          "from": "^9.0.1",
+          "to": "^9.0.2"
+        },
+        "hosted-git-info": {
+          "from": "^9.0.2",
+          "to": "^10.1.1"
+        },
+        "ignore-walk": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        },
+        "inquirer": {
+          "from": "^13.4.1",
+          "to": "^14.0.2"
+        },
+        "onetime": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-11T10:15:28.454Z",
+      "version": "11.2.1-depup.9"
     }
   }
 }
