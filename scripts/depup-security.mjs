@@ -272,14 +272,7 @@ class SecureDepUp {
     const spinner = ora('Scanning extracted package for malware...').start();
 
     try {
-      execFileSync(
-        'clamscan',
-        ['--recursive', '--infected', '--quiet', packagePath],
-        {
-          stdio: 'pipe',
-          timeout: 60_000,
-        },
-      );
+      this.runClamScanCommand(packagePath);
       spinner.succeed('Malware scan passed');
     } catch (error) {
       if (error.code === 'ENOENT') {
@@ -335,6 +328,27 @@ class SecureDepUp {
     });
   }
 
+  runNpmAuditCommand(auditDirectory) {
+    return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
+      cwd: auditDirectory,
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 60_000,
+    });
+  }
+
+  runNpmPublish(revisionDirectory, options) {
+    execFileSync('npm', ['publish', '--access', 'public', '--tag', 'latest'], {
+      cwd: revisionDirectory,
+      env: {
+        ...process.env,
+        NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+      },
+      stdio: options.debug ? 'inherit' : 'pipe',
+      timeout: 120_000,
+    });
+  }
+
   runSnykScan(packagePath) {
     try {
       this.spawnSnyk(packagePath);
@@ -364,16 +378,7 @@ class SecureDepUp {
     try {
       const auditDirectory =
         await this.findLatestRevisionDirectory(packagePath);
-      const auditResult = execFileSync(
-        'npm',
-        ['audit', '--audit-level=moderate', '--json'],
-        {
-          cwd: auditDirectory,
-          encoding: 'utf8',
-          stdio: 'pipe',
-          timeout: 60_000,
-        },
-      );
+      const auditResult = this.runNpmAuditCommand(auditDirectory);
 
       this.checkAuditForCritical(this.safeParseJson(auditResult));
       this.runSnykScan(auditDirectory);
@@ -450,6 +455,17 @@ class SecureDepUp {
         }
       }
     }
+  }
+
+  runClamScanCommand(packagePath) {
+    execFileSync(
+      'clamscan',
+      ['--recursive', '--infected', '--quiet', packagePath],
+      {
+        stdio: 'pipe',
+        timeout: 60_000,
+      },
+    );
   }
 
   async runInSandbox(target, options) {
@@ -538,19 +554,7 @@ class SecureDepUp {
       const revisionDirectory = await this.findLatestRevisionDirectory(
         packageInfo.path,
       );
-      execFileSync(
-        'npm',
-        ['publish', '--access', 'public', '--tag', 'latest'],
-        {
-          cwd: revisionDirectory,
-          env: {
-            ...process.env,
-            NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
-          },
-          stdio: options.debug ? 'inherit' : 'pipe',
-          timeout: 120_000,
-        },
-      );
+      this.runNpmPublish(revisionDirectory, options);
 
       spinner.succeed('Package published with security attestation');
     } catch (error) {
