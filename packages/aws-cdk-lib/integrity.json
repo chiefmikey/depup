@@ -213,39 +213,6 @@
     }
   },
   "2.258.1": {
-    "0": {
-      "changes": {
-        "@aws-cdk/asset-awscli-v1": {
-          "from": "2.2.282",
-          "to": "^2.2.283"
-        },
-        "@aws-cdk/cloud-assembly-schema": {
-          "from": "^54.0.0",
-          "to": "^54.2.0"
-        },
-        "ignore": {
-          "from": "^5.3.2",
-          "to": "^7.0.5"
-        },
-        "semver": {
-          "from": "^7.8.1",
-          "to": "^7.8.3"
-        },
-        "yaml": {
-          "from": "1.10.3",
-          "to": "^2.9.0"
-        },
-        "mime-types": {
-          "from": "^2.1.35",
-          "to": "^3.0.2"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T09:46:43.915Z",
-      "version": "2.258.1-depup.0"
-    },
     "1": {
       "changes": {
         "@aws-cdk/asset-awscli-v1": {
@@ -377,6 +344,39 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:44:09.056Z",
       "version": "2.258.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@aws-cdk/asset-awscli-v1": {
+          "from": "2.2.282",
+          "to": "^2.2.283"
+        },
+        "@aws-cdk/cloud-assembly-schema": {
+          "from": "^54.0.0",
+          "to": "^54.2.0"
+        },
+        "ignore": {
+          "from": "^5.3.2",
+          "to": "^7.0.5"
+        },
+        "semver": {
+          "from": "^7.8.1",
+          "to": "^7.8.4"
+        },
+        "yaml": {
+          "from": "1.10.3",
+          "to": "^2.9.0"
+        },
+        "mime-types": {
+          "from": "^2.1.35",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:38:37.028Z",
+      "version": "2.258.1-depup.5"
     }
   }
 }

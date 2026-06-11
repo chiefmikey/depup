@@ -1,0 +1,46 @@
+{
+  "name": "@depup/react-types__switch",
+  "version": "3.6.0-depup.11",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/switch": "^3.8.1",
+    "@react-spectrum/switch": "^3.7.1"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "a6999bdf494a2e9c0381a5881908328bdd22ddae",
+  "keywords": [
+    "@react-types/switch",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@react-aria/switch": {
+        "from": "^3.8.0",
+        "to": "^3.8.1"
+      },
+      "@react-spectrum/switch": {
+        "from": "^3.7.0",
+        "to": "^3.7.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@react-types/switch",
+    "originalVersion": "3.6.0",
+    "processedAt": "2026-06-11T01:36:29.343Z",
+    "smokeTest": "failed"
+  }
+}

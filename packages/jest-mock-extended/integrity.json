@@ -15,19 +15,6 @@
     }
   },
   "4.0.1": {
-    "5": {
-      "changes": {
-        "ts-essentials": {
-          "from": "^10.1.1",
-          "to": "^10.2.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-09T17:18:22.219Z",
-      "version": "4.0.1-depup.5"
-    },
     "6": {
       "changes": {
         "ts-essentials": {
@@ -79,6 +66,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:21:59.819Z",
       "version": "4.0.1-depup.9"
+    },
+    "10": {
+      "changes": {
+        "ts-essentials": {
+          "from": "^10.1.1",
+          "to": "^10.2.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:52:13.063Z",
+      "version": "4.0.1-depup.10"
     }
   }
 }
