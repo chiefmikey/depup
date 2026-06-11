@@ -428,5 +428,20 @@
       "timestamp": "2026-06-11T01:29:04.103Z",
       "version": "1.1.0-depup.7"
     }
+  },
+  "1.1.1": {
+    "0": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T09:58:37.893Z",
+      "version": "1.1.1-depup.0"
+    }
   }
 }

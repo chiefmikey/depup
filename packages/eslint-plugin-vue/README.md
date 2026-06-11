@@ -12,7 +12,7 @@ npm install @depup/eslint-plugin-vue
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.8 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.9 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @eslint-community/eslint-utils | `^4.4.0` | `^4.9.1` |
 | nth-check | `^2.1.1` | `^3.0.1` |
-| postcss-selector-parser | `^7.1.0` | `^7.1.2` |
+| postcss-selector-parser | `^7.1.0` | `^7.1.3` |
 | semver | `^7.6.3` | `^7.8.4` |
 | xml-name-validator | `^4.0.0` | `^5.0.0` |
 
