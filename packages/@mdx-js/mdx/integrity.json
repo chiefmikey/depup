@@ -1,78 +1,5 @@
 {
   "3.1.1": {
-    "7": {
-      "changes": {
-        "@types/estree": {
-          "from": "^1.0.0",
-          "to": "^1.0.9"
-        },
-        "@types/estree-jsx": {
-          "from": "^1.0.0",
-          "to": "^1.0.5"
-        },
-        "@types/hast": {
-          "from": "^3.0.0",
-          "to": "^3.0.4"
-        },
-        "@types/mdx": {
-          "from": "^2.0.0",
-          "to": "^2.0.14"
-        },
-        "acorn": {
-          "from": "^8.0.0",
-          "to": "^8.16.0"
-        },
-        "collapse-white-space": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "devlop": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "estree-walker": {
-          "from": "^3.0.0",
-          "to": "^3.0.3"
-        },
-        "hast-util-to-jsx-runtime": {
-          "from": "^2.0.0",
-          "to": "^2.3.6"
-        },
-        "recma-jsx": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "remark-mdx": {
-          "from": "^3.0.0",
-          "to": "^3.1.1"
-        },
-        "remark-rehype": {
-          "from": "^11.0.0",
-          "to": "^11.1.2"
-        },
-        "source-map": {
-          "from": "^0.7.0",
-          "to": "^0.7.6"
-        },
-        "unified": {
-          "from": "^11.0.0",
-          "to": "^11.0.5"
-        },
-        "unist-util-visit": {
-          "from": "^5.0.0",
-          "to": "^5.1.0"
-        },
-        "vfile": {
-          "from": "^6.0.0",
-          "to": "^6.0.3"
-        }
-      },
-      "depsUpdated": 16,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:48:39.612Z",
-      "version": "3.1.1-depup.7"
-    },
     "8": {
       "changes": {
         "@types/estree": {
@@ -364,6 +291,79 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:34:30.616Z",
       "version": "3.1.1-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@types/estree": {
+          "from": "^1.0.0",
+          "to": "^1.0.9"
+        },
+        "@types/estree-jsx": {
+          "from": "^1.0.0",
+          "to": "^1.0.5"
+        },
+        "@types/hast": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@types/mdx": {
+          "from": "^2.0.0",
+          "to": "^2.0.14"
+        },
+        "acorn": {
+          "from": "^8.0.0",
+          "to": "^8.16.0"
+        },
+        "collapse-white-space": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "devlop": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "estree-walker": {
+          "from": "^3.0.0",
+          "to": "^3.0.3"
+        },
+        "hast-util-to-jsx-runtime": {
+          "from": "^2.0.0",
+          "to": "^2.3.6"
+        },
+        "recma-jsx": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "remark-mdx": {
+          "from": "^3.0.0",
+          "to": "^3.1.1"
+        },
+        "remark-rehype": {
+          "from": "^11.0.0",
+          "to": "^11.1.2"
+        },
+        "source-map": {
+          "from": "^0.7.0",
+          "to": "^0.7.6"
+        },
+        "unified": {
+          "from": "^11.0.0",
+          "to": "^11.0.5"
+        },
+        "unist-util-visit": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "vfile": {
+          "from": "^6.0.0",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 16,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T08:08:29.153Z",
+      "version": "3.1.1-depup.12"
     }
   }
 }

@@ -285,6 +285,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:04:00.080Z",
       "version": "22.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T07:54:55.967Z",
+      "version": "22.0.1-depup.2"
     }
   }
 }

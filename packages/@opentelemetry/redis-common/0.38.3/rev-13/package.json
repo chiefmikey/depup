@@ -1,0 +1,53 @@
+{
+  "name": "@depup/opentelemetry__redis-common",
+  "version": "0.38.3-depup.13",
+  "description": "Redis utilities for redis instrumentations (with updated dependencies)",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "compile": "tsc --build tsconfig.json",
+    "compile:with-dependencies": "nx run-many -t compile -p @opentelemetry/redis-common",
+    "test": "nyc mocha 'test/**/*.test.ts'",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-telemetry/opentelemetry-js-contrib.git",
+    "directory": "packages/redis-common"
+  },
+  "keywords": [
+    "@opentelemetry/redis-common",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "opentelemetry",
+    "redis-common"
+  ],
+  "files": [
+    "build/**/*.js",
+    "build/**/*.js.map",
+    "build/**/*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "author": "OpenTelemetry Authors",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "^18.19.0 || >=20.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/open-telemetry/opentelemetry-js-contrib/issues"
+  },
+  "homepage": "https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/packages/redis-common#readme",
+  "gitHead": "bd017c86bcdf369d7bc1b490e455f95b25385779",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@opentelemetry/redis-common",
+    "originalVersion": "0.38.3",
+    "processedAt": "2026-06-11T08:12:13.351Z",
+    "smokeTest": "passed"
+  }
+}

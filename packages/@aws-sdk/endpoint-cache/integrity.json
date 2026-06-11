@@ -55,23 +55,6 @@
     }
   },
   "3.972.7": {
-    "7": {
-      "changes": {
-        "mnemonist": {
-          "from": "0.38.3",
-          "to": "^0.40.4"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:23:18.205Z",
-      "version": "3.972.7-depup.7"
-    },
     "8": {
       "changes": {
         "mnemonist": {
@@ -139,6 +122,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T01:04:42.397Z",
       "version": "3.972.7-depup.11"
+    },
+    "12": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T07:57:56.391Z",
+      "version": "3.972.7-depup.12"
     }
   }
 }

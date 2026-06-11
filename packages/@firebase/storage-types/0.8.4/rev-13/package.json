@@ -1,0 +1,47 @@
+{
+  "name": "@depup/firebase__storage-types",
+  "version": "0.8.4-depup.13",
+  "description": "@firebase/storage Types (with updated dependencies)",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@firebase/app-types": "0.x",
+    "@firebase/util": "1.x"
+  },
+  "repository": {
+    "directory": "packages/storage-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "keywords": [
+    "@firebase/storage-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/storage-types",
+    "originalVersion": "0.8.4",
+    "processedAt": "2026-06-11T08:05:18.330Z",
+    "smokeTest": "failed"
+  }
+}

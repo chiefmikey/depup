@@ -1,0 +1,115 @@
+{
+  "name": "@depup/cloudflare__vite-plugin",
+  "version": "1.40.1-depup.7",
+  "description": "Cloudflare plugin for Vite (with updated dependencies)",
+  "keywords": [
+    "@cloudflare/vite-plugin",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cloudflare",
+    "cloudflare-workers",
+    "vite",
+    "vite-plugin",
+    "workers"
+  ],
+  "homepage": "https://github.com/cloudflare/workers-sdk/tree/main/packages/vite-plugin-cloudflare#readme",
+  "bugs": {
+    "url": "https://github.com/cloudflare/workers-sdk/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudflare/workers-sdk.git",
+    "directory": "packages/vite-plugin-cloudflare"
+  },
+  "bin": {
+    "cf-vite": "./bin/cf-vite"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./experimental-config": {
+      "types": "./dist/experimental-config.d.mts",
+      "import": "./dist/experimental-config.mjs"
+    }
+  },
+  "dependencies": {
+    "unenv": "2.0.0-rc.24",
+    "ws": "^8.21.0",
+    "@cloudflare/unenv-preset": "2.16.1",
+    "miniflare": "4.20260609.0",
+    "wrangler": "4.99.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260609.1",
+    "@remix-run/node-fetch-server": "^0.8.0",
+    "@types/node": "22.15.17",
+    "@types/semver": "^7.5.1",
+    "@types/ws": "^8.5.13",
+    "defu": "^6.1.4",
+    "get-port": "^7.1.0",
+    "magic-string": "^0.30.12",
+    "mlly": "^1.7.4",
+    "open": "11.0.0",
+    "picocolors": "^1.1.1",
+    "qr": "^0.6.0",
+    "semver": "^7.7.1",
+    "tinyglobby": "0.2.16",
+    "tree-kill": "1.2.2",
+    "tsdown": "0.16.3",
+    "typescript": "5.8.3",
+    "vite": "8.0.13",
+    "vite-legacy": "npm:vite@7.1.12",
+    "vitest": "4.1.0",
+    "@cloudflare/config": "0.0.0",
+    "@cloudflare/containers-shared": "0.15.1",
+    "@cloudflare/mock-npm-registry": "0.0.0",
+    "@cloudflare/workers-shared": "0.19.6",
+    "@cloudflare/workers-tsconfig": "0.0.0",
+    "@cloudflare/workers-utils": "0.23.0"
+  },
+  "peerDependencies": {
+    "vite": "^6.1.0 || ^7.0.0 || ^8.0.0",
+    "wrangler": "^4.99.0"
+  },
+  "workers-sdk": {
+    "prerelease": true
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check:type": "tsc --build",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:ci": "pnpm test",
+    "test:e2e": "vitest run -c e2e/vitest.config.ts",
+    "test:watch": "vitest"
+  },
+  "depup": {
+    "changes": {
+      "ws": {
+        "from": "8.20.1",
+        "to": "^8.21.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@cloudflare/vite-plugin",
+    "originalVersion": "1.40.1",
+    "processedAt": "2026-06-11T08:01:17.082Z",
+    "smokeTest": "failed"
+  }
+}

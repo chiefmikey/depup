@@ -1,0 +1,61 @@
+{
+  "name": "@depup/angular-eslint__utils",
+  "version": "22.0.0-depup.12",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-eslint/angular-eslint.git",
+    "directory": "packages/utils"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "peerDependencies": {
+    "@typescript-eslint/utils": "^8.0.0",
+    "eslint": "^9.0.0 || ^10.0.0",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@angular-eslint/bundled-angular-compiler": "22.0.0"
+  },
+  "nx": {
+    "namedInputs": {
+      "projectSpecificFiles": [
+        "{workspaceRoot}/tools/scripts/update-native-event-names.ts"
+      ]
+    },
+    "targets": {
+      "update-native-event-names": {
+        "outputs": [
+          "{projectRoot}/src/eslint-plugin/get-native-event-names"
+        ],
+        "command": "npx tsx ./tools/scripts/update-native-event-names.ts"
+      }
+    }
+  },
+  "gitHead": "e2006e5e9c99e5a943d1a999e0efa5247d29ec24",
+  "description": "@angular-eslint/utils with all dependencies updated to latest",
+  "keywords": [
+    "@angular-eslint/utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@angular-eslint/utils",
+    "originalVersion": "22.0.0",
+    "processedAt": "2026-06-11T07:54:18.410Z",
+    "smokeTest": "passed"
+  }
+}
