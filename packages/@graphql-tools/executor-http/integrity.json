@@ -90,23 +90,6 @@
     }
   },
   "3.3.0": {
-    "10": {
-      "changes": {
-        "@graphql-tools/utils": {
-          "from": "^11.0.0",
-          "to": "^11.1.0"
-        },
-        "@repeaterjs/repeater": {
-          "from": "^3.0.4",
-          "to": "^3.1.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T15:25:37.094Z",
-      "version": "3.3.0-depup.10"
-    },
     "11": {
       "changes": {
         "@graphql-tools/utils": {
@@ -174,6 +157,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T08:06:39.138Z",
       "version": "3.3.0-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "@repeaterjs/repeater": {
+          "from": "^3.0.4",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T09:40:15.442Z",
+      "version": "3.3.0-depup.15"
     }
   }
 }

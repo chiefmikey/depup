@@ -353,6 +353,14 @@
       "status": "skipped",
       "timestamp": "2026-06-11T08:00:57.259Z",
       "version": "7.5.1-depup.2"
+    },
+    "3": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-11T09:39:17.137Z",
+      "version": "7.5.1-depup.3"
     }
   }
 }

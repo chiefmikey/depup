@@ -1,0 +1,51 @@
+{
+  "version": "2.2.0-depup.8",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "bun src/generate.ts"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "name": "@depup/sf-symbols-typescript",
+  "author": "Fernando Rojo",
+  "repository": {
+    "url": "https://github.com/nandorojo/typescript-sf-symbols"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.5",
+    "@types/plist": "^3.0.5",
+    "plist": "^3.1.0"
+  },
+  "description": "sf-symbols-typescript with all dependencies updated to latest",
+  "keywords": [
+    "sf-symbols-typescript",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "sf-symbols-typescript",
+    "originalVersion": "2.2.0",
+    "processedAt": "2026-06-11T09:54:38.939Z",
+    "smokeTest": "passed"
+  }
+}

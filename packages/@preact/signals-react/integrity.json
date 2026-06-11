@@ -30,19 +30,6 @@
     }
   },
   "3.10.1": {
-    "9": {
-      "changes": {
-        "use-sync-external-store": {
-          "from": "^1.2.0",
-          "to": "^1.6.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T15:31:24.451Z",
-      "version": "3.10.1-depup.9"
-    },
     "10": {
       "changes": {
         "use-sync-external-store": {
@@ -94,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T08:12:35.447Z",
       "version": "3.10.1-depup.13"
+    },
+    "14": {
+      "changes": {
+        "use-sync-external-store": {
+          "from": "^1.2.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-11T09:41:43.827Z",
+      "version": "3.10.1-depup.14"
     }
   }
 }
