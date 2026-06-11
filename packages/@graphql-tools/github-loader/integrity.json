@@ -59,27 +59,6 @@
     }
   },
   "9.1.2": {
-    "11": {
-      "changes": {
-        "@graphql-tools/executor-http": {
-          "from": "^3.2.1",
-          "to": "^3.3.0"
-        },
-        "@whatwg-node/promise-helpers": {
-          "from": "^1.0.0",
-          "to": "^1.3.2"
-        },
-        "tslib": {
-          "from": "^2.4.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:14:54.522Z",
-      "version": "9.1.2-depup.11"
-    },
     "12": {
       "changes": {
         "@graphql-tools/executor-http": {
@@ -163,6 +142,27 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:40:14.601Z",
       "version": "9.1.2-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@graphql-tools/executor-http": {
+          "from": "^3.2.1",
+          "to": "^3.3.0"
+        },
+        "@whatwg-node/promise-helpers": {
+          "from": "^1.0.0",
+          "to": "^1.3.2"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T17:23:58.737Z",
+      "version": "9.1.2-depup.16"
     }
   }
 }

@@ -12,13 +12,13 @@ npm install @depup/nitro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.260610-beta | **DepUp version**: 3.0.260610-beta-depup.1 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 3.0.260610-beta | **DepUp version**: 3.0.260610-beta-depup.2 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| env-runner | `^0.1.12` | `^0.1.13` |
+| env-runner | `^0.1.12` | `^0.1.14` |
 | rolldown | `^1.1.0` | `^1.1.1` |
 
 

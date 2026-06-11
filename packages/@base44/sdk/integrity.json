@@ -368,19 +368,6 @@
     }
   },
   "0.8.32": {
-    "1": {
-      "changes": {
-        "uuid": {
-          "from": "^13.0.2",
-          "to": "^14.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:13:42.452Z",
-      "version": "0.8.32-depup.1"
-    },
     "2": {
       "changes": {
         "uuid": {
@@ -432,6 +419,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:39:08.442Z",
       "version": "0.8.32-depup.5"
+    },
+    "6": {
+      "changes": {
+        "uuid": {
+          "from": "^13.0.2",
+          "to": "^14.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T17:22:41.609Z",
+      "version": "0.8.32-depup.6"
     }
   }
 }
