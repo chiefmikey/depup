@@ -137,5 +137,20 @@
       "timestamp": "2026-06-10T17:27:06.337Z",
       "version": "3.0.260603-beta-depup.7"
     }
+  },
+  "3.0.260610-beta": {
+    "0": {
+      "changes": {
+        "env-runner": {
+          "from": "^0.1.12",
+          "to": "^0.1.13"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:17:48.748Z",
+      "version": "3.0.260610-beta-depup.0"
+    }
   }
 }

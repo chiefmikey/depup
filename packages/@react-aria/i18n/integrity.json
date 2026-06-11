@@ -28,35 +28,6 @@
     }
   },
   "3.13.1": {
-    "7": {
-      "changes": {
-        "@internationalized/date": {
-          "from": "^3.12.1",
-          "to": "^3.12.2"
-        },
-        "@internationalized/message": {
-          "from": "^3.1.9",
-          "to": "^3.1.10"
-        },
-        "@internationalized/string": {
-          "from": "^3.2.8",
-          "to": "^3.2.9"
-        },
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        },
-        "react-aria": {
-          "from": "^3.48.0",
-          "to": "^3.49.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:08:52.794Z",
-      "version": "3.13.1-depup.7"
-    },
     "8": {
       "changes": {
         "@internationalized/date": {
@@ -172,6 +143,35 @@
       "status": "failed",
       "timestamp": "2026-06-10T21:28:01.537Z",
       "version": "3.13.1-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@internationalized/date": {
+          "from": "^3.12.1",
+          "to": "^3.12.2"
+        },
+        "@internationalized/message": {
+          "from": "^3.1.9",
+          "to": "^3.1.10"
+        },
+        "@internationalized/string": {
+          "from": "^3.2.8",
+          "to": "^3.2.9"
+        },
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:07:57.719Z",
+      "version": "3.13.1-depup.12"
     }
   }
 }

@@ -41,47 +41,6 @@
     }
   },
   "8.1.2": {
-    "5": {
-      "changes": {
-        "abbrev": {
-          "from": "^3.0.0",
-          "to": "^5.0.0"
-        },
-        "hexo-front-matter": {
-          "from": "^4.2.1",
-          "to": "^5.0.0"
-        },
-        "hexo-fs": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^4.2.0"
-        },
-        "moize": {
-          "from": "^6.1.6",
-          "to": "^6.1.7"
-        },
-        "moment-timezone": {
-          "from": "^0.5.46",
-          "to": "^0.6.2"
-        },
-        "strip-ansi": {
-          "from": "^7.1.0",
-          "to": "^7.2.0"
-        },
-        "tildify": {
-          "from": "^2.0.0",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-09T09:28:59.337Z",
-      "version": "8.1.2-depup.5"
-    },
     "6": {
       "changes": {
         "abbrev": {
@@ -245,6 +204,47 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:24:15.632Z",
       "version": "8.1.2-depup.9"
+    },
+    "10": {
+      "changes": {
+        "abbrev": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "hexo-front-matter": {
+          "from": "^4.2.1",
+          "to": "^5.0.0"
+        },
+        "hexo-fs": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.2.0"
+        },
+        "moize": {
+          "from": "^6.1.6",
+          "to": "^6.1.7"
+        },
+        "moment-timezone": {
+          "from": "^0.5.46",
+          "to": "^0.6.2"
+        },
+        "strip-ansi": {
+          "from": "^7.1.0",
+          "to": "^7.2.0"
+        },
+        "tildify": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-11T01:15:07.274Z",
+      "version": "8.1.2-depup.10"
     }
   }
 }

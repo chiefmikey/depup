@@ -12,7 +12,7 @@ npm install @depup/stripe__react-stripe-js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.0 | **DepUp version**: 6.6.0-depup.11 | **Updated**: 6/10/2026 | **Import test**: failed
+**Original version**: 6.6.0 | **DepUp version**: 6.6.0-depup.12 | **Updated**: 6/11/2026 | **Import test**: failed
 
 ## What changed
 

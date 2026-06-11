@@ -1,0 +1,90 @@
+{
+  "name": "@depup/string-width",
+  "version": "8.2.1-depup.8",
+  "description": "Get the visual width of a string - the number of columns required to display it (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/string-width",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "string-width",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "string",
+    "character",
+    "unicode",
+    "width",
+    "visual",
+    "column",
+    "columns",
+    "fullwidth",
+    "full-width",
+    "wcwidth",
+    "wcswidth",
+    "full",
+    "ansi",
+    "escape",
+    "codes",
+    "cli",
+    "command-line",
+    "terminal",
+    "console",
+    "cjk",
+    "chinese",
+    "japanese",
+    "korean",
+    "fixed-width",
+    "east-asian-width"
+  ],
+  "dependencies": {
+    "get-east-asian-width": "^1.6.0",
+    "strip-ansi": "^7.2.0"
+  },
+  "devDependencies": {
+    "ava": "^6.4.1",
+    "tsd": "^0.33.0",
+    "xo": "^1.2.3"
+  },
+  "depup": {
+    "changes": {
+      "get-east-asian-width": {
+        "from": "^1.5.0",
+        "to": "^1.6.0"
+      },
+      "strip-ansi": {
+        "from": "^7.1.2",
+        "to": "^7.2.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "string-width",
+    "originalVersion": "8.2.1",
+    "processedAt": "2026-06-11T01:20:48.214Z",
+    "smokeTest": "passed"
+  }
+}
