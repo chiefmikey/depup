@@ -1,0 +1,42 @@
+{
+  "bumped": {
+    "@babel/runtime": {
+      "from": "^7.20.13",
+      "to": "^7.29.7"
+    },
+    "@panva/hkdf": {
+      "from": "^1.0.2",
+      "to": "^1.2.1"
+    },
+    "cookie": {
+      "from": "^0.7.0",
+      "to": "^1.1.1"
+    },
+    "jose": {
+      "from": "^4.15.5",
+      "to": "^6.2.3"
+    },
+    "oauth": {
+      "from": "^0.9.15",
+      "to": "^0.10.2"
+    },
+    "openid-client": {
+      "from": "^5.4.0",
+      "to": "^6.8.4"
+    },
+    "preact": {
+      "from": "^10.6.3",
+      "to": "^10.29.2"
+    },
+    "preact-render-to-string": {
+      "from": "^5.1.19",
+      "to": "^6.7.0"
+    },
+    "uuid": {
+      "from": "^8.3.2",
+      "to": "^14.0.0"
+    }
+  },
+  "timestamp": "2026-06-11T01:18:01.584Z",
+  "totalUpdated": 9
+}

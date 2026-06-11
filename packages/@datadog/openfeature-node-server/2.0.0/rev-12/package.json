@@ -1,0 +1,69 @@
+{
+  "name": "@depup/datadog__openfeature-node-server",
+  "version": "2.0.0-depup.12",
+  "description": "Node.js server bindings for OpenFeature (wraps @datadog/flagging-core) (with updated dependencies)",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/DataDog/openfeature-js-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataDog/openfeature-js-client.git",
+    "directory": "packages/node-server"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "cjs/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "cjs/",
+    "esm/",
+    "*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "pack": "yarn pack",
+    "build": "run-p build:cjs build:esm",
+    "build:cjs": "rm -rf cjs && tsc -p tsconfig.cjs.json && yarn replace-build-env cjs",
+    "build:esm": "rm -rf esm && tsc -p tsconfig.esm.json && yarn replace-build-env esm",
+    "replace-build-env": "node ../../scripts/build/replace-build-env.js",
+    "clean": "rm -rf dist cjs esm",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@datadog/flagging-core": "1.2.1"
+  },
+  "peerDependencies": {
+    "@openfeature/server-sdk": ">=1.15.1"
+  },
+  "devDependencies": {
+    "@openfeature/core": "1.9.2",
+    "@openfeature/server-sdk": "1.20.2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^18.19.130",
+    "jest": "^30.0.5",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^29.4.9",
+    "ts-loader": "^9.5.7",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "@datadog/openfeature-node-server",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@datadog/openfeature-node-server",
+    "originalVersion": "2.0.0",
+    "processedAt": "2026-06-11T01:05:13.787Z",
+    "smokeTest": "failed"
+  }
+}
