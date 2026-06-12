@@ -12,7 +12,7 @@ npm install @depup/swc__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.8.1 | **DepUp version**: 0.8.1-depup.3 | **Updated**: 6/6/2026 | **Import test**: failed
+**Original version**: 0.8.1 | **DepUp version**: 0.8.1-depup.4 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,8 +21,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @xhmikosr/bin-wrapper | `^14.0.0` | `^14.3.0` |
 | commander | `^8.3.0` | `^15.0.0` |
 | minimatch | `^9.0.3` | `^10.2.5` |
-| piscina | `^4.3.1` | `^5.1.4` |
-| semver | `^7.3.8` | `^7.8.2` |
+| piscina | `^4.3.1` | `^5.2.0` |
+| semver | `^7.3.8` | `^7.8.4` |
 | slash | `3.0.0` | `^5.1.0` |
 | source-map | `^0.7.3` | `^0.7.6` |
 | tinyglobby | `^0.2.13` | `^0.2.17` |
