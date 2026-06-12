@@ -1,0 +1,89 @@
+{
+  "author": {
+    "name": "Robert Kieffer",
+    "url": "http://github.com/broofa",
+    "email": "robert@broofa.com"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "./dist/src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./lite": "./dist/src/index_lite.js",
+    "./types/standard.js": "./dist/types/standard.js",
+    "./types/other.js": "./dist/types/other.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "dist/src",
+    "dist/types",
+    "src",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "bin": {
+    "mime": "bin/cli.js"
+  },
+  "contributors": [],
+  "description": "A comprehensive library for mime-type mapping (with updated dependencies)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mime-db": "1.43.6",
+    "@types/mime-types": "3.0.1",
+    "@types/node": "24.3.1",
+    "@typescript-eslint/eslint-plugin": "8.43.0",
+    "@typescript-eslint/parser": "8.43.0",
+    "chalk": "5.6.2",
+    "mime-score": "2.0.4",
+    "mime-types": "3.0.1",
+    "prettier": "3.6.2",
+    "release-please": "17.1.2",
+    "runmd": "1.4.1",
+    "typescript": "5.9.2"
+  },
+  "scripts": {
+    "build": "rm -fr dist && tsc",
+    "build:types": "node dist/scripts/build.js",
+    "build:watch": "npm run build -- --watch",
+    "lint": "prettier -c .",
+    "lint:fix": "prettier -w .",
+    "pretest": "npm run build",
+    "test": "node --test && ./test/exports_test.sh",
+    "test:watch": "clear && node --enable-source-maps --test --watch test"
+  },
+  "keywords": [
+    "mime",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "extension",
+    "file",
+    "mime-db",
+    "mimetypes",
+    "util"
+  ],
+  "name": "@depup/mime",
+  "repository": {
+    "url": "https://github.com/broofa/mime",
+    "type": "git"
+  },
+  "version": "4.1.0-depup.11",
+  "funding": [
+    "https://github.com/sponsors/broofa"
+  ],
+  "packageManager": "npm@11.6.0",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "mime",
+    "originalVersion": "4.1.0",
+    "processedAt": "2026-06-12T17:45:12.776Z",
+    "smokeTest": "passed"
+  }
+}

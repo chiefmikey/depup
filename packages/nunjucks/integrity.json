@@ -1,26 +1,5 @@
 {
   "3.2.4": {
-    "7": {
-      "changes": {
-        "a-sync-waterfall": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "asap": {
-          "from": "^2.0.3",
-          "to": "^2.0.6"
-        },
-        "commander": {
-          "from": "^5.1.0",
-          "to": "^15.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:52:16.745Z",
-      "version": "3.2.4-depup.7"
-    },
     "8": {
       "changes": {
         "a-sync-waterfall": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T10:08:16.018Z",
       "version": "3.2.4-depup.11"
+    },
+    "12": {
+      "changes": {
+        "a-sync-waterfall": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "asap": {
+          "from": "^2.0.3",
+          "to": "^2.0.6"
+        },
+        "commander": {
+          "from": "^5.1.0",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:45:44.375Z",
+      "version": "3.2.4-depup.12"
     }
   }
 }

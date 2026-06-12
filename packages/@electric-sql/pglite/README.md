@@ -12,7 +12,7 @@ npm install @depup/electric-sql__pglite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.5.2 | **DepUp version**: 0.5.2-depup.2 | **Updated**: 6/12/2026 | **Import test**: passed
+**Original version**: 0.5.2 | **DepUp version**: 0.5.2-depup.3 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 

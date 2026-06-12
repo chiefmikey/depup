@@ -12,15 +12,14 @@ npm install @depup/form-data
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.10 | **Updated**: 6/12/2026 | **Import test**: passed
+**Original version**: 4.0.6 | **DepUp version**: 4.0.6-depup.0 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | asynckit | `^0.4.0` | `^0.5.0` |
-| hasown | `^2.0.2` | `^2.0.4` |
-| mime-types | `^2.1.12` | `^3.0.2` |
+| mime-types | `^2.1.35` | `^3.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/form-data&labels=bug).
