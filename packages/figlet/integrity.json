@@ -1,18 +1,5 @@
 {
   "1.11.0": {
-    "6": {
-      "changes": {
-        "commander": {
-          "from": "^14.0.0",
-          "to": "^15.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:53:13.876Z",
-      "version": "1.11.0-depup.6"
-    },
     "7": {
       "changes": {
         "commander": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:38:07.821Z",
       "version": "1.11.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "commander": {
+          "from": "^14.0.0",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T10:01:55.765Z",
+      "version": "1.11.0-depup.11"
     }
   }
 }

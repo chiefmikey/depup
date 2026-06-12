@@ -112,23 +112,6 @@
     }
   },
   "2.4.11": {
-    "5": {
-      "changes": {
-        "js-beautify": {
-          "from": "^1.14.9",
-          "to": "^1.15.4"
-        },
-        "vue-component-type-helpers": {
-          "from": "^3.0.0",
-          "to": "^3.3.4"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:50:52.813Z",
-      "version": "2.4.11-depup.5"
-    },
     "6": {
       "changes": {
         "js-beautify": {
@@ -196,6 +179,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:35:36.902Z",
       "version": "2.4.11-depup.9"
+    },
+    "10": {
+      "changes": {
+        "js-beautify": {
+          "from": "^1.14.9",
+          "to": "^1.15.4"
+        },
+        "vue-component-type-helpers": {
+          "from": "^3.0.0",
+          "to": "^3.3.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:59:32.580Z",
+      "version": "2.4.11-depup.10"
     }
   }
 }
