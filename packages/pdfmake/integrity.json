@@ -124,5 +124,20 @@
       "timestamp": "2026-06-12T01:23:47.242Z",
       "version": "0.3.10-depup.11"
     }
+  },
+  "0.3.11": {
+    "0": {
+      "changes": {
+        "xmldoc": {
+          "from": "^2.0.3",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:48:10.587Z",
+      "version": "0.3.11-depup.0"
+    }
   }
 }

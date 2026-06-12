@@ -329,6 +329,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:08:43.319Z",
       "version": "1.40.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "ws": {
+          "from": "8.20.1",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:33:45.135Z",
+      "version": "1.40.2-depup.1"
     }
   }
 }

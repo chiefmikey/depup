@@ -765,23 +765,6 @@
     }
   },
   "3.972.55": {
-    "0": {
-      "changes": {
-        "@smithy/credential-provider-imds": {
-          "from": "^4.3.7",
-          "to": "^4.3.8"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T21:12:23.611Z",
-      "version": "3.972.55-depup.0"
-    },
     "1": {
       "changes": {
         "@smithy/credential-provider-imds": {
@@ -849,6 +832,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:07:39.060Z",
       "version": "3.972.55-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@smithy/credential-provider-imds": {
+          "from": "^4.3.7",
+          "to": "^4.3.8"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:32:43.400Z",
+      "version": "3.972.55-depup.5"
     }
   }
 }

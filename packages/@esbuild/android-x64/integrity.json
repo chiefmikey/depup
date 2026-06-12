@@ -55,6 +55,14 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:08:49.648Z",
       "version": "0.28.1-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-12T09:33:47.956Z",
+      "version": "0.28.1-depup.1"
     }
   }
 }
