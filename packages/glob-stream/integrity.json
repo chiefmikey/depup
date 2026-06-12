@@ -1,22 +1,5 @@
 {
   "8.0.3": {
-    "0": {
-      "changes": {
-        "fastq": {
-          "from": "^1.13.0",
-          "to": "^1.20.1"
-        },
-        "streamx": {
-          "from": "^2.12.5",
-          "to": "^2.23.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-19T03:34:52.930Z",
-      "version": "8.0.3-depup.0"
-    },
     "1": {
       "changes": {
         "fastq": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-05T00:43:23.726Z",
       "version": "8.0.3-depup.4"
+    },
+    "5": {
+      "changes": {
+        "fastq": {
+          "from": "^1.13.0",
+          "to": "^1.20.1"
+        },
+        "streamx": {
+          "from": "^2.12.5",
+          "to": "^2.28.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:38:44.873Z",
+      "version": "8.0.3-depup.5"
     }
   }
 }
