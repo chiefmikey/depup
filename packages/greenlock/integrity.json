@@ -1,34 +1,5 @@
 {
   "2.8.9": {
-    "6": {
-      "changes": {
-        "acme": {
-          "from": "^1.3.5",
-          "to": "^3.0.3"
-        },
-        "acme-dns-01-cli": {
-          "from": "^3.0.0",
-          "to": "^3.0.7"
-        },
-        "acme-v2": {
-          "from": "^1.8.7",
-          "to": "^3.0.3"
-        },
-        "greenlock-store-fs": {
-          "from": "^3.0.2",
-          "to": "^3.2.2"
-        },
-        "le-challenge-fs": {
-          "from": "^2.0.2",
-          "to": "^2.0.9"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:33:38.478Z",
-      "version": "2.8.9-depup.6"
-    },
     "7": {
       "changes": {
         "acme": {
@@ -144,6 +115,35 @@
       "status": "failed",
       "timestamp": "2026-06-11T17:33:25.300Z",
       "version": "2.8.9-depup.10"
+    },
+    "11": {
+      "changes": {
+        "acme": {
+          "from": "^1.3.5",
+          "to": "^3.0.3"
+        },
+        "acme-dns-01-cli": {
+          "from": "^3.0.0",
+          "to": "^3.0.7"
+        },
+        "acme-v2": {
+          "from": "^1.8.7",
+          "to": "^3.0.3"
+        },
+        "greenlock-store-fs": {
+          "from": "^3.0.2",
+          "to": "^3.2.2"
+        },
+        "le-challenge-fs": {
+          "from": "^2.0.2",
+          "to": "^2.0.9"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:19:11.611Z",
+      "version": "2.8.9-depup.11"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/minipass-flush
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.1 | **DepUp version**: 2.0.1-depup.9 | **Updated**: 6/11/2026 | **Import test**: passed
+**Original version**: 2.0.1 | **DepUp version**: 2.0.1-depup.10 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 

@@ -12,23 +12,23 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.32 | **DepUp version**: 2.0.32-depup.27 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 2.0.32 | **DepUp version**: 2.0.32-depup.28 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-iam | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/client-sts | `^3.1034.0` | `^3.1066.0` |
-| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1066.0` |
+| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-iam | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/client-sts | `^3.1034.0` | `^3.1067.0` |
+| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1067.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.32.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.30.0` |
@@ -43,7 +43,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^6.2.1` |
 | dotenv | `^16.6.1` | `^17.4.2` |
-| esbuild-wasm | `^0.19.12` | `^0.28.0` |
+| esbuild-wasm | `^0.19.12` | `^0.28.1` |
 | fs-extra | `^11.3.3` | `^11.3.5` |
 | got | `^14.6.6` | `^15.0.5` |
 | joi | `^17.13.3` | `^18.2.1` |

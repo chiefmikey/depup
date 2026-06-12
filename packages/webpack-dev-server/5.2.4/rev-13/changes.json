@@ -1,0 +1,78 @@
+{
+  "bumped": {
+    "@types/express": {
+      "from": "^4.17.25",
+      "to": "^5.0.6"
+    },
+    "@types/express-serve-static-core": {
+      "from": "^4.17.21",
+      "to": "^5.1.1"
+    },
+    "@types/serve-static": {
+      "from": "^1.15.5",
+      "to": "^2.2.0"
+    },
+    "@types/ws": {
+      "from": "^8.5.10",
+      "to": "^8.18.1"
+    },
+    "bonjour-service": {
+      "from": "^1.2.1",
+      "to": "^1.4.1"
+    },
+    "chokidar": {
+      "from": "^3.6.0",
+      "to": "^5.0.0"
+    },
+    "colorette": {
+      "from": "^2.0.10",
+      "to": "^2.0.20"
+    },
+    "express": {
+      "from": "^4.22.1",
+      "to": "^5.2.1"
+    },
+    "graceful-fs": {
+      "from": "^4.2.6",
+      "to": "^4.2.11"
+    },
+    "http-proxy-middleware": {
+      "from": "^2.0.9",
+      "to": "^4.1.0"
+    },
+    "ipaddr.js": {
+      "from": "^2.1.0",
+      "to": "^2.4.0"
+    },
+    "launch-editor": {
+      "from": "^2.6.1",
+      "to": "^2.14.1"
+    },
+    "open": {
+      "from": "^10.0.3",
+      "to": "^11.0.0"
+    },
+    "p-retry": {
+      "from": "^6.2.0",
+      "to": "^8.0.0"
+    },
+    "schema-utils": {
+      "from": "^4.2.0",
+      "to": "^4.3.3"
+    },
+    "serve-index": {
+      "from": "^1.9.1",
+      "to": "^1.9.2"
+    },
+    "webpack-dev-middleware": {
+      "from": "^7.4.2",
+      "to": "^8.0.3"
+    },
+    "ws": {
+      "from": "^8.18.0",
+      "to": "^8.21.0"
+    }
+  },
+  "timestamp": "2026-06-12T01:28:40.890Z",
+  "totalUpdated": 18
+}
