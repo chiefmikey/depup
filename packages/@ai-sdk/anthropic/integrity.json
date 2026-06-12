@@ -298,5 +298,15 @@
       "timestamp": "2026-06-12T09:32:04.328Z",
       "version": "3.0.83-depup.2"
     }
+  },
+  "3.0.84": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:06:19.855Z",
+      "version": "3.0.84-depup.0"
+    }
   }
 }

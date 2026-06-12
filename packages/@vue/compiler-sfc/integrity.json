@@ -218,6 +218,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:38:40.636Z",
       "version": "3.5.38-depup.3"
+    },
+    "4": {
+      "changes": {
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:13:33.503Z",
+      "version": "3.5.38-depup.4"
     }
   }
 }

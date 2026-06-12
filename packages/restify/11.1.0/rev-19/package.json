@@ -1,0 +1,234 @@
+{
+  "author": "Mark Cavage <mcavage@gmail.com>",
+  "contributors": [
+    "Adam Argo",
+    "Alex Liu",
+    "Alexander Olsson",
+    "Andrew Robinson",
+    "Andrew Sliwinski",
+    "Anro Robinson",
+    "Armin Tamzarian",
+    "Asa Ayers",
+    "Bastiaan Marinus van de Weerd",
+    "Ben Doerr",
+    "Ben Hale",
+    "Ben Howes",
+    "Ben Hutchison",
+    "Benjamine Coe",
+    "Benjamin Urban",
+    "Blake VanLandingham",
+    "Brian Pin",
+    "Bryan Donovan",
+    "Bryce Kahle",
+    "Christopher Cannell",
+    "Clément Désiles",
+    "Colin O'Brien",
+    "Corbin Uselton",
+    "Diego Torres",
+    "Domenic Denicola",
+    "Domikik Lessel",
+    "Dominic Barnes",
+    "Erik Kristensen",
+    "Falco Nogatz",
+    "Gergely Nemeth",
+    "Guillaume Chauvet",
+    "Ifiok Idiang",
+    "Isaac Schlueter",
+    "Jacob Quatier",
+    "James O'Cull",
+    "James Womack",
+    "Jonathan Dahan",
+    "Josh Clulow",
+    "Jorge Serrano",
+    "Jason Ghent",
+    "Khaja Naquiuddin",
+    "Lou Sacco",
+    "Matt Smillie",
+    "Mattijs Spierings",
+    "Micah Ransdell",
+    "Michal Moskal",
+    "Michael Paulson",
+    "Mike Williams",
+    "Nathanael Anderson",
+    "Patrick Mooney",
+    "Paul Bouzakis",
+    "Pedro Palazón",
+    "Quentin Buathier",
+    "Richardo Stuven",
+    "Scott Turnquest",
+    "Shaun Berryman",
+    "Steve Mason",
+    "Tim Kuijsten",
+    "Trent Mick",
+    "Tuure Kanuisto",
+    "Will Prater",
+    "Yunong Xiao",
+    "Zachary Snow"
+  ],
+  "name": "@depup/restify",
+  "homepage": "http://restify.com",
+  "description": "REST framework (with updated dependencies)",
+  "keywords": [
+    "restify",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "REST",
+    "framework",
+    "express",
+    "DTrace"
+  ],
+  "version": "11.1.0-depup.19",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/restify/node-restify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/restify/node-restify/issues"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "bin": {
+    "report-latency": "./bin/report-latency"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "csv": "^6.5.1",
+    "escape-regexp-component": "^1.0.2",
+    "ewma": "^2.0.1",
+    "find-my-way": "^9.6.0",
+    "formidable": "^3.5.4",
+    "http-signature": "^1.4.0",
+    "lodash": "^4.18.1",
+    "lru-cache": "^11.5.1",
+    "mime": "^4.1.0",
+    "negotiator": "^1.0.0",
+    "once": "^1.4.0",
+    "pidusage": "^4.0.1",
+    "pino": "^10.3.1",
+    "qs": "^6.15.2",
+    "restify-errors": "^8.1.0",
+    "semver": "^7.8.4",
+    "send": "^1.2.1",
+    "spdy": "^4.0.2",
+    "uuid": "^14.0.0",
+    "vasync": "^2.2.1"
+  },
+  "optionalDependencies": {
+    "dtrace-provider": "~0.8"
+  },
+  "devDependencies": {
+    "autocannon": "^4.0.0",
+    "autocannon-compare": "^0.4.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "documentation": "^11.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-jsdoc": "^3.15.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "glob": "^7.1.4",
+    "inquirer": "^3.3.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^7.1.1",
+    "nodeunit": "^0.11.3",
+    "nyc": "^15.0.0",
+    "ora": "^1.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.17.1",
+    "proxyquire": "^1.8.0",
+    "restify-clients": "^2.6.6",
+    "rimraf": "^2.6.3",
+    "sinon": "^7.5.0",
+    "validator": "^7.2.0",
+    "watershed": "^0.4.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "make prepush"
+  },
+  "depup": {
+    "changes": {
+      "csv": {
+        "from": "^6.2.2",
+        "to": "^6.5.1"
+      },
+      "find-my-way": {
+        "from": "^7.2.0",
+        "to": "^9.6.0"
+      },
+      "formidable": {
+        "from": "^1.2.1",
+        "to": "^3.5.4"
+      },
+      "http-signature": {
+        "from": "^1.3.6",
+        "to": "^1.4.0"
+      },
+      "lodash": {
+        "from": "^4.17.11",
+        "to": "^4.18.1"
+      },
+      "lru-cache": {
+        "from": "^7.14.1",
+        "to": "^11.5.1"
+      },
+      "mime": {
+        "from": "^3.0.0",
+        "to": "^4.1.0"
+      },
+      "negotiator": {
+        "from": "^0.6.2",
+        "to": "^1.0.0"
+      },
+      "pidusage": {
+        "from": "^3.0.2",
+        "to": "^4.0.1"
+      },
+      "pino": {
+        "from": "^8.7.0",
+        "to": "^10.3.1"
+      },
+      "qs": {
+        "from": "^6.7.0",
+        "to": "^6.15.2"
+      },
+      "restify-errors": {
+        "from": "^8.0.2",
+        "to": "^8.1.0"
+      },
+      "semver": {
+        "from": "^7.3.8",
+        "to": "^7.8.4"
+      },
+      "send": {
+        "from": "^0.18.0",
+        "to": "^1.2.1"
+      },
+      "spdy": {
+        "from": "^4.0.0",
+        "to": "^4.0.2"
+      },
+      "uuid": {
+        "from": "^9.0.0",
+        "to": "^14.0.0"
+      },
+      "vasync": {
+        "from": "^2.2.0",
+        "to": "^2.2.1"
+      }
+    },
+    "depsUpdated": 17,
+    "originalPackage": "restify",
+    "originalVersion": "11.1.0",
+    "processedAt": "2026-06-12T17:28:50.886Z",
+    "smokeTest": "failed"
+  }
+}

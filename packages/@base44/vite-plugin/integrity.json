@@ -403,31 +403,6 @@
     }
   },
   "1.0.21": {
-    "13": {
-      "changes": {
-        "@babel/generator": {
-          "from": "^7.28.5",
-          "to": "^7.29.7"
-        },
-        "@babel/parser": {
-          "from": "^7.28.5",
-          "to": "^7.29.7"
-        },
-        "@babel/traverse": {
-          "from": "^7.28.5",
-          "to": "^7.29.7"
-        },
-        "@babel/types": {
-          "from": "^7.28.5",
-          "to": "^7.29.7"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T08:00:44.068Z",
-      "version": "1.0.21-depup.13"
-    },
     "14": {
       "changes": {
         "@babel/generator": {
@@ -527,6 +502,31 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:33:31.631Z",
       "version": "1.0.21-depup.17"
+    },
+    "18": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/parser": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        },
+        "@babel/types": {
+          "from": "^7.28.5",
+          "to": "^7.29.7"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:07:53.584Z",
+      "version": "1.0.21-depup.18"
     }
   }
 }

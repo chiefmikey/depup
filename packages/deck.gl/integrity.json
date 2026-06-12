@@ -153,6 +153,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:41:09.004Z",
       "version": "9.3.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@loaders.gl/core": {
+          "from": "^4.4.1",
+          "to": "^4.4.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:16:41.943Z",
+      "version": "9.3.4-depup.2"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.13 | **Updated**: 6/12/2026 | **Import test**: failed
+**Original version**: 6.44.1 | **DepUp version**: 6.44.1-depup.14 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,46 +25,48 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sentry/node | `7.120.4` | `^10.57.0` |
 | @tryghost/adapter-base-cache | `0.1.25` | `^0.1.26` |
 | @tryghost/admin-api-schema | `4.7.4` | `^4.7.5` |
-| @tryghost/bookshelf-plugins | `2.2.2` | `^2.2.3` |
+| @tryghost/api-framework | `3.2.3` | `^3.2.4` |
+| @tryghost/bookshelf-plugins | `2.2.2` | `^2.2.4` |
 | @tryghost/color-utils | `0.2.18` | `^0.2.19` |
 | @tryghost/config-url-helpers | `1.0.25` | `^1.0.26` |
 | @tryghost/custom-fonts | `1.0.10` | `^1.0.11` |
-| @tryghost/database-info | `0.3.35` | `^2.2.2` |
-| @tryghost/debug | `2.2.1` | `^2.2.2` |
-| @tryghost/domain-events | `3.2.3` | `^3.2.4` |
-| @tryghost/email-mock-receiver | `2.1.0` | `^2.2.2` |
-| @tryghost/errors | `1.3.13` | `^3.2.3` |
+| @tryghost/database-info | `0.3.35` | `^2.2.3` |
+| @tryghost/debug | `2.2.1` | `^2.2.3` |
+| @tryghost/domain-events | `3.2.3` | `^3.2.5` |
+| @tryghost/email-mock-receiver | `2.1.0` | `^2.2.3` |
+| @tryghost/errors | `1.3.13` | `^3.2.4` |
 | @tryghost/helpers | `1.1.105` | `^1.1.106` |
 | @tryghost/html-to-plaintext | `1.0.10` | `^1.0.11` |
 | @tryghost/image-transform | `1.4.15` | `^1.4.16` |
-| @tryghost/job-manager | `1.0.9` | `^4.0.3` |
+| @tryghost/job-manager | `1.0.9` | `^4.0.4` |
 | @tryghost/limit-service | `1.5.5` | `^1.5.6` |
-| @tryghost/logging | `4.2.1` | `^5.0.2` |
-| @tryghost/metrics | `1.0.43` | `^3.2.2` |
+| @tryghost/logging | `4.2.1` | `^5.0.3` |
+| @tryghost/metrics | `1.0.43` | `^3.2.3` |
 | @tryghost/mongo-utils | `0.6.3` | `^0.6.4` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.2.3` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.2.2` |
-| @tryghost/nodemailer | `2.2.2` | `^2.2.3` |
-| @tryghost/pretty-cli | `3.2.1` | `^3.2.2` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^4.0.2` |
-| @tryghost/promise | `2.2.1` | `^2.2.2` |
+| @tryghost/mw-error-handler | `1.0.13` | `^3.2.4` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.2.3` |
+| @tryghost/nodemailer | `2.2.2` | `^2.2.4` |
+| @tryghost/nql | `0.12.11` | `^0.13.0` |
+| @tryghost/pretty-cli | `3.2.1` | `^3.2.3` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^4.0.3` |
+| @tryghost/promise | `2.2.1` | `^2.2.3` |
 | @tryghost/referrer-parser | `0.1.17` | `^0.1.19` |
-| @tryghost/request | `1.0.17` | `^3.2.3` |
-| @tryghost/root-utils | `2.2.1` | `^2.2.2` |
-| @tryghost/security | `1.0.6` | `^3.2.2` |
+| @tryghost/request | `1.0.17` | `^3.2.4` |
+| @tryghost/root-utils | `2.2.1` | `^2.2.3` |
+| @tryghost/security | `1.0.6` | `^3.2.3` |
 | @tryghost/social-urls | `0.1.62` | `^0.1.63` |
 | @tryghost/string | `0.3.4` | `^0.3.5` |
-| @tryghost/tpl | `2.2.1` | `^2.2.2` |
+| @tryghost/tpl | `2.2.1` | `^2.2.3` |
 | @tryghost/url-utils | `5.2.4` | `^5.2.6` |
-| @tryghost/validator | `0.2.22` | `^3.1.3` |
-| @tryghost/version | `2.2.1` | `^2.2.2` |
-| @tryghost/zip | `3.3.2` | `^3.3.3` |
+| @tryghost/validator | `0.2.22` | `^3.1.4` |
+| @tryghost/version | `2.2.1` | `^2.2.3` |
+| @tryghost/zip | `3.3.2` | `^3.3.4` |
 | body-parser | `1.20.5` | `^2.2.2` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | date-fns | `2.30.0` | `^4.4.0` |
-| dompurify | `3.4.5` | `^3.4.9` |
+| dompurify | `3.4.5` | `^3.4.10` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |

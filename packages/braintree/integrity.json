@@ -21,27 +21,6 @@
     }
   },
   "3.37.0": {
-    "8": {
-      "changes": {
-        "@braintree/wrap-promise": {
-          "from": "2.1.0",
-          "to": "^3.0.4"
-        },
-        "dateformat": {
-          "from": "4.5.1",
-          "to": "^5.0.3"
-        },
-        "xml2js": {
-          "from": "0.5.0",
-          "to": "^0.6.2"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:12:44.547Z",
-      "version": "3.37.0-depup.8"
-    },
     "9": {
       "changes": {
         "@braintree/wrap-promise": {
@@ -125,6 +104,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:39:43.354Z",
       "version": "3.37.0-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@braintree/wrap-promise": {
+          "from": "2.1.0",
+          "to": "^3.0.4"
+        },
+        "dateformat": {
+          "from": "4.5.1",
+          "to": "^5.0.3"
+        },
+        "xml2js": {
+          "from": "0.5.0",
+          "to": "^0.6.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:14:44.557Z",
+      "version": "3.37.0-depup.13"
     }
   }
 }

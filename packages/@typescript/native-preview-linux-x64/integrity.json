@@ -881,6 +881,14 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:38:35.292Z",
       "version": "7.0.0-dev.20260612.1-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-12T17:13:20.720Z",
+      "version": "7.0.0-dev.20260612.1-depup.1"
     }
   }
 }
