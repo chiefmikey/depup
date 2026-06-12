@@ -33,27 +33,6 @@
     }
   },
   "3.49.0": {
-    "6": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        },
-        "aria-hidden": {
-          "from": "^1.2.3",
-          "to": "^1.2.6"
-        },
-        "clsx": {
-          "from": "^2.0.0",
-          "to": "^2.1.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:42:19.699Z",
-      "version": "3.49.0-depup.6"
-    },
     "7": {
       "changes": {
         "@swc/helpers": {
@@ -137,6 +116,27 @@
       "status": "failed",
       "timestamp": "2026-06-11T17:42:40.747Z",
       "version": "3.49.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "aria-hidden": {
+          "from": "^1.2.3",
+          "to": "^1.2.6"
+        },
+        "clsx": {
+          "from": "^2.0.0",
+          "to": "^2.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:27:02.255Z",
+      "version": "3.49.0-depup.11"
     }
   }
 }

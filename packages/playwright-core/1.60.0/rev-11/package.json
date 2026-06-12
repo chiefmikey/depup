@@ -1,0 +1,50 @@
+{
+  "name": "@depup/playwright-core",
+  "version": "1.60.0-depup.11",
+  "description": "A high-level API to automate web browsers (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/playwright.git"
+  },
+  "homepage": "https://playwright.dev",
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json",
+    "./lib/bootstrap": "./lib/bootstrap.js",
+    "./lib/coreBundle": "./lib/coreBundle.js",
+    "./lib/utilsBundle": "./lib/utilsBundle.js",
+    "./lib/tools/cli-client/program": "./lib/tools/cli-client/program.js"
+  },
+  "bin": {
+    "playwright-core": "cli.js"
+  },
+  "types": "types/types.d.ts",
+  "keywords": [
+    "playwright-core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "playwright-core",
+    "originalVersion": "1.60.0",
+    "processedAt": "2026-06-12T01:26:31.976Z",
+    "smokeTest": "passed"
+  }
+}
