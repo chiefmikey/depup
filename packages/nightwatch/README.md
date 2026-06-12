@@ -12,7 +12,7 @@ npm install @depup/nightwatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.12 | **Updated**: 6/12/2026 | **Import test**: failed
+**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.13 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -40,7 +40,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | nightwatch-axe-verbose | `^2.3.0` | `^2.5.1` |
 | open | `8.4.2` | `^11.0.0` |
 | ora | `5.4.1` | `^9.4.0` |
-| piscina | `^4.3.1` | `^5.1.4` |
+| piscina | `^4.3.1` | `^5.2.0` |
 | selenium-webdriver | `4.27.0` | `^4.44.0` |
 | semver | `7.5.4` | `^7.8.4` |
 | stacktrace-parser | `0.1.10` | `^0.1.11` |

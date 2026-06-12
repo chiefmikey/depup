@@ -244,35 +244,6 @@
     }
   },
   "4.2.3": {
-    "10": {
-      "changes": {
-        "@graphql-typed-document-node/core": {
-          "from": "^3.1.1",
-          "to": "^3.2.0"
-        },
-        "@wry/caches": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "@wry/equality": {
-          "from": "^0.5.6",
-          "to": "^0.5.7"
-        },
-        "optimism": {
-          "from": "^0.18.0",
-          "to": "^0.18.1"
-        },
-        "tslib": {
-          "from": "^2.3.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:04:02.730Z",
-      "version": "4.2.3-depup.10"
-    },
     "11": {
       "changes": {
         "@graphql-typed-document-node/core": {
@@ -388,6 +359,35 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:07:11.764Z",
       "version": "4.2.3-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@graphql-typed-document-node/core": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "@wry/caches": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@wry/equality": {
+          "from": "^0.5.6",
+          "to": "^0.5.7"
+        },
+        "optimism": {
+          "from": "^0.18.0",
+          "to": "^0.18.1"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:32:14.811Z",
+      "version": "4.2.3-depup.15"
     }
   }
 }

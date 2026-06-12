@@ -524,6 +524,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:20:08.338Z",
       "version": "16.10.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@fuma-translate/react": {
+          "from": "^1.0.1",
+          "to": "^1.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:44:08.136Z",
+      "version": "16.10.1-depup.1"
     }
   }
 }
