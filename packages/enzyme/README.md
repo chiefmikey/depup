@@ -12,7 +12,7 @@ npm install @depup/enzyme
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.11.0 | **DepUp version**: 3.11.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 3.11.0 | **DepUp version**: 3.11.0-depup.1 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | array.prototype.flat | `^1.2.3` | `^1.3.3` |
 | cheerio | `^1.0.0-rc.3` | `^1.2.0` |
 | enzyme-shallow-equal | `^1.0.1` | `^1.0.7` |
-| function.prototype.name | `^1.1.2` | `^1.1.8` |
+| function.prototype.name | `^1.1.2` | `^1.2.0` |
 | has | `^1.0.3` | `^1.0.4` |
 | html-element-map | `^1.2.0` | `^1.4.0` |
 | is-boolean-object | `^1.0.1` | `^1.2.2` |
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | object.assign | `^4.1.0` | `^4.1.7` |
 | object.entries | `^1.1.1` | `^1.1.9` |
 | object.values | `^1.1.1` | `^1.2.1` |
-| string.prototype.trim | `^1.2.1` | `^1.2.10` |
+| string.prototype.trim | `^1.2.1` | `^1.2.11` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/enzyme&labels=bug).

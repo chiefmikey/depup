@@ -82,19 +82,6 @@
     }
   },
   "8.5.15": {
-    "4": {
-      "changes": {
-        "nanoid": {
-          "from": "^3.3.12",
-          "to": "^5.1.11"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:38:35.572Z",
-      "version": "8.5.15-depup.4"
-    },
     "5": {
       "changes": {
         "nanoid": {
@@ -146,6 +133,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T10:12:32.784Z",
       "version": "8.5.15-depup.8"
+    },
+    "9": {
+      "changes": {
+        "nanoid": {
+          "from": "^3.3.12",
+          "to": "^5.1.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:41:50.751Z",
+      "version": "8.5.15-depup.9"
     }
   }
 }

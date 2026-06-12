@@ -12,7 +12,7 @@ npm install @depup/mdx-js__mdx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.13 | **Updated**: 6/11/2026 | **Import test**: passed
+**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.14 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/estree-jsx | `^1.0.0` | `^1.0.5` |
 | @types/hast | `^3.0.0` | `^3.0.4` |
 | @types/mdx | `^2.0.0` | `^2.0.14` |
-| acorn | `^8.0.0` | `^8.16.0` |
+| acorn | `^8.0.0` | `^8.17.0` |
 | collapse-white-space | `^2.0.0` | `^2.1.0` |
 | devlop | `^1.0.0` | `^1.1.0` |
 | estree-walker | `^3.0.0` | `^3.0.3` |

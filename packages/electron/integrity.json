@@ -418,23 +418,6 @@
     }
   },
   "42.4.0": {
-    "1": {
-      "changes": {
-        "@electron-internal/extract-zip": {
-          "from": "^1.0.1",
-          "to": "^1.0.2"
-        },
-        "@types/node": {
-          "from": "^24.9.0",
-          "to": "^25.9.2"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:33:38.301Z",
-      "version": "42.4.0-depup.1"
-    },
     "2": {
       "changes": {
         "@electron-internal/extract-zip": {
@@ -502,6 +485,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T10:07:23.971Z",
       "version": "42.4.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@electron-internal/extract-zip": {
+          "from": "^1.0.1",
+          "to": "^1.0.2"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^25.9.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:36:49.071Z",
+      "version": "42.4.0-depup.6"
     }
   }
 }
