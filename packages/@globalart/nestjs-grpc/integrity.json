@@ -15,19 +15,6 @@
     }
   },
   "4.0.4": {
-    "11": {
-      "changes": {
-        "rxjs": {
-          "from": "^7.8.1",
-          "to": "^7.8.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:33:45.469Z",
-      "version": "4.0.4-depup.11"
-    },
     "12": {
       "changes": {
         "rxjs": {
@@ -79,6 +66,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:56:46.095Z",
       "version": "4.0.4-depup.15"
+    },
+    "16": {
+      "changes": {
+        "rxjs": {
+          "from": "^7.8.1",
+          "to": "^7.8.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:33:21.652Z",
+      "version": "4.0.4-depup.16"
     }
   }
 }

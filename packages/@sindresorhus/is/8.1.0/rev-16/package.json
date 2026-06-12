@@ -1,0 +1,90 @@
+{
+  "name": "@depup/sindresorhus__is",
+  "version": "8.1.0-depup.16",
+  "description": "Type check values (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/is",
+  "funding": "https://github.com/sindresorhus/is?sponsor=1",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./distribution/index.d.ts",
+    "default": "./distribution/index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "del distribution && tsc",
+    "test": "tsc --noEmit && tsc --project test/tsconfig.json --noEmit && xo && node --experimental-transform-types --test test/test.ts"
+  },
+  "files": [
+    "distribution",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@sindresorhus/is",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "type",
+    "types",
+    "is",
+    "check",
+    "checking",
+    "validate",
+    "validation",
+    "utility",
+    "util",
+    "typeof",
+    "instanceof",
+    "object",
+    "assert",
+    "assertion",
+    "test",
+    "kind",
+    "primitive",
+    "verify",
+    "compare",
+    "typescript",
+    "typeguards"
+  ],
+  "xo": {
+    "rules": {
+      "@typescript-eslint/no-unsafe-enum-comparison": "off",
+      "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/no-unsafe-type-assertion": "off",
+      "@stylistic/operator-linebreak": "off"
+    }
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^8.1.0",
+    "@types/jsdom": "^28.0.1",
+    "@types/node": "^25.5.2",
+    "@types/zen-observable": "^0.8.7",
+    "del-cli": "^7.0.0",
+    "expect-type": "^1.3.0",
+    "jsdom": "^29.0.2",
+    "rxjs": "^7.8.2",
+    "tempy": "^3.2.0",
+    "typescript": "6.0.2",
+    "xo": "^2.0.2",
+    "zen-observable": "^0.10.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@sindresorhus/is",
+    "originalVersion": "8.1.0",
+    "processedAt": "2026-06-12T17:35:37.747Z",
+    "smokeTest": "passed"
+  }
+}
