@@ -90,27 +90,6 @@
     }
   },
   "4.15.0": {
-    "12": {
-      "changes": {
-        "@grpc/grpc-js": {
-          "from": "~1.9.0",
-          "to": "^1.14.4"
-        },
-        "@grpc/proto-loader": {
-          "from": "^0.7.8",
-          "to": "^0.8.1"
-        },
-        "tslib": {
-          "from": "^2.1.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:06:23.572Z",
-      "version": "4.15.0-depup.12"
-    },
     "13": {
       "changes": {
         "@grpc/grpc-js": {
@@ -194,6 +173,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:34:47.850Z",
       "version": "4.15.0-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "~1.9.0",
+          "to": "^1.14.4"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.7.8",
+          "to": "^0.8.1"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:09:10.518Z",
+      "version": "4.15.0-depup.17"
     }
   }
 }

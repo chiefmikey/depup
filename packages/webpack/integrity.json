@@ -568,51 +568,6 @@
     }
   },
   "5.107.2": {
-    "7": {
-      "changes": {
-        "@types/estree": {
-          "from": "^1.0.8",
-          "to": "^1.0.9"
-        },
-        "acorn-import-phases": {
-          "from": "^1.0.3",
-          "to": "^1.0.4"
-        },
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.2"
-        },
-        "chrome-trace-event": {
-          "from": "^1.0.2",
-          "to": "^1.0.4"
-        },
-        "enhanced-resolve": {
-          "from": "^5.22.0",
-          "to": "^5.23.0"
-        },
-        "eslint-scope": {
-          "from": "5.1.1",
-          "to": "^9.1.2"
-        },
-        "events": {
-          "from": "^3.2.0",
-          "to": "^3.3.0"
-        },
-        "tapable": {
-          "from": "^2.3.0",
-          "to": "^2.3.3"
-        },
-        "terser-webpack-plugin": {
-          "from": "^5.5.0",
-          "to": "^5.6.1"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:36:02.571Z",
-      "version": "5.107.2-depup.7"
-    },
     "8": {
       "changes": {
         "@types/estree": {
@@ -808,6 +763,59 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:54:13.580Z",
       "version": "5.107.2-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@types/estree": {
+          "from": "^1.0.8",
+          "to": "^1.0.9"
+        },
+        "acorn": {
+          "from": "^8.16.0",
+          "to": "^8.17.0"
+        },
+        "acorn-import-phases": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "enhanced-resolve": {
+          "from": "^5.22.0",
+          "to": "^5.24.0"
+        },
+        "eslint-scope": {
+          "from": "5.1.1",
+          "to": "^9.1.2"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.3"
+        },
+        "terser-webpack-plugin": {
+          "from": "^5.5.0",
+          "to": "^5.6.1"
+        },
+        "watchpack": {
+          "from": "^2.5.1",
+          "to": "^2.5.2"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:29:30.586Z",
+      "version": "5.107.2-depup.12"
     }
   }
 }

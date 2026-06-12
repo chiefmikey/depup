@@ -1,30 +1,5 @@
 {
   "6.9.1": {
-    "8": {
-      "changes": {
-        "@adobe/css-tools": {
-          "from": "^4.4.0",
-          "to": "^4.5.0"
-        },
-        "aria-query": {
-          "from": "^5.0.0",
-          "to": "^5.3.2"
-        },
-        "dom-accessibility-api": {
-          "from": "^0.6.3",
-          "to": "^0.7.1"
-        },
-        "redent": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:18:53.073Z",
-      "version": "6.9.1-depup.8"
-    },
     "9": {
       "changes": {
         "@adobe/css-tools": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-12T09:37:51.943Z",
       "version": "6.9.1-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@adobe/css-tools": {
+          "from": "^4.4.0",
+          "to": "^4.5.0"
+        },
+        "aria-query": {
+          "from": "^5.0.0",
+          "to": "^5.3.2"
+        },
+        "dom-accessibility-api": {
+          "from": "^0.6.3",
+          "to": "^0.7.1"
+        },
+        "redent": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T17:12:32.696Z",
+      "version": "6.9.1-depup.13"
     }
   }
 }
