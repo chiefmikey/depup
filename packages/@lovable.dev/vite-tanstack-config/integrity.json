@@ -212,23 +212,6 @@
     }
   },
   "2.4.0": {
-    "6": {
-      "changes": {
-        "lightningcss": {
-          "from": "^1.30.0",
-          "to": "^1.32.0"
-        },
-        "lovable-tagger": {
-          "from": "1.2.0",
-          "to": "^1.3.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:06:24.318Z",
-      "version": "2.4.0-depup.6"
-    },
     "7": {
       "changes": {
         "lightningcss": {
@@ -296,6 +279,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:10:07.899Z",
       "version": "2.4.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "lightningcss": {
+          "from": "^1.30.0",
+          "to": "^1.32.0"
+        },
+        "lovable-tagger": {
+          "from": "1.2.0",
+          "to": "^1.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:35:21.093Z",
+      "version": "2.4.0-depup.11"
     }
   }
 }

@@ -1036,23 +1036,6 @@
     }
   },
   "3.997.20": {
-    "1": {
-      "changes": {
-        "@smithy/node-http-handler": {
-          "from": "^4.7.6",
-          "to": "^4.7.7"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:04:39.367Z",
-      "version": "3.997.20-depup.1"
-    },
     "2": {
       "changes": {
         "@smithy/node-http-handler": {
@@ -1120,6 +1103,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:07:54.490Z",
       "version": "3.997.20-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@smithy/node-http-handler": {
+          "from": "^4.7.6",
+          "to": "^4.7.7"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:33:10.237Z",
+      "version": "3.997.20-depup.6"
     }
   }
 }

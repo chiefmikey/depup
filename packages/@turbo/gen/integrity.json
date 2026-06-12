@@ -581,6 +581,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:13:44.917Z",
       "version": "2.9.18-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "esbuild": {
+          "from": "^0.25.0",
+          "to": "^0.28.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:39:06.054Z",
+      "version": "2.9.18-depup.4"
     }
   }
 }

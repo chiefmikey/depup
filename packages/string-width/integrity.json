@@ -15,23 +15,6 @@
     }
   },
   "8.2.1": {
-    "7": {
-      "changes": {
-        "get-east-asian-width": {
-          "from": "^1.5.0",
-          "to": "^1.6.0"
-        },
-        "strip-ansi": {
-          "from": "^7.1.2",
-          "to": "^7.2.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:30:32.185Z",
-      "version": "8.2.1-depup.7"
-    },
     "8": {
       "changes": {
         "get-east-asian-width": {
@@ -99,6 +82,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:25:40.553Z",
       "version": "8.2.1-depup.11"
+    },
+    "12": {
+      "changes": {
+        "get-east-asian-width": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        },
+        "strip-ansi": {
+          "from": "^7.1.2",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:51:25.835Z",
+      "version": "8.2.1-depup.12"
     }
   }
 }

@@ -68,31 +68,6 @@
     }
   },
   "4.2.4": {
-    "9": {
-      "changes": {
-        "vscode-jsonrpc": {
-          "from": "~8.2.0",
-          "to": "^9.0.0"
-        },
-        "vscode-languageserver": {
-          "from": "~9.0.1",
-          "to": "^10.0.0"
-        },
-        "vscode-languageserver-protocol": {
-          "from": "~3.17.5",
-          "to": "^3.18.0"
-        },
-        "vscode-languageserver-types": {
-          "from": "~3.17.5",
-          "to": "^3.18.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:25:24.051Z",
-      "version": "4.2.4-depup.9"
-    },
     "10": {
       "changes": {
         "vscode-jsonrpc": {
@@ -192,6 +167,31 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:20:31.859Z",
       "version": "4.2.4-depup.13"
+    },
+    "14": {
+      "changes": {
+        "vscode-jsonrpc": {
+          "from": "~8.2.0",
+          "to": "^9.0.0"
+        },
+        "vscode-languageserver": {
+          "from": "~9.0.1",
+          "to": "^10.0.0"
+        },
+        "vscode-languageserver-protocol": {
+          "from": "~3.17.5",
+          "to": "^3.18.0"
+        },
+        "vscode-languageserver-types": {
+          "from": "~3.17.5",
+          "to": "^3.18.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:46:07.286Z",
+      "version": "4.2.4-depup.14"
     }
   }
 }

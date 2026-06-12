@@ -280,6 +280,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T01:10:57.951Z",
       "version": "0.71.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@opentelemetry/propagator-aws-xray": {
+          "from": "^2.1.4",
+          "to": "^2.2.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.41.1"
+        },
+        "@types/aws-lambda": {
+          "from": "^8.10.155",
+          "to": "^8.10.162"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T09:36:08.965Z",
+      "version": "0.71.0-depup.2"
     }
   }
 }
