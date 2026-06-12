@@ -44,27 +44,6 @@
     }
   },
   "1.9.13": {
-    "4": {
-      "changes": {
-        "csstype": {
-          "from": "^3.1.0",
-          "to": "^3.2.3"
-        },
-        "seroval": {
-          "from": "~1.5.0",
-          "to": "^1.5.4"
-        },
-        "seroval-plugins": {
-          "from": "~1.5.0",
-          "to": "^1.5.4"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:25:29.042Z",
-      "version": "1.9.13-depup.4"
-    },
     "5": {
       "changes": {
         "csstype": {
@@ -148,6 +127,27 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:58:41.393Z",
       "version": "1.9.13-depup.8"
+    },
+    "9": {
+      "changes": {
+        "csstype": {
+          "from": "^3.1.0",
+          "to": "^3.2.3"
+        },
+        "seroval": {
+          "from": "~1.5.0",
+          "to": "^1.5.4"
+        },
+        "seroval-plugins": {
+          "from": "~1.5.0",
+          "to": "^1.5.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:28:19.416Z",
+      "version": "1.9.13-depup.9"
     }
   }
 }

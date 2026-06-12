@@ -1,0 +1,79 @@
+{
+  "name": "@depup/fast-png",
+  "version": "8.0.0-depup.10",
+  "license": "MIT",
+  "description": "PNG image decoder and encoder written entirely in JavaScript (with updated dependencies)",
+  "author": "Michaël Zasso",
+  "keywords": [
+    "fast-png",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "png",
+    "image",
+    "image-js",
+    "encoder",
+    "decoder"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf coverage lib",
+    "eslint": "eslint .",
+    "eslint-fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "test": "npm run test-only && npm run check-types && npm run eslint && npm run prettier",
+    "test-only": "vitest run --coverage",
+    "tsc": "npm run clean && npm run tsc-build",
+    "tsc-build": "tsc --project tsconfig.build.json"
+  },
+  "dependencies": {
+    "fflate": "^0.8.3",
+    "iobuffer": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@vitest/coverage-v8": "^4.0.16",
+    "@zakodium/tsconfig": "^1.0.2",
+    "eslint": "^9.39.2",
+    "eslint-config-cheminfo-typescript": "^21.0.1",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/image-js/fast-png.git"
+  },
+  "bugs": {
+    "url": "https://github.com/image-js/fast-png/issues"
+  },
+  "homepage": "https://image-js.github.io/fast-png/",
+  "depup": {
+    "changes": {
+      "fflate": {
+        "from": "^0.8.2",
+        "to": "^0.8.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "fast-png",
+    "originalVersion": "8.0.0",
+    "processedAt": "2026-06-12T01:17:41.124Z",
+    "smokeTest": "passed"
+  }
+}

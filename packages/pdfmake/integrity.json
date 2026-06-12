@@ -43,19 +43,6 @@
     }
   },
   "0.3.10": {
-    "6": {
-      "changes": {
-        "xmldoc": {
-          "from": "^2.0.3",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T09:39:11.415Z",
-      "version": "0.3.10-depup.6"
-    },
     "7": {
       "changes": {
         "xmldoc": {
@@ -119,6 +106,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:54:20.096Z",
       "version": "0.3.10-depup.10"
+    },
+    "11": {
+      "changes": {
+        "pdfkit": {
+          "from": "^0.19.0",
+          "to": "^0.19.1"
+        },
+        "xmldoc": {
+          "from": "^2.0.3",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:23:47.242Z",
+      "version": "0.3.10-depup.11"
     }
   }
 }

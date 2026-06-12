@@ -239,5 +239,24 @@
       "timestamp": "2026-06-11T09:42:09.863Z",
       "version": "0.61.0-depup.14"
     }
+  },
+  "0.62.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.33.0",
+          "to": "^1.41.1"
+        },
+        "@types/memcached": {
+          "from": "^2.2.6",
+          "to": "^2.2.10"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:11:30.889Z",
+      "version": "0.62.0-depup.0"
+    }
   }
 }

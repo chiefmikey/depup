@@ -36,23 +36,6 @@
     }
   },
   "8.1.10": {
-    "10": {
-      "changes": {
-        "p-limit": {
-          "from": "3.1.0",
-          "to": "^7.3.0"
-        },
-        "tslib": {
-          "from": "^2.4.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:16:02.799Z",
-      "version": "8.1.10-depup.10"
-    },
     "11": {
       "changes": {
         "p-limit": {
@@ -120,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:41:08.196Z",
       "version": "8.1.10-depup.14"
+    },
+    "15": {
+      "changes": {
+        "p-limit": {
+          "from": "3.1.0",
+          "to": "^7.3.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:10:28.985Z",
+      "version": "8.1.10-depup.15"
     }
   }
 }

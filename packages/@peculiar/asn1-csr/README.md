@@ -12,14 +12,11 @@ npm install @depup/peculiar__asn1-csr
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.7.0 | **DepUp version**: 2.7.0-depup.14 | **Updated**: 6/11/2026 | **Import test**: passed
+**Original version**: 2.8.0 | **DepUp version**: 2.8.0-depup.0 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| asn1js | `^3.0.6` | `^3.0.10` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/peculiar__asn1-csr&labels=bug).
 

@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.31.1 | **DepUp version**: 5.31.1-depup.1 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,15 +22,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
 | @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
-| @portabletext/editor | `^6.6.5` | `^7.3.4` |
-| @portabletext/plugin-markdown-shortcuts | `^7.0.29` | `^8.0.14` |
-| @portabletext/plugin-one-line | `^6.0.28` | `^7.0.14` |
-| @portabletext/plugin-paste-link | `^3.0.28` | `^4.0.14` |
-| @portabletext/plugin-typography | `^7.0.28` | `^8.0.14` |
-| @portabletext/sanity-bridge | `^3.1.0` | `^3.1.1` |
-| @sanity/cli | `^6.7.2` | `^7.2.2` |
+| @portabletext/editor | `^7.3.3` | `^7.3.4` |
+| @portabletext/plugin-markdown-shortcuts | `^8.0.13` | `^8.0.14` |
+| @portabletext/plugin-one-line | `^7.0.13` | `^7.0.14` |
+| @portabletext/plugin-paste-link | `^4.0.13` | `^4.0.14` |
+| @portabletext/plugin-typography | `^8.0.13` | `^8.0.14` |
+| @portabletext/sanity-bridge | `^3.1.1` | `^3.1.2` |
+| @sanity/cli | `^7.2.2` | `^7.2.3` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/migrate | `^6.1.2` | `^7.0.1` |
+| @sanity/migrate | `^7.0.1` | `^7.0.2` |
+| @sanity/mutate | `^0.18.0` | `^0.18.1` |
 | @sanity/sdk | `^2.12.0` | `^2.13.0` |
 | @sentry/react | `^8.55.2` | `^10.57.0` |
 | classnames | `^2.2.5` | `^2.5.1` |
@@ -42,7 +43,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | player.style | `^0.1.9` | `^0.3.4` |
 | semver | `^7.7.2` | `^7.8.4` |
 | uuid | `^11.1.0` | `^14.0.0` |
-| web-vitals | `^5.1.0` | `^5.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

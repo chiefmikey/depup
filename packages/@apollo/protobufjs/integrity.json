@@ -17,43 +17,6 @@
     }
   },
   "1.2.8": {
-    "9": {
-      "changes": {
-        "@protobufjs/codegen": {
-          "from": "^2.0.4",
-          "to": "^2.0.5"
-        },
-        "@protobufjs/eventemitter": {
-          "from": "^1.1.0",
-          "to": "^1.1.1"
-        },
-        "@protobufjs/fetch": {
-          "from": "^1.1.0",
-          "to": "^1.1.1"
-        },
-        "@protobufjs/inquire": {
-          "from": "^1.1.0",
-          "to": "^1.1.2"
-        },
-        "@protobufjs/utf8": {
-          "from": "^1.1.0",
-          "to": "^1.1.1"
-        },
-        "@types/long": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        },
-        "long": {
-          "from": "^4.0.0",
-          "to": "^5.3.2"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T17:13:01.546Z",
-      "version": "1.2.8-depup.9"
-    },
     "10": {
       "changes": {
         "@protobufjs/codegen": {
@@ -201,6 +164,43 @@
       "status": "failed",
       "timestamp": "2026-06-11T09:38:05.435Z",
       "version": "1.2.8-depup.13"
+    },
+    "14": {
+      "changes": {
+        "@protobufjs/codegen": {
+          "from": "^2.0.4",
+          "to": "^2.0.5"
+        },
+        "@protobufjs/eventemitter": {
+          "from": "^1.1.0",
+          "to": "^1.1.1"
+        },
+        "@protobufjs/fetch": {
+          "from": "^1.1.0",
+          "to": "^1.1.1"
+        },
+        "@protobufjs/inquire": {
+          "from": "^1.1.0",
+          "to": "^1.1.2"
+        },
+        "@protobufjs/utf8": {
+          "from": "^1.1.0",
+          "to": "^1.1.1"
+        },
+        "@types/long": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "long": {
+          "from": "^4.0.0",
+          "to": "^5.3.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:07:21.736Z",
+      "version": "1.2.8-depup.14"
     }
   }
 }
