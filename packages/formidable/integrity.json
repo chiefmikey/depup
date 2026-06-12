@@ -1,18 +1,5 @@
 {
   "3.5.4": {
-    "4": {
-      "changes": {
-        "@paralleldrive/cuid2": {
-          "from": "^2.2.2",
-          "to": "^3.3.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-10T01:35:46.015Z",
-      "version": "3.5.4-depup.4"
-    },
     "5": {
       "changes": {
         "@paralleldrive/cuid2": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-11T10:09:20.678Z",
       "version": "3.5.4-depup.8"
+    },
+    "9": {
+      "changes": {
+        "@paralleldrive/cuid2": {
+          "from": "^2.2.2",
+          "to": "^3.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-12T01:40:23.689Z",
+      "version": "3.5.4-depup.9"
     }
   }
 }

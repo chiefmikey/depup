@@ -12,15 +12,15 @@ npm install @depup/elastic-apm-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.15.0 | **DepUp version**: 4.15.0-depup.5 | **Updated**: 5/20/2026 | **Import test**: failed
+**Original version**: 4.15.0 | **DepUp version**: 4.15.0-depup.6 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @opentelemetry/api | `^1.4.1` | `^1.9.1` |
-| @opentelemetry/core | `^1.11.0` | `^2.7.1` |
-| @opentelemetry/sdk-metrics | `^1.12.0` | `^2.7.1` |
+| @opentelemetry/core | `^1.11.0` | `^2.8.0` |
+| @opentelemetry/sdk-metrics | `^1.12.0` | `^2.8.0` |
 | agentkeepalive | `^4.2.1` | `^4.6.0` |
 | cookie | `^0.7.1` | `^1.1.1` |
 | core-util-is | `^1.0.2` | `^1.0.3` |
@@ -28,14 +28,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | error-stack-parser | `^2.0.6` | `^2.1.4` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
 | fast-safe-stringify | `^2.0.7` | `^2.1.1` |
-| import-in-the-middle | `1.14.4` | `^3.0.1` |
-| lru-cache | `10.2.0` | `^11.5.0` |
+| import-in-the-middle | `1.14.4` | `^3.0.2` |
+| lru-cache | `10.2.0` | `^11.5.1` |
 | measured-reporting | `^1.51.1` | `^2.0.0` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | pino | `^8.15.0` | `^10.3.1` |
 | readable-stream | `^3.6.2` | `^4.7.0` |
 | require-in-the-middle | `^8.0.0` | `^8.0.1` |
-| semver | `^7.5.4` | `^7.8.0` |
+| semver | `^7.5.4` | `^7.8.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/elastic-apm-node&labels=bug).

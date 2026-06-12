@@ -12,13 +12,13 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.27 | **Updated**: 6/11/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.28 | **Updated**: 6/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `9.1.6` | `^9.7.0` |
+| @npmcli/arborist | `9.1.6` | `^9.8.0` |
 | @npmcli/package-json | `7.0.2` | `^8.0.0` |
 | @npmcli/run-script | `10.0.3` | `^10.0.4` |
 | @nx/devkit | `>=21.5.2 < 23.0.0` | `^22.7.5` |

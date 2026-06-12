@@ -12,15 +12,15 @@ npm install @depup/jsonc-eslint-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.2 | **Updated**: 6/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| acorn | `^8.5.0` | `^8.16.0` |
+| acorn | `^8.5.0` | `^8.17.0` |
 | eslint-visitor-keys | `^5.0.0` | `^5.0.1` |
-| semver | `^7.3.5` | `^7.8.0` |
+| semver | `^7.3.5` | `^7.8.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jsonc-eslint-parser&labels=bug).
