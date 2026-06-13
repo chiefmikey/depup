@@ -34,23 +34,6 @@
     }
   },
   "7.29.7": {
-    "15": {
-      "changes": {
-        "eslint-visitor-keys": {
-          "from": "^2.1.0",
-          "to": "^5.0.1"
-        },
-        "semver": {
-          "from": "^6.3.1",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:08:03.914Z",
-      "version": "7.29.7-depup.15"
-    },
     "16": {
       "changes": {
         "eslint-visitor-keys": {
@@ -118,6 +101,23 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:12:09.156Z",
       "version": "7.29.7-depup.19"
+    },
+    "20": {
+      "changes": {
+        "eslint-visitor-keys": {
+          "from": "^2.1.0",
+          "to": "^5.0.1"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T16:37:27.674Z",
+      "version": "7.29.7-depup.20"
     }
   }
 }

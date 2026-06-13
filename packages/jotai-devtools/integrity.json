@@ -274,51 +274,6 @@
     }
   },
   "0.14.0": {
-    "12": {
-      "changes": {
-        "@mantine/code-highlight": {
-          "from": "7.17.4",
-          "to": "^9.3.1"
-        },
-        "@mantine/core": {
-          "from": "7.17.4",
-          "to": "^9.3.1"
-        },
-        "@mantine/hooks": {
-          "from": "7.17.4",
-          "to": "^9.3.1"
-        },
-        "@redux-devtools/extension": {
-          "from": "^3.3.0",
-          "to": "^4.0.0"
-        },
-        "jsondiffpatch": {
-          "from": "^0.5.0",
-          "to": "^0.7.6"
-        },
-        "react-base16-styling": {
-          "from": "^0.9.1",
-          "to": "^0.10.0"
-        },
-        "react-error-boundary": {
-          "from": "^5.0.0",
-          "to": "^6.1.2"
-        },
-        "react-json-tree": {
-          "from": "^0.18.0",
-          "to": "^0.20.0"
-        },
-        "react-resizable-panels": {
-          "from": "2.1.7",
-          "to": "^4.11.2"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:20:33.685Z",
-      "version": "0.14.0-depup.12"
-    },
     "13": {
       "changes": {
         "@mantine/code-highlight": {
@@ -498,6 +453,51 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:24:11.336Z",
       "version": "0.14.0-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@mantine/code-highlight": {
+          "from": "7.17.4",
+          "to": "^9.3.1"
+        },
+        "@mantine/core": {
+          "from": "7.17.4",
+          "to": "^9.3.1"
+        },
+        "@mantine/hooks": {
+          "from": "7.17.4",
+          "to": "^9.3.1"
+        },
+        "@redux-devtools/extension": {
+          "from": "^3.3.0",
+          "to": "^4.0.0"
+        },
+        "jsondiffpatch": {
+          "from": "^0.5.0",
+          "to": "^0.7.6"
+        },
+        "react-base16-styling": {
+          "from": "^0.9.1",
+          "to": "^0.10.0"
+        },
+        "react-error-boundary": {
+          "from": "^5.0.0",
+          "to": "^6.1.2"
+        },
+        "react-json-tree": {
+          "from": "^0.18.0",
+          "to": "^0.20.0"
+        },
+        "react-resizable-panels": {
+          "from": "2.1.7",
+          "to": "^4.11.2"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-13T16:49:55.463Z",
+      "version": "0.14.0-depup.17"
     }
   }
 }
