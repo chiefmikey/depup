@@ -1,0 +1,115 @@
+{
+  "name": "@depup/conform-to__zod",
+  "description": "Conform helpers for integrating with Zod (with updated dependencies)",
+  "homepage": "https://conform.guide",
+  "license": "MIT",
+  "version": "1.19.4-depup.20",
+  "main": "./dist/default/index.js",
+  "module": "./dist/default/index.mjs",
+  "types": "./dist/default/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/default/index.d.ts",
+      "module": "./dist/default/index.mjs",
+      "import": "./dist/default/index.mjs",
+      "require": "./dist/default/index.js",
+      "default": "./dist/default/index.mjs"
+    },
+    "./v3": {
+      "types": "./dist/v3/index.d.ts",
+      "module": "./dist/v3/index.mjs",
+      "import": "./dist/v3/index.mjs",
+      "require": "./dist/v3/index.js",
+      "default": "./dist/v3/index.mjs"
+    },
+    "./v3/future": {
+      "types": "./dist/v3/future.d.ts",
+      "module": "./dist/v3/future.mjs",
+      "import": "./dist/v3/future.mjs",
+      "require": "./dist/v3/future.js",
+      "default": "./dist/v3/future.mjs"
+    },
+    "./v4": {
+      "types": "./dist/v4/index.d.ts",
+      "module": "./dist/v4/index.mjs",
+      "import": "./dist/v4/index.mjs",
+      "require": "./dist/v4/index.js",
+      "default": "./dist/v4/index.mjs"
+    },
+    "./v4/future": {
+      "types": "./dist/v4/future.d.ts",
+      "module": "./dist/v4/future.mjs",
+      "import": "./dist/v4/future.mjs",
+      "require": "./dist/v4/future.js",
+      "default": "./dist/v4/future.mjs"
+    }
+  },
+  "files": [
+    "./dist/**/*.{js,mjs}",
+    "./dist/**/*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edmundhung/conform",
+    "directory": "packages/conform-zod"
+  },
+  "bugs": {
+    "url": "https://github.com/edmundhung/conform/issues"
+  },
+  "dependencies": {
+    "@conform-to/dom": "1.19.4"
+  },
+  "peerDependencies": {
+    "zod": "^3.21.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.20.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@vitest/browser-playwright": "^4.1.5",
+    "playwright": "^1.49.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "vitest": "^4.1.5",
+    "zod": "^3.25.75",
+    "zod-v4": "npm:zod@^4.4.3"
+  },
+  "keywords": [
+    "@conform-to/zod",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "constraint-validation",
+    "form",
+    "form-validation",
+    "html",
+    "progressive-enhancement",
+    "validation",
+    "zod"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build:js": "rollup -c",
+    "build:ts": "tsc --project ./tsconfig.build.json",
+    "build": "pnpm run \"/^build:.*/\"",
+    "dev:js": "pnpm run build:js --watch",
+    "dev:ts": "pnpm run build:ts --watch",
+    "dev": "pnpm run \"/^dev:.*/\"",
+    "test": "vitest",
+    "typecheck": "tsc"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@conform-to/zod",
+    "originalVersion": "1.19.4",
+    "processedAt": "2026-06-13T09:12:31.735Z",
+    "smokeTest": "failed"
+  }
+}

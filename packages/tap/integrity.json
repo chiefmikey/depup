@@ -58,14 +58,6 @@
     }
   },
   "21.7.4": {
-    "9": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-11T17:44:59.199Z",
-      "version": "21.7.4-depup.9"
-    },
     "10": {
       "changes": {},
       "depsUpdated": 0,
@@ -97,6 +89,14 @@
       "status": "skipped",
       "timestamp": "2026-06-13T01:27:41.035Z",
       "version": "21.7.4-depup.13"
+    },
+    "14": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-06-13T09:32:34.037Z",
+      "version": "21.7.4-depup.14"
     }
   }
 }

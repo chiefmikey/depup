@@ -1,0 +1,43 @@
+{
+  "name": "@depup/firebase__app-check-interop-types",
+  "version": "0.3.4-depup.20",
+  "description": "@firebase/app-check-interop-types Types (with updated dependencies)",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "directory": "packages/app-check-interop-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "keywords": [
+    "@firebase/app-check-interop-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/app-check-interop-types",
+    "originalVersion": "0.3.4",
+    "processedAt": "2026-06-13T09:13:59.132Z",
+    "smokeTest": "failed"
+  }
+}

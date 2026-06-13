@@ -1,0 +1,223 @@
+{
+  "name": "@depup/contentful",
+  "description": "Client for Contentful's Content Delivery API (with updated dependencies)",
+  "version": "11.12.5-depup.2",
+  "homepage": "https://www.contentful.com/developers/documentation/content-delivery-api/",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/contentful.cjs"
+    }
+  },
+  "main": "./dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "browserslist": [
+    ">0.3%",
+    "Chrome >= 75",
+    "Edge >= 74",
+    "Firefox >= 73",
+    "Safari >= 13"
+  ],
+  "tsd": {
+    "directory": "test/types",
+    "compilerOptions": {
+      "rootDir": "./lib",
+      "typeRoots": [
+        "./lib"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "images",
+    "ADVANCED.md",
+    "CONTRIBUTING.md",
+    "MIGRATION.md",
+    "README.md",
+    "TYPESCRIPT.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contentful/contentful.js.git"
+  },
+  "author": "Contentful <opensource@contentful.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run build:esm && npm run build:bundles && rm -rf dist/esm-raw",
+    "build:esm": "tsc",
+    "build:bundles": "NODE_ENV=production rollup -c",
+    "check": "npm run check:cjs && npm run check:esm && npm run check:browser && npm run check:browser-min",
+    "check:browser": "es-check es2018 ./dist/contentful.browser.js",
+    "check:browser-min": "es-check es2018 ./dist/contentful.browser.min.js",
+    "check:cjs": "es-check es2017 './dist/contentful.cjs'",
+    "check:esm": "es-check es2017 --module './dist/esm/*.js'",
+    "docs:build": "typedoc --options typedoc.json",
+    "docs:watch": "npm run docs:build -- --watch",
+    "docs:publish": "npm run docs:build && ./node_modules/contentful-sdk-jsdoc/bin/publish-docs.sh contentful.js contentful",
+    "lint": "eslint lib test",
+    "prettier": "prettier --write '**/*.{jsx,js,ts,tsx}'",
+    "prettier:check": "prettier --check '**/*.{jsx,js,ts,tsx}'",
+    "pretest": "rimraf coverage",
+    "test": "npm run test:unit && npm run test:integration && npm run lint && npm run test:types",
+    "test:unit": "vitest --run ./test/unit",
+    "test:unit:watch": "vitest ./test/unit",
+    "test:integration": "vitest --run ./test/integration",
+    "test:integration:watch": "vitest ./test/integration",
+    "test:size": "size-limit",
+    "test:demo-projects": "npm run test:demo-node && npm run test:demo-browser",
+    "test:demo-node": "rimraf ./test/output-integration/node/node-modules && npm --prefix ./test/output-integration/node ci && npm --prefix ./test/output-integration/node test",
+    "test:demo-browser": "rimraf ./test/output-integration/browser/node-modules && npm --prefix ./test/output-integration/browser ci && npm --prefix ./test/output-integration/browser run setup-test-env && npm --prefix ./test/output-integration/browser run test",
+    "test:types": "tsd",
+    "test:prepush": "npm run build && npm run test:unit && npm run test:types",
+    "semantic-release": "semantic-release",
+    "precommit": "npm run lint && npm run prettier:check",
+    "prepush": "npm run test:prepush"
+  },
+  "dependencies": {
+    "@contentful/content-source-maps": "^0.12.2",
+    "@contentful/rich-text-types": "^17.2.7",
+    "axios": "^1.17.0",
+    "contentful-resolve-response": "^2.0.0",
+    "contentful-sdk-core": "^10.0.0",
+    "json-stringify-safe": "^5.0.1",
+    "tslib": "^2.8.1",
+    "type-fest": "^5.7.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.24.3",
+    "@eslint/js": "^9.15.0",
+    "@optimize-lodash/rollup-plugin": "^6.0.0",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@semantic-release/changelog": "^6.0.1",
+    "@size-limit/file": "^11.1.6",
+    "@types/json-stringify-safe": "^5.0.0",
+    "@types/node": "^25.0.10",
+    "contentful-sdk-jsdoc": "^3.1.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "es-check": "^7.0.0",
+    "eslint": "^9.15.0",
+    "fast-copy": "^3.0.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.8.1",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "semantic-release": "^25.0.3",
+    "size-limit": "^11.1.6",
+    "tsd": "^0.31.0",
+    "typedoc": "^0.26.4",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.55.0",
+    "vitest": "^3.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "size-limit": [
+    {
+      "path": "./dist/contentful.browser.js",
+      "limit": "85 Kb"
+    },
+    {
+      "path": "./dist/contentful.browser.min.js",
+      "limit": "45 Kb"
+    }
+  ],
+  "release": {
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "channel": "next",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      "@semantic-release/github"
+    ]
+  },
+  "keywords": [
+    "contentful",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@contentful/content-source-maps": {
+        "from": "^0.11.33",
+        "to": "^0.12.2"
+      },
+      "@contentful/rich-text-types": {
+        "from": "^16.6.1",
+        "to": "^17.2.7"
+      },
+      "axios": {
+        "from": "^1.15.0",
+        "to": "^1.17.0"
+      },
+      "contentful-resolve-response": {
+        "from": "^1.9.4",
+        "to": "^2.0.0"
+      },
+      "contentful-sdk-core": {
+        "from": "^9.4.4",
+        "to": "^10.0.0"
+      },
+      "type-fest": {
+        "from": "^4.0.0",
+        "to": "^5.7.0"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "contentful",
+    "originalVersion": "11.12.5",
+    "processedAt": "2026-06-13T09:20:10.290Z",
+    "smokeTest": "passed"
+  }
+}
