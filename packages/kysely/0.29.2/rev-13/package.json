@@ -1,0 +1,145 @@
+{
+  "name": "@depup/kysely",
+  "version": "0.29.2-depup.13",
+  "description": "Type safe SQL query builder (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kysely-org/kysely.git"
+  },
+  "homepage": "https://kysely.dev",
+  "keywords": [
+    "kysely",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "query",
+    "builder",
+    "query builder",
+    "sql",
+    "typescript",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite",
+    "mssql",
+    "ms sql server",
+    "sql server",
+    "type-safe",
+    "type-safety",
+    "plugins"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typesVersions": {
+    "<5.4": {
+      "*": [
+        "outdated-typescript.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "outdated-typescript.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types@<5.4": "./outdated-typescript.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./helpers/mssql": "./dist/helpers/mssql.js",
+    "./helpers/mysql": "./dist/helpers/mysql.js",
+    "./helpers/postgres": "./dist/helpers/postgres.js",
+    "./helpers/sqlite": "./dist/helpers/sqlite.js",
+    "./migration": "./dist/migration/index.js",
+    "./readonly": "./dist/readonly/index.js"
+  },
+  "sideEffects": false,
+  "author": "Sami Koskimäki <sami@jakso.me>",
+  "license": "MIT",
+  "contributors": [
+    "Sami Koskimäki <sami@jakso.me>",
+    "Igal Klebanov <igalklebanov@gmail.com>"
+  ],
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
+    "@ark/attest": "0.56.0",
+    "@electric-sql/pglite": "0.4.5",
+    "@types/better-sqlite3": "7.6.13",
+    "@types/chai": "5.2.3",
+    "@types/chai-as-promised": "8.0.2",
+    "@types/mocha": "10.0.10",
+    "@types/node": "25.8.0",
+    "@types/pg": "8.20.0",
+    "@types/pg-cursor": "2.7.2",
+    "@types/prototype-pollution-vulnerable-lodash.merge-dont-upgrade": "npm:@types/lodash.merge@4.6.1",
+    "@types/semver": "7.7.1",
+    "@types/sinon": "21.0.1",
+    "better-sqlite3": "12.10.0",
+    "chai": "6.2.2",
+    "chai-as-promised": "8.0.2",
+    "esbuild": "0.28.0",
+    "jsr": "0.14.3",
+    "mocha": "11.7.5",
+    "mysql2": "3.22.3",
+    "pathe": "2.0.3",
+    "pg": "8.20.0",
+    "pg-cursor": "2.19.0",
+    "playwright": "1.60.0",
+    "prettier": "3.8.3",
+    "prototype-pollution-vulnerable-lodash.merge-dont-upgrade": "npm:lodash.merge@4.6.1",
+    "remeda": "2.34.1",
+    "semver": "7.8.0",
+    "sinon": "22.0.0",
+    "std-env": "4.1.0",
+    "tarn": "3.0.2",
+    "tedious": "19.2.1",
+    "tsd": "0.33.0",
+    "tsx": "4.22.0",
+    "typescript": "6.0.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist & rm -rf test/node/dist & rm -rf test/browser/bundle.js",
+    "bench:ts": "pnpm build && node --experimental-strip-types ./test/ts-benchmarks/index.ts",
+    "test": "pnpm build && pnpm test:node:build && pnpm test:node:run && pnpm test:typings && pnpm test:esmimports && pnpm test:exports",
+    "test:node:build": "tsc -p test/node",
+    "test:node": "pnpm build && pnpm test:node:build && pnpm test:node:run",
+    "test:node:run": "mocha --timeout 15000 test/node/dist/**/*.test.js",
+    "test:browser:build": "rm -rf test/browser/bundle.js && esbuild test/browser/main.ts --bundle --outfile=test/browser/bundle.js",
+    "test:browser": "pnpm build && pnpm test:browser:build && node test/browser/test.js",
+    "test:bun": "pnpm build && bun link && cd test/bun && bun install && bun run test",
+    "test:cloudflare-workers": "pnpm build && pnpm -r test --filter kysely-cloudflare-workers-test",
+    "test:deno": "deno run --allow-env --allow-read --allow-net --no-lock test/deno/test.ts",
+    "test:typings": "tsd test/typings",
+    "test:esmimports": "node scripts/check-esm-imports.cjs",
+    "test:esbuild": "esbuild --bundle --platform=node --external:pg-native dist/index.js --outfile=/dev/null",
+    "test:exports": "attw --profile esm-only --pack . && node scripts/check-exports.cjs",
+    "test:jsdocs": "deno check --doc-only --no-lock --unstable-sloppy-imports --config=\"deno.check.json\" ./src",
+    "test:outdatedts": "pnpm build && cd test/outdated-ts && pnpm i && pnpm test",
+    "lint:deno": "deno lint --config=\"deno.lint.json\" ./src",
+    "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "build": "pnpm clean && tsc && pnpm script:add-deno-type-references && pnpm script:copy-interface-doc",
+    "script:copy-interface-doc": "node scripts/copy-interface-documentation.cjs",
+    "script:add-deno-type-references": "node scripts/add-deno-type-references.cjs",
+    "script:align-versions": "node --experimental-strip-types scripts/align-versions.mts",
+    "script:generate-site-examples": "node scripts/generate-site-examples.mts",
+    "script:override-tsconfig-target": "node --experimental-strip-types scripts/override-tsconfig-target.mts",
+    "script:remove-global-augmentations": "node --experimental-strip-types scripts/remove-global-augmentations.mts",
+    "version": "pnpm script:align-versions && git add ."
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "kysely",
+    "originalVersion": "0.29.2",
+    "processedAt": "2026-06-13T09:43:29.357Z",
+    "smokeTest": "passed"
+  }
+}

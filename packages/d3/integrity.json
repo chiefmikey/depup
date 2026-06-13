@@ -1,110 +1,5 @@
 {
   "7.9.0": {
-    "14": {
-      "changes": {
-        "d3-array": {
-          "from": "3",
-          "to": "^3.2.4"
-        },
-        "d3-chord": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-color": {
-          "from": "3",
-          "to": "^3.1.0"
-        },
-        "d3-contour": {
-          "from": "4",
-          "to": "^4.0.2"
-        },
-        "d3-delaunay": {
-          "from": "6",
-          "to": "^6.0.4"
-        },
-        "d3-dispatch": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-dsv": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-ease": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-fetch": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-format": {
-          "from": "3",
-          "to": "^3.1.2"
-        },
-        "d3-geo": {
-          "from": "3",
-          "to": "^3.1.1"
-        },
-        "d3-hierarchy": {
-          "from": "3",
-          "to": "^3.1.2"
-        },
-        "d3-interpolate": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-path": {
-          "from": "3",
-          "to": "^3.1.0"
-        },
-        "d3-polygon": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-quadtree": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-random": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-scale": {
-          "from": "4",
-          "to": "^4.0.2"
-        },
-        "d3-scale-chromatic": {
-          "from": "3",
-          "to": "^3.1.0"
-        },
-        "d3-shape": {
-          "from": "3",
-          "to": "^3.2.0"
-        },
-        "d3-time": {
-          "from": "3",
-          "to": "^3.1.0"
-        },
-        "d3-time-format": {
-          "from": "4",
-          "to": "^4.1.0"
-        },
-        "d3-timer": {
-          "from": "3",
-          "to": "^3.0.1"
-        },
-        "d3-transition": {
-          "from": "3",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 24,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T10:07:31.257Z",
-      "version": "7.9.0-depup.14"
-    },
     "15": {
       "changes": {
         "d3-array": {
@@ -524,6 +419,111 @@
       "status": "failed",
       "timestamp": "2026-06-13T01:35:51.189Z",
       "version": "7.9.0-depup.18"
+    },
+    "19": {
+      "changes": {
+        "d3-array": {
+          "from": "3",
+          "to": "^3.2.4"
+        },
+        "d3-chord": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-color": {
+          "from": "3",
+          "to": "^3.1.0"
+        },
+        "d3-contour": {
+          "from": "4",
+          "to": "^4.0.2"
+        },
+        "d3-delaunay": {
+          "from": "6",
+          "to": "^6.0.4"
+        },
+        "d3-dispatch": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-dsv": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-ease": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-fetch": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-format": {
+          "from": "3",
+          "to": "^3.1.2"
+        },
+        "d3-geo": {
+          "from": "3",
+          "to": "^3.1.1"
+        },
+        "d3-hierarchy": {
+          "from": "3",
+          "to": "^3.1.2"
+        },
+        "d3-interpolate": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-path": {
+          "from": "3",
+          "to": "^3.1.0"
+        },
+        "d3-polygon": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-quadtree": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-random": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-scale": {
+          "from": "4",
+          "to": "^4.0.2"
+        },
+        "d3-scale-chromatic": {
+          "from": "3",
+          "to": "^3.1.0"
+        },
+        "d3-shape": {
+          "from": "3",
+          "to": "^3.2.0"
+        },
+        "d3-time": {
+          "from": "3",
+          "to": "^3.1.0"
+        },
+        "d3-time-format": {
+          "from": "4",
+          "to": "^4.1.0"
+        },
+        "d3-timer": {
+          "from": "3",
+          "to": "^3.0.1"
+        },
+        "d3-transition": {
+          "from": "3",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 24,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T09:40:41.673Z",
+      "version": "7.9.0-depup.19"
     }
   }
 }
