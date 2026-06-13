@@ -12,14 +12,14 @@ npm install @depup/urql__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.1 | **Updated**: 6/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @0no-co/graphql.web | `^1.0.13` | `^1.2.0` |
-| wonka | `^6.3.2` | `^6.3.5` |
+| @0no-co/graphql.web | `^1.0.13` | `^1.3.2` |
+| wonka | `^6.3.2` | `^6.3.6` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/urql__core&labels=bug).
