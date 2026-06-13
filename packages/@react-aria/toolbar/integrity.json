@@ -30,23 +30,6 @@
     }
   },
   "3.0.0-beta.26": {
-    "14": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        },
-        "react-aria": {
-          "from": "^3.48.0",
-          "to": "^3.49.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:34:41.894Z",
-      "version": "3.0.0-beta.26-depup.14"
-    },
     "15": {
       "changes": {
         "@swc/helpers": {
@@ -114,6 +97,23 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:38:08.244Z",
       "version": "3.0.0-beta.26-depup.18"
+    },
+    "19": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T17:04:31.452Z",
+      "version": "3.0.0-beta.26-depup.19"
     }
   }
 }

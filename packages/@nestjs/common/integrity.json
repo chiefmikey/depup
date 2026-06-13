@@ -148,19 +148,6 @@
     }
   },
   "11.1.26": {
-    "14": {
-      "changes": {
-        "file-type": {
-          "from": "21.3.4",
-          "to": "^22.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:33:49.275Z",
-      "version": "11.1.26-depup.14"
-    },
     "15": {
       "changes": {
         "file-type": {
@@ -212,6 +199,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:37:15.163Z",
       "version": "11.1.26-depup.18"
+    },
+    "19": {
+      "changes": {
+        "file-type": {
+          "from": "21.3.4",
+          "to": "^22.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T17:03:33.827Z",
+      "version": "11.1.26-depup.19"
     }
   }
 }
