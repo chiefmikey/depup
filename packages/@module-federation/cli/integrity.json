@@ -200,23 +200,6 @@
     }
   },
   "2.5.1": {
-    "14": {
-      "changes": {
-        "commander": {
-          "from": "11.1.0",
-          "to": "^15.0.0"
-        },
-        "jiti": {
-          "from": "2.4.2",
-          "to": "^2.7.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:33:21.601Z",
-      "version": "2.5.1-depup.14"
-    },
     "15": {
       "changes": {
         "commander": {
@@ -284,6 +267,23 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:36:28.820Z",
       "version": "2.5.1-depup.18"
+    },
+    "19": {
+      "changes": {
+        "commander": {
+          "from": "11.1.0",
+          "to": "^15.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T17:02:29.170Z",
+      "version": "2.5.1-depup.19"
     }
   }
 }

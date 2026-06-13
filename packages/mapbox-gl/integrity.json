@@ -555,6 +555,55 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:44:18.789Z",
       "version": "3.24.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@mapbox/mapbox-gl-supported": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        },
+        "@mapbox/tiny-sdf": {
+          "from": "^2.0.6",
+          "to": "^2.2.0"
+        },
+        "@mapbox/unitbezier": {
+          "from": "^0.0.1",
+          "to": "^1.0.0"
+        },
+        "@mapbox/vector-tile": {
+          "from": "^2.0.4",
+          "to": "^3.0.0"
+        },
+        "cheap-ruler": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "earcut": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "geojson-vt": {
+          "from": "^4.0.2",
+          "to": "^4.0.3"
+        },
+        "kdbush": {
+          "from": "^4.0.2",
+          "to": "^4.1.0"
+        },
+        "pbf": {
+          "from": "^4.0.1",
+          "to": "^5.1.0"
+        },
+        "potpack": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T17:10:16.335Z",
+      "version": "3.24.1-depup.3"
     }
   }
 }
