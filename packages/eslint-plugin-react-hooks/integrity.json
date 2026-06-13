@@ -94,35 +94,6 @@
     }
   },
   "7.1.1": {
-    "11": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.24.4",
-          "to": "^7.29.7"
-        },
-        "@babel/parser": {
-          "from": "^7.24.4",
-          "to": "^7.29.7"
-        },
-        "hermes-parser": {
-          "from": "^0.25.1",
-          "to": "^0.36.1"
-        },
-        "zod": {
-          "from": "^3.25.0 || ^4.0.0",
-          "to": "^4.4.3"
-        },
-        "zod-validation-error": {
-          "from": "^3.5.0 || ^4.0.0",
-          "to": "^5.0.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T09:48:10.593Z",
-      "version": "7.1.1-depup.11"
-    },
     "12": {
       "changes": {
         "@babel/core": {
@@ -238,6 +209,35 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:16:55.524Z",
       "version": "7.1.1-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.24.4",
+          "to": "^7.29.7"
+        },
+        "@babel/parser": {
+          "from": "^7.24.4",
+          "to": "^7.29.7"
+        },
+        "hermes-parser": {
+          "from": "^0.25.1",
+          "to": "^0.36.1"
+        },
+        "zod": {
+          "from": "^3.25.0 || ^4.0.0",
+          "to": "^4.4.3"
+        },
+        "zod-validation-error": {
+          "from": "^3.5.0 || ^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:15:30.239Z",
+      "version": "7.1.1-depup.16"
     }
   }
 }

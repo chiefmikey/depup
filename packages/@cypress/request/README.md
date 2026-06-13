@@ -12,7 +12,7 @@ npm install @depup/cypress__request
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.1 | **DepUp version**: 4.0.1-depup.18 | **Updated**: 6/12/2026 | **Import test**: passed
+**Original version**: 4.0.1 | **DepUp version**: 4.0.1-depup.19 | **Updated**: 6/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | aws4 | `^1.8.0` | `^1.13.2` |
 | combined-stream | `~1.0.6` | `^1.0.8` |
-| form-data | `~4.0.4` | `^4.0.5` |
+| form-data | `~4.0.4` | `^4.0.6` |
 | mime-types | `~2.1.19` | `^3.0.2` |
 | safe-buffer | `^5.1.2` | `^5.2.1` |
 | tough-cookie | `^5.0.0` | `^6.0.1` |

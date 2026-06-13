@@ -1,0 +1,90 @@
+{
+  "name": "@depup/greenlock",
+  "version": "2.8.9-depup.14",
+  "description": "Greenlock is Let's Encrypt (ACME) client for node.js (with updated dependencies)",
+  "homepage": "https://greenlock.domains/",
+  "main": "index.js",
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "bump": "npm version -m \"chore(release): bump to v%s\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.rootprojects.org/root/greenlock.js.git"
+  },
+  "keywords": [
+    "greenlock",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Let's Encrypt",
+    "letsencrypt",
+    "ACME",
+    "v2",
+    "auto-sni",
+    "Free SSL",
+    "Automated HTTPS",
+    "tls",
+    "https"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com> (https://solderjs.com/)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://git.rootprojects.org/root/greenlock.js/issues"
+  },
+  "trulyOptionalDependencies": {
+    "bluebird": "^3.5.1",
+    "le-acme-core": "^2.1.3"
+  },
+  "dependencies": {
+    "acme": "^3.0.3",
+    "acme-dns-01-cli": "^3.0.7",
+    "acme-v2": "^3.0.3",
+    "cert-info": "^1.5.1",
+    "greenlock-store-fs": "^3.2.2",
+    "keypairs": "^1.2.14",
+    "le-challenge-fs": "^2.0.9",
+    "le-sni-auto": "^2.1.9",
+    "le-store-certbot": "^2.2.4",
+    "rsa-compat": "^2.0.8"
+  },
+  "engines": {
+    "node": ">=4.5"
+  },
+  "depup": {
+    "changes": {
+      "acme": {
+        "from": "^1.3.5",
+        "to": "^3.0.3"
+      },
+      "acme-dns-01-cli": {
+        "from": "^3.0.0",
+        "to": "^3.0.7"
+      },
+      "acme-v2": {
+        "from": "^1.8.7",
+        "to": "^3.0.3"
+      },
+      "greenlock-store-fs": {
+        "from": "^3.0.2",
+        "to": "^3.2.2"
+      },
+      "le-challenge-fs": {
+        "from": "^2.0.2",
+        "to": "^2.0.9"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "greenlock",
+    "originalVersion": "2.8.9",
+    "processedAt": "2026-06-13T01:16:30.936Z",
+    "smokeTest": "failed"
+  }
+}
