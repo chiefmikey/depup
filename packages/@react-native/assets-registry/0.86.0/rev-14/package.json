@@ -1,0 +1,46 @@
+{
+  "name": "@depup/react-native__assets-registry",
+  "version": "0.86.0-depup.14",
+  "description": "Asset support code for React Native. (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/react-native.git",
+    "directory": "packages/assets"
+  },
+  "homepage": "https://github.com/facebook/react-native/tree/HEAD/packages/assets#readme",
+  "keywords": [
+    "@react-native/assets-registry",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "assets",
+    "registry",
+    "react-native",
+    "support"
+  ],
+  "bugs": "https://github.com/facebook/react-native/issues",
+  "engines": {
+    "node": "^20.19.4 || ^22.13.0 || ^24.3.0 || >= 25.0.0"
+  },
+  "files": [
+    "path-support.js",
+    "registry.js",
+    "README.md",
+    "!**/__docs__/**",
+    "!**/__fixtures__/**",
+    "!**/__mocks__/**",
+    "!**/__tests__/**",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-native/assets-registry",
+    "originalVersion": "0.86.0",
+    "processedAt": "2026-06-13T09:14:27.977Z",
+    "smokeTest": "failed"
+  }
+}
