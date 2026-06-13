@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@contentful/content-source-maps": {
+      "from": "^0.11.33",
+      "to": "^0.12.2"
+    },
+    "@contentful/rich-text-types": {
+      "from": "^16.6.1",
+      "to": "^17.2.7"
+    },
+    "axios": {
+      "from": "^1.15.0",
+      "to": "^1.17.0"
+    },
+    "contentful-resolve-response": {
+      "from": "^1.9.4",
+      "to": "^2.0.0"
+    },
+    "contentful-sdk-core": {
+      "from": "^9.4.4",
+      "to": "^10.0.0"
+    },
+    "type-fest": {
+      "from": "^4.0.0",
+      "to": "^5.7.0"
+    }
+  },
+  "timestamp": "2026-06-13T16:45:34.180Z",
+  "totalUpdated": 6
+}
