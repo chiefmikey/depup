@@ -10,27 +10,6 @@
     }
   },
   "3.11.0": {
-    "11": {
-      "changes": {
-        "@react-aria/menu": {
-          "from": "^3.22.0",
-          "to": "^3.22.1"
-        },
-        "@react-spectrum/menu": {
-          "from": "^3.23.0",
-          "to": "^3.23.1"
-        },
-        "@react-stately/menu": {
-          "from": "^3.10.0",
-          "to": "^3.10.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T08:15:57.495Z",
-      "version": "3.11.0-depup.11"
-    },
     "12": {
       "changes": {
         "@react-aria/menu": {
@@ -114,6 +93,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:35:11.967Z",
       "version": "3.11.0-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@react-aria/menu": {
+          "from": "^3.22.0",
+          "to": "^3.22.1"
+        },
+        "@react-spectrum/menu": {
+          "from": "^3.23.0",
+          "to": "^3.23.1"
+        },
+        "@react-stately/menu": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:33:16.379Z",
+      "version": "3.11.0-depup.16"
     }
   }
 }

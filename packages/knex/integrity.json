@@ -431,43 +431,6 @@
     }
   },
   "3.2.10": {
-    "9": {
-      "changes": {
-        "colorette": {
-          "from": "2.0.19",
-          "to": "^2.0.20"
-        },
-        "commander": {
-          "from": "^10.0.0",
-          "to": "^15.0.0"
-        },
-        "debug": {
-          "from": "4.3.4",
-          "to": "^4.4.3"
-        },
-        "escalade": {
-          "from": "^3.1.1",
-          "to": "^3.2.0"
-        },
-        "interpret": {
-          "from": "^2.2.0",
-          "to": "^3.1.1"
-        },
-        "pg-connection-string": {
-          "from": "2.6.2",
-          "to": "^2.13.0"
-        },
-        "tildify": {
-          "from": "2.0.0",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:40:59.896Z",
-      "version": "3.2.10-depup.9"
-    },
     "10": {
       "changes": {
         "colorette": {
@@ -615,6 +578,43 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:40:25.887Z",
       "version": "3.2.10-depup.13"
+    },
+    "14": {
+      "changes": {
+        "colorette": {
+          "from": "2.0.19",
+          "to": "^2.0.20"
+        },
+        "commander": {
+          "from": "^10.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "4.3.4",
+          "to": "^4.4.3"
+        },
+        "escalade": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "interpret": {
+          "from": "^2.2.0",
+          "to": "^3.1.1"
+        },
+        "pg-connection-string": {
+          "from": "2.6.2",
+          "to": "^2.13.0"
+        },
+        "tildify": {
+          "from": "2.0.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:38:29.003Z",
+      "version": "3.2.10-depup.14"
     }
   }
 }

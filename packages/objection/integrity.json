@@ -1,22 +1,5 @@
 {
   "3.1.5": {
-    "8": {
-      "changes": {
-        "ajv": {
-          "from": "^8.17.1",
-          "to": "^8.20.0"
-        },
-        "ajv-formats": {
-          "from": "^2.1.1",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:43:31.957Z",
-      "version": "3.1.5-depup.8"
-    },
     "9": {
       "changes": {
         "ajv": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:43:01.977Z",
       "version": "3.1.5-depup.12"
+    },
+    "13": {
+      "changes": {
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        },
+        "ajv-formats": {
+          "from": "^2.1.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:41:01.570Z",
+      "version": "3.1.5-depup.13"
     }
   }
 }
