@@ -1,0 +1,70 @@
+{
+  "name": "@depup/biomejs__biome",
+  "version": "2.5.0-depup.2",
+  "bin": {
+    "biome": "bin/biome"
+  },
+  "homepage": "https://biomejs.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biomejs/biome.git",
+    "directory": "packages/@biomejs/biome"
+  },
+  "author": "Emanuele Stoppa",
+  "license": "MIT OR Apache-2.0",
+  "bugs": "https://github.com/biomejs/biome/issues",
+  "description": "Biome is a toolchain for the web: formatter, linter and more (with updated dependencies)",
+  "files": [
+    "bin/biome",
+    "configuration_schema.json",
+    "README.md",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "ROME-LICENSE-MIT",
+    "changes.json"
+  ],
+  "keywords": [
+    "@biomejs/biome",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "format",
+    "lint",
+    "toolchain",
+    "JavaScript",
+    "TypeScript",
+    "JSON",
+    "JSONC",
+    "JSX",
+    "TSX",
+    "CSS",
+    "GraphQL"
+  ],
+  "engines": {
+    "node": ">=14.21.3"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/biome"
+  },
+  "optionalDependencies": {
+    "@biomejs/cli-win32-x64": "2.5.0",
+    "@biomejs/cli-win32-arm64": "2.5.0",
+    "@biomejs/cli-darwin-x64": "2.5.0",
+    "@biomejs/cli-darwin-arm64": "2.5.0",
+    "@biomejs/cli-linux-x64": "2.5.0",
+    "@biomejs/cli-linux-arm64": "2.5.0",
+    "@biomejs/cli-linux-x64-musl": "2.5.0",
+    "@biomejs/cli-linux-arm64-musl": "2.5.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@biomejs/biome",
+    "originalVersion": "2.5.0",
+    "processedAt": "2026-06-13T09:12:29.169Z",
+    "smokeTest": "failed"
+  }
+}

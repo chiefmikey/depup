@@ -1,0 +1,51 @@
+{
+  "name": "@depup/vue__devtools-shared",
+  "type": "module",
+  "version": "8.1.2-depup.14",
+  "author": "webfansplz",
+  "license": "MIT",
+  "repository": {
+    "directory": "packages/shared",
+    "type": "git",
+    "url": "git+https://github.com/vuejs/devtools.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "rfdc": "^1.4.1"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepare:type": "tsdown --dts-only",
+    "stub": "tsdown --watch --onSuccess 'tsdown --dts-only'"
+  },
+  "description": "@vue/devtools-shared with all dependencies updated to latest",
+  "keywords": [
+    "@vue/devtools-shared",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vue/devtools-shared",
+    "originalVersion": "8.1.2",
+    "processedAt": "2026-06-13T09:17:39.141Z",
+    "smokeTest": "passed"
+  }
+}

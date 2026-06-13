@@ -1,0 +1,64 @@
+{
+  "name": "@depup/websocket-driver",
+  "description": "WebSocket protocol handler with pluggable I/O (with updated dependencies)",
+  "homepage": "https://github.com/faye/websocket-driver-node",
+  "author": "James Coglan <jcoglan@gmail.com> (http://jcoglan.com/)",
+  "keywords": [
+    "websocket-driver",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "websocket"
+  ],
+  "license": "Apache-2.0",
+  "version": "0.7.5-depup.13",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./lib/websocket/driver",
+  "dependencies": {
+    "http-parser-js": "^0.5.10",
+    "safe-buffer": "^5.2.1",
+    "websocket-extensions": "^0.1.4"
+  },
+  "devDependencies": {
+    "jstest": "*",
+    "permessage-deflate": "*"
+  },
+  "scripts": {
+    "test": "jstest spec/runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/faye/websocket-driver-node.git"
+  },
+  "bugs": "https://github.com/faye/websocket-driver-node/issues",
+  "depup": {
+    "changes": {
+      "http-parser-js": {
+        "from": ">=0.5.1",
+        "to": "^0.5.10"
+      },
+      "safe-buffer": {
+        "from": ">=5.1.0",
+        "to": "^5.2.1"
+      },
+      "websocket-extensions": {
+        "from": ">=0.1.1",
+        "to": "^0.1.4"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "websocket-driver",
+    "originalVersion": "0.7.5",
+    "processedAt": "2026-06-13T09:33:19.614Z",
+    "smokeTest": "passed"
+  }
+}

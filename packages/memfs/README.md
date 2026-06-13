@@ -12,7 +12,7 @@ npm install @depup/memfs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.57.7 | **DepUp version**: 4.57.7-depup.5 | **Updated**: 6/13/2026 | **Import test**: passed
+**Original version**: 4.57.7 | **DepUp version**: 4.57.7-depup.6 | **Updated**: 6/13/2026 | **Import test**: passed
 
 ## What changed
 

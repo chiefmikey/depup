@@ -43,19 +43,6 @@
     }
   },
   "30.4.1": {
-    "9": {
-      "changes": {
-        "jsdom": {
-          "from": "^26.1.0",
-          "to": "^29.1.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T09:50:50.048Z",
-      "version": "30.4.1-depup.9"
-    },
     "10": {
       "changes": {
         "jsdom": {
@@ -107,6 +94,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T01:18:48.391Z",
       "version": "30.4.1-depup.13"
+    },
+    "14": {
+      "changes": {
+        "jsdom": {
+          "from": "^26.1.0",
+          "to": "^29.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-13T09:23:50.733Z",
+      "version": "30.4.1-depup.14"
     }
   }
 }

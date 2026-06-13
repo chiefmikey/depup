@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__android-x64",
+  "version": "0.28.1-depup.4",
+  "description": "A WebAssembly shim for esbuild on Android x64. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/android-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/android-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-13T09:12:50.812Z",
+    "smokeTest": "failed"
+  }
+}

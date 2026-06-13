@@ -39,19 +39,6 @@
     }
   },
   "4.0.1": {
-    "17": {
-      "changes": {
-        "undici": {
-          "from": "^6.23.0",
-          "to": "^8.4.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T09:37:45.845Z",
-      "version": "4.0.1-depup.17"
-    },
     "18": {
       "changes": {
         "undici": {
@@ -103,6 +90,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T01:05:13.720Z",
       "version": "4.0.1-depup.21"
+    },
+    "22": {
+      "changes": {
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T09:11:07.669Z",
+      "version": "4.0.1-depup.22"
     }
   }
 }
