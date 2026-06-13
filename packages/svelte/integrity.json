@@ -1187,47 +1187,6 @@
     }
   },
   "5.56.3": {
-    "8": {
-      "changes": {
-        "@jridgewell/remapping": {
-          "from": "^2.3.4",
-          "to": "^2.3.5"
-        },
-        "@jridgewell/sourcemap-codec": {
-          "from": "^1.5.0",
-          "to": "^1.5.5"
-        },
-        "@types/estree": {
-          "from": "^1.0.5",
-          "to": "^1.0.9"
-        },
-        "acorn": {
-          "from": "^8.12.1",
-          "to": "^8.16.0"
-        },
-        "aria-query": {
-          "from": "5.3.1",
-          "to": "^5.3.2"
-        },
-        "esm-env": {
-          "from": "^1.2.1",
-          "to": "^1.2.2"
-        },
-        "magic-string": {
-          "from": "^0.30.11",
-          "to": "^0.30.21"
-        },
-        "zimmerframe": {
-          "from": "^1.1.2",
-          "to": "^1.1.4"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T09:59:12.730Z",
-      "version": "5.56.3-depup.8"
-    },
     "9": {
       "changes": {
         "@jridgewell/remapping": {
@@ -1391,6 +1350,47 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:29:25.510Z",
       "version": "5.56.3-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@jridgewell/remapping": {
+          "from": "^2.3.4",
+          "to": "^2.3.5"
+        },
+        "@jridgewell/sourcemap-codec": {
+          "from": "^1.5.0",
+          "to": "^1.5.5"
+        },
+        "@types/estree": {
+          "from": "^1.0.5",
+          "to": "^1.0.9"
+        },
+        "acorn": {
+          "from": "^8.12.1",
+          "to": "^8.17.0"
+        },
+        "aria-query": {
+          "from": "5.3.1",
+          "to": "^5.3.2"
+        },
+        "esm-env": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        },
+        "magic-string": {
+          "from": "^0.30.11",
+          "to": "^0.30.21"
+        },
+        "zimmerframe": {
+          "from": "^1.1.2",
+          "to": "^1.1.4"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:27:30.233Z",
+      "version": "5.56.3-depup.13"
     }
   }
 }

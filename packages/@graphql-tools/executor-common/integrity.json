@@ -1,22 +1,5 @@
 {
   "1.0.6": {
-    "15": {
-      "changes": {
-        "@envelop/core": {
-          "from": "^5.4.0",
-          "to": "^5.5.1"
-        },
-        "@graphql-tools/utils": {
-          "from": "^11.0.0",
-          "to": "^11.1.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T09:41:12.069Z",
-      "version": "1.0.6-depup.15"
-    },
     "16": {
       "changes": {
         "@envelop/core": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:09:59.361Z",
       "version": "1.0.6-depup.19"
+    },
+    "20": {
+      "changes": {
+        "@envelop/core": {
+          "from": "^5.4.0",
+          "to": "^5.5.1"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:08:46.861Z",
+      "version": "1.0.6-depup.20"
     }
   }
 }
