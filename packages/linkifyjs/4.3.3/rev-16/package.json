@@ -1,0 +1,51 @@
+{
+  "name": "@depup/linkifyjs",
+  "type": "module",
+  "version": "4.3.3-depup.16",
+  "description": "Find URLs, email addresses, #hashtags and @mentions in plain-text strings, then convert them into HTML <a> links. (with updated dependencies)",
+  "main": "dist/linkify.cjs",
+  "module": "dist/linkify.mjs",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "clean": "rm -rf lib dist *.tgz *.d.ts",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfrasser/linkifyjs.git",
+    "directory": "packages/linkifyjs"
+  },
+  "keywords": [
+    "linkifyjs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "autolink",
+    "email",
+    "hashtag",
+    "html",
+    "jquery",
+    "link",
+    "mention",
+    "react",
+    "twitter",
+    "url"
+  ],
+  "author": "Nick Frasser (https://nfrasser.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nfrasser/linkifyjs/issues"
+  },
+  "homepage": "https://linkify.js.org",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "linkifyjs",
+    "originalVersion": "4.3.3",
+    "processedAt": "2026-06-13T16:50:32.368Z",
+    "smokeTest": "passed"
+  }
+}

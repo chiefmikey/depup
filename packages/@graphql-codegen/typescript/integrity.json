@@ -78,27 +78,6 @@
     }
   },
   "6.0.2": {
-    "17": {
-      "changes": {
-        "auto-bind": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "tslib": {
-          "from": "~2.8.0",
-          "to": "^2.8.1"
-        },
-        "@graphql-codegen/visitor-plugin-common": {
-          "from": "^7.0.3",
-          "to": "^7.1.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T01:09:34.680Z",
-      "version": "6.0.2-depup.17"
-    },
     "18": {
       "changes": {
         "auto-bind": {
@@ -182,6 +161,27 @@
       "status": "failed",
       "timestamp": "2026-06-13T09:12:50.604Z",
       "version": "6.0.2-depup.21"
+    },
+    "22": {
+      "changes": {
+        "auto-bind": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "~2.8.0",
+          "to": "^2.8.1"
+        },
+        "@graphql-codegen/visitor-plugin-common": {
+          "from": "^7.0.3",
+          "to": "^7.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T16:38:53.832Z",
+      "version": "6.0.2-depup.22"
     }
   }
 }
