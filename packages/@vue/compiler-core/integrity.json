@@ -271,6 +271,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:13:09.684Z",
       "version": "3.5.38-depup.3"
+    },
+    "4": {
+      "changes": {
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:12:08.724Z",
+      "version": "3.5.38-depup.4"
     }
   }
 }

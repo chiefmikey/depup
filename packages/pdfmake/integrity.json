@@ -151,6 +151,19 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:23:20.464Z",
       "version": "0.3.11-depup.1"
+    },
+    "2": {
+      "changes": {
+        "xmldoc": {
+          "from": "^2.0.3",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:22:38.922Z",
+      "version": "0.3.11-depup.2"
     }
   }
 }

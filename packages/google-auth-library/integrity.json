@@ -17,35 +17,6 @@
     }
   },
   "10.7.0": {
-    "9": {
-      "changes": {
-        "base64-js": {
-          "from": "^1.3.0",
-          "to": "^1.5.1"
-        },
-        "gaxios": {
-          "from": "^7.1.4",
-          "to": "^7.1.5"
-        },
-        "gcp-metadata": {
-          "from": "8.1.2",
-          "to": "^8.1.3"
-        },
-        "google-logging-utils": {
-          "from": "1.1.3",
-          "to": "^1.1.4"
-        },
-        "jws": {
-          "from": "^4.0.0",
-          "to": "^4.0.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:50:47.089Z",
-      "version": "10.7.0-depup.9"
-    },
     "10": {
       "changes": {
         "base64-js": {
@@ -161,6 +132,35 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:18:41.025Z",
       "version": "10.7.0-depup.13"
+    },
+    "14": {
+      "changes": {
+        "base64-js": {
+          "from": "^1.3.0",
+          "to": "^1.5.1"
+        },
+        "gaxios": {
+          "from": "^7.1.4",
+          "to": "^7.1.5"
+        },
+        "gcp-metadata": {
+          "from": "8.1.2",
+          "to": "^8.1.3"
+        },
+        "google-logging-utils": {
+          "from": "1.1.3",
+          "to": "^1.1.4"
+        },
+        "jws": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:17:52.050Z",
+      "version": "10.7.0-depup.14"
     }
   }
 }

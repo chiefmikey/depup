@@ -324,6 +324,27 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:10:55.655Z",
       "version": "2.19.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.0.0",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.41.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:09:50.086Z",
+      "version": "2.19.0-depup.3"
     }
   }
 }

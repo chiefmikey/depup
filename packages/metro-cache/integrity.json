@@ -53,23 +53,6 @@
     }
   },
   "0.84.4": {
-    "9": {
-      "changes": {
-        "exponential-backoff": {
-          "from": "^3.1.1",
-          "to": "^3.1.3"
-        },
-        "https-proxy-agent": {
-          "from": "^7.0.5",
-          "to": "^9.1.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-11T01:17:14.689Z",
-      "version": "0.84.4-depup.9"
-    },
     "10": {
       "changes": {
         "exponential-backoff": {
@@ -137,6 +120,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:20:32.447Z",
       "version": "0.84.4-depup.13"
+    },
+    "14": {
+      "changes": {
+        "exponential-backoff": {
+          "from": "^3.1.1",
+          "to": "^3.1.3"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.5",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:19:43.336Z",
+      "version": "0.84.4-depup.14"
     }
   }
 }
