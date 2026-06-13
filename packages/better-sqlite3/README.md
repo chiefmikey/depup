@@ -12,7 +12,7 @@ npm install @depup/better-sqlite3
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.10.0 | **DepUp version**: 12.10.0-depup.11 | **Updated**: 6/12/2026 | **Import test**: passed
+**Original version**: 12.10.0 | **DepUp version**: 12.10.0-depup.12 | **Updated**: 6/13/2026 | **Import test**: passed
 
 ## What changed
 
