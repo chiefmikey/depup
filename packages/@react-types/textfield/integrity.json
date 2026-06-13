@@ -10,23 +10,6 @@
     }
   },
   "3.13.0": {
-    "12": {
-      "changes": {
-        "@react-aria/textfield": {
-          "from": "^3.19.0",
-          "to": "^3.19.1"
-        },
-        "@react-spectrum/textfield": {
-          "from": "^3.15.0",
-          "to": "^3.15.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-11T08:16:15.642Z",
-      "version": "3.13.0-depup.12"
-    },
     "13": {
       "changes": {
         "@react-aria/textfield": {
@@ -94,6 +77,23 @@
       "status": "failed",
       "timestamp": "2026-06-12T17:35:18.874Z",
       "version": "3.13.0-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@react-aria/textfield": {
+          "from": "^3.19.0",
+          "to": "^3.19.1"
+        },
+        "@react-spectrum/textfield": {
+          "from": "^3.15.0",
+          "to": "^3.15.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-13T01:33:25.261Z",
+      "version": "3.13.0-depup.17"
     }
   }
 }
