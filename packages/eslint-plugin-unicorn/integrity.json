@@ -271,5 +271,20 @@
       "timestamp": "2026-06-14T09:42:39.056Z",
       "version": "65.0.1-depup.17"
     }
+  },
+  "66.0.0": {
+    "0": {
+      "changes": {
+        "regjsparser": {
+          "from": "^0.13.1",
+          "to": "^0.13.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T17:10:00.392Z",
+      "version": "66.0.0-depup.0"
+    }
   }
 }

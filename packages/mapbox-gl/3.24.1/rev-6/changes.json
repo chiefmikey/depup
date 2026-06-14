@@ -1,0 +1,46 @@
+{
+  "bumped": {
+    "@mapbox/mapbox-gl-supported": {
+      "from": "^3.0.0",
+      "to": "^4.0.0"
+    },
+    "@mapbox/tiny-sdf": {
+      "from": "^2.0.6",
+      "to": "^2.2.0"
+    },
+    "@mapbox/unitbezier": {
+      "from": "^0.0.1",
+      "to": "^1.0.0"
+    },
+    "@mapbox/vector-tile": {
+      "from": "^2.0.4",
+      "to": "^3.0.0"
+    },
+    "cheap-ruler": {
+      "from": "^4.0.0",
+      "to": "^4.1.0"
+    },
+    "earcut": {
+      "from": "^3.0.1",
+      "to": "^3.0.2"
+    },
+    "geojson-vt": {
+      "from": "^4.0.2",
+      "to": "^4.0.3"
+    },
+    "kdbush": {
+      "from": "^4.0.2",
+      "to": "^4.1.0"
+    },
+    "pbf": {
+      "from": "^4.0.1",
+      "to": "^5.1.0"
+    },
+    "potpack": {
+      "from": "^2.0.0",
+      "to": "^2.1.0"
+    }
+  },
+  "timestamp": "2026-06-14T17:11:55.214Z",
+  "totalUpdated": 10
+}
