@@ -46,27 +46,6 @@
     }
   },
   "9.6.1": {
-    "16": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.17.8",
-          "to": "^7.29.7"
-        },
-        "use-sync-external-store": {
-          "from": "^1.4.0",
-          "to": "^1.6.0"
-        },
-        "zustand": {
-          "from": "^5.0.3",
-          "to": "^5.0.14"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:35:01.799Z",
-      "version": "9.6.1-depup.16"
-    },
     "17": {
       "changes": {
         "@babel/runtime": {
@@ -150,6 +129,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:35:21.072Z",
       "version": "9.6.1-depup.20"
+    },
+    "21": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.17.8",
+          "to": "^7.29.7"
+        },
+        "use-sync-external-store": {
+          "from": "^1.4.0",
+          "to": "^1.6.0"
+        },
+        "zustand": {
+          "from": "^5.0.3",
+          "to": "^5.0.14"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:39:05.448Z",
+      "version": "9.6.1-depup.21"
     }
   }
 }

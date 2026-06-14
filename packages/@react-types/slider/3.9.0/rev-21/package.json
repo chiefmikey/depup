@@ -1,0 +1,51 @@
+{
+  "name": "@depup/react-types__slider",
+  "version": "3.9.0-depup.21",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/slider": "^3.9.1",
+    "@react-spectrum/slider": "^3.9.1",
+    "@react-stately/slider": "^3.8.1"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "a6999bdf494a2e9c0381a5881908328bdd22ddae",
+  "keywords": [
+    "@react-types/slider",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@react-aria/slider": {
+        "from": "^3.9.0",
+        "to": "^3.9.1"
+      },
+      "@react-spectrum/slider": {
+        "from": "^3.9.0",
+        "to": "^3.9.1"
+      },
+      "@react-stately/slider": {
+        "from": "^3.8.0",
+        "to": "^3.8.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@react-types/slider",
+    "originalVersion": "3.9.0",
+    "processedAt": "2026-06-14T09:39:25.061Z",
+    "smokeTest": "failed"
+  }
+}
