@@ -1,0 +1,35 @@
+{
+  "name": "@depup/esbuild__netbsd-x64",
+  "version": "0.28.1-depup.6",
+  "description": "The NetBSD AMD64 binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "netbsd"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/netbsd-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/netbsd-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-14T01:08:27.096Z",
+    "smokeTest": "failed"
+  }
+}

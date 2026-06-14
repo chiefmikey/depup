@@ -1,18 +1,5 @@
 {
   "3.1.1": {
-    "16": {
-      "changes": {
-        "@types/mdx": {
-          "from": "^2.0.0",
-          "to": "^2.0.14"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T09:35:45.808Z",
-      "version": "3.1.1-depup.16"
-    },
     "17": {
       "changes": {
         "@types/mdx": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T16:40:12.851Z",
       "version": "3.1.1-depup.20"
+    },
+    "21": {
+      "changes": {
+        "@types/mdx": {
+          "from": "^2.0.0",
+          "to": "^2.0.14"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:10:15.333Z",
+      "version": "3.1.1-depup.21"
     }
   }
 }

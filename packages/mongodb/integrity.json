@@ -100,23 +100,6 @@
     }
   },
   "7.3.0": {
-    "7": {
-      "changes": {
-        "@mongodb-js/saslprep": {
-          "from": "^1.3.0",
-          "to": "^1.4.11"
-        },
-        "mongodb-connection-string-url": {
-          "from": "^7.0.0",
-          "to": "^7.0.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T09:46:16.203Z",
-      "version": "7.3.0-depup.7"
-    },
     "8": {
       "changes": {
         "@mongodb-js/saslprep": {
@@ -184,6 +167,23 @@
       "status": "failed",
       "timestamp": "2026-06-13T16:51:12.155Z",
       "version": "7.3.0-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@mongodb-js/saslprep": {
+          "from": "^1.3.0",
+          "to": "^1.4.11"
+        },
+        "mongodb-connection-string-url": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:21:21.462Z",
+      "version": "7.3.0-depup.12"
     }
   }
 }
