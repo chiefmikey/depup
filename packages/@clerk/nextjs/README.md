@@ -12,7 +12,7 @@ npm install @depup/clerk__nextjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.5.2 | **DepUp version**: 7.5.2-depup.6 | **Updated**: 6/14/2026 | **Import test**: failed
+**Original version**: 7.5.2 | **DepUp version**: 7.5.2-depup.7 | **Updated**: 6/14/2026 | **Import test**: failed
 
 ## What changed
 

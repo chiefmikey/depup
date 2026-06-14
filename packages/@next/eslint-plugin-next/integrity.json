@@ -185,19 +185,6 @@
     }
   },
   "16.2.9": {
-    "11": {
-      "changes": {
-        "fast-glob": {
-          "from": "3.3.1",
-          "to": "^3.3.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:09:13.692Z",
-      "version": "16.2.9-depup.11"
-    },
     "12": {
       "changes": {
         "fast-glob": {
@@ -249,6 +236,19 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:09:21.882Z",
       "version": "16.2.9-depup.15"
+    },
+    "16": {
+      "changes": {
+        "fast-glob": {
+          "from": "3.3.1",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:15:42.323Z",
+      "version": "16.2.9-depup.16"
     }
   }
 }

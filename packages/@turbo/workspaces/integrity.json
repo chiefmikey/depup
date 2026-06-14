@@ -1375,55 +1375,6 @@
     }
   },
   "2.9.18": {
-    "5": {
-      "changes": {
-        "@inquirer/prompts": {
-          "from": "^7.10.1",
-          "to": "^8.5.2"
-        },
-        "commander": {
-          "from": "10.0.0",
-          "to": "^15.0.0"
-        },
-        "execa": {
-          "from": "5.1.1",
-          "to": "^9.6.1"
-        },
-        "fast-glob": {
-          "from": "3.2.12",
-          "to": "^3.3.3"
-        },
-        "fs-extra": {
-          "from": "10.1.0",
-          "to": "^11.3.5"
-        },
-        "gradient-string": {
-          "from": "2.0.1",
-          "to": "^3.0.0"
-        },
-        "js-yaml": {
-          "from": "4.1.1",
-          "to": "^4.2.0"
-        },
-        "ora": {
-          "from": "4.1.1",
-          "to": "^9.4.0"
-        },
-        "picocolors": {
-          "from": "1.0.1",
-          "to": "^1.1.1"
-        },
-        "semver": {
-          "from": "7.6.2",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 10,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:13:18.499Z",
-      "version": "2.9.18-depup.5"
-    },
     "6": {
       "changes": {
         "@inquirer/prompts": {
@@ -1619,6 +1570,55 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:13:44.197Z",
       "version": "2.9.18-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "commander": {
+          "from": "10.0.0",
+          "to": "^15.0.0"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^9.6.1"
+        },
+        "fast-glob": {
+          "from": "3.2.12",
+          "to": "^3.3.3"
+        },
+        "fs-extra": {
+          "from": "10.1.0",
+          "to": "^11.3.5"
+        },
+        "gradient-string": {
+          "from": "2.0.1",
+          "to": "^3.0.0"
+        },
+        "js-yaml": {
+          "from": "4.1.1",
+          "to": "^4.2.0"
+        },
+        "ora": {
+          "from": "4.1.1",
+          "to": "^9.4.0"
+        },
+        "picocolors": {
+          "from": "1.0.1",
+          "to": "^1.1.1"
+        },
+        "semver": {
+          "from": "7.6.2",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:18:03.987Z",
+      "version": "2.9.18-depup.10"
     }
   }
 }
