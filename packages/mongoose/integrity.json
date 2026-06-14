@@ -197,19 +197,6 @@
     }
   },
   "9.7.0": {
-    "8": {
-      "changes": {
-        "mongodb": {
-          "from": "~7.2",
-          "to": "^7.3.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T01:20:33.148Z",
-      "version": "9.7.0-depup.8"
-    },
     "9": {
       "changes": {
         "mongodb": {
@@ -261,6 +248,19 @@
       "status": "failed",
       "timestamp": "2026-06-14T09:27:54.532Z",
       "version": "9.7.0-depup.12"
+    },
+    "13": {
+      "changes": {
+        "mongodb": {
+          "from": "~7.2",
+          "to": "^7.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T16:53:46.202Z",
+      "version": "9.7.0-depup.13"
     }
   }
 }

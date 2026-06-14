@@ -160,6 +160,14 @@
       "status": "skipped",
       "timestamp": "2026-06-14T09:30:37.673Z",
       "version": "7.79.0-depup.3"
+    },
+    "4": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-14T16:56:33.041Z",
+      "version": "7.79.0-depup.4"
     }
   }
 }

@@ -689,35 +689,6 @@
     }
   },
   "10.4.4": {
-    "4": {
-      "changes": {
-        "magic-string": {
-          "from": "^0.30.5",
-          "to": "^0.30.21"
-        },
-        "react-docgen": {
-          "from": "^7.1.1",
-          "to": "^8.0.3"
-        },
-        "resolve": {
-          "from": "^1.22.8",
-          "to": "^1.22.12"
-        },
-        "semver": {
-          "from": "^7.7.3",
-          "to": "^7.8.4"
-        },
-        "webpack": {
-          "from": "5",
-          "to": "^5.107.2"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T01:11:35.070Z",
-      "version": "10.4.4-depup.4"
-    },
     "5": {
       "changes": {
         "magic-string": {
@@ -833,6 +804,35 @@
       "status": "failed",
       "timestamp": "2026-06-14T09:19:13.126Z",
       "version": "10.4.4-depup.8"
+    },
+    "9": {
+      "changes": {
+        "magic-string": {
+          "from": "^0.30.5",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^7.1.1",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.4"
+        },
+        "webpack": {
+          "from": "5",
+          "to": "^5.107.2"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T16:44:40.051Z",
+      "version": "10.4.4-depup.9"
     }
   }
 }
