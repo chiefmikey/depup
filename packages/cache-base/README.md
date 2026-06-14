@@ -12,13 +12,13 @@ npm install @depup/cache-base
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.1 | **Updated**: 6/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| get-value | `^3.0.1` | `^4.0.1` |
+| get-value | `^3.0.1` | `^4.1.0` |
 | kind-of | `^6.0.2` | `^6.0.3` |
 | union-value | `^1.0.0` | `^2.0.1` |
 | unset-value | `^1.0.0` | `^2.0.1` |
