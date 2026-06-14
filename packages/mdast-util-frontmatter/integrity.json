@@ -1,30 +1,5 @@
 {
   "2.0.1": {
-    "11": {
-      "changes": {
-        "@types/mdast": {
-          "from": "^4.0.0",
-          "to": "^4.0.4"
-        },
-        "devlop": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "mdast-util-from-markdown": {
-          "from": "^2.0.0",
-          "to": "^2.0.3"
-        },
-        "mdast-util-to-markdown": {
-          "from": "^2.0.0",
-          "to": "^2.1.2"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:42:09.888Z",
-      "version": "2.0.1-depup.11"
-    },
     "12": {
       "changes": {
         "@types/mdast": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:42:59.459Z",
       "version": "2.0.1-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "devlop": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "mdast-util-from-markdown": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        },
+        "mdast-util-to-markdown": {
+          "from": "^2.0.0",
+          "to": "^2.1.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:25:55.194Z",
+      "version": "2.0.1-depup.16"
     }
   }
 }

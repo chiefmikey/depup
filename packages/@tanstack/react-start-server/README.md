@@ -12,7 +12,7 @@ npm install @depup/tanstack__react-start-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.167.19 | **DepUp version**: 1.167.19-depup.17 | **Updated**: 6/14/2026 | **Import test**: passed
+**Original version**: 1.167.19 | **DepUp version**: 1.167.19-depup.18 | **Updated**: 6/14/2026 | **Import test**: passed
 
 ## What changed
 

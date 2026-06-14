@@ -44,27 +44,6 @@
     }
   },
   "6.2.5": {
-    "13": {
-      "changes": {
-        "cron-parser": {
-          "from": "^5.0.0",
-          "to": "^5.5.0"
-        },
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "luxon": {
-          "from": "^3.2.1",
-          "to": "^3.7.2"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:13:45.518Z",
-      "version": "6.2.5-depup.13"
-    },
     "14": {
       "changes": {
         "cron-parser": {
@@ -148,6 +127,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:14:06.124Z",
       "version": "6.2.5-depup.17"
+    },
+    "18": {
+      "changes": {
+        "cron-parser": {
+          "from": "^5.0.0",
+          "to": "^5.5.0"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "luxon": {
+          "from": "^3.2.1",
+          "to": "^3.7.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:19:38.440Z",
+      "version": "6.2.5-depup.18"
     }
   }
 }
