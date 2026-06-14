@@ -1,0 +1,37 @@
+{
+  "name": "@depup/angular-eslint__bundled-angular-compiler",
+  "version": "22.0.0-depup.20",
+  "description": "A CJS bundled version of @angular/compiler (with updated dependencies)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-eslint/angular-eslint.git",
+    "directory": "packages/bundled-angular-compiler"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo",
+    "package.json",
+    "README.md",
+    "changes.json"
+  ],
+  "gitHead": "e2006e5e9c99e5a943d1a999e0efa5247d29ec24",
+  "keywords": [
+    "@angular-eslint/bundled-angular-compiler",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@angular-eslint/bundled-angular-compiler",
+    "originalVersion": "22.0.0",
+    "processedAt": "2026-06-14T01:32:26.043Z",
+    "smokeTest": "passed"
+  }
+}

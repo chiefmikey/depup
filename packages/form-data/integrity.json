@@ -174,6 +174,23 @@
       "status": "failed",
       "timestamp": "2026-06-13T17:13:31.052Z",
       "version": "4.0.6-depup.3"
+    },
+    "4": {
+      "changes": {
+        "asynckit": {
+          "from": "^0.4.0",
+          "to": "^0.5.0"
+        },
+        "mime-types": {
+          "from": "^2.1.35",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:44:59.968Z",
+      "version": "4.0.6-depup.4"
     }
   }
 }
