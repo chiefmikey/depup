@@ -1,0 +1,46 @@
+{
+  "name": "@depup/react-types__textfield",
+  "version": "3.13.0-depup.20",
+  "description": "Spectrum UI components in React (with updated dependencies)",
+  "license": "Apache-2.0",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/react-spectrum"
+  },
+  "dependencies": {
+    "@react-aria/textfield": "^3.19.1",
+    "@react-spectrum/textfield": "^3.15.1"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "gitHead": "a6999bdf494a2e9c0381a5881908328bdd22ddae",
+  "keywords": [
+    "@react-types/textfield",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@react-aria/textfield": {
+        "from": "^3.19.0",
+        "to": "^3.19.1"
+      },
+      "@react-spectrum/textfield": {
+        "from": "^3.15.0",
+        "to": "^3.15.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@react-types/textfield",
+    "originalVersion": "3.13.0",
+    "processedAt": "2026-06-14T01:35:21.078Z",
+    "smokeTest": "failed"
+  }
+}
