@@ -1,22 +1,5 @@
 {
   "10.0.1": {
-    "12": {
-      "changes": {
-        "hyphenate-style-name": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "prop-types": {
-          "from": "^15.6.1",
-          "to": "^15.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:28:25.825Z",
-      "version": "10.0.1-depup.12"
-    },
     "13": {
       "changes": {
         "hyphenate-style-name": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:28:33.371Z",
       "version": "10.0.1-depup.16"
+    },
+    "17": {
+      "changes": {
+        "hyphenate-style-name": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "prop-types": {
+          "from": "^15.6.1",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:31:42.291Z",
+      "version": "10.0.1-depup.17"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__android-arm",
+  "version": "0.28.1-depup.7",
+  "description": "A WebAssembly shim for esbuild on Android ARM. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "keywords": [
+    "@esbuild/android-arm",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/android-arm",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-14T09:14:00.540Z",
+    "smokeTest": "failed"
+  }
+}

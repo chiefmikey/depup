@@ -1,0 +1,49 @@
+{
+  "name": "@depup/tinybench",
+  "version": "6.0.2-depup.16",
+  "description": "🔎 A simple, tiny and lightweight benchmarking library! (with updated dependencies)",
+  "type": "module",
+  "volta": {
+    "node": "24.15.0",
+    "pnpm": "11.1.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": "tinylibs/tinybench",
+  "license": "MIT",
+  "keywords": [
+    "tinybench",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "benchmark",
+    "tinylibs",
+    "tiny"
+  ],
+  "scripts": {},
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "tinybench",
+    "originalVersion": "6.0.2",
+    "processedAt": "2026-06-14T09:33:16.589Z",
+    "smokeTest": "passed"
+  }
+}
