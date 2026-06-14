@@ -10,23 +10,6 @@
     }
   },
   "3.6.0": {
-    "16": {
-      "changes": {
-        "@react-aria/dialog": {
-          "from": "^3.6.0",
-          "to": "^3.6.1"
-        },
-        "@react-spectrum/dialog": {
-          "from": "^3.10.0",
-          "to": "^3.10.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T17:35:08.197Z",
-      "version": "3.6.0-depup.16"
-    },
     "17": {
       "changes": {
         "@react-aria/dialog": {
@@ -94,6 +77,23 @@
       "status": "failed",
       "timestamp": "2026-06-14T01:35:13.043Z",
       "version": "3.6.0-depup.20"
+    },
+    "21": {
+      "changes": {
+        "@react-aria/dialog": {
+          "from": "^3.6.0",
+          "to": "^3.6.1"
+        },
+        "@react-spectrum/dialog": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T09:39:55.146Z",
+      "version": "3.6.0-depup.21"
     }
   }
 }
