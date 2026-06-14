@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@rollup/pluginutils": {
+      "from": "^5.0.1",
+      "to": "^5.4.0"
+    },
+    "@types/resolve": {
+      "from": "1.20.2",
+      "to": "^1.20.6"
+    },
+    "deepmerge": {
+      "from": "^4.2.2",
+      "to": "^4.3.1"
+    },
+    "resolve": {
+      "from": "^1.22.1",
+      "to": "^1.22.12"
+    }
+  },
+  "timestamp": "2026-06-14T09:39:58.767Z",
+  "totalUpdated": 4
+}
