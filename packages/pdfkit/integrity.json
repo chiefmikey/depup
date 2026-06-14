@@ -200,27 +200,6 @@
     }
   },
   "0.19.1": {
-    "6": {
-      "changes": {
-        "@noble/ciphers": {
-          "from": "^1.0.0",
-          "to": "^2.2.0"
-        },
-        "@noble/hashes": {
-          "from": "^1.6.0",
-          "to": "^2.2.0"
-        },
-        "png-js": {
-          "from": "^1.1.0",
-          "to": "^2.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T01:24:55.850Z",
-      "version": "0.19.1-depup.6"
-    },
     "7": {
       "changes": {
         "@noble/ciphers": {
@@ -304,6 +283,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T09:30:14.121Z",
       "version": "0.19.1-depup.10"
+    },
+    "11": {
+      "changes": {
+        "@noble/ciphers": {
+          "from": "^1.0.0",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "^1.6.0",
+          "to": "^2.2.0"
+        },
+        "png-js": {
+          "from": "^1.1.0",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T16:55:33.664Z",
+      "version": "0.19.1-depup.11"
     }
   }
 }

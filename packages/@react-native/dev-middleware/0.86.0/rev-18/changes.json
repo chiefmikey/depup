@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@isaacs/ttlcache": {
+      "from": "^1.4.1",
+      "to": "^2.1.5"
+    },
+    "chrome-launcher": {
+      "from": "^0.15.2",
+      "to": "^1.2.1"
+    },
+    "chromium-edge-launcher": {
+      "from": "^0.3.0",
+      "to": "^2.0.1"
+    },
+    "connect": {
+      "from": "^3.6.5",
+      "to": "^3.7.0"
+    },
+    "debug": {
+      "from": "^4.4.0",
+      "to": "^4.4.3"
+    },
+    "open": {
+      "from": "^7.0.3",
+      "to": "^11.0.0"
+    },
+    "serve-static": {
+      "from": "^1.16.2",
+      "to": "^2.2.1"
+    },
+    "ws": {
+      "from": "^7.5.10",
+      "to": "^8.21.0"
+    }
+  },
+  "timestamp": "2026-06-14T16:41:31.855Z",
+  "totalUpdated": 8
+}
