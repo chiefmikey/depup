@@ -1,0 +1,92 @@
+{
+  "version": "1.54.0-depup.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algolia/algoliasearch-client-javascript.git"
+  },
+  "homepage": "https://github.com/algolia/algoliasearch-client-javascript/tree/main/packages/monitoring#readme",
+  "type": "module",
+  "license": "MIT",
+  "author": "Algolia",
+  "scripts": {
+    "build": "yarn clean && yarn tsup && yarn rollup -c rollup.config.js",
+    "clean": "rm -rf ./dist || true",
+    "test:bundle": "publint . && attw --pack ."
+  },
+  "name": "@depup/algolia__monitoring",
+  "description": "JavaScript client for monitoring (with updated dependencies)",
+  "exports": {
+    ".": {
+      "react-native": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/builds/browser.js"
+      },
+      "node": {
+        "types": {
+          "import": "./dist/node.d.ts",
+          "module": "./dist/node.d.ts",
+          "require": "./dist/node.d.cts"
+        },
+        "import": "./dist/builds/node.js",
+        "module": "./dist/builds/node.js",
+        "require": "./dist/builds/node.cjs"
+      },
+      "worker": {
+        "types": "./dist/worker.d.ts",
+        "default": "./dist/builds/worker.js"
+      },
+      "default": {
+        "types": "./dist/browser.d.ts",
+        "module": "./dist/builds/browser.js",
+        "import": "./dist/builds/browser.js",
+        "default": "./dist/builds/browser.umd.js"
+      }
+    },
+    "./dist/builds/*": "./dist/builds/*.js",
+    "./dist/builds/*.js": "./dist/builds/*.js"
+  },
+  "jsdelivr": "./dist/builds/browser.umd.js",
+  "unpkg": "./dist/builds/browser.umd.js",
+  "react-native": "./dist/builds/browser.js",
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@algolia/client-common": "5.54.0",
+    "@algolia/requester-browser-xhr": "5.54.0",
+    "@algolia/requester-fetch": "5.54.0",
+    "@algolia/requester-node-http": "5.54.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
+    "@types/node": "25.8.0",
+    "publint": "0.3.21",
+    "rollup": "4.60.4",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "gitHead": "b2006b248e1ed1a94168391b649d0ec897cd8812",
+  "keywords": [
+    "@algolia/monitoring",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@algolia/monitoring",
+    "originalVersion": "1.54.0",
+    "processedAt": "2026-06-14T01:06:21.583Z",
+    "smokeTest": "passed"
+  }
+}

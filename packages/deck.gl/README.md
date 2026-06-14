@@ -12,13 +12,15 @@ npm install @depup/deck.gl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.3.4 | **DepUp version**: 9.3.4-depup.5 | **Updated**: 6/13/2026 | **Import test**: passed
+**Original version**: 9.3.4 | **DepUp version**: 9.3.4-depup.6 | **Updated**: 6/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @loaders.gl/core | `^4.4.1` | `^4.4.2` |
+| @loaders.gl/core | `^4.4.1` | `^4.4.3` |
+| @luma.gl/core | `^9.3.3` | `^9.3.4` |
+| @luma.gl/engine | `^9.3.3` | `^9.3.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/deck.gl&labels=bug).

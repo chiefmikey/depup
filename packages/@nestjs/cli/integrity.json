@@ -882,63 +882,6 @@
     }
   },
   "11.0.23": {
-    "12": {
-      "changes": {
-        "@angular-devkit/core": {
-          "from": "19.2.27",
-          "to": "^22.0.1"
-        },
-        "@angular-devkit/schematics": {
-          "from": "19.2.27",
-          "to": "^22.0.1"
-        },
-        "@angular-devkit/schematics-cli": {
-          "from": "19.2.27",
-          "to": "^22.0.1"
-        },
-        "@inquirer/prompts": {
-          "from": "7.10.1",
-          "to": "^8.5.2"
-        },
-        "@nestjs/schematics": {
-          "from": "^11.0.1",
-          "to": "^11.1.0"
-        },
-        "ansis": {
-          "from": "4.2.0",
-          "to": "^4.3.1"
-        },
-        "chokidar": {
-          "from": "4.0.3",
-          "to": "^5.0.0"
-        },
-        "commander": {
-          "from": "4.1.1",
-          "to": "^15.0.0"
-        },
-        "node-emoji": {
-          "from": "1.11.0",
-          "to": "^2.2.0"
-        },
-        "ora": {
-          "from": "5.4.1",
-          "to": "^9.4.0"
-        },
-        "typescript": {
-          "from": "5.9.3",
-          "to": "^6.0.3"
-        },
-        "webpack": {
-          "from": "5.106.2",
-          "to": "^5.107.2"
-        }
-      },
-      "depsUpdated": 12,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T09:35:57.848Z",
-      "version": "11.0.23-depup.12"
-    },
     "13": {
       "changes": {
         "@angular-devkit/core": {
@@ -1166,6 +1109,63 @@
       "status": "failed",
       "timestamp": "2026-06-13T16:40:33.348Z",
       "version": "11.0.23-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@angular-devkit/core": {
+          "from": "19.2.27",
+          "to": "^22.0.1"
+        },
+        "@angular-devkit/schematics": {
+          "from": "19.2.27",
+          "to": "^22.0.1"
+        },
+        "@angular-devkit/schematics-cli": {
+          "from": "19.2.27",
+          "to": "^22.0.1"
+        },
+        "@inquirer/prompts": {
+          "from": "7.10.1",
+          "to": "^8.5.2"
+        },
+        "@nestjs/schematics": {
+          "from": "^11.0.1",
+          "to": "^11.1.0"
+        },
+        "ansis": {
+          "from": "4.2.0",
+          "to": "^4.3.1"
+        },
+        "chokidar": {
+          "from": "4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "4.1.1",
+          "to": "^15.0.0"
+        },
+        "node-emoji": {
+          "from": "1.11.0",
+          "to": "^2.2.0"
+        },
+        "ora": {
+          "from": "5.4.1",
+          "to": "^9.4.0"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.3"
+        },
+        "webpack": {
+          "from": "5.106.2",
+          "to": "^5.107.2"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:10:40.022Z",
+      "version": "11.0.23-depup.17"
     }
   }
 }

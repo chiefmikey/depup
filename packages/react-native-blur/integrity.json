@@ -1,18 +1,5 @@
 {
   "3.2.2": {
-    "12": {
-      "changes": {
-        "prop-types": {
-          "from": "^15.5.10",
-          "to": "^15.8.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-12T09:50:50.477Z",
-      "version": "3.2.2-depup.12"
-    },
     "13": {
       "changes": {
         "prop-types": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T16:57:04.771Z",
       "version": "3.2.2-depup.16"
+    },
+    "17": {
+      "changes": {
+        "prop-types": {
+          "from": "^15.5.10",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:28:01.707Z",
+      "version": "3.2.2-depup.17"
     }
   }
 }

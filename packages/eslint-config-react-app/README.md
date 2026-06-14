@@ -12,7 +12,7 @@ npm install @depup/eslint-config-react-app
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.20 | **Updated**: 6/13/2026 | **Import test**: passed
+**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.21 | **Updated**: 6/14/2026 | **Import test**: passed
 
 ## What changed
 
