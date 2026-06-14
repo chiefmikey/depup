@@ -12,7 +12,7 @@ npm install @depup/react-aria__form
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.19 | **Updated**: 6/13/2026 | **Import test**: passed
+**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.20 | **Updated**: 6/14/2026 | **Import test**: passed
 
 ## What changed
 

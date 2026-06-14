@@ -7,39 +7,6 @@
     }
   },
   "29.0.3": {
-    "15": {
-      "changes": {
-        "@rollup/pluginutils": {
-          "from": "^5.0.1",
-          "to": "^5.4.0"
-        },
-        "estree-walker": {
-          "from": "^2.0.2",
-          "to": "^3.0.3"
-        },
-        "fdir": {
-          "from": "^6.2.0",
-          "to": "^6.5.0"
-        },
-        "is-reference": {
-          "from": "1.2.1",
-          "to": "^3.0.3"
-        },
-        "magic-string": {
-          "from": "^0.30.3",
-          "to": "^0.30.21"
-        },
-        "picomatch": {
-          "from": "^4.0.2",
-          "to": "^4.0.4"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T09:58:43.756Z",
-      "version": "29.0.3-depup.15"
-    },
     "16": {
       "changes": {
         "@rollup/pluginutils": {
@@ -171,6 +138,39 @@
       "status": "failed",
       "timestamp": "2026-06-13T17:04:14.779Z",
       "version": "29.0.3-depup.19"
+    },
+    "20": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.0.1",
+          "to": "^5.4.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        },
+        "fdir": {
+          "from": "^6.2.0",
+          "to": "^6.5.0"
+        },
+        "is-reference": {
+          "from": "1.2.1",
+          "to": "^3.0.3"
+        },
+        "magic-string": {
+          "from": "^0.30.3",
+          "to": "^0.30.21"
+        },
+        "picomatch": {
+          "from": "^4.0.2",
+          "to": "^4.0.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:35:47.878Z",
+      "version": "29.0.3-depup.20"
     }
   }
 }

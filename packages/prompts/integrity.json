@@ -1,18 +1,5 @@
 {
   "2.4.2": {
-    "10": {
-      "changes": {
-        "kleur": {
-          "from": "^3.0.3",
-          "to": "^4.1.5"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-12T10:06:42.689Z",
-      "version": "2.4.2-depup.10"
-    },
     "11": {
       "changes": {
         "kleur": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-13T17:12:22.259Z",
       "version": "2.4.2-depup.14"
+    },
+    "15": {
+      "changes": {
+        "kleur": {
+          "from": "^3.0.3",
+          "to": "^4.1.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:44:35.305Z",
+      "version": "2.4.2-depup.15"
     }
   }
 }
