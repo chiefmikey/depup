@@ -343,6 +343,27 @@
       "status": "failed",
       "timestamp": "2026-06-13T16:43:49.028Z",
       "version": "3.3.5-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@vue/compiler-dom": {
+          "from": "^3.5.0",
+          "to": "^3.5.38"
+        },
+        "@vue/shared": {
+          "from": "^3.5.0",
+          "to": "^3.5.38"
+        },
+        "alien-signals": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T01:13:06.148Z",
+      "version": "3.3.5-depup.2"
     }
   }
 }

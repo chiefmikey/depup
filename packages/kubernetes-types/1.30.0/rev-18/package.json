@@ -1,0 +1,27 @@
+{
+  "name": "@depup/kubernetes-types",
+  "version": "1.30.0-depup.18",
+  "description": "TypeScript definitions of Kubernetes resource types (with updated dependencies)",
+  "repository": "https://github.com/silverlyra/kubernetes-types",
+  "author": "Lyra Naeseth <lyra@naeseth.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": ">=3.2.0"
+  },
+  "keywords": [
+    "kubernetes-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "kubernetes-types",
+    "originalVersion": "1.30.0",
+    "processedAt": "2026-06-14T01:19:11.081Z",
+    "smokeTest": "failed"
+  }
+}
