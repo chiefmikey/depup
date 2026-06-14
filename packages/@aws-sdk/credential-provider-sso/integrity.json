@@ -1067,31 +1067,6 @@
     }
   },
   "3.972.52": {
-    "8": {
-      "changes": {
-        "@aws-sdk/token-providers": {
-          "from": "3.1066.0",
-          "to": "^3.1068.0"
-        },
-        "@smithy/core": {
-          "from": "^3.24.6",
-          "to": "^3.24.7"
-        },
-        "@smithy/types": {
-          "from": "^4.14.3",
-          "to": "^4.14.4"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T01:06:02.179Z",
-      "version": "3.972.52-depup.8"
-    },
     "9": {
       "changes": {
         "@aws-sdk/token-providers": {
@@ -1191,6 +1166,31 @@
       "status": "failed",
       "timestamp": "2026-06-14T09:13:15.501Z",
       "version": "3.972.52-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1066.0",
+          "to": "^3.1068.0"
+        },
+        "@smithy/core": {
+          "from": "^3.24.6",
+          "to": "^3.24.7"
+        },
+        "@smithy/types": {
+          "from": "^4.14.3",
+          "to": "^4.14.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-14T16:38:17.625Z",
+      "version": "3.972.52-depup.13"
     }
   }
 }

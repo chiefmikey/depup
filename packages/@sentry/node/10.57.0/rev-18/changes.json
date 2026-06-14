@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@opentelemetry/core": {
+      "from": "^2.6.1",
+      "to": "^2.8.0"
+    },
+    "@opentelemetry/instrumentation": {
+      "from": "^0.214.0",
+      "to": "^0.219.0"
+    },
+    "@opentelemetry/sdk-trace-base": {
+      "from": "^2.6.1",
+      "to": "^2.8.0"
+    },
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.40.0",
+      "to": "^1.41.1"
+    },
+    "import-in-the-middle": {
+      "from": "^3.0.0",
+      "to": "^3.0.2"
+    }
+  },
+  "timestamp": "2026-06-14T16:42:52.738Z",
+  "totalUpdated": 5
+}

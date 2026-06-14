@@ -1,0 +1,127 @@
+{
+  "name": "@depup/storybook__react",
+  "version": "10.4.4-depup.8",
+  "description": "Storybook React renderer (with updated dependencies)",
+  "keywords": [
+    "@storybook/react",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/react",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "code/renderers/react"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "code": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./entry-preview": "./dist/entry-preview.js",
+    "./entry-preview-argtypes": "./dist/entry-preview-argtypes.js",
+    "./entry-preview-docs": "./dist/entry-preview-docs.js",
+    "./entry-preview-rsc": "./dist/entry-preview-rsc.js",
+    "./experimental-playwright": {
+      "types": "./dist/playwright.d.ts",
+      "code": "./src/playwright.ts",
+      "default": "./dist/playwright.js"
+    },
+    "./package.json": "./package.json",
+    "./preset": "./dist/preset.js",
+    "./preview": {
+      "types": "./dist/preview.d.ts",
+      "code": "./src/preview.tsx",
+      "default": "./dist/preview.js"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "template/cli/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts",
+    "!src/**/*",
+    "changes.json"
+  ],
+  "dependencies": {
+    "@storybook/global": "^5.0.0",
+    "@storybook/react-dom-shim": "10.4.4",
+    "react-docgen": "^8.0.3",
+    "react-docgen-typescript": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/babel-plugin-react-docgen": "^4.2.3",
+    "@types/escodegen": "^0.0.6",
+    "@types/estree": "^1.0.6",
+    "@types/node": "^22.19.1",
+    "@volar/language-core": "~2.4.28",
+    "@volar/typescript": "~2.4.28",
+    "acorn": "^7.4.1",
+    "acorn-jsx": "^5.3.1",
+    "acorn-walk": "^7.2.0",
+    "babel-plugin-react-docgen": "^4.2.1",
+    "comment-parser": "^1.4.1",
+    "empathic": "^2.0.0",
+    "es-toolkit": "^1.43.0",
+    "escodegen": "^2.1.0",
+    "expect-type": "^0.15.0",
+    "html-tags": "^3.1.0",
+    "prop-types": "^15.7.2",
+    "react-element-to-jsx-string": "npm:@7rulnik/react-element-to-jsx-string@15.0.1",
+    "require-from-string": "^2.0.2",
+    "ts-dedent": "^2.0.0",
+    "type-fest": "^5.6.0"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@types/react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "storybook": "^10.4.4",
+    "typescript": ">= 4.9.x"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "gitHead": "a8e7fd8a655c69780bc20b9749d2699e45beae1l",
+  "depup": {
+    "changes": {
+      "react-docgen": {
+        "from": "^8.0.2",
+        "to": "^8.0.3"
+      },
+      "react-docgen-typescript": {
+        "from": "^2.2.2",
+        "to": "^2.4.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@storybook/react",
+    "originalVersion": "10.4.4",
+    "processedAt": "2026-06-14T16:43:27.239Z",
+    "smokeTest": "passed"
+  }
+}
