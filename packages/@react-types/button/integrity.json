@@ -8,23 +8,6 @@
     }
   },
   "3.16.0": {
-    "20": {
-      "changes": {
-        "@react-aria/button": {
-          "from": "^3.15.0",
-          "to": "^3.15.1"
-        },
-        "@react-spectrum/button": {
-          "from": "^3.18.0",
-          "to": "^3.18.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:14:53.949Z",
-      "version": "3.16.0-depup.20"
-    },
     "21": {
       "changes": {
         "@react-aria/button": {
@@ -92,6 +75,23 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:41:57.431Z",
       "version": "3.16.0-depup.24"
+    },
+    "25": {
+      "changes": {
+        "@react-aria/button": {
+          "from": "^3.15.0",
+          "to": "^3.15.1"
+        },
+        "@react-spectrum/button": {
+          "from": "^3.18.0",
+          "to": "^3.18.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:13:58.486Z",
+      "version": "3.16.0-depup.25"
     }
   }
 }

@@ -1,18 +1,5 @@
 {
   "4.1.0": {
-    "14": {
-      "changes": {
-        "node-gyp-build": {
-          "from": "^4.3.0",
-          "to": "^4.8.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:18:49.906Z",
-      "version": "4.1.0-depup.14"
-    },
     "15": {
       "changes": {
         "node-gyp-build": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:45:03.757Z",
       "version": "4.1.0-depup.18"
+    },
+    "19": {
+      "changes": {
+        "node-gyp-build": {
+          "from": "^4.3.0",
+          "to": "^4.8.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:17:19.161Z",
+      "version": "4.1.0-depup.19"
     }
   }
 }

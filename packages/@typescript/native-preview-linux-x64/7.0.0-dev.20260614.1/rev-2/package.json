@@ -1,0 +1,80 @@
+{
+  "name": "@depup/typescript__native-preview-linux-x64",
+  "version": "7.0.0-dev.20260614.1-depup.2",
+  "license": "Apache-2.0",
+  "author": "Microsoft Corp.",
+  "homepage": "https://www.typescriptlang.org/",
+  "description": "Preview CLI and JS API for the native TypeScript compiler port (with updated dependencies)",
+  "keywords": [
+    "@typescript/native-preview-linux-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript",
+    "tsgo"
+  ],
+  "bugs": {
+    "url": "https://github.com/microsoft/typescript-go/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/typescript-go.git"
+  },
+  "type": "module",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=16.20.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "dist",
+    "vendor",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "node": "node --experimental-strip-types --no-warnings --conditions @typescript/source",
+    "generate": "npm run generate:ast && npm run generate:encoder && npm run generate:enums && npm run generate:sync",
+    "generate:ast": "node --experimental-strip-types --no-warnings ../../_scripts/generate-ts-ast.ts",
+    "generate:encoder": "npm run node -- ../../_scripts/generate-encoder.ts",
+    "generate:sync": "npm run node -- scripts/generateSync.ts",
+    "generate:enums": "npx hereby generate:enums --herebyfile ../../Herebyfile.mjs",
+    "prebuild": "npm run generate",
+    "build": "tsc -b",
+    "prebuild:test": "npm run generate",
+    "build:test": "tsc -b test",
+    "test:only": "npm run node -- --test './test/**/*.test.ts'",
+    "pretest": "npm run generate",
+    "test": "npm run test:only"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tinybench": "^6.0.2",
+    "vscode-jsonrpc": "^9.0.0"
+  },
+  "gitHead": "551b02d6c10e78610fc5ca7c23b77c9d531ee59b",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@typescript/native-preview-linux-x64",
+    "originalVersion": "7.0.0-dev.20260614.1",
+    "processedAt": "2026-06-15T01:15:17.647Z",
+    "smokeTest": "failed"
+  }
+}

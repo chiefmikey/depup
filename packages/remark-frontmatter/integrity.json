@@ -62,6 +62,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:57:38.320Z",
       "version": "5.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "mdast-util-frontmatter": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "unified": {
+          "from": "^11.0.0",
+          "to": "^11.0.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:31:23.480Z",
+      "version": "5.0.0-depup.3"
     }
   }
 }

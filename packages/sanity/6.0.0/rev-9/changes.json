@@ -1,0 +1,114 @@
+{
+  "bumped": {
+    "@algorithm.ts/lcs": {
+      "from": "^4.0.5",
+      "to": "^4.0.6"
+    },
+    "@dnd-kit/modifiers": {
+      "from": "^6.0.1",
+      "to": "^9.0.0"
+    },
+    "@dnd-kit/sortable": {
+      "from": "^7.0.2",
+      "to": "^10.0.0"
+    },
+    "@isaacs/ttlcache": {
+      "from": "^1.4.1",
+      "to": "^2.1.5"
+    },
+    "@portabletext/editor": {
+      "from": "^7.3.3",
+      "to": "^7.3.4"
+    },
+    "@portabletext/plugin-markdown-shortcuts": {
+      "from": "^8.0.13",
+      "to": "^8.0.14"
+    },
+    "@portabletext/plugin-one-line": {
+      "from": "^7.0.13",
+      "to": "^7.0.14"
+    },
+    "@portabletext/plugin-paste-link": {
+      "from": "^4.0.13",
+      "to": "^4.0.14"
+    },
+    "@portabletext/plugin-typography": {
+      "from": "^8.0.13",
+      "to": "^8.0.14"
+    },
+    "@portabletext/sanity-bridge": {
+      "from": "^3.1.1",
+      "to": "^3.1.2"
+    },
+    "@sanity/cli": {
+      "from": "^7.2.2",
+      "to": "^7.2.3"
+    },
+    "@sanity/diff-patch": {
+      "from": "^5.0.0",
+      "to": "^6.0.0"
+    },
+    "@sanity/migrate": {
+      "from": "^7.0.1",
+      "to": "^7.0.2"
+    },
+    "@sanity/mutate": {
+      "from": "^0.18.0",
+      "to": "^0.18.1"
+    },
+    "@sanity/sdk": {
+      "from": "^2.12.0",
+      "to": "^2.14.0"
+    },
+    "@sanity/uuid": {
+      "from": "^3.0.2",
+      "to": "^3.0.3"
+    },
+    "@sentry/react": {
+      "from": "^8.55.2",
+      "to": "^10.57.0"
+    },
+    "classnames": {
+      "from": "^2.2.5",
+      "to": "^2.5.1"
+    },
+    "date-fns": {
+      "from": "^4.1.0",
+      "to": "^4.4.0"
+    },
+    "i18next": {
+      "from": "^26.2.0",
+      "to": "^26.3.1"
+    },
+    "isomorphic-dompurify": {
+      "from": "2.26.0",
+      "to": "^3.17.0"
+    },
+    "nanoid": {
+      "from": "^3.3.11",
+      "to": "^5.1.11"
+    },
+    "path-to-regexp": {
+      "from": "^6.3.0",
+      "to": "^8.4.2"
+    },
+    "player.style": {
+      "from": "^0.1.9",
+      "to": "^0.3.4"
+    },
+    "semver": {
+      "from": "^7.7.2",
+      "to": "^7.8.4"
+    },
+    "uuid": {
+      "from": "^11.1.0",
+      "to": "^14.0.0"
+    },
+    "xstate": {
+      "from": "^5.32.0",
+      "to": "^5.32.1"
+    }
+  },
+  "timestamp": "2026-06-15T01:31:27.525Z",
+  "totalUpdated": 27
+}

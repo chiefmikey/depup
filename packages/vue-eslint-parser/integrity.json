@@ -66,39 +66,6 @@
     }
   },
   "10.4.1": {
-    "13": {
-      "changes": {
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "eslint-scope": {
-          "from": "^8.2.0 || ^9.0.0",
-          "to": "^9.1.2"
-        },
-        "eslint-visitor-keys": {
-          "from": "^4.2.0 || ^5.0.0",
-          "to": "^5.0.1"
-        },
-        "espree": {
-          "from": "^10.3.0 || ^11.0.0",
-          "to": "^11.2.0"
-        },
-        "esquery": {
-          "from": "^1.6.0",
-          "to": "^1.7.0"
-        },
-        "semver": {
-          "from": "^7.6.3",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:33:08.563Z",
-      "version": "10.4.1-depup.13"
-    },
     "14": {
       "changes": {
         "debug": {
@@ -230,6 +197,39 @@
       "status": "failed",
       "timestamp": "2026-06-14T17:00:17.028Z",
       "version": "10.4.1-depup.17"
+    },
+    "18": {
+      "changes": {
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "eslint-scope": {
+          "from": "^8.2.0 || ^9.0.0",
+          "to": "^9.1.2"
+        },
+        "eslint-visitor-keys": {
+          "from": "^4.2.0 || ^5.0.0",
+          "to": "^5.0.1"
+        },
+        "espree": {
+          "from": "^10.3.0 || ^11.0.0",
+          "to": "^11.2.0"
+        },
+        "esquery": {
+          "from": "^1.6.0",
+          "to": "^1.7.0"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:34:19.040Z",
+      "version": "10.4.1-depup.18"
     }
   }
 }

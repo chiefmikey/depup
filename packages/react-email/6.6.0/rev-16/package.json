@@ -1,0 +1,159 @@
+{
+  "name": "@depup/react-email",
+  "version": "6.6.0-depup.16",
+  "description": "A live preview of your emails right in your browser. (with updated dependencies)",
+  "bin": {
+    "email": "./dist/cli/index.mjs"
+  },
+  "type": "module",
+  "types": "./dist/index.d.mts",
+  "license": "MIT",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resend/react-email.git",
+    "directory": "packages/react-email"
+  },
+  "keywords": [
+    "react-email",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "email"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.7",
+    "@babel/traverse": "^7.29.7",
+    "@react-email/render": ">=2.0.8",
+    "chokidar": "^5.0.0",
+    "commander": "^15.0.0",
+    "conf": "^15.1.0",
+    "css-tree": "3.2.1",
+    "debounce": "^3.0.0",
+    "esbuild": "^0.28.1",
+    "glob": "^13.0.6",
+    "jiti": "^2.7.0",
+    "log-symbols": "^7.0.1",
+    "marked": "^18.0.5",
+    "mime-types": "^3.0.2",
+    "normalize-path": "^3.0.0",
+    "nypm": "^0.6.7",
+    "picospinner": "^3.0.0",
+    "prismjs": "^1.30.0",
+    "prompts": "2.4.2",
+    "socket.io": "^4.8.3",
+    "tailwindcss": "^4.3.1",
+    "tsconfig-paths": "4.2.0"
+  },
+  "devDependencies": {
+    "@responsive-email/react-email": "0.0.4",
+    "@types/babel__core": "7.20.5",
+    "@types/babel__traverse": "7.20.7",
+    "@types/css-tree": "2.3.11",
+    "@types/mime-types": "2.1.4",
+    "@types/prompts": "2.4.9",
+    "@types/shelljs": "0.10.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "shelljs": "0.10.0",
+    "shlex": "3.0.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "yalc": "1.0.0-pre.53",
+    "@react-email/render": "2.0.8"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "build:watch": "tsdown --watch src",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "depup": {
+    "changes": {
+      "@babel/parser": {
+        "from": "7.27.0",
+        "to": "^7.29.7"
+      },
+      "@babel/traverse": {
+        "from": "7.27.0",
+        "to": "^7.29.7"
+      },
+      "chokidar": {
+        "from": "^4.0.3",
+        "to": "^5.0.0"
+      },
+      "commander": {
+        "from": "^13.0.0",
+        "to": "^15.0.0"
+      },
+      "conf": {
+        "from": "^15.0.2",
+        "to": "^15.1.0"
+      },
+      "debounce": {
+        "from": "^2.0.0",
+        "to": "^3.0.0"
+      },
+      "esbuild": {
+        "from": "^0.28.0",
+        "to": "^0.28.1"
+      },
+      "jiti": {
+        "from": "2.4.2",
+        "to": "^2.7.0"
+      },
+      "log-symbols": {
+        "from": "^7.0.0",
+        "to": "^7.0.1"
+      },
+      "marked": {
+        "from": "^15.0.12",
+        "to": "^18.0.5"
+      },
+      "mime-types": {
+        "from": "^3.0.0",
+        "to": "^3.0.2"
+      },
+      "nypm": {
+        "from": "0.6.6",
+        "to": "^0.6.7"
+      },
+      "socket.io": {
+        "from": "^4.8.1",
+        "to": "^4.8.3"
+      },
+      "tailwindcss": {
+        "from": "^4.1.18",
+        "to": "^4.3.1"
+      }
+    },
+    "depsUpdated": 14,
+    "originalPackage": "react-email",
+    "originalVersion": "6.6.0",
+    "processedAt": "2026-06-15T01:29:53.521Z",
+    "smokeTest": "failed"
+  }
+}
