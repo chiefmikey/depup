@@ -1,0 +1,35 @@
+{
+  "name": "@depup/vue-component-type-helpers",
+  "version": "3.3.5-depup.7",
+  "license": "MIT",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuejs/language-tools.git",
+    "directory": "packages/component-type-helpers"
+  },
+  "gitHead": "2fe255ca6d5809c93b71ec8185ec14562cff5945",
+  "description": "vue-component-type-helpers with all dependencies updated to latest",
+  "keywords": [
+    "vue-component-type-helpers",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "vue-component-type-helpers",
+    "originalVersion": "3.3.5",
+    "processedAt": "2026-06-15T18:07:48.609Z",
+    "smokeTest": "passed"
+  }
+}

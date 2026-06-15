@@ -12,7 +12,7 @@ npm install @depup/mswjs__data
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.16.2 | **DepUp version**: 0.16.2-depup.31 | **Updated**: 6/15/2026 | **Import test**: failed
+**Original version**: 0.16.2 | **DepUp version**: 0.16.2-depup.32 | **Updated**: 6/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/uuid | `^8.3.0` | `^11.0.0` |
 | date-fns | `^2.21.1` | `^4.4.0` |
 | debug | `^4.3.1` | `^4.4.3` |
-| graphql | `^16.8.1` | `^16.14.2` |
+| graphql | `^16.8.1` | `^17.0.0` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | outvariant | `^1.2.1` | `^1.4.3` |
 | strict-event-emitter | `^0.5.0` | `^0.5.1` |

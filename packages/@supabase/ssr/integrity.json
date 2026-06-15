@@ -112,19 +112,6 @@
     }
   },
   "0.12.0": {
-    "16": {
-      "changes": {
-        "cookie": {
-          "from": "^1.0.2",
-          "to": "^1.1.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:12:19.644Z",
-      "version": "0.12.0-depup.16"
-    },
     "17": {
       "changes": {
         "cookie": {
@@ -176,6 +163,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:22:10.133Z",
       "version": "0.12.0-depup.20"
+    },
+    "21": {
+      "changes": {
+        "cookie": {
+          "from": "^1.0.2",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T17:50:10.113Z",
+      "version": "0.12.0-depup.21"
     }
   }
 }

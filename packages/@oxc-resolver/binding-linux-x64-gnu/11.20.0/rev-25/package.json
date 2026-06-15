@@ -1,0 +1,42 @@
+{
+  "name": "@depup/oxc-resolver__binding-linux-x64-gnu",
+  "version": "11.20.0-depup.25",
+  "cpu": [
+    "x64"
+  ],
+  "main": "resolver.linux-x64-gnu.node",
+  "files": [
+    "resolver.linux-x64-gnu.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Oxc Resolver Node API (with updated dependencies)",
+  "homepage": "https://oxc.rs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxc-project/oxc-resolver.git"
+  },
+  "os": [
+    "linux"
+  ],
+  "libc": [
+    "glibc"
+  ],
+  "keywords": [
+    "@oxc-resolver/binding-linux-x64-gnu",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@oxc-resolver/binding-linux-x64-gnu",
+    "originalVersion": "11.20.0",
+    "processedAt": "2026-06-15T17:48:15.602Z",
+    "smokeTest": "failed"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "@depup/react-native__virtualized-lists",
+  "version": "0.86.0-depup.21",
+  "description": "Virtualized lists for React Native. (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/react-native.git",
+    "directory": "packages/virtualized-lists"
+  },
+  "homepage": "https://github.com/facebook/react-native/tree/HEAD/packages/virtualized-lists#readme",
+  "keywords": [
+    "@react-native/virtualized-lists",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "lists",
+    "virtualized-lists",
+    "section-lists",
+    "react-native"
+  ],
+  "bugs": "https://github.com/facebook/react-native/issues",
+  "engines": {
+    "node": "^20.19.4 || ^22.13.0 || ^24.3.0 || >= 25.0.0"
+  },
+  "exports": {
+    ".": {
+      "react-native-strict-api": "./types_generated/index.d.ts",
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./*": {
+      "types": null,
+      "default": "./*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "Lists",
+    "README.md",
+    "types_generated",
+    "Utilities",
+    "!**/__docs__/**",
+    "!**/__fixtures__/**",
+    "!**/__mocks__/**",
+    "!**/__tests__/**",
+    "changes.json"
+  ],
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "nullthrows": "^1.1.1"
+  },
+  "devDependencies": {
+    "react-test-renderer": "19.2.3"
+  },
+  "peerDependencies": {
+    "@types/react": "^19.2.0",
+    "react": "*",
+    "react-native": "0.86.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-native/virtualized-lists",
+    "originalVersion": "0.86.0",
+    "processedAt": "2026-06-15T17:49:04.884Z",
+    "smokeTest": "failed"
+  }
+}
