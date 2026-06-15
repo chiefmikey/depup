@@ -1,18 +1,5 @@
 {
   "7.3.0": {
-    "15": {
-      "changes": {
-        "yocto-queue": {
-          "from": "^1.2.1",
-          "to": "^1.2.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:46:32.326Z",
-      "version": "7.3.0-depup.15"
-    },
     "16": {
       "changes": {
         "yocto-queue": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:50:20.462Z",
       "version": "7.3.0-depup.19"
+    },
+    "20": {
+      "changes": {
+        "yocto-queue": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:18:10.773Z",
+      "version": "7.3.0-depup.20"
     }
   }
 }

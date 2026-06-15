@@ -1,26 +1,5 @@
 {
   "11.0.0": {
-    "15": {
-      "changes": {
-        "default-browser": {
-          "from": "^5.4.0",
-          "to": "^5.5.0"
-        },
-        "powershell-utils": {
-          "from": "^0.1.0",
-          "to": "^0.2.0"
-        },
-        "wsl-utils": {
-          "from": "^0.3.0",
-          "to": "^0.4.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:46:18.633Z",
-      "version": "11.0.0-depup.15"
-    },
     "16": {
       "changes": {
         "default-browser": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:49:58.725Z",
       "version": "11.0.0-depup.19"
+    },
+    "20": {
+      "changes": {
+        "default-browser": {
+          "from": "^5.4.0",
+          "to": "^5.5.0"
+        },
+        "powershell-utils": {
+          "from": "^0.1.0",
+          "to": "^0.2.0"
+        },
+        "wsl-utils": {
+          "from": "^0.3.0",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:17:50.277Z",
+      "version": "11.0.0-depup.20"
     }
   }
 }
