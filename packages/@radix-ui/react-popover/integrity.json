@@ -7,19 +7,6 @@
     }
   },
   "1.1.16": {
-    "19": {
-      "changes": {
-        "aria-hidden": {
-          "from": "^1.2.4",
-          "to": "^1.2.6"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T17:04:19.440Z",
-      "version": "1.1.16-depup.19"
-    },
     "20": {
       "changes": {
         "aria-hidden": {
@@ -71,6 +58,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:38:12.538Z",
       "version": "1.1.16-depup.23"
+    },
+    "24": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:44:13.301Z",
+      "version": "1.1.16-depup.24"
     }
   }
 }

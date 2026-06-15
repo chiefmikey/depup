@@ -17,23 +17,6 @@
     }
   },
   "0.8.6": {
-    "14": {
-      "changes": {
-        "@fastify/busboy": {
-          "from": "^3.1.1",
-          "to": "^3.2.0"
-        },
-        "tslib": {
-          "from": "^2.6.3",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T17:04:57.765Z",
-      "version": "0.8.6-depup.14"
-    },
     "15": {
       "changes": {
         "@fastify/busboy": {
@@ -101,6 +84,23 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:39:23.176Z",
       "version": "0.8.6-depup.18"
+    },
+    "19": {
+      "changes": {
+        "@fastify/busboy": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "tslib": {
+          "from": "^2.6.3",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:45:28.759Z",
+      "version": "0.8.6-depup.19"
     }
   }
 }
