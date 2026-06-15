@@ -150,5 +150,15 @@
       "timestamp": "2026-06-15T10:21:40.070Z",
       "version": "5.54.0-depup.10"
     }
+  },
+  "5.54.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T17:50:02.038Z",
+      "version": "5.54.1-depup.0"
+    }
   }
 }

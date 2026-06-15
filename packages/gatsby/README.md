@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.60 | **Updated**: 6/15/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.61 | **Updated**: 6/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.1.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.1` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.0.2` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.3` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.4` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -52,6 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | axios | `^1.6.4` | `^1.18.0` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
+| body-parser | `^2.2.2` | `^2.3.0` |
 | browserslist | `^4.21.9` | `^4.28.2` |
 | cache-manager | `^2.11.1` | `^7.2.8` |
 | chalk | `^4.1.2` | `^5.6.2` |
@@ -84,7 +85,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
 | got | `^11.8.6` | `^15.0.5` |
-| graphql | `^16.7.1` | `^16.14.2` |
+| graphql | `^16.7.1` | `^17.0.0` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
 | hasha | `^5.2.2` | `^7.0.0` |
@@ -100,7 +101,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mini-css-extract-plugin | `1.6.2` | `^2.10.2` |
 | mitt | `^1.2.0` | `^3.0.1` |
 | moment | `^2.29.4` | `^2.30.1` |
-| multer | `^2.0.1` | `^2.1.1` |
+| multer | `^2.0.1` | `^2.2.0` |
 | node-fetch | `^2.6.11` | `^3.3.2` |
 | node-html-parser | `^5.4.2` | `^7.1.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |

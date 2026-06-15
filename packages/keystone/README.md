@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.39 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.40 | **Updated**: 6/15/2026 | **Import test**: passed
 
 ## What changed
 
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/preset-env | `^7.4.4` | `^7.29.7` |
 | @babel/preset-react | `^7.0.0` | `^7.29.7` |
 | async | `^2.6.2` | `^3.2.6` |
-| body-parser | `^1.19.0` | `^2.2.2` |
+| body-parser | `^1.19.0` | `^2.3.0` |
 | browserify | `^16.2.3` | `^17.0.1` |
 | browserify-shim | `^3.8.14` | `^3.8.16` |
 | chalk | `^2.4.2` | `^5.6.2` |
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.24.0` | `^2.30.1` |
 | mongoose | `^4.13.14` | `^9.7.0` |
 | morgan | `^1.9.1` | `^1.11.0` |
-| multer | `^1.4.1` | `^2.1.1` |
+| multer | `^1.4.1` | `^2.2.0` |
 | qs | `^6.7.0` | `^6.15.2` |
 | range_check | `^1.4.0` | `^4.1.0` |
 | react | `^15.4.2` | `^19.2.7` |
