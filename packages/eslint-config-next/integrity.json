@@ -756,43 +756,6 @@
     }
   },
   "16.2.9": {
-    "11": {
-      "changes": {
-        "eslint-import-resolver-node": {
-          "from": "^0.3.6",
-          "to": "^0.4.0"
-        },
-        "eslint-import-resolver-typescript": {
-          "from": "^3.5.2",
-          "to": "^4.4.5"
-        },
-        "eslint-plugin-jsx-a11y": {
-          "from": "^6.10.0",
-          "to": "^6.10.2"
-        },
-        "eslint-plugin-react": {
-          "from": "^7.37.0",
-          "to": "^7.37.5"
-        },
-        "eslint-plugin-react-hooks": {
-          "from": "^7.0.0",
-          "to": "^7.1.1"
-        },
-        "globals": {
-          "from": "16.4.0",
-          "to": "^17.6.0"
-        },
-        "typescript-eslint": {
-          "from": "^8.46.0",
-          "to": "^8.61.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T16:46:26.142Z",
-      "version": "16.2.9-depup.11"
-    },
     "12": {
       "changes": {
         "eslint-import-resolver-node": {
@@ -940,6 +903,43 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:45:22.769Z",
       "version": "16.2.9-depup.15"
+    },
+    "16": {
+      "changes": {
+        "eslint-import-resolver-node": {
+          "from": "^0.3.6",
+          "to": "^0.4.0"
+        },
+        "eslint-import-resolver-typescript": {
+          "from": "^3.5.2",
+          "to": "^4.4.5"
+        },
+        "eslint-plugin-jsx-a11y": {
+          "from": "^6.10.0",
+          "to": "^6.10.2"
+        },
+        "eslint-plugin-react": {
+          "from": "^7.37.0",
+          "to": "^7.37.5"
+        },
+        "eslint-plugin-react-hooks": {
+          "from": "^7.0.0",
+          "to": "^7.1.1"
+        },
+        "globals": {
+          "from": "16.4.0",
+          "to": "^17.6.0"
+        },
+        "typescript-eslint": {
+          "from": "^8.46.0",
+          "to": "^8.61.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:50:53.317Z",
+      "version": "16.2.9-depup.16"
     }
   }
 }
