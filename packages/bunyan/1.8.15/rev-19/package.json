@@ -1,0 +1,64 @@
+{
+  "name": "@depup/bunyan",
+  "version": "1.8.15-depup.19",
+  "description": "a JSON logging library for node.js services (with updated dependencies)",
+  "author": "Trent Mick <trentm@gmail.com> (http://trentm.com)",
+  "main": "./lib/bunyan.js",
+  "bin": {
+    "bunyan": "./bin/bunyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trentm/node-bunyan.git"
+  },
+  "engines": [
+    "node >=0.10.0"
+  ],
+  "files": [
+    "bin",
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "bunyan",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "log",
+    "logging",
+    "log4j",
+    "json"
+  ],
+  "license": "MIT",
+  "// dtrace-provider": "required for dtrace features",
+  "// mv": "required for RotatingFileStream",
+  "// moment": "required for local time with CLI",
+  "optionalDependencies": {
+    "dtrace-provider": "~0.8",
+    "mv": "~2",
+    "safe-json-stringify": "~1",
+    "moment": "^2.19.3"
+  },
+  "devDependencies": {
+    "ben": "0.0.0",
+    "markdown-toc": "0.12.x",
+    "tap": "^9.0.3",
+    "vasync": "1.4.3",
+    "verror": "1.3.3"
+  },
+  "scripts": {
+    "check": "make check",
+    "test": "tap test/*.test.js  # skip dtrace tests"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "bunyan",
+    "originalVersion": "1.8.15",
+    "processedAt": "2026-06-15T10:24:04.492Z",
+    "smokeTest": "passed"
+  }
+}

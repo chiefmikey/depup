@@ -592,6 +592,27 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:14:16.192Z",
       "version": "2.9.25-depup.0"
+    },
+    "1": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.4"
+        },
+        "use-sync-external-store": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:20:04.666Z",
+      "version": "2.9.25-depup.1"
     }
   }
 }

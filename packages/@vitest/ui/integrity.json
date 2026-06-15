@@ -205,5 +205,24 @@
       "timestamp": "2026-06-15T01:16:29.646Z",
       "version": "4.1.8-depup.18"
     }
+  },
+  "4.1.9": {
+    "0": {
+      "changes": {
+        "fflate": {
+          "from": "^0.8.2",
+          "to": "^0.8.3"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:22:26.802Z",
+      "version": "4.1.9-depup.0"
+    }
   }
 }
