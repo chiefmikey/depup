@@ -1592,91 +1592,6 @@
     }
   },
   "14.1.0": {
-    "17": {
-      "changes": {
-        "@grpc/grpc-js": {
-          "from": "^1.13.2",
-          "to": "^1.14.4"
-        },
-        "@newrelic/security-agent": {
-          "from": "^3.0.0",
-          "to": "^3.0.4"
-        },
-        "@opentelemetry/api": {
-          "from": "^1.9.0",
-          "to": "^1.9.1"
-        },
-        "@opentelemetry/api-logs": {
-          "from": "^0.217.0",
-          "to": "^0.219.0"
-        },
-        "@opentelemetry/core": {
-          "from": "^2.0.0",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/exporter-metrics-otlp-http": {
-          "from": "^0.218.0",
-          "to": "^0.219.0"
-        },
-        "@opentelemetry/otlp-exporter-base": {
-          "from": "^0.218.0",
-          "to": "^0.219.0"
-        },
-        "@opentelemetry/otlp-transformer": {
-          "from": "^0.218.0",
-          "to": "^0.219.0"
-        },
-        "@opentelemetry/resources": {
-          "from": "^2.0.1",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/sdk-logs": {
-          "from": "^0.217.0",
-          "to": "^0.219.0"
-        },
-        "@opentelemetry/sdk-metrics": {
-          "from": "^2.0.1",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/sdk-trace-base": {
-          "from": "^2.0.0",
-          "to": "^2.8.0"
-        },
-        "@tyriar/fibonacci-heap": {
-          "from": "^2.0.7",
-          "to": "^2.0.9"
-        },
-        "https-proxy-agent": {
-          "from": "^9.0.0",
-          "to": "^9.1.0"
-        },
-        "import-in-the-middle": {
-          "from": "^3.0.1",
-          "to": "^3.0.2"
-        },
-        "json-stringify-safe": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "module-details-from-path": {
-          "from": "^1.0.3",
-          "to": "^1.0.4"
-        },
-        "semver": {
-          "from": "^7.5.2",
-          "to": "^7.8.4"
-        },
-        "winston-transport": {
-          "from": "^4.5.0",
-          "to": "^4.9.0"
-        }
-      },
-      "depsUpdated": 19,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T16:51:32.732Z",
-      "version": "14.1.0-depup.17"
-    },
     "18": {
       "changes": {
         "@grpc/grpc-js": {
@@ -2016,6 +1931,91 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:25:13.916Z",
       "version": "14.1.0-depup.21"
+    },
+    "22": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.13.2",
+          "to": "^1.14.4"
+        },
+        "@newrelic/security-agent": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/api-logs": {
+          "from": "^0.217.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/exporter-metrics-otlp-http": {
+          "from": "^0.218.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/otlp-exporter-base": {
+          "from": "^0.218.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/otlp-transformer": {
+          "from": "^0.218.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.0.1",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/sdk-logs": {
+          "from": "^0.217.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/sdk-metrics": {
+          "from": "^2.0.1",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.0.0",
+          "to": "^2.8.0"
+        },
+        "@tyriar/fibonacci-heap": {
+          "from": "^2.0.7",
+          "to": "^2.0.9"
+        },
+        "https-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "json-stringify-safe": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "module-details-from-path": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "semver": {
+          "from": "^7.5.2",
+          "to": "^7.8.4"
+        },
+        "winston-transport": {
+          "from": "^4.5.0",
+          "to": "^4.9.0"
+        }
+      },
+      "depsUpdated": 19,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:32:05.269Z",
+      "version": "14.1.0-depup.22"
     }
   }
 }

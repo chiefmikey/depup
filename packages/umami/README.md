@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.42 | **Updated**: 6/15/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.43 | **Updated**: 6/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | is-ci | `^3.0.1` | `^4.1.0` |
 | is-docker | `^3.0.0` | `^4.0.0` |
 | is-localhost-ip | `^1.4.0` | `^3.0.1` |
-| isbot | `^3.4.5` | `^5.1.42` |
+| isbot | `^3.4.5` | `^5.1.43` |
 | kafkajs | `^2.1.0` | `^2.2.4` |
 | maxmind | `^4.3.6` | `^5.0.6` |
 | moment-timezone | `^0.5.35` | `^0.6.2` |
