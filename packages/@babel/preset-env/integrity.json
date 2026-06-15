@@ -174,39 +174,6 @@
     }
   },
   "7.29.7": {
-    "18": {
-      "changes": {
-        "@babel/plugin-proposal-private-property-in-object": {
-          "from": "7.21.0-placeholder-for-preset-env.2",
-          "to": "^7.21.11"
-        },
-        "babel-plugin-polyfill-corejs2": {
-          "from": "^0.4.15",
-          "to": "^0.4.17"
-        },
-        "babel-plugin-polyfill-corejs3": {
-          "from": "^0.14.0",
-          "to": "^0.14.2"
-        },
-        "babel-plugin-polyfill-regenerator": {
-          "from": "^0.6.6",
-          "to": "^0.6.8"
-        },
-        "core-js-compat": {
-          "from": "^3.48.0",
-          "to": "^3.49.0"
-        },
-        "semver": {
-          "from": "^6.3.1",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:36:05.933Z",
-      "version": "7.29.7-depup.18"
-    },
     "19": {
       "changes": {
         "@babel/plugin-proposal-private-property-in-object": {
@@ -338,6 +305,39 @@
       "status": "failed",
       "timestamp": "2026-06-14T17:03:51.613Z",
       "version": "7.29.7-depup.22"
+    },
+    "23": {
+      "changes": {
+        "@babel/plugin-proposal-private-property-in-object": {
+          "from": "7.21.0-placeholder-for-preset-env.2",
+          "to": "^7.21.11"
+        },
+        "babel-plugin-polyfill-corejs2": {
+          "from": "^0.4.15",
+          "to": "^0.4.17"
+        },
+        "babel-plugin-polyfill-corejs3": {
+          "from": "^0.14.0",
+          "to": "^0.14.2"
+        },
+        "babel-plugin-polyfill-regenerator": {
+          "from": "^0.6.6",
+          "to": "^0.6.8"
+        },
+        "core-js-compat": {
+          "from": "^3.48.0",
+          "to": "^3.49.0"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:36:11.320Z",
+      "version": "7.29.7-depup.23"
     }
   }
 }
