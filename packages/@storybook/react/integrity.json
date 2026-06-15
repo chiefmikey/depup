@@ -358,23 +358,6 @@
     }
   },
   "10.4.4": {
-    "4": {
-      "changes": {
-        "react-docgen": {
-          "from": "^8.0.2",
-          "to": "^8.0.3"
-        },
-        "react-docgen-typescript": {
-          "from": "^2.2.2",
-          "to": "^2.4.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:16:41.430Z",
-      "version": "10.4.4-depup.4"
-    },
     "5": {
       "changes": {
         "react-docgen": {
@@ -442,6 +425,23 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:43:29.655Z",
       "version": "10.4.4-depup.8"
+    },
+    "9": {
+      "changes": {
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "react-docgen-typescript": {
+          "from": "^2.2.2",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:15:13.309Z",
+      "version": "10.4.4-depup.9"
     }
   }
 }

@@ -117,6 +117,23 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:58:19.152Z",
       "version": "12.3.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "safe-regex2": {
+          "from": "^5.1.0",
+          "to": "^5.1.1"
+        },
+        "validator": {
+          "from": "^13.15.26",
+          "to": "^13.15.35"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:30:30.448Z",
+      "version": "12.3.1-depup.3"
     }
   }
 }
