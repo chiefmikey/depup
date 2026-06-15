@@ -1,0 +1,39 @@
+{
+  "name": "@depup/husky",
+  "version": "9.1.7-depup.20",
+  "type": "module",
+  "description": "Modern native Git hooks (with updated dependencies)",
+  "keywords": [
+    "husky",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "git",
+    "hooks",
+    "pre-commit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typicode/husky.git"
+  },
+  "funding": "https://github.com/sponsors/typicode",
+  "license": "MIT",
+  "author": "typicode",
+  "bin": {
+    "husky": "bin.js"
+  },
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "husky",
+    "originalVersion": "9.1.7",
+    "processedAt": "2026-06-15T18:21:14.466Z",
+    "smokeTest": "passed"
+  }
+}

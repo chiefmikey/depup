@@ -7,19 +7,6 @@
     }
   },
   "2.3.0": {
-    "20": {
-      "changes": {
-        "aria-hidden": {
-          "from": "^1.2.4",
-          "to": "^1.2.6"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:34:54.291Z",
-      "version": "2.3.0-depup.20"
-    },
     "21": {
       "changes": {
         "aria-hidden": {
@@ -71,6 +58,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:43:49.440Z",
       "version": "2.3.0-depup.24"
+    },
+    "25": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:12:33.604Z",
+      "version": "2.3.0-depup.25"
     }
   }
 }

@@ -1,54 +1,5 @@
 {
   "1.2.0": {
-    "27": {
-      "changes": {
-        "dom-serializer": {
-          "from": "^2.0.0",
-          "to": "^3.1.1"
-        },
-        "domhandler": {
-          "from": "^5.0.3",
-          "to": "^6.0.1"
-        },
-        "domutils": {
-          "from": "^3.2.2",
-          "to": "^4.0.2"
-        },
-        "encoding-sniffer": {
-          "from": "^0.2.1",
-          "to": "^1.0.2"
-        },
-        "htmlparser2": {
-          "from": "^10.1.0",
-          "to": "^12.0.0"
-        },
-        "parse5": {
-          "from": "^7.3.0",
-          "to": "^8.0.1"
-        },
-        "parse5-htmlparser2-tree-adapter": {
-          "from": "^7.1.0",
-          "to": "^8.0.1"
-        },
-        "parse5-parser-stream": {
-          "from": "^7.1.2",
-          "to": "^8.0.0"
-        },
-        "undici": {
-          "from": "^7.19.0",
-          "to": "^8.4.1"
-        },
-        "whatwg-mimetype": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        }
-      },
-      "depsUpdated": 10,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:43:31.062Z",
-      "version": "1.2.0-depup.27"
-    },
     "28": {
       "changes": {
         "dom-serializer": {
@@ -244,6 +195,55 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:50:15.438Z",
       "version": "1.2.0-depup.31"
+    },
+    "32": {
+      "changes": {
+        "dom-serializer": {
+          "from": "^2.0.0",
+          "to": "^3.1.1"
+        },
+        "domhandler": {
+          "from": "^5.0.3",
+          "to": "^6.0.1"
+        },
+        "domutils": {
+          "from": "^3.2.2",
+          "to": "^4.0.2"
+        },
+        "encoding-sniffer": {
+          "from": "^0.2.1",
+          "to": "^1.0.2"
+        },
+        "htmlparser2": {
+          "from": "^10.1.0",
+          "to": "^12.0.0"
+        },
+        "parse5": {
+          "from": "^7.3.0",
+          "to": "^8.0.1"
+        },
+        "parse5-htmlparser2-tree-adapter": {
+          "from": "^7.1.0",
+          "to": "^8.0.1"
+        },
+        "parse5-parser-stream": {
+          "from": "^7.1.2",
+          "to": "^8.0.0"
+        },
+        "undici": {
+          "from": "^7.19.0",
+          "to": "^8.5.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:19:00.712Z",
+      "version": "1.2.0-depup.32"
     }
   }
 }

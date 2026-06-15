@@ -12,7 +12,7 @@ npm install @depup/nodemon
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.14 | **DepUp version**: 3.1.14-depup.58 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 3.1.14 | **DepUp version**: 3.1.14-depup.59 | **Updated**: 6/15/2026 | **Import test**: passed
 
 ## What changed
 
