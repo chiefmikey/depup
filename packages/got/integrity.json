@@ -133,27 +133,6 @@
     }
   },
   "15.0.5": {
-    "17": {
-      "changes": {
-        "@sindresorhus/is": {
-          "from": "^8.0.0",
-          "to": "^8.1.0"
-        },
-        "cacheable-request": {
-          "from": "^13.0.18",
-          "to": "^13.0.19"
-        },
-        "type-fest": {
-          "from": "^5.6.0",
-          "to": "^5.7.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:20:05.504Z",
-      "version": "15.0.5-depup.17"
-    },
     "18": {
       "changes": {
         "@sindresorhus/is": {
@@ -237,6 +216,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:51:09.455Z",
       "version": "15.0.5-depup.21"
+    },
+    "22": {
+      "changes": {
+        "@sindresorhus/is": {
+          "from": "^8.0.0",
+          "to": "^8.1.0"
+        },
+        "cacheable-request": {
+          "from": "^13.0.18",
+          "to": "^13.0.19"
+        },
+        "type-fest": {
+          "from": "^5.6.0",
+          "to": "^5.7.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:22:20.170Z",
+      "version": "15.0.5-depup.22"
     }
   }
 }

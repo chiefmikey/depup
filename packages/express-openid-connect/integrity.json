@@ -230,43 +230,6 @@
     }
   },
   "3.0.0": {
-    "16": {
-      "changes": {
-        "cookie": {
-          "from": "^0.7.2",
-          "to": "^1.1.1"
-        },
-        "debug": {
-          "from": "^4.4.1",
-          "to": "^4.4.3"
-        },
-        "http-errors": {
-          "from": "^1.8.1",
-          "to": "^2.0.1"
-        },
-        "joi": {
-          "from": "^17.13.3",
-          "to": "^18.2.1"
-        },
-        "jose": {
-          "from": "^6.1.3",
-          "to": "^6.2.3"
-        },
-        "openid-client": {
-          "from": "^6.1.3",
-          "to": "^6.8.4"
-        },
-        "url-join": {
-          "from": "^4.0.1",
-          "to": "^5.0.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:23:24.397Z",
-      "version": "3.0.0-depup.16"
-    },
     "17": {
       "changes": {
         "cookie": {
@@ -414,6 +377,43 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:50:08.074Z",
       "version": "3.0.0-depup.20"
+    },
+    "21": {
+      "changes": {
+        "cookie": {
+          "from": "^0.7.2",
+          "to": "^1.1.1"
+        },
+        "debug": {
+          "from": "^4.4.1",
+          "to": "^4.4.3"
+        },
+        "http-errors": {
+          "from": "^1.8.1",
+          "to": "^2.0.1"
+        },
+        "joi": {
+          "from": "^17.13.3",
+          "to": "^18.2.1"
+        },
+        "jose": {
+          "from": "^6.1.3",
+          "to": "^6.2.3"
+        },
+        "openid-client": {
+          "from": "^6.1.3",
+          "to": "^6.8.4"
+        },
+        "url-join": {
+          "from": "^4.0.1",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:21:22.442Z",
+      "version": "3.0.0-depup.21"
     }
   }
 }

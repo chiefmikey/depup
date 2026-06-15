@@ -506,5 +506,24 @@
       "timestamp": "2026-06-14T16:43:27.308Z",
       "version": "7.17.3-depup.11"
     }
+  },
+  "7.17.5": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:14:47.900Z",
+      "version": "7.17.5-depup.0"
+    }
   }
 }

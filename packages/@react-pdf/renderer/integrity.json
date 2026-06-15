@@ -41,6 +41,27 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:43:37.257Z",
       "version": "4.5.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.13",
+          "to": "^7.29.7"
+        },
+        "prop-types": {
+          "from": "^15.6.2",
+          "to": "^15.8.1"
+        },
+        "queue": {
+          "from": "^6.0.1",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:14:57.662Z",
+      "version": "4.5.1-depup.2"
     }
   }
 }

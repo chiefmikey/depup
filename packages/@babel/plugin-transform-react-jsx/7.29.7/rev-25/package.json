@@ -1,0 +1,50 @@
+{
+  "name": "@depup/babel__plugin-transform-react-jsx",
+  "version": "7.29.7-depup.25",
+  "description": "Turn JSX into React function calls (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-react-jsx"
+  },
+  "homepage": "https://babel.dev/docs/en/next/babel-plugin-transform-react-jsx",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "keywords": [
+    "@babel/plugin-transform-react-jsx",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin"
+  ],
+  "dependencies": {
+    "@babel/helper-annotate-as-pure": "^7.29.7",
+    "@babel/helper-module-imports": "^7.29.7",
+    "@babel/helper-plugin-utils": "^7.29.7",
+    "@babel/plugin-syntax-jsx": "^7.29.7",
+    "@babel/types": "^7.29.7"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/helper-plugin-test-runner": "^7.29.7",
+    "@babel/traverse": "^7.29.7"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "type": "commonjs",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@babel/plugin-transform-react-jsx",
+    "originalVersion": "7.29.7",
+    "processedAt": "2026-06-15T01:10:16.950Z",
+    "smokeTest": "passed"
+  }
+}

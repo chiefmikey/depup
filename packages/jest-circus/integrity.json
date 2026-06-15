@@ -134,39 +134,6 @@
     }
   },
   "30.4.2": {
-    "15": {
-      "changes": {
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        },
-        "dedent": {
-          "from": "^1.6.0",
-          "to": "^1.7.2"
-        },
-        "is-generator-fn": {
-          "from": "^2.1.0",
-          "to": "^3.0.0"
-        },
-        "p-limit": {
-          "from": "^3.1.0",
-          "to": "^7.3.0"
-        },
-        "pure-rand": {
-          "from": "^7.0.0",
-          "to": "^8.4.0"
-        },
-        "slash": {
-          "from": "^3.0.0",
-          "to": "^5.1.0"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:20:53.027Z",
-      "version": "30.4.2-depup.15"
-    },
     "16": {
       "changes": {
         "chalk": {
@@ -298,6 +265,39 @@
       "status": "failed",
       "timestamp": "2026-06-14T16:52:06.142Z",
       "version": "30.4.2-depup.19"
+    },
+    "20": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "dedent": {
+          "from": "^1.6.0",
+          "to": "^1.7.2"
+        },
+        "is-generator-fn": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        },
+        "p-limit": {
+          "from": "^3.1.0",
+          "to": "^7.3.0"
+        },
+        "pure-rand": {
+          "from": "^7.0.0",
+          "to": "^8.4.0"
+        },
+        "slash": {
+          "from": "^3.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:23:16.774Z",
+      "version": "30.4.2-depup.20"
     }
   }
 }

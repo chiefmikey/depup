@@ -2296,31 +2296,6 @@
     }
   },
   "4.100.0": {
-    "5": {
-      "changes": {
-        "blake3-wasm": {
-          "from": "2.1.5",
-          "to": "^3.0.0"
-        },
-        "esbuild": {
-          "from": "0.27.3",
-          "to": "^0.28.1"
-        },
-        "path-to-regexp": {
-          "from": "6.3.0",
-          "to": "^8.4.2"
-        },
-        "workerd": {
-          "from": "1.20260611.1",
-          "to": "^1.20260613.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:34:27.303Z",
-      "version": "4.100.0-depup.5"
-    },
     "6": {
       "changes": {
         "blake3-wasm": {
@@ -2420,6 +2395,31 @@
       "status": "failed",
       "timestamp": "2026-06-14T17:02:23.355Z",
       "version": "4.100.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "esbuild": {
+          "from": "0.27.3",
+          "to": "^0.28.1"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        },
+        "workerd": {
+          "from": "1.20260611.1",
+          "to": "^1.20260613.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:33:10.139Z",
+      "version": "4.100.0-depup.10"
     }
   }
 }

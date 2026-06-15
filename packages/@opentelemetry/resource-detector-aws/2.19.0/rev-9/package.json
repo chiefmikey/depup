@@ -1,0 +1,88 @@
+{
+  "name": "@depup/opentelemetry__resource-detector-aws",
+  "version": "2.19.0-depup.9",
+  "description": "OpenTelemetry SDK resource detector for AWS (with updated dependencies)",
+  "main": "build/src/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-telemetry/opentelemetry-js-contrib.git",
+    "directory": "packages/resource-detector-aws"
+  },
+  "scripts": {
+    "clean": "tsc --build --clean tsconfig.json tsconfig.esm.json",
+    "compile": "tsc --build tsconfig.json tsconfig.esm.json",
+    "compile:with-dependencies": "nx run-many -t compile -p @opentelemetry/resource-detector-aws",
+    "test": "nyc mocha 'test/**/*.test.ts'",
+    "tdd": "npm run test -- --watch-extensions ts --watch",
+    "watch": "tsc --build --watch tsconfig.json tsconfig.esm.json"
+  },
+  "keywords": [
+    "@opentelemetry/resource-detector-aws",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "opentelemetry",
+    "nodejs",
+    "resources",
+    "stats",
+    "profiling"
+  ],
+  "author": "OpenTelemetry Authors",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "^18.19.0 || >=20.6.0"
+  },
+  "files": [
+    "build/src/**/*.js",
+    "build/src/**/*.js.map",
+    "build/src/**/*.d.ts",
+    "build/esm/**/*.js",
+    "build/esm/**/*.js.map",
+    "build/esm/**/*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@opentelemetry/api": "^1.0.0",
+    "@opentelemetry/contrib-test-utils": "^0.66.0",
+    "@opentelemetry/instrumentation-fs": "^0.38.0",
+    "@opentelemetry/instrumentation-http": "^0.219.0",
+    "@opentelemetry/sdk-trace-base": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.0.0"
+  },
+  "dependencies": {
+    "@opentelemetry/core": "^2.8.0",
+    "@opentelemetry/resources": "^2.8.0",
+    "@opentelemetry/semantic-conventions": "^1.41.1"
+  },
+  "homepage": "https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/packages/resource-detector-aws#readme",
+  "sideEffects": false,
+  "gitHead": "4e52a9053029304f271b7dbe1b07e7fb2b987e30",
+  "depup": {
+    "changes": {
+      "@opentelemetry/core": {
+        "from": "^2.0.0",
+        "to": "^2.8.0"
+      },
+      "@opentelemetry/resources": {
+        "from": "^2.0.0",
+        "to": "^2.8.0"
+      },
+      "@opentelemetry/semantic-conventions": {
+        "from": "^1.27.0",
+        "to": "^1.41.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@opentelemetry/resource-detector-aws",
+    "originalVersion": "2.19.0",
+    "processedAt": "2026-06-15T01:14:01.364Z",
+    "smokeTest": "passed"
+  }
+}
