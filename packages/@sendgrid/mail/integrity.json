@@ -1,18 +1,5 @@
 {
   "8.1.6": {
-    "20": {
-      "changes": {
-        "@sendgrid/client": {
-          "from": "^8.1.5",
-          "to": "^8.1.6"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:35:33.366Z",
-      "version": "8.1.6-depup.20"
-    },
     "21": {
       "changes": {
         "@sendgrid/client": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:45:06.644Z",
       "version": "8.1.6-depup.24"
+    },
+    "25": {
+      "changes": {
+        "@sendgrid/client": {
+          "from": "^8.1.5",
+          "to": "^8.1.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:13:36.834Z",
+      "version": "8.1.6-depup.25"
     }
   }
 }

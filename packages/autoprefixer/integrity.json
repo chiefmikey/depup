@@ -7,19 +7,6 @@
     }
   },
   "10.5.0": {
-    "15": {
-      "changes": {
-        "caniuse-lite": {
-          "from": "^1.0.30001787",
-          "to": "^1.0.30001799"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:36:21.158Z",
-      "version": "10.5.0-depup.15"
-    },
     "16": {
       "changes": {
         "caniuse-lite": {
@@ -71,6 +58,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:45:48.244Z",
       "version": "10.5.0-depup.19"
+    },
+    "20": {
+      "changes": {
+        "caniuse-lite": {
+          "from": "^1.0.30001787",
+          "to": "^1.0.30001799"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:14:18.914Z",
+      "version": "10.5.0-depup.20"
     }
   }
 }

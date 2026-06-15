@@ -1,0 +1,58 @@
+{
+  "name": "@depup/electron",
+  "version": "42.4.0-depup.17",
+  "repository": "https://github.com/electron/electron",
+  "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS (with updated dependencies)",
+  "license": "MIT",
+  "author": "Electron Community",
+  "keywords": [
+    "electron",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "main": "index.js",
+  "types": "electron.d.ts",
+  "bin": {
+    "electron": "cli.js",
+    "install-electron": "install.js"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "abi_version",
+    "checksums.json",
+    "cli.js",
+    "electron.d.ts",
+    "index.js",
+    "install.js",
+    "changes.json"
+  ],
+  "engines": {
+    "node": ">= 22.12.0"
+  },
+  "dependencies": {
+    "@electron-internal/extract-zip": "^1.0.3",
+    "@electron/get": "^5.0.0",
+    "@types/node": "^25.9.3"
+  },
+  "depup": {
+    "changes": {
+      "@electron-internal/extract-zip": {
+        "from": "^1.0.1",
+        "to": "^1.0.3"
+      },
+      "@types/node": {
+        "from": "^24.9.0",
+        "to": "^25.9.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "electron",
+    "originalVersion": "42.4.0",
+    "processedAt": "2026-06-15T18:15:20.270Z",
+    "smokeTest": "failed"
+  }
+}

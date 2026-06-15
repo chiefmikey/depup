@@ -47,6 +47,31 @@
       "status": "failed",
       "timestamp": "2026-06-10T17:40:32.693Z",
       "version": "1.5.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "body-parser": {
+          "from": "^1",
+          "to": "^2.3.0"
+        },
+        "cors": {
+          "from": "^2",
+          "to": "^2.8.6"
+        },
+        "express": {
+          "from": "^4",
+          "to": "^5.2.1"
+        },
+        "sharp": {
+          "from": "^0.32.1",
+          "to": "^0.35.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-15T18:11:33.361Z",
+      "version": "1.5.3-depup.2"
     }
   }
 }

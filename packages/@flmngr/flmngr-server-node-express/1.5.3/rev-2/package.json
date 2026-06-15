@@ -1,0 +1,97 @@
+{
+  "name": "@depup/flmngr__flmngr-server-node-express",
+  "description": "Include Flmngr file manager server-side into your Express app or website (with updated dependencies)",
+  "version": "1.5.3-depup.2",
+  "author": {
+    "name": "EdSDK",
+    "url": "https://edsdk.com/"
+  },
+  "homepage": "https://flmngr.com",
+  "repository": "https://github.com/flmngr/flmngr-server-node-express",
+  "license": "LGPL v3",
+  "scripts": {
+    "clean": "rm -Rf dist",
+    "build": "npm run clean && tsc -b ./tsconfig.json ./tsconfig.esm.json"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@flmngr/flmngr-server-node": "^1.5.3",
+    "body-parser": "^2.3.0",
+    "connect-busboy": "^1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sharp": "^0.35.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/body-parser": "^1.16.8",
+    "@types/busboy": "^0.2.3",
+    "@types/cors": "^2.8.12",
+    "@types/fs-extra": "^5.0.5",
+    "@types/node": "^10.17.60",
+    "@types/sharp": "^0.21.3",
+    "blurhash": "^2.0.5",
+    "exif-reader": "^1.2.0",
+    "fs-extra": "^11.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "@flmngr/flmngr-server-node-express",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "file-manager",
+    "fileManager",
+    "file",
+    "image",
+    "manager",
+    "server",
+    "express",
+    "node"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "types": "./dist/cjs/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "depup": {
+    "changes": {
+      "body-parser": {
+        "from": "^1",
+        "to": "^2.3.0"
+      },
+      "cors": {
+        "from": "^2",
+        "to": "^2.8.6"
+      },
+      "express": {
+        "from": "^4",
+        "to": "^5.2.1"
+      },
+      "sharp": {
+        "from": "^0.32.1",
+        "to": "^0.35.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@flmngr/flmngr-server-node-express",
+    "originalVersion": "1.5.3",
+    "processedAt": "2026-06-15T18:11:31.649Z",
+    "smokeTest": "failed"
+  }
+}
