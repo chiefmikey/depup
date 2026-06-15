@@ -12,7 +12,7 @@ npm install @depup/electron-builder
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 26.15.3 | **DepUp version**: 26.15.3-depup.7 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 26.15.3 | **DepUp version**: 26.15.3-depup.8 | **Updated**: 6/15/2026 | **Import test**: passed
 
 ## What changed
 

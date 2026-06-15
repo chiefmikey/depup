@@ -1,0 +1,62 @@
+{
+  "bumped": {
+    "body-parser": {
+      "from": "^2.2.1",
+      "to": "^2.3.0"
+    },
+    "content-disposition": {
+      "from": "^1.0.0",
+      "to": "^2.0.1"
+    },
+    "content-type": {
+      "from": "^1.0.5",
+      "to": "^2.0.0"
+    },
+    "cookie": {
+      "from": "^0.7.1",
+      "to": "^1.1.1"
+    },
+    "cookie-signature": {
+      "from": "^1.2.1",
+      "to": "^1.2.2"
+    },
+    "debug": {
+      "from": "^4.4.0",
+      "to": "^4.4.3"
+    },
+    "finalhandler": {
+      "from": "^2.1.0",
+      "to": "^2.1.1"
+    },
+    "http-errors": {
+      "from": "^2.0.0",
+      "to": "^2.0.1"
+    },
+    "mime-types": {
+      "from": "^3.0.0",
+      "to": "^3.0.2"
+    },
+    "qs": {
+      "from": "^6.14.0",
+      "to": "^6.15.2"
+    },
+    "send": {
+      "from": "^1.1.0",
+      "to": "^1.2.1"
+    },
+    "serve-static": {
+      "from": "^2.2.0",
+      "to": "^2.2.1"
+    },
+    "statuses": {
+      "from": "^2.0.1",
+      "to": "^2.0.2"
+    },
+    "type-is": {
+      "from": "^2.0.1",
+      "to": "^2.1.0"
+    }
+  },
+  "timestamp": "2026-06-15T10:47:17.891Z",
+  "totalUpdated": 14
+}
