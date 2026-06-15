@@ -30,19 +30,6 @@
     }
   },
   "22.0.0": {
-    "18": {
-      "changes": {
-        "ts-api-utils": {
-          "from": "^2.1.0",
-          "to": "^2.5.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T09:35:37.679Z",
-      "version": "22.0.0-depup.18"
-    },
     "19": {
       "changes": {
         "ts-api-utils": {
@@ -94,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-06-14T17:03:58.220Z",
       "version": "22.0.0-depup.22"
+    },
+    "23": {
+      "changes": {
+        "ts-api-utils": {
+          "from": "^2.1.0",
+          "to": "^2.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T01:36:09.105Z",
+      "version": "22.0.0-depup.23"
     }
   }
 }
