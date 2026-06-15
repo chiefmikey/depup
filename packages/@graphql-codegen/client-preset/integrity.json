@@ -165,43 +165,6 @@
     }
   },
   "6.0.1": {
-    "22": {
-      "changes": {
-        "@babel/helper-plugin-utils": {
-          "from": "^7.20.2",
-          "to": "^7.29.7"
-        },
-        "@babel/template": {
-          "from": "^7.20.7",
-          "to": "^7.29.7"
-        },
-        "@graphql-tools/documents": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "@graphql-tools/utils": {
-          "from": "^11.0.0",
-          "to": "^11.1.0"
-        },
-        "tslib": {
-          "from": "^2.8.0",
-          "to": "^2.8.1"
-        },
-        "@graphql-codegen/typed-document-node": {
-          "from": "^7.0.1",
-          "to": "^7.0.3"
-        },
-        "@graphql-codegen/visitor-plugin-common": {
-          "from": "^7.0.3",
-          "to": "^7.1.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T16:38:55.050Z",
-      "version": "6.0.1-depup.22"
-    },
     "23": {
       "changes": {
         "@babel/helper-plugin-utils": {
@@ -349,6 +312,43 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:12:21.898Z",
       "version": "6.0.1-depup.26"
+    },
+    "27": {
+      "changes": {
+        "@babel/helper-plugin-utils": {
+          "from": "^7.20.2",
+          "to": "^7.29.7"
+        },
+        "@babel/template": {
+          "from": "^7.20.7",
+          "to": "^7.29.7"
+        },
+        "@graphql-tools/documents": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        },
+        "@graphql-codegen/typed-document-node": {
+          "from": "^7.0.1",
+          "to": "^7.0.3"
+        },
+        "@graphql-codegen/visitor-plugin-common": {
+          "from": "^7.0.3",
+          "to": "^7.1.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:17:50.314Z",
+      "version": "6.0.1-depup.27"
     }
   }
 }

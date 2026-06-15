@@ -58,39 +58,6 @@
     }
   },
   "8.0.0": {
-    "15": {
-      "changes": {
-        "async": {
-          "from": "^3.2.4",
-          "to": "^3.2.6"
-        },
-        "is-stream": {
-          "from": "^4.0.0",
-          "to": "^4.0.1"
-        },
-        "lazystream": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "readable-stream": {
-          "from": "^4.0.0",
-          "to": "^4.7.0"
-        },
-        "tar-stream": {
-          "from": "^3.0.0",
-          "to": "^3.2.0"
-        },
-        "zip-stream": {
-          "from": "^7.0.2",
-          "to": "^7.0.5"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-13T16:43:37.107Z",
-      "version": "8.0.0-depup.15"
-    },
     "16": {
       "changes": {
         "async": {
@@ -222,6 +189,39 @@
       "status": "failed",
       "timestamp": "2026-06-15T01:16:02.694Z",
       "version": "8.0.0-depup.19"
+    },
+    "20": {
+      "changes": {
+        "async": {
+          "from": "^3.2.4",
+          "to": "^3.2.6"
+        },
+        "is-stream": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        },
+        "lazystream": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "readable-stream": {
+          "from": "^4.0.0",
+          "to": "^4.7.0"
+        },
+        "tar-stream": {
+          "from": "^3.0.0",
+          "to": "^3.2.0"
+        },
+        "zip-stream": {
+          "from": "^7.0.2",
+          "to": "^7.0.5"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T10:21:31.770Z",
+      "version": "8.0.0-depup.20"
     }
   }
 }
