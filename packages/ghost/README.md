@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.45.0 | **DepUp version**: 6.45.0-depup.7 | **Updated**: 6/15/2026 | **Import test**: failed
+**Original version**: 6.45.0 | **DepUp version**: 6.45.0-depup.8 | **Updated**: 6/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @aws-sdk/client-s3 | `3.1064.0` | `^3.1068.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.57.0` |
+| @sentry/node | `7.120.4` | `^10.58.0` |
 | @tryghost/adapter-base-cache | `0.1.25` | `^0.1.26` |
 | @tryghost/admin-api-schema | `4.7.4` | `^4.7.5` |
 | @tryghost/api-framework | `3.2.3` | `^3.2.4` |
@@ -35,11 +35,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/job-manager | `1.0.9` | `^4.0.4` |
 | @tryghost/logging | `4.2.1` | `^5.0.3` |
 | @tryghost/metrics | `1.0.43` | `^3.2.3` |
-| @tryghost/mongo-utils | `0.6.3` | `^0.6.4` |
+| @tryghost/mongo-utils | `0.6.3` | `^0.6.5` |
 | @tryghost/mw-error-handler | `1.0.13` | `^3.2.4` |
 | @tryghost/mw-vhost | `1.0.6` | `^3.2.3` |
 | @tryghost/nodemailer | `2.2.3` | `^2.2.4` |
-| @tryghost/nql | `0.12.11` | `^0.13.0` |
+| @tryghost/nql | `0.12.11` | `^0.13.1` |
+| @tryghost/nql-lang | `0.6.5` | `^0.6.6` |
 | @tryghost/pretty-cli | `3.2.1` | `^3.2.3` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^4.0.3` |
 | @tryghost/promise | `2.2.1` | `^2.2.3` |
@@ -52,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/validator | `0.2.22` | `^3.1.4` |
 | @tryghost/version | `2.2.1` | `^2.2.3` |
 | @tryghost/zip | `3.3.2` | `^3.3.4` |
-| body-parser | `1.20.5` | `^2.2.2` |
+| body-parser | `1.20.5` | `^2.3.0` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
@@ -69,7 +70,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.8` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
-| juice | `9.1.0` | `^12.1.0` |
+| juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.2.10` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.2.0` |
@@ -86,6 +87,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.1` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
+| multer | `2.1.1` | `^2.2.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `8.0.10` | `^9.0.0` |
 | otplib | `12.0.1` | `^13.4.1` |

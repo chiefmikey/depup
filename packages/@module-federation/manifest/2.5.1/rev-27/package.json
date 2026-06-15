@@ -1,0 +1,76 @@
+{
+  "name": "@depup/module-federation__manifest",
+  "version": "2.5.1-depup.27",
+  "license": "MIT",
+  "description": "Provide manifest/stats for webpack/rspack MF project . (with updated dependencies)",
+  "keywords": [
+    "@module-federation/manifest",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Module Federation",
+    "Webpack",
+    "Rspack",
+    "Manifest"
+  ],
+  "files": [
+    "dist/",
+    "README.md",
+    "changes.json"
+  ],
+  "author": "hanric <hanric.zhang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/module-federation/core.git",
+    "directory": "packages/manifest"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "find-pkg": "2.0.0",
+    "@module-federation/sdk": "2.5.1",
+    "@module-federation/dts-plugin": "2.5.1",
+    "@module-federation/managers": "2.5.1"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0"
+  },
+  "scripts": {
+    "build": "rslib build",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false pnpm exec eslint --ignore-pattern node_modules \"**/*.ts\" \"package.json\"",
+    "test": "pnpm exec jest --config jest.config.js --passWithNoTests",
+    "test:ci": "pnpm exec jest --config jest.config.js --passWithNoTests --ci --coverage",
+    "pre-release": "pnpm run test && pnpm run build"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@module-federation/manifest",
+    "originalVersion": "2.5.1",
+    "processedAt": "2026-06-15T17:46:46.996Z",
+    "smokeTest": "passed"
+  }
+}

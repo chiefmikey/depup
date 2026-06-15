@@ -1,18 +1,5 @@
 {
   "7.0.1": {
-    "17": {
-      "changes": {
-        "whatwg-url": {
-          "from": "^14.1.0",
-          "to": "^16.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:20:27.431Z",
-      "version": "7.0.1-depup.17"
-    },
     "18": {
       "changes": {
         "whatwg-url": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:29:10.386Z",
       "version": "7.0.1-depup.21"
+    },
+    "22": {
+      "changes": {
+        "whatwg-url": {
+          "from": "^14.1.0",
+          "to": "^16.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T17:56:56.163Z",
+      "version": "7.0.1-depup.22"
     }
   }
 }

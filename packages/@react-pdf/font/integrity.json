@@ -1,18 +1,5 @@
 {
   "4.0.8": {
-    "20": {
-      "changes": {
-        "fontkit": {
-          "from": "^2.0.2",
-          "to": "^2.0.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T01:35:02.392Z",
-      "version": "4.0.8-depup.20"
-    },
     "21": {
       "changes": {
         "fontkit": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:20:10.107Z",
       "version": "4.0.8-depup.24"
+    },
+    "25": {
+      "changes": {
+        "fontkit": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-15T17:48:04.138Z",
+      "version": "4.0.8-depup.25"
     }
   }
 }
