@@ -105,19 +105,6 @@
     }
   },
   "5.3.0": {
-    "18": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.28.4",
-          "to": "^7.29.7"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:53:43.717Z",
-      "version": "5.3.0-depup.18"
-    },
     "19": {
       "changes": {
         "@babel/runtime": {
@@ -169,6 +156,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:28:52.907Z",
       "version": "5.3.0-depup.22"
+    },
+    "23": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.4",
+          "to": "^7.29.7"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T02:43:19.601Z",
+      "version": "5.3.0-depup.23"
     }
   }
 }

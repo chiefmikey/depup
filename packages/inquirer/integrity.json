@@ -106,19 +106,6 @@
     }
   },
   "14.0.2": {
-    "16": {
-      "changes": {
-        "mute-stream": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:48:20.400Z",
-      "version": "14.0.2-depup.16"
-    },
     "17": {
       "changes": {
         "mute-stream": {
@@ -170,6 +157,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:21:23.921Z",
       "version": "14.0.2-depup.20"
+    },
+    "21": {
+      "changes": {
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T02:40:20.648Z",
+      "version": "14.0.2-depup.21"
     }
   }
 }

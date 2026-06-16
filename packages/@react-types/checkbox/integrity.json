@@ -10,35 +10,6 @@
     }
   },
   "3.11.0": {
-    "21": {
-      "changes": {
-        "@react-aria/checkbox": {
-          "from": "^3.17.0",
-          "to": "^3.17.1"
-        },
-        "@react-aria/toggle": {
-          "from": "^3.13.0",
-          "to": "^3.13.1"
-        },
-        "@react-spectrum/checkbox": {
-          "from": "^3.11.0",
-          "to": "^3.11.1"
-        },
-        "@react-stately/checkbox": {
-          "from": "^3.8.0",
-          "to": "^3.8.1"
-        },
-        "@react-stately/toggle": {
-          "from": "^3.10.0",
-          "to": "^3.10.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:39:48.743Z",
-      "version": "3.11.0-depup.21"
-    },
     "22": {
       "changes": {
         "@react-aria/checkbox": {
@@ -154,6 +125,35 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:12:57.914Z",
       "version": "3.11.0-depup.25"
+    },
+    "26": {
+      "changes": {
+        "@react-aria/checkbox": {
+          "from": "^3.17.0",
+          "to": "^3.17.1"
+        },
+        "@react-aria/toggle": {
+          "from": "^3.13.0",
+          "to": "^3.13.1"
+        },
+        "@react-spectrum/checkbox": {
+          "from": "^3.11.0",
+          "to": "^3.11.1"
+        },
+        "@react-stately/checkbox": {
+          "from": "^3.8.0",
+          "to": "^3.8.1"
+        },
+        "@react-stately/toggle": {
+          "from": "^3.10.0",
+          "to": "^3.10.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:46:35.496Z",
+      "version": "3.11.0-depup.26"
     }
   }
 }
