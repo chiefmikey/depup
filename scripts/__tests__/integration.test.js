@@ -355,17 +355,17 @@ describe('cron-sync.mjs end-to-end', () => {
   );
 
   it(
-    'syncPackage detects up-to-date package',
+    'checkNeedsUpdate detects up-to-date package',
     async () => {
       const syncer = new PackageSyncer();
       const packages = await syncer.getExistingPackages();
       const isOdd = packages.find((p) => p.name === TEST_PACKAGE);
 
       // Recently processed -- should be skipped or up-to-date
-      const synced = await syncer.syncPackage(isOdd);
+      const check = await syncer.checkNeedsUpdate(isOdd);
 
-      // Returns false when package is up-to-date or recently processed
-      expect(synced).toBe(false);
+      // updateType is null when package is up-to-date or recently processed
+      expect(check.updateType).toBeNull();
     },
     TIMEOUT,
   );

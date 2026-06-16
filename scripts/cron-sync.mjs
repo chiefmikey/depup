@@ -56,7 +56,9 @@ class PackageSyncer {
             checkedCount++;
           }
         } else {
-          // Check itself failed -- include in update list so Phase 2 retries
+          // Check itself failed unexpectedly (checkNeedsUpdate catches its own
+          // errors, so this path is defensive). Treat as up-to-date this run;
+          // the next cron cycle will re-check.
           console.warn(
             `Pre-check failed for package: ${result.reason?.message || 'Unknown error'}`,
           );
