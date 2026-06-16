@@ -1,18 +1,5 @@
 {
   "2.0.0": {
-    "19": {
-      "changes": {
-        "micromark-util-types": {
-          "from": "^2.0.0",
-          "to": "^2.0.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:27:32.778Z",
-      "version": "2.0.0-depup.19"
-    },
     "20": {
       "changes": {
         "micromark-util-types": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:59:17.932Z",
       "version": "2.0.0-depup.23"
+    },
+    "24": {
+      "changes": {
+        "micromark-util-types": {
+          "from": "^2.0.0",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:27:47.405Z",
+      "version": "2.0.0-depup.24"
     }
   }
 }

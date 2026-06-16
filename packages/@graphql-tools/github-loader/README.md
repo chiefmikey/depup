@@ -12,7 +12,7 @@ npm install @depup/graphql-tools__github-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.2 | **DepUp version**: 9.1.2-depup.28 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 9.1.2 | **DepUp version**: 9.1.2-depup.29 | **Updated**: 6/16/2026 | **Import test**: passed
 
 ## What changed
 

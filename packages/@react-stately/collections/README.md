@@ -12,7 +12,7 @@ npm install @depup/react-stately__collections
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.13.1 | **DepUp version**: 3.13.1-depup.25 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 3.13.1 | **DepUp version**: 3.13.1-depup.26 | **Updated**: 6/16/2026 | **Import test**: passed
 
 ## What changed
 

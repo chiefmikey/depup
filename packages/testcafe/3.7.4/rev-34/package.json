@@ -1,0 +1,547 @@
+{
+  "name": "@depup/testcafe",
+  "description": "Automated browser testing for the modern web development stack. (with updated dependencies)",
+  "license": "MIT",
+  "version": "3.7.4-depup.34",
+  "author": {
+    "name": "Developer Express Inc.",
+    "url": "https://www.devexpress.com/"
+  },
+  "esm": {
+    "sourceMap": false
+  },
+  "bugs": {
+    "url": "https://github.com/DevExpress/testcafe/issues"
+  },
+  "homepage": "https://testcafe.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevExpress/testcafe.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "lib/index",
+  "types": "ts-defs/index.d.ts",
+  "bin": {
+    "testcafe": "./bin/testcafe-with-v8-flag-filter.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "ts-defs",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "testcafe",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "automated",
+    "functional",
+    "browser",
+    "browsers",
+    "website",
+    "webapp",
+    "testing",
+    "automation",
+    "test",
+    "runner",
+    "tdd",
+    "assert",
+    "assertion",
+    "QA",
+    "ES6",
+    "ES2015",
+    "async",
+    "await"
+  ],
+  "scripts": {
+    "test": "gulp travis",
+    "build": "gulp build",
+    "test-functional-local-headless-chrome-run-esm": "cross-env NODE_OPTIONS='--experimental-loader=./lib/compiler/esm-loader.js' gulp test-functional-local-headless-chrome-run --steps-as-tasks",
+    "test-functional-local-headless-chrome-esm": "npm run build && npm run test-functional-local-headless-chrome-run-esm",
+    "publish-please-only": "publish-please",
+    "publish-please": "del-cli package-lock.json node_modules && npm i && publish-please"
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/plugin-proposal-decorators": "^7.29.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-async-generator-functions": "^7.29.7",
+    "@babel/plugin-transform-async-to-generator": "^7.29.7",
+    "@babel/plugin-transform-class-properties": "^7.29.7",
+    "@babel/plugin-transform-class-static-block": "^7.29.7",
+    "@babel/plugin-transform-exponentiation-operator": "^7.29.7",
+    "@babel/plugin-transform-for-of": "^7.29.7",
+    "@babel/plugin-transform-object-rest-spread": "^7.29.7",
+    "@babel/plugin-transform-private-methods": "^7.29.7",
+    "@babel/plugin-transform-runtime": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-flow": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@babel/runtime": "^7.29.7",
+    "@devexpress/bin-v8-flags-filter": "^1.3.0",
+    "@devexpress/callsite-record": "^4.1.7",
+    "@types/node": "^25.9.3",
+    "address": "^2.0.3",
+    "async-exit-hook": "^2.0.1",
+    "babel-plugin-module-resolver": "^5.0.3",
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+    "bowser": "^2.14.1",
+    "callsite": "^1.0.0",
+    "chai": "^6.2.2",
+    "chalk": "^5.6.2",
+    "chrome-remote-interface": "^0.34.0",
+    "coffeescript": "^2.7.0",
+    "commander": "^15.0.0",
+    "debug": "^4.4.3",
+    "dedent": "^1.7.2",
+    "del": "^8.0.1",
+    "device-specs": "^1.0.1",
+    "devtools-protocol": "^0.0.1646372",
+    "diff": "^9.0.0",
+    "elegant-spinner": "^3.0.0",
+    "email-validator": "^2.0.4",
+    "emittery": "^2.0.0",
+    "error-stack-parser": "^2.1.4",
+    "execa": "^9.6.1",
+    "get-os-info": "^1.0.2",
+    "globby": "^16.2.0",
+    "graceful-fs": "^4.2.11",
+    "graphlib": "^2.1.8",
+    "http-status-codes": "^2.3.0",
+    "humanize-duration": "^3.33.2",
+    "import-lazy": "^4.0.0",
+    "indent-string": "^5.0.0",
+    "is-ci": "^4.1.0",
+    "is-docker": "^4.0.0",
+    "is-glob": "^4.0.3",
+    "is-podman": "^1.0.1",
+    "is-stream": "^4.0.1",
+    "json5": "^2.2.3",
+    "lodash": "^4.18.1",
+    "log-update-async-hook": "^2.0.7",
+    "make-dir": "^5.1.0",
+    "mime-db": "^1.54.0",
+    "moment": "^2.30.1",
+    "moment-duration-format-commonjs": "^1.0.1",
+    "mustache": "^4.2.0",
+    "nanoid": "^5.1.11",
+    "os-family": "^1.1.0",
+    "parse5": "^8.0.1",
+    "pify": "^6.1.0",
+    "pinkie": "^2.0.4",
+    "pngjs": "^7.0.0",
+    "pretty-hrtime": "^1.0.3",
+    "promisify-event": "^1.0.0",
+    "prompts": "^2.4.2",
+    "qrcode-terminal": "^0.12.0",
+    "read-file-relative": "^1.2.0",
+    "replicator": "^1.0.5",
+    "resolve-cwd": "^3.0.0",
+    "resolve-from": "^5.0.0",
+    "sanitize-filename": "^1.6.4",
+    "semver": "^7.8.4",
+    "set-cookie-parser": "^3.1.0",
+    "source-map-support": "^0.5.21",
+    "strip-bom": "^5.0.0",
+    "testcafe-browser-tools": "2.0.26",
+    "testcafe-hammerhead": "^31.7.8",
+    "testcafe-legacy-api": "^5.1.9",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.2.0",
+    "testcafe-reporter-minimal": "^2.2.0",
+    "testcafe-reporter-spec": "^2.2.0",
+    "testcafe-reporter-xunit": "^2.2.3",
+    "testcafe-selector-generator": "^0.1.0",
+    "time-limit-promise": "^1.0.4",
+    "tmp": "^0.2.7",
+    "tree-kill": "^1.2.2",
+    "typescript": "^6.0.3",
+    "unquote": "^1.1.1",
+    "url-to-options": "^2.0.0"
+  },
+  "devDependencies": {
+    "@devexpress/gulp-qunit-harness": "^1.1.0",
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "@ffprobe-installer/ffprobe": "^2.1.1",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-inject": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@testcafe/publish-please": "^5.6.0",
+    "@types/callsite": "^1.0.30",
+    "@types/chai": "^3.5.2",
+    "@types/debug": "^4.1.5",
+    "@types/dedent": "^0.7.0",
+    "@types/diff": "^4.0.2",
+    "@types/json5": "0.0.30",
+    "@types/mime-db": "^1.27.0",
+    "@types/mustache": "^0.8.32",
+    "@types/prompts": "^2.0.14",
+    "@types/semver": "^7.5.0",
+    "@types/set-cookie-parser": "^2.4.2",
+    "@types/source-map-support": "^0.5.0",
+    "@types/useragent": "^2.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "babel-plugin-add-module-exports": "^0.2.0",
+    "basic-auth": "^1.1.0",
+    "body-parser": "^1.17.1",
+    "browserstack-connector": "^0.1.7",
+    "caller": "^1.0.1",
+    "chai-as-promised": "^7.1.1",
+    "chai-string": "^1.5.0",
+    "chrome-launcher": "^0.15.0",
+    "connect": "^3.4.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dom-walk": "^0.1.1",
+    "escape-string-regexp": "^4.0.0",
+    "eslint": "^7.13.0",
+    "eslint-plugin-hammerhead": "0.4.0",
+    "eslint-plugin-no-only-tests": "^2.0.1",
+    "express": "^4.13.3",
+    "express-ntlm": "2.4.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clone": "^2.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-ll-next": "^2.1.0",
+    "gulp-mocha-simple": "^2.0.0",
+    "gulp-mustache": "^3.0.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-step": "^1.0.1",
+    "gulp-uglify": "^3.0.0",
+    "license-checker": "^20.0.0",
+    "markdownlint": "^0.34.0",
+    "merge-stream": "^1.0.1",
+    "minimist": "^1.2.0",
+    "mocha-reporter-spec-with-retries": "1.0.0",
+    "multer": "2.0.2",
+    "openssl-self-signed-certificate": "^1.1.6",
+    "proxyquire": "^2.1.0",
+    "react": "^16.13.1",
+    "recursive-copy": "^2.0.5",
+    "rollup": "2.79.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "serve-static": "^1.10.0",
+    "sinon": "^7.3.0",
+    "stack-chain": "^2.0.0",
+    "strip-ansi": "^3.0.0",
+    "testcafe-browser-provider-browserstack": "^1.14.1",
+    "tslib": "^2.4.0",
+    "uglify-js": "~3.10.4"
+  },
+  "overrides": {
+    "glob": "8.1.0"
+  },
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.23.2",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-proposal-decorators": {
+        "from": "^7.23.2",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-async-generator-functions": {
+        "from": "^7.25.4",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-async-to-generator": {
+        "from": "^7.22.5",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-class-properties": {
+        "from": "^7.25.4",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-class-static-block": {
+        "from": "^7.24.7",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-exponentiation-operator": {
+        "from": "^7.22.5",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-for-of": {
+        "from": "^7.22.15",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-object-rest-spread": {
+        "from": "^7.24.7",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-private-methods": {
+        "from": "^7.25.4",
+        "to": "^7.29.7"
+      },
+      "@babel/plugin-transform-runtime": {
+        "from": "7.23.3",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-env": {
+        "from": "^7.23.2",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-flow": {
+        "from": "^7.22.15",
+        "to": "^7.29.7"
+      },
+      "@babel/preset-react": {
+        "from": "^7.22.15",
+        "to": "^7.29.7"
+      },
+      "@babel/runtime": {
+        "from": "^7.23.2",
+        "to": "^7.29.7"
+      },
+      "@devexpress/callsite-record": {
+        "from": "^4.1.6",
+        "to": "^4.1.7"
+      },
+      "@types/node": {
+        "from": "20.14.5",
+        "to": "^25.9.3"
+      },
+      "address": {
+        "from": "^2.0.2",
+        "to": "^2.0.3"
+      },
+      "async-exit-hook": {
+        "from": "^1.1.2",
+        "to": "^2.0.1"
+      },
+      "babel-plugin-module-resolver": {
+        "from": "5.0.0",
+        "to": "^5.0.3"
+      },
+      "bowser": {
+        "from": "^2.8.1",
+        "to": "^2.14.1"
+      },
+      "chai": {
+        "from": "4.3.4",
+        "to": "^6.2.2"
+      },
+      "chalk": {
+        "from": "^2.3.0",
+        "to": "^5.6.2"
+      },
+      "chrome-remote-interface": {
+        "from": "^0.32.2",
+        "to": "^0.34.0"
+      },
+      "coffeescript": {
+        "from": "^2.3.1",
+        "to": "^2.7.0"
+      },
+      "commander": {
+        "from": "^8.3.0",
+        "to": "^15.0.0"
+      },
+      "debug": {
+        "from": "^4.3.1",
+        "to": "^4.4.3"
+      },
+      "dedent": {
+        "from": "^0.4.0",
+        "to": "^1.7.2"
+      },
+      "del": {
+        "from": "^3.0.0",
+        "to": "^8.0.1"
+      },
+      "device-specs": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      },
+      "devtools-protocol": {
+        "from": "0.0.1109433",
+        "to": "^0.0.1646372"
+      },
+      "diff": {
+        "from": "^8.0.3",
+        "to": "^9.0.0"
+      },
+      "elegant-spinner": {
+        "from": "^1.0.1",
+        "to": "^3.0.0"
+      },
+      "emittery": {
+        "from": "^0.4.1",
+        "to": "^2.0.0"
+      },
+      "execa": {
+        "from": "^4.0.3",
+        "to": "^9.6.1"
+      },
+      "globby": {
+        "from": "^11.0.4",
+        "to": "^16.2.0"
+      },
+      "graceful-fs": {
+        "from": "^4.1.11",
+        "to": "^4.2.11"
+      },
+      "graphlib": {
+        "from": "^2.1.5",
+        "to": "^2.1.8"
+      },
+      "http-status-codes": {
+        "from": "^2.2.0",
+        "to": "^2.3.0"
+      },
+      "humanize-duration": {
+        "from": "^3.25.0",
+        "to": "^3.33.2"
+      },
+      "import-lazy": {
+        "from": "^3.1.0",
+        "to": "^4.0.0"
+      },
+      "indent-string": {
+        "from": "^1.2.2",
+        "to": "^5.0.0"
+      },
+      "is-ci": {
+        "from": "^1.0.10",
+        "to": "^4.1.0"
+      },
+      "is-docker": {
+        "from": "^2.0.0",
+        "to": "^4.0.0"
+      },
+      "is-glob": {
+        "from": "^2.0.1",
+        "to": "^4.0.3"
+      },
+      "is-stream": {
+        "from": "^2.0.0",
+        "to": "^4.0.1"
+      },
+      "json5": {
+        "from": "^2.2.2",
+        "to": "^2.2.3"
+      },
+      "lodash": {
+        "from": "^4.17.21",
+        "to": "^4.18.1"
+      },
+      "make-dir": {
+        "from": "^3.0.0",
+        "to": "^5.1.0"
+      },
+      "mime-db": {
+        "from": "^1.41.0",
+        "to": "^1.54.0"
+      },
+      "moment": {
+        "from": "^2.29.4",
+        "to": "^2.30.1"
+      },
+      "moment-duration-format-commonjs": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      },
+      "mustache": {
+        "from": "^2.1.2",
+        "to": "^4.2.0"
+      },
+      "nanoid": {
+        "from": "^3.1.31",
+        "to": "^5.1.11"
+      },
+      "os-family": {
+        "from": "^1.0.0",
+        "to": "^1.1.0"
+      },
+      "parse5": {
+        "from": "^1.5.0",
+        "to": "^8.0.1"
+      },
+      "pify": {
+        "from": "^2.3.0",
+        "to": "^6.1.0"
+      },
+      "pngjs": {
+        "from": "^3.3.1",
+        "to": "^7.0.0"
+      },
+      "qrcode-terminal": {
+        "from": "^0.10.0",
+        "to": "^0.12.0"
+      },
+      "resolve-cwd": {
+        "from": "^1.0.0",
+        "to": "^3.0.0"
+      },
+      "resolve-from": {
+        "from": "^4.0.0",
+        "to": "^5.0.0"
+      },
+      "sanitize-filename": {
+        "from": "^1.6.0",
+        "to": "^1.6.4"
+      },
+      "semver": {
+        "from": "^7.5.3",
+        "to": "^7.8.4"
+      },
+      "set-cookie-parser": {
+        "from": "^2.5.1",
+        "to": "^3.1.0"
+      },
+      "source-map-support": {
+        "from": "^0.5.16",
+        "to": "^0.5.21"
+      },
+      "strip-bom": {
+        "from": "^2.0.0",
+        "to": "^5.0.0"
+      },
+      "testcafe-hammerhead": {
+        "from": "31.7.7",
+        "to": "^31.7.8"
+      },
+      "testcafe-legacy-api": {
+        "from": "5.1.8",
+        "to": "^5.1.9"
+      },
+      "testcafe-reporter-json": {
+        "from": "^2.1.0",
+        "to": "^2.2.0"
+      },
+      "testcafe-reporter-xunit": {
+        "from": "^2.2.1",
+        "to": "^2.2.3"
+      },
+      "time-limit-promise": {
+        "from": "^1.0.2",
+        "to": "^1.0.4"
+      },
+      "tmp": {
+        "from": "0.2.5",
+        "to": "^0.2.7"
+      },
+      "typescript": {
+        "from": "4.7.4",
+        "to": "^6.0.3"
+      }
+    },
+    "depsUpdated": 73,
+    "originalPackage": "testcafe",
+    "originalVersion": "3.7.4",
+    "processedAt": "2026-06-16T01:34:18.369Z",
+    "smokeTest": "passed"
+  }
+}

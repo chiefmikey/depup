@@ -887,31 +887,6 @@
     }
   },
   "5.78.1": {
-    "1": {
-      "changes": {
-        "cron-parser": {
-          "from": "4.9.0",
-          "to": "^5.5.0"
-        },
-        "ioredis": {
-          "from": "5.10.1",
-          "to": "^5.11.1"
-        },
-        "msgpackr": {
-          "from": "2.0.2",
-          "to": "^2.0.4"
-        },
-        "semver": {
-          "from": "7.8.1",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:20:12.787Z",
-      "version": "5.78.1-depup.1"
-    },
     "2": {
       "changes": {
         "cron-parser": {
@@ -1011,6 +986,31 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:51:12.250Z",
       "version": "5.78.1-depup.5"
+    },
+    "6": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.5.0"
+        },
+        "ioredis": {
+          "from": "5.10.1",
+          "to": "^5.11.1"
+        },
+        "msgpackr": {
+          "from": "2.0.2",
+          "to": "^2.0.4"
+        },
+        "semver": {
+          "from": "7.8.1",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:20:16.058Z",
+      "version": "5.78.1-depup.6"
     }
   }
 }
