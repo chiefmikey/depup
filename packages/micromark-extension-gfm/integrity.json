@@ -1,42 +1,5 @@
 {
   "3.0.0": {
-    "18": {
-      "changes": {
-        "micromark-extension-gfm-autolink-literal": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "micromark-extension-gfm-footnote": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "micromark-extension-gfm-strikethrough": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "micromark-extension-gfm-table": {
-          "from": "^2.0.0",
-          "to": "^2.1.1"
-        },
-        "micromark-extension-gfm-task-list-item": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "micromark-util-combine-extensions": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "micromark-util-types": {
-          "from": "^2.0.0",
-          "to": "^2.0.2"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:51:30.726Z",
-      "version": "3.0.0-depup.18"
-    },
     "19": {
       "changes": {
         "micromark-extension-gfm-autolink-literal": {
@@ -184,6 +147,43 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:28:26.210Z",
       "version": "3.0.0-depup.22"
+    },
+    "23": {
+      "changes": {
+        "micromark-extension-gfm-autolink-literal": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "micromark-extension-gfm-footnote": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "micromark-extension-gfm-strikethrough": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "micromark-extension-gfm-table": {
+          "from": "^2.0.0",
+          "to": "^2.1.1"
+        },
+        "micromark-extension-gfm-task-list-item": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "micromark-util-combine-extensions": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "micromark-util-types": {
+          "from": "^2.0.0",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:07:38.195Z",
+      "version": "3.0.0-depup.23"
     }
   }
 }

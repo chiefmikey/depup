@@ -12,7 +12,7 @@ npm install @depup/algolia__monitoring
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.54.1 | **DepUp version**: 1.54.1-depup.1 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 1.54.1 | **DepUp version**: 1.54.1-depup.2 | **Updated**: 6/16/2026 | **Import test**: passed
 
 ## What changed
 

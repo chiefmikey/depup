@@ -12,7 +12,7 @@ npm install @depup/strapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.30 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.31 | **Updated**: 6/16/2026 | **Import test**: passed
 
 ## What changed
 
@@ -37,7 +37,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | is-docker | `2.2.1` | `^4.0.0` |
 | koa | `^2.13.1` | `^3.2.1` |
 | koa-body | `^4.2.0` | `^8.0.0` |
-| koa-compress | `^5.0.1` | `^5.2.1` |
+| koa-compress | `^5.0.1` | `^5.2.2` |
 | koa-favicon | `^2.0.0` | `^2.1.0` |
 | koa-ip | `^2.0.0` | `^2.1.4` |
 | koa-router | `^7.4.0` | `^14.0.0` |

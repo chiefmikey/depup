@@ -84,19 +84,6 @@
     }
   },
   "2.10.4": {
-    "19": {
-      "changes": {
-        "globals": {
-          "from": "^17.3.0",
-          "to": "^17.6.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:47:32.796Z",
-      "version": "2.10.4-depup.19"
-    },
     "20": {
       "changes": {
         "globals": {
@@ -148,6 +135,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:23:35.095Z",
       "version": "2.10.4-depup.23"
+    },
+    "24": {
+      "changes": {
+        "globals": {
+          "from": "^17.3.0",
+          "to": "^17.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:03:33.749Z",
+      "version": "2.10.4-depup.24"
     }
   }
 }

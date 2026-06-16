@@ -42,23 +42,6 @@
     }
   },
   "17.0.0": {
-    "21": {
-      "changes": {
-        "mkdirp": {
-          "from": "^1.0.4",
-          "to": "^3.0.1"
-        },
-        "strip-ansi": {
-          "from": "^6.0.1",
-          "to": "^7.2.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:22:05.116Z",
-      "version": "17.0.0-depup.21"
-    },
     "22": {
       "changes": {
         "mkdirp": {
@@ -126,6 +109,23 @@
       "status": "failed",
       "timestamp": "2026-06-16T02:41:41.054Z",
       "version": "17.0.0-depup.25"
+    },
+    "26": {
+      "changes": {
+        "mkdirp": {
+          "from": "^1.0.4",
+          "to": "^3.0.1"
+        },
+        "strip-ansi": {
+          "from": "^6.0.1",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:06:19.314Z",
+      "version": "17.0.0-depup.26"
     }
   }
 }

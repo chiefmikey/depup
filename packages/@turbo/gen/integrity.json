@@ -514,23 +514,6 @@
     }
   },
   "2.9.18": {
-    "12": {
-      "changes": {
-        "@inquirer/prompts": {
-          "from": "^7.10.1",
-          "to": "^8.5.2"
-        },
-        "esbuild": {
-          "from": "^0.25.0",
-          "to": "^0.28.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:15:48.619Z",
-      "version": "2.9.18-depup.12"
-    },
     "13": {
       "changes": {
         "@inquirer/prompts": {
@@ -598,6 +581,23 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:55:25.524Z",
       "version": "2.9.18-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "esbuild": {
+          "from": "^0.25.0",
+          "to": "^0.28.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:00:18.182Z",
+      "version": "2.9.18-depup.17"
     }
   }
 }
