@@ -11519,13 +11519,10 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     jestInstance.spyOn(console, 'warn').mockImplementation(() => {});
     jestInstance.spyOn(console, 'error').mockImplementation(() => {});
 
-    // Speed up setTimeout (rate-limit delays)
-    jestInstance
-      .spyOn(globalThis, 'setTimeout')
-      .mockImplementation((function_) => {
-        function_();
-        return 0;
-      });
+    // Speed up sleep calls (rate-limit delays) -- spy on the instance method
+    // instead of globalThis.setTimeout, which is not spyable inside the Jest
+    // VM module sandbox on Node 26+.
+    jestInstance.spyOn(refresher, 'sleep').mockResolvedValue(undefined);
   });
 
   afterEach(async () => {
