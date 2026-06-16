@@ -1,18 +1,5 @@
 {
   "0.15.3": {
-    "16": {
-      "changes": {
-        "make-plural": {
-          "from": "^7.4.0",
-          "to": "^8.1.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:43:22.976Z",
-      "version": "0.15.3-depup.16"
-    },
     "17": {
       "changes": {
         "make-plural": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:16:52.949Z",
       "version": "0.15.3-depup.20"
+    },
+    "21": {
+      "changes": {
+        "make-plural": {
+          "from": "^7.4.0",
+          "to": "^8.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:45:06.240Z",
+      "version": "0.15.3-depup.21"
     }
   }
 }

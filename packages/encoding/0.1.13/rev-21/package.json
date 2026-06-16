@@ -1,0 +1,39 @@
+{
+  "name": "@depup/encoding",
+  "version": "0.1.13-depup.21",
+  "description": "Convert encodings, uses iconv-lite (with updated dependencies)",
+  "main": "lib/encoding.js",
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "repository": "https://github.com/andris9/encoding.git",
+  "author": "Andris Reinman",
+  "license": "MIT",
+  "dependencies": {
+    "iconv-lite": "^0.7.2"
+  },
+  "devDependencies": {
+    "nodeunit": "0.11.3"
+  },
+  "keywords": [
+    "encoding",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "iconv-lite": {
+        "from": "^0.6.2",
+        "to": "^0.7.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "encoding",
+    "originalVersion": "0.1.13",
+    "processedAt": "2026-06-16T01:43:30.129Z",
+    "smokeTest": "passed"
+  }
+}

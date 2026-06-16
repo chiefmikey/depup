@@ -1,18 +1,5 @@
 {
   "0.1.13": {
-    "16": {
-      "changes": {
-        "iconv-lite": {
-          "from": "^0.6.2",
-          "to": "^0.7.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:41:54.561Z",
-      "version": "0.1.13-depup.16"
-    },
     "17": {
       "changes": {
         "iconv-lite": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:15:23.386Z",
       "version": "0.1.13-depup.20"
+    },
+    "21": {
+      "changes": {
+        "iconv-lite": {
+          "from": "^0.6.2",
+          "to": "^0.7.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:43:33.516Z",
+      "version": "0.1.13-depup.21"
     }
   }
 }
