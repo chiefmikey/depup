@@ -7488,10 +7488,10 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   });
 
   // ─────────────────────────────────────────────────────────────────
-  // syncPackage (lines 157-203) -- spy on instance methods + fetch
+  // checkNeedsUpdate -- cheap pre-check (Phase 1), spy on instance methods + fetch
   // ─────────────────────────────────────────────────────────────────
-  describe('syncPackage', () => {
-    it('returns false when wasRecentlyProcessed is true (skip path)', async () => {
+  describe('checkNeedsUpdate', () => {
+    it('returns skip:true when wasRecentlyProcessed is true', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(true);
@@ -7503,10 +7503,13 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(false);
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(true);
+      expect(result.updateType).toBeNull();
     });
 
-    it('returns false when registry returns no latest version', async () => {
+    it('returns skip:true when registry returns no latest version', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(false);
@@ -7521,22 +7524,19 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(false);
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(true);
+      expect(result.updateType).toBeNull();
     });
 
-    it('calls updatePackage and generateReadme when version differs', async () => {
+    it('returns updateType:version when upstream version differs', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(false);
       jestInstance
         .spyOn(fetchModule.default, 'json')
         .mockResolvedValueOnce({ 'dist-tags': { latest: '5.0.0' } });
-      const updateSpy = jestInstance
-        .spyOn(syncer, 'updatePackage')
-        .mockResolvedValueOnce();
-      const readmeSpy = jestInstance
-        .spyOn(syncer, 'generateReadme')
-        .mockResolvedValueOnce();
 
       const package_ = {
         integrityData: {},
@@ -7545,12 +7545,37 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(true);
-      expect(updateSpy).toHaveBeenCalledWith(package_, '5.0.0');
-      expect(readmeSpy).toHaveBeenCalledWith('express');
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(false);
+      expect(result.updateType).toBe('version');
+      expect(result.latestVersion).toBe('5.0.0');
     });
 
-    it('calls updateDependencies and generateReadme when only deps need update', async () => {
+    it('returns updateType:failed-revisions when current version has only failed revisions', async () => {
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
+      jestInstance
+        .spyOn(fetchModule.default, 'json')
+        .mockResolvedValueOnce({ 'dist-tags': { latest: '4.18.2' } });
+      // All revisions have status:failed -> hasOnlyFailedRevisions returns true
+      const package_ = {
+        integrityData: {
+          '4.18.2': { 0: { status: 'failed' } },
+        },
+        name: 'express',
+        path: temporaryDirectory,
+        version: '4.18.2',
+      };
+
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(false);
+      expect(result.updateType).toBe('failed-revisions');
+    });
+
+    it('returns updateType:deps when only deps need updating', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(false);
@@ -7560,26 +7585,21 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance
         .spyOn(syncer, 'checkDependencyUpdates')
         .mockResolvedValueOnce(true);
-      const depSpy = jestInstance
-        .spyOn(syncer, 'updateDependencies')
-        .mockResolvedValueOnce();
-      const readmeSpy = jestInstance
-        .spyOn(syncer, 'generateReadme')
-        .mockResolvedValueOnce();
 
       const package_ = {
-        integrityData: {},
+        integrityData: { '4.18.2': { 0: { status: 'published' } } },
         name: 'express',
         path: temporaryDirectory,
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(true);
-      expect(depSpy).toHaveBeenCalledWith(package_);
-      expect(readmeSpy).toHaveBeenCalledWith('express');
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(false);
+      expect(result.updateType).toBe('deps');
     });
 
-    it('returns false when same version and no dep updates needed', async () => {
+    it('returns updateType:null when package is up to date', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(false);
@@ -7591,16 +7611,19 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .mockResolvedValueOnce(false);
 
       const package_ = {
-        integrityData: {},
+        integrityData: { '4.18.2': { 0: { status: 'published' } } },
         name: 'express',
         path: temporaryDirectory,
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(false);
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(false);
+      expect(result.updateType).toBeNull();
     });
 
-    it('returns false (catches error) when registry fetch throws', async () => {
+    it('returns updateType:null when registry fetch throws (catch path)', async () => {
       jestInstance
         .spyOn(syncer, 'wasRecentlyProcessed')
         .mockResolvedValueOnce(false);
@@ -7615,7 +7638,210 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         version: '4.18.2',
       };
 
-      await expect(syncer.syncPackage(package_)).resolves.toBe(false);
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.skip).toBe(false);
+      expect(result.updateType).toBeNull();
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // applyUpdate -- dispatches to updatePackage or updateDependencies
+  // ─────────────────────────────────────────────────────────────────
+  describe('applyUpdate', () => {
+    it('calls updatePackage for updateType:version', async () => {
+      const updateSpy = jestInstance
+        .spyOn(syncer, 'updatePackage')
+        .mockResolvedValueOnce();
+
+      const package_ = {
+        name: 'express',
+        path: temporaryDirectory,
+        version: '4.18.2',
+      };
+      const check = { latestVersion: '5.0.0', updateType: 'version' };
+
+      await syncer.applyUpdate(package_, check);
+
+      expect(updateSpy).toHaveBeenCalledWith(package_, '5.0.0');
+    });
+
+    it('calls updatePackage for updateType:failed-revisions', async () => {
+      const updateSpy = jestInstance
+        .spyOn(syncer, 'updatePackage')
+        .mockResolvedValueOnce();
+
+      const package_ = {
+        name: 'express',
+        path: temporaryDirectory,
+        version: '4.18.2',
+      };
+      const check = { latestVersion: '4.18.2', updateType: 'failed-revisions' };
+
+      await syncer.applyUpdate(package_, check);
+
+      expect(updateSpy).toHaveBeenCalledWith(package_, '4.18.2');
+    });
+
+    it('calls updateDependencies for updateType:deps', async () => {
+      const depSpy = jestInstance
+        .spyOn(syncer, 'updateDependencies')
+        .mockResolvedValueOnce();
+
+      const package_ = {
+        name: 'lodash',
+        path: temporaryDirectory,
+        version: '4.17.21',
+      };
+      const check = { latestVersion: '4.17.21', updateType: 'deps' };
+
+      await syncer.applyUpdate(package_, check);
+
+      expect(depSpy).toHaveBeenCalledWith(package_);
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // checkBatches -- Phase 1 high-concurrency check loop
+  // ─────────────────────────────────────────────────────────────────
+  describe('checkBatches', () => {
+    it('returns empty needsUpdate when all packages are up to date', async () => {
+      jestInstance
+        .spyOn(syncer, 'checkNeedsUpdate')
+        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+
+      const packages = [
+        { name: 'a', version: '1.0.0' },
+        { name: 'b', version: '1.0.0' },
+      ];
+      syncer.rateLimitDelay = 0;
+
+      const { needsUpdate, skippedCount } = await syncer.checkBatches(packages);
+
+      expect(needsUpdate).toHaveLength(0);
+      expect(skippedCount).toBe(0);
+    });
+
+    it('counts skipped packages correctly', async () => {
+      jestInstance
+        .spyOn(syncer, 'checkNeedsUpdate')
+        .mockResolvedValue({ latestVersion: '1.0.0', skip: true, updateType: null });
+
+      const packages = [{ name: 'a', version: '1.0.0' }];
+      syncer.rateLimitDelay = 0;
+
+      const { needsUpdate, skippedCount } = await syncer.checkBatches(packages);
+
+      expect(needsUpdate).toHaveLength(0);
+      expect(skippedCount).toBe(1);
+    });
+
+    it('collects packages that need updating', async () => {
+      jestInstance
+        .spyOn(syncer, 'checkNeedsUpdate')
+        .mockResolvedValue({ latestVersion: '2.0.0', skip: false, updateType: 'version' });
+
+      const package_ = { name: 'express', version: '1.0.0' };
+      syncer.rateLimitDelay = 0;
+
+      const { needsUpdate } = await syncer.checkBatches([package_]);
+
+      expect(needsUpdate).toHaveLength(1);
+      expect(needsUpdate[0].package_).toBe(package_);
+      expect(needsUpdate[0].check.updateType).toBe('version');
+    });
+
+    it('handles a rejected checkNeedsUpdate without crashing', async () => {
+      jestInstance
+        .spyOn(syncer, 'checkNeedsUpdate')
+        .mockRejectedValueOnce(new Error('check failed'));
+
+      const packages = [{ name: 'bad-pkg', version: '1.0.0' }];
+      syncer.rateLimitDelay = 0;
+
+      const { needsUpdate } = await syncer.checkBatches(packages);
+
+      // Rejected checks don't add to needsUpdate -- they're just warned about
+      expect(needsUpdate).toHaveLength(0);
+    });
+
+    it('processes multiple batches when packages exceed checkConcurrentPackages', async () => {
+      jestInstance
+        .spyOn(syncer, 'checkNeedsUpdate')
+        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+      syncer.checkConcurrentPackages = 2;
+      syncer.rateLimitDelay = 0;
+
+      const packages = Array.from({ length: 5 }, (_, i) => ({
+        name: `pkg-${i}`,
+        version: '1.0.0',
+      }));
+
+      const { needsUpdate } = await syncer.checkBatches(packages);
+
+      expect(needsUpdate).toHaveLength(0);
+      expect(syncer.checkNeedsUpdate).toHaveBeenCalledTimes(5);
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // applyBatches -- Phase 2 low-concurrency update loop
+  // ─────────────────────────────────────────────────────────────────
+  describe('applyBatches', () => {
+    it('returns empty syncedPackages when needsUpdate list is empty', async () => {
+      const { failedCount, syncedPackages } = await syncer.applyBatches([]);
+
+      expect(syncedPackages).toHaveLength(0);
+      expect(failedCount).toBe(0);
+    });
+
+    it('records synced package name on success', async () => {
+      jestInstance.spyOn(syncer, 'applyUpdate').mockResolvedValueOnce();
+      jestInstance.spyOn(syncer, 'generateReadme').mockResolvedValueOnce();
+
+      const package_ = { name: 'express', version: '4.18.2' };
+      const check = { latestVersion: '5.0.0', updateType: 'version' };
+      syncer.rateLimitDelay = 0;
+
+      const { syncedPackages } = await syncer.applyBatches([
+        { check, package_ },
+      ]);
+
+      expect(syncedPackages).toEqual(['express']);
+    });
+
+    it('increments failedCount when applyUpdate throws', async () => {
+      jestInstance
+        .spyOn(syncer, 'applyUpdate')
+        .mockRejectedValueOnce(new Error('update failed'));
+      jestInstance.spyOn(syncer, 'generateReadme').mockResolvedValueOnce();
+
+      const package_ = { name: 'broken-pkg', version: '1.0.0' };
+      const check = { latestVersion: '2.0.0', updateType: 'version' };
+      syncer.rateLimitDelay = 0;
+
+      const { failedCount, syncedPackages } = await syncer.applyBatches([
+        { check, package_ },
+      ]);
+
+      expect(syncedPackages).toHaveLength(0);
+      expect(failedCount).toBe(1);
+    });
+
+    it('handles a rejected Promise.allSettled result (status rejected)', async () => {
+      // Simulate a case where the async wrapper itself rejects (rare but possible)
+      jestInstance
+        .spyOn(syncer, 'applyUpdate')
+        .mockRejectedValueOnce(new Error('hard crash'));
+      jestInstance.spyOn(syncer, 'generateReadme').mockResolvedValueOnce();
+
+      const package_ = { name: 'crash-pkg', version: '1.0.0' };
+      const check = { latestVersion: '1.0.0', updateType: 'failed-revisions' };
+      syncer.rateLimitDelay = 0;
+
+      const { failedCount } = await syncer.applyBatches([{ check, package_ }]);
+
+      expect(failedCount).toBe(1);
     });
   });
 
@@ -7805,13 +8031,19 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   });
 
   // ─────────────────────────────────────────────────────────────────
-  // main (lines 16-89) -- spy on syncPackage + getExistingPackages
+  // main -- spy on checkBatches + applyBatches + getExistingPackages
   // ─────────────────────────────────────────────────────────────────
   describe('main', () => {
     it('logs starting message and calls getExistingPackages', async () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([]);
+      jestInstance
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({ needsUpdate: [], skippedCount: 0 });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 0, syncedPackages: [] });
 
       await syncer.main();
 
@@ -7821,16 +8053,23 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('reports synced count when a package is successfully synced', async () => {
-      const mockPackage = {
-        integrityData: {},
-        name: 'express',
-        path: temporaryDirectory,
-        version: '4.18.2',
-      };
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce([mockPackage]);
-      jestInstance.spyOn(syncer, 'syncPackage').mockResolvedValueOnce(true);
+        .mockResolvedValueOnce([{ name: 'express', version: '4.18.2' }]);
+      jestInstance
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({
+          needsUpdate: [
+            {
+              check: { latestVersion: '5.0.0', updateType: 'version' },
+              package_: { name: 'express', version: '4.18.2' },
+            },
+          ],
+          skippedCount: 0,
+        });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['express'] });
 
       await syncer.main();
 
@@ -7840,41 +8079,27 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('logs synced package names when at least one is synced', async () => {
-      const mockPackage = {
-        integrityData: {},
-        name: 'lodash',
-        path: temporaryDirectory,
-        version: '4.17.21',
-      };
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce([mockPackage]);
-      jestInstance.spyOn(syncer, 'syncPackage').mockResolvedValueOnce(true);
+        .mockResolvedValueOnce([{ name: 'lodash', version: '4.17.21' }]);
+      jestInstance
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({
+          needsUpdate: [
+            {
+              check: { latestVersion: '5.0.0', updateType: 'version' },
+              package_: { name: 'lodash', version: '4.17.21' },
+            },
+          ],
+          skippedCount: 0,
+        });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['lodash'] });
 
       await syncer.main();
 
       expect(console.log).toHaveBeenCalledWith('Synced packages:', 'lodash');
-    });
-
-    it('handles rejected batch result (syncPackage throws) without crashing', async () => {
-      const mockPackage = {
-        integrityData: {},
-        name: 'bad-pkg',
-        path: temporaryDirectory,
-        version: '1.0.0',
-      };
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce([mockPackage]);
-      jestInstance
-        .spyOn(syncer, 'syncPackage')
-        .mockRejectedValueOnce(new Error('sync crashed'));
-
-      await syncer.main();
-
-      expect(console.log).toHaveBeenCalledWith(
-        expect.stringContaining('Synced 0 packages'),
-      );
     });
 
     it('exits with code 1 when getExistingPackages throws', async () => {
@@ -7890,18 +8115,21 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       expect(exitSpy).toHaveBeenCalledWith(1);
     });
 
-    it('processes multiple batches of packages (covers batching loop)', async () => {
-      const packages = Array.from({ length: 7 }, (_, index) => ({
-        integrityData: {},
-        name: `pkg-${index}`,
-        path: temporaryDirectory,
-        version: '1.0.0',
-      }));
+    it('reports zero synced packages when nothing needs updating', async () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(packages);
-      jestInstance.spyOn(syncer, 'syncPackage').mockResolvedValue(false);
-      syncer.rateLimitDelay = 0;
+        .mockResolvedValueOnce(
+          Array.from({ length: 7 }, (_, index) => ({
+            name: `pkg-${index}`,
+            version: '1.0.0',
+          })),
+        );
+      jestInstance
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({ needsUpdate: [], skippedCount: 0 });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 0, syncedPackages: [] });
 
       await syncer.main();
 
@@ -7910,34 +8138,16 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       );
     });
 
-    it('warns about failed sync inside the batch (inner catch path)', async () => {
-      const mockPackage = {
-        integrityData: {},
-        name: 'warn-pkg',
-        path: temporaryDirectory,
-        version: '1.0.0',
-      };
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce([mockPackage]);
-      // syncPackage throwing is caught by the inner try/catch in main(),
-      // which calls console.warn with "Failed to sync <name>:"
-      jestInstance
-        .spyOn(syncer, 'syncPackage')
-        .mockRejectedValueOnce(new Error('inner sync error'));
-
-      await syncer.main();
-
-      expect(console.warn).toHaveBeenCalledWith(
-        'Failed to sync warn-pkg:',
-        'inner sync error',
-      );
-    });
-
     it('emits DEPUP_SUMMARY line at end of successful run', async () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([]);
+      jestInstance
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({ needsUpdate: [], skippedCount: 0 });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 0, syncedPackages: [] });
 
       await syncer.main();
 
@@ -7949,23 +8159,30 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('exits with 1 and logs SYSTEMIC FAILURE when >50% of 10+ attempts fail', async () => {
-      // Build 12 packages that will all fail
-      const packages = Array.from({ length: 12 }, (_, index) => ({
-        integrityData: {},
-        name: `fail-pkg-${index}`,
-        path: temporaryDirectory,
-        version: '1.0.0',
-      }));
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(packages);
+        .mockResolvedValueOnce(
+          Array.from({ length: 12 }, (_, index) => ({
+            name: `fail-pkg-${index}`,
+            version: '1.0.0',
+          })),
+        );
+      // checkBatches returns 12 packages needing update, applyBatches fails all
       jestInstance
-        .spyOn(syncer, 'syncPackage')
-        .mockRejectedValue(new Error('boom'));
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({
+          needsUpdate: Array.from({ length: 12 }, (_, index) => ({
+            check: { latestVersion: '2.0.0', updateType: 'version' },
+            package_: { name: `fail-pkg-${index}`, version: '1.0.0' },
+          })),
+          skippedCount: 0,
+        });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 12, syncedPackages: [] });
       const exitSpy = jestInstance
         .spyOn(process, 'exit')
         .mockImplementation(() => {});
-      syncer.rateLimitDelay = 0;
 
       await syncer.main();
 
@@ -7976,22 +8193,29 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('does NOT trigger systemic failure when fewer than 10 packages attempted', async () => {
-      const packages = Array.from({ length: 3 }, (_, index) => ({
-        integrityData: {},
-        name: `small-fail-${index}`,
-        path: temporaryDirectory,
-        version: '1.0.0',
-      }));
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(packages);
+        .mockResolvedValueOnce(
+          Array.from({ length: 3 }, (_, index) => ({
+            name: `small-fail-${index}`,
+            version: '1.0.0',
+          })),
+        );
       jestInstance
-        .spyOn(syncer, 'syncPackage')
-        .mockRejectedValue(new Error('small fail'));
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValueOnce({
+          needsUpdate: Array.from({ length: 3 }, (_, index) => ({
+            check: { latestVersion: '2.0.0', updateType: 'version' },
+            package_: { name: `small-fail-${index}`, version: '1.0.0' },
+          })),
+          skippedCount: 0,
+        });
+      jestInstance
+        .spyOn(syncer, 'applyBatches')
+        .mockResolvedValueOnce({ failedCount: 3, syncedPackages: [] });
       const exitSpy = jestInstance
         .spyOn(process, 'exit')
         .mockImplementation(() => {});
-      syncer.rateLimitDelay = 0;
 
       await syncer.main();
 
@@ -8067,8 +8291,8 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   // syncPackage -- retry when only failed revisions (FIX 2)
   // ─────────────────────────────────────────────────────────────────
-  describe('syncPackage -- retry on all-failed revisions', () => {
-    it('retries when version matches but all revisions are failed', async () => {
+  describe('checkNeedsUpdate -- retry on all-failed revisions', () => {
+    it('returns updateType:failed-revisions when version matches but all revisions are failed', async () => {
       const integrityData = {
         '1.0.0': { 'rev-1': { status: 'failed' } },
       };
@@ -8084,18 +8308,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance.spyOn(fetchModule.default, 'json').mockResolvedValueOnce({
         'dist-tags': { latest: '1.0.0' },
       });
-      const updateSpy = jestInstance
-        .spyOn(syncer, 'updatePackage')
-        .mockResolvedValueOnce();
-      jestInstance.spyOn(syncer, 'generateReadme').mockResolvedValueOnce();
 
-      const result = await syncer.syncPackage(package_);
+      const result = await syncer.checkNeedsUpdate(package_);
 
-      expect(updateSpy).toHaveBeenCalledWith(package_, '1.0.0');
-      expect(result).toBe(true);
+      expect(result.updateType).toBe('failed-revisions');
+      expect(result.skip).toBe(false);
+      expect(result.latestVersion).toBe('1.0.0');
     });
 
-    it('does NOT retry when version matches and at least one revision is published', async () => {
+    it('returns updateType:null when version matches and at least one revision is published', async () => {
       const integrityData = {
         '1.0.0': { 'rev-1': { status: 'published' } },
       };
@@ -8115,9 +8336,10 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         .spyOn(syncer, 'checkDependencyUpdates')
         .mockResolvedValueOnce(false);
 
-      const result = await syncer.syncPackage(package_);
+      const result = await syncer.checkNeedsUpdate(package_);
 
-      expect(result).toBe(false);
+      expect(result.updateType).toBeNull();
+      expect(result.skip).toBe(false);
     });
   });
 });

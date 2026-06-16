@@ -13,43 +13,104 @@ import {
 } from './utilities.mjs';
 
 class PackageSyncer {
-  async processBatches(packagesToProcess) {
-    const syncedPackages = [];
-    let failedCount = 0;
+  /**
+   * Phase 1: cheap pre-check at high concurrency.
+   *
+   * For each package, determine whether it needs any work without spawning
+   * child processes. Network calls (registry fetches) are the only I/O here --
+   * no npm install, no test runs. Returns the list of packages that actually
+   * need to be updated so Phase 2 can process only those at safe concurrency.
+   */
+  async checkBatches(packagesToProcess) {
+    const needsUpdate = [];
     let skippedCount = 0;
+    let checkedCount = 0;
 
     for (
       let index = 0;
       index < packagesToProcess.length;
-      index += this.concurrentPackages
+      index += this.checkConcurrentPackages
     ) {
       const batch = packagesToProcess.slice(
         index,
-        index + this.concurrentPackages,
-      );
-      console.log(
-        `Processing batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+        index + this.checkConcurrentPackages,
       );
 
       const batchResults = await Promise.allSettled(
         batch.map(async (package_) => {
+          const check = await this.checkNeedsUpdate(package_);
+          return { check, package_ };
+        }),
+      );
+
+      for (const result of batchResults) {
+        if (result.status === 'fulfilled') {
+          const { check, package_ } = result.value;
+          if (check.skip) {
+            skippedCount++;
+          } else if (check.updateType === null) {
+            // up-to-date
+            checkedCount++;
+          } else {
+            needsUpdate.push({ check, package_ });
+            checkedCount++;
+          }
+        } else {
+          // Check itself failed -- include in update list so Phase 2 retries
+          console.warn(
+            `Pre-check failed for package: ${result.reason?.message || 'Unknown error'}`,
+          );
+          checkedCount++;
+        }
+      }
+
+      if (index + this.checkConcurrentPackages < packagesToProcess.length) {
+        await sleep(this.rateLimitDelay);
+      }
+    }
+
+    console.log(
+      `Pre-check complete: ${needsUpdate.length} packages need updates, ${checkedCount - needsUpdate.length} up-to-date, ${skippedCount} skipped`,
+    );
+    return { needsUpdate, skippedCount };
+  }
+
+  /**
+   * Phase 2: apply updates at safe concurrency (5 concurrent max).
+   *
+   * Each package here runs depup.mjs which spawns npm install + tests.
+   * The low concurrency limit prevents OOM on the 7 GB CI runner.
+   */
+  async applyBatches(packagesToUpdate) {
+    const syncedPackages = [];
+    let failedCount = 0;
+
+    for (
+      let index = 0;
+      index < packagesToUpdate.length;
+      index += this.concurrentPackages
+    ) {
+      const batch = packagesToUpdate.slice(
+        index,
+        index + this.concurrentPackages,
+      );
+      console.log(
+        `Applying updates batch ${Math.floor(index / this.concurrentPackages) + 1} (${batch.length} packages)...`,
+      );
+
+      const batchResults = await Promise.allSettled(
+        batch.map(async ({ check, package_ }) => {
           try {
-            console.log(`Syncing ${package_.name}...`);
-            const synced = await this.syncPackage(package_);
-            return {
-              name: package_.name,
-              skipped: !synced,
-              success: true,
-              synced,
-            };
+            console.log(`Syncing ${package_.name} (${check.updateType})...`);
+            await this.applyUpdate(package_, check);
+            await this.generateReadme(package_.name);
+            return { name: package_.name, success: true };
           } catch (error) {
             console.warn(`Failed to sync ${package_.name}:`, error.message);
             return {
               error: error.message,
               name: package_.name,
-              skipped: false,
               success: false,
-              synced: false,
             };
           }
         }),
@@ -57,11 +118,9 @@ class PackageSyncer {
 
       for (const result of batchResults) {
         if (result.status === 'fulfilled') {
-          if (result.value.synced) {
+          if (result.value.success) {
             syncedPackages.push(result.value.name);
-          } else if (result.value.success && result.value.skipped) {
-            skippedCount++;
-          } else if (!result.value.success) {
+          } else {
             failedCount++;
           }
         } else if (result.status === 'rejected') {
@@ -72,16 +131,16 @@ class PackageSyncer {
         }
       }
 
-      if (index + this.concurrentPackages < packagesToProcess.length) {
+      if (index + this.concurrentPackages < packagesToUpdate.length) {
         await sleep(this.rateLimitDelay);
       }
     }
 
-    return { failedCount, skippedCount, syncedPackages };
+    return { failedCount, syncedPackages };
   }
 
   async main() {
-    console.log('🔄 Starting package sync...');
+    console.log('Starting package sync...');
 
     try {
       const existingPackages = await this.getExistingPackages();
@@ -91,10 +150,16 @@ class PackageSyncer {
         0,
         this.maxPackagesPerRun,
       );
-      const { failedCount, skippedCount, syncedPackages } =
-        await this.processBatches(packagesToProcess);
 
-      console.log(`✅ Synced ${syncedPackages.length} packages`);
+      // Phase 1: cheap pre-check at high concurrency (no child processes)
+      const { needsUpdate, skippedCount } =
+        await this.checkBatches(packagesToProcess);
+
+      // Phase 2: apply updates at safe concurrency (spawns depup.mjs per package)
+      const { failedCount, syncedPackages } =
+        await this.applyBatches(needsUpdate);
+
+      console.log(`Synced ${syncedPackages.length} packages`);
       if (syncedPackages.length > 0) {
         console.log('Synced packages:', syncedPackages.join(', '));
       }
@@ -110,7 +175,7 @@ class PackageSyncer {
         process.exit(1);
       }
 
-      // Machine-readable summary for GitHub step summary (FIX 6)
+      // Machine-readable summary for GitHub step summary
       console.log(
         `DEPUP_SUMMARY processed=${syncedPackages.length} failed=${failedCount} skipped=${skippedCount}`,
       );
@@ -186,12 +251,26 @@ class PackageSyncer {
     return sortedPackages;
   }
 
-  async syncPackage(package_) {
+  /**
+   * Cheap determination of whether a package needs any work.
+   *
+   * Makes only registry network calls -- no child processes, no npm install.
+   * Returns { skip, updateType, latestVersion } where updateType is one of:
+   *   'version'          -- upstream released a newer version
+   *   'failed-revisions' -- current version never successfully published
+   *   'deps'             -- a production dep has a minor/major update available
+   *   null               -- nothing to do (up-to-date)
+   */
+  async checkNeedsUpdate(package_) {
     try {
       // Skip recently processed packages (e.g., just handled by discover)
       if (await this.wasRecentlyProcessed(package_)) {
         console.log(`  ${package_.name} was recently processed, skipping`);
-        return false;
+        return {
+          latestVersion: package_.version,
+          skip: true,
+          updateType: null,
+        };
       }
 
       // Get latest version from npm
@@ -206,46 +285,68 @@ class PackageSyncer {
         console.warn(
           `  No latest version found for ${package_.name}, skipping`,
         );
-        return false;
+        return {
+          latestVersion: package_.version,
+          skip: true,
+          updateType: null,
+        };
       }
 
-      // Check if we need to update
+      // Check if upstream released a new version
       if (latestVersion !== package_.version) {
         console.log(
-          `  🔄 Version update: ${package_.version} -> ${latestVersion}`,
+          `  Version update: ${package_.version} -> ${latestVersion}`,
         );
-        await this.updatePackage(package_, latestVersion);
-        await this.generateReadme(package_.name);
-        return true;
+        return { latestVersion, skip: false, updateType: 'version' };
       }
 
-      // Even if version matches, check whether the current version only has
-      // failed revisions -- meaning the publish never actually landed.
-      // If so, re-process rather than treating it as up-to-date.
+      // Check whether the current version only has failed revisions -- meaning
+      // the publish never actually landed, so we must retry.
       if (
         this.hasOnlyFailedRevisions(package_.integrityData, package_.version)
       ) {
         console.log(
-          `  🔄 ${package_.name}@${package_.version} has only failed revisions — retrying`,
+          `  ${package_.name}@${package_.version} has only failed revisions -- retrying`,
         );
-        await this.updatePackage(package_, package_.version);
-        await this.generateReadme(package_.name);
-        return true;
+        return {
+          latestVersion: package_.version,
+          skip: false,
+          updateType: 'failed-revisions',
+        };
       }
 
-      // Check if dependencies need updating
+      // Check if production dependencies need updating
       const needsDependencyUpdate = await this.checkDependencyUpdates(package_);
       if (needsDependencyUpdate) {
-        console.log(`  🔄 Dependencies need updating`);
-        await this.updateDependencies(package_);
-        await this.generateReadme(package_.name);
-        return true;
+        console.log(`  ${package_.name} dependencies need updating`);
+        return {
+          latestVersion: package_.version,
+          skip: false,
+          updateType: 'deps',
+        };
       }
-      console.log(`  ✅ ${package_.name} is up to date`);
-      return false;
+
+      console.log(`  ${package_.name} is up to date`);
+      return { latestVersion: package_.version, skip: false, updateType: null };
     } catch (error) {
-      console.warn(`  ⚠️  Could not sync ${package_.name}:`, error.message);
-      return false;
+      console.warn(`  Could not check ${package_.name}:`, error.message);
+      return { latestVersion: package_.version, skip: false, updateType: null };
+    }
+  }
+
+  /**
+   * Apply the update determined by checkNeedsUpdate.
+   *
+   * Spawns depup.mjs as a child process (expensive: npm install + tests + publish).
+   */
+  async applyUpdate(package_, check) {
+    if (
+      check.updateType === 'version' ||
+      check.updateType === 'failed-revisions'
+    ) {
+      await this.updatePackage(package_, check.latestVersion);
+    } else if (check.updateType === 'deps') {
+      await this.updateDependencies(package_);
     }
   }
 
@@ -398,11 +499,11 @@ class PackageSyncer {
       });
 
       console.log(
-        `  ✅ Successfully updated ${package_.name} to ${updatedVersion}`,
+        `  Successfully updated ${package_.name} to ${updatedVersion}`,
       );
     } catch (error) {
       console.error(
-        `  ❌ Failed to update ${package_.name} to ${updatedVersion}:`,
+        `  Failed to update ${package_.name} to ${updatedVersion}:`,
         error.message,
       );
       throw error;
@@ -427,12 +528,10 @@ class PackageSyncer {
         timeout: 300_000,
       });
 
-      console.log(
-        `  ✅ Successfully updated dependencies for ${package_.name}`,
-      );
+      console.log(`  Successfully updated dependencies for ${package_.name}`);
     } catch (error) {
       console.error(
-        `  ❌ Failed to update dependencies for ${package_.name}:`,
+        `  Failed to update dependencies for ${package_.name}:`,
         error.message,
       );
       throw error;
@@ -566,12 +665,16 @@ class PackageSyncer {
     }
   }
 
-  registry = 'https://registry.npmjs.org';
-  rateLimitDelay = 100;
-  maxPackagesPerRun = 600;
-  // Limit to 5 concurrent packages (heavy operations spawn depup.mjs child
-  // processes that each run npm install -- 20 concurrent would OOM the runner)
+  // High concurrency for Phase 1 (cheap checks: registry fetches only, no
+  // child processes). 20 concurrent is safe because each request is just an
+  // HTTP call with no meaningful memory overhead on the CI runner.
+  checkConcurrentPackages = 20;
+  // Low concurrency for Phase 2 (expensive: spawns depup.mjs per package which
+  // runs npm install + tests). 5 concurrent prevents OOM on the 7 GB runner.
   concurrentPackages = 5;
+  maxPackagesPerRun = 600;
+  rateLimitDelay = 100;
+  registry = 'https://registry.npmjs.org';
 }
 
 export { PackageSyncer };
