@@ -1,0 +1,121 @@
+{
+  "name": "@depup/less-loader",
+  "version": "13.0.0-depup.26",
+  "description": "A Less loader for webpack. Compiles Less to CSS. (with updated dependencies)",
+  "keywords": [
+    "less-loader",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webpack",
+    "loader",
+    "less",
+    "lesscss",
+    "less.js",
+    "css",
+    "preprocessor"
+  ],
+  "homepage": "https://github.com/webpack/less-loader",
+  "bugs": "https://github.com/webpack/less-loader/issues",
+  "repository": "webpack/less-loader",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/webpack"
+  },
+  "license": "MIT",
+  "author": "Johannes Ewald @jhnns",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "npm run build -- -w",
+    "clean": "del-cli dist",
+    "prebuild": "npm run clean",
+    "build:esm": "babel src -d dist/esm --env-name esm --copy-files --no-copy-ignored && node -e \"require('fs').writeFileSync('dist/esm/package.json','{\\\"type\\\":\\\"module\\\"}\\n')\"",
+    "build:cjs": "babel src -d dist/cjs --env-name cjs --copy-files --no-copy-ignored && node -e \"const fs=require('fs');fs.writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}\\n');fs.appendFileSync('dist/cjs/index.js','module.exports = exports.default;\\nmodule.exports.default = exports.default;\\n')\"",
+    "build:types": "tsc && prettier \"types/**/*.ts\" --write",
+    "build": "npm-run-all -p \"build:*\"",
+    "security": "npm audit --production",
+    "lint": "npm-run-all -l -p \"lint:**\" && npm run fmt:check",
+    "lint:code": "eslint --cache .",
+    "lint:spelling": "cspell --cache --no-must-find-files --quiet \"**/*.*\"",
+    "lint:types": "tsc --pretty --noEmit",
+    "fmt": "npm run fmt:check -- --write",
+    "fmt:check": "prettier --list-different --cache --ignore-unknown .",
+    "fix": "npm run fix:code && npm run fmt",
+    "fix:code": "npm run lint:code -- --fix",
+    "pretest": "npm run lint",
+    "test": "npm run test:base",
+    "test:base": "node --import ./test/setup-snapshots.js --test --test-force-exit --test-reporter=dot --test-reporter-destination=stdout --experimental-test-module-mocks",
+    "test:coverage": "npm run test:base -- --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-coverage-include=\"src/**/*.js\"",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "dependencies": {
+    "@types/less": "^3.0.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.29.5",
+    "@changesets/cli": "^2.30.0",
+    "@changesets/get-github-info": "^0.8.0",
+    "@types/node": "^22.13.4",
+    "cspell": "^10.0.0",
+    "del": "^8.0.1",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.32.0",
+    "eslint-config-webpack": "^4.9.6",
+    "husky": "^9.1.3",
+    "less": "^4.6.4",
+    "less-plugin-glob": "^3.0.0",
+    "lint-staged": "^17.0.5",
+    "memfs": "^4.57.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "webpack": "^5.107.0"
+  },
+  "peerDependencies": {
+    "@rspack/core": "0.x || ^1.0.0 || ^2.0.0-0",
+    "less": "^3.5.0 || ^4.0.0",
+    "webpack": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@rspack/core": {
+      "optional": true
+    },
+    "webpack": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">= 22.11.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "less-loader",
+    "originalVersion": "13.0.0",
+    "processedAt": "2026-06-16T10:07:15.975Z",
+    "smokeTest": "passed"
+  }
+}

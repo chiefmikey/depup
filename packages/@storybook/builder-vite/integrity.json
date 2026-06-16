@@ -400,6 +400,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:54:17.370Z",
       "version": "10.4.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ts-dedent": {
+          "from": "^2.0.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T09:59:50.801Z",
+      "version": "10.4.5-depup.4"
     }
   }
 }

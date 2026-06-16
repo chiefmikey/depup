@@ -663,6 +663,31 @@
       "status": "failed",
       "timestamp": "2026-06-16T02:39:58.928Z",
       "version": "20.10.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^25.9.3"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:06:13.349Z",
+      "version": "20.10.4-depup.2"
     }
   }
 }

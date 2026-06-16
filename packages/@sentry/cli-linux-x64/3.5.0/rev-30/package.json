@@ -1,0 +1,34 @@
+{
+  "name": "@depup/sentry__cli-linux-x64",
+  "version": "3.5.0-depup.30",
+  "description": "The linux x64 distribution of the Sentry CLI binary. (with updated dependencies)",
+  "repository": "https://github.com/getsentry/sentry-cli",
+  "license": "FSL-1.1-MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "linux",
+    "freebsd",
+    "android"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@sentry/cli-linux-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@sentry/cli-linux-x64",
+    "originalVersion": "3.5.0",
+    "processedAt": "2026-06-16T09:59:29.630Z",
+    "smokeTest": "failed"
+  }
+}

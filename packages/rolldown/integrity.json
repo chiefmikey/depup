@@ -430,19 +430,6 @@
     }
   },
   "1.1.1": {
-    "10": {
-      "changes": {
-        "@rolldown/pluginutils": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:58:14.209Z",
-      "version": "1.1.1-depup.10"
-    },
     "11": {
       "changes": {
         "@rolldown/pluginutils": {
@@ -502,6 +489,23 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:33:19.252Z",
       "version": "1.1.1-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@oxc-project/types": {
+          "from": "=0.135.0",
+          "to": "^0.136.0"
+        },
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:12:23.669Z",
+      "version": "1.1.1-depup.15"
     }
   }
 }

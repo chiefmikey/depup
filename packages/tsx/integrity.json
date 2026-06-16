@@ -81,19 +81,6 @@
     }
   },
   "4.22.4": {
-    "17": {
-      "changes": {
-        "esbuild": {
-          "from": "~0.28.0",
-          "to": "^0.28.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:59:39.688Z",
-      "version": "4.22.4-depup.17"
-    },
     "18": {
       "changes": {
         "esbuild": {
@@ -145,6 +132,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:34:36.642Z",
       "version": "4.22.4-depup.21"
+    },
+    "22": {
+      "changes": {
+        "esbuild": {
+          "from": "~0.28.0",
+          "to": "^0.28.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:13:36.945Z",
+      "version": "4.22.4-depup.22"
     }
   }
 }
