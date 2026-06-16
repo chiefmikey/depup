@@ -7,27 +7,6 @@
     }
   },
   "11.3.5": {
-    "17": {
-      "changes": {
-        "graceful-fs": {
-          "from": "^4.2.0",
-          "to": "^4.2.11"
-        },
-        "jsonfile": {
-          "from": "^6.0.1",
-          "to": "^6.2.1"
-        },
-        "universalify": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T17:10:22.323Z",
-      "version": "11.3.5-depup.17"
-    },
     "18": {
       "changes": {
         "graceful-fs": {
@@ -111,6 +90,27 @@
       "status": "failed",
       "timestamp": "2026-06-16T02:37:12.650Z",
       "version": "11.3.5-depup.21"
+    },
+    "22": {
+      "changes": {
+        "graceful-fs": {
+          "from": "^4.2.0",
+          "to": "^4.2.11"
+        },
+        "jsonfile": {
+          "from": "^6.0.1",
+          "to": "^6.2.1"
+        },
+        "universalify": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:26:16.852Z",
+      "version": "11.3.5-depup.22"
     }
   }
 }

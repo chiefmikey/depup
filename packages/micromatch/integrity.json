@@ -1,18 +1,5 @@
 {
   "4.0.8": {
-    "17": {
-      "changes": {
-        "picomatch": {
-          "from": "^2.3.1",
-          "to": "^4.0.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T17:10:54.583Z",
-      "version": "4.0.8-depup.17"
-    },
     "18": {
       "changes": {
         "picomatch": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T02:42:26.860Z",
       "version": "4.0.8-depup.21"
+    },
+    "22": {
+      "changes": {
+        "picomatch": {
+          "from": "^2.3.1",
+          "to": "^4.0.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:26:49.510Z",
+      "version": "4.0.8-depup.22"
     }
   }
 }
