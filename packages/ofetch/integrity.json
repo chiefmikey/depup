@@ -1,18 +1,5 @@
 {
   "1.5.1": {
-    "18": {
-      "changes": {
-        "ufo": {
-          "from": "^1.6.1",
-          "to": "^1.6.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:28:57.408Z",
-      "version": "1.5.1-depup.18"
-    },
     "19": {
       "changes": {
         "ufo": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:01:04.285Z",
       "version": "1.5.1-depup.22"
+    },
+    "23": {
+      "changes": {
+        "ufo": {
+          "from": "^1.6.1",
+          "to": "^1.6.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:29:56.688Z",
+      "version": "1.5.1-depup.23"
     }
   }
 }

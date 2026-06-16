@@ -268,19 +268,6 @@
     }
   },
   "5.108.0": {
-    "5": {
-      "changes": {
-        "import-in-the-middle": {
-          "from": "^3.0.1",
-          "to": "^3.0.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:23:13.579Z",
-      "version": "5.108.0-depup.5"
-    },
     "6": {
       "changes": {
         "import-in-the-middle": {
@@ -332,6 +319,19 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:54:42.120Z",
       "version": "5.108.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "import-in-the-middle": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:24:04.234Z",
+      "version": "5.108.0-depup.10"
     }
   }
 }

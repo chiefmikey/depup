@@ -612,5 +612,32 @@
       "timestamp": "2026-06-15T17:57:20.219Z",
       "version": "20.10.3-depup.8"
     }
+  },
+  "20.10.4": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^25.9.3"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:26:32.050Z",
+      "version": "20.10.4-depup.0"
+    }
   }
 }

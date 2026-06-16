@@ -12,7 +12,7 @@ npm install @depup/react-native-svg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.15.5 | **DepUp version**: 15.15.5-depup.21 | **Updated**: 6/15/2026 | **Import test**: failed
+**Original version**: 15.15.5 | **DepUp version**: 15.15.5-depup.22 | **Updated**: 6/16/2026 | **Import test**: failed
 
 ## What changed
 

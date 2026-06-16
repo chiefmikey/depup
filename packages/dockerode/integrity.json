@@ -89,31 +89,6 @@
     }
   },
   "5.0.0": {
-    "23": {
-      "changes": {
-        "@grpc/grpc-js": {
-          "from": "^1.11.1",
-          "to": "^1.14.4"
-        },
-        "@grpc/proto-loader": {
-          "from": "^0.7.13",
-          "to": "^0.8.1"
-        },
-        "protobufjs": {
-          "from": "^7.3.2",
-          "to": "^8.6.3"
-        },
-        "tar-fs": {
-          "from": "^2.1.4",
-          "to": "^3.1.2"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:23:30.983Z",
-      "version": "5.0.0-depup.23"
-    },
     "24": {
       "changes": {
         "@grpc/grpc-js": {
@@ -213,6 +188,31 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:55:01.309Z",
       "version": "5.0.0-depup.27"
+    },
+    "28": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.11.1",
+          "to": "^1.14.4"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.7.13",
+          "to": "^0.8.1"
+        },
+        "protobufjs": {
+          "from": "^7.3.2",
+          "to": "^8.6.3"
+        },
+        "tar-fs": {
+          "from": "^2.1.4",
+          "to": "^3.1.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:24:18.812Z",
+      "version": "5.0.0-depup.28"
     }
   }
 }

@@ -2207,35 +2207,6 @@
     }
   },
   "4.20260611.0": {
-    "7": {
-      "changes": {
-        "sharp": {
-          "from": "0.34.5",
-          "to": "^0.35.1"
-        },
-        "undici": {
-          "from": "7.24.8",
-          "to": "^8.4.1"
-        },
-        "workerd": {
-          "from": "1.20260611.1",
-          "to": "^1.20260613.1"
-        },
-        "ws": {
-          "from": "8.20.1",
-          "to": "^8.21.0"
-        },
-        "youch": {
-          "from": "4.1.0-beta.10",
-          "to": "^4.1.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:27:41.699Z",
-      "version": "4.20260611.0-depup.7"
-    },
     "8": {
       "changes": {
         "sharp": {
@@ -2351,6 +2322,35 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:59:35.240Z",
       "version": "4.20260611.0-depup.11"
+    },
+    "12": {
+      "changes": {
+        "sharp": {
+          "from": "0.34.5",
+          "to": "^0.35.1"
+        },
+        "undici": {
+          "from": "7.24.8",
+          "to": "^8.5.0"
+        },
+        "workerd": {
+          "from": "1.20260611.1",
+          "to": "^1.20260615.1"
+        },
+        "ws": {
+          "from": "8.20.1",
+          "to": "^8.21.0"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:28:41.746Z",
+      "version": "4.20260611.0-depup.12"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__win32-x64",
+  "version": "0.28.1-depup.12",
+  "description": "The Windows 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/win32-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/win32-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-16T01:14:44.638Z",
+    "smokeTest": "failed"
+  }
+}
