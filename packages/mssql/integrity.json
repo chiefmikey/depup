@@ -327,31 +327,6 @@
     }
   },
   "12.5.5": {
-    "17": {
-      "changes": {
-        "@tediousjs/connection-string": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "commander": {
-          "from": "^11.0.0",
-          "to": "^15.0.0"
-        },
-        "debug": {
-          "from": "^4.3.3",
-          "to": "^4.4.3"
-        },
-        "tedious": {
-          "from": "^19.0.0",
-          "to": "^19.2.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T17:12:45.851Z",
-      "version": "12.5.5-depup.17"
-    },
     "18": {
       "changes": {
         "@tediousjs/connection-string": {
@@ -451,6 +426,31 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:46:56.780Z",
       "version": "12.5.5-depup.21"
+    },
+    "22": {
+      "changes": {
+        "@tediousjs/connection-string": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "commander": {
+          "from": "^11.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "^4.3.3",
+          "to": "^4.4.3"
+        },
+        "tedious": {
+          "from": "^19.0.0",
+          "to": "^19.2.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:26:58.606Z",
+      "version": "12.5.5-depup.22"
     }
   }
 }
