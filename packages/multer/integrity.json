@@ -74,6 +74,23 @@
       "status": "failed",
       "timestamp": "2026-06-16T02:44:07.792Z",
       "version": "2.2.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "append-field": {
+          "from": "^1.0.0",
+          "to": "^2.0.0"
+        },
+        "type-is": {
+          "from": "^1.6.18",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T10:31:55.894Z",
+      "version": "2.2.0-depup.2"
     }
   }
 }
