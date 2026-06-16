@@ -149,15 +149,11 @@ class CuratedListRefresher {
         this.collectResults(results, seen, packages);
 
         // Rate limit courtesy -- npm returns 429 without delay
-        await new Promise((resolve) => {
-          setTimeout(resolve, 500);
-        });
+        await this.sleep(500);
       } catch (error) {
         if (error.statusCode === 429) {
           spinner.text = `Rate limited on "${query}", waiting 5s...`;
-          await new Promise((resolve) => {
-            setTimeout(resolve, 5000);
-          });
+          await this.sleep(5000);
         } else {
           console.warn(
             chalk.yellow(
@@ -212,6 +208,12 @@ class CuratedListRefresher {
       timeout: 10_000,
     });
     return result.objects || [];
+  }
+
+  sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
   }
 
   shouldSkip(name) {
