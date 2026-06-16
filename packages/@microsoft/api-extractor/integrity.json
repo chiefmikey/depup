@@ -672,39 +672,6 @@
     }
   },
   "7.58.9": {
-    "4": {
-      "changes": {
-        "diff": {
-          "from": "~8.0.2",
-          "to": "^9.0.0"
-        },
-        "minimatch": {
-          "from": "10.2.3",
-          "to": "^10.2.5"
-        },
-        "resolve": {
-          "from": "~1.22.1",
-          "to": "^1.22.12"
-        },
-        "semver": {
-          "from": "~7.7.4",
-          "to": "^7.8.4"
-        },
-        "source-map": {
-          "from": "~0.6.1",
-          "to": "^0.7.6"
-        },
-        "typescript": {
-          "from": "5.9.3",
-          "to": "^6.0.3"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T09:16:01.528Z",
-      "version": "7.58.9-depup.4"
-    },
     "5": {
       "changes": {
         "diff": {
@@ -836,6 +803,39 @@
       "status": "failed",
       "timestamp": "2026-06-15T17:46:41.131Z",
       "version": "7.58.9-depup.8"
+    },
+    "9": {
+      "changes": {
+        "diff": {
+          "from": "~8.0.2",
+          "to": "^9.0.0"
+        },
+        "minimatch": {
+          "from": "10.2.3",
+          "to": "^10.2.5"
+        },
+        "resolve": {
+          "from": "~1.22.1",
+          "to": "^1.22.12"
+        },
+        "semver": {
+          "from": "~7.7.4",
+          "to": "^7.8.4"
+        },
+        "source-map": {
+          "from": "~0.6.1",
+          "to": "^0.7.6"
+        },
+        "typescript": {
+          "from": "5.9.3",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-16T01:16:33.442Z",
+      "version": "7.58.9-depup.9"
     }
   }
 }

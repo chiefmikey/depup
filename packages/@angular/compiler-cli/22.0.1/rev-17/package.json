@@ -1,0 +1,131 @@
+{
+  "name": "@depup/angular__compiler-cli",
+  "version": "22.0.1-depup.17",
+  "description": "Angular - the compiler CLI for Node.js (with updated dependencies)",
+  "typings": "index.d.ts",
+  "bin": {
+    "ngc": "./bundles/src/bin/ngc.js",
+    "ng-xi18n": "./bundles/src/bin/ng_xi18n.js"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./bundles/index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./linker": {
+      "types": "./linker/index.d.ts",
+      "default": "./bundles/linker/index.js"
+    },
+    "./linker/babel": {
+      "types": "./linker/babel/index.d.ts",
+      "default": "./bundles/linker/babel/index.js"
+    },
+    "./private/*": {
+      "types": "./private/*.d.ts",
+      "default": "./bundles/private/*.js"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.7",
+    "@jridgewell/sourcemap-codec": "^1.5.5",
+    "reflect-metadata": "^0.2.2",
+    "chokidar": "^5.0.0",
+    "convert-source-map": "^2.0.0",
+    "semver": "^7.8.4",
+    "tslib": "^2.8.1",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "@types/convert-source-map": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/compiler": "22.0.1",
+    "typescript": ">=6.0 <6.1"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular.git",
+    "directory": "packages/compiler-cli"
+  },
+  "keywords": [
+    "@angular/compiler-cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "angular",
+    "compiler"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular/issues"
+  },
+  "homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli",
+  "ng-update": {
+    "packageGroup": [
+      "@angular/core",
+      "@angular/bazel",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/compiler-cli",
+      "@angular/animations",
+      "@angular/elements",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/forms",
+      "@angular/platform-server",
+      "@angular/upgrade",
+      "@angular/router",
+      "@angular/language-service",
+      "@angular/localize",
+      "@angular/service-worker"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "7.29.0",
+        "to": "^7.29.7"
+      },
+      "@jridgewell/sourcemap-codec": {
+        "from": "^1.4.14",
+        "to": "^1.5.5"
+      },
+      "reflect-metadata": {
+        "from": "^0.2.0",
+        "to": "^0.2.2"
+      },
+      "convert-source-map": {
+        "from": "^1.5.1",
+        "to": "^2.0.0"
+      },
+      "semver": {
+        "from": "^7.0.0",
+        "to": "^7.8.4"
+      },
+      "tslib": {
+        "from": "^2.3.0",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "@angular/compiler-cli",
+    "originalVersion": "22.0.1",
+    "processedAt": "2026-06-16T01:13:05.080Z",
+    "smokeTest": "passed"
+  }
+}
