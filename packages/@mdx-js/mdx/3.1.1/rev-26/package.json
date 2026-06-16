@@ -1,0 +1,189 @@
+{
+  "name": "@depup/mdx-js__mdx",
+  "version": "3.1.1-depup.26",
+  "description": "MDX compiler (with updated dependencies)",
+  "license": "MIT",
+  "keywords": [
+    "@mdx-js/mdx",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "jsx",
+    "markdown",
+    "mdx",
+    "remark"
+  ],
+  "homepage": "https://mdxjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdx-js/mdx",
+    "directory": "packages/mdx/"
+  },
+  "bugs": "https://github.com/mdx-js/mdx/issues",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
+  "author": "John Otander <johnotander@gmail.com> (https://johno.com)",
+  "contributors": [
+    "John Otander <johnotander@gmail.com> (https://johno.com)",
+    "Tim Neutkens <tim@vercel.com>",
+    "Matija Marohnić <matija.marohnic@gmail.com>",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+    "JounQin <admin@1stg.me> (https://www.1stg.me)",
+    "Christian Murphy <christian.murphy.42@gmail.com>"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./index.js",
+    "./internal-create-format-aware-processors": "./lib/util/create-format-aware-processors.js",
+    "./internal-extnames-to-regex": "./lib/util/extnames-to-regex.js"
+  },
+  "files": [
+    "lib/",
+    "index.d.ts.map",
+    "index.d.ts",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@types/estree": "^1.0.9",
+    "@types/estree-jsx": "^1.0.5",
+    "@types/hast": "^3.0.4",
+    "@types/mdx": "^2.0.14",
+    "acorn": "^8.17.0",
+    "collapse-white-space": "^2.1.0",
+    "devlop": "^1.1.0",
+    "estree-util-is-identifier-name": "^3.0.0",
+    "estree-util-scope": "^1.0.0",
+    "estree-walker": "^3.0.3",
+    "hast-util-to-jsx-runtime": "^2.3.6",
+    "markdown-extensions": "^2.0.0",
+    "recma-build-jsx": "^1.0.0",
+    "recma-jsx": "^1.0.1",
+    "recma-stringify": "^1.0.0",
+    "rehype-recma": "^1.0.0",
+    "remark-mdx": "^3.1.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "source-map": "^0.7.6",
+    "unified": "^11.0.5",
+    "unist-util-position-from-estree": "^2.0.0",
+    "unist-util-stringify-position": "^4.0.0",
+    "unist-util-visit": "^5.1.0",
+    "vfile": "^6.0.3"
+  },
+  "scripts": {
+    "test": "npm run test-coverage",
+    "test-api": "node --conditions development --enable-source-maps test/index.js",
+    "test-coverage": "c8 --100 --reporter lcov npm run test-api"
+  },
+  "xo": {
+    "overrides": [
+      {
+        "files": [
+          "test/**/*.js"
+        ],
+        "rules": {
+          "no-restricted-globals": "off"
+        }
+      },
+      {
+        "files": [
+          "**/*.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/array-type": "off",
+          "@typescript-eslint/ban-types": "off",
+          "@typescript-eslint/consistent-type-definitions": "off"
+        }
+      }
+    ],
+    "prettier": true,
+    "rules": {
+      "complexity": "off",
+      "logical-assignment-operators": "off",
+      "max-depth": "off",
+      "n/file-extension-in-import": "off",
+      "unicorn/prefer-at": "off",
+      "unicorn/prefer-code-point": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "@types/estree": {
+        "from": "^1.0.0",
+        "to": "^1.0.9"
+      },
+      "@types/estree-jsx": {
+        "from": "^1.0.0",
+        "to": "^1.0.5"
+      },
+      "@types/hast": {
+        "from": "^3.0.0",
+        "to": "^3.0.4"
+      },
+      "@types/mdx": {
+        "from": "^2.0.0",
+        "to": "^2.0.14"
+      },
+      "acorn": {
+        "from": "^8.0.0",
+        "to": "^8.17.0"
+      },
+      "collapse-white-space": {
+        "from": "^2.0.0",
+        "to": "^2.1.0"
+      },
+      "devlop": {
+        "from": "^1.0.0",
+        "to": "^1.1.0"
+      },
+      "estree-walker": {
+        "from": "^3.0.0",
+        "to": "^3.0.3"
+      },
+      "hast-util-to-jsx-runtime": {
+        "from": "^2.0.0",
+        "to": "^2.3.6"
+      },
+      "recma-jsx": {
+        "from": "^1.0.0",
+        "to": "^1.0.1"
+      },
+      "remark-mdx": {
+        "from": "^3.0.0",
+        "to": "^3.1.1"
+      },
+      "remark-rehype": {
+        "from": "^11.0.0",
+        "to": "^11.1.2"
+      },
+      "source-map": {
+        "from": "^0.7.0",
+        "to": "^0.7.6"
+      },
+      "unified": {
+        "from": "^11.0.0",
+        "to": "^11.0.5"
+      },
+      "unist-util-visit": {
+        "from": "^5.0.0",
+        "to": "^5.1.0"
+      },
+      "vfile": {
+        "from": "^6.0.0",
+        "to": "^6.0.3"
+      }
+    },
+    "depsUpdated": 16,
+    "originalPackage": "@mdx-js/mdx",
+    "originalVersion": "3.1.1",
+    "processedAt": "2026-06-16T01:39:13.152Z",
+    "smokeTest": "passed"
+  }
+}

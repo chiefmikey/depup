@@ -50,31 +50,6 @@
     }
   },
   "9.0.2": {
-    "18": {
-      "changes": {
-        "env-paths": {
-          "from": "^2.2.1",
-          "to": "^4.0.0"
-        },
-        "import-fresh": {
-          "from": "^3.3.0",
-          "to": "^4.0.0"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^4.2.0"
-        },
-        "parse-json": {
-          "from": "^5.2.0",
-          "to": "^8.3.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:45:36.167Z",
-      "version": "9.0.2-depup.18"
-    },
     "19": {
       "changes": {
         "env-paths": {
@@ -174,6 +149,31 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:20:42.781Z",
       "version": "9.0.2-depup.22"
+    },
+    "23": {
+      "changes": {
+        "env-paths": {
+          "from": "^2.2.1",
+          "to": "^4.0.0"
+        },
+        "import-fresh": {
+          "from": "^3.3.0",
+          "to": "^4.0.0"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^4.2.0"
+        },
+        "parse-json": {
+          "from": "^5.2.0",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-16T02:17:25.511Z",
+      "version": "9.0.2-depup.23"
     }
   }
 }

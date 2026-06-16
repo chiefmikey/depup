@@ -167,19 +167,6 @@
     }
   },
   "3.5.38": {
-    "10": {
-      "changes": {
-        "estree-walker": {
-          "from": "^2.0.2",
-          "to": "^3.0.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-14T16:43:28.587Z",
-      "version": "3.5.38-depup.10"
-    },
     "11": {
       "changes": {
         "estree-walker": {
@@ -231,6 +218,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:18:34.787Z",
       "version": "3.5.38-depup.14"
+    },
+    "15": {
+      "changes": {
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-16T02:00:10.572Z",
+      "version": "3.5.38-depup.15"
     }
   }
 }

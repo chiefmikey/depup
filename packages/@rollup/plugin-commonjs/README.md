@@ -12,7 +12,7 @@ npm install @depup/rollup__plugin-commonjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 29.0.3 | **DepUp version**: 29.0.3-depup.25 | **Updated**: 6/15/2026 | **Import test**: passed
+**Original version**: 29.0.3 | **DepUp version**: 29.0.3-depup.26 | **Updated**: 6/16/2026 | **Import test**: passed
 
 ## What changed
 
