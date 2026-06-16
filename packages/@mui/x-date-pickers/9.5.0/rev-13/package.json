@@ -1,0 +1,855 @@
+{
+  "name": "@depup/mui__x-date-pickers",
+  "version": "9.5.0-depup.13",
+  "author": "MUI Team",
+  "description": "The community edition of the MUI X Date and Time Picker components. (with updated dependencies)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mui/mui-x/issues"
+  },
+  "homepage": "https://mui.com/x/react-date-pickers/",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/mui-org"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "@mui/x-date-pickers",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "react-component",
+    "mui",
+    "mui-x",
+    "material-ui",
+    "material design",
+    "datepicker",
+    "timepicker",
+    "datetimepicker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mui/mui-x.git",
+    "directory": "packages/x-date-pickers"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.29.7",
+    "@mui/utils": "^9.1.1",
+    "@types/react-transition-group": "^4.4.12",
+    "clsx": "^2.1.1",
+    "prop-types": "^15.8.1",
+    "react-transition-group": "^4.4.5",
+    "@mui/x-internals": "^9.1.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^7.3.0 || ^9.0.0",
+    "@mui/system": "^7.3.0 || ^9.0.0",
+    "date-fns": "^2.25.0 || ^3.2.0 || ^4.0.0",
+    "date-fns-jalali": "^2.13.0-0 || ^3.2.0-0 || ^4.0.0-0",
+    "dayjs": "^1.10.7",
+    "luxon": "^3.0.2",
+    "moment": "^2.29.4",
+    "moment-hijri": "^2.1.2 || ^3.0.0",
+    "moment-jalaali": "^0.7.4 || ^0.8.0 || ^0.9.0 || ^0.10.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@emotion/react": {
+      "optional": true
+    },
+    "@emotion/styled": {
+      "optional": true
+    },
+    "date-fns": {
+      "optional": true
+    },
+    "date-fns-jalali": {
+      "optional": true
+    },
+    "dayjs": {
+      "optional": true
+    },
+    "luxon": {
+      "optional": true
+    },
+    "moment": {
+      "optional": true
+    },
+    "moment-hijri": {
+      "optional": true
+    },
+    "moment-jalaali": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      }
+    },
+    "./icons": {
+      "import": {
+        "types": "./icons/index.d.mts",
+        "default": "./icons/index.mjs"
+      },
+      "require": {
+        "types": "./icons/index.d.ts",
+        "default": "./icons/index.js"
+      },
+      "default": {
+        "types": "./icons/index.d.mts",
+        "default": "./icons/index.mjs"
+      }
+    },
+    "./internals/demo": {
+      "import": {
+        "types": "./internals/demo/index.d.mts",
+        "default": "./internals/demo/index.mjs"
+      },
+      "require": {
+        "types": "./internals/demo/index.d.ts",
+        "default": "./internals/demo/index.js"
+      },
+      "default": {
+        "types": "./internals/demo/index.d.mts",
+        "default": "./internals/demo/index.mjs"
+      }
+    },
+    "./AdapterDateFns": {
+      "import": {
+        "types": "./AdapterDateFns/index.d.mts",
+        "default": "./AdapterDateFns/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDateFns/index.d.ts",
+        "default": "./AdapterDateFns/index.js"
+      },
+      "default": {
+        "types": "./AdapterDateFns/index.d.mts",
+        "default": "./AdapterDateFns/index.mjs"
+      }
+    },
+    "./AdapterDateFnsBase": {
+      "import": {
+        "types": "./AdapterDateFnsBase/index.d.mts",
+        "default": "./AdapterDateFnsBase/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDateFnsBase/index.d.ts",
+        "default": "./AdapterDateFnsBase/index.js"
+      },
+      "default": {
+        "types": "./AdapterDateFnsBase/index.d.mts",
+        "default": "./AdapterDateFnsBase/index.mjs"
+      }
+    },
+    "./AdapterDateFnsJalali": {
+      "import": {
+        "types": "./AdapterDateFnsJalali/index.d.mts",
+        "default": "./AdapterDateFnsJalali/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDateFnsJalali/index.d.ts",
+        "default": "./AdapterDateFnsJalali/index.js"
+      },
+      "default": {
+        "types": "./AdapterDateFnsJalali/index.d.mts",
+        "default": "./AdapterDateFnsJalali/index.mjs"
+      }
+    },
+    "./AdapterDateFnsJalaliV2": {
+      "import": {
+        "types": "./AdapterDateFnsJalaliV2/index.d.mts",
+        "default": "./AdapterDateFnsJalaliV2/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDateFnsJalaliV2/index.d.ts",
+        "default": "./AdapterDateFnsJalaliV2/index.js"
+      },
+      "default": {
+        "types": "./AdapterDateFnsJalaliV2/index.d.mts",
+        "default": "./AdapterDateFnsJalaliV2/index.mjs"
+      }
+    },
+    "./AdapterDateFnsV2": {
+      "import": {
+        "types": "./AdapterDateFnsV2/index.d.mts",
+        "default": "./AdapterDateFnsV2/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDateFnsV2/index.d.ts",
+        "default": "./AdapterDateFnsV2/index.js"
+      },
+      "default": {
+        "types": "./AdapterDateFnsV2/index.d.mts",
+        "default": "./AdapterDateFnsV2/index.mjs"
+      }
+    },
+    "./AdapterDayjs": {
+      "import": {
+        "types": "./AdapterDayjs/index.d.mts",
+        "default": "./AdapterDayjs/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDayjs/index.d.ts",
+        "default": "./AdapterDayjs/index.js"
+      },
+      "default": {
+        "types": "./AdapterDayjs/index.d.mts",
+        "default": "./AdapterDayjs/index.mjs"
+      }
+    },
+    "./AdapterDayjsBuddhist": {
+      "import": {
+        "types": "./AdapterDayjsBuddhist/index.d.mts",
+        "default": "./AdapterDayjsBuddhist/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterDayjsBuddhist/index.d.ts",
+        "default": "./AdapterDayjsBuddhist/index.js"
+      },
+      "default": {
+        "types": "./AdapterDayjsBuddhist/index.d.mts",
+        "default": "./AdapterDayjsBuddhist/index.mjs"
+      }
+    },
+    "./AdapterLuxon": {
+      "import": {
+        "types": "./AdapterLuxon/index.d.mts",
+        "default": "./AdapterLuxon/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterLuxon/index.d.ts",
+        "default": "./AdapterLuxon/index.js"
+      },
+      "default": {
+        "types": "./AdapterLuxon/index.d.mts",
+        "default": "./AdapterLuxon/index.mjs"
+      }
+    },
+    "./AdapterMoment": {
+      "import": {
+        "types": "./AdapterMoment/index.d.mts",
+        "default": "./AdapterMoment/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterMoment/index.d.ts",
+        "default": "./AdapterMoment/index.js"
+      },
+      "default": {
+        "types": "./AdapterMoment/index.d.mts",
+        "default": "./AdapterMoment/index.mjs"
+      }
+    },
+    "./AdapterMomentHijri": {
+      "import": {
+        "types": "./AdapterMomentHijri/index.d.mts",
+        "default": "./AdapterMomentHijri/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterMomentHijri/index.d.ts",
+        "default": "./AdapterMomentHijri/index.js"
+      },
+      "default": {
+        "types": "./AdapterMomentHijri/index.d.mts",
+        "default": "./AdapterMomentHijri/index.mjs"
+      }
+    },
+    "./AdapterMomentJalaali": {
+      "import": {
+        "types": "./AdapterMomentJalaali/index.d.mts",
+        "default": "./AdapterMomentJalaali/index.mjs"
+      },
+      "require": {
+        "types": "./AdapterMomentJalaali/index.d.ts",
+        "default": "./AdapterMomentJalaali/index.js"
+      },
+      "default": {
+        "types": "./AdapterMomentJalaali/index.d.mts",
+        "default": "./AdapterMomentJalaali/index.mjs"
+      }
+    },
+    "./DateCalendar": {
+      "import": {
+        "types": "./DateCalendar/index.d.mts",
+        "default": "./DateCalendar/index.mjs"
+      },
+      "require": {
+        "types": "./DateCalendar/index.d.ts",
+        "default": "./DateCalendar/index.js"
+      },
+      "default": {
+        "types": "./DateCalendar/index.d.mts",
+        "default": "./DateCalendar/index.mjs"
+      }
+    },
+    "./DateField": {
+      "import": {
+        "types": "./DateField/index.d.mts",
+        "default": "./DateField/index.mjs"
+      },
+      "require": {
+        "types": "./DateField/index.d.ts",
+        "default": "./DateField/index.js"
+      },
+      "default": {
+        "types": "./DateField/index.d.mts",
+        "default": "./DateField/index.mjs"
+      }
+    },
+    "./DatePicker": {
+      "import": {
+        "types": "./DatePicker/index.d.mts",
+        "default": "./DatePicker/index.mjs"
+      },
+      "require": {
+        "types": "./DatePicker/index.d.ts",
+        "default": "./DatePicker/index.js"
+      },
+      "default": {
+        "types": "./DatePicker/index.d.mts",
+        "default": "./DatePicker/index.mjs"
+      }
+    },
+    "./DateTimeField": {
+      "import": {
+        "types": "./DateTimeField/index.d.mts",
+        "default": "./DateTimeField/index.mjs"
+      },
+      "require": {
+        "types": "./DateTimeField/index.d.ts",
+        "default": "./DateTimeField/index.js"
+      },
+      "default": {
+        "types": "./DateTimeField/index.d.mts",
+        "default": "./DateTimeField/index.mjs"
+      }
+    },
+    "./DateTimePicker": {
+      "import": {
+        "types": "./DateTimePicker/index.d.mts",
+        "default": "./DateTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./DateTimePicker/index.d.ts",
+        "default": "./DateTimePicker/index.js"
+      },
+      "default": {
+        "types": "./DateTimePicker/index.d.mts",
+        "default": "./DateTimePicker/index.mjs"
+      }
+    },
+    "./DayCalendarSkeleton": {
+      "import": {
+        "types": "./DayCalendarSkeleton/index.d.mts",
+        "default": "./DayCalendarSkeleton/index.mjs"
+      },
+      "require": {
+        "types": "./DayCalendarSkeleton/index.d.ts",
+        "default": "./DayCalendarSkeleton/index.js"
+      },
+      "default": {
+        "types": "./DayCalendarSkeleton/index.d.mts",
+        "default": "./DayCalendarSkeleton/index.mjs"
+      }
+    },
+    "./DesktopDatePicker": {
+      "import": {
+        "types": "./DesktopDatePicker/index.d.mts",
+        "default": "./DesktopDatePicker/index.mjs"
+      },
+      "require": {
+        "types": "./DesktopDatePicker/index.d.ts",
+        "default": "./DesktopDatePicker/index.js"
+      },
+      "default": {
+        "types": "./DesktopDatePicker/index.d.mts",
+        "default": "./DesktopDatePicker/index.mjs"
+      }
+    },
+    "./DesktopDateTimePicker": {
+      "import": {
+        "types": "./DesktopDateTimePicker/index.d.mts",
+        "default": "./DesktopDateTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./DesktopDateTimePicker/index.d.ts",
+        "default": "./DesktopDateTimePicker/index.js"
+      },
+      "default": {
+        "types": "./DesktopDateTimePicker/index.d.mts",
+        "default": "./DesktopDateTimePicker/index.mjs"
+      }
+    },
+    "./DesktopTimePicker": {
+      "import": {
+        "types": "./DesktopTimePicker/index.d.mts",
+        "default": "./DesktopTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./DesktopTimePicker/index.d.ts",
+        "default": "./DesktopTimePicker/index.js"
+      },
+      "default": {
+        "types": "./DesktopTimePicker/index.d.mts",
+        "default": "./DesktopTimePicker/index.mjs"
+      }
+    },
+    "./DigitalClock": {
+      "import": {
+        "types": "./DigitalClock/index.d.mts",
+        "default": "./DigitalClock/index.mjs"
+      },
+      "require": {
+        "types": "./DigitalClock/index.d.ts",
+        "default": "./DigitalClock/index.js"
+      },
+      "default": {
+        "types": "./DigitalClock/index.d.mts",
+        "default": "./DigitalClock/index.mjs"
+      }
+    },
+    "./LocalizationProvider": {
+      "import": {
+        "types": "./LocalizationProvider/index.d.mts",
+        "default": "./LocalizationProvider/index.mjs"
+      },
+      "require": {
+        "types": "./LocalizationProvider/index.d.ts",
+        "default": "./LocalizationProvider/index.js"
+      },
+      "default": {
+        "types": "./LocalizationProvider/index.d.mts",
+        "default": "./LocalizationProvider/index.mjs"
+      }
+    },
+    "./MobileDatePicker": {
+      "import": {
+        "types": "./MobileDatePicker/index.d.mts",
+        "default": "./MobileDatePicker/index.mjs"
+      },
+      "require": {
+        "types": "./MobileDatePicker/index.d.ts",
+        "default": "./MobileDatePicker/index.js"
+      },
+      "default": {
+        "types": "./MobileDatePicker/index.d.mts",
+        "default": "./MobileDatePicker/index.mjs"
+      }
+    },
+    "./MobileDateTimePicker": {
+      "import": {
+        "types": "./MobileDateTimePicker/index.d.mts",
+        "default": "./MobileDateTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./MobileDateTimePicker/index.d.ts",
+        "default": "./MobileDateTimePicker/index.js"
+      },
+      "default": {
+        "types": "./MobileDateTimePicker/index.d.mts",
+        "default": "./MobileDateTimePicker/index.mjs"
+      }
+    },
+    "./MobileTimePicker": {
+      "import": {
+        "types": "./MobileTimePicker/index.d.mts",
+        "default": "./MobileTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./MobileTimePicker/index.d.ts",
+        "default": "./MobileTimePicker/index.js"
+      },
+      "default": {
+        "types": "./MobileTimePicker/index.d.mts",
+        "default": "./MobileTimePicker/index.mjs"
+      }
+    },
+    "./MonthCalendar": {
+      "import": {
+        "types": "./MonthCalendar/index.d.mts",
+        "default": "./MonthCalendar/index.mjs"
+      },
+      "require": {
+        "types": "./MonthCalendar/index.d.ts",
+        "default": "./MonthCalendar/index.js"
+      },
+      "default": {
+        "types": "./MonthCalendar/index.d.mts",
+        "default": "./MonthCalendar/index.mjs"
+      }
+    },
+    "./MultiSectionDigitalClock": {
+      "import": {
+        "types": "./MultiSectionDigitalClock/index.d.mts",
+        "default": "./MultiSectionDigitalClock/index.mjs"
+      },
+      "require": {
+        "types": "./MultiSectionDigitalClock/index.d.ts",
+        "default": "./MultiSectionDigitalClock/index.js"
+      },
+      "default": {
+        "types": "./MultiSectionDigitalClock/index.d.mts",
+        "default": "./MultiSectionDigitalClock/index.mjs"
+      }
+    },
+    "./PickerDay": {
+      "import": {
+        "types": "./PickerDay/index.d.mts",
+        "default": "./PickerDay/index.mjs"
+      },
+      "require": {
+        "types": "./PickerDay/index.d.ts",
+        "default": "./PickerDay/index.js"
+      },
+      "default": {
+        "types": "./PickerDay/index.d.mts",
+        "default": "./PickerDay/index.mjs"
+      }
+    },
+    "./PickersActionBar": {
+      "import": {
+        "types": "./PickersActionBar/index.d.mts",
+        "default": "./PickersActionBar/index.mjs"
+      },
+      "require": {
+        "types": "./PickersActionBar/index.d.ts",
+        "default": "./PickersActionBar/index.js"
+      },
+      "default": {
+        "types": "./PickersActionBar/index.d.mts",
+        "default": "./PickersActionBar/index.mjs"
+      }
+    },
+    "./PickersCalendarHeader": {
+      "import": {
+        "types": "./PickersCalendarHeader/index.d.mts",
+        "default": "./PickersCalendarHeader/index.mjs"
+      },
+      "require": {
+        "types": "./PickersCalendarHeader/index.d.ts",
+        "default": "./PickersCalendarHeader/index.js"
+      },
+      "default": {
+        "types": "./PickersCalendarHeader/index.d.mts",
+        "default": "./PickersCalendarHeader/index.mjs"
+      }
+    },
+    "./PickersLayout": {
+      "import": {
+        "types": "./PickersLayout/index.d.mts",
+        "default": "./PickersLayout/index.mjs"
+      },
+      "require": {
+        "types": "./PickersLayout/index.d.ts",
+        "default": "./PickersLayout/index.js"
+      },
+      "default": {
+        "types": "./PickersLayout/index.d.mts",
+        "default": "./PickersLayout/index.mjs"
+      }
+    },
+    "./PickersSectionList": {
+      "import": {
+        "types": "./PickersSectionList/index.d.mts",
+        "default": "./PickersSectionList/index.mjs"
+      },
+      "require": {
+        "types": "./PickersSectionList/index.d.ts",
+        "default": "./PickersSectionList/index.js"
+      },
+      "default": {
+        "types": "./PickersSectionList/index.d.mts",
+        "default": "./PickersSectionList/index.mjs"
+      }
+    },
+    "./PickersShortcuts": {
+      "import": {
+        "types": "./PickersShortcuts/index.d.mts",
+        "default": "./PickersShortcuts/index.mjs"
+      },
+      "require": {
+        "types": "./PickersShortcuts/index.d.ts",
+        "default": "./PickersShortcuts/index.js"
+      },
+      "default": {
+        "types": "./PickersShortcuts/index.d.mts",
+        "default": "./PickersShortcuts/index.mjs"
+      }
+    },
+    "./PickersTextField": {
+      "import": {
+        "types": "./PickersTextField/index.d.mts",
+        "default": "./PickersTextField/index.mjs"
+      },
+      "require": {
+        "types": "./PickersTextField/index.d.ts",
+        "default": "./PickersTextField/index.js"
+      },
+      "default": {
+        "types": "./PickersTextField/index.d.mts",
+        "default": "./PickersTextField/index.mjs"
+      }
+    },
+    "./StaticDatePicker": {
+      "import": {
+        "types": "./StaticDatePicker/index.d.mts",
+        "default": "./StaticDatePicker/index.mjs"
+      },
+      "require": {
+        "types": "./StaticDatePicker/index.d.ts",
+        "default": "./StaticDatePicker/index.js"
+      },
+      "default": {
+        "types": "./StaticDatePicker/index.d.mts",
+        "default": "./StaticDatePicker/index.mjs"
+      }
+    },
+    "./StaticDateTimePicker": {
+      "import": {
+        "types": "./StaticDateTimePicker/index.d.mts",
+        "default": "./StaticDateTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./StaticDateTimePicker/index.d.ts",
+        "default": "./StaticDateTimePicker/index.js"
+      },
+      "default": {
+        "types": "./StaticDateTimePicker/index.d.mts",
+        "default": "./StaticDateTimePicker/index.mjs"
+      }
+    },
+    "./StaticTimePicker": {
+      "import": {
+        "types": "./StaticTimePicker/index.d.mts",
+        "default": "./StaticTimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./StaticTimePicker/index.d.ts",
+        "default": "./StaticTimePicker/index.js"
+      },
+      "default": {
+        "types": "./StaticTimePicker/index.d.mts",
+        "default": "./StaticTimePicker/index.mjs"
+      }
+    },
+    "./TimeClock": {
+      "import": {
+        "types": "./TimeClock/index.d.mts",
+        "default": "./TimeClock/index.mjs"
+      },
+      "require": {
+        "types": "./TimeClock/index.d.ts",
+        "default": "./TimeClock/index.js"
+      },
+      "default": {
+        "types": "./TimeClock/index.d.mts",
+        "default": "./TimeClock/index.mjs"
+      }
+    },
+    "./TimeField": {
+      "import": {
+        "types": "./TimeField/index.d.mts",
+        "default": "./TimeField/index.mjs"
+      },
+      "require": {
+        "types": "./TimeField/index.d.ts",
+        "default": "./TimeField/index.js"
+      },
+      "default": {
+        "types": "./TimeField/index.d.mts",
+        "default": "./TimeField/index.mjs"
+      }
+    },
+    "./TimePicker": {
+      "import": {
+        "types": "./TimePicker/index.d.mts",
+        "default": "./TimePicker/index.mjs"
+      },
+      "require": {
+        "types": "./TimePicker/index.d.ts",
+        "default": "./TimePicker/index.js"
+      },
+      "default": {
+        "types": "./TimePicker/index.d.mts",
+        "default": "./TimePicker/index.mjs"
+      }
+    },
+    "./YearCalendar": {
+      "import": {
+        "types": "./YearCalendar/index.d.mts",
+        "default": "./YearCalendar/index.mjs"
+      },
+      "require": {
+        "types": "./YearCalendar/index.d.ts",
+        "default": "./YearCalendar/index.js"
+      },
+      "default": {
+        "types": "./YearCalendar/index.d.mts",
+        "default": "./YearCalendar/index.mjs"
+      }
+    },
+    "./dateViewRenderers": {
+      "import": {
+        "types": "./dateViewRenderers/index.d.mts",
+        "default": "./dateViewRenderers/index.mjs"
+      },
+      "require": {
+        "types": "./dateViewRenderers/index.d.ts",
+        "default": "./dateViewRenderers/index.js"
+      },
+      "default": {
+        "types": "./dateViewRenderers/index.d.mts",
+        "default": "./dateViewRenderers/index.mjs"
+      }
+    },
+    "./hooks": {
+      "import": {
+        "types": "./hooks/index.d.mts",
+        "default": "./hooks/index.mjs"
+      },
+      "require": {
+        "types": "./hooks/index.d.ts",
+        "default": "./hooks/index.js"
+      },
+      "default": {
+        "types": "./hooks/index.d.mts",
+        "default": "./hooks/index.mjs"
+      }
+    },
+    "./internals": {
+      "import": {
+        "types": "./internals/index.d.mts",
+        "default": "./internals/index.mjs"
+      },
+      "require": {
+        "types": "./internals/index.d.ts",
+        "default": "./internals/index.js"
+      },
+      "default": {
+        "types": "./internals/index.d.mts",
+        "default": "./internals/index.mjs"
+      }
+    },
+    "./locales": {
+      "import": {
+        "types": "./locales/index.d.mts",
+        "default": "./locales/index.mjs"
+      },
+      "require": {
+        "types": "./locales/index.d.ts",
+        "default": "./locales/index.js"
+      },
+      "default": {
+        "types": "./locales/index.d.mts",
+        "default": "./locales/index.mjs"
+      }
+    },
+    "./managers": {
+      "import": {
+        "types": "./managers/index.d.mts",
+        "default": "./managers/index.mjs"
+      },
+      "require": {
+        "types": "./managers/index.d.ts",
+        "default": "./managers/index.js"
+      },
+      "default": {
+        "types": "./managers/index.d.mts",
+        "default": "./managers/index.mjs"
+      }
+    },
+    "./models": {
+      "import": {
+        "types": "./models/index.d.mts",
+        "default": "./models/index.mjs"
+      },
+      "require": {
+        "types": "./models/index.d.ts",
+        "default": "./models/index.js"
+      },
+      "default": {
+        "types": "./models/index.d.mts",
+        "default": "./models/index.mjs"
+      }
+    },
+    "./themeAugmentation": {
+      "import": {
+        "types": "./themeAugmentation/index.d.mts",
+        "default": "./themeAugmentation/index.mjs"
+      },
+      "require": {
+        "types": "./themeAugmentation/index.d.ts",
+        "default": "./themeAugmentation/index.js"
+      },
+      "default": {
+        "types": "./themeAugmentation/index.d.mts",
+        "default": "./themeAugmentation/index.mjs"
+      }
+    },
+    "./timeViewRenderers": {
+      "import": {
+        "types": "./timeViewRenderers/index.d.mts",
+        "default": "./timeViewRenderers/index.mjs"
+      },
+      "require": {
+        "types": "./timeViewRenderers/index.d.ts",
+        "default": "./timeViewRenderers/index.js"
+      },
+      "default": {
+        "types": "./timeViewRenderers/index.d.mts",
+        "default": "./timeViewRenderers/index.mjs"
+      }
+    },
+    "./validation": {
+      "import": {
+        "types": "./validation/index.d.mts",
+        "default": "./validation/index.mjs"
+      },
+      "require": {
+        "types": "./validation/index.d.ts",
+        "default": "./validation/index.js"
+      },
+      "default": {
+        "types": "./validation/index.d.mts",
+        "default": "./validation/index.mjs"
+      }
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "depup": {
+    "changes": {
+      "@mui/utils": {
+        "from": "9.0.1",
+        "to": "^9.1.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@mui/x-date-pickers",
+    "originalVersion": "9.5.0",
+    "processedAt": "2026-06-16T09:57:13.820Z",
+    "smokeTest": "failed"
+  }
+}

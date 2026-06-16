@@ -127,6 +127,14 @@
       "status": "failed",
       "timestamp": "2026-06-16T01:33:52.167Z",
       "version": "15.3.2-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-16T10:16:01.174Z",
+      "version": "15.3.2-depup.1"
     }
   }
 }
