@@ -12,27 +12,27 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.4 | **DepUp version**: 3.7.4-depup.35 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 3.7.5 | **DepUp version**: 3.7.5-depup.0 | **Updated**: 6/17/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.23.2` | `^7.29.7` |
-| @babel/plugin-proposal-decorators | `^7.23.2` | `^7.29.7` |
-| @babel/plugin-transform-async-generator-functions | `^7.25.4` | `^7.29.7` |
-| @babel/plugin-transform-async-to-generator | `^7.22.5` | `^7.29.7` |
-| @babel/plugin-transform-class-properties | `^7.25.4` | `^7.29.7` |
-| @babel/plugin-transform-class-static-block | `^7.24.7` | `^7.29.7` |
-| @babel/plugin-transform-exponentiation-operator | `^7.22.5` | `^7.29.7` |
-| @babel/plugin-transform-for-of | `^7.22.15` | `^7.29.7` |
-| @babel/plugin-transform-object-rest-spread | `^7.24.7` | `^7.29.7` |
-| @babel/plugin-transform-private-methods | `^7.25.4` | `^7.29.7` |
-| @babel/plugin-transform-runtime | `7.23.3` | `^7.29.7` |
-| @babel/preset-env | `^7.23.2` | `^7.29.7` |
-| @babel/preset-flow | `^7.22.15` | `^7.29.7` |
-| @babel/preset-react | `^7.22.15` | `^7.29.7` |
-| @babel/runtime | `^7.23.2` | `^7.29.7` |
+| @babel/core | `^7.23.2` | `^8.0.0` |
+| @babel/plugin-proposal-decorators | `^7.23.2` | `^8.0.0` |
+| @babel/plugin-transform-async-generator-functions | `^7.25.4` | `^8.0.0` |
+| @babel/plugin-transform-async-to-generator | `^7.22.5` | `^8.0.0` |
+| @babel/plugin-transform-class-properties | `^7.25.4` | `^8.0.0` |
+| @babel/plugin-transform-class-static-block | `^7.24.7` | `^8.0.0` |
+| @babel/plugin-transform-exponentiation-operator | `^7.22.5` | `^8.0.0` |
+| @babel/plugin-transform-for-of | `^7.22.15` | `^8.0.0` |
+| @babel/plugin-transform-object-rest-spread | `^7.24.7` | `^8.0.0` |
+| @babel/plugin-transform-private-methods | `^7.25.4` | `^8.0.0` |
+| @babel/plugin-transform-runtime | `7.23.3` | `^8.0.0` |
+| @babel/preset-env | `^7.29.5` | `^8.0.0` |
+| @babel/preset-flow | `^7.22.15` | `^8.0.0` |
+| @babel/preset-react | `^7.22.15` | `^8.0.0` |
+| @babel/runtime | `^7.23.2` | `^8.0.0` |
 | @devexpress/callsite-record | `^4.1.6` | `^4.1.7` |
 | @types/node | `20.14.5` | `^25.9.3` |
 | address | `^2.0.2` | `^2.0.3` |
@@ -84,13 +84,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | set-cookie-parser | `^2.5.1` | `^3.1.0` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
-| testcafe-hammerhead | `31.7.7` | `^31.7.8` |
 | testcafe-legacy-api | `5.1.8` | `^5.1.9` |
 | testcafe-reporter-json | `^2.1.0` | `^2.2.0` |
 | testcafe-reporter-xunit | `^2.2.1` | `^2.2.3` |
 | time-limit-promise | `^1.0.2` | `^1.0.4` |
-| tmp | `0.2.5` | `^0.2.7` |
-| typescript | `4.7.4` | `^6.0.3` |
+| tmp | `0.2.6` | `^0.2.7` |
+| typescript | `4.9.5` | `^6.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/testcafe&labels=bug).

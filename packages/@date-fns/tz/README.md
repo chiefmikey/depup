@@ -12,7 +12,7 @@ npm install @depup/date-fns__tz
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.5.0 | **DepUp version**: 1.5.0-depup.27 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 1.5.0 | **DepUp version**: 1.5.0-depup.28 | **Updated**: 6/17/2026 | **Import test**: passed
 
 ## What changed
 

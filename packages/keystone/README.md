@@ -12,26 +12,26 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.42 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.43 | **Updated**: 6/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.4.4` | `^7.29.7` |
+| @babel/core | `^7.4.4` | `^8.0.0` |
 | @babel/plugin-proposal-class-properties | `^7.4.4` | `^7.18.6` |
-| @babel/plugin-proposal-decorators | `^7.4.4` | `^7.29.7` |
+| @babel/plugin-proposal-decorators | `^7.4.4` | `^8.0.0` |
 | @babel/plugin-proposal-export-namespace-from | `^7.2.0` | `^7.18.9` |
-| @babel/plugin-proposal-function-sent | `^7.2.0` | `^7.29.7` |
+| @babel/plugin-proposal-function-sent | `^7.2.0` | `^8.0.0` |
 | @babel/plugin-proposal-json-strings | `^7.2.0` | `^7.18.6` |
 | @babel/plugin-proposal-numeric-separator | `^7.2.0` | `^7.18.6` |
-| @babel/plugin-proposal-throw-expressions | `^7.2.0` | `^7.29.7` |
+| @babel/plugin-proposal-throw-expressions | `^7.2.0` | `^8.0.0` |
 | @babel/plugin-syntax-dynamic-import | `^7.2.0` | `^7.8.3` |
 | @babel/plugin-syntax-import-meta | `^7.2.0` | `^7.10.4` |
 | @babel/plugin-transform-object-assign | `^7.2.0` | `^7.29.7` |
 | @babel/polyfill | `^7.4.4` | `^7.12.1` |
-| @babel/preset-env | `^7.4.4` | `^7.29.7` |
-| @babel/preset-react | `^7.0.0` | `^7.29.7` |
+| @babel/preset-env | `^7.4.4` | `^8.0.0` |
+| @babel/preset-react | `^7.0.0` | `^8.0.0` |
 | async | `^2.6.2` | `^3.2.6` |
 | body-parser | `^1.19.0` | `^2.3.0` |
 | browserify | `^16.2.3` | `^17.0.1` |
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-images | `^0.5.6` | `^1.2.0-beta.7` |
 | react-markdown | `^2.5.0` | `^10.1.0` |
 | react-redux | `^5.0.6` | `^9.3.0` |
-| react-router | `^3.0.2` | `^7.17.0` |
+| react-router | `^3.0.2` | `^7.18.0` |
 | redux | `^3.7.2` | `^5.0.1` |
 | redux-saga | `^0.15.6` | `^1.5.0` |
 | redux-thunk | `^2.2.0` | `^3.1.0` |

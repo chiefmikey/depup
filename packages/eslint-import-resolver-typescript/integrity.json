@@ -87,35 +87,6 @@
     }
   },
   "4.4.5": {
-    "22": {
-      "changes": {
-        "debug": {
-          "from": "^4.4.1",
-          "to": "^4.4.3"
-        },
-        "eslint-import-context": {
-          "from": "^0.1.8",
-          "to": "^0.2.0"
-        },
-        "get-tsconfig": {
-          "from": "^4.10.1",
-          "to": "^4.14.0"
-        },
-        "tinyglobby": {
-          "from": "^0.2.14",
-          "to": "^0.2.17"
-        },
-        "unrs-resolver": {
-          "from": "^1.7.11",
-          "to": "^1.12.2"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T10:26:13.374Z",
-      "version": "4.4.5-depup.22"
-    },
     "23": {
       "changes": {
         "debug": {
@@ -231,6 +202,35 @@
       "status": "failed",
       "timestamp": "2026-06-16T10:05:07.888Z",
       "version": "4.4.5-depup.26"
+    },
+    "27": {
+      "changes": {
+        "debug": {
+          "from": "^4.4.1",
+          "to": "^4.4.3"
+        },
+        "eslint-import-context": {
+          "from": "^0.1.8",
+          "to": "^0.2.0"
+        },
+        "get-tsconfig": {
+          "from": "^4.10.1",
+          "to": "^4.14.0"
+        },
+        "tinyglobby": {
+          "from": "^0.2.14",
+          "to": "^0.2.17"
+        },
+        "unrs-resolver": {
+          "from": "^1.7.11",
+          "to": "^1.12.2"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-17T00:46:31.571Z",
+      "version": "4.4.5-depup.27"
     }
   }
 }
