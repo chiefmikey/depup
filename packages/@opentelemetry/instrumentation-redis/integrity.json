@@ -187,19 +187,6 @@
     }
   },
   "0.67.0": {
-    "10": {
-      "changes": {
-        "@opentelemetry/semantic-conventions": {
-          "from": "^1.27.0",
-          "to": "^1.41.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:14:02.906Z",
-      "version": "0.67.0-depup.10"
-    },
     "11": {
       "changes": {
         "@opentelemetry/semantic-conventions": {
@@ -251,6 +238,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T09:58:25.385Z",
       "version": "0.67.0-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.41.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-17T00:39:16.537Z",
+      "version": "0.67.0-depup.15"
     }
   }
 }

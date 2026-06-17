@@ -12,21 +12,21 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.35 | **Updated**: 6/16/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.36 | **Updated**: 6/17/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.12.10` | `^7.29.7` |
+| @babel/core | `^7.12.10` | `^8.0.0` |
 | @babel/plugin-proposal-class-properties | `7.12.1` | `^7.18.6` |
-| @babel/plugin-syntax-jsx | `^7.12.1` | `^7.29.7` |
-| @babel/plugin-transform-flow-strip-types | `^7.12.10` | `^7.29.7` |
-| @babel/plugin-transform-react-jsx | `^7.12.11` | `^7.29.7` |
-| @babel/plugin-transform-regenerator | `^7.12.1` | `^7.29.7` |
-| @babel/preset-env | `^7.12.11` | `^7.29.7` |
-| @babel/preset-flow | `^7.12.1` | `^7.29.7` |
-| @babel/preset-react | `^7.12.10` | `^7.29.7` |
+| @babel/plugin-syntax-jsx | `^7.12.1` | `^8.0.0` |
+| @babel/plugin-transform-flow-strip-types | `^7.12.10` | `^8.0.0` |
+| @babel/plugin-transform-react-jsx | `^7.12.11` | `^8.0.0` |
+| @babel/plugin-transform-regenerator | `^7.12.1` | `^8.0.0` |
+| @babel/preset-env | `^7.12.11` | `^8.0.0` |
+| @babel/preset-flow | `^7.12.1` | `^8.0.0` |
+| @babel/preset-react | `^7.12.10` | `^8.0.0` |
 | @rollup/plugin-alias | `^3.1.1` | `^6.0.0` |
 | @rollup/plugin-babel | `^5.2.2` | `^7.1.0` |
 | @rollup/plugin-commonjs | `^17.0.0` | `^29.0.3` |

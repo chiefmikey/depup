@@ -12,13 +12,13 @@ npm install @depup/next-auth
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.24.14 | **DepUp version**: 4.24.14-depup.27 | **Updated**: 6/16/2026 | **Import test**: failed
+**Original version**: 4.24.14 | **DepUp version**: 4.24.14-depup.28 | **Updated**: 6/17/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.20.13` | `^7.29.7` |
+| @babel/runtime | `^7.20.13` | `^8.0.0` |
 | @panva/hkdf | `^1.0.2` | `^1.2.1` |
 | cookie | `^0.7.0` | `^1.1.1` |
 | jose | `^4.15.5` | `^6.2.3` |

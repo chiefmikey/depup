@@ -1,0 +1,40 @@
+{
+  "name": "@depup/rollup__rollup-android-arm-eabi",
+  "version": "4.62.0-depup.10",
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "files": [
+    "rollup.android-arm-eabi.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Native bindings for Rollup (with updated dependencies)",
+  "author": "Lukas Taegert-Atkinson",
+  "homepage": "https://rollupjs.org/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollup/rollup.git"
+  },
+  "main": "./rollup.android-arm-eabi.node",
+  "keywords": [
+    "@rollup/rollup-android-arm-eabi",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rollup/rollup-android-arm-eabi",
+    "originalVersion": "4.62.0",
+    "processedAt": "2026-06-17T00:40:24.480Z",
+    "smokeTest": "failed"
+  }
+}

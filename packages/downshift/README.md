@@ -12,13 +12,13 @@ npm install @depup/downshift
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.3.6 | **DepUp version**: 9.3.6-depup.25 | **Updated**: 6/16/2026 | **Import test**: failed
+**Original version**: 9.3.6 | **DepUp version**: 9.3.6-depup.26 | **Updated**: 6/17/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.28.6` | `^7.29.7` |
+| @babel/runtime | `^7.28.6` | `^8.0.0` |
 | react-is | `^18.2.0` | `^19.2.7` |
 
 
