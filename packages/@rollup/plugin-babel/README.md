@@ -12,13 +12,13 @@ npm install @depup/rollup__plugin-babel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.0 | **DepUp version**: 7.1.0-depup.28 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 7.1.0 | **DepUp version**: 7.1.0-depup.29 | **Updated**: 6/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/helper-module-imports | `^7.18.6` | `^7.29.7` |
+| @babel/helper-module-imports | `^7.18.6` | `^8.0.0` |
 | @rollup/pluginutils | `^5.0.1` | `^5.4.0` |
 | workerpool | `^9.0.0` | `^10.0.2` |
 

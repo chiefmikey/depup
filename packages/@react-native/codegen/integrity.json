@@ -319,35 +319,6 @@
     }
   },
   "0.86.0": {
-    "18": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.25.2",
-          "to": "^7.29.7"
-        },
-        "@babel/parser": {
-          "from": "^7.29.0",
-          "to": "^7.29.7"
-        },
-        "hermes-parser": {
-          "from": "0.36.0",
-          "to": "^0.36.1"
-        },
-        "tinyglobby": {
-          "from": "^0.2.15",
-          "to": "^0.2.17"
-        },
-        "yargs": {
-          "from": "^17.6.2",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:14:09.673Z",
-      "version": "0.86.0-depup.18"
-    },
     "19": {
       "changes": {
         "@babel/core": {
@@ -463,6 +434,35 @@
       "status": "failed",
       "timestamp": "2026-06-16T09:58:40.503Z",
       "version": "0.86.0-depup.22"
+    },
+    "23": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.25.2",
+          "to": "^8.0.0"
+        },
+        "@babel/parser": {
+          "from": "^7.29.0",
+          "to": "^8.0.0"
+        },
+        "hermes-parser": {
+          "from": "0.36.0",
+          "to": "^0.36.1"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-17T00:38:48.571Z",
+      "version": "0.86.0-depup.23"
     }
   }
 }

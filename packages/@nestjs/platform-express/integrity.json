@@ -196,6 +196,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T09:57:32.399Z",
       "version": "11.1.27-depup.3"
+    },
+    "4": {
+      "changes": {
+        "multer": {
+          "from": "2.1.1",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-17T00:37:39.025Z",
+      "version": "11.1.27-depup.4"
     }
   }
 }
