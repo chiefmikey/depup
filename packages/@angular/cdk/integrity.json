@@ -393,5 +393,24 @@
       "timestamp": "2026-06-17T00:33:43.431Z",
       "version": "22.0.1-depup.17"
     }
+  },
+  "22.0.2": {
+    "0": {
+      "changes": {
+        "parse5": {
+          "from": "^8.0.0",
+          "to": "^8.0.1"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:35:13.590Z",
+      "version": "22.0.2-depup.0"
+    }
   }
 }

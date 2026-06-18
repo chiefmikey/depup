@@ -366,5 +366,24 @@
       "timestamp": "2026-06-17T00:56:19.609Z",
       "version": "12.0.2-depup.11"
     }
+  },
+  "12.0.3": {
+    "0": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "undici": {
+          "from": "^8.3.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:59:47.259Z",
+      "version": "12.0.3-depup.0"
+    }
   }
 }

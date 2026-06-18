@@ -12,12 +12,13 @@ npm install @depup/testcontainers
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.2 | **DepUp version**: 12.0.2-depup.11 | **Updated**: 6/17/2026 | **Import test**: passed
+**Original version**: 12.0.3 | **DepUp version**: 12.0.3-depup.0 | **Updated**: 6/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| archiver | `^7.0.1` | `^8.0.0` |
 | undici | `^8.3.0` | `^8.5.0` |
 
 

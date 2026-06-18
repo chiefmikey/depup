@@ -121,6 +121,19 @@
       "status": "skipped",
       "timestamp": "2026-06-17T00:35:22.580Z",
       "version": "7.3.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@datadog/js-core": {
+          "from": "0.0.2",
+          "to": "^0.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:36:48.478Z",
+      "version": "7.3.0-depup.4"
     }
   }
 }

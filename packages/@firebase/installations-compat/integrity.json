@@ -28,19 +28,6 @@
     }
   },
   "0.2.22": {
-    "25": {
-      "changes": {
-        "tslib": {
-          "from": "^2.1.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T10:18:39.587Z",
-      "version": "0.2.22-depup.25"
-    },
     "26": {
       "changes": {
         "tslib": {
@@ -92,6 +79,19 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:37:32.422Z",
       "version": "0.2.22-depup.29"
+    },
+    "30": {
+      "changes": {
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:38:48.709Z",
+      "version": "0.2.22-depup.30"
     }
   }
 }

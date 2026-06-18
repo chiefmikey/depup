@@ -185,19 +185,6 @@
     }
   },
   "16.2.9": {
-    "19": {
-      "changes": {
-        "webpack-bundle-analyzer": {
-          "from": "4.10.1",
-          "to": "^5.3.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T10:19:28.894Z",
-      "version": "16.2.9-depup.19"
-    },
     "20": {
       "changes": {
         "webpack-bundle-analyzer": {
@@ -249,6 +236,19 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:38:23.814Z",
       "version": "16.2.9-depup.23"
+    },
+    "24": {
+      "changes": {
+        "webpack-bundle-analyzer": {
+          "from": "4.10.1",
+          "to": "^5.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:39:39.520Z",
+      "version": "16.2.9-depup.24"
     }
   }
 }

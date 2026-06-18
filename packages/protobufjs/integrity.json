@@ -290,6 +290,14 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:52:55.676Z",
       "version": "8.6.4-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-06-18T00:55:39.321Z",
+      "version": "8.6.4-depup.1"
     }
   }
 }

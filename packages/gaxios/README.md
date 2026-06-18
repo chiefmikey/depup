@@ -12,7 +12,7 @@ npm install @depup/gaxios
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.5 | **DepUp version**: 7.1.5-depup.27 | **Updated**: 6/17/2026 | **Import test**: passed
+**Original version**: 7.1.5 | **DepUp version**: 7.1.5-depup.28 | **Updated**: 6/18/2026 | **Import test**: passed
 
 ## What changed
 

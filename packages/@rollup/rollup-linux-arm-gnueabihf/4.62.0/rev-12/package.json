@@ -1,0 +1,43 @@
+{
+  "name": "@depup/rollup__rollup-linux-arm-gnueabihf",
+  "version": "4.62.0-depup.12",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "files": [
+    "rollup.linux-arm-gnueabihf.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Native bindings for Rollup (with updated dependencies)",
+  "author": "Lukas Taegert-Atkinson",
+  "homepage": "https://rollupjs.org/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollup/rollup.git"
+  },
+  "libc": [
+    "glibc"
+  ],
+  "main": "./rollup.linux-arm-gnueabihf.node",
+  "keywords": [
+    "@rollup/rollup-linux-arm-gnueabihf",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rollup/rollup-linux-arm-gnueabihf",
+    "originalVersion": "4.62.0",
+    "processedAt": "2026-06-18T00:41:47.428Z",
+    "smokeTest": "failed"
+  }
+}

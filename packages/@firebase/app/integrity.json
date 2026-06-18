@@ -177,6 +177,23 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:37:16.367Z",
       "version": "0.15.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "idb": {
+          "from": "7.1.1",
+          "to": "^8.0.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:38:33.238Z",
+      "version": "0.15.0-depup.1"
     }
   }
 }
