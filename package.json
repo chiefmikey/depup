@@ -23,18 +23,18 @@
     "inquirer": "14.0.2",
     "npm-registry-fetch": "20.0.1",
     "ora": "9.4.0",
-    "pacote": "21.5.0",
-    "semver": "7.8.3"
+    "pacote": "22.0.0",
+    "semver": "7.8.4"
   },
   "devDependencies": {
-    "eslint": "10.4.1",
+    "eslint": "10.5.0",
     "jest": "30.4.2",
     "mikey-pro": "10.3.3",
-    "prettier": "3.8.3",
+    "prettier": "3.8.4",
     "stylelint": "16.26.1"
   },
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=24.15.0"
   },
   "homepage": "https://github.com/depup/npm",
   "repository": "https://github.com/depup/npm",
