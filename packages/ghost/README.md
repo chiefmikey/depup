@@ -12,14 +12,15 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.45.0 | **DepUp version**: 6.45.0-depup.12 | **Updated**: 6/17/2026 | **Import test**: failed
+**Original version**: 6.45.0 | **DepUp version**: 6.45.0-depup.13 | **Updated**: 6/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1064.0` | `^3.1070.0` |
+| @aws-sdk/client-s3 | `3.1064.0` | `^3.1071.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
+| @faker-js/faker | `10.4.0` | `^10.5.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.58.0` |
 | @tryghost/adapter-base-cache | `0.1.25` | `^0.1.26` |
@@ -58,7 +59,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | date-fns | `2.30.0` | `^4.4.0` |
-| dompurify | `3.4.8` | `^3.4.10` |
+| dompurify | `3.4.8` | `^3.4.11` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `16.5.4` | `^22.0.1` |
@@ -85,11 +86,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-title | `5.45.10` | `^5.50.6` |
 | metascraper-url | `5.45.10` | `^5.50.6` |
 | mime-types | `2.1.35` | `^3.0.2` |
-| mingo | `2.5.3` | `^7.2.1` |
+| mingo | `2.5.3` | `^7.2.2` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
 | multer | `2.1.1` | `^2.2.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.10` | `^9.0.0` |
+| nodemailer | `8.0.10` | `^9.0.1` |
 | otplib | `12.0.1` | `^13.4.1` |
 | sanitize-html | `2.17.4` | `^2.17.5` |
 | semver | `7.7.4` | `^7.8.4` |

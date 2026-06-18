@@ -12,7 +12,7 @@ npm install @depup/undici
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.5.0 | **DepUp version**: 8.5.0-depup.3 | **Updated**: 6/17/2026 | **Import test**: passed
+**Original version**: 8.5.0 | **DepUp version**: 8.5.0-depup.4 | **Updated**: 6/18/2026 | **Import test**: passed
 
 ## What changed
 

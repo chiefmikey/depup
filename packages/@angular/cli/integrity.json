@@ -1423,5 +1423,48 @@
       "timestamp": "2026-06-17T00:34:05.555Z",
       "version": "22.0.1-depup.18"
     }
+  },
+  "22.0.2": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.4.2",
+          "to": "^8.5.2"
+        },
+        "@listr2/prompt-adapter-inquirer": {
+          "from": "4.2.3",
+          "to": "^4.2.4"
+        },
+        "algoliasearch": {
+          "from": "5.52.0",
+          "to": "^5.55.0"
+        },
+        "ini": {
+          "from": "6.0.0",
+          "to": "^7.0.0"
+        },
+        "npm-package-arg": {
+          "from": "13.0.2",
+          "to": "^14.0.0"
+        },
+        "pacote": {
+          "from": "21.5.1",
+          "to": "^22.0.0"
+        },
+        "semver": {
+          "from": "7.7.4",
+          "to": "^7.8.4"
+        },
+        "zod": {
+          "from": "4.4.2",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:35:33.472Z",
+      "version": "22.0.2-depup.0"
+    }
   }
 }

@@ -1062,83 +1062,6 @@
     }
   },
   "0.86.0": {
-    "17": {
-      "changes": {
-        "anser": {
-          "from": "^1.4.9",
-          "to": "^2.3.5"
-        },
-        "ansi-regex": {
-          "from": "^5.0.0",
-          "to": "^6.2.2"
-        },
-        "babel-plugin-syntax-hermes-parser": {
-          "from": "0.36.0",
-          "to": "^0.36.1"
-        },
-        "commander": {
-          "from": "^12.0.0",
-          "to": "^15.0.0"
-        },
-        "memoize-one": {
-          "from": "^5.0.0",
-          "to": "^6.0.0"
-        },
-        "metro-runtime": {
-          "from": "^0.84.3",
-          "to": "^0.84.4"
-        },
-        "metro-source-map": {
-          "from": "^0.84.3",
-          "to": "^0.84.4"
-        },
-        "pretty-format": {
-          "from": "^29.7.0",
-          "to": "^30.4.1"
-        },
-        "react-devtools-core": {
-          "from": "^6.1.5",
-          "to": "^7.0.1"
-        },
-        "react-refresh": {
-          "from": "^0.14.0",
-          "to": "^0.18.0"
-        },
-        "regenerator-runtime": {
-          "from": "^0.13.2",
-          "to": "^0.14.1"
-        },
-        "semver": {
-          "from": "^7.1.3",
-          "to": "^7.8.4"
-        },
-        "stacktrace-parser": {
-          "from": "^0.1.10",
-          "to": "^0.1.11"
-        },
-        "tinyglobby": {
-          "from": "^0.2.15",
-          "to": "^0.2.17"
-        },
-        "whatwg-fetch": {
-          "from": "^3.0.0",
-          "to": "^3.6.20"
-        },
-        "ws": {
-          "from": "^7.5.10",
-          "to": "^8.21.0"
-        },
-        "yargs": {
-          "from": "^17.6.2",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 17,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T10:32:14.524Z",
-      "version": "0.86.0-depup.17"
-    },
     "18": {
       "changes": {
         "anser": {
@@ -1446,6 +1369,83 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:51:32.161Z",
       "version": "0.86.0-depup.21"
+    },
+    "22": {
+      "changes": {
+        "anser": {
+          "from": "^1.4.9",
+          "to": "^2.3.5"
+        },
+        "ansi-regex": {
+          "from": "^5.0.0",
+          "to": "^6.2.2"
+        },
+        "babel-plugin-syntax-hermes-parser": {
+          "from": "0.36.0",
+          "to": "^0.36.1"
+        },
+        "commander": {
+          "from": "^12.0.0",
+          "to": "^15.0.0"
+        },
+        "memoize-one": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "metro-runtime": {
+          "from": "^0.84.3",
+          "to": "^0.84.4"
+        },
+        "metro-source-map": {
+          "from": "^0.84.3",
+          "to": "^0.84.4"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.4.1"
+        },
+        "react-devtools-core": {
+          "from": "^6.1.5",
+          "to": "^7.0.1"
+        },
+        "react-refresh": {
+          "from": "^0.14.0",
+          "to": "^0.18.0"
+        },
+        "regenerator-runtime": {
+          "from": "^0.13.2",
+          "to": "^0.14.1"
+        },
+        "semver": {
+          "from": "^7.1.3",
+          "to": "^7.8.4"
+        },
+        "stacktrace-parser": {
+          "from": "^0.1.10",
+          "to": "^0.1.11"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        },
+        "whatwg-fetch": {
+          "from": "^3.0.0",
+          "to": "^3.6.20"
+        },
+        "ws": {
+          "from": "^7.5.10",
+          "to": "^8.21.0"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 17,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:55:34.672Z",
+      "version": "0.86.0-depup.22"
     }
   }
 }

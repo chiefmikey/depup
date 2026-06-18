@@ -1135,5 +1135,24 @@
       "timestamp": "2026-06-17T00:39:08.315Z",
       "version": "2.33.2-depup.0"
     }
+  },
+  "2.34.0": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:40:55.529Z",
+      "version": "2.34.0-depup.0"
+    }
   }
 }

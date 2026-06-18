@@ -1,0 +1,59 @@
+{
+  "name": "@depup/jest-junit",
+  "version": "17.0.0-depup.28",
+  "description": "A jest reporter that generates junit xml files (with updated dependencies)",
+  "main": "index.js",
+  "repository": "https://github.com/jest-community/jest-junit",
+  "author": "Jason Palmer",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "index.js",
+    "utils",
+    "constants",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "mkdirp": "^3.0.1",
+    "strip-ansi": "^7.2.0",
+    "uuid": "^14.0.0",
+    "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^30.2.0",
+    "jest": "^30.2.0",
+    "libxml2-wasm": "^0.4.1",
+    "slash": "^3.0.0"
+  },
+  "keywords": [
+    "jest-junit",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "mkdirp": {
+        "from": "^1.0.4",
+        "to": "^3.0.1"
+      },
+      "strip-ansi": {
+        "from": "^6.0.1",
+        "to": "^7.2.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "jest-junit",
+    "originalVersion": "17.0.0",
+    "processedAt": "2026-06-18T00:50:28.163Z",
+    "smokeTest": "passed"
+  }
+}
