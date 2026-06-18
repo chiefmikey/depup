@@ -12,21 +12,21 @@ npm install @depup/react-native-worklets
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.9.2 | **DepUp version**: 0.9.2-depup.8 | **Updated**: 6/17/2026 | **Import test**: failed
+**Original version**: 0.9.2 | **DepUp version**: 0.9.2-depup.9 | **Updated**: 6/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/plugin-transform-arrow-functions | `^7.27.1` | `^8.0.0` |
-| @babel/plugin-transform-class-properties | `^7.28.6` | `^8.0.0` |
-| @babel/plugin-transform-classes | `^7.28.6` | `^8.0.0` |
-| @babel/plugin-transform-nullish-coalescing-operator | `^7.28.6` | `^8.0.0` |
-| @babel/plugin-transform-optional-chaining | `^7.28.6` | `^8.0.0` |
-| @babel/plugin-transform-shorthand-properties | `^7.27.1` | `^8.0.0` |
-| @babel/plugin-transform-template-literals | `^7.27.1` | `^8.0.0` |
-| @babel/plugin-transform-unicode-regex | `^7.27.1` | `^8.0.0` |
-| @babel/preset-typescript | `^7.28.5` | `^8.0.0` |
+| @babel/plugin-transform-arrow-functions | `^7.27.1` | `^8.0.1` |
+| @babel/plugin-transform-class-properties | `^7.28.6` | `^8.0.1` |
+| @babel/plugin-transform-classes | `^7.28.6` | `^8.0.1` |
+| @babel/plugin-transform-nullish-coalescing-operator | `^7.28.6` | `^8.0.1` |
+| @babel/plugin-transform-optional-chaining | `^7.28.6` | `^8.0.1` |
+| @babel/plugin-transform-shorthand-properties | `^7.27.1` | `^8.0.1` |
+| @babel/plugin-transform-template-literals | `^7.27.1` | `^8.0.1` |
+| @babel/plugin-transform-unicode-regex | `^7.27.1` | `^8.0.1` |
+| @babel/preset-typescript | `^7.28.5` | `^8.0.1` |
 | @babel/types | `^7.27.1` | `^8.0.0` |
 | semver | `^7.7.4` | `^7.8.4` |
 

@@ -12,7 +12,7 @@ npm install @depup/react-timer-hook
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.6 | **DepUp version**: 4.0.6-depup.11 | **Updated**: 6/17/2026 | **Import test**: failed
+**Original version**: 4.0.6 | **DepUp version**: 4.0.6-depup.12 | **Updated**: 6/18/2026 | **Import test**: failed
 
 ## What changed
 

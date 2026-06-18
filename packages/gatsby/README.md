@@ -12,16 +12,16 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.64 | **Updated**: 6/17/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.65 | **Updated**: 6/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/code-frame | `^7.18.6` | `^8.0.0` |
-| @babel/core | `^7.20.12` | `^8.0.0` |
-| @babel/eslint-parser | `^7.19.1` | `^8.0.0` |
-| @babel/helper-plugin-utils | `^7.20.2` | `^8.0.0` |
+| @babel/core | `^7.20.12` | `^8.0.1` |
+| @babel/eslint-parser | `^7.19.1` | `^8.0.1` |
+| @babel/helper-plugin-utils | `^7.20.2` | `^8.0.1` |
 | @babel/parser | `^7.20.13` | `^8.0.0` |
 | @babel/runtime | `^7.20.13` | `^8.0.0` |
 | @babel/traverse | `^7.20.13` | `^8.0.0` |
@@ -88,9 +88,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | graphql | `^16.7.1` | `^17.0.1` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
+| graphql-tag | `^2.12.6` | `^2.12.7` |
 | hasha | `^5.2.2` | `^7.0.0` |
 | is-relative-url | `^3.0.0` | `^4.1.0` |
-| joi | `^17.9.2` | `^18.2.1` |
+| joi | `^17.9.2` | `^18.2.3` |
 | latest-version | `^7.0.0` | `^9.0.0` |
 | lmdb | `2.5.3` | `^3.5.5` |
 | lodash | `^4.17.21` | `^4.18.1` |

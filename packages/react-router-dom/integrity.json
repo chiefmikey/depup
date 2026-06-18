@@ -127,6 +127,19 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:58:38.361Z",
       "version": "7.18.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "react-router": {
+          "from": "7.18.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:55:36.312Z",
+      "version": "7.18.0-depup.1"
     }
   }
 }

@@ -55,23 +55,6 @@
     }
   },
   "4.25.2": {
-    "22": {
-      "changes": {
-        "react-freeze": {
-          "from": "^1.0.0",
-          "to": "^1.0.4"
-        },
-        "warn-once": {
-          "from": "^0.1.0",
-          "to": "^0.1.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T18:03:44.215Z",
-      "version": "4.25.2-depup.22"
-    },
     "23": {
       "changes": {
         "react-freeze": {
@@ -139,6 +122,23 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:58:33.569Z",
       "version": "4.25.2-depup.26"
+    },
+    "27": {
+      "changes": {
+        "react-freeze": {
+          "from": "^1.0.0",
+          "to": "^1.0.4"
+        },
+        "warn-once": {
+          "from": "^0.1.0",
+          "to": "^0.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:55:31.410Z",
+      "version": "4.25.2-depup.27"
     }
   }
 }

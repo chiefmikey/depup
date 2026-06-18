@@ -1109,6 +1109,19 @@
       "status": "failed",
       "timestamp": "2026-06-17T00:40:59.352Z",
       "version": "6.0.207-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-18T00:41:39.519Z",
+      "version": "6.0.207-depup.1"
     }
   }
 }

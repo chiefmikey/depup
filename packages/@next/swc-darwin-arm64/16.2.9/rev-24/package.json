@@ -1,0 +1,42 @@
+{
+  "name": "@depup/next__swc-darwin-arm64",
+  "version": "16.2.9-depup.24",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel/next.js",
+    "directory": "crates/next-napi-bindings/npm/darwin-arm64"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "next-swc.darwin-arm64.node",
+  "files": [
+    "next-swc.darwin-arm64.node",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "description": "@next/swc-darwin-arm64 with all dependencies updated to latest",
+  "keywords": [
+    "@next/swc-darwin-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@next/swc-darwin-arm64",
+    "originalVersion": "16.2.9",
+    "processedAt": "2026-06-18T00:38:30.957Z",
+    "smokeTest": "failed"
+  }
+}

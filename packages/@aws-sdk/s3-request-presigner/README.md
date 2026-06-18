@@ -12,13 +12,13 @@ npm install @depup/aws-sdk__s3-request-presigner
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1070.0 | **DepUp version**: 3.1070.0-depup.0 | **Updated**: 6/17/2026 | **Import test**: passed
+**Original version**: 3.1071.0 | **DepUp version**: 3.1071.0-depup.0 | **Updated**: 6/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.24.6` | `^3.25.0` |
+| @smithy/core | `^3.24.6` | `^3.25.1` |
 | @smithy/types | `^4.14.3` | `^4.15.0` |
 | tslib | `^2.6.2` | `^2.8.1` |
 

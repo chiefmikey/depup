@@ -12,7 +12,7 @@ npm install @depup/aws-sdk__util-user-agent-browser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.22 | **DepUp version**: 3.972.22-depup.2 | **Updated**: 6/17/2026 | **Import test**: passed
+**Original version**: 3.972.23 | **DepUp version**: 3.972.23-depup.0 | **Updated**: 6/18/2026 | **Import test**: passed
 
 ## What changed
 
