@@ -50,6 +50,9 @@
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
   "prettier": "mikey-pro/prettier",
   "overrides": {
-    "@boundaries/elements": "2.0.1"
+    "@boundaries/elements": "2.0.1",
+    "@istanbuljs/load-nyc-config": {
+      "js-yaml": "^4.2.0"
+    }
   }
 }
