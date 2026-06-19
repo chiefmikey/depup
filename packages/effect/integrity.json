@@ -193,5 +193,24 @@
       "timestamp": "2026-06-18T00:46:33.697Z",
       "version": "3.21.3-depup.26"
     }
+  },
+  "3.21.4": {
+    "0": {
+      "changes": {
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "fast-check": {
+          "from": "^3.23.1",
+          "to": "^4.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-19T00:47:57.590Z",
+      "version": "3.21.4-depup.0"
+    }
   }
 }

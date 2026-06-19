@@ -1,0 +1,59 @@
+{
+  "name": "@depup/babel__plugin-transform-typescript",
+  "version": "8.0.1-depup.1",
+  "description": "Transform TypeScript into ES.next (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-typescript"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "keywords": [
+    "@babel/plugin-transform-typescript",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin",
+    "typescript"
+  ],
+  "dependencies": {
+    "@babel/helper-annotate-as-pure": "^8.0.0",
+    "@babel/helper-create-class-features-plugin": "^8.0.1",
+    "@babel/helper-plugin-utils": "^8.0.1",
+    "@babel/helper-skip-transparent-expression-wrappers": "^8.0.0",
+    "@babel/plugin-syntax-typescript": "^8.0.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/helper-plugin-test-runner": "^8.0.0",
+    "@babel/traverse": "^8.0.0",
+    "@babel/types": "^8.0.0"
+  },
+  "homepage": "https://babel.dev/docs/en/next/babel-plugin-transform-typescript",
+  "engines": {
+    "node": "^22.18.0 || >=24.11.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "module",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@babel/plugin-transform-typescript",
+    "originalVersion": "8.0.1",
+    "processedAt": "2026-06-19T00:39:06.455Z",
+    "smokeTest": "passed"
+  }
+}

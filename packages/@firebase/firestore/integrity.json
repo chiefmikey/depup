@@ -246,6 +246,31 @@
       "status": "failed",
       "timestamp": "2026-06-18T00:38:07.070Z",
       "version": "4.16.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "~1.9.0",
+          "to": "^1.14.4"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.7.8",
+          "to": "^0.8.1"
+        },
+        "re2js": {
+          "from": "^0.4.2",
+          "to": "^2.8.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-19T00:40:49.437Z",
+      "version": "4.16.0-depup.2"
     }
   }
 }

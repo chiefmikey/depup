@@ -95,5 +95,20 @@
       "timestamp": "2026-06-18T00:54:19.556Z",
       "version": "1.18.0-depup.25"
     }
+  },
+  "1.19.0": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-19T01:06:17.673Z",
+      "version": "1.19.0-depup.0"
+    }
   }
 }
