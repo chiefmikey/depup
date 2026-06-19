@@ -12,7 +12,7 @@ npm install @depup/aws-sdk__client-bedrock-runtime
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1071.0 | **DepUp version**: 3.1071.0-depup.0 | **Updated**: 6/18/2026 | **Import test**: passed
+**Original version**: 3.1072.0 | **DepUp version**: 3.1072.0-depup.0 | **Updated**: 6/19/2026 | **Import test**: passed
 
 ## What changed
 

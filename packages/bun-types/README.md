@@ -12,7 +12,7 @@ npm install @depup/bun-types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.14 | **DepUp version**: 1.3.14-depup.28 | **Updated**: 6/18/2026 | **Import test**: failed
+**Original version**: 1.3.14 | **DepUp version**: 1.3.14-depup.29 | **Updated**: 6/19/2026 | **Import test**: failed
 
 ## What changed
 

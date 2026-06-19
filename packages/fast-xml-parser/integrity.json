@@ -398,6 +398,19 @@
       "status": "failed",
       "timestamp": "2026-06-18T00:48:44.146Z",
       "version": "5.9.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "strnum": {
+          "from": "^2.4.0",
+          "to": "^2.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-19T00:50:11.522Z",
+      "version": "5.9.2-depup.1"
     }
   }
 }

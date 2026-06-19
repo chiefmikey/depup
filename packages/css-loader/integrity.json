@@ -1,30 +1,5 @@
 {
   "7.1.4": {
-    "23": {
-      "changes": {
-        "postcss": {
-          "from": "^8.4.40",
-          "to": "^8.5.15"
-        },
-        "postcss-modules-local-by-default": {
-          "from": "^4.0.5",
-          "to": "^4.2.0"
-        },
-        "postcss-modules-scope": {
-          "from": "^3.2.0",
-          "to": "^3.2.1"
-        },
-        "semver": {
-          "from": "^7.6.3",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T17:54:19.616Z",
-      "version": "7.1.4-depup.23"
-    },
     "24": {
       "changes": {
         "postcss": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-18T00:46:36.310Z",
       "version": "7.1.4-depup.27"
+    },
+    "28": {
+      "changes": {
+        "postcss": {
+          "from": "^8.4.40",
+          "to": "^8.5.15"
+        },
+        "postcss-modules-local-by-default": {
+          "from": "^4.0.5",
+          "to": "^4.2.0"
+        },
+        "postcss-modules-scope": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-19T00:48:24.087Z",
+      "version": "7.1.4-depup.28"
     }
   }
 }

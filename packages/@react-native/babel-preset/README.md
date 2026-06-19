@@ -12,7 +12,7 @@ npm install @depup/react-native__babel-preset
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.25 | **Updated**: 6/18/2026 | **Import test**: passed
+**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.26 | **Updated**: 6/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -40,7 +40,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-transform-react-jsx | `^7.25.2` | `^8.0.1` |
 | @babel/plugin-transform-react-jsx-self | `^7.24.7` | `^7.29.7` |
 | @babel/plugin-transform-react-jsx-source | `^7.24.7` | `^7.29.7` |
-| @babel/plugin-transform-regenerator | `^7.24.7` | `^8.0.1` |
+| @babel/plugin-transform-regenerator | `^7.24.7` | `^8.0.2` |
 | @babel/plugin-transform-runtime | `^7.24.7` | `^8.0.1` |
 | @babel/plugin-transform-typescript | `^7.25.2` | `^8.0.1` |
 | @babel/plugin-transform-unicode-regex | `^7.24.7` | `^8.0.1` |

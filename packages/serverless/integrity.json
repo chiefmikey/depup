@@ -340,6 +340,23 @@
       "status": "failed",
       "timestamp": "2026-06-18T00:58:33.828Z",
       "version": "4.38.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "rimraf": {
+          "from": "5.0.10",
+          "to": "^6.1.3"
+        },
+        "undici": {
+          "from": "6.25.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-19T01:26:56.060Z",
+      "version": "4.38.0-depup.1"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__darwin-arm64",
+  "version": "0.28.1-depup.16",
+  "description": "The macOS ARM 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "keywords": [
+    "@esbuild/darwin-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/darwin-arm64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-19T00:39:49.727Z",
+    "smokeTest": "failed"
+  }
+}

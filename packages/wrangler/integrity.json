@@ -2469,5 +2469,24 @@
       "timestamp": "2026-06-18T01:03:25.293Z",
       "version": "4.101.0-depup.1"
     }
+  },
+  "4.102.0": {
+    "0": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-19T01:42:34.297Z",
+      "version": "4.102.0-depup.0"
+    }
   }
 }

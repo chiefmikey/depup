@@ -12,23 +12,23 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.1 | **Updated**: 6/18/2026 | **Import test**: failed
+**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.2 | **Updated**: 6/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-iam | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/client-sts | `^3.1034.0` | `^3.1071.0` |
-| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1071.0` |
+| @aws-sdk/client-cloudwatch | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-ec2 | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-ecs | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-iam | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-lambda | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-s3 | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-sqs | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-ssm | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/client-sts | `^3.1034.0` | `^3.1072.0` |
+| @aws-sdk/credential-providers | `^3.1034.0` | `^3.1072.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
 | @azure/storage-blob | `^12.30.0` | `^12.32.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.30.0` |
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | joi | `^17.13.3` | `^18.2.3` |
 | js-yaml | `^3.14.1` | `^4.2.0` |
 | lodash | `^4.18.0` | `^4.18.1` |
-| nanoid | `^3.3.4` | `^5.1.11` |
+| nanoid | `^3.3.4` | `^5.1.14` |
 | ora | `^4.0.4` | `^9.4.0` |
 | sqs-consumer | `6.0.2` | `^15.0.2` |
 | tempy | `3.1.0` | `^3.2.0` |
