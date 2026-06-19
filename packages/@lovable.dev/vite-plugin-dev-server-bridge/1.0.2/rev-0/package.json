@@ -1,0 +1,60 @@
+{
+  "name": "@depup/lovable.dev__vite-plugin-dev-server-bridge",
+  "version": "1.0.2-depup.0",
+  "description": "Vite plugin exposing a loopback-only control-plane endpoint that broadcasts dev-server lifecycle events over the HMR WebSocket (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --outDir dist",
+    "typecheck": "tsgo --noEmit",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "@lovable.dev/vite-plugin-dev-server-bridge",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "plugin",
+    "hmr",
+    "lovable"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">=5.0.0 <9.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "rimraf": "^5.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@lovable.dev/vite-plugin-dev-server-bridge",
+    "originalVersion": "1.0.2",
+    "processedAt": "2026-06-19T00:41:11.941Z",
+    "smokeTest": "passed"
+  }
+}

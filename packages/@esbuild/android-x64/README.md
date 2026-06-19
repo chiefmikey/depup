@@ -12,7 +12,7 @@ npm install @depup/esbuild__android-x64
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.28.1 | **DepUp version**: 0.28.1-depup.15 | **Updated**: 6/18/2026 | **Import test**: failed
+**Original version**: 0.28.1 | **DepUp version**: 0.28.1-depup.16 | **Updated**: 6/19/2026 | **Import test**: failed
 
 ## What changed
 
