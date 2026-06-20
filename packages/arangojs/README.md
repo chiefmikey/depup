@@ -12,13 +12,13 @@ npm install @depup/arangojs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.1 | **DepUp version**: 10.3.1-depup.27 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 10.3.1 | **DepUp version**: 10.3.1-depup.28 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `^20.11.26` | `^25.9.3` |
+| @types/node | `^20.11.26` | `^26.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/arangojs&labels=bug).

@@ -90,14 +90,6 @@
     }
   },
   "7.3.0": {
-    "1": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-16T01:14:21.295Z",
-      "version": "7.3.0-depup.1"
-    },
     "2": {
       "changes": {},
       "depsUpdated": 0,
@@ -139,6 +131,19 @@
       "status": "failed",
       "timestamp": "2026-06-19T00:39:33.700Z",
       "version": "7.3.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@datadog/js-core": {
+          "from": "0.0.2",
+          "to": "^0.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:31:52.503Z",
+      "version": "7.3.0-depup.6"
     }
   }
 }

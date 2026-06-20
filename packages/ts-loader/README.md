@@ -12,7 +12,7 @@ npm install @depup/ts-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.6.1 | **DepUp version**: 9.6.1-depup.2 | **Updated**: 6/19/2026 | **Import test**: failed
+**Original version**: 9.6.1 | **DepUp version**: 9.6.1-depup.3 | **Updated**: 6/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.0` | `^5.6.2` |
 | enhanced-resolve | `^5.0.0` | `^5.24.0` |
 | micromatch | `^4.0.0` | `^4.0.8` |
-| semver | `^7.3.4` | `^7.8.4` |
+| semver | `^7.3.4` | `^7.8.5` |
 | source-map | `^0.7.4` | `^0.7.6` |
 
 

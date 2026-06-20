@@ -12,7 +12,7 @@ npm install @depup/electron-updater
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.8.9 | **DepUp version**: 6.8.9-depup.28 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 6.8.9 | **DepUp version**: 6.8.9-depup.29 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | fs-extra | `^10.1.0` | `^11.3.5` |
 | js-yaml | `^4.1.0` | `^4.2.0` |
-| semver | `~7.7.3` | `^7.8.4` |
+| semver | `~7.7.3` | `^7.8.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/electron-updater&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/ink
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.0 | **DepUp version**: 7.1.0-depup.1 | **Updated**: 6/19/2026 | **Import test**: failed
+**Original version**: 7.1.0 | **DepUp version**: 7.1.0-depup.2 | **Updated**: 6/20/2026 | **Import test**: failed
 
 ## What changed
 
