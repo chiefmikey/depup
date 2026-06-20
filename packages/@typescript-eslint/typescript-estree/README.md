@@ -12,14 +12,14 @@ npm install @depup/typescript-eslint__typescript-estree
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.61.1 | **DepUp version**: 8.61.1-depup.5 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 8.61.1 | **DepUp version**: 8.61.1-depup.6 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | minimatch | `^10.2.2` | `^10.2.5` |
-| semver | `^7.7.3` | `^7.8.4` |
+| semver | `^7.7.3` | `^7.8.5` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
 
 

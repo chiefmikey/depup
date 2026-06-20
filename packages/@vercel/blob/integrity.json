@@ -176,6 +176,19 @@
       "status": "failed",
       "timestamp": "2026-06-19T00:45:09.976Z",
       "version": "2.4.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:37:25.651Z",
+      "version": "2.4.1-depup.1"
     }
   }
 }

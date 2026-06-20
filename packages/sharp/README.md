@@ -12,11 +12,14 @@ npm install @depup/sharp
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.35.1 | **DepUp version**: 0.35.1-depup.17 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 0.35.2 | **DepUp version**: 0.35.2-depup.0 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| semver | `^7.8.4` | `^7.8.5` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sharp&labels=bug).
 

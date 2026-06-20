@@ -1,26 +1,5 @@
 {
   "4.13.0": {
-    "6": {
-      "changes": {
-        "@formatjs/fast-memoize": {
-          "from": "^3.1.0",
-          "to": "^3.1.6"
-        },
-        "@schummar/icu-type-parser": {
-          "from": "1.21.5",
-          "to": "^1.26.1"
-        },
-        "intl-messageformat": {
-          "from": "^11.1.0",
-          "to": "^11.2.8"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-16T01:34:43.629Z",
-      "version": "4.13.0-depup.6"
-    },
     "7": {
       "changes": {
         "@formatjs/fast-memoize": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-06-19T01:24:43.154Z",
       "version": "4.13.0-depup.10"
+    },
+    "11": {
+      "changes": {
+        "@formatjs/fast-memoize": {
+          "from": "^3.1.0",
+          "to": "^3.1.6"
+        },
+        "@schummar/icu-type-parser": {
+          "from": "1.21.5",
+          "to": "^1.26.1"
+        },
+        "intl-messageformat": {
+          "from": "^11.1.0",
+          "to": "^11.2.8"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:53:03.225Z",
+      "version": "4.13.0-depup.11"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/micromark-extension-gfm
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.26 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.27 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
