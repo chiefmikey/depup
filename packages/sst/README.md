@@ -12,13 +12,13 @@ npm install @depup/sst
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.15.2 | **DepUp version**: 4.15.2-depup.25 | **Updated**: 6/19/2026 | **Import test**: passed
+**Original version**: 4.15.2 | **DepUp version**: 4.15.2-depup.26 | **Updated**: 6/20/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws/durable-execution-sdk-js | `1.0.2` | `^1.1.7` |
+| @aws/durable-execution-sdk-js | `1.0.2` | `^2.0.0` |
 | aws4fetch | `1.0.18` | `^1.0.20` |
 | jose | `5.2.3` | `^6.2.3` |
 | openid-client | `5.6.4` | `^6.8.4` |

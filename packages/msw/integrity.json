@@ -715,39 +715,6 @@
     }
   },
   "2.14.6": {
-    "26": {
-      "changes": {
-        "@inquirer/confirm": {
-          "from": "^6.0.11",
-          "to": "^6.1.1"
-        },
-        "@mswjs/interceptors": {
-          "from": "^0.41.3",
-          "to": "^0.41.9"
-        },
-        "graphql": {
-          "from": "^16.13.2",
-          "to": "^17.0.0"
-        },
-        "path-to-regexp": {
-          "from": "^6.3.0",
-          "to": "^8.4.2"
-        },
-        "type-fest": {
-          "from": "^5.5.0",
-          "to": "^5.7.0"
-        },
-        "yargs": {
-          "from": "^17.7.2",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T02:43:04.207Z",
-      "version": "2.14.6-depup.26"
-    },
     "27": {
       "changes": {
         "@inquirer/confirm": {
@@ -879,6 +846,39 @@
       "status": "failed",
       "timestamp": "2026-06-19T01:04:57.869Z",
       "version": "2.14.6-depup.30"
+    },
+    "31": {
+      "changes": {
+        "@inquirer/confirm": {
+          "from": "^6.0.11",
+          "to": "^6.1.1"
+        },
+        "@mswjs/interceptors": {
+          "from": "^0.41.3",
+          "to": "^0.41.9"
+        },
+        "graphql": {
+          "from": "^16.13.2",
+          "to": "^17.0.1"
+        },
+        "path-to-regexp": {
+          "from": "^6.3.0",
+          "to": "^8.4.2"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.7.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:46:30.012Z",
+      "version": "2.14.6-depup.31"
     }
   }
 }

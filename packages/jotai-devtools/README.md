@@ -12,7 +12,7 @@ npm install @depup/jotai-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.14.0 | **DepUp version**: 0.14.0-depup.29 | **Updated**: 6/19/2026 | **Import test**: failed
+**Original version**: 0.14.0 | **DepUp version**: 0.14.0-depup.30 | **Updated**: 6/20/2026 | **Import test**: failed
 
 ## What changed
 

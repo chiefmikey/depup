@@ -237,23 +237,6 @@
     }
   },
   "1.18.0": {
-    "4": {
-      "changes": {
-        "form-data": {
-          "from": "^4.0.5",
-          "to": "^4.0.6"
-        },
-        "https-proxy-agent": {
-          "from": "^5.0.1",
-          "to": "^9.1.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-16T02:08:04.515Z",
-      "version": "1.18.0-depup.4"
-    },
     "5": {
       "changes": {
         "form-data": {
@@ -321,6 +304,23 @@
       "status": "failed",
       "timestamp": "2026-06-19T00:45:02.471Z",
       "version": "1.18.0-depup.8"
+    },
+    "9": {
+      "changes": {
+        "form-data": {
+          "from": "^4.0.5",
+          "to": "^4.0.6"
+        },
+        "https-proxy-agent": {
+          "from": "^5.0.1",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:37:03.539Z",
+      "version": "1.18.0-depup.9"
     }
   }
 }

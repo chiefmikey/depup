@@ -12,7 +12,7 @@ npm install @depup/algoliasearch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.55.0 | **DepUp version**: 5.55.0-depup.2 | **Updated**: 6/19/2026 | **Import test**: failed
+**Original version**: 5.55.0 | **DepUp version**: 5.55.0-depup.3 | **Updated**: 6/20/2026 | **Import test**: failed
 
 ## What changed
 

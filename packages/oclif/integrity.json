@@ -3544,71 +3544,6 @@
     }
   },
   "4.23.16": {
-    "5": {
-      "changes": {
-        "@aws-sdk/client-cloudfront": {
-          "from": "^3.1068.0",
-          "to": "^3.1069.0"
-        },
-        "@aws-sdk/client-s3": {
-          "from": "^3.1063.0",
-          "to": "^3.1069.0"
-        },
-        "@inquirer/confirm": {
-          "from": "^3.1.22",
-          "to": "^6.1.1"
-        },
-        "@inquirer/input": {
-          "from": "^2.2.4",
-          "to": "^5.1.2"
-        },
-        "@inquirer/select": {
-          "from": "^2.5.0",
-          "to": "^5.2.1"
-        },
-        "@oclif/core": {
-          "from": "^4.11.4",
-          "to": "^4.11.6"
-        },
-        "ansis": {
-          "from": "^3.16.0",
-          "to": "^4.3.1"
-        },
-        "change-case": {
-          "from": "^4",
-          "to": "^5.4.4"
-        },
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "ejs": {
-          "from": "^3.1.10",
-          "to": "^6.0.1"
-        },
-        "fs-extra": {
-          "from": "^8.1",
-          "to": "^11.3.5"
-        },
-        "got": {
-          "from": "^13",
-          "to": "^15.0.5"
-        },
-        "normalize-package-data": {
-          "from": "^6",
-          "to": "^9.0.0"
-        },
-        "validate-npm-package-name": {
-          "from": "^5.0.1",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 14,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T02:45:46.598Z",
-      "version": "4.23.16-depup.5"
-    },
     "6": {
       "changes": {
         "@aws-sdk/client-cloudfront": {
@@ -3868,6 +3803,75 @@
       "status": "failed",
       "timestamp": "2026-06-19T01:10:20.739Z",
       "version": "4.23.16-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@aws-sdk/client-cloudfront": {
+          "from": "^3.1068.0",
+          "to": "^3.1073.0"
+        },
+        "@aws-sdk/client-s3": {
+          "from": "^3.1063.0",
+          "to": "^3.1073.0"
+        },
+        "@inquirer/confirm": {
+          "from": "^3.1.22",
+          "to": "^6.1.1"
+        },
+        "@inquirer/input": {
+          "from": "^2.2.4",
+          "to": "^5.1.2"
+        },
+        "@inquirer/select": {
+          "from": "^2.5.0",
+          "to": "^5.2.1"
+        },
+        "@oclif/core": {
+          "from": "^4.11.4",
+          "to": "^4.11.7"
+        },
+        "ansis": {
+          "from": "^3.16.0",
+          "to": "^4.3.1"
+        },
+        "change-case": {
+          "from": "^4",
+          "to": "^5.4.4"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "ejs": {
+          "from": "^3.1.10",
+          "to": "^6.0.1"
+        },
+        "fs-extra": {
+          "from": "^8.1",
+          "to": "^11.3.5"
+        },
+        "got": {
+          "from": "^13",
+          "to": "^15.0.5"
+        },
+        "normalize-package-data": {
+          "from": "^6",
+          "to": "^9.0.0"
+        },
+        "semver": {
+          "from": "^7.8.4",
+          "to": "^7.8.5"
+        },
+        "validate-npm-package-name": {
+          "from": "^5.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 15,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-20T00:48:34.347Z",
+      "version": "4.23.16-depup.10"
     }
   }
 }

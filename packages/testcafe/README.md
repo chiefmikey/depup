@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.5 | **DepUp version**: 3.7.5-depup.2 | **Updated**: 6/19/2026 | **Import test**: failed
+**Original version**: 3.7.5 | **DepUp version**: 3.7.5-depup.3 | **Updated**: 6/20/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/preset-react | `^7.22.15` | `^8.0.1` |
 | @babel/runtime | `^7.23.2` | `^8.0.0` |
 | @devexpress/callsite-record | `^4.1.6` | `^4.1.7` |
-| @types/node | `20.14.5` | `^25.9.3` |
+| @types/node | `20.14.5` | `^26.0.0` |
 | address | `^2.0.2` | `^2.0.3` |
 | async-exit-hook | `^1.1.2` | `^2.0.1` |
 | babel-plugin-module-resolver | `5.0.0` | `^5.0.3` |
@@ -80,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | resolve-cwd | `^1.0.0` | `^3.0.0` |
 | resolve-from | `^4.0.0` | `^5.0.0` |
 | sanitize-filename | `^1.6.0` | `^1.6.4` |
-| semver | `^7.5.3` | `^7.8.4` |
+| semver | `^7.5.3` | `^7.8.5` |
 | set-cookie-parser | `^2.5.1` | `^3.1.0` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
