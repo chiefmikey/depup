@@ -302,6 +302,19 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:48:30.387Z",
       "version": "9.7.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "mongodb": {
+          "from": "~7.2",
+          "to": "^7.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:48:40.010Z",
+      "version": "9.7.1-depup.3"
     }
   }
 }

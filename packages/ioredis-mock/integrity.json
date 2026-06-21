@@ -1,30 +1,5 @@
 {
   "8.13.1": {
-    "31": {
-      "changes": {
-        "@ioredis/commands": {
-          "from": "^1.4.0",
-          "to": "^1.10.0"
-        },
-        "fengari": {
-          "from": "^0.1.4",
-          "to": "^0.1.5"
-        },
-        "fengari-interop": {
-          "from": "^0.1.3",
-          "to": "^0.1.4"
-        },
-        "semver": {
-          "from": "^7.7.2",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:06:41.956Z",
-      "version": "8.13.1-depup.31"
-    },
     "32": {
       "changes": {
         "@ioredis/commands": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:46:10.050Z",
       "version": "8.13.1-depup.35"
+    },
+    "36": {
+      "changes": {
+        "@ioredis/commands": {
+          "from": "^1.4.0",
+          "to": "^1.10.0"
+        },
+        "fengari": {
+          "from": "^0.1.4",
+          "to": "^0.1.5"
+        },
+        "fengari-interop": {
+          "from": "^0.1.3",
+          "to": "^0.1.4"
+        },
+        "semver": {
+          "from": "^7.7.2",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:46:39.952Z",
+      "version": "8.13.1-depup.36"
     }
   }
 }

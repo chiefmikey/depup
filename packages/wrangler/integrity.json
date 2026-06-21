@@ -2510,6 +2510,27 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:58:27.102Z",
       "version": "4.103.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        },
+        "workerd": {
+          "from": "1.20260617.1",
+          "to": "^1.20260620.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:57:25.968Z",
+      "version": "4.103.0-depup.1"
     }
   }
 }

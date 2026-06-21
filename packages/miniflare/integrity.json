@@ -2457,6 +2457,31 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:48:14.798Z",
       "version": "4.20260617.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "sharp": {
+          "from": "0.34.5",
+          "to": "^0.35.2"
+        },
+        "undici": {
+          "from": "7.28.0",
+          "to": "^8.5.0"
+        },
+        "workerd": {
+          "from": "1.20260617.1",
+          "to": "^1.20260620.1"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:48:25.404Z",
+      "version": "4.20260617.1-depup.1"
     }
   }
 }

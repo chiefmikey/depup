@@ -26,19 +26,6 @@
     }
   },
   "7.1.5": {
-    "26": {
-      "changes": {
-        "https-proxy-agent": {
-          "from": "^7.0.1",
-          "to": "^9.1.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:05:49.263Z",
-      "version": "7.1.5-depup.26"
-    },
     "27": {
       "changes": {
         "https-proxy-agent": {
@@ -90,6 +77,19 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:44:41.887Z",
       "version": "7.1.5-depup.30"
+    },
+    "31": {
+      "changes": {
+        "https-proxy-agent": {
+          "from": "^7.0.1",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:45:29.410Z",
+      "version": "7.1.5-depup.31"
     }
   }
 }

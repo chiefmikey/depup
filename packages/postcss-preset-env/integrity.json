@@ -116,19 +116,6 @@
     }
   },
   "11.3.1": {
-    "6": {
-      "changes": {
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:10:15.320Z",
-      "version": "11.3.1-depup.6"
-    },
     "7": {
       "changes": {
         "browserslist": {
@@ -180,6 +167,19 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:50:40.317Z",
       "version": "11.3.1-depup.10"
+    },
+    "11": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:50:44.998Z",
+      "version": "11.3.1-depup.11"
     }
   }
 }

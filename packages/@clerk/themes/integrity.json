@@ -1,18 +1,5 @@
 {
   "2.4.57": {
-    "41": {
-      "changes": {
-        "@clerk/shared": {
-          "from": "^3.47.2",
-          "to": "^4.18.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T09:55:09.984Z",
-      "version": "2.4.57-depup.41"
-    },
     "42": {
       "changes": {
         "@clerk/shared": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:31:52.921Z",
       "version": "2.4.57-depup.45"
+    },
+    "46": {
+      "changes": {
+        "@clerk/shared": {
+          "from": "^3.47.2",
+          "to": "^4.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:33:36.701Z",
+      "version": "2.4.57-depup.46"
     }
   }
 }
