@@ -633,39 +633,6 @@
     }
   },
   "11.12.5": {
-    "12": {
-      "changes": {
-        "@contentful/content-source-maps": {
-          "from": "^0.11.33",
-          "to": "^0.12.2"
-        },
-        "@contentful/rich-text-types": {
-          "from": "^16.6.1",
-          "to": "^17.2.7"
-        },
-        "axios": {
-          "from": "^1.15.0",
-          "to": "^1.18.0"
-        },
-        "contentful-resolve-response": {
-          "from": "^1.9.4",
-          "to": "^2.0.0"
-        },
-        "contentful-sdk-core": {
-          "from": "^9.4.4",
-          "to": "^10.0.0"
-        },
-        "type-fest": {
-          "from": "^4.0.0",
-          "to": "^5.7.0"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:02:55.290Z",
-      "version": "11.12.5-depup.12"
-    },
     "13": {
       "changes": {
         "@contentful/content-source-maps": {
@@ -797,6 +764,39 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:40:32.933Z",
       "version": "11.12.5-depup.16"
+    },
+    "17": {
+      "changes": {
+        "@contentful/content-source-maps": {
+          "from": "^0.11.33",
+          "to": "^0.12.2"
+        },
+        "@contentful/rich-text-types": {
+          "from": "^16.6.1",
+          "to": "^17.2.7"
+        },
+        "axios": {
+          "from": "^1.15.0",
+          "to": "^1.18.0"
+        },
+        "contentful-resolve-response": {
+          "from": "^1.9.4",
+          "to": "^2.0.0"
+        },
+        "contentful-sdk-core": {
+          "from": "^9.4.4",
+          "to": "^10.0.0"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.7.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:41:27.112Z",
+      "version": "11.12.5-depup.17"
     }
   }
 }

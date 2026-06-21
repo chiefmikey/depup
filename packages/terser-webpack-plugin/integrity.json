@@ -129,31 +129,6 @@
     }
   },
   "5.6.1": {
-    "22": {
-      "changes": {
-        "@jridgewell/trace-mapping": {
-          "from": "^0.3.25",
-          "to": "^0.3.31"
-        },
-        "jest-worker": {
-          "from": "^27.4.5",
-          "to": "^30.4.1"
-        },
-        "schema-utils": {
-          "from": "^4.3.0",
-          "to": "^4.3.3"
-        },
-        "terser": {
-          "from": "^5.31.1",
-          "to": "^5.48.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:13:01.298Z",
-      "version": "5.6.1-depup.22"
-    },
     "23": {
       "changes": {
         "@jridgewell/trace-mapping": {
@@ -253,6 +228,31 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:52:20.781Z",
       "version": "5.6.1-depup.26"
+    },
+    "27": {
+      "changes": {
+        "@jridgewell/trace-mapping": {
+          "from": "^0.3.25",
+          "to": "^0.3.31"
+        },
+        "jest-worker": {
+          "from": "^27.4.5",
+          "to": "^30.4.1"
+        },
+        "schema-utils": {
+          "from": "^4.3.0",
+          "to": "^4.3.3"
+        },
+        "terser": {
+          "from": "^5.31.1",
+          "to": "^5.48.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:52:14.698Z",
+      "version": "5.6.1-depup.27"
     }
   }
 }

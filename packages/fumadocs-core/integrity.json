@@ -648,5 +648,20 @@
       "timestamp": "2026-06-20T00:42:11.420Z",
       "version": "16.10.4-depup.2"
     }
+  },
+  "16.10.5": {
+    "0": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:42:55.626Z",
+      "version": "16.10.5-depup.0"
+    }
   }
 }

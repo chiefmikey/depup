@@ -1,0 +1,59 @@
+{
+  "name": "@depup/fast-csv",
+  "version": "5.0.7-depup.30",
+  "description": "CSV parser and writer (with updated dependencies)",
+  "main": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./build && rm -rf tsconfig.tsbuildinfo",
+    "compile": "tsc"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "build/src/**",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C2FO/fast-csv.git",
+    "directory": "packages/fast-csv"
+  },
+  "keywords": [
+    "fast-csv",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "csv",
+    "parser",
+    "fast",
+    "writer",
+    "csv writer",
+    "CSV"
+  ],
+  "homepage": "https://c2fo.github.io/fast-csv",
+  "author": "Doug Martin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@fast-csv/format": "5.0.7",
+    "@fast-csv/parse": "5.0.7"
+  },
+  "gitHead": "e8b8bf960defb26f945744242321afcd930f808a",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "fast-csv",
+    "originalVersion": "5.0.7",
+    "processedAt": "2026-06-21T00:42:20.514Z",
+    "smokeTest": "passed"
+  }
+}

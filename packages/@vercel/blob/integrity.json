@@ -189,6 +189,23 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:37:25.651Z",
       "version": "2.4.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@vercel/oidc": {
+          "from": "^3.6.1",
+          "to": "^3.6.2"
+        },
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:39:06.148Z",
+      "version": "2.4.1-depup.2"
     }
   }
 }
