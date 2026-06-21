@@ -1,0 +1,83 @@
+{
+  "name": "@depup/urql__core",
+  "version": "6.0.2-depup.7",
+  "description": "The shared core for the highly customizable and versatile GraphQL client (with updated dependencies)",
+  "sideEffects": false,
+  "homepage": "https://formidable.com/open-source/urql/docs/",
+  "bugs": "https://github.com/urql-graphql/urql/issues",
+  "license": "MIT",
+  "author": "urql GraphQL Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urql-graphql/urql.git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "@urql/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "graphql",
+    "graphql client",
+    "state management",
+    "cache",
+    "exchanges"
+  ],
+  "main": "dist/urql-core",
+  "module": "dist/urql-core.mjs",
+  "types": "dist/urql-core.d.ts",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/urql-core.d.ts",
+      "import": "./dist/urql-core.mjs",
+      "require": "./dist/urql-core.js",
+      "source": "./src/index.ts"
+    },
+    "./package.json": "./package.json",
+    "./internal": {
+      "types": "./dist/urql-core-internal.d.ts",
+      "import": "./dist/urql-core-internal.mjs",
+      "require": "./dist/urql-core-internal.js",
+      "source": "./src/internal/index.ts"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/",
+    "internal/",
+    "changes.json"
+  ],
+  "dependencies": {
+    "@0no-co/graphql.web": "^1.3.2",
+    "wonka": "^6.3.6"
+  },
+  "scripts": {
+    "test": "vitest",
+    "clean": "rimraf dist",
+    "check": "tsc --noEmit",
+    "lint": "eslint --ext=js,jsx,ts,tsx .",
+    "build": "rollup -c ../../scripts/rollup/config.mjs",
+    "jsr": "jsr publish"
+  },
+  "depup": {
+    "changes": {
+      "@0no-co/graphql.web": {
+        "from": "^1.0.13",
+        "to": "^1.3.2"
+      },
+      "wonka": {
+        "from": "^6.3.2",
+        "to": "^6.3.6"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@urql/core",
+    "originalVersion": "6.0.2",
+    "processedAt": "2026-06-21T00:37:56.253Z",
+    "smokeTest": "passed"
+  }
+}

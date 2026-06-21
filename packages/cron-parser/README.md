@@ -12,14 +12,11 @@ npm install @depup/cron-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.5.0 | **DepUp version**: 5.5.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 5.6.0 | **DepUp version**: 5.6.0-depup.0 | **Updated**: 6/21/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| luxon | `^3.7.1` | `^3.7.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cron-parser&labels=bug).
 

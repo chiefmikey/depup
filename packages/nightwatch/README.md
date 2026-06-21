@@ -12,7 +12,7 @@ npm install @depup/nightwatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.29 | **Updated**: 6/20/2026 | **Import test**: failed
+**Original version**: 3.16.0 | **DepUp version**: 3.16.0-depup.30 | **Updated**: 6/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | stacktrace-parser | `0.1.10` | `^0.1.11` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | untildify | `4.0.0` | `^6.0.0` |
-| uuid | `8.3.2` | `^14.0.0` |
+| uuid | `8.3.2` | `^14.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nightwatch&labels=bug).

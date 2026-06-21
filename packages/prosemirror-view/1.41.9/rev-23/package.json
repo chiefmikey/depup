@@ -1,0 +1,73 @@
+{
+  "name": "@depup/prosemirror-view",
+  "version": "1.41.9-depup.23",
+  "description": "ProseMirror's view component (with updated dependencies)",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style/prosemirror.css": "./style/prosemirror.css"
+  },
+  "sideEffects": [
+    "./style/prosemirror.css"
+  ],
+  "style": "style/prosemirror.css",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Marijn Haverbeke",
+      "email": "marijn@haverbeke.berlin",
+      "web": "http://marijnhaverbeke.nl"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://code.haverbeke.berlin/prosemirror/prosemirror-view.git"
+  },
+  "dependencies": {
+    "prosemirror-model": "^1.25.9",
+    "prosemirror-state": "^1.4.4",
+    "prosemirror-transform": "^1.12.0"
+  },
+  "devDependencies": {
+    "@prosemirror/buildhelper": "^0.1.5",
+    "prosemirror-test-builder": "^1.0.0"
+  },
+  "scripts": {
+    "test": "pm-runtests"
+  },
+  "keywords": [
+    "prosemirror-view",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "prosemirror-model": {
+        "from": "^1.25.8",
+        "to": "^1.25.9"
+      },
+      "prosemirror-state": {
+        "from": "^1.0.0",
+        "to": "^1.4.4"
+      },
+      "prosemirror-transform": {
+        "from": "^1.1.0",
+        "to": "^1.12.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "prosemirror-view",
+    "originalVersion": "1.41.9",
+    "processedAt": "2026-06-21T00:51:21.832Z",
+    "smokeTest": "passed"
+  }
+}

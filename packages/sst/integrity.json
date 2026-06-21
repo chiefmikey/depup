@@ -1220,31 +1220,6 @@
     }
   },
   "4.15.2": {
-    "22": {
-      "changes": {
-        "@aws/durable-execution-sdk-js": {
-          "from": "1.0.2",
-          "to": "^1.1.7"
-        },
-        "aws4fetch": {
-          "from": "1.0.18",
-          "to": "^1.0.20"
-        },
-        "jose": {
-          "from": "5.2.3",
-          "to": "^6.2.3"
-        },
-        "openid-client": {
-          "from": "5.6.4",
-          "to": "^6.8.4"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:15:50.995Z",
-      "version": "4.15.2-depup.22"
-    },
     "23": {
       "changes": {
         "@aws/durable-execution-sdk-js": {
@@ -1344,6 +1319,31 @@
       "status": "failed",
       "timestamp": "2026-06-20T00:52:41.213Z",
       "version": "4.15.2-depup.26"
+    },
+    "27": {
+      "changes": {
+        "@aws/durable-execution-sdk-js": {
+          "from": "1.0.2",
+          "to": "^2.0.0"
+        },
+        "aws4fetch": {
+          "from": "1.0.18",
+          "to": "^1.0.20"
+        },
+        "jose": {
+          "from": "5.2.3",
+          "to": "^6.2.3"
+        },
+        "openid-client": {
+          "from": "5.6.4",
+          "to": "^6.8.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-21T00:54:17.536Z",
+      "version": "4.15.2-depup.27"
     }
   }
 }
