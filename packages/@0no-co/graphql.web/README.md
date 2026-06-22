@@ -12,7 +12,7 @@ npm install @depup/0no-co__graphql.web
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.2 | **DepUp version**: 1.3.2-depup.13 | **Updated**: 6/21/2026 | **Import test**: passed
+**Original version**: 1.3.2 | **DepUp version**: 1.3.2-depup.14 | **Updated**: 6/22/2026 | **Import test**: passed
 
 ## What changed
 

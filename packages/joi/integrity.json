@@ -155,6 +155,19 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:46:43.414Z",
       "version": "18.2.3-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@hapi/tlds": {
+          "from": "^1.1.1",
+          "to": "^1.1.7"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:45:34.136Z",
+      "version": "18.2.3-depup.4"
     }
   }
 }

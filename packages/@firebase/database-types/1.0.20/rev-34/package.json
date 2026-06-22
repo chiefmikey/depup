@@ -1,0 +1,47 @@
+{
+  "name": "@depup/firebase__database-types",
+  "version": "1.0.20-depup.34",
+  "description": "@firebase/database Types (with updated dependencies)",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tsc",
+    "test:ci": "node ../../scripts/run_tests_in_ci.js"
+  },
+  "files": [
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@firebase/app-types": "0.9.5",
+    "@firebase/util": "1.15.1"
+  },
+  "repository": {
+    "directory": "packages/database-types",
+    "type": "git",
+    "url": "git+https://github.com/firebase/firebase-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firebase/firebase-js-sdk/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "keywords": [
+    "@firebase/database-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@firebase/database-types",
+    "originalVersion": "1.0.20",
+    "processedAt": "2026-06-22T00:34:58.860Z",
+    "smokeTest": "failed"
+  }
+}

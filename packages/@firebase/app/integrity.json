@@ -161,23 +161,6 @@
     }
   },
   "0.15.0": {
-    "0": {
-      "changes": {
-        "idb": {
-          "from": "7.1.1",
-          "to": "^8.0.3"
-        },
-        "tslib": {
-          "from": "^2.1.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-17T00:37:16.367Z",
-      "version": "0.15.0-depup.0"
-    },
     "1": {
       "changes": {
         "idb": {
@@ -245,6 +228,23 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:35:20.650Z",
       "version": "0.15.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "idb": {
+          "from": "7.1.1",
+          "to": "^8.0.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:34:54.908Z",
+      "version": "0.15.0-depup.5"
     }
   }
 }
