@@ -2137,6 +2137,35 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:37:33.879Z",
       "version": "10.59.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@opentelemetry/core": {
+          "from": "^2.6.1",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/instrumentation": {
+          "from": "^0.214.0",
+          "to": "^0.219.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.6.1",
+          "to": "^2.8.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.40.0",
+          "to": "^1.41.1"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:37:45.330Z",
+      "version": "10.59.0-depup.2"
     }
   }
 }

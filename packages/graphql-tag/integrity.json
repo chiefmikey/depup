@@ -64,6 +64,19 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:45:48.093Z",
       "version": "2.12.7-depup.3"
+    },
+    "4": {
+      "changes": {
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:44:03.572Z",
+      "version": "2.12.7-depup.4"
     }
   }
 }

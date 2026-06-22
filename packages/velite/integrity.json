@@ -153,6 +153,27 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:55:36.956Z",
       "version": "0.4.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "esbuild": {
+          "from": "^0.25.12",
+          "to": "^0.28.1"
+        },
+        "sharp": {
+          "from": "^0.34.5",
+          "to": "^0.35.2"
+        },
+        "terser": {
+          "from": "^5.44.1",
+          "to": "^5.48.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:52:14.929Z",
+      "version": "0.4.0-depup.4"
     }
   }
 }

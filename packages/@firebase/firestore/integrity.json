@@ -197,31 +197,6 @@
     }
   },
   "4.16.0": {
-    "0": {
-      "changes": {
-        "@grpc/grpc-js": {
-          "from": "~1.9.0",
-          "to": "^1.14.4"
-        },
-        "@grpc/proto-loader": {
-          "from": "^0.7.8",
-          "to": "^0.8.1"
-        },
-        "re2js": {
-          "from": "^0.4.2",
-          "to": "^2.8.3"
-        },
-        "tslib": {
-          "from": "^2.1.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-17T00:36:33.733Z",
-      "version": "4.16.0-depup.0"
-    },
     "1": {
       "changes": {
         "@grpc/grpc-js": {
@@ -321,6 +296,31 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:34:35.821Z",
       "version": "4.16.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "~1.9.0",
+          "to": "^1.14.4"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.7.8",
+          "to": "^0.8.1"
+        },
+        "re2js": {
+          "from": "^0.4.2",
+          "to": "^2.8.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:34:52.412Z",
+      "version": "4.16.0-depup.5"
     }
   }
 }

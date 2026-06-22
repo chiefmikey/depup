@@ -30,14 +30,6 @@
     }
   },
   "4.0.4": {
-    "29": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-17T00:36:47.968Z",
-      "version": "4.0.4-depup.29"
-    },
     "30": {
       "changes": {},
       "depsUpdated": 0,
@@ -84,6 +76,19 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:34:52.071Z",
       "version": "4.0.4-depup.33"
+    },
+    "34": {
+      "changes": {
+        "nanoid": {
+          "from": "^5.1.11",
+          "to": "^5.1.15"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:35:09.301Z",
+      "version": "4.0.4-depup.34"
     }
   }
 }

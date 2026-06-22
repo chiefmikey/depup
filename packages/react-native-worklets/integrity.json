@@ -1,58 +1,5 @@
 {
   "0.9.2": {
-    "8": {
-      "changes": {
-        "@babel/plugin-transform-arrow-functions": {
-          "from": "^7.27.1",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-class-properties": {
-          "from": "^7.28.6",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-classes": {
-          "from": "^7.28.6",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-nullish-coalescing-operator": {
-          "from": "^7.28.6",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-optional-chaining": {
-          "from": "^7.28.6",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-shorthand-properties": {
-          "from": "^7.27.1",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-template-literals": {
-          "from": "^7.27.1",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-transform-unicode-regex": {
-          "from": "^7.27.1",
-          "to": "^8.0.0"
-        },
-        "@babel/preset-typescript": {
-          "from": "^7.28.5",
-          "to": "^8.0.0"
-        },
-        "@babel/types": {
-          "from": "^7.27.1",
-          "to": "^8.0.0"
-        },
-        "semver": {
-          "from": "^7.7.4",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 11,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-17T00:58:12.470Z",
-      "version": "0.9.2-depup.8"
-    },
     "9": {
       "changes": {
         "@babel/plugin-transform-arrow-functions": {
@@ -264,6 +211,59 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:52:00.258Z",
       "version": "0.9.2-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@babel/plugin-transform-arrow-functions": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-class-properties": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-classes": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-nullish-coalescing-operator": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-optional-chaining": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-shorthand-properties": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-template-literals": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-unicode-regex": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/preset-typescript": {
+          "from": "^7.28.5",
+          "to": "^8.0.1"
+        },
+        "@babel/types": {
+          "from": "^7.27.1",
+          "to": "^8.0.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:49:01.926Z",
+      "version": "0.9.2-depup.13"
     }
   }
 }

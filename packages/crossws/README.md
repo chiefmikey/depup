@@ -12,7 +12,7 @@ npm install @depup/crossws
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.4.6 | **DepUp version**: 0.4.6-depup.25 | **Updated**: 6/21/2026 | **Import test**: passed
+**Original version**: 0.4.6 | **DepUp version**: 0.4.6-depup.26 | **Updated**: 6/22/2026 | **Import test**: passed
 
 ## What changed
 

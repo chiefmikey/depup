@@ -903,6 +903,39 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:32:09.893Z",
       "version": "22.0.2-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@babel/core": {
+          "from": "7.29.0",
+          "to": "^8.0.1"
+        },
+        "@jridgewell/sourcemap-codec": {
+          "from": "^1.4.14",
+          "to": "^1.5.5"
+        },
+        "reflect-metadata": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "convert-source-map": {
+          "from": "^1.5.1",
+          "to": "^2.0.0"
+        },
+        "semver": {
+          "from": "^7.0.0",
+          "to": "^7.8.5"
+        },
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:32:43.871Z",
+      "version": "22.0.2-depup.4"
     }
   }
 }
