@@ -12,14 +12,15 @@ npm install @depup/babel__eslint-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.29.7 | **DepUp version**: 7.29.7-depup.28 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.0 | **Updated**: 6/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| eslint-visitor-keys | `^2.1.0` | `^5.0.1` |
-| semver | `^6.3.1` | `^7.8.4` |
+| eslint-scope | `^9.1.0` | `^9.1.2` |
+| eslint-visitor-keys | `^5.0.0` | `^5.0.1` |
+| semver | `^7.7.3` | `^7.8.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel__eslint-parser&labels=bug).

@@ -36,23 +36,6 @@
     }
   },
   "30.4.2": {
-    "27": {
-      "changes": {
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        },
-        "yargs": {
-          "from": "^17.7.2",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-17T00:46:53.970Z",
-      "version": "30.4.2-depup.27"
-    },
     "28": {
       "changes": {
         "chalk": {
@@ -120,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:45:04.571Z",
       "version": "30.4.2-depup.31"
+    },
+    "32": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-22T00:49:59.958Z",
+      "version": "30.4.2-depup.32"
     }
   }
 }

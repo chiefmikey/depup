@@ -1,0 +1,49 @@
+{
+  "name": "@depup/jest__create-cache-key-function",
+  "version": "30.4.1-depup.35",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-create-cache-key-function"
+  },
+  "dependencies": {
+    "@jest/types": "30.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "jest-util": "30.4.1"
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "gitHead": "b3b4a09ed3005369dacc7466d1d2122797283785",
+  "description": "@jest/create-cache-key-function with all dependencies updated to latest",
+  "keywords": [
+    "@jest/create-cache-key-function",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@jest/create-cache-key-function",
+    "originalVersion": "30.4.1",
+    "processedAt": "2026-06-22T00:36:56.566Z",
+    "smokeTest": "passed"
+  }
+}
