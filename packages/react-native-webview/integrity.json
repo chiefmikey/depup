@@ -40,6 +40,19 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:50:35.027Z",
       "version": "14.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:51:09.035Z",
+      "version": "14.0.1-depup.2"
     }
   }
 }

@@ -322,5 +322,24 @@
       "timestamp": "2026-06-22T00:39:59.585Z",
       "version": "1.18.0-depup.11"
     }
+  },
+  "1.18.1": {
+    "0": {
+      "changes": {
+        "form-data": {
+          "from": "^4.0.5",
+          "to": "^4.0.6"
+        },
+        "https-proxy-agent": {
+          "from": "^5.0.1",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:38:20.920Z",
+      "version": "1.18.1-depup.0"
+    }
   }
 }

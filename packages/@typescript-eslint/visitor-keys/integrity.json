@@ -310,5 +310,20 @@
       "timestamp": "2026-06-22T00:38:37.880Z",
       "version": "8.61.1-depup.8"
     }
+  },
+  "8.62.0": {
+    "0": {
+      "changes": {
+        "eslint-visitor-keys": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:36:50.124Z",
+      "version": "8.62.0-depup.0"
+    }
   }
 }

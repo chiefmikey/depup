@@ -12,14 +12,14 @@ npm install @depup/tanstack__react-router
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.170.16 | **DepUp version**: 1.170.16-depup.5 | **Updated**: 6/22/2026 | **Import test**: passed
+**Original version**: 1.170.16 | **DepUp version**: 1.170.16-depup.6 | **Updated**: 6/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @tanstack/react-store | `^0.9.3` | `^0.11.0` |
-| isbot | `^5.1.22` | `^5.1.43` |
+| isbot | `^5.1.22` | `^5.1.44` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tanstack__react-router&labels=bug).
