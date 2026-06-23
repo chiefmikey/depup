@@ -12,15 +12,11 @@ npm install @depup/focus-trap-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.2 | **DepUp version**: 12.0.2-depup.30 | **Updated**: 6/22/2026 | **Import test**: failed
+**Original version**: 12.0.3 | **DepUp version**: 12.0.3-depup.0 | **Updated**: 6/23/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| focus-trap | `^8.2.1` | `^8.2.2` |
-| tabbable | `^6.4.0` | `^6.5.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/focus-trap-react&labels=bug).
 

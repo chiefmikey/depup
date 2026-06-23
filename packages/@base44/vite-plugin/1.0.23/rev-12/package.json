@@ -1,0 +1,77 @@
+{
+  "name": "@depup/base44__vite-plugin",
+  "version": "1.0.23-depup.12",
+  "description": "The Vite plugin for base44 based applications (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js",
+    "./bridge": "./dist/bridge.js",
+    "./compat/*": "./compat/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "compat",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:bridge": "tsup",
+    "validate-exports": "node scripts/validate-exports.mjs",
+    "dev": "node dev-server.js",
+    "test:unit": "vitest run"
+  },
+  "devDependencies": {
+    "@types/babel__generator": "^7.27.0",
+    "@types/babel__traverse": "^7.28.0",
+    "@types/node": "^24.6.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsdom": "^26.0.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "@babel/generator": "^8.0.0",
+    "@babel/parser": "^8.0.0",
+    "@babel/traverse": "^8.0.0",
+    "@babel/types": "^8.0.0"
+  },
+  "keywords": [
+    "@base44/vite-plugin",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/generator": {
+        "from": "^7.28.5",
+        "to": "^8.0.0"
+      },
+      "@babel/parser": {
+        "from": "^7.28.5",
+        "to": "^8.0.0"
+      },
+      "@babel/traverse": {
+        "from": "^7.28.5",
+        "to": "^8.0.0"
+      },
+      "@babel/types": {
+        "from": "^7.28.5",
+        "to": "^8.0.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@base44/vite-plugin",
+    "originalVersion": "1.0.23",
+    "processedAt": "2026-06-23T00:31:10.630Z",
+    "smokeTest": "failed"
+  }
+}

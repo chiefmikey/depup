@@ -8,14 +8,6 @@
     }
   },
   "10.0.0": {
-    "24": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-18T00:58:52.023Z",
-      "version": "10.0.0-depup.24"
-    },
     "25": {
       "changes": {},
       "depsUpdated": 0,
@@ -47,6 +39,19 @@
       "status": "skipped",
       "timestamp": "2026-06-22T00:52:17.003Z",
       "version": "10.0.0-depup.28"
+    },
+    "29": {
+      "changes": {
+        "vscode-languageserver-protocol": {
+          "from": "3.18.0",
+          "to": "^3.18.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:49:19.632Z",
+      "version": "10.0.0-depup.29"
     }
   }
 }

@@ -239,27 +239,6 @@
     }
   },
   "0.71.0": {
-    "16": {
-      "changes": {
-        "@opentelemetry/propagator-aws-xray": {
-          "from": "^2.1.4",
-          "to": "^2.2.0"
-        },
-        "@opentelemetry/semantic-conventions": {
-          "from": "^1.27.0",
-          "to": "^1.41.1"
-        },
-        "@types/aws-lambda": {
-          "from": "^8.10.155",
-          "to": "^8.10.162"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:39:41.364Z",
-      "version": "0.71.0-depup.16"
-    },
     "17": {
       "changes": {
         "@opentelemetry/propagator-aws-xray": {
@@ -343,6 +322,27 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:36:30.129Z",
       "version": "0.71.0-depup.20"
+    },
+    "21": {
+      "changes": {
+        "@opentelemetry/propagator-aws-xray": {
+          "from": "^2.1.4",
+          "to": "^2.2.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.41.1"
+        },
+        "@types/aws-lambda": {
+          "from": "^8.10.155",
+          "to": "^8.10.162"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:34:05.641Z",
+      "version": "0.71.0-depup.21"
     }
   }
 }

@@ -675,6 +675,19 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:43:36.501Z",
       "version": "16.10.5-depup.1"
+    },
+    "2": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:40:50.002Z",
+      "version": "16.10.5-depup.2"
     }
   }
 }

@@ -139,23 +139,6 @@
     }
   },
   "3.0.260610-beta": {
-    "19": {
-      "changes": {
-        "env-runner": {
-          "from": "^0.1.12",
-          "to": "^0.1.14"
-        },
-        "rolldown": {
-          "from": "^1.1.0",
-          "to": "^1.1.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:52:59.437Z",
-      "version": "3.0.260610-beta-depup.19"
-    },
     "20": {
       "changes": {
         "env-runner": {
@@ -235,6 +218,27 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:47:03.256Z",
       "version": "3.0.260610-beta-depup.23"
+    },
+    "24": {
+      "changes": {
+        "env-runner": {
+          "from": "^0.1.12",
+          "to": "^0.1.14"
+        },
+        "rolldown": {
+          "from": "^1.1.0",
+          "to": "^1.1.2"
+        },
+        "srvx": {
+          "from": "^0.11.16",
+          "to": "^0.11.17"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:44:07.220Z",
+      "version": "3.0.260610-beta-depup.24"
     }
   }
 }

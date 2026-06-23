@@ -520,5 +520,28 @@
       "timestamp": "2026-06-22T00:38:45.406Z",
       "version": "8.61.1-depup.8"
     }
+  },
+  "8.62.0": {
+    "0": {
+      "changes": {
+        "minimatch": {
+          "from": "^10.2.2",
+          "to": "^10.2.5"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.5"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:36:10.971Z",
+      "version": "8.62.0-depup.0"
+    }
   }
 }

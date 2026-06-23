@@ -338,6 +338,27 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:42:28.812Z",
       "version": "63.0.7-depup.0"
+    },
+    "1": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "semver": {
+          "from": "^7.8.2",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:39:44.883Z",
+      "version": "63.0.7-depup.1"
     }
   }
 }

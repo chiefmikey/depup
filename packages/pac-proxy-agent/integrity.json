@@ -100,23 +100,6 @@
     }
   },
   "9.1.0": {
-    "26": {
-      "changes": {
-        "debug": {
-          "from": "^4.3.4",
-          "to": "^4.4.3"
-        },
-        "quickjs-wasi": {
-          "from": "^2.2.0",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:54:16.915Z",
-      "version": "9.1.0-depup.26"
-    },
     "27": {
       "changes": {
         "debug": {
@@ -184,6 +167,23 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:47:23.312Z",
       "version": "9.1.0-depup.30"
+    },
+    "31": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "quickjs-wasi": {
+          "from": "^2.2.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:44:26.253Z",
+      "version": "9.1.0-depup.31"
     }
   }
 }
