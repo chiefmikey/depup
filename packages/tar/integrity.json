@@ -93,23 +93,6 @@
     }
   },
   "7.5.16": {
-    "24": {
-      "changes": {
-        "@isaacs/fs-minipass": {
-          "from": "^4.0.0",
-          "to": "^4.0.1"
-        },
-        "minipass": {
-          "from": "^7.1.2",
-          "to": "^7.1.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:57:51.815Z",
-      "version": "7.5.16-depup.24"
-    },
     "25": {
       "changes": {
         "@isaacs/fs-minipass": {
@@ -177,6 +160,23 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:57:51.704Z",
       "version": "7.5.16-depup.28"
+    },
+    "29": {
+      "changes": {
+        "@isaacs/fs-minipass": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        },
+        "minipass": {
+          "from": "^7.1.2",
+          "to": "^7.1.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:55:06.600Z",
+      "version": "7.5.16-depup.29"
     }
   }
 }

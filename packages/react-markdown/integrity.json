@@ -1,54 +1,5 @@
 {
   "10.1.0": {
-    "26": {
-      "changes": {
-        "@types/hast": {
-          "from": "^3.0.0",
-          "to": "^3.0.4"
-        },
-        "@types/mdast": {
-          "from": "^4.0.0",
-          "to": "^4.0.4"
-        },
-        "devlop": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "hast-util-to-jsx-runtime": {
-          "from": "^2.0.0",
-          "to": "^2.3.6"
-        },
-        "html-url-attributes": {
-          "from": "^3.0.0",
-          "to": "^3.0.1"
-        },
-        "mdast-util-to-hast": {
-          "from": "^13.0.0",
-          "to": "^13.2.1"
-        },
-        "remark-rehype": {
-          "from": "^11.0.0",
-          "to": "^11.1.2"
-        },
-        "unified": {
-          "from": "^11.0.0",
-          "to": "^11.0.5"
-        },
-        "unist-util-visit": {
-          "from": "^5.0.0",
-          "to": "^5.1.0"
-        },
-        "vfile": {
-          "from": "^6.0.0",
-          "to": "^6.0.3"
-        }
-      },
-      "depsUpdated": 10,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:56:35.182Z",
-      "version": "10.1.0-depup.26"
-    },
     "27": {
       "changes": {
         "@types/hast": {
@@ -244,6 +195,55 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:55:43.528Z",
       "version": "10.1.0-depup.30"
+    },
+    "31": {
+      "changes": {
+        "@types/hast": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "devlop": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "hast-util-to-jsx-runtime": {
+          "from": "^2.0.0",
+          "to": "^2.3.6"
+        },
+        "html-url-attributes": {
+          "from": "^3.0.0",
+          "to": "^3.0.1"
+        },
+        "mdast-util-to-hast": {
+          "from": "^13.0.0",
+          "to": "^13.2.1"
+        },
+        "remark-rehype": {
+          "from": "^11.0.0",
+          "to": "^11.1.2"
+        },
+        "unified": {
+          "from": "^11.0.0",
+          "to": "^11.0.5"
+        },
+        "unist-util-visit": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "vfile": {
+          "from": "^6.0.0",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:53:03.444Z",
+      "version": "10.1.0-depup.31"
     }
   }
 }

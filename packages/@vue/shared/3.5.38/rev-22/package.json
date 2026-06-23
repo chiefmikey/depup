@@ -1,0 +1,63 @@
+{
+  "name": "@depup/vue__shared",
+  "version": "3.5.38-depup.22",
+  "description": "internal utils shared across @vue packages (with updated dependencies)",
+  "main": "index.js",
+  "module": "dist/shared.esm-bundler.js",
+  "types": "dist/shared.d.ts",
+  "files": [
+    "index.js",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/shared.d.ts",
+      "node": {
+        "production": "./dist/shared.cjs.prod.js",
+        "development": "./dist/shared.cjs.js",
+        "default": "./index.js"
+      },
+      "module": "./dist/shared.esm-bundler.js",
+      "import": "./dist/shared.esm-bundler.js",
+      "require": "./index.js"
+    },
+    "./*": "./*"
+  },
+  "sideEffects": false,
+  "buildOptions": {
+    "formats": [
+      "esm-bundler",
+      "cjs"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/core.git",
+    "directory": "packages/shared"
+  },
+  "keywords": [
+    "@vue/shared",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vue"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuejs/core/issues"
+  },
+  "homepage": "https://github.com/vuejs/core/tree/main/packages/shared#readme",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vue/shared",
+    "originalVersion": "3.5.38",
+    "processedAt": "2026-06-23T00:37:59.712Z",
+    "smokeTest": "passed"
+  }
+}

@@ -484,19 +484,6 @@
     }
   },
   "17.5.0": {
-    "0": {
-      "changes": {
-        "semver": {
-          "from": "^7.3.5",
-          "to": "^7.8.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:45:59.906Z",
-      "version": "17.5.0-depup.0"
-    },
     "1": {
       "changes": {
         "semver": {
@@ -548,6 +535,19 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:43:09.002Z",
       "version": "17.5.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:40:49.152Z",
+      "version": "17.5.0-depup.5"
     }
   }
 }

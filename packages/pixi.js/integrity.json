@@ -132,31 +132,6 @@
     }
   },
   "8.19.0": {
-    "27": {
-      "changes": {
-        "@webgpu/types": {
-          "from": "^0.1.69",
-          "to": "^0.1.70"
-        },
-        "@xmldom/xmldom": {
-          "from": "^0.8.13",
-          "to": "^0.9.10"
-        },
-        "eventemitter3": {
-          "from": "^5.0.1",
-          "to": "^5.0.4"
-        },
-        "tiny-lru": {
-          "from": "^11.4.7",
-          "to": "^13.0.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:53:53.397Z",
-      "version": "8.19.0-depup.27"
-    },
     "28": {
       "changes": {
         "@webgpu/types": {
@@ -256,6 +231,31 @@
       "status": "failed",
       "timestamp": "2026-06-22T00:54:40.377Z",
       "version": "8.19.0-depup.31"
+    },
+    "32": {
+      "changes": {
+        "@webgpu/types": {
+          "from": "^0.1.69",
+          "to": "^0.1.70"
+        },
+        "@xmldom/xmldom": {
+          "from": "^0.8.13",
+          "to": "^0.9.10"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-23T00:52:04.177Z",
+      "version": "8.19.0-depup.32"
     }
   }
 }
