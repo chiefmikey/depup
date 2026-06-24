@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-label
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.10 | **DepUp version**: 2.1.10-depup.8 | **Updated**: 6/23/2026 | **Import test**: failed
+**Original version**: 2.1.10 | **DepUp version**: 2.1.10-depup.9 | **Updated**: 6/24/2026 | **Import test**: failed
 
 ## What changed
 

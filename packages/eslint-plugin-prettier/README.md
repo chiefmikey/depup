@@ -12,7 +12,7 @@ npm install @depup/eslint-plugin-prettier
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.5.6 | **DepUp version**: 5.5.6-depup.32 | **Updated**: 6/23/2026 | **Import test**: passed
+**Original version**: 5.5.6 | **DepUp version**: 5.5.6-depup.33 | **Updated**: 6/24/2026 | **Import test**: passed
 
 ## What changed
 

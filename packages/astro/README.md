@@ -12,7 +12,7 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.0 | **Updated**: 6/23/2026 | **Import test**: failed
+**Original version**: 7.0.2 | **DepUp version**: 7.0.2-depup.0 | **Updated**: 6/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @capsizecss/unpack | `^4.0.0` | `^4.0.1` |
 | @clack/prompts | `^1.1.0` | `^1.6.0` |
 | @rollup/pluginutils | `^5.3.0` | `^5.4.0` |
-| am-i-vibing | `^0.3.0` | `^0.4.0` |
+| am-i-vibing | `^0.4.0` | `^0.5.0` |
 | diff | `^8.0.3` | `^9.0.0` |
 | es-module-lexer | `^2.0.0` | `^2.1.0` |
 | esbuild | `^0.28.0` | `^0.28.1` |
@@ -36,7 +36,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinyclip | `^0.1.12` | `^0.1.15` |
 | tinyexec | `^1.0.4` | `^1.2.4` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
-| vite | `^8.0.13` | `^8.0.16` |
+| vite | `^8.0.13` | `^8.1.0` |
 | vitefu | `^1.1.2` | `^1.1.3` |
 | zod | `^4.3.6` | `^4.4.3` |
 

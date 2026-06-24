@@ -12,17 +12,17 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.46.0 | **DepUp version**: 6.46.0-depup.3 | **Updated**: 6/23/2026 | **Import test**: failed
+**Original version**: 6.46.0 | **DepUp version**: 6.46.0-depup.4 | **Updated**: 6/24/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1068.0` | `^3.1074.0` |
+| @aws-sdk/client-s3 | `3.1068.0` | `^3.1075.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `10.4.0` | `^10.5.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.59.0` |
+| @sentry/node | `7.120.4` | `^10.60.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.0` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.0` |
 | @tryghost/database-info | `0.3.35` | `^2.3.0` |

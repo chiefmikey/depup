@@ -12,7 +12,7 @@ npm install @depup/drizzle-orm
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.45.2 | **DepUp version**: 0.45.2-depup.5 | **Updated**: 6/23/2026 | **Import test**: passed
+**Original version**: 0.45.2 | **DepUp version**: 0.45.2-depup.6 | **Updated**: 6/24/2026 | **Import test**: passed
 
 ## What changed
 
