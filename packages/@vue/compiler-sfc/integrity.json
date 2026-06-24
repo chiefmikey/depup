@@ -167,23 +167,6 @@
     }
   },
   "3.5.38": {
-    "19": {
-      "changes": {
-        "@babel/parser": {
-          "from": "^7.29.7",
-          "to": "^8.0.0"
-        },
-        "estree-walker": {
-          "from": "^2.0.2",
-          "to": "^3.0.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-19T00:44:08.158Z",
-      "version": "3.5.38-depup.19"
-    },
     "20": {
       "changes": {
         "@babel/parser": {
@@ -251,6 +234,23 @@
       "status": "failed",
       "timestamp": "2026-06-23T00:37:57.923Z",
       "version": "3.5.38-depup.23"
+    },
+    "24": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-24T00:32:23.794Z",
+      "version": "3.5.38-depup.24"
     }
   }
 }

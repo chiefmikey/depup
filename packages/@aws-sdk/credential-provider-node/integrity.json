@@ -1120,6 +1120,31 @@
       "status": "failed",
       "timestamp": "2026-06-23T00:30:57.880Z",
       "version": "3.972.58-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.24.6",
+          "to": "^3.26.0"
+        },
+        "@smithy/credential-provider-imds": {
+          "from": "^4.3.7",
+          "to": "^4.4.2"
+        },
+        "@smithy/types": {
+          "from": "^4.14.3",
+          "to": "^4.15.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-24T00:25:54.452Z",
+      "version": "3.972.58-depup.1"
     }
   }
 }

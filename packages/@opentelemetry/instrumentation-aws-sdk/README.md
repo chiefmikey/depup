@@ -12,7 +12,7 @@ npm install @depup/opentelemetry__instrumentation-aws-sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.74.0 | **DepUp version**: 0.74.0-depup.21 | **Updated**: 6/23/2026 | **Import test**: passed
+**Original version**: 0.74.0 | **DepUp version**: 0.74.0-depup.22 | **Updated**: 6/24/2026 | **Import test**: passed
 
 ## What changed
 

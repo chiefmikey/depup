@@ -270,14 +270,6 @@
     }
   },
   "22.0.3": {
-    "0": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-19T00:38:05.022Z",
-      "version": "22.0.3-depup.0"
-    },
     "1": {
       "changes": {},
       "depsUpdated": 0,
@@ -314,6 +306,19 @@
       "status": "failed",
       "timestamp": "2026-06-23T00:30:19.790Z",
       "version": "22.0.3-depup.4"
+    },
+    "5": {
+      "changes": {
+        "ora": {
+          "from": "9.4.0",
+          "to": "^9.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-24T00:25:15.385Z",
+      "version": "22.0.3-depup.5"
     }
   }
 }

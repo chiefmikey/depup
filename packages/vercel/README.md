@@ -12,7 +12,7 @@ npm install @depup/vercel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 54.14.5 | **DepUp version**: 54.14.5-depup.2 | **Updated**: 6/23/2026 | **Import test**: failed
+**Original version**: 54.15.1 | **DepUp version**: 54.15.1-depup.0 | **Updated**: 6/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,19 +29,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | sandbox | `3.1.2` | `^3.2.2` |
 | smol-toml | `1.5.2` | `^1.7.0` |
 | zod | `4.1.11` | `^4.4.3` |
-| @vercel/backends | `0.8.14` | `^0.8.15` |
-| @vercel/build-utils | `13.30.0` | `^13.31.0` |
-| @vercel/elysia | `0.1.93` | `^0.1.94` |
-| @vercel/express | `0.1.105` | `^0.1.106` |
-| @vercel/fastify | `0.1.96` | `^0.1.97` |
-| @vercel/h3 | `0.1.102` | `^0.1.103` |
-| @vercel/hono | `0.2.96` | `^0.2.97` |
-| @vercel/nestjs | `0.2.97` | `^0.2.98` |
-| @vercel/koa | `0.1.76` | `^0.1.77` |
-| @vercel/python | `6.47.0` | `^6.47.1` |
-| @vercel/node | `5.8.17` | `^5.8.18` |
-| @vercel/ruby | `2.4.0` | `^2.5.0` |
-| @vercel/static-build | `2.10.3` | `^2.11.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vercel&labels=bug).

@@ -401,6 +401,14 @@
       "status": "failed",
       "timestamp": "2026-06-23T00:30:25.366Z",
       "version": "3.0.74-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-24T00:25:18.628Z",
+      "version": "3.0.74-depup.1"
     }
   }
 }
