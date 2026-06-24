@@ -12,14 +12,11 @@ npm install @depup/vitejs__plugin-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.32 | **Updated**: 6/23/2026 | **Import test**: failed
+**Original version**: 6.0.3 | **DepUp version**: 6.0.3-depup.0 | **Updated**: 6/24/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @rolldown/pluginutils | `^1.0.0` | `^1.0.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitejs__plugin-react&labels=bug).
 

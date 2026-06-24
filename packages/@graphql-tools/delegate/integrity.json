@@ -143,31 +143,6 @@
     }
   },
   "12.0.17": {
-    "32": {
-      "changes": {
-        "@graphql-tools/executor": {
-          "from": "^1.4.13",
-          "to": "^1.5.3"
-        },
-        "@graphql-tools/schema": {
-          "from": "^10.0.29",
-          "to": "^10.0.33"
-        },
-        "@graphql-tools/utils": {
-          "from": "^11.0.0",
-          "to": "^11.1.0"
-        },
-        "@repeaterjs/repeater": {
-          "from": "^3.0.6",
-          "to": "^3.1.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-19T00:41:13.629Z",
-      "version": "12.0.17-depup.32"
-    },
     "33": {
       "changes": {
         "@graphql-tools/executor": {
@@ -267,6 +242,31 @@
       "status": "failed",
       "timestamp": "2026-06-23T00:32:57.594Z",
       "version": "12.0.17-depup.36"
+    },
+    "37": {
+      "changes": {
+        "@graphql-tools/executor": {
+          "from": "^1.4.13",
+          "to": "^1.5.3"
+        },
+        "@graphql-tools/schema": {
+          "from": "^10.0.29",
+          "to": "^10.0.33"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.1.0"
+        },
+        "@repeaterjs/repeater": {
+          "from": "^3.0.6",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-24T00:28:02.975Z",
+      "version": "12.0.17-depup.37"
     }
   }
 }

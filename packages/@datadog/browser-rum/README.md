@@ -12,14 +12,11 @@ npm install @depup/datadog__browser-rum
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.0 | **DepUp version**: 7.3.0-depup.9 | **Updated**: 6/23/2026 | **Import test**: passed
+**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.0 | **Updated**: 6/24/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @datadog/js-core | `0.0.2` | `^0.0.3` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/datadog__browser-rum&labels=bug).
 
