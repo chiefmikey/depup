@@ -463,6 +463,14 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:26:52.141Z",
       "version": "1.42.2-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-25T00:31:47.453Z",
+      "version": "1.42.2-depup.1"
     }
   }
 }

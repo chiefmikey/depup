@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.7 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.8 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,8 +30,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @aws-sdk/client-sts | `^3.1034.0` | `^3.1075.0` |
 | @aws-sdk/credential-providers | `^3.1034.0` | `^3.1075.0` |
 | @azure/identity | `^4.13.0` | `^4.13.1` |
-| @azure/storage-blob | `^12.30.0` | `^12.32.0` |
-| @azure/storage-queue | `^12.29.0` | `^12.30.0` |
+| @azure/storage-blob | `^12.30.0` | `^12.33.0` |
+| @azure/storage-queue | `^12.29.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.11.11` |
 | @oclif/plugin-help | `^6.2.36` | `^6.2.52` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.88` |
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | joi | `^17.13.3` | `^18.2.3` |
 | js-yaml | `^3.14.1` | `^5.1.0` |
 | lodash | `^4.18.0` | `^4.18.1` |
-| nanoid | `^3.3.4` | `^5.1.15` |
+| nanoid | `^3.3.4` | `^5.1.16` |
 | ora | `^4.0.4` | `^9.4.1` |
 | sqs-consumer | `6.0.2` | `^15.0.2` |
 | tempy | `3.1.0` | `^3.2.0` |

@@ -12,13 +12,13 @@ npm install @depup/cookie-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.31 | **Updated**: 6/24/2026 | **Import test**: passed
+**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.32 | **Updated**: 6/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cookie | `0.7.2` | `^1.1.1` |
+| cookie | `0.7.2` | `^2.0.0` |
 | cookie-signature | `1.0.6` | `^1.2.2` |
 
 

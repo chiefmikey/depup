@@ -32,27 +32,6 @@
     }
   },
   "3.34.1": {
-    "33": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        },
-        "react-aria": {
-          "from": "^3.48.0",
-          "to": "^3.50.0"
-        },
-        "react-stately": {
-          "from": "^3.46.0",
-          "to": "^3.48.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:35:05.568Z",
-      "version": "3.34.1-depup.33"
-    },
     "34": {
       "changes": {
         "@swc/helpers": {
@@ -136,6 +115,27 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:30:42.326Z",
       "version": "3.34.1-depup.37"
+    },
+    "38": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-aria": {
+          "from": "^3.48.0",
+          "to": "^3.50.0"
+        },
+        "react-stately": {
+          "from": "^3.46.0",
+          "to": "^3.48.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:36:01.047Z",
+      "version": "3.34.1-depup.38"
     }
   }
 }

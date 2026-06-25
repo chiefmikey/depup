@@ -12,7 +12,7 @@ npm install @depup/eslint-plugin-unicorn
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 68.0.0 | **DepUp version**: 68.0.0-depup.2 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 69.0.0 | **DepUp version**: 69.0.0-depup.0 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 

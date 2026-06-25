@@ -1137,23 +1137,6 @@
     }
   },
   "2.34.0": {
-    "2": {
-      "changes": {
-        "@redocly/ajv": {
-          "from": "^8.18.1",
-          "to": "^8.18.3"
-        },
-        "colorette": {
-          "from": "^1.2.0",
-          "to": "^2.0.20"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:35:33.760Z",
-      "version": "2.34.0-depup.2"
-    },
     "3": {
       "changes": {
         "@redocly/ajv": {
@@ -1237,6 +1220,27 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:31:05.587Z",
       "version": "2.34.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:36:27.998Z",
+      "version": "2.34.0-depup.7"
     }
   }
 }

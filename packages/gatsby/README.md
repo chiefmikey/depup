@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.71 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.72 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.1.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.1` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.0.2` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.4` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.5` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.10` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | acorn-walk | `^8.2.0` | `^8.3.5` |
 | address | `1.2.2` | `^2.0.3` |
 | anser | `^2.1.1` | `^2.3.5` |
-| autoprefixer | `^10.4.14` | `^10.5.1` |
+| autoprefixer | `^10.4.14` | `^10.5.2` |
 | axios | `^1.6.4` | `^1.18.1` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
@@ -58,7 +58,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.2` | `^5.6.2` |
 | chokidar | `^3.6.0` | `^5.0.0` |
 | compression | `^1.7.4` | `^1.8.1` |
-| cookie | `^0.5.0` | `^1.1.1` |
+| cookie | `^0.5.0` | `^2.0.0` |
 | core-js | `^3.31.0` | `^3.49.0` |
 | cors | `^2.8.5` | `^2.8.6` |
 | css-loader | `^5.2.7` | `^7.1.4` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
-| enhanced-resolve | `^5.15.0` | `^5.24.0` |
+| enhanced-resolve | `^5.15.0` | `^5.24.1` |
 | eslint | `^7.32.0` | `^10.5.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
