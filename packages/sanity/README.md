@@ -12,42 +12,30 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.0 | **DepUp version**: 6.1.0-depup.7 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.0 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @algorithm.ts/lcs | `^4.0.5` | `^4.0.6` |
-| @dnd-kit/modifiers | `^6.0.1` | `^9.0.0` |
-| @dnd-kit/sortable | `^7.0.2` | `^10.0.0` |
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
-| @portabletext/editor | `^7.5.0` | `^7.7.0` |
-| @portabletext/html | `^1.0.2` | `^1.0.3` |
-| @portabletext/plugin-markdown-shortcuts | `^8.0.16` | `^8.0.22` |
-| @portabletext/plugin-one-line | `^7.0.16` | `^7.0.22` |
-| @portabletext/plugin-paste-link | `^4.0.16` | `^4.0.22` |
-| @portabletext/plugin-typography | `^8.0.16` | `^8.0.22` |
-| @portabletext/sanity-bridge | `^3.1.2` | `^3.1.5` |
-| @sanity/cli | `^7.2.3` | `^7.4.0` |
-| @sanity/client | `^7.22.1` | `^7.23.0` |
+| @portabletext/editor | `^7.7.0` | `^7.8.0` |
+| @portabletext/html | `^1.0.3` | `^1.1.0` |
+| @portabletext/patches | `^2.0.4` | `^2.0.5` |
+| @portabletext/plugin-markdown-shortcuts | `^8.0.22` | `^8.0.23` |
+| @portabletext/plugin-one-line | `^7.0.22` | `^7.0.23` |
+| @portabletext/plugin-paste-link | `^4.0.22` | `^4.0.23` |
+| @portabletext/plugin-typography | `^8.0.22` | `^8.0.23` |
+| @portabletext/sanity-bridge | `^3.1.5` | `^3.1.6` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/migrate | `^7.0.2` | `^7.0.3` |
-| @sanity/sdk | `^2.14.0` | `^2.14.1` |
-| @sanity/uuid | `^3.0.2` | `^3.0.3` |
-| @sentry/react | `^8.55.2` | `^10.60.0` |
-| @tanstack/react-virtual | `^3.14.2` | `^3.14.3` |
-| classnames | `^2.2.5` | `^2.5.1` |
-| date-fns | `^4.1.0` | `^4.4.0` |
-| i18next | `^26.2.0` | `^26.3.1` |
-| isomorphic-dompurify | `2.26.0` | `^3.18.0` |
+| @sanity/sdk | `^2.14.1` | `^2.15.0` |
+| @sentry/react | `^10.59.0` | `^10.60.0` |
+| i18next | `^26.3.1` | `^26.3.2` |
+| isomorphic-dompurify | `2.36.0` | `^3.18.0` |
 | motion | `^12.40.0` | `^12.41.0` |
-| nanoid | `^3.3.11` | `^5.1.15` |
+| nanoid | `^5.1.15` | `^5.1.16` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
-| player.style | `^0.1.9` | `^0.3.4` |
-| semver | `^7.7.2` | `^7.8.5` |
-| uuid | `^11.1.0` | `^14.0.1` |
-| xstate | `^5.32.0` | `^5.32.2` |
+| xstate | `^5.32.1` | `^5.32.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

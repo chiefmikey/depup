@@ -1,38 +1,5 @@
 {
   "2.1.3": {
-    "38": {
-      "changes": {
-        "@sentry/browser": {
-          "from": "^8.51.0",
-          "to": "^10.59.0"
-        },
-        "@sentry/core": {
-          "from": "^8.51.0",
-          "to": "^10.59.0"
-        },
-        "@sentry/react": {
-          "from": "^8.51.0",
-          "to": "^10.59.0"
-        },
-        "@sentry/types": {
-          "from": "^8.51.0",
-          "to": "^10.59.0"
-        },
-        "fmrs": {
-          "from": "^2.0.3",
-          "to": "^2.1.2"
-        },
-        "use-shallow-memo": {
-          "from": "^1.1.0",
-          "to": "^1.1.1"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:51:24.393Z",
-      "version": "2.1.3-depup.38"
-    },
     "39": {
       "changes": {
         "@sentry/browser": {
@@ -164,6 +131,39 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:43:20.322Z",
       "version": "2.1.3-depup.42"
+    },
+    "43": {
+      "changes": {
+        "@sentry/browser": {
+          "from": "^8.51.0",
+          "to": "^10.60.0"
+        },
+        "@sentry/core": {
+          "from": "^8.51.0",
+          "to": "^10.60.0"
+        },
+        "@sentry/react": {
+          "from": "^8.51.0",
+          "to": "^10.60.0"
+        },
+        "@sentry/types": {
+          "from": "^8.51.0",
+          "to": "^10.60.0"
+        },
+        "fmrs": {
+          "from": "^2.0.3",
+          "to": "^3.0.0"
+        },
+        "use-shallow-memo": {
+          "from": "^1.1.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:47:29.183Z",
+      "version": "2.1.3-depup.43"
     }
   }
 }

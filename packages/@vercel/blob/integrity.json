@@ -164,19 +164,6 @@
     }
   },
   "2.4.1": {
-    "1": {
-      "changes": {
-        "undici": {
-          "from": "^6.23.0",
-          "to": "^8.5.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:37:25.651Z",
-      "version": "2.4.1-depup.1"
-    },
     "2": {
       "changes": {
         "@vercel/oidc": {
@@ -244,6 +231,23 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:31:49.517Z",
       "version": "2.4.1-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@vercel/oidc": {
+          "from": "^3.6.1",
+          "to": "^3.7.0"
+        },
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:36:03.791Z",
+      "version": "2.4.1-depup.6"
     }
   }
 }

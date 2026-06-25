@@ -45,6 +45,27 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:46:06.710Z",
       "version": "0.14.13-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chokidar": {
+          "from": "^3.5.3",
+          "to": "^5.0.0"
+        },
+        "fast-glob": {
+          "from": "^3.2.11",
+          "to": "^3.3.3"
+        },
+        "jsonc-parser": {
+          "from": "^3.0.0",
+          "to": "^3.3.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:50:17.089Z",
+      "version": "0.14.13-depup.1"
     }
   }
 }

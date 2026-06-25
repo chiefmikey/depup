@@ -368,23 +368,6 @@
     }
   },
   "12.0.3": {
-    "2": {
-      "changes": {
-        "archiver": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        },
-        "undici": {
-          "from": "^8.3.0",
-          "to": "^8.5.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:54:44.987Z",
-      "version": "12.0.3-depup.2"
-    },
     "3": {
       "changes": {
         "archiver": {
@@ -452,6 +435,27 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:44:51.751Z",
       "version": "12.0.3-depup.6"
+    },
+    "7": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "dockerode": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "undici": {
+          "from": "^8.3.0",
+          "to": "^8.5.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:49:07.607Z",
+      "version": "12.0.3-depup.7"
     }
   }
 }

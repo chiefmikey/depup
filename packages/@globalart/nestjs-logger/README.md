@@ -12,13 +12,13 @@ npm install @depup/globalart__nestjs-logger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.4 | **DepUp version**: 4.0.4-depup.36 | **Updated**: 6/24/2026 | **Import test**: passed
+**Original version**: 4.0.4 | **DepUp version**: 4.0.4-depup.37 | **Updated**: 6/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| nanoid | `^5.1.11` | `^5.1.15` |
+| nanoid | `^5.1.11` | `^5.1.16` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/globalart__nestjs-logger&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/string-width
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.2.1 | **DepUp version**: 8.2.1-depup.32 | **Updated**: 6/24/2026 | **Import test**: passed
+**Original version**: 8.2.1 | **DepUp version**: 8.2.1-depup.33 | **Updated**: 6/25/2026 | **Import test**: passed
 
 ## What changed
 

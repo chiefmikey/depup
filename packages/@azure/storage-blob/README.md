@@ -12,7 +12,7 @@ npm install @depup/azure__storage-blob
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.32.0 | **DepUp version**: 12.32.0-depup.37 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 12.33.0 | **DepUp version**: 12.33.0-depup.0 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/core-util | `^1.11.0` | `^1.13.1` |
 | @azure/core-xml | `^1.4.5` | `^1.5.1` |
 | @azure/logger | `^1.1.4` | `^1.3.0` |
-| @azure/storage-common | `^12.4.0` | `^12.4.1` |
 | events | `^3.0.0` | `^3.3.0` |
 
 

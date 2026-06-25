@@ -1,0 +1,61 @@
+{
+  "name": "@depup/zod-form-data",
+  "version": "3.0.2-depup.32",
+  "homepage": "https://github.com/airjp73/rvf/tree/main/packages/zod-form-data",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airjp73/rvf",
+    "directory": "packages/zod-form-data"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@rvf/set-get": "^7.0.2"
+  },
+  "peerDependencies": {
+    "zod": ">= 3.25.0"
+  },
+  "devDependencies": {
+    "@rvf/set-get": "*",
+    "tsconfig": "*",
+    "tsup-config": "*",
+    "typescript": "^5.8.3",
+    "zod": "4.4.3"
+  },
+  "description": "zod-form-data with all dependencies updated to latest",
+  "keywords": [
+    "zod-form-data",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@rvf/set-get": {
+        "from": "^7.0.0",
+        "to": "^7.0.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "zod-form-data",
+    "originalVersion": "3.0.2",
+    "processedAt": "2026-06-25T00:50:31.241Z",
+    "smokeTest": "failed"
+  }
+}
