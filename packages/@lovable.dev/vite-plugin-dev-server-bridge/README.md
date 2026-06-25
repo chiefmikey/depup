@@ -12,7 +12,7 @@ npm install @depup/lovable.dev__vite-plugin-dev-server-bridge
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.2 | **DepUp version**: 1.0.2-depup.5 | **Updated**: 6/24/2026 | **Import test**: passed
+**Original version**: 1.0.2 | **DepUp version**: 1.0.2-depup.6 | **Updated**: 6/25/2026 | **Import test**: passed
 
 ## What changed
 

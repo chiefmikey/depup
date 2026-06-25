@@ -378,14 +378,6 @@
     }
   },
   "2.108.2": {
-    "2": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-16T01:52:54.131Z",
-      "version": "2.108.2-depup.2"
-    },
     "3": {
       "changes": {},
       "depsUpdated": 0,
@@ -432,6 +424,19 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:30:18.911Z",
       "version": "2.108.2-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@supabase/phoenix": {
+          "from": "^0.4.2",
+          "to": "^0.4.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:35:38.490Z",
+      "version": "2.108.2-depup.7"
     }
   }
 }

@@ -263,23 +263,6 @@
     }
   },
   "9.6.0": {
-    "1": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.29.7",
-          "to": "^8.0.0"
-        },
-        "@mui/utils": {
-          "from": "^9.0.1",
-          "to": "^9.1.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-20T00:33:27.566Z",
-      "version": "9.6.0-depup.1"
-    },
     "2": {
       "changes": {
         "@babel/runtime": {
@@ -347,6 +330,23 @@
       "status": "failed",
       "timestamp": "2026-06-24T00:28:23.188Z",
       "version": "9.6.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@mui/utils": {
+          "from": "^9.0.1",
+          "to": "^9.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-25T00:33:33.124Z",
+      "version": "9.6.0-depup.6"
     }
   }
 }

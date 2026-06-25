@@ -12,7 +12,7 @@ npm install @depup/tabler__icons-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.44.0 | **DepUp version**: 3.44.0-depup.33 | **Updated**: 6/24/2026 | **Import test**: failed
+**Original version**: 3.44.0 | **DepUp version**: 3.44.0-depup.34 | **Updated**: 6/25/2026 | **Import test**: failed
 
 ## What changed
 
