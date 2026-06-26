@@ -1,0 +1,56 @@
+{
+  "name": "@depup/class-validator",
+  "version": "0.15.1-depup.31",
+  "description": "Decorator-based property validation for classes. (with updated dependencies)",
+  "author": "TypeStack contributors",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./cjs/index.js",
+  "module": "./esm5/index.js",
+  "es2015": "./esm2015/index.js",
+  "typings": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typestack/class-validator.git"
+  },
+  "tags": [
+    "validator",
+    "validation",
+    "decorators",
+    "typescript"
+  ],
+  "dependencies": {
+    "@types/validator": "^13.15.10",
+    "libphonenumber-js": "^1.13.7",
+    "validator": "^13.15.35"
+  },
+  "keywords": [
+    "class-validator",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@types/validator": {
+        "from": "^13.15.3",
+        "to": "^13.15.10"
+      },
+      "libphonenumber-js": {
+        "from": "^1.11.1",
+        "to": "^1.13.7"
+      },
+      "validator": {
+        "from": "^13.15.22",
+        "to": "^13.15.35"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "class-validator",
+    "originalVersion": "0.15.1",
+    "processedAt": "2026-06-26T00:39:57.500Z",
+    "smokeTest": "passed"
+  }
+}

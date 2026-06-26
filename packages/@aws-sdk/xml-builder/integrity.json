@@ -648,6 +648,23 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:30:55.045Z",
       "version": "3.972.31-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@smithy/types": {
+          "from": "^4.14.3",
+          "to": "^4.15.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:32:06.133Z",
+      "version": "3.972.31-depup.3"
     }
   }
 }

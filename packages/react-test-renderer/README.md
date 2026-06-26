@@ -12,7 +12,7 @@ npm install @depup/react-test-renderer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 19.2.7 | **DepUp version**: 19.2.7-depup.32 | **Updated**: 6/25/2026 | **Import test**: passed
+**Original version**: 19.2.7 | **DepUp version**: 19.2.7-depup.33 | **Updated**: 6/26/2026 | **Import test**: passed
 
 ## What changed
 

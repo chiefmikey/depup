@@ -12,14 +12,11 @@ npm install @depup/ai
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.209 | **DepUp version**: 6.0.209-depup.1 | **Updated**: 6/25/2026 | **Import test**: failed
+**Original version**: 7.0.2 | **DepUp version**: 7.0.2-depup.0 | **Updated**: 6/26/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @opentelemetry/api | `^1.9.0` | `^1.9.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ai&labels=bug).
 

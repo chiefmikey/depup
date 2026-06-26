@@ -1,26 +1,5 @@
 {
   "0.15.1": {
-    "26": {
-      "changes": {
-        "@types/validator": {
-          "from": "^13.15.3",
-          "to": "^13.15.10"
-        },
-        "libphonenumber-js": {
-          "from": "^1.11.1",
-          "to": "^1.13.6"
-        },
-        "validator": {
-          "from": "^13.15.22",
-          "to": "^13.15.35"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:27:55.685Z",
-      "version": "0.15.1-depup.26"
-    },
     "27": {
       "changes": {
         "@types/validator": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:37:58.329Z",
       "version": "0.15.1-depup.30"
+    },
+    "31": {
+      "changes": {
+        "@types/validator": {
+          "from": "^13.15.3",
+          "to": "^13.15.10"
+        },
+        "libphonenumber-js": {
+          "from": "^1.11.1",
+          "to": "^1.13.7"
+        },
+        "validator": {
+          "from": "^13.15.22",
+          "to": "^13.15.35"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:39:59.917Z",
+      "version": "0.15.1-depup.31"
     }
   }
 }

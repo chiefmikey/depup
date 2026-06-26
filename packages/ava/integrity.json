@@ -202,27 +202,6 @@
     }
   },
   "8.0.1": {
-    "30": {
-      "changes": {
-        "@vercel/nft": {
-          "from": "^1.5.0",
-          "to": "^1.10.2"
-        },
-        "acorn": {
-          "from": "^8.16.0",
-          "to": "^8.17.0"
-        },
-        "write-file-atomic": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:39:48.278Z",
-      "version": "8.0.1-depup.30"
-    },
     "31": {
       "changes": {
         "@vercel/nft": {
@@ -314,6 +293,31 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:37:14.103Z",
       "version": "8.0.1-depup.34"
+    },
+    "35": {
+      "changes": {
+        "@vercel/nft": {
+          "from": "^1.5.0",
+          "to": "^1.10.2"
+        },
+        "acorn": {
+          "from": "^8.16.0",
+          "to": "^8.17.0"
+        },
+        "cli-truncate": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        },
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:39:12.989Z",
+      "version": "8.0.1-depup.35"
     }
   }
 }
