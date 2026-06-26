@@ -257,23 +257,6 @@
     }
   },
   "9.8.5": {
-    "7": {
-      "changes": {
-        "@koa/router": {
-          "from": "^15.5.0",
-          "to": "^15.6.0"
-        },
-        "nanoid": {
-          "from": "^5.1.11",
-          "to": "^5.1.15"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:47:31.317Z",
-      "version": "9.8.5-depup.7"
-    },
     "8": {
       "changes": {
         "@koa/router": {
@@ -341,6 +324,23 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:51:06.905Z",
       "version": "9.8.5-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@koa/router": {
+          "from": "^15.5.0",
+          "to": "^15.6.0"
+        },
+        "nanoid": {
+          "from": "^5.1.11",
+          "to": "^5.1.16"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:52:23.488Z",
+      "version": "9.8.5-depup.12"
     }
   }
 }

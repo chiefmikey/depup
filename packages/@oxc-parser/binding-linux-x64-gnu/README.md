@@ -12,7 +12,7 @@ npm install @depup/oxc-parser__binding-linux-x64-gnu
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.137.0 | **DepUp version**: 0.137.0-depup.6 | **Updated**: 6/25/2026 | **Import test**: failed
+**Original version**: 0.137.0 | **DepUp version**: 0.137.0-depup.7 | **Updated**: 6/26/2026 | **Import test**: failed
 
 ## What changed
 

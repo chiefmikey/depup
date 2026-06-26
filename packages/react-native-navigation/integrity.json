@@ -365,6 +365,23 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:53:24.696Z",
       "version": "8.8.9-depup.3"
+    },
+    "4": {
+      "changes": {
+        "prop-types": {
+          "from": "15.x.x",
+          "to": "^15.8.1"
+        },
+        "tslib": {
+          "from": "1.9.3",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:54:38.990Z",
+      "version": "8.8.9-depup.4"
     }
   }
 }

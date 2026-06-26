@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.72 | **Updated**: 6/25/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.73 | **Updated**: 6/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -127,7 +127,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.1` |
-| webpack | `~5.98.0` | `^5.107.2` |
+| webpack | `~5.98.0` | `^5.108.0` |
 | webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.2` |

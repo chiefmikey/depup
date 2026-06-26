@@ -5515,111 +5515,6 @@
     }
   },
   "56.1.16": {
-    "7": {
-      "changes": {
-        "@expo/schema-utils": {
-          "from": "^56.0.0",
-          "to": "^56.0.1"
-        },
-        "@react-native/dev-middleware": {
-          "from": "0.85.3",
-          "to": "^0.86.0"
-        },
-        "bplist-creator": {
-          "from": "0.1.0",
-          "to": "^0.1.1"
-        },
-        "bplist-parser": {
-          "from": "^0.3.1",
-          "to": "^0.3.2"
-        },
-        "chalk": {
-          "from": "^4.0.0",
-          "to": "^5.6.2"
-        },
-        "ci-info": {
-          "from": "^3.3.0",
-          "to": "^4.4.0"
-        },
-        "compression": {
-          "from": "^1.7.4",
-          "to": "^1.8.1"
-        },
-        "debug": {
-          "from": "^4.3.4",
-          "to": "^4.4.3"
-        },
-        "dnssd-advertise": {
-          "from": "^1.1.4",
-          "to": "^1.1.6"
-        },
-        "glob": {
-          "from": "^13.0.0",
-          "to": "^13.0.6"
-        },
-        "node-forge": {
-          "from": "^1.3.3",
-          "to": "^1.4.0"
-        },
-        "npm-package-arg": {
-          "from": "^11.0.0",
-          "to": "^14.0.0"
-        },
-        "ora": {
-          "from": "^3.4.0",
-          "to": "^9.4.0"
-        },
-        "pretty-format": {
-          "from": "^29.7.0",
-          "to": "^30.4.1"
-        },
-        "prompts": {
-          "from": "^2.3.2",
-          "to": "^2.4.2"
-        },
-        "semver": {
-          "from": "^7.6.0",
-          "to": "^7.8.5"
-        },
-        "send": {
-          "from": "^0.19.0",
-          "to": "^1.2.1"
-        },
-        "slugify": {
-          "from": "^1.3.4",
-          "to": "^1.6.9"
-        },
-        "stacktrace-parser": {
-          "from": "^0.1.10",
-          "to": "^0.1.11"
-        },
-        "structured-headers": {
-          "from": "^0.4.1",
-          "to": "^2.0.2"
-        },
-        "terminal-link": {
-          "from": "^2.1.1",
-          "to": "^5.0.0"
-        },
-        "wrap-ansi": {
-          "from": "^7.0.0",
-          "to": "^10.0.0"
-        },
-        "ws": {
-          "from": "^8.12.1",
-          "to": "^8.21.0"
-        },
-        "zod": {
-          "from": "^3.25.76",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 24,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:35:12.324Z",
-      "version": "56.1.16-depup.7"
-    },
     "8": {
       "changes": {
         "@expo/schema-utils": {
@@ -6039,6 +5934,111 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:33:14.265Z",
       "version": "56.1.16-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@expo/schema-utils": {
+          "from": "^56.0.0",
+          "to": "^56.0.1"
+        },
+        "@react-native/dev-middleware": {
+          "from": "0.85.3",
+          "to": "^0.86.0"
+        },
+        "bplist-creator": {
+          "from": "0.1.0",
+          "to": "^0.1.1"
+        },
+        "bplist-parser": {
+          "from": "^0.3.1",
+          "to": "^0.3.2"
+        },
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^5.6.2"
+        },
+        "ci-info": {
+          "from": "^3.3.0",
+          "to": "^4.4.0"
+        },
+        "compression": {
+          "from": "^1.7.4",
+          "to": "^1.8.1"
+        },
+        "debug": {
+          "from": "^4.3.4",
+          "to": "^4.4.3"
+        },
+        "dnssd-advertise": {
+          "from": "^1.1.4",
+          "to": "^1.1.6"
+        },
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        },
+        "node-forge": {
+          "from": "^1.3.3",
+          "to": "^1.4.0"
+        },
+        "npm-package-arg": {
+          "from": "^11.0.0",
+          "to": "^14.0.0"
+        },
+        "ora": {
+          "from": "^3.4.0",
+          "to": "^9.4.1"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.4.1"
+        },
+        "prompts": {
+          "from": "^2.3.2",
+          "to": "^2.4.2"
+        },
+        "semver": {
+          "from": "^7.6.0",
+          "to": "^7.8.5"
+        },
+        "send": {
+          "from": "^0.19.0",
+          "to": "^1.2.1"
+        },
+        "slugify": {
+          "from": "^1.3.4",
+          "to": "^1.6.9"
+        },
+        "stacktrace-parser": {
+          "from": "^0.1.10",
+          "to": "^0.1.11"
+        },
+        "structured-headers": {
+          "from": "^0.4.1",
+          "to": "^2.0.2"
+        },
+        "terminal-link": {
+          "from": "^2.1.1",
+          "to": "^5.0.0"
+        },
+        "wrap-ansi": {
+          "from": "^7.0.0",
+          "to": "^10.0.0"
+        },
+        "ws": {
+          "from": "^8.12.1",
+          "to": "^8.21.0"
+        },
+        "zod": {
+          "from": "^3.25.76",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 24,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:34:18.259Z",
+      "version": "56.1.16-depup.12"
     }
   }
 }

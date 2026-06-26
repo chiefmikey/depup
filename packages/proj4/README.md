@@ -12,7 +12,7 @@ npm install @depup/proj4
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.20.9 | **DepUp version**: 2.20.9-depup.34 | **Updated**: 6/25/2026 | **Import test**: passed
+**Original version**: 2.20.9 | **DepUp version**: 2.20.9-depup.35 | **Updated**: 6/26/2026 | **Import test**: passed
 
 ## What changed
 

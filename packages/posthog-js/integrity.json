@@ -4632,5 +4632,28 @@
       "timestamp": "2026-06-25T00:52:17.959Z",
       "version": "1.393.4-depup.0"
     }
+  },
+  "1.393.5": {
+    "0": {
+      "changes": {
+        "core-js": {
+          "from": "^3.38.1",
+          "to": "^3.49.0"
+        },
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.11"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:53:33.821Z",
+      "version": "1.393.5-depup.0"
+    }
   }
 }

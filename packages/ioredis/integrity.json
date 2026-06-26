@@ -129,19 +129,6 @@
     }
   },
   "5.11.1": {
-    "30": {
-      "changes": {
-        "cluster-key-slot": {
-          "from": "1.1.1",
-          "to": "^1.1.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:46:28.670Z",
-      "version": "5.11.1-depup.30"
-    },
     "31": {
       "changes": {
         "cluster-key-slot": {
@@ -193,6 +180,19 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:47:06.513Z",
       "version": "5.11.1-depup.34"
+    },
+    "35": {
+      "changes": {
+        "cluster-key-slot": {
+          "from": "1.1.1",
+          "to": "^1.1.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:48:26.156Z",
+      "version": "5.11.1-depup.35"
     }
   }
 }

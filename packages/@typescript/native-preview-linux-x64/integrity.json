@@ -1073,6 +1073,14 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:37:34.978Z",
       "version": "7.0.0-dev.20260624.1-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-06-26T00:38:53.922Z",
+      "version": "7.0.0-dev.20260624.1-depup.1"
     }
   }
 }
