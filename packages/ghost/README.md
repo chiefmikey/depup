@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.47.0 | **DepUp version**: 6.47.0-depup.0 | **Updated**: 6/25/2026 | **Import test**: failed
+**Original version**: 6.48.0 | **DepUp version**: 6.48.0-depup.0 | **Updated**: 6/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `10.4.0` | `^10.5.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.60.0` |
+| @sentry/node | `7.120.4` | `^10.61.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.1` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.1` |
 | @tryghost/database-info | `0.3.35` | `^2.3.1` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/tpl | `2.2.3` | `^2.3.1` |
 | @tryghost/validator | `0.2.22` | `^3.2.1` |
 | @tryghost/version | `2.2.3` | `^2.3.1` |
-| @tryghost/zip | `3.3.4` | `^3.4.1` |
+| @tryghost/zip | `3.3.4` | `^3.5.0` |
 | body-parser | `1.20.5` | `^2.3.0` |
 | cache-manager | `4.1.0` | `^7.2.8` |
 | chalk | `4.1.2` | `^5.6.2` |
@@ -65,7 +65,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `21.3.4` | `^22.0.1` |
-| ghost-storage-base | `2.1.0` | `^2.1.2` |
+| ghost-storage-base | `2.1.2` | `^2.1.5` |
 | got | `13.0.0` | `^15.0.6` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | html5parser | `2.0.2` | `^3.0.0` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.2.10` |
-| knex-migrator | `5.3.2` | `^5.4.0` |
+| knex-migrator | `5.3.2` | `^5.4.1` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.2.0` |
 | metascraper | `5.45.15` | `^5.51.1` |

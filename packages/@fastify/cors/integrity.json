@@ -1,22 +1,5 @@
 {
   "11.2.0": {
-    "34": {
-      "changes": {
-        "fastify-plugin": {
-          "from": "^5.0.0",
-          "to": "^6.0.0"
-        },
-        "toad-cache": {
-          "from": "^3.7.0",
-          "to": "^3.7.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:35:21.868Z",
-      "version": "11.2.0-depup.34"
-    },
     "35": {
       "changes": {
         "fastify-plugin": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:32:24.945Z",
       "version": "11.2.0-depup.38"
+    },
+    "39": {
+      "changes": {
+        "fastify-plugin": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "toad-cache": {
+          "from": "^3.7.0",
+          "to": "^3.7.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:33:36.232Z",
+      "version": "11.2.0-depup.39"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__aix-ppc64",
+  "version": "0.28.1-depup.23",
+  "description": "The IBM AIX PowerPC 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "aix"
+  ],
+  "cpu": [
+    "ppc64"
+  ],
+  "keywords": [
+    "@esbuild/aix-ppc64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/aix-ppc64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-26T00:33:02.146Z",
+    "smokeTest": "failed"
+  }
+}

@@ -12,14 +12,14 @@ npm install @depup/vue__language-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.5 | **DepUp version**: 3.3.5-depup.18 | **Updated**: 6/25/2026 | **Import test**: passed
+**Original version**: 3.3.5 | **DepUp version**: 3.3.5-depup.19 | **Updated**: 6/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vue/compiler-dom | `^3.5.0` | `^3.5.38` |
-| @vue/shared | `^3.5.0` | `^3.5.38` |
+| @vue/compiler-dom | `^3.5.0` | `^3.5.39` |
+| @vue/shared | `^3.5.0` | `^3.5.39` |
 | alien-signals | `^3.2.0` | `^3.2.1` |
 
 

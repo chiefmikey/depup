@@ -116,19 +116,6 @@
     }
   },
   "11.3.1": {
-    "11": {
-      "changes": {
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:50:44.998Z",
-      "version": "11.3.1-depup.11"
-    },
     "12": {
       "changes": {
         "browserslist": {
@@ -188,6 +175,27 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:48:15.415Z",
       "version": "11.3.1-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@csstools/postcss-text-decoration-shorthand": {
+          "from": "^5.0.3",
+          "to": "^5.0.4"
+        },
+        "autoprefixer": {
+          "from": "^10.5.0",
+          "to": "^10.5.2"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:50:15.473Z",
+      "version": "11.3.1-depup.16"
     }
   }
 }

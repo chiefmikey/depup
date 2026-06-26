@@ -935,23 +935,6 @@
     }
   },
   "1.170.16": {
-    "4": {
-      "changes": {
-        "@tanstack/react-store": {
-          "from": "^0.9.3",
-          "to": "^0.11.0"
-        },
-        "isbot": {
-          "from": "^5.1.22",
-          "to": "^5.1.43"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-21T00:39:18.316Z",
-      "version": "1.170.16-depup.4"
-    },
     "5": {
       "changes": {
         "@tanstack/react-store": {
@@ -1019,6 +1002,23 @@
       "status": "failed",
       "timestamp": "2026-06-25T00:36:02.753Z",
       "version": "1.170.16-depup.8"
+    },
+    "9": {
+      "changes": {
+        "@tanstack/react-store": {
+          "from": "^0.9.3",
+          "to": "^0.11.0"
+        },
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.1.44"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-26T00:37:26.239Z",
+      "version": "1.170.16-depup.9"
     }
   }
 }
