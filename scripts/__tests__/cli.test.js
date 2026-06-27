@@ -3,7 +3,14 @@
  * jest.unstable_mockModule('node:child_process') that must not leak into other
  * blocks. Jest gives each test file its own module registry, so this is hermetic.
  */
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals';
+import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest,
+} from '@jest/globals';
 
 // jest.unstable_mockModule must be evaluated before any dynamic import('../cli.mjs').
 // Placing it here (module evaluation time) ensures the mock is registered first.
@@ -717,6 +724,181 @@ describe('cli.mjs -- coverage gap fill', () => {
   });
 
   // ─────────────────────────────────────────────────────────────────
+  // _validateVersion -- extracted validator method
+  // ─────────────────────────────────────────────────────────────────
+  describe('_validateVersion', () => {
+    it('accepts a non-empty version string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateVersion('1.0.0')).toBe(true);
+    });
+
+    it('accepts a version with whitespace content', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateVersion(' 2.0 ')).toBe(true);
+    });
+
+    it('rejects undefined', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateVersion()).toBe('Version is required');
+    });
+
+    it('rejects empty string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateVersion('')).toBe('Version is required');
+    });
+
+    it('rejects whitespace-only string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateVersion('   ')).toBe('Version is required');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // _validateRevision -- extracted validator method
+  // ─────────────────────────────────────────────────────────────────
+  describe('_validateRevision', () => {
+    it('accepts a zero revision', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('0')).toBe(true);
+    });
+
+    it('accepts a multi-digit numeric revision', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('42')).toBe(true);
+    });
+
+    it('rejects a non-numeric string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('abc')).toBe('Revision must be a number');
+    });
+
+    it('rejects a float string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('1.5')).toBe('Revision must be a number');
+    });
+
+    it('rejects empty string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('')).toBe('Revision must be a number');
+    });
+
+    it('rejects alphanumeric', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validateRevision('1a')).toBe('Revision must be a number');
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
+  // _validatePackageName -- extracted validator method
+  // ─────────────────────────────────────────────────────────────────
+  describe('_validatePackageName', () => {
+    it('accepts a valid unscoped package name', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('express')).toBe(true);
+    });
+
+    it('accepts a scoped package name', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('@nestjs/common')).toBe(true);
+    });
+
+    it('rejects empty string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('')).toBe('Package name is required');
+    });
+
+    it('rejects whitespace-only string', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('   ')).toBe('Package name is required');
+    });
+
+    it('rejects undefined', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName()).toBe('Package name is required');
+    });
+
+    it('rejects semicolons', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('pkg;rm')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects backticks', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('pkg`cmd`')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects dollar signs', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('$evil')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects pipe characters', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('pkg|other')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects angle brackets', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('a>b')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects less-than sign', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('a<b')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects curly braces', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('{bad}')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+
+    it('rejects square brackets', () => {
+      const cli = new DepUpCLI();
+
+      expect(cli._validatePackageName('[bad]')).toBe(
+        'Package name contains invalid characters',
+      );
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────────
   // run()
   // ─────────────────────────────────────────────────────────────────
   describe('run', () => {
@@ -733,4 +915,3 @@ describe('cli.mjs -- coverage gap fill', () => {
     });
   });
 });
-
