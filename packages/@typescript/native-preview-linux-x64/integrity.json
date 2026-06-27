@@ -1082,5 +1082,15 @@
       "timestamp": "2026-06-26T00:38:53.922Z",
       "version": "7.0.0-dev.20260624.1-depup.1"
     }
+  },
+  "7.0.0-dev.20260626.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:36:27.109Z",
+      "version": "7.0.0-dev.20260626.1-depup.0"
+    }
   }
 }

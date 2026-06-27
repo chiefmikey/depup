@@ -1,0 +1,56 @@
+{
+  "name": "@depup/react-lifecycles-compat",
+  "version": "3.0.4-depup.35",
+  "description": "Backwards compatibility polyfill for React class components (with updated dependencies)",
+  "main": "react-lifecycles-compat.cjs.js",
+  "module": "react-lifecycles-compat.es.js",
+  "license": "MIT",
+  "repository": "reactjs/react-lifecycles-compat",
+  "scripts": {
+    "build": "rollup -c",
+    "install:dependencies": "node install.js",
+    "lint": "eslint index.js",
+    "pretest": "npm run install:dependencies && npm run build",
+    "prettier": "prettier --write {index,test}.js",
+    "test": "jest test.js"
+  },
+  "files": [
+    "react-lifecycles-compat.cjs.js",
+    "react-lifecycles-compat.es.js",
+    "react-lifecycles-compat.js",
+    "react-lifecycles-compat.min.js",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "camelcase": "^5.0.0",
+    "chalk": "^2.3.0",
+    "eslint": "^4.16.0",
+    "eslint-config-es5": "^0.5.0",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "prettier": "^1.10.2",
+    "rollup": "^0.57.1",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "devEngines": {
+    "node": "8.5 || 9.x"
+  },
+  "keywords": [
+    "react-lifecycles-compat",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-lifecycles-compat",
+    "originalVersion": "3.0.4",
+    "processedAt": "2026-06-27T00:51:08.901Z",
+    "smokeTest": "passed"
+  }
+}

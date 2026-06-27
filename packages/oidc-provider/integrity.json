@@ -342,5 +342,24 @@
       "timestamp": "2026-06-26T00:52:23.488Z",
       "version": "9.8.5-depup.12"
     }
+  },
+  "9.8.6": {
+    "0": {
+      "changes": {
+        "@koa/router": {
+          "from": "^15.5.0",
+          "to": "^15.6.0"
+        },
+        "nanoid": {
+          "from": "^5.1.11",
+          "to": "^5.1.16"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:49:30.402Z",
+      "version": "9.8.6-depup.0"
+    }
   }
 }

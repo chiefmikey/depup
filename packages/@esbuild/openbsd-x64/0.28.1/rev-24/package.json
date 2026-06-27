@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__openbsd-x64",
+  "version": "0.28.1-depup.24",
+  "description": "The OpenBSD 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "openbsd"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/openbsd-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/openbsd-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-27T00:30:43.878Z",
+    "smokeTest": "failed"
+  }
+}

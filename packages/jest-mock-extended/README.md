@@ -12,7 +12,7 @@ npm install @depup/jest-mock-extended
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.1 | **DepUp version**: 4.0.1-depup.37 | **Updated**: 6/26/2026 | **Import test**: failed
+**Original version**: 4.0.1 | **DepUp version**: 4.0.1-depup.38 | **Updated**: 6/27/2026 | **Import test**: failed
 
 ## What changed
 
