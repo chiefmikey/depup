@@ -12,7 +12,7 @@ npm install @depup/supabase__ssr
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.12.0 | **DepUp version**: 0.12.0-depup.34 | **Updated**: 6/26/2026 | **Import test**: failed
+**Original version**: 0.12.0 | **DepUp version**: 0.12.0-depup.35 | **Updated**: 6/27/2026 | **Import test**: failed
 
 ## What changed
 

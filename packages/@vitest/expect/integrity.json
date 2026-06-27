@@ -193,19 +193,6 @@
     }
   },
   "4.1.9": {
-    "10": {
-      "changes": {
-        "@types/chai": {
-          "from": "^5.2.2",
-          "to": "^5.2.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-22T00:39:08.815Z",
-      "version": "4.1.9-depup.10"
-    },
     "11": {
       "changes": {
         "@types/chai": {
@@ -257,6 +244,19 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:38:06.619Z",
       "version": "4.1.9-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@types/chai": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:35:46.414Z",
+      "version": "4.1.9-depup.15"
     }
   }
 }

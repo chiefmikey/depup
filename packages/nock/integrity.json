@@ -149,5 +149,24 @@
       "timestamp": "2026-06-26T00:46:13.101Z",
       "version": "14.0.15-depup.35"
     }
+  },
+  "14.0.16": {
+    "0": {
+      "changes": {
+        "@mswjs/interceptors": {
+          "from": "^0.41.0",
+          "to": "^0.41.9"
+        },
+        "propagate": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:43:23.367Z",
+      "version": "14.0.16-depup.0"
+    }
   }
 }

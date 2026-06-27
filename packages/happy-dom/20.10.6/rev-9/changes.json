@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@types/node": {
+      "from": ">=20.0.0",
+      "to": "^26.0.1"
+    },
+    "@types/whatwg-mimetype": {
+      "from": "^3.0.2",
+      "to": "^5.0.0"
+    },
+    "entities": {
+      "from": "^7.0.1",
+      "to": "^8.0.0"
+    },
+    "whatwg-mimetype": {
+      "from": "^3.0.0",
+      "to": "^5.0.0"
+    }
+  },
+  "timestamp": "2026-06-27T00:40:44.823Z",
+  "totalUpdated": 4
+}

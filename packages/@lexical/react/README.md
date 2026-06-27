@@ -12,14 +12,11 @@ npm install @depup/lexical__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.45.0 | **DepUp version**: 0.45.0-depup.38 | **Updated**: 6/26/2026 | **Import test**: failed
+**Original version**: 0.46.0 | **DepUp version**: 0.46.0-depup.0 | **Updated**: 6/27/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| react-error-boundary | `^6.1.1` | `^6.1.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/lexical__react&labels=bug).
 
