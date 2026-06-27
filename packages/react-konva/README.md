@@ -12,7 +12,7 @@ npm install @depup/react-konva
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 19.2.5 | **DepUp version**: 19.2.5-depup.29 | **Updated**: 6/26/2026 | **Import test**: failed
+**Original version**: 19.2.5 | **DepUp version**: 19.2.5-depup.30 | **Updated**: 6/27/2026 | **Import test**: failed
 
 ## What changed
 

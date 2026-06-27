@@ -587,5 +587,28 @@
       "timestamp": "2026-06-26T00:31:39.806Z",
       "version": "22.0.3-depup.0"
     }
+  },
+  "22.0.4": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        },
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "zod": {
+          "from": "^4.0.10",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:29:23.568Z",
+      "version": "22.0.4-depup.0"
+    }
   }
 }

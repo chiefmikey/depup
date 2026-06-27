@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__linux-s390x",
+  "version": "0.28.1-depup.24",
+  "description": "The Linux IBM Z 64-bit Big Endian binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "s390x"
+  ],
+  "keywords": [
+    "@esbuild/linux-s390x",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/linux-s390x",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-27T00:30:59.114Z",
+    "smokeTest": "failed"
+  }
+}

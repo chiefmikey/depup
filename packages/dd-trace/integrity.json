@@ -400,5 +400,20 @@
       "timestamp": "2026-06-26T00:40:34.137Z",
       "version": "5.109.0-depup.9"
     }
+  },
+  "5.110.0": {
+    "0": {
+      "changes": {
+        "import-in-the-middle": {
+          "from": "^3.1.0",
+          "to": "^3.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:37:47.652Z",
+      "version": "5.110.0-depup.0"
+    }
   }
 }

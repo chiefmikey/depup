@@ -17,19 +17,6 @@
     }
   },
   "4.2.6": {
-    "30": {
-      "changes": {
-        "readable-stream": {
-          "from": "^2.3.8",
-          "to": "^4.7.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-22T00:40:05.732Z",
-      "version": "4.2.6-depup.30"
-    },
     "31": {
       "changes": {
         "readable-stream": {
@@ -81,6 +68,23 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:39:26.325Z",
       "version": "4.2.6-depup.34"
+    },
+    "35": {
+      "changes": {
+        "bn.js": {
+          "from": "^5.2.3",
+          "to": "^5.2.4"
+        },
+        "readable-stream": {
+          "from": "^2.3.8",
+          "to": "^4.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:36:46.547Z",
+      "version": "4.2.6-depup.35"
     }
   }
 }

@@ -391,6 +391,23 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:39:19.801Z",
       "version": "1.18.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "form-data": {
+          "from": "^4.0.5",
+          "to": "^4.0.6"
+        },
+        "https-proxy-agent": {
+          "from": "^5.0.1",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:36:40.670Z",
+      "version": "1.18.1-depup.4"
     }
   }
 }

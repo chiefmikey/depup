@@ -302,27 +302,6 @@
     }
   },
   "3.3.5": {
-    "15": {
-      "changes": {
-        "@vue/compiler-dom": {
-          "from": "^3.5.0",
-          "to": "^3.5.38"
-        },
-        "@vue/shared": {
-          "from": "^3.5.0",
-          "to": "^3.5.38"
-        },
-        "alien-signals": {
-          "from": "^3.2.0",
-          "to": "^3.2.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-22T00:39:06.776Z",
-      "version": "3.3.5-depup.15"
-    },
     "16": {
       "changes": {
         "@vue/compiler-dom": {
@@ -406,6 +385,27 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:38:20.763Z",
       "version": "3.3.5-depup.19"
+    },
+    "20": {
+      "changes": {
+        "@vue/compiler-dom": {
+          "from": "^3.5.0",
+          "to": "^3.5.39"
+        },
+        "@vue/shared": {
+          "from": "^3.5.0",
+          "to": "^3.5.39"
+        },
+        "alien-signals": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:35:45.663Z",
+      "version": "3.3.5-depup.20"
     }
   }
 }

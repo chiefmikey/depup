@@ -12,13 +12,13 @@ npm install @depup/dd-trace
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.109.0 | **DepUp version**: 5.109.0-depup.9 | **Updated**: 6/26/2026 | **Import test**: passed
+**Original version**: 5.110.0 | **DepUp version**: 5.110.0-depup.0 | **Updated**: 6/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| import-in-the-middle | `^3.0.1` | `^3.2.0` |
+| import-in-the-middle | `^3.1.0` | `^3.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/dd-trace&labels=bug).

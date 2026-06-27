@@ -1,0 +1,106 @@
+{
+  "name": "@depup/mammoth",
+  "version": "1.12.0-depup.36",
+  "author": "Michael Williamson <mike@zwobble.org>",
+  "description": "Convert Word documents from docx to simple HTML and Markdown (with updated dependencies)",
+  "keywords": [
+    "mammoth",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "docx",
+    "html",
+    "office",
+    "word",
+    "markdown",
+    "md"
+  ],
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mwilliamson/mammoth.js.git"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.10",
+    "argparse": "^2.0.1",
+    "base64-js": "^1.5.1",
+    "bluebird": "^3.7.2",
+    "dingbat-to-unicode": "^1.0.1",
+    "jszip": "^3.10.1",
+    "lop": "^0.4.2",
+    "path-is-absolute": "^2.0.0",
+    "underscore": "^1.13.8",
+    "xmlbuilder": "^15.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "browserify": "~13.0.1",
+    "browserify-prepend-licenses": "~1.0.0",
+    "duck": "^0.1.12",
+    "eslint": "2.13.1",
+    "hamjest": "^4.0.1",
+    "mocha": "~2.2.5",
+    "temp": "^0.9.4",
+    "typescript": "^5.0.4",
+    "uglify-js": "~2.4.8"
+  },
+  "browser": {
+    "./lib/unzip.js": "./browser/unzip.js",
+    "./lib/docx/files.js": "./browser/docx/files.js"
+  },
+  "bin": {
+    "mammoth": "bin/mammoth"
+  },
+  "scripts": {
+    "pretest": "eslint lib test",
+    "test": "mocha 'test/**/*.tests.js'",
+    "check-typescript": "tsc --noEmit lib/index.d.ts"
+  },
+  "license": "BSD-2-Clause",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "volta": {
+    "node": "16.18.1",
+    "npm": "8.19.2"
+  },
+  "depup": {
+    "changes": {
+      "@xmldom/xmldom": {
+        "from": "^0.8.6",
+        "to": "^0.9.10"
+      },
+      "argparse": {
+        "from": "~1.0.3",
+        "to": "^2.0.1"
+      },
+      "bluebird": {
+        "from": "~3.4.0",
+        "to": "^3.7.2"
+      },
+      "jszip": {
+        "from": "^3.7.1",
+        "to": "^3.10.1"
+      },
+      "path-is-absolute": {
+        "from": "^1.0.0",
+        "to": "^2.0.0"
+      },
+      "underscore": {
+        "from": "^1.13.1",
+        "to": "^1.13.8"
+      },
+      "xmlbuilder": {
+        "from": "^10.0.0",
+        "to": "^15.1.1"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "mammoth",
+    "originalVersion": "1.12.0",
+    "processedAt": "2026-06-27T00:42:56.603Z",
+    "smokeTest": "passed"
+  }
+}

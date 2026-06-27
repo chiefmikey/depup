@@ -12,12 +12,13 @@ npm install @depup/browserify-sign
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.6 | **DepUp version**: 4.2.6-depup.34 | **Updated**: 6/26/2026 | **Import test**: passed
+**Original version**: 4.2.6 | **DepUp version**: 4.2.6-depup.35 | **Updated**: 6/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| bn.js | `^5.2.3` | `^5.2.4` |
 | readable-stream | `^2.3.8` | `^4.7.0` |
 
 

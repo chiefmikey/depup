@@ -360,6 +360,19 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:50:46.959Z",
       "version": "25.2.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "devtools-protocol": {
+          "from": "0.0.1638949",
+          "to": "^0.0.1652909"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:46:24.733Z",
+      "version": "25.2.1-depup.2"
     }
   }
 }

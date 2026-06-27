@@ -227,6 +227,27 @@
       "status": "failed",
       "timestamp": "2026-06-26T00:48:03.579Z",
       "version": "7.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@mongodb-js/saslprep": {
+          "from": "^1.3.0",
+          "to": "^1.4.11"
+        },
+        "bson": {
+          "from": "^7.2.0",
+          "to": "^7.3.1"
+        },
+        "mongodb-connection-string-url": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-27T00:43:52.431Z",
+      "version": "7.4.0-depup.1"
     }
   }
 }
