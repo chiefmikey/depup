@@ -12,7 +12,7 @@ npm install @depup/cucumber__messages
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 33.0.3 | **DepUp version**: 33.0.3-depup.6 | **Updated**: 6/27/2026 | **Import test**: passed
+**Original version**: 33.0.4 | **DepUp version**: 33.0.4-depup.0 | **Updated**: 6/28/2026 | **Import test**: passed
 
 ## What changed
 

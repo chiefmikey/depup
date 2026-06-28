@@ -41,47 +41,6 @@
     }
   },
   "8.1.2": {
-    "34": {
-      "changes": {
-        "abbrev": {
-          "from": "^3.0.0",
-          "to": "^5.0.0"
-        },
-        "hexo-front-matter": {
-          "from": "^4.2.1",
-          "to": "^5.0.0"
-        },
-        "hexo-fs": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^5.1.0"
-        },
-        "moize": {
-          "from": "^6.1.6",
-          "to": "^6.1.7"
-        },
-        "moment-timezone": {
-          "from": "^0.5.46",
-          "to": "^0.6.2"
-        },
-        "strip-ansi": {
-          "from": "^7.1.0",
-          "to": "^7.2.0"
-        },
-        "tildify": {
-          "from": "^2.0.0",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-23T00:47:01.062Z",
-      "version": "8.1.2-depup.34"
-    },
     "35": {
       "changes": {
         "abbrev": {
@@ -245,6 +204,47 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:45:15.168Z",
       "version": "8.1.2-depup.38"
+    },
+    "39": {
+      "changes": {
+        "abbrev": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "hexo-front-matter": {
+          "from": "^4.2.1",
+          "to": "^5.0.0"
+        },
+        "hexo-fs": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^5.2.0"
+        },
+        "moize": {
+          "from": "^6.1.6",
+          "to": "^6.1.7"
+        },
+        "moment-timezone": {
+          "from": "^0.5.46",
+          "to": "^0.6.2"
+        },
+        "strip-ansi": {
+          "from": "^7.1.0",
+          "to": "^7.2.0"
+        },
+        "tildify": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:44:53.783Z",
+      "version": "8.1.2-depup.39"
     }
   }
 }

@@ -287,6 +287,23 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:36:39.082Z",
       "version": "3.5.39-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:35:41.290Z",
+      "version": "3.5.39-depup.2"
     }
   }
 }
