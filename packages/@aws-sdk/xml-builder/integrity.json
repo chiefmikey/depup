@@ -598,23 +598,6 @@
     }
   },
   "3.972.31": {
-    "0": {
-      "changes": {
-        "@smithy/types": {
-          "from": "^4.14.3",
-          "to": "^4.15.0"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-23T00:31:03.051Z",
-      "version": "3.972.31-depup.0"
-    },
     "1": {
       "changes": {
         "@smithy/types": {
@@ -682,6 +665,23 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:29:59.742Z",
       "version": "3.972.31-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@smithy/types": {
+          "from": "^4.14.3",
+          "to": "^4.15.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:28:55.435Z",
+      "version": "3.972.31-depup.5"
     }
   }
 }

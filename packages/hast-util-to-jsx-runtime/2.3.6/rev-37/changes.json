@@ -1,0 +1,54 @@
+{
+  "bumped": {
+    "@types/estree": {
+      "from": "^1.0.0",
+      "to": "^1.0.9"
+    },
+    "@types/hast": {
+      "from": "^3.0.0",
+      "to": "^3.0.4"
+    },
+    "@types/unist": {
+      "from": "^3.0.0",
+      "to": "^3.0.3"
+    },
+    "comma-separated-tokens": {
+      "from": "^2.0.0",
+      "to": "^2.0.3"
+    },
+    "devlop": {
+      "from": "^1.0.0",
+      "to": "^1.1.0"
+    },
+    "mdast-util-mdx-expression": {
+      "from": "^2.0.0",
+      "to": "^2.0.1"
+    },
+    "mdast-util-mdx-jsx": {
+      "from": "^3.0.0",
+      "to": "^3.2.0"
+    },
+    "mdast-util-mdxjs-esm": {
+      "from": "^2.0.0",
+      "to": "^2.0.1"
+    },
+    "property-information": {
+      "from": "^7.0.0",
+      "to": "^7.2.0"
+    },
+    "space-separated-tokens": {
+      "from": "^2.0.0",
+      "to": "^2.0.2"
+    },
+    "style-to-js": {
+      "from": "^1.0.0",
+      "to": "^2.0.1"
+    },
+    "vfile-message": {
+      "from": "^4.0.0",
+      "to": "^4.0.3"
+    }
+  },
+  "timestamp": "2026-06-28T00:40:05.395Z",
+  "totalUpdated": 12
+}

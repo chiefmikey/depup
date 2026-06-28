@@ -44,27 +44,6 @@
     }
   },
   "9.7.0": {
-    "1": {
-      "changes": {
-        "@eslint-community/eslint-utils": {
-          "from": "^4.1.2",
-          "to": "^4.9.1"
-        },
-        "@eslint-community/regexpp": {
-          "from": "^4.12.1",
-          "to": "^4.12.2"
-        },
-        "eslint-type-tracer": {
-          "from": "^0.5.1",
-          "to": "^0.5.2"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-23T00:39:39.947Z",
-      "version": "9.7.0-depup.1"
-    },
     "2": {
       "changes": {
         "@eslint-community/eslint-utils": {
@@ -148,6 +127,27 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:39:03.046Z",
       "version": "9.7.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.1.2",
+          "to": "^4.9.1"
+        },
+        "@eslint-community/regexpp": {
+          "from": "^4.12.1",
+          "to": "^4.12.2"
+        },
+        "eslint-type-tracer": {
+          "from": "^0.5.1",
+          "to": "^0.5.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:38:23.864Z",
+      "version": "9.7.0-depup.6"
     }
   }
 }

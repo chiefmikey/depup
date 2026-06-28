@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__freebsd-x64",
+  "version": "0.28.1-depup.25",
+  "description": "The FreeBSD 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "freebsd"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/freebsd-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/freebsd-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-28T00:29:43.336Z",
+    "smokeTest": "failed"
+  }
+}

@@ -85,5 +85,20 @@
       "timestamp": "2026-05-24T18:04:47.762Z",
       "version": "6.1.22-depup.2"
     }
+  },
+  "6.1.23": {
+    "0": {
+      "changes": {
+        "hookified": {
+          "from": "^1.15.0",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:38:58.055Z",
+      "version": "6.1.23-depup.0"
+    }
   }
 }

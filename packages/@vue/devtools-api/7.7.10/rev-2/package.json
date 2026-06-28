@@ -1,0 +1,51 @@
+{
+  "name": "@depup/vue__devtools-api",
+  "type": "module",
+  "version": "7.7.10-depup.2",
+  "author": "webfansplz",
+  "license": "MIT",
+  "repository": {
+    "directory": "packages/devtools-api",
+    "type": "git",
+    "url": "git+https://github.com/vuejs/devtools.git"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@vue/devtools-kit": "^7.7.10"
+  },
+  "scripts": {
+    "build": "tsup --clean",
+    "prepare:type": "tsup --dts-only",
+    "stub": "tsup --watch --onSuccess 'tsup --dts-only'"
+  },
+  "description": "@vue/devtools-api with all dependencies updated to latest",
+  "keywords": [
+    "@vue/devtools-api",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vue/devtools-api",
+    "originalVersion": "7.7.10",
+    "processedAt": "2026-06-28T00:34:57.820Z",
+    "smokeTest": "passed"
+  }
+}
