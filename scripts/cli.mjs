@@ -165,6 +165,24 @@ class DepUpCLI {
     }
   }
 
+  _validateVersion(input) {
+    return input && input.trim() ? true : 'Version is required';
+  }
+
+  _validateRevision(input) {
+    return /^\d+$/u.test(input) ? true : 'Revision must be a number';
+  }
+
+  _validatePackageName(input) {
+    if (!input || !input.trim()) {
+      return 'Package name is required';
+    }
+    if (/[;`$|><\\{}[\]!#%^&*()='"]/u.test(input)) {
+      return 'Package name contains invalid characters';
+    }
+    return true;
+  }
+
   async handleIntegrityCommand(options) {
     try {
       if (options.vote) {
@@ -173,15 +191,13 @@ class DepUpCLI {
             message: 'Version:',
             name: 'version',
             type: 'input',
-            validate: (input) =>
-              input && input.trim() ? true : 'Version is required',
+            validate: (input) => this._validateVersion(input),
           },
           {
             message: 'Revision number:',
             name: 'revision',
             type: 'input',
-            validate: (input) =>
-              /^\d+$/u.test(input) ? true : 'Revision must be a number',
+            validate: (input) => this._validateRevision(input),
           },
           {
             choices: [
@@ -309,15 +325,7 @@ class DepUpCLI {
             message: 'Package name:',
             name: 'name',
             type: 'input',
-            validate: (input) => {
-              if (!input || !input.trim()) {
-                return 'Package name is required';
-              }
-              if (/[;`$|><\\{}[\]!#%^&*()='"]/u.test(input)) {
-                return 'Package name contains invalid characters';
-              }
-              return true;
-            },
+            validate: (input) => this._validatePackageName(input),
           },
           {
             message: 'Version (optional):',
