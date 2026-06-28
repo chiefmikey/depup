@@ -378,19 +378,6 @@
     }
   },
   "2.108.2": {
-    "5": {
-      "changes": {
-        "@supabase/phoenix": {
-          "from": "^0.4.2",
-          "to": "^0.4.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-23T00:35:55.573Z",
-      "version": "2.108.2-depup.5"
-    },
     "6": {
       "changes": {
         "@supabase/phoenix": {
@@ -442,6 +429,19 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:34:26.126Z",
       "version": "2.108.2-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@supabase/phoenix": {
+          "from": "^0.4.2",
+          "to": "^0.4.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:33:28.272Z",
+      "version": "2.108.2-depup.10"
     }
   }
 }

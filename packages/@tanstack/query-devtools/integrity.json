@@ -312,5 +312,15 @@
       "timestamp": "2026-06-27T00:34:49.725Z",
       "version": "5.101.1-depup.3"
     }
+  },
+  "5.101.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:33:57.812Z",
+      "version": "5.101.2-depup.0"
+    }
   }
 }

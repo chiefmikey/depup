@@ -121,39 +121,6 @@
     }
   },
   "4.0.1": {
-    "36": {
-      "changes": {
-        "aws4": {
-          "from": "^1.8.0",
-          "to": "^1.13.2"
-        },
-        "combined-stream": {
-          "from": "~1.0.6",
-          "to": "^1.0.8"
-        },
-        "form-data": {
-          "from": "~4.0.4",
-          "to": "^4.0.6"
-        },
-        "mime-types": {
-          "from": "~2.1.19",
-          "to": "^3.0.2"
-        },
-        "safe-buffer": {
-          "from": "^5.1.2",
-          "to": "^5.2.1"
-        },
-        "tough-cookie": {
-          "from": "^5.0.0",
-          "to": "^6.0.1"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-23T00:32:07.562Z",
-      "version": "4.0.1-depup.36"
-    },
     "37": {
       "changes": {
         "aws4": {
@@ -297,6 +264,43 @@
       "status": "failed",
       "timestamp": "2026-06-27T00:30:38.670Z",
       "version": "4.0.1-depup.40"
+    },
+    "41": {
+      "changes": {
+        "aws4": {
+          "from": "^1.8.0",
+          "to": "^1.13.2"
+        },
+        "combined-stream": {
+          "from": "~1.0.6",
+          "to": "^1.0.8"
+        },
+        "form-data": {
+          "from": "~4.0.4",
+          "to": "^4.0.6"
+        },
+        "mime-types": {
+          "from": "~2.1.19",
+          "to": "^3.0.2"
+        },
+        "qs": {
+          "from": "^6.15.2",
+          "to": "^6.15.3"
+        },
+        "safe-buffer": {
+          "from": "^5.1.2",
+          "to": "^5.2.1"
+        },
+        "tough-cookie": {
+          "from": "^5.0.0",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-28T00:29:38.451Z",
+      "version": "4.0.1-depup.41"
     }
   }
 }
