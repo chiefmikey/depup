@@ -12,7 +12,7 @@ npm install @depup/use-intl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.13.0 | **DepUp version**: 4.13.0-depup.12 | **Updated**: 6/21/2026 | **Import test**: failed
+**Original version**: 4.13.0 | **DepUp version**: 4.13.0-depup.13 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @formatjs/fast-memoize | `^3.1.0` | `^3.1.6` |
 | @schummar/icu-type-parser | `1.21.5` | `^1.26.1` |
-| intl-messageformat | `^11.1.0` | `^11.2.8` |
+| intl-messageformat | `^11.1.0` | `^11.2.9` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/use-intl&labels=bug).

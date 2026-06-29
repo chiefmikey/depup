@@ -12,7 +12,7 @@ npm install @depup/redis__bloom
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.3 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.4 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 

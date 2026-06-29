@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.75 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.76 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,8 +33,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.0.1` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.0.2` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^6.0.5` |
-| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.32` |
-| @graphql-tools/load | `^7.8.14` | `^8.1.10` |
+| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.33` |
+| @graphql-tools/load | `^7.8.14` | `^8.1.11` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
 | @nodelib/fs.walk | `^1.2.8` | `^3.0.1` |
 | @parcel/cache | `2.8.3` | `^2.16.4` |
@@ -84,7 +84,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fs-extra | `^11.2.0` | `^11.3.5` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
-| got | `^11.8.6` | `^15.0.6` |
+| got | `^11.8.6` | `^15.0.7` |
 | graphql | `^16.7.1` | `^17.0.1` |
 | graphql-compose | `^9.0.10` | `^9.1.0` |
 | graphql-http | `^1.19.0` | `^1.22.4` |
@@ -107,9 +107,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^8.0.3` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.15` |
+| postcss | `^8.4.24` | `^8.5.16` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
-| query-string | `^6.14.1` | `^9.4.0` |
+| query-string | `^6.14.1` | `^9.4.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
 | react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.7` |
 | redux | `4.2.1` | `^5.0.1` |

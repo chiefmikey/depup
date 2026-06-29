@@ -1,0 +1,107 @@
+{
+  "name": "@depup/tiptap__react",
+  "version": "3.27.1-depup.10",
+  "description": "React components for tiptap (with updated dependencies)",
+  "keywords": [
+    "@tiptap/react",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "tiptap",
+    "tiptap react components"
+  ],
+  "homepage": "https://tiptap.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/ueberdosis/tiptap/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ueberdosis"
+  },
+  "files": [
+    "src",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./menus": {
+      "types": {
+        "import": "./dist/menus/index.d.ts",
+        "require": "./dist/menus/index.d.cts"
+      },
+      "import": "./dist/menus/index.js",
+      "require": "./dist/menus/index.cjs"
+    }
+  },
+  "dependencies": {
+    "@types/use-sync-external-store": "^1.5.0",
+    "fast-equals": "^6.0.0",
+    "use-sync-external-store": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@tiptap/core": "^3.27.1",
+    "@tiptap/pm": "^3.27.1"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@types/react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@tiptap/core": "3.27.1",
+    "@tiptap/pm": "3.27.1"
+  },
+  "optionalDependencies": {
+    "@tiptap/extension-floating-menu": "^3.27.1",
+    "@tiptap/extension-bubble-menu": "^3.27.1"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "depup": {
+    "changes": {
+      "@types/use-sync-external-store": {
+        "from": "^0.0.6",
+        "to": "^1.5.0"
+      },
+      "fast-equals": {
+        "from": "^5.3.3",
+        "to": "^6.0.0"
+      },
+      "use-sync-external-store": {
+        "from": "^1.4.0",
+        "to": "^1.6.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@tiptap/react",
+    "originalVersion": "3.27.1",
+    "processedAt": "2026-06-29T00:35:15.628Z",
+    "smokeTest": "failed"
+  }
+}
