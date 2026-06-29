@@ -12,12 +12,13 @@ npm install @depup/vite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.4 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 8.1.0 | **DepUp version**: 8.1.0-depup.5 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| postcss | `^8.5.15` | `^8.5.16` |
 | rolldown | `~1.1.2` | `^1.1.3` |
 
 

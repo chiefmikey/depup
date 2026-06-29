@@ -741,6 +741,23 @@
       "status": "failed",
       "timestamp": "2026-06-28T00:39:38.184Z",
       "version": "16.10.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "js-yaml": {
+          "from": "^5.1.0",
+          "to": "^5.2.0"
+        },
+        "shiki": {
+          "from": "^4.2.0",
+          "to": "^4.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-29T00:41:02.447Z",
+      "version": "16.10.6-depup.1"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.11 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.12 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/storage-blob | `^12.30.0` | `^12.33.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.11.11` |
-| @oclif/plugin-help | `^6.2.36` | `^6.2.52` |
+| @oclif/plugin-help | `^6.2.36` | `^6.2.53` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.88` |
 | @smithy/core | `^3.24.0` | `^3.26.0` |
 | @upstash/redis | `^1.36.1` | `^1.38.0` |
@@ -45,7 +45,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv | `^16.6.1` | `^17.4.2` |
 | esbuild-wasm | `^0.19.12` | `^0.28.1` |
 | fs-extra | `^11.3.3` | `^11.3.5` |
-| got | `^14.6.6` | `^15.0.6` |
+| got | `^14.6.6` | `^15.0.7` |
 | joi | `^17.13.3` | `^18.2.3` |
 | js-yaml | `^3.14.1` | `^5.2.0` |
 | lodash | `^4.18.0` | `^4.18.1` |

@@ -180,6 +180,19 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:51:14.266Z",
       "version": "0.35.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "semver": {
+          "from": "^7.8.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-29T00:49:39.067Z",
+      "version": "0.35.2-depup.2"
     }
   }
 }

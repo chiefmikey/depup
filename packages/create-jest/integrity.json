@@ -28,19 +28,6 @@
     }
   },
   "30.4.2": {
-    "27": {
-      "changes": {
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-17T00:44:50.906Z",
-      "version": "30.4.2-depup.27"
-    },
     "28": {
       "changes": {
         "chalk": {
@@ -92,6 +79,19 @@
       "status": "failed",
       "timestamp": "2026-06-21T00:42:57.556Z",
       "version": "30.4.2-depup.31"
+    },
+    "32": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-29T00:38:14.847Z",
+      "version": "30.4.2-depup.32"
     }
   }
 }

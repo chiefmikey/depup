@@ -1,30 +1,5 @@
 {
   "9.22.6": {
-    "31": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.7.2",
-          "to": "^8.0.0"
-        },
-        "clsx": {
-          "from": "^1.0.4",
-          "to": "^2.1.1"
-        },
-        "dom-helpers": {
-          "from": "^5.1.3",
-          "to": "^6.0.1"
-        },
-        "prop-types": {
-          "from": "^15.7.2",
-          "to": "^15.8.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-24T00:47:29.843Z",
-      "version": "9.22.6-depup.31"
-    },
     "32": {
       "changes": {
         "@babel/runtime": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-06-28T00:52:02.723Z",
       "version": "9.22.6-depup.35"
+    },
+    "36": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.7.2",
+          "to": "^8.0.0"
+        },
+        "clsx": {
+          "from": "^1.0.4",
+          "to": "^2.1.1"
+        },
+        "dom-helpers": {
+          "from": "^5.1.3",
+          "to": "^6.0.1"
+        },
+        "prop-types": {
+          "from": "^15.7.2",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-29T00:48:58.721Z",
+      "version": "9.22.6-depup.36"
     }
   }
 }

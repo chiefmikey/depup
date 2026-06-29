@@ -12,7 +12,7 @@ npm install @depup/grunt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.2 | **DepUp version**: 1.6.2-depup.40 | **Updated**: 6/28/2026 | **Import test**: passed
+**Original version**: 1.6.2 | **DepUp version**: 1.6.2-depup.41 | **Updated**: 6/29/2026 | **Import test**: passed
 
 ## What changed
 

@@ -489,5 +489,20 @@
       "timestamp": "2026-06-21T00:32:35.154Z",
       "version": "54.4.0-depup.3"
     }
+  },
+  "54.5.0": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.8.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-29T00:30:02.240Z",
+      "version": "54.5.0-depup.0"
+    }
   }
 }
