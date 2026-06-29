@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__darwin-x64",
+  "version": "0.28.1-depup.26",
+  "description": "The macOS 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "@esbuild/darwin-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/darwin-x64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-06-29T00:30:49.894Z",
+    "smokeTest": "failed"
+  }
+}

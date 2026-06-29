@@ -12,7 +12,7 @@ npm install @depup/cacache
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.0.1 | **DepUp version**: 21.0.1-depup.26 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 21.0.1 | **DepUp version**: 21.0.1-depup.27 | **Updated**: 6/29/2026 | **Import test**: failed
 
 ## What changed
 

@@ -1,0 +1,106 @@
+{
+  "name": "@depup/conform-to__react",
+  "description": "Conform view adapter for react (with updated dependencies)",
+  "homepage": "https://conform.guide",
+  "license": "MIT",
+  "version": "1.19.4-depup.42",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    },
+    "./future": {
+      "types": "./dist/future/index.d.ts",
+      "module": "./dist/future/index.mjs",
+      "import": "./dist/future/index.mjs",
+      "require": "./dist/future/index.js",
+      "default": "./dist/future/index.mjs"
+    }
+  },
+  "files": [
+    "./dist/**/*.{js,mjs}",
+    "./dist/**/*.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edmundhung/conform",
+    "directory": "packages/conform-react"
+  },
+  "author": {
+    "name": "Edmund Hung",
+    "email": "me@edmund.dev",
+    "url": "https://edmund.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/edmundhung/conform/issues"
+  },
+  "dependencies": {
+    "@conform-to/dom": "1.19.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.20.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.3.5",
+    "@vitest/browser-playwright": "^4.1.5",
+    "playwright": "^1.49.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup": "^2.79.1",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.5",
+    "vitest-browser-react": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "keywords": [
+    "@conform-to/react",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "constraint-validation",
+    "form",
+    "form-validation",
+    "html",
+    "progressive-enhancement",
+    "validation",
+    "react",
+    "remix"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build:js": "rollup -c",
+    "build:ts": "tsc --project ./tsconfig.build.json",
+    "build": "pnpm run \"/^build:.*/\"",
+    "dev:js": "pnpm run build:js --watch",
+    "dev:ts": "pnpm run build:ts --watch",
+    "dev": "pnpm run \"/^dev:.*/\"",
+    "test": "vitest",
+    "typecheck": "tsc"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@conform-to/react",
+    "originalVersion": "1.19.4",
+    "processedAt": "2026-06-29T00:30:43.366Z",
+    "smokeTest": "failed"
+  }
+}

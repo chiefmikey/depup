@@ -1,0 +1,214 @@
+{
+  "name": "@depup/lost-pixel",
+  "version": "3.22.0-depup.55",
+  "description": "GitHub Action for Lost Pixel integration (with updated dependencies)",
+  "main": "dist/",
+  "bin": "dist/bin.js",
+  "files": [
+    "dist",
+    "config-templates",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test:watch": "jest --watch --detectOpenHandles",
+    "build": "rimraf dist && tsc",
+    "build-example-storybook-v6.4": "rimraf examples/example-storybook-v6.4/storybook-static && docker run --rm -v $PWD/examples/example-storybook-v6.4:/storybook -w /storybook node:16-alpine sh -c 'npm install && npm run build-storybook'",
+    "build-example-storybook-v6.5-storystore-v7": "rimraf examples/example-storybook-v6.5-storystore-v7/storybook-static && docker run --rm -v $PWD/examples/example-storybook-v6.5-storystore-v7:/storybook -w /storybook node:16-alpine sh -c 'npm install && npm run build-storybook'",
+    "build-example-storybook-v8": "rimraf examples/example-storybook-v8/storybook-static && docker run --rm -v $PWD/examples/example-storybook-v8:/storybook -w /storybook node:16-alpine sh -c 'npm install && npm run build-storybook'",
+    "build-example-next-js-pages": "cd examples/example-next-js-pages && npm ci --legacy-peer-deps && npm run build",
+    "build-example-ladle": "cd examples/example-ladle && npm ci && npm run build",
+    "build-example-vite": "cd examples/example-vite-app && npm ci && npm run build",
+    "build-example-histoire": "cd examples/example-swyxkit && npm ci --legacy-peer-deps && npm run story:build",
+    "build-example-vue-histoire": "cd examples/example-vue-histoire && npm ci && npm run story:build",
+    "run-example-next-js-pages": "cd examples/example-next-js-pages && npm run start",
+    "run-example-vite": "cd examples/example-vite-app && npm run preview",
+    "test-on-examples": "./test-on-examples.sh",
+    "unused-exports": "ts-prune --error --ignore 'src/index.ts'",
+    "lint": "xo && npm run unused-exports",
+    "lint-fix": "xo --fix",
+    "lint-staged": "lint-staged",
+    "release": "np --no-publish",
+    "version": "./update-versions.sh",
+    "dev": "ts-node src/bin",
+    "start": "NODE_ENV=production node dist/bin.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lost-pixel/lost-pixel.git"
+  },
+  "keywords": [
+    "lost-pixel",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "author": "Chris Kalmar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lost-pixel/lost-pixel/issues"
+  },
+  "homepage": "https://github.com/lost-pixel/lost-pixel#readme",
+  "dependencies": {
+    "@types/xml2js": "^0.4.14",
+    "async": "3.2.6",
+    "axios": "^1.18.1",
+    "bundle-require": "^5.1.0",
+    "esbuild": "^0.28.1",
+    "execa": "^9.6.1",
+    "form-data": "^4.0.6",
+    "fs-extra": "^11.3.5",
+    "get-port-please": "^3.2.0",
+    "lodash.get": "4.4.2",
+    "lodash.kebabcase": "4.1.1",
+    "odiff-bin": "^4.3.8",
+    "pixelmatch": "^7.2.0",
+    "playwright-core": "^1.61.1",
+    "pngjs": "7.0.0",
+    "posthog-node": "^5.38.6",
+    "serve-handler": "^6.1.7",
+    "shelljs": "^0.10.0",
+    "ts-node": "10.9.2",
+    "xml2js": "^0.6.2",
+    "yargs": "^18.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.47.2",
+    "@types/async": "3.2.24",
+    "@types/fs-extra": "11.0.4",
+    "@types/jest": "29.5.13",
+    "@types/lodash.get": "4.4.9",
+    "@types/lodash.kebabcase": "4.1.9",
+    "@types/pixelmatch": "5.2.6",
+    "@types/pngjs": "6.0.5",
+    "@types/serve-handler": "6.1.4",
+    "@types/shelljs": "0.8.15",
+    "husky": "9.1.6",
+    "jest": "29.7.0",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
+    "rimraf": "5.0.10",
+    "ts-jest": "29.2.5",
+    "ts-prune": "0.10.3",
+    "typescript": "5.6.2",
+    "xo": "0.59.3"
+  },
+  "peerDependencies": {
+    "playwright-core": ">=1.47.2"
+  },
+  "xo": {
+    "prettier": true,
+    "ignores": [
+      "dist",
+      "examples"
+    ],
+    "rules": {
+      "@typescript-eslint/object-curly-spacing": "off",
+      "complexity": [
+        "error",
+        30
+      ],
+      "import/extensions": "off",
+      "no-unused-vars": "error",
+      "unicorn/filename-case": "off",
+      "unicorn/no-process-exit": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "node/prefer-global/process": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "unicorn/prefer-module": "off",
+      "import/no-mutable-exports": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "n/prefer-global/process": "off",
+      "n/file-extension-in-import": "off",
+      "no-lone-blocks": "off",
+      "capitalized-comments": "off",
+      "unicorn/prefer-ternary": "off"
+    }
+  },
+  "depup": {
+    "changes": {
+      "axios": {
+        "from": "1.7.7",
+        "to": "^1.18.1"
+      },
+      "bundle-require": {
+        "from": "4.0.2",
+        "to": "^5.1.0"
+      },
+      "esbuild": {
+        "from": "0.24.0",
+        "to": "^0.28.1"
+      },
+      "execa": {
+        "from": "5.1.1",
+        "to": "^9.6.1"
+      },
+      "form-data": {
+        "from": "4.0.0",
+        "to": "^4.0.6"
+      },
+      "fs-extra": {
+        "from": "11.2.0",
+        "to": "^11.3.5"
+      },
+      "get-port-please": {
+        "from": "3.1.2",
+        "to": "^3.2.0"
+      },
+      "odiff-bin": {
+        "from": "2.6.1",
+        "to": "^4.3.8"
+      },
+      "pixelmatch": {
+        "from": "5.3.0",
+        "to": "^7.2.0"
+      },
+      "playwright-core": {
+        "from": "1.47.2",
+        "to": "^1.61.1"
+      },
+      "posthog-node": {
+        "from": "3.5.0",
+        "to": "^5.38.6"
+      },
+      "serve-handler": {
+        "from": "6.1.6",
+        "to": "^6.1.7"
+      },
+      "shelljs": {
+        "from": "0.8.5",
+        "to": "^0.10.0"
+      },
+      "yargs": {
+        "from": "17.7.2",
+        "to": "^18.0.0"
+      },
+      "zod": {
+        "from": "3.23.8",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 15,
+    "originalPackage": "lost-pixel",
+    "originalVersion": "3.22.0",
+    "processedAt": "2026-06-29T00:46:02.259Z",
+    "smokeTest": "failed"
+  }
+}
