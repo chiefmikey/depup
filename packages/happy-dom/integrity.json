@@ -718,31 +718,6 @@
     }
   },
   "20.10.6": {
-    "7": {
-      "changes": {
-        "@types/node": {
-          "from": ">=20.0.0",
-          "to": "^26.0.1"
-        },
-        "@types/whatwg-mimetype": {
-          "from": "^3.0.2",
-          "to": "^5.0.0"
-        },
-        "entities": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        },
-        "whatwg-mimetype": {
-          "from": "^3.0.0",
-          "to": "^5.0.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:41:14.319Z",
-      "version": "20.10.6-depup.7"
-    },
     "8": {
       "changes": {
         "@types/node": {
@@ -842,6 +817,31 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:43:42.598Z",
       "version": "20.10.6-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^26.0.1"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:42:18.158Z",
+      "version": "20.10.6-depup.12"
     }
   }
 }

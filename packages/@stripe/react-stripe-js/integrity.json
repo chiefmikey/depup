@@ -103,19 +103,6 @@
     }
   },
   "6.6.0": {
-    "38": {
-      "changes": {
-        "prop-types": {
-          "from": "^15.7.2",
-          "to": "^15.8.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:35:52.918Z",
-      "version": "6.6.0-depup.38"
-    },
     "39": {
       "changes": {
         "prop-types": {
@@ -167,6 +154,19 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:35:04.409Z",
       "version": "6.6.0-depup.42"
+    },
+    "43": {
+      "changes": {
+        "prop-types": {
+          "from": "^15.7.2",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:34:28.641Z",
+      "version": "6.6.0-depup.43"
     }
   }
 }

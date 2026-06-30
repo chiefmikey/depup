@@ -150,19 +150,6 @@
     }
   },
   "11.1.27": {
-    "12": {
-      "changes": {
-        "multer": {
-          "from": "2.1.1",
-          "to": "^2.2.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:34:43.628Z",
-      "version": "11.1.27-depup.12"
-    },
     "13": {
       "changes": {
         "multer": {
@@ -214,6 +201,19 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:32:53.681Z",
       "version": "11.1.27-depup.16"
+    },
+    "17": {
+      "changes": {
+        "multer": {
+          "from": "2.1.1",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:32:14.081Z",
+      "version": "11.1.27-depup.17"
     }
   }
 }

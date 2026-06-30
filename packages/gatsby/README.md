@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.76 | **Updated**: 6/29/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.77 | **Updated**: 6/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.62.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.62.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.62.1` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.62.1` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express-http-proxy | `^1.6.3` | `^2.1.2` |
 | fastq | `^1.15.0` | `^1.20.1` |
 | find-cache-dir | `^3.3.2` | `^6.0.0` |
-| fs-extra | `^11.2.0` | `^11.3.5` |
+| fs-extra | `^11.2.0` | `^11.3.6` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.0` |
 | got | `^11.8.6` | `^15.0.7` |
@@ -104,7 +104,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.29.4` | `^2.30.1` |
 | multer | `^2.0.1` | `^2.2.0` |
 | node-fetch | `^2.6.11` | `^3.3.2` |
-| node-html-parser | `^5.4.2` | `^8.0.3` |
+| node-html-parser | `^5.4.2` | `^8.0.4` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
 | postcss | `^8.4.24` | `^8.5.16` |
@@ -127,7 +127,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.1` |
-| webpack | `~5.98.0` | `^5.108.1` |
+| webpack | `~5.98.0` | `^5.108.3` |
 | webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.2` |

@@ -12,7 +12,7 @@ npm install @depup/react-aria__focus
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.22.1 | **DepUp version**: 3.22.1-depup.41 | **Updated**: 6/29/2026 | **Import test**: passed
+**Original version**: 3.22.1 | **DepUp version**: 3.22.1-depup.42 | **Updated**: 6/30/2026 | **Import test**: passed
 
 ## What changed
 

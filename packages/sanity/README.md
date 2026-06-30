@@ -12,20 +12,20 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.4 | **Updated**: 6/29/2026 | **Import test**: failed
+**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.5 | **Updated**: 6/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
-| @portabletext/editor | `^7.7.0` | `^7.8.1` |
+| @portabletext/editor | `^7.7.0` | `^7.9.0` |
 | @portabletext/html | `^1.0.3` | `^1.1.0` |
 | @portabletext/patches | `^2.0.4` | `^2.0.5` |
-| @portabletext/plugin-markdown-shortcuts | `^8.0.22` | `^8.0.24` |
-| @portabletext/plugin-one-line | `^7.0.22` | `^7.0.24` |
-| @portabletext/plugin-paste-link | `^4.0.22` | `^4.0.24` |
-| @portabletext/plugin-typography | `^8.0.22` | `^8.0.24` |
+| @portabletext/plugin-markdown-shortcuts | `^8.0.22` | `^8.0.26` |
+| @portabletext/plugin-one-line | `^7.0.22` | `^7.0.26` |
+| @portabletext/plugin-paste-link | `^4.0.22` | `^4.0.26` |
+| @portabletext/plugin-typography | `^8.0.22` | `^8.0.26` |
 | @portabletext/sanity-bridge | `^3.1.5` | `^3.2.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/sdk | `^2.14.1` | `^2.15.0` |
