@@ -12,7 +12,7 @@ npm install @depup/react-three__fiber
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.6.1 | **DepUp version**: 9.6.1-depup.28 | **Updated**: 6/29/2026 | **Import test**: passed
+**Original version**: 9.6.1 | **DepUp version**: 9.6.1-depup.29 | **Updated**: 6/30/2026 | **Import test**: passed
 
 ## What changed
 

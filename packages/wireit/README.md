@@ -12,12 +12,13 @@ npm install @depup/wireit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.14.13 | **DepUp version**: 0.14.13-depup.5 | **Updated**: 6/29/2026 | **Import test**: failed
+**Original version**: 0.14.13 | **DepUp version**: 0.14.13-depup.6 | **Updated**: 6/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| brace-expansion | `^5.0.6` | `^5.0.7` |
 | chokidar | `^3.5.3` | `^5.0.0` |
 | fast-glob | `^3.2.11` | `^3.3.3` |
 | jsonc-parser | `^3.0.0` | `^3.3.1` |

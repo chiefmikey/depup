@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "accepts": {
+      "from": "~1.3.4",
+      "to": "^1.3.8"
+    },
+    "cors": {
+      "from": "~2.8.5",
+      "to": "^2.8.6"
+    },
+    "debug": {
+      "from": "~4.4.1",
+      "to": "^4.4.3"
+    },
+    "engine.io": {
+      "from": "~6.6.0",
+      "to": "^6.6.9"
+    },
+    "socket.io-adapter": {
+      "from": "~2.5.2",
+      "to": "^2.5.8"
+    },
+    "socket.io-parser": {
+      "from": "~4.2.4",
+      "to": "^4.2.6"
+    }
+  },
+  "timestamp": "2026-06-30T00:50:27.705Z",
+  "totalUpdated": 6
+}

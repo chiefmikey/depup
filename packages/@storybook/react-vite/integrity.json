@@ -922,35 +922,6 @@
     }
   },
   "10.4.6": {
-    "8": {
-      "changes": {
-        "@rollup/pluginutils": {
-          "from": "^5.0.2",
-          "to": "^5.4.0"
-        },
-        "empathic": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "magic-string": {
-          "from": "^0.30.0",
-          "to": "^0.30.21"
-        },
-        "react-docgen": {
-          "from": "^8.0.0",
-          "to": "^8.0.3"
-        },
-        "resolve": {
-          "from": "^1.22.8",
-          "to": "^1.22.12"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:35:09.813Z",
-      "version": "10.4.6-depup.8"
-    },
     "9": {
       "changes": {
         "@rollup/pluginutils": {
@@ -1066,6 +1037,35 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:36:10.718Z",
       "version": "10.4.6-depup.12"
+    },
+    "13": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.0.2",
+          "to": "^5.4.0"
+        },
+        "empathic": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "magic-string": {
+          "from": "^0.30.0",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^8.0.0",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:35:11.799Z",
+      "version": "10.4.6-depup.13"
     }
   }
 }

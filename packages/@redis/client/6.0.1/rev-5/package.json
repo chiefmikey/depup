@@ -1,0 +1,70 @@
+{
+  "name": "@depup/redis__client",
+  "version": "6.0.1-depup.5",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "!dist/tsconfig.tsbuildinfo",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run test:types && nyc -r text-summary -r lcov mocha -r tsx --reporter mocha-multi-reporters --reporter-options configFile=mocha-multi-reporter-config.json --exit './lib/**/*.spec.ts'",
+    "test:types": "tsc -p tsconfig.types-test.json",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "cluster-key-slot": "1.1.2"
+  },
+  "devDependencies": {
+    "@node-rs/xxhash": "1.7.6",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-metrics": "^2.2.0",
+    "@redis/test-utils": "*",
+    "@types/sinon": "^17.0.3",
+    "sinon": "^17.0.1"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": ">=1 <2",
+    "@node-rs/xxhash": "^1.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@opentelemetry/api": {
+      "optional": true
+    },
+    "@node-rs/xxhash": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">= 20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/redis/node-redis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redis/node-redis/issues"
+  },
+  "homepage": "https://github.com/redis/node-redis/tree/master/packages/client",
+  "keywords": [
+    "@redis/client",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "redis"
+  ],
+  "description": "@redis/client with all dependencies updated to latest",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@redis/client",
+    "originalVersion": "6.0.1",
+    "processedAt": "2026-06-30T00:34:29.982Z",
+    "smokeTest": "failed"
+  }
+}

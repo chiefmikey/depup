@@ -402,35 +402,6 @@
     }
   },
   "14.1.0": {
-    "0": {
-      "changes": {
-        "@fastify/busboy": {
-          "from": "^3.0.0",
-          "to": "^3.2.0"
-        },
-        "fast-deep-equal": {
-          "from": "^3.1.1",
-          "to": "^3.1.3"
-        },
-        "google-auth-library": {
-          "from": "^10.6.2",
-          "to": "^10.9.0"
-        },
-        "jsonwebtoken": {
-          "from": "^9.0.0",
-          "to": "^9.0.3"
-        },
-        "jwks-rsa": {
-          "from": "^4.0.1",
-          "to": "^4.1.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:44:58.223Z",
-      "version": "14.1.0-depup.0"
-    },
     "1": {
       "changes": {
         "@fastify/busboy": {
@@ -546,6 +517,35 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:43:23.783Z",
       "version": "14.1.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@fastify/busboy": {
+          "from": "^3.0.0",
+          "to": "^3.2.0"
+        },
+        "fast-deep-equal": {
+          "from": "^3.1.1",
+          "to": "^3.1.3"
+        },
+        "google-auth-library": {
+          "from": "^10.6.2",
+          "to": "^10.9.0"
+        },
+        "jsonwebtoken": {
+          "from": "^9.0.0",
+          "to": "^9.0.3"
+        },
+        "jwks-rsa": {
+          "from": "^4.0.1",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:41:49.427Z",
+      "version": "14.1.0-depup.5"
     }
   }
 }

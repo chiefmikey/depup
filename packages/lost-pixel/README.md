@@ -12,7 +12,7 @@ npm install @depup/lost-pixel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.22.0 | **DepUp version**: 3.22.0-depup.55 | **Updated**: 6/29/2026 | **Import test**: failed
+**Original version**: 3.22.0 | **DepUp version**: 3.22.0-depup.56 | **Updated**: 6/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,12 +23,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild | `0.24.0` | `^0.28.1` |
 | execa | `5.1.1` | `^9.6.1` |
 | form-data | `4.0.0` | `^4.0.6` |
-| fs-extra | `11.2.0` | `^11.3.5` |
+| fs-extra | `11.2.0` | `^11.3.6` |
 | get-port-please | `3.1.2` | `^3.2.0` |
 | odiff-bin | `2.6.1` | `^4.3.8` |
 | pixelmatch | `5.3.0` | `^7.2.0` |
 | playwright-core | `1.47.2` | `^1.61.1` |
-| posthog-node | `3.5.0` | `^5.38.6` |
+| posthog-node | `3.5.0` | `^5.38.8` |
 | serve-handler | `6.1.6` | `^6.1.7` |
 | shelljs | `0.8.5` | `^0.10.0` |
 | yargs | `17.7.2` | `^18.0.0` |

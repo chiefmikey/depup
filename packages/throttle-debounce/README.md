@@ -12,7 +12,7 @@ npm install @depup/throttle-debounce
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.35 | **Updated**: 6/29/2026 | **Import test**: passed
+**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.36 | **Updated**: 6/30/2026 | **Import test**: passed
 
 ## What changed
 

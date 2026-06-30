@@ -67,19 +67,6 @@
     }
   },
   "0.4.2": {
-    "3": {
-      "changes": {
-        "@noble/hashes": {
-          "from": "^2.0.1",
-          "to": "^2.2.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-18T00:36:52.635Z",
-      "version": "0.4.2-depup.3"
-    },
     "4": {
       "changes": {
         "@noble/hashes": {
@@ -131,6 +118,19 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:30:32.265Z",
       "version": "0.4.2-depup.7"
+    },
+    "8": {
+      "changes": {
+        "@noble/hashes": {
+          "from": "^2.0.1",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:30:01.367Z",
+      "version": "0.4.2-depup.8"
     }
   }
 }
