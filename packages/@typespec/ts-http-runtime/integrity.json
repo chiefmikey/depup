@@ -65,27 +65,6 @@
     }
   },
   "0.3.6": {
-    "34": {
-      "changes": {
-        "http-proxy-agent": {
-          "from": "^7.0.0",
-          "to": "^9.1.0"
-        },
-        "https-proxy-agent": {
-          "from": "^7.0.0",
-          "to": "^9.1.0"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-25T00:36:42.680Z",
-      "version": "0.3.6-depup.34"
-    },
     "35": {
       "changes": {
         "http-proxy-agent": {
@@ -169,6 +148,27 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:35:52.283Z",
       "version": "0.3.6-depup.38"
+    },
+    "39": {
+      "changes": {
+        "http-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:35:21.752Z",
+      "version": "0.3.6-depup.39"
     }
   }
 }

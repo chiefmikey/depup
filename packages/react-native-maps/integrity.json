@@ -25,6 +25,19 @@
       "status": "failed",
       "timestamp": "2026-06-29T00:47:58.538Z",
       "version": "1.29.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/geojson": {
+          "from": "^7946.0.13",
+          "to": "^7946.0.16"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-06-30T00:47:18.988Z",
+      "version": "1.29.0-depup.1"
     }
   }
 }
