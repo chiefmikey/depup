@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.5 | **DepUp version**: 3.7.5-depup.13 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 3.7.5 | **DepUp version**: 3.7.5-depup.14 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dedent | `^0.4.0` | `^1.7.2` |
 | del | `^3.0.0` | `^8.0.1` |
 | device-specs | `^1.0.0` | `^1.0.1` |
-| devtools-protocol | `0.0.1109433` | `^0.0.1653615` |
+| devtools-protocol | `0.0.1109433` | `^0.0.1654583` |
 | diff | `^8.0.3` | `^9.0.0` |
 | elegant-spinner | `^1.0.1` | `^3.0.0` |
 | emittery | `^0.4.1` | `^2.0.0` |
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | graceful-fs | `^4.1.11` | `^4.2.11` |
 | graphlib | `^2.1.5` | `^2.1.8` |
 | http-status-codes | `^2.2.0` | `^2.3.0` |
-| humanize-duration | `^3.25.0` | `^3.33.2` |
+| humanize-duration | `^3.25.0` | `^3.34.0` |
 | import-lazy | `^3.1.0` | `^4.0.0` |
 | indent-string | `^1.2.2` | `^5.0.0` |
 | is-ci | `^1.0.10` | `^4.1.0` |

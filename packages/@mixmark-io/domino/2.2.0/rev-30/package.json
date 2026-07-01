@@ -1,0 +1,38 @@
+{
+  "name": "@depup/mixmark-io__domino",
+  "version": "2.2.0-depup.30",
+  "license": "BSD-2-Clause",
+  "author": "Felix Gnass <fgnass@gmail.com>",
+  "description": "Server-side DOM implementation based on Mozilla's dom.js (with updated dependencies)",
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixmark-io/domino.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "jquery": "^3.5.1",
+    "mocha": "^6.2.3",
+    "puppeteer": "^21.3.5",
+    "should": "^13.2.3"
+  },
+  "keywords": [
+    "@mixmark-io/domino",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@mixmark-io/domino",
+    "originalVersion": "2.2.0",
+    "processedAt": "2026-07-01T00:33:26.041Z",
+    "smokeTest": "passed"
+  }
+}

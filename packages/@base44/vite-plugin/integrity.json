@@ -708,6 +708,31 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:30:07.133Z",
       "version": "1.0.24-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.5",
+          "to": "^8.0.0"
+        },
+        "@babel/parser": {
+          "from": "^7.28.5",
+          "to": "^8.0.0"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.5",
+          "to": "^8.0.0"
+        },
+        "@babel/types": {
+          "from": "^7.28.5",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:31:26.783Z",
+      "version": "1.0.24-depup.1"
     }
   }
 }

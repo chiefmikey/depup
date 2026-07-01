@@ -12,13 +12,13 @@ npm install @depup/mongodb
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.4 | **Updated**: 6/30/2026 | **Import test**: passed
+**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.5 | **Updated**: 7/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mongodb-js/saslprep | `^1.3.0` | `^1.4.11` |
+| @mongodb-js/saslprep | `^1.3.0` | `^1.4.12` |
 | bson | `^7.2.0` | `^7.3.1` |
 | mongodb-connection-string-url | `^7.0.0` | `^7.0.1` |
 

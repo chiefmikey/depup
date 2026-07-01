@@ -12,17 +12,18 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.49.0 | **DepUp version**: 6.49.0-depup.3 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 6.49.0 | **DepUp version**: 6.49.0-depup.4 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1068.0` | `^3.1076.0` |
+| @aws-sdk/client-s3 | `3.1068.0` | `^3.1077.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @faker-js/faker | `10.4.0` | `^10.5.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.62.0` |
+| @slack/webhook | `7.0.9` | `^7.1.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.1` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.1` |
 | @tryghost/database-info | `0.3.35` | `^2.3.1` |
@@ -67,7 +68,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.2.0` |
 | metascraper | `5.45.15` | `^5.51.1` |
-| metascraper-amazon | `5.45.10` | `^5.51.1` |
+| metascraper-amazon | `5.45.10` | `^5.51.2` |
 | metascraper-author | `5.45.10` | `^5.51.1` |
 | metascraper-description | `5.45.10` | `^5.51.1` |
 | metascraper-image | `5.45.10` | `^5.51.1` |
@@ -81,7 +82,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment-timezone | `0.5.45` | `^0.6.2` |
 | multer | `2.1.1` | `^2.2.0` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.11` | `^9.0.1` |
+| nodemailer | `8.0.11` | `^9.0.3` |
 | otplib | `12.0.1` | `^13.4.1` |
 | stripe | `8.222.0` | `^22.3.0` |
 | superagent | `5.3.1` | `^10.3.0` |

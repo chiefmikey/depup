@@ -12,14 +12,13 @@ npm install @depup/redocly__openapi-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.35.1 | **DepUp version**: 2.35.1-depup.4 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 2.36.0 | **DepUp version**: 2.36.0-depup.0 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @redocly/ajv | `^8.18.1` | `^8.18.3` |
-| @redocly/config | `^0.49.0` | `^0.49.1` |
 | colorette | `^1.2.0` | `^2.0.20` |
 | js-yaml | `^4.2.0` | `^5.2.0` |
 

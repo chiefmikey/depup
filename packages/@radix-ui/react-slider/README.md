@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-slider
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.1 | **DepUp version**: 1.4.1-depup.15 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 1.4.2 | **DepUp version**: 1.4.2-depup.0 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 

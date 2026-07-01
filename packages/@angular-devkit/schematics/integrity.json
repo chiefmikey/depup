@@ -322,19 +322,6 @@
     }
   },
   "22.0.4": {
-    "1": {
-      "changes": {
-        "ora": {
-          "from": "9.4.0",
-          "to": "^9.4.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:31:09.866Z",
-      "version": "22.0.4-depup.1"
-    },
     "2": {
       "changes": {
         "ora": {
@@ -386,6 +373,19 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:29:00.761Z",
       "version": "22.0.4-depup.5"
+    },
+    "6": {
+      "changes": {
+        "ora": {
+          "from": "9.4.0",
+          "to": "^9.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:30:18.242Z",
+      "version": "22.0.4-depup.6"
     }
   }
 }
