@@ -12,32 +12,19 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.5 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.0 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @isaacs/ttlcache | `^1.4.1` | `^2.1.5` |
-| @portabletext/editor | `^7.7.0` | `^7.9.0` |
-| @portabletext/html | `^1.0.3` | `^1.1.0` |
-| @portabletext/patches | `^2.0.4` | `^2.0.5` |
-| @portabletext/plugin-markdown-shortcuts | `^8.0.22` | `^8.0.26` |
-| @portabletext/plugin-one-line | `^7.0.22` | `^7.0.26` |
-| @portabletext/plugin-paste-link | `^4.0.22` | `^4.0.26` |
-| @portabletext/plugin-typography | `^8.0.22` | `^8.0.26` |
-| @portabletext/sanity-bridge | `^3.1.5` | `^3.2.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/sdk | `^2.14.1` | `^2.15.0` |
-| @sentry/react | `^10.59.0` | `^10.62.0` |
-| @tanstack/react-virtual | `^3.14.3` | `^3.14.4` |
-| groq-js | `^1.30.2` | `^1.30.3` |
-| i18next | `^26.3.1` | `^26.3.3` |
+| @tanstack/react-virtual | `^3.14.4` | `^3.14.5` |
+| i18next | `^26.3.3` | `^26.3.4` |
 | isomorphic-dompurify | `2.36.0` | `^3.18.0` |
-| motion | `^12.40.0` | `^12.42.0` |
-| nanoid | `^5.1.15` | `^5.1.16` |
+| motion | `^12.42.0` | `^12.42.2` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
-| xstate | `^5.32.1` | `^5.32.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

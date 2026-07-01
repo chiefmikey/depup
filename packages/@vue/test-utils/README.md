@@ -12,14 +12,14 @@ npm install @depup/vue__test-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.4.11 | **DepUp version**: 2.4.11-depup.24 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 2.4.11 | **DepUp version**: 2.4.11-depup.25 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| js-beautify | `^1.14.9` | `^1.15.4` |
-| vue-component-type-helpers | `^3.0.0` | `^3.3.5` |
+| js-beautify | `^1.14.9` | `^2.0.3` |
+| vue-component-type-helpers | `^3.0.0` | `^3.3.6` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vue__test-utils&labels=bug).

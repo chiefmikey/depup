@@ -89,35 +89,6 @@
     }
   },
   "3.8.3": {
-    "34": {
-      "changes": {
-        "@rushstack/ts-command-line": {
-          "from": "4.19.1",
-          "to": "^5.3.10"
-        },
-        "emittery": {
-          "from": "^0.13.0",
-          "to": "^2.0.0"
-        },
-        "pony-cause": {
-          "from": "^2.1.4",
-          "to": "^2.1.11"
-        },
-        "tinyglobby": {
-          "from": "^0.2.16",
-          "to": "^0.2.17"
-        },
-        "type-fest": {
-          "from": "^4.0.0",
-          "to": "^5.7.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:52:43.546Z",
-      "version": "3.8.3-depup.34"
-    },
     "35": {
       "changes": {
         "@rushstack/ts-command-line": {
@@ -233,6 +204,35 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:51:26.286Z",
       "version": "3.8.3-depup.38"
+    },
+    "39": {
+      "changes": {
+        "@rushstack/ts-command-line": {
+          "from": "4.19.1",
+          "to": "^5.3.10"
+        },
+        "emittery": {
+          "from": "^0.13.0",
+          "to": "^2.0.0"
+        },
+        "pony-cause": {
+          "from": "^2.1.4",
+          "to": "^2.1.11"
+        },
+        "tinyglobby": {
+          "from": "^0.2.16",
+          "to": "^0.2.17"
+        },
+        "type-fest": {
+          "from": "^4.0.0",
+          "to": "^5.7.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:53:45.420Z",
+      "version": "3.8.3-depup.39"
     }
   }
 }

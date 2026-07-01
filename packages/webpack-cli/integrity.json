@@ -253,6 +253,19 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:51:50.908Z",
       "version": "7.1.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "commander": {
+          "from": "^14.0.3",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:54:11.668Z",
+      "version": "7.1.0-depup.4"
     }
   }
 }

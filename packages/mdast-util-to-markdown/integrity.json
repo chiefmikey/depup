@@ -1,46 +1,5 @@
 {
   "2.1.2": {
-    "34": {
-      "changes": {
-        "@types/mdast": {
-          "from": "^4.0.0",
-          "to": "^4.0.4"
-        },
-        "@types/unist": {
-          "from": "^3.0.0",
-          "to": "^3.0.3"
-        },
-        "longest-streak": {
-          "from": "^3.0.0",
-          "to": "^3.1.0"
-        },
-        "mdast-util-phrasing": {
-          "from": "^4.0.0",
-          "to": "^4.1.0"
-        },
-        "micromark-util-classify-character": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "micromark-util-decode-string": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "unist-util-visit": {
-          "from": "^5.0.0",
-          "to": "^5.1.0"
-        },
-        "zwitch": {
-          "from": "^2.0.0",
-          "to": "^2.0.4"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:49:52.500Z",
-      "version": "2.1.2-depup.34"
-    },
     "35": {
       "changes": {
         "@types/mdast": {
@@ -204,6 +163,47 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:43:39.979Z",
       "version": "2.1.2-depup.38"
+    },
+    "39": {
+      "changes": {
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "@types/unist": {
+          "from": "^3.0.0",
+          "to": "^3.0.3"
+        },
+        "longest-streak": {
+          "from": "^3.0.0",
+          "to": "^3.1.0"
+        },
+        "mdast-util-phrasing": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "micromark-util-classify-character": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "micromark-util-decode-string": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "unist-util-visit": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "zwitch": {
+          "from": "^2.0.0",
+          "to": "^2.0.4"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:46:08.961Z",
+      "version": "2.1.2-depup.39"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/recharts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.9.0 | **DepUp version**: 3.9.0-depup.6 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 3.9.1 | **DepUp version**: 3.9.1-depup.0 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @reduxjs/toolkit | `^1.9.0 || 2.x.x` | `^2.12.0` |
 | es-toolkit | `^1.39.3` | `^1.49.0` |
 | eventemitter3 | `^5.0.1` | `^5.0.4` |
-| immer | `^10.1.1` | `^11.1.8` |
 | react-redux | `8.x.x || 9.x.x` | `^9.3.0` |
 | use-sync-external-store | `^1.2.2` | `^1.6.0` |
 | victory-vendor | `^37.0.2` | `^37.3.6` |

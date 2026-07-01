@@ -414,19 +414,6 @@
     }
   },
   "5.9.3": {
-    "6": {
-      "changes": {
-        "path-expression-matcher": {
-          "from": "^1.5.0",
-          "to": "^1.6.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:41:58.838Z",
-      "version": "5.9.3-depup.6"
-    },
     "7": {
       "changes": {
         "path-expression-matcher": {
@@ -478,6 +465,19 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:39:57.139Z",
       "version": "5.9.3-depup.10"
+    },
+    "11": {
+      "changes": {
+        "path-expression-matcher": {
+          "from": "^1.5.0",
+          "to": "^1.6.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:42:17.427Z",
+      "version": "5.9.3-depup.11"
     }
   }
 }

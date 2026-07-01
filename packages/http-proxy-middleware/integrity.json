@@ -59,14 +59,6 @@
     }
   },
   "4.1.1": {
-    "15": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "skipped",
-      "timestamp": "2026-06-26T00:45:48.488Z",
-      "version": "4.1.1-depup.15"
-    },
     "16": {
       "changes": {},
       "depsUpdated": 0,
@@ -98,6 +90,19 @@
       "status": "skipped",
       "timestamp": "2026-06-30T00:42:35.677Z",
       "version": "4.1.1-depup.19"
+    },
+    "20": {
+      "changes": {
+        "httpxy": {
+          "from": "^0.5.3",
+          "to": "^0.5.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:45:01.394Z",
+      "version": "4.1.1-depup.20"
     }
   }
 }
