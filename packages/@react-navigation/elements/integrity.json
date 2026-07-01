@@ -784,5 +784,28 @@
       "timestamp": "2026-06-30T00:34:15.385Z",
       "version": "2.9.26-depup.6"
     }
+  },
+  "2.9.27": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.4"
+        },
+        "use-sync-external-store": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:36:25.150Z",
+      "version": "2.9.27-depup.0"
+    }
   }
 }

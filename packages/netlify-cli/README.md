@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 26.1.0 | **DepUp version**: 26.1.0-depup.42 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 26.1.0 | **DepUp version**: 26.1.0-depup.43 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @netlify/ai | `^0.4.1` | `^0.4.2` |
 | @netlify/api | `^14.0.19` | `^15.0.0` |
 | @netlify/blobs | `^10.7.7` | `^10.7.9` |
-| @netlify/build | `^35.13.9` | `^36.0.1` |
+| @netlify/build | `^35.13.9` | `^36.1.0` |
 | @netlify/build-info | `^10.5.1` | `^11.0.0` |
 | @netlify/config | `^24.6.0` | `^25.0.0` |
 | @netlify/dev | `^4.18.4` | `^4.18.9` |
@@ -33,14 +33,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @netlify/headers-parser | `^9.0.3` | `^10.0.0` |
 | @netlify/images | `^1.3.7` | `^1.3.10` |
 | @netlify/redirect-parser | `^15.0.4` | `^16.0.0` |
-| @netlify/zip-it-and-ship-it | `^14.7.0` | `^15.0.1` |
+| @netlify/zip-it-and-ship-it | `^14.7.0` | `^15.1.0` |
 | @octokit/rest | `^22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `^1.8.0` | `^1.9.1` |
 | chokidar | `^4.0.3` | `^5.0.0` |
 | commander | `^12.1.0` | `^15.0.0` |
 | comment-json | `^4.6.2` | `^5.0.0` |
 | content-type | `^1.0.5` | `^2.0.0` |
-| cookie | `^1.1.1` | `^2.0.0` |
+| cookie | `^1.1.1` | `^2.0.1` |
 | cron-parser | `^4.9.0` | `^5.6.1` |
 | dotenv | `^17.3.1` | `^17.4.2` |
 | execa | `^5.1.1` | `^9.6.1` |
@@ -61,7 +61,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | raw-body | `^3.0.1` | `^3.0.2` |
 | readdirp | `^4.1.2` | `^5.0.0` |
 | semver | `^7.7.2` | `^7.8.5` |
-| toml | `^3.0.0` | `^4.1.1` |
+| toml | `^3.0.0` | `^4.1.2` |
 | ulid | `^3.0.1` | `^3.0.2` |
 | write-file-atomic | `^5.0.1` | `^8.0.0` |
 | ws | `^8.19.0` | `^8.21.0` |

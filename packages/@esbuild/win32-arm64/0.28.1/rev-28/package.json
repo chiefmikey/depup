@@ -1,0 +1,36 @@
+{
+  "name": "@depup/esbuild__win32-arm64",
+  "version": "0.28.1-depup.28",
+  "description": "The Windows ARM 64-bit binary for esbuild, a JavaScript bundler. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanw/esbuild.git"
+  },
+  "license": "MIT",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "keywords": [
+    "@esbuild/win32-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@esbuild/win32-arm64",
+    "originalVersion": "0.28.1",
+    "processedAt": "2026-07-01T00:32:14.808Z",
+    "smokeTest": "failed"
+  }
+}

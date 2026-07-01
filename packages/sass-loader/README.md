@@ -12,7 +12,7 @@ npm install @depup/sass-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 17.0.0 | **DepUp version**: 17.0.0-depup.37 | **Updated**: 6/30/2026 | **Import test**: passed
+**Original version**: 17.0.0 | **DepUp version**: 17.0.0-depup.38 | **Updated**: 7/1/2026 | **Import test**: passed
 
 ## What changed
 

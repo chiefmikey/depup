@@ -1,0 +1,93 @@
+{
+  "name": "@depup/arangojs",
+  "version": "10.3.1-depup.39",
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache-2.0",
+  "description": "The official ArangoDB JavaScript driver. (with updated dependencies)",
+  "homepage": "https://github.com/arangodb/arangojs",
+  "bugs": {
+    "url": "https://github.com/arangodb/arangojs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arangodb/arangojs.git"
+  },
+  "author": "ArangoDB GmbH",
+  "contributors": [
+    {
+      "name": "Alan Plum",
+      "email": "me@pluma.io"
+    }
+  ],
+  "keywords": [
+    "arangojs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "arango",
+    "arangodb",
+    "aql",
+    "nosql",
+    "client",
+    "driver",
+    "api",
+    "http",
+    "rest"
+  ],
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js",
+      "types": "./index.d.ts"
+    },
+    "./*": {
+      "import": "./esm/*.js",
+      "require": "./cjs/*.js",
+      "types": "./*.d.ts"
+    },
+    "./lib/*": {
+      "import": "./esm/lib/*.js",
+      "require": "./cjs/lib/*.js",
+      "types": "./lib/*.d.ts"
+    }
+  },
+  "files": [
+    "**/*",
+    "!test/**",
+    "!cjs/test/**",
+    "!esm/test/**",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@types/node": "^26.0.1"
+  },
+  "peerDependencies": {
+    "undici": ">=5.21.0"
+  },
+  "peerDependenciesMeta": {
+    "undici": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "@types/node": {
+        "from": "^20.11.26",
+        "to": "^26.0.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "arangojs",
+    "originalVersion": "10.3.1",
+    "processedAt": "2026-07-01T00:39:06.177Z",
+    "smokeTest": "passed"
+  }
+}

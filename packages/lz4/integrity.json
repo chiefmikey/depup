@@ -1,22 +1,5 @@
 {
   "0.6.5": {
-    "35": {
-      "changes": {
-        "buffer": {
-          "from": "^5.2.1",
-          "to": "^6.0.3"
-        },
-        "nan": {
-          "from": "^2.13.2",
-          "to": "^2.28.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:49:39.497Z",
-      "version": "0.6.5-depup.35"
-    },
     "36": {
       "changes": {
         "buffer": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:44:45.338Z",
       "version": "0.6.5-depup.39"
+    },
+    "40": {
+      "changes": {
+        "buffer": {
+          "from": "^5.2.1",
+          "to": "^6.0.3"
+        },
+        "nan": {
+          "from": "^2.13.2",
+          "to": "^2.28.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:48:33.978Z",
+      "version": "0.6.5-depup.40"
     }
   }
 }

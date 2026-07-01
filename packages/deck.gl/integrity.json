@@ -235,23 +235,6 @@
     }
   },
   "9.3.5": {
-    "0": {
-      "changes": {
-        "@luma.gl/core": {
-          "from": "^9.3.3",
-          "to": "^9.3.5"
-        },
-        "@luma.gl/engine": {
-          "from": "^9.3.3",
-          "to": "^9.3.5"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-26T00:43:11.533Z",
-      "version": "9.3.5-depup.0"
-    },
     "1": {
       "changes": {
         "@luma.gl/core": {
@@ -319,6 +302,23 @@
       "status": "failed",
       "timestamp": "2026-06-30T00:39:05.130Z",
       "version": "9.3.5-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@luma.gl/core": {
+          "from": "^9.3.3",
+          "to": "^9.3.5"
+        },
+        "@luma.gl/engine": {
+          "from": "^9.3.3",
+          "to": "^9.3.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:42:02.196Z",
+      "version": "9.3.5-depup.5"
     }
   }
 }

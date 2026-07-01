@@ -12,7 +12,7 @@ npm install @depup/react-responsive
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.37 | **Updated**: 6/30/2026 | **Import test**: failed
+**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.38 | **Updated**: 7/1/2026 | **Import test**: failed
 
 ## What changed
 

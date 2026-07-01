@@ -1290,5 +1290,40 @@
       "timestamp": "2026-06-30T00:52:05.173Z",
       "version": "2.53.1-depup.9"
     }
+  },
+  "2.54.1": {
+    "0": {
+      "changes": {
+        "@noble/curves": {
+          "from": "1.9.1",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "1.8.0",
+          "to": "^2.2.0"
+        },
+        "@scure/bip32": {
+          "from": "1.7.0",
+          "to": "^2.2.0"
+        },
+        "@scure/bip39": {
+          "from": "1.6.0",
+          "to": "^2.2.0"
+        },
+        "abitype": {
+          "from": "1.2.3",
+          "to": "^1.2.4"
+        },
+        "ws": {
+          "from": "8.20.1",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-01T00:57:00.315Z",
+      "version": "2.54.1-depup.0"
+    }
   }
 }
