@@ -149,5 +149,20 @@
       "timestamp": "2026-07-01T00:52:00.864Z",
       "version": "1.9.13-depup.37"
     }
+  },
+  "1.9.14": {
+    "0": {
+      "changes": {
+        "csstype": {
+          "from": "^3.1.0",
+          "to": "^3.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-02T00:50:24.540Z",
+      "version": "1.9.14-depup.0"
+    }
   }
 }

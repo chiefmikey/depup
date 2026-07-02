@@ -237,5 +237,20 @@
       "timestamp": "2026-07-01T00:33:59.523Z",
       "version": "16.2.9-depup.36"
     }
+  },
+  "16.2.10": {
+    "0": {
+      "changes": {
+        "source-map": {
+          "from": "^0.7.0",
+          "to": "^0.7.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-02T00:33:23.497Z",
+      "version": "16.2.10-depup.0"
+    }
   }
 }

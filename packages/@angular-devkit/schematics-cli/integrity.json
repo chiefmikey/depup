@@ -500,5 +500,20 @@
       "timestamp": "2026-07-01T00:30:21.222Z",
       "version": "22.0.4-depup.6"
     }
+  },
+  "22.0.5": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.4.2",
+          "to": "^8.5.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-02T00:29:56.563Z",
+      "version": "22.0.5-depup.0"
+    }
   }
 }

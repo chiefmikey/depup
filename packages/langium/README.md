@@ -12,13 +12,13 @@ npm install @depup/langium
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.3.0 | **DepUp version**: 4.3.0-depup.18 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 4.3.0 | **DepUp version**: 4.3.0-depup.19 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| vscode-languageserver | `~10.0.0` | `^10.0.1` |
+| vscode-languageserver | `~10.0.0` | `^10.1.0` |
 | vscode-languageserver-protocol | `~3.18.0` | `^3.18.2` |
 
 

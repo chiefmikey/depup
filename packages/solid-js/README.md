@@ -12,15 +12,13 @@ npm install @depup/solid-js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.9.13 | **DepUp version**: 1.9.13-depup.37 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 1.9.14 | **DepUp version**: 1.9.14-depup.0 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | csstype | `^3.1.0` | `^3.2.3` |
-| seroval | `~1.5.0` | `^1.5.4` |
-| seroval-plugins | `~1.5.0` | `^1.5.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/solid-js&labels=bug).
