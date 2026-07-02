@@ -1,0 +1,57 @@
+{
+  "name": "@depup/nwsapi",
+  "version": "2.2.24-depup.39",
+  "description": "Fast CSS Selectors API Engine (with updated dependencies)",
+  "homepage": "https://javascript.nwbox.com/nwsapi/",
+  "main": "./src/nwsapi",
+  "keywords": [
+    "nwsapi",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "css",
+    "css3",
+    "css4",
+    "matcher",
+    "selector"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://javascript.nwbox.com/nwsapi/MIT-LICENSE"
+    }
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Diego Perini",
+    "email": "diego.perini@gmail.com",
+    "web": "https://www.iport.it/"
+  },
+  "maintainers": [
+    {
+      "name": "Diego Perini",
+      "email": "diego.perini@gmail.com",
+      "web": "https://www.iport.it/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/dperini/nwsapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dperini/nwsapi.git"
+  },
+  "scripts": {
+    "lint": "eslint ./src/nwsapi.js"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "nwsapi",
+    "originalVersion": "2.2.24",
+    "processedAt": "2026-07-02T00:45:37.919Z",
+    "smokeTest": "passed"
+  }
+}

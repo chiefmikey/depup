@@ -12,7 +12,7 @@ npm install @depup/grammyjs__types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.28.0 | **DepUp version**: 3.28.0-depup.2 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 3.28.0 | **DepUp version**: 3.28.0-depup.3 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 

@@ -12,7 +12,7 @@ npm install @depup/google-logging-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.4 | **DepUp version**: 1.1.4-depup.33 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 1.1.4 | **DepUp version**: 1.1.4-depup.34 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 

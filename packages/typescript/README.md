@@ -12,7 +12,7 @@ npm install @depup/typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.3 | **DepUp version**: 6.0.3-depup.38 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 6.0.3 | **DepUp version**: 6.0.3-depup.39 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 

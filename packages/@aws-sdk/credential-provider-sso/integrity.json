@@ -1545,5 +1545,20 @@
       "timestamp": "2026-07-01T00:31:00.486Z",
       "version": "3.972.57-depup.0"
     }
+  },
+  "3.972.58": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-02T00:30:32.483Z",
+      "version": "3.972.58-depup.0"
+    }
   }
 }
