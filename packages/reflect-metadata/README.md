@@ -12,7 +12,7 @@ npm install @depup/reflect-metadata
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.2 | **DepUp version**: 0.2.2-depup.37 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 0.2.2 | **DepUp version**: 0.2.2-depup.38 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 

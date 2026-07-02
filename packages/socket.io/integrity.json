@@ -7,39 +7,6 @@
     }
   },
   "4.8.3": {
-    "62": {
-      "changes": {
-        "accepts": {
-          "from": "~1.3.4",
-          "to": "^1.3.8"
-        },
-        "cors": {
-          "from": "~2.8.5",
-          "to": "^2.8.6"
-        },
-        "debug": {
-          "from": "~4.4.1",
-          "to": "^4.4.3"
-        },
-        "engine.io": {
-          "from": "~6.6.0",
-          "to": "^6.6.9"
-        },
-        "socket.io-adapter": {
-          "from": "~2.5.2",
-          "to": "^2.5.8"
-        },
-        "socket.io-parser": {
-          "from": "~4.2.4",
-          "to": "^4.2.6"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-27T00:48:23.515Z",
-      "version": "4.8.3-depup.62"
-    },
     "63": {
       "changes": {
         "accepts": {
@@ -171,6 +138,39 @@
       "status": "failed",
       "timestamp": "2026-07-01T00:55:12.118Z",
       "version": "4.8.3-depup.66"
+    },
+    "67": {
+      "changes": {
+        "accepts": {
+          "from": "~1.3.4",
+          "to": "^1.3.8"
+        },
+        "cors": {
+          "from": "~2.8.5",
+          "to": "^2.8.6"
+        },
+        "debug": {
+          "from": "~4.4.1",
+          "to": "^4.4.3"
+        },
+        "engine.io": {
+          "from": "~6.6.0",
+          "to": "^6.6.9"
+        },
+        "socket.io-adapter": {
+          "from": "~2.5.2",
+          "to": "^2.5.8"
+        },
+        "socket.io-parser": {
+          "from": "~4.2.4",
+          "to": "^4.2.6"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-02T00:54:10.068Z",
+      "version": "4.8.3-depup.67"
     }
   }
 }

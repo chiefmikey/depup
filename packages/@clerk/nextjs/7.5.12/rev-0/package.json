@@ -1,0 +1,121 @@
+{
+  "name": "@depup/clerk__nextjs",
+  "version": "7.5.12-depup.0",
+  "description": "Clerk SDK for NextJS (with updated dependencies)",
+  "keywords": [
+    "@clerk/nextjs",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "clerk",
+    "typescript",
+    "nextjs",
+    "auth",
+    "authentication",
+    "passwordless",
+    "session",
+    "jwt"
+  ],
+  "homepage": "https://clerk.com/",
+  "bugs": {
+    "url": "https://github.com/clerk/javascript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clerk/javascript.git",
+    "directory": "packages/nextjs"
+  },
+  "license": "MIT",
+  "author": "Clerk",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./server": {
+      "types": "./dist/types/server/index.d.ts",
+      "import": "./dist/esm/server/index.js",
+      "require": "./dist/cjs/server/index.js"
+    },
+    "./errors": {
+      "types": "./dist/types/errors.d.ts",
+      "import": "./dist/esm/errors.js",
+      "require": "./dist/cjs/errors.js"
+    },
+    "./internal": {
+      "types": "./dist/types/internal.d.ts",
+      "import": "./dist/esm/internal.js",
+      "require": "./dist/cjs/internal.js"
+    },
+    "./webhooks": {
+      "types": "./dist/types/webhooks.d.ts",
+      "import": "./dist/esm/webhooks.js",
+      "require": "./dist/cjs/webhooks.js"
+    },
+    "./experimental": {
+      "types": "./dist/types/experimental.d.ts",
+      "import": "./dist/esm/experimental.js",
+      "require": "./dist/cjs/experimental.js"
+    },
+    "./legacy": {
+      "types": "./dist/types/legacy.d.ts",
+      "import": "./dist/esm/legacy.js",
+      "require": "./dist/cjs/legacy.js"
+    },
+    "./types": "./dist/types/types/index.d.ts"
+  },
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "server",
+    "errors",
+    "webhooks",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "server-only": "0.0.1",
+    "tslib": "2.8.1",
+    "@clerk/backend": "^3.10.0",
+    "@clerk/react": "^6.11.3",
+    "@clerk/shared": "^4.23.0"
+  },
+  "devDependencies": {
+    "crypto-es": "^2.1.0",
+    "next": "15.5.19"
+  },
+  "peerDependencies": {
+    "next": "^15.2.8 || ^15.3.8 || ^15.4.10 || ^15.5.9 || ^15.6.0-0 || ^16.0.10 || ^16.1.0-0",
+    "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0",
+    "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "build": "pnpm clean && tsup",
+    "build:declarations": "tsc -p tsconfig.declarations.json",
+    "clean": "rimraf ./dist",
+    "dev": "tsup --watch",
+    "dev:pub": "pnpm dev -- --env.publish",
+    "format": "node ../../scripts/format-package.mjs",
+    "format:check": "node ../../scripts/format-package.mjs --check",
+    "lint": "eslint src",
+    "lint:attw": "attw --pack . --profile node16 --ignore-rules unexpected-module-syntax",
+    "lint:publint": "publint",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@clerk/nextjs",
+    "originalVersion": "7.5.12",
+    "processedAt": "2026-07-02T00:31:17.877Z",
+    "smokeTest": "failed"
+  }
+}

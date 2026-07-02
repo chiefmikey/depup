@@ -12,14 +12,11 @@ npm install @depup/vscode-languageserver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.7 | **Updated**: 7/1/2026 | **Import test**: passed
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.0 | **Updated**: 7/2/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| vscode-languageserver-protocol | `3.18.1` | `^3.18.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vscode-languageserver&labels=bug).
 
