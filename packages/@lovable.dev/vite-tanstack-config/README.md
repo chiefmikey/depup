@@ -12,12 +12,14 @@ npm install @depup/lovable.dev__vite-tanstack-config
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.6.4 | **DepUp version**: 2.6.4-depup.2 | **Updated**: 7/2/2026 | **Import test**: failed
+**Original version**: 2.6.5 | **DepUp version**: 2.6.5-depup.0 | **Updated**: 7/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @lovable.dev/vite-plugin-dev-server-bridge | `^1.0.2` | `^1.0.3` |
+| @lovable.dev/vite-plugin-hmr-gate | `^1.1.1` | `^1.1.2` |
 | lightningcss | `^1.30.0` | `^1.32.0` |
 | lovable-tagger | `1.2.0` | `^1.3.1` |
 

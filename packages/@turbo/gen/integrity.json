@@ -708,6 +708,19 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:36:05.503Z",
       "version": "2.10.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:32:08.061Z",
+      "version": "2.10.2-depup.2"
     }
   }
 }

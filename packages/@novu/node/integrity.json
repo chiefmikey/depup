@@ -1,34 +1,5 @@
 {
   "2.6.6": {
-    "23": {
-      "changes": {
-        "axios": {
-          "from": "^1.6.8",
-          "to": "^1.18.1"
-        },
-        "axios-retry": {
-          "from": "^3.8.0",
-          "to": "^4.5.0"
-        },
-        "handlebars": {
-          "from": "^4.7.7",
-          "to": "^4.7.9"
-        },
-        "uuid": {
-          "from": "^9.0.1",
-          "to": "^14.0.1"
-        },
-        "@novu/shared": {
-          "from": "2.6.6",
-          "to": "^2.7.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-28T00:32:59.910Z",
-      "version": "2.6.6-depup.23"
-    },
     "24": {
       "changes": {
         "axios": {
@@ -144,6 +115,35 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:33:31.997Z",
       "version": "2.6.6-depup.27"
+    },
+    "28": {
+      "changes": {
+        "axios": {
+          "from": "^1.6.8",
+          "to": "^1.18.1"
+        },
+        "axios-retry": {
+          "from": "^3.8.0",
+          "to": "^4.5.0"
+        },
+        "handlebars": {
+          "from": "^4.7.7",
+          "to": "^4.7.9"
+        },
+        "uuid": {
+          "from": "^9.0.1",
+          "to": "^14.0.1"
+        },
+        "@novu/shared": {
+          "from": "2.6.6",
+          "to": "^2.8.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:29:34.031Z",
+      "version": "2.6.6-depup.28"
     }
   }
 }

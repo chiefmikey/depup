@@ -1,0 +1,37 @@
+{
+  "name": "@depup/swagger-ui-dist",
+  "version": "5.32.8-depup.9",
+  "main": "index.js",
+  "repository": "git@github.com:swagger-api/swagger-ui.git",
+  "contributors": [
+    "(in alphabetical order)",
+    "Anna Bodnia <anna.bodnia@gmail.com>",
+    "Buu Nguyen <buunguyen@gmail.com>",
+    "Josh Ponelat <jponelat@gmail.com>",
+    "Kyle Shockey <kyleshockey1@gmail.com>",
+    "Robert Barnwell <robert@robertismy.name>",
+    "Sahar Jafari <shr.jafari@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@scarf/scarf": "=1.4.0"
+  },
+  "devDependencies": {},
+  "description": "swagger-ui-dist with all dependencies updated to latest",
+  "keywords": [
+    "swagger-ui-dist",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "swagger-ui-dist",
+    "originalVersion": "5.32.8",
+    "processedAt": "2026-07-03T00:47:06.602Z",
+    "smokeTest": "passed"
+  }
+}

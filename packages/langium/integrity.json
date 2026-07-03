@@ -280,5 +280,24 @@
       "timestamp": "2026-07-02T00:44:06.772Z",
       "version": "4.3.0-depup.19"
     }
+  },
+  "4.3.1": {
+    "0": {
+      "changes": {
+        "vscode-languageserver": {
+          "from": "~10.0.1",
+          "to": "^10.1.0"
+        },
+        "vscode-languageserver-protocol": {
+          "from": "~3.18.1",
+          "to": "^3.18.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:40:23.046Z",
+      "version": "4.3.1-depup.0"
+    }
   }
 }

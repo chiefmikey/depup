@@ -12,7 +12,7 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.47 | **Updated**: 7/2/2026 | **Import test**: failed
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.48 | **Updated**: 7/3/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | deepmerge | `^4.2.2` | `^4.3.1` |
 | default-browser-id | `^2.0.0` | `^5.0.1` |
 | detect-port | `^1.3.0` | `^2.1.0` |
-| es-module-lexer | `^0.3.24` | `^2.2.0` |
+| es-module-lexer | `^0.3.24` | `^2.3.0` |
 | esbuild | `~0.9.0` | `^0.28.1` |
 | estree-walker | `^2.0.2` | `^3.0.3` |
 | execa | `^5.1.1` | `^9.6.1` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | open | `^8.2.1` | `^11.0.0` |
 | pacote | `^11.3.4` | `^22.0.0` |
 | periscopic | `^2.0.3` | `^4.0.3` |
-| picomatch | `^2.3.0` | `^4.0.4` |
+| picomatch | `^2.3.0` | `^4.0.5` |
 | postcss | `^8.3.5` | `^8.5.16` |
 | postcss-modules | `^4.0.0` | `^9.0.0` |
 | resolve | `^1.20.0` | `^1.22.12` |

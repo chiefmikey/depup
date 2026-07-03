@@ -1,0 +1,74 @@
+{
+  "name": "@depup/better-auth__telemetry",
+  "version": "1.6.23-depup.3",
+  "description": "Telemetry package for Better Auth (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/telemetry"
+  },
+  "keywords": [
+    "@better-auth/telemetry",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "telemetry",
+    "typescript",
+    "better-auth"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "dev-source": "./src/index.ts",
+      "types": "./dist/index.d.mts",
+      "node": "./dist/node.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "index": [
+        "dist/index.d.mts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "tsdown": "0.21.1",
+    "type-fest": "^5.4.4",
+    "@better-auth/core": "1.6.23"
+  },
+  "peerDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "@better-fetch/fetch": "1.3.1",
+    "@better-auth/core": "^1.6.23"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint:package": "publint run --strict --pack false",
+    "lint:types": "attw --profile esm-only --pack .",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@better-auth/telemetry",
+    "originalVersion": "1.6.23",
+    "processedAt": "2026-07-03T00:27:03.559Z",
+    "smokeTest": "failed"
+  }
+}

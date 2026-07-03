@@ -12,7 +12,7 @@ npm install @depup/rollup__pluginutils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.46 | **Updated**: 7/2/2026 | **Import test**: passed
+**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.47 | **Updated**: 7/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/estree | `^1.0.0` | `^1.0.9` |
 | estree-walker | `^2.0.2` | `^3.0.3` |
-| picomatch | `^4.0.2` | `^4.0.4` |
+| picomatch | `^4.0.2` | `^4.0.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/rollup__pluginutils&labels=bug).

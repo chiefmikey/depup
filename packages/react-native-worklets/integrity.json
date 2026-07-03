@@ -586,6 +586,59 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:47:56.927Z",
       "version": "0.10.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/plugin-transform-arrow-functions": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-class-properties": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-classes": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-nullish-coalescing-operator": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-optional-chaining": {
+          "from": "^7.28.6",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-shorthand-properties": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-template-literals": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-transform-unicode-regex": {
+          "from": "^7.27.1",
+          "to": "^8.0.1"
+        },
+        "@babel/preset-typescript": {
+          "from": "^7.28.5",
+          "to": "^8.0.1"
+        },
+        "@babel/types": {
+          "from": "^7.27.1",
+          "to": "^8.0.0"
+        },
+        "semver": {
+          "from": "^7.7.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:43:58.697Z",
+      "version": "0.10.1-depup.1"
     }
   }
 }

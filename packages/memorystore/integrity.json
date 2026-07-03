@@ -36,23 +36,6 @@
     }
   },
   "1.6.8": {
-    "38": {
-      "changes": {
-        "debug": {
-          "from": "^4.3.0",
-          "to": "^4.4.3"
-        },
-        "lru-cache": {
-          "from": "^4.0.3",
-          "to": "^11.5.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-28T00:46:33.576Z",
-      "version": "1.6.8-depup.38"
-    },
     "39": {
       "changes": {
         "debug": {
@@ -120,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:44:44.727Z",
       "version": "1.6.8-depup.42"
+    },
+    "43": {
+      "changes": {
+        "debug": {
+          "from": "^4.3.0",
+          "to": "^4.4.3"
+        },
+        "lru-cache": {
+          "from": "^4.0.3",
+          "to": "^11.5.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:40:54.046Z",
+      "version": "1.6.8-depup.43"
     }
   }
 }
