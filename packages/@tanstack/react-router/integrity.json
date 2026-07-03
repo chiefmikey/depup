@@ -1038,6 +1038,23 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:35:22.605Z",
       "version": "1.170.17-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@tanstack/react-store": {
+          "from": "^0.9.3",
+          "to": "^0.11.0"
+        },
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.1.44"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:31:03.953Z",
+      "version": "1.170.17-depup.1"
     }
   }
 }

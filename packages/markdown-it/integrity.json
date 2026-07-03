@@ -97,6 +97,19 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:44:15.499Z",
       "version": "14.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:39:19.453Z",
+      "version": "14.3.0-depup.1"
     }
   }
 }

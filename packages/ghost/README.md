@@ -12,21 +12,19 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.49.0 | **DepUp version**: 6.49.0-depup.5 | **Updated**: 7/2/2026 | **Import test**: failed
+**Original version**: 6.50.0 | **DepUp version**: 6.50.0-depup.0 | **Updated**: 7/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1068.0` | `^3.1078.0` |
+| @aws-sdk/client-s3 | `3.1075.0` | `^3.1079.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
-| @faker-js/faker | `10.4.0` | `^10.5.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.63.0` |
 | @slack/webhook | `7.0.9` | `^7.1.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.1` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.1` |
-| @tryghost/database-info | `0.3.35` | `^2.3.1` |
 | @tryghost/debug | `2.2.3` | `^2.3.1` |
 | @tryghost/domain-events | `3.2.5` | `^3.3.1` |
 | @tryghost/email-mock-receiver | `2.1.0` | `^2.3.1` |
@@ -55,28 +53,28 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `21.3.4` | `^22.0.1` |
 | fs-extra | `11.3.5` | `^11.3.6` |
-| got | `13.0.0` | `^15.0.7` |
+| got | `13.0.0` | `^15.1.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | html5parser | `2.0.2` | `^3.0.0` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.9` |
-| js-yaml | `4.2.0` | `^5.2.0` |
+| js-yaml | `4.2.0` | `^5.2.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.3.0` |
-| knex-migrator | `5.3.2` | `^6.0.0` |
+| knex-migrator | `5.4.1` | `^6.0.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.2.0` |
-| metascraper | `5.45.15` | `^5.51.1` |
-| metascraper-amazon | `5.45.10` | `^5.51.2` |
-| metascraper-author | `5.45.10` | `^5.51.1` |
-| metascraper-description | `5.45.10` | `^5.51.1` |
-| metascraper-image | `5.45.10` | `^5.51.1` |
-| metascraper-logo | `5.45.10` | `^5.51.1` |
-| metascraper-logo-favicon | `5.42.0` | `^5.51.1` |
-| metascraper-publisher | `5.45.10` | `^5.51.1` |
-| metascraper-title | `5.45.10` | `^5.51.1` |
-| metascraper-url | `5.45.10` | `^5.51.1` |
+| metascraper | `5.50.6` | `^5.51.1` |
+| metascraper-amazon | `5.50.6` | `^5.51.2` |
+| metascraper-author | `5.50.6` | `^5.51.1` |
+| metascraper-description | `5.50.6` | `^5.51.1` |
+| metascraper-image | `5.50.6` | `^5.51.1` |
+| metascraper-logo | `5.50.6` | `^5.51.1` |
+| metascraper-logo-favicon | `5.50.6` | `^5.51.1` |
+| metascraper-publisher | `5.50.6` | `^5.51.1` |
+| metascraper-title | `5.50.6` | `^5.51.1` |
+| metascraper-url | `5.50.6` | `^5.51.1` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.2` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
@@ -87,6 +85,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | sharp | `0.35.2` | `^0.35.3` |
 | stripe | `8.222.0` | `^22.3.0` |
 | superagent | `5.3.1` | `^10.3.0` |
+| tldts | `7.4.4` | `^7.4.6` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
 
 

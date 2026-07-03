@@ -1412,6 +1412,35 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:34:32.889Z",
       "version": "2.36.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "@redocly/config": {
+          "from": "^0.49.1",
+          "to": "^0.50.0"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.2.1"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:30:18.110Z",
+      "version": "2.36.0-depup.2"
     }
   }
 }

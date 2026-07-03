@@ -1,0 +1,115 @@
+{
+  "name": "@depup/rollup__plugin-babel",
+  "version": "7.1.0-depup.45",
+  "description": "Seamless integration between Rollup and Babel. (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "url": "rollup/plugins",
+    "directory": "packages/babel"
+  },
+  "author": "Rich Harris",
+  "homepage": "https://github.com/rollup/plugins/tree/master/packages/babel#readme",
+  "bugs": "https://github.com/rollup/plugins/issues",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/es/index.js",
+    "default": "./dist/cjs/index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "types",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "keywords": [
+    "@rollup/plugin-babel",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "babel",
+    "es2015",
+    "es6"
+  ],
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "@types/babel__core": "^7.1.9",
+    "rollup": "^2.0.0||^3.0.0||^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "rollup": {
+      "optional": true
+    },
+    "@types/babel__core": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@babel/helper-module-imports": "^8.0.0",
+    "@rollup/pluginutils": "^5.4.0",
+    "workerpool": "^10.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/plugin-external-helpers": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.19.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@rollup/plugin-json": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@types/babel__core": "^7.1.9",
+    "rollup": "^4.0.0-24",
+    "source-map": "^0.7.4"
+  },
+  "types": "./types/index.d.ts",
+  "contributors": [
+    "Bogdan Chadkin <trysound@yandex.ru>",
+    "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "ci:coverage": "nyc pnpm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "ci:lint": "pnpm build && pnpm lint",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "pnpm test -- --reporter=verbose",
+    "prebuild": "del-cli dist",
+    "prerelease": "pnpm build",
+    "pretest": "pnpm build",
+    "release": "pnpm --workspace-root package:release $(pwd)",
+    "test": "vitest --config ../../.config/vitest.config.mts run",
+    "test:ts": "tsc types/index.d.ts test/types.ts --noEmit"
+  },
+  "depup": {
+    "changes": {
+      "@babel/helper-module-imports": {
+        "from": "^7.18.6",
+        "to": "^8.0.0"
+      },
+      "@rollup/pluginutils": {
+        "from": "^5.0.1",
+        "to": "^5.4.0"
+      },
+      "workerpool": {
+        "from": "^9.0.0",
+        "to": "^10.0.3"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@rollup/plugin-babel",
+    "originalVersion": "7.1.0",
+    "processedAt": "2026-07-03T00:30:24.412Z",
+    "smokeTest": "passed"
+  }
+}
