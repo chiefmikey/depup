@@ -361,6 +361,19 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:29:50.520Z",
       "version": "22.0.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "picomatch": {
+          "from": "4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:25:52.958Z",
+      "version": "22.0.5-depup.1"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/cipher-base
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.7 | **DepUp version**: 1.0.7-depup.39 | **Updated**: 7/2/2026 | **Import test**: passed
+**Original version**: 1.0.7 | **DepUp version**: 1.0.7-depup.40 | **Updated**: 7/3/2026 | **Import test**: passed
 
 ## What changed
 

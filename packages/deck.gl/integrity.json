@@ -320,5 +320,24 @@
       "timestamp": "2026-07-02T00:41:49.234Z",
       "version": "9.3.5-depup.6"
     }
+  },
+  "9.3.6": {
+    "0": {
+      "changes": {
+        "@luma.gl/core": {
+          "from": "^9.3.3",
+          "to": "^9.3.5"
+        },
+        "@luma.gl/engine": {
+          "from": "^9.3.3",
+          "to": "^9.3.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:37:53.026Z",
+      "version": "9.3.6-depup.0"
+    }
   }
 }

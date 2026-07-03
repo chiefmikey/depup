@@ -1,0 +1,67 @@
+{
+  "name": "@depup/aws-sdk__middleware-recursion-detection",
+  "version": "3.972.29-depup.0",
+  "scripts": {
+    "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+    "build:cjs": "node ../../scripts/compilation/inline",
+    "build:es": "premove dist-es && tsc -p tsconfig.es.json",
+    "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+    "build:types": "premove dist-types && tsc -p tsconfig.types.json",
+    "clean": "premove dist-cjs dist-es dist-types"
+  },
+  "main": "./dist-cjs/index.js",
+  "module": "./dist-es/index.js",
+  "types": "./dist-types/index.d.ts",
+  "sideEffects": false,
+  "author": {
+    "name": "AWS SDK for JavaScript Team",
+    "url": "https://aws.amazon.com/sdk-for-javascript/"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-sdk/core": "^3.974.27",
+    "tslib": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/main/packages-internal/middleware-recursion-detection",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws/aws-sdk-js-v3.git",
+    "directory": "packages-internal/middleware-recursion-detection"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.1",
+    "concurrently": "7.0.0",
+    "premove": "4.0.0",
+    "typescript": "~5.8.3"
+  },
+  "description": "@aws-sdk/middleware-recursion-detection with all dependencies updated to latest",
+  "keywords": [
+    "@aws-sdk/middleware-recursion-detection",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.6.2",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@aws-sdk/middleware-recursion-detection",
+    "originalVersion": "3.972.29",
+    "processedAt": "2026-07-03T00:26:32.004Z",
+    "smokeTest": "passed"
+  }
+}

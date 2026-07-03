@@ -21,27 +21,6 @@
     }
   },
   "0.7.5": {
-    "34": {
-      "changes": {
-        "http-parser-js": {
-          "from": ">=0.5.1",
-          "to": "^0.5.10"
-        },
-        "safe-buffer": {
-          "from": ">=5.1.0",
-          "to": "^5.2.1"
-        },
-        "websocket-extensions": {
-          "from": ">=0.1.1",
-          "to": "^0.1.4"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-28T00:50:14.762Z",
-      "version": "0.7.5-depup.34"
-    },
     "35": {
       "changes": {
         "http-parser-js": {
@@ -125,6 +104,27 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:56:46.229Z",
       "version": "0.7.5-depup.38"
+    },
+    "39": {
+      "changes": {
+        "http-parser-js": {
+          "from": ">=0.5.1",
+          "to": "^0.5.10"
+        },
+        "safe-buffer": {
+          "from": ">=5.1.0",
+          "to": "^5.2.1"
+        },
+        "websocket-extensions": {
+          "from": ">=0.1.1",
+          "to": "^0.1.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:53:46.144Z",
+      "version": "0.7.5-depup.39"
     }
   }
 }

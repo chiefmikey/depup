@@ -36,19 +36,6 @@
     }
   },
   "8.0.0": {
-    "8": {
-      "changes": {
-        "graceful-fs": {
-          "from": "^4.1.11",
-          "to": "^4.2.11"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-28T00:41:02.085Z",
-      "version": "8.0.0-depup.8"
-    },
     "9": {
       "changes": {
         "graceful-fs": {
@@ -100,6 +87,19 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:47:02.145Z",
       "version": "8.0.0-depup.12"
+    },
+    "13": {
+      "changes": {
+        "graceful-fs": {
+          "from": "^4.1.11",
+          "to": "^4.2.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:42:57.910Z",
+      "version": "8.0.0-depup.13"
     }
   }
 }

@@ -142,23 +142,6 @@
     }
   },
   "3.972.8": {
-    "13": {
-      "changes": {
-        "mnemonist": {
-          "from": "0.38.3",
-          "to": "^0.40.4"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-28T00:28:49.418Z",
-      "version": "3.972.8-depup.13"
-    },
     "14": {
       "changes": {
         "mnemonist": {
@@ -226,6 +209,23 @@
       "status": "failed",
       "timestamp": "2026-07-02T00:30:39.894Z",
       "version": "3.972.8-depup.17"
+    },
+    "18": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-03T00:26:33.516Z",
+      "version": "3.972.8-depup.18"
     }
   }
 }
