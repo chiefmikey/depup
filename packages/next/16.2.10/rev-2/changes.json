@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@swc/helpers": {
+      "from": "0.5.15",
+      "to": "^0.5.23"
+    },
+    "baseline-browser-mapping": {
+      "from": "^2.9.19",
+      "to": "^2.10.41"
+    },
+    "caniuse-lite": {
+      "from": "^1.0.30001579",
+      "to": "^1.0.30001800"
+    },
+    "postcss": {
+      "from": "8.4.31",
+      "to": "^8.5.16"
+    },
+    "styled-jsx": {
+      "from": "5.1.6",
+      "to": "^5.1.7"
+    }
+  },
+  "timestamp": "2026-07-04T00:42:53.296Z",
+  "totalUpdated": 5
+}

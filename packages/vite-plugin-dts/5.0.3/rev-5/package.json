@@ -1,0 +1,88 @@
+{
+  "name": "@depup/vite-plugin-dts",
+  "version": "5.0.3-depup.5",
+  "type": "module",
+  "license": "MIT",
+  "author": "qmhc",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "default": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "vite-plugin-dts",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "vite-plugin",
+    "ts",
+    "dts",
+    "typescript",
+    "vue",
+    "tsc",
+    "vue-tsc",
+    "volar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qmhc/unplugin-dts.git",
+    "directory": "packages/vite-plugin-dts"
+  },
+  "bugs": {
+    "url": "https://github.com/qmhc/unplugin-dts/issues"
+  },
+  "dependencies": {
+    "unplugin-dts": "1.0.3"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.57.0"
+  },
+  "peerDependencies": {
+    "@microsoft/api-extractor": ">=7",
+    "rollup": ">=3",
+    "vite": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "@microsoft/api-extractor": {
+      "optional": true
+    },
+    "rollup": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path ."
+  },
+  "description": "vite-plugin-dts with all dependencies updated to latest",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "vite-plugin-dts",
+    "originalVersion": "5.0.3",
+    "processedAt": "2026-07-04T00:48:36.476Z",
+    "smokeTest": "passed"
+  }
+}

@@ -240,6 +240,19 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:48:56.299Z",
       "version": "4.5.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:45:52.745Z",
+      "version": "4.5.1-depup.1"
     }
   }
 }

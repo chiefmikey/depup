@@ -581,6 +581,14 @@
       "status": "skipped",
       "timestamp": "2026-07-03T00:27:26.502Z",
       "version": "7.5.12-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-07-04T00:26:26.928Z",
+      "version": "7.5.12-depup.2"
     }
   }
 }

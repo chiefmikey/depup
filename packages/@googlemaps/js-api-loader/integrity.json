@@ -106,19 +106,6 @@
     }
   },
   "2.1.1": {
-    "37": {
-      "changes": {
-        "@types/google.maps": {
-          "from": "^3.53.1",
-          "to": "^3.65.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-29T00:32:59.669Z",
-      "version": "2.1.1-depup.37"
-    },
     "38": {
       "changes": {
         "@types/google.maps": {
@@ -170,6 +157,19 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:29:43.216Z",
       "version": "2.1.1-depup.41"
+    },
+    "42": {
+      "changes": {
+        "@types/google.maps": {
+          "from": "^3.53.1",
+          "to": "^3.65.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:28:41.145Z",
+      "version": "2.1.1-depup.42"
     }
   }
 }

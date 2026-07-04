@@ -12,7 +12,7 @@ npm install @depup/peculiar__asn1-x509-attr
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.8.0 | **DepUp version**: 2.8.0-depup.30 | **Updated**: 7/3/2026 | **Import test**: passed
+**Original version**: 2.8.0 | **DepUp version**: 2.8.0-depup.31 | **Updated**: 7/4/2026 | **Import test**: passed
 
 ## What changed
 
