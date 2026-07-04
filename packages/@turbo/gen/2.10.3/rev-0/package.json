@@ -1,0 +1,78 @@
+{
+  "name": "@depup/turbo__gen",
+  "version": "2.10.3-depup.0",
+  "description": "Extend a Turborepo (with updated dependencies)",
+  "homepage": "https://turborepo.dev",
+  "bugs": {
+    "url": "https://github.com/vercel/turborepo/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vercel/turborepo.git",
+    "directory": "packages/turbo-gen"
+  },
+  "bin": "dist/cli.js",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "dist/types.d.ts",
+  "dependencies": {
+    "@inquirer/prompts": "^8.5.2",
+    "esbuild": "^0.28.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
+    "@jest/globals": "30.3.0",
+    "@types/fs-extra": "9.0.13",
+    "@types/node": "18.17.4",
+    "@types/validate-npm-package-name": "4.0.0",
+    "brace-expansion": "5.0.5",
+    "commander": "10.0.0",
+    "fs-extra": "10.1.0",
+    "handlebars": "4.7.9",
+    "jest": "30.3.0",
+    "minimatch": "9.0.7",
+    "node-plop": "0.32.3",
+    "picocolors": "1.0.1",
+    "proxy-agent": "8.0.1",
+    "tsdown": "0.12.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.1",
+    "typescript-7": "npm:typescript@7.0.1-rc",
+    "update-check": "1.5.4",
+    "validate-npm-package-name": "5.0.0",
+    "@turbo/test-utils": "0.0.0",
+    "@turbo/tsconfig": "0.0.0",
+    "@turbo/utils": "0.0.0",
+    "@turbo/workspaces": "2.10.3"
+  },
+  "scripts": {
+    "build": "tsdown && tsc -p tsconfig.build.json",
+    "build:embed": "node scripts/embed-templates.mjs",
+    "test": "jest",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [
+    "@turbo/gen",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@inquirer/prompts": {
+        "from": "^7.10.1",
+        "to": "^8.5.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@turbo/gen",
+    "originalVersion": "2.10.3",
+    "processedAt": "2026-07-04T00:31:12.601Z",
+    "smokeTest": "failed"
+  }
+}

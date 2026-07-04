@@ -1,0 +1,169 @@
+{
+  "name": "@depup/temporal-polyfill",
+  "version": "1.0.1-depup.15",
+  "title": "Temporal Polyfill",
+  "description": "A lightweight polyfill for Temporal, successor to the JavaScript Date object (with updated dependencies)",
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@users.noreply.github.com",
+    "url": "http://arshaw.com/"
+  },
+  "license": "MIT",
+  "copyright": "2026 Adam Shaw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/temporal-polyfill.git",
+    "directory": "polyfill"
+  },
+  "type": "module",
+  "dependencies": {
+    "temporal-spec": "1.0.0",
+    "temporal-utils": "1.0.1"
+  },
+  "types": "./index.d.ts",
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./global": {
+      "import": {
+        "types": "./global.d.ts",
+        "default": "./global.esm.js"
+      }
+    },
+    "./shim": {
+      "import": {
+        "types": "./shim.d.ts",
+        "default": "./shim.js"
+      }
+    },
+    "./implementation": {
+      "import": {
+        "types": "./implementation.d.ts",
+        "default": "./implementation.js"
+      }
+    },
+    "./full": {
+      "import": {
+        "types": "./full/index.d.ts",
+        "default": "./full/index.js"
+      }
+    },
+    "./full/global": {
+      "import": {
+        "types": "./full/global.d.ts",
+        "default": "./full/global.esm.js"
+      }
+    },
+    "./full/shim": {
+      "import": {
+        "types": "./full/shim.d.ts",
+        "default": "./full/shim.js"
+      }
+    },
+    "./full/implementation": {
+      "import": {
+        "types": "./full/implementation.d.ts",
+        "default": "./full/implementation.js"
+      }
+    },
+    "./types/global": {
+      "import": {
+        "types": "./types/global.d.ts",
+        "default": "./types/global.js"
+      }
+    },
+    "./fns": {
+      "import": {
+        "types": "./fns/index.d.ts",
+        "default": "./fns/index.js"
+      }
+    },
+    "./fns/Calendar": {
+      "import": {
+        "types": "./fns/Calendar.d.ts",
+        "default": "./fns/Calendar.js"
+      }
+    },
+    "./fns/Instant": {
+      "import": {
+        "types": "./fns/Instant.d.ts",
+        "default": "./fns/Instant.js"
+      }
+    },
+    "./fns/ZonedDateTime": {
+      "import": {
+        "types": "./fns/ZonedDateTime.d.ts",
+        "default": "./fns/ZonedDateTime.js"
+      }
+    },
+    "./fns/PlainDateTime": {
+      "import": {
+        "types": "./fns/PlainDateTime.d.ts",
+        "default": "./fns/PlainDateTime.js"
+      }
+    },
+    "./fns/PlainDate": {
+      "import": {
+        "types": "./fns/PlainDate.d.ts",
+        "default": "./fns/PlainDate.js"
+      }
+    },
+    "./fns/PlainTime": {
+      "import": {
+        "types": "./fns/PlainTime.d.ts",
+        "default": "./fns/PlainTime.js"
+      }
+    },
+    "./fns/PlainYearMonth": {
+      "import": {
+        "types": "./fns/PlainYearMonth.d.ts",
+        "default": "./fns/PlainYearMonth.js"
+      }
+    },
+    "./fns/PlainMonthDay": {
+      "import": {
+        "types": "./fns/PlainMonthDay.d.ts",
+        "default": "./fns/PlainMonthDay.js"
+      }
+    },
+    "./fns/Duration": {
+      "import": {
+        "types": "./fns/Duration.d.ts",
+        "default": "./fns/Duration.js"
+      }
+    },
+    "./fns/Now": {
+      "import": {
+        "types": "./fns/Now.d.ts",
+        "default": "./fns/Now.js"
+      }
+    }
+  },
+  "sideEffects": [
+    "./global.js",
+    "./global.esm.js",
+    "./full/global.js",
+    "./full/global.esm.js"
+  ],
+  "keywords": [
+    "temporal-polyfill",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "temporal-polyfill",
+    "originalVersion": "1.0.1",
+    "processedAt": "2026-07-04T00:46:46.504Z",
+    "smokeTest": "passed"
+  }
+}

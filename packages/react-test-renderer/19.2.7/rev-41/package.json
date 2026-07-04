@@ -1,0 +1,50 @@
+{
+  "name": "@depup/react-test-renderer",
+  "version": "19.2.7-depup.41",
+  "description": "React package for snapshot testing. (with updated dependencies)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/react.git",
+    "directory": "packages/react-test-renderer"
+  },
+  "keywords": [
+    "react-test-renderer",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "react-native",
+    "react-testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facebook/react/issues"
+  },
+  "homepage": "https://react.dev/",
+  "dependencies": {
+    "react-is": "^19.2.7",
+    "scheduler": "^0.27.0"
+  },
+  "peerDependencies": {
+    "react": "^19.2.7"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "shallow.js",
+    "cjs/",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-test-renderer",
+    "originalVersion": "19.2.7",
+    "processedAt": "2026-07-04T00:43:53.644Z",
+    "smokeTest": "passed"
+  }
+}

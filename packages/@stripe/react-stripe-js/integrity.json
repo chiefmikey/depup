@@ -195,6 +195,19 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:31:30.626Z",
       "version": "6.7.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "prop-types": {
+          "from": "^15.7.2",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:30:41.526Z",
+      "version": "6.7.0-depup.2"
     }
   }
 }

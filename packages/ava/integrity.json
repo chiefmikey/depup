@@ -202,31 +202,6 @@
     }
   },
   "8.0.1": {
-    "38": {
-      "changes": {
-        "@vercel/nft": {
-          "from": "^1.5.0",
-          "to": "^1.10.2"
-        },
-        "acorn": {
-          "from": "^8.16.0",
-          "to": "^8.17.0"
-        },
-        "cli-truncate": {
-          "from": "^6.0.0",
-          "to": "^6.1.0"
-        },
-        "write-file-atomic": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-29T00:36:52.598Z",
-      "version": "8.0.1-depup.38"
-    },
     "39": {
       "changes": {
         "@vercel/nft": {
@@ -346,6 +321,39 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:33:18.987Z",
       "version": "8.0.1-depup.42"
+    },
+    "43": {
+      "changes": {
+        "@vercel/nft": {
+          "from": "^1.5.0",
+          "to": "^1.10.2"
+        },
+        "acorn": {
+          "from": "^8.16.0",
+          "to": "^8.17.0"
+        },
+        "cli-truncate": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        },
+        "p-map": {
+          "from": "^7.0.4",
+          "to": "^7.0.5"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        },
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:32:25.656Z",
+      "version": "8.0.1-depup.43"
     }
   }
 }
