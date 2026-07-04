@@ -269,35 +269,6 @@
     }
   },
   "0.86.0": {
-    "36": {
-      "changes": {
-        "debug": {
-          "from": "^4.4.0",
-          "to": "^4.4.3"
-        },
-        "metro": {
-          "from": "^0.84.3",
-          "to": "^0.85.0"
-        },
-        "metro-config": {
-          "from": "^0.84.3",
-          "to": "^0.85.0"
-        },
-        "metro-core": {
-          "from": "^0.84.3",
-          "to": "^0.85.0"
-        },
-        "semver": {
-          "from": "^7.1.3",
-          "to": "^7.8.5"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-29T00:33:50.030Z",
-      "version": "0.86.0-depup.36"
-    },
     "37": {
       "changes": {
         "debug": {
@@ -413,6 +384,35 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:30:01.050Z",
       "version": "0.86.0-depup.40"
+    },
+    "41": {
+      "changes": {
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "metro": {
+          "from": "^0.84.3",
+          "to": "^0.85.0"
+        },
+        "metro-config": {
+          "from": "^0.84.3",
+          "to": "^0.85.0"
+        },
+        "metro-core": {
+          "from": "^0.84.3",
+          "to": "^0.85.0"
+        },
+        "semver": {
+          "from": "^7.1.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:29:16.419Z",
+      "version": "0.86.0-depup.41"
     }
   }
 }

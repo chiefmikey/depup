@@ -12,14 +12,14 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.6 | **DepUp version**: 7.0.6-depup.0 | **Updated**: 7/3/2026 | **Import test**: failed
+**Original version**: 7.0.6 | **DepUp version**: 7.0.6-depup.1 | **Updated**: 7/4/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @capsizecss/unpack | `^4.0.0` | `^4.0.1` |
-| @clack/prompts | `^1.1.0` | `^1.6.0` |
+| @clack/prompts | `^1.1.0` | `^1.7.0` |
 | @rollup/pluginutils | `^5.3.0` | `^5.4.0` |
 | am-i-vibing | `^0.4.0` | `^0.5.0` |
 | cookie | `^1.1.1` | `^2.0.1` |
@@ -30,11 +30,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | magicast | `^0.5.2` | `^0.5.3` |
 | neotraverse | `^0.6.18` | `^1.0.1` |
 | obug | `^2.1.1` | `^2.1.3` |
-| p-queue | `^9.1.0` | `^9.3.0` |
+| p-queue | `^9.1.0` | `^9.3.1` |
 | package-manager-detector | `^1.6.0` | `^1.7.0` |
 | picomatch | `^4.0.4` | `^4.0.5` |
 | semver | `^7.7.4` | `^7.8.5` |
-| shiki | `^4.0.2` | `^4.3.0` |
+| shiki | `^4.0.2` | `^4.3.1` |
 | smol-toml | `^1.6.0` | `^1.7.0` |
 | tinyclip | `^0.1.12` | `^0.1.15` |
 | tinyexec | `^1.0.4` | `^1.2.4` |

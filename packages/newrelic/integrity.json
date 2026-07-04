@@ -2179,75 +2179,6 @@
     }
   },
   "14.1.2": {
-    "3": {
-      "changes": {
-        "@apm-js-collab/tracing-hooks": {
-          "from": "^0.9.1",
-          "to": "^0.10.0"
-        },
-        "@grpc/grpc-js": {
-          "from": "^1.13.2",
-          "to": "^1.14.4"
-        },
-        "@newrelic/security-agent": {
-          "from": "^3.0.0",
-          "to": "^3.0.4"
-        },
-        "@opentelemetry/api": {
-          "from": "^1.9.0",
-          "to": "^1.9.1"
-        },
-        "@opentelemetry/core": {
-          "from": "^2.0.0",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/resources": {
-          "from": "^2.0.1",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/sdk-metrics": {
-          "from": "^2.0.1",
-          "to": "^2.8.0"
-        },
-        "@opentelemetry/sdk-trace-base": {
-          "from": "^2.0.0",
-          "to": "^2.8.0"
-        },
-        "@tyriar/fibonacci-heap": {
-          "from": "^2.0.7",
-          "to": "^2.0.9"
-        },
-        "https-proxy-agent": {
-          "from": "^9.0.0",
-          "to": "^9.1.0"
-        },
-        "import-in-the-middle": {
-          "from": "^3.0.1",
-          "to": "^3.2.0"
-        },
-        "json-stringify-safe": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "module-details-from-path": {
-          "from": "^1.0.3",
-          "to": "^1.0.4"
-        },
-        "semver": {
-          "from": "^7.5.2",
-          "to": "^7.8.5"
-        },
-        "winston-transport": {
-          "from": "^4.5.0",
-          "to": "^4.9.0"
-        }
-      },
-      "depsUpdated": 15,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-29T00:45:12.437Z",
-      "version": "14.1.2-depup.3"
-    },
     "4": {
       "changes": {
         "@apm-js-collab/tracing-hooks": {
@@ -2543,6 +2474,95 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:40:22.939Z",
       "version": "14.1.2-depup.7"
+    },
+    "8": {
+      "changes": {
+        "@apm-js-collab/tracing-hooks": {
+          "from": "^0.9.1",
+          "to": "^0.11.0"
+        },
+        "@grpc/grpc-js": {
+          "from": "^1.13.2",
+          "to": "^1.14.4"
+        },
+        "@newrelic/security-agent": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/api-logs": {
+          "from": "^0.219.0",
+          "to": "^0.220.0"
+        },
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.9.0"
+        },
+        "@opentelemetry/exporter-metrics-otlp-http": {
+          "from": "^0.219.0",
+          "to": "^0.220.0"
+        },
+        "@opentelemetry/otlp-exporter-base": {
+          "from": "^0.219.0",
+          "to": "^0.220.0"
+        },
+        "@opentelemetry/otlp-transformer": {
+          "from": "^0.219.0",
+          "to": "^0.220.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.0.1",
+          "to": "^2.9.0"
+        },
+        "@opentelemetry/sdk-logs": {
+          "from": "^0.219.0",
+          "to": "^0.220.0"
+        },
+        "@opentelemetry/sdk-metrics": {
+          "from": "^2.0.1",
+          "to": "^2.9.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.0.0",
+          "to": "^2.9.0"
+        },
+        "@tyriar/fibonacci-heap": {
+          "from": "^2.0.7",
+          "to": "^2.0.9"
+        },
+        "https-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.1",
+          "to": "^3.3.0"
+        },
+        "json-stringify-safe": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "module-details-from-path": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "semver": {
+          "from": "^7.5.2",
+          "to": "^7.8.5"
+        },
+        "winston-transport": {
+          "from": "^4.5.0",
+          "to": "^4.9.0"
+        }
+      },
+      "depsUpdated": 20,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:40:01.885Z",
+      "version": "14.1.2-depup.8"
     }
   }
 }

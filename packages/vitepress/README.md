@@ -12,7 +12,7 @@ npm install @depup/vitepress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.45 | **Updated**: 7/3/2026 | **Import test**: failed
+**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.46 | **Updated**: 7/4/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,9 +21,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @docsearch/css | `3.8.2` | `^4.6.3` |
 | @docsearch/js | `3.8.2` | `^4.6.3` |
 | @iconify-json/simple-icons | `^1.2.21` | `^1.2.88` |
-| @shikijs/core | `^2.1.0` | `^4.3.0` |
-| @shikijs/transformers | `^2.1.0` | `^4.3.0` |
-| @shikijs/types | `^2.1.0` | `^4.3.0` |
+| @shikijs/core | `^2.1.0` | `^4.3.1` |
+| @shikijs/transformers | `^2.1.0` | `^4.3.1` |
+| @shikijs/types | `^2.1.0` | `^4.3.1` |
 | @vitejs/plugin-vue | `^5.2.1` | `^6.0.7` |
 | @vue/devtools-api | `^7.7.0` | `^8.1.5` |
 | @vue/shared | `^3.5.13` | `^3.5.39` |
@@ -31,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @vueuse/integrations | `^12.4.0` | `^14.3.0` |
 | focus-trap | `^7.6.4` | `^8.2.2` |
 | minisearch | `^7.1.1` | `^7.2.0` |
-| shiki | `^2.1.0` | `^4.3.0` |
+| shiki | `^2.1.0` | `^4.3.1` |
 | vite | `^5.4.14` | `^8.1.3` |
 | vue | `^3.5.13` | `^3.5.39` |
 

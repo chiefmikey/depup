@@ -568,6 +568,87 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:35:15.807Z",
       "version": "4.17.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@opentelemetry/api": {
+          "from": "^1.4.1",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/core": {
+          "from": "^1.11.0",
+          "to": "^2.9.0"
+        },
+        "@opentelemetry/sdk-metrics": {
+          "from": "^1.12.0",
+          "to": "^2.9.0"
+        },
+        "agentkeepalive": {
+          "from": "^4.2.1",
+          "to": "^4.6.0"
+        },
+        "cookie": {
+          "from": "^0.7.1",
+          "to": "^2.0.1"
+        },
+        "core-util-is": {
+          "from": "^1.0.2",
+          "to": "^1.0.3"
+        },
+        "end-of-stream": {
+          "from": "^1.4.4",
+          "to": "^1.4.5"
+        },
+        "error-stack-parser": {
+          "from": "^2.0.6",
+          "to": "^2.1.4"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "fast-safe-stringify": {
+          "from": "^2.0.7",
+          "to": "^2.1.1"
+        },
+        "import-in-the-middle": {
+          "from": "1.15.0",
+          "to": "^3.3.0"
+        },
+        "lru-cache": {
+          "from": "10.2.0",
+          "to": "^11.5.1"
+        },
+        "measured-reporting": {
+          "from": "^1.51.1",
+          "to": "^2.0.0"
+        },
+        "module-details-from-path": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "pino": {
+          "from": "^8.15.0",
+          "to": "^10.3.1"
+        },
+        "readable-stream": {
+          "from": "^3.6.2",
+          "to": "^4.7.0"
+        },
+        "require-in-the-middle": {
+          "from": "^8.0.0",
+          "to": "^8.0.1"
+        },
+        "semver": {
+          "from": "^7.5.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 18,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:34:33.344Z",
+      "version": "4.17.0-depup.2"
     }
   }
 }

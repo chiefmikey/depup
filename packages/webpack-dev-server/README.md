@@ -12,29 +12,16 @@ npm install @depup/webpack-dev-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.6 | **DepUp version**: 5.2.6-depup.0 | **Updated**: 7/3/2026 | **Import test**: passed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 7/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/express | `^4.17.25` | `^5.0.6` |
-| @types/express-serve-static-core | `^4.17.21` | `^5.1.1` |
-| @types/serve-static | `^1.15.5` | `^2.2.0` |
-| @types/ws | `^8.5.10` | `^8.18.1` |
-| bonjour-service | `^1.2.1` | `^1.4.2` |
-| chokidar | `^3.6.0` | `^5.0.0` |
-| colorette | `^2.0.10` | `^2.0.20` |
-| express | `^4.22.1` | `^5.2.1` |
-| graceful-fs | `^4.2.6` | `^4.2.11` |
-| http-proxy-middleware | `^2.0.9` | `^4.1.1` |
-| ipaddr.js | `^2.1.0` | `^2.4.0` |
-| open | `^10.0.3` | `^11.0.0` |
-| p-retry | `^6.2.0` | `^8.0.0` |
-| schema-utils | `^4.2.0` | `^4.3.3` |
-| serve-index | `^1.9.1` | `^1.9.2` |
-| webpack-dev-middleware | `^7.4.2` | `^8.0.3` |
-| ws | `^8.18.0` | `^8.21.0` |
+| bonjour-service | `^1.3.0` | `^1.4.2` |
+| ipaddr.js | `^2.3.0` | `^2.4.0` |
+| tinyglobby | `^0.2.15` | `^0.2.17` |
+| ws | `^8.20.0` | `^8.21.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-dev-server&labels=bug).

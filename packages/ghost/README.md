@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.50.0 | **DepUp version**: 6.50.0-depup.0 | **Updated**: 7/3/2026 | **Import test**: failed
+**Original version**: 6.51.0 | **DepUp version**: 6.51.0-depup.0 | **Updated**: 7/4/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1075.0` | `^3.1079.0` |
+| @aws-sdk/client-s3 | `3.1076.0` | `^3.1079.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.63.0` |
@@ -52,13 +52,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | file-type | `21.3.4` | `^22.0.1` |
-| fs-extra | `11.3.5` | `^11.3.6` |
 | got | `13.0.0` | `^15.1.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
 | html5parser | `2.0.2` | `^3.0.0` |
+| iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.9` |
-| js-yaml | `4.2.0` | `^5.2.1` |
+| js-yaml | `4.3.0` | `^5.2.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.3.0` |

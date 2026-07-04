@@ -696,5 +696,28 @@
       "timestamp": "2026-07-03T00:30:12.569Z",
       "version": "7.3.5-depup.2"
     }
+  },
+  "7.3.7": {
+    "0": {
+      "changes": {
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "nanoid": {
+          "from": "^3.3.11",
+          "to": "^5.1.16"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:29:28.070Z",
+      "version": "7.3.7-depup.0"
+    }
   }
 }

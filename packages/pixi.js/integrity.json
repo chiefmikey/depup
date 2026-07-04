@@ -132,35 +132,6 @@
     }
   },
   "8.19.0": {
-    "38": {
-      "changes": {
-        "@webgpu/types": {
-          "from": "^0.1.69",
-          "to": "^0.1.71"
-        },
-        "@xmldom/xmldom": {
-          "from": "^0.8.13",
-          "to": "^0.9.10"
-        },
-        "earcut": {
-          "from": "^3.0.2",
-          "to": "^3.1.0"
-        },
-        "eventemitter3": {
-          "from": "^5.0.1",
-          "to": "^5.0.4"
-        },
-        "tiny-lru": {
-          "from": "^11.4.7",
-          "to": "^13.0.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-29T00:46:24.995Z",
-      "version": "8.19.0-depup.38"
-    },
     "39": {
       "changes": {
         "@webgpu/types": {
@@ -276,6 +247,35 @@
       "status": "failed",
       "timestamp": "2026-07-03T00:41:32.994Z",
       "version": "8.19.0-depup.42"
+    },
+    "43": {
+      "changes": {
+        "@webgpu/types": {
+          "from": "^0.1.69",
+          "to": "^0.1.71"
+        },
+        "@xmldom/xmldom": {
+          "from": "^0.8.13",
+          "to": "^0.9.10"
+        },
+        "earcut": {
+          "from": "^3.0.2",
+          "to": "^3.2.3"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-04T00:41:11.212Z",
+      "version": "8.19.0-depup.43"
     }
   }
 }
