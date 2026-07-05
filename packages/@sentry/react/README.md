@@ -12,7 +12,7 @@ npm install @depup/sentry__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.63.0 | **DepUp version**: 10.63.0-depup.2 | **Updated**: 7/4/2026 | **Import test**: failed
+**Original version**: 10.63.0 | **DepUp version**: 10.63.0-depup.3 | **Updated**: 7/5/2026 | **Import test**: failed
 
 ## What changed
 

@@ -555,5 +555,24 @@
       "timestamp": "2026-07-04T00:35:34.097Z",
       "version": "63.0.10-depup.6"
     }
+  },
+  "63.0.11": {
+    "0": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:35:27.633Z",
+      "version": "63.0.11-depup.0"
+    }
   }
 }

@@ -540,6 +540,19 @@
       "status": "failed",
       "timestamp": "2026-07-04T00:25:16.350Z",
       "version": "22.0.5-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.4.2",
+          "to": "^8.5.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:25:16.652Z",
+      "version": "22.0.5-depup.3"
     }
   }
 }
