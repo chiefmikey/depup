@@ -12,7 +12,7 @@ npm install @depup/mdx-js__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.46 | **Updated**: 7/4/2026 | **Import test**: passed
+**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.47 | **Updated**: 7/5/2026 | **Import test**: passed
 
 ## What changed
 

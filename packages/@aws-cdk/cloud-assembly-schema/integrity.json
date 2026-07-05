@@ -572,6 +572,19 @@
       "status": "failed",
       "timestamp": "2026-07-04T00:25:39.059Z",
       "version": "54.8.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "semver": {
+          "from": "^7.8.4",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:25:45.739Z",
+      "version": "54.8.0-depup.3"
     }
   }
 }

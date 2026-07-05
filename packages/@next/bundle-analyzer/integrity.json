@@ -290,6 +290,19 @@
       "status": "failed",
       "timestamp": "2026-07-04T00:28:20.729Z",
       "version": "16.2.10-depup.2"
+    },
+    "3": {
+      "changes": {
+        "webpack-bundle-analyzer": {
+          "from": "4.10.1",
+          "to": "^5.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:28:35.841Z",
+      "version": "16.2.10-depup.3"
     }
   }
 }

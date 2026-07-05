@@ -96,31 +96,6 @@
     }
   },
   "2.27.1": {
-    "40": {
-      "changes": {
-        "@rollup/plugin-commonjs": {
-          "from": "^29.0.1",
-          "to": "^29.0.3"
-        },
-        "esbuild": {
-          "from": "^0.26.0",
-          "to": "^0.28.1"
-        },
-        "rollup": {
-          "from": "^4.53.5",
-          "to": "^4.62.2"
-        },
-        "yaml": {
-          "from": "^2.8.2",
-          "to": "^2.9.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-30T00:45:24.360Z",
-      "version": "2.27.1-depup.40"
-    },
     "41": {
       "changes": {
         "@rollup/plugin-commonjs": {
@@ -220,6 +195,31 @@
       "status": "failed",
       "timestamp": "2026-07-04T00:40:48.595Z",
       "version": "2.27.1-depup.44"
+    },
+    "45": {
+      "changes": {
+        "@rollup/plugin-commonjs": {
+          "from": "^29.0.1",
+          "to": "^29.0.3"
+        },
+        "esbuild": {
+          "from": "^0.26.0",
+          "to": "^0.28.1"
+        },
+        "rollup": {
+          "from": "^4.53.5",
+          "to": "^4.62.2"
+        },
+        "yaml": {
+          "from": "^2.8.2",
+          "to": "^2.9.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:41:28.162Z",
+      "version": "2.27.1-depup.45"
     }
   }
 }

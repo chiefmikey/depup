@@ -1,0 +1,94 @@
+{
+  "name": "@depup/ai-sdk__anthropic",
+  "version": "4.0.8-depup.0",
+  "type": "module",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "docs/**/*",
+    "src",
+    "!src/**/*.test.ts",
+    "!src/**/*.test-d.ts",
+    "!src/**/__snapshots__",
+    "!src/**/__fixtures__",
+    "CHANGELOG.md",
+    "README.md",
+    "internal.d.ts",
+    "changes.json"
+  ],
+  "directories": {
+    "doc": "./docs"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./internal": {
+      "types": "./dist/internal/index.d.ts",
+      "import": "./dist/internal/index.js",
+      "default": "./dist/internal/index.js"
+    }
+  },
+  "dependencies": {
+    "@ai-sdk/provider": "4.0.2",
+    "@ai-sdk/provider-utils": "5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "tsup": "^8.5.1",
+    "typescript": "5.8.3",
+    "zod": "3.25.76",
+    "@ai-sdk/test-server": "2.0.0",
+    "@vercel/ai-tsconfig": "0.0.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.25.76 || ^4.1.8"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "homepage": "https://ai-sdk.dev/docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel/ai",
+    "directory": "packages/anthropic"
+  },
+  "bugs": {
+    "url": "https://github.com/vercel/ai/issues"
+  },
+  "keywords": [
+    "@ai-sdk/anthropic",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ai"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsup --tsconfig tsconfig.build.json",
+    "build:watch": "pnpm clean && tsup --watch --tsconfig tsconfig.build.json",
+    "clean": "del-cli dist docs *.tsbuildinfo",
+    "type-check": "tsc --build",
+    "test": "pnpm test:node && pnpm test:edge",
+    "test:update": "pnpm test:node -u",
+    "test:watch": "vitest --config vitest.node.config.js",
+    "test:edge": "vitest --config vitest.edge.config.js --run",
+    "test:node": "vitest --config vitest.node.config.js --run"
+  },
+  "description": "@ai-sdk/anthropic with all dependencies updated to latest",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@ai-sdk/anthropic",
+    "originalVersion": "4.0.8",
+    "processedAt": "2026-07-05T00:25:13.504Z",
+    "smokeTest": "failed"
+  }
+}
