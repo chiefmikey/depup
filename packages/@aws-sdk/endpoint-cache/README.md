@@ -12,7 +12,7 @@ npm install @depup/aws-sdk__endpoint-cache
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.8 | **DepUp version**: 3.972.8-depup.19 | **Updated**: 7/4/2026 | **Import test**: passed
+**Original version**: 3.972.8 | **DepUp version**: 3.972.8-depup.20 | **Updated**: 7/5/2026 | **Import test**: passed
 
 ## What changed
 

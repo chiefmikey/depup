@@ -1,0 +1,46 @@
+{
+  "bumped": {
+    "@types/estree": {
+      "from": "^1.0.8",
+      "to": "^1.0.9"
+    },
+    "acorn": {
+      "from": "^8.16.0",
+      "to": "^8.17.0"
+    },
+    "acorn-import-phases": {
+      "from": "^1.0.3",
+      "to": "^1.0.4"
+    },
+    "browserslist": {
+      "from": "^4.28.1",
+      "to": "^4.28.4"
+    },
+    "chrome-trace-event": {
+      "from": "^1.0.2",
+      "to": "^1.0.4"
+    },
+    "enhanced-resolve": {
+      "from": "^5.22.2",
+      "to": "^5.24.1"
+    },
+    "es-module-lexer": {
+      "from": "^2.1.0",
+      "to": "^2.3.0"
+    },
+    "eslint-scope": {
+      "from": "5.1.1",
+      "to": "^9.1.2"
+    },
+    "events": {
+      "from": "^3.2.0",
+      "to": "^3.3.0"
+    },
+    "tapable": {
+      "from": "^2.3.0",
+      "to": "^2.3.3"
+    }
+  },
+  "timestamp": "2026-07-05T00:49:05.077Z",
+  "totalUpdated": 10
+}

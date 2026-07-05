@@ -365,5 +365,15 @@
       "timestamp": "2026-07-04T00:44:31.366Z",
       "version": "8.6.5-depup.10"
     }
+  },
+  "8.6.6": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:44:17.189Z",
+      "version": "8.6.6-depup.0"
+    }
   }
 }

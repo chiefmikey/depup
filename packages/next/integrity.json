@@ -662,6 +662,35 @@
       "status": "failed",
       "timestamp": "2026-07-04T00:43:21.776Z",
       "version": "16.2.10-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "0.5.15",
+          "to": "^0.5.23"
+        },
+        "baseline-browser-mapping": {
+          "from": "^2.9.19",
+          "to": "^2.10.42"
+        },
+        "caniuse-lite": {
+          "from": "^1.0.30001579",
+          "to": "^1.0.30001800"
+        },
+        "postcss": {
+          "from": "8.4.31",
+          "to": "^8.5.16"
+        },
+        "styled-jsx": {
+          "from": "5.1.6",
+          "to": "^5.1.7"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-05T00:43:01.833Z",
+      "version": "16.2.10-depup.3"
     }
   }
 }
