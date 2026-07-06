@@ -10778,43 +10778,6 @@
     }
   },
   "6.3.0": {
-    "0": {
-      "changes": {
-        "@isaacs/ttlcache": {
-          "from": "^1.4.1",
-          "to": "^2.1.5"
-        },
-        "@sanity/diff-patch": {
-          "from": "^5.0.0",
-          "to": "^6.0.0"
-        },
-        "@tanstack/react-virtual": {
-          "from": "^3.14.4",
-          "to": "^3.14.5"
-        },
-        "i18next": {
-          "from": "^26.3.3",
-          "to": "^26.3.4"
-        },
-        "isomorphic-dompurify": {
-          "from": "2.36.0",
-          "to": "^3.18.0"
-        },
-        "motion": {
-          "from": "^12.42.0",
-          "to": "^12.42.2"
-        },
-        "path-to-regexp": {
-          "from": "^6.3.0",
-          "to": "^8.4.2"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:51:53.731Z",
-      "version": "6.3.0-depup.0"
-    },
     "1": {
       "changes": {
         "@isaacs/ttlcache": {
@@ -11082,6 +11045,83 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:45:47.830Z",
       "version": "6.3.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@isaacs/ttlcache": {
+          "from": "^1.4.1",
+          "to": "^2.1.5"
+        },
+        "@sanity/cli": {
+          "from": "^7.4.2",
+          "to": "^7.5.0"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/icons": {
+          "from": "^3.7.4",
+          "to": "^5.0.0"
+        },
+        "@sanity/insert-menu": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        },
+        "@sanity/media-library-types": {
+          "from": "^1.4.0",
+          "to": "^1.5.0"
+        },
+        "@sanity/preview-url-secret": {
+          "from": "^4.0.7",
+          "to": "^4.0.8"
+        },
+        "@sanity/ui": {
+          "from": "^3.2.0",
+          "to": "^3.3.2"
+        },
+        "@sentry/react": {
+          "from": "^10.62.0",
+          "to": "^10.63.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.4",
+          "to": "^3.14.5"
+        },
+        "color2k": {
+          "from": "^2.0.3",
+          "to": "^2.0.4"
+        },
+        "i18next": {
+          "from": "^26.3.3",
+          "to": "^26.3.4"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^3.18.0"
+        },
+        "motion": {
+          "from": "^12.42.0",
+          "to": "^12.42.2"
+        },
+        "path-to-regexp": {
+          "from": "^6.3.0",
+          "to": "^8.4.2"
+        },
+        "react-rx": {
+          "from": "^4.2.2",
+          "to": "^4.2.3"
+        },
+        "xstate": {
+          "from": "^5.32.2",
+          "to": "^5.32.4"
+        }
+      },
+      "depsUpdated": 17,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:46:25.727Z",
+      "version": "6.3.0-depup.5"
     }
   }
 }

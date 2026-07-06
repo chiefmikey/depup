@@ -12,7 +12,7 @@ npm install @depup/uiw__react-codemirror
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.25.10 | **DepUp version**: 4.25.10-depup.44 | **Updated**: 7/5/2026 | **Import test**: passed
+**Original version**: 4.25.10 | **DepUp version**: 4.25.10-depup.45 | **Updated**: 7/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/runtime | `^7.18.6` | `^8.0.0` |
 | @codemirror/commands | `^6.1.0` | `^6.10.4` |
-| @codemirror/state | `^6.1.1` | `^6.7.0` |
+| @codemirror/state | `^6.1.1` | `^6.7.1` |
 | @codemirror/theme-one-dark | `^6.0.0` | `^6.1.3` |
 | codemirror | `^6.0.0` | `^6.0.2` |
 

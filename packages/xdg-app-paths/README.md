@@ -12,7 +12,7 @@ npm install @depup/xdg-app-paths
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.3.0 | **DepUp version**: 8.3.0-depup.30 | **Updated**: 7/5/2026 | **Import test**: passed
+**Original version**: 8.3.0 | **DepUp version**: 8.3.0-depup.31 | **Updated**: 7/6/2026 | **Import test**: passed
 
 ## What changed
 

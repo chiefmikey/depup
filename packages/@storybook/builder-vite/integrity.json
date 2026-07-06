@@ -416,19 +416,6 @@
     }
   },
   "10.4.6": {
-    "14": {
-      "changes": {
-        "ts-dedent": {
-          "from": "^2.0.0",
-          "to": "^2.3.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:37:26.196Z",
-      "version": "10.4.6-depup.14"
-    },
     "15": {
       "changes": {
         "ts-dedent": {
@@ -480,6 +467,19 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:31:13.002Z",
       "version": "10.4.6-depup.18"
+    },
+    "19": {
+      "changes": {
+        "ts-dedent": {
+          "from": "^2.0.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:32:21.998Z",
+      "version": "10.4.6-depup.19"
     }
   }
 }

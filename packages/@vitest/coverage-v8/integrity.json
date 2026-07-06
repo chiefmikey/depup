@@ -247,31 +247,6 @@
     }
   },
   "4.1.9": {
-    "19": {
-      "changes": {
-        "ast-v8-to-istanbul": {
-          "from": "^1.0.0",
-          "to": "^1.0.4"
-        },
-        "magicast": {
-          "from": "^0.5.2",
-          "to": "^0.5.3"
-        },
-        "obug": {
-          "from": "^2.1.1",
-          "to": "^2.1.3"
-        },
-        "std-env": {
-          "from": "^4.0.0-rc.1",
-          "to": "^4.1.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:36:55.040Z",
-      "version": "4.1.9-depup.19"
-    },
     "20": {
       "changes": {
         "ast-v8-to-istanbul": {
@@ -371,6 +346,31 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:31:26.762Z",
       "version": "4.1.9-depup.23"
+    },
+    "24": {
+      "changes": {
+        "ast-v8-to-istanbul": {
+          "from": "^1.0.0",
+          "to": "^1.0.4"
+        },
+        "magicast": {
+          "from": "^0.5.2",
+          "to": "^0.5.3"
+        },
+        "obug": {
+          "from": "^2.1.1",
+          "to": "^2.1.3"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:33:43.930Z",
+      "version": "4.1.9-depup.24"
     }
   }
 }

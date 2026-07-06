@@ -12,14 +12,14 @@ npm install @depup/workbox-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.1 | **DepUp version**: 7.4.1-depup.36 | **Updated**: 7/5/2026 | **Import test**: passed
+**Original version**: 7.4.1 | **DepUp version**: 7.4.1-depup.37 | **Updated**: 7/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | pretty-bytes | `^5.4.1` | `^7.1.0` |
-| upath | `^1.2.0` | `^3.0.7` |
+| upath | `^1.2.0` | `^3.0.8` |
 | webpack-sources | `^1.4.3` | `^3.5.0` |
 
 
