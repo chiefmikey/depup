@@ -35,19 +35,6 @@
     }
   },
   "8.1.2": {
-    "38": {
-      "changes": {
-        "cookie": {
-          "from": "^1.1.1",
-          "to": "^2.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:51:04.716Z",
-      "version": "8.1.2-depup.38"
-    },
     "39": {
       "changes": {
         "cookie": {
@@ -99,6 +86,19 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:45:59.043Z",
       "version": "8.1.2-depup.42"
+    },
+    "43": {
+      "changes": {
+        "cookie": {
+          "from": "^1.1.1",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:49:19.639Z",
+      "version": "8.1.2-depup.43"
     }
   }
 }

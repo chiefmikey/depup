@@ -12,7 +12,7 @@ npm install @depup/firebase__auth-types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.13.1 | **DepUp version**: 0.13.1-depup.47 | **Updated**: 7/5/2026 | **Import test**: failed
+**Original version**: 0.13.1 | **DepUp version**: 0.13.1-depup.48 | **Updated**: 7/6/2026 | **Import test**: failed
 
 ## What changed
 

@@ -459,47 +459,6 @@
     }
   },
   "1.21.1": {
-    "0": {
-      "changes": {
-        "@emotion/hash": {
-          "from": "^0.9.0",
-          "to": "^0.9.2"
-        },
-        "css-what": {
-          "from": "^6.1.0",
-          "to": "^8.0.0"
-        },
-        "dedent": {
-          "from": "^1.5.3",
-          "to": "^1.7.2"
-        },
-        "deepmerge": {
-          "from": "^4.2.2",
-          "to": "^4.3.1"
-        },
-        "lru-cache": {
-          "from": "^10.4.3",
-          "to": "^11.5.1"
-        },
-        "media-query-parser": {
-          "from": "^2.0.2",
-          "to": "^3.0.2"
-        },
-        "modern-ahocorasick": {
-          "from": "^1.0.0",
-          "to": "^2.0.4"
-        },
-        "picocolors": {
-          "from": "^1.0.0",
-          "to": "^1.1.1"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:38:18.020Z",
-      "version": "1.21.1-depup.0"
-    },
     "1": {
       "changes": {
         "@emotion/hash": {
@@ -663,6 +622,47 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:32:00.833Z",
       "version": "1.21.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@emotion/hash": {
+          "from": "^0.9.0",
+          "to": "^0.9.2"
+        },
+        "css-what": {
+          "from": "^6.1.0",
+          "to": "^8.0.0"
+        },
+        "dedent": {
+          "from": "^1.5.3",
+          "to": "^1.7.2"
+        },
+        "deepmerge": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "lru-cache": {
+          "from": "^10.4.3",
+          "to": "^11.5.1"
+        },
+        "media-query-parser": {
+          "from": "^2.0.2",
+          "to": "^3.0.2"
+        },
+        "modern-ahocorasick": {
+          "from": "^1.0.0",
+          "to": "^2.0.4"
+        },
+        "picocolors": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:32:02.106Z",
+      "version": "1.21.1-depup.5"
     }
   }
 }

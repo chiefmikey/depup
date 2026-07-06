@@ -463,6 +463,23 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:28:31.625Z",
       "version": "9.8.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@mui/utils": {
+          "from": "^9.1.1",
+          "to": "^9.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:29:26.193Z",
+      "version": "9.8.0-depup.3"
     }
   }
 }

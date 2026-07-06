@@ -398,5 +398,28 @@
       "timestamp": "2026-06-28T00:32:32.150Z",
       "version": "0.71.0-depup.21"
     }
+  },
+  "0.72.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.9.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.34.0",
+          "to": "^1.41.1"
+        },
+        "@types/pg": {
+          "from": "8.15.6",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:29:52.449Z",
+      "version": "0.72.0-depup.0"
+    }
   }
 }

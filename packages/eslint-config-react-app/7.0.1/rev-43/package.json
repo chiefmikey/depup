@@ -1,0 +1,109 @@
+{
+  "name": "@depup/eslint-config-react-app",
+  "version": "7.0.1-depup.43",
+  "description": "ESLint configuration used by Create React App (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/create-react-app.git",
+    "directory": "packages/eslint-config-react-app"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facebook/create-react-app/issues"
+  },
+  "files": [
+    "base.js",
+    "index.js",
+    "jest.js",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/eslint-parser": "^8.0.1",
+    "@rushstack/eslint-patch": "^1.16.1",
+    "@typescript-eslint/eslint-plugin": "^8.62.1",
+    "@typescript-eslint/parser": "^8.62.1",
+    "babel-preset-react-app": "^10.1.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.15.4",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-testing-library": "^7.16.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "gitHead": "19fa58d527ae74f2b6baa0867463eea1d290f9a5",
+  "keywords": [
+    "eslint-config-react-app",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.16.0",
+        "to": "^8.0.1"
+      },
+      "@babel/eslint-parser": {
+        "from": "^7.16.3",
+        "to": "^8.0.1"
+      },
+      "@rushstack/eslint-patch": {
+        "from": "^1.1.0",
+        "to": "^1.16.1"
+      },
+      "@typescript-eslint/eslint-plugin": {
+        "from": "^5.5.0",
+        "to": "^8.62.1"
+      },
+      "@typescript-eslint/parser": {
+        "from": "^5.5.0",
+        "to": "^8.62.1"
+      },
+      "babel-preset-react-app": {
+        "from": "^10.0.1",
+        "to": "^10.1.0"
+      },
+      "eslint-plugin-import": {
+        "from": "^2.25.3",
+        "to": "^2.32.0"
+      },
+      "eslint-plugin-jest": {
+        "from": "^25.3.0",
+        "to": "^29.15.4"
+      },
+      "eslint-plugin-jsx-a11y": {
+        "from": "^6.5.1",
+        "to": "^6.10.2"
+      },
+      "eslint-plugin-react": {
+        "from": "^7.27.1",
+        "to": "^7.37.5"
+      },
+      "eslint-plugin-react-hooks": {
+        "from": "^4.3.0",
+        "to": "^7.1.1"
+      },
+      "eslint-plugin-testing-library": {
+        "from": "^5.0.1",
+        "to": "^7.16.2"
+      }
+    },
+    "depsUpdated": 12,
+    "originalPackage": "eslint-config-react-app",
+    "originalVersion": "7.0.1",
+    "processedAt": "2026-07-06T00:35:33.636Z",
+    "smokeTest": "passed"
+  }
+}

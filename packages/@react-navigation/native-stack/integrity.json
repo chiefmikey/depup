@@ -768,6 +768,23 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:29:44.348Z",
       "version": "7.17.9-depup.1"
+    },
+    "2": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:30:30.687Z",
+      "version": "7.17.9-depup.2"
     }
   }
 }

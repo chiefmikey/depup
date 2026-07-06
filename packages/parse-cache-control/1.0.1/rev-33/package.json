@@ -1,0 +1,38 @@
+{
+  "name": "@depup/parse-cache-control",
+  "version": "1.0.1-depup.33",
+  "description": "Parse Cache-Control headers. (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roryf/parse-cache-control.git"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/hapijs/wreck/raw/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "parse-cache-control",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "parse-cache-control",
+    "originalVersion": "1.0.1",
+    "processedAt": "2026-07-06T00:43:37.115Z",
+    "smokeTest": "passed"
+  }
+}

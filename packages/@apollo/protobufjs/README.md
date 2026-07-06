@@ -12,7 +12,7 @@ npm install @depup/apollo__protobufjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.8 | **DepUp version**: 1.2.8-depup.39 | **Updated**: 7/5/2026 | **Import test**: passed
+**Original version**: 1.2.8 | **DepUp version**: 1.2.8-depup.40 | **Updated**: 7/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @protobufjs/eventemitter | `^1.1.0` | `^1.1.1` |
 | @protobufjs/fetch | `^1.1.0` | `^1.1.1` |
 | @protobufjs/inquire | `^1.1.0` | `^1.1.2` |
-| @protobufjs/utf8 | `^1.1.0` | `^1.1.1` |
+| @protobufjs/utf8 | `^1.1.0` | `^1.1.2` |
 | @types/long | `^4.0.0` | `^5.0.0` |
 | long | `^4.0.0` | `^5.3.2` |
 

@@ -2166,6 +2166,55 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:31:56.627Z",
       "version": "2.10.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "commander": {
+          "from": "10.0.0",
+          "to": "^15.0.0"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^9.6.1"
+        },
+        "fast-glob": {
+          "from": "3.2.12",
+          "to": "^3.3.3"
+        },
+        "fs-extra": {
+          "from": "10.1.0",
+          "to": "^11.3.6"
+        },
+        "gradient-string": {
+          "from": "2.0.1",
+          "to": "^3.0.0"
+        },
+        "js-yaml": {
+          "from": "4.1.1",
+          "to": "^5.2.1"
+        },
+        "ora": {
+          "from": "4.1.1",
+          "to": "^9.4.1"
+        },
+        "picocolors": {
+          "from": "1.0.1",
+          "to": "^1.1.1"
+        },
+        "semver": {
+          "from": "7.6.2",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:31:57.435Z",
+      "version": "2.10.3-depup.2"
     }
   }
 }

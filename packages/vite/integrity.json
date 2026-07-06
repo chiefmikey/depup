@@ -437,6 +437,23 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:46:56.207Z",
       "version": "8.1.3-depup.2"
+    },
+    "3": {
+      "changes": {
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        },
+        "rolldown": {
+          "from": "~1.1.3",
+          "to": "^1.1.4"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:50:21.428Z",
+      "version": "8.1.3-depup.3"
     }
   }
 }

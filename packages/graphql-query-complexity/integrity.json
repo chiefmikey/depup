@@ -10,14 +10,6 @@
     }
   },
   "1.1.1": {
-    "29": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "failed",
-      "status": "skipped",
-      "timestamp": "2026-07-01T00:44:25.461Z",
-      "version": "1.1.1-depup.29"
-    },
     "30": {
       "changes": {},
       "depsUpdated": 0,
@@ -49,6 +41,14 @@
       "status": "skipped",
       "timestamp": "2026-07-05T00:38:14.791Z",
       "version": "1.1.1-depup.33"
+    },
+    "34": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-07-06T00:39:01.054Z",
+      "version": "1.1.1-depup.34"
     }
   }
 }
