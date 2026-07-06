@@ -1,0 +1,96 @@
+{
+  "name": "@depup/npmcli__agent",
+  "version": "5.0.2-depup.16",
+  "description": "the http/https agent used by the npm cli (with updated dependencies)",
+  "main": "lib/index.js",
+  "scripts": {
+    "gencerts": "bash scripts/create-cert.sh",
+    "test": "tap",
+    "lint": "npm run eslint",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "lintfix": "npm run eslint -- --fix",
+    "snap": "tap",
+    "posttest": "npm run lint",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+  },
+  "author": "GitHub Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/agent/issues"
+  },
+  "homepage": "https://github.com/npm/agent#readme",
+  "files": [
+    "bin/",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "5.1.1",
+    "publish": "true",
+    "updateNpm": false
+  },
+  "dependencies": {
+    "agent-base": "^9.0.0",
+    "http-proxy-agent": "^9.1.0",
+    "https-proxy-agent": "^9.1.0",
+    "lru-cache": "^11.5.1",
+    "socks-proxy-agent": "^10.1.0"
+  },
+  "devDependencies": {
+    "@npmcli/eslint-config": "^7.0.0",
+    "@npmcli/template-oss": "5.1.1",
+    "ip-address": "^10.1.0",
+    "minipass-fetch": "^6.0.0",
+    "nock": "^14.0.3",
+    "tap": "^16.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/agent.git"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  },
+  "keywords": [
+    "@npmcli/agent",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "http-proxy-agent": {
+        "from": "^9.0.0",
+        "to": "^9.1.0"
+      },
+      "https-proxy-agent": {
+        "from": "^9.0.0",
+        "to": "^9.1.0"
+      },
+      "lru-cache": {
+        "from": "^11.2.1",
+        "to": "^11.5.1"
+      },
+      "socks-proxy-agent": {
+        "from": "^10.0.0",
+        "to": "^10.1.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "@npmcli/agent",
+    "originalVersion": "5.0.2",
+    "processedAt": "2026-07-06T00:29:32.325Z",
+    "smokeTest": "passed"
+  }
+}

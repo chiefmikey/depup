@@ -12,14 +12,13 @@ npm install @depup/aws-sdk__signature-v4-multi-region
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.996.35 | **DepUp version**: 3.996.35-depup.13 | **Updated**: 6/28/2026 | **Import test**: passed
+**Original version**: 3.996.38 | **DepUp version**: 3.996.38-depup.0 | **Updated**: 7/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/signature-v4 | `^5.4.6` | `^5.5.2` |
-| @smithy/types | `^4.14.3` | `^4.15.0` |
+| @smithy/signature-v4 | `^5.6.1` | `^5.6.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

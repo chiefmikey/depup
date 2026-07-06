@@ -730,5 +730,24 @@
       "timestamp": "2026-06-28T00:29:00.681Z",
       "version": "3.996.35-depup.13"
     }
+  },
+  "3.996.38": {
+    "0": {
+      "changes": {
+        "@smithy/signature-v4": {
+          "from": "^5.6.1",
+          "to": "^5.6.2"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:27:12.135Z",
+      "version": "3.996.38-depup.0"
+    }
   }
 }

@@ -1,26 +1,5 @@
 {
   "4.5.1": {
-    "14": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.20.13",
-          "to": "^8.0.0"
-        },
-        "prop-types": {
-          "from": "^15.6.2",
-          "to": "^15.8.1"
-        },
-        "queue": {
-          "from": "^6.0.1",
-          "to": "^7.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:36:34.986Z",
-      "version": "4.5.1-depup.14"
-    },
     "15": {
       "changes": {
         "@babel/runtime": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:30:28.687Z",
       "version": "4.5.1-depup.18"
+    },
+    "19": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.13",
+          "to": "^8.0.0"
+        },
+        "prop-types": {
+          "from": "^15.6.2",
+          "to": "^15.8.1"
+        },
+        "queue": {
+          "from": "^6.0.1",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:30:41.575Z",
+      "version": "4.5.1-depup.19"
     }
   }
 }

@@ -4899,6 +4899,31 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:42:12.781Z",
       "version": "1.396.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "core-js": {
+          "from": "^3.38.1",
+          "to": "^3.49.0"
+        },
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.11"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.29.2",
+          "to": "^10.29.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:44:28.429Z",
+      "version": "1.396.6-depup.2"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/next__swc-linux-x64-musl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.2.10 | **DepUp version**: 16.2.10-depup.3 | **Updated**: 7/5/2026 | **Import test**: failed
+**Original version**: 16.2.10 | **DepUp version**: 16.2.10-depup.4 | **Updated**: 7/6/2026 | **Import test**: failed
 
 ## What changed
 

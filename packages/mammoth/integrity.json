@@ -1,42 +1,5 @@
 {
   "1.12.0": {
-    "40": {
-      "changes": {
-        "@xmldom/xmldom": {
-          "from": "^0.8.6",
-          "to": "^0.9.10"
-        },
-        "argparse": {
-          "from": "~1.0.3",
-          "to": "^2.0.1"
-        },
-        "bluebird": {
-          "from": "~3.4.0",
-          "to": "^3.7.2"
-        },
-        "jszip": {
-          "from": "^3.7.1",
-          "to": "^3.10.1"
-        },
-        "path-is-absolute": {
-          "from": "^1.0.0",
-          "to": "^2.0.0"
-        },
-        "underscore": {
-          "from": "^1.13.1",
-          "to": "^1.13.8"
-        },
-        "xmlbuilder": {
-          "from": "^10.0.0",
-          "to": "^15.1.1"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-01T00:44:43.295Z",
-      "version": "1.12.0-depup.40"
-    },
     "41": {
       "changes": {
         "@xmldom/xmldom": {
@@ -184,6 +147,43 @@
       "status": "failed",
       "timestamp": "2026-07-05T00:39:28.947Z",
       "version": "1.12.0-depup.44"
+    },
+    "45": {
+      "changes": {
+        "@xmldom/xmldom": {
+          "from": "^0.8.6",
+          "to": "^0.9.10"
+        },
+        "argparse": {
+          "from": "~1.0.3",
+          "to": "^2.0.1"
+        },
+        "bluebird": {
+          "from": "~3.4.0",
+          "to": "^3.7.2"
+        },
+        "jszip": {
+          "from": "^3.7.1",
+          "to": "^3.10.1"
+        },
+        "path-is-absolute": {
+          "from": "^1.0.0",
+          "to": "^2.0.0"
+        },
+        "underscore": {
+          "from": "^1.13.1",
+          "to": "^1.13.8"
+        },
+        "xmlbuilder": {
+          "from": "^10.0.0",
+          "to": "^15.1.1"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-06T00:42:27.374Z",
+      "version": "1.12.0-depup.45"
     }
   }
 }
