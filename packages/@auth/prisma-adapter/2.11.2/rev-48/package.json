@@ -1,0 +1,76 @@
+{
+  "name": "@depup/auth__prisma-adapter",
+  "version": "2.11.2-depup.48",
+  "description": "Prisma adapter for Auth.js (with updated dependencies)",
+  "homepage": "https://authjs.dev/reference/adapter/prisma",
+  "repository": "https://github.com/nextauthjs/next-auth",
+  "bugs": {
+    "url": "https://github.com/nextauthjs/next-auth/issues"
+  },
+  "author": "William Luke",
+  "contributors": [
+    "Balázs Orbán <info@balazsorban.com>"
+  ],
+  "type": "module",
+  "types": "./index.d.ts",
+  "files": [
+    "*.js",
+    "*.d.ts*",
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "license": "ISC",
+  "keywords": [
+    "@auth/prisma-adapter",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "next-auth",
+    "next.js",
+    "oauth",
+    "prisma"
+  ],
+  "dependencies": {
+    "@auth/core": "0.41.2"
+  },
+  "peerDependencies": {
+    "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5 || >=6"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.0.0",
+    "@prisma/extension-accelerate": "1.1.0",
+    "mongodb": "^6.9.0",
+    "prisma": "^6.0.0"
+  },
+  "scripts": {
+    "clean": "rm ./prisma/dev.db* || echo 'File deleted' && rm -rf index.js *.d.ts*",
+    "init:default": "prisma migrate dev --name init --skip-seed",
+    "init:custom": "prisma migrate dev --name init-custom --schema ./prisma/custom.prisma",
+    "test:default": "pnpm init:default && vitest run -c ../utils/vitest.config.ts",
+    "test:custom": "pnpm init:custom && CUSTOM_MODEL=1 vitest run -c ../utils/vitest.config.ts",
+    "test:mongodb": "./test/mongodb.test.sh",
+    "test": "pnpm test:default && pnpm test:custom",
+    "test:og": "pnpm test:default && pnpm test:custom && pnpm test:mongodb",
+    "build": "prisma generate && tsc",
+    "dev": "prisma generate && tsc -w",
+    "studio": "prisma studio"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@auth/prisma-adapter",
+    "originalVersion": "2.11.2",
+    "processedAt": "2026-07-07T00:27:42.362Z",
+    "smokeTest": "passed"
+  }
+}

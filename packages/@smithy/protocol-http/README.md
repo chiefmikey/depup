@@ -12,7 +12,7 @@ npm install @depup/smithy__protocol-http
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.5.6 | **DepUp version**: 5.5.6-depup.3 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 5.5.6 | **DepUp version**: 5.5.6-depup.4 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 

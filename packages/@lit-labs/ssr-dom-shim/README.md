@@ -12,7 +12,7 @@ npm install @depup/lit-labs__ssr-dom-shim
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.0 | **DepUp version**: 1.6.0-depup.49 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 1.6.0 | **DepUp version**: 1.6.0-depup.50 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 

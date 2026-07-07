@@ -12,7 +12,7 @@ npm install @depup/xyflow__system
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.0.78 | **DepUp version**: 0.0.78-depup.13 | **Updated**: 7/6/2026 | **Import test**: failed
+**Original version**: 0.0.79 | **DepUp version**: 0.0.79-depup.0 | **Updated**: 7/7/2026 | **Import test**: failed
 
 ## What changed
 

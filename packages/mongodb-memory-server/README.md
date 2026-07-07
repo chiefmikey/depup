@@ -12,7 +12,7 @@ npm install @depup/mongodb-memory-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.0 | **DepUp version**: 11.2.0-depup.45 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 11.2.0 | **DepUp version**: 11.2.0-depup.46 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 

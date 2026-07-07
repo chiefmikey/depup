@@ -208,5 +208,24 @@
       "timestamp": "2026-07-06T00:33:58.280Z",
       "version": "0.0.78-depup.13"
     }
+  },
+  "0.0.79": {
+    "0": {
+      "changes": {
+        "@types/d3-selection": {
+          "from": "^3.0.10",
+          "to": "^3.0.11"
+        },
+        "@types/d3-transition": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:35:09.020Z",
+      "version": "0.0.79-depup.0"
+    }
   }
 }

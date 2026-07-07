@@ -17,5 +17,24 @@
       "timestamp": "2026-07-06T00:26:23.568Z",
       "version": "3.1000.12-depup.0"
     }
+  },
+  "3.1000.13": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.0",
+          "to": "^3.29.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:27:39.797Z",
+      "version": "3.1000.13-depup.0"
+    }
   }
 }

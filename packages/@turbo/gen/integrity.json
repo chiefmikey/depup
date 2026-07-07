@@ -763,5 +763,20 @@
       "timestamp": "2026-07-06T00:33:33.378Z",
       "version": "2.10.3-depup.2"
     }
+  },
+  "2.10.4": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:34:44.933Z",
+      "version": "2.10.4-depup.0"
+    }
   }
 }
