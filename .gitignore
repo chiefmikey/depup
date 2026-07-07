@@ -26,6 +26,9 @@ coverage/
 *.swp
 *~
 
+# Playwright MCP session artifacts (console/page logs from browser tooling)
+.playwright-mcp/
+
 # OS
 .DS_Store
 Thumbs.db
