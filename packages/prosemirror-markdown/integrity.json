@@ -40,5 +40,28 @@
       "timestamp": "2026-05-24T02:21:25.235Z",
       "version": "1.13.4-depup.1"
     }
+  },
+  "1.13.5": {
+    "0": {
+      "changes": {
+        "markdown-it": {
+          "from": "^14.0.0",
+          "to": "^14.3.0"
+        },
+        "prosemirror-model": {
+          "from": "^1.25.0",
+          "to": "^1.25.10"
+        },
+        "@types/markdown-it": {
+          "from": "^14.0.0",
+          "to": "^14.1.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:46:30.778Z",
+      "version": "1.13.5-depup.0"
+    }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/opentelemetry__instrumentation-aws-sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.75.0 | **DepUp version**: 0.75.0-depup.0 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 0.75.0 | **DepUp version**: 0.75.0-depup.1 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @opentelemetry/core | `^2.0.0` | `^2.9.0` |
-| @opentelemetry/semantic-conventions | `^1.34.0` | `^1.41.1` |
+| @opentelemetry/semantic-conventions | `^1.34.0` | `^1.42.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/opentelemetry__instrumentation-aws-sdk&labels=bug).

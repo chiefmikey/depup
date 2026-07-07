@@ -1,0 +1,77 @@
+{
+  "name": "@depup/normalize-package-data",
+  "version": "9.0.0-depup.44",
+  "author": "GitHub Inc.",
+  "description": "Normalizes data that can be found in package.json files. (with updated dependencies)",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/normalize-package-data.git"
+  },
+  "main": "lib/normalize.js",
+  "scripts": {
+    "test": "node --test './test/**/*.js'",
+    "npmclilint": "npmcli-lint",
+    "lint": "npm run eslint",
+    "lintfix": "npm run eslint -- --fix",
+    "posttest": "npm run lint",
+    "postsnap": "npm run lintfix --",
+    "postlint": "template-oss-check",
+    "snap": "node --test --test-update-snapshots './test/**/*.js'",
+    "template-oss-apply": "template-oss-apply --force",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "test:node20": "node --test test",
+    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=97 --test-coverage-functions=97 --test-coverage-branches=97 './test/**/*.js'"
+  },
+  "dependencies": {
+    "hosted-git-info": "^10.1.1",
+    "semver": "^7.8.5",
+    "validate-npm-package-license": "^3.0.4"
+  },
+  "devDependencies": {
+    "@npmcli/eslint-config": "^6.0.0",
+    "@npmcli/template-oss": "5.1.0"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "5.1.0",
+    "publish": "true",
+    "testRunner": "node:test",
+    "latestCiVersion": 24,
+    "coverageThreshold": 97
+  },
+  "keywords": [
+    "normalize-package-data",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "hosted-git-info": {
+        "from": "^10.1.0",
+        "to": "^10.1.1"
+      },
+      "semver": {
+        "from": "^7.3.5",
+        "to": "^7.8.5"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "normalize-package-data",
+    "originalVersion": "9.0.0",
+    "processedAt": "2026-07-07T00:45:38.279Z",
+    "smokeTest": "passed"
+  }
+}

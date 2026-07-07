@@ -208,5 +208,24 @@
       "timestamp": "2026-07-06T00:33:07.612Z",
       "version": "12.11.1-depup.13"
     }
+  },
+  "12.11.2": {
+    "0": {
+      "changes": {
+        "classcat": {
+          "from": "^5.0.3",
+          "to": "^5.0.5"
+        },
+        "zustand": {
+          "from": "^4.4.0",
+          "to": "^5.0.14"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:34:36.114Z",
+      "version": "12.11.2-depup.0"
+    }
   }
 }

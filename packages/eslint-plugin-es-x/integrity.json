@@ -149,5 +149,28 @@
       "timestamp": "2026-07-06T00:38:50.404Z",
       "version": "9.7.0-depup.14"
     }
+  },
+  "10.0.0": {
+    "0": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.1.2",
+          "to": "^4.9.1"
+        },
+        "@eslint-community/regexpp": {
+          "from": "^4.12.1",
+          "to": "^4.12.2"
+        },
+        "eslint-type-tracer": {
+          "from": "^0.5.1",
+          "to": "^0.5.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:40:34.297Z",
+      "version": "10.0.0-depup.0"
+    }
   }
 }
