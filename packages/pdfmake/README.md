@@ -12,7 +12,7 @@ npm install @depup/pdfmake
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.11 | **DepUp version**: 0.3.11-depup.33 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 0.3.11 | **DepUp version**: 0.3.11-depup.34 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 

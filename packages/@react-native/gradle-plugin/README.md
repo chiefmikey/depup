@@ -12,7 +12,7 @@ npm install @depup/react-native__gradle-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.43 | **Updated**: 7/6/2026 | **Import test**: failed
+**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.44 | **Updated**: 7/7/2026 | **Import test**: failed
 
 ## What changed
 

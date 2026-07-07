@@ -12,7 +12,7 @@ npm install @depup/jest-junit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 17.0.0 | **DepUp version**: 17.0.0-depup.39 | **Updated**: 7/6/2026 | **Import test**: passed
+**Original version**: 17.0.0 | **DepUp version**: 17.0.0-depup.40 | **Updated**: 7/7/2026 | **Import test**: passed
 
 ## What changed
 

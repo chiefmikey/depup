@@ -95,5 +95,20 @@
       "timestamp": "2026-07-06T00:28:41.306Z",
       "version": "4.0.4-depup.48"
     }
+  },
+  "4.0.5": {
+    "0": {
+      "changes": {
+        "nanoid": {
+          "from": "^5.1.11",
+          "to": "^5.1.16"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-07T00:29:56.093Z",
+      "version": "4.0.5-depup.0"
+    }
   }
 }
