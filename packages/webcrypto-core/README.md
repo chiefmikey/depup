@@ -12,7 +12,7 @@ npm install @depup/webcrypto-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.9.2 | **DepUp version**: 1.9.2-depup.44 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 1.9.2 | **DepUp version**: 1.9.2-depup.45 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 

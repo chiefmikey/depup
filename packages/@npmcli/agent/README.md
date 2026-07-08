@@ -12,7 +12,7 @@ npm install @depup/npmcli__agent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.17 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.18 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | http-proxy-agent | `^9.0.0` | `^9.1.0` |
 | https-proxy-agent | `^9.0.0` | `^9.1.0` |
-| lru-cache | `^11.2.1` | `^11.5.1` |
+| lru-cache | `^11.2.1` | `^11.5.2` |
 | socks-proxy-agent | `^10.0.0` | `^10.1.0` |
 
 

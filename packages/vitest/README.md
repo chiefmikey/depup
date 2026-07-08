@@ -12,7 +12,7 @@ npm install @depup/vitest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.0 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.1 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | expect-type | `^1.3.0` | `^1.4.0` |
 | obug | `^2.1.1` | `^2.1.3` |
 | picomatch | `^4.0.3` | `^4.0.5` |
-| std-env | `^4.0.0-rc.1` | `^4.1.0` |
+| std-env | `^4.0.0-rc.1` | `^4.2.0` |
 | tinybench | `^2.9.0` | `^6.0.2` |
 | tinyexec | `^1.0.2` | `^1.2.4` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |

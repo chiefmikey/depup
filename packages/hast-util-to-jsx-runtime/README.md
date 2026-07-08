@@ -12,7 +12,7 @@ npm install @depup/hast-util-to-jsx-runtime
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.3.6 | **DepUp version**: 2.3.6-depup.46 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 2.3.6 | **DepUp version**: 2.3.6-depup.47 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mdast-util-mdxjs-esm | `^2.0.0` | `^2.0.1` |
 | property-information | `^7.0.0` | `^7.2.0` |
 | space-separated-tokens | `^2.0.0` | `^2.0.2` |
-| style-to-js | `^1.0.0` | `^2.0.1` |
+| style-to-js | `^1.0.0` | `^2.0.2` |
 | vfile-message | `^4.0.0` | `^4.0.3` |
 
 

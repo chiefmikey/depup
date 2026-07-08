@@ -12,7 +12,7 @@ npm install @depup/umzug
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.3 | **DepUp version**: 3.8.3-depup.45 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 3.8.3 | **DepUp version**: 3.8.3-depup.46 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 

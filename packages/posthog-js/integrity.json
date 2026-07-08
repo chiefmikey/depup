@@ -4952,5 +4952,28 @@
       "timestamp": "2026-07-07T00:46:23.993Z",
       "version": "1.398.0-depup.0"
     }
+  },
+  "1.398.2": {
+    "0": {
+      "changes": {
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.11"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.29.3",
+          "to": "^10.29.6"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:41:08.296Z",
+      "version": "1.398.2-depup.0"
+    }
   }
 }

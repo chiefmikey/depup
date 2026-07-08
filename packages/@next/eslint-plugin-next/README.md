@@ -12,7 +12,7 @@ npm install @depup/next__eslint-plugin-next
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.2.10 | **DepUp version**: 16.2.10-depup.5 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 16.2.10 | **DepUp version**: 16.2.10-depup.6 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
