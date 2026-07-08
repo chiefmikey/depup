@@ -1902,51 +1902,6 @@
     }
   },
   "22.0.5": {
-    "1": {
-      "changes": {
-        "@inquirer/prompts": {
-          "from": "8.4.2",
-          "to": "^8.5.2"
-        },
-        "@listr2/prompt-adapter-inquirer": {
-          "from": "4.2.3",
-          "to": "^4.2.4"
-        },
-        "algoliasearch": {
-          "from": "5.52.0",
-          "to": "^5.55.1"
-        },
-        "ini": {
-          "from": "6.0.0",
-          "to": "^7.0.0"
-        },
-        "listr2": {
-          "from": "10.2.1",
-          "to": "^10.2.2"
-        },
-        "npm-package-arg": {
-          "from": "13.0.2",
-          "to": "^14.0.0"
-        },
-        "pacote": {
-          "from": "21.5.1",
-          "to": "^22.0.0"
-        },
-        "semver": {
-          "from": "7.7.4",
-          "to": "^7.8.5"
-        },
-        "zod": {
-          "from": "4.4.2",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-03T00:26:19.447Z",
-      "version": "22.0.5-depup.1"
-    },
     "2": {
       "changes": {
         "@inquirer/prompts": {
@@ -2126,6 +2081,51 @@
       "status": "failed",
       "timestamp": "2026-07-07T00:27:33.574Z",
       "version": "22.0.5-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.4.2",
+          "to": "^8.5.2"
+        },
+        "@listr2/prompt-adapter-inquirer": {
+          "from": "4.2.3",
+          "to": "^4.2.4"
+        },
+        "algoliasearch": {
+          "from": "5.52.0",
+          "to": "^5.55.2"
+        },
+        "ini": {
+          "from": "6.0.0",
+          "to": "^7.0.0"
+        },
+        "listr2": {
+          "from": "10.2.1",
+          "to": "^10.2.2"
+        },
+        "npm-package-arg": {
+          "from": "13.0.2",
+          "to": "^14.0.0"
+        },
+        "pacote": {
+          "from": "21.5.1",
+          "to": "^22.0.0"
+        },
+        "semver": {
+          "from": "7.7.4",
+          "to": "^7.8.5"
+        },
+        "zod": {
+          "from": "4.4.2",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:22:55.775Z",
+      "version": "22.0.5-depup.6"
     }
   }
 }

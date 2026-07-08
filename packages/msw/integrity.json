@@ -900,5 +900,48 @@
       "timestamp": "2026-07-07T00:42:15.881Z",
       "version": "2.14.6-depup.48"
     }
+  },
+  "2.14.7": {
+    "0": {
+      "changes": {
+        "@inquirer/confirm": {
+          "from": "^6.0.11",
+          "to": "^6.1.1"
+        },
+        "@mswjs/interceptors": {
+          "from": "^0.41.3",
+          "to": "^0.41.9"
+        },
+        "cookie": {
+          "from": "^1.1.1",
+          "to": "^2.0.1"
+        },
+        "graphql": {
+          "from": "^16.13.2",
+          "to": "^17.0.2"
+        },
+        "path-to-regexp": {
+          "from": "^6.3.0",
+          "to": "^8.4.2"
+        },
+        "tough-cookie": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.8.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:38:54.404Z",
+      "version": "2.14.7-depup.0"
+    }
   }
 }

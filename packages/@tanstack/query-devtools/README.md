@@ -12,7 +12,7 @@ npm install @depup/tanstack__query-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.101.2 | **DepUp version**: 5.101.2-depup.9 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 5.101.2 | **DepUp version**: 5.101.2-depup.10 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 

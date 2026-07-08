@@ -727,6 +727,19 @@
       "status": "failed",
       "timestamp": "2026-07-07T00:39:10.582Z",
       "version": "71.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.28.4",
+          "to": "^4.28.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:35:27.550Z",
+      "version": "71.1.0-depup.1"
     }
   }
 }
