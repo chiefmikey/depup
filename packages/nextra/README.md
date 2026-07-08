@@ -12,7 +12,7 @@ npm install @depup/nextra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.52 | **Updated**: 7/7/2026 | **Import test**: failed
+**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.53 | **Updated**: 7/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @formatjs/intl-localematcher | `^0.6.0` | `^0.8.10` |
 | @headlessui/react | `^2.1.2` | `^2.2.10` |
 | @mdx-js/mdx | `^3.0.0` | `^3.1.1` |
-| @napi-rs/simple-git | `^0.1.9` | `^1.0.0` |
+| @napi-rs/simple-git | `^0.1.9` | `^1.1.0` |
 | @shikijs/twoslash | `^3.2.1` | `^4.3.1` |
 | @theguild/remark-npm2yarn | `^0.3.2` | `^0.3.3` |
 | better-react-mathjax | `^2.3.0` | `^3.0.1` |

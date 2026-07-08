@@ -240,35 +240,6 @@
     }
   },
   "6.0.2": {
-    "41": {
-      "changes": {
-        "axios": {
-          "from": "^1.13.5",
-          "to": "^1.18.1"
-        },
-        "dayjs": {
-          "from": "^1.11.9",
-          "to": "^1.11.21"
-        },
-        "https-proxy-agent": {
-          "from": "^5.0.0",
-          "to": "^9.1.0"
-        },
-        "qs": {
-          "from": "^6.14.1",
-          "to": "^6.15.3"
-        },
-        "xmlbuilder": {
-          "from": "^13.0.2",
-          "to": "^15.1.1"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-03T00:47:51.913Z",
-      "version": "6.0.2-depup.41"
-    },
     "42": {
       "changes": {
         "axios": {
@@ -384,6 +355,35 @@
       "status": "failed",
       "timestamp": "2026-07-07T00:50:47.198Z",
       "version": "6.0.2-depup.45"
+    },
+    "46": {
+      "changes": {
+        "axios": {
+          "from": "^1.13.5",
+          "to": "^1.18.1"
+        },
+        "dayjs": {
+          "from": "^1.11.9",
+          "to": "^1.11.21"
+        },
+        "https-proxy-agent": {
+          "from": "^5.0.0",
+          "to": "^9.1.0"
+        },
+        "qs": {
+          "from": "^6.14.1",
+          "to": "^6.15.3"
+        },
+        "xmlbuilder": {
+          "from": "^13.0.2",
+          "to": "^15.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:46:25.364Z",
+      "version": "6.0.2-depup.46"
     }
   }
 }

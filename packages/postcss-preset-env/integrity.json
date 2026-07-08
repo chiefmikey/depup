@@ -215,23 +215,6 @@
     }
   },
   "11.3.2": {
-    "4": {
-      "changes": {
-        "autoprefixer": {
-          "from": "^10.5.0",
-          "to": "^10.5.2"
-        },
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.4"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-03T00:47:18.886Z",
-      "version": "11.3.2-depup.4"
-    },
     "5": {
       "changes": {
         "autoprefixer": {
@@ -299,6 +282,23 @@
       "status": "failed",
       "timestamp": "2026-07-07T00:46:13.219Z",
       "version": "11.3.2-depup.8"
+    },
+    "9": {
+      "changes": {
+        "autoprefixer": {
+          "from": "^10.5.0",
+          "to": "^10.5.2"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:41:47.560Z",
+      "version": "11.3.2-depup.9"
     }
   }
 }

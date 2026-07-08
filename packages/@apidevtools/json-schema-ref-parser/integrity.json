@@ -103,19 +103,6 @@
     }
   },
   "15.4.0": {
-    "13": {
-      "changes": {
-        "js-yaml": {
-          "from": "^4.2.0",
-          "to": "^5.2.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-03T00:26:19.303Z",
-      "version": "15.4.0-depup.13"
-    },
     "14": {
       "changes": {
         "js-yaml": {
@@ -167,6 +154,19 @@
       "status": "failed",
       "timestamp": "2026-07-07T00:27:30.525Z",
       "version": "15.4.0-depup.17"
+    },
+    "18": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.2.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:22:51.268Z",
+      "version": "15.4.0-depup.18"
     }
   }
 }

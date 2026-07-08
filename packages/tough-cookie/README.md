@@ -12,13 +12,13 @@ npm install @depup/tough-cookie
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.3 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.0 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| tldts | `^7.0.5` | `^7.4.0` |
+| tldts | `^7.0.5` | `^7.4.7` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tough-cookie&labels=bug).

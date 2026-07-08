@@ -803,5 +803,24 @@
       "timestamp": "2026-07-07T00:31:53.541Z",
       "version": "7.17.9-depup.3"
     }
+  },
+  "7.17.10": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-08T00:27:21.217Z",
+      "version": "7.17.10-depup.0"
+    }
   }
 }

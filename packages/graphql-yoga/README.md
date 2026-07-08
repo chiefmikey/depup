@@ -12,7 +12,7 @@ npm install @depup/graphql-yoga
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.21.2 | **DepUp version**: 5.21.2-depup.46 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 5.21.2 | **DepUp version**: 5.21.2-depup.47 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-tools/schema | `^10.0.11` | `^10.0.35` |
 | @graphql-tools/utils | `^10.11.0` | `^11.2.0` |
 | @whatwg-node/fetch | `^0.10.6` | `^0.10.13` |
-| lru-cache | `^10.0.0` | `^11.5.1` |
+| lru-cache | `^10.0.0` | `^11.5.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/graphql-yoga&labels=bug).

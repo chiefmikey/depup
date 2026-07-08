@@ -12,7 +12,7 @@ npm install @depup/opentelemetry__propagator-jaeger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.9.0 | **DepUp version**: 2.9.0-depup.4 | **Updated**: 7/7/2026 | **Import test**: passed
+**Original version**: 2.9.0 | **DepUp version**: 2.9.0-depup.5 | **Updated**: 7/8/2026 | **Import test**: passed
 
 ## What changed
 
