@@ -188,5 +188,20 @@
       "timestamp": "2026-07-08T00:36:08.326Z",
       "version": "9.0.30-depup.1"
     }
+  },
+  "9.0.31": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:37:58.523Z",
+      "version": "9.0.31-depup.0"
+    }
   }
 }

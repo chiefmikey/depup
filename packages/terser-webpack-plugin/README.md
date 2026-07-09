@@ -12,7 +12,7 @@ npm install @depup/terser-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.6.1 | **DepUp version**: 5.6.1-depup.44 | **Updated**: 7/8/2026 | **Import test**: passed
+**Original version**: 5.6.1 | **DepUp version**: 5.6.1-depup.45 | **Updated**: 7/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @jridgewell/trace-mapping | `^0.3.25` | `^0.3.31` |
 | jest-worker | `^27.4.5` | `^30.4.1` |
 | schema-utils | `^4.3.0` | `^4.3.3` |
-| terser | `^5.31.1` | `^5.48.0` |
+| terser | `^5.31.1` | `^5.49.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/terser-webpack-plugin&labels=bug).

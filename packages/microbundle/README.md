@@ -12,7 +12,7 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.57 | **Updated**: 7/8/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.58 | **Updated**: 7/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -48,10 +48,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | rollup-plugin-typescript2 | `^0.32.0` | `^0.37.0` |
 | rollup-plugin-visualizer | `^5.6.0` | `^7.0.1` |
 | sade | `^1.7.4` | `^1.8.1` |
-| terser | `^5.7.0` | `^5.48.0` |
+| terser | `^5.7.0` | `^5.49.0` |
 | tiny-glob | `^0.2.8` | `^0.2.9` |
 | tslib | `^2.0.3` | `^2.8.1` |
-| typescript | `^4.1.3` | `^6.0.3` |
+| typescript | `^4.1.3` | `^7.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/microbundle&labels=bug).

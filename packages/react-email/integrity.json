@@ -3123,6 +3123,71 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:41:52.368Z",
       "version": "6.6.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/parser": {
+          "from": "7.27.0",
+          "to": "^8.0.0"
+        },
+        "@babel/traverse": {
+          "from": "7.27.0",
+          "to": "^8.0.0"
+        },
+        "chokidar": {
+          "from": "^4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "^13.0.0",
+          "to": "^15.0.0"
+        },
+        "conf": {
+          "from": "^15.0.2",
+          "to": "^15.1.0"
+        },
+        "debounce": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        },
+        "esbuild": {
+          "from": "^0.28.0",
+          "to": "^0.28.1"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        },
+        "log-symbols": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        },
+        "marked": {
+          "from": "^15.0.12",
+          "to": "^18.0.5"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "nypm": {
+          "from": "0.6.6",
+          "to": "^0.6.8"
+        },
+        "socket.io": {
+          "from": "^4.8.1",
+          "to": "^4.8.3"
+        },
+        "tailwindcss": {
+          "from": "^4.1.18",
+          "to": "^4.3.2"
+        }
+      },
+      "depsUpdated": 14,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:42:33.855Z",
+      "version": "6.6.8-depup.1"
     }
   }
 }

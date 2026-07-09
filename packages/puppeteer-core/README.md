@@ -12,14 +12,14 @@ npm install @depup/puppeteer-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 25.3.0 | **DepUp version**: 25.3.0-depup.6 | **Updated**: 7/8/2026 | **Import test**: passed
+**Original version**: 25.3.0 | **DepUp version**: 25.3.0-depup.7 | **Updated**: 7/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | chromium-bidi | `16.0.1` | `^17.0.2` |
-| devtools-protocol | `0.0.1638949` | `^0.0.1657692` |
+| devtools-protocol | `0.0.1638949` | `^0.0.1658499` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/puppeteer-core&labels=bug).

@@ -227,5 +227,24 @@
       "timestamp": "2026-07-08T00:23:27.325Z",
       "version": "3.972.8-depup.23"
     }
+  },
+  "3.972.9": {
+    "0": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:26:50.788Z",
+      "version": "3.972.9-depup.0"
+    }
   }
 }

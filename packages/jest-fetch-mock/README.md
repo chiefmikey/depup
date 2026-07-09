@@ -12,14 +12,13 @@ npm install @depup/jest-fetch-mock
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.3 | **DepUp version**: 3.0.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 4.1.0 | **DepUp version**: 4.1.0-depup.0 | **Updated**: 7/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cross-fetch | `^3.0.4` | `^4.1.0` |
-| promise-polyfill | `^8.1.3` | `^8.3.0` |
+| cross-fetch | `^3.1.8` | `^4.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jest-fetch-mock&labels=bug).
