@@ -12,7 +12,7 @@ npm install @depup/nestjs__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.0.23 | **DepUp version**: 11.0.23-depup.46 | **Updated**: 7/8/2026 | **Import test**: failed
+**Original version**: 11.0.23 | **DepUp version**: 11.0.23-depup.47 | **Updated**: 7/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | commander | `4.1.1` | `^15.0.0` |
 | node-emoji | `1.11.0` | `^2.2.0` |
 | ora | `5.4.1` | `^9.4.1` |
-| typescript | `5.9.3` | `^6.0.3` |
+| typescript | `5.9.3` | `^7.0.2` |
 | webpack | `5.106.2` | `^5.108.4` |
 
 

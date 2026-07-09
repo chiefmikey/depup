@@ -439,6 +439,23 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:25:12.552Z",
       "version": "6.1.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "auto-bind": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:28:43.194Z",
+      "version": "6.1.0-depup.2"
     }
   }
 }

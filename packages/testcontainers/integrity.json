@@ -483,35 +483,6 @@
     }
   },
   "12.0.4": {
-    "4": {
-      "changes": {
-        "archiver": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        },
-        "dockerode": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "get-port": {
-          "from": "^5.1.1",
-          "to": "^7.2.0"
-        },
-        "tar-fs": {
-          "from": "^3.1.2",
-          "to": "^3.1.3"
-        },
-        "undici": {
-          "from": "^8.5.0",
-          "to": "^8.6.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-04T00:46:54.966Z",
-      "version": "12.0.4-depup.4"
-    },
     "5": {
       "changes": {
         "archiver": {
@@ -627,6 +598,35 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:44:47.181Z",
       "version": "12.0.4-depup.8"
+    },
+    "9": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "dockerode": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "get-port": {
+          "from": "^5.1.1",
+          "to": "^7.2.0"
+        },
+        "tar-fs": {
+          "from": "^3.1.2",
+          "to": "^3.1.3"
+        },
+        "undici": {
+          "from": "^8.5.0",
+          "to": "^8.7.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:49:50.426Z",
+      "version": "12.0.4-depup.9"
     }
   }
 }

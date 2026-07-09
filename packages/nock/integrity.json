@@ -151,23 +151,6 @@
     }
   },
   "14.0.16": {
-    "7": {
-      "changes": {
-        "@mswjs/interceptors": {
-          "from": "^0.41.0",
-          "to": "^0.41.9"
-        },
-        "propagate": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-04T00:41:06.249Z",
-      "version": "14.0.16-depup.7"
-    },
     "8": {
       "changes": {
         "@mswjs/interceptors": {
@@ -235,6 +218,23 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:40:32.287Z",
       "version": "14.0.16-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@mswjs/interceptors": {
+          "from": "^0.41.0",
+          "to": "^0.41.9"
+        },
+        "propagate": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:45:23.928Z",
+      "version": "14.0.16-depup.12"
     }
   }
 }

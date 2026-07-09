@@ -372,5 +372,24 @@
       "timestamp": "2026-07-08T00:25:42.041Z",
       "version": "2.6.0-depup.9"
     }
+  },
+  "2.7.0": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "11.1.0",
+          "to": "^15.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:29:14.393Z",
+      "version": "2.7.0-depup.0"
+    }
   }
 }

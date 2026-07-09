@@ -1,0 +1,71 @@
+{
+  "name": "@depup/module-federation__cli",
+  "version": "2.7.0-depup.0",
+  "type": "commonjs",
+  "description": "Module Federation CLI (with updated dependencies)",
+  "homepage": "https://module-federation.io",
+  "bugs": {
+    "url": "https://github.com/module-federation/core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/module-federation/core.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "mf": "./bin/mf.js"
+  },
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "bin",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "commander": "^15.0.0",
+    "jiti": "^2.7.0",
+    "@module-federation/sdk": "2.7.0",
+    "@module-federation/dts-plugin": "2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.5",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "rslib build",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false pnpm exec eslint --ignore-pattern node_modules \"**/*.ts\" \"package.json\"",
+    "test": "rstest",
+    "pre-release": "pnpm run test && pnpm run build"
+  },
+  "keywords": [
+    "@module-federation/cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "commander": {
+        "from": "11.1.0",
+        "to": "^15.0.0"
+      },
+      "jiti": {
+        "from": "2.4.2",
+        "to": "^2.7.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@module-federation/cli",
+    "originalVersion": "2.7.0",
+    "processedAt": "2026-07-09T00:29:12.660Z",
+    "smokeTest": "passed"
+  }
+}

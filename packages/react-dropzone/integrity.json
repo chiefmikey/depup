@@ -1,22 +1,5 @@
 {
   "15.0.0": {
-    "41": {
-      "changes": {
-        "attr-accept": {
-          "from": "^2.2.4",
-          "to": "^2.2.5"
-        },
-        "file-selector": {
-          "from": "^2.1.0",
-          "to": "^2.1.2"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-04T00:42:23.984Z",
-      "version": "15.0.0-depup.41"
-    },
     "42": {
       "changes": {
         "attr-accept": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:41:59.047Z",
       "version": "15.0.0-depup.45"
+    },
+    "46": {
+      "changes": {
+        "attr-accept": {
+          "from": "^2.2.4",
+          "to": "^2.2.5"
+        },
+        "file-selector": {
+          "from": "^2.1.0",
+          "to": "^2.1.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:46:56.038Z",
+      "version": "15.0.0-depup.46"
     }
   }
 }

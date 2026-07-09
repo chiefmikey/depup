@@ -320,6 +320,19 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:45:39.889Z",
       "version": "7.2.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "commander": {
+          "from": "^14.0.3",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:50:44.582Z",
+      "version": "7.2.1-depup.4"
     }
   }
 }
