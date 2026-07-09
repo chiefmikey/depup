@@ -2887,5 +2887,32 @@
       "timestamp": "2026-07-08T00:48:48.889Z",
       "version": "4.108.0-depup.0"
     }
+  },
+  "4.107.1": {
+    "0": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        },
+        "workerd": {
+          "from": "1.20260702.1",
+          "to": "^1.20260708.1"
+        },
+        "miniflare": {
+          "from": "4.20260702.0",
+          "to": "^4.20260706.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:51:03.174Z",
+      "version": "4.107.1-depup.0"
+    }
   }
 }

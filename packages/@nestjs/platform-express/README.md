@@ -12,14 +12,11 @@ npm install @depup/nestjs__platform-express
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.1.27 | **DepUp version**: 11.1.27-depup.25 | **Updated**: 7/8/2026 | **Import test**: failed
+**Original version**: 11.1.28 | **DepUp version**: 11.1.28-depup.0 | **Updated**: 7/9/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| multer | `2.1.1` | `^2.2.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nestjs__platform-express&labels=bug).
 

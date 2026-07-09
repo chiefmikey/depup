@@ -12,13 +12,12 @@ npm install @depup/fastify__cors
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.0 | **DepUp version**: 11.2.0-depup.51 | **Updated**: 7/8/2026 | **Import test**: passed
+**Original version**: 11.3.0 | **DepUp version**: 11.3.0-depup.0 | **Updated**: 7/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fastify-plugin | `^5.0.0` | `^6.0.0` |
 | toad-cache | `^3.7.0` | `^3.7.4` |
 
 

@@ -73,19 +73,6 @@
     }
   },
   "8.0.1": {
-    "16": {
-      "changes": {
-        "@babel/plugin-syntax-typescript": {
-          "from": "^8.0.1",
-          "to": "^8.0.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-04T00:26:20.801Z",
-      "version": "8.0.1-depup.16"
-    },
     "17": {
       "changes": {
         "@babel/plugin-syntax-typescript": {
@@ -137,6 +124,19 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:24:07.660Z",
       "version": "8.0.1-depup.20"
+    },
+    "21": {
+      "changes": {
+        "@babel/plugin-syntax-typescript": {
+          "from": "^8.0.1",
+          "to": "^8.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:27:36.809Z",
+      "version": "8.0.1-depup.21"
     }
   }
 }

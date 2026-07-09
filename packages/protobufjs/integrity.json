@@ -400,6 +400,14 @@
       "status": "skipped",
       "timestamp": "2026-07-08T00:41:54.803Z",
       "version": "8.7.0-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-07-09T00:44:28.325Z",
+      "version": "8.7.0-depup.2"
     }
   }
 }

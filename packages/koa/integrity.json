@@ -117,39 +117,6 @@
     }
   },
   "3.2.1": {
-    "42": {
-      "changes": {
-        "content-disposition": {
-          "from": "~1.0.1",
-          "to": "^2.0.1"
-        },
-        "content-type": {
-          "from": "^1.0.5",
-          "to": "^2.0.0"
-        },
-        "http-errors": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "mime-types": {
-          "from": "^3.0.1",
-          "to": "^3.0.2"
-        },
-        "statuses": {
-          "from": "^2.0.1",
-          "to": "^2.0.2"
-        },
-        "type-is": {
-          "from": "^2.0.1",
-          "to": "^2.1.0"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-04T00:41:19.192Z",
-      "version": "3.2.1-depup.42"
-    },
     "43": {
       "changes": {
         "content-disposition": {
@@ -281,6 +248,39 @@
       "status": "failed",
       "timestamp": "2026-07-08T00:36:44.327Z",
       "version": "3.2.1-depup.46"
+    },
+    "47": {
+      "changes": {
+        "content-disposition": {
+          "from": "~1.0.1",
+          "to": "^2.0.1"
+        },
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        },
+        "type-is": {
+          "from": "^2.0.1",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-09T00:39:26.859Z",
+      "version": "3.2.1-depup.47"
     }
   }
 }

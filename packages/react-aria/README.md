@@ -12,7 +12,7 @@ npm install @depup/react-aria
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.50.0 | **DepUp version**: 3.50.0-depup.19 | **Updated**: 7/8/2026 | **Import test**: failed
+**Original version**: 3.50.0 | **DepUp version**: 3.50.0-depup.20 | **Updated**: 7/9/2026 | **Import test**: failed
 
 ## What changed
 

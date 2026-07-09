@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.64 | **Updated**: 7/8/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.65 | **Updated**: 7/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | react-images | `^0.5.6` | `^1.2.0-beta.7` |
 | react-markdown | `^2.5.0` | `^10.1.0` |
 | react-redux | `^5.0.6` | `^9.3.0` |
-| react-router | `^3.0.2` | `^8.1.0` |
+| react-router | `^3.0.2` | `^8.2.0` |
 | redux | `^3.7.2` | `^5.0.1` |
 | redux-saga | `^0.15.6` | `^1.5.0` |
 | redux-thunk | `^2.2.0` | `^3.1.0` |
