@@ -12,7 +12,7 @@ npm install @depup/vue-eslint-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.4.1 | **DepUp version**: 10.4.1-depup.45 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 10.4.1 | **DepUp version**: 10.4.1-depup.46 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 

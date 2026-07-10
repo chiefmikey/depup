@@ -402,19 +402,6 @@
     }
   },
   "25.3.0": {
-    "3": {
-      "changes": {
-        "devtools-protocol": {
-          "from": "0.0.1638949",
-          "to": "^0.0.1656784"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:42:47.577Z",
-      "version": "25.3.0-depup.3"
-    },
     "4": {
       "changes": {
         "devtools-protocol": {
@@ -478,6 +465,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:42:21.740Z",
       "version": "25.3.0-depup.7"
+    },
+    "8": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "16.0.1",
+          "to": "^17.0.2"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1638949",
+          "to": "^0.0.1658499"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:43:49.453Z",
+      "version": "25.3.0-depup.8"
     }
   }
 }

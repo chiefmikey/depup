@@ -2127,5 +2127,52 @@
       "timestamp": "2026-07-09T00:26:24.178Z",
       "version": "22.0.5-depup.7"
     }
+  },
+  "22.0.6": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.4.2",
+          "to": "^8.5.2"
+        },
+        "@listr2/prompt-adapter-inquirer": {
+          "from": "4.2.3",
+          "to": "^4.2.4"
+        },
+        "algoliasearch": {
+          "from": "5.52.0",
+          "to": "^5.55.2"
+        },
+        "ini": {
+          "from": "6.0.0",
+          "to": "^7.0.0"
+        },
+        "listr2": {
+          "from": "10.2.1",
+          "to": "^10.2.2"
+        },
+        "npm-package-arg": {
+          "from": "13.0.2",
+          "to": "^14.0.0"
+        },
+        "pacote": {
+          "from": "21.5.1",
+          "to": "^22.0.0"
+        },
+        "semver": {
+          "from": "7.7.4",
+          "to": "^7.8.5"
+        },
+        "zod": {
+          "from": "4.4.2",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:27:09.171Z",
+      "version": "22.0.6-depup.0"
+    }
   }
 }

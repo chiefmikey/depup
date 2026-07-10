@@ -12,14 +12,14 @@ npm install @depup/react-email
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.8 | **DepUp version**: 6.6.8-depup.1 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 6.6.9 | **DepUp version**: 6.6.9-depup.0 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/parser | `7.27.0` | `^8.0.0` |
-| @babel/traverse | `7.27.0` | `^8.0.0` |
+| @babel/parser | `7.27.0` | `^8.0.4` |
+| @babel/traverse | `7.27.0` | `^8.0.4` |
 | chokidar | `^4.0.3` | `^5.0.0` |
 | commander | `^13.0.0` | `^15.0.0` |
 | conf | `^15.0.2` | `^15.1.0` |
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild | `^0.28.0` | `^0.28.1` |
 | jiti | `2.4.2` | `^2.7.0` |
 | log-symbols | `^7.0.0` | `^7.0.1` |
-| marked | `^15.0.12` | `^18.0.5` |
+| marked | `^15.0.12` | `^18.0.6` |
 | mime-types | `^3.0.0` | `^3.0.2` |
 | nypm | `0.6.6` | `^0.6.8` |
 | socket.io | `^4.8.1` | `^4.8.3` |

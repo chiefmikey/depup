@@ -104,27 +104,6 @@
     }
   },
   "18.2.3": {
-    "17": {
-      "changes": {
-        "@hapi/formula": {
-          "from": "^3.0.2",
-          "to": "^4.0.0"
-        },
-        "@hapi/pinpoint": {
-          "from": "^2.0.1",
-          "to": "^3.0.0"
-        },
-        "@hapi/tlds": {
-          "from": "^1.1.1",
-          "to": "^2.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:38:48.189Z",
-      "version": "18.2.3-depup.17"
-    },
     "18": {
       "changes": {
         "@hapi/formula": {
@@ -208,6 +187,27 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:38:46.478Z",
       "version": "18.2.3-depup.21"
+    },
+    "22": {
+      "changes": {
+        "@hapi/formula": {
+          "from": "^3.0.2",
+          "to": "^4.0.0"
+        },
+        "@hapi/pinpoint": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        },
+        "@hapi/tlds": {
+          "from": "^1.1.1",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:39:57.084Z",
+      "version": "18.2.3-depup.22"
     }
   }
 }

@@ -395,6 +395,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:30:37.925Z",
       "version": "0.63.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.33.0",
+          "to": "^1.43.0"
+        },
+        "@types/memcached": {
+          "from": "^2.2.6",
+          "to": "^2.2.10"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:31:36.866Z",
+      "version": "0.63.0-depup.4"
     }
   }
 }

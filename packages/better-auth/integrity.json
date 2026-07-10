@@ -2123,47 +2123,6 @@
     }
   },
   "1.6.23": {
-    "5": {
-      "changes": {
-        "@noble/ciphers": {
-          "from": "^2.1.1",
-          "to": "^2.2.0"
-        },
-        "@noble/hashes": {
-          "from": "^2.0.1",
-          "to": "^2.2.0"
-        },
-        "better-call": {
-          "from": "1.3.7",
-          "to": "^2.0.5"
-        },
-        "defu": {
-          "from": "^6.1.4",
-          "to": "^6.1.7"
-        },
-        "jose": {
-          "from": "^6.1.3",
-          "to": "^6.2.3"
-        },
-        "kysely": {
-          "from": "^0.28.17 || ^0.29.0",
-          "to": "^0.29.2"
-        },
-        "nanostores": {
-          "from": "^1.1.1",
-          "to": "^1.4.0"
-        },
-        "zod": {
-          "from": "^4.3.6",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:32:36.452Z",
-      "version": "1.6.23-depup.5"
-    },
     "6": {
       "changes": {
         "@noble/ciphers": {
@@ -2327,6 +2286,47 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:34:51.048Z",
       "version": "1.6.23-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@noble/ciphers": {
+          "from": "^2.1.1",
+          "to": "^2.2.0"
+        },
+        "@noble/hashes": {
+          "from": "^2.0.1",
+          "to": "^2.2.0"
+        },
+        "better-call": {
+          "from": "1.3.7",
+          "to": "^2.0.5"
+        },
+        "defu": {
+          "from": "^6.1.4",
+          "to": "^6.1.7"
+        },
+        "jose": {
+          "from": "^6.1.3",
+          "to": "^6.2.3"
+        },
+        "kysely": {
+          "from": "^0.28.17 || ^0.29.0",
+          "to": "^0.29.3"
+        },
+        "nanostores": {
+          "from": "^1.1.1",
+          "to": "^1.4.0"
+        },
+        "zod": {
+          "from": "^4.3.6",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:36:06.109Z",
+      "version": "1.6.23-depup.10"
     }
   }
 }

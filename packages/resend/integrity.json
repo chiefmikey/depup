@@ -401,6 +401,19 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:43:47.334Z",
       "version": "6.17.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "postal-mime": {
+          "from": "2.7.4",
+          "to": "^2.7.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:45:13.569Z",
+      "version": "6.17.2-depup.1"
     }
   }
 }

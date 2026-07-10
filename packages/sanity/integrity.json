@@ -11366,6 +11366,111 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:44:59.654Z",
       "version": "6.4.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@isaacs/ttlcache": {
+          "from": "^1.4.1",
+          "to": "^2.1.5"
+        },
+        "@portabletext/editor": {
+          "from": "^7.10.1",
+          "to": "^7.10.6"
+        },
+        "@portabletext/plugin-dnd": {
+          "from": "^1.0.13",
+          "to": "^1.0.18"
+        },
+        "@portabletext/plugin-list-index": {
+          "from": "^1.0.13",
+          "to": "^1.0.18"
+        },
+        "@portabletext/plugin-markdown-shortcuts": {
+          "from": "^8.0.28",
+          "to": "^8.0.34"
+        },
+        "@portabletext/plugin-one-line": {
+          "from": "^7.0.28",
+          "to": "^7.0.33"
+        },
+        "@portabletext/plugin-paste-link": {
+          "from": "^4.0.28",
+          "to": "^4.0.33"
+        },
+        "@portabletext/plugin-typography": {
+          "from": "^8.0.28",
+          "to": "^8.0.34"
+        },
+        "@portabletext/sanity-bridge": {
+          "from": "^3.2.0",
+          "to": "^3.2.1"
+        },
+        "@sanity/cli": {
+          "from": "^7.5.0",
+          "to": "^7.7.1"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/insert-menu": {
+          "from": "^3.0.8",
+          "to": "^3.0.9"
+        },
+        "@sanity/preview-url-secret": {
+          "from": "^4.0.7",
+          "to": "^4.0.8"
+        },
+        "@sanity/ui": {
+          "from": "^3.3.0",
+          "to": "^3.3.5"
+        },
+        "@sentry/react": {
+          "from": "^10.62.0",
+          "to": "^10.64.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.4",
+          "to": "^3.14.5"
+        },
+        "color2k": {
+          "from": "^2.0.3",
+          "to": "^2.0.4"
+        },
+        "i18next": {
+          "from": "^26.3.3",
+          "to": "^26.3.6"
+        },
+        "is-network-error": {
+          "from": "^1.3.1",
+          "to": "^1.3.2"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^3.18.0"
+        },
+        "motion": {
+          "from": "^12.42.0",
+          "to": "^12.42.2"
+        },
+        "path-to-regexp": {
+          "from": "^6.3.0",
+          "to": "^8.4.2"
+        },
+        "react-i18next": {
+          "from": "^17.0.8",
+          "to": "^17.0.9"
+        },
+        "xstate": {
+          "from": "^5.32.2",
+          "to": "^5.32.4"
+        }
+      },
+      "depsUpdated": 24,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:46:23.359Z",
+      "version": "6.4.0-depup.2"
     }
   }
 }

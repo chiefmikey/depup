@@ -63,27 +63,6 @@
     }
   },
   "6.8.9": {
-    "44": {
-      "changes": {
-        "fs-extra": {
-          "from": "^10.1.0",
-          "to": "^11.3.6"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^5.2.1"
-        },
-        "semver": {
-          "from": "~7.7.3",
-          "to": "^7.8.5"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:34:53.906Z",
-      "version": "6.8.9-depup.44"
-    },
     "45": {
       "changes": {
         "fs-extra": {
@@ -167,6 +146,27 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:36:50.776Z",
       "version": "6.8.9-depup.48"
+    },
+    "49": {
+      "changes": {
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.3.6"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^5.2.1"
+        },
+        "semver": {
+          "from": "~7.7.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:38:04.681Z",
+      "version": "6.8.9-depup.49"
     }
   }
 }

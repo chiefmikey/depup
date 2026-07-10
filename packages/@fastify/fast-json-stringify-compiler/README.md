@@ -12,11 +12,14 @@ npm install @depup/fastify__fast-json-stringify-compiler
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.3 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.4 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| fast-json-stringify | `^7.0.0` | `^7.0.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify__fast-json-stringify-compiler&labels=bug).
 

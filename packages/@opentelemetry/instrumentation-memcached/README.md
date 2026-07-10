@@ -12,13 +12,13 @@ npm install @depup/opentelemetry__instrumentation-memcached
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.63.0 | **DepUp version**: 0.63.0-depup.3 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 0.63.0 | **DepUp version**: 0.63.0-depup.4 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @opentelemetry/semantic-conventions | `^1.33.0` | `^1.42.0` |
+| @opentelemetry/semantic-conventions | `^1.33.0` | `^1.43.0` |
 | @types/memcached | `^2.2.6` | `^2.2.10` |
 
 
