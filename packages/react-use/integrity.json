@@ -68,39 +68,6 @@
     }
   },
   "17.6.1": {
-    "6": {
-      "changes": {
-        "@types/js-cookie": {
-          "from": "^3.0.0",
-          "to": "^3.0.6"
-        },
-        "copy-to-clipboard": {
-          "from": "^3.3.1",
-          "to": "^4.0.2"
-        },
-        "js-cookie": {
-          "from": "^3.0.0",
-          "to": "^3.0.8"
-        },
-        "screenfull": {
-          "from": "^5.1.0",
-          "to": "^6.0.2"
-        },
-        "throttle-debounce": {
-          "from": "^3.0.1",
-          "to": "^5.0.2"
-        },
-        "tslib": {
-          "from": "^2.1.0",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:44:34.638Z",
-      "version": "17.6.1-depup.6"
-    },
     "7": {
       "changes": {
         "@types/js-cookie": {
@@ -232,6 +199,39 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:46:47.062Z",
       "version": "17.6.1-depup.10"
+    },
+    "11": {
+      "changes": {
+        "@types/js-cookie": {
+          "from": "^3.0.0",
+          "to": "^3.0.6"
+        },
+        "copy-to-clipboard": {
+          "from": "^3.3.1",
+          "to": "^4.0.2"
+        },
+        "js-cookie": {
+          "from": "^3.0.0",
+          "to": "^3.0.8"
+        },
+        "screenfull": {
+          "from": "^5.1.0",
+          "to": "^6.0.2"
+        },
+        "throttle-debounce": {
+          "from": "^3.0.1",
+          "to": "^5.0.2"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:48:15.196Z",
+      "version": "17.6.1-depup.11"
     }
   }
 }

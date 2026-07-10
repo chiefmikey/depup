@@ -1,0 +1,54 @@
+{
+  "name": "@depup/intl-messageformat",
+  "version": "11.2.10-depup.0",
+  "description": "Formats ICU Message strings with number, date, plural, and select placeholders to create localized messages. (with updated dependencies)",
+  "keywords": [
+    "intl-messageformat",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "globalization",
+    "i18n",
+    "icu",
+    "internationalization",
+    "intl",
+    "localization",
+    "messageformat",
+    "parser",
+    "plural"
+  ],
+  "homepage": "https://github.com/formatjs/formatjs",
+  "bugs": "https://github.com/formatjs/formatjs/issues",
+  "license": "BSD-3-Clause",
+  "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
+  "contributors": [
+    "Anthony Pipkin <a.pipkin@yahoo.com>",
+    "Caridy Patino <caridy@gmail.com>",
+    "Drew Folta <drew@folta.net>",
+    "Long Ho <holevietlong@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:formatjs/formatjs.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "dependencies": {
+    "@formatjs/fast-memoize": "3.1.6",
+    "@formatjs/icu-messageformat-parser": "3.5.13"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "intl-messageformat",
+    "originalVersion": "11.2.10",
+    "processedAt": "2026-07-10T00:39:54.703Z",
+    "smokeTest": "passed"
+  }
+}

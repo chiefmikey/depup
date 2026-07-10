@@ -12,7 +12,7 @@ npm install @depup/picomatch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.6 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.7 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 

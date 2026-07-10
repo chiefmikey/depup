@@ -12,17 +12,17 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.51.0 | **DepUp version**: 6.51.0-depup.5 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 6.52.0 | **DepUp version**: 6.52.0-depup.0 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1076.0` | `^3.1083.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1084.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.64.0` |
-| @slack/webhook | `7.0.9` | `^7.2.0` |
+| @slack/webhook | `7.1.0` | `^7.2.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.1` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.1` |
 | @tryghost/brute-knex | `3.1.0` | `^3.2.0` |
@@ -62,37 +62,25 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html5parser | `2.0.2` | `^3.0.0` |
 | iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.9` |
+| intl-messageformat | `5.4.3` | `^11.2.10` |
 | js-yaml | `4.3.0` | `^5.2.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.0.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
-| mailgun.js | `10.4.0` | `^13.2.0` |
-| metascraper | `5.50.6` | `^5.51.1` |
-| metascraper-amazon | `5.50.6` | `^5.51.2` |
-| metascraper-author | `5.50.6` | `^5.51.1` |
-| metascraper-description | `5.50.6` | `^5.51.1` |
-| metascraper-image | `5.50.6` | `^5.51.1` |
-| metascraper-logo | `5.50.6` | `^5.51.1` |
-| metascraper-logo-favicon | `5.50.6` | `^5.51.1` |
-| metascraper-publisher | `5.50.6` | `^5.51.1` |
-| metascraper-title | `5.50.6` | `^5.51.1` |
-| metascraper-url | `5.50.6` | `^5.51.1` |
+| mailgun.js | `10.4.0` | `^13.3.0` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.2` |
 | moment-timezone | `0.5.45` | `^0.6.2` |
-| multer | `2.1.1` | `^2.2.0` |
 | mysql2 | `3.22.5` | `^3.22.6` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `8.0.11` | `^9.0.3` |
 | otplib | `12.0.1` | `^13.4.1` |
-| sharp | `0.35.2` | `^0.35.3` |
-| stripe | `8.222.0` | `^22.3.0` |
+| stripe | `8.222.0` | `^22.3.1` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.48.0` | `^5.49.0` |
-| tldts | `7.4.4` | `^7.4.7` |
+| tldts | `7.4.4` | `^7.4.8` |
 | type-fest | `5.7.0` | `^5.8.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
 

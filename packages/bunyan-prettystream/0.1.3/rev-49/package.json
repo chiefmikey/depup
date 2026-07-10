@@ -1,0 +1,50 @@
+{
+  "name": "@depup/bunyan-prettystream",
+  "version": "0.1.3-depup.49",
+  "description": "A stream implementation of the bunyan cli tool's pretty printing capabilities (with updated dependencies)",
+  "author": "Amar Suhail <amar.suhail@gmail.com>",
+  "main": "./lib/prettystream.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrrama/node-bunyan-prettystream.git"
+  },
+  "engines": [
+    "node >=0.8.0"
+  ],
+  "keywords": [
+    "bunyan-prettystream",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "log",
+    "logging",
+    "console",
+    "bunyan",
+    "development",
+    "stream"
+  ],
+  "devDependencies": {
+    "mocha": "1.11.0",
+    "blanket": "1.1.5",
+    "mocha-lcov-reporter": "0.0.1",
+    "coveralls": "2.0.13",
+    "travis-cov": "0.2.4",
+    "should": "1.2.2"
+  },
+  "scripts": {
+    "test": "make test",
+    "travis-cov": {
+      "threshold": 70
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "bunyan-prettystream",
+    "originalVersion": "0.1.3",
+    "processedAt": "2026-07-10T00:35:14.530Z",
+    "smokeTest": "passed"
+  }
+}

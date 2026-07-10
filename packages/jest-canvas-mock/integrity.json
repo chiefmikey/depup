@@ -26,5 +26,20 @@
       "timestamp": "2026-04-01T16:31:27.108Z",
       "version": "2.5.2-depup.1"
     }
+  },
+  "2.5.8": {
+    "0": {
+      "changes": {
+        "moo-color": {
+          "from": "^1.0.2",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:40:18.058Z",
+      "version": "2.5.8-depup.0"
+    }
   }
 }

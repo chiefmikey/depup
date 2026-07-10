@@ -28,19 +28,6 @@
     }
   },
   "0.8.4": {
-    "43": {
-      "changes": {
-        "libsodium": {
-          "from": "^0.8.0",
-          "to": "^0.8.4"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:40:03.611Z",
-      "version": "0.8.4-depup.43"
-    },
     "44": {
       "changes": {
         "libsodium": {
@@ -92,6 +79,19 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:40:04.059Z",
       "version": "0.8.4-depup.47"
+    },
+    "48": {
+      "changes": {
+        "libsodium": {
+          "from": "^0.8.0",
+          "to": "^0.8.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:41:13.083Z",
+      "version": "0.8.4-depup.48"
     }
   }
 }

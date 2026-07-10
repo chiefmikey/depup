@@ -1,22 +1,5 @@
 {
   "1.4.7": {
-    "42": {
-      "changes": {
-        "cookie": {
-          "from": "0.7.2",
-          "to": "^2.0.1"
-        },
-        "cookie-signature": {
-          "from": "1.0.6",
-          "to": "^1.2.2"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:34:15.172Z",
-      "version": "1.4.7-depup.42"
-    },
     "43": {
       "changes": {
         "cookie": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:34:37.759Z",
       "version": "1.4.7-depup.46"
+    },
+    "47": {
+      "changes": {
+        "cookie": {
+          "from": "0.7.2",
+          "to": "^2.0.1"
+        },
+        "cookie-signature": {
+          "from": "1.0.6",
+          "to": "^1.2.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:35:35.167Z",
+      "version": "1.4.7-depup.47"
     }
   }
 }

@@ -1451,6 +1451,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:26:46.930Z",
       "version": "3.975.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:27:27.141Z",
+      "version": "3.975.1-depup.1"
     }
   }
 }

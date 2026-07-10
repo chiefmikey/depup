@@ -12,7 +12,7 @@ npm install @depup/vitepress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.51 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.52 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | focus-trap | `^7.6.4` | `^8.2.2` |
 | minisearch | `^7.1.1` | `^7.2.0` |
 | shiki | `^2.1.0` | `^4.3.1` |
-| vite | `^5.4.14` | `^8.1.3` |
+| vite | `^5.4.14` | `^8.1.4` |
 | vue | `^3.5.13` | `^3.5.39` |
 
 

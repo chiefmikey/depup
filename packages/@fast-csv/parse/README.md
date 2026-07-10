@@ -12,7 +12,7 @@ npm install @depup/fast-csv__parse
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.7 | **DepUp version**: 5.0.7-depup.52 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 5.0.7 | **DepUp version**: 5.0.7-depup.53 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 

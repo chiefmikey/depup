@@ -208,6 +208,19 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:38:40.136Z",
       "version": "6.1.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "style-to-js": {
+          "from": "2.0.1",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:39:44.340Z",
+      "version": "6.1.4-depup.4"
     }
   }
 }

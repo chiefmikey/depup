@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.1 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.2 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | resolve-from | `^4.0.0` | `^5.0.0` |
 | sanitize-filename | `^1.6.0` | `^1.6.4` |
 | semver | `^7.5.3` | `^7.8.5` |
-| set-cookie-parser | `^2.5.1` | `^3.1.1` |
+| set-cookie-parser | `^2.5.1` | `^3.1.2` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
 | testcafe-legacy-api | `5.1.8` | `^5.1.9` |

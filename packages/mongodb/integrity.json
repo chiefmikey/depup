@@ -347,6 +347,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:41:43.197Z",
       "version": "7.5.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@mongodb-js/saslprep": {
+          "from": "^1.4.11",
+          "to": "^1.4.12"
+        },
+        "bson": {
+          "from": "^7.2.0",
+          "to": "^7.3.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:42:57.692Z",
+      "version": "7.5.0-depup.2"
     }
   }
 }

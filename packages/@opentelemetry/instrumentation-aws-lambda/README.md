@@ -12,14 +12,14 @@ npm install @depup/opentelemetry__instrumentation-aws-lambda
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.72.0 | **DepUp version**: 0.72.0-depup.3 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 0.72.0 | **DepUp version**: 0.72.0-depup.4 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @opentelemetry/propagator-aws-xray | `^2.1.4` | `^2.2.0` |
-| @opentelemetry/semantic-conventions | `^1.27.0` | `^1.42.0` |
+| @opentelemetry/semantic-conventions | `^1.27.0` | `^1.43.0` |
 | @types/aws-lambda | `^8.10.155` | `^8.10.162` |
 
 

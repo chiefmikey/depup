@@ -12,7 +12,7 @@ npm install @depup/mjml
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.9 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.10 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 
