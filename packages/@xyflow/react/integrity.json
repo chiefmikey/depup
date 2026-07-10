@@ -260,6 +260,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:33:20.165Z",
       "version": "12.11.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "classcat": {
+          "from": "^5.0.3",
+          "to": "^5.0.5"
+        },
+        "zustand": {
+          "from": "^4.4.0",
+          "to": "^5.0.14"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:33:45.877Z",
+      "version": "12.11.2-depup.3"
     }
   }
 }

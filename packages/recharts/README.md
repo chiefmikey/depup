@@ -12,7 +12,7 @@ npm install @depup/recharts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.9.2 | **DepUp version**: 3.9.2-depup.4 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 3.9.2 | **DepUp version**: 3.9.2-depup.5 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 

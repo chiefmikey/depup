@@ -12,16 +12,16 @@ npm install @depup/base44__vite-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.30 | **DepUp version**: 1.0.30-depup.0 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 1.0.30 | **DepUp version**: 1.0.30-depup.1 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/generator | `^7.28.5` | `^8.0.0` |
-| @babel/parser | `^7.28.5` | `^8.0.0` |
-| @babel/traverse | `^7.28.5` | `^8.0.0` |
-| @babel/types | `^7.28.5` | `^8.0.0` |
+| @babel/parser | `^7.28.5` | `^8.0.4` |
+| @babel/traverse | `^7.28.5` | `^8.0.4` |
+| @babel/types | `^7.28.5` | `^8.0.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/base44__vite-plugin&labels=bug).

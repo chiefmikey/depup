@@ -277,6 +277,23 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:28:50.543Z",
       "version": "8.0.30-depup.2"
+    },
+    "3": {
+      "changes": {
+        "globby": {
+          "from": "^11.0.3",
+          "to": "^16.2.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:29:34.759Z",
+      "version": "8.0.30-depup.3"
     }
   }
 }

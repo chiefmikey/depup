@@ -12,11 +12,14 @@ npm install @depup/http-proxy-middleware
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.4 | **Updated**: 7/9/2026 | **Import test**: passed
+**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.5 | **Updated**: 7/10/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| httpxy | `^0.5.4` | `^0.5.5` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/http-proxy-middleware&labels=bug).
 

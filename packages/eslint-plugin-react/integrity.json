@@ -1,42 +1,5 @@
 {
   "7.37.5": {
-    "46": {
-      "changes": {
-        "array-includes": {
-          "from": "^3.1.8",
-          "to": "^3.1.9"
-        },
-        "doctrine": {
-          "from": "^2.1.0",
-          "to": "^3.0.0"
-        },
-        "es-iterator-helpers": {
-          "from": "^1.2.1",
-          "to": "^1.3.3"
-        },
-        "hasown": {
-          "from": "^2.0.2",
-          "to": "^2.0.4"
-        },
-        "jsx-ast-utils": {
-          "from": "^2.4.1 || ^3.0.0",
-          "to": "^3.3.5"
-        },
-        "minimatch": {
-          "from": "^3.1.2",
-          "to": "^10.2.5"
-        },
-        "semver": {
-          "from": "^6.3.1",
-          "to": "^7.8.5"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-05T00:35:23.318Z",
-      "version": "7.37.5-depup.46"
-    },
     "47": {
       "changes": {
         "array-includes": {
@@ -184,6 +147,43 @@
       "status": "failed",
       "timestamp": "2026-07-09T00:39:14.638Z",
       "version": "7.37.5-depup.50"
+    },
+    "51": {
+      "changes": {
+        "array-includes": {
+          "from": "^3.1.8",
+          "to": "^3.1.9"
+        },
+        "doctrine": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        },
+        "es-iterator-helpers": {
+          "from": "^1.2.1",
+          "to": "^1.3.3"
+        },
+        "hasown": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        },
+        "jsx-ast-utils": {
+          "from": "^2.4.1 || ^3.0.0",
+          "to": "^3.3.5"
+        },
+        "minimatch": {
+          "from": "^3.1.2",
+          "to": "^10.2.5"
+        },
+        "semver": {
+          "from": "^6.3.1",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:39:00.506Z",
+      "version": "7.37.5-depup.51"
     }
   }
 }

@@ -351,5 +351,20 @@
       "timestamp": "2026-07-09T00:31:22.946Z",
       "version": "22.0.5-depup.7"
     }
+  },
+  "22.0.6": {
+    "0": {
+      "changes": {
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-10T00:31:56.744Z",
+      "version": "22.0.6-depup.0"
+    }
   }
 }

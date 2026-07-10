@@ -12,7 +12,7 @@ npm install @depup/react-native-paper
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.15.3 | **DepUp version**: 5.15.3-depup.47 | **Updated**: 7/9/2026 | **Import test**: failed
+**Original version**: 5.15.3 | **DepUp version**: 5.15.3-depup.48 | **Updated**: 7/10/2026 | **Import test**: failed
 
 ## What changed
 
