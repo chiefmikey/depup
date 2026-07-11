@@ -139,35 +139,6 @@
     }
   },
   "3.0.260610-beta": {
-    "37": {
-      "changes": {
-        "crossws": {
-          "from": "^0.4.6",
-          "to": "^0.4.9"
-        },
-        "env-runner": {
-          "from": "^0.1.12",
-          "to": "^0.1.16"
-        },
-        "nf3": {
-          "from": "^0.3.17",
-          "to": "^0.3.19"
-        },
-        "rolldown": {
-          "from": "^1.1.0",
-          "to": "^1.1.4"
-        },
-        "srvx": {
-          "from": "^0.11.16",
-          "to": "^0.11.21"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-06T00:43:37.871Z",
-      "version": "3.0.260610-beta-depup.37"
-    },
     "38": {
       "changes": {
         "crossws": {
@@ -287,6 +258,39 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:43:36.659Z",
       "version": "3.0.260610-beta-depup.41"
+    },
+    "42": {
+      "changes": {
+        "crossws": {
+          "from": "^0.4.6",
+          "to": "^0.4.9"
+        },
+        "env-runner": {
+          "from": "^0.1.12",
+          "to": "^0.1.16"
+        },
+        "nf3": {
+          "from": "^0.3.17",
+          "to": "^0.3.21"
+        },
+        "ocache": {
+          "from": "^0.1.5",
+          "to": "^0.2.0"
+        },
+        "rolldown": {
+          "from": "^1.1.0",
+          "to": "^1.1.5"
+        },
+        "srvx": {
+          "from": "^0.11.16",
+          "to": "^0.11.21"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:38:34.780Z",
+      "version": "3.0.260610-beta-depup.42"
     }
   }
 }

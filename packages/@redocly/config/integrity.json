@@ -385,6 +385,19 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:31:39.143Z",
       "version": "0.50.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "json-schema-to-ts": {
+          "from": "2.7.2",
+          "to": "^3.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:26:01.839Z",
+      "version": "0.50.1-depup.4"
     }
   }
 }

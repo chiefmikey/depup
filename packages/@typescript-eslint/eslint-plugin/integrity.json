@@ -335,6 +335,19 @@
       "status": "skipped",
       "timestamp": "2026-07-10T00:32:56.313Z",
       "version": "8.63.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ignore": {
+          "from": "^7.0.5",
+          "to": "^7.0.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:27:22.842Z",
+      "version": "8.63.0-depup.4"
     }
   }
 }

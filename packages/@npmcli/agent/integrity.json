@@ -255,31 +255,6 @@
     }
   },
   "5.0.2": {
-    "16": {
-      "changes": {
-        "http-proxy-agent": {
-          "from": "^9.0.0",
-          "to": "^9.1.0"
-        },
-        "https-proxy-agent": {
-          "from": "^9.0.0",
-          "to": "^9.1.0"
-        },
-        "lru-cache": {
-          "from": "^11.2.1",
-          "to": "^11.5.1"
-        },
-        "socks-proxy-agent": {
-          "from": "^10.0.0",
-          "to": "^10.1.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-06T00:29:34.146Z",
-      "version": "5.0.2-depup.16"
-    },
     "17": {
       "changes": {
         "http-proxy-agent": {
@@ -379,6 +354,31 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:30:23.861Z",
       "version": "5.0.2-depup.20"
+    },
+    "21": {
+      "changes": {
+        "http-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "https-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "lru-cache": {
+          "from": "^11.2.1",
+          "to": "^11.5.2"
+        },
+        "socks-proxy-agent": {
+          "from": "^10.0.0",
+          "to": "^10.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:24:41.755Z",
+      "version": "5.0.2-depup.21"
     }
   }
 }

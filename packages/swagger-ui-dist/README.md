@@ -12,7 +12,7 @@ npm install @depup/swagger-ui-dist
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.32.8 | **DepUp version**: 5.32.8-depup.16 | **Updated**: 7/10/2026 | **Import test**: passed
+**Original version**: 5.32.8 | **DepUp version**: 5.32.8-depup.17 | **Updated**: 7/11/2026 | **Import test**: passed
 
 ## What changed
 

@@ -13,19 +13,6 @@
     }
   },
   "1.29.0": {
-    "7": {
-      "changes": {
-        "@types/geojson": {
-          "from": "^7946.0.13",
-          "to": "^7946.0.16"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-06T00:46:03.965Z",
-      "version": "1.29.0-depup.7"
-    },
     "8": {
       "changes": {
         "@types/geojson": {
@@ -77,6 +64,19 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:45:56.060Z",
       "version": "1.29.0-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@types/geojson": {
+          "from": "^7946.0.13",
+          "to": "^7946.0.16"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:41:07.537Z",
+      "version": "1.29.0-depup.12"
     }
   }
 }

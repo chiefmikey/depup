@@ -800,43 +800,6 @@
     }
   },
   "7.1.0": {
-    "18": {
-      "changes": {
-        "cli-cursor": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        },
-        "cli-truncate": {
-          "from": "^6.0.0",
-          "to": "^6.1.0"
-        },
-        "es-toolkit": {
-          "from": "^1.45.1",
-          "to": "^1.49.0"
-        },
-        "signal-exit": {
-          "from": "^3.0.7",
-          "to": "^4.1.0"
-        },
-        "string-width": {
-          "from": "^8.2.0",
-          "to": "^8.2.1"
-        },
-        "type-fest": {
-          "from": "^5.5.0",
-          "to": "^5.8.0"
-        },
-        "ws": {
-          "from": "^8.20.0",
-          "to": "^8.21.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-06T00:41:42.382Z",
-      "version": "7.1.0-depup.18"
-    },
     "19": {
       "changes": {
         "cli-cursor": {
@@ -984,6 +947,43 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:41:40.542Z",
       "version": "7.1.0-depup.22"
+    },
+    "23": {
+      "changes": {
+        "cli-cursor": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "cli-truncate": {
+          "from": "^6.0.0",
+          "to": "^6.1.1"
+        },
+        "es-toolkit": {
+          "from": "^1.45.1",
+          "to": "^1.49.0"
+        },
+        "signal-exit": {
+          "from": "^3.0.7",
+          "to": "^4.1.0"
+        },
+        "string-width": {
+          "from": "^8.2.0",
+          "to": "^8.2.2"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.8.0"
+        },
+        "ws": {
+          "from": "^8.20.0",
+          "to": "^8.21.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:36:32.744Z",
+      "version": "7.1.0-depup.23"
     }
   }
 }

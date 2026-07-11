@@ -1,0 +1,93 @@
+{
+  "license": "MIT",
+  "name": "@depup/react-konva",
+  "description": "React binding to canvas element via Konva framework (with updated dependencies)",
+  "version": "19.2.5-depup.44",
+  "keywords": [
+    "react-konva",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "canvas",
+    "jsx",
+    "konva"
+  ],
+  "bugs": "https://github.com/konvajs/react-konva/issues",
+  "main": "lib/ReactKonva.js",
+  "module": "es/ReactKonva.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:konvajs/react-konva.git"
+  },
+  "dependencies": {
+    "@types/react-reconciler": "^0.33.0",
+    "its-fine": "^2.0.0",
+    "react-reconciler": "0.33.0",
+    "scheduler": "0.27.0"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/lavrton"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/konva"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/lavrton"
+    }
+  ],
+  "peerDependencies": {
+    "konva": "^8.0.1 || ^7.2.5 || ^9.0.0 || ^10.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@vitest/browser": "^4.0.18",
+    "@vitest/browser-playwright": "^4.0.18",
+    "konva": "^10.2.0",
+    "mobx": "^6.13.5",
+    "mobx-react-lite": "^4.1.0",
+    "playwright": "^1.58.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3",
+    "use-image": "^1.1.4",
+    "vitest": "^4.0.18"
+  },
+  "scripts": {
+    "build": "node ./build.mjs",
+    "test:typings": "tsc --noEmit",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "",
+    "test": "vitest run && npm run test:prod && npm run test:ssr && npm run test:typings",
+    "test:prod": "NODE_ENV=production vitest run",
+    "test:ssr": "npm run build && node test/11-ssr.mjs",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:debug": "HEADLESS=false vitest"
+  },
+  "typings": "ReactKonvaCore.d.ts",
+  "files": [
+    "README.md",
+    "lib",
+    "es",
+    "ReactKonvaCore.d.ts",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-konva",
+    "originalVersion": "19.2.5",
+    "processedAt": "2026-07-11T00:40:31.665Z",
+    "smokeTest": "failed"
+  }
+}
