@@ -61,27 +61,6 @@
     }
   },
   "30.4.1": {
-    "37": {
-      "changes": {
-        "babel-plugin-istanbul": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        },
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        },
-        "slash": {
-          "from": "^3.0.0",
-          "to": "^5.1.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-06T00:35:11.367Z",
-      "version": "30.4.1-depup.37"
-    },
     "38": {
       "changes": {
         "babel-plugin-istanbul": {
@@ -165,6 +144,27 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:35:55.110Z",
       "version": "30.4.1-depup.41"
+    },
+    "42": {
+      "changes": {
+        "babel-plugin-istanbul": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "slash": {
+          "from": "^3.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:30:16.502Z",
+      "version": "30.4.1-depup.42"
     }
   }
 }

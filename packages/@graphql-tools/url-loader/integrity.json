@@ -581,6 +581,35 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:30:30.217Z",
       "version": "9.1.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@graphql-tools/executor-graphql-ws": {
+          "from": "^3.1.4",
+          "to": "^3.1.5"
+        },
+        "@graphql-tools/wrap": {
+          "from": "^11.1.1",
+          "to": "^11.1.17"
+        },
+        "@types/ws": {
+          "from": "^8.0.0",
+          "to": "^8.18.1"
+        },
+        "@whatwg-node/promise-helpers": {
+          "from": "^1.0.0",
+          "to": "^1.3.2"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:25:02.116Z",
+      "version": "9.1.4-depup.4"
     }
   }
 }

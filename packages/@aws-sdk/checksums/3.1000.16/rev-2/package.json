@@ -1,0 +1,160 @@
+{
+  "name": "@depup/aws-sdk__checksums",
+  "version": "3.1000.16-depup.2",
+  "description": "Checksum algorithms and flexible checksums middleware for the AWS SDK (with updated dependencies)",
+  "scripts": {
+    "benchmark": "node ./scripts/checksum-perf.mjs",
+    "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+    "build:cjs": "node ../../scripts/compilation/inline",
+    "build:es": "premove dist-es && tsc -p tsconfig.es.json",
+    "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+    "build:types": "premove dist-types && tsc -p tsconfig.types.json",
+    "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4",
+    "clean": "premove dist-cjs dist-es dist-types",
+    "extract:docs": "api-extractor run --local",
+    "lint": "node ../../scripts/validation/submodules-linter.js",
+    "prebuild": "yarn lint",
+    "test": "yarn g:vitest run",
+    "test:watch": "yarn g:vitest watch",
+    "test:integration": "yarn g:vitest run -c vitest.config.integ.mts",
+    "test:integration:watch": "yarn g:vitest watch -c vitest.config.integ.mts",
+    "test:e2e": "yarn g:vitest run -c vitest.config.e2e.mts --mode development",
+    "test:e2e:watch": "yarn g:vitest watch -c vitest.config.e2e.mts"
+  },
+  "main": "./dist-cjs/index.js",
+  "module": "./dist-es/index.js",
+  "types": "./dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "module": "./dist-es/index.js",
+      "node": "./dist-cjs/index.js",
+      "import": "./dist-es/index.js",
+      "require": "./dist-cjs/index.js"
+    },
+    "./package.json": {
+      "module": "./package.json",
+      "node": "./package.json",
+      "import": "./package.json",
+      "require": "./package.json"
+    },
+    "./crc": {
+      "types": "./dist-types/submodules/crc/index.d.ts",
+      "react-native": "./dist-es/submodules/crc/index.browser.js",
+      "browser": "./dist-es/submodules/crc/index.browser.js",
+      "module": "./dist-es/submodules/crc/index.js",
+      "node": "./dist-cjs/submodules/crc/index.js",
+      "import": "./dist-es/submodules/crc/index.js",
+      "require": "./dist-cjs/submodules/crc/index.js"
+    },
+    "./flexible-checksums": {
+      "types": "./dist-types/submodules/flexible-checksums/index.d.ts",
+      "module": "./dist-es/submodules/flexible-checksums/index.js",
+      "node": "./dist-cjs/submodules/flexible-checksums/index.js",
+      "import": "./dist-es/submodules/flexible-checksums/index.js",
+      "require": "./dist-cjs/submodules/flexible-checksums/index.js"
+    },
+    "./sha": {
+      "types": "./dist-types/submodules/sha/index.d.ts",
+      "react-native": "./dist-es/submodules/sha/index.browser.js",
+      "browser": "./dist-es/submodules/sha/index.browser.js",
+      "module": "./dist-es/submodules/sha/index.js",
+      "node": "./dist-cjs/submodules/sha/index.js",
+      "import": "./dist-es/submodules/sha/index.js",
+      "require": "./dist-cjs/submodules/sha/index.js"
+    },
+    "./md5": {
+      "types": "./dist-types/submodules/md5/index.d.ts",
+      "module": "./dist-es/submodules/md5/index.js",
+      "node": "./dist-cjs/submodules/md5/index.js",
+      "import": "./dist-es/submodules/md5/index.js",
+      "require": "./dist-cjs/submodules/md5/index.js"
+    }
+  },
+  "sideEffects": false,
+  "author": {
+    "name": "AWS SDK for JavaScript Team",
+    "url": "https://aws.amazon.com/sdk-for-javascript/"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-sdk/core": "^3.975.1",
+    "@aws-sdk/types": "^3.974.0",
+    "@smithy/core": "^3.29.3",
+    "@smithy/types": "^4.16.1",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.1",
+    "concurrently": "7.0.0",
+    "downlevel-dts": "0.10.1",
+    "premove": "4.0.0",
+    "typescript": "~5.8.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "typesVersions": {
+    "<4.5": {
+      "dist-types/*": [
+        "dist-types/ts3.4/*"
+      ]
+    }
+  },
+  "files": [
+    "./crc.d.ts",
+    "./crc.js",
+    "./flexible-checksums.d.ts",
+    "./flexible-checksums.js",
+    "./md5.d.ts",
+    "./md5.js",
+    "./sha.d.ts",
+    "./sha.js",
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "browser": {
+    "./dist-es/submodules/crc/index.js": "./dist-es/submodules/crc/index.browser.js",
+    "./dist-es/submodules/sha/index.js": "./dist-es/submodules/sha/index.browser.js"
+  },
+  "react-native": {
+    "./dist-es/submodules/crc/index.js": "./dist-es/submodules/crc/index.browser.js",
+    "./dist-es/submodules/sha/index.js": "./dist-es/submodules/sha/index.browser.js"
+  },
+  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/main/packages-internal/checksums",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws/aws-sdk-js-v3.git",
+    "directory": "packages-internal/checksums"
+  },
+  "keywords": [
+    "@aws-sdk/checksums",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@smithy/core": {
+        "from": "^3.29.2",
+        "to": "^3.29.3"
+      },
+      "@smithy/types": {
+        "from": "^4.16.0",
+        "to": "^4.16.1"
+      },
+      "tslib": {
+        "from": "^2.6.2",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@aws-sdk/checksums",
+    "originalVersion": "3.1000.16",
+    "processedAt": "2026-07-11T00:21:41.634Z",
+    "smokeTest": "failed"
+  }
+}

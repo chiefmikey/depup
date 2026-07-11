@@ -846,6 +846,27 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:32:31.472Z",
       "version": "7.3.8-depup.2"
+    },
+    "3": {
+      "changes": {
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        },
+        "nanoid": {
+          "from": "^3.3.11",
+          "to": "^5.1.16"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:26:57.171Z",
+      "version": "7.3.8-depup.3"
     }
   }
 }

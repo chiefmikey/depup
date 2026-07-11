@@ -12,7 +12,7 @@ npm install @depup/storybook__builder-vite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.4.6 | **DepUp version**: 10.4.6-depup.23 | **Updated**: 7/10/2026 | **Import test**: passed
+**Original version**: 10.5.0 | **DepUp version**: 10.5.0-depup.0 | **Updated**: 7/11/2026 | **Import test**: passed
 
 ## What changed
 

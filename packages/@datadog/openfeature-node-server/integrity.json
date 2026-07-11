@@ -53,14 +53,6 @@
     }
   },
   "2.0.0": {
-    "48": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "failed",
-      "status": "skipped",
-      "timestamp": "2026-07-06T00:27:39.147Z",
-      "version": "2.0.0-depup.48"
-    },
     "49": {
       "changes": {},
       "depsUpdated": 0,
@@ -97,6 +89,19 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:28:33.762Z",
       "version": "2.0.0-depup.52"
+    },
+    "53": {
+      "changes": {
+        "@datadog/flagging-core": {
+          "from": "1.2.1",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:23:03.152Z",
+      "version": "2.0.0-depup.53"
     }
   }
 }
