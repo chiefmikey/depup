@@ -12,7 +12,7 @@ npm install @depup/graphql-query-complexity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.1 | **DepUp version**: 1.1.1-depup.38 | **Updated**: 7/10/2026 | **Import test**: failed
+**Original version**: 1.1.1 | **DepUp version**: 1.1.1-depup.39 | **Updated**: 7/11/2026 | **Import test**: failed
 
 ## What changed
 

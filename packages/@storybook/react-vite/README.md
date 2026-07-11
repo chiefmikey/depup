@@ -12,7 +12,7 @@ npm install @depup/storybook__react-vite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.4.6 | **DepUp version**: 10.4.6-depup.23 | **Updated**: 7/10/2026 | **Import test**: passed
+**Original version**: 10.5.0 | **DepUp version**: 10.5.0-depup.0 | **Updated**: 7/11/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @rollup/pluginutils | `^5.0.2` | `^5.4.0` |
 | empathic | `^2.0.0` | `^2.0.1` |
 | magic-string | `^0.30.0` | `^0.30.21` |
-| react-docgen | `^8.0.0` | `^8.0.3` |
+| react-docgen | `^8.0.2` | `^8.0.3` |
 | resolve | `^1.22.8` | `^1.22.12` |
 
 

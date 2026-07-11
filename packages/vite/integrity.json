@@ -486,6 +486,19 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:51:24.209Z",
       "version": "8.1.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "rolldown": {
+          "from": "~1.1.4",
+          "to": "^1.1.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:46:04.936Z",
+      "version": "8.1.4-depup.1"
     }
   }
 }

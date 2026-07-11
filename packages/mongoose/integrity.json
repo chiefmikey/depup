@@ -503,6 +503,19 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:42:57.941Z",
       "version": "9.7.4-depup.3"
+    },
+    "4": {
+      "changes": {
+        "mongodb": {
+          "from": "~7.2",
+          "to": "^7.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:37:51.338Z",
+      "version": "9.7.4-depup.4"
     }
   }
 }

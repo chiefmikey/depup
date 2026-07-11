@@ -12,16 +12,16 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.52.0 | **DepUp version**: 6.52.0-depup.0 | **Updated**: 7/10/2026 | **Import test**: failed
+**Original version**: 6.52.1 | **DepUp version**: 6.52.1-depup.0 | **Updated**: 7/11/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1084.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1085.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^4.1.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.64.0` |
+| @sentry/node | `7.120.4` | `^10.65.0` |
 | @slack/webhook | `7.1.0` | `^7.2.0` |
 | @tryghost/api-framework | `3.2.4` | `^3.3.1` |
 | @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.1` |
@@ -77,6 +77,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `8.0.11` | `^9.0.3` |
 | otplib | `12.0.1` | `^13.4.1` |
+| sanitize-html | `2.17.5` | `^2.17.6` |
 | stripe | `8.222.0` | `^22.3.1` |
 | superagent | `5.3.1` | `^10.3.0` |
 | terser | `5.48.0` | `^5.49.0` |

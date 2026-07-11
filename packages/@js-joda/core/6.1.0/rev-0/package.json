@@ -1,0 +1,65 @@
+{
+  "name": "@depup/js-joda__core",
+  "version": "6.1.0-depup.0",
+  "description": "a date and time library for javascript (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/js-joda/js-joda.git"
+  },
+  "author": "pithu",
+  "contributors": [
+    "pithu",
+    "phueper"
+  ],
+  "homepage": "https://js-joda.github.io/js-joda",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/js-joda/js-joda/issues"
+  },
+  "main": "dist/js-joda.js",
+  "module": "dist/js-joda.esm.js",
+  "typings": "typings/js-joda.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "typings",
+    "CHANGELOG.md",
+    "README.md",
+    "changes.json"
+  ],
+  "scripts": {
+    "test": "NODE_ENV=test npx mocha --timeout 5000 --require @babel/register ./test/*Test_mochaOnly.js ./test/*Test.js ./test/**/*Test.js ./test/**/**/*Test.js",
+    "test-coverage": "NODE_ENV=test COVERAGE=1 npx nyc --report-dir=build/coverage --reporter=lcov --reporter html npx mocha --timeout 5000 --require @babel/register --reporter progress ./test/*Test.js ./test/**/*Test.js ./test/**/**/*Test.js",
+    "test-browser": "npx karma start --reporters=dots --single-run",
+    "test-ci": "npm run build-dist && npm run test && npm run test-browser && npm run test-ts-definitions && npm run test-coverage",
+    "test-ts-definitions": "TS_NODE_PROJECT='../../shared/ts-test-config.json' NODE_ENV=test mocha --timeout 5000 --require ts-node/register ./test/typescript_definitions/*.ts",
+    "build-dist": "npx rollup -c rollup.config.js",
+    "build-md-toc": "npx markdown-toc -i CheatSheet.md",
+    "build-gz-check": "gzip -kf dist/js-joda.min.js && ls -alh ./dist/js-joda.min.js*",
+    "lint": "npx eslint  ."
+  },
+  "keywords": [
+    "@js-joda/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "date",
+    "time",
+    "timezone"
+  ],
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
+  "gitHead": "d82df374b19b312796817f40945c22783536170b",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@js-joda/core",
+    "originalVersion": "6.1.0",
+    "processedAt": "2026-07-11T00:24:22.937Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1067,5 +1067,36 @@
       "timestamp": "2026-07-10T00:32:11.496Z",
       "version": "10.4.6-depup.23"
     }
+  },
+  "10.5.0": {
+    "0": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.0.2",
+          "to": "^5.4.0"
+        },
+        "empathic": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "magic-string": {
+          "from": "^0.30.0",
+          "to": "^0.30.21"
+        },
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:26:30.741Z",
+      "version": "10.5.0-depup.0"
+    }
   }
 }

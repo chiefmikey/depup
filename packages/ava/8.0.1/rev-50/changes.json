@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@vercel/nft": {
+      "from": "^1.5.0",
+      "to": "^1.10.2"
+    },
+    "acorn": {
+      "from": "^8.16.0",
+      "to": "^8.17.0"
+    },
+    "cli-truncate": {
+      "from": "^6.0.0",
+      "to": "^6.1.1"
+    },
+    "globby": {
+      "from": "^16.2.0",
+      "to": "^16.2.1"
+    },
+    "p-map": {
+      "from": "^7.0.4",
+      "to": "^7.0.5"
+    },
+    "picomatch": {
+      "from": "^4.0.4",
+      "to": "^4.0.5"
+    },
+    "write-file-atomic": {
+      "from": "^7.0.1",
+      "to": "^8.0.0"
+    }
+  },
+  "timestamp": "2026-07-11T00:28:10.143Z",
+  "totalUpdated": 7
+}

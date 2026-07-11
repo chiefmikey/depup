@@ -361,6 +361,23 @@
       "status": "failed",
       "timestamp": "2026-07-10T00:33:25.366Z",
       "version": "4.1.10-depup.3"
+    },
+    "4": {
+      "changes": {
+        "fflate": {
+          "from": "^0.8.2",
+          "to": "^0.8.3"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-11T00:27:41.877Z",
+      "version": "4.1.10-depup.4"
     }
   }
 }
