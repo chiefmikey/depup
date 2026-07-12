@@ -12,13 +12,13 @@ npm install @depup/floating-ui__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.27.19 | **DepUp version**: 0.27.19-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.27.20 | **DepUp version**: 0.27.20-depup.0 | **Updated**: 7/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| tabbable | `^6.0.0` | `^6.4.0` |
+| tabbable | `^6.0.0` | `^6.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/floating-ui__react&labels=bug).

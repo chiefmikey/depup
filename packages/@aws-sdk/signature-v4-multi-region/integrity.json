@@ -831,6 +831,27 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:22:20.895Z",
       "version": "3.996.39-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@smithy/signature-v4": {
+          "from": "^5.6.3",
+          "to": "^5.6.4"
+        },
+        "@smithy/types": {
+          "from": "^4.16.0",
+          "to": "^4.16.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:23:08.299Z",
+      "version": "3.996.39-depup.3"
     }
   }
 }

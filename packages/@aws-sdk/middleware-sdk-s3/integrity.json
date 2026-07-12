@@ -1217,6 +1217,27 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:22:14.233Z",
       "version": "3.972.62-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.2",
+          "to": "^3.29.3"
+        },
+        "@smithy/types": {
+          "from": "^4.16.0",
+          "to": "^4.16.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:23:01.652Z",
+      "version": "3.972.62-depup.3"
     }
   }
 }

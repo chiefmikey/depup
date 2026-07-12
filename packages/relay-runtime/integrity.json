@@ -36,23 +36,6 @@
     }
   },
   "21.0.1": {
-    "43": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.25.0",
-          "to": "^8.0.0"
-        },
-        "fbjs": {
-          "from": "^3.0.2",
-          "to": "^3.0.5"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:48:41.057Z",
-      "version": "21.0.1-depup.43"
-    },
     "44": {
       "changes": {
         "@babel/runtime": {
@@ -120,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:41:45.343Z",
       "version": "21.0.1-depup.47"
+    },
+    "48": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.25.0",
+          "to": "^8.0.0"
+        },
+        "fbjs": {
+          "from": "^3.0.2",
+          "to": "^3.0.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:42:33.555Z",
+      "version": "21.0.1-depup.48"
     }
   }
 }

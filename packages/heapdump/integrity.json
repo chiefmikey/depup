@@ -1,18 +1,5 @@
 {
   "0.3.15": {
-    "45": {
-      "changes": {
-        "nan": {
-          "from": "^2.13.2",
-          "to": "^2.28.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:42:56.980Z",
-      "version": "0.3.15-depup.45"
-    },
     "46": {
       "changes": {
         "nan": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:36:02.665Z",
       "version": "0.3.15-depup.49"
+    },
+    "50": {
+      "changes": {
+        "nan": {
+          "from": "^2.13.2",
+          "to": "^2.28.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:36:49.535Z",
+      "version": "0.3.15-depup.50"
     }
   }
 }

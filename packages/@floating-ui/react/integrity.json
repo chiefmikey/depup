@@ -11,5 +11,20 @@
       "timestamp": "2026-03-17T16:31:50.178Z",
       "version": "0.27.19-depup.0"
     }
+  },
+  "0.27.20": {
+    "0": {
+      "changes": {
+        "tabbable": {
+          "from": "^6.0.0",
+          "to": "^6.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:24:40.783Z",
+      "version": "0.27.20-depup.0"
+    }
   }
 }

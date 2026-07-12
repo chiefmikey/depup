@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@opentelemetry/core": {
+      "from": "^2.0.0",
+      "to": "^2.9.0"
+    },
+    "@opentelemetry/resources": {
+      "from": "^2.0.0",
+      "to": "^2.9.0"
+    },
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.27.0",
+      "to": "^1.43.0"
+    }
+  },
+  "timestamp": "2026-07-12T00:25:53.001Z",
+  "totalUpdated": 3
+}

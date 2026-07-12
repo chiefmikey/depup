@@ -1,0 +1,53 @@
+{
+  "name": "@depup/babel__plugin-syntax-typescript",
+  "version": "8.0.3-depup.14",
+  "description": "Allow parsing of TypeScript syntax (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-syntax-typescript"
+  },
+  "homepage": "https://babel.dev/docs/en/next/babel-plugin-syntax-typescript",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "keywords": [
+    "@babel/plugin-syntax-typescript",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin",
+    "typescript"
+  ],
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^8.0.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/helper-plugin-test-runner": "^8.0.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.11.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "module",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@babel/plugin-syntax-typescript",
+    "originalVersion": "8.0.3",
+    "processedAt": "2026-07-12T00:23:27.899Z",
+    "smokeTest": "passed"
+  }
+}

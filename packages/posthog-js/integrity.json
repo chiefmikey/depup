@@ -5043,6 +5043,31 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:39:23.781Z",
       "version": "1.399.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.12"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.29.3",
+          "to": "^10.29.7"
+        },
+        "@posthog/core": {
+          "from": "^1.40.1",
+          "to": "^1.40.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:40:15.520Z",
+      "version": "1.399.2-depup.1"
     }
   }
 }

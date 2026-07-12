@@ -378,6 +378,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:26:20.182Z",
       "version": "22.0.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:27:12.173Z",
+      "version": "22.0.6-depup.2"
     }
   }
 }

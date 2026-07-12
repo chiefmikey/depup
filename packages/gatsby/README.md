@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.88 | **Updated**: 7/11/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.89 | **Updated**: 7/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | body-parser | `^2.2.2` | `^2.3.0` |
-| browserslist | `^4.21.9` | `^4.28.5` |
+| browserslist | `^4.21.9` | `^4.28.6` |
 | cache-manager | `^2.11.1` | `^7.2.9` |
 | chalk | `^4.1.2` | `^5.6.2` |
 | chokidar | `^3.6.0` | `^5.0.0` |
@@ -107,7 +107,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^9.0.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.16` |
+| postcss | `^8.4.24` | `^8.5.17` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.4.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |

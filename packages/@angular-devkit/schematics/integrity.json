@@ -481,6 +481,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:21:07.492Z",
       "version": "22.0.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "ora": {
+          "from": "9.4.0",
+          "to": "^9.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:22:01.073Z",
+      "version": "22.0.6-depup.2"
     }
   }
 }
