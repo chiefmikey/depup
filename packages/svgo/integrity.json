@@ -87,5 +87,36 @@
       "timestamp": "2026-05-29T10:04:55.310Z",
       "version": "4.0.1-depup.2"
     }
+  },
+  "4.0.2": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "^11.1.0",
+          "to": "^15.0.0"
+        },
+        "css-select": {
+          "from": "^5.1.0",
+          "to": "^7.0.0"
+        },
+        "css-tree": {
+          "from": "^3.0.1",
+          "to": "^3.2.1"
+        },
+        "css-what": {
+          "from": "^6.1.0",
+          "to": "^8.0.0"
+        },
+        "sax": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:44:12.691Z",
+      "version": "4.0.2-depup.0"
+    }
   }
 }

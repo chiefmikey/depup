@@ -1,26 +1,5 @@
 {
   "5.0.0": {
-    "14": {
-      "changes": {
-        "@types/mdast": {
-          "from": "^4.0.0",
-          "to": "^4.0.4"
-        },
-        "mdast-util-frontmatter": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "unified": {
-          "from": "^11.0.0",
-          "to": "^11.0.5"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:49:02.542Z",
-      "version": "5.0.0-depup.14"
-    },
     "15": {
       "changes": {
         "@types/mdast": {
@@ -104,6 +83,27 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:43:11.251Z",
       "version": "5.0.0-depup.18"
+    },
+    "19": {
+      "changes": {
+        "@types/mdast": {
+          "from": "^4.0.0",
+          "to": "^4.0.4"
+        },
+        "mdast-util-frontmatter": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "unified": {
+          "from": "^11.0.0",
+          "to": "^11.0.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:43:19.467Z",
+      "version": "5.0.0-depup.19"
     }
   }
 }

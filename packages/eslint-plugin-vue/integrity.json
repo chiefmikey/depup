@@ -120,35 +120,6 @@
     }
   },
   "10.9.2": {
-    "40": {
-      "changes": {
-        "@eslint-community/eslint-utils": {
-          "from": "^4.4.0",
-          "to": "^4.9.1"
-        },
-        "nth-check": {
-          "from": "^2.1.1",
-          "to": "^3.0.1"
-        },
-        "postcss-selector-parser": {
-          "from": "^7.1.0",
-          "to": "^7.1.4"
-        },
-        "semver": {
-          "from": "^7.6.3",
-          "to": "^7.8.5"
-        },
-        "xml-name-validator": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:37:30.123Z",
-      "version": "10.9.2-depup.40"
-    },
     "41": {
       "changes": {
         "@eslint-community/eslint-utils": {
@@ -264,6 +235,35 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:31:09.487Z",
       "version": "10.9.2-depup.44"
+    },
+    "45": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.4.0",
+          "to": "^4.9.1"
+        },
+        "nth-check": {
+          "from": "^2.1.1",
+          "to": "^3.0.1"
+        },
+        "postcss-selector-parser": {
+          "from": "^7.1.0",
+          "to": "^7.1.4"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.5"
+        },
+        "xml-name-validator": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:32:15.639Z",
+      "version": "10.9.2-depup.45"
     }
   }
 }

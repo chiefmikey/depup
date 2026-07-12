@@ -27,23 +27,6 @@
     }
   },
   "6.8.4": {
-    "32": {
-      "changes": {
-        "jose": {
-          "from": "^6.2.2",
-          "to": "^6.2.3"
-        },
-        "oauth4webapi": {
-          "from": "^3.8.5",
-          "to": "^3.8.6"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:44:34.449Z",
-      "version": "6.8.4-depup.32"
-    },
     "33": {
       "changes": {
         "jose": {
@@ -111,6 +94,23 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:38:56.208Z",
       "version": "6.8.4-depup.36"
+    },
+    "37": {
+      "changes": {
+        "jose": {
+          "from": "^6.2.2",
+          "to": "^6.2.3"
+        },
+        "oauth4webapi": {
+          "from": "^3.8.5",
+          "to": "^3.8.6"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:39:07.645Z",
+      "version": "6.8.4-depup.37"
     }
   }
 }

@@ -12,11 +12,14 @@ npm install @depup/react-joyride
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.0 | **DepUp version**: 3.2.0-depup.1 | **Updated**: 7/11/2026 | **Import test**: passed
+**Original version**: 3.2.0 | **DepUp version**: 3.2.0-depup.2 | **Updated**: 7/12/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @floating-ui/react-dom | `^2.1.8` | `^2.1.9` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-joyride&labels=bug).
 

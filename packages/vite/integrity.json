@@ -499,6 +499,23 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:46:04.936Z",
       "version": "8.1.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "postcss": {
+          "from": "^8.5.16",
+          "to": "^8.5.17"
+        },
+        "rolldown": {
+          "from": "~1.1.4",
+          "to": "^1.1.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:46:10.371Z",
+      "version": "8.1.4-depup.2"
     }
   }
 }

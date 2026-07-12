@@ -882,5 +882,15 @@
       "timestamp": "2026-07-11T00:32:04.339Z",
       "version": "16.11.2-depup.0"
     }
+  },
+  "16.11.3": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:33:06.553Z",
+      "version": "16.11.3-depup.0"
+    }
   }
 }

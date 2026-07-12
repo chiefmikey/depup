@@ -12,7 +12,7 @@ npm install @depup/react-draggable
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.7.0 | **DepUp version**: 4.7.0-depup.22 | **Updated**: 7/11/2026 | **Import test**: failed
+**Original version**: 4.7.0 | **DepUp version**: 4.7.0-depup.23 | **Updated**: 7/12/2026 | **Import test**: failed
 
 ## What changed
 

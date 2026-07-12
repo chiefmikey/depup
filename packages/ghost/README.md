@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.52.1 | **DepUp version**: 6.52.1-depup.0 | **Updated**: 7/11/2026 | **Import test**: failed
+**Original version**: 6.52.1 | **DepUp version**: 6.52.1-depup.1 | **Updated**: 7/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -53,6 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^5.6.2` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | date-fns | `2.30.0` | `^4.4.0` |
+| dompurify | `3.4.11` | `^3.4.12` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
@@ -62,7 +63,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html5parser | `2.0.2` | `^3.0.0` |
 | iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.10` |
+| intl-messageformat | `5.4.3` | `^11.2.11` |
 | js-yaml | `4.3.0` | `^5.2.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |

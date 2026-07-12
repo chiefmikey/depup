@@ -260,19 +260,6 @@
     }
   },
   "4.1.10": {
-    "0": {
-      "changes": {
-        "@types/chai": {
-          "from": "^5.2.2",
-          "to": "^5.2.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-07T00:33:48.161Z",
-      "version": "4.1.10-depup.0"
-    },
     "1": {
       "changes": {
         "@types/chai": {
@@ -324,6 +311,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:27:30.621Z",
       "version": "4.1.10-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@types/chai": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:28:34.358Z",
+      "version": "4.1.10-depup.5"
     }
   }
 }

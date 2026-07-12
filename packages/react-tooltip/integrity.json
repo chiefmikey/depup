@@ -138,14 +138,6 @@
     }
   },
   "6.0.8": {
-    "23": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "failed",
-      "status": "skipped",
-      "timestamp": "2026-07-07T00:48:32.675Z",
-      "version": "6.0.8-depup.23"
-    },
     "24": {
       "changes": {},
       "depsUpdated": 0,
@@ -177,6 +169,19 @@
       "status": "skipped",
       "timestamp": "2026-07-11T00:42:41.411Z",
       "version": "6.0.8-depup.27"
+    },
+    "28": {
+      "changes": {
+        "@floating-ui/dom": {
+          "from": "1.7.6",
+          "to": "^1.8.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:42:53.473Z",
+      "version": "6.0.8-depup.28"
     }
   }
 }

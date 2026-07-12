@@ -163,6 +163,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:23:53.535Z",
       "version": "4.0.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "nanoid": {
+          "from": "^5.1.11",
+          "to": "^5.1.16"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:24:56.502Z",
+      "version": "4.0.6-depup.2"
     }
   }
 }
