@@ -12,7 +12,7 @@ npm install @depup/srvx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.11.21 | **DepUp version**: 0.11.21-depup.6 | **Updated**: 7/11/2026 | **Import test**: passed
+**Original version**: 0.11.22 | **DepUp version**: 0.11.22-depup.0 | **Updated**: 7/12/2026 | **Import test**: passed
 
 ## What changed
 

@@ -380,6 +380,14 @@
       "status": "skipped",
       "timestamp": "2026-07-11T00:39:04.328Z",
       "version": "8.2.0-depup.2"
+    },
+    "3": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-07-12T00:39:48.107Z",
+      "version": "8.2.0-depup.3"
     }
   }
 }

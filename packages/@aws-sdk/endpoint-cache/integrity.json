@@ -279,6 +279,23 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:22:04.940Z",
       "version": "3.972.9-depup.2"
+    },
+    "3": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:22:56.825Z",
+      "version": "3.972.9-depup.3"
     }
   }
 }

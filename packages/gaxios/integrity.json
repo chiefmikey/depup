@@ -159,6 +159,19 @@
       "status": "failed",
       "timestamp": "2026-07-11T00:33:14.793Z",
       "version": "7.2.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "https-proxy-agent": {
+          "from": "^7.0.1",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-12T00:34:01.289Z",
+      "version": "7.2.0-depup.3"
     }
   }
 }
