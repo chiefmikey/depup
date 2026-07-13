@@ -1,0 +1,47 @@
+{
+  "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://helmetjs.github.io/",
+  "bugs": {
+    "url": "https://github.com/helmetjs/helmet/issues",
+    "email": "me@evanhahn.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/helmetjs/helmet.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "changes.json"
+  ],
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "name": "@depup/expect-ct",
+  "description": "Middleware to set the Expect-CT header (with updated dependencies)",
+  "version": "1.0.0-depup.52",
+  "keywords": [
+    "expect-ct",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "express"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "expect-ct",
+    "originalVersion": "1.0.0",
+    "processedAt": "2026-07-13T00:29:11.330Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,13 +12,13 @@ npm install @depup/css-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.4 | **DepUp version**: 7.1.4-depup.51 | **Updated**: 7/12/2026 | **Import test**: passed
+**Original version**: 7.1.4 | **DepUp version**: 7.1.4-depup.52 | **Updated**: 7/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| postcss | `^8.4.40` | `^8.5.17` |
+| postcss | `^8.4.40` | `^8.5.18` |
 | postcss-modules-local-by-default | `^4.0.5` | `^4.2.0` |
 | postcss-modules-scope | `^3.2.0` | `^3.2.1` |
 | semver | `^7.6.3` | `^7.8.5` |

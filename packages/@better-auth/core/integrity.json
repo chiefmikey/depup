@@ -1,0 +1,21 @@
+{
+  "1.6.23": {
+    "0": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.39.0",
+          "to": "^1.43.0"
+        },
+        "zod": {
+          "from": "^4.3.6",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:23:05.014Z",
+      "version": "1.6.23-depup.0"
+    }
+  }
+}

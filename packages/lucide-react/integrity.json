@@ -333,6 +333,14 @@
       "status": "skipped",
       "timestamp": "2026-07-12T00:36:54.851Z",
       "version": "1.24.0-depup.2"
+    },
+    "3": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "skipped",
+      "timestamp": "2026-07-13T00:31:24.896Z",
+      "version": "1.24.0-depup.3"
     }
   }
 }

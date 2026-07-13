@@ -715,19 +715,6 @@
     }
   },
   "71.1.0": {
-    "1": {
-      "changes": {
-        "browserslist": {
-          "from": "^4.28.4",
-          "to": "^4.28.5"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:35:27.550Z",
-      "version": "71.1.0-depup.1"
-    },
     "2": {
       "changes": {
         "browserslist": {
@@ -779,6 +766,19 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:33:37.246Z",
       "version": "71.1.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.28.4",
+          "to": "^4.28.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:29:10.384Z",
+      "version": "71.1.0-depup.6"
     }
   }
 }

@@ -1,30 +1,5 @@
 {
   "2.0.0": {
-    "38": {
-      "changes": {
-        "fault": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "micromark-util-character": {
-          "from": "^2.0.0",
-          "to": "^2.1.1"
-        },
-        "micromark-util-symbol": {
-          "from": "^2.0.0",
-          "to": "^2.0.1"
-        },
-        "micromark-util-types": {
-          "from": "^2.0.0",
-          "to": "^2.0.2"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:38:19.980Z",
-      "version": "2.0.0-depup.38"
-    },
     "39": {
       "changes": {
         "fault": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:36:06.350Z",
       "version": "2.0.0-depup.42"
+    },
+    "43": {
+      "changes": {
+        "fault": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "micromark-util-character": {
+          "from": "^2.0.0",
+          "to": "^2.1.1"
+        },
+        "micromark-util-symbol": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "micromark-util-types": {
+          "from": "^2.0.0",
+          "to": "^2.0.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:31:56.515Z",
+      "version": "2.0.0-depup.43"
     }
   }
 }

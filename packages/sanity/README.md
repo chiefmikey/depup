@@ -12,7 +12,7 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.4.0 | **DepUp version**: 6.4.0-depup.4 | **Updated**: 7/12/2026 | **Import test**: failed
+**Original version**: 6.4.0 | **DepUp version**: 6.4.0-depup.5 | **Updated**: 7/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,12 +34,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @sanity/preview-url-secret | `^4.0.7` | `^4.0.8` |
 | @sanity/ui | `^3.3.0` | `^3.3.5` |
 | @sentry/react | `^10.62.0` | `^10.65.0` |
-| @tanstack/react-virtual | `^3.14.4` | `^3.14.5` |
+| @tanstack/react-virtual | `^3.14.4` | `^3.14.6` |
 | color2k | `^2.0.3` | `^2.0.4` |
 | i18next | `^26.3.3` | `^26.3.6` |
 | is-network-error | `^1.3.1` | `^1.3.2` |
 | isomorphic-dompurify | `2.36.0` | `^3.18.0` |
 | motion | `^12.42.0` | `^12.42.2` |
+| nanoid | `^5.1.16` | `^6.0.0` |
 | path-to-regexp | `^6.3.0` | `^8.4.2` |
 | react-i18next | `^17.0.8` | `^17.0.9` |
 | xstate | `^5.32.2` | `^5.32.4` |

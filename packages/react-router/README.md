@@ -12,7 +12,7 @@ npm install @depup/react-router
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.2.0 | **DepUp version**: 8.2.0-depup.3 | **Updated**: 7/12/2026 | **Import test**: failed
+**Original version**: 8.2.0 | **DepUp version**: 8.2.0-depup.4 | **Updated**: 7/13/2026 | **Import test**: failed
 
 ## What changed
 
