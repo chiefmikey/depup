@@ -36,23 +36,6 @@
     }
   },
   "3.4.17": {
-    "46": {
-      "changes": {
-        "country-flag-icons": {
-          "from": "^1.6.14",
-          "to": "^1.6.20"
-        },
-        "libphonenumber-js": {
-          "from": "^1.13.4",
-          "to": "^1.13.8"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:43:45.310Z",
-      "version": "3.4.17-depup.46"
-    },
     "47": {
       "changes": {
         "country-flag-icons": {
@@ -120,6 +103,23 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:42:33.207Z",
       "version": "3.4.17-depup.50"
+    },
+    "51": {
+      "changes": {
+        "country-flag-icons": {
+          "from": "^1.6.14",
+          "to": "^1.6.20"
+        },
+        "libphonenumber-js": {
+          "from": "^1.13.4",
+          "to": "^1.13.8"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:45:39.924Z",
+      "version": "3.4.17-depup.51"
     }
   }
 }

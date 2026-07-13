@@ -1749,6 +1749,31 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:22:58.578Z",
       "version": "3.973.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1083.0",
+          "to": "^3.1085.0"
+        },
+        "@smithy/core": {
+          "from": "^3.29.2",
+          "to": "^3.29.3"
+        },
+        "@smithy/types": {
+          "from": "^4.16.0",
+          "to": "^4.16.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:22:46.500Z",
+      "version": "3.973.1-depup.4"
     }
   }
 }

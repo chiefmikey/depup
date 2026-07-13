@@ -208,6 +208,19 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:22:33.985Z",
       "version": "15.5.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.2.0",
+          "to": "^5.2.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:22:14.088Z",
+      "version": "15.5.0-depup.3"
     }
   }
 }

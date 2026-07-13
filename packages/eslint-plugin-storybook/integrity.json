@@ -529,6 +529,23 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:32:08.915Z",
       "version": "10.5.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@typescript-eslint/types": {
+          "from": "^8.48.0",
+          "to": "^8.63.0"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.48.0",
+          "to": "^8.63.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:38:35.862Z",
+      "version": "10.5.0-depup.2"
     }
   }
 }

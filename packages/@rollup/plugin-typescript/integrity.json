@@ -1,22 +1,5 @@
 {
   "12.3.0": {
-    "24": {
-      "changes": {
-        "@rollup/pluginutils": {
-          "from": "^5.1.0",
-          "to": "^5.4.0"
-        },
-        "resolve": {
-          "from": "^1.22.1",
-          "to": "^1.22.12"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:38:55.565Z",
-      "version": "12.3.0-depup.24"
-    },
     "25": {
       "changes": {
         "@rollup/pluginutils": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-16T10:21:54.054Z",
       "version": "12.3.0-depup.28"
+    },
+    "29": {
+      "changes": {
+        "@rollup/pluginutils": {
+          "from": "^5.1.0",
+          "to": "^5.4.0"
+        },
+        "resolve": {
+          "from": "^1.22.1",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:27:24.735Z",
+      "version": "12.3.0-depup.29"
     }
   }
 }

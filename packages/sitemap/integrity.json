@@ -1,0 +1,29 @@
+{
+  "9.0.1": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^24.9.2",
+          "to": "^26.1.1"
+        },
+        "@types/sax": {
+          "from": "^1.2.1",
+          "to": "^1.2.7"
+        },
+        "arg": {
+          "from": "^5.0.0",
+          "to": "^5.0.2"
+        },
+        "sax": {
+          "from": "^1.4.1",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:47:18.983Z",
+      "version": "9.0.1-depup.0"
+    }
+  }
+}

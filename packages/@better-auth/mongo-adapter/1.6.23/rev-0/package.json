@@ -1,0 +1,76 @@
+{
+  "name": "@depup/better-auth__mongo-adapter",
+  "version": "1.6.23-depup.0",
+  "description": "Mongo adapter for Better Auth (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com/docs/adapters/mongodb",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/mongo-adapter"
+  },
+  "keywords": [
+    "@better-auth/mongo-adapter",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "mongodb",
+    "adapter",
+    "typescript",
+    "better-auth"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "dev-source": "./src/index.ts",
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "mongodb": "^6.0.0 || ^7.0.0",
+    "@better-auth/core": "^1.6.23"
+  },
+  "peerDependenciesMeta": {
+    "mongodb": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "mongodb": "^7.1.0",
+    "tsdown": "0.21.1",
+    "typescript": "^5.9.3",
+    "@better-auth/core": "1.6.23"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint:package": "publint run --strict --pack false",
+    "lint:types": "attw --profile esm-only --pack .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@better-auth/mongo-adapter",
+    "originalVersion": "1.6.23",
+    "processedAt": "2026-07-13T00:23:20.900Z",
+    "smokeTest": "failed"
+  }
+}

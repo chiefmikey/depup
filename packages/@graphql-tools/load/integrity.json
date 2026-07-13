@@ -313,6 +313,23 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:25:45.110Z",
       "version": "8.1.13-depup.3"
+    },
+    "4": {
+      "changes": {
+        "p-limit": {
+          "from": "3.1.0",
+          "to": "^7.3.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:24:57.490Z",
+      "version": "8.1.13-depup.4"
     }
   }
 }

@@ -12,14 +12,15 @@ npm install @depup/oidc-provider
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.9.1 | **DepUp version**: 9.9.1-depup.4 | **Updated**: 7/12/2026 | **Import test**: passed
+**Original version**: 9.9.1 | **DepUp version**: 9.9.1-depup.5 | **Updated**: 7/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @koa/router | `^15.5.0` | `^15.7.0` |
-| nanoid | `^5.1.11` | `^5.1.16` |
+| nanoid | `^5.1.11` | `^6.0.0` |
+| raw-body | `^3.0.2` | `^4.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/oidc-provider&labels=bug).

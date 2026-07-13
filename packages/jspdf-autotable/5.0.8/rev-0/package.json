@@ -1,0 +1,104 @@
+{
+  "name": "@depup/jspdf-autotable",
+  "version": "5.0.8-depup.0",
+  "description": "Generate pdf tables with javascript (jsPDF plugin) (with updated dependencies)",
+  "main": "dist/jspdf.plugin.autotable.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/jspdf.plugin.autotable.js",
+      "import": "./dist/jspdf.plugin.autotable.mjs"
+    },
+    "./es": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/jspdf.plugin.autotable.mjs"
+    }
+  },
+  "types": "dist/index",
+  "files": [
+    "dist/*",
+    "changes.json",
+    "README.md"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 11"
+  ],
+  "directories": {
+    "example": "examples"
+  },
+  "peerDependencies": {
+    "jspdf": "^2 || ^3 || ^4"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "dts-bundle-generator": "^9.5.1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "happy-dom": "^20.9.0",
+    "jspdf": "^4.2.1",
+    "npm-check-updates": "^22.2.0",
+    "prettier": "^3.8.3",
+    "rollup": "^4.60.4",
+    "ts-loader": "^9.5.7",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.4"
+  },
+  "scripts": {
+    "start": "webpack serve --config webpack.config.mjs --mode=development",
+    "checkout-pr": "git fetch origin pull/$PR/head:pr$PR && git checkout pr$PR",
+    "start-external": "webpack serve --config webpack.config.mjs --mode=development --host 0.0.0.0",
+    "build": "webpack --mode=production && webpack --mode=production --env minified && npm run buildes && npm run types",
+    "buildes": "rollup --config rollup.config.mjs",
+    "lint": "eslint --ext=.ts .",
+    "test": "vitest run",
+    "format": "prettier --write src",
+    "version": "npm test && npm run build && git add -A dist",
+    "hosting": "git push origin main:gh-pages -f",
+    "deploy": "git push --follow-tags && npm run hosting && npm publish",
+    "types": "dts-bundle-generator src/main.ts -o ./dist/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonbengtsson/jsPDF-AutoTable.git"
+  },
+  "keywords": [
+    "jspdf-autotable",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "pdf",
+    "table",
+    "jspdf"
+  ],
+  "author": "Simon Bengtsson <dev@simonbengtsson.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonbengtsson/jsPDF-AutoTable/issues"
+  },
+  "homepage": "https://simonbengtsson.github.io/jsPDF-AutoTable",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "jspdf-autotable",
+    "originalVersion": "5.0.8",
+    "processedAt": "2026-07-13T00:40:55.633Z",
+    "smokeTest": "passed"
+  }
+}

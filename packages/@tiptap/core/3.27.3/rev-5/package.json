@@ -1,0 +1,88 @@
+{
+  "name": "@depup/tiptap__core",
+  "version": "3.27.3-depup.5",
+  "description": "headless rich text editor (with updated dependencies)",
+  "keywords": [
+    "@tiptap/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "headless",
+    "prosemirror",
+    "text editor",
+    "tiptap",
+    "wysiwyg"
+  ],
+  "homepage": "https://tiptap.dev",
+  "bugs": {
+    "url": "https://github.com/ueberdosis/tiptap/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "directory": "packages/core"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ueberdosis"
+  },
+  "files": [
+    "src",
+    "dist",
+    "jsx-runtime",
+    "jsx-dev-runtime",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./jsx-runtime": {
+      "types": {
+        "import": "./jsx-runtime/index.d.ts",
+        "require": "./jsx-runtime/index.d.cts"
+      },
+      "import": "./jsx-runtime/index.js",
+      "require": "./jsx-runtime/index.cjs"
+    },
+    "./jsx-dev-runtime": {
+      "types": {
+        "import": "./jsx-dev-runtime/index.d.ts",
+        "require": "./jsx-dev-runtime/index.d.cts"
+      },
+      "import": "./jsx-dev-runtime/index.js",
+      "require": "./jsx-dev-runtime/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@tiptap/pm": "^3.27.3"
+  },
+  "peerDependencies": {
+    "@tiptap/pm": "3.27.3"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@tiptap/core",
+    "originalVersion": "3.27.3",
+    "processedAt": "2026-07-13T00:31:58.771Z",
+    "smokeTest": "failed"
+  }
+}
