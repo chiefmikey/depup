@@ -478,27 +478,6 @@
     }
   },
   "3.6.0": {
-    "11": {
-      "changes": {
-        "proxy-from-env": {
-          "from": "^1.1.0",
-          "to": "^2.1.0"
-        },
-        "undici": {
-          "from": "^6.22.0",
-          "to": "^8.7.0"
-        },
-        "which": {
-          "from": "^2.0.2",
-          "to": "^7.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:29:18.434Z",
-      "version": "3.6.0-depup.11"
-    },
     "12": {
       "changes": {
         "proxy-from-env": {
@@ -582,6 +561,27 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:28:14.449Z",
       "version": "3.6.0-depup.15"
+    },
+    "16": {
+      "changes": {
+        "proxy-from-env": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        },
+        "undici": {
+          "from": "^6.22.0",
+          "to": "^8.7.0"
+        },
+        "which": {
+          "from": "^2.0.2",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:28:28.325Z",
+      "version": "3.6.0-depup.16"
     }
   }
 }

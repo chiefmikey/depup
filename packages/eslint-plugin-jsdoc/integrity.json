@@ -696,6 +696,23 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:34:28.290Z",
       "version": "63.0.13-depup.1"
+    },
+    "2": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:34:22.146Z",
+      "version": "63.0.13-depup.2"
     }
   }
 }

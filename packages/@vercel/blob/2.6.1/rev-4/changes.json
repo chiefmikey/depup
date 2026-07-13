@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@vercel/oidc": {
+      "from": "^3.6.1",
+      "to": "^3.8.0"
+    },
+    "throttleit": {
+      "from": "^2.1.0",
+      "to": "^3.0.0"
+    },
+    "undici": {
+      "from": "^6.23.0",
+      "to": "^8.7.0"
+    }
+  },
+  "timestamp": "2026-07-13T00:29:35.039Z",
+  "totalUpdated": 3
+}

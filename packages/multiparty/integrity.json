@@ -13,19 +13,6 @@
     }
   },
   "4.3.0": {
-    "48": {
-      "changes": {
-        "http-errors": {
-          "from": "2.0.0",
-          "to": "^2.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:39:50.066Z",
-      "version": "4.3.0-depup.48"
-    },
     "49": {
       "changes": {
         "http-errors": {
@@ -77,6 +64,19 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:38:55.863Z",
       "version": "4.3.0-depup.52"
+    },
+    "53": {
+      "changes": {
+        "http-errors": {
+          "from": "2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:40:02.582Z",
+      "version": "4.3.0-depup.53"
     }
   }
 }

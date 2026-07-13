@@ -1,0 +1,73 @@
+{
+  "name": "@depup/commander-js__extra-typings",
+  "version": "15.0.0-depup.0",
+  "description": "Infer strong typings for commander options and action handlers (with updated dependencies)",
+  "main": "./index.js",
+  "scripts": {
+    "check": "npm run check:type && npm run check:lint && npm run check:format",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint .",
+    "check:type": "tsd && tsc",
+    "fix": "npm run fix:lint && npm run fix:format",
+    "fix:format": "prettier --write .",
+    "fix:lint": "eslint --fix .",
+    "test": "tsd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commander-js/extra-typings.git"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "tsd": {
+    "directory": "tests"
+  },
+  "keywords": [
+    "@commander-js/extra-typings",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/commander-js/extra-typings/issues"
+  },
+  "homepage": "https://github.com/commander-js/extra-typings#readme",
+  "peerDependencies": {
+    "commander": "~15.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.10.1",
+    "commander": "~15.0.0",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^17.0.0",
+    "prettier": "^3.2.5",
+    "tsd": "^0.33.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.11.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@commander-js/extra-typings",
+    "originalVersion": "15.0.0",
+    "processedAt": "2026-07-13T00:23:39.942Z",
+    "smokeTest": "passed"
+  }
+}

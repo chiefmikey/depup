@@ -51,23 +51,6 @@
     }
   },
   "9.0.0": {
-    "45": {
-      "changes": {
-        "hosted-git-info": {
-          "from": "^10.1.0",
-          "to": "^10.1.1"
-        },
-        "semver": {
-          "from": "^7.3.5",
-          "to": "^7.8.5"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-08T00:40:27.842Z",
-      "version": "9.0.0-depup.45"
-    },
     "46": {
       "changes": {
         "hosted-git-info": {
@@ -135,6 +118,23 @@
       "status": "failed",
       "timestamp": "2026-07-12T00:39:33.211Z",
       "version": "9.0.0-depup.49"
+    },
+    "50": {
+      "changes": {
+        "hosted-git-info": {
+          "from": "^10.1.0",
+          "to": "^10.1.1"
+        },
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-13T00:41:00.184Z",
+      "version": "9.0.0-depup.50"
     }
   }
 }
