@@ -67,12 +67,15 @@ export default [
   },
   {
     // Core pipeline has batch-processing orchestrator with validated early-exit guards
-    // and input validation adding necessary lines to processPackageCore
+    // and input validation adding necessary lines to processPackageCore. The
+    // install-method arrays were extracted into testable getters and the
+    // subprocess env is now sanitized to scrub NPM_TOKEN/NODE_AUTH_TOKEN
+    // before untrusted installs run -- both add a handful of necessary lines.
     files: ['scripts/depup.mjs'],
     rules: {
       complexity: ['error', { max: 15 }],
       'sonarjs/cognitive-complexity': ['warn', 15],
-      'max-lines': ['error', { max: 1195, skipBlankLines: true, skipComments: true }],
+      'max-lines': ['error', { max: 1210, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': [
         'error',
         { max: 85, skipBlankLines: true, skipComments: true },

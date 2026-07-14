@@ -301,8 +301,10 @@ class CompatibilityTester {
 
   async testInstallation(packagePath, results) {
     try {
-      // Test npm install
-      execFileSync('npm', ['install', '--dry-run'], {
+      // Test npm install (--dry-run never executes lifecycle scripts, but
+      // --ignore-scripts is added as defense-in-depth against untrusted
+      // package code regardless of how this method is invoked)
+      execFileSync('npm', ['install', '--dry-run', '--ignore-scripts'], {
         cwd: packagePath,
         stdio: 'pipe',
         timeout: 60_000,
