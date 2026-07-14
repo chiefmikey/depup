@@ -1,5 +1,5 @@
 # DepUp Security Scanner - Pre-publication Security Validation
-FROM node:20-alpine
+FROM node:24-alpine
 
 # Install security scanning tools
 RUN apk add --no-cache \
@@ -14,7 +14,7 @@ RUN apk add --no-cache \
 
 # Install additional security tools via npm
 RUN npm install -g \
-    @snyk/cli \
+    snyk \
     audit-ci \
     npm-check-updates \
     && npm cache clean --force
@@ -25,8 +25,8 @@ RUN addgroup -g 1001 -S depup && \
 
 WORKDIR /app
 
-# Create npm cache directory writable by depup user
-RUN mkdir -p /tmp/npm-cache && chown depup:depup /tmp/npm-cache
+# Create npm cache directory and make /app writable by depup user
+RUN mkdir -p /tmp/npm-cache && chown depup:depup /tmp/npm-cache /app
 
 USER depup
 
