@@ -113,6 +113,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:27:43.160Z",
       "version": "5.4.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@sentry/bundler-plugins": {
+          "from": "^10.64.0",
+          "to": "^10.65.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:26:20.977Z",
+      "version": "5.4.0-depup.3"
     }
   }
 }

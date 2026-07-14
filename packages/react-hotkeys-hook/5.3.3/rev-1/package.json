@@ -1,0 +1,64 @@
+{
+  "name": "@depup/react-hotkeys-hook",
+  "description": "React hook for handling keyboard shortcuts (with updated dependencies)",
+  "version": "5.3.3-depup.1",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JohannesKlauss/react-keymap-hook.git"
+  },
+  "homepage": "https://react-hotkeys-hook.vercel.app/",
+  "author": "Johannes Klauss",
+  "type": "module",
+  "main": "packages/react-hotkeys-hook/dist/index.js",
+  "types": "packages/react-hotkeys-hook/dist/index.d.ts",
+  "files": [
+    "packages/react-hotkeys-hook/dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "react-hotkeys-hook",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "hook",
+    "hooks",
+    "component",
+    "hotkey",
+    "shortcut",
+    "keyboard",
+    "shortcuts",
+    "keypress",
+    "hotkeys"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run -w packages/react-hotkeys-hook build",
+    "build:documentation": "npm run -w packages/documentation build",
+    "test": "npm run -w packages/react-hotkeys-hook test",
+    "format": "npx @biomejs/biome format --write packages",
+    "lint": "npx @biomejs/biome lint --write packages"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-hotkeys-hook",
+    "originalVersion": "5.3.3",
+    "processedAt": "2026-07-14T00:42:57.872Z",
+    "smokeTest": "passed"
+  }
+}

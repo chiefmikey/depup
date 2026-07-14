@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@reduxjs/toolkit": {
+      "from": "^1.9.0 || 2.x.x",
+      "to": "^2.12.0"
+    },
+    "es-toolkit": {
+      "from": "^1.39.3",
+      "to": "^1.49.0"
+    },
+    "eventemitter3": {
+      "from": "^5.0.1",
+      "to": "^5.0.4"
+    },
+    "immer": {
+      "from": "^11.1.8",
+      "to": "^11.1.11"
+    },
+    "react-redux": {
+      "from": "8.x.x || 9.x.x",
+      "to": "^9.3.0"
+    },
+    "use-sync-external-store": {
+      "from": "^1.2.2",
+      "to": "^1.6.0"
+    },
+    "victory-vendor": {
+      "from": "^37.0.2",
+      "to": "^37.3.6"
+    }
+  },
+  "timestamp": "2026-07-14T00:44:38.330Z",
+  "totalUpdated": 7
+}

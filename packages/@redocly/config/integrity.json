@@ -399,5 +399,20 @@
       "timestamp": "2026-07-13T00:27:13.358Z",
       "version": "0.50.1-depup.6"
     }
+  },
+  "0.51.0": {
+    "0": {
+      "changes": {
+        "json-schema-to-ts": {
+          "from": "2.7.2",
+          "to": "^3.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:25:49.876Z",
+      "version": "0.51.0-depup.0"
+    }
   }
 }

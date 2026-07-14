@@ -576,35 +576,6 @@
     }
   },
   "16.2.10": {
-    "7": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "0.5.15",
-          "to": "^0.5.23"
-        },
-        "baseline-browser-mapping": {
-          "from": "^2.9.19",
-          "to": "^2.10.42"
-        },
-        "caniuse-lite": {
-          "from": "^1.0.30001579",
-          "to": "^1.0.30001803"
-        },
-        "postcss": {
-          "from": "8.4.31",
-          "to": "^8.5.16"
-        },
-        "styled-jsx": {
-          "from": "5.1.6",
-          "to": "^5.1.7"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:41:06.133Z",
-      "version": "16.2.10-depup.7"
-    },
     "8": {
       "changes": {
         "@swc/helpers": {
@@ -720,6 +691,35 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:43:06.387Z",
       "version": "16.2.10-depup.11"
+    },
+    "12": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "0.5.15",
+          "to": "^0.5.23"
+        },
+        "baseline-browser-mapping": {
+          "from": "^2.9.19",
+          "to": "^2.10.43"
+        },
+        "caniuse-lite": {
+          "from": "^1.0.30001579",
+          "to": "^1.0.30001805"
+        },
+        "postcss": {
+          "from": "8.4.31",
+          "to": "^8.5.19"
+        },
+        "styled-jsx": {
+          "from": "5.1.6",
+          "to": "^5.1.7"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:41:23.177Z",
+      "version": "16.2.10-depup.12"
     }
   }
 }

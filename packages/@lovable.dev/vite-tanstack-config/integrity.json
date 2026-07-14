@@ -739,27 +739,6 @@
     }
   },
   "2.7.2": {
-    "0": {
-      "changes": {
-        "@lovable.dev/vite-plugin-dev-server-bridge": {
-          "from": "^1.0.2",
-          "to": "^1.1.0"
-        },
-        "@lovable.dev/vite-plugin-hmr-gate": {
-          "from": "^1.1.1",
-          "to": "^1.1.2"
-        },
-        "lightningcss": {
-          "from": "^1.30.0",
-          "to": "^1.32.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:30:10.757Z",
-      "version": "2.7.2-depup.0"
-    },
     "1": {
       "changes": {
         "@lovable.dev/vite-plugin-dev-server-bridge": {
@@ -843,6 +822,27 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:25:38.417Z",
       "version": "2.7.2-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@lovable.dev/vite-plugin-dev-server-bridge": {
+          "from": "^1.0.2",
+          "to": "^1.1.0"
+        },
+        "@lovable.dev/vite-plugin-hmr-gate": {
+          "from": "^1.1.1",
+          "to": "^1.1.2"
+        },
+        "lightningcss": {
+          "from": "^1.30.0",
+          "to": "^1.32.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:24:07.921Z",
+      "version": "2.7.2-depup.5"
     }
   }
 }

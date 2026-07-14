@@ -52,31 +52,6 @@
     }
   },
   "30.4.1": {
-    "49": {
-      "changes": {
-        "ansi-escapes": {
-          "from": "^4.3.2",
-          "to": "^7.3.0"
-        },
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        },
-        "emittery": {
-          "from": "^0.13.1",
-          "to": "^2.0.0"
-        },
-        "string-length": {
-          "from": "^4.0.2",
-          "to": "^7.0.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:39:13.609Z",
-      "version": "30.4.1-depup.49"
-    },
     "50": {
       "changes": {
         "ansi-escapes": {
@@ -176,6 +151,31 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:40:33.155Z",
       "version": "30.4.1-depup.53"
+    },
+    "54": {
+      "changes": {
+        "ansi-escapes": {
+          "from": "^4.3.2",
+          "to": "^7.3.0"
+        },
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "emittery": {
+          "from": "^0.13.1",
+          "to": "^2.0.0"
+        },
+        "string-length": {
+          "from": "^4.0.2",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:38:45.057Z",
+      "version": "30.4.1-depup.54"
     }
   }
 }

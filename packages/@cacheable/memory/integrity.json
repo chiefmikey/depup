@@ -97,19 +97,6 @@
     }
   },
   "2.2.0": {
-    "11": {
-      "changes": {
-        "hookified": {
-          "from": "^1.15.1",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:27:36.374Z",
-      "version": "2.2.0-depup.11"
-    },
     "12": {
       "changes": {
         "hookified": {
@@ -161,6 +148,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:23:36.309Z",
       "version": "2.2.0-depup.15"
+    },
+    "16": {
+      "changes": {
+        "hookified": {
+          "from": "^1.15.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:21:59.678Z",
+      "version": "2.2.0-depup.16"
     }
   }
 }

@@ -181,6 +181,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:45:01.328Z",
       "version": "3.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@floating-ui/react-dom": {
+          "from": "^2.1.8",
+          "to": "^2.1.9"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:43:25.417Z",
+      "version": "3.2.0-depup.4"
     }
   }
 }

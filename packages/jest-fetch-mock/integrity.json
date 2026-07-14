@@ -85,6 +85,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:40:27.252Z",
       "version": "4.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "cross-fetch": {
+          "from": "^3.1.8",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:38:39.172Z",
+      "version": "4.2.0-depup.4"
     }
   }
 }

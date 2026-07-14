@@ -2630,6 +2630,23 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:27:33.985Z",
       "version": "10.65.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@sentry/conventions": {
+          "from": "^0.15.1",
+          "to": "^0.16.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.3.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:26:11.385Z",
+      "version": "10.65.0-depup.3"
     }
   }
 }

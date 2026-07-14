@@ -226,6 +226,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:25:30.311Z",
       "version": "0.47.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@floating-ui/react": {
+          "from": "^0.27.19",
+          "to": "^0.27.20"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:23:59.058Z",
+      "version": "0.47.0-depup.4"
     }
   }
 }

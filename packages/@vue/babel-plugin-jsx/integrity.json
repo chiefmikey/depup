@@ -92,6 +92,23 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:32:46.548Z",
       "version": "3.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/types": {
+          "from": "^8.0.0",
+          "to": "^8.0.4"
+        },
+        "@vue/shared": {
+          "from": "^3.5.38",
+          "to": "^3.5.39"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:30:26.223Z",
+      "version": "3.0.0-depup.1"
     }
   }
 }
