@@ -799,6 +799,216 @@ describe('packageSyncer class', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════
+// cron-sync.mjs -- PackageSyncer systemic abort recalibration
+// (applyBatches healthy/chronic split, main() abort threshold,
+// logFailureBreakdown)
+// ═══════════════════════════════════════════════════════════════════
+describe('packageSyncer class -- systemic abort recalibration', () => {
+  let syncer;
+
+  beforeEach(() => {
+    syncer = new PackageSyncer();
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  describe('applyBatches', () => {
+    it('separates healthy version/deps attempts from chronic failed-revisions retries', async () => {
+      jest.spyOn(syncer, 'generateReadme').mockResolvedValue();
+      jest.spyOn(syncer, 'applyUpdate').mockImplementation(async (package_) => {
+        if (
+          package_.name === 'pkg-version-fail' ||
+          package_.name === 'pkg-revisions-fail-1' ||
+          package_.name === 'pkg-revisions-fail-2'
+        ) {
+          throw new Error(`sync failed for ${package_.name}`);
+        }
+      });
+
+      const items = [
+        { check: { updateType: 'version' }, package_: { name: 'pkg-version-ok' } },
+        {
+          check: { updateType: 'version' },
+          package_: { name: 'pkg-version-fail' },
+        },
+        { check: { updateType: 'deps' }, package_: { name: 'pkg-deps-ok' } },
+        {
+          check: { updateType: 'failed-revisions' },
+          package_: { name: 'pkg-revisions-fail-1' },
+        },
+        {
+          check: { updateType: 'failed-revisions' },
+          package_: { name: 'pkg-revisions-fail-2' },
+        },
+      ];
+
+      const result = await syncer.applyBatches(items);
+
+      expect(result.healthyAttemptedCount).toBe(3);
+      expect(result.healthyFailedCount).toBe(1);
+      expect(result.failedCount).toBe(3);
+      expect(result.syncedPackages.toSorted()).toStrictEqual([
+        'pkg-deps-ok',
+        'pkg-version-ok',
+      ]);
+      expect(result.failureReasons).toHaveLength(3);
+      expect(
+        result.failureReasons.map(({ name }) => name).toSorted(),
+      ).toStrictEqual(
+        [
+          'pkg-revisions-fail-1',
+          'pkg-revisions-fail-2',
+          'pkg-version-fail',
+        ].toSorted(),
+      );
+    });
+  });
+
+  describe('main -- systemic abort threshold', () => {
+    it('does not abort when only chronic failed-revisions retries fail', async () => {
+      jest.spyOn(syncer, 'getExistingPackages').mockResolvedValue([]);
+      jest.spyOn(syncer, 'generateReadme').mockResolvedValue();
+      jest.spyOn(syncer, 'applyUpdate').mockImplementation(async (package_) => {
+        if (package_.name.startsWith('chronic-')) {
+          throw new Error('publish still failing');
+        }
+      });
+
+      const chronicItems = Array.from({ length: 15 }, (_, index) => ({
+        check: { updateType: 'failed-revisions' },
+        package_: { name: `chronic-${index}` },
+      }));
+      const healthyItems = Array.from({ length: 3 }, (_, index) => ({
+        check: { updateType: 'version' },
+        package_: { name: `healthy-${index}` },
+      }));
+      jest.spyOn(syncer, 'checkBatches').mockResolvedValue({
+        needsUpdate: [...chronicItems, ...healthyItems],
+        skippedCount: 0,
+      });
+
+      const processExit = jest
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await syncer.main();
+
+      expect(processExit).not.toHaveBeenCalledWith(1);
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining('DEPUP_SUMMARY'),
+      );
+    });
+
+    it('aborts when healthy version/deps updates fail over 50% across >=10 attempts', async () => {
+      jest.spyOn(syncer, 'getExistingPackages').mockResolvedValue([]);
+      jest.spyOn(syncer, 'generateReadme').mockResolvedValue();
+      jest.spyOn(syncer, 'applyUpdate').mockImplementation(async (package_) => {
+        if (package_.name.startsWith('healthy-fail-')) {
+          throw new Error('registry unreachable');
+        }
+      });
+
+      const failingHealthy = Array.from({ length: 6 }, (_, index) => ({
+        check: { updateType: 'version' },
+        package_: { name: `healthy-fail-${index}` },
+      }));
+      const succeedingHealthy = Array.from({ length: 4 }, (_, index) => ({
+        check: { updateType: 'deps' },
+        package_: { name: `healthy-ok-${index}` },
+      }));
+      jest.spyOn(syncer, 'checkBatches').mockResolvedValue({
+        needsUpdate: [...failingHealthy, ...succeedingHealthy],
+        skippedCount: 0,
+      });
+
+      const processExit = jest
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await syncer.main();
+
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining('SYSTEMIC FAILURE'),
+      );
+      expect(processExit).toHaveBeenCalledWith(1);
+    });
+  });
+
+  describe('main -- systemic abort boundary (strict > 0.5)', () => {
+    it('does not abort at exactly 50% healthy failure', async () => {
+      jest.spyOn(syncer, 'getExistingPackages').mockResolvedValue([]);
+      jest.spyOn(syncer, 'checkBatches').mockResolvedValue({
+        needsUpdate: [],
+        skippedCount: 0,
+      });
+      jest.spyOn(syncer, 'applyBatches').mockResolvedValue({
+        failedCount: 5,
+        failureReasons: [],
+        healthyAttemptedCount: 10,
+        healthyFailedCount: 5,
+        syncedPackages: [],
+      });
+      const processExit = jest
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await syncer.main();
+
+      expect(processExit).not.toHaveBeenCalledWith(1);
+    });
+
+    it('aborts just past 50% healthy failure', async () => {
+      jest.spyOn(syncer, 'getExistingPackages').mockResolvedValue([]);
+      jest.spyOn(syncer, 'checkBatches').mockResolvedValue({
+        needsUpdate: [],
+        skippedCount: 0,
+      });
+      jest.spyOn(syncer, 'applyBatches').mockResolvedValue({
+        failedCount: 6,
+        failureReasons: [],
+        healthyAttemptedCount: 10,
+        healthyFailedCount: 6,
+        syncedPackages: [],
+      });
+      const processExit = jest
+        .spyOn(process, 'exit')
+        .mockImplementation(() => {});
+
+      await syncer.main();
+
+      expect(processExit).toHaveBeenCalledWith(1);
+    });
+  });
+
+  describe('logFailureBreakdown', () => {
+    it('does nothing for an empty or undefined array', () => {
+      syncer.logFailureBreakdown([]);
+      syncer.logFailureBreakdown(undefined);
+
+      expect(console.error).not.toHaveBeenCalled();
+    });
+
+    it('groups failures by message and sorts descending by count', () => {
+      syncer.logFailureBreakdown([
+        { error: 'timeout', name: 'pkg-a' },
+        { error: 'timeout', name: 'pkg-b' },
+        { error: 'registry error', name: 'pkg-c' },
+        { error: 'timeout', name: 'pkg-d' },
+      ]);
+
+      expect(console.error).toHaveBeenCalledWith(
+        'Failure breakdown:\n  3x timeout\n  1x registry error',
+      );
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
 // heal.mjs -- SelfHealer pure methods
 // ═══════════════════════════════════════════════════════════════════
 describe('selfHealer class', () => {
@@ -8366,9 +8576,13 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
           })),
           skippedCount: 0,
         });
-      jestInstance
-        .spyOn(syncer, 'applyBatches')
-        .mockResolvedValueOnce({ failedCount: 12, syncedPackages: [] });
+      jestInstance.spyOn(syncer, 'applyBatches').mockResolvedValueOnce({
+        failedCount: 12,
+        failureReasons: [],
+        healthyAttemptedCount: 12,
+        healthyFailedCount: 12,
+        syncedPackages: [],
+      });
       const exitSpy = jestInstance
         .spyOn(process, 'exit')
         .mockImplementation(() => {});
@@ -8399,9 +8613,13 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
           })),
           skippedCount: 0,
         });
-      jestInstance
-        .spyOn(syncer, 'applyBatches')
-        .mockResolvedValueOnce({ failedCount: 3, syncedPackages: [] });
+      jestInstance.spyOn(syncer, 'applyBatches').mockResolvedValueOnce({
+        failedCount: 3,
+        failureReasons: [],
+        healthyAttemptedCount: 3,
+        healthyFailedCount: 3,
+        syncedPackages: [],
+      });
       const exitSpy = jestInstance
         .spyOn(process, 'exit')
         .mockImplementation(() => {});
@@ -8475,6 +8693,28 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(true);
     });
+
+    it('returns false when all revisions have status skipped', () => {
+      const integrityData = {
+        '1.0.0': {
+          'rev-1': { status: 'skipped' },
+          'rev-2': { status: 'skipped' },
+        },
+      };
+
+      expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(false);
+    });
+
+    it('returns false when revisions mix failed and skipped with no published', () => {
+      const integrityData = {
+        '1.0.0': {
+          'rev-1': { status: 'failed' },
+          'rev-2': { status: 'skipped' },
+        },
+      };
+
+      expect(syncer.hasOnlyFailedRevisions(integrityData, '1.0.0')).toBe(false);
+    });
   });
 
   // ─────────────────────────────────────────────────────────────────
@@ -8529,6 +8769,32 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
 
       expect(result.updateType).toBeNull();
       expect(result.skip).toBe(false);
+    });
+
+    it('does not flag updateType:failed-revisions for a skipped-only current version', async () => {
+      const integrityData = {
+        '1.0.0': { 'rev-1': { status: 'skipped' } },
+      };
+      const package_ = {
+        integrityData,
+        name: 'skipped-pkg',
+        path: temporaryDirectory,
+        version: '1.0.0',
+      };
+      jestInstance
+        .spyOn(syncer, 'wasRecentlyProcessed')
+        .mockResolvedValueOnce(false);
+      jestInstance.spyOn(fetchModule.default, 'json').mockResolvedValueOnce({
+        'dist-tags': { latest: '1.0.0' },
+      });
+      jestInstance
+        .spyOn(syncer, 'checkDependencyUpdates')
+        .mockResolvedValueOnce(false);
+
+      const result = await syncer.checkNeedsUpdate(package_);
+
+      expect(result.updateType).not.toBe('failed-revisions');
+      expect(result.updateType).toBeNull();
     });
   });
 });

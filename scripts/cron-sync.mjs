@@ -78,14 +78,54 @@ class PackageSyncer {
   }
 
   /**
+   * Apply a single update, translating success/failure into a plain result
+   * object (never throws) so the batch aggregation stays flat. `updateType` is
+   * carried through so the caller can distinguish healthy version/dependency
+   * updates from chronic 'failed-revisions' retries.
+   */
+  async applyOne({ check, package_ }) {
+    try {
+      console.log(`Syncing ${package_.name} (${check.updateType})...`);
+      await this.applyUpdate(package_, check);
+      await this.generateReadme(package_.name);
+      return {
+        name: package_.name,
+        success: true,
+        updateType: check.updateType,
+      };
+    } catch (error) {
+      console.warn(`Failed to sync ${package_.name}:`, error.message);
+      return {
+        error: error.message,
+        name: package_.name,
+        success: false,
+        updateType: check.updateType,
+      };
+    }
+  }
+
+  /**
    * Phase 2: apply updates at safe concurrency (5 concurrent max).
    *
    * Each package here runs depup.mjs which spawns npm install + tests.
    * The low concurrency limit prevents OOM on the 7 GB CI runner.
    */
   async applyBatches(packagesToUpdate) {
-    const syncedPackages = [];
-    let failedCount = 0;
+    // Accumulator object so accumulateResult can mutate counters in-place
+    // without returning primitives. "Healthy" attempts are fresh version /
+    // dependency updates we expect to publish successfully. A dead NPM_TOKEN or
+    // registry outage makes these fail en masse -- that (and only that) is what
+    // the systemic abort should trip on. Retries of already-failed versions
+    // (updateType 'failed-revisions') are a chronic per-package baseline:
+    // expected to keep failing, excluded from the systemic ratio so the job
+    // can commit its real work instead of aborting on the baseline every run.
+    const acc = {
+      failedCount: 0,
+      failureReasons: [],
+      healthyAttemptedCount: 0,
+      healthyFailedCount: 0,
+      syncedPackages: [],
+    };
 
     for (
       let index = 0;
@@ -101,36 +141,11 @@ class PackageSyncer {
       );
 
       const batchResults = await Promise.allSettled(
-        batch.map(async ({ check, package_ }) => {
-          try {
-            console.log(`Syncing ${package_.name} (${check.updateType})...`);
-            await this.applyUpdate(package_, check);
-            await this.generateReadme(package_.name);
-            return { name: package_.name, success: true };
-          } catch (error) {
-            console.warn(`Failed to sync ${package_.name}:`, error.message);
-            return {
-              error: error.message,
-              name: package_.name,
-              success: false,
-            };
-          }
-        }),
+        batch.map((item) => this.applyOne(item)),
       );
 
       for (const result of batchResults) {
-        if (result.status === 'fulfilled') {
-          if (result.value.success) {
-            syncedPackages.push(result.value.name);
-          } else {
-            failedCount++;
-          }
-        } else if (result.status === 'rejected') {
-          failedCount++;
-          console.warn(
-            `Sync failed: ${result.reason?.message || 'Unknown error'}`,
-          );
-        }
+        this.accumulateResult(result, acc);
       }
 
       if (index + this.concurrentPackages < packagesToUpdate.length) {
@@ -138,7 +153,68 @@ class PackageSyncer {
       }
     }
 
-    return { failedCount, syncedPackages };
+    return acc;
+  }
+
+  /**
+   * Fold one allSettled result into the running accumulator. Extracted from
+   * applyBatches to keep that function's cyclomatic complexity within the
+   * sonarjs/cognitive-complexity limit.
+   *
+   * 'fulfilled' results carry the applyOne return value. 'rejected' results
+   * are defensive (applyOne itself never throws) and are treated as healthy
+   * failures so a genuine meltdown still trips the systemic-abort threshold.
+   */
+  accumulateResult(result, acc) {
+    if (result.status === 'fulfilled') {
+      const isHealthy = result.value.updateType !== 'failed-revisions';
+      if (isHealthy) {
+        acc.healthyAttemptedCount++;
+      }
+      if (result.value.success) {
+        acc.syncedPackages.push(result.value.name);
+      } else {
+        acc.failedCount++;
+        if (isHealthy) {
+          acc.healthyFailedCount++;
+        }
+        acc.failureReasons.push({
+          error: result.value.error,
+          name: result.value.name,
+        });
+      }
+    } else {
+      // Defensive path: applyOne catches its own errors, so rejection is rare.
+      // Treat as healthy failure (updateType unknown) so outages still abort.
+      acc.failedCount++;
+      acc.healthyAttemptedCount++;
+      acc.healthyFailedCount++;
+      const error = result.reason?.message || 'Unknown error';
+      acc.failureReasons.push({ error, name: 'unknown' });
+      console.warn(`Sync failed: ${error}`);
+    }
+  }
+
+  /**
+   * Group failure reasons by message so a failure exit (or a chronic-failure
+   * warning) leaves an actionable breakdown in the CI log instead of a bare
+   * count. CI log access on this repo is admin-gated, so an in-log breakdown is
+   * the primary diagnostic trail when a run goes wrong.
+   */
+  logFailureBreakdown(failureReasons) {
+    if (!failureReasons || failureReasons.length === 0) {
+      return;
+    }
+    const counts = new Map();
+    for (const { error } of failureReasons) {
+      const key = error || 'Unknown error';
+      counts.set(key, (counts.get(key) || 0) + 1);
+    }
+    const breakdown = [...counts.entries()]
+      .toSorted((a, b) => b[1] - a[1])
+      .map(([message, count]) => `  ${count}x ${message}`)
+      .join('\n');
+    console.error(`Failure breakdown:\n${breakdown}`);
   }
 
   async main() {
@@ -158,23 +234,43 @@ class PackageSyncer {
         await this.checkBatches(packagesToProcess);
 
       // Phase 2: apply updates at safe concurrency (spawns depup.mjs per package)
-      const { failedCount, syncedPackages } =
-        await this.applyBatches(needsUpdate);
+      const {
+        failedCount,
+        failureReasons,
+        healthyAttemptedCount,
+        healthyFailedCount,
+        syncedPackages,
+      } = await this.applyBatches(needsUpdate);
 
       console.log(`Synced ${syncedPackages.length} packages`);
       if (syncedPackages.length > 0) {
         console.log('Synced packages:', syncedPackages.join(', '));
       }
 
-      const attemptedCount = syncedPackages.length + failedCount;
-
-      // Systemic failure detection: >50% failure rate on 10+ attempts signals a
-      // dead NPM_TOKEN or registry outage rather than individual package failures
-      if (attemptedCount >= 10 && failedCount / attemptedCount > 0.5) {
+      // Systemic failure detection: a dead NPM_TOKEN or registry outage makes
+      // even healthy packages (fresh version/dependency updates) fail. We
+      // measure the abort ONLY over those healthy attempts -- chronic
+      // per-package publish failures (retries of already-failed versions) are
+      // an expected baseline and are excluded, so the job commits its real work
+      // instead of aborting on them every run.
+      if (
+        healthyAttemptedCount >= 10 &&
+        healthyFailedCount / healthyAttemptedCount > 0.5
+      ) {
         console.error(
-          `SYSTEMIC FAILURE: ${failedCount}/${attemptedCount} packages failed (>${Math.round((failedCount / attemptedCount) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
+          `SYSTEMIC FAILURE: ${healthyFailedCount}/${healthyAttemptedCount} healthy updates failed (>${Math.round((healthyFailedCount / healthyAttemptedCount) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
         );
+        this.logFailureBreakdown(failureReasons);
         process.exit(1);
+      }
+
+      // Chronic per-package failures are expected and do not abort the job.
+      // Surface them (with a breakdown) so they stay visible in the CI log.
+      if (failedCount > 0) {
+        console.warn(
+          `${failedCount} package(s) failed to sync this run; chronic per-package failures do not abort the job.`,
+        );
+        this.logFailureBreakdown(failureReasons);
       }
 
       // Machine-readable summary for GitHub step summary
@@ -590,9 +686,17 @@ class PackageSyncer {
     if (revisions.length === 0) {
       return false;
     }
+    // A version is only "stuck on failures" if NONE of its revisions reached a
+    // successful terminal state. 'published' means it landed on npm; 'skipped'
+    // means depup intentionally did not publish because nothing needed
+    // publishing (no dependency changes) -- an expected no-op, not a failure.
+    // Treating 'skipped' as a failure re-queued ~500 up-to-date packages for a
+    // full download/install/test cycle on every cron run, forever.
     return !revisions.some(
       (rev) =>
-        rev !== null && typeof rev === 'object' && rev.status === 'published',
+        rev !== null &&
+        typeof rev === 'object' &&
+        (rev.status === 'published' || rev.status === 'skipped'),
     );
   }
 
