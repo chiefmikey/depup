@@ -764,10 +764,18 @@ class DepUp {
     ];
   }
 
-  tryInstallMethods(methods, directory, debug, timeout) {
+  // Clone of process.env with the publish tokens stripped, so install
+  // subprocesses running untrusted package code can never read them.
+  // Returns a fresh object -- never mutates the real process.env.
+  buildSanitizedInstallEnvironment() {
     const sanitizedEnvironment = { ...process.env };
     delete sanitizedEnvironment.NODE_AUTH_TOKEN;
     delete sanitizedEnvironment.NPM_TOKEN;
+    return sanitizedEnvironment;
+  }
+
+  tryInstallMethods(methods, directory, debug, timeout) {
+    const sanitizedEnvironment = this.buildSanitizedInstallEnvironment();
 
     for (const [command, commandArguments] of methods) {
       try {
@@ -961,6 +969,7 @@ try {
     try {
       execFileSync('npm', ['install', IGNORE_SCRIPTS], {
         cwd: packageDirectory,
+        env: this.buildSanitizedInstallEnvironment(),
         stdio: debug ? 'inherit' : 'pipe',
         timeout: 60_000,
       });

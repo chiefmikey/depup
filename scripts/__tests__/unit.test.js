@@ -345,6 +345,95 @@ describe('depUp class', () => {
     });
   });
 
+  describe('buildSanitizedInstallEnvironment', () => {
+    it('strips both publish tokens while preserving other env vars', () => {
+      const originalNpmToken = process.env.NPM_TOKEN;
+      const originalNodeAuthToken = process.env.NODE_AUTH_TOKEN;
+      const originalPath = process.env.PATH;
+      process.env.NPM_TOKEN = 'leaked-npm-token';
+      process.env.NODE_AUTH_TOKEN = 'leaked-node-auth-token';
+
+      try {
+        const sanitized = depup.buildSanitizedInstallEnvironment();
+
+        expect(sanitized.NPM_TOKEN).toBeUndefined();
+        expect(sanitized.NODE_AUTH_TOKEN).toBeUndefined();
+        // Unrelated env vars must survive so npm can still resolve its PATH.
+        expect(sanitized.PATH).toBe(originalPath);
+      } finally {
+        if (originalNpmToken === undefined) {
+          delete process.env.NPM_TOKEN;
+        } else {
+          process.env.NPM_TOKEN = originalNpmToken;
+        }
+        if (originalNodeAuthToken === undefined) {
+          delete process.env.NODE_AUTH_TOKEN;
+        } else {
+          process.env.NODE_AUTH_TOKEN = originalNodeAuthToken;
+        }
+      }
+    });
+
+    it('does not mutate the parent process environment', () => {
+      const originalNpmToken = process.env.NPM_TOKEN;
+      process.env.NPM_TOKEN = 'stays-in-parent-env';
+
+      try {
+        depup.buildSanitizedInstallEnvironment();
+
+        expect(process.env.NPM_TOKEN).toBe('stays-in-parent-env');
+      } finally {
+        if (originalNpmToken === undefined) {
+          delete process.env.NPM_TOKEN;
+        } else {
+          process.env.NPM_TOKEN = originalNpmToken;
+        }
+      }
+    });
+  });
+
+  describe('installBuildDeps', () => {
+    it('builds the install subprocess env via the token-scrubbing helper', () => {
+      // execFileSync uses a named import bound at module load, so it cannot be
+      // patched from here. Instead, spy on the shared helper (proving the
+      // build-deps path routes through the same sanitization the helper tests
+      // verify strips both tokens) and point the install at a nonexistent cwd
+      // so execFileSync throws synchronously -- installBuildDeps swallows it.
+      const originalNpmToken = process.env.NPM_TOKEN;
+      const originalNodeAuthToken = process.env.NODE_AUTH_TOKEN;
+      process.env.NPM_TOKEN = 'leaked-npm-token';
+      process.env.NODE_AUTH_TOKEN = 'leaked-node-auth-token';
+
+      const environmentSpy = jest.spyOn(
+        depup,
+        'buildSanitizedInstallEnvironment',
+      );
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+      try {
+        depup.installBuildDeps('/nonexistent/path/xyz123', false);
+
+        expect(environmentSpy).toHaveBeenCalledTimes(1);
+        const builtEnvironment = environmentSpy.mock.results[0].value;
+        expect(builtEnvironment.NPM_TOKEN).toBeUndefined();
+        expect(builtEnvironment.NODE_AUTH_TOKEN).toBeUndefined();
+      } finally {
+        environmentSpy.mockRestore();
+        warnSpy.mockRestore();
+        if (originalNpmToken === undefined) {
+          delete process.env.NPM_TOKEN;
+        } else {
+          process.env.NPM_TOKEN = originalNpmToken;
+        }
+        if (originalNodeAuthToken === undefined) {
+          delete process.env.NODE_AUTH_TOKEN;
+        } else {
+          process.env.NODE_AUTH_TOKEN = originalNodeAuthToken;
+        }
+      }
+    });
+  });
+
   describe('isDepupPrereleaseVersion', () => {
     it('detects depup prerelease IDs', () => {
       expect(depup.isDepupPrereleaseVersion(['depup', 0])).toBe(true);
