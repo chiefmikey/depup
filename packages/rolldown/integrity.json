@@ -734,19 +734,6 @@
     }
   },
   "1.1.5": {
-    "0": {
-      "changes": {
-        "@rolldown/pluginutils": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:44:02.109Z",
-      "version": "1.1.5-depup.0"
-    },
     "1": {
       "changes": {
         "@rolldown/pluginutils": {
@@ -798,6 +785,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:45:33.694Z",
       "version": "1.1.5-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:43:15.584Z",
+      "version": "1.1.5-depup.5"
     }
   }
 }

@@ -99,6 +99,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:43:10.949Z",
       "version": "17.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "file-selector": {
+          "from": "^2.1.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:41:01.751Z",
+      "version": "17.0.0-depup.1"
     }
   }
 }

@@ -441,6 +441,19 @@
       "status": "skipped",
       "timestamp": "2026-07-13T00:28:26.281Z",
       "version": "10.65.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@sentry/conventions": {
+          "from": "^0.15.1",
+          "to": "^0.16.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:26:41.833Z",
+      "version": "10.65.0-depup.3"
     }
   }
 }

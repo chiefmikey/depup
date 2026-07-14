@@ -227,5 +227,52 @@
       "timestamp": "2026-06-15T01:44:31.639Z",
       "version": "3.1.3-depup.2"
     }
+  },
+  "3.2.0": {
+    "0": {
+      "changes": {
+        "ci-info": {
+          "from": "^3.8.0",
+          "to": "^4.4.0"
+        },
+        "get-port": {
+          "from": "5.1.1",
+          "to": "^7.2.0"
+        },
+        "mailparser": {
+          "from": "3.9.8",
+          "to": "^3.9.14"
+        },
+        "nodemailer": {
+          "from": "^9.0.1",
+          "to": "^9.0.3"
+        },
+        "open": {
+          "from": "7",
+          "to": "^11.0.0"
+        },
+        "p-event": {
+          "from": "4.2.0",
+          "to": "^7.1.0"
+        },
+        "p-wait-for": {
+          "from": "3.2.0",
+          "to": "^6.0.0"
+        },
+        "pug": {
+          "from": "^3.0.3",
+          "to": "^3.0.4"
+        },
+        "uuid": {
+          "from": "^9.0.1",
+          "to": "^14.0.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:40:13.842Z",
+      "version": "3.2.0-depup.0"
+    }
   }
 }

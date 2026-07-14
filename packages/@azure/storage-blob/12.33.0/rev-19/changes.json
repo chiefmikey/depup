@@ -1,0 +1,54 @@
+{
+  "bumped": {
+    "@azure/abort-controller": {
+      "from": "^2.1.2",
+      "to": "^2.2.0"
+    },
+    "@azure/core-auth": {
+      "from": "^1.9.0",
+      "to": "^1.11.0"
+    },
+    "@azure/core-client": {
+      "from": "^1.9.3",
+      "to": "^1.11.0"
+    },
+    "@azure/core-http-compat": {
+      "from": "^2.2.0",
+      "to": "^2.5.0"
+    },
+    "@azure/core-lro": {
+      "from": "^2.2.0",
+      "to": "^3.4.0"
+    },
+    "@azure/core-paging": {
+      "from": "^1.6.2",
+      "to": "^1.7.0"
+    },
+    "@azure/core-rest-pipeline": {
+      "from": "^1.19.1",
+      "to": "^1.25.0"
+    },
+    "@azure/core-tracing": {
+      "from": "^1.2.0",
+      "to": "^1.4.0"
+    },
+    "@azure/core-util": {
+      "from": "^1.11.0",
+      "to": "^1.14.0"
+    },
+    "@azure/core-xml": {
+      "from": "^1.4.5",
+      "to": "^1.6.0"
+    },
+    "@azure/logger": {
+      "from": "^1.1.4",
+      "to": "^1.4.0"
+    },
+    "events": {
+      "from": "^3.0.0",
+      "to": "^3.3.0"
+    }
+  },
+  "timestamp": "2026-07-14T00:21:20.833Z",
+  "totalUpdated": 12
+}

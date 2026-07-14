@@ -16,6 +16,23 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:24:12.732Z",
       "version": "4.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime": {
+          "from": "^3",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:22:31.987Z",
+      "version": "4.1.0-depup.1"
     }
   }
 }

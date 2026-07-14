@@ -276,6 +276,27 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:47:08.437Z",
       "version": "4.13.2-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@formatjs/fast-memoize": {
+          "from": "^3.1.0",
+          "to": "^3.1.7"
+        },
+        "@schummar/icu-type-parser": {
+          "from": "1.21.5",
+          "to": "^1.26.1"
+        },
+        "intl-messageformat": {
+          "from": "^11.1.0",
+          "to": "^11.2.11"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:44:50.719Z",
+      "version": "4.13.2-depup.3"
     }
   }
 }

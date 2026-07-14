@@ -280,5 +280,24 @@
       "timestamp": "2026-07-13T00:33:39.406Z",
       "version": "3.21.4-depup.24"
     }
+  },
+  "3.22.0": {
+    "0": {
+      "changes": {
+        "@standard-schema/spec": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "fast-check": {
+          "from": "^3.23.1",
+          "to": "^4.9.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:31:48.092Z",
+      "version": "3.22.0-depup.0"
+    }
   }
 }
