@@ -72,7 +72,14 @@ This package inherits the license from [{{originalPackage}}](https://www.npmjs.c
   }
 
   async generateReadme(packageName) {
-    const packageDirectory = path.join(process.cwd(), 'packages', packageName);
+    const packagesRoot = path.resolve(process.cwd(), 'packages');
+    const packageDirectory = path.join(packagesRoot, packageName);
+    if (!packageDirectory.startsWith(packagesRoot + path.sep)) {
+      throw new Error(
+        `Path traversal detected in package name: ${packageName}`,
+      );
+    }
+
     const integrityFile = path.join(packageDirectory, 'integrity.json');
 
     const integrityData = await this.loadJsonSafe(

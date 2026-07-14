@@ -262,6 +262,89 @@ describe('depUp class', () => {
     });
   });
 
+  // Regression coverage for the install-script token-exfiltration fix:
+  // untrusted packages (and their transitive deps) must never run
+  // lifecycle scripts while NPM_TOKEN/NODE_AUTH_TOKEN are reachable.
+  describe('getProductionInstallMethods', () => {
+    it('includes --ignore-scripts on every install variant', () => {
+      const methods = depup.getProductionInstallMethods();
+
+      expect(methods.length).toBeGreaterThan(0);
+      for (const [command, commandArguments] of methods) {
+        expect(command).toBe('npm');
+        expect(commandArguments).toContain('--ignore-scripts');
+      }
+    });
+  });
+
+  describe('getTestInstallMethods', () => {
+    it('includes --ignore-scripts on every install variant', () => {
+      const methods = depup.getTestInstallMethods();
+
+      expect(methods.length).toBeGreaterThan(0);
+      for (const [command, commandArguments] of methods) {
+        expect(command).toBe('npm');
+        expect(commandArguments).toContain('--ignore-scripts');
+      }
+    });
+  });
+
+  describe('tryInstallMethods', () => {
+    it('scrubs NPM_TOKEN and NODE_AUTH_TOKEN from the install subprocess environment', () => {
+      const originalNpmToken = process.env.NPM_TOKEN;
+      const originalNodeAuthToken = process.env.NODE_AUTH_TOKEN;
+      process.env.NPM_TOKEN = 'leaked-npm-token';
+      process.env.NODE_AUTH_TOKEN = 'leaked-node-auth-token';
+
+      try {
+        // This subprocess exits non-zero if either token is visible, so a
+        // `true` result proves the tokens were scrubbed before spawning.
+        const methods = [
+          [
+            'node',
+            [
+              '-e',
+              'if (process.env.NPM_TOKEN || process.env.NODE_AUTH_TOKEN) { process.exit(1); }',
+            ],
+          ],
+        ];
+
+        expect(
+          depup.tryInstallMethods(methods, process.cwd(), false, 20_000),
+        ).toBe(true);
+      } finally {
+        if (originalNpmToken === undefined) {
+          delete process.env.NPM_TOKEN;
+        } else {
+          process.env.NPM_TOKEN = originalNpmToken;
+        }
+        if (originalNodeAuthToken === undefined) {
+          delete process.env.NODE_AUTH_TOKEN;
+        } else {
+          process.env.NODE_AUTH_TOKEN = originalNodeAuthToken;
+        }
+      }
+    });
+
+    it('does not mutate the parent process environment', () => {
+      const originalNpmToken = process.env.NPM_TOKEN;
+      process.env.NPM_TOKEN = 'stays-in-parent-env';
+
+      try {
+        const methods = [['node', ['-e', 'process.exit(0)']]];
+        depup.tryInstallMethods(methods, process.cwd(), false, 20_000);
+
+        expect(process.env.NPM_TOKEN).toBe('stays-in-parent-env');
+      } finally {
+        if (originalNpmToken === undefined) {
+          delete process.env.NPM_TOKEN;
+        } else {
+          process.env.NPM_TOKEN = originalNpmToken;
+        }
+      }
+    });
+  });
+
   describe('isDepupPrereleaseVersion', () => {
     it('detects depup prerelease IDs', () => {
       expect(depup.isDepupPrereleaseVersion(['depup', 0])).toBe(true);
@@ -812,6 +895,23 @@ describe('readmeGenerator class', () => {
       const result = await generator.loadJsonSafe('/nonexistent.json', 'test');
 
       expect(result).toStrictEqual({});
+    });
+  });
+
+  // Regression coverage: process.argv[2] flows into a filesystem path with
+  // no traversal guard of its own -- defense-in-depth in case a caller
+  // ever passes an unsanitized package name.
+  describe('generateReadme path traversal guard', () => {
+    it('rejects a package name that escapes the packages root', async () => {
+      await expect(
+        generator.generateReadme('../../etc/passwd'),
+      ).rejects.toThrow('Path traversal');
+    });
+
+    it('rejects a deeply nested traversal attempt', async () => {
+      await expect(
+        generator.generateReadme('../../../../etc/shadow'),
+      ).rejects.toThrow('Path traversal');
     });
   });
 });

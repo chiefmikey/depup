@@ -12,6 +12,9 @@ import semver from 'semver';
 import { isNonSemverSpecifier, toScopedName } from './utilities.mjs';
 
 const PACKAGE_JSON = 'package.json';
+// Untrusted packages (and their transitive deps) must never run lifecycle
+// scripts, so every install variant below is required to pass this flag.
+const IGNORE_SCRIPTS = '--ignore-scripts';
 
 class DepUp {
   async main() {
@@ -729,14 +732,8 @@ class DepUp {
       installSpinner.stop();
     }
 
-    const installMethods = [
-      ['npm', ['install', '--omit=dev']],
-      ['npm', ['install', '--omit=dev', '--legacy-peer-deps']],
-      ['npm', ['install', '--omit=dev', '--force', '--ignore-scripts']],
-    ];
-
     const success = this.tryInstallMethods(
-      installMethods,
+      this.getProductionInstallMethods(),
       packageDirectory,
       debug,
       timeout,
@@ -756,11 +753,27 @@ class DepUp {
     }
   }
 
+  // Every variant below MUST include --ignore-scripts: these installs run
+  // against untrusted third-party packages while NPM_TOKEN is present in
+  // the environment, so lifecycle scripts must never execute here.
+  getProductionInstallMethods() {
+    return [
+      ['npm', ['install', '--omit=dev', IGNORE_SCRIPTS]],
+      ['npm', ['install', '--omit=dev', '--legacy-peer-deps', IGNORE_SCRIPTS]],
+      ['npm', ['install', '--omit=dev', '--force', IGNORE_SCRIPTS]],
+    ];
+  }
+
   tryInstallMethods(methods, directory, debug, timeout) {
+    const sanitizedEnvironment = { ...process.env };
+    delete sanitizedEnvironment.NODE_AUTH_TOKEN;
+    delete sanitizedEnvironment.NPM_TOKEN;
+
     for (const [command, commandArguments] of methods) {
       try {
         execFileSync(command, commandArguments, {
           cwd: directory,
+          env: sanitizedEnvironment,
           stdio: debug ? 'inherit' : 'pipe',
           timeout: Math.min(timeout / 4, 60_000),
         });
@@ -831,14 +844,8 @@ try {
       testInstallSpinner.stop();
     }
 
-    const testInstallMethods = [
-      ['npm', ['install']],
-      ['npm', ['install', '--legacy-peer-deps']],
-      ['npm', ['install', '--force', '--ignore-scripts']],
-    ];
-
     const success = this.tryInstallMethods(
-      testInstallMethods,
+      this.getTestInstallMethods(),
       testDirectory,
       debug,
       timeout,
@@ -856,6 +863,17 @@ try {
         );
       }
     }
+  }
+
+  // Every variant below MUST include --ignore-scripts: these installs run
+  // against untrusted third-party packages while NPM_TOKEN is present in
+  // the environment, so lifecycle scripts must never execute here.
+  getTestInstallMethods() {
+    return [
+      ['npm', ['install', IGNORE_SCRIPTS]],
+      ['npm', ['install', '--legacy-peer-deps', IGNORE_SCRIPTS]],
+      ['npm', ['install', '--force', IGNORE_SCRIPTS]],
+    ];
   }
 
   async executeImportTest(testDirectory, debug, timeout) {
@@ -941,7 +959,7 @@ try {
       console.log('Installing devDependencies for build tools...');
     }
     try {
-      execFileSync('npm', ['install', '--ignore-scripts'], {
+      execFileSync('npm', ['install', IGNORE_SCRIPTS], {
         cwd: packageDirectory,
         stdio: debug ? 'inherit' : 'pipe',
         timeout: 60_000,
