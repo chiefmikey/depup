@@ -119,23 +119,6 @@
     }
   },
   "0.8.0": {
-    "51": {
-      "changes": {
-        "axios": {
-          "from": "1.15.0",
-          "to": "^1.18.1"
-        },
-        "joi": {
-          "from": "18.1.2",
-          "to": "^18.2.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:33:34.375Z",
-      "version": "0.8.0-depup.51"
-    },
     "52": {
       "changes": {
         "axios": {
@@ -203,6 +186,23 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:27:06.503Z",
       "version": "0.8.0-depup.55"
+    },
+    "56": {
+      "changes": {
+        "axios": {
+          "from": "1.15.0",
+          "to": "^1.18.1"
+        },
+        "joi": {
+          "from": "18.1.2",
+          "to": "^18.2.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:27:25.501Z",
+      "version": "0.8.0-depup.56"
     }
   }
 }

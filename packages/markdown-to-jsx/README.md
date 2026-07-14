@@ -12,7 +12,7 @@ npm install @depup/markdown-to-jsx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.8.2 | **DepUp version**: 9.8.2-depup.46 | **Updated**: 7/13/2026 | **Import test**: failed
+**Original version**: 9.8.2 | **DepUp version**: 9.8.2-depup.47 | **Updated**: 7/14/2026 | **Import test**: failed
 
 ## What changed
 

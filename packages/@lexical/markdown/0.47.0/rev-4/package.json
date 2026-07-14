@@ -1,0 +1,95 @@
+{
+  "name": "@depup/lexical__markdown",
+  "description": "This package contains Markdown helpers and functionality for Lexical. (with updated dependencies)",
+  "keywords": [
+    "@lexical/markdown",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "lexical",
+    "editor",
+    "rich-text",
+    "markdown"
+  ],
+  "license": "MIT",
+  "version": "0.47.0-depup.4",
+  "main": "./dist/LexicalMarkdown.js",
+  "types": "./dist/typescript-too-old.d.ts",
+  "dependencies": {
+    "@lexical/code-core": "0.47.0",
+    "@lexical/internal": "0.47.0",
+    "@lexical/list": "0.47.0",
+    "@lexical/rich-text": "0.47.0",
+    "@lexical/link": "0.47.0",
+    "@lexical/utils": "0.47.0",
+    "@lexical/text": "0.47.0",
+    "@lexical/selection": "0.47.0",
+    "lexical": "0.47.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/lexical.git",
+    "directory": "packages/lexical-markdown"
+  },
+  "module": "./dist/LexicalMarkdown.mjs",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": {
+        "types@<5.2": "./dist/typescript-too-old.d.ts",
+        "types": "./dist/index.d.ts",
+        "development": "./dist/LexicalMarkdown.dev.mjs",
+        "production": "./dist/LexicalMarkdown.prod.mjs",
+        "node": "./dist/LexicalMarkdown.node.mjs",
+        "default": "./dist/LexicalMarkdown.mjs"
+      },
+      "require": {
+        "types@<5.2": "./dist/typescript-too-old.d.ts",
+        "types": "./dist/index.d.ts",
+        "development": "./dist/LexicalMarkdown.dev.js",
+        "production": "./dist/LexicalMarkdown.prod.js",
+        "default": "./dist/LexicalMarkdown.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "!src/__tests__",
+    "!src/__bench__",
+    "!src/__mocks__",
+    "!src/**/*.test.ts",
+    "!src/**/*.test.tsx",
+    "!src/**/*.bench.ts",
+    "!src/**/*.bench.tsx",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/typescript-too-old.d.ts"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "typescript": ">=5.2"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@lexical/markdown",
+    "originalVersion": "0.47.0",
+    "processedAt": "2026-07-14T00:23:56.705Z",
+    "smokeTest": "passed"
+  }
+}

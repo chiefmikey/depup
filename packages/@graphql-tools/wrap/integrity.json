@@ -268,5 +268,24 @@
       "timestamp": "2026-07-13T00:24:34.228Z",
       "version": "11.1.17-depup.9"
     }
+  },
+  "11.1.18": {
+    "0": {
+      "changes": {
+        "@graphql-tools/schema": {
+          "from": "^10.0.29",
+          "to": "^10.0.36"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:23:44.766Z",
+      "version": "11.1.18-depup.0"
+    }
   }
 }

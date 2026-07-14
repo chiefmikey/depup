@@ -13,23 +13,6 @@
     }
   },
   "4.3.1": {
-    "47": {
-      "changes": {
-        "@rolldown/pluginutils": {
-          "from": "^1.0.0",
-          "to": "^1.0.1"
-        },
-        "@swc/core": {
-          "from": "^1.15.11",
-          "to": "^1.15.43"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:32:56.742Z",
-      "version": "4.3.1-depup.47"
-    },
     "48": {
       "changes": {
         "@rolldown/pluginutils": {
@@ -97,6 +80,23 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:26:48.197Z",
       "version": "4.3.1-depup.51"
+    },
+    "52": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@swc/core": {
+          "from": "^1.15.11",
+          "to": "^1.15.43"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:27:06.203Z",
+      "version": "4.3.1-depup.52"
     }
   }
 }

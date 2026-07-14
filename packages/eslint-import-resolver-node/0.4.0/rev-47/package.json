@@ -1,0 +1,62 @@
+{
+  "name": "@depup/eslint-import-resolver-node",
+  "version": "0.4.0-depup.47",
+  "description": "Node default behavior import resolution plugin for eslint-plugin-import. (with updated dependencies)",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "tests-only": "nyc mocha",
+    "test": "npm run tests-only"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/import-js/eslint-plugin-import",
+    "directory": "resolvers/node"
+  },
+  "keywords": [
+    "eslint-import-resolver-node",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "eslint",
+    "eslintplugin",
+    "esnext",
+    "modules",
+    "eslint-plugin-import"
+  ],
+  "author": "Ben Mosher (me@benmosher.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/import-js/eslint-plugin-import/issues"
+  },
+  "homepage": "https://github.com/import-js/eslint-plugin-import",
+  "dependencies": {
+    "debug": "^4.4.3",
+    "is-core-module": "^2.16.2",
+    "resolve": "^2.0.0-next.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.5.3",
+    "nyc": "^11.9.0"
+  },
+  "depup": {
+    "changes": {
+      "debug": {
+        "from": "^3.2.7",
+        "to": "^4.4.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "eslint-import-resolver-node",
+    "originalVersion": "0.4.0",
+    "processedAt": "2026-07-14T00:29:53.944Z",
+    "smokeTest": "passed"
+  }
+}

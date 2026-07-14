@@ -322,6 +322,27 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:33:58.039Z",
       "version": "1.42.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "prosemirror-model": {
+          "from": "^1.25.8",
+          "to": "^1.25.11"
+        },
+        "prosemirror-state": {
+          "from": "^1.0.0",
+          "to": "^1.4.4"
+        },
+        "prosemirror-transform": {
+          "from": "^1.1.0",
+          "to": "^1.12.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:36:41.287Z",
+      "version": "1.42.1-depup.2"
     }
   }
 }

@@ -1,0 +1,173 @@
+{
+  "name": "@depup/react-email__render",
+  "version": "2.1.0-depup.3",
+  "description": "Transform React components into HTML email templates (with updated dependencies)",
+  "sideEffects": false,
+  "main": "./dist/browser/index.cjs",
+  "module": "./dist/browser/index.mjs",
+  "types": "./dist/browser/index.d.cts",
+  "files": [
+    "dist/**",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "workerd": {
+        "import": {
+          "types": "./dist/edge/index.d.mts",
+          "default": "./dist/edge/index.mjs"
+        },
+        "require": {
+          "types": "./dist/edge/index.d.cts",
+          "default": "./dist/edge/index.cjs"
+        }
+      },
+      "deno": {
+        "import": {
+          "types": "./dist/browser/index.d.mts",
+          "default": "./dist/browser/index.mjs"
+        },
+        "require": {
+          "types": "./dist/browser/index.d.cts",
+          "default": "./dist/browser/index.cjs"
+        }
+      },
+      "worker": {
+        "import": {
+          "types": "./dist/browser/index.d.mts",
+          "default": "./dist/browser/index.mjs"
+        },
+        "require": {
+          "types": "./dist/browser/index.d.cts",
+          "default": "./dist/browser/index.cjs"
+        }
+      },
+      "edge-light": {
+        "import": {
+          "types": "./dist/edge/index.d.mts",
+          "default": "./dist/edge/index.mjs"
+        },
+        "require": {
+          "types": "./dist/edge/index.d.cts",
+          "default": "./dist/edge/index.cjs"
+        }
+      },
+      "node": {
+        "import": {
+          "types": "./dist/node/index.d.mts",
+          "default": "./dist/node/index.mjs"
+        },
+        "require": {
+          "types": "./dist/node/index.d.cts",
+          "default": "./dist/node/index.cjs"
+        }
+      },
+      "convex": {
+        "import": {
+          "types": "./dist/edge/index.d.mts",
+          "default": "./dist/edge/index.mjs"
+        },
+        "require": {
+          "types": "./dist/edge/index.d.cts",
+          "default": "./dist/edge/index.cjs"
+        }
+      },
+      "browser": {
+        "import": {
+          "types": "./dist/browser/index.d.mts",
+          "default": "./dist/browser/index.mjs"
+        },
+        "require": {
+          "types": "./dist/browser/index.d.cts",
+          "default": "./dist/browser/index.cjs"
+        }
+      },
+      "default": {
+        "import": {
+          "types": "./dist/node/index.d.mts",
+          "default": "./dist/node/index.mjs"
+        },
+        "require": {
+          "types": "./dist/node/index.d.cts",
+          "default": "./dist/node/index.cjs"
+        }
+      }
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resend/react-email.git",
+    "directory": "packages/render"
+  },
+  "bugs": {
+    "url": "https://github.com/resend/react-email/issues"
+  },
+  "homepage": "https://react.email",
+  "keywords": [
+    "@react-email/render",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "email"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "entities": "^8.0.0",
+    "html-to-text": "^10.0.0",
+    "html5parser": "^3.0.0",
+    "prettier": "^3.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "5.0.0",
+    "@types/html-to-text": "9.0.4",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/shelljs": "0.10.0",
+    "jsdom": "26.1.0",
+    "playwright": "1.59.1",
+    "shelljs": "0.10.0",
+    "typescript": "5.9.3",
+    "yalc": "1.0.0-pre.53",
+    "tsconfig": "0.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "test:watch": "vitest"
+  },
+  "depup": {
+    "changes": {
+      "entities": {
+        "from": "^4.5.0",
+        "to": "^8.0.0"
+      },
+      "html-to-text": {
+        "from": "^9.0.5",
+        "to": "^10.0.0"
+      },
+      "prettier": {
+        "from": "^3.5.3",
+        "to": "^3.9.5"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@react-email/render",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-07-14T00:25:08.323Z",
+    "smokeTest": "failed"
+  }
+}

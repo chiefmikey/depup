@@ -12,7 +12,7 @@ npm install @depup/dockerode
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.18 | **Updated**: 7/13/2026 | **Import test**: passed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.19 | **Updated**: 7/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @grpc/grpc-js | `^1.11.1` | `^1.14.4` |
 | @grpc/proto-loader | `^0.7.13` | `^0.8.1` |
-| protobufjs | `^7.3.2` | `^8.7.0` |
+| protobufjs | `^7.3.2` | `^8.7.1` |
 | tar-fs | `^2.1.4` | `^3.1.3` |
 
 

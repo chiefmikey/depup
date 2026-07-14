@@ -30,19 +30,6 @@
     }
   },
   "3.12.2": {
-    "51": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:29:04.274Z",
-      "version": "3.12.2-depup.51"
-    },
     "52": {
       "changes": {
         "@swc/helpers": {
@@ -94,6 +81,19 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:24:39.212Z",
       "version": "3.12.2-depup.55"
+    },
+    "56": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:23:52.038Z",
+      "version": "3.12.2-depup.56"
     }
   }
 }

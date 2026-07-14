@@ -1,0 +1,159 @@
+{
+  "name": "@depup/eslint-plugin-unicorn",
+  "version": "71.1.0-depup.7",
+  "description": "More than 300 powerful ESLint rules (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindresorhus/eslint-plugin-unicorn.git"
+  },
+  "funding": "https://github.com/sindresorhus/eslint-plugin-unicorn?sponsor=1",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "coverage": "c8 ava",
+    "create-rule": "node ./scripts/create-rule.js && npm run create-rules-index-file && npm run fix:eslint-docs",
+    "create-rules-index-file": "node ./scripts/create-rules-index-file.js",
+    "fix": "run-p --continue-on-error \"fix:*\"",
+    "fix:eslint-docs": "eslint-doc-generator",
+    "fix:js": "npm run lint:js -- --fix",
+    "fix:markdown": "npm run lint:markdown -- --fix",
+    "fix:non-js-languages": "node ./scripts/create-non-js-languages-list.js",
+    "fix:snapshots": "ava --update-snapshots",
+    "integration": "node ./test/integration/test.js",
+    "lint": "run-p --continue-on-error \"lint:*\"",
+    "lint:eslint-docs": "npm run fix:eslint-docs -- --check",
+    "lint:js": "eslint",
+    "lint:markdown": "markdownlint \"**/*.md\"",
+    "lint:non-js-languages": "node ./scripts/create-non-js-languages-list.js --check",
+    "lint:package-json": "npmPkgJsonLint .",
+    "rename-rule": "node ./scripts/rename-rule.js && npm run create-rules-index-file && npm run fix:eslint-docs",
+    "run-rules-on-codebase": "eslint --config=./eslint.dogfooding.config.js",
+    "smoke": "eslint-remote-tester --config ./test/smoke/eslint-remote-tester.config.js",
+    "test": "npm-run-all --node-run --continue-on-error lint \"test:*\"",
+    "test:js": "ava"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "rules",
+    "configs",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "eslint-plugin-unicorn",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "unicorn",
+    "linter",
+    "lint",
+    "style",
+    "xo"
+  ],
+  "dependencies": {
+    "@eslint-community/eslint-utils": "^4.9.1",
+    "browserslist": "^4.28.6",
+    "change-case": "^5.4.4",
+    "ci-info": "^4.4.0",
+    "core-js-compat": "^3.49.0",
+    "detect-indent": "^7.0.2",
+    "find-up-simple": "^1.0.1",
+    "globals": "^17.7.0",
+    "indent-string": "^5.0.0",
+    "is-builtin-module": "^5.0.0",
+    "is-identifier": "^1.1.0",
+    "pluralize": "^8.0.0",
+    "quote-js-string": "^0.1.0",
+    "regjsparser": "^0.13.2",
+    "reserved-identifiers": "^1.2.0",
+    "semver": "^7.8.5",
+    "strip-indent": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "^8.0.0",
+    "@eslint/css": "^1.4.0",
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/json": "^2.0.1",
+    "@eslint/markdown": "^8.0.3",
+    "@html-eslint/eslint-plugin": "^0.63.0",
+    "@html-eslint/parser": "^0.63.0",
+    "@lubien/fixture-beta-package": "^1.0.0-beta.1",
+    "@typescript-eslint/parser": "^8.62.1",
+    "@typescript-eslint/types": "^8.62.1",
+    "ava": "^8.0.1",
+    "c8": "^11.0.0",
+    "enquirer": "^2.4.1",
+    "eslint": "^10.6.0",
+    "eslint-ava-rule-tester": "^5.0.1",
+    "eslint-config-xo": "^0.56.0",
+    "eslint-doc-generator": "^3.6.0",
+    "eslint-plugin-eslint-plugin": "^7.4.1",
+    "eslint-plugin-jsdoc": "^63.0.11",
+    "eslint-plugin-unicorn": "^70.0.0",
+    "eslint-remote-tester": "^4.0.4",
+    "eslint-remote-tester-repositories": "^2.0.2",
+    "eslint-scope": "^9.1.2",
+    "espree": "^11.2.0",
+    "listr2": "^10.2.2",
+    "markdownlint-cli": "^0.49.0",
+    "nano-spawn": "^2.1.0",
+    "node-style-text": "^2.1.2",
+    "npm-package-json-lint": "^10.4.1",
+    "npm-run-all2": "^9.0.2",
+    "open-editor": "^6.0.0",
+    "outdent": "^0.8.0",
+    "pretty-ms": "^9.3.0",
+    "svelte": "^5.56.4",
+    "svelte-eslint-parser": "^1.8.0",
+    "typescript": "^6.0.3",
+    "vue-eslint-parser": "^10.4.1",
+    "yaml": "^2.9.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=10.4"
+  },
+  "ava": {
+    "files": [
+      "test/*.js",
+      "test/unit/*.js"
+    ]
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
+  "depup": {
+    "changes": {
+      "browserslist": {
+        "from": "^4.28.4",
+        "to": "^4.28.6"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "eslint-plugin-unicorn",
+    "originalVersion": "71.1.0",
+    "processedAt": "2026-07-14T00:30:09.704Z",
+    "smokeTest": "passed"
+  }
+}

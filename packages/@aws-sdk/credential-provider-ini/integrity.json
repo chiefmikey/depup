@@ -1381,19 +1381,6 @@
     }
   },
   "3.973.1": {
-    "0": {
-      "changes": {
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:26:58.375Z",
-      "version": "3.973.1-depup.0"
-    },
     "1": {
       "changes": {
         "tslib": {
@@ -1481,6 +1468,31 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:22:36.547Z",
       "version": "3.973.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.2",
+          "to": "^3.29.3"
+        },
+        "@smithy/credential-provider-imds": {
+          "from": "^4.4.7",
+          "to": "^4.4.8"
+        },
+        "@smithy/types": {
+          "from": "^4.16.0",
+          "to": "^4.16.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:20:59.490Z",
+      "version": "3.973.1-depup.5"
     }
   }
 }

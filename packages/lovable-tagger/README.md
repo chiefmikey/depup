@@ -12,7 +12,7 @@ npm install @depup/lovable-tagger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.1 | **DepUp version**: 1.3.1-depup.13 | **Updated**: 7/13/2026 | **Import test**: failed
+**Original version**: 1.3.1 | **DepUp version**: 1.3.1-depup.14 | **Updated**: 7/14/2026 | **Import test**: failed
 
 ## What changed
 

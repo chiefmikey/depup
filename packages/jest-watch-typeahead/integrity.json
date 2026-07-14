@@ -1,42 +1,5 @@
 {
   "3.0.1": {
-    "40": {
-      "changes": {
-        "ansi-escapes": {
-          "from": "^7.0.0",
-          "to": "^7.3.0"
-        },
-        "chalk": {
-          "from": "^5.2.0",
-          "to": "^5.6.2"
-        },
-        "jest-regex-util": {
-          "from": "^30.0.0",
-          "to": "^30.4.0"
-        },
-        "jest-watcher": {
-          "from": "^30.0.0",
-          "to": "^30.4.1"
-        },
-        "slash": {
-          "from": "^5.0.0",
-          "to": "^5.1.0"
-        },
-        "string-length": {
-          "from": "^6.0.0",
-          "to": "^7.0.1"
-        },
-        "strip-ansi": {
-          "from": "^7.0.1",
-          "to": "^7.2.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:38:52.219Z",
-      "version": "3.0.1-depup.40"
-    },
     "41": {
       "changes": {
         "ansi-escapes": {
@@ -184,6 +147,43 @@
       "status": "failed",
       "timestamp": "2026-07-13T00:30:44.713Z",
       "version": "3.0.1-depup.44"
+    },
+    "45": {
+      "changes": {
+        "ansi-escapes": {
+          "from": "^7.0.0",
+          "to": "^7.3.0"
+        },
+        "chalk": {
+          "from": "^5.2.0",
+          "to": "^5.6.2"
+        },
+        "jest-regex-util": {
+          "from": "^30.0.0",
+          "to": "^30.4.0"
+        },
+        "jest-watcher": {
+          "from": "^30.0.0",
+          "to": "^30.4.1"
+        },
+        "slash": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "string-length": {
+          "from": "^6.0.0",
+          "to": "^7.0.1"
+        },
+        "strip-ansi": {
+          "from": "^7.0.1",
+          "to": "^7.2.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-14T00:32:18.054Z",
+      "version": "3.0.1-depup.45"
     }
   }
 }
