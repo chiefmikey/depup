@@ -28,7 +28,7 @@ services:
     # No command — Dockerfile ENTRYPOINT handles execution
 
   clamav-daemon:
-    image: clamav/clamav:latest
+    image: clamav/clamav:1.5
     container_name: depup-clamav
     networks:
       - depup-secure
