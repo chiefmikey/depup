@@ -1,5 +1,5 @@
 # DepUp Security Sandbox - Isolated Package Processing Environment
-FROM node:20-alpine
+FROM node:24-alpine
 
 # Install security tools and dependencies
 RUN apk add --no-cache \
