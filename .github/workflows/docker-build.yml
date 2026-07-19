@@ -1,0 +1,79 @@
+name: Docker Build Verification
+
+# Build-only verification for BOTH container images.
+#
+# This is the ONLY CI job that exercises Dockerfile.security. It is otherwise
+# referenced solely by docker-compose.yml (which no workflow runs), so it rots
+# silently -- it has previously accumulated latent build bugs (a non-existent
+# npm package and a missing chown that broke `npm ci` as the non-root user),
+# caught only by a manual local build.
+#
+# No image is run, pushed, or published here. The build fully executes every
+# RUN layer, which is exactly what catches Dockerfile build regressions, with
+# zero external side effects -- unlike depup-secure.yml, which is
+# dispatch-only and publishes to npm + pushes to main and therefore must never
+# be triggered merely to prove a container builds.
+
+on:
+  pull_request:
+    paths:
+      - 'Dockerfile'
+      - 'Dockerfile.security'
+      - 'docker-compose.yml'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/docker-build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'Dockerfile'
+      - 'Dockerfile.security'
+      - 'docker-compose.yml'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/docker-build.yml'
+  workflow_dispatch:
+
+# Build-only: no registry push, no repo write. Read is all that is needed.
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build ${{ matrix.image }} image
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: sandbox
+            file: ./Dockerfile
+            tag: depup-security-sandbox:ci
+          - image: scanner
+            file: ./Dockerfile.security
+            tag: depup-security-scanner:ci
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
+
+      - name: Build ${{ matrix.image }} image (build-only, no push, no run)
+        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
+        with:
+          context: .
+          file: ${{ matrix.file }}
+          tags: ${{ matrix.tag }}
+          push: false
+          load: false
