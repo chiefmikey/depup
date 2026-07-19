@@ -2,8 +2,11 @@ name: "Automated Discovery & Sync"
 
 on:
   schedule:
-    - cron: "0 8,16 * * *"  # sync + heal only (skip discover)
-    - cron: "0 0 * * *"     # full pipeline: discover + sync + heal (daily, midnight UTC)
+    - cron: "0 8,16 * * *"  # sync + heal only (skip discover), every day
+    - cron: "0 0 * * 1-6"   # sync + heal only (skip discover), midnight UTC Mon-Sat
+    - cron: "0 0 * * 0"     # full pipeline: discover + sync + heal, midnight UTC Sunday only
+                             # (discover is weekly -- new-package onboarding lags by up to
+                             # a week; the existing catalog keeps syncing deps every 8h)
   workflow_dispatch:
     inputs:
       discover_only:
@@ -30,7 +33,7 @@ jobs:
     name: Discover (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
     timeout-minutes: 90
-    if: ${{ !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * *') }}
+    if: ${{ !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 0') }}
     strategy:
       fail-fast: false
       matrix:
