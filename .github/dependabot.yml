@@ -20,3 +20,17 @@ updates:
       npm:
         patterns:
           - "*"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+    groups:
+      docker:
+        patterns:
+          - "*"
+    ignore:
+      # clamav/clamav has no arm64 manifest and its docker-compose.yml pin is
+      # a deliberately deferred separate decision -- never auto-bump it here.
+      - dependency-name: "clamav/clamav"
