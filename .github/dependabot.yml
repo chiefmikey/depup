@@ -34,3 +34,10 @@ updates:
       # clamav/clamav has no arm64 manifest and its docker-compose.yml pin is
       # a deliberately deferred separate decision -- never auto-bump it here.
       - dependency-name: "clamav/clamav"
+      # Node 24 is depup's standard runtime (Active LTS "Krypton", EOL 2028-04-30).
+      # Node 26 stays "Current" until it enters Active LTS on 2026-10-28 -- do not
+      # auto-jump the base image off the LTS line onto a pre-LTS major. Digest,
+      # patch, and minor refreshes of node:24-alpine still flow through normally.
+      # Remove this rule once Node 26 reaches Active LTS to move to the next LTS.
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]
