@@ -187,19 +187,6 @@
     }
   },
   "7.18.1": {
-    "10": {
-      "changes": {
-        "react-router": {
-          "from": "7.18.1",
-          "to": "^8.2.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:47:43.808Z",
-      "version": "7.18.1-depup.10"
-    },
     "11": {
       "changes": {
         "react-router": {
@@ -251,6 +238,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:44:13.819Z",
       "version": "7.18.1-depup.14"
+    },
+    "15": {
+      "changes": {
+        "react-router": {
+          "from": "7.18.1",
+          "to": "^8.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-21T16:32:48.504Z",
+      "version": "7.18.1-depup.15"
     }
   }
 }

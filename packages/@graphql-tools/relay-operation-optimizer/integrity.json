@@ -242,5 +242,20 @@
       "timestamp": "2026-07-14T00:24:25.302Z",
       "version": "7.1.6-depup.7"
     }
+  },
+  "7.1.8": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:58.276Z",
+      "version": "7.1.8-depup.0"
+    }
   }
 }

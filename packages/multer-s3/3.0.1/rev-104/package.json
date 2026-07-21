@@ -1,0 +1,73 @@
+{
+  "name": "@depup/multer-s3",
+  "version": "3.0.1-depup.104",
+  "description": "Streaming multer storage engine for AWS S3 (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && mocha test/basic.js"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badunk/multer-s3.git"
+  },
+  "keywords": [
+    "multer-s3",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "multer",
+    "s3",
+    "amazon",
+    "aws"
+  ],
+  "author": "badunk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badunk/multer-s3/issues"
+  },
+  "homepage": "https://github.com/badunk/multer-s3#readme",
+  "dependencies": {
+    "@aws-sdk/lib-storage": "^3.1091.0",
+    "file-type": "^22.0.1",
+    "html-comment-regex": "^1.1.2",
+    "run-parallel": "^1.2.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.13.1",
+    "form-data": "^1.0.0-rc3",
+    "mocha": "^2.2.5",
+    "multer": "^1.1.0",
+    "on-finished": "^2.3.0",
+    "standard": "^5.4.1",
+    "xtend": "^4.0.1"
+  },
+  "depup": {
+    "changes": {
+      "@aws-sdk/lib-storage": {
+        "from": "^3.46.0",
+        "to": "^3.1091.0"
+      },
+      "file-type": {
+        "from": "^3.3.0",
+        "to": "^22.0.1"
+      },
+      "run-parallel": {
+        "from": "^1.1.6",
+        "to": "^1.2.0"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "multer-s3",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-07-21T16:17:59.369Z",
+    "smokeTest": "passed"
+  }
+}

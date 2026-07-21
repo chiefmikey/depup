@@ -51,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:23:12.603Z",
       "version": "0.27.20-depup.2"
+    },
+    "3": {
+      "changes": {
+        "tabbable": {
+          "from": "^6.0.0",
+          "to": "^6.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:40.841Z",
+      "version": "0.27.20-depup.3"
     }
   }
 }

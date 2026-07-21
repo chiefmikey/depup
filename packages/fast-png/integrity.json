@@ -1,18 +1,5 @@
 {
   "8.0.0": {
-    "33": {
-      "changes": {
-        "fflate": {
-          "from": "^0.8.2",
-          "to": "^0.8.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-03T00:36:09.752Z",
-      "version": "8.0.0-depup.33"
-    },
     "34": {
       "changes": {
         "fflate": {
@@ -64,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:30:34.084Z",
       "version": "8.0.0-depup.37"
+    },
+    "38": {
+      "changes": {
+        "fflate": {
+          "from": "^0.8.2",
+          "to": "^0.8.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:14:27.153Z",
+      "version": "8.0.0-depup.38"
     }
   }
 }

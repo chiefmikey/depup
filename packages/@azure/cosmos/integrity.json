@@ -237,5 +237,44 @@
       "timestamp": "2026-07-14T00:21:33.321Z",
       "version": "4.9.3-depup.57"
     }
+  },
+  "4.10.0": {
+    "0": {
+      "changes": {
+        "@azure/abort-controller": {
+          "from": "^2.1.2",
+          "to": "^2.2.0"
+        },
+        "@azure/core-auth": {
+          "from": "^1.9.0",
+          "to": "^1.11.0"
+        },
+        "@azure/core-rest-pipeline": {
+          "from": "^1.19.1",
+          "to": "^1.25.0"
+        },
+        "@azure/core-tracing": {
+          "from": "^1.2.0",
+          "to": "^1.4.0"
+        },
+        "@azure/core-util": {
+          "from": "^1.11.0",
+          "to": "^1.14.0"
+        },
+        "@azure/keyvault-keys": {
+          "from": "^4.9.0",
+          "to": "^4.10.2"
+        },
+        "@azure/logger": {
+          "from": "^1.1.4",
+          "to": "^1.4.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:03:13.101Z",
+      "version": "4.10.0-depup.0"
+    }
   }
 }

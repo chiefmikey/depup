@@ -12,16 +12,15 @@ npm install @depup/aws-sdk__client-sns
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1086.0 | **DepUp version**: 3.1086.0-depup.0 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 3.1091.0 | **DepUp version**: 3.1091.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.29.2` | `^3.29.3` |
-| @smithy/fetch-http-handler | `^5.6.4` | `^5.6.5` |
-| @smithy/node-http-handler | `^4.9.4` | `^4.9.5` |
-| @smithy/types | `^4.16.0` | `^4.16.1` |
+| @smithy/core | `^3.29.4` | `^3.29.6` |
+| @smithy/fetch-http-handler | `^5.6.6` | `^5.6.8` |
+| @smithy/node-http-handler | `^4.9.6` | `^4.9.8` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

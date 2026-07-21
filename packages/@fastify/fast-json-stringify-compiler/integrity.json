@@ -39,19 +39,6 @@
     }
   },
   "5.1.0": {
-    "4": {
-      "changes": {
-        "fast-json-stringify": {
-          "from": "^7.0.0",
-          "to": "^7.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:30:01.037Z",
-      "version": "5.1.0-depup.4"
-    },
     "5": {
       "changes": {
         "fast-json-stringify": {
@@ -103,6 +90,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:22:31.661Z",
       "version": "5.1.0-depup.8"
+    },
+    "9": {
+      "changes": {
+        "fast-json-stringify": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:03.753Z",
+      "version": "5.1.0-depup.9"
     }
   }
 }

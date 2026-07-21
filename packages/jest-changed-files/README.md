@@ -12,14 +12,14 @@ npm install @depup/jest-changed-files
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.4.1 | **DepUp version**: 30.4.1-depup.45 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 30.4.1 | **DepUp version**: 30.4.1-depup.46 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| execa | `^5.1.1` | `^9.6.1` |
-| p-limit | `^3.1.0` | `^7.3.0` |
+| execa | `^5.1.1` | `^10.0.0` |
+| p-limit | `^3.1.0` | `^7.3.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jest-changed-files&labels=bug).

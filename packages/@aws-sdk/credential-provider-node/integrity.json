@@ -1536,5 +1536,28 @@
       "timestamp": "2026-07-14T00:21:08.932Z",
       "version": "3.972.67-depup.0"
     }
+  },
+  "3.972.70": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.4",
+          "to": "^3.29.6"
+        },
+        "@smithy/credential-provider-imds": {
+          "from": "^4.4.9",
+          "to": "^4.4.11"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:02:25.709Z",
+      "version": "3.972.70-depup.0"
+    }
   }
 }

@@ -7,19 +7,6 @@
     }
   },
   "8.20.0": {
-    "49": {
-      "changes": {
-        "fast-uri": {
-          "from": "^3.0.1",
-          "to": "^4.1.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:34:46.314Z",
-      "version": "8.20.0-depup.49"
-    },
     "50": {
       "changes": {
         "fast-uri": {
@@ -71,6 +58,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:27:29.388Z",
       "version": "8.20.0-depup.53"
+    },
+    "54": {
+      "changes": {
+        "fast-uri": {
+          "from": "^3.0.1",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:11:02.510Z",
+      "version": "8.20.0-depup.54"
     }
   }
 }

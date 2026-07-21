@@ -12,13 +12,13 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.2.1 | **DepUp version**: 14.2.1-depup.4 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 14.3.1 | **DepUp version**: 14.3.1-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @apm-js-collab/tracing-hooks | `^0.9.1` | `^0.11.0` |
+| @apm-js-collab/tracing-hooks | `^0.9.1` | `^0.13.0` |
 | @grpc/grpc-js | `^1.13.2` | `^1.14.4` |
 | @newrelic/security-agent | `^3.0.0` | `^3.0.4` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.9.0` |
 | @tyriar/fibonacci-heap | `^2.0.7` | `^2.0.9` |
 | https-proxy-agent | `^9.0.0` | `^9.1.0` |
-| import-in-the-middle | `^3.0.1` | `^3.3.1` |
+| import-in-the-middle | `^3.0.1` | `^3.3.2` |
 | json-stringify-safe | `^5.0.0` | `^5.0.1` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | semver | `^7.5.2` | `^7.8.5` |

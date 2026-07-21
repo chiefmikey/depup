@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "7.29.7",
+      "to": "^8.0.1"
+    },
+    "@jridgewell/sourcemap-codec": {
+      "from": "^1.4.14",
+      "to": "^1.5.5"
+    },
+    "reflect-metadata": {
+      "from": "^0.2.0",
+      "to": "^0.2.2"
+    },
+    "convert-source-map": {
+      "from": "^1.5.1",
+      "to": "^2.0.0"
+    },
+    "semver": {
+      "from": "^7.0.0",
+      "to": "^7.8.5"
+    },
+    "tslib": {
+      "from": "^2.3.0",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-07-21T16:01:39.671Z",
+  "totalUpdated": 6
+}

@@ -12,7 +12,7 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.63 | **Updated**: 7/14/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.64 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,7 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @rollup/plugin-json | `^4.1.0` | `^6.1.0` |
 | @rollup/plugin-node-resolve | `^11.0.1` | `^16.0.3` |
 | @surma/rollup-plugin-off-main-thread | `^2.2.2` | `^2.2.3` |
-| autoprefixer | `^10.1.0` | `^10.5.2` |
+| autoprefixer | `^10.1.0` | `^10.5.4` |
 | babel-plugin-macros | `^3.0.1` | `^3.1.0` |
 | builtin-modules | `^3.1.0` | `^5.3.0` |
 | camelcase | `^6.2.0` | `^9.0.0` |
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | filesize | `^6.1.0` | `^11.0.22` |
 | gzip-size | `^6.0.0` | `^7.0.0` |
 | kleur | `^4.1.3` | `^4.1.5` |
-| postcss | `^8.2.1` | `^8.5.19` |
-| pretty-bytes | `^5.4.1` | `^7.1.0` |
+| postcss | `^8.2.1` | `^8.5.21` |
+| pretty-bytes | `^5.4.1` | `^7.1.1` |
 | rollup | `^2.35.1` | `^4.62.2` |
 | rollup-plugin-postcss | `^4.0.0` | `^4.0.2` |
 | rollup-plugin-typescript2 | `^0.32.0` | `^0.37.0` |

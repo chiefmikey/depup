@@ -12,12 +12,13 @@ npm install @depup/react-native-worklets
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.10.2 | **DepUp version**: 0.10.2-depup.7 | **Updated**: 7/14/2026 | **Import test**: failed
+**Original version**: 0.11.1 | **DepUp version**: 0.11.1-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @babel/generator | `^7.27.1` | `^8.0.0` |
 | @babel/plugin-transform-arrow-functions | `^7.27.1` | `^8.0.1` |
 | @babel/plugin-transform-class-properties | `^7.28.6` | `^8.0.1` |
 | @babel/plugin-transform-classes | `^7.28.6` | `^8.0.1` |
@@ -27,6 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-transform-template-literals | `^7.27.1` | `^8.0.1` |
 | @babel/plugin-transform-unicode-regex | `^7.27.1` | `^8.0.1` |
 | @babel/preset-typescript | `^7.28.5` | `^8.0.1` |
+| @babel/traverse | `^7.27.1` | `^8.0.4` |
 | @babel/types | `^7.27.1` | `^8.0.4` |
 | semver | `^7.7.4` | `^7.8.5` |
 

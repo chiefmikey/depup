@@ -12,7 +12,7 @@ npm install @depup/npmcli__package-json
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.49 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.50 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,6 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | glob | `^13.0.0` | `^13.0.6` |
 | semver | `^7.5.3` | `^7.8.5` |
+| spdx-expression-parse | `^4.0.0` | `^5.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/npmcli__package-json&labels=bug).

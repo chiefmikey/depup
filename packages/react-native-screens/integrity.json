@@ -210,5 +210,24 @@
       "timestamp": "2026-07-14T00:37:15.027Z",
       "version": "4.26.0-depup.3"
     }
+  },
+  "4.26.2": {
+    "0": {
+      "changes": {
+        "react-freeze": {
+          "from": "^1.0.0",
+          "to": "^1.0.4"
+        },
+        "warn-once": {
+          "from": "^0.1.0",
+          "to": "^0.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-21T16:30:19.044Z",
+      "version": "4.26.2-depup.0"
+    }
   }
 }

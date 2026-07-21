@@ -265,5 +265,20 @@
       "timestamp": "2026-07-14T00:36:42.235Z",
       "version": "10.9.2-depup.47"
     }
+  },
+  "10.10.0": {
+    "0": {
+      "changes": {
+        "nth-check": {
+          "from": "^2.1.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:14:09.405Z",
+      "version": "10.10.0-depup.0"
+    }
   }
 }

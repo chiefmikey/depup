@@ -1,0 +1,82 @@
+{
+  "name": "@depup/aws-sdk__util-dynamodb",
+  "version": "3.996.7-depup.0",
+  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/main/packages/util-dynamodb",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "AWS SDK for JavaScript Team",
+    "url": "https://aws.amazon.com/sdk-for-javascript/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws/aws-sdk-js-v3.git",
+    "directory": "packages/util-dynamodb"
+  },
+  "files": [
+    "dist-*/**",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "main": "./dist-cjs/index.js",
+  "module": "./dist-es/index.js",
+  "types": "./dist-types/index.d.ts",
+  "typesVersions": {
+    "<4.5": {
+      "dist-types/*": [
+        "dist-types/ts3.4/*"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+    "build:cjs": "node ../../scripts/compilation/inline",
+    "build:es": "premove dist-es && tsc -p tsconfig.es.json",
+    "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+    "build:types": "premove dist-types && tsc -p tsconfig.types.json",
+    "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4",
+    "clean": "premove dist-cjs dist-es dist-types",
+    "extract:docs": "api-extractor run --local",
+    "test": "yarn g:vitest run",
+    "test:watch": "yarn g:vitest watch"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "3.1088.0",
+    "@tsconfig/recommended": "1.0.1",
+    "concurrently": "7.0.0",
+    "downlevel-dts": "0.10.1",
+    "premove": "4.0.0",
+    "typescript": "~5.8.3"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1088.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "description": "@aws-sdk/util-dynamodb with all dependencies updated to latest",
+  "keywords": [
+    "@aws-sdk/util-dynamodb",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "tslib": {
+        "from": "^2.6.2",
+        "to": "^2.8.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@aws-sdk/util-dynamodb",
+    "originalVersion": "3.996.7",
+    "processedAt": "2026-07-21T16:02:30.337Z",
+    "smokeTest": "passed"
+  }
+}

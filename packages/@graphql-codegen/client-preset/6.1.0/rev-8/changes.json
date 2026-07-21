@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@babel/helper-plugin-utils": {
+      "from": "^7.20.2",
+      "to": "^8.0.1"
+    },
+    "@babel/template": {
+      "from": "^7.20.7",
+      "to": "^8.0.0"
+    },
+    "@graphql-tools/documents": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "@graphql-tools/utils": {
+      "from": "^11.2.0",
+      "to": "^11.2.2"
+    },
+    "tslib": {
+      "from": "^2.8.0",
+      "to": "^2.8.1"
+    },
+    "@graphql-codegen/typescript-operations": {
+      "from": "^6.1.0",
+      "to": "^6.1.1"
+    },
+    "@graphql-codegen/visitor-plugin-common": {
+      "from": "^7.2.0",
+      "to": "^7.2.1"
+    }
+  },
+  "timestamp": "2026-07-21T16:05:24.518Z",
+  "totalUpdated": 7
+}
