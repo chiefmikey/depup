@@ -72,5 +72,24 @@
       "timestamp": "2026-06-16T10:28:13.182Z",
       "version": "8.21.0-depup.22"
     }
+  },
+  "8.22.0": {
+    "0": {
+      "changes": {
+        "pg-types": {
+          "from": "2.2.0",
+          "to": "^4.1.0"
+        },
+        "pgpass": {
+          "from": "1.0.5",
+          "to": "^1.0.6"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:27:58.768Z",
+      "version": "8.22.0-depup.0"
+    }
   }
 }

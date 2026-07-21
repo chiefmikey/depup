@@ -47,6 +47,35 @@
       "status": "failed",
       "timestamp": "2026-05-14T07:16:21.179Z",
       "version": "6.2.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@hapi/bourne": {
+          "from": "^3.0.0",
+          "to": "^4.0.1"
+        },
+        "inflation": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "qs": {
+          "from": "^6.5.2",
+          "to": "^6.15.3"
+        },
+        "raw-body": {
+          "from": "^2.3.3",
+          "to": "^4.0.0"
+        },
+        "type-is": {
+          "from": "^1.6.16",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:22:34.520Z",
+      "version": "6.2.0-depup.2"
     }
   }
 }

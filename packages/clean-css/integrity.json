@@ -12,6 +12,19 @@
       "status": "published",
       "timestamp": "2026-03-19T03:28:41.704Z",
       "version": "5.3.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "source-map": {
+          "from": "~0.6.0",
+          "to": "^0.8.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:21:56.917Z",
+      "version": "5.3.3-depup.1"
     }
   }
 }

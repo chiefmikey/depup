@@ -12,7 +12,7 @@ npm install @depup/devcert
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.6 | **Updated**: 5/19/2026 | **Import test**: failed
+**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.7 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/glob | `^5.0.34` | `^9.0.0` |
 | @types/lodash | `^4.14.92` | `^4.17.24` |
 | @types/mkdirp | `^0.5.2` | `^2.0.0` |
-| @types/node | `^8.5.7` | `^25.9.0` |
+| @types/node | `^8.5.7` | `^26.1.1` |
 | @types/rimraf | `^2.0.2` | `^4.0.5` |
 | @types/tmp | `^0.0.33` | `^0.2.6` |
 | application-config-path | `^0.1.0` | `^1.0.0` |
@@ -38,7 +38,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | password-prompt | `^1.0.4` | `^1.1.3` |
 | rimraf | `^2.6.2` | `^6.1.3` |
 | sudo-prompt | `^8.2.0` | `^9.2.1` |
-| tmp | `^0.0.33` | `^0.2.5` |
+| tmp | `^0.0.33` | `^0.2.7` |
 | tslib | `^1.10.0` | `^2.8.1` |
 
 

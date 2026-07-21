@@ -12,13 +12,13 @@ npm install @depup/fakeredis
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.2 | **Updated**: 5/28/2026 | **Import test**: passed
+**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.3 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| redis | `2.6.0-0` | `^6.0.0` |
+| redis | `2.6.0-0` | `^6.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fakeredis&labels=bug).

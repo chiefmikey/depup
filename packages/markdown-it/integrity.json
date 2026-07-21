@@ -85,19 +85,6 @@
     }
   },
   "14.3.0": {
-    "8": {
-      "changes": {
-        "entities": {
-          "from": "^4.5.0",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:42:22.681Z",
-      "version": "14.3.0-depup.8"
-    },
     "9": {
       "changes": {
         "entities": {
@@ -161,6 +148,27 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:39:47.865Z",
       "version": "14.3.0-depup.12"
+    },
+    "13": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        },
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        },
+        "linkify-it": {
+          "from": "^5.0.2",
+          "to": "^6.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-21T17:24:57.745Z",
+      "version": "14.3.0-depup.13"
     }
   }
 }

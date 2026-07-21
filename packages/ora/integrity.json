@@ -92,5 +92,24 @@
       "timestamp": "2026-06-16T10:27:45.545Z",
       "version": "9.4.0-depup.22"
     }
+  },
+  "9.4.1": {
+    "0": {
+      "changes": {
+        "cli-spinners": {
+          "from": "^3.2.0",
+          "to": "^3.4.0"
+        },
+        "string-width": {
+          "from": "^8.1.0",
+          "to": "^8.2.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:27:20.585Z",
+      "version": "9.4.1-depup.0"
+    }
   }
 }

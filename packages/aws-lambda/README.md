@@ -12,15 +12,15 @@ npm install @depup/aws-lambda
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.7 | **DepUp version**: 1.0.7-depup.2 | **Updated**: 6/1/2026 | **Import test**: passed
+**Original version**: 1.0.7 | **DepUp version**: 1.0.7-depup.3 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | aws-sdk | `^2.814.0` | `^2.1693.0` |
-| js-yaml | `^3.14.1` | `^4.2.0` |
-| watchpack | `^2.0.0-beta.10` | `^2.5.1` |
+| js-yaml | `^3.14.1` | `^5.2.1` |
+| watchpack | `^2.0.0-beta.10` | `^2.5.2` |
 | commander | `^3.0.2` | `^15.0.0` |
 
 

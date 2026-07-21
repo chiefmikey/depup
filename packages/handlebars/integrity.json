@@ -23,6 +23,23 @@
       "status": "published",
       "timestamp": "2026-03-27T00:41:43.742Z",
       "version": "4.7.9-depup.0"
+    },
+    "1": {
+      "changes": {
+        "minimist": {
+          "from": "^1.2.5",
+          "to": "^1.2.8"
+        },
+        "source-map": {
+          "from": "^0.6.1",
+          "to": "^0.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:23:56.881Z",
+      "version": "4.7.9-depup.1"
     }
   }
 }

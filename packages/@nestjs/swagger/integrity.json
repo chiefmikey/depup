@@ -194,5 +194,20 @@
       "timestamp": "2026-06-16T10:20:41.391Z",
       "version": "11.4.4-depup.28"
     }
+  },
+  "11.4.6": {
+    "0": {
+      "changes": {
+        "swagger-ui-dist": {
+          "from": "5.32.8",
+          "to": "^5.32.10"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-21T17:15:27.269Z",
+      "version": "11.4.6-depup.0"
+    }
   }
 }

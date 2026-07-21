@@ -12,13 +12,14 @@ npm install @depup/pg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.21.0 | **DepUp version**: 8.21.0-depup.22 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 8.22.0 | **DepUp version**: 8.22.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | pg-types | `2.2.0` | `^4.1.0` |
+| pgpass | `1.0.5` | `^1.0.6` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pg&labels=bug).

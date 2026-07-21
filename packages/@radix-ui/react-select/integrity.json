@@ -100,5 +100,20 @@
       "timestamp": "2026-06-16T10:21:04.147Z",
       "version": "2.3.1-depup.1"
     }
+  },
+  "2.3.4": {
+    "0": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-21T17:15:17.211Z",
+      "version": "2.3.4-depup.0"
+    }
   }
 }

@@ -1,0 +1,86 @@
+{
+  "bumped": {
+    "@babel/code-frame": {
+      "from": "^7.16.0",
+      "to": "^8.0.0"
+    },
+    "address": {
+      "from": "^1.1.2",
+      "to": "^2.0.3"
+    },
+    "browserslist": {
+      "from": "^4.18.1",
+      "to": "^4.28.6"
+    },
+    "chalk": {
+      "from": "^4.1.2",
+      "to": "^5.6.2"
+    },
+    "cross-spawn": {
+      "from": "^7.0.3",
+      "to": "^7.0.6"
+    },
+    "escape-string-regexp": {
+      "from": "^4.0.0",
+      "to": "^5.0.0"
+    },
+    "filesize": {
+      "from": "^8.0.6",
+      "to": "^11.0.22"
+    },
+    "find-up": {
+      "from": "^5.0.0",
+      "to": "^8.0.0"
+    },
+    "fork-ts-checker-webpack-plugin": {
+      "from": "^6.5.0",
+      "to": "^9.1.0"
+    },
+    "globby": {
+      "from": "^11.0.4",
+      "to": "^16.2.2"
+    },
+    "gzip-size": {
+      "from": "^6.0.0",
+      "to": "^7.0.0"
+    },
+    "immer": {
+      "from": "^9.0.7",
+      "to": "^11.1.15"
+    },
+    "is-root": {
+      "from": "^2.1.0",
+      "to": "^3.0.0"
+    },
+    "loader-utils": {
+      "from": "^3.2.0",
+      "to": "^3.3.1"
+    },
+    "open": {
+      "from": "^8.4.0",
+      "to": "^11.0.0"
+    },
+    "pkg-up": {
+      "from": "^3.1.0",
+      "to": "^5.0.0"
+    },
+    "react-error-overlay": {
+      "from": "^6.0.11",
+      "to": "^6.1.0"
+    },
+    "recursive-readdir": {
+      "from": "^2.2.2",
+      "to": "^2.2.3"
+    },
+    "shell-quote": {
+      "from": "^1.7.3",
+      "to": "^1.10.0"
+    },
+    "strip-ansi": {
+      "from": "^6.0.1",
+      "to": "^7.2.0"
+    }
+  },
+  "timestamp": "2026-07-21T17:28:51.111Z",
+  "totalUpdated": 20
+}

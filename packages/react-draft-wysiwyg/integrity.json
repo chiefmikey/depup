@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-19T00:39:19.198Z",
       "version": "1.15.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "classnames": {
+          "from": "^2.2.6",
+          "to": "^2.5.1"
+        },
+        "linkify-it": {
+          "from": "^2.2.0",
+          "to": "^6.0.0"
+        },
+        "prop-types": {
+          "from": "^15.7.2",
+          "to": "^15.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:29:35.581Z",
+      "version": "1.15.0-depup.1"
     }
   }
 }

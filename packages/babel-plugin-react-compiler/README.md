@@ -12,13 +12,13 @@ npm install @depup/babel-plugin-react-compiler
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/types | `^7.26.0` | `^7.29.0` |
+| @babel/types | `^7.26.0` | `^8.0.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel-plugin-react-compiler&labels=bug).

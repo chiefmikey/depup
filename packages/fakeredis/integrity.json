@@ -38,6 +38,19 @@
       "status": "failed",
       "timestamp": "2026-05-28T18:12:28.245Z",
       "version": "2.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "redis": {
+          "from": "2.6.0-0",
+          "to": "^6.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:22:51.454Z",
+      "version": "2.0.0-depup.3"
     }
   }
 }

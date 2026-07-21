@@ -12,34 +12,36 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.0.1 | **DepUp version**: 22.0.1-depup.16 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 22.0.7 | **DepUp version**: 22.0.7-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `7.29.0` | `^7.29.7` |
-| @babel/generator | `7.29.1` | `^7.29.7` |
-| @babel/helper-annotate-as-pure | `7.27.3` | `^7.29.7` |
-| @babel/plugin-transform-async-generator-functions | `7.29.0` | `^7.29.7` |
-| @babel/plugin-transform-async-to-generator | `7.28.6` | `^7.29.7` |
-| @babel/plugin-transform-runtime | `7.29.0` | `^7.29.7` |
-| @babel/preset-env | `7.29.3` | `^7.29.7` |
-| @babel/runtime | `7.29.2` | `^7.29.7` |
-| browserslist | `^4.26.0` | `^4.28.2` |
-| esbuild-wasm | `0.28.0` | `^0.28.1` |
-| http-proxy-middleware | `3.0.5` | `^4.1.1` |
-| less | `4.6.4` | `^4.6.6` |
+| @babel/core | `7.29.7` | `^8.0.1` |
+| @babel/generator | `7.29.7` | `^8.0.0` |
+| @babel/helper-annotate-as-pure | `7.29.7` | `^8.0.0` |
+| @babel/plugin-transform-async-generator-functions | `7.29.7` | `^8.0.1` |
+| @babel/plugin-transform-async-to-generator | `7.29.7` | `^8.0.1` |
+| @babel/plugin-transform-runtime | `7.29.7` | `^8.0.1` |
+| @babel/preset-env | `7.29.7` | `^8.0.2` |
+| @babel/runtime | `7.29.7` | `^8.0.0` |
+| autoprefixer | `10.5.0` | `^10.5.4` |
+| browserslist | `^4.26.0` | `^4.28.6` |
+| http-proxy-middleware | `3.0.7` | `^4.2.0` |
+| less | `4.6.4` | `^4.7.0` |
 | less-loader | `12.3.2` | `^13.0.0` |
-| piscina | `5.1.4` | `^5.2.0` |
-| postcss | `8.5.13` | `^8.5.15` |
-| sass | `1.99.0` | `^1.101.0` |
+| ora | `9.4.0` | `^9.4.1` |
+| picomatch | `4.0.4` | `^4.0.5` |
+| piscina | `5.2.0` | `^5.3.0` |
+| postcss | `8.5.13` | `^8.5.21` |
+| sass | `1.99.0` | `^1.101.3` |
 | sass-loader | `16.0.7` | `^17.0.0` |
-| semver | `7.7.4` | `^7.8.4` |
-| terser | `5.46.2` | `^5.48.0` |
+| semver | `7.7.4` | `^7.8.5` |
+| terser | `5.46.2` | `^5.49.0` |
 | tinyglobby | `0.2.16` | `^0.2.17` |
-| webpack | `5.106.2` | `^5.107.2` |
-| webpack-dev-server | `5.2.3` | `^5.2.5` |
+| webpack | `5.106.2` | `^5.108.4` |
+| webpack-dev-server | `5.2.3` | `^6.0.0` |
 | webpack-subresource-integrity | `5.1.0` | `^5.2.0-rc.1` |
 
 

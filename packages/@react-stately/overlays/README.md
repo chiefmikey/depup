@@ -12,7 +12,7 @@ npm install @depup/react-stately__overlays
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.1 | **DepUp version**: 3.7.1-depup.48 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 3.7.1 | **DepUp version**: 3.7.1-depup.49 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 

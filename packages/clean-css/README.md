@@ -12,13 +12,13 @@ npm install @depup/clean-css
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.3.3 | **DepUp version**: 5.3.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 5.3.3 | **DepUp version**: 5.3.3-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| source-map | `~0.6.0` | `^0.7.6` |
+| source-map | `~0.6.0` | `^0.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/clean-css&labels=bug).

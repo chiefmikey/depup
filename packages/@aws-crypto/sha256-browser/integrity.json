@@ -72,6 +72,31 @@
       "status": "failed",
       "timestamp": "2026-06-15T18:10:16.336Z",
       "version": "5.2.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@aws-sdk/types": {
+          "from": "^3.222.0",
+          "to": "^3.974.2"
+        },
+        "@aws-sdk/util-locate-window": {
+          "from": "^3.0.0",
+          "to": "^3.965.8"
+        },
+        "@smithy/util-utf8": {
+          "from": "^2.0.0",
+          "to": "^4.4.11"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-21T17:10:34.178Z",
+      "version": "5.2.0-depup.3"
     }
   }
 }

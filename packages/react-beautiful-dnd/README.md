@@ -12,13 +12,13 @@ npm install @depup/react-beautiful-dnd
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.1.1 | **DepUp version**: 13.1.1-depup.1 | **Updated**: 5/16/2026 | **Import test**: failed
+**Original version**: 13.1.1 | **DepUp version**: 13.1.1-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.9.2` | `^7.29.2` |
+| @babel/runtime | `^7.9.2` | `^8.0.0` |
 | css-box-model | `^1.2.0` | `^1.2.1` |
 | memoize-one | `^5.1.1` | `^6.0.0` |
 | raf-schd | `^4.0.2` | `^4.0.3` |

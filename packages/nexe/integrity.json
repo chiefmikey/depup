@@ -1,52 +1,5 @@
 {
   "5.0.0-beta.4": {
-    "0": {
-      "changes": {
-        "@yarnpkg/fslib": {
-          "from": "^3.0.0-rc.43",
-          "to": "^3.1.4"
-        },
-        "@yarnpkg/libzip": {
-          "from": "^3.0.0-rc.43",
-          "to": "^3.2.2"
-        },
-        "archiver": {
-          "from": "^5.3.1",
-          "to": "^7.0.1"
-        },
-        "chalk": {
-          "from": "^2.4.2",
-          "to": "^5.6.2"
-        },
-        "globby": {
-          "from": "^11.0.2",
-          "to": "^16.1.1"
-        },
-        "got": {
-          "from": "^12.6.0",
-          "to": "^14.6.6"
-        },
-        "meriyah": {
-          "from": "^4.3.5",
-          "to": "^7.1.0"
-        },
-        "mkdirp": {
-          "from": "^1.0.4",
-          "to": "^3.0.1"
-        },
-        "ora": {
-          "from": "^3.4.0",
-          "to": "^9.3.0"
-        },
-        "rimraf": {
-          "from": "^3.0.2",
-          "to": "^6.1.3"
-        }
-      },
-      "status": "published",
-      "timestamp": "2026-03-17T19:30:33.566Z",
-      "version": "5.0.0-beta.4-depup.0"
-    },
     "1": {
       "changes": {
         "@yarnpkg/fslib": {
@@ -242,6 +195,55 @@
       "status": "failed",
       "timestamp": "2026-05-09T07:01:36.073Z",
       "version": "5.0.0-beta.4-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@yarnpkg/fslib": {
+          "from": "^3.0.0-rc.43",
+          "to": "^3.1.5"
+        },
+        "@yarnpkg/libzip": {
+          "from": "^3.0.0-rc.43",
+          "to": "^3.2.2"
+        },
+        "archiver": {
+          "from": "^5.3.1",
+          "to": "^8.0.0"
+        },
+        "chalk": {
+          "from": "^2.4.2",
+          "to": "^5.6.2"
+        },
+        "globby": {
+          "from": "^11.0.2",
+          "to": "^16.2.2"
+        },
+        "got": {
+          "from": "^12.6.0",
+          "to": "^15.1.0"
+        },
+        "meriyah": {
+          "from": "^4.3.5",
+          "to": "^7.1.2"
+        },
+        "mkdirp": {
+          "from": "^1.0.4",
+          "to": "^3.0.1"
+        },
+        "ora": {
+          "from": "^3.4.0",
+          "to": "^9.4.1"
+        },
+        "rimraf": {
+          "from": "^3.0.2",
+          "to": "^6.1.3"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:26:02.959Z",
+      "version": "5.0.0-beta.4-depup.5"
     }
   }
 }

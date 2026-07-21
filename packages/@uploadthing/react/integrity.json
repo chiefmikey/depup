@@ -12,6 +12,19 @@
       "status": "published",
       "timestamp": "2026-03-19T00:37:33.950Z",
       "version": "7.3.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "file-selector": {
+          "from": "0.6.0",
+          "to": "^4.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:20:37.306Z",
+      "version": "7.3.3-depup.1"
     }
   }
 }

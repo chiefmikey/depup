@@ -12,17 +12,17 @@ npm install @depup/istanbul-lib-instrument
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.3 | **DepUp version**: 6.0.3-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 6.0.3 | **DepUp version**: 6.0.3-depup.2 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.23.9` | `^7.29.0` |
-| @babel/parser | `^7.23.9` | `^7.29.3` |
+| @babel/core | `^7.23.9` | `^8.0.1` |
+| @babel/parser | `^7.23.9` | `^8.0.4` |
 | @istanbuljs/schema | `^0.1.3` | `^0.1.6` |
 | istanbul-lib-coverage | `^3.2.0` | `^3.2.2` |
-| semver | `^7.5.4` | `^7.8.0` |
+| semver | `^7.5.4` | `^7.8.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/istanbul-lib-instrument&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/heml
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.3 | **DepUp version**: 1.1.3-depup.4 | **Updated**: 5/29/2026 | **Import test**: passed
+**Original version**: 1.1.3 | **DepUp version**: 1.1.3-depup.5 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,10 +23,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^2.1.0` | `^5.6.2` |
 | commander | `^2.11.0` | `^15.0.0` |
 | express | `^4.16.2` | `^5.2.1` |
-| fs-extra | `^4.0.2` | `^11.3.5` |
+| fs-extra | `^4.0.2` | `^11.3.6` |
 | gaze | `^1.1.2` | `^1.1.3` |
 | get-port | `^3.2.0` | `^7.2.0` |
-| js-beautify | `^1.7.4` | `^1.15.4` |
+| js-beautify | `^1.7.4` | `^2.0.3` |
 | lodash | `^4.17.4` | `^4.18.1` |
 | log-update | `^2.1.0` | `^8.0.0` |
 | open | `0.0.5` | `^11.0.0` |

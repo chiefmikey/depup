@@ -12,31 +12,31 @@ npm install @depup/react-dev-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.1 | **DepUp version**: 12.0.1-depup.1 | **Updated**: 3/27/2026 | **Import test**: failed
+**Original version**: 12.0.1 | **DepUp version**: 12.0.1-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/code-frame | `^7.16.0` | `^7.29.0` |
+| @babel/code-frame | `^7.16.0` | `^8.0.0` |
 | address | `^1.1.2` | `^2.0.3` |
-| browserslist | `^4.18.1` | `^4.28.1` |
+| browserslist | `^4.18.1` | `^4.28.6` |
 | chalk | `^4.1.2` | `^5.6.2` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
-| filesize | `^8.0.6` | `^11.0.14` |
+| filesize | `^8.0.6` | `^11.0.22` |
 | find-up | `^5.0.0` | `^8.0.0` |
 | fork-ts-checker-webpack-plugin | `^6.5.0` | `^9.1.0` |
-| globby | `^11.0.4` | `^16.2.0` |
+| globby | `^11.0.4` | `^16.2.2` |
 | gzip-size | `^6.0.0` | `^7.0.0` |
-| immer | `^9.0.7` | `^11.1.4` |
+| immer | `^9.0.7` | `^11.1.15` |
 | is-root | `^2.1.0` | `^3.0.0` |
 | loader-utils | `^3.2.0` | `^3.3.1` |
 | open | `^8.4.0` | `^11.0.0` |
 | pkg-up | `^3.1.0` | `^5.0.0` |
 | react-error-overlay | `^6.0.11` | `^6.1.0` |
 | recursive-readdir | `^2.2.2` | `^2.2.3` |
-| shell-quote | `^1.7.3` | `^1.8.3` |
+| shell-quote | `^1.7.3` | `^1.10.0` |
 | strip-ansi | `^6.0.1` | `^7.2.0` |
 
 

@@ -12,14 +12,14 @@ npm install @depup/proxy-agent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.2 | **DepUp version**: 8.0.2-depup.22 | **Updated**: 6/16/2026 | **Import test**: failed
+**Original version**: 8.0.2 | **DepUp version**: 8.0.2-depup.23 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^4.3.4` | `^4.4.3` |
-| lru-cache | `^7.14.1` | `^11.5.1` |
+| lru-cache | `^7.14.1` | `^11.5.2` |
 | proxy-from-env | `^2.0.0` | `^2.1.0` |
 
 

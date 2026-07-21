@@ -1,0 +1,82 @@
+{
+  "name": "@depup/co-body",
+  "version": "6.2.0-depup.2",
+  "repository": "cojs/co-body",
+  "description": "request body parsing for co (with updated dependencies)",
+  "keywords": [
+    "co-body",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "request",
+    "parse",
+    "parser",
+    "json",
+    "co",
+    "generators",
+    "urlencoded"
+  ],
+  "dependencies": {
+    "@hapi/bourne": "^4.0.1",
+    "inflation": "^2.1.0",
+    "qs": "^6.15.3",
+    "raw-body": "^4.0.0",
+    "type-is": "^2.1.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.0.0",
+    "koa": "^1.6.0",
+    "safe-qs": "^6.0.1",
+    "should": "^11.2.0",
+    "supertest": "^3.1.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "egg-bin test -r should",
+    "cov": "eslint . && egg-bin cov -r should",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "depup": {
+    "changes": {
+      "@hapi/bourne": {
+        "from": "^3.0.0",
+        "to": "^4.0.1"
+      },
+      "inflation": {
+        "from": "^2.0.0",
+        "to": "^2.1.0"
+      },
+      "qs": {
+        "from": "^6.5.2",
+        "to": "^6.15.3"
+      },
+      "raw-body": {
+        "from": "^2.3.3",
+        "to": "^4.0.0"
+      },
+      "type-is": {
+        "from": "^1.6.16",
+        "to": "^2.1.0"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "co-body",
+    "originalVersion": "6.2.0",
+    "processedAt": "2026-07-21T17:22:15.467Z",
+    "smokeTest": "passed"
+  }
+}
