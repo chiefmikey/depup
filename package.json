@@ -22,15 +22,15 @@
     "commander": "15.0.0",
     "inquirer": "14.0.2",
     "npm-registry-fetch": "20.0.1",
-    "ora": "9.4.0",
+    "ora": "9.4.1",
     "pacote": "22.0.0",
-    "semver": "7.8.4"
+    "semver": "7.8.5"
   },
   "devDependencies": {
-    "eslint": "10.5.0",
+    "eslint": "10.7.0",
     "jest": "30.4.2",
-    "mikey-pro": "10.3.3",
-    "prettier": "3.8.4",
+    "mikey-pro": "10.3.4",
+    "prettier": "3.9.5",
     "stylelint": "16.26.1"
   },
   "engines": {
