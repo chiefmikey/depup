@@ -12,13 +12,13 @@ npm install @depup/next__mdx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.2.10 | **DepUp version**: 16.2.10-depup.12 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 16.2.11 | **DepUp version**: 16.2.11-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| source-map | `^0.7.0` | `^0.7.6` |
+| source-map | `^0.7.0` | `^0.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/next__mdx&labels=bug).

@@ -594,5 +594,40 @@
       "timestamp": "2026-07-14T00:23:20.647Z",
       "version": "8.3.33-depup.7"
     }
+  },
+  "8.3.35": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.29.7",
+          "to": "^8.0.1"
+        },
+        "@babel/parser": {
+          "from": "^7.29.3",
+          "to": "^8.0.4"
+        },
+        "@babel/plugin-syntax-import-assertions": {
+          "from": "^7.26.0",
+          "to": "^7.29.7"
+        },
+        "@babel/traverse": {
+          "from": "^7.26.10",
+          "to": "^8.0.4"
+        },
+        "@babel/types": {
+          "from": "^7.26.10",
+          "to": "^8.0.4"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:19.621Z",
+      "version": "8.3.35-depup.0"
+    }
   }
 }

@@ -416,5 +416,28 @@
       "timestamp": "2026-07-14T00:28:15.810Z",
       "version": "3.5.39-depup.18"
     }
+  },
+  "3.5.40": {
+    "0": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.7",
+          "to": "^8.0.4"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:09:35.280Z",
+      "version": "3.5.40-depup.0"
+    }
   }
 }

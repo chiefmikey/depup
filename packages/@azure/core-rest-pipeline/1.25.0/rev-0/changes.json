@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@azure/abort-controller": {
+      "from": "^2.1.2",
+      "to": "^2.2.0"
+    },
+    "@azure/core-auth": {
+      "from": "^1.10.0",
+      "to": "^1.11.0"
+    },
+    "@azure/core-tracing": {
+      "from": "^1.3.0",
+      "to": "^1.4.0"
+    },
+    "@azure/core-util": {
+      "from": "^1.13.0",
+      "to": "^1.14.0"
+    },
+    "@azure/logger": {
+      "from": "^1.3.0",
+      "to": "^1.4.0"
+    },
+    "@typespec/ts-http-runtime": {
+      "from": "^0.3.4",
+      "to": "^0.3.7"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-07-21T16:02:45.054Z",
+  "totalUpdated": 7
+}

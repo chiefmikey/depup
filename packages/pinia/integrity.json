@@ -16,5 +16,20 @@
       "timestamp": "2026-03-14T20:37:41.500Z",
       "version": "3.0.4-depup.1"
     }
+  },
+  "4.0.2": {
+    "0": {
+      "changes": {
+        "nostics": {
+          "from": "^1.1.4",
+          "to": "^1.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:20:52.692Z",
+      "version": "4.0.2-depup.0"
+    }
   }
 }

@@ -1,0 +1,79 @@
+{
+  "name": "@depup/raw-body",
+  "description": "Get and validate the raw body of a readable stream. (with updated dependencies)",
+  "version": "4.0.0-depup.0",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Raynos <raynos2@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": "stream-utils/raw-body",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "dependencies": {
+    "bytes": "^3.1.2",
+    "http-errors": "^2.0.1"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^12.1.0",
+    "@types/bytes": "^3.1.5",
+    "@types/http-errors": "^2.0.5",
+    "@types/node": "^26.1.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^9.0.0",
+    "iconv-lite": "^0.7.0",
+    "neostandard": "^0.13.0",
+    "size-limit": "^12.1.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "4.56 KB",
+      "ignore": [
+        "node:async_hooks",
+        "node:stream"
+      ]
+    }
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/",
+    "changes.json"
+  ],
+  "scripts": {
+    "bench": "vitest bench --run",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "size": "size-limit",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage --coverage.reporter=lcovonly --coverage.reporter=text",
+    "test:cov": "vitest run --coverage --coverage.reporter=html --coverage.reporter=text",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "raw-body",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "raw-body",
+    "originalVersion": "4.0.0",
+    "processedAt": "2026-07-21T16:21:44.052Z",
+    "smokeTest": "passed"
+  }
+}

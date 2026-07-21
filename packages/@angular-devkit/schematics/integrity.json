@@ -521,5 +521,24 @@
       "timestamp": "2026-07-14T00:20:07.024Z",
       "version": "22.0.6-depup.4"
     }
+  },
+  "22.0.7": {
+    "0": {
+      "changes": {
+        "magic-string": {
+          "from": "0.30.21",
+          "to": "^1.0.0"
+        },
+        "ora": {
+          "from": "9.4.0",
+          "to": "^9.4.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:01:39.260Z",
+      "version": "22.0.7-depup.0"
+    }
   }
 }

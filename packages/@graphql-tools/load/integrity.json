@@ -331,5 +331,24 @@
       "timestamp": "2026-07-14T00:23:26.255Z",
       "version": "8.1.13-depup.5"
     }
+  },
+  "8.1.15": {
+    "0": {
+      "changes": {
+        "p-limit": {
+          "from": "3.1.0",
+          "to": "^7.3.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:19.392Z",
+      "version": "8.1.15-depup.0"
+    }
   }
 }

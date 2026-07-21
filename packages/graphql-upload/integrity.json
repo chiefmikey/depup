@@ -21,5 +21,28 @@
       "timestamp": "2026-03-19T03:04:23.027Z",
       "version": "17.0.0-depup.0"
     }
+  },
+  "17.1.0": {
+    "0": {
+      "changes": {
+        "@types/busboy": {
+          "from": "^1.5.0",
+          "to": "^1.5.4"
+        },
+        "@types/object-path": {
+          "from": "^0.11.1",
+          "to": "^0.11.4"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:16:14.337Z",
+      "version": "17.1.0-depup.0"
+    }
   }
 }

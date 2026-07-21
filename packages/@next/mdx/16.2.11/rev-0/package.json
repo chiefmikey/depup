@@ -1,0 +1,47 @@
+{
+  "name": "@depup/next__mdx",
+  "version": "16.2.11-depup.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "vercel/next.js",
+    "directory": "packages/next-mdx"
+  },
+  "peerDependencies": {
+    "@mdx-js/loader": ">=0.15.0",
+    "@mdx-js/react": ">=0.15.0"
+  },
+  "peerDependenciesMeta": {
+    "@mdx-js/loader": {
+      "optional": true
+    },
+    "@mdx-js/react": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "source-map": "^0.8.0"
+  },
+  "description": "@next/mdx with all dependencies updated to latest",
+  "keywords": [
+    "@next/mdx",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "source-map": {
+        "from": "^0.7.0",
+        "to": "^0.8.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@next/mdx",
+    "originalVersion": "16.2.11",
+    "processedAt": "2026-07-21T16:05:59.632Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,7 +12,7 @@ npm install @depup/express-session
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.19.0 | **DepUp version**: 1.19.0-depup.43 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 1.19.0 | **DepUp version**: 1.19.0-depup.44 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 

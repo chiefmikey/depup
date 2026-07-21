@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.70 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.71 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -52,20 +52,20 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
-| marked | `^0.6.2` | `^18.0.6` |
+| marked | `^0.6.2` | `^18.0.7` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
-| mongoose | `^4.13.14` | `^9.7.4` |
+| mongoose | `^4.13.14` | `^9.8.0` |
 | morgan | `^1.9.1` | `^1.11.0` |
 | multer | `^1.4.1` | `^2.2.0` |
 | qs | `^6.7.0` | `^6.15.3` |
 | range_check | `^1.4.0` | `^4.1.0` |
-| react | `^15.4.2` | `^19.2.7` |
+| react | `^15.4.2` | `^19.2.8` |
 | react-color | `^2.14.1` | `^2.19.3` |
 | react-day-picker | `^2.5.0` | `^10.0.1` |
 | react-dnd | `^2.5.3` | `^16.0.1` |
 | react-dnd-html5-backend | `^2.5.3` | `^16.0.1` |
-| react-dom | `^15.4.2` | `^19.2.7` |
+| react-dom | `^15.4.2` | `^19.2.8` |
 | react-images | `^0.5.6` | `^1.2.0-beta.7` |
 | react-markdown | `^2.5.0` | `^10.1.0` |
 | react-redux | `^5.0.6` | `^9.3.0` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | redux-thunk | `^2.2.0` | `^3.1.0` |
 | react-select | `^1.2.4` | `^5.10.2` |
 | sanitize-filename | `^1.6.1` | `^1.6.4` |
-| tinymce | `^4.9.2` | `^8.7.0` |
+| tinymce | `^4.9.2` | `^8.8.0` |
 | sanitize-html | `^1.20.1` | `^2.17.6` |
 | scmp | `^1.0.2` | `^2.1.0` |
 | semver | `^6.0.0` | `^7.8.5` |

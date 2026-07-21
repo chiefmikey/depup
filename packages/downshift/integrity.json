@@ -144,23 +144,6 @@
     }
   },
   "9.4.0": {
-    "9": {
-      "changes": {
-        "@babel/runtime": {
-          "from": "^7.28.6",
-          "to": "^8.0.0"
-        },
-        "react-is": {
-          "from": "^18.2.0",
-          "to": "^19.2.7"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:37:49.418Z",
-      "version": "9.4.0-depup.9"
-    },
     "10": {
       "changes": {
         "@babel/runtime": {
@@ -228,6 +211,23 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:29:32.106Z",
       "version": "9.4.0-depup.13"
+    },
+    "14": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.6",
+          "to": "^8.0.0"
+        },
+        "react-is": {
+          "from": "^18.2.0",
+          "to": "^19.2.8"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:13:33.227Z",
+      "version": "9.4.0-depup.14"
     }
   }
 }

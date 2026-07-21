@@ -192,5 +192,20 @@
       "timestamp": "2026-07-14T00:26:41.941Z",
       "version": "0.12.1-depup.0"
     }
+  },
+  "0.12.3": {
+    "0": {
+      "changes": {
+        "cookie": {
+          "from": "^1.0.2",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:08:24.509Z",
+      "version": "0.12.3-depup.0"
+    }
   }
 }

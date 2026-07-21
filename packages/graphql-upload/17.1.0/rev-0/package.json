@@ -1,0 +1,133 @@
+{
+  "name": "@depup/graphql-upload",
+  "version": "17.1.0-depup.0",
+  "description": "Middleware and a scalar Upload to add support for GraphQL multipart requests (file uploads via queries and mutations) to various Node.js GraphQL servers. (with updated dependencies)",
+  "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydenseric/graphql-upload.git"
+  },
+  "homepage": "https://github.com/jaydenseric/graphql-upload#readme",
+  "bugs": "https://github.com/jaydenseric/graphql-upload/issues",
+  "funding": "https://github.com/sponsors/jaydenseric",
+  "keywords": [
+    "graphql-upload",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "graphql",
+    "upload",
+    "file",
+    "multipart",
+    "request",
+    "server",
+    "middleware",
+    "koa",
+    "express",
+    "apollo",
+    "esm",
+    "mjs"
+  ],
+  "files": [
+    "GRAPHQL_MULTIPART_REQUEST_SPEC_URL.mjs",
+    "GraphQLUpload.mjs",
+    "graphqlUploadExpress.mjs",
+    "graphqlUploadKoa.mjs",
+    "ignoreStream.mjs",
+    "processRequest.mjs",
+    "requestFinished.mjs",
+    "Upload.mjs",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "exports": {
+    "./GraphQLUpload.mjs": "./GraphQLUpload.mjs",
+    "./graphqlUploadExpress.mjs": "./graphqlUploadExpress.mjs",
+    "./graphqlUploadKoa.mjs": "./graphqlUploadKoa.mjs",
+    "./package.json": "./package.json",
+    "./processRequest.mjs": "./processRequest.mjs",
+    "./Upload.mjs": "./Upload.mjs"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=22.0.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.13.0 || ^24.0.0 || >=26.0.0"
+    }
+  },
+  "peerDependencies": {
+    "@types/express": "^4.0.29 || ^5.0.0",
+    "@types/koa": "^2.11.4 || ^3.0.0",
+    "graphql": "^16.3.0 || ^17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/express": {
+      "optional": true
+    },
+    "@types/koa": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@types/busboy": "^1.5.4",
+    "@types/node": "*",
+    "@types/object-path": "^0.11.4",
+    "busboy": "^1.6.0",
+    "fs-capacitor": "^8.0.0",
+    "http-errors": "^2.0.1",
+    "object-path": "^0.11.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.6",
+    "@types/koa": "^3.0.3",
+    "async-listen": "^3.1.0",
+    "eslint": "^10.6.0",
+    "eslint-plugin-jsdoc": "^63.0.10",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "express": "^5.2.1",
+    "globals": "^17.7.0",
+    "graphql": "^17.0.2",
+    "koa": "^3.2.1",
+    "prettier": "^3.9.1",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "prettier": "prettier -c .",
+    "eslint": "eslint",
+    "types": "tsc -p jsconfig.json",
+    "tests": "node --test --experimental-test-coverage --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-exclude='**/*.test.*' --test-reporter=spec",
+    "test": "node --run prettier && node --run eslint && node --run types && node --run tests"
+  },
+  "depup": {
+    "changes": {
+      "@types/busboy": {
+        "from": "^1.5.0",
+        "to": "^1.5.4"
+      },
+      "@types/object-path": {
+        "from": "^0.11.1",
+        "to": "^0.11.4"
+      },
+      "http-errors": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "graphql-upload",
+    "originalVersion": "17.1.0",
+    "processedAt": "2026-07-21T16:16:11.570Z",
+    "smokeTest": "failed"
+  }
+}

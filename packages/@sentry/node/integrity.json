@@ -2648,5 +2648,24 @@
       "timestamp": "2026-07-14T00:26:11.385Z",
       "version": "10.65.0-depup.3"
     }
+  },
+  "10.67.0": {
+    "0": {
+      "changes": {
+        "@sentry/conventions": {
+          "from": "^0.16.0",
+          "to": "^0.17.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.3.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:08:06.354Z",
+      "version": "10.67.0-depup.0"
+    }
   }
 }

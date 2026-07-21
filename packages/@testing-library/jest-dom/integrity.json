@@ -125,5 +125,32 @@
       "timestamp": "2026-07-14T00:29:52.762Z",
       "version": "6.9.1-depup.45"
     }
+  },
+  "7.0.0": {
+    "0": {
+      "changes": {
+        "@adobe/css-tools": {
+          "from": "^4.4.0",
+          "to": "^4.5.0"
+        },
+        "aria-query": {
+          "from": "^5.0.0",
+          "to": "^5.3.2"
+        },
+        "dom-accessibility-api": {
+          "from": "^0.6.3",
+          "to": "^0.7.1"
+        },
+        "redent": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:08:44.603Z",
+      "version": "7.0.0-depup.0"
+    }
   }
 }

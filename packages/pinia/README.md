@@ -12,13 +12,13 @@ npm install @depup/pinia
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.4 | **DepUp version**: 3.0.4-depup.1 | **Updated**: 3/14/2026 | **Import test**: unknown
+**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vue/devtools-api | `^7.7.7` | `^8.1.0` |
+| nostics | `^1.1.4` | `^1.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pinia&labels=bug).
