@@ -1,6 +1,6 @@
 {
   "name": "@depup/firebase__performance",
-  "version": "0.7.12-depup.47",
+  "version": "0.7.12-depup.52",
   "description": "Firebase performance for web (with updated dependencies)",
   "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
   "main": "dist/index.cjs.js",
@@ -45,7 +45,7 @@
     "@firebase/util": "1.15.1",
     "@firebase/component": "0.7.3",
     "tslib": "^2.8.1",
-    "web-vitals": "^5.3.0"
+    "web-vitals": "^6.0.0"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -86,13 +86,13 @@
       },
       "web-vitals": {
         "from": "^4.2.4",
-        "to": "^5.3.0"
+        "to": "^6.0.0"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "@firebase/performance",
     "originalVersion": "0.7.12",
-    "processedAt": "2026-07-04T00:27:17.836Z",
+    "processedAt": "2026-07-21T17:33:04.800Z",
     "smokeTest": "passed"
   }
 }
