@@ -12,7 +12,7 @@ npm install @depup/react-stately__datepicker
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.17.1 | **DepUp version**: 3.17.1-depup.28 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.17.1 | **DepUp version**: 3.17.1-depup.29 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 

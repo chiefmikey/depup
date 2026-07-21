@@ -50,6 +50,23 @@
       "status": "failed",
       "timestamp": "2026-07-21T17:12:14.482Z",
       "version": "1.6.23-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.39.0",
+          "to": "^1.43.0"
+        },
+        "zod": {
+          "from": "^4.3.6",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T19:28:09.304Z",
+      "version": "1.6.23-depup.3"
     }
   }
 }

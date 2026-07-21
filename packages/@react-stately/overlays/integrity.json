@@ -28,23 +28,6 @@
     }
   },
   "3.7.1": {
-    "45": {
-      "changes": {
-        "@swc/helpers": {
-          "from": "^0.5.0",
-          "to": "^0.5.23"
-        },
-        "react-stately": {
-          "from": "^3.46.0",
-          "to": "^3.48.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:25:58.705Z",
-      "version": "3.7.1-depup.45"
-    },
     "46": {
       "changes": {
         "@swc/helpers": {
@@ -112,6 +95,23 @@
       "status": "failed",
       "timestamp": "2026-07-21T17:18:07.365Z",
       "version": "3.7.1-depup.49"
+    },
+    "50": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        },
+        "react-stately": {
+          "from": "^3.46.0",
+          "to": "^3.48.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T19:30:34.994Z",
+      "version": "3.7.1-depup.50"
     }
   }
 }

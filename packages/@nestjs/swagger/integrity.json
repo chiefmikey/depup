@@ -208,6 +208,19 @@
       "status": "failed",
       "timestamp": "2026-07-21T17:15:27.269Z",
       "version": "11.4.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "swagger-ui-dist": {
+          "from": "5.32.8",
+          "to": "^5.32.10"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T19:29:36.963Z",
+      "version": "11.4.6-depup.1"
     }
   }
 }
