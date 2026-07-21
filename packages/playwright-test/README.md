@@ -12,17 +12,17 @@ npm install @depup/playwright-test
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.1.15 | **DepUp version**: 14.1.15-depup.53 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 14.1.15 | **DepUp version**: 14.1.15-depup.54 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | acorn-loose | `^8.3.0` | `^8.5.2` |
-| c8 | `^10.1.3` | `^11.0.0` |
+| c8 | `^10.1.3` | `^12.0.0` |
 | chokidar | `^4.0.3` | `^5.0.0` |
 | esbuild | `0.25.11` | `^0.28.1` |
-| execa | `^9.3.0` | `^9.6.1` |
+| execa | `^9.3.0` | `^10.0.0` |
 | exit-hook | `^4.0.0` | `^5.1.0` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | nanoid | `^5.0.9` | `^6.0.0` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-timeout | `^6.1.4` | `^7.0.1` |
 | playwright-core | `1.60.0` | `^1.61.1` |
 | sirv | `^3.0.0` | `^3.0.2` |
-| source-map | `0.6.1` | `^0.7.6` |
+| source-map | `0.6.1` | `^0.8.0` |
 | tempy | `^3.1.0` | `^3.2.0` |
 | test-exclude | `^7.0.1` | `^8.0.0` |
 | tinyglobby | `^0.2.14` | `^0.2.17` |

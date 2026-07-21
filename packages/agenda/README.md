@@ -12,15 +12,13 @@ npm install @depup/agenda
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.5 | **DepUp version**: 6.2.5-depup.53 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 6.2.6 | **DepUp version**: 6.2.6-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cron-parser | `^5.0.0` | `^5.6.2` |
-| debug | `^4.4.0` | `^4.4.3` |
-| luxon | `^3.2.1` | `^3.7.2` |
+| cron-parser | `^5.5.0` | `^5.6.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/agenda&labels=bug).

@@ -140,14 +140,6 @@
     }
   },
   "3.2.0": {
-    "0": {
-      "changes": {},
-      "depsUpdated": 0,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:46:43.139Z",
-      "version": "3.2.0-depup.0"
-    },
     "1": {
       "changes": {},
       "depsUpdated": 0,
@@ -194,6 +186,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:43:25.417Z",
       "version": "3.2.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@floating-ui/react-dom": {
+          "from": "^2.1.8",
+          "to": "^2.1.9"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-21T16:37:54.024Z",
+      "version": "3.2.0-depup.5"
     }
   }
 }

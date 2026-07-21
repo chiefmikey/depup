@@ -12,19 +12,16 @@ npm install @depup/auth__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.34.3 | **DepUp version**: 0.34.3-depup.1 | **Updated**: 5/18/2026 | **Import test**: passed
+**Original version**: 0.41.3 | **DepUp version**: 0.41.3-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @panva/hkdf | `^1.1.1` | `^1.2.1` |
-| @types/cookie | `0.6.0` | `^1.0.0` |
-| cookie | `0.6.0` | `^1.1.1` |
-| jose | `^5.1.3` | `^6.2.3` |
-| oauth4webapi | `^2.10.4` | `^3.8.6` |
-| preact | `10.11.3` | `^10.29.2` |
-| preact-render-to-string | `5.2.3` | `^6.7.0` |
+| jose | `^6.0.6` | `^6.2.3` |
+| oauth4webapi | `^3.3.0` | `^3.8.6` |
+| preact | `10.24.3` | `^10.29.7` |
+| preact-render-to-string | `6.5.11` | `^6.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/auth__core&labels=bug).

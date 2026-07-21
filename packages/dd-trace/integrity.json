@@ -586,5 +586,20 @@
       "timestamp": "2026-07-14T00:28:58.446Z",
       "version": "6.2.0-depup.3"
     }
+  },
+  "6.4.0": {
+    "0": {
+      "changes": {
+        "import-in-the-middle": {
+          "from": "^3.3.1",
+          "to": "^3.3.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:12:12.498Z",
+      "version": "6.4.0-depup.0"
+    }
   }
 }

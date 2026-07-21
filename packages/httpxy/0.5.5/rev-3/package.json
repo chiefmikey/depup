@@ -1,0 +1,75 @@
+{
+  "name": "@depup/httpxy",
+  "version": "0.5.5-depup.3",
+  "description": "A full-featured HTTP proxy for Node.js. (with updated dependencies)",
+  "license": "MIT",
+  "repository": "unjs/httpxy",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "scripts": {
+    "bench": "node bench/bench.ts",
+    "bench:standalone": "node bench/standalone.ts",
+    "build": "obuild",
+    "dev": "vitest",
+    "test:ecosystem": "node scripts/ecosystem-test.mjs",
+    "lint": "oxlint . && oxfmt --check",
+    "fmt": "oxlint . --fix && oxfmt",
+    "release": "pnpm test && pnpm build && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm typecheck && vitest run --coverage",
+    "typecheck": "tsgo --noEmit"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.25",
+    "@types/concat-stream": "^2.0.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "@types/semver": "^7.7.1",
+    "@types/sse": "^0.0.0",
+    "@types/ws": "^8.18.1",
+    "@typescript/native-preview": "latest",
+    "@vitest/coverage-v8": "^4.1.10",
+    "async": "^3.2.6",
+    "changelogen": "^0.6.2",
+    "concat-stream": "^2.0.0",
+    "eslint-config-unjs": "^0.6.2",
+    "expect.js": "^0.3.1",
+    "obuild": "^0.4.37",
+    "ofetch": "^1.5.1",
+    "oxfmt": ">=0.57.0",
+    "oxlint": "^1.72.0",
+    "semver": "^7.8.5",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "sse": "^0.0.8",
+    "typescript": "^6.0.3",
+    "undici": "^8.7.0",
+    "vitest": "^4.1.10",
+    "ws": "^8.21.0"
+  },
+  "packageManager": "pnpm@11.10.0",
+  "keywords": [
+    "httpxy",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "httpxy",
+    "originalVersion": "0.5.5",
+    "processedAt": "2026-07-21T16:17:06.494Z",
+    "smokeTest": "passed"
+  }
+}

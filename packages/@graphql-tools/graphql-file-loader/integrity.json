@@ -312,5 +312,24 @@
       "timestamp": "2026-07-14T00:23:35.655Z",
       "version": "8.1.16-depup.7"
     }
+  },
+  "8.1.18": {
+    "0": {
+      "changes": {
+        "globby": {
+          "from": "^11.0.3",
+          "to": "^16.2.2"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:05:00.904Z",
+      "version": "8.1.18-depup.0"
+    }
   }
 }

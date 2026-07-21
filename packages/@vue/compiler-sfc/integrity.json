@@ -359,5 +359,32 @@
       "timestamp": "2026-07-14T00:30:25.060Z",
       "version": "3.5.39-depup.18"
     }
+  },
+  "3.5.40": {
+    "0": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.7",
+          "to": "^8.0.4"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        },
+        "magic-string": {
+          "from": "^0.30.21",
+          "to": "^1.0.0"
+        },
+        "postcss": {
+          "from": "^8.5.19",
+          "to": "^8.5.21"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:09:22.067Z",
+      "version": "3.5.40-depup.0"
+    }
   }
 }

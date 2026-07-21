@@ -74,5 +74,32 @@
       "timestamp": "2026-05-18T07:37:05.443Z",
       "version": "0.34.3-depup.1"
     }
+  },
+  "0.41.3": {
+    "0": {
+      "changes": {
+        "jose": {
+          "from": "^6.0.6",
+          "to": "^6.2.3"
+        },
+        "oauth4webapi": {
+          "from": "^3.3.0",
+          "to": "^3.8.6"
+        },
+        "preact": {
+          "from": "10.24.3",
+          "to": "^10.29.7"
+        },
+        "preact-render-to-string": {
+          "from": "6.5.11",
+          "to": "^6.7.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:02:03.703Z",
+      "version": "0.41.3-depup.0"
+    }
   }
 }

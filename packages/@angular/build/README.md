@@ -12,24 +12,27 @@ npm install @depup/angular__build
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.0.6 | **DepUp version**: 22.0.6-depup.4 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 22.0.7 | **DepUp version**: 22.0.7-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `7.29.0` | `^8.0.1` |
-| @babel/helper-annotate-as-pure | `7.27.3` | `^8.0.0` |
+| @babel/core | `7.29.7` | `^8.0.1` |
+| @babel/helper-annotate-as-pure | `7.29.7` | `^8.0.0` |
 | @inquirer/confirm | `6.0.12` | `^6.1.1` |
+| beasties | `0.4.2` | `^0.4.3` |
 | browserslist | `^4.26.0` | `^4.28.6` |
 | https-proxy-agent | `9.0.0` | `^9.1.0` |
 | listr2 | `10.2.1` | `^10.2.2` |
+| magic-string | `0.30.21` | `^1.0.0` |
 | picomatch | `4.0.4` | `^4.0.5` |
+| piscina | `5.2.0` | `^5.3.0` |
 | rollup | `4.60.2` | `^4.62.2` |
-| sass | `1.99.0` | `^1.101.0` |
+| sass | `1.99.0` | `^1.101.3` |
 | semver | `7.7.4` | `^7.8.5` |
 | tinyglobby | `0.2.16` | `^0.2.17` |
-| vite | `7.3.5` | `^8.1.4` |
+| vite | `7.3.5` | `^8.1.5` |
 | watchpack | `2.5.1` | `^2.5.2` |
 
 

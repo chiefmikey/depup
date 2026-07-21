@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@opentelemetry/propagator-aws-xray": {
+      "from": "^2.1.4",
+      "to": "^2.2.0"
+    },
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.27.0",
+      "to": "^1.43.0"
+    },
+    "@types/aws-lambda": {
+      "from": "^8.10.155",
+      "to": "^8.10.162"
+    }
+  },
+  "timestamp": "2026-07-21T16:06:02.777Z",
+  "totalUpdated": 3
+}

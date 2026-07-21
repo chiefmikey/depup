@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@azure/abort-controller": {
+      "from": "^2.0.0",
+      "to": "^2.2.0"
+    },
+    "@azure/core-auth": {
+      "from": "^1.9.0",
+      "to": "^1.11.0"
+    },
+    "@azure/core-client": {
+      "from": "^1.9.2",
+      "to": "^1.11.0"
+    },
+    "@azure/core-rest-pipeline": {
+      "from": "^1.17.0",
+      "to": "^1.25.0"
+    },
+    "@azure/core-tracing": {
+      "from": "^1.0.0",
+      "to": "^1.4.0"
+    },
+    "@azure/core-util": {
+      "from": "^1.11.0",
+      "to": "^1.14.0"
+    },
+    "@azure/logger": {
+      "from": "^1.0.0",
+      "to": "^1.4.0"
+    },
+    "@azure/msal-browser": {
+      "from": "^5.5.0",
+      "to": "^5.17.1"
+    },
+    "@azure/msal-node": {
+      "from": "^5.1.0",
+      "to": "^5.4.1"
+    },
+    "open": {
+      "from": "^10.1.0",
+      "to": "^11.0.0"
+    },
+    "tslib": {
+      "from": "^2.2.0",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-07-21T16:02:46.911Z",
+  "totalUpdated": 11
+}

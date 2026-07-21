@@ -34,19 +34,6 @@
     }
   },
   "4.2.0": {
-    "0": {
-      "changes": {
-        "cross-fetch": {
-          "from": "^3.1.8",
-          "to": "^4.1.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-10T00:39:48.474Z",
-      "version": "4.2.0-depup.0"
-    },
     "1": {
       "changes": {
         "cross-fetch": {
@@ -98,6 +85,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:38:39.172Z",
       "version": "4.2.0-depup.4"
+    },
+    "5": {
+      "changes": {
+        "cross-fetch": {
+          "from": "^3.1.8",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:17:24.936Z",
+      "version": "4.2.0-depup.5"
     }
   }
 }

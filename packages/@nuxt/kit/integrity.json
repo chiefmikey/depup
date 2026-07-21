@@ -240,5 +240,24 @@
       "timestamp": "2026-07-14T00:24:26.758Z",
       "version": "4.4.8-depup.56"
     }
+  },
+  "4.5.0": {
+    "0": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.5"
+        },
+        "nostics": {
+          "from": "^1.1.4",
+          "to": "^1.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:06:01.670Z",
+      "version": "4.5.0-depup.0"
+    }
   }
 }

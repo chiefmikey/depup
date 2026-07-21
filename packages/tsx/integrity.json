@@ -242,6 +242,19 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:39:52.768Z",
       "version": "4.23.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "esbuild": {
+          "from": "~0.28.0",
+          "to": "^0.28.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-21T16:57:03.029Z",
+      "version": "4.23.1-depup.1"
     }
   }
 }

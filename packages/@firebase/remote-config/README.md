@@ -12,7 +12,7 @@ npm install @depup/firebase__remote-config
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.9.0 | **DepUp version**: 0.9.0-depup.1 | **Updated**: 7/14/2026 | **Import test**: failed
+**Original version**: 0.9.0 | **DepUp version**: 0.9.0-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 

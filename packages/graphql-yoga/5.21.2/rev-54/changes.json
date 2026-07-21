@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@graphql-tools/executor": {
+      "from": "^1.5.0",
+      "to": "^1.5.7"
+    },
+    "@graphql-tools/schema": {
+      "from": "^10.0.11",
+      "to": "^10.0.38"
+    },
+    "@graphql-tools/utils": {
+      "from": "^10.11.0",
+      "to": "^11.2.2"
+    },
+    "@whatwg-node/fetch": {
+      "from": "^0.10.6",
+      "to": "^0.10.13"
+    },
+    "lru-cache": {
+      "from": "^10.0.0",
+      "to": "^11.5.2"
+    }
+  },
+  "timestamp": "2026-07-21T16:16:31.180Z",
+  "totalUpdated": 5
+}

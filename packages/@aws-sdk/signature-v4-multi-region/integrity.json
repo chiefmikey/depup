@@ -882,5 +882,24 @@
       "timestamp": "2026-07-14T00:21:14.396Z",
       "version": "3.996.39-depup.5"
     }
+  },
+  "3.996.41": {
+    "0": {
+      "changes": {
+        "@smithy/signature-v4": {
+          "from": "^5.6.5",
+          "to": "^5.6.7"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T16:02:43.341Z",
+      "version": "3.996.41-depup.0"
+    }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/react-native__js-polyfills
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.50 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 0.86.0 | **DepUp version**: 0.86.0-depup.51 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
