@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-19T04:44:23.849Z",
       "version": "6.1.35-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@graphql-tools/delegate": {
+          "from": "^8.8.1",
+          "to": "^12.1.0"
+        },
+        "@graphql-tools/schema": {
+          "from": "^8.5.1",
+          "to": "^10.0.38"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:26:22.631Z",
+      "version": "6.1.35-depup.1"
     }
   }
 }

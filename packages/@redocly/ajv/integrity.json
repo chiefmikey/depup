@@ -68,6 +68,19 @@
       "status": "failed",
       "timestamp": "2026-06-09T17:32:24.936Z",
       "version": "8.18.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "fast-uri": {
+          "from": "^3.0.1",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:20:46.604Z",
+      "version": "8.18.3-depup.2"
     }
   }
 }

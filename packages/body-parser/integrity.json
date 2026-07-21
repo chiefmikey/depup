@@ -190,6 +190,27 @@
       "status": "skipped",
       "timestamp": "2026-06-16T10:22:11.887Z",
       "version": "2.3.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "iconv-lite": {
+          "from": "^0.7.2",
+          "to": "^0.7.3"
+        },
+        "qs": {
+          "from": "^6.15.2",
+          "to": "^6.15.3"
+        },
+        "raw-body": {
+          "from": "^3.0.2",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:21:18.956Z",
+      "version": "2.3.0-depup.3"
     }
   }
 }

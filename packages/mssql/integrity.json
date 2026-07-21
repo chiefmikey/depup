@@ -452,5 +452,36 @@
       "timestamp": "2026-06-16T10:26:58.606Z",
       "version": "12.5.5-depup.22"
     }
+  },
+  "12.7.0": {
+    "0": {
+      "changes": {
+        "@tediousjs/connection-string": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "commander": {
+          "from": "^11.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "^4.3.3",
+          "to": "^4.4.3"
+        },
+        "tarn": {
+          "from": "^3.0.2",
+          "to": "^3.1.2"
+        },
+        "tedious": {
+          "from": "^19.2.2 || ^20.0.0",
+          "to": "^20.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:28:38.472Z",
+      "version": "12.7.0-depup.0"
+    }
   }
 }

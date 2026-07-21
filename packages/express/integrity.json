@@ -289,6 +289,75 @@
       "status": "failed",
       "timestamp": "2026-06-15T10:47:26.645Z",
       "version": "5.2.1-depup.11"
+    },
+    "12": {
+      "changes": {
+        "body-parser": {
+          "from": "^2.2.1",
+          "to": "^2.3.0"
+        },
+        "content-disposition": {
+          "from": "^1.0.0",
+          "to": "^2.0.1"
+        },
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "cookie": {
+          "from": "^0.7.1",
+          "to": "^2.0.1"
+        },
+        "cookie-signature": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "finalhandler": {
+          "from": "^2.1.0",
+          "to": "^2.1.1"
+        },
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime-types": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "qs": {
+          "from": "^6.14.0",
+          "to": "^6.15.3"
+        },
+        "range-parser": {
+          "from": "^1.2.1",
+          "to": "^1.3.0"
+        },
+        "send": {
+          "from": "^1.1.0",
+          "to": "^1.2.1"
+        },
+        "serve-static": {
+          "from": "^2.2.0",
+          "to": "^2.2.1"
+        },
+        "statuses": {
+          "from": "^2.0.1",
+          "to": "^2.0.2"
+        },
+        "type-is": {
+          "from": "^2.0.1",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 15,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:23:25.353Z",
+      "version": "5.2.1-depup.12"
     }
   }
 }

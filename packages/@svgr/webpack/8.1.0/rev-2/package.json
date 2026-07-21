@@ -1,0 +1,88 @@
+{
+  "name": "@depup/svgr__webpack",
+  "description": "SVGR webpack loader. (with updated dependencies)",
+  "version": "8.1.0-depup.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": "https://github.com/gregberge/svgr/tree/main/packages/webpack",
+  "author": "Greg Bergé <berge.greg@gmail.com>",
+  "keywords": [
+    "@svgr/webpack",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "svgr",
+    "svg",
+    "react",
+    "webpack",
+    "webpack-loader"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "homepage": "https://react-svgr.com",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/gregberge"
+  },
+  "license": "MIT",
+  "scripts": {
+    "reset": "rm -rf dist",
+    "build": "rollup -c ../../build/rollup.config.mjs"
+  },
+  "dependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/plugin-transform-react-constant-elements": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^9.1.2",
+    "memory-fs": "^0.5.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.76.3"
+  },
+  "gitHead": "772592e042be5063e782bfb8711d024b2fefc6b8",
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.21.3",
+        "to": "^8.0.1"
+      },
+      "@babel/plugin-transform-react-constant-elements": {
+        "from": "^7.21.3",
+        "to": "^8.0.1"
+      },
+      "@babel/preset-env": {
+        "from": "^7.20.2",
+        "to": "^8.0.2"
+      },
+      "@babel/preset-react": {
+        "from": "^7.18.6",
+        "to": "^8.0.1"
+      },
+      "@babel/preset-typescript": {
+        "from": "^7.21.0",
+        "to": "^8.0.1"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "@svgr/webpack",
+    "originalVersion": "8.1.0",
+    "processedAt": "2026-07-21T17:20:57.488Z",
+    "smokeTest": "failed"
+  }
+}

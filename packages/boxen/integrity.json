@@ -115,6 +115,43 @@
       "status": "failed",
       "timestamp": "2026-05-31T22:05:22.994Z",
       "version": "8.0.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "camelcase": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        },
+        "chalk": {
+          "from": "^5.3.0",
+          "to": "^5.6.2"
+        },
+        "cli-boxes": {
+          "from": "^3.0.0",
+          "to": "^4.0.1"
+        },
+        "string-width": {
+          "from": "^7.2.0",
+          "to": "^8.2.2"
+        },
+        "type-fest": {
+          "from": "^4.21.0",
+          "to": "^5.8.0"
+        },
+        "widest-line": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "wrap-ansi": {
+          "from": "^9.0.0",
+          "to": "^10.0.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:22:19.674Z",
+      "version": "8.0.1-depup.4"
     }
   }
 }

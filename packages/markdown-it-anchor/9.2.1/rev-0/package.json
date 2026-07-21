@@ -1,0 +1,68 @@
+{
+  "name": "@depup/markdown-it-anchor",
+  "version": "9.2.1-depup.0",
+  "description": "Header anchors for markdown-it. (with updated dependencies)",
+  "keywords": [
+    "markdown-it-anchor",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "markdown",
+    "markdown-it",
+    "markdown-it-plugin",
+    "header",
+    "anchor"
+  ],
+  "license": "Unlicense",
+  "contributors": [
+    "Val (https://val.codejam.info/)",
+    "Nagao, Fabio Zendhi <nagaozen@gmail.com> (https://github.com/nagaozen/)"
+  ],
+  "files": [
+    "README.md",
+    "UNLICENSE",
+    "dist/*",
+    "runkit.js",
+    "types/*",
+    "changes.json"
+  ],
+  "main": "dist/markdownItAnchor.js",
+  "module": "dist/markdownItAnchor.mjs",
+  "types": "./types/index.d.ts",
+  "repository": "valeriangalliat/markdown-it-anchor",
+  "scripts": {
+    "build": "microbundle --generateTypes false",
+    "dev": "microbundle --generateTypes false watch",
+    "lint": "standard index.js test.js",
+    "test": "npm run lint && ava test.js"
+  },
+  "devDependencies": {
+    "@sindresorhus/slugify": "^2.2.1",
+    "ava": "^5.1.0",
+    "markdown-it": "*",
+    "markdown-it-attrs": "^4.1.6",
+    "microbundle": "^0.15.1",
+    "source-map-support": "^0.5.19",
+    "standard": "^17.1.0"
+  },
+  "peerDependencies": {
+    "@types/markdown-it": "*",
+    "markdown-it": "*"
+  },
+  "source": "index.js",
+  "unpkg": "dist/markdownItAnchor.umd.js",
+  "mangle": {
+    "regex": "^_"
+  },
+  "runkitExampleFilename": "runkit.js",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "markdown-it-anchor",
+    "originalVersion": "9.2.1",
+    "processedAt": "2026-07-21T17:27:37.780Z",
+    "smokeTest": "passed"
+  }
+}

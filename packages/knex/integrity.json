@@ -616,5 +616,48 @@
       "timestamp": "2026-06-16T10:25:35.632Z",
       "version": "3.2.10-depup.24"
     }
+  },
+  "3.3.0": {
+    "0": {
+      "changes": {
+        "colorette": {
+          "from": "2.0.19",
+          "to": "^2.0.20"
+        },
+        "commander": {
+          "from": "^10.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "4.3.4",
+          "to": "^4.4.3"
+        },
+        "escalade": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "interpret": {
+          "from": "^2.2.0",
+          "to": "^3.1.1"
+        },
+        "pg-connection-string": {
+          "from": "2.6.2",
+          "to": "^2.14.0"
+        },
+        "tarn": {
+          "from": "^3.1.0",
+          "to": "^3.1.2"
+        },
+        "tildify": {
+          "from": "2.0.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:27:27.105Z",
+      "version": "3.3.0-depup.0"
+    }
   }
 }

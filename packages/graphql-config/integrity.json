@@ -185,6 +185,55 @@
       "status": "failed",
       "timestamp": "2026-05-06T07:13:15.493Z",
       "version": "5.1.6-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@graphql-tools/graphql-file-loader": {
+          "from": "^8.0.0",
+          "to": "^8.1.18"
+        },
+        "@graphql-tools/json-file-loader": {
+          "from": "^8.0.0",
+          "to": "^8.0.32"
+        },
+        "@graphql-tools/load": {
+          "from": "^8.1.0",
+          "to": "^8.1.15"
+        },
+        "@graphql-tools/merge": {
+          "from": "^9.0.0",
+          "to": "^9.2.2"
+        },
+        "@graphql-tools/url-loader": {
+          "from": "^9.0.0",
+          "to": "^9.1.6"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^11.2.2"
+        },
+        "cosmiconfig": {
+          "from": "^8.1.0",
+          "to": "^9.0.2"
+        },
+        "jiti": {
+          "from": "^2.0.0",
+          "to": "^2.7.0"
+        },
+        "minimatch": {
+          "from": "^10.0.0",
+          "to": "^10.2.5"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:26:06.182Z",
+      "version": "5.1.6-depup.4"
     }
   }
 }

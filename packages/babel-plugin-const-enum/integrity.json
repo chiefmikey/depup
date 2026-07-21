@@ -41,6 +41,27 @@
       "status": "failed",
       "timestamp": "2026-05-25T14:07:00.584Z",
       "version": "1.2.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@babel/helper-plugin-utils": {
+          "from": "^7.0.0",
+          "to": "^8.0.1"
+        },
+        "@babel/plugin-syntax-typescript": {
+          "from": "^7.3.3",
+          "to": "^8.0.3"
+        },
+        "@babel/traverse": {
+          "from": "^7.16.0",
+          "to": "^8.0.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:21:15.310Z",
+      "version": "1.2.0-depup.2"
     }
   }
 }

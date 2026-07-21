@@ -112,5 +112,28 @@
       "timestamp": "2026-06-16T10:26:16.852Z",
       "version": "11.3.5-depup.22"
     }
+  },
+  "11.3.6": {
+    "0": {
+      "changes": {
+        "graceful-fs": {
+          "from": "^4.2.0",
+          "to": "^4.2.11"
+        },
+        "jsonfile": {
+          "from": "^6.0.1",
+          "to": "^6.2.1"
+        },
+        "universalify": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:24:53.556Z",
+      "version": "11.3.6-depup.0"
+    }
   }
 }

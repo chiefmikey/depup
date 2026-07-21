@@ -12,13 +12,13 @@ npm install @depup/pdf-lib__standard-fonts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| pako | `^1.0.6` | `^2.1.0` |
+| pako | `^1.0.6` | `^3.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pdf-lib__standard-fonts&labels=bug).

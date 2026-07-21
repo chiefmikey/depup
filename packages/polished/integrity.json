@@ -10,6 +10,19 @@
       "status": "published",
       "timestamp": "2026-03-17T22:58:20.867Z",
       "version": "4.3.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.17.8",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:29:50.456Z",
+      "version": "4.3.1-depup.1"
     }
   }
 }

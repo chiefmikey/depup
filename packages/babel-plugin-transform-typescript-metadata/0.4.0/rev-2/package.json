@@ -1,0 +1,109 @@
+{
+  "name": "@depup/babel-plugin-transform-typescript-metadata",
+  "version": "0.4.0-depup.2",
+  "description": "Babel plugin to emit decorator metadata like typescript compiler (with updated dependencies)",
+  "main": "lib/plugin.js",
+  "types": "lib/plugin.d.ts",
+  "repository": "https://github.com/leonardfactory/babel-plugin-transform-typescript-metadata.git",
+  "author": "Leonardo Ascione <leonardo.ascione@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "babel-plugin-transform-typescript-metadata",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel",
+    "babel-plugin",
+    "babel-typescript",
+    "decorators",
+    "reflect-metadata"
+  ],
+  "scripts": {
+    "dev": "babel src -w -d lib -x \".ts\"",
+    "build": "yarn build:lib && yarn build:types",
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "babel src -d lib -x \".ts\"",
+    "build:types": "tsc --emitDeclarationOnly",
+    "check-types": "tsc --noEmit",
+    "release": "yarn test && yarn build && release-it",
+    "pretest": "cd test/__helpers__/babel-8 && yarn",
+    "test": "jest --forceExit",
+    "test:dev": "jest --watch",
+    "test:ci": "jest --ci --runInBand --coverage --forceExit"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "emoji-commit-lint"
+    }
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "🔖 v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "@favoloso/emoji",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/plugin-transform-object-rest-spread": "^7.28.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.28.5",
+    "@babel/template": "^7.6.0",
+    "@babel/traverse": "^7.6.4",
+    "@babel/types": "^7.6.3",
+    "@favoloso/conventional-changelog-emoji": "^0.10.0",
+    "@release-it/conventional-changelog": "^1.1.0",
+    "@types/jest": "^27.4.1",
+    "babel-test": "^0.2.3",
+    "conventional-changelog-cli": "^2.0.25",
+    "husky": "^4.2.3",
+    "jest": "^27.5.1",
+    "jest-file-snapshot": "^0.5.0",
+    "release-it": "13.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^8.0.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0 || ^8.0.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": false
+    }
+  },
+  "depup": {
+    "changes": {
+      "@babel/helper-plugin-utils": {
+        "from": "^7.0.0",
+        "to": "^8.0.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "babel-plugin-transform-typescript-metadata",
+    "originalVersion": "0.4.0",
+    "processedAt": "2026-07-21T17:21:16.052Z",
+    "smokeTest": "passed"
+  }
+}

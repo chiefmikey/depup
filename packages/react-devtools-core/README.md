@@ -12,14 +12,14 @@ npm install @depup/react-devtools-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.2 | **Updated**: 5/22/2026 | **Import test**: failed
+**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.3 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| shell-quote | `^1.6.1` | `^1.8.4` |
-| ws | `^7` | `^8.21.0` |
+| shell-quote | `^1.6.1` | `^1.10.0` |
+| ws | `^7` | `^8.21.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-devtools-core&labels=bug).

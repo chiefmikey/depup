@@ -17,19 +17,6 @@
     }
   },
   "21.4.9": {
-    "23": {
-      "changes": {
-        "@hapi/shot": {
-          "from": "^6.0.2",
-          "to": "^6.0.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T01:36:38.330Z",
-      "version": "21.4.9-depup.23"
-    },
     "24": {
       "changes": {
         "@hapi/shot": {
@@ -81,6 +68,19 @@
       "status": "failed",
       "timestamp": "2026-06-16T10:19:55.754Z",
       "version": "21.4.9-depup.27"
+    },
+    "28": {
+      "changes": {
+        "@hapi/shot": {
+          "from": "^6.0.2",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-21T17:15:07.975Z",
+      "version": "21.4.9-depup.28"
     }
   }
 }

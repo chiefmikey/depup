@@ -12,13 +12,13 @@ npm install @depup/css-tree
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.1 | **Updated**: 4/13/2026 | **Import test**: passed
+**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.2 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| mdn-data | `2.27.1` | `^2.28.0` |
+| mdn-data | `2.27.1` | `^2.29.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/css-tree&labels=bug).

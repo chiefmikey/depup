@@ -1,0 +1,40 @@
+{
+  "version": "7.0.2001-depup.0",
+  "description": "High-performance type-aware TypeScript linter powered by typescript-go, for use with oxlint. (with updated dependencies)",
+  "license": "MIT",
+  "author": "auvred <aauvred@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "github:oxc-project/tsgolint"
+  },
+  "bugs": "https://github.com/oxc-project/tsgolint/issues",
+  "homepage": "https://github.com/oxc-project/tsgolint#readme",
+  "name": "@depup/oxlint-tsgolint",
+  "bin": {
+    "tsgolint": "./bin/tsgolint.js"
+  },
+  "optionalDependencies": {
+    "@oxlint-tsgolint/win32-x64": "7.0.2001",
+    "@oxlint-tsgolint/win32-arm64": "7.0.2001",
+    "@oxlint-tsgolint/linux-x64": "7.0.2001",
+    "@oxlint-tsgolint/linux-arm64": "7.0.2001",
+    "@oxlint-tsgolint/darwin-x64": "7.0.2001",
+    "@oxlint-tsgolint/darwin-arm64": "7.0.2001"
+  },
+  "keywords": [
+    "oxlint-tsgolint",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "oxlint-tsgolint",
+    "originalVersion": "7.0.2001",
+    "processedAt": "2026-07-21T17:28:56.682Z",
+    "smokeTest": "failed"
+  }
+}

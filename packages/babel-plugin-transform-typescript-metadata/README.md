@@ -12,13 +12,13 @@ npm install @depup/babel-plugin-transform-typescript-metadata
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.4.0 | **DepUp version**: 0.4.0-depup.1 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 0.4.0 | **DepUp version**: 0.4.0-depup.2 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/helper-plugin-utils | `^7.0.0` | `^7.29.7` |
+| @babel/helper-plugin-utils | `^7.0.0` | `^8.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel-plugin-transform-typescript-metadata&labels=bug).

@@ -12,17 +12,17 @@ npm install @depup/emotion__babel-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.13.5 | **DepUp version**: 11.13.5-depup.2 | **Updated**: 5/25/2026 | **Import test**: passed
+**Original version**: 11.13.5 | **DepUp version**: 11.13.5-depup.3 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/helper-module-imports | `^7.16.7` | `^7.29.7` |
-| @babel/runtime | `^7.18.3` | `^7.29.7` |
+| @babel/helper-module-imports | `^7.16.7` | `^8.0.0` |
+| @babel/runtime | `^7.18.3` | `^8.0.0` |
 | convert-source-map | `^1.5.0` | `^2.0.0` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
-| source-map | `^0.5.7` | `^0.7.6` |
+| source-map | `^0.5.7` | `^0.8.0` |
 | stylis | `4.2.0` | `^4.4.0` |
 
 

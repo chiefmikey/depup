@@ -12,7 +12,7 @@ npm install @depup/primus
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.9 | **DepUp version**: 8.0.9-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 8.0.9 | **DepUp version**: 8.0.9-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | create-server | `~1.0.1` | `^1.0.2` |
 | diagnostics | `~2.0.0` | `^3.0.0` |
 | eventemitter3 | `~5.0.0` | `^5.0.4` |
-| nanoid | `~3.3.3` | `^5.1.7` |
+| nanoid | `~3.3.3` | `^6.0.0` |
 | ultron | `~1.1.0` | `^1.1.1` |
 
 

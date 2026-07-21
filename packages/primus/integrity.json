@@ -30,6 +30,39 @@
       "status": "published",
       "timestamp": "2026-03-17T18:41:45.138Z",
       "version": "8.0.9-depup.0"
+    },
+    "1": {
+      "changes": {
+        "access-control": {
+          "from": "~1.0.0",
+          "to": "^1.0.1"
+        },
+        "create-server": {
+          "from": "~1.0.1",
+          "to": "^1.0.2"
+        },
+        "diagnostics": {
+          "from": "~2.0.0",
+          "to": "^3.0.0"
+        },
+        "eventemitter3": {
+          "from": "~5.0.0",
+          "to": "^5.0.4"
+        },
+        "nanoid": {
+          "from": "~3.3.3",
+          "to": "^6.0.0"
+        },
+        "ultron": {
+          "from": "~1.1.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:30:10.856Z",
+      "version": "8.0.9-depup.1"
     }
   }
 }

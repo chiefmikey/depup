@@ -12,23 +12,23 @@ npm install @depup/fork-ts-checker-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.2 | **Updated**: 5/9/2026 | **Import test**: failed
+**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.3 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/code-frame | `^7.16.7` | `^7.29.0` |
+| @babel/code-frame | `^7.16.7` | `^8.0.0` |
 | chalk | `^4.1.2` | `^5.6.2` |
 | chokidar | `^4.0.1` | `^5.0.0` |
-| cosmiconfig | `^8.2.0` | `^9.0.1` |
+| cosmiconfig | `^8.2.0` | `^9.0.2` |
 | deepmerge | `^4.2.2` | `^4.3.1` |
-| fs-extra | `^10.0.0` | `^11.3.5` |
-| memfs | `^3.4.1` | `^4.57.2` |
+| fs-extra | `^10.0.0` | `^11.3.6` |
+| memfs | `^3.4.1` | `^4.64.0` |
 | minimatch | `^3.0.4` | `^10.2.5` |
 | node-abort-controller | `^3.0.1` | `^3.1.1` |
 | schema-utils | `^3.1.1` | `^4.3.3` |
-| semver | `^7.3.5` | `^7.8.0` |
+| semver | `^7.3.5` | `^7.8.5` |
 | tapable | `^2.2.1` | `^2.3.3` |
 
 
