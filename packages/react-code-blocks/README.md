@@ -12,15 +12,15 @@ npm install @depup/react-code-blocks
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.1.6 | **DepUp version**: 0.1.6-depup.1 | **Updated**: 4/9/2026 | **Import test**: failed
+**Original version**: 0.1.6 | **DepUp version**: 0.1.6-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.10.4` | `^7.29.2` |
+| @babel/runtime | `^7.10.4` | `^8.0.0` |
 | react-syntax-highlighter | `^15.5.0` | `^16.1.1` |
-| styled-components | `^6.1.0` | `^6.4.0` |
+| styled-components | `^6.1.0` | `^6.4.4` |
 | tslib | `^2.6.0` | `^2.8.1` |
 
 

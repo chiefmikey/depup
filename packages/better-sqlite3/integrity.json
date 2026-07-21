@@ -182,5 +182,20 @@
       "timestamp": "2026-06-16T10:27:21.405Z",
       "version": "12.11.1-depup.1"
     }
+  },
+  "13.0.1": {
+    "0": {
+      "changes": {
+        "node-addon-api": {
+          "from": "^8.0.0",
+          "to": "^8.9.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:12:52.660Z",
+      "version": "13.0.1-depup.0"
+    }
   }
 }

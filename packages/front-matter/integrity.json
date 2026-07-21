@@ -23,6 +23,19 @@
       "status": "failed",
       "timestamp": "2026-06-01T02:03:35.634Z",
       "version": "4.0.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^5.2.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:15:53.145Z",
+      "version": "4.0.2-depup.2"
     }
   }
 }

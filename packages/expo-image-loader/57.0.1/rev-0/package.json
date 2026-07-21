@@ -1,0 +1,43 @@
+{
+  "name": "@depup/expo-image-loader",
+  "version": "57.0.1-depup.0",
+  "description": "Image loader (with updated dependencies)",
+  "main": "index.js",
+  "keywords": [
+    "expo-image-loader",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "unimodules",
+    "image-loader"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/expo-image-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/expo/expo/issues"
+  },
+  "author": "650 Industries, Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/expo/expo/tree/main/packages/expo-image-loader",
+  "dependencies": {},
+  "devDependencies": {
+    "expo": "57.0.6"
+  },
+  "peerDependencies": {
+    "expo": "*"
+  },
+  "gitHead": "b9503d06b8e130abfca1bc16f671dbefb41ad709",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "expo-image-loader",
+    "originalVersion": "57.0.1",
+    "processedAt": "2026-07-21T17:15:00.593Z",
+    "smokeTest": "passed"
+  }
+}

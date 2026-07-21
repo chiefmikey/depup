@@ -12,13 +12,13 @@ npm install @depup/pdf-lib
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.17.1 | **DepUp version**: 1.17.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.17.1 | **DepUp version**: 1.17.1-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| pako | `^1.0.11` | `^2.1.0` |
+| pako | `^1.0.11` | `^3.0.1` |
 | tslib | `^1.11.1` | `^2.8.1` |
 
 

@@ -12,7 +12,7 @@ npm install @depup/rollup__plugin-node-resolve
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.0.3 | **DepUp version**: 16.0.3-depup.28 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 16.0.3 | **DepUp version**: 16.0.3-depup.29 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 

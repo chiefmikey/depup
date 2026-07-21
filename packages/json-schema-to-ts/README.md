@@ -12,13 +12,13 @@ npm install @depup/json-schema-to-ts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.0 | **Updated**: 3/29/2026 | **Import test**: passed
+**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.18.3` | `^7.29.2` |
+| @babel/runtime | `^7.18.3` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/json-schema-to-ts&labels=bug).

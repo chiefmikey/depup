@@ -12,25 +12,28 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.7.5 | **DepUp version**: 22.7.5-depup.24 | **Updated**: 6/16/2026 | **Import test**: failed
+**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @emnapi/core | `1.4.5` | `^1.11.1` |
-| @emnapi/runtime | `1.4.5` | `^1.11.1` |
-| @emnapi/wasi-threads | `1.0.4` | `^2.0.0` |
+| @emnapi/core | `1.4.5` | `^1.11.2` |
+| @emnapi/runtime | `1.4.5` | `^1.11.2` |
+| @emnapi/wasi-threads | `1.0.4` | `^2.0.1` |
 | @jest/diff-sequences | `30.0.1` | `^30.4.0` |
-| @napi-rs/wasm-runtime | `0.2.4` | `^1.1.5` |
-| @tybys/wasm-util | `0.9.0` | `^0.10.2` |
+| @napi-rs/wasm-runtime | `0.2.4` | `^1.1.6` |
+| @tybys/wasm-util | `0.9.0` | `^0.10.3` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
+| agent-base | `6.0.2` | `^9.0.0` |
 | ansi-regex | `5.0.1` | `^6.2.2` |
 | ansi-styles | `4.3.0` | `^6.2.3` |
+| argparse | `2.0.1` | `^3.0.0` |
 | asynckit | `0.4.0` | `^0.5.0` |
-| axios | `1.16.0` | `^1.18.0` |
+| axios | `1.16.1` | `^1.18.1` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.3` |
+| bl | `4.1.0` | `^7.0.7` |
+| brace-expansion | `5.0.6` | `^5.0.7` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -50,15 +53,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | escape-string-regexp | `1.0.5` | `^5.0.0` |
 | figures | `3.2.0` | `^6.1.0` |
 | flat | `5.0.2` | `^6.0.1` |
-| form-data | `4.0.5` | `^4.0.6` |
 | has-flag | `4.0.0` | `^5.0.1` |
-| hasown | `2.0.2` | `^2.0.4` |
+| https-proxy-agent | `5.0.1` | `^9.1.0` |
+| ignore | `7.0.5` | `^7.0.6` |
 | is-docker | `2.2.1` | `^4.0.0` |
 | is-fullwidth-code-point | `3.0.0` | `^5.1.0` |
 | is-interactive | `1.0.0` | `^2.0.0` |
 | is-unicode-supported | `0.1.0` | `^2.1.0` |
 | is-wsl | `2.2.0` | `^3.1.1` |
-| jsonc-parser | `3.2.0` | `^3.3.1` |
+| isexe | `2.0.0` | `^4.0.0` |
 | lines-and-columns | `2.0.3` | `^2.0.4` |
 | log-symbols | `4.1.0` | `^7.0.1` |
 | mime-db | `1.52.0` | `^1.54.0` |
@@ -67,18 +70,19 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
 | open | `8.4.2` | `^11.0.0` |
-| ora | `5.3.0` | `^9.4.0` |
+| ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
 | restore-cursor | `3.1.0` | `^5.1.0` |
-| semver | `7.7.4` | `^7.8.4` |
+| semver | `7.8.4` | `^7.8.5` |
 | signal-exit | `3.0.7` | `^4.1.0` |
-| string-width | `4.2.3` | `^8.2.1` |
+| smol-toml | `1.6.1` | `^1.7.0` |
+| string-width | `4.2.3` | `^8.2.2` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^10.2.2` |
 | tar-stream | `2.2.0` | `^3.2.0` |
-| tmp | `0.2.6` | `^0.2.7` |
+| which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.0` |
 | yargs | `17.7.2` | `^18.0.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |

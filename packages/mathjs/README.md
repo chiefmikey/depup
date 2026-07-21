@@ -12,13 +12,13 @@ npm install @depup/mathjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.2.0 | **DepUp version**: 15.2.0-depup.0 | **Updated**: 4/7/2026 | **Import test**: passed
+**Original version**: 15.2.0 | **DepUp version**: 15.2.0-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.26.10` | `^7.29.2` |
+| @babel/runtime | `^7.26.10` | `^8.0.0` |
 | complex.js | `^2.2.5` | `^2.4.3` |
 | decimal.js | `^10.4.3` | `^10.6.0` |
 | fraction.js | `^5.2.1` | `^5.3.4` |

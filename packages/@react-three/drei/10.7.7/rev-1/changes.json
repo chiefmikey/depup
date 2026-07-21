@@ -1,0 +1,54 @@
+{
+  "bumped": {
+    "@babel/runtime": {
+      "from": "^7.26.0",
+      "to": "^8.0.0"
+    },
+    "@mediapipe/tasks-vision": {
+      "from": "0.10.17",
+      "to": "^0.10.35"
+    },
+    "@monogrid/gainmap-js": {
+      "from": "^3.0.6",
+      "to": "^3.4.0"
+    },
+    "camera-controls": {
+      "from": "^3.1.0",
+      "to": "^3.1.2"
+    },
+    "cross-env": {
+      "from": "^7.0.3",
+      "to": "^10.1.0"
+    },
+    "detect-gpu": {
+      "from": "^5.0.56",
+      "to": "^5.0.70"
+    },
+    "hls.js": {
+      "from": "^1.5.17",
+      "to": "^1.6.16"
+    },
+    "stats-gl": {
+      "from": "^2.2.8",
+      "to": "^4.2.3"
+    },
+    "three-mesh-bvh": {
+      "from": "^0.8.3",
+      "to": "^0.9.13"
+    },
+    "three-stdlib": {
+      "from": "^2.35.6",
+      "to": "^2.36.1"
+    },
+    "use-sync-external-store": {
+      "from": "^1.4.0",
+      "to": "^1.6.0"
+    },
+    "zustand": {
+      "from": "^5.0.1",
+      "to": "^5.0.14"
+    }
+  },
+  "timestamp": "2026-07-21T17:10:55.554Z",
+  "totalUpdated": 12
+}

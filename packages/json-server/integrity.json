@@ -87,6 +87,31 @@
       "status": "failed",
       "timestamp": "2026-04-25T20:18:41.122Z",
       "version": "1.0.0-beta.15-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@tinyhttp/app": {
+          "from": "^3.0.1",
+          "to": "^3.0.9"
+        },
+        "dot-prop": {
+          "from": "^10.1.0",
+          "to": "^10.2.0"
+        },
+        "eta": {
+          "from": "^4.5.0",
+          "to": "^4.6.0"
+        },
+        "milliparsec": {
+          "from": "^5.1.0",
+          "to": "^5.1.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:17:18.238Z",
+      "version": "1.0.0-beta.15-depup.2"
     }
   }
 }

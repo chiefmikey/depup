@@ -12,7 +12,7 @@ npm install @depup/mdx-js__mdx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.27 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.28 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/estree | `^1.0.0` | `^1.0.9` |
 | @types/estree-jsx | `^1.0.0` | `^1.0.5` |
-| @types/hast | `^3.0.0` | `^3.0.4` |
+| @types/hast | `^3.0.0` | `^3.0.5` |
 | @types/mdx | `^2.0.0` | `^2.0.14` |
 | acorn | `^8.0.0` | `^8.17.0` |
 | collapse-white-space | `^2.0.0` | `^2.1.0` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | recma-jsx | `^1.0.0` | `^1.0.1` |
 | remark-mdx | `^3.0.0` | `^3.1.1` |
 | remark-rehype | `^11.0.0` | `^11.1.2` |
-| source-map | `^0.7.0` | `^0.7.6` |
+| source-map | `^0.7.0` | `^0.8.0` |
 | unified | `^11.0.0` | `^11.0.5` |
 | unist-util-visit | `^5.0.0` | `^5.1.0` |
 | vfile | `^6.0.0` | `^6.0.3` |

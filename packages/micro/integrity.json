@@ -39,6 +39,27 @@
       "status": "failed",
       "timestamp": "2026-05-12T07:14:58.039Z",
       "version": "10.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "arg": {
+          "from": "4.1.0",
+          "to": "^5.0.2"
+        },
+        "content-type": {
+          "from": "1.0.4",
+          "to": "^2.0.0"
+        },
+        "raw-body": {
+          "from": "2.4.1",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-21T17:17:45.951Z",
+      "version": "10.0.1-depup.2"
     }
   }
 }

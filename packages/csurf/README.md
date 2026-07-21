@@ -12,13 +12,13 @@ npm install @depup/csurf
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.11.0 | **DepUp version**: 1.11.0-depup.22 | **Updated**: 6/16/2026 | **Import test**: passed
+**Original version**: 1.11.0 | **DepUp version**: 1.11.0-depup.23 | **Updated**: 7/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cookie | `0.4.0` | `^1.1.1` |
+| cookie | `0.4.0` | `^2.0.1` |
 | cookie-signature | `1.0.6` | `^1.2.2` |
 | http-errors | `~1.7.3` | `^2.0.1` |
 

@@ -12,15 +12,15 @@ npm install @depup/react-grid-layout
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.3 | **DepUp version**: 2.2.3-depup.3 | **Updated**: 5/29/2026 | **Import test**: failed
+**Original version**: 2.2.3 | **DepUp version**: 2.2.3-depup.4 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fast-equals | `^4.0.3` | `^6.0.0` |
-| react-draggable | `^4.4.6` | `^4.6.0` |
-| react-resizable | `^3.1.3` | `^4.0.1` |
+| fast-equals | `^4.0.3` | `^6.0.2` |
+| react-draggable | `^4.4.6` | `^4.7.0` |
+| react-resizable | `^3.1.3` | `^4.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-grid-layout&labels=bug).

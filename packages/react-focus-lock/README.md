@@ -12,13 +12,13 @@ npm install @depup/react-focus-lock
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.13.7 | **DepUp version**: 2.13.7-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 2.13.7 | **DepUp version**: 2.13.7-depup.1 | **Updated**: 7/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.0.0` | `^7.29.2` |
+| @babel/runtime | `^7.0.0` | `^8.0.0` |
 | prop-types | `^15.6.2` | `^15.8.1` |
 | react-clientside-effect | `^1.2.7` | `^1.2.8` |
 
