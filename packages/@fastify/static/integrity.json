@@ -116,5 +116,36 @@
       "timestamp": "2026-07-21T19:28:44.211Z",
       "version": "10.1.0-depup.3"
     }
+  },
+  "10.1.1": {
+    "0": {
+      "changes": {
+        "@fastify/accept-negotiator": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "@fastify/error": {
+          "from": "^4.0.0",
+          "to": "^4.2.0"
+        },
+        "@fastify/send": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "fastq": {
+          "from": "^1.17.1",
+          "to": "^1.20.1"
+        },
+        "glob": {
+          "from": "^13.0.0",
+          "to": "^13.0.6"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T08:54:55.098Z",
+      "version": "10.1.1-depup.0"
+    }
   }
 }
