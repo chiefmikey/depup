@@ -798,6 +798,27 @@
       "status": "published",
       "timestamp": "2026-07-21T16:14:21.489Z",
       "version": "72.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.9.1",
+          "to": "^4.10.1"
+        },
+        "browserslist": {
+          "from": "^4.28.4",
+          "to": "^4.28.7"
+        },
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T16:32:58.389Z",
+      "version": "72.0.0-depup.1"
     }
   }
 }

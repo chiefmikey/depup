@@ -215,23 +215,6 @@
     }
   },
   "11.3.2": {
-    "13": {
-      "changes": {
-        "autoprefixer": {
-          "from": "^10.5.0",
-          "to": "^10.5.2"
-        },
-        "browserslist": {
-          "from": "^4.28.1",
-          "to": "^4.28.6"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-12T00:40:41.642Z",
-      "version": "11.3.2-depup.13"
-    },
     "14": {
       "changes": {
         "autoprefixer": {
@@ -299,6 +282,115 @@
       "status": "published",
       "timestamp": "2026-07-21T17:29:25.365Z",
       "version": "11.3.2-depup.17"
+    },
+    "18": {
+      "changes": {
+        "@csstools/postcss-alpha-function": {
+          "from": "^2.0.7",
+          "to": "^2.0.8"
+        },
+        "@csstools/postcss-color-function": {
+          "from": "^5.0.6",
+          "to": "^5.0.7"
+        },
+        "@csstools/postcss-color-function-display-p3-linear": {
+          "from": "^2.0.6",
+          "to": "^2.0.7"
+        },
+        "@csstools/postcss-color-mix-function": {
+          "from": "^4.0.6",
+          "to": "^4.0.7"
+        },
+        "@csstools/postcss-color-mix-variadic-function-arguments": {
+          "from": "^2.0.6",
+          "to": "^2.0.7"
+        },
+        "@csstools/postcss-contrast-color-function": {
+          "from": "^3.0.6",
+          "to": "^3.0.7"
+        },
+        "@csstools/postcss-exponential-functions": {
+          "from": "^3.0.3",
+          "to": "^3.0.4"
+        },
+        "@csstools/postcss-gamut-mapping": {
+          "from": "^3.0.6",
+          "to": "^3.0.7"
+        },
+        "@csstools/postcss-gradients-interpolation-method": {
+          "from": "^6.0.6",
+          "to": "^6.0.7"
+        },
+        "@csstools/postcss-hwb-function": {
+          "from": "^5.0.6",
+          "to": "^5.0.7"
+        },
+        "@csstools/postcss-media-minmax": {
+          "from": "^3.0.3",
+          "to": "^3.0.4"
+        },
+        "@csstools/postcss-oklab-function": {
+          "from": "^5.0.6",
+          "to": "^5.0.7"
+        },
+        "@csstools/postcss-random-function": {
+          "from": "^3.0.3",
+          "to": "^4.0.0"
+        },
+        "@csstools/postcss-relative-color-syntax": {
+          "from": "^4.0.6",
+          "to": "^4.0.7"
+        },
+        "@csstools/postcss-sign-functions": {
+          "from": "^2.0.3",
+          "to": "^2.0.4"
+        },
+        "@csstools/postcss-stepped-value-functions": {
+          "from": "^5.0.3",
+          "to": "^5.0.4"
+        },
+        "@csstools/postcss-trigonometric-functions": {
+          "from": "^5.0.3",
+          "to": "^5.0.4"
+        },
+        "autoprefixer": {
+          "from": "^10.5.0",
+          "to": "^10.5.4"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.7"
+        },
+        "css-blank-pseudo": {
+          "from": "^8.0.1",
+          "to": "^8.0.2"
+        },
+        "css-has-pseudo": {
+          "from": "^8.0.0",
+          "to": "^8.0.1"
+        },
+        "css-prefers-color-scheme": {
+          "from": "^11.0.0",
+          "to": "^11.0.1"
+        },
+        "postcss-color-functional-notation": {
+          "from": "^8.0.6",
+          "to": "^8.0.7"
+        },
+        "postcss-focus-within": {
+          "from": "^10.0.0",
+          "to": "^10.0.1"
+        },
+        "postcss-lab-function": {
+          "from": "^8.0.6",
+          "to": "^8.0.7"
+        }
+      },
+      "depsUpdated": 25,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T16:33:44.725Z",
+      "version": "11.3.2-depup.18"
     }
   }
 }

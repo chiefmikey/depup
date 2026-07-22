@@ -1,7 +1,7 @@
 {
   "name": "@depup/postcss-preset-env",
   "description": "Convert modern CSS into something browsers understand (with updated dependencies)",
-  "version": "11.3.2-depup.13",
+  "version": "11.3.2-depup.18",
   "contributors": [
     {
       "name": "Antonio Laguna",
@@ -46,21 +46,21 @@
     "changes.json"
   ],
   "dependencies": {
-    "@csstools/postcss-alpha-function": "^2.0.7",
+    "@csstools/postcss-alpha-function": "^2.0.8",
     "@csstools/postcss-cascade-layers": "^6.0.0",
-    "@csstools/postcss-color-function": "^5.0.6",
-    "@csstools/postcss-color-function-display-p3-linear": "^2.0.6",
-    "@csstools/postcss-color-mix-function": "^4.0.6",
-    "@csstools/postcss-color-mix-variadic-function-arguments": "^2.0.6",
+    "@csstools/postcss-color-function": "^5.0.7",
+    "@csstools/postcss-color-function-display-p3-linear": "^2.0.7",
+    "@csstools/postcss-color-mix-function": "^4.0.7",
+    "@csstools/postcss-color-mix-variadic-function-arguments": "^2.0.7",
     "@csstools/postcss-container-rule-prelude-list": "^1.0.1",
     "@csstools/postcss-content-alt-text": "^3.0.2",
-    "@csstools/postcss-contrast-color-function": "^3.0.6",
-    "@csstools/postcss-exponential-functions": "^3.0.3",
+    "@csstools/postcss-contrast-color-function": "^3.0.7",
+    "@csstools/postcss-exponential-functions": "^3.0.4",
     "@csstools/postcss-font-format-keywords": "^5.0.0",
     "@csstools/postcss-font-width-property": "^1.0.0",
-    "@csstools/postcss-gamut-mapping": "^3.0.6",
-    "@csstools/postcss-gradients-interpolation-method": "^6.0.6",
-    "@csstools/postcss-hwb-function": "^5.0.6",
+    "@csstools/postcss-gamut-mapping": "^3.0.7",
+    "@csstools/postcss-gradients-interpolation-method": "^6.0.7",
+    "@csstools/postcss-hwb-function": "^5.0.7",
     "@csstools/postcss-ic-unit": "^5.0.2",
     "@csstools/postcss-image-function": "^1.0.1",
     "@csstools/postcss-initial": "^3.0.0",
@@ -71,34 +71,34 @@
     "@csstools/postcss-logical-overscroll-behavior": "^3.0.0",
     "@csstools/postcss-logical-resize": "^4.0.0",
     "@csstools/postcss-logical-viewport-units": "^4.0.0",
-    "@csstools/postcss-media-minmax": "^3.0.3",
+    "@csstools/postcss-media-minmax": "^3.0.4",
     "@csstools/postcss-media-queries-aspect-ratio-number-values": "^4.0.0",
     "@csstools/postcss-mixins": "^1.0.0",
     "@csstools/postcss-nested-calc": "^5.0.0",
     "@csstools/postcss-normalize-display-values": "^5.0.1",
-    "@csstools/postcss-oklab-function": "^5.0.6",
+    "@csstools/postcss-oklab-function": "^5.0.7",
     "@csstools/postcss-position-area-property": "^2.0.0",
     "@csstools/postcss-progressive-custom-properties": "^5.1.1",
     "@csstools/postcss-property-rule-prelude-list": "^2.0.0",
-    "@csstools/postcss-random-function": "^3.0.3",
-    "@csstools/postcss-relative-color-syntax": "^4.0.6",
+    "@csstools/postcss-random-function": "^4.0.0",
+    "@csstools/postcss-relative-color-syntax": "^4.0.7",
     "@csstools/postcss-scope-pseudo-class": "^5.0.0",
-    "@csstools/postcss-sign-functions": "^2.0.3",
-    "@csstools/postcss-stepped-value-functions": "^5.0.3",
+    "@csstools/postcss-sign-functions": "^2.0.4",
+    "@csstools/postcss-stepped-value-functions": "^5.0.4",
     "@csstools/postcss-syntax-descriptor-syntax-production": "^2.0.0",
     "@csstools/postcss-system-ui-font-family": "^2.0.0",
     "@csstools/postcss-text-decoration-shorthand": "^5.0.4",
-    "@csstools/postcss-trigonometric-functions": "^5.0.3",
+    "@csstools/postcss-trigonometric-functions": "^5.0.4",
     "@csstools/postcss-unset-value": "^5.0.0",
-    "autoprefixer": "^10.5.2",
-    "browserslist": "^4.28.6",
-    "css-blank-pseudo": "^8.0.1",
-    "css-has-pseudo": "^8.0.0",
-    "css-prefers-color-scheme": "^11.0.0",
+    "autoprefixer": "^10.5.4",
+    "browserslist": "^4.28.7",
+    "css-blank-pseudo": "^8.0.2",
+    "css-has-pseudo": "^8.0.1",
+    "css-prefers-color-scheme": "^11.0.1",
     "cssdb": "^8.9.0",
     "postcss-attribute-case-insensitive": "^8.0.0",
     "postcss-clamp": "^4.1.0",
-    "postcss-color-functional-notation": "^8.0.6",
+    "postcss-color-functional-notation": "^8.0.7",
     "postcss-color-hex-alpha": "^11.0.0",
     "postcss-color-rebeccapurple": "^11.0.0",
     "postcss-custom-media": "^12.0.1",
@@ -107,11 +107,11 @@
     "postcss-dir-pseudo-class": "^10.0.0",
     "postcss-double-position-gradients": "^7.0.2",
     "postcss-focus-visible": "^11.0.0",
-    "postcss-focus-within": "^10.0.0",
+    "postcss-focus-within": "^10.0.1",
     "postcss-font-variant": "^5.0.0",
     "postcss-gap-properties": "^7.0.0",
     "postcss-image-set-function": "^8.0.0",
-    "postcss-lab-function": "^8.0.6",
+    "postcss-lab-function": "^8.0.7",
     "postcss-logical": "^9.0.0",
     "postcss-nesting": "^14.0.0",
     "postcss-opacity-percentage": "^3.0.0",
@@ -155,19 +155,111 @@
   ],
   "depup": {
     "changes": {
+      "@csstools/postcss-alpha-function": {
+        "from": "^2.0.7",
+        "to": "^2.0.8"
+      },
+      "@csstools/postcss-color-function": {
+        "from": "^5.0.6",
+        "to": "^5.0.7"
+      },
+      "@csstools/postcss-color-function-display-p3-linear": {
+        "from": "^2.0.6",
+        "to": "^2.0.7"
+      },
+      "@csstools/postcss-color-mix-function": {
+        "from": "^4.0.6",
+        "to": "^4.0.7"
+      },
+      "@csstools/postcss-color-mix-variadic-function-arguments": {
+        "from": "^2.0.6",
+        "to": "^2.0.7"
+      },
+      "@csstools/postcss-contrast-color-function": {
+        "from": "^3.0.6",
+        "to": "^3.0.7"
+      },
+      "@csstools/postcss-exponential-functions": {
+        "from": "^3.0.3",
+        "to": "^3.0.4"
+      },
+      "@csstools/postcss-gamut-mapping": {
+        "from": "^3.0.6",
+        "to": "^3.0.7"
+      },
+      "@csstools/postcss-gradients-interpolation-method": {
+        "from": "^6.0.6",
+        "to": "^6.0.7"
+      },
+      "@csstools/postcss-hwb-function": {
+        "from": "^5.0.6",
+        "to": "^5.0.7"
+      },
+      "@csstools/postcss-media-minmax": {
+        "from": "^3.0.3",
+        "to": "^3.0.4"
+      },
+      "@csstools/postcss-oklab-function": {
+        "from": "^5.0.6",
+        "to": "^5.0.7"
+      },
+      "@csstools/postcss-random-function": {
+        "from": "^3.0.3",
+        "to": "^4.0.0"
+      },
+      "@csstools/postcss-relative-color-syntax": {
+        "from": "^4.0.6",
+        "to": "^4.0.7"
+      },
+      "@csstools/postcss-sign-functions": {
+        "from": "^2.0.3",
+        "to": "^2.0.4"
+      },
+      "@csstools/postcss-stepped-value-functions": {
+        "from": "^5.0.3",
+        "to": "^5.0.4"
+      },
+      "@csstools/postcss-trigonometric-functions": {
+        "from": "^5.0.3",
+        "to": "^5.0.4"
+      },
       "autoprefixer": {
         "from": "^10.5.0",
-        "to": "^10.5.2"
+        "to": "^10.5.4"
       },
       "browserslist": {
         "from": "^4.28.1",
-        "to": "^4.28.6"
+        "to": "^4.28.7"
+      },
+      "css-blank-pseudo": {
+        "from": "^8.0.1",
+        "to": "^8.0.2"
+      },
+      "css-has-pseudo": {
+        "from": "^8.0.0",
+        "to": "^8.0.1"
+      },
+      "css-prefers-color-scheme": {
+        "from": "^11.0.0",
+        "to": "^11.0.1"
+      },
+      "postcss-color-functional-notation": {
+        "from": "^8.0.6",
+        "to": "^8.0.7"
+      },
+      "postcss-focus-within": {
+        "from": "^10.0.0",
+        "to": "^10.0.1"
+      },
+      "postcss-lab-function": {
+        "from": "^8.0.6",
+        "to": "^8.0.7"
       }
     },
-    "depsUpdated": 2,
+    "depsUpdated": 25,
     "originalPackage": "postcss-preset-env",
     "originalVersion": "11.3.2",
-    "processedAt": "2026-07-12T00:40:40.112Z",
+    "processedAt": "2026-07-22T16:33:42.255Z",
     "smokeTest": "passed"
   }
 }

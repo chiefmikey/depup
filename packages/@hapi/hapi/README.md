@@ -12,7 +12,7 @@ npm install @depup/hapi__hapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.4.9 | **DepUp version**: 21.4.9-depup.29 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 21.4.10 | **DepUp version**: 21.4.10-depup.0 | **Updated**: 7/22/2026 | **Import test**: passed
 
 ## What changed
 

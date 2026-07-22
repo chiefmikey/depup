@@ -1,6 +1,6 @@
 {
   "name": "@depup/keystone",
-  "version": "4.2.1-depup.67",
+  "version": "4.2.1-depup.72",
   "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose (with updated dependencies)",
   "main": "index.js",
   "repository": {
@@ -64,11 +64,11 @@
     "less-middleware": "^3.1.0",
     "list-to-array": "^1.1.0",
     "lodash": "^4.18.1",
-    "marked": "^18.0.6",
+    "marked": "^18.0.7",
     "method-override": "^3.0.0",
     "mime-types": "^3.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^9.7.4",
+    "mongoose": "^9.8.0",
     "morgan": "^1.11.0",
     "multer": "^2.2.0",
     "numeral": "^2.0.6",
@@ -76,26 +76,26 @@
     "qs": "^6.15.3",
     "queryfilter": "^0.0.4",
     "range_check": "^4.1.0",
-    "react": "^19.2.7",
+    "react": "^19.2.8",
     "react-addons-css-transition-group": "^15.6.2",
     "react-alt-text": "^2.0.0",
     "react-color": "^2.19.3",
     "react-day-picker": "^10.0.1",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^19.2.7",
+    "react-dom": "^19.2.8",
     "react-domify": "^0.2.6",
     "react-images": "^1.2.0-beta.7",
     "react-markdown": "^10.1.0",
     "react-redux": "^9.3.0",
-    "react-router": "^8.2.0",
+    "react-router": "^8.3.0",
     "react-router-redux": "^4.0.8",
     "redux": "^5.0.1",
     "redux-saga": "^1.5.0",
     "redux-thunk": "^3.1.0",
     "react-select": "^5.10.2",
     "sanitize-filename": "^1.6.4",
-    "tinymce": "^8.7.0",
+    "tinymce": "^8.8.1",
     "sanitize-html": "^2.17.6",
     "scmp": "^2.1.0",
     "semver": "^7.8.5",
@@ -336,7 +336,7 @@
       },
       "marked": {
         "from": "^0.6.2",
-        "to": "^18.0.6"
+        "to": "^18.0.7"
       },
       "mime-types": {
         "from": "^2.1.24",
@@ -348,7 +348,7 @@
       },
       "mongoose": {
         "from": "^4.13.14",
-        "to": "^9.7.4"
+        "to": "^9.8.0"
       },
       "morgan": {
         "from": "^1.9.1",
@@ -368,7 +368,7 @@
       },
       "react": {
         "from": "^15.4.2",
-        "to": "^19.2.7"
+        "to": "^19.2.8"
       },
       "react-color": {
         "from": "^2.14.1",
@@ -388,7 +388,7 @@
       },
       "react-dom": {
         "from": "^15.4.2",
-        "to": "^19.2.7"
+        "to": "^19.2.8"
       },
       "react-images": {
         "from": "^0.5.6",
@@ -404,7 +404,7 @@
       },
       "react-router": {
         "from": "^3.0.2",
-        "to": "^8.2.0"
+        "to": "^8.3.0"
       },
       "redux": {
         "from": "^3.7.2",
@@ -428,7 +428,7 @@
       },
       "tinymce": {
         "from": "^4.9.2",
-        "to": "^8.7.0"
+        "to": "^8.8.1"
       },
       "sanitize-html": {
         "from": "^1.20.1",
@@ -462,7 +462,7 @@
     "depsUpdated": 65,
     "originalPackage": "keystone",
     "originalVersion": "4.2.1",
-    "processedAt": "2026-07-11T00:35:57.445Z",
+    "processedAt": "2026-07-22T16:34:06.934Z",
     "smokeTest": "passed"
   }
 }

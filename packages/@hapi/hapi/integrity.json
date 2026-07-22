@@ -82,5 +82,20 @@
       "timestamp": "2026-07-21T19:29:03.348Z",
       "version": "21.4.9-depup.29"
     }
+  },
+  "21.4.10": {
+    "0": {
+      "changes": {
+        "@hapi/shot": {
+          "from": "^6.0.2",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T16:32:10.416Z",
+      "version": "21.4.10-depup.0"
+    }
   }
 }
