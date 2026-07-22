@@ -12,15 +12,11 @@ npm install @depup/vitejs__plugin-react-swc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.3.1 | **DepUp version**: 4.3.1-depup.53 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 4.3.2 | **DepUp version**: 4.3.2-depup.0 | **Updated**: 7/22/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @rolldown/pluginutils | `^1.0.0` | `^1.0.1` |
-| @swc/core | `^1.15.11` | `^1.15.46` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitejs__plugin-react-swc&labels=bug).
 

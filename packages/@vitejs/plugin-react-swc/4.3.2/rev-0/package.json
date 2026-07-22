@@ -1,0 +1,53 @@
+{
+  "name": "@depup/vitejs__plugin-react-swc",
+  "version": "4.3.2-depup.0",
+  "description": "Speed up your Vite dev server with SWC (with updated dependencies)",
+  "keywords": [
+    "@vitejs/plugin-react-swc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "fast refresh",
+    "react",
+    "react-refresh",
+    "swc",
+    "vite",
+    "vite-plugin"
+  ],
+  "homepage": "https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc#readme",
+  "bugs": {
+    "url": "https://github.com/vitejs/vite-plugin-react/issues"
+  },
+  "license": "MIT",
+  "author": "Arnaud Barré (https://github.com/ArnaudBarre)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitejs/vite-plugin-react.git",
+    "directory": "packages/plugin-react-swc"
+  },
+  "type": "module",
+  "dependencies": {
+    "@rolldown/pluginutils": "^1.0.1",
+    "@swc/core": "^1.15.46"
+  },
+  "peerDependencies": {
+    "vite": "^4 || ^5 || ^6 || ^7 || ^8"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./preamble": "./types/preamble.d.ts"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitejs/plugin-react-swc",
+    "originalVersion": "4.3.2",
+    "processedAt": "2026-07-22T08:54:28.660Z",
+    "smokeTest": "passed"
+  }
+}
