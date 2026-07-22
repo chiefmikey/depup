@@ -606,5 +606,28 @@
       "timestamp": "2026-07-21T16:08:32.823Z",
       "version": "3.6.1-depup.0"
     }
+  },
+  "3.6.2": {
+    "0": {
+      "changes": {
+        "proxy-from-env": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        },
+        "undici": {
+          "from": "^6.22.0",
+          "to": "^8.8.0"
+        },
+        "which": {
+          "from": "^2.0.2",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T16:32:26.725Z",
+      "version": "3.6.2-depup.0"
+    }
   }
 }
