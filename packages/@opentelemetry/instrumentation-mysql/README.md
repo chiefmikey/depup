@@ -12,12 +12,13 @@ npm install @depup/opentelemetry__instrumentation-mysql
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.66.0 | **DepUp version**: 0.66.0-depup.9 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 0.66.0 | **DepUp version**: 0.66.0-depup.10 | **Updated**: 7/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @opentelemetry/instrumentation | `^0.220.0` | `^0.221.0` |
 | @opentelemetry/semantic-conventions | `^1.33.0` | `^1.43.0` |
 
 

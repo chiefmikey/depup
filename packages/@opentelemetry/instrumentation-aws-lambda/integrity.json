@@ -346,27 +346,6 @@
     }
   },
   "0.72.0": {
-    "5": {
-      "changes": {
-        "@opentelemetry/propagator-aws-xray": {
-          "from": "^2.1.4",
-          "to": "^2.2.0"
-        },
-        "@opentelemetry/semantic-conventions": {
-          "from": "^1.27.0",
-          "to": "^1.43.0"
-        },
-        "@types/aws-lambda": {
-          "from": "^8.10.155",
-          "to": "^8.10.162"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:25:00.655Z",
-      "version": "0.72.0-depup.5"
-    },
     "6": {
       "changes": {
         "@opentelemetry/propagator-aws-xray": {
@@ -450,6 +429,31 @@
       "status": "published",
       "timestamp": "2026-07-21T16:06:07.870Z",
       "version": "0.72.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@opentelemetry/instrumentation": {
+          "from": "^0.220.0",
+          "to": "^0.221.0"
+        },
+        "@opentelemetry/propagator-aws-xray": {
+          "from": "^2.1.4",
+          "to": "^2.2.0"
+        },
+        "@opentelemetry/semantic-conventions": {
+          "from": "^1.27.0",
+          "to": "^1.43.0"
+        },
+        "@types/aws-lambda": {
+          "from": "^8.10.155",
+          "to": "^8.10.162"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-22T00:36:24.522Z",
+      "version": "0.72.0-depup.10"
     }
   }
 }
