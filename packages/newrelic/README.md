@@ -12,7 +12,7 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.3.2 | **DepUp version**: 14.3.2-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 14.3.2 | **DepUp version**: 14.3.2-depup.1 | **Updated**: 7/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,15 +22,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @grpc/grpc-js | `^1.13.2` | `^1.14.4` |
 | @newrelic/security-agent | `^3.0.0` | `^3.0.4` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
-| @opentelemetry/api-logs | `^0.219.0` | `^0.220.0` |
-| @opentelemetry/core | `^2.0.0` | `^2.9.0` |
-| @opentelemetry/exporter-metrics-otlp-http | `^0.219.0` | `^0.220.0` |
-| @opentelemetry/otlp-exporter-base | `^0.219.0` | `^0.220.0` |
-| @opentelemetry/otlp-transformer | `^0.219.0` | `^0.220.0` |
-| @opentelemetry/resources | `^2.0.1` | `^2.9.0` |
-| @opentelemetry/sdk-logs | `^0.219.0` | `^0.220.0` |
-| @opentelemetry/sdk-metrics | `^2.0.1` | `^2.9.0` |
-| @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.9.0` |
+| @opentelemetry/api-logs | `^0.219.0` | `^0.221.0` |
+| @opentelemetry/core | `^2.0.0` | `^2.10.0` |
+| @opentelemetry/exporter-metrics-otlp-http | `^0.219.0` | `^0.221.0` |
+| @opentelemetry/otlp-exporter-base | `^0.219.0` | `^0.221.0` |
+| @opentelemetry/otlp-transformer | `^0.219.0` | `^0.221.0` |
+| @opentelemetry/resources | `^2.0.1` | `^2.10.0` |
+| @opentelemetry/sdk-logs | `^0.219.0` | `^0.221.0` |
+| @opentelemetry/sdk-metrics | `^2.0.1` | `^2.10.0` |
+| @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.10.0` |
 | @tyriar/fibonacci-heap | `^2.0.7` | `^2.0.9` |
 | https-proxy-agent | `^9.0.0` | `^9.1.0` |
 | import-in-the-middle | `^3.0.1` | `^3.3.2` |
