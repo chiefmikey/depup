@@ -1,0 +1,79 @@
+{
+  "name": "@depup/better-auth__prisma-adapter",
+  "version": "1.6.24-depup.0",
+  "description": "Prisma adapter for Better Auth (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com/docs/adapters/prisma",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/prisma-adapter"
+  },
+  "keywords": [
+    "@better-auth/prisma-adapter",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "prisma",
+    "adapter",
+    "typescript",
+    "better-auth"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "dev-source": "./src/index.ts",
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "@prisma/client": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "prisma": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "@better-auth/core": "^1.6.24"
+  },
+  "peerDependenciesMeta": {
+    "@prisma/client": {
+      "optional": true
+    },
+    "prisma": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "tsdown": "0.22.7",
+    "typescript": "^6.0.3",
+    "@better-auth/core": "1.6.24"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint:package": "publint run --strict --pack false",
+    "lint:types": "attw --profile esm-only --pack .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@better-auth/prisma-adapter",
+    "originalVersion": "1.6.24",
+    "processedAt": "2026-07-22T16:32:11.252Z",
+    "smokeTest": "failed"
+  }
+}

@@ -12,13 +12,13 @@ npm install @depup/nock
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.16 | **DepUp version**: 14.0.16-depup.19 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 14.0.16 | **DepUp version**: 14.0.16-depup.20 | **Updated**: 7/22/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mswjs/interceptors | `^0.41.0` | `^0.41.9` |
+| @mswjs/interceptors | `^0.41.0` | `^0.42.0` |
 | propagate | `^2.0.0` | `^2.0.1` |
 
 

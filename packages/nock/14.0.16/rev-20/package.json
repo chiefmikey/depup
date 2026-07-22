@@ -7,7 +7,7 @@
     "testing",
     "isolation"
   ],
-  "version": "14.0.16-depup.15",
+  "version": "14.0.16-depup.20",
   "author": "Pedro Teixeira <pedro.teixeira@gmail.com>",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "main": "./index.js",
   "types": "types",
   "dependencies": {
-    "@mswjs/interceptors": "^0.41.9",
+    "@mswjs/interceptors": "^0.42.0",
     "json-stringify-safe": "^5.0.1",
     "propagate": "^2.0.1"
   },
@@ -100,7 +100,7 @@
     "changes": {
       "@mswjs/interceptors": {
         "from": "^0.41.0",
-        "to": "^0.41.9"
+        "to": "^0.42.0"
       },
       "propagate": {
         "from": "^2.0.0",
@@ -110,7 +110,7 @@
     "depsUpdated": 2,
     "originalPackage": "nock",
     "originalVersion": "14.0.16",
-    "processedAt": "2026-07-12T00:39:35.679Z",
-    "smokeTest": "passed"
+    "processedAt": "2026-07-22T16:33:43.151Z",
+    "smokeTest": "failed"
   }
 }

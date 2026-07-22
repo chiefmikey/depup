@@ -1,5 +1,9 @@
 {
   "bumped": {
+    "argparse": {
+      "from": "^2.0.1",
+      "to": "^3.0.0"
+    },
     "entities": {
       "from": "^4.5.0",
       "to": "^8.0.0"
@@ -9,6 +13,6 @@
       "to": "^6.0.0"
     }
   },
-  "timestamp": "2026-07-13T00:41:24.135Z",
-  "totalUpdated": 2
+  "timestamp": "2026-07-22T16:32:58.550Z",
+  "totalUpdated": 3
 }
