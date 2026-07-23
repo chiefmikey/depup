@@ -1,6 +1,6 @@
 {
   "name": "@depup/pkgroll",
-  "version": "2.27.1-depup.52",
+  "version": "2.27.1-depup.57",
   "description": "Zero-config rollup bundler (with updated dependencies)",
   "keywords": [
     "pkgroll",
@@ -44,7 +44,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "cjs-module-lexer": "^2.2.0",
     "esbuild": "^0.28.1",
-    "magic-string": "^0.30.21",
+    "magic-string": "^1.1.0",
     "rollup": "^4.62.2",
     "rollup-plugin-import-trace": "^1.0.1",
     "rollup-pluginutils": "^2.8.2",
@@ -68,6 +68,10 @@
         "from": "^0.26.0",
         "to": "^0.28.1"
       },
+      "magic-string": {
+        "from": "^0.30.21",
+        "to": "^1.1.0"
+      },
       "rollup": {
         "from": "^4.53.5",
         "to": "^4.62.2"
@@ -77,10 +81,10 @@
         "to": "^2.9.0"
       }
     },
-    "depsUpdated": 4,
+    "depsUpdated": 5,
     "originalPackage": "pkgroll",
     "originalVersion": "2.27.1",
-    "processedAt": "2026-07-12T00:40:08.489Z",
+    "processedAt": "2026-07-23T16:34:31.924Z",
     "smokeTest": "failed"
   }
 }

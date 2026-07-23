@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.33-depup.26",
+  "version": "2.0.33-depup.31",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "types": "./types.d.ts",
   "exports": {
@@ -113,25 +113,25 @@
   "dependencies": {
     "@artilleryio/int-commons": "2.24.0",
     "@artilleryio/int-core": "2.28.0",
-    "@aws-sdk/client-cloudwatch": "^3.1085.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1085.0",
-    "@aws-sdk/client-ec2": "^3.1085.0",
-    "@aws-sdk/client-ecs": "^3.1085.0",
-    "@aws-sdk/client-iam": "^3.1085.0",
-    "@aws-sdk/client-lambda": "^3.1085.0",
-    "@aws-sdk/client-s3": "^3.1085.0",
-    "@aws-sdk/client-sqs": "^3.1085.0",
-    "@aws-sdk/client-ssm": "^3.1085.0",
-    "@aws-sdk/client-sts": "^3.1085.0",
-    "@aws-sdk/credential-providers": "^3.1081.0",
+    "@aws-sdk/client-cloudwatch": "^3.1093.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1093.0",
+    "@aws-sdk/client-ec2": "^3.1093.0",
+    "@aws-sdk/client-ecs": "^3.1093.0",
+    "@aws-sdk/client-iam": "^3.1093.0",
+    "@aws-sdk/client-lambda": "^3.1093.0",
+    "@aws-sdk/client-s3": "^3.1093.0",
+    "@aws-sdk/client-sqs": "^3.1093.0",
+    "@aws-sdk/client-ssm": "^3.1093.0",
+    "@aws-sdk/client-sts": "^3.1093.0",
+    "@aws-sdk/credential-providers": "^3.1093.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.1",
     "@azure/storage-blob": "^12.33.0",
     "@azure/storage-queue": "^12.31.0",
-    "@oclif/core": "^4.11.14",
+    "@oclif/core": "^4.13.0",
     "@oclif/plugin-help": "^6.2.53",
     "@oclif/plugin-not-found": "^3.2.88",
-    "@smithy/core": "^3.29.3",
+    "@smithy/core": "^3.29.7",
     "@upstash/redis": "^1.38.0",
     "artillery-engine-playwright": "1.30.0",
     "artillery-plugin-apdex": "1.24.0",
@@ -163,7 +163,7 @@
     "nanoid": "^6.0.0",
     "ora": "^9.4.1",
     "rc": "^1.2.8",
-    "sqs-consumer": "^15.0.2",
+    "sqs-consumer": "^15.0.3",
     "tempy": "^3.2.0",
     "walk-sync": "^4.0.2",
     "yaml-js": "^0.3.1"
@@ -183,47 +183,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.1034.0",
-        "to": "^3.1085.0"
+        "to": "^3.1093.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.1034.0",
-        "to": "^3.1081.0"
+        "to": "^3.1093.0"
       },
       "@azure/identity": {
         "from": "^4.13.0",
@@ -239,7 +239,7 @@
       },
       "@oclif/core": {
         "from": "^4.8.0",
-        "to": "^4.11.14"
+        "to": "^4.13.0"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.36",
@@ -251,7 +251,7 @@
       },
       "@smithy/core": {
         "from": "^3.24.0",
-        "to": "^3.29.3"
+        "to": "^3.29.7"
       },
       "@upstash/redis": {
         "from": "^1.36.1",
@@ -315,7 +315,7 @@
       },
       "sqs-consumer": {
         "from": "6.0.2",
-        "to": "^15.0.2"
+        "to": "^15.0.3"
       },
       "tempy": {
         "from": "3.1.0",
@@ -329,7 +329,7 @@
     "depsUpdated": 36,
     "originalPackage": "artillery",
     "originalVersion": "2.0.33",
-    "processedAt": "2026-07-13T00:34:01.122Z",
+    "processedAt": "2026-07-23T16:34:16.229Z",
     "smokeTest": "failed"
   }
 }
