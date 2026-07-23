@@ -12,14 +12,14 @@ npm install @depup/pac-proxy-agent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.51 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.52 | **Updated**: 7/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^4.3.4` | `^4.4.3` |
-| quickjs-wasi | `^2.2.0` | `^3.1.0` |
+| quickjs-wasi | `^2.2.0` | `^3.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pac-proxy-agent&labels=bug).

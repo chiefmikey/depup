@@ -510,5 +510,24 @@
       "timestamp": "2026-07-21T16:04:54.029Z",
       "version": "6.1.1-depup.0"
     }
+  },
+  "6.1.2": {
+    "0": {
+      "changes": {
+        "auto-bind": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-23T16:33:09.940Z",
+      "version": "6.1.2-depup.0"
+    }
   }
 }

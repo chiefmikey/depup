@@ -330,23 +330,6 @@
     }
   },
   "4.1.10": {
-    "2": {
-      "changes": {
-        "@blazediff/core": {
-          "from": "1.9.1",
-          "to": "^1.9.3"
-        },
-        "ws": {
-          "from": "^8.19.0",
-          "to": "^8.21.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-09T00:32:21.973Z",
-      "version": "4.1.10-depup.2"
-    },
     "3": {
       "changes": {
         "@blazediff/core": {
@@ -418,6 +401,27 @@
       "status": "published",
       "timestamp": "2026-07-21T16:10:23.322Z",
       "version": "4.1.10-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@blazediff/core": {
+          "from": "1.9.1",
+          "to": "^1.9.3"
+        },
+        "magic-string": {
+          "from": "^0.30.21",
+          "to": "^1.1.0"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-23T16:33:30.814Z",
+      "version": "4.1.10-depup.7"
     }
   }
 }

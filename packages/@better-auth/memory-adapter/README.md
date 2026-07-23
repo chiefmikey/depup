@@ -12,7 +12,7 @@ npm install @depup/better-auth__memory-adapter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.24 | **DepUp version**: 1.6.24-depup.0 | **Updated**: 7/22/2026 | **Import test**: failed
+**Original version**: 1.6.25 | **DepUp version**: 1.6.25-depup.0 | **Updated**: 7/23/2026 | **Import test**: failed
 
 ## What changed
 

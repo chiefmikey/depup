@@ -1424,5 +1424,20 @@
       "timestamp": "2026-07-23T08:55:13.214Z",
       "version": "5.80.11-depup.0"
     }
+  },
+  "5.81.0": {
+    "0": {
+      "changes": {
+        "cron-parser": {
+          "from": "4.9.0",
+          "to": "^5.6.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-23T16:34:06.427Z",
+      "version": "5.81.0-depup.0"
+    }
   }
 }
