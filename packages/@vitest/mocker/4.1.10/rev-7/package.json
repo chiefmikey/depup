@@ -1,7 +1,7 @@
 {
   "name": "@depup/vitest__mocker",
   "type": "module",
-  "version": "4.1.10-depup.2",
+  "version": "4.1.10-depup.7",
   "description": "Vitest module mocker implementation (with updated dependencies)",
   "license": "MIT",
   "funding": "https://opencollective.com/vitest",
@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "estree-walker": "^3.0.3",
-    "magic-string": "^0.30.21",
+    "magic-string": "^1.1.0",
     "@vitest/spy": "4.1.10"
   },
   "devDependencies": {
@@ -103,11 +103,16 @@
     "dev": "rollup -c --watch"
   },
   "depup": {
-    "changes": {},
-    "depsUpdated": 0,
+    "changes": {
+      "magic-string": {
+        "from": "^0.30.21",
+        "to": "^1.1.0"
+      }
+    },
+    "depsUpdated": 1,
     "originalPackage": "@vitest/mocker",
     "originalVersion": "4.1.10",
-    "processedAt": "2026-07-09T00:32:55.221Z",
+    "processedAt": "2026-07-23T16:33:31.519Z",
     "smokeTest": "passed"
   }
 }

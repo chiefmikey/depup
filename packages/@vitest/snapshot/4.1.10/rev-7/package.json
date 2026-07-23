@@ -1,7 +1,7 @@
 {
   "name": "@depup/vitest__snapshot",
   "type": "module",
-  "version": "4.1.10-depup.2",
+  "version": "4.1.10-depup.7",
   "description": "Vitest snapshot manager (with updated dependencies)",
   "license": "MIT",
   "funding": "https://opencollective.com/vitest",
@@ -51,7 +51,7 @@
     "README.md"
   ],
   "dependencies": {
-    "magic-string": "^0.30.21",
+    "magic-string": "^1.1.0",
     "pathe": "^2.0.3",
     "@vitest/pretty-format": "4.1.10",
     "@vitest/utils": "4.1.10"
@@ -65,11 +65,16 @@
     "dev": "rollup -c --watch"
   },
   "depup": {
-    "changes": {},
-    "depsUpdated": 0,
+    "changes": {
+      "magic-string": {
+        "from": "^0.30.21",
+        "to": "^1.1.0"
+      }
+    },
+    "depsUpdated": 1,
     "originalPackage": "@vitest/snapshot",
     "originalVersion": "4.1.10",
-    "processedAt": "2026-07-09T00:32:52.779Z",
+    "processedAt": "2026-07-23T16:33:29.200Z",
     "smokeTest": "passed"
   }
 }

@@ -12,13 +12,13 @@ npm install @depup/vitest__snapshot
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.6 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.7 | **Updated**: 7/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| magic-string | `^0.30.21` | `^1.0.0` |
+| magic-string | `^0.30.21` | `^1.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitest__snapshot&labels=bug).
