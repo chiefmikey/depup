@@ -128,5 +128,20 @@
       "timestamp": "2026-07-21T19:30:14.771Z",
       "version": "2.3.4-depup.1"
     }
+  },
+  "2.3.5": {
+    "0": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-23T00:38:49.003Z",
+      "version": "2.3.5-depup.0"
+    }
   }
 }

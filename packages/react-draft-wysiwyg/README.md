@@ -12,14 +12,14 @@ npm install @depup/react-draft-wysiwyg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.15.0 | **DepUp version**: 1.15.0-depup.1 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.15.0 | **DepUp version**: 1.15.0-depup.2 | **Updated**: 7/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | classnames | `^2.2.6` | `^2.5.1` |
-| linkify-it | `^2.2.0` | `^6.0.0` |
+| linkify-it | `^2.2.0` | `^6.1.0` |
 | prop-types | `^15.7.2` | `^15.8.1` |
 
 

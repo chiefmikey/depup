@@ -601,5 +601,15 @@
       "timestamp": "2026-07-21T16:12:12.498Z",
       "version": "6.4.0-depup.0"
     }
+  },
+  "6.5.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-23T00:40:05.375Z",
+      "version": "6.5.0-depup.0"
+    }
   }
 }
