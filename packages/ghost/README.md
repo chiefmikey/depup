@@ -12,43 +12,43 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.53.0 | **DepUp version**: 6.53.0-depup.2 | **Updated**: 7/22/2026 | **Import test**: failed
+**Original version**: 6.53.0 | **DepUp version**: 6.53.0-depup.3 | **Updated**: 7/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1092.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1093.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^5.0.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.67.0` |
 | @slack/webhook | `7.1.0` | `^8.0.0` |
-| @tryghost/api-framework | `3.2.4` | `^3.3.4` |
-| @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.4` |
+| @tryghost/api-framework | `3.2.4` | `^3.3.5` |
+| @tryghost/bookshelf-plugins | `2.2.4` | `^2.3.5` |
 | @tryghost/brute-knex | `3.2.0` | `^3.2.1` |
-| @tryghost/database-info | `2.3.1` | `^2.3.4` |
-| @tryghost/debug | `2.2.3` | `^2.3.4` |
-| @tryghost/domain-events | `3.2.5` | `^3.3.4` |
-| @tryghost/email-mock-receiver | `2.1.0` | `^2.3.4` |
-| @tryghost/errors | `1.3.13` | `^3.3.4` |
-| @tryghost/job-manager | `1.0.9` | `^4.1.4` |
-| @tryghost/logging | `4.2.1` | `^5.2.1` |
-| @tryghost/metrics | `1.0.43` | `^3.3.4` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.3.4` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.3.4` |
-| @tryghost/nodemailer | `2.3.1` | `^2.3.4` |
-| @tryghost/pretty-cli | `3.2.3` | `^3.3.4` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^4.1.4` |
-| @tryghost/promise | `2.2.3` | `^2.3.4` |
+| @tryghost/database-info | `2.3.1` | `^2.3.5` |
+| @tryghost/debug | `2.2.3` | `^2.3.5` |
+| @tryghost/domain-events | `3.2.5` | `^3.3.5` |
+| @tryghost/email-mock-receiver | `2.1.0` | `^2.3.5` |
+| @tryghost/errors | `1.3.13` | `^3.3.5` |
+| @tryghost/job-manager | `1.0.9` | `^4.1.5` |
+| @tryghost/logging | `4.2.1` | `^5.3.0` |
+| @tryghost/metrics | `1.0.43` | `^3.3.5` |
+| @tryghost/mw-error-handler | `1.0.13` | `^3.3.5` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.3.5` |
+| @tryghost/nodemailer | `2.3.1` | `^2.3.5` |
+| @tryghost/pretty-cli | `3.2.3` | `^3.3.5` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^4.1.5` |
+| @tryghost/promise | `2.2.3` | `^2.3.5` |
 | @tryghost/referrer-parser | `0.1.19` | `^0.1.21` |
-| @tryghost/request | `1.0.17` | `^3.3.4` |
-| @tryghost/root-utils | `2.2.3` | `^2.3.4` |
-| @tryghost/security | `1.0.6` | `^3.3.4` |
-| @tryghost/tpl | `2.2.3` | `^2.3.4` |
+| @tryghost/request | `1.0.17` | `^3.3.5` |
+| @tryghost/root-utils | `2.2.3` | `^2.3.5` |
+| @tryghost/security | `1.0.6` | `^3.3.5` |
+| @tryghost/tpl | `2.2.3` | `^2.3.5` |
 | @tryghost/url-utils | `5.2.6` | `^5.2.9` |
-| @tryghost/validator | `0.2.22` | `^3.2.4` |
-| @tryghost/version | `2.2.3` | `^2.3.4` |
-| @tryghost/zip | `3.3.4` | `^3.5.3` |
+| @tryghost/validator | `0.2.22` | `^3.2.5` |
+| @tryghost/version | `2.2.3` | `^2.3.5` |
+| @tryghost/zip | `3.3.4` | `^3.5.4` |
 | body-parser | `1.20.5` | `^2.3.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^5.6.2` |

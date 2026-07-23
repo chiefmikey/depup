@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-avatar
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.3 | **DepUp version**: 1.2.3-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.2.4 | **DepUp version**: 1.2.4-depup.0 | **Updated**: 7/23/2026 | **Import test**: failed
 
 ## What changed
 
