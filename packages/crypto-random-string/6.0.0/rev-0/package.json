@@ -1,0 +1,70 @@
+{
+  "name": "@depup/crypto-random-string",
+  "version": "6.0.0-depup.0",
+  "description": "Generate a cryptographically strong random string (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/crypto-random-string",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "crypto-random-string",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "random",
+    "string",
+    "text",
+    "id",
+    "identifier",
+    "slug",
+    "salt",
+    "pin",
+    "crypto",
+    "strong",
+    "secure",
+    "hex",
+    "secret",
+    "protect"
+  ],
+  "dependencies": {
+    "type-fest": "^5.8.0",
+    "uint8array-extras": "^1.5.0"
+  },
+  "devDependencies": {
+    "ava": "^8.0.1",
+    "tsd": "^0.33.0",
+    "xo": "^4.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "crypto-random-string",
+    "originalVersion": "6.0.0",
+    "processedAt": "2026-07-24T00:37:43.421Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,14 +12,11 @@ npm install @depup/opentelemetry__instrumentation-lru-memoizer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.64.0 | **DepUp version**: 0.64.0-depup.12 | **Updated**: 7/22/2026 | **Import test**: passed
+**Original version**: 0.65.0 | **DepUp version**: 0.65.0-depup.0 | **Updated**: 7/24/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @opentelemetry/instrumentation | `^0.220.0` | `^0.221.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/opentelemetry__instrumentation-lru-memoizer&labels=bug).
 

@@ -161,31 +161,6 @@
     }
   },
   "26.15.3": {
-    "8": {
-      "changes": {
-        "chalk": {
-          "from": "^4.1.2",
-          "to": "^5.6.2"
-        },
-        "ci-info": {
-          "from": "^4.2.0",
-          "to": "^4.4.0"
-        },
-        "fs-extra": {
-          "from": "^10.1.0",
-          "to": "^11.3.5"
-        },
-        "yargs": {
-          "from": "^17.6.2",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-15T10:46:25.562Z",
-      "version": "26.15.3-depup.8"
-    },
     "9": {
       "changes": {
         "chalk": {
@@ -285,6 +260,31 @@
       "status": "published",
       "timestamp": "2026-07-21T17:14:27.465Z",
       "version": "26.15.3-depup.12"
+    },
+    "13": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^5.6.2"
+        },
+        "ci-info": {
+          "from": "^4.2.0",
+          "to": "^4.4.0"
+        },
+        "fs-extra": {
+          "from": "^10.1.0",
+          "to": "^11.4.0"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T00:37:45.168Z",
+      "version": "26.15.3-depup.13"
     }
   }
 }

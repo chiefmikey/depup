@@ -433,5 +433,20 @@
       "timestamp": "2026-07-21T16:07:54.697Z",
       "version": "22.0.7-depup.0"
     }
+  },
+  "22.0.8": {
+    "0": {
+      "changes": {
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-24T00:36:55.812Z",
+      "version": "22.0.8-depup.0"
+    }
   }
 }
