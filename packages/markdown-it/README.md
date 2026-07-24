@@ -12,7 +12,7 @@ npm install @depup/markdown-it
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.3.0 | **DepUp version**: 14.3.0-depup.20 | **Updated**: 7/24/2026 | **Import test**: failed
+**Original version**: 14.3.0 | **DepUp version**: 14.3.0-depup.21 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 

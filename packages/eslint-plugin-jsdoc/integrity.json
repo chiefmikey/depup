@@ -773,5 +773,24 @@
       "timestamp": "2026-07-24T00:37:03.895Z",
       "version": "63.2.1-depup.0"
     }
+  },
+  "63.2.2": {
+    "0": {
+      "changes": {
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T08:55:07.951Z",
+      "version": "63.2.2-depup.0"
+    }
   }
 }
