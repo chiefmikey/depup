@@ -12,18 +12,18 @@ npm install @depup/storybook__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.5 | **Updated**: 5/22/2026 | **Import test**: passed
+**Original version**: 8.6.14 | **DepUp version**: 8.6.14-depup.6 | **Updated**: 7/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| esbuild | `^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0` | `^0.28.0` |
+| esbuild | `^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0` | `^0.28.1` |
 | esbuild-register | `^3.5.0` | `^3.6.0` |
-| jsdoc-type-pratt-parser | `^4.0.0` | `^7.2.0` |
-| recast | `^0.23.5` | `^0.23.11` |
-| semver | `^7.6.2` | `^7.8.1` |
-| ws | `^8.2.3` | `^8.21.0` |
+| jsdoc-type-pratt-parser | `^4.0.0` | `^7.3.0` |
+| recast | `^0.23.5` | `^0.23.12` |
+| semver | `^7.6.2` | `^7.8.5` |
+| ws | `^8.2.3` | `^8.21.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/storybook__core&labels=bug).
