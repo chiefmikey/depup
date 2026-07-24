@@ -2692,5 +2692,32 @@
       "timestamp": "2026-07-22T00:37:08.384Z",
       "version": "10.67.0-depup.1"
     }
+  },
+  "10.68.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/instrumentation": {
+          "from": "^0.220.0",
+          "to": "^0.221.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.9.0",
+          "to": "^2.10.0"
+        },
+        "@sentry/conventions": {
+          "from": "^0.16.0",
+          "to": "^0.17.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.0",
+          "to": "^3.3.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T16:34:19.463Z",
+      "version": "10.68.0-depup.0"
+    }
   }
 }

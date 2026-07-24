@@ -550,5 +550,20 @@
       "timestamp": "2026-07-21T16:08:14.759Z",
       "version": "10.5.3-depup.0"
     }
+  },
+  "10.5.4": {
+    "0": {
+      "changes": {
+        "ts-dedent": {
+          "from": "^2.0.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T16:34:33.452Z",
+      "version": "10.5.4-depup.0"
+    }
   }
 }

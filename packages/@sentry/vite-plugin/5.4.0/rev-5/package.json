@@ -1,6 +1,6 @@
 {
   "name": "@depup/sentry__vite-plugin",
-  "version": "5.4.0-depup.0",
+  "version": "5.4.0-depup.5",
   "description": "Official Sentry Vite plugin (with updated dependencies)",
   "repository": "git://github.com/getsentry/sentry-javascript-bundler-plugins.git",
   "homepage": "https://github.com/getsentry/sentry-javascript-bundler-plugins/tree/main/packages/vite-plugin",
@@ -50,7 +50,7 @@
     "clean:deps": "premove node_modules"
   },
   "dependencies": {
-    "@sentry/bundler-plugins": "^10.65.0"
+    "@sentry/bundler-plugins": "^10.68.0"
   },
   "devDependencies": {
     "@sentry-internal/dev-utils": "5.4.0",
@@ -68,13 +68,13 @@
     "changes": {
       "@sentry/bundler-plugins": {
         "from": "^10.64.0",
-        "to": "^10.65.0"
+        "to": "^10.68.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "@sentry/vite-plugin",
     "originalVersion": "5.4.0",
-    "processedAt": "2026-07-11T00:26:08.492Z",
+    "processedAt": "2026-07-24T16:34:15.413Z",
     "smokeTest": "failed"
   }
 }
