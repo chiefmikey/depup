@@ -12,7 +12,7 @@ npm install @depup/express-openid-connect
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.0 | **DepUp version**: 3.2.0-depup.11 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.0 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.4.1` | `^4.4.3` |
 | http-errors | `^1.8.1` | `^2.0.1` |
 | joi | `^17.13.3` | `^18.2.3` |
-| jose | `^6.1.3` | `^6.2.3` |
+| jose | `^6.1.3` | `^6.2.4` |
 | openid-client | `^6.1.3` | `^6.8.4` |
 | url-join | `^4.0.1` | `^5.0.0` |
 

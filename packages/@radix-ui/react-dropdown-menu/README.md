@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-dropdown-menu
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.22 | **DepUp version**: 2.1.22-depup.0 | **Updated**: 7/23/2026 | **Import test**: failed
+**Original version**: 2.1.23 | **DepUp version**: 2.1.23-depup.0 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 
