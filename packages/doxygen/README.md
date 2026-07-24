@@ -12,14 +12,14 @@ npm install @depup/doxygen
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.4.0 | **DepUp version**: 0.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.4.0 | **DepUp version**: 0.4.0-depup.1 | **Updated**: 7/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | extend | `~3.0.0` | `^3.0.2` |
-| fs-extra | `~2.1.2` | `^11.3.4` |
+| fs-extra | `~2.1.2` | `^11.4.0` |
 | ftp | `~0.3.0` | `^0.3.10` |
 | promise | `~7.1.1` | `^8.3.0` |
 

@@ -709,5 +709,24 @@
       "timestamp": "2026-07-23T08:55:10.682Z",
       "version": "1.46.0-depup.2"
     }
+  },
+  "1.47.0": {
+    "0": {
+      "changes": {
+        "workerd": {
+          "from": "1.20260722.1",
+          "to": "^1.20260723.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-24T00:36:49.779Z",
+      "version": "1.47.0-depup.0"
+    }
   }
 }

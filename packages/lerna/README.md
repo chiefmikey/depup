@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.42 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 9.0.7 | **DepUp version**: 9.0.7-depup.43 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dedent | `1.5.3` | `^1.7.2` |
 | envinfo | `7.13.0` | `^7.21.0` |
 | execa | `5.0.0` | `^10.0.0` |
-| fs-extra | `^11.2.0` | `^11.3.6` |
+| fs-extra | `^11.2.0` | `^11.4.0` |
 | get-stream | `6.0.0` | `^9.0.1` |
 | git-url-parse | `14.0.0` | `^16.1.0` |
 | import-local | `3.1.0` | `^3.2.0` |
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | inquirer | `12.9.6` | `^14.0.2` |
 | is-ci | `3.0.1` | `^4.1.0` |
 | jest-diff | `>=30.0.0 < 31` | `^30.4.1` |
-| js-yaml | `4.1.1` | `^5.2.1` |
+| js-yaml | `4.1.1` | `^5.2.2` |
 | libnpmaccess | `10.0.3` | `^11.0.0` |
 | libnpmpublish | `11.1.2` | `^12.0.0` |
 | load-json-file | `6.2.0` | `^7.0.1` |
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-map | `4.0.0` | `^7.0.6` |
 | p-map-series | `2.1.0` | `^3.0.0` |
 | p-pipe | `3.1.0` | `^4.0.0` |
-| p-queue | `6.6.2` | `^9.3.2` |
+| p-queue | `6.6.2` | `^9.3.3` |
 | p-reduce | `2.1.0` | `^3.0.0` |
 | p-waterfall | `2.1.1` | `^3.0.0` |
 | pacote | `21.0.1` | `^22.0.0` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | slash | `3.0.0` | `^5.1.0` |
 | ssri | `12.0.0` | `^14.0.0` |
 | string-width | `^4.2.3` | `^8.2.2` |
-| tar | `7.5.11` | `^7.5.20` |
+| tar | `7.5.11` | `^7.5.21` |
 | tinyglobby | `0.2.12` | `^0.2.17` |
 | typescript | `>=3 < 6` | `^7.0.2` |
 | upath | `2.0.1` | `^3.0.8` |

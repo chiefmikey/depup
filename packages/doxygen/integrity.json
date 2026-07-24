@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T18:42:26.549Z",
       "version": "0.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "extend": {
+          "from": "~3.0.0",
+          "to": "^3.0.2"
+        },
+        "fs-extra": {
+          "from": "~2.1.2",
+          "to": "^11.4.0"
+        },
+        "ftp": {
+          "from": "~0.3.0",
+          "to": "^0.3.10"
+        },
+        "promise": {
+          "from": "~7.1.1",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T00:38:35.468Z",
+      "version": "0.4.0-depup.1"
     }
   }
 }

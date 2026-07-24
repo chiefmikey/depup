@@ -604,5 +604,20 @@
       "timestamp": "2026-07-22T00:37:09.246Z",
       "version": "5.6.8-depup.0"
     }
+  },
+  "5.6.9": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-24T00:37:42.446Z",
+      "version": "5.6.9-depup.0"
+    }
   }
 }

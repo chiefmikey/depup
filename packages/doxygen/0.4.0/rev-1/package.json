@@ -1,0 +1,77 @@
+{
+  "author": "EruantalonJS",
+  "bin": {
+    "doxygen": "./bin/nodeDoxygen.js"
+  },
+  "bugs": {
+    "url": "https://github.com/EruantalonJS/node-doxygen/issues"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "decompress": "^4.2.1",
+    "dmg": "~0.1.0",
+    "extend": "^3.0.2",
+    "fs-extra": "^11.4.0",
+    "ftp": "^0.3.10",
+    "promise": "^8.3.0",
+    "stream-to-array": "~2.3.0"
+  },
+  "description": "node module for doxygen documentation (with updated dependencies)",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "nyc": "^15.1.0",
+    "jasmine": "~2.6.0",
+    "rimraf": "^2.7.1"
+  },
+  "keywords": [
+    "doxygen",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "documentation",
+    "automation",
+    "wrapper"
+  ],
+  "license": "MIT",
+  "main": "./lib/nodeDoxygen.js",
+  "name": "@depup/doxygen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EruantalonJS/node-doxygen.git"
+  },
+  "scripts": {
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "test": "jasmine",
+    "coverage": "nyc --reporter=lcov node_modules/jasmine/bin/jasmine.js spec/spec.js && nyc merge .nyc_output coverage/coverage.json"
+  },
+  "version": "0.4.0-depup.1",
+  "depup": {
+    "changes": {
+      "extend": {
+        "from": "~3.0.0",
+        "to": "^3.0.2"
+      },
+      "fs-extra": {
+        "from": "~2.1.2",
+        "to": "^11.4.0"
+      },
+      "ftp": {
+        "from": "~0.3.0",
+        "to": "^0.3.10"
+      },
+      "promise": {
+        "from": "~7.1.1",
+        "to": "^8.3.0"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "doxygen",
+    "originalVersion": "0.4.0",
+    "processedAt": "2026-07-24T00:38:29.449Z",
+    "smokeTest": "passed"
+  }
+}
