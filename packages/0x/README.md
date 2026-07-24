@@ -12,7 +12,7 @@ npm install @depup/0x
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.3 | **Updated**: 5/9/2026 | **Import test**: failed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.4 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | end-of-stream | `^1.1.0` | `^1.4.5` |
 | env-string | `^1.0.0` | `^1.0.1` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
-| fs-extra | `^10.1.0` | `^11.3.5` |
+| fs-extra | `^10.1.0` | `^11.4.0` |
 | hsl-to-rgb-for-reals | `^1.1.0` | `^1.1.1` |
 | make-dir | `^3.1.0` | `^5.1.0` |
 | minimist | `^1.2.0` | `^1.2.8` |
@@ -34,11 +34,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | on-net-listen | `^1.1.0` | `^1.1.2` |
 | opn | `^5.4.0` | `^6.0.0` |
 | pump | `^3.0.0` | `^3.0.4` |
-| semver | `^7.3.5` | `^7.8.0` |
+| semver | `^7.3.5` | `^7.8.5` |
 | single-line-log | `^1.0.1` | `^1.1.2` |
 | split2 | `^4.0.0` | `^4.2.0` |
 | tachyons | `^4.9.1` | `^4.12.0` |
-| through2 | `^4.0.0` | `^5.0.0` |
+| through2 | `^4.0.0` | `^5.0.7` |
 | which | `^2.0.2` | `^7.0.0` |
 
 

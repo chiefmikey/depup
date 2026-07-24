@@ -85,27 +85,6 @@
     }
   },
   "14.3.0": {
-    "15": {
-      "changes": {
-        "argparse": {
-          "from": "^2.0.1",
-          "to": "^3.0.0"
-        },
-        "entities": {
-          "from": "^4.5.0",
-          "to": "^8.0.0"
-        },
-        "linkify-it": {
-          "from": "^5.0.2",
-          "to": "^6.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-22T08:55:01.301Z",
-      "version": "14.3.0-depup.15"
-    },
     "16": {
       "changes": {
         "argparse": {
@@ -213,6 +192,35 @@
       "status": "failed",
       "timestamp": "2026-07-23T16:35:02.927Z",
       "version": "14.3.0-depup.19"
+    },
+    "20": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        },
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        },
+        "linkify-it": {
+          "from": "^5.0.2",
+          "to": "^6.1.0"
+        },
+        "mdurl": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "uc.micro": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-24T00:37:58.846Z",
+      "version": "14.3.0-depup.20"
     }
   }
 }

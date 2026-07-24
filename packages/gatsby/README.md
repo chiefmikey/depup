@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.92 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.93 | **Updated**: 7/24/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.1.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.1` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.2` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.36` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.15` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | body-parser | `^2.2.2` | `^2.3.0` |
-| browserslist | `^4.21.9` | `^4.28.6` |
+| browserslist | `^4.21.9` | `^4.28.7` |
 | cache-manager | `^2.11.1` | `^7.2.9` |
 | chalk | `^4.1.2` | `^5.6.2` |
 | chokidar | `^3.6.0` | `^5.0.0` |
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express-http-proxy | `^1.6.3` | `^2.1.2` |
 | fastq | `^1.15.0` | `^1.20.1` |
 | find-cache-dir | `^3.3.2` | `^6.0.0` |
-| fs-extra | `^11.2.0` | `^11.3.6` |
+| fs-extra | `^11.2.0` | `^11.4.0` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.2` |
 | got | `^11.8.6` | `^15.1.0` |
@@ -107,7 +107,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^9.0.0` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.21` |
+| postcss | `^8.4.24` | `^8.5.22` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
 | query-string | `^6.14.1` | `^9.4.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
@@ -127,8 +127,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.1` |
-| webpack | `~5.98.0` | `^5.108.4` |
-| webpack-dev-middleware | `^5.3.4` | `^8.0.3` |
+| webpack | `~5.98.0` | `^5.109.0` |
+| webpack-dev-middleware | `^5.3.4` | `^8.0.4` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.5` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |
