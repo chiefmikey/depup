@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-scroll-area
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.17 | **DepUp version**: 1.2.17-depup.0 | **Updated**: 7/24/2026 | **Import test**: failed
+**Original version**: 1.2.18 | **DepUp version**: 1.2.18-depup.0 | **Updated**: 7/25/2026 | **Import test**: failed
 
 ## What changed
 

@@ -1,0 +1,70 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "7.29.7",
+      "to": "^8.0.1"
+    },
+    "@babel/helper-annotate-as-pure": {
+      "from": "7.29.7",
+      "to": "^8.0.0"
+    },
+    "@inquirer/confirm": {
+      "from": "6.0.12",
+      "to": "^6.1.1"
+    },
+    "beasties": {
+      "from": "0.4.2",
+      "to": "^0.4.3"
+    },
+    "browserslist": {
+      "from": "^4.26.0",
+      "to": "^4.28.7"
+    },
+    "https-proxy-agent": {
+      "from": "9.0.0",
+      "to": "^9.1.0"
+    },
+    "listr2": {
+      "from": "10.2.1",
+      "to": "^11.0.0"
+    },
+    "magic-string": {
+      "from": "0.30.21",
+      "to": "^1.1.0"
+    },
+    "picomatch": {
+      "from": "4.0.4",
+      "to": "^4.0.5"
+    },
+    "piscina": {
+      "from": "5.2.0",
+      "to": "^5.3.0"
+    },
+    "rollup": {
+      "from": "4.60.2",
+      "to": "^4.62.2"
+    },
+    "sass": {
+      "from": "1.99.0",
+      "to": "^1.102.0"
+    },
+    "semver": {
+      "from": "7.7.4",
+      "to": "^7.8.5"
+    },
+    "tinyglobby": {
+      "from": "0.2.16",
+      "to": "^0.2.17"
+    },
+    "vite": {
+      "from": "7.3.6",
+      "to": "^8.1.5"
+    },
+    "watchpack": {
+      "from": "2.5.1",
+      "to": "^2.5.2"
+    }
+  },
+  "timestamp": "2026-07-25T00:38:35.202Z",
+  "totalUpdated": 16
+}
