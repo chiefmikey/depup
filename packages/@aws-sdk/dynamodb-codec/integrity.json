@@ -972,5 +972,28 @@
       "timestamp": "2026-07-21T19:26:54.563Z",
       "version": "3.973.34-depup.0"
     }
+  },
+  "3.973.35": {
+    "0": {
+      "changes": {
+        "@aws-sdk/core": {
+          "from": "^3.977.0",
+          "to": "^3.977.1"
+        },
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.30.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:39:22.720Z",
+      "version": "3.973.35-depup.0"
+    }
   }
 }

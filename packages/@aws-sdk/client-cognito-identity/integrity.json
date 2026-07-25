@@ -2540,5 +2540,36 @@
       "timestamp": "2026-07-24T00:36:17.370Z",
       "version": "3.1094.0-depup.0"
     }
+  },
+  "3.1095.0": {
+    "0": {
+      "changes": {
+        "@aws-sdk/core": {
+          "from": "^3.977.0",
+          "to": "^3.977.1"
+        },
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.30.0"
+        },
+        "@smithy/fetch-http-handler": {
+          "from": "^5.6.10",
+          "to": "^5.6.11"
+        },
+        "@smithy/node-http-handler": {
+          "from": "^4.9.10",
+          "to": "^4.9.11"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:39:06.579Z",
+      "version": "3.1095.0-depup.0"
+    }
   }
 }

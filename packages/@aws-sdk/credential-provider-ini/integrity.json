@@ -1540,5 +1540,32 @@
       "timestamp": "2026-07-21T19:26:18.118Z",
       "version": "3.973.5-depup.0"
     }
+  },
+  "3.973.6": {
+    "0": {
+      "changes": {
+        "@aws-sdk/core": {
+          "from": "^3.977.0",
+          "to": "^3.977.1"
+        },
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.30.0"
+        },
+        "@smithy/credential-provider-imds": {
+          "from": "^4.4.13",
+          "to": "^4.4.14"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:39:25.392Z",
+      "version": "3.973.6-depup.0"
+    }
   }
 }

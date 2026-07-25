@@ -12,14 +12,15 @@ npm install @depup/aws-sdk__credential-provider-ini
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.973.5 | **DepUp version**: 3.973.5-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.973.6 | **DepUp version**: 3.973.6-depup.0 | **Updated**: 7/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.29.4` | `^3.29.6` |
-| @smithy/credential-provider-imds | `^4.4.9` | `^4.4.11` |
+| @aws-sdk/core | `^3.977.0` | `^3.977.1` |
+| @smithy/core | `^3.29.8` | `^3.30.0` |
+| @smithy/credential-provider-imds | `^4.4.13` | `^4.4.14` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

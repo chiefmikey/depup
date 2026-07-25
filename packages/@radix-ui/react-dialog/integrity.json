@@ -158,5 +158,20 @@
       "timestamp": "2026-07-24T16:33:49.223Z",
       "version": "1.1.22-depup.0"
     }
+  },
+  "1.1.23": {
+    "0": {
+      "changes": {
+        "aria-hidden": {
+          "from": "^1.2.4",
+          "to": "^1.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:40:17.726Z",
+      "version": "1.1.23-depup.0"
+    }
   }
 }
