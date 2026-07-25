@@ -12,7 +12,7 @@ npm install @depup/next-intl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.13.4 | **DepUp version**: 4.13.4-depup.3 | **Updated**: 7/24/2026 | **Import test**: passed
+**Original version**: 4.13.4 | **DepUp version**: 4.13.4-depup.4 | **Updated**: 7/25/2026 | **Import test**: passed
 
 ## What changed
 

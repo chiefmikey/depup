@@ -1622,5 +1622,32 @@
       "timestamp": "2026-07-21T19:26:17.722Z",
       "version": "3.976.0-depup.0"
     }
+  },
+  "3.977.1": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.30.0"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.6.9",
+          "to": "^5.6.10"
+        },
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:39:35.402Z",
+      "version": "3.977.1-depup.0"
+    }
   }
 }

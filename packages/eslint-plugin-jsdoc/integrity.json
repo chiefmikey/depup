@@ -791,6 +791,27 @@
       "status": "published",
       "timestamp": "2026-07-24T08:55:07.951Z",
       "version": "63.2.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@es-joy/jsdoccomment": {
+          "from": "~0.90.0",
+          "to": "^0.91.0"
+        },
+        "are-docs-informative": {
+          "from": "^0.0.2",
+          "to": "^0.1.1"
+        },
+        "escape-string-regexp": {
+          "from": "^4.0.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-25T00:41:57.698Z",
+      "version": "63.2.2-depup.1"
     }
   }
 }

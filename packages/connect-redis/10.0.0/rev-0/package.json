@@ -1,0 +1,84 @@
+{
+  "name": "@depup/connect-redis",
+  "version": "10.0.0-depup.0",
+  "description": "Redis session store for Connect (with updated dependencies)",
+  "keywords": [
+    "connect-redis",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "connect",
+    "express",
+    "redis",
+    "session"
+  ],
+  "bugs": {
+    "url": "https://github.com/tj/connect-redis/issues"
+  },
+  "license": "MIT",
+  "author": "TJ Holowaychuk <tj@vision-media.ca>",
+  "contributors": [
+    "Marc Harter <wavded@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tj/connect-redis.git"
+  },
+  "type": "module",
+  "main": "./dist/connect-redis.cjs",
+  "module": "./dist/connect-redis.js",
+  "types": "./dist/connect-redis.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/connect-redis.d.ts",
+        "default": "./dist/connect-redis.js"
+      },
+      "require": {
+        "types": "./dist/connect-redis.d.cts",
+        "default": "./dist/connect-redis.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run --coverage",
+    "lint": "tsc --noemit && oxlint . && oxfmt --check .",
+    "fix": "oxlint --fix . && oxfmt ."
+  },
+  "devDependencies": {
+    "@types/express-session": "^1.19.0",
+    "@types/node": "^26.1.1",
+    "@typescript/typescript6": "^6.0.2",
+    "@vitest/coverage-v8": "^4.1.10",
+    "express-session": "^1.19.0",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
+    "redis": "^6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.5",
+    "vite-plugin-dts": "^5.0.3",
+    "vitest": "^4.1.10"
+  },
+  "peerDependencies": {
+    "express-session": ">=1",
+    "redis": ">=5"
+  },
+  "overrides": {
+    "rollup": "^4.59.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "connect-redis",
+    "originalVersion": "10.0.0",
+    "processedAt": "2026-07-25T00:41:38.591Z",
+    "smokeTest": "failed"
+  }
+}
