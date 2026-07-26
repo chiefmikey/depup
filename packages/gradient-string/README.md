@@ -12,13 +12,13 @@ npm install @depup/gradient-string
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^5.3.0` | `^5.6.2` |
+| chalk | `^5.3.0` | `^6.0.0` |
 | tinygradient | `^1.1.5` | `^2.0.1` |
 
 

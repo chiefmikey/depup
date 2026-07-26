@@ -1,10 +1,5 @@
 {
   "8.0.1": {
-    "0": {
-      "status": "created",
-      "timestamp": "2026-03-09T08:18:51.856Z",
-      "version": "8.0.1-depup.0"
-    },
     "1": {
       "changes": {
         "camelcase": {
@@ -152,6 +147,43 @@
       "status": "published",
       "timestamp": "2026-07-21T17:22:19.674Z",
       "version": "8.0.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "camelcase": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        },
+        "chalk": {
+          "from": "^5.3.0",
+          "to": "^6.0.0"
+        },
+        "cli-boxes": {
+          "from": "^3.0.0",
+          "to": "^4.0.1"
+        },
+        "string-width": {
+          "from": "^7.2.0",
+          "to": "^8.2.2"
+        },
+        "type-fest": {
+          "from": "^4.21.0",
+          "to": "^5.8.0"
+        },
+        "widest-line": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "wrap-ansi": {
+          "from": "^9.0.0",
+          "to": "^10.0.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-26T16:24:08.411Z",
+      "version": "8.0.1-depup.5"
     }
   }
 }
