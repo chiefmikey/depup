@@ -12,7 +12,7 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.60 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.61 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -40,8 +40,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | isbinaryfile | `^4.0.6` | `^6.0.0` |
 | jsonschema | `~1.2.5` | `^1.5.0` |
 | kleur | `^4.1.1` | `^4.1.5` |
-| magic-string | `^0.25.7` | `^1.0.0` |
-| meriyah | `^3.1.6` | `^7.1.2` |
+| magic-string | `^0.25.7` | `^1.1.0` |
+| meriyah | `^3.1.6` | `^7.2.0` |
 | mime-types | `^2.1.26` | `^3.0.2` |
 | mkdirp | `^1.0.3` | `^3.0.1` |
 | npm-run-path | `^4.0.1` | `^6.0.0` |
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pacote | `^11.3.4` | `^22.0.0` |
 | periscopic | `^2.0.3` | `^4.0.3` |
 | picomatch | `^2.3.0` | `^4.0.5` |
-| postcss | `^8.3.5` | `^8.5.21` |
+| postcss | `^8.3.5` | `^8.5.23` |
 | postcss-modules | `^4.0.0` | `^9.0.1` |
 | resolve | `^1.20.0` | `^1.22.12` |
 | rimraf | `^3.0.0` | `^6.1.3` |

@@ -12,7 +12,7 @@ npm install @depup/electron-log
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.4 | **DepUp version**: 5.4.4-depup.55 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.4.4 | **DepUp version**: 5.4.4-depup.56 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
