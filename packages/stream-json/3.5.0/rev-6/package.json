@@ -1,0 +1,120 @@
+{
+  "name": "@depup/stream-json",
+  "version": "3.5.0-depup.6",
+  "description": "A micro-library of stream components for building custom JSON and JSONC processing pipelines with a minimal memory footprint — parse, filter, and transform JSON far larger than available memory with a SAX-inspired token API, on Node.js or Web Streams. (with updated dependencies)",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./web": "./src/web/index.js",
+    "./*": "./src/*"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "tape6 --flags FO",
+    "test:bun": "tape6-bun --flags FO",
+    "test:deno": "tape6-deno --flags FO",
+    "test:seq": "tape6-seq --flags FO",
+    "test:seq:bun": "bun run `tape6-seq --self` --flags FO",
+    "test:seq:deno": "deno run -A `tape6-seq --self` --flags FO",
+    "test:proc": "tape6-proc --flags FO",
+    "test:proc:bun": "bun run `tape6-proc --self` --flags FO",
+    "test:proc:deno": "deno run -A `tape6-proc --self` -r -A --flags FO",
+    "ts-check": "tsc --noEmit",
+    "js-check": "tsc --project tsconfig.check.json",
+    "ts-test": "tape6 --flags FO 'tests/**/test-*.*ts'",
+    "ts-test:bun": "tape6-bun --flags FO 'tests/**/test-*.*ts'",
+    "ts-test:deno": "tape6-deno --flags FO 'tests/**/test-*.*ts'",
+    "bench": "nano-bench",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "keywords": [
+    "stream-json",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json",
+    "json-parser",
+    "parser",
+    "stream",
+    "streaming",
+    "streaming-json",
+    "sax",
+    "tokenizer",
+    "pipeline",
+    "filter",
+    "jsonc",
+    "web-streams",
+    "large-files",
+    "memory-efficient",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uhop/stream-json.git"
+  },
+  "author": "Eugene Lazutkin <eugene.lazutkin@gmail.com> (https://www.lazutkin.com/)",
+  "funding": "https://github.com/sponsors/uhop",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/uhop/stream-json#readme",
+  "bugs": {
+    "url": "https://github.com/uhop/stream-json/issues"
+  },
+  "llms": "https://raw.githubusercontent.com/uhop/stream-json/master/llms.txt",
+  "llmsFull": "https://raw.githubusercontent.com/uhop/stream-json/master/llms-full.txt",
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md",
+    "llms.txt",
+    "llms-full.txt",
+    "changes.json"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "stream-chain": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "nano-benchmark": "^1.1.0",
+    "prettier": "^3.9.4",
+    "tape-six": "^1.14.0",
+    "tape-six-proc": "^1.3.1",
+    "typescript": "^6.0.3"
+  },
+  "tape6": {
+    "tests": [
+      "/tests/web/test-*.*js"
+    ],
+    "cli": [
+      "/tests/node/test-*.*js"
+    ],
+    "importmap": {
+      "imports": {
+        "tape-six": "/node_modules/tape-six/index.js",
+        "tape-six/": "/node_modules/tape-six/src/",
+        "stream-chain": "/node_modules/stream-chain/src/node/index.js",
+        "stream-chain/node": "/node_modules/stream-chain/src/node/index.js",
+        "stream-chain/web": "/node_modules/stream-chain/src/web/index.js",
+        "stream-chain/core": "/node_modules/stream-chain/src/core/index.js",
+        "stream-chain/": "/node_modules/stream-chain/src/"
+      }
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "stream-json",
+    "originalVersion": "3.5.0",
+    "processedAt": "2026-07-26T01:01:00.257Z",
+    "smokeTest": "passed"
+  }
+}
