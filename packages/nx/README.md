@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.1 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.2 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
 | agent-base | `6.0.2` | `^9.0.0` |
 | ansi-regex | `5.0.1` | `^6.2.2` |
-| ansi-styles | `4.3.0` | `^6.2.3` |
+| ansi-styles | `4.3.0` | `^7.0.0` |
 | argparse | `2.0.1` | `^3.0.0` |
 | asynckit | `0.4.0` | `^0.5.0` |
 | axios | `1.16.1` | `^1.18.1` |
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | bl | `4.1.0` | `^7.0.8` |
 | brace-expansion | `5.0.6` | `^5.0.8` |
 | buffer | `5.7.1` | `^6.0.3` |
-| chalk | `4.1.2` | `^5.6.2` |
+| chalk | `4.1.2` | `^6.0.0` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
 | cli-spinners | `2.6.1` | `^3.4.0` |
 | cliui | `8.0.1` | `^9.0.1` |
@@ -80,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | string-width | `4.2.3` | `^8.2.2` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
-| supports-color | `7.2.0` | `^10.2.2` |
+| supports-color | `7.2.0` | `^11.0.0` |
 | tar-stream | `2.2.0` | `^3.2.0` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.0` |

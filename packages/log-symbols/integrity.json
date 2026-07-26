@@ -16,6 +16,23 @@
       "status": "published",
       "timestamp": "2026-03-19T04:46:47.745Z",
       "version": "7.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "is-unicode-supported": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "yoctocolors": {
+          "from": "^2.1.1",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-26T16:26:44.458Z",
+      "version": "7.0.1-depup.1"
     }
   }
 }

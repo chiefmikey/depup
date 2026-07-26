@@ -12,14 +12,14 @@ npm install @depup/babel-jest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.4.1 | **DepUp version**: 30.4.1-depup.46 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 30.4.1 | **DepUp version**: 30.4.1-depup.47 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | babel-plugin-istanbul | `^7.0.1` | `^8.0.0` |
-| chalk | `^4.1.2` | `^5.6.2` |
+| chalk | `^4.1.2` | `^6.0.0` |
 | slash | `^3.0.0` | `^5.1.0` |
 
 

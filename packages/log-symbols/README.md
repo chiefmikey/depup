@@ -12,14 +12,14 @@ npm install @depup/log-symbols
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 7.0.1 | **DepUp version**: 7.0.1-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | is-unicode-supported | `^2.0.0` | `^2.1.0` |
-| yoctocolors | `^2.1.1` | `^2.1.2` |
+| yoctocolors | `^2.1.1` | `^2.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/log-symbols&labels=bug).

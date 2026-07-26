@@ -12,7 +12,7 @@ npm install @depup/prism-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.5.3 | **DepUp version**: 0.5.3-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 0.5.3 | **DepUp version**: 0.5.3-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @jcubic/lily | `^0.1.0` | `^0.5.0` |
 | prismjs | `^1.22.0` | `^1.30.0` |
-| supports-color | `^7.2.0` | `^10.2.2` |
+| supports-color | `^7.2.0` | `^11.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/prism-cli&labels=bug).

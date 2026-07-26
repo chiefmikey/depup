@@ -12,7 +12,7 @@ npm install @depup/documentation
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.6 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.7 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/parser | `^7.18.11` | `^8.0.4` |
 | @babel/traverse | `^7.18.11` | `^8.0.4` |
 | @babel/types | `^7.18.10` | `^8.0.4` |
-| chalk | `^5.0.1` | `^5.6.2` |
+| chalk | `^5.0.1` | `^6.0.0` |
 | chokidar | `^3.5.3` | `^5.0.0` |
 | diff | `^5.1.0` | `^9.0.0` |
 | git-url-parse | `^13.1.0` | `^16.1.0` |

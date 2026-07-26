@@ -12,13 +12,14 @@ npm install @depup/json-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.0-beta.15 | **DepUp version**: 1.0.0-beta.15-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.0.0-beta.15 | **DepUp version**: 1.0.0-beta.15-depup.3 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @tinyhttp/app | `^3.0.1` | `^3.0.9` |
+| @tinyhttp/app | `^3.0.1` | `^3.0.10` |
+| chalk | `^5.6.2` | `^6.0.0` |
 | dot-prop | `^10.1.0` | `^10.2.0` |
 | eta | `^4.5.0` | `^4.6.0` |
 | milliparsec | `^5.1.0` | `^5.1.1` |

@@ -1,142 +1,5 @@
 {
   "14.0.3": {
-    "2": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.18.10",
-          "to": "^7.29.0"
-        },
-        "@babel/generator": {
-          "from": "^7.18.10",
-          "to": "^7.29.1"
-        },
-        "@babel/parser": {
-          "from": "^7.18.11",
-          "to": "^7.29.2"
-        },
-        "@babel/traverse": {
-          "from": "^7.18.11",
-          "to": "^7.29.0"
-        },
-        "@babel/types": {
-          "from": "^7.18.10",
-          "to": "^7.29.0"
-        },
-        "chalk": {
-          "from": "^5.0.1",
-          "to": "^5.6.2"
-        },
-        "chokidar": {
-          "from": "^3.5.3",
-          "to": "^5.0.0"
-        },
-        "diff": {
-          "from": "^5.1.0",
-          "to": "^9.0.0"
-        },
-        "git-url-parse": {
-          "from": "^13.1.0",
-          "to": "^16.1.0"
-        },
-        "github-slugger": {
-          "from": "1.4.0",
-          "to": "^2.0.0"
-        },
-        "glob": {
-          "from": "^8.0.3",
-          "to": "^13.0.6"
-        },
-        "highlight.js": {
-          "from": "^11.6.0",
-          "to": "^11.11.1"
-        },
-        "ini": {
-          "from": "^3.0.0",
-          "to": "^6.0.0"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^4.1.1"
-        },
-        "lodash": {
-          "from": "^4.17.21",
-          "to": "^4.18.1"
-        },
-        "mdast-util-find-and-replace": {
-          "from": "^2.2.1",
-          "to": "^3.0.2"
-        },
-        "micromark-util-character": {
-          "from": "^1.1.0",
-          "to": "^2.1.1"
-        },
-        "pify": {
-          "from": "^6.0.0",
-          "to": "^6.1.0"
-        },
-        "read-pkg-up": {
-          "from": "^9.1.0",
-          "to": "^11.0.0"
-        },
-        "remark": {
-          "from": "^14.0.2",
-          "to": "^15.0.1"
-        },
-        "remark-gfm": {
-          "from": "^3.0.1",
-          "to": "^4.0.1"
-        },
-        "remark-html": {
-          "from": "^15.0.1",
-          "to": "^16.0.1"
-        },
-        "remark-reference-links": {
-          "from": "^6.0.1",
-          "to": "^7.0.0"
-        },
-        "remark-toc": {
-          "from": "^8.0.1",
-          "to": "^9.0.0"
-        },
-        "resolve": {
-          "from": "^1.22.1",
-          "to": "^1.22.12"
-        },
-        "strip-json-comments": {
-          "from": "^5.0.0",
-          "to": "^5.0.3"
-        },
-        "unist-builder": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        },
-        "unist-util-visit": {
-          "from": "^4.1.0",
-          "to": "^5.1.0"
-        },
-        "vfile": {
-          "from": "^5.3.4",
-          "to": "^6.0.3"
-        },
-        "vfile-reporter": {
-          "from": "^7.0.4",
-          "to": "^8.1.1"
-        },
-        "vfile-sort": {
-          "from": "^3.0.0",
-          "to": "^4.0.0"
-        },
-        "yargs": {
-          "from": "^17.5.1",
-          "to": "^18.0.0"
-        }
-      },
-      "depsUpdated": 32,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-04-13T16:36:16.642Z",
-      "version": "14.0.3-depup.2"
-    },
     "3": {
       "changes": {
         "@babel/core": {
@@ -684,6 +547,143 @@
       "status": "published",
       "timestamp": "2026-07-26T08:50:26.721Z",
       "version": "14.0.3-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.18.10",
+          "to": "^8.0.1"
+        },
+        "@babel/generator": {
+          "from": "^7.18.10",
+          "to": "^8.0.0"
+        },
+        "@babel/parser": {
+          "from": "^7.18.11",
+          "to": "^8.0.4"
+        },
+        "@babel/traverse": {
+          "from": "^7.18.11",
+          "to": "^8.0.4"
+        },
+        "@babel/types": {
+          "from": "^7.18.10",
+          "to": "^8.0.4"
+        },
+        "chalk": {
+          "from": "^5.0.1",
+          "to": "^6.0.0"
+        },
+        "chokidar": {
+          "from": "^3.5.3",
+          "to": "^5.0.0"
+        },
+        "diff": {
+          "from": "^5.1.0",
+          "to": "^9.0.0"
+        },
+        "git-url-parse": {
+          "from": "^13.1.0",
+          "to": "^16.1.0"
+        },
+        "github-slugger": {
+          "from": "1.4.0",
+          "to": "^2.0.0"
+        },
+        "glob": {
+          "from": "^8.0.3",
+          "to": "^13.0.6"
+        },
+        "highlight.js": {
+          "from": "^11.6.0",
+          "to": "^11.11.1"
+        },
+        "ini": {
+          "from": "^3.0.0",
+          "to": "^7.0.0"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^5.2.2"
+        },
+        "lodash": {
+          "from": "^4.17.21",
+          "to": "^4.18.1"
+        },
+        "mdast-util-find-and-replace": {
+          "from": "^2.2.1",
+          "to": "^3.0.2"
+        },
+        "micromark-util-character": {
+          "from": "^1.1.0",
+          "to": "^2.1.1"
+        },
+        "pify": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        },
+        "read-pkg-up": {
+          "from": "^9.1.0",
+          "to": "^11.0.0"
+        },
+        "remark": {
+          "from": "^14.0.2",
+          "to": "^15.0.1"
+        },
+        "remark-gfm": {
+          "from": "^3.0.1",
+          "to": "^4.0.1"
+        },
+        "remark-html": {
+          "from": "^15.0.1",
+          "to": "^16.0.1"
+        },
+        "remark-reference-links": {
+          "from": "^6.0.1",
+          "to": "^7.0.0"
+        },
+        "remark-toc": {
+          "from": "^8.0.1",
+          "to": "^9.0.0"
+        },
+        "resolve": {
+          "from": "^1.22.1",
+          "to": "^1.22.12"
+        },
+        "strip-json-comments": {
+          "from": "^5.0.0",
+          "to": "^5.0.3"
+        },
+        "unist-builder": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        },
+        "unist-util-visit": {
+          "from": "^4.1.0",
+          "to": "^5.1.0"
+        },
+        "vfile": {
+          "from": "^5.3.4",
+          "to": "^6.0.3"
+        },
+        "vfile-reporter": {
+          "from": "^7.0.4",
+          "to": "^8.1.1"
+        },
+        "vfile-sort": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        },
+        "yargs": {
+          "from": "^17.5.1",
+          "to": "^18.1.0"
+        }
+      },
+      "depsUpdated": 32,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T16:24:44.757Z",
+      "version": "14.0.3-depup.7"
     }
   }
 }
