@@ -1,6 +1,6 @@
 {
   "name": "@depup/lost-pixel",
-  "version": "3.22.0-depup.71",
+  "version": "3.22.0-depup.76",
   "description": "GitHub Action for Lost Pixel integration (with updated dependencies)",
   "main": "dist/",
   "bin": "dist/bin.js",
@@ -73,20 +73,20 @@
     "esbuild": "^0.28.1",
     "execa": "^10.0.0",
     "form-data": "^4.0.6",
-    "fs-extra": "^11.3.6",
+    "fs-extra": "^11.4.0",
     "get-port-please": "^3.2.0",
     "lodash.get": "4.4.2",
     "lodash.kebabcase": "4.1.1",
-    "odiff-bin": "^4.3.8",
+    "odiff-bin": "^4.5.0",
     "pixelmatch": "^7.2.0",
-    "playwright-core": "^1.61.1",
+    "playwright-core": "^1.62.0",
     "pngjs": "7.0.0",
-    "posthog-node": "^5.46.0",
+    "posthog-node": "^5.46.1",
     "serve-handler": "^6.1.7",
     "shelljs": "^0.10.0",
     "ts-node": "10.9.2",
     "xml2js": "^0.6.2",
-    "yargs": "^18.0.0",
+    "yargs": "^18.1.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -166,7 +166,7 @@
       },
       "fs-extra": {
         "from": "11.2.0",
-        "to": "^11.3.6"
+        "to": "^11.4.0"
       },
       "get-port-please": {
         "from": "3.1.2",
@@ -174,7 +174,7 @@
       },
       "odiff-bin": {
         "from": "2.6.1",
-        "to": "^4.3.8"
+        "to": "^4.5.0"
       },
       "pixelmatch": {
         "from": "5.3.0",
@@ -182,11 +182,11 @@
       },
       "playwright-core": {
         "from": "1.47.2",
-        "to": "^1.61.1"
+        "to": "^1.62.0"
       },
       "posthog-node": {
         "from": "3.5.0",
-        "to": "^5.46.0"
+        "to": "^5.46.1"
       },
       "serve-handler": {
         "from": "6.1.6",
@@ -198,7 +198,7 @@
       },
       "yargs": {
         "from": "17.7.2",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       },
       "zod": {
         "from": "3.23.8",
@@ -208,7 +208,7 @@
     "depsUpdated": 15,
     "originalPackage": "lost-pixel",
     "originalVersion": "3.22.0",
-    "processedAt": "2026-07-21T16:18:27.804Z",
+    "processedAt": "2026-07-26T08:49:47.636Z",
     "smokeTest": "failed"
   }
 }

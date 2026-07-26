@@ -12,7 +12,7 @@ npm install @depup/nconf
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.13.0 | **DepUp version**: 0.13.0-depup.24 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 0.13.0 | **DepUp version**: 0.13.0-depup.25 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | async | `^3.0.0` | `^3.2.6` |
 | ini | `^2.0.0` | `^7.0.0` |
-| yargs | `^16.1.1` | `^18.0.0` |
+| yargs | `^16.1.1` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nconf&labels=bug).

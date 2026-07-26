@@ -12,7 +12,7 @@ npm install @depup/c8
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,6 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | istanbul-lib-coverage | `^3.2.0` | `^3.2.2` |
 | istanbul-reports | `^3.1.6` | `^3.2.0` |
 | v8-to-istanbul | `^9.0.0` | `^9.3.0` |
+| yargs | `^18.0.0` | `^18.1.0` |
 | yargs-parser | `^21.1.1` | `^22.0.0` |
 
 

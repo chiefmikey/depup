@@ -1,7 +1,7 @@
 {
   "name": "@depup/nconf",
   "description": "Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging. (with updated dependencies)",
-  "version": "0.13.0-depup.20",
+  "version": "0.13.0-depup.25",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
   "contributors": [
     "Matt Hamann <matthew.hamann@gmail.com>",
@@ -28,7 +28,7 @@
     "async": "^3.2.6",
     "ini": "^7.0.0",
     "secure-keys": "^1.0.0",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^7.0.2",
@@ -63,13 +63,13 @@
       },
       "yargs": {
         "from": "^16.1.1",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 3,
     "originalPackage": "nconf",
     "originalVersion": "0.13.0",
-    "processedAt": "2026-06-15T10:54:03.559Z",
+    "processedAt": "2026-07-26T08:50:47.135Z",
     "smokeTest": "passed"
   }
 }
