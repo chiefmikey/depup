@@ -12,7 +12,7 @@ npm install @depup/eslint__eslintrc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.6 | **DepUp version**: 3.3.6-depup.4 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 3.3.6 | **DepUp version**: 3.3.6-depup.5 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,10 +21,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ajv | `^6.14.0` | `^8.20.0` |
 | debug | `^4.3.2` | `^4.4.3` |
 | espree | `^10.0.1` | `^11.2.0` |
-| globals | `^14.0.0` | `^17.7.0` |
+| globals | `^14.0.0` | `^17.8.0` |
 | ignore | `^5.2.0` | `^7.0.6` |
 | import-fresh | `^3.2.1` | `^4.0.0` |
-| js-yaml | `^4.3.0` | `^5.2.1` |
+| js-yaml | `^4.3.0` | `^5.2.2` |
 | minimatch | `^3.1.5` | `^10.2.5` |
 | strip-json-comments | `^3.1.1` | `^5.0.3` |
 
