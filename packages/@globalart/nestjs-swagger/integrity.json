@@ -111,5 +111,20 @@
       "timestamp": "2026-07-21T19:28:34.025Z",
       "version": "4.0.7-depup.1"
     }
+  },
+  "4.0.8": {
+    "0": {
+      "changes": {
+        "@globalart/nestjs-zod": {
+          "from": "4.0.7",
+          "to": "^4.0.8"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T01:09:36.746Z",
+      "version": "4.0.8-depup.0"
+    }
   }
 }

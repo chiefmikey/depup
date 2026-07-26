@@ -12,11 +12,14 @@ npm install @depup/globalart__nestjs-swagger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.7 | **DepUp version**: 4.0.7-depup.1 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 4.0.8 | **DepUp version**: 4.0.8-depup.0 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @globalart/nestjs-zod | `4.0.7` | `^4.0.8` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/globalart__nestjs-swagger&labels=bug).
 
