@@ -1,7 +1,7 @@
 {
   "name": "@depup/electron-builder",
   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box (with updated dependencies)",
-  "version": "26.15.3-depup.9",
+  "version": "26.15.3-depup.14",
   "main": "out/index.js",
   "files": [
     "out",
@@ -61,10 +61,10 @@
   "dependencies": {
     "chalk": "^5.6.2",
     "ci-info": "^4.4.0",
-    "fs-extra": "^11.3.5",
+    "fs-extra": "^11.4.0",
     "lazy-val": "^1.0.5",
     "simple-update-notifier": "2.0.0",
-    "yargs": "^18.0.0",
+    "yargs": "^18.1.0",
     "app-builder-lib": "26.15.3",
     "builder-util-runtime": "9.7.0",
     "dmg-builder": "26.15.3",
@@ -87,17 +87,17 @@
       },
       "fs-extra": {
         "from": "^10.1.0",
-        "to": "^11.3.5"
+        "to": "^11.4.0"
       },
       "yargs": {
         "from": "^17.6.2",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 4,
     "originalPackage": "electron-builder",
     "originalVersion": "26.15.3",
-    "processedAt": "2026-06-15T18:14:45.331Z",
+    "processedAt": "2026-07-26T08:50:11.444Z",
     "smokeTest": "passed"
   }
 }

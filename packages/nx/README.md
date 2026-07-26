@@ -12,14 +12,14 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.1 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @emnapi/core | `1.4.5` | `^1.11.2` |
-| @emnapi/runtime | `1.4.5` | `^1.11.2` |
+| @emnapi/core | `1.4.5` | `^1.11.3` |
+| @emnapi/runtime | `1.4.5` | `^1.11.3` |
 | @emnapi/wasi-threads | `1.0.4` | `^2.0.1` |
 | @jest/diff-sequences | `30.0.1` | `^30.4.0` |
 | @napi-rs/wasm-runtime | `0.2.4` | `^1.1.6` |
@@ -32,8 +32,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | asynckit | `0.4.0` | `^0.5.0` |
 | axios | `1.16.1` | `^1.18.1` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.7` |
-| brace-expansion | `5.0.6` | `^5.0.7` |
+| bl | `4.1.0` | `^7.0.8` |
+| brace-expansion | `5.0.6` | `^5.0.8` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^5.6.2` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -41,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cliui | `8.0.1` | `^9.0.1` |
 | clone | `1.0.4` | `^2.1.2` |
 | color-convert | `2.0.1` | `^3.1.3` |
-| color-name | `1.1.4` | `^2.1.0` |
+| color-name | `1.1.4` | `^2.1.1` |
 | defaults | `1.0.4` | `^3.0.0` |
 | define-lazy-prop | `2.0.0` | `^3.0.0` |
 | dotenv | `16.4.7` | `^17.4.2` |
@@ -76,7 +76,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | restore-cursor | `3.1.0` | `^5.1.0` |
 | semver | `7.8.4` | `^7.8.5` |
 | signal-exit | `3.0.7` | `^4.1.0` |
-| smol-toml | `1.6.1` | `^1.7.0` |
+| smol-toml | `1.6.1` | `^1.7.1` |
 | string-width | `4.2.3` | `^8.2.2` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
@@ -84,7 +84,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tar-stream | `2.2.0` | `^3.2.0` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.0` |
-| yargs | `17.7.2` | `^18.0.0` |
+| yargs | `17.7.2` | `^18.1.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |
 
 

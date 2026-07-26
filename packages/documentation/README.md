@@ -12,7 +12,7 @@ npm install @depup/documentation
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.5 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.6 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -31,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | glob | `^8.0.3` | `^13.0.6` |
 | highlight.js | `^11.6.0` | `^11.11.1` |
 | ini | `^3.0.0` | `^7.0.0` |
-| js-yaml | `^4.1.0` | `^5.2.1` |
+| js-yaml | `^4.1.0` | `^5.2.2` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | mdast-util-find-and-replace | `^2.2.1` | `^3.0.2` |
 | micromark-util-character | `^1.1.0` | `^2.1.1` |
@@ -49,7 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | vfile | `^5.3.4` | `^6.0.3` |
 | vfile-reporter | `^7.0.4` | `^8.1.1` |
 | vfile-sort | `^3.0.0` | `^4.0.0` |
-| yargs | `^17.5.1` | `^18.0.0` |
+| yargs | `^17.5.1` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/documentation&labels=bug).

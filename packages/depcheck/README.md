@@ -12,7 +12,7 @@ npm install @depup/depcheck
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.4 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.5 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -26,14 +26,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | ignore | `^5.2.4` | `^7.0.6` |
 | is-core-module | `^2.12.0` | `^2.16.2` |
-| js-yaml | `^3.14.1` | `^5.2.1` |
+| js-yaml | `^3.14.1` | `^5.2.2` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | minimatch | `^7.4.6` | `^10.2.5` |
 | multimatch | `^5.0.0` | `^8.0.0` |
 | readdirp | `^3.6.0` | `^5.0.0` |
 | resolve | `^1.22.3` | `^1.22.12` |
 | semver | `^7.5.4` | `^7.8.5` |
-| yargs | `^16.2.0` | `^18.0.0` |
+| yargs | `^16.2.0` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/depcheck&labels=bug).
