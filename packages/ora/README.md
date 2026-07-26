@@ -12,12 +12,13 @@ npm install @depup/ora
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.4.1 | **DepUp version**: 9.4.1-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 9.4.1 | **DepUp version**: 9.4.1-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| chalk | `^5.6.2` | `^6.0.0` |
 | cli-spinners | `^3.2.0` | `^3.4.0` |
 | string-width | `^8.1.0` | `^8.2.2` |
 

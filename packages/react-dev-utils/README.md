@@ -12,7 +12,7 @@ npm install @depup/react-dev-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.1 | **DepUp version**: 12.0.1-depup.2 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 12.0.1 | **DepUp version**: 12.0.1-depup.3 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/code-frame | `^7.16.0` | `^8.0.0` |
 | address | `^1.1.2` | `^2.0.3` |
-| browserslist | `^4.18.1` | `^4.28.6` |
-| chalk | `^4.1.2` | `^5.6.2` |
+| browserslist | `^4.18.1` | `^4.28.7` |
+| chalk | `^4.1.2` | `^6.0.0` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
 | filesize | `^8.0.6` | `^11.0.22` |

@@ -1,0 +1,106 @@
+{
+  "name": "@depup/make",
+  "version": "0.8.1-depup.2",
+  "description": "Make like Task runner (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel lib -d src && mocha -R spec",
+    "babel": "babel lib -d src"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-regenerator": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.10.2",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "mocha": "^2.5.2",
+    "standard-version": "^2.2.1",
+    "watchd": "github:mklabs/watchd",
+    "gentle-cli": "^1.0.3"
+  },
+  "bin": {
+    "make": "bin/make.js",
+    "make-init": "bin/make-init.js"
+  },
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "debug": "^4.4.3",
+    "jsonlint": "^1.6.3",
+    "log-symbols": "^7.0.1",
+    "minimist": "^1.2.8",
+    "npmlog": "^7.0.1",
+    "request": "^2.88.2",
+    "template-copy": "^1.1.2",
+    "unzip": "^0.1.11",
+    "which": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mklabs/make.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mklabs/make/issues"
+  },
+  "homepage": "https://github.com/mklabs/make#readme",
+  "keywords": [
+    "make",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "build",
+    "tool",
+    "task",
+    "cli",
+    "runner"
+  ],
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^1.1.3",
+        "to": "^6.0.0"
+      },
+      "debug": {
+        "from": "^2.2.0",
+        "to": "^4.4.3"
+      },
+      "jsonlint": {
+        "from": "^1.6.2",
+        "to": "^1.6.3"
+      },
+      "log-symbols": {
+        "from": "^1.0.2",
+        "to": "^7.0.1"
+      },
+      "minimist": {
+        "from": "^1.2.0",
+        "to": "^1.2.8"
+      },
+      "npmlog": {
+        "from": "^2.0.3",
+        "to": "^7.0.1"
+      },
+      "request": {
+        "from": "^2.72.0",
+        "to": "^2.88.2"
+      },
+      "template-copy": {
+        "from": "^1.1.1",
+        "to": "^1.1.2"
+      },
+      "which": {
+        "from": "^1.2.9",
+        "to": "^7.0.0"
+      }
+    },
+    "depsUpdated": 9,
+    "originalPackage": "make",
+    "originalVersion": "0.8.1",
+    "processedAt": "2026-07-26T16:25:17.646Z",
+    "smokeTest": "passed"
+  }
+}

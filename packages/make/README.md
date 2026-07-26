@@ -12,13 +12,13 @@ npm install @depup/make
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.8.1 | **DepUp version**: 0.8.1-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 0.8.1 | **DepUp version**: 0.8.1-depup.2 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^1.1.3` | `^5.6.2` |
+| chalk | `^1.1.3` | `^6.0.0` |
 | debug | `^2.2.0` | `^4.4.3` |
 | jsonlint | `^1.6.2` | `^1.6.3` |
 | log-symbols | `^1.0.2` | `^7.0.1` |

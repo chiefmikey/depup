@@ -12,13 +12,13 @@ npm install @depup/expo__image-utils
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.11.4 | **DepUp version**: 0.11.4-depup.0 | **Updated**: 7/22/2026 | **Import test**: passed
+**Original version**: 0.11.4 | **DepUp version**: 0.11.4-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^4.0.0` | `^5.6.2` |
+| chalk | `^4.0.0` | `^6.0.0` |
 | semver | `^7.6.0` | `^7.8.5` |
 
 

@@ -12,15 +12,15 @@ npm install @depup/elasticsearch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.7.3 | **DepUp version**: 16.7.3-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 16.7.3 | **DepUp version**: 16.7.3-depup.2 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | agentkeepalive | `^3.4.1` | `^4.6.0` |
-| chalk | `^1.0.0` | `^5.6.2` |
-| lodash | `^4.17.10` | `^4.18.0` |
+| chalk | `^1.0.0` | `^6.0.0` |
+| lodash | `^4.17.10` | `^4.18.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/elasticsearch&labels=bug).

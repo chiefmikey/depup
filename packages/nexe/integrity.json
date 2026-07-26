@@ -1,54 +1,5 @@
 {
   "5.0.0-beta.4": {
-    "2": {
-      "changes": {
-        "@yarnpkg/fslib": {
-          "from": "^3.0.0-rc.43",
-          "to": "^3.1.5"
-        },
-        "@yarnpkg/libzip": {
-          "from": "^3.0.0-rc.43",
-          "to": "^3.2.2"
-        },
-        "archiver": {
-          "from": "^5.3.1",
-          "to": "^7.0.1"
-        },
-        "chalk": {
-          "from": "^2.4.2",
-          "to": "^5.6.2"
-        },
-        "globby": {
-          "from": "^11.0.2",
-          "to": "^16.2.0"
-        },
-        "got": {
-          "from": "^12.6.0",
-          "to": "^15.0.0"
-        },
-        "meriyah": {
-          "from": "^4.3.5",
-          "to": "^7.1.0"
-        },
-        "mkdirp": {
-          "from": "^1.0.4",
-          "to": "^3.0.1"
-        },
-        "ora": {
-          "from": "^3.4.0",
-          "to": "^9.3.0"
-        },
-        "rimraf": {
-          "from": "^3.0.2",
-          "to": "^6.1.3"
-        }
-      },
-      "depsUpdated": 10,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-04-01T20:23:40.623Z",
-      "version": "5.0.0-beta.4-depup.2"
-    },
     "3": {
       "changes": {
         "@yarnpkg/fslib": {
@@ -244,6 +195,55 @@
       "status": "published",
       "timestamp": "2026-07-24T08:54:55.302Z",
       "version": "5.0.0-beta.4-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@yarnpkg/fslib": {
+          "from": "^3.0.0-rc.43",
+          "to": "^3.1.5"
+        },
+        "@yarnpkg/libzip": {
+          "from": "^3.0.0-rc.43",
+          "to": "^3.2.2"
+        },
+        "archiver": {
+          "from": "^5.3.1",
+          "to": "^8.0.0"
+        },
+        "chalk": {
+          "from": "^2.4.2",
+          "to": "^6.0.0"
+        },
+        "globby": {
+          "from": "^11.0.2",
+          "to": "^16.2.2"
+        },
+        "got": {
+          "from": "^12.6.0",
+          "to": "^15.1.0"
+        },
+        "meriyah": {
+          "from": "^4.3.5",
+          "to": "^7.2.0"
+        },
+        "mkdirp": {
+          "from": "^1.0.4",
+          "to": "^3.0.1"
+        },
+        "ora": {
+          "from": "^3.4.0",
+          "to": "^9.4.1"
+        },
+        "rimraf": {
+          "from": "^3.0.2",
+          "to": "^6.1.3"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T16:25:28.191Z",
+      "version": "5.0.0-beta.4-depup.7"
     }
   }
 }

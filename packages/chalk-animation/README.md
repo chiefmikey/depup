@@ -12,13 +12,13 @@ npm install @depup/chalk-animation
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.3 | **DepUp version**: 2.0.3-depup.52 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 2.0.3 | **DepUp version**: 2.0.3-depup.53 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^4.1.2` | `^5.6.2` |
+| chalk | `^4.1.2` | `^6.0.0` |
 | gradient-string | `^2.0.2` | `^3.0.0` |
 | meow | `^10.1.2` | `^14.1.0` |
 

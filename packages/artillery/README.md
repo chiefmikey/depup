@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.33 | **Updated**: 7/25/2026 | **Import test**: failed
+**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.34 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,12 +33,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/storage-blob | `^12.30.0` | `^12.33.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.31.0` |
 | @oclif/core | `^4.8.0` | `^4.13.0` |
-| @oclif/plugin-help | `^6.2.36` | `^6.2.53` |
-| @oclif/plugin-not-found | `^3.2.73` | `^3.2.88` |
+| @oclif/plugin-help | `^6.2.36` | `^6.2.55` |
+| @oclif/plugin-not-found | `^3.2.73` | `^3.2.90` |
 | @smithy/core | `^3.24.0` | `^3.30.0` |
 | @upstash/redis | `^1.36.1` | `^1.38.0` |
 | async | `^2.6.4` | `^3.2.6` |
-| chalk | `^2.4.2` | `^5.6.2` |
+| chalk | `^2.4.2` | `^6.0.0` |
 | chokidar | `^3.6.0` | `^5.0.0` |
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^7.0.1` |
