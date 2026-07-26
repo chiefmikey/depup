@@ -2,7 +2,7 @@
   "bumped": {
     "@npmcli/arborist": {
       "from": "9.1.6",
-      "to": "^9.8.0"
+      "to": "^10.0.1"
     },
     "@npmcli/package-json": {
       "from": "7.0.2",
@@ -10,11 +10,11 @@
     },
     "@npmcli/run-script": {
       "from": "10.0.3",
-      "to": "^10.0.4"
+      "to": "^11.0.0"
     },
     "@nx/devkit": {
       "from": ">=21.5.2 < 23.0.0",
-      "to": "^22.7.5"
+      "to": "^23.1.0"
     },
     "@octokit/rest": {
       "from": "20.1.2",
@@ -38,11 +38,11 @@
     },
     "cmd-shim": {
       "from": "6.0.3",
-      "to": "^9.0.1"
+      "to": "^9.0.2"
     },
     "conventional-changelog-angular": {
       "from": "7.0.0",
-      "to": "^8.3.1"
+      "to": "^9.2.1"
     },
     "conventional-changelog-core": {
       "from": "5.0.1",
@@ -50,7 +50,7 @@
     },
     "conventional-recommended-bump": {
       "from": "7.0.1",
-      "to": "^11.2.0"
+      "to": "^12.1.0"
     },
     "cosmiconfig": {
       "from": "9.0.0",
@@ -66,11 +66,11 @@
     },
     "execa": {
       "from": "5.0.0",
-      "to": "^9.6.1"
+      "to": "^10.0.0"
     },
     "fs-extra": {
       "from": "^11.2.0",
-      "to": "^11.3.5"
+      "to": "^11.4.0"
     },
     "get-stream": {
       "from": "6.0.0",
@@ -106,11 +106,15 @@
     },
     "js-yaml": {
       "from": "4.1.1",
-      "to": "^4.2.0"
+      "to": "^5.2.2"
+    },
+    "libnpmaccess": {
+      "from": "10.0.3",
+      "to": "^11.0.0"
     },
     "libnpmpublish": {
       "from": "11.1.2",
-      "to": "^11.2.0"
+      "to": "^12.0.0"
     },
     "load-json-file": {
       "from": "6.2.0",
@@ -118,7 +122,7 @@
     },
     "make-fetch-happen": {
       "from": "15.0.2",
-      "to": "^15.0.6"
+      "to": "^16.0.1"
     },
     "minimatch": {
       "from": "3.1.4",
@@ -130,7 +134,7 @@
     },
     "npm-packlist": {
       "from": "10.0.3",
-      "to": "^11.2.0"
+      "to": "^11.3.0"
     },
     "npm-registry-fetch": {
       "from": "19.1.0",
@@ -138,11 +142,11 @@
     },
     "nx": {
       "from": ">=21.5.3 < 23.0.0",
-      "to": "^22.7.5"
+      "to": "^23.1.0"
     },
     "p-map": {
       "from": "4.0.0",
-      "to": "^7.0.4"
+      "to": "^7.0.6"
     },
     "p-map-series": {
       "from": "2.1.0",
@@ -154,7 +158,7 @@
     },
     "p-queue": {
       "from": "6.6.2",
-      "to": "^9.3.0"
+      "to": "^9.3.3"
     },
     "p-reduce": {
       "from": "2.1.0",
@@ -166,7 +170,7 @@
     },
     "pacote": {
       "from": "21.0.1",
-      "to": "^21.5.1"
+      "to": "^22.0.0"
     },
     "read-cmd-shim": {
       "from": "4.0.0",
@@ -174,7 +178,7 @@
     },
     "semver": {
       "from": "7.7.2",
-      "to": "^7.8.4"
+      "to": "^7.8.5"
     },
     "signal-exit": {
       "from": "3.0.7",
@@ -190,11 +194,11 @@
     },
     "string-width": {
       "from": "^4.2.3",
-      "to": "^8.2.1"
+      "to": "^8.2.2"
     },
     "tar": {
       "from": "7.5.11",
-      "to": "^7.5.16"
+      "to": "^7.5.22"
     },
     "tinyglobby": {
       "from": "0.2.12",
@@ -202,11 +206,11 @@
     },
     "typescript": {
       "from": ">=3 < 6",
-      "to": "^6.0.3"
+      "to": "^7.0.2"
     },
     "upath": {
       "from": "2.0.1",
-      "to": "^3.0.7"
+      "to": "^3.0.8"
     },
     "validate-npm-package-name": {
       "from": "6.0.2",
@@ -218,13 +222,13 @@
     },
     "yargs": {
       "from": "17.7.2",
-      "to": "^18.0.0"
+      "to": "^18.1.0"
     },
     "yargs-parser": {
       "from": "21.1.1",
       "to": "^22.0.0"
     }
   },
-  "timestamp": "2026-06-15T18:17:20.211Z",
-  "totalUpdated": 56
+  "timestamp": "2026-07-26T08:50:07.391Z",
+  "totalUpdated": 57
 }

@@ -12,7 +12,7 @@ npm install @depup/qrcode
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.5.4 | **DepUp version**: 1.5.4-depup.55 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 1.5.4 | **DepUp version**: 1.5.4-depup.56 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | dijkstrajs | `^1.0.1` | `^1.0.3` |
 | pngjs | `^5.0.0` | `^7.0.0` |
-| yargs | `^15.3.1` | `^18.0.0` |
+| yargs | `^15.3.1` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/qrcode&labels=bug).

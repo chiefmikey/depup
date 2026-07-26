@@ -1,6 +1,6 @@
 {
   "name": "@depup/hexo",
-  "version": "8.1.2-depup.52",
+  "version": "8.1.2-depup.57",
   "description": "A fast, simple & powerful blog framework, powered by Node.js. (with updated dependencies)",
   "main": "dist/hexo",
   "bin": {
@@ -50,19 +50,19 @@
     "abbrev": "^5.0.0",
     "bluebird": "^3.7.2",
     "fast-archy": "^1.0.0",
-    "fast-text-table": "^1.0.1",
+    "fast-text-table": "^1.1.0",
     "hexo-cli": "^4.3.2",
     "hexo-front-matter": "^5.0.0",
     "hexo-fs": "^5.0.1",
     "hexo-i18n": "^2.0.0",
     "hexo-log": "^4.1.0",
     "hexo-util": "^4.0.0",
-    "js-yaml": "^5.2.1",
+    "js-yaml": "^5.2.2",
     "js-yaml-js-types": "^1.0.1",
     "micromatch": "^4.0.8",
     "moize": "^6.1.7",
     "moment": "^2.30.1",
-    "moment-timezone": "^0.6.2",
+    "moment-timezone": "^0.6.3",
     "nunjucks": "^3.2.4",
     "picocolors": "^1.1.1",
     "pretty-hrtime": "^1.0.3",
@@ -106,6 +106,10 @@
         "from": "^3.0.0",
         "to": "^5.0.0"
       },
+      "fast-text-table": {
+        "from": "^1.0.1",
+        "to": "^1.1.0"
+      },
       "hexo-front-matter": {
         "from": "^4.2.1",
         "to": "^5.0.0"
@@ -116,7 +120,7 @@
       },
       "js-yaml": {
         "from": "^4.1.0",
-        "to": "^5.2.1"
+        "to": "^5.2.2"
       },
       "moize": {
         "from": "^6.1.6",
@@ -124,7 +128,7 @@
       },
       "moment-timezone": {
         "from": "^0.5.46",
-        "to": "^0.6.2"
+        "to": "^0.6.3"
       },
       "strip-ansi": {
         "from": "^7.1.0",
@@ -135,10 +139,10 @@
         "to": "^3.0.0"
       }
     },
-    "depsUpdated": 8,
+    "depsUpdated": 9,
     "originalPackage": "hexo",
     "originalVersion": "8.1.2",
-    "processedAt": "2026-07-11T00:33:48.780Z",
+    "processedAt": "2026-07-26T08:50:25.372Z",
     "smokeTest": "passed"
   }
 }

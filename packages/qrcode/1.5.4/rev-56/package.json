@@ -1,7 +1,7 @@
 {
   "name": "@depup/qrcode",
   "description": "QRCode / 2d Barcode api with both server side and client side support using canvas (with updated dependencies)",
-  "version": "1.5.4-depup.51",
+  "version": "1.5.4-depup.56",
   "author": "Ryan Day <soldair@gmail.com>",
   "contributors": [
     "Vincenzo Greco <greco.vincenzo@gmail.com>",
@@ -46,7 +46,7 @@
   "dependencies": {
     "dijkstrajs": "^1.0.3",
     "pngjs": "^7.0.0",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -92,13 +92,13 @@
       },
       "yargs": {
         "from": "^15.3.1",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 3,
     "originalPackage": "qrcode",
     "originalVersion": "1.5.4",
-    "processedAt": "2026-07-12T00:40:55.138Z",
+    "processedAt": "2026-07-26T08:51:46.521Z",
     "smokeTest": "passed"
   }
 }

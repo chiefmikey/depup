@@ -1,7 +1,7 @@
 {
   "name": "@depup/jest-cli",
   "description": "Delightful JavaScript Testing. (with updated dependencies)",
-  "version": "30.4.2-depup.51",
+  "version": "30.4.2-depup.56",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "exports": {
@@ -24,7 +24,7 @@
     "jest-config": "30.4.2",
     "jest-util": "30.4.1",
     "jest-validate": "30.4.1",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@types/yargs": "^17.0.33"
@@ -94,13 +94,13 @@
       },
       "yargs": {
         "from": "^17.7.2",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "jest-cli",
     "originalVersion": "30.4.2",
-    "processedAt": "2026-07-11T00:35:09.533Z",
+    "processedAt": "2026-07-26T08:50:17.292Z",
     "smokeTest": "passed"
   }
 }

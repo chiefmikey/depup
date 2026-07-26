@@ -202,43 +202,6 @@
     }
   },
   "8.0.1": {
-    "50": {
-      "changes": {
-        "@vercel/nft": {
-          "from": "^1.5.0",
-          "to": "^1.10.2"
-        },
-        "acorn": {
-          "from": "^8.16.0",
-          "to": "^8.17.0"
-        },
-        "cli-truncate": {
-          "from": "^6.0.0",
-          "to": "^6.1.1"
-        },
-        "globby": {
-          "from": "^16.2.0",
-          "to": "^16.2.1"
-        },
-        "p-map": {
-          "from": "^7.0.4",
-          "to": "^7.0.5"
-        },
-        "picomatch": {
-          "from": "^4.0.4",
-          "to": "^4.0.5"
-        },
-        "write-file-atomic": {
-          "from": "^7.0.1",
-          "to": "^8.0.0"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:28:25.541Z",
-      "version": "8.0.1-depup.50"
-    },
     "51": {
       "changes": {
         "@vercel/nft": {
@@ -386,6 +349,47 @@
       "status": "published",
       "timestamp": "2026-07-21T16:10:48.434Z",
       "version": "8.0.1-depup.54"
+    },
+    "55": {
+      "changes": {
+        "@vercel/nft": {
+          "from": "^1.5.0",
+          "to": "^1.10.2"
+        },
+        "acorn": {
+          "from": "^8.16.0",
+          "to": "^8.17.0"
+        },
+        "cli-truncate": {
+          "from": "^6.0.0",
+          "to": "^6.1.1"
+        },
+        "globby": {
+          "from": "^16.2.0",
+          "to": "^16.2.2"
+        },
+        "p-map": {
+          "from": "^7.0.4",
+          "to": "^7.0.6"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        },
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "yargs": {
+          "from": "^18.0.0",
+          "to": "^18.1.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T08:50:04.862Z",
+      "version": "8.0.1-depup.55"
     }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/angular__compiler-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.0.8 | **DepUp version**: 22.0.8-depup.0 | **Updated**: 7/22/2026 | **Import test**: passed
+**Original version**: 22.0.8 | **DepUp version**: 22.0.8-depup.1 | **Updated**: 7/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,6 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | convert-source-map | `^1.5.1` | `^2.0.0` |
 | semver | `^7.0.0` | `^7.8.5` |
 | tslib | `^2.3.0` | `^2.8.1` |
+| yargs | `^18.0.0` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular__compiler-cli&labels=bug).
