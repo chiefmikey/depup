@@ -12,7 +12,7 @@ npm install @depup/react-native-reanimated
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 4.5.3 | **DepUp version**: 4.5.3-depup.0 | **Updated**: 7/26/2026 | **Import test**: failed
 
 ## What changed
 

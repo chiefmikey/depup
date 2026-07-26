@@ -573,6 +573,27 @@
       "status": "failed",
       "timestamp": "2026-07-21T17:03:38.347Z",
       "version": "8.1.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "lightningcss": {
+          "from": "^1.32.0",
+          "to": "^1.33.0"
+        },
+        "postcss": {
+          "from": "^8.5.17",
+          "to": "^8.5.23"
+        },
+        "rolldown": {
+          "from": "~1.1.5",
+          "to": "^1.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T01:07:08.167Z",
+      "version": "8.1.5-depup.1"
     }
   }
 }

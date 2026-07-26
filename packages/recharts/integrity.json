@@ -752,5 +752,44 @@
       "timestamp": "2026-07-21T16:45:20.544Z",
       "version": "3.10.0-depup.0"
     }
+  },
+  "3.10.1": {
+    "0": {
+      "changes": {
+        "@reduxjs/toolkit": {
+          "from": "^1.9.0 || 2.x.x",
+          "to": "^2.12.0"
+        },
+        "es-toolkit": {
+          "from": "^1.39.3",
+          "to": "^1.50.0"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "immer": {
+          "from": "^11.1.8",
+          "to": "^11.1.15"
+        },
+        "react-redux": {
+          "from": "8.x.x || 9.x.x",
+          "to": "^9.3.0"
+        },
+        "use-sync-external-store": {
+          "from": "^1.2.2",
+          "to": "^1.6.0"
+        },
+        "victory-vendor": {
+          "from": "^37.0.2",
+          "to": "^37.3.6"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-26T01:02:34.179Z",
+      "version": "3.10.1-depup.0"
+    }
   }
 }

@@ -354,5 +354,24 @@
       "timestamp": "2026-07-21T16:53:02.053Z",
       "version": "7.5.20-depup.2"
     }
+  },
+  "7.5.22": {
+    "0": {
+      "changes": {
+        "@isaacs/fs-minipass": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        },
+        "minipass": {
+          "from": "^7.1.2",
+          "to": "^7.1.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-26T01:04:31.166Z",
+      "version": "7.5.22-depup.0"
+    }
   }
 }
