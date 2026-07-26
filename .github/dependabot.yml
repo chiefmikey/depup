@@ -16,6 +16,9 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "chore"
+    ignore:
+      - dependency-name: "stylelint"
+        update-types: ["version-update:semver-major"]
     groups:
       npm:
         patterns:
