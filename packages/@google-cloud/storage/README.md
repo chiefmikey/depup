@@ -12,14 +12,14 @@ npm install @depup/google-cloud__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.21.0 | **DepUp version**: 7.21.0-depup.29 | **Updated**: 7/24/2026 | **Import test**: passed
+**Original version**: 7.21.0 | **DepUp version**: 7.21.0-depup.30 | **Updated**: 7/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @google-cloud/paginator | `^5.0.0` | `^6.1.0` |
-| @google-cloud/projectify | `^4.0.0` | `^5.1.0` |
+| @google-cloud/projectify | `^4.0.0` | `^5.2.0` |
 | @google-cloud/promisify | `<4.1.0` | `^5.1.0` |
 | fast-xml-parser | `^5.3.4` | `^5.10.1` |
 | gaxios | `^6.0.2` | `^7.3.0` |
