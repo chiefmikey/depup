@@ -540,6 +540,27 @@
       "status": "published",
       "timestamp": "2026-07-22T00:37:20.912Z",
       "version": "43.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@electron-internal/extract-zip": {
+          "from": "^1.0.1",
+          "to": "^1.0.4"
+        },
+        "@electron/get": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^26.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-27T09:08:00.642Z",
+      "version": "43.2.0-depup.1"
     }
   }
 }

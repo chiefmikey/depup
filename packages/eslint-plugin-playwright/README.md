@@ -12,7 +12,7 @@ npm install @depup/eslint-plugin-playwright
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.5 | **DepUp version**: 2.10.5-depup.9 | **Updated**: 7/27/2026 | **Import test**: passed
+**Original version**: 2.11.0 | **DepUp version**: 2.11.0-depup.0 | **Updated**: 7/27/2026 | **Import test**: passed
 
 ## What changed
 
