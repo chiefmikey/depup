@@ -200,6 +200,19 @@
       "status": "published",
       "timestamp": "2026-07-21T16:14:04.139Z",
       "version": "6.4.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "globals": {
+          "from": "^17.7.0",
+          "to": "^17.8.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-27T00:40:59.998Z",
+      "version": "6.4.3-depup.1"
     }
   }
 }
