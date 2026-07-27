@@ -166,19 +166,6 @@
     }
   },
   "5.2.2": {
-    "5": {
-      "changes": {
-        "argparse": {
-          "from": "^2.0.1",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-25T16:20:19.775Z",
-      "version": "5.2.2-depup.5"
-    },
     "6": {
       "changes": {
         "argparse": {
@@ -230,6 +217,19 @@
       "status": "failed",
       "timestamp": "2026-07-27T00:41:11.736Z",
       "version": "5.2.2-depup.9"
+    },
+    "10": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-07-27T09:09:12.989Z",
+      "version": "5.2.2-depup.10"
     }
   }
 }

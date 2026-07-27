@@ -953,5 +953,20 @@
       "timestamp": "2026-07-25T00:41:58.884Z",
       "version": "16.12.1-depup.1"
     }
+  },
+  "16.13.0": {
+    "0": {
+      "changes": {
+        "npm-to-yarn": {
+          "from": "3.1.0",
+          "to": "^3.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-27T09:08:20.339Z",
+      "version": "16.13.0-depup.0"
+    }
   }
 }
