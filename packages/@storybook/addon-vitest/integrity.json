@@ -56,5 +56,20 @@
       "timestamp": "2026-07-24T16:34:13.027Z",
       "version": "10.5.4-depup.0"
     }
+  },
+  "10.5.5": {
+    "0": {
+      "changes": {
+        "@storybook/icons": {
+          "from": "^2.0.2",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-27T16:45:14.645Z",
+      "version": "10.5.5-depup.0"
+    }
   }
 }
