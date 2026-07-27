@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-playwright",
-  "version": "2.10.5-depup.4",
+  "version": "2.10.5-depup.9",
   "description": "ESLint plugin for Playwright testing. (with updated dependencies)",
   "license": "MIT",
   "author": "Mark Skelton <mark@mskelton.dev>",
@@ -38,7 +38,7 @@
     "ci": "yarn format:check && yarn lint && yarn typecheck"
   },
   "dependencies": {
-    "globals": "^17.7.0"
+    "globals": "^17.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -75,13 +75,13 @@
     "changes": {
       "globals": {
         "from": "^17.3.0",
-        "to": "^17.7.0"
+        "to": "^17.8.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "eslint-plugin-playwright",
     "originalVersion": "2.10.5",
-    "processedAt": "2026-07-11T00:32:43.814Z",
+    "processedAt": "2026-07-27T00:40:53.372Z",
     "smokeTest": "passed"
   }
 }
