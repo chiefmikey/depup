@@ -1833,5 +1833,36 @@
       "timestamp": "2026-07-27T16:44:46.529Z",
       "version": "2.41.0-depup.0"
     }
+  },
+  "2.41.1": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.1",
+          "to": "^5.2.2"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-28T16:34:25.953Z",
+      "version": "2.41.1-depup.0"
+    }
   }
 }
