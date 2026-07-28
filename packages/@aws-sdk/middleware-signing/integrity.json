@@ -700,6 +700,27 @@
       "status": "published",
       "timestamp": "2026-07-25T00:39:43.291Z",
       "version": "3.973.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.31.0"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.6.9",
+          "to": "^5.6.11"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-28T00:38:07.398Z",
+      "version": "3.973.0-depup.1"
     }
   }
 }
