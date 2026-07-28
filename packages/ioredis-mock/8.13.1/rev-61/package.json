@@ -1,6 +1,6 @@
 {
   "name": "@depup/ioredis-mock",
-  "version": "8.13.1-depup.56",
+  "version": "8.13.1-depup.61",
   "description": "This library emulates ioredis by performing all operations in-memory. (with updated dependencies)",
   "keywords": [
     "ioredis-mock",
@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "@ioredis/as-callback": "^3.0.0",
-    "@ioredis/commands": "^1.10.0",
+    "@ioredis/commands": "^2.0.0",
     "fengari": "^0.1.5",
     "fengari-interop": "^0.1.4",
     "semver": "^7.8.5"
@@ -137,7 +137,7 @@
     "changes": {
       "@ioredis/commands": {
         "from": "^1.4.0",
-        "to": "^1.10.0"
+        "to": "^2.0.0"
       },
       "fengari": {
         "from": "^0.1.4",
@@ -155,7 +155,7 @@
     "depsUpdated": 4,
     "originalPackage": "ioredis-mock",
     "originalVersion": "8.13.1",
-    "processedAt": "2026-07-11T00:34:58.862Z",
+    "processedAt": "2026-07-28T16:37:00.226Z",
     "smokeTest": "passed"
   }
 }
