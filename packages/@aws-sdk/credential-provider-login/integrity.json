@@ -1256,5 +1256,24 @@
       "timestamp": "2026-07-25T00:39:36.768Z",
       "version": "3.972.68-depup.0"
     }
+  },
+  "3.972.69": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.31.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-28T00:37:34.446Z",
+      "version": "3.972.69-depup.0"
+    }
   }
 }

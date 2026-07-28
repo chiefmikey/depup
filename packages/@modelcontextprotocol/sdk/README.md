@@ -12,22 +12,22 @@ npm install @depup/modelcontextprotocol__sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.29.0 | **DepUp version**: 1.29.0-depup.64 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.30.0 | **DepUp version**: 1.30.0-depup.0 | **Updated**: 7/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @hono/node-server | `^1.19.9` | `^2.0.11` |
+| @hono/node-server | `^1.19.9 || ^2.0.5` | `^2.0.12` |
 | ajv | `^8.17.1` | `^8.20.0` |
 | content-type | `^1.0.5` | `^2.0.0` |
 | cors | `^2.8.5` | `^2.8.6` |
 | cross-spawn | `^7.0.5` | `^7.0.6` |
 | eventsource | `^3.0.2` | `^4.1.0` |
 | eventsource-parser | `^3.0.0` | `^3.1.0` |
-| express-rate-limit | `^8.2.1` | `^8.6.0` |
-| hono | `^4.11.4` | `^4.12.31` |
-| jose | `^6.1.3` | `^6.2.3` |
+| express-rate-limit | `^8.2.1` | `^8.6.1` |
+| hono | `^4.11.4` | `^4.12.32` |
+| jose | `^6.1.3` | `^6.2.4` |
 | pkce-challenge | `^5.0.0` | `^6.0.0` |
 | raw-body | `^3.0.0` | `^4.0.0` |
 | zod | `^3.25 || ^4.0` | `^4.4.3` |

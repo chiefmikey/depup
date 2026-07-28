@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.54.0 | **DepUp version**: 6.54.0-depup.3 | **Updated**: 7/27/2026 | **Import test**: failed
+**Original version**: 6.54.1 | **DepUp version**: 6.54.1-depup.0 | **Updated**: 7/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1095.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1096.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^5.0.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.68.0` |
@@ -76,7 +76,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.2` |
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.3` |
-| mysql2 | `3.22.5` | `^3.23.1` |
+| mysql2 | `3.22.5` | `^3.23.2` |
 | node-fetch | `2.7.0` | `^3.3.2` |
 | nodemailer | `8.0.11` | `^9.0.3` |
 | otplib | `12.0.1` | `^13.4.1` |
