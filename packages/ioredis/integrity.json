@@ -129,19 +129,6 @@
     }
   },
   "5.11.1": {
-    "41": {
-      "changes": {
-        "cluster-key-slot": {
-          "from": "1.1.1",
-          "to": "^1.1.2"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-02T00:43:36.869Z",
-      "version": "5.11.1-depup.41"
-    },
     "42": {
       "changes": {
         "cluster-key-slot": {
@@ -197,6 +184,23 @@
       "status": "published",
       "timestamp": "2026-07-21T16:16:49.600Z",
       "version": "5.11.1-depup.45"
+    },
+    "46": {
+      "changes": {
+        "@ioredis/commands": {
+          "from": "1.10.0",
+          "to": "^2.0.0"
+        },
+        "cluster-key-slot": {
+          "from": "1.1.1",
+          "to": "^1.1.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-28T16:34:54.640Z",
+      "version": "5.11.1-depup.46"
     }
   }
 }

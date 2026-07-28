@@ -1,6 +1,6 @@
 {
   "name": "@depup/ioredis",
-  "version": "5.11.1-depup.41",
+  "version": "5.11.1-depup.46",
   "description": "A robust, performance-focused and full-featured Redis client for Node.js. (with updated dependencies)",
   "main": "./built/index.js",
   "types": "./built/index.d.ts",
@@ -50,7 +50,7 @@
     "url": "https://opencollective.com/ioredis"
   },
   "dependencies": {
-    "@ioredis/commands": "1.10.0",
+    "@ioredis/commands": "^2.0.0",
     "cluster-key-slot": "^1.1.2",
     "debug": "4.4.3",
     "denque": "2.1.0",
@@ -104,15 +104,19 @@
   },
   "depup": {
     "changes": {
+      "@ioredis/commands": {
+        "from": "1.10.0",
+        "to": "^2.0.0"
+      },
       "cluster-key-slot": {
         "from": "1.1.1",
         "to": "^1.1.2"
       }
     },
-    "depsUpdated": 1,
+    "depsUpdated": 2,
     "originalPackage": "ioredis",
     "originalVersion": "5.11.1",
-    "processedAt": "2026-07-02T00:43:34.794Z",
+    "processedAt": "2026-07-28T16:34:18.826Z",
     "smokeTest": "passed"
   }
 }
