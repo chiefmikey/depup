@@ -1,6 +1,6 @@
 {
   "name": "@depup/mdx-js__mdx",
-  "version": "3.1.1-depup.24",
+  "version": "3.1.1-depup.29",
   "description": "MDX compiler (with updated dependencies)",
   "license": "MIT",
   "keywords": [
@@ -53,9 +53,9 @@
   "dependencies": {
     "@types/estree": "^1.0.9",
     "@types/estree-jsx": "^1.0.5",
-    "@types/hast": "^3.0.4",
+    "@types/hast": "^3.0.5",
     "@types/mdx": "^2.0.14",
-    "acorn": "^8.17.0",
+    "acorn": "^8.18.0",
     "collapse-white-space": "^2.1.0",
     "devlop": "^1.1.0",
     "estree-util-is-identifier-name": "^3.0.0",
@@ -70,7 +70,7 @@
     "remark-mdx": "^3.1.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
-    "source-map": "^0.7.6",
+    "source-map": "^0.8.0",
     "unified": "^11.0.5",
     "unist-util-position-from-estree": "^2.0.0",
     "unist-util-stringify-position": "^4.0.0",
@@ -125,7 +125,7 @@
       },
       "@types/hast": {
         "from": "^3.0.0",
-        "to": "^3.0.4"
+        "to": "^3.0.5"
       },
       "@types/mdx": {
         "from": "^2.0.0",
@@ -133,7 +133,7 @@
       },
       "acorn": {
         "from": "^8.0.0",
-        "to": "^8.17.0"
+        "to": "^8.18.0"
       },
       "collapse-white-space": {
         "from": "^2.0.0",
@@ -165,7 +165,7 @@
       },
       "source-map": {
         "from": "^0.7.0",
-        "to": "^0.7.6"
+        "to": "^0.8.0"
       },
       "unified": {
         "from": "^11.0.0",
@@ -183,7 +183,7 @@
     "depsUpdated": 16,
     "originalPackage": "@mdx-js/mdx",
     "originalVersion": "3.1.1",
-    "processedAt": "2026-06-15T10:42:29.143Z",
+    "processedAt": "2026-07-28T08:57:26.337Z",
     "smokeTest": "passed"
   }
 }
