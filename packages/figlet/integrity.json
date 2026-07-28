@@ -80,5 +80,20 @@
       "timestamp": "2026-07-21T17:23:36.413Z",
       "version": "1.11.3-depup.0"
     }
+  },
+  "1.11.4": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "^14.0.0",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-28T00:39:09.279Z",
+      "version": "1.11.4-depup.0"
+    }
   }
 }
