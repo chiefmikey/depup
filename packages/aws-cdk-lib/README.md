@@ -12,18 +12,20 @@ npm install @depup/aws-cdk-lib
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.262.1 | **DepUp version**: 2.262.1-depup.0 | **Updated**: 7/24/2026 | **Import test**: passed
+**Original version**: 2.262.1 | **DepUp version**: 2.262.1-depup.1 | **Updated**: 7/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-cdk/asset-awscli-v1 | `2.2.282` | `^2.2.290` |
+| @aws-cdk/asset-awscli-v1 | `2.2.282` | `^2.2.291` |
 | @aws-cdk/cloud-assembly-api | `^2.2.6` | `^2.3.0` |
 | @aws-cdk/cloud-assembly-schema | `^54.11.0` | `^54.14.0` |
+| @aws/cloudformation-validate | `1.5.1-beta` | `^1.6.0-beta` |
 | fs-extra | `^11.3.6` | `^11.4.0` |
 | ignore | `^5.3.2` | `^7.0.6` |
 | mime-types | `^2.1.35` | `^3.0.2` |
+| minimatch | `^10.2.5` | `^10.2.6` |
 | yaml | `1.10.3` | `^2.9.0` |
 
 
