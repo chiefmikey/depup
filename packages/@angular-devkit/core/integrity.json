@@ -524,5 +524,24 @@
       "timestamp": "2026-07-24T00:35:26.339Z",
       "version": "22.0.8-depup.0"
     }
+  },
+  "22.0.9": {
+    "0": {
+      "changes": {
+        "picomatch": {
+          "from": "4.0.4",
+          "to": "^4.0.5"
+        },
+        "source-map": {
+          "from": "0.7.6",
+          "to": "^0.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-29T16:33:44.503Z",
+      "version": "22.0.9-depup.0"
+    }
   }
 }

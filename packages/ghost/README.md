@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.54.1 | **DepUp version**: 6.54.1-depup.1 | **Updated**: 7/29/2026 | **Import test**: failed
+**Original version**: 6.54.1 | **DepUp version**: 6.54.1-depup.2 | **Updated**: 7/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @aws-sdk/client-s3 | `3.1079.0` | `^3.1097.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^5.0.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.68.0` |
+| @sentry/node | `7.120.4` | `^10.69.0` |
 | @slack/webhook | `7.1.0` | `^8.0.0` |
 | @tryghost/api-framework | `3.3.5` | `^3.3.6` |
 | @tryghost/bookshelf-plugins | `2.3.2` | `^2.3.6` |
@@ -65,13 +65,23 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.12` |
 | js-yaml | `4.3.0` | `^5.2.2` |
-| jsdom | `29.1.1` | `^30.0.0` |
+| jsdom | `29.1.1` | `^30.0.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.3.0` |
+| metascraper | `5.51.1` | `^5.52.0` |
+| metascraper-amazon | `5.51.2` | `^5.52.0` |
+| metascraper-author | `5.51.1` | `^5.52.0` |
+| metascraper-description | `5.51.1` | `^5.52.0` |
+| metascraper-image | `5.51.1` | `^5.52.0` |
+| metascraper-logo | `5.51.1` | `^5.52.0` |
+| metascraper-logo-favicon | `5.51.1` | `^5.52.0` |
+| metascraper-publisher | `5.51.1` | `^5.52.0` |
+| metascraper-title | `5.51.1` | `^5.52.0` |
+| metascraper-url | `5.51.1` | `^5.52.0` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.2` |
 | moment | `2.24.0` | `^2.30.1` |
