@@ -39,6 +39,27 @@
       "status": "published",
       "timestamp": "2026-07-24T16:34:51.269Z",
       "version": "10.68.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@apm-js-collab/code-transformer-bundler-plugins": {
+          "from": "0.7.1",
+          "to": "^0.7.3"
+        },
+        "@sentry/conventions": {
+          "from": "^0.16.0",
+          "to": "^0.17.0"
+        },
+        "meriyah": {
+          "from": "^6.1.4",
+          "to": "^7.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-29T08:59:50.423Z",
+      "version": "10.68.0-depup.1"
     }
   }
 }
