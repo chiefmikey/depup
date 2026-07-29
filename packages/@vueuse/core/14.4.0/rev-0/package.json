@@ -1,0 +1,65 @@
+{
+  "name": "@depup/vueuse__core",
+  "type": "module",
+  "version": "14.4.0-depup.0",
+  "description": "Collection of essential Vue Composition Utilities (with updated dependencies)",
+  "author": "Anthony Fu <https://github.com/antfu>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/antfu",
+  "homepage": "https://github.com/vueuse/vueuse#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueuse/vueuse.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/vueuse/vueuse/issues"
+  },
+  "keywords": [
+    "@vueuse/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vue",
+    "vue-use",
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./metadata": "./dist/metadata.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "unpkg": "./dist/index.iife.min.js",
+  "jsdelivr": "./dist/index.iife.min.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@types/web-bluetooth": "^0.0.21",
+    "@vueuse/metadata": "14.4.0",
+    "@vueuse/shared": "14.4.0"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vueuse/core",
+    "originalVersion": "14.4.0",
+    "processedAt": "2026-07-29T00:37:42.801Z",
+    "smokeTest": "passed"
+  }
+}
