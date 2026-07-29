@@ -1421,5 +1421,32 @@
       "timestamp": "2026-07-28T00:38:11.094Z",
       "version": "3.972.44-depup.0"
     }
+  },
+  "3.972.45": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.29.8",
+          "to": "^3.31.0"
+        },
+        "@smithy/fetch-http-handler": {
+          "from": "^5.6.10",
+          "to": "^5.6.12"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.6.9",
+          "to": "^5.6.11"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-29T00:36:01.035Z",
+      "version": "3.972.45-depup.0"
+    }
   }
 }
