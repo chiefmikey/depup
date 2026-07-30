@@ -232,5 +232,15 @@
       "timestamp": "2026-07-26T00:57:14.654Z",
       "version": "12.1.1-depup.14"
     }
+  },
+  "12.2.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-30T00:38:05.045Z",
+      "version": "12.2.0-depup.0"
+    }
   }
 }

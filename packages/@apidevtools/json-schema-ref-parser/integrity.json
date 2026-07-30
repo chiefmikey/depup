@@ -235,5 +235,20 @@
       "timestamp": "2026-07-21T16:01:54.328Z",
       "version": "15.5.0-depup.5"
     }
+  },
+  "15.5.1": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "^6.28.0",
+          "to": "^8.9.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-30T00:35:36.077Z",
+      "version": "15.5.1-depup.0"
+    }
   }
 }

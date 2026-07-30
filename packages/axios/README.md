@@ -12,13 +12,12 @@ npm install @depup/axios
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.18.1 | **DepUp version**: 1.18.1-depup.20 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.19.0 | **DepUp version**: 1.19.0-depup.0 | **Updated**: 7/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| form-data | `^4.0.5` | `^4.0.6` |
 | https-proxy-agent | `^5.0.1` | `^9.1.0` |
 
 
