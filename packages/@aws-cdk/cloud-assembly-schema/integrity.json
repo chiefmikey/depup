@@ -665,5 +665,15 @@
       "timestamp": "2026-07-24T00:35:51.414Z",
       "version": "54.14.0-depup.0"
     }
+  },
+  "54.15.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-30T08:57:21.162Z",
+      "version": "54.15.0-depup.0"
+    }
   }
 }

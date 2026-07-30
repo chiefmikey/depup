@@ -12,7 +12,7 @@ npm install @depup/aws-cdk__cloud-assembly-schema
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 54.14.0 | **DepUp version**: 54.14.0-depup.0 | **Updated**: 7/24/2026 | **Import test**: passed
+**Original version**: 54.15.0 | **DepUp version**: 54.15.0-depup.0 | **Updated**: 7/30/2026 | **Import test**: passed
 
 ## What changed
 
