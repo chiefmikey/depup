@@ -12,13 +12,12 @@ npm install @depup/elastic__elasticsearch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.4.2 | **DepUp version**: 9.4.2-depup.58 | **Updated**: 7/30/2026 | **Import test**: passed
+**Original version**: 9.4.3 | **DepUp version**: 9.4.3-depup.0 | **Updated**: 7/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @elastic/transport | `^9.3.5` | `^9.4.0` |
 | tslib | `^2.4.0` | `^2.8.1` |
 
 

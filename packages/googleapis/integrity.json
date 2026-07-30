@@ -36,23 +36,6 @@
     }
   },
   "173.0.0": {
-    "51": {
-      "changes": {
-        "google-auth-library": {
-          "from": "^10.2.0",
-          "to": "^10.9.0"
-        },
-        "googleapis-common": {
-          "from": "^8.0.0",
-          "to": "^8.0.2"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:32:26.923Z",
-      "version": "173.0.0-depup.51"
-    },
     "52": {
       "changes": {
         "google-auth-library": {
@@ -120,6 +103,23 @@
       "status": "published",
       "timestamp": "2026-07-21T16:15:39.298Z",
       "version": "173.0.0-depup.55"
+    },
+    "56": {
+      "changes": {
+        "google-auth-library": {
+          "from": "^10.2.0",
+          "to": "^11.0.0"
+        },
+        "googleapis-common": {
+          "from": "^8.0.0",
+          "to": "^9.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-30T16:35:10.284Z",
+      "version": "173.0.0-depup.56"
     }
   }
 }
