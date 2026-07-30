@@ -1,0 +1,36 @@
+{
+  "name": "@depup/fastify-passport",
+  "version": "0.6.0-depup.1",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/fastify/fastify-passport.git"
+  },
+  "homepage": "https://github.com/fastify/fastify-passport",
+  "dependencies": {
+    "process-warning": "^5.1.0",
+    "fastify-passport-deprecated": "npm:fastify-passport@0.4.3"
+  },
+  "description": "fastify-passport with all dependencies updated to latest",
+  "keywords": [
+    "fastify-passport",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "process-warning": {
+        "from": "^1.0.0",
+        "to": "^5.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "fastify-passport",
+    "originalVersion": "0.6.0",
+    "processedAt": "2026-07-30T16:33:27.577Z",
+    "smokeTest": "failed"
+  }
+}

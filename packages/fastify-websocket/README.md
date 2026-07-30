@@ -12,13 +12,13 @@ npm install @depup/fastify-websocket
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.3.0 | **DepUp version**: 4.3.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 4.3.0 | **DepUp version**: 4.3.0-depup.1 | **Updated**: 7/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| process-warning | `^1.0.0` | `^5.0.0` |
+| process-warning | `^1.0.0` | `^5.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fastify-websocket&labels=bug).

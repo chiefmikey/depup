@@ -12,7 +12,7 @@ npm install @depup/pino
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.1 | **DepUp version**: 10.3.1-depup.4 | **Updated**: 5/15/2026 | **Import test**: passed
+**Original version**: 10.3.1 | **DepUp version**: 10.3.1-depup.5 | **Updated**: 7/30/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,6 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | on-exit-leak-free | `^2.1.0` | `^2.1.2` |
 | pino-std-serializers | `^7.0.0` | `^7.1.0` |
+| process-warning | `^5.0.0` | `^5.1.0` |
 | quick-format-unescaped | `^4.0.3` | `^4.0.4` |
 | real-require | `^0.2.0` | `^1.0.0` |
 | safe-stable-stringify | `^2.3.1` | `^2.5.0` |

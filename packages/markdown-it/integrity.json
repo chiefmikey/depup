@@ -85,35 +85,6 @@
     }
   },
   "14.3.0": {
-    "35": {
-      "changes": {
-        "argparse": {
-          "from": "^2.0.1",
-          "to": "^3.0.0"
-        },
-        "entities": {
-          "from": "^4.5.0",
-          "to": "^8.0.0"
-        },
-        "linkify-it": {
-          "from": "^5.0.2",
-          "to": "^6.1.0"
-        },
-        "mdurl": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "uc.micro": {
-          "from": "^2.1.0",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-29T00:39:08.468Z",
-      "version": "14.3.0-depup.35"
-    },
     "36": {
       "changes": {
         "argparse": {
@@ -229,6 +200,35 @@
       "status": "failed",
       "timestamp": "2026-07-30T08:57:56.598Z",
       "version": "14.3.0-depup.39"
+    },
+    "40": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        },
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        },
+        "linkify-it": {
+          "from": "^5.0.2",
+          "to": "^6.1.0"
+        },
+        "mdurl": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "uc.micro": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-07-30T16:34:21.621Z",
+      "version": "14.3.0-depup.40"
     }
   }
 }
