@@ -39,6 +39,19 @@
       "status": "published",
       "timestamp": "2026-03-19T04:44:56.961Z",
       "version": "4.2.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "process-warning": {
+          "from": "^1.0.0",
+          "to": "^5.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-30T16:35:11.129Z",
+      "version": "4.2.0-depup.1"
     }
   }
 }
