@@ -1,0 +1,81 @@
+{
+  "name": "@depup/dotenv-expand",
+  "version": "1000.0.0-depup.0",
+  "description": "Expand environment variables using dotenv (with updated dependencies)",
+  "main": "dist/lib/main.js",
+  "types": "lib/main.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/lib/main.js",
+      "types": "./lib/main.d.ts",
+      "default": "./dist/lib/main.js"
+    },
+    "./config": "./dist/config.js",
+    "./config.js": "./dist/config.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "lib/main.d.ts",
+    "config.d.ts",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "changes.json"
+  ],
+  "scripts": {
+    "build": "esbuild lib/main.js config.js --bundle --platform=node --format=cjs --target=node16 --outdir=dist --outbase=. --legal-comments=none --minify",
+    "dts-check": "tsc --project tests/types/tsconfig.json",
+    "lint": "biome lint --diagnostic-level=error lib config.js tests",
+    "pretest": "npm run lint && npm run dts-check",
+    "test": "node tests/main.js",
+    "prerelease": "npm test",
+    "release": "npm version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotenvx/dotenv-expand.git"
+  },
+  "homepage": "https://github.com/dotenvx/dotenv-expand#readme",
+  "bugs": {
+    "url": "https://github.com/dotenvx/dotenv-expand/issues"
+  },
+  "funding": "https://dotenvx.com",
+  "author": "motdotla",
+  "keywords": [
+    "dotenv-expand",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "dotenv",
+    "expand",
+    "variables",
+    "interpolation",
+    "substitution",
+    "env",
+    ".env"
+  ],
+  "readmeFilename": "README.md",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.6",
+    "@dotenvx/primitives": "2.1.1",
+    "@types/node": "^18.11.3",
+    "dotenv": "^17.4.2",
+    "esbuild": "^0.28.1",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "dotenv-expand",
+    "originalVersion": "1000.0.0",
+    "processedAt": "2026-07-30T00:38:50.461Z",
+    "smokeTest": "passed"
+  }
+}

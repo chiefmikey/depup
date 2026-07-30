@@ -1,0 +1,63 @@
+{
+  "name": "@depup/schematics__angular",
+  "version": "22.1.0-depup.0",
+  "description": "Schematics specific to Angular (with updated dependencies)",
+  "homepage": "https://github.com/angular/angular-cli",
+  "keywords": [
+    "@schematics/angular",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Angular CLI",
+    "Angular DevKit",
+    "angular",
+    "blueprints",
+    "code generation",
+    "devkit",
+    "schematics",
+    "sdk"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./utility": "./utility/index.js",
+    "./utility/*": "./utility/*.js",
+    "./migrations/migration-collection.json": "./migrations/migration-collection.json",
+    "./*": "./*.js"
+  },
+  "schematics": "./collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "22.1.0",
+    "@angular-devkit/schematics": "22.1.0",
+    "jsonc-parser": "3.3.1",
+    "typescript": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-cli.git"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+    "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+    "yarn": ">= 1.13.0"
+  },
+  "author": "Angular Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular-cli/issues"
+  },
+  "depup": {
+    "changes": {
+      "typescript": {
+        "from": "6.0.3",
+        "to": "^7.0.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@schematics/angular",
+    "originalVersion": "22.1.0",
+    "processedAt": "2026-07-30T00:38:25.770Z",
+    "smokeTest": "failed"
+  }
+}

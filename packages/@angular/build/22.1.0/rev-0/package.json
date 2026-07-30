@@ -1,0 +1,177 @@
+{
+  "name": "@depup/angular__build",
+  "version": "22.1.0-depup.0",
+  "description": "Official build system for Angular (with updated dependencies)",
+  "keywords": [
+    "@angular/build",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "Angular CLI",
+    "Angular DevKit",
+    "angular",
+    "angular-cli",
+    "devkit",
+    "sdk"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./private": {
+      "default": "./src/private.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "builders": "builders.json",
+  "dependencies": {
+    "@ampproject/remapping": "2.3.0",
+    "@angular-devkit/architect": "0.2201.0",
+    "@babel/core": "8.0.1",
+    "@babel/helper-annotate-as-pure": "8.0.0",
+    "@babel/helper-split-export-declaration": "7.24.7",
+    "@inquirer/confirm": "6.1.1",
+    "@vitejs/plugin-basic-ssl": "2.3.0",
+    "beasties": "0.4.3",
+    "browserslist": "^4.28.7",
+    "esbuild": "0.28.1",
+    "https-proxy-agent": "9.1.0",
+    "jsonc-parser": "3.3.1",
+    "listr2": "^11.0.0",
+    "magic-string": "^1.1.0",
+    "mrmime": "2.0.1",
+    "oxc-parser": "^0.142.0",
+    "parse5-html-rewriting-stream": "8.0.1",
+    "picomatch": "4.0.5",
+    "piscina": "^5.3.0",
+    "rolldown": "^1.2.1",
+    "sass": "^1.102.0",
+    "semver": "7.8.5",
+    "source-map-support": "0.5.21",
+    "tinyglobby": "0.2.17",
+    "vite": "8.1.5",
+    "watchpack": "2.5.2"
+  },
+  "optionalDependencies": {
+    "lmdb": "3.5.6"
+  },
+  "peerDependencies": {
+    "@angular/compiler": "^22.0.0",
+    "@angular/compiler-cli": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/localize": "^22.0.0",
+    "@angular/platform-browser": "^22.0.0",
+    "@angular/platform-server": "^22.0.0",
+    "@angular/service-worker": "^22.0.0",
+    "@angular/ssr": "^22.1.0",
+    "istanbul-lib-instrument": "^6.0.0",
+    "karma": "^6.4.0",
+    "less": "^4.2.0",
+    "ng-packagr": "^22.0.0",
+    "postcss": "^8.4.0",
+    "rollup": "^4.0.0",
+    "tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+    "tslib": "^2.3.0",
+    "typescript": ">=6.0 <6.1",
+    "vitest": "^4.0.8"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "@angular/localize": {
+      "optional": true
+    },
+    "@angular/platform-browser": {
+      "optional": true
+    },
+    "@angular/platform-server": {
+      "optional": true
+    },
+    "@angular/service-worker": {
+      "optional": true
+    },
+    "@angular/ssr": {
+      "optional": true
+    },
+    "istanbul-lib-instrument": {
+      "optional": true
+    },
+    "karma": {
+      "optional": true
+    },
+    "less": {
+      "optional": true
+    },
+    "ng-packagr": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    },
+    "rollup": {
+      "optional": true
+    },
+    "tailwindcss": {
+      "optional": true
+    },
+    "vitest": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-cli.git"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+    "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+    "yarn": ">= 1.13.0"
+  },
+  "author": "Angular Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular-cli/issues"
+  },
+  "homepage": "https://github.com/angular/angular-cli",
+  "depup": {
+    "changes": {
+      "browserslist": {
+        "from": "^4.26.0",
+        "to": "^4.28.7"
+      },
+      "listr2": {
+        "from": "10.2.2",
+        "to": "^11.0.0"
+      },
+      "magic-string": {
+        "from": "1.0.0",
+        "to": "^1.1.0"
+      },
+      "oxc-parser": {
+        "from": "0.140.0",
+        "to": "^0.142.0"
+      },
+      "piscina": {
+        "from": "5.2.0",
+        "to": "^5.3.0"
+      },
+      "rolldown": {
+        "from": "1.2.0",
+        "to": "^1.2.1"
+      },
+      "sass": {
+        "from": "1.101.0",
+        "to": "^1.102.0"
+      }
+    },
+    "depsUpdated": 7,
+    "originalPackage": "@angular/build",
+    "originalVersion": "22.1.0",
+    "processedAt": "2026-07-30T00:35:12.151Z",
+    "smokeTest": "passed"
+  }
+}

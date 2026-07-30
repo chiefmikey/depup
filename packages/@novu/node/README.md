@@ -12,13 +12,13 @@ npm install @depup/novu__node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.6.6 | **DepUp version**: 2.6.6-depup.40 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 2.6.6 | **DepUp version**: 2.6.6-depup.41 | **Updated**: 7/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| axios | `^1.6.8` | `^1.18.1` |
+| axios | `^1.6.8` | `^1.19.0` |
 | axios-retry | `^3.8.0` | `^4.5.0` |
 | handlebars | `^4.7.7` | `^4.7.9` |
 | uuid | `^9.0.1` | `^14.0.1` |

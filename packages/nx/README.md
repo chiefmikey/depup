@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.3 | **Updated**: 7/28/2026 | **Import test**: failed
+**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.4 | **Updated**: 7/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,9 +30,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ansi-styles | `4.3.0` | `^7.0.0` |
 | argparse | `2.0.1` | `^3.0.0` |
 | asynckit | `0.4.0` | `^0.5.0` |
-| axios | `1.16.1` | `^1.18.1` |
+| axios | `1.16.1` | `^1.19.0` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.10` |
+| bl | `4.1.0` | `^7.0.11` |
 | brace-expansion | `5.0.6` | `^5.0.8` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^6.0.0` |
@@ -45,7 +45,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | defaults | `1.0.4` | `^3.0.0` |
 | define-lazy-prop | `2.0.0` | `^3.0.0` |
 | dotenv | `16.4.7` | `^17.4.2` |
-| dotenv-expand | `12.0.3` | `^13.0.0` |
+| dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
 | emoji-regex | `8.0.0` | `^10.6.0` |
 | enquirer | `2.3.6` | `^2.4.1` |

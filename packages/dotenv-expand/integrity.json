@@ -60,5 +60,15 @@
       "timestamp": "2026-06-16T10:23:55.267Z",
       "version": "13.0.0-depup.22"
     }
+  },
+  "1000.0.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-30T00:38:55.631Z",
+      "version": "1000.0.0-depup.0"
+    }
   }
 }
