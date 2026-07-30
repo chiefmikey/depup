@@ -1,0 +1,90 @@
+{
+  "name": "@depup/lovable.dev__vite-tanstack-config",
+  "version": "2.8.1-depup.0",
+  "description": "Vite config wrapper for Lovable TanStack Start projects (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@lovable.dev/vite-tanstack-config",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "tanstack",
+    "lovable",
+    "config"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@lovable.dev/vite-plugin-dev-server-bridge": "^1.2.1",
+    "@lovable.dev/vite-plugin-hmr-gate": "^1.2.1",
+    "@tanstack/devtools-vite": "^0.8.3",
+    "lightningcss": "^1.33.0"
+  },
+  "peerDependencies": {
+    "vite": ">=5.0.0 <9.0.0",
+    "@tailwindcss/vite": ">=4.0.0",
+    "vite-tsconfig-paths": ">=6.0.0",
+    "nitro": ">=3.0.260603-beta",
+    "@tanstack/react-start": ">=1.100.0",
+    "@vitejs/plugin-react": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "nitro": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@tanstack/react-start": "^1.167.50",
+    "@types/node": "22.13.13",
+    "@vitejs/plugin-react": "^5.2.0",
+    "nitro": "3.0.260603-beta",
+    "rimraf": "^5.0.0",
+    "tsdown": "^0.22.5",
+    "typescript": "7.0.2",
+    "vite": "^8.1.5",
+    "vite-tsconfig-paths": "^6.0.2",
+    "vitest": "^4.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovablelabs/lovable.git",
+    "directory": "npm-packages/lovable-vite-tanstack"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check:package": "tmp=$(mktemp -d) && pnpm pack --out \"$tmp/pkg.tgz\" && tar -xzf \"$tmp/pkg.tgz\" -C \"$tmp\" && publint \"$tmp/package\" --strict && attw \"$tmp/pkg.tgz\"",
+    "typecheck": "tsgo --noEmit",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "clean": "rimraf dist",
+    "coverage": "vitest run --coverage"
+  },
+  "depup": {
+    "changes": {
+      "@tanstack/devtools-vite": {
+        "from": "^0.8.1",
+        "to": "^0.8.3"
+      },
+      "lightningcss": {
+        "from": "^1.30.0",
+        "to": "^1.33.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@lovable.dev/vite-tanstack-config",
+    "originalVersion": "2.8.1",
+    "processedAt": "2026-07-30T08:57:16.619Z",
+    "smokeTest": "passed"
+  }
+}
