@@ -12,15 +12,15 @@ npm install @depup/react-aria__interactions
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.28.1 | **DepUp version**: 3.28.1-depup.58 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.28.1 | **DepUp version**: 3.28.1-depup.59 | **Updated**: 7/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @react-types/shared | `^3.34.0` | `^3.36.0` |
+| @react-types/shared | `^3.34.0` | `^3.36.1` |
 | @swc/helpers | `^0.5.0` | `^0.5.23` |
-| react-aria | `^3.48.0` | `^3.50.0` |
+| react-aria | `^3.48.0` | `^3.51.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-aria__interactions&labels=bug).

@@ -977,6 +977,19 @@
       "status": "published",
       "timestamp": "2026-07-31T00:40:44.951Z",
       "version": "16.14.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "shiki": {
+          "from": "^4.3.1",
+          "to": "^4.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-31T16:36:51.350Z",
+      "version": "16.14.0-depup.1"
     }
   }
 }
