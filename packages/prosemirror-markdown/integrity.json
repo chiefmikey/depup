@@ -42,27 +42,6 @@
     }
   },
   "1.13.5": {
-    "4": {
-      "changes": {
-        "markdown-it": {
-          "from": "^14.0.0",
-          "to": "^14.3.0"
-        },
-        "prosemirror-model": {
-          "from": "^1.25.0",
-          "to": "^1.25.10"
-        },
-        "@types/markdown-it": {
-          "from": "^14.0.0",
-          "to": "^14.1.2"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:39:30.694Z",
-      "version": "1.13.5-depup.4"
-    },
     "5": {
       "changes": {
         "markdown-it": {
@@ -146,6 +125,27 @@
       "status": "published",
       "timestamp": "2026-07-21T17:30:04.124Z",
       "version": "1.13.5-depup.8"
+    },
+    "9": {
+      "changes": {
+        "markdown-it": {
+          "from": "^14.0.0",
+          "to": "^15.0.0"
+        },
+        "prosemirror-model": {
+          "from": "^1.25.0",
+          "to": "^1.25.11"
+        },
+        "@types/markdown-it": {
+          "from": "^14.0.0",
+          "to": "^14.1.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-31T00:41:03.853Z",
+      "version": "1.13.5-depup.9"
     }
   }
 }

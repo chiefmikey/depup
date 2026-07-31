@@ -1,6 +1,6 @@
 {
   "name": "@depup/prosemirror-markdown",
-  "version": "1.13.5-depup.4",
+  "version": "1.13.5-depup.9",
   "description": "ProseMirror Markdown integration (with updated dependencies)",
   "type": "module",
   "main": "dist/index.cjs",
@@ -24,8 +24,8 @@
     "url": "git+https://code.haverbeke.berlin/prosemirror/prosemirror-markdown.git"
   },
   "dependencies": {
-    "markdown-it": "^14.3.0",
-    "prosemirror-model": "^1.25.10",
+    "markdown-it": "^15.0.0",
+    "prosemirror-model": "^1.25.11",
     "@types/markdown-it": "^14.1.2"
   },
   "devDependencies": {
@@ -48,11 +48,11 @@
     "changes": {
       "markdown-it": {
         "from": "^14.0.0",
-        "to": "^14.3.0"
+        "to": "^15.0.0"
       },
       "prosemirror-model": {
         "from": "^1.25.0",
-        "to": "^1.25.10"
+        "to": "^1.25.11"
       },
       "@types/markdown-it": {
         "from": "^14.0.0",
@@ -62,7 +62,7 @@
     "depsUpdated": 3,
     "originalPackage": "prosemirror-markdown",
     "originalVersion": "1.13.5",
-    "processedAt": "2026-07-11T00:39:29.009Z",
+    "processedAt": "2026-07-31T00:41:00.060Z",
     "smokeTest": "passed"
   }
 }
