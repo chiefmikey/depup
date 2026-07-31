@@ -12,14 +12,14 @@ npm install @depup/catbox-redis
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.4 | **DepUp version**: 4.2.4-depup.1 | **Updated**: 5/26/2026 | **Import test**: passed
+**Original version**: 4.2.4 | **DepUp version**: 4.2.4-depup.2 | **Updated**: 7/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | hoek | `6.x.x` | `^6.1.3` |
-| ioredis | `4.x.x` | `^5.11.0` |
+| ioredis | `4.x.x` | `^6.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/catbox-redis&labels=bug).

@@ -1926,5 +1926,32 @@
       "timestamp": "2026-07-30T16:32:55.820Z",
       "version": "2.43.1-depup.0"
     }
+  },
+  "2.43.2": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-31T16:36:58.067Z",
+      "version": "2.43.2-depup.0"
+    }
   }
 }

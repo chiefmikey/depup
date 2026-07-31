@@ -1,0 +1,59 @@
+{
+  "name": "@depup/catbox-redis",
+  "description": "Redis adapter for catbox (with updated dependencies)",
+  "version": "4.2.4-depup.2",
+  "author": "Eran Hammer <eran@hammer.io> (http://hueniverse.com)",
+  "contributors": [
+    "Marcus Poehls <marcus@futurestud.io> (https://futurestud.io)",
+    "Loic Mahieu (https://igloo.be)",
+    "Wyatt Preul <wpreul@gmail.com> (http://jsgeek.com)"
+  ],
+  "repository": "git://github.com/hapijs/catbox-redis",
+  "main": "lib/index.js",
+  "keywords": [
+    "catbox-redis",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cache",
+    "catbox",
+    "redis"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "hoek": "^6.1.3",
+    "ioredis": "^6.0.0"
+  },
+  "devDependencies": {
+    "catbox": "10.x.x",
+    "code": "5.x.x",
+    "lab": "17.x.x",
+    "redis-parser": "3.x.x"
+  },
+  "scripts": {
+    "test": "lab -r console -t 100 -a code -L",
+    "test-cov-html": "lab -r html -o coverage.html -a code -L"
+  },
+  "license": "BSD-3-Clause",
+  "depup": {
+    "changes": {
+      "hoek": {
+        "from": "6.x.x",
+        "to": "^6.1.3"
+      },
+      "ioredis": {
+        "from": "4.x.x",
+        "to": "^6.0.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "catbox-redis",
+    "originalVersion": "4.2.4",
+    "processedAt": "2026-07-31T16:37:19.286Z",
+    "smokeTest": "passed"
+  }
+}

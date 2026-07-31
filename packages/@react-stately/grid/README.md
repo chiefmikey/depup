@@ -12,14 +12,14 @@ npm install @depup/react-stately__grid
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.12.1 | **DepUp version**: 3.12.1-depup.29 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.12.1 | **DepUp version**: 3.12.1-depup.30 | **Updated**: 7/31/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @swc/helpers | `^0.5.0` | `^0.5.23` |
-| react-stately | `^3.46.0` | `^3.48.0` |
+| react-stately | `^3.46.0` | `^3.49.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-stately__grid&labels=bug).
