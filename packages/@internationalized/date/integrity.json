@@ -95,5 +95,20 @@
       "timestamp": "2026-07-21T16:05:26.696Z",
       "version": "3.12.2-depup.57"
     }
+  },
+  "3.12.3": {
+    "0": {
+      "changes": {
+        "@swc/helpers": {
+          "from": "^0.5.0",
+          "to": "^0.5.23"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-31T16:35:05.939Z",
+      "version": "3.12.3-depup.0"
+    }
   }
 }

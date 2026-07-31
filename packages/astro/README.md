@@ -12,7 +12,7 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.1.6 | **DepUp version**: 7.1.6-depup.2 | **Updated**: 7/31/2026 | **Import test**: failed
+**Original version**: 7.1.6 | **DepUp version**: 7.1.6-depup.3 | **Updated**: 7/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,14 +28,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | esbuild | `^0.28.0` | `^0.28.1` |
 | js-yaml | `^4.3.0` | `^5.2.2` |
 | magic-string | `^1.0.0` | `^1.1.0` |
-| magicast | `^0.5.2` | `^0.5.3` |
+| magicast | `^0.5.2` | `^0.5.4` |
 | obug | `^2.1.1` | `^2.1.4` |
 | p-limit | `^7.3.0` | `^7.3.1` |
 | p-queue | `^9.1.0` | `^9.3.3` |
 | package-manager-detector | `^1.6.0` | `^1.8.0` |
 | picomatch | `^4.0.4` | `^4.0.5` |
 | semver | `^7.7.4` | `^7.8.5` |
-| shiki | `^4.0.2` | `^4.3.1` |
+| shiki | `^4.0.2` | `^4.4.1` |
 | smol-toml | `^1.6.0` | `^1.7.1` |
 | svgo | `^4.0.1` | `^4.0.2` |
 | tinyclip | `^0.1.12` | `^1.0.1` |
