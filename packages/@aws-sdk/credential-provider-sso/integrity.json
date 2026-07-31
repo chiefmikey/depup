@@ -1964,5 +1964,20 @@
       "timestamp": "2026-07-31T00:39:40.412Z",
       "version": "3.973.8-depup.1"
     }
+  },
+  "3.973.9": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-31T09:03:09.288Z",
+      "version": "3.973.9-depup.0"
+    }
   }
 }
