@@ -227,5 +227,24 @@
       "timestamp": "2026-07-30T00:37:29.557Z",
       "version": "0.8.2-depup.1"
     }
+  },
+  "0.8.3": {
+    "0": {
+      "changes": {
+        "axios": {
+          "from": "1.18.1",
+          "to": "^1.19.0"
+        },
+        "google-libphonenumber": {
+          "from": "3.2.44",
+          "to": "^3.2.46"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-07-31T09:03:32.057Z",
+      "version": "0.8.3-depup.0"
+    }
   }
 }
