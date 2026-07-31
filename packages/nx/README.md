@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.0 | **DepUp version**: 23.1.0-depup.4 | **Updated**: 7/30/2026 | **Import test**: failed
+**Original version**: 23.1.1 | **DepUp version**: 23.1.1-depup.0 | **Updated**: 7/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @emnapi/runtime | `1.4.5` | `^1.11.3` |
 | @emnapi/wasi-threads | `1.0.4` | `^2.0.1` |
 | @jest/diff-sequences | `30.0.1` | `^30.4.0` |
-| @napi-rs/wasm-runtime | `0.2.4` | `^1.2.0` |
+| @napi-rs/wasm-runtime | `0.2.4` | `^1.2.1` |
 | @tybys/wasm-util | `0.9.0` | `^0.10.3` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
 | agent-base | `6.0.2` | `^9.0.0` |
@@ -30,10 +30,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ansi-styles | `4.3.0` | `^7.0.0` |
 | argparse | `2.0.1` | `^3.0.0` |
 | asynckit | `0.4.0` | `^0.5.0` |
-| axios | `1.16.1` | `^1.19.0` |
+| axios | `1.18.1` | `^1.19.0` |
 | balanced-match | `4.0.3` | `^4.0.4` |
-| bl | `4.1.0` | `^7.0.11` |
-| brace-expansion | `5.0.6` | `^5.0.8` |
+| bl | `4.1.0` | `^7.0.12` |
+| brace-expansion | `5.0.8` | `^5.0.9` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^6.0.0` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -42,8 +42,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | clone | `1.0.4` | `^2.1.2` |
 | color-convert | `2.0.1` | `^3.1.3` |
 | color-name | `1.1.4` | `^2.1.1` |
+| default-browser | `5.2.1` | `^5.5.0` |
+| default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
-| define-lazy-prop | `2.0.0` | `^3.0.0` |
 | dotenv | `16.4.7` | `^17.4.2` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
@@ -56,11 +57,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | has-flag | `4.0.0` | `^5.0.1` |
 | https-proxy-agent | `5.0.1` | `^9.1.0` |
 | ignore | `7.0.5` | `^7.0.6` |
-| is-docker | `2.2.1` | `^4.0.0` |
+| is-docker | `3.0.0` | `^4.0.0` |
 | is-fullwidth-code-point | `3.0.0` | `^5.1.0` |
 | is-interactive | `1.0.0` | `^2.0.0` |
 | is-unicode-supported | `0.1.0` | `^2.1.0` |
-| is-wsl | `2.2.0` | `^3.1.1` |
+| is-wsl | `3.1.0` | `^3.1.1` |
 | isexe | `2.0.0` | `^4.0.0` |
 | lines-and-columns | `2.0.3` | `^2.0.4` |
 | log-symbols | `4.1.0` | `^7.0.1` |
@@ -70,11 +71,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | minimatch | `10.2.5` | `^10.2.6` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
-| open | `8.4.2` | `^11.0.0` |
+| open | `10.1.0` | `^11.0.0` |
 | ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
 | restore-cursor | `3.1.0` | `^5.1.0` |
+| run-applescript | `7.0.0` | `^7.1.0` |
 | semver | `7.8.4` | `^7.8.5` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | smol-toml | `1.6.1` | `^1.7.1` |

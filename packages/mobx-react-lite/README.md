@@ -12,14 +12,11 @@ npm install @depup/mobx-react-lite
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.1 | **DepUp version**: 4.1.1-depup.0 | **Updated**: 3/22/2026 | **Import test**: failed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 7/31/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| use-sync-external-store | `^1.4.0` | `^1.6.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mobx-react-lite&labels=bug).
 
