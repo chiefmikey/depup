@@ -1,74 +1,5 @@
 {
   "3.22.0": {
-    "73": {
-      "changes": {
-        "axios": {
-          "from": "1.7.7",
-          "to": "^1.18.1"
-        },
-        "bundle-require": {
-          "from": "4.0.2",
-          "to": "^5.1.0"
-        },
-        "esbuild": {
-          "from": "0.24.0",
-          "to": "^0.28.1"
-        },
-        "execa": {
-          "from": "5.1.1",
-          "to": "^10.0.0"
-        },
-        "form-data": {
-          "from": "4.0.0",
-          "to": "^4.0.6"
-        },
-        "fs-extra": {
-          "from": "11.2.0",
-          "to": "^11.3.6"
-        },
-        "get-port-please": {
-          "from": "3.1.2",
-          "to": "^3.2.0"
-        },
-        "odiff-bin": {
-          "from": "2.6.1",
-          "to": "^4.5.0"
-        },
-        "pixelmatch": {
-          "from": "5.3.0",
-          "to": "^7.2.0"
-        },
-        "playwright-core": {
-          "from": "1.47.2",
-          "to": "^1.61.1"
-        },
-        "posthog-node": {
-          "from": "3.5.0",
-          "to": "^5.46.0"
-        },
-        "serve-handler": {
-          "from": "6.1.6",
-          "to": "^6.1.7"
-        },
-        "shelljs": {
-          "from": "0.8.5",
-          "to": "^0.10.0"
-        },
-        "yargs": {
-          "from": "17.7.2",
-          "to": "^18.0.0"
-        },
-        "zod": {
-          "from": "3.23.8",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 15,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-07-23T08:55:28.220Z",
-      "version": "3.22.0-depup.73"
-    },
     "74": {
       "changes": {
         "axios": {
@@ -344,6 +275,75 @@
       "status": "published",
       "timestamp": "2026-07-30T00:40:33.084Z",
       "version": "3.22.0-depup.77"
+    },
+    "78": {
+      "changes": {
+        "axios": {
+          "from": "1.7.7",
+          "to": "^1.19.0"
+        },
+        "bundle-require": {
+          "from": "4.0.2",
+          "to": "^5.1.0"
+        },
+        "esbuild": {
+          "from": "0.24.0",
+          "to": "^0.28.1"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^10.0.0"
+        },
+        "form-data": {
+          "from": "4.0.0",
+          "to": "^4.0.6"
+        },
+        "fs-extra": {
+          "from": "11.2.0",
+          "to": "^11.4.0"
+        },
+        "get-port-please": {
+          "from": "3.1.2",
+          "to": "^3.2.0"
+        },
+        "odiff-bin": {
+          "from": "2.6.1",
+          "to": "^4.5.0"
+        },
+        "pixelmatch": {
+          "from": "5.3.0",
+          "to": "^7.2.0"
+        },
+        "playwright-core": {
+          "from": "1.47.2",
+          "to": "^1.62.1"
+        },
+        "posthog-node": {
+          "from": "3.5.0",
+          "to": "^5.47.0"
+        },
+        "serve-handler": {
+          "from": "6.1.6",
+          "to": "^6.1.7"
+        },
+        "shelljs": {
+          "from": "0.8.5",
+          "to": "^0.10.0"
+        },
+        "yargs": {
+          "from": "17.7.2",
+          "to": "^18.1.0"
+        },
+        "zod": {
+          "from": "3.23.8",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 15,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-07-31T00:43:32.160Z",
+      "version": "3.22.0-depup.78"
     }
   }
 }
