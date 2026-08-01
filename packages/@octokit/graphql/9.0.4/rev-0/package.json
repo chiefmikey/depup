@@ -1,0 +1,72 @@
+{
+  "name": "@depup/octokit__graphql",
+  "version": "9.0.4-depup.0",
+  "type": "module",
+  "description": "GitHub GraphQL API client for browsers and Node (with updated dependencies)",
+  "repository": "github:octokit/graphql.js",
+  "keywords": [
+    "@octokit/graphql",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "octokit",
+    "github",
+    "api",
+    "graphql"
+  ],
+  "author": "Gregor Martynus (https://github.com/gr2m)",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/request": "^10.0.13",
+    "@octokit/types": "^17.0.0",
+    "universal-user-agent": "^7.0.3"
+  },
+  "devDependencies": {
+    "@octokit/tsconfig": "^4.0.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "esbuild": "^0.28.0",
+    "fetch-mock": "^12.0.0",
+    "prettier": "3.9.6",
+    "semantic-release-plugin-update-version-in-files": "^2.0.0",
+    "tinyglobby": "^0.2.15",
+    "typescript": "^7.0.0",
+    "vitest": "^4.0.5"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "files": [
+    "dist-*/**",
+    "bin/**",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "./dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "import": "./dist-bundle/index.js",
+      "default": "./dist-bundle/index.js"
+    },
+    "./types": {
+      "types": "./dist-types/types.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {
+      "universal-user-agent": {
+        "from": "^7.0.0",
+        "to": "^7.0.3"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@octokit/graphql",
+    "originalVersion": "9.0.4",
+    "processedAt": "2026-08-01T16:22:06.395Z",
+    "smokeTest": "passed"
+  }
+}

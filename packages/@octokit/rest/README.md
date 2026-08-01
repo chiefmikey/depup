@@ -12,11 +12,16 @@ npm install @depup/octokit__rest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.0.1 | **DepUp version**: 22.0.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 22.0.1 | **DepUp version**: 22.0.1-depup.1 | **Updated**: 8/1/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @octokit/core | `^7.0.6` | `^7.0.7` |
+| @octokit/plugin-paginate-rest | `^14.0.0` | `^15.0.0` |
+| @octokit/plugin-rest-endpoint-methods | `^17.0.0` | `^18.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/octokit__rest&labels=bug).
 
