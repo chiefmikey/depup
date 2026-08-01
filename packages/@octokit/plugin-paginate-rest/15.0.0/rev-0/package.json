@@ -1,0 +1,71 @@
+{
+  "name": "@depup/octokit__plugin-paginate-rest",
+  "type": "module",
+  "version": "15.0.0-depup.0",
+  "description": "Octokit plugin to paginate REST API endpoint responses (with updated dependencies)",
+  "repository": "github:octokit/plugin-paginate-rest.js",
+  "keywords": [
+    "@octokit/plugin-paginate-rest",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "github",
+    "api",
+    "sdk",
+    "toolkit"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/types": "^17.0.0"
+  },
+  "peerDependencies": {
+    "@octokit/core": ">=6"
+  },
+  "devDependencies": {
+    "@octokit/core": "^7.0.7",
+    "@octokit/plugin-rest-endpoint-methods": "^18.0.0",
+    "@octokit/tsconfig": "^4.0.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "esbuild": "^0.28.0",
+    "fetch-mock": "^12.0.0",
+    "github-openapi-graphql-query": "^5.0.0",
+    "npm-run-all2": "^8.0.0",
+    "prettier": "3.9.6",
+    "semantic-release-plugin-update-version-in-files": "^2.0.0",
+    "tinyglobby": "^0.2.15",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "files": [
+    "dist-*/**",
+    "bin/**",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "import": "./dist-bundle/index.js",
+      "default": "./dist-bundle/index.js"
+    },
+    "./types": {
+      "types": "./dist-types/.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@octokit/plugin-paginate-rest",
+    "originalVersion": "15.0.0",
+    "processedAt": "2026-08-01T16:21:54.925Z",
+    "smokeTest": "passed"
+  }
+}

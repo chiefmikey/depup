@@ -12,7 +12,7 @@ npm install @depup/octokit__plugin-paginate-rest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.0 | **DepUp version**: 14.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 15.0.0 | **DepUp version**: 15.0.0-depup.0 | **Updated**: 8/1/2026 | **Import test**: passed
 
 ## What changed
 
