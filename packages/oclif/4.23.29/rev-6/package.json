@@ -1,15 +1,15 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "4.23.29-depup.1",
+  "version": "4.23.29-depup.6",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1096.0",
-    "@aws-sdk/client-s3": "^3.1096.0",
+    "@aws-sdk/client-cloudfront": "^3.1101.0",
+    "@aws-sdk/client-s3": "^3.1101.0",
     "@inquirer/confirm": "^6.1.1",
     "@inquirer/input": "^5.1.2",
     "@inquirer/select": "^5.2.1",
@@ -156,11 +156,11 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "^3.1079.0",
-        "to": "^3.1096.0"
+        "to": "^3.1101.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1079.0",
-        "to": "^3.1096.0"
+        "to": "^3.1101.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
@@ -226,7 +226,7 @@
     "depsUpdated": 17,
     "originalPackage": "oclif",
     "originalVersion": "4.23.29",
-    "processedAt": "2026-07-28T00:39:51.277Z",
+    "processedAt": "2026-08-01T00:39:33.791Z",
     "smokeTest": "passed"
   }
 }

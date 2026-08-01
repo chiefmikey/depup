@@ -2,11 +2,11 @@
   "bumped": {
     "@aws-sdk/client-cloudfront": {
       "from": "^3.1079.0",
-      "to": "^3.1096.0"
+      "to": "^3.1101.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1079.0",
-      "to": "^3.1096.0"
+      "to": "^3.1101.0"
     },
     "@inquirer/confirm": {
       "from": "^3.1.22",
@@ -69,6 +69,6 @@
       "to": "^8.0.0"
     }
   },
-  "timestamp": "2026-07-28T00:39:37.980Z",
+  "timestamp": "2026-08-01T00:39:09.713Z",
   "totalUpdated": 17
 }

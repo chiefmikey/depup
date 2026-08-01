@@ -1,6 +1,6 @@
 {
   "name": "@depup/pac-proxy-agent",
-  "version": "9.1.0-depup.48",
+  "version": "9.1.0-depup.53",
   "type": "module",
   "description": "A PAC file proxy `http.Agent` implementation for HTTP (with updated dependencies)",
   "exports": {
@@ -37,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^4.4.3",
-    "quickjs-wasi": "^3.0.2",
+    "quickjs-wasi": "^3.3.0",
     "agent-base": "9.0.0",
     "get-uri": "8.0.1",
     "pac-resolver": "9.0.1",
@@ -71,13 +71,13 @@
       },
       "quickjs-wasi": {
         "from": "^2.2.0",
-        "to": "^3.0.2"
+        "to": "^3.3.0"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "pac-proxy-agent",
     "originalVersion": "9.1.0",
-    "processedAt": "2026-07-10T00:42:34.981Z",
+    "processedAt": "2026-08-01T00:39:14.177Z",
     "smokeTest": "failed"
   }
 }
