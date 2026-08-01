@@ -12,14 +12,12 @@ npm install @depup/octokit__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.6 | **DepUp version**: 7.0.6-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 7.0.7 | **DepUp version**: 7.0.7-depup.0 | **Updated**: 8/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @octokit/request | `^10.0.6` | `^10.0.8` |
-| @octokit/request-error | `^7.0.2` | `^7.1.0` |
 | universal-user-agent | `^7.0.0` | `^7.0.3` |
 
 

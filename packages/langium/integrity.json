@@ -282,23 +282,6 @@
     }
   },
   "4.3.1": {
-    "11": {
-      "changes": {
-        "vscode-languageserver": {
-          "from": "~10.0.1",
-          "to": "^10.1.0"
-        },
-        "vscode-languageserver-protocol": {
-          "from": "~3.18.1",
-          "to": "^3.18.2"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-14T00:39:18.856Z",
-      "version": "4.3.1-depup.11"
-    },
     "12": {
       "changes": {
         "chevrotain-allstar": {
@@ -402,6 +385,35 @@
       "status": "published",
       "timestamp": "2026-08-01T00:39:58.673Z",
       "version": "4.3.1-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@chevrotain/regexp-to-ast": {
+          "from": "~12.0.0",
+          "to": "^13.2.0"
+        },
+        "chevrotain": {
+          "from": "~12.0.0",
+          "to": "^13.2.0"
+        },
+        "chevrotain-allstar": {
+          "from": "~0.4.3",
+          "to": "^0.4.4"
+        },
+        "vscode-languageserver": {
+          "from": "~10.0.1",
+          "to": "^10.1.0"
+        },
+        "vscode-languageserver-protocol": {
+          "from": "~3.18.1",
+          "to": "^3.18.2"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-01T16:22:41.111Z",
+      "version": "4.3.1-depup.16"
     }
   }
 }

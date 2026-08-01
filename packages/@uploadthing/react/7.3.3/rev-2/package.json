@@ -1,0 +1,92 @@
+{
+  "name": "@depup/uploadthing__react",
+  "version": "7.3.3-depup.2",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "github:pingdotgg/uploadthing",
+    "directory": "packages/react"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    "./styles.css": "./dist/index.css",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./native": {
+      "import": {
+        "types": "./native/index.d.ts",
+        "default": "./native/index.js"
+      },
+      "require": {
+        "types": "./native/index.d.cts",
+        "default": "./native/index.cjs"
+      }
+    },
+    "./next-ssr-plugin": {
+      "import": {
+        "types": "./next-ssr-plugin/index.d.ts",
+        "default": "./next-ssr-plugin/index.js"
+      },
+      "require": {
+        "types": "./next-ssr-plugin/index.d.cts",
+        "default": "./next-ssr-plugin/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "native",
+    "next-ssr-plugin",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@uploadthing/shared": "7.1.10",
+    "file-selector": "^4.1.0"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "^17.0.2 || ^18.0.0 || ^19.0.0",
+    "uploadthing": "^7.2.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "description": "@uploadthing/react with all dependencies updated to latest",
+  "keywords": [
+    "@uploadthing/react",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "file-selector": {
+        "from": "0.6.0",
+        "to": "^4.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@uploadthing/react",
+    "originalVersion": "7.3.3",
+    "processedAt": "2026-08-01T16:22:03.293Z",
+    "smokeTest": "passed"
+  }
+}

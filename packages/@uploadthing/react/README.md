@@ -12,13 +12,13 @@ npm install @depup/uploadthing__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.3 | **DepUp version**: 7.3.3-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 7.3.3 | **DepUp version**: 7.3.3-depup.2 | **Updated**: 8/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| file-selector | `0.6.0` | `^4.0.2` |
+| file-selector | `0.6.0` | `^4.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/uploadthing__react&labels=bug).
