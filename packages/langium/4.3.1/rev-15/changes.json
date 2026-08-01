@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@chevrotain/regexp-to-ast": {
+      "from": "~12.0.0",
+      "to": "^13.1.0"
+    },
+    "chevrotain": {
+      "from": "~12.0.0",
+      "to": "^13.1.0"
+    },
+    "chevrotain-allstar": {
+      "from": "~0.4.3",
+      "to": "^0.4.4"
+    },
+    "vscode-languageserver": {
+      "from": "~10.0.1",
+      "to": "^10.1.0"
+    },
+    "vscode-languageserver-protocol": {
+      "from": "~3.18.1",
+      "to": "^3.18.2"
+    }
+  },
+  "timestamp": "2026-08-01T00:39:49.697Z",
+  "totalUpdated": 5
+}

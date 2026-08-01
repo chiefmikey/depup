@@ -1,0 +1,56 @@
+{
+  "name": "@depup/fakeredis",
+  "version": "2.0.0-depup.4",
+  "description": "Fake redis for testing, works as a drop-in replacement for node_redis (with updated dependencies)",
+  "keywords": [
+    "fakeredis",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "test",
+    "spec",
+    "fake",
+    "redis",
+    "simulated",
+    "implementation",
+    "client"
+  ],
+  "author": "Hristo Dachev <tutini@gmail.com>",
+  "main": "./main.js",
+  "dependencies": {
+    "redis": "^6.2.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "mail": "tutini@gmail.com",
+    "url": "http://github.com/hdachev/fakeredis/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hdachev/fakeredis.git"
+  },
+  "scripts": {
+    "test": "./runtest",
+    "coverage": "./covertest"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "lcov-result-merger": "^1.0.2"
+  },
+  "depup": {
+    "changes": {
+      "redis": {
+        "from": "2.6.0-0",
+        "to": "^6.2.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "fakeredis",
+    "originalVersion": "2.0.0",
+    "processedAt": "2026-08-01T00:39:54.792Z",
+    "smokeTest": "passed"
+  }
+}
