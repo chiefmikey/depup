@@ -2,7 +2,7 @@
   "bumped": {
     "@babel/generator": {
       "from": "^7.18.13",
-      "to": "^8.0.0"
+      "to": "^7.29.8"
     },
     "@babel/template": {
       "from": "^7.18.10",
@@ -10,43 +10,47 @@
     },
     "@babel/types": {
       "from": "^7.18.13",
-      "to": "^8.0.4"
+      "to": "^7.29.8"
     },
     "@graphql-tools/apollo-engine-loader": {
       "from": "^8.0.28",
-      "to": "^8.0.32"
+      "to": "^8.0.34"
     },
     "@graphql-tools/code-file-loader": {
       "from": "^8.1.28",
-      "to": "^8.1.34"
+      "to": "^8.1.36"
     },
     "@graphql-tools/git-loader": {
       "from": "^8.0.32",
-      "to": "^8.0.38"
+      "to": "^8.0.40"
     },
     "@graphql-tools/github-loader": {
       "from": "^9.0.6",
-      "to": "^9.1.4"
+      "to": "^9.1.6"
     },
     "@graphql-tools/graphql-file-loader": {
       "from": "^8.1.11",
-      "to": "^8.1.16"
+      "to": "^8.1.18"
     },
     "@graphql-tools/json-file-loader": {
       "from": "^8.0.26",
-      "to": "^8.0.30"
+      "to": "^8.0.32"
     },
     "@graphql-tools/load": {
       "from": "^8.1.8",
-      "to": "^8.1.13"
+      "to": "^8.1.15"
     },
     "@graphql-tools/merge": {
       "from": "^9.0.6",
-      "to": "^9.2.0"
+      "to": "^9.2.2"
     },
     "@graphql-tools/url-loader": {
       "from": "^9.0.6",
-      "to": "^9.1.4"
+      "to": "^9.1.6"
+    },
+    "@graphql-tools/utils": {
+      "from": "^11.2.0",
+      "to": "^11.2.2"
     },
     "@inquirer/prompts": {
       "from": "^8.3.2",
@@ -58,11 +62,11 @@
     },
     "chalk": {
       "from": "^5.6.0",
-      "to": "^5.6.2"
+      "to": "^6.0.0"
     },
     "cosmiconfig": {
       "from": "^9.0.0",
-      "to": "^9.0.2"
+      "to": "^10.0.0"
     },
     "detect-indent": {
       "from": "^7.0.0",
@@ -78,7 +82,7 @@
     },
     "listr2": {
       "from": "^10.2.1",
-      "to": "^10.2.2"
+      "to": "^11.0.0"
     },
     "log-symbols": {
       "from": "^7.0.0",
@@ -103,8 +107,12 @@
     "yaml": {
       "from": "^2.3.1",
       "to": "^2.9.0"
+    },
+    "yargs": {
+      "from": "^18.0.0",
+      "to": "^18.1.0"
     }
   },
-  "timestamp": "2026-07-14T00:22:54.879Z",
-  "totalUpdated": 26
+  "timestamp": "2026-08-02T16:21:33.439Z",
+  "totalUpdated": 28
 }

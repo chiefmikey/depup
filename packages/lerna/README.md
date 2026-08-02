@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.0 | **Updated**: 7/31/2026 | **Import test**: failed
+**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.1 | **Updated**: 8/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -25,8 +25,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | ci-info | `4.3.1` | `^4.4.0` |
 | cmd-shim | `6.0.3` | `^9.0.2` |
-| conventional-commits-parser | `7.1.0` | `^7.1.1` |
-| cosmiconfig | `9.0.0` | `^9.0.2` |
+| conventional-commits-parser | `7.1.0` | `^7.1.2` |
+| cosmiconfig | `9.0.0` | `^10.0.0` |
 | dedent | `1.5.3` | `^1.7.2` |
 | envinfo | `7.13.0` | `^7.21.0` |
 | execa | `5.0.0` | `^10.0.1` |
@@ -36,7 +36,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ini | `^1.3.8` | `^7.0.0` |
 | init-package-json | `8.2.2` | `^9.0.0` |
 | inquirer | `12.9.6` | `^14.0.2` |
-| js-yaml | `4.3.0` | `^5.2.2` |
+| js-yaml | `4.3.0` | `^5.2.3` |
 | libnpmaccess | `10.0.3` | `^11.0.0` |
 | libnpmpublish | `11.1.2` | `^12.0.0` |
 | load-json-file | `6.2.0` | `^7.0.1` |

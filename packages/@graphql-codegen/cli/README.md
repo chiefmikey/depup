@@ -12,15 +12,15 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.11 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.12 | **Updated**: 8/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/generator | `^7.18.13` | `^8.0.0` |
+| @babel/generator | `^7.18.13` | `^7.29.8` |
 | @babel/template | `^7.18.10` | `^8.0.0` |
-| @babel/types | `^7.18.13` | `^8.0.4` |
+| @babel/types | `^7.18.13` | `^7.29.8` |
 | @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.34` |
 | @graphql-tools/code-file-loader | `^8.1.28` | `^8.1.36` |
 | @graphql-tools/git-loader | `^8.0.32` | `^8.0.40` |
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @inquirer/prompts | `^8.3.2` | `^8.5.2` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.10.13` |
 | chalk | `^5.6.0` | `^6.0.0` |
-| cosmiconfig | `^9.0.0` | `^9.0.2` |
+| cosmiconfig | `^9.0.0` | `^10.0.0` |
 | detect-indent | `^7.0.0` | `^7.0.2` |
 | is-glob | `^4.0.1` | `^4.0.3` |
 | jiti | `^2.3.0` | `^2.7.0` |

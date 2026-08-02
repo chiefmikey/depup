@@ -1,6 +1,6 @@
 {
   "name": "@depup/fork-ts-checker-webpack-plugin",
-  "version": "9.1.0-depup.1",
+  "version": "9.1.0-depup.6",
   "description": "Runs typescript type checker and linter on separate process. (with updated dependencies)",
   "keywords": [
     "fork-ts-checker-webpack-plugin",
@@ -61,18 +61,18 @@
     }
   },
   "dependencies": {
-    "@babel/code-frame": "^7.29.0",
-    "chalk": "^5.6.2",
+    "@babel/code-frame": "^8.0.0",
+    "chalk": "^6.0.0",
     "chokidar": "^5.0.0",
-    "cosmiconfig": "^9.0.1",
+    "cosmiconfig": "^10.0.0",
     "deepmerge": "^4.3.1",
-    "fs-extra": "^11.3.4",
-    "memfs": "^4.57.1",
-    "minimatch": "^10.2.4",
+    "fs-extra": "^11.4.0",
+    "memfs": "^4.64.0",
+    "minimatch": "^10.2.6",
     "node-abort-controller": "^3.1.1",
     "schema-utils": "^4.3.3",
-    "semver": "^7.7.4",
-    "tapable": "^2.3.0"
+    "semver": "^7.8.5",
+    "tapable": "^2.3.3"
   },
   "peerDependencies": {
     "typescript": ">3.6.0",
@@ -128,11 +128,11 @@
     "changes": {
       "@babel/code-frame": {
         "from": "^7.16.7",
-        "to": "^7.29.0"
+        "to": "^8.0.0"
       },
       "chalk": {
         "from": "^4.1.2",
-        "to": "^5.6.2"
+        "to": "^6.0.0"
       },
       "chokidar": {
         "from": "^4.0.1",
@@ -140,7 +140,7 @@
       },
       "cosmiconfig": {
         "from": "^8.2.0",
-        "to": "^9.0.1"
+        "to": "^10.0.0"
       },
       "deepmerge": {
         "from": "^4.2.2",
@@ -148,15 +148,15 @@
       },
       "fs-extra": {
         "from": "^10.0.0",
-        "to": "^11.3.4"
+        "to": "^11.4.0"
       },
       "memfs": {
         "from": "^3.4.1",
-        "to": "^4.57.1"
+        "to": "^4.64.0"
       },
       "minimatch": {
         "from": "^3.0.4",
-        "to": "^10.2.4"
+        "to": "^10.2.6"
       },
       "node-abort-controller": {
         "from": "^3.0.1",
@@ -168,17 +168,17 @@
       },
       "semver": {
         "from": "^7.3.5",
-        "to": "^7.7.4"
+        "to": "^7.8.5"
       },
       "tapable": {
         "from": "^2.2.1",
-        "to": "^2.3.0"
+        "to": "^2.3.3"
       }
     },
     "depsUpdated": 12,
     "originalPackage": "fork-ts-checker-webpack-plugin",
     "originalVersion": "9.1.0",
-    "processedAt": "2026-03-21T20:11:11.211Z",
+    "processedAt": "2026-08-02T16:21:54.532Z",
     "smokeTest": "failed"
   }
 }
