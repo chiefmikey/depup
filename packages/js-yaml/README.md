@@ -12,7 +12,7 @@ npm install @depup/js-yaml
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.3 | **DepUp version**: 5.2.3-depup.1 | **Updated**: 8/1/2026 | **Import test**: passed
+**Original version**: 5.2.3 | **DepUp version**: 5.2.3-depup.2 | **Updated**: 8/2/2026 | **Import test**: passed
 
 ## What changed
 
