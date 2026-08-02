@@ -1,6 +1,6 @@
 {
   "name": "@depup/bull",
-  "version": "4.16.5-depup.4",
+  "version": "4.16.5-depup.9",
   "description": "Job manager (with updated dependencies)",
   "engines": {
     "node": ">=12"
@@ -27,13 +27,13 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "cron-parser": "^5.5.0",
+    "cron-parser": "^5.7.0",
     "get-port": "^7.2.0",
-    "ioredis": "^5.10.1",
+    "ioredis": "^6.0.0",
     "lodash": "^4.18.1",
-    "msgpackr": "^2.0.1",
-    "semver": "^7.7.4",
-    "uuid": "^14.0.0"
+    "msgpackr": "^2.0.5",
+    "semver": "^7.8.5",
+    "uuid": "^14.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
@@ -135,7 +135,7 @@
     "changes": {
       "cron-parser": {
         "from": "^4.9.0",
-        "to": "^5.5.0"
+        "to": "^5.7.0"
       },
       "get-port": {
         "from": "^5.1.1",
@@ -143,7 +143,7 @@
       },
       "ioredis": {
         "from": "^5.3.2",
-        "to": "^5.10.1"
+        "to": "^6.0.0"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -151,21 +151,21 @@
       },
       "msgpackr": {
         "from": "^1.11.2",
-        "to": "^2.0.1"
+        "to": "^2.0.5"
       },
       "semver": {
         "from": "^7.5.2",
-        "to": "^7.7.4"
+        "to": "^7.8.5"
       },
       "uuid": {
         "from": "^8.3.0",
-        "to": "^14.0.0"
+        "to": "^14.0.1"
       }
     },
     "depsUpdated": 7,
     "originalPackage": "bull",
     "originalVersion": "4.16.5",
-    "processedAt": "2026-05-03T07:03:07.404Z",
+    "processedAt": "2026-08-02T01:03:57.388Z",
     "smokeTest": "passed"
   }
 }
