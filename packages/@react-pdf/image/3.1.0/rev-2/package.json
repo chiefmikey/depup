@@ -1,0 +1,51 @@
+{
+  "name": "@depup/react-pdf__image",
+  "version": "3.1.0-depup.2",
+  "license": "MIT",
+  "description": "Parses the images in png or jpeg format for react-pdf document (with updated dependencies)",
+  "author": "Diego Muracciole <diegomuracciole@gmail.com>",
+  "homepage": "https://github.com/diegomura/react-pdf#readme",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "browser": {
+    "./lib/index.js": "./lib/index.browser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegomura/react-pdf.git",
+    "directory": "packages/image"
+  },
+  "scripts": {
+    "test": "vitest",
+    "build": "rimraf ./lib && rollup -c",
+    "watch": "rimraf ./lib && rollup -c -w",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-pdf/svg": "^1.1.0",
+    "jay-peg": "^1.1.1",
+    "png-js": "^2.0.0"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@react-pdf/image",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-pdf/image",
+    "originalVersion": "3.1.0",
+    "processedAt": "2026-08-02T00:53:53.768Z",
+    "smokeTest": "passed"
+  }
+}
