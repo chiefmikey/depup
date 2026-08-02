@@ -12,11 +12,14 @@ npm install @depup/vitest__pretty-format
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.9 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.10 | **Updated**: 8/2/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| tinyrainbow | `^3.1.0` | `^3.1.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitest__pretty-format&labels=bug).
 

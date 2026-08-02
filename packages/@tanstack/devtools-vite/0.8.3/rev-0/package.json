@@ -1,0 +1,91 @@
+{
+  "name": "@depup/tanstack__devtools-vite",
+  "version": "0.8.3-depup.0",
+  "description": "TanStack Vite plugin used to enhance the core devtools with additional functionalities (with updated dependencies)",
+  "author": "Tanner Linsley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TanStack/devtools.git",
+    "directory": "packages/devtools-vite"
+  },
+  "homepage": "https://tanstack.com/devtools",
+  "bugs": {
+    "url": "https://github.com/TanStack/devtools/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tannerlinsley"
+  },
+  "keywords": [
+    "@tanstack/devtools-vite",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "devtools"
+  ],
+  "type": "module",
+  "types": "dist/esm//index.d.ts",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "intent": "./bin/intent.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "src",
+    "skills",
+    "bin",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vite": "^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "@tanstack/devtools-bundler-core": "0.1.1",
+    "@tanstack/devtools-client": "0.0.8",
+    "@tanstack/devtools-event-bus": "0.4.2"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.0.0"
+  },
+  "scripts": {
+    "clean": "premove ./build ./dist",
+    "lint:fix": "eslint ./src --fix",
+    "test:eslint": "eslint ./src",
+    "test:lib": "vitest",
+    "test:lib:dev": "pnpm test:lib --watch",
+    "test:types": "tsc",
+    "test:build": "publint --strict",
+    "build": "vite build"
+  },
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^5.6.2",
+        "to": "^6.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@tanstack/devtools-vite",
+    "originalVersion": "0.8.3",
+    "processedAt": "2026-08-02T00:53:29.366Z",
+    "smokeTest": "passed"
+  }
+}

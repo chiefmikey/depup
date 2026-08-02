@@ -252,5 +252,20 @@
       "timestamp": "2026-07-26T00:58:06.277Z",
       "version": "7.18.1-depup.16"
     }
+  },
+  "7.18.2": {
+    "0": {
+      "changes": {
+        "react-router": {
+          "from": "7.18.2",
+          "to": "^8.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-02T00:56:46.877Z",
+      "version": "7.18.2-depup.0"
+    }
   }
 }

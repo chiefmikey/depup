@@ -12000,5 +12000,52 @@
       "timestamp": "2026-07-26T01:03:46.916Z",
       "version": "6.6.0-depup.0"
     }
+  },
+  "6.8.0": {
+    "0": {
+      "changes": {
+        "@sanity/client": {
+          "from": "^7.25.0",
+          "to": "^7.26.0"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/ui": {
+          "from": "^3.5.0",
+          "to": "^3.5.1"
+        },
+        "@sentry/react": {
+          "from": "^10.68.0",
+          "to": "^10.69.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.8",
+          "to": "^3.14.9"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^3.21.0"
+        },
+        "motion": {
+          "from": "^12.42.2",
+          "to": "^12.43.0"
+        },
+        "react-rx": {
+          "from": "^4.2.5",
+          "to": "^5.1.0"
+        },
+        "web-vitals": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-02T00:58:41.651Z",
+      "version": "6.8.0-depup.0"
+    }
   }
 }

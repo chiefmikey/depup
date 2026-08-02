@@ -12,41 +12,21 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.0 | **DepUp version**: 6.6.0-depup.0 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 6.8.0 | **DepUp version**: 6.8.0-depup.0 | **Updated**: 8/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mux/mux-player-react | `^3.13.0` | `^3.13.2` |
-| @portabletext/editor | `^7.10.11` | `^7.10.13` |
-| @portabletext/plugin-dnd | `^1.0.23` | `^1.0.25` |
-| @portabletext/plugin-list-index | `^1.0.23` | `^1.0.25` |
-| @portabletext/plugin-markdown-shortcuts | `^8.0.39` | `^8.0.41` |
-| @portabletext/plugin-one-line | `^7.0.38` | `^7.0.40` |
-| @portabletext/plugin-paste-link | `^4.0.38` | `^4.0.40` |
-| @portabletext/plugin-table | `^1.3.8` | `^1.3.10` |
-| @portabletext/plugin-typography | `^8.0.39` | `^8.0.41` |
-| @portabletext/react | `^6.2.0` | `^7.0.1` |
-| @sanity/cli | `^7.12.1` | `^7.13.0` |
-| @sanity/client | `^7.24.0` | `^7.25.0` |
-| @sanity/color | `^3.0.6` | `^3.0.8` |
+| @sanity/client | `^7.25.0` | `^7.26.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/icons | `^5.2.0` | `^5.2.1` |
-| @sanity/logos | `^2.2.2` | `^2.2.5` |
-| @sanity/message-protocol | `^0.23.0` | `^0.24.0` |
-| @sanity/migrate | `^8.0.0` | `^8.0.1` |
-| @sanity/preview-url-secret | `^4.1.0` | `^4.1.2` |
-| @sanity/ui | `^3.4.0` | `^3.4.5` |
-| @sentry/react | `^10.66.0` | `^10.68.0` |
-| @tanstack/react-virtual | `^3.14.6` | `^3.14.8` |
-| color2k | `^2.0.3` | `^2.0.4` |
-| groq-js | `^1.30.3` | `^2.0.0` |
-| isomorphic-dompurify | `2.36.0` | `^3.19.0` |
-| path-to-regexp | `^6.3.0` | `^8.4.2` |
-| react-i18next | `^17.0.10` | `^17.0.11` |
-| react-is | `^19.2.7` | `^19.2.8` |
-| web-vitals | `^5.3.0` | `^6.0.0` |
+| @sanity/ui | `^3.5.0` | `^3.5.1` |
+| @sentry/react | `^10.68.0` | `^10.69.0` |
+| @tanstack/react-virtual | `^3.14.8` | `^3.14.9` |
+| isomorphic-dompurify | `2.36.0` | `^3.21.0` |
+| motion | `^12.42.2` | `^12.43.0` |
+| react-rx | `^4.2.5` | `^5.1.0` |
+| web-vitals | `^6.0.0` | `^6.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).
