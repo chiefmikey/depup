@@ -12,23 +12,23 @@ npm install @depup/depcheck
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.5 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.6 | **Updated**: 8/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/parser | `^7.23.0` | `^8.0.4` |
-| @babel/traverse | `^7.23.2` | `^8.0.4` |
+| @babel/parser | `^7.23.0` | `^7.29.8` |
+| @babel/traverse | `^7.23.2` | `^7.29.8` |
 | @vue/compiler-sfc | `^3.3.4` | `^3.5.40` |
 | camelcase | `^6.3.0` | `^9.0.0` |
-| cosmiconfig | `^7.1.0` | `^9.0.2` |
+| cosmiconfig | `^7.1.0` | `^10.0.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | ignore | `^5.2.4` | `^7.0.6` |
 | is-core-module | `^2.12.0` | `^2.16.2` |
-| js-yaml | `^3.14.1` | `^5.2.2` |
+| js-yaml | `^3.14.1` | `^5.2.3` |
 | lodash | `^4.17.21` | `^4.18.1` |
-| minimatch | `^7.4.6` | `^10.2.5` |
+| minimatch | `^7.4.6` | `^10.2.6` |
 | multimatch | `^5.0.0` | `^8.0.0` |
 | readdirp | `^3.6.0` | `^5.0.0` |
 | resolve | `^1.22.3` | `^1.22.12` |
