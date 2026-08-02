@@ -1396,6 +1396,39 @@
       "status": "published",
       "timestamp": "2026-07-27T16:44:48.380Z",
       "version": "10.5.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/semver": {
+          "from": "^7.7.1",
+          "to": "^7.8.0"
+        },
+        "magic-string": {
+          "from": "^0.30.5",
+          "to": "^1.1.0"
+        },
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.5"
+        },
+        "webpack": {
+          "from": "5",
+          "to": "^5.109.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-02T08:49:23.633Z",
+      "version": "10.5.5-depup.1"
     }
   }
 }

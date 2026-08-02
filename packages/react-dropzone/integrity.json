@@ -151,5 +151,24 @@
       "timestamp": "2026-08-01T16:23:07.135Z",
       "version": "19.2.0-depup.0"
     }
+  },
+  "20.0.0": {
+    "0": {
+      "changes": {
+        "attr-accept": {
+          "from": "^2.2.5",
+          "to": "^4.0.0"
+        },
+        "file-selector": {
+          "from": "^4.1.0",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-02T08:49:56.065Z",
+      "version": "20.0.0-depup.0"
+    }
   }
 }
