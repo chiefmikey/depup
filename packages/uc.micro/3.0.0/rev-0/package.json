@@ -1,0 +1,49 @@
+{
+  "name": "@depup/uc.micro",
+  "version": "3.0.0-depup.0",
+  "description": "Micro subset of unicode data files for markdown-it projects. (with updated dependencies)",
+  "repository": "markdown-it/uc.micro",
+  "license": "MIT",
+  "main": "build/index.cjs.js",
+  "module": "build/index.mjs",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.cjs.js",
+      "import": "./build/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run build && npm run type-check && node --test test/**/*.test.*",
+    "build": "rollup -c",
+    "type-check": "tsc --noEmit --strict --target ESNext --module ESNext --moduleResolution Bundler test/types.ts"
+  },
+  "devDependencies": {
+    "regenerate-unicode-properties": "10.2.2",
+    "rollup": "^4.62.2",
+    "typescript": "^7.0.2"
+  },
+  "keywords": [
+    "uc.micro",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "uc.micro",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-08-02T00:57:58.392Z",
+    "smokeTest": "passed"
+  }
+}

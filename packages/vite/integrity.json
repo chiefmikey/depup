@@ -595,5 +595,24 @@
       "timestamp": "2026-07-26T01:07:08.167Z",
       "version": "8.1.5-depup.1"
     }
+  },
+  "8.2.0": {
+    "0": {
+      "changes": {
+        "postcss": {
+          "from": "^8.5.23",
+          "to": "^8.5.25"
+        },
+        "rolldown": {
+          "from": "~1.2.0",
+          "to": "^1.2.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-02T00:59:08.861Z",
+      "version": "8.2.0-depup.0"
+    }
   }
 }
