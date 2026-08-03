@@ -744,5 +744,24 @@
       "timestamp": "2026-07-27T16:45:09.486Z",
       "version": "10.5.5-depup.0"
     }
+  },
+  "10.5.6": {
+    "0": {
+      "changes": {
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "react-docgen-typescript": {
+          "from": "^2.2.2",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-03T16:50:06.339Z",
+      "version": "10.5.6-depup.0"
+    }
   }
 }

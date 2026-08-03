@@ -12,14 +12,15 @@ npm install @depup/vitest__browser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.7 | **Updated**: 7/23/2026 | **Import test**: failed
+**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.8 | **Updated**: 8/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @blazediff/core | `1.9.1` | `^1.9.3` |
+| @blazediff/core | `1.9.1` | `^1.10.0` |
 | magic-string | `^0.30.21` | `^1.1.0` |
+| tinyrainbow | `^3.1.0` | `^3.1.1` |
 | ws | `^8.19.0` | `^8.21.1` |
 
 

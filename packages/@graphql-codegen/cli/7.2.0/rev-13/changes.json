@@ -1,0 +1,118 @@
+{
+  "bumped": {
+    "@babel/generator": {
+      "from": "^7.18.13",
+      "to": "^8.0.0"
+    },
+    "@babel/template": {
+      "from": "^7.18.10",
+      "to": "^8.0.0"
+    },
+    "@babel/types": {
+      "from": "^7.18.13",
+      "to": "^8.0.4"
+    },
+    "@graphql-tools/apollo-engine-loader": {
+      "from": "^8.0.28",
+      "to": "^8.0.34"
+    },
+    "@graphql-tools/code-file-loader": {
+      "from": "^8.1.28",
+      "to": "^8.1.36"
+    },
+    "@graphql-tools/git-loader": {
+      "from": "^8.0.32",
+      "to": "^8.0.40"
+    },
+    "@graphql-tools/github-loader": {
+      "from": "^9.0.6",
+      "to": "^9.1.6"
+    },
+    "@graphql-tools/graphql-file-loader": {
+      "from": "^8.1.11",
+      "to": "^8.1.18"
+    },
+    "@graphql-tools/json-file-loader": {
+      "from": "^8.0.26",
+      "to": "^8.0.32"
+    },
+    "@graphql-tools/load": {
+      "from": "^8.1.8",
+      "to": "^8.1.15"
+    },
+    "@graphql-tools/merge": {
+      "from": "^9.0.6",
+      "to": "^9.2.2"
+    },
+    "@graphql-tools/url-loader": {
+      "from": "^9.0.6",
+      "to": "^9.1.6"
+    },
+    "@graphql-tools/utils": {
+      "from": "^11.2.0",
+      "to": "^11.2.2"
+    },
+    "@inquirer/prompts": {
+      "from": "^8.3.2",
+      "to": "^8.5.2"
+    },
+    "@whatwg-node/fetch": {
+      "from": "^0.10.0",
+      "to": "^0.10.13"
+    },
+    "chalk": {
+      "from": "^5.6.0",
+      "to": "^6.0.0"
+    },
+    "cosmiconfig": {
+      "from": "^9.0.0",
+      "to": "^10.0.0"
+    },
+    "detect-indent": {
+      "from": "^7.0.0",
+      "to": "^7.0.2"
+    },
+    "is-glob": {
+      "from": "^4.0.1",
+      "to": "^4.0.3"
+    },
+    "jiti": {
+      "from": "^2.3.0",
+      "to": "^2.7.0"
+    },
+    "listr2": {
+      "from": "^10.2.1",
+      "to": "^11.0.0"
+    },
+    "log-symbols": {
+      "from": "^7.0.0",
+      "to": "^7.0.1"
+    },
+    "micromatch": {
+      "from": "^4.0.5",
+      "to": "^4.0.8"
+    },
+    "shell-quote": {
+      "from": "^1.7.3",
+      "to": "^1.10.0"
+    },
+    "ts-log": {
+      "from": "^3.0.0",
+      "to": "^3.0.2"
+    },
+    "tslib": {
+      "from": "^2.4.0",
+      "to": "^2.8.1"
+    },
+    "yaml": {
+      "from": "^2.3.1",
+      "to": "^2.9.0"
+    },
+    "yargs": {
+      "from": "^18.0.0",
+      "to": "^18.1.0"
+    }
+  },
+  "timestamp": "2026-08-03T16:49:28.710Z",
+  "totalUpdated": 28
+}

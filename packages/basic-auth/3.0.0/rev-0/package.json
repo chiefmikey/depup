@@ -1,0 +1,69 @@
+{
+  "name": "@depup/basic-auth",
+  "version": "3.0.0-depup.0",
+  "description": "Basic auth parser (with updated dependencies)",
+  "keywords": [
+    "basic-auth",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "basic",
+    "auth",
+    "authorization",
+    "basicauth"
+  ],
+  "repository": "jshttp/basic-auth",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "bench": "vitest bench",
+    "build": "ts-scripts build",
+    "format": "ts-scripts format",
+    "lint": "ts-scripts lint",
+    "size": "size-limit",
+    "specs": "ts-scripts specs",
+    "test": "ts-scripts test && npm run size"
+  },
+  "devDependencies": {
+    "@borderless/ts-scripts": "^0.15.0",
+    "@size-limit/preset-small-lib": "^13.0.3",
+    "@types/node": "^26.1.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "size-limit": "^13.0.3",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.6"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "1 kB"
+    }
+  ],
+  "ts-scripts": {
+    "dist": [
+      "dist"
+    ],
+    "project": [
+      "tsconfig.build.json"
+    ]
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "basic-auth",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-08-03T16:49:58.800Z",
+    "smokeTest": "passed"
+  }
+}
