@@ -473,6 +473,23 @@
       "status": "published",
       "timestamp": "2026-07-29T09:00:46.218Z",
       "version": "30.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@asamuzakjp/dom-selector": {
+          "from": "^8.3.0",
+          "to": "^8.3.2"
+        },
+        "undici": {
+          "from": "^8.9.0",
+          "to": "^8.10.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-03T16:51:25.886Z",
+      "version": "30.0.1-depup.1"
     }
   }
 }

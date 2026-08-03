@@ -12,7 +12,7 @@ npm install @depup/elastic-apm-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.18.0 | **DepUp version**: 4.18.0-depup.7 | **Updated**: 7/22/2026 | **Import test**: failed
+**Original version**: 4.18.0 | **DepUp version**: 4.18.0-depup.8 | **Updated**: 8/3/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,13 +22,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/core | `^2.8.0` | `^2.10.0` |
 | @opentelemetry/sdk-metrics | `^2.8.0` | `^2.10.0` |
 | agentkeepalive | `^4.2.1` | `^4.6.0` |
+| basic-auth | `^2.0.1` | `^3.0.0` |
 | cookie | `^0.7.1` | `^2.0.1` |
 | core-util-is | `^1.0.2` | `^1.0.3` |
 | end-of-stream | `^1.4.4` | `^1.4.5` |
 | error-stack-parser | `^2.0.6` | `^2.1.4` |
 | escape-string-regexp | `^4.0.0` | `^5.0.0` |
 | fast-safe-stringify | `^2.0.7` | `^2.1.1` |
-| import-in-the-middle | `1.15.0` | `^3.3.2` |
+| import-in-the-middle | `1.15.0` | `^3.3.3` |
 | lru-cache | `10.2.0` | `^11.5.2` |
 | measured-reporting | `^1.51.1` | `^2.0.0` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |

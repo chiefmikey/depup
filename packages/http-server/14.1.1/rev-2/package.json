@@ -1,0 +1,170 @@
+{
+  "name": "@depup/http-server",
+  "version": "14.1.1-depup.2",
+  "description": "A simple zero-configuration command-line http server (with updated dependencies)",
+  "main": "./lib/http-server",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/http-party/http-server.git"
+  },
+  "keywords": [
+    "http-server",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "command",
+    "static",
+    "http",
+    "https",
+    "https-server",
+    "server"
+  ],
+  "scripts": {
+    "start": "node ./bin/http-server",
+    "test": "tap --reporter=spec test/*.test.js",
+    "test-watch": "tap --reporter=spec --watch test/*.test.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "doc",
+    "changes.json",
+    "README.md"
+  ],
+  "man": "./doc/http-server.1",
+  "engines": {
+    "node": ">=12"
+  },
+  "contributors": [
+    {
+      "name": "Charlie Robbins",
+      "email": "charlie.robbins@gmail.com"
+    },
+    {
+      "name": "Marak Squires",
+      "email": "marak.squires@gmail.com"
+    },
+    {
+      "name": "Charlie McConnell",
+      "email": "charlie@charlieistheman.com"
+    },
+    {
+      "name": "Joshua Holbrook",
+      "email": "josh.holbrook@gmail.com"
+    },
+    {
+      "name": "Maciej Małecki",
+      "email": "maciej.malecki@notimplemented.org"
+    },
+    {
+      "name": "Matthew Bergman",
+      "email": "mzbphoto@gmail.com"
+    },
+    {
+      "name": "brad dunbar",
+      "email": "dunbarb2@gmail.com"
+    },
+    {
+      "name": "Dominic Tarr"
+    },
+    {
+      "name": "Travis Person",
+      "email": "travis.person@gmail.com"
+    },
+    {
+      "name": "Jinkwon Lee",
+      "email": "master@bdyne.net"
+    },
+    {
+      "name": "BigBlueHat",
+      "email": "byoung@bigbluehat.com"
+    },
+    {
+      "name": "Daniel Dalton",
+      "email": "daltond2@hawkmail.newpaltz.edu"
+    },
+    {
+      "name": "Jade Michael Thornton",
+      "email": "jademichael@jmthornton.net"
+    }
+  ],
+  "dependencies": {
+    "basic-auth": "^3.0.0",
+    "chalk": "^6.0.0",
+    "corser": "^2.0.1",
+    "he": "^1.2.0",
+    "html-encoding-sniffer": "^6.0.0",
+    "http-proxy": "^1.18.1",
+    "mime": "^4.1.0",
+    "minimist": "^1.2.8",
+    "opener": "^1.5.2",
+    "portfinder": "^1.0.38",
+    "secure-compare": "3.0.1",
+    "union": "^0.6.0",
+    "url-join": "^5.0.0"
+  },
+  "devDependencies": {
+    "eol": "^0.9.1",
+    "eslint": "^4.19.1",
+    "eslint-config-populist": "^4.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "tap": "^14.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/http-party/http-server/issues"
+  },
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "http-server": "./bin/http-server"
+  },
+  "depup": {
+    "changes": {
+      "basic-auth": {
+        "from": "^2.0.1",
+        "to": "^3.0.0"
+      },
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^6.0.0"
+      },
+      "html-encoding-sniffer": {
+        "from": "^3.0.0",
+        "to": "^6.0.0"
+      },
+      "mime": {
+        "from": "^1.6.0",
+        "to": "^4.1.0"
+      },
+      "minimist": {
+        "from": "^1.2.6",
+        "to": "^1.2.8"
+      },
+      "opener": {
+        "from": "^1.5.1",
+        "to": "^1.5.2"
+      },
+      "portfinder": {
+        "from": "^1.0.28",
+        "to": "^1.0.38"
+      },
+      "union": {
+        "from": "~0.5.0",
+        "to": "^0.6.0"
+      },
+      "url-join": {
+        "from": "^4.0.1",
+        "to": "^5.0.0"
+      }
+    },
+    "depsUpdated": 9,
+    "originalPackage": "http-server",
+    "originalVersion": "14.1.1",
+    "processedAt": "2026-08-03T16:50:38.756Z",
+    "smokeTest": "passed"
+  }
+}

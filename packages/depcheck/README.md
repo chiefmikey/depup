@@ -12,14 +12,14 @@ npm install @depup/depcheck
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.6 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.7 | **Updated**: 8/3/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/parser | `^7.23.0` | `^7.29.8` |
-| @babel/traverse | `^7.23.2` | `^7.29.8` |
+| @babel/parser | `^7.23.0` | `^8.0.4` |
+| @babel/traverse | `^7.23.2` | `^8.0.4` |
 | @vue/compiler-sfc | `^3.3.4` | `^3.5.40` |
 | camelcase | `^6.3.0` | `^9.0.0` |
 | cosmiconfig | `^7.1.0` | `^10.0.0` |
