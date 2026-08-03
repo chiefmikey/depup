@@ -35,5 +35,24 @@
       "timestamp": "2026-03-17T16:32:27.699Z",
       "version": "8.0.3-depup.0"
     }
+  },
+  "8.0.4": {
+    "0": {
+      "changes": {
+        "@types/aws-lambda": {
+          "from": "^8.10.83",
+          "to": "^8.10.162"
+        },
+        "universal-user-agent": {
+          "from": "^7.0.0",
+          "to": "^7.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-03T00:39:38.695Z",
+      "version": "8.0.4-depup.0"
+    }
   }
 }

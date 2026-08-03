@@ -1,0 +1,80 @@
+{
+  "name": "@depup/octokit__oauth-app",
+  "version": "8.0.4-depup.0",
+  "description": "GitHub OAuth toolset for Node.js (with updated dependencies)",
+  "type": "module",
+  "repository": "github:octokit/oauth-app.js",
+  "keywords": [
+    "@octokit/oauth-app",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "github",
+    "api",
+    "sdk",
+    "toolkit"
+  ],
+  "author": "Gregor Martynus (https://twitter.com/gr2m)",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/auth-oauth-app": "^9.0.4",
+    "@octokit/auth-oauth-user": "^6.0.3",
+    "@octokit/auth-unauthenticated": "^7.0.4",
+    "@octokit/core": "^7.0.7",
+    "@octokit/oauth-authorization-url": "^8.0.0",
+    "@octokit/oauth-methods": "^6.0.3",
+    "@types/aws-lambda": "^8.10.162",
+    "universal-user-agent": "^7.0.3"
+  },
+  "devDependencies": {
+    "@octokit/tsconfig": "^4.0.0",
+    "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "^4.0.0",
+    "esbuild": "^0.28.0",
+    "express": "^4.17.1",
+    "fetch-mock": "^11.0.0",
+    "nock": "^14.0.0",
+    "prettier": "3.6.2",
+    "semantic-release-plugin-update-version-in-files": "^2.0.0",
+    "tinyglobby": "^0.2.13",
+    "typescript": "^7.0.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "files": [
+    "dist-*/**",
+    "bin/**",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "./dist-types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-types/index.d.ts",
+      "import": "./dist-node/index.js",
+      "default": "./dist-node/index.js"
+    }
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {
+      "@types/aws-lambda": {
+        "from": "^8.10.83",
+        "to": "^8.10.162"
+      },
+      "universal-user-agent": {
+        "from": "^7.0.0",
+        "to": "^7.0.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@octokit/oauth-app",
+    "originalVersion": "8.0.4",
+    "processedAt": "2026-08-03T00:39:31.828Z",
+    "smokeTest": "passed"
+  }
+}

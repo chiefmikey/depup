@@ -12,18 +12,13 @@ npm install @depup/octokit__oauth-app
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.3 | **DepUp version**: 8.0.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 8.0.4 | **DepUp version**: 8.0.4-depup.0 | **Updated**: 8/3/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @octokit/auth-oauth-app | `^9.0.2` | `^9.0.3` |
-| @octokit/auth-oauth-user | `^6.0.1` | `^6.0.2` |
-| @octokit/auth-unauthenticated | `^7.0.2` | `^7.0.3` |
-| @octokit/core | `^7.0.5` | `^7.0.6` |
-| @octokit/oauth-methods | `^6.0.1` | `^6.0.2` |
-| @types/aws-lambda | `^8.10.83` | `^8.10.161` |
+| @types/aws-lambda | `^8.10.83` | `^8.10.162` |
 | universal-user-agent | `^7.0.0` | `^7.0.3` |
 
 

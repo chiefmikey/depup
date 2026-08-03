@@ -1,7 +1,7 @@
 {
   "name": "@depup/nightwatch",
   "description": "Easy to use Node.js based end-to-end testing solution for web applications using the W3C WebDriver API. (with updated dependencies)",
-  "version": "3.16.0-depup.52",
+  "version": "3.16.0-depup.57",
   "author": "Andrei Rusu",
   "homepage": "https://nightwatchjs.org",
   "main": "./lib/index.js",
@@ -25,24 +25,24 @@
     "assertion-error": "^2.0.1",
     "boxen": "^8.0.1",
     "chai-nightwatch": "^0.5.3",
-    "chalk": "^5.6.2",
+    "chalk": "^6.0.0",
     "ci-info": "^4.4.0",
     "cli-table3": "^0.6.5",
-    "devtools-protocol": "^0.0.1660672",
+    "devtools-protocol": "^0.0.1672245",
     "didyoumean": "^1.2.2",
     "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
     "envinfo": "^7.21.0",
     "glob": "^13.0.6",
-    "jsdom": "^29.1.1",
+    "jsdom": "^30.0.1",
     "lodash": "^4.18.1",
-    "minimatch": "^10.2.5",
+    "minimatch": "^10.2.6",
     "minimist": "^1.2.8",
-    "mocha": "^11.7.6",
+    "mocha": "^11.8.0",
     "nightwatch-axe-verbose": "^2.5.1",
     "open": "^11.0.0",
     "ora": "^9.4.1",
-    "piscina": "^5.2.0",
+    "piscina": "^5.3.0",
     "selenium-webdriver": "^4.46.0",
     "semver": "^7.8.5",
     "stacktrace-parser": "^0.1.11",
@@ -201,7 +201,7 @@
       },
       "chalk": {
         "from": "^4.1.2",
-        "to": "^5.6.2"
+        "to": "^6.0.0"
       },
       "ci-info": {
         "from": "3.3.0",
@@ -213,7 +213,7 @@
       },
       "devtools-protocol": {
         "from": "^0.0.1140464",
-        "to": "^0.0.1660672"
+        "to": "^0.0.1672245"
       },
       "dotenv": {
         "from": "16.3.1",
@@ -233,7 +233,7 @@
       },
       "jsdom": {
         "from": "^24.1.0",
-        "to": "^29.1.1"
+        "to": "^30.0.1"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -241,7 +241,7 @@
       },
       "minimatch": {
         "from": "3.1.5",
-        "to": "^10.2.5"
+        "to": "^10.2.6"
       },
       "minimist": {
         "from": "1.2.6",
@@ -249,7 +249,7 @@
       },
       "mocha": {
         "from": "10.8.2",
-        "to": "^11.7.6"
+        "to": "^11.8.0"
       },
       "nightwatch-axe-verbose": {
         "from": "^2.3.0",
@@ -265,7 +265,7 @@
       },
       "piscina": {
         "from": "^4.3.1",
-        "to": "^5.2.0"
+        "to": "^5.3.0"
       },
       "selenium-webdriver": {
         "from": "4.27.0",
@@ -295,7 +295,7 @@
     "depsUpdated": 29,
     "originalPackage": "nightwatch",
     "originalVersion": "3.16.0",
-    "processedAt": "2026-07-13T00:42:49.552Z",
+    "processedAt": "2026-08-03T00:40:00.962Z",
     "smokeTest": "failed"
   }
 }
