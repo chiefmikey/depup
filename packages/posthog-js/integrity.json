@@ -5516,5 +5516,32 @@
       "timestamp": "2026-07-31T16:37:47.426Z",
       "version": "1.409.5-depup.0"
     }
+  },
+  "1.410.1": {
+    "0": {
+      "changes": {
+        "dompurify": {
+          "from": "^3.3.2",
+          "to": "^3.4.12"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.29.3",
+          "to": "^10.29.8"
+        },
+        "web-vitals": {
+          "from": "^5.3.0",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-03T09:10:44.176Z",
+      "version": "1.410.1-depup.0"
+    }
   }
 }
