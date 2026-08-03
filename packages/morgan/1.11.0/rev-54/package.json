@@ -1,7 +1,7 @@
 {
   "name": "@depup/morgan",
   "description": "HTTP request logger middleware for node.js (with updated dependencies)",
-  "version": "1.11.0-depup.49",
+  "version": "1.11.0-depup.54",
   "contributors": [
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)"
@@ -25,7 +25,7 @@
     "url": "https://opencollective.com/express"
   },
   "dependencies": {
-    "basic-auth": "~2.0.1",
+    "basic-auth": "^3.0.0",
     "debug": "^4.4.3",
     "depd": "~2.0.0",
     "on-finished": "~2.4.1",
@@ -61,15 +61,19 @@
   },
   "depup": {
     "changes": {
+      "basic-auth": {
+        "from": "~2.0.1",
+        "to": "^3.0.0"
+      },
       "debug": {
         "from": "2.6.9",
         "to": "^4.4.3"
       }
     },
-    "depsUpdated": 1,
+    "depsUpdated": 2,
     "originalPackage": "morgan",
     "originalVersion": "1.11.0",
-    "processedAt": "2026-07-09T00:44:22.089Z",
+    "processedAt": "2026-08-03T16:50:16.920Z",
     "smokeTest": "passed"
   }
 }

@@ -400,5 +400,15 @@
       "timestamp": "2026-07-29T16:31:38.872Z",
       "version": "1.2.1-depup.0"
     }
+  },
+  "1.2.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-03T16:49:44.604Z",
+      "version": "1.2.2-depup.0"
+    }
   }
 }
