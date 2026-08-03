@@ -1,0 +1,53 @@
+{
+  "name": "@depup/postcss-nested",
+  "version": "8.0.1-depup.0",
+  "description": "PostCSS plugin to unwrap nested rules like how Sass does it (with updated dependencies)",
+  "keywords": [
+    "postcss-nested",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "css",
+    "nested",
+    "postcss",
+    "postcss-plugin",
+    "sass"
+  ],
+  "license": "MIT",
+  "author": "Andrey Sitnik <andrey@sitnik.es>",
+  "repository": "postcss/postcss-nested",
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/postcss/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ai"
+    }
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "postcss-selector-parser": "^7.1.4"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.14"
+  },
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0 || >= 26.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postcss-nested",
+    "originalVersion": "8.0.1",
+    "processedAt": "2026-08-03T00:39:29.748Z",
+    "smokeTest": "passed"
+  }
+}
