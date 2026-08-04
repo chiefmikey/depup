@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.55.0 | **DepUp version**: 6.55.0-depup.1 | **Updated**: 8/1/2026 | **Import test**: failed
+**Original version**: 6.55.0 | **DepUp version**: 6.55.0-depup.2 | **Updated**: 8/4/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1101.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1102.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^5.0.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.69.0` |
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^6.0.0` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | date-fns | `2.30.0` | `^4.4.0` |
-| dompurify | `3.4.11` | `^3.4.12` |
+| dompurify | `3.4.11` | `^3.4.13` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
@@ -64,7 +64,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.2` |
 | intl-messageformat | `5.4.3` | `^11.2.13` |
-| js-yaml | `4.3.0` | `^5.2.2` |
+| js-yaml | `4.3.0` | `^5.2.3` |
 | jsdom | `29.1.1` | `^30.0.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `9.1.0` | `^12.1.1` |
@@ -78,7 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-description | `5.51.1` | `^5.53.0` |
 | metascraper-image | `5.51.1` | `^5.53.0` |
 | metascraper-logo | `5.51.1` | `^5.53.0` |
-| metascraper-logo-favicon | `5.51.1` | `^5.53.0` |
+| metascraper-logo-favicon | `5.51.1` | `^5.53.1` |
 | metascraper-publisher | `5.51.1` | `^5.53.0` |
 | metascraper-title | `5.51.1` | `^5.53.0` |
 | metascraper-url | `5.51.1` | `^5.53.0` |

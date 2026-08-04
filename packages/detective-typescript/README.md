@@ -12,13 +12,13 @@ npm install @depup/detective-typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.0.1 | **DepUp version**: 15.0.1-depup.12 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 15.0.1 | **DepUp version**: 15.0.1-depup.13 | **Updated**: 8/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @typescript-eslint/typescript-estree | `^8.62.1` | `^8.65.0` |
+| @typescript-eslint/typescript-estree | `^8.62.1` | `^8.66.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/detective-typescript&labels=bug).

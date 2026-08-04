@@ -12,7 +12,7 @@ npm install @depup/jsonjoy.com__fs-node-to-fsa
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.66.0 | **DepUp version**: 4.66.0-depup.0 | **Updated**: 8/3/2026 | **Import test**: passed
+**Original version**: 4.66.1 | **DepUp version**: 4.66.1-depup.0 | **Updated**: 8/4/2026 | **Import test**: passed
 
 ## What changed
 

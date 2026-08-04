@@ -1739,5 +1739,24 @@
       "timestamp": "2026-07-31T09:03:09.206Z",
       "version": "3.977.4-depup.0"
     }
+  },
+  "3.977.5": {
+    "0": {
+      "changes": {
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-04T00:38:49.399Z",
+      "version": "3.977.5-depup.0"
+    }
   }
 }
