@@ -1,6 +1,6 @@
 {
   "name": "@depup/bookshelf",
-  "version": "1.2.0-depup.92",
+  "version": "1.2.0-depup.97",
   "description": "A lightweight ORM for PostgreSQL, MySQL, and SQLite3 (with updated dependencies)",
   "main": "bookshelf.js",
   "scripts": {
@@ -107,7 +107,7 @@
     "depsUpdated": 2,
     "originalPackage": "bookshelf",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-08-03T00:39:36.267Z",
+    "processedAt": "2026-08-04T16:38:49.002Z",
     "smokeTest": "passed"
   }
 }

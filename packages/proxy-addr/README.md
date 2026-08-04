@@ -12,13 +12,13 @@ npm install @depup/proxy-addr
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.7 | **DepUp version**: 2.0.7-depup.1 | **Updated**: 5/4/2026 | **Import test**: passed
+**Original version**: 2.0.7 | **DepUp version**: 2.0.7-depup.2 | **Updated**: 8/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ipaddr.js | `1.9.1` | `^2.4.0` |
+| ipaddr.js | `1.9.1` | `^2.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/proxy-addr&labels=bug).
