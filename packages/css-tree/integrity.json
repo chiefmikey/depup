@@ -31,6 +31,19 @@
       "status": "published",
       "timestamp": "2026-07-21T17:22:32.324Z",
       "version": "3.2.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "mdn-data": {
+          "from": "2.27.1",
+          "to": "^2.30.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-04T16:40:32.185Z",
+      "version": "3.2.1-depup.3"
     }
   }
 }
