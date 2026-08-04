@@ -1,0 +1,89 @@
+{
+  "name": "@depup/next-sitemap",
+  "version": "4.2.3-depup.1",
+  "description": "Sitemap generator for next.js (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/@types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": "https://github.com/iamvishnusankar/next-sitemap.git",
+  "funding": [
+    {
+      "url": "https://github.com/iamvishnusankar/next-sitemap.git"
+    }
+  ],
+  "engines": {
+    "node": ">=14.18"
+  },
+  "keywords": [
+    "next-sitemap",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "nextjs",
+    "next",
+    "sitemap",
+    "seo",
+    "react"
+  ],
+  "author": {
+    "name": "Vishnu Sankar",
+    "url": "https://www.iamvishnusankar.com"
+  },
+  "bugs": {
+    "url": "https://github.com/iamvishnusankar/next-sitemap/issues"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "bin": {
+    "next-sitemap": "./bin/next-sitemap.mjs",
+    "next-sitemap-cjs": "./bin/next-sitemap.cjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "tsc --module commonjs --outDir dist/cjs"
+  },
+  "dependencies": {
+    "@corex/deepmerge": "^4.0.43",
+    "@next/env": "^16.3.0",
+    "fast-glob": "^3.3.3",
+    "minimist": "^1.2.8"
+  },
+  "peerDependencies": {
+    "next": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "depup": {
+    "changes": {
+      "@next/env": {
+        "from": "^13.4.3",
+        "to": "^16.3.0"
+      },
+      "fast-glob": {
+        "from": "^3.2.12",
+        "to": "^3.3.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "next-sitemap",
+    "originalVersion": "4.2.3",
+    "processedAt": "2026-08-04T00:41:46.854Z",
+    "smokeTest": "passed"
+  }
+}

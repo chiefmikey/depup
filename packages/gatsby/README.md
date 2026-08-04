@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.97 | **Updated**: 7/30/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.98 | **Updated**: 8/4/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.65.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.65.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.66.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.66.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
-| enhanced-resolve | `^5.15.0` | `^5.24.4` |
+| enhanced-resolve | `^5.15.0` | `^5.24.5` |
 | eslint | `^7.32.0` | `^10.8.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
@@ -76,7 +76,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | eslint-plugin-react | `^7.32.2` | `^7.37.5` |
 | eslint-plugin-react-hooks | `^4.6.0` | `^7.1.1` |
 | eslint-webpack-plugin | `^2.7.0` | `^6.0.0` |
-| execa | `^5.1.1` | `^10.0.0` |
+| execa | `^5.1.1` | `^10.0.1` |
 | express | `^4.18.2` | `^5.2.1` |
 | express-http-proxy | `^1.6.3` | `^2.1.2` |
 | fastq | `^1.15.0` | `^1.20.1` |
@@ -128,7 +128,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.1` |
 | webpack | `~5.98.0` | `^5.109.2` |
-| webpack-dev-middleware | `^5.3.4` | `^8.1.0` |
+| webpack-dev-middleware | `^5.3.4` | `^8.1.1` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.5` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |
