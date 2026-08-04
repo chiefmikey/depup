@@ -583,5 +583,20 @@
       "timestamp": "2026-07-28T00:39:39.450Z",
       "version": "9.11.1-depup.0"
     }
+  },
+  "9.11.2": {
+    "0": {
+      "changes": {
+        "nanoid": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-04T00:41:20.964Z",
+      "version": "9.11.2-depup.0"
+    }
   }
 }
