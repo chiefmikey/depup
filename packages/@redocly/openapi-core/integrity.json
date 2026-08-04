@@ -1984,5 +1984,36 @@
       "timestamp": "2026-08-03T16:49:49.483Z",
       "version": "2.43.3-depup.0"
     }
+  },
+  "2.44.1": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-04T16:40:07.139Z",
+      "version": "2.44.1-depup.0"
+    }
   }
 }

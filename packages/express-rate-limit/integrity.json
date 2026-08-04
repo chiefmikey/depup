@@ -174,5 +174,20 @@
       "timestamp": "2026-07-31T09:04:33.900Z",
       "version": "8.6.1-depup.1"
     }
+  },
+  "8.6.2": {
+    "0": {
+      "changes": {
+        "ip-address": {
+          "from": "^10.2.0",
+          "to": "^10.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-04T16:42:20.027Z",
+      "version": "8.6.2-depup.0"
+    }
   }
 }
