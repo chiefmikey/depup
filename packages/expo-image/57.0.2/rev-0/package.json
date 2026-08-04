@@ -1,0 +1,69 @@
+{
+  "name": "@depup/expo-image",
+  "title": "Expo Image",
+  "version": "57.0.2-depup.0",
+  "description": "A cross-platform, performant image component for React Native and Expo with Web support (with updated dependencies)",
+  "main": "src/index.ts",
+  "types": "build/index.d.ts",
+  "sideEffects": false,
+  "homepage": "https://docs.expo.dev/versions/latest/sdk/image/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/expo-image"
+  },
+  "keywords": [
+    "expo-image",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react-native"
+  ],
+  "author": "650 Industries, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "sf-symbols-typescript": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "~19.2.0",
+    "expo-app-metrics": "57.0.8",
+    "expo": "57.0.10",
+    "expo-module-scripts": "56.0.3",
+    "expo-observe": "57.0.10"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-native-web": {
+      "optional": true
+    }
+  },
+  "jest": {
+    "preset": "expo-module-scripts"
+  },
+  "gitHead": "fb5049481ebd5cadd499c4d1f1d5e47f9ac678be",
+  "scripts": {
+    "build": "expo-module build",
+    "build:plugin": "expo-module build plugin",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "test:rsc": "jest --config jest-rsc.config.js",
+    "expo-module": "expo-module"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "expo-image",
+    "originalVersion": "57.0.2",
+    "processedAt": "2026-08-04T09:00:21.209Z",
+    "smokeTest": "failed"
+  }
+}
