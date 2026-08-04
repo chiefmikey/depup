@@ -1359,5 +1359,36 @@
       "timestamp": "2026-07-30T00:38:35.816Z",
       "version": "57.0.9-depup.0"
     }
+  },
+  "57.0.10": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.0",
+          "to": "^8.0.0"
+        },
+        "@ungap/structured-clone": {
+          "from": "^1.3.0",
+          "to": "^1.3.3"
+        },
+        "pretty-format": {
+          "from": "^29.7.0",
+          "to": "^30.4.1"
+        },
+        "react-refresh": {
+          "from": "^0.14.2",
+          "to": "^0.18.0"
+        },
+        "whatwg-url-minimum": {
+          "from": "^0.1.2",
+          "to": "^0.2.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-04T08:59:24.086Z",
+      "version": "57.0.10-depup.0"
+    }
   }
 }

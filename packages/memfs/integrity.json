@@ -1202,5 +1202,40 @@
       "timestamp": "2026-08-04T00:41:56.946Z",
       "version": "4.66.1-depup.0"
     }
+  },
+  "4.67.0": {
+    "0": {
+      "changes": {
+        "@jsonjoy.com/json-pack": {
+          "from": "^1.11.0",
+          "to": "^18.28.0"
+        },
+        "@jsonjoy.com/util": {
+          "from": "^1.9.0",
+          "to": "^18.28.0"
+        },
+        "glob-to-regex.js": {
+          "from": "^1.0.1",
+          "to": "^1.2.0"
+        },
+        "thingies": {
+          "from": "^2.5.0",
+          "to": "^2.6.1"
+        },
+        "tree-dump": {
+          "from": "^1.0.3",
+          "to": "^1.1.0"
+        },
+        "tslib": {
+          "from": "^2.0.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-04T08:59:18.252Z",
+      "version": "4.67.0-depup.0"
+    }
   }
 }
