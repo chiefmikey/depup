@@ -12,21 +12,21 @@ npm install @depup/react-three__drei
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.7.7 | **DepUp version**: 10.7.7-depup.2 | **Updated**: 7/28/2026 | **Import test**: failed
+**Original version**: 10.7.8 | **DepUp version**: 10.7.8-depup.0 | **Updated**: 8/5/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/runtime | `^7.26.0` | `^8.0.0` |
-| @mediapipe/tasks-vision | `0.10.17` | `^1.0.0` |
+| @mediapipe/tasks-vision | `0.10.17` | `^1.0.1` |
 | @monogrid/gainmap-js | `^3.0.6` | `^3.4.0` |
 | camera-controls | `^3.1.0` | `^3.1.2` |
 | cross-env | `^7.0.3` | `^10.1.0` |
 | detect-gpu | `^5.0.56` | `^5.0.70` |
-| hls.js | `^1.5.17` | `^1.6.16` |
+| hls.js | `^1.5.17` | `^1.6.17` |
 | stats-gl | `^2.2.8` | `^4.2.3` |
-| three-mesh-bvh | `^0.8.3` | `^0.9.13` |
+| three-mesh-bvh | `^0.8.3` | `^0.9.14` |
 | three-stdlib | `^2.35.6` | `^2.36.1` |
 | troika-three-text | `^0.52.4` | `^0.52.5` |
 | use-sync-external-store | `^1.4.0` | `^1.6.0` |

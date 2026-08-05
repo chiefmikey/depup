@@ -1870,5 +1870,28 @@
       "timestamp": "2026-08-03T16:51:46.872Z",
       "version": "4.5.1-depup.4"
     }
+  },
+  "4.5.2": {
+    "0": {
+      "changes": {
+        "@vue/shared": {
+          "from": "^3.5.40",
+          "to": "^3.5.41"
+        },
+        "verkit": {
+          "from": "^0.3.1",
+          "to": "^0.3.2"
+        },
+        "vue": {
+          "from": "^3.5.40",
+          "to": "^3.5.41"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-05T16:38:52.111Z",
+      "version": "4.5.2-depup.0"
+    }
   }
 }
