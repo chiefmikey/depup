@@ -12,7 +12,7 @@ npm install @depup/cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.19.0 | **DepUp version**: 15.19.0-depup.2 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 15.20.0 | **DepUp version**: 15.20.0-depup.0 | **Updated**: 8/5/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/sinonjs__fake-timers | `8.1.1` | `^15.0.1` |
 | @types/sizzle | `^2.3.2` | `^2.3.10` |
 | @types/tmp | `^0.2.3` | `^0.2.6` |
-| arch | `^2.2.0` | `^3.0.0` |
 | buffer | `^5.7.1` | `^6.0.3` |
 | chalk | `^4.1.0` | `^6.0.0` |
 | ci-info | `^4.1.0` | `^4.4.0` |
@@ -32,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dayjs | `^1.10.4` | `^1.11.21` |
 | debug | `^4.3.4` | `^4.4.3` |
 | eventemitter2 | `6.4.7` | `^6.4.9` |
-| execa | `4.1.0` | `^10.0.0` |
+| execa | `4.1.0` | `^10.0.1` |
 | fs-extra | `^9.1.0` | `^11.4.0` |
 | hasha | `5.2.2` | `^7.0.0` |
 | is-installed-globally | `~0.4.0` | `^1.0.0` |
@@ -44,7 +43,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | supports-color | `^8.1.1` | `^11.0.0` |
 | systeminformation | `^5.31.1` | `^5.33.1` |
 | tmp | `~0.2.4` | `^0.2.7` |
-| tslib | `1.14.1` | `^2.8.1` |
 | untildify | `^4.0.0` | `^6.0.0` |
 | yauzl | `^3.3.1` | `^3.4.0` |
 
