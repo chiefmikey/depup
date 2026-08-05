@@ -278,5 +278,24 @@
       "timestamp": "2026-07-27T16:44:23.551Z",
       "version": "4.5.1-depup.0"
     }
+  },
+  "4.5.2": {
+    "0": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.5"
+        },
+        "verkit": {
+          "from": "^0.3.1",
+          "to": "^0.3.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-05T16:35:09.810Z",
+      "version": "4.5.2-depup.0"
+    }
   }
 }
