@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.55.0 | **DepUp version**: 6.55.0-depup.2 | **Updated**: 8/4/2026 | **Import test**: failed
+**Original version**: 6.56.0 | **DepUp version**: 6.56.0-depup.0 | **Updated**: 8/5/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1102.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1103.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^5.0.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.69.0` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.3.0` | `^5.2.3` |
 | jsdom | `29.1.1` | `^30.0.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
-| juice | `9.1.0` | `^12.1.1` |
+| juice | `9.1.0` | `^12.1.2` |
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
@@ -83,16 +83,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-title | `5.51.1` | `^5.53.0` |
 | metascraper-url | `5.51.1` | `^5.53.0` |
 | mime-types | `2.1.35` | `^3.0.2` |
-| mingo | `2.5.3` | `^7.2.2` |
+| mingo | `2.5.3` | `^7.2.3` |
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.3` |
 | mysql2 | `3.22.5` | `^3.23.2` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.11` | `^9.0.3` |
+| nodemailer | `8.0.11` | `^9.0.4` |
 | otplib | `12.0.1` | `^13.4.1` |
 | sanitize-html | `2.17.5` | `^2.17.6` |
 | stripe | `8.222.0` | `^22.4.0` |
-| terser | `5.48.0` | `^5.49.0` |
+| terser | `5.48.0` | `^5.49.1` |
 | tldts | `^7.4.4` | `^7.4.10` |
 | type-fest | `5.7.0` | `^5.8.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |

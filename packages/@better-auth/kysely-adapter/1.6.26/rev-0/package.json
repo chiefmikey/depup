@@ -1,0 +1,82 @@
+{
+  "name": "@depup/better-auth__kysely-adapter",
+  "version": "1.6.26-depup.0",
+  "description": "Kysely adapter for Better Auth (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com/docs/adapters/kysely",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/kysely-adapter"
+  },
+  "keywords": [
+    "@better-auth/kysely-adapter",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "kysely",
+    "adapter",
+    "typescript",
+    "better-auth"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "dev-source": "./src/index.ts",
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./node-sqlite-dialect": {
+      "dev-source": "./src/node-sqlite-dialect.ts",
+      "types": "./dist/node-sqlite-dialect.d.mts",
+      "default": "./dist/node-sqlite-dialect.mjs"
+    }
+  },
+  "peerDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "kysely": "^0.28.17 || ^0.29.0",
+    "@better-auth/core": "^1.6.26"
+  },
+  "peerDependenciesMeta": {
+    "kysely": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250121.0",
+    "@better-auth/utils": "0.4.2",
+    "kysely": "^0.28.17 || ^0.29.0",
+    "tsdown": "0.22.7",
+    "typescript": "^6.0.3",
+    "@better-auth/core": "1.6.26"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint:package": "publint run --strict --pack false",
+    "lint:types": "attw --profile esm-only --pack .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@better-auth/kysely-adapter",
+    "originalVersion": "1.6.26",
+    "processedAt": "2026-08-05T00:36:46.806Z",
+    "smokeTest": "failed"
+  }
+}
