@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@listr2/prompt-adapter-inquirer": {
+      "from": "4.2.4",
+      "to": "^4.2.5"
+    },
+    "@modelcontextprotocol/sdk": {
+      "from": "1.29.0",
+      "to": "^1.30.0"
+    },
+    "listr2": {
+      "from": "10.2.2",
+      "to": "^11.0.0"
+    },
+    "yargs": {
+      "from": "18.0.0",
+      "to": "^18.1.0"
+    }
+  },
+  "timestamp": "2026-08-05T08:57:28.012Z",
+  "totalUpdated": 4
+}

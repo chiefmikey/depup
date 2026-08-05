@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@babel/parser": {
+      "from": "^7.29.8",
+      "to": "^8.0.4"
+    },
+    "estree-walker": {
+      "from": "^2.0.2",
+      "to": "^3.0.3"
+    },
+    "magic-string": {
+      "from": "^0.30.21",
+      "to": "^1.1.0"
+    },
+    "postcss": {
+      "from": "^8.5.19",
+      "to": "^8.5.25"
+    }
+  },
+  "timestamp": "2026-08-05T08:57:46.353Z",
+  "totalUpdated": 4
+}

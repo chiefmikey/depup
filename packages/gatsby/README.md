@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.98 | **Updated**: 8/4/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.99 | **Updated**: 8/5/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.1.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.2` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.3` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.36` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.15` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -59,7 +59,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chokidar | `^3.6.0` | `^5.0.0` |
 | compression | `^1.7.4` | `^1.8.1` |
 | cookie | `^0.5.0` | `^2.0.1` |
-| core-js | `^3.31.0` | `^3.49.0` |
+| core-js | `^3.31.0` | `^3.50.0` |
 | cors | `^2.8.5` | `^2.8.6` |
 | css-loader | `^5.2.7` | `^7.1.4` |
 | css-minimizer-webpack-plugin | `^2.0.0` | `^8.0.0` |
