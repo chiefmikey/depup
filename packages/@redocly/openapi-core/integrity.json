@@ -2046,5 +2046,36 @@
       "timestamp": "2026-08-05T16:34:38.172Z",
       "version": "2.44.2-depup.0"
     }
+  },
+  "2.45.0": {
+    "0": {
+      "changes": {
+        "@redocly/ajv": {
+          "from": "^8.18.1",
+          "to": "^8.18.3"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-06T08:57:53.387Z",
+      "version": "2.45.0-depup.0"
+    }
   }
 }

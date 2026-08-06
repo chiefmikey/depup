@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 27.1.0 | **DepUp version**: 27.1.0-depup.0 | **Updated**: 8/5/2026 | **Import test**: failed
+**Original version**: 27.1.0 | **DepUp version**: 27.1.0-depup.1 | **Updated**: 8/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,9 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @fastify/static | `^10.0.0` | `^10.1.2` |
 | @netlify/ai | `^0.4.3` | `^0.4.4` |
+| @netlify/api | `^15.1.0` | `^15.1.1` |
 | @netlify/blobs | `^10.7.10` | `^10.7.12` |
-| @netlify/build | `^36.2.4` | `^36.3.0` |
-| @netlify/config | `^25.1.1` | `^25.2.0` |
+| @netlify/build | `^36.2.4` | `^36.3.1` |
+| @netlify/config | `^25.1.1` | `^25.2.1` |
 | @netlify/dev | `^4.18.10` | `^4.18.12` |
 | @netlify/edge-functions-bootstrap | `^2.17.1` | `^3.2.0` |
 | @netlify/zip-it-and-ship-it | `^15.3.1` | `^15.3.2` |
@@ -46,7 +47,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | inquirer-autocomplete-prompt | `^1.4.0` | `^3.0.1` |
 | is-wsl | `^3.1.0` | `^3.1.1` |
 | log-update | `^7.2.0` | `^8.0.0` |
-| modern-tar | `^0.8.0` | `^0.8.1` |
+| modern-tar | `^0.8.0` | `^0.8.2` |
 | multiparty | `^4.2.3` | `^4.3.0` |
 | normalize-package-data | `^7.0.1` | `^9.0.0` |
 | p-map | `^7.0.3` | `^7.0.6` |
@@ -54,6 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | parse-github-url | `^1.0.3` | `^1.0.4` |
 | pg | `^8.20.0` | `^8.22.0` |
 | raw-body | `^3.0.1` | `^4.0.0` |
+| readdirp | `^5.0.0` | `^5.1.1` |
 | semver | `^7.7.2` | `^7.8.5` |
 | toml | `^3.0.0` | `^5.0.0` |
 | ulid | `^3.0.1` | `^3.0.2` |

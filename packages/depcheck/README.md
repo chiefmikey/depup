@@ -12,7 +12,7 @@ npm install @depup/depcheck
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.7 | **Updated**: 8/3/2026 | **Import test**: passed
+**Original version**: 1.4.7 | **DepUp version**: 1.4.7-depup.8 | **Updated**: 8/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/parser | `^7.23.0` | `^8.0.4` |
 | @babel/traverse | `^7.23.2` | `^8.0.4` |
-| @vue/compiler-sfc | `^3.3.4` | `^3.5.40` |
+| @vue/compiler-sfc | `^3.3.4` | `^3.5.41` |
 | camelcase | `^6.3.0` | `^9.0.0` |
 | cosmiconfig | `^7.1.0` | `^10.0.0` |
 | debug | `^4.3.4` | `^4.4.3` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.17.21` | `^4.18.1` |
 | minimatch | `^7.4.6` | `^10.2.6` |
 | multimatch | `^5.0.0` | `^8.0.0` |
-| readdirp | `^3.6.0` | `^5.0.0` |
+| readdirp | `^3.6.0` | `^5.1.1` |
 | resolve | `^1.22.3` | `^1.22.12` |
 | semver | `^7.5.4` | `^7.8.5` |
 | yargs | `^16.2.0` | `^18.1.0` |
