@@ -5,6 +5,19 @@
       "status": "published",
       "timestamp": "2026-03-17T18:40:29.348Z",
       "version": "5.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "readdirp": {
+          "from": "^5.0.0",
+          "to": "^5.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-06T08:57:51.437Z",
+      "version": "5.0.0-depup.1"
     }
   }
 }

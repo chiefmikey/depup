@@ -1,0 +1,84 @@
+{
+  "name": "@depup/chokidar",
+  "description": "Minimal and efficient cross-platform file watching library (with updated dependencies)",
+  "version": "5.0.0-depup.1",
+  "type": "module",
+  "homepage": "https://github.com/paulmillr/chokidar",
+  "author": "Paul Miller (https://paulmillr.com)",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "handler.js",
+    "handler.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./handler.js": {
+      "default": "./handler.js"
+    }
+  },
+  "dependencies": {
+    "readdirp": "^5.1.1"
+  },
+  "devDependencies": {
+    "@paulmillr/jsbt": "0.4.5",
+    "@types/node": "24.10.1",
+    "prettier": "3.5.2",
+    "tinyspy": "3.0.2",
+    "typescript": "5.9.2",
+    "upath": "2.0.1"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">= 20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulmillr/chokidar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulmillr/chokidar/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "prettier --check src",
+    "format": "prettier --write src",
+    "test": "node index.test.js",
+    "test:bun1": "bun index.test.js"
+  },
+  "keywords": [
+    "chokidar",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "fs",
+    "watch",
+    "watchFile",
+    "watcher",
+    "watching",
+    "file",
+    "fsevents"
+  ],
+  "funding": "https://paulmillr.com/funding/",
+  "depup": {
+    "changes": {
+      "readdirp": {
+        "from": "^5.0.0",
+        "to": "^5.1.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "chokidar",
+    "originalVersion": "5.0.0",
+    "processedAt": "2026-08-06T08:57:47.788Z",
+    "smokeTest": "passed"
+  }
+}
