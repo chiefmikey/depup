@@ -1,22 +1,22 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "4.23.29-depup.4",
+  "version": "4.23.29-depup.9",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1099.0",
-    "@aws-sdk/client-s3": "^3.1099.0",
+    "@aws-sdk/client-cloudfront": "^3.1104.0",
+    "@aws-sdk/client-s3": "^3.1104.0",
     "@inquirer/confirm": "^6.1.1",
     "@inquirer/input": "^5.1.2",
     "@inquirer/select": "^5.2.1",
-    "@oclif/core": "^4.13.2",
-    "@oclif/plugin-help": "^6.2.55",
-    "@oclif/plugin-not-found": "^3.2.90",
-    "@oclif/plugin-warn-if-update-available": "^3.1.70",
+    "@oclif/core": "^4.13.3",
+    "@oclif/plugin-help": "^6.2.56",
+    "@oclif/plugin-not-found": "^3.2.91",
+    "@oclif/plugin-warn-if-update-available": "^3.1.71",
     "ansis": "^4.3.1",
     "async-retry": "^1.3.3",
     "change-case": "^5.4.4",
@@ -156,11 +156,11 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "^3.1079.0",
-        "to": "^3.1099.0"
+        "to": "^3.1104.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1079.0",
-        "to": "^3.1099.0"
+        "to": "^3.1104.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
@@ -176,19 +176,19 @@
       },
       "@oclif/core": {
         "from": "^4.11.11",
-        "to": "^4.13.2"
+        "to": "^4.13.3"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.53",
-        "to": "^6.2.55"
+        "to": "^6.2.56"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.87",
-        "to": "^3.2.90"
+        "to": "^3.2.91"
       },
       "@oclif/plugin-warn-if-update-available": {
         "from": "^3.1.67",
-        "to": "^3.1.70"
+        "to": "^3.1.71"
       },
       "ansis": {
         "from": "^3.16.0",
@@ -226,7 +226,7 @@
     "depsUpdated": 17,
     "originalPackage": "oclif",
     "originalVersion": "4.23.29",
-    "processedAt": "2026-07-31T00:41:12.162Z",
+    "processedAt": "2026-08-06T00:36:44.588Z",
     "smokeTest": "passed"
   }
 }

@@ -256,5 +256,15 @@
       "timestamp": "2026-07-21T16:03:27.632Z",
       "version": "34.2.0-depup.0"
     }
+  },
+  "34.2.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-06T00:34:12.420Z",
+      "version": "34.2.1-depup.0"
+    }
   }
 }
