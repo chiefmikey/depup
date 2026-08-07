@@ -12,7 +12,7 @@ npm install @depup/discord-api-types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.38.52 | **DepUp version**: 0.38.52-depup.0 | **Updated**: 7/27/2026 | **Import test**: failed
+**Original version**: 0.38.53 | **DepUp version**: 0.38.53-depup.0 | **Updated**: 8/7/2026 | **Import test**: failed
 
 ## What changed
 
