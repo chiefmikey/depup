@@ -499,6 +499,19 @@
       "status": "published",
       "timestamp": "2026-07-29T16:35:02.678Z",
       "version": "10.69.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@sentry/conventions": {
+          "from": "^0.16.0",
+          "to": "^0.19.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-07T16:19:01.656Z",
+      "version": "10.69.0-depup.1"
     }
   }
 }
