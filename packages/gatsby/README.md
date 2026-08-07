@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.99 | **Updated**: 8/5/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.100 | **Updated**: 8/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.1.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.3` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.5` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.36` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.15` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -107,9 +107,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | node-html-parser | `^5.4.2` | `^9.0.1` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
-| postcss | `^8.4.24` | `^8.5.25` |
+| postcss | `^8.4.24` | `^8.5.26` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
-| query-string | `^6.14.1` | `^9.4.1` |
+| query-string | `^6.14.1` | `^9.5.0` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
 | react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.8` |
 | redux | `4.2.1` | `^5.0.1` |
