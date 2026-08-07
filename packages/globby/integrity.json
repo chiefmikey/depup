@@ -31,5 +31,20 @@
       "timestamp": "2026-07-21T17:23:39.242Z",
       "version": "16.2.2-depup.0"
     }
+  },
+  "16.2.3": {
+    "0": {
+      "changes": {
+        "ignore": {
+          "from": "^7.0.5",
+          "to": "^7.0.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-07T16:19:41.155Z",
+      "version": "16.2.3-depup.0"
+    }
   }
 }
