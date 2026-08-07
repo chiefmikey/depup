@@ -12,7 +12,7 @@ npm install @depup/datadog__openfeature-node-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.2 | **DepUp version**: 2.0.2-depup.0 | **Updated**: 7/25/2026 | **Import test**: failed
+**Original version**: 2.1.0 | **DepUp version**: 2.1.0-depup.0 | **Updated**: 8/7/2026 | **Import test**: passed
 
 ## What changed
 

@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.56.0 | **DepUp version**: 6.56.0-depup.4 | **Updated**: 8/7/2026 | **Import test**: failed
+**Original version**: 6.57.0 | **DepUp version**: 6.57.0-depup.0 | **Updated**: 8/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -53,7 +53,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^6.0.0` |
 | cheerio | `0.22.0` | `^1.2.0` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
-| date-fns | `2.30.0` | `^4.4.0` |
 | dompurify | `3.4.11` | `^3.4.13` |
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
@@ -74,23 +73,23 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.3.0` |
-| metascraper | `5.51.1` | `^5.54.0` |
-| metascraper-amazon | `5.51.2` | `^5.54.0` |
-| metascraper-author | `5.51.1` | `^5.54.0` |
-| metascraper-description | `5.51.1` | `^5.54.0` |
-| metascraper-image | `5.51.1` | `^5.54.0` |
-| metascraper-logo | `5.51.1` | `^5.54.0` |
-| metascraper-logo-favicon | `5.51.1` | `^5.54.0` |
-| metascraper-publisher | `5.51.1` | `^5.54.0` |
-| metascraper-title | `5.51.1` | `^5.54.0` |
-| metascraper-url | `5.51.1` | `^5.54.0` |
+| metascraper | `5.51.1` | `^5.54.1` |
+| metascraper-amazon | `5.51.2` | `^5.54.1` |
+| metascraper-author | `5.51.1` | `^5.54.1` |
+| metascraper-description | `5.51.1` | `^5.54.1` |
+| metascraper-image | `5.51.1` | `^5.54.1` |
+| metascraper-logo | `5.51.1` | `^5.54.1` |
+| metascraper-logo-favicon | `5.51.1` | `^5.54.1` |
+| metascraper-publisher | `5.51.1` | `^5.54.1` |
+| metascraper-title | `5.51.1` | `^5.54.1` |
+| metascraper-url | `5.51.1` | `^5.54.1` |
 | mime-types | `2.1.35` | `^3.0.2` |
-| mingo | `2.5.3` | `^7.2.3` |
+| mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.3` |
 | mysql2 | `3.22.5` | `^3.23.2` |
 | node-fetch | `2.7.0` | `^3.3.2` |
-| nodemailer | `8.0.11` | `^9.0.4` |
+| nodemailer | `8.0.11` | `^9.0.5` |
 | otplib | `12.0.1` | `^13.4.1` |
 | sanitize-html | `2.17.5` | `^2.17.6` |
 | stripe | `8.222.0` | `^22.4.0` |

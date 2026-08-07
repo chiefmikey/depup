@@ -18,5 +18,20 @@
       "timestamp": "2026-08-04T08:58:25.906Z",
       "version": "9.0.0-depup.0"
     }
+  },
+  "9.0.1": {
+    "0": {
+      "changes": {
+        "@tanstack/store": {
+          "from": "^0.11.0",
+          "to": "^0.11.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-07T16:19:37.006Z",
+      "version": "9.0.1-depup.0"
+    }
   }
 }

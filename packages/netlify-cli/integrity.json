@@ -10688,5 +10688,176 @@
       "timestamp": "2026-08-07T01:20:16.877Z",
       "version": "27.1.0-depup.2"
     }
+  },
+  "27.1.1": {
+    "0": {
+      "changes": {
+        "@fastify/static": {
+          "from": "^10.0.0",
+          "to": "^10.1.3"
+        },
+        "@netlify/ai": {
+          "from": "^0.4.3",
+          "to": "^0.4.4"
+        },
+        "@netlify/blobs": {
+          "from": "^10.7.10",
+          "to": "^10.7.12"
+        },
+        "@netlify/dev": {
+          "from": "^4.18.10",
+          "to": "^4.18.12"
+        },
+        "@netlify/edge-functions-bootstrap": {
+          "from": "^2.17.1",
+          "to": "^3.2.0"
+        },
+        "@octokit/rest": {
+          "from": "^22.0.0",
+          "to": "^22.0.1"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.8.0",
+          "to": "^1.9.1"
+        },
+        "chalk": {
+          "from": "^5.6.2",
+          "to": "^6.0.0"
+        },
+        "chokidar": {
+          "from": "^4.0.3",
+          "to": "^5.0.0"
+        },
+        "commander": {
+          "from": "^12.1.0",
+          "to": "^15.0.0"
+        },
+        "comment-json": {
+          "from": "^4.6.2",
+          "to": "^5.0.0"
+        },
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^2.0.0"
+        },
+        "cookie": {
+          "from": "^1.1.1",
+          "to": "^2.0.1"
+        },
+        "cron-parser": {
+          "from": "^4.9.0",
+          "to": "^5.7.0"
+        },
+        "dot-prop": {
+          "from": "^10.1.0",
+          "to": "^10.2.0"
+        },
+        "dotenv": {
+          "from": "^17.3.1",
+          "to": "^17.4.2"
+        },
+        "execa": {
+          "from": "^5.1.1",
+          "to": "^10.0.1"
+        },
+        "fastify": {
+          "from": "^5.8.5",
+          "to": "^5.11.2"
+        },
+        "get-port": {
+          "from": "^5.1.1",
+          "to": "^7.2.0"
+        },
+        "http-proxy-middleware": {
+          "from": "^3.0.5",
+          "to": "^4.2.0"
+        },
+        "https-proxy-agent": {
+          "from": "^8.0.0",
+          "to": "^9.1.0"
+        },
+        "inquirer": {
+          "from": "^8.2.7",
+          "to": "^14.0.2"
+        },
+        "inquirer-autocomplete-prompt": {
+          "from": "^1.4.0",
+          "to": "^3.0.1"
+        },
+        "is-wsl": {
+          "from": "^3.1.0",
+          "to": "^3.1.1"
+        },
+        "log-update": {
+          "from": "^7.2.0",
+          "to": "^8.0.0"
+        },
+        "modern-tar": {
+          "from": "^0.8.0",
+          "to": "^0.8.2"
+        },
+        "multiparty": {
+          "from": "^4.2.3",
+          "to": "^4.3.0"
+        },
+        "normalize-package-data": {
+          "from": "^7.0.1",
+          "to": "^9.0.0"
+        },
+        "p-map": {
+          "from": "^7.0.3",
+          "to": "^7.0.6"
+        },
+        "parse-duration": {
+          "from": "^2.1.6",
+          "to": "^2.1.8"
+        },
+        "parse-github-url": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "pg": {
+          "from": "^8.20.0",
+          "to": "^8.22.0"
+        },
+        "raw-body": {
+          "from": "^3.0.1",
+          "to": "^4.0.0"
+        },
+        "readdirp": {
+          "from": "^5.0.0",
+          "to": "^5.1.1"
+        },
+        "semver": {
+          "from": "^7.7.2",
+          "to": "^7.8.5"
+        },
+        "toml": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "ulid": {
+          "from": "^3.0.1",
+          "to": "^3.0.2"
+        },
+        "write-file-atomic": {
+          "from": "^5.0.1",
+          "to": "^8.0.0"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.3"
+        },
+        "yauzl": {
+          "from": "^3.3.1",
+          "to": "^3.4.0"
+        }
+      },
+      "depsUpdated": 40,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-07T16:22:12.351Z",
+      "version": "27.1.1-depup.0"
+    }
   }
 }

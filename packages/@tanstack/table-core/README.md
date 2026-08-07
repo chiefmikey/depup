@@ -12,11 +12,14 @@ npm install @depup/tanstack__table-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.0 | **Updated**: 8/4/2026 | **Import test**: passed
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.0 | **Updated**: 8/7/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @tanstack/store | `^0.11.0` | `^0.11.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tanstack__table-core&labels=bug).
 

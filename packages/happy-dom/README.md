@@ -12,17 +12,17 @@ npm install @depup/happy-dom
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 20.11.1 | **DepUp version**: 20.11.1-depup.0 | **Updated**: 7/22/2026 | **Import test**: passed
+**Original version**: 20.11.2 | **DepUp version**: 20.11.2-depup.0 | **Updated**: 8/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `>=20.0.0` | `^26.1.1` |
+| @types/node | `>=20.0.0` | `^26.1.2` |
 | @types/whatwg-mimetype | `^3.0.2` | `^5.0.0` |
 | entities | `^7.0.1` | `^8.0.0` |
 | whatwg-mimetype | `^3.0.0` | `^5.0.0` |
-| ws | `^8.21.0` | `^8.21.1` |
+| ws | `^8.21.0` | `^8.21.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/happy-dom&labels=bug).

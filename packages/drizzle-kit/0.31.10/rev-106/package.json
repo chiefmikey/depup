@@ -1,6 +1,6 @@
 {
   "name": "@depup/drizzle-kit",
-  "version": "0.31.10-depup.101",
+  "version": "0.31.10-depup.106",
   "homepage": "https://orm.drizzle.team",
   "keywords": [
     "drizzle-kit",
@@ -48,7 +48,7 @@
     "@drizzle-team/brocli": "^0.12.0",
     "@esbuild-kit/esm-loader": "^2.6.5",
     "esbuild": "^0.28.1",
-    "tsx": "^4.23.8"
+    "tsx": "^4.23.11"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",
@@ -160,13 +160,13 @@
       },
       "tsx": {
         "from": "^4.21.0",
-        "to": "^4.23.8"
+        "to": "^4.23.11"
       }
     },
     "depsUpdated": 4,
     "originalPackage": "drizzle-kit",
     "originalVersion": "0.31.10",
-    "processedAt": "2026-08-05T16:35:20.515Z",
+    "processedAt": "2026-08-07T16:20:26.421Z",
     "smokeTest": "passed"
   }
 }
