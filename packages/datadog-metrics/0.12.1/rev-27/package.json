@@ -1,6 +1,6 @@
 {
   "name": "@depup/datadog-metrics",
-  "version": "0.12.1-depup.22",
+  "version": "0.12.1-depup.27",
   "description": "Buffered metrics reporting via the Datadog HTTP API (with updated dependencies)",
   "main": "index.js",
   "types": "dist/index.d.ts",
@@ -44,7 +44,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@datadog/datadog-api-client": "^1.58.0",
+    "@datadog/datadog-api-client": "^1.61.0",
     "debug": "^4.4.3"
   },
   "engines": {
@@ -63,7 +63,7 @@
     "changes": {
       "@datadog/datadog-api-client": {
         "from": "^1.17.0",
-        "to": "^1.58.0"
+        "to": "^1.61.0"
       },
       "debug": {
         "from": "^4.1.0",
@@ -73,7 +73,7 @@
     "depsUpdated": 2,
     "originalPackage": "datadog-metrics",
     "originalVersion": "0.12.1",
-    "processedAt": "2026-06-15T10:46:02.870Z",
+    "processedAt": "2026-08-07T08:25:51.910Z",
     "smokeTest": "passed"
   }
 }

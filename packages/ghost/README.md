@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.56.0 | **DepUp version**: 6.56.0-depup.3 | **Updated**: 8/7/2026 | **Import test**: failed
+**Original version**: 6.56.0 | **DepUp version**: 6.56.0-depup.4 | **Updated**: 8/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -74,16 +74,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^13.3.0` |
-| metascraper | `5.51.1` | `^5.53.0` |
-| metascraper-amazon | `5.51.2` | `^5.53.0` |
-| metascraper-author | `5.51.1` | `^5.53.0` |
-| metascraper-description | `5.51.1` | `^5.53.0` |
-| metascraper-image | `5.51.1` | `^5.53.0` |
-| metascraper-logo | `5.51.1` | `^5.53.0` |
-| metascraper-logo-favicon | `5.51.1` | `^5.53.1` |
-| metascraper-publisher | `5.51.1` | `^5.53.0` |
-| metascraper-title | `5.51.1` | `^5.53.0` |
-| metascraper-url | `5.51.1` | `^5.53.0` |
+| metascraper | `5.51.1` | `^5.54.0` |
+| metascraper-amazon | `5.51.2` | `^5.54.0` |
+| metascraper-author | `5.51.1` | `^5.54.0` |
+| metascraper-description | `5.51.1` | `^5.54.0` |
+| metascraper-image | `5.51.1` | `^5.54.0` |
+| metascraper-logo | `5.51.1` | `^5.54.0` |
+| metascraper-logo-favicon | `5.51.1` | `^5.54.0` |
+| metascraper-publisher | `5.51.1` | `^5.54.0` |
+| metascraper-title | `5.51.1` | `^5.54.0` |
+| metascraper-url | `5.51.1` | `^5.54.0` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.3` |
 | moment | `2.24.0` | `^2.30.1` |
