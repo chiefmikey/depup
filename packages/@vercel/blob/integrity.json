@@ -462,5 +462,28 @@
       "timestamp": "2026-08-03T16:50:16.738Z",
       "version": "2.6.1-depup.8"
     }
+  },
+  "2.7.0": {
+    "0": {
+      "changes": {
+        "@vercel/oidc": {
+          "from": "^3.6.1",
+          "to": "^3.8.2"
+        },
+        "throttleit": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        },
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.10.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-07T01:19:55.183Z",
+      "version": "2.7.0-depup.0"
+    }
   }
 }
