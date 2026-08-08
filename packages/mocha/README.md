@@ -12,7 +12,7 @@ npm install @depup/mocha
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.8.0 | **DepUp version**: 11.8.0-depup.0 | **Updated**: 8/3/2026 | **Import test**: passed
+**Original version**: 11.8.0 | **DepUp version**: 11.8.0-depup.1 | **Updated**: 8/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `^4.1.0` | `^5.2.3` |
 | log-symbols | `^4.1.0` | `^7.0.1` |
 | minimatch | `^9.0.5` | `^10.2.6` |
-| serialize-javascript | `^6.0.2` | `^7.0.7` |
+| serialize-javascript | `^6.0.2` | `^7.1.0` |
 | strip-json-comments | `^3.1.1` | `^5.0.3` |
 | supports-color | `^8.1.1` | `^11.0.0` |
 | workerpool | `^9.2.0` | `^10.0.3` |
