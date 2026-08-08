@@ -12,15 +12,15 @@ npm install @depup/fastify__static
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.1.3 | **DepUp version**: 10.1.3-depup.0 | **Updated**: 8/7/2026 | **Import test**: passed
+**Original version**: 10.1.3 | **DepUp version**: 10.1.3-depup.1 | **Updated**: 8/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @fastify/accept-negotiator | `^2.0.0` | `^2.0.1` |
+| @fastify/accept-negotiator | `^2.0.0` | `^2.1.0` |
 | @fastify/error | `^4.0.0` | `^4.2.0` |
-| @fastify/send | `^4.0.0` | `^4.1.0` |
+| @fastify/send | `^4.0.0` | `^4.1.1` |
 | fastq | `^1.17.1` | `^1.20.1` |
 | glob | `^13.0.0` | `^13.0.6` |
 

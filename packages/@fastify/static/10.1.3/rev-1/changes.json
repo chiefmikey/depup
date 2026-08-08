@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@fastify/accept-negotiator": {
+      "from": "^2.0.0",
+      "to": "^2.1.0"
+    },
+    "@fastify/error": {
+      "from": "^4.0.0",
+      "to": "^4.2.0"
+    },
+    "@fastify/send": {
+      "from": "^4.0.0",
+      "to": "^4.1.1"
+    },
+    "fastq": {
+      "from": "^1.17.1",
+      "to": "^1.20.1"
+    },
+    "glob": {
+      "from": "^13.0.0",
+      "to": "^13.0.6"
+    }
+  },
+  "timestamp": "2026-08-08T16:08:35.255Z",
+  "totalUpdated": 5
+}
