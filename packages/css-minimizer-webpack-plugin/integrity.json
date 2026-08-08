@@ -96,6 +96,39 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:55:09.162Z",
       "version": "8.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@jridgewell/trace-mapping": {
+          "from": "^0.3.25",
+          "to": "^0.3.31"
+        },
+        "cssnano": {
+          "from": "^7.0.4",
+          "to": "^8.0.4"
+        },
+        "jest-worker": {
+          "from": "^30.0.5",
+          "to": "^30.4.1"
+        },
+        "postcss": {
+          "from": "^8.4.40",
+          "to": "^8.5.26"
+        },
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.3.3"
+        },
+        "serialize-javascript": {
+          "from": "^7.0.3",
+          "to": "^7.1.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-08T08:14:41.011Z",
+      "version": "8.0.0-depup.3"
     }
   }
 }
