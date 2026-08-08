@@ -6,7 +6,7 @@
     },
     "@types/node": {
       "from": ">=10.0.0",
-      "to": "^26.1.1"
+      "to": "^26.2.0"
     },
     "@types/ws": {
       "from": "^8.5.12",
@@ -31,8 +31,12 @@
     "engine.io-parser": {
       "from": "~5.2.1",
       "to": "^5.2.3"
+    },
+    "ws": {
+      "from": "~8.21.0",
+      "to": "^8.21.3"
     }
   },
-  "timestamp": "2026-07-11T00:32:23.960Z",
-  "totalUpdated": 8
+  "timestamp": "2026-08-08T00:22:12.298Z",
+  "totalUpdated": 9
 }

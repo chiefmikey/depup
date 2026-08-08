@@ -1,6 +1,6 @@
 {
   "name": "@depup/engine.io",
-  "version": "6.6.9-depup.25",
+  "version": "6.6.9-depup.30",
   "description": "The realtime engine behind Socket.IO. Provides the foundation of a bidirectional connection between client and server (with updated dependencies)",
   "type": "commonjs",
   "main": "./build/engine.io.js",
@@ -32,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/cors": "^2.8.19",
-    "@types/node": "^26.1.1",
+    "@types/node": "^26.2.0",
     "@types/ws": "^8.18.1",
     "accepts": "^1.3.8",
     "base64id": "2.0.0",
@@ -40,7 +40,7 @@
     "cors": "^2.8.6",
     "debug": "^4.4.3",
     "engine.io-parser": "^5.2.3",
-    "ws": "~8.21.0"
+    "ws": "^8.21.3"
   },
   "scripts": {
     "compile": "rimraf ./build && tsc",
@@ -85,7 +85,7 @@
       },
       "@types/node": {
         "from": ">=10.0.0",
-        "to": "^26.1.1"
+        "to": "^26.2.0"
       },
       "@types/ws": {
         "from": "^8.5.12",
@@ -110,12 +110,16 @@
       "engine.io-parser": {
         "from": "~5.2.1",
         "to": "^5.2.3"
+      },
+      "ws": {
+        "from": "~8.21.0",
+        "to": "^8.21.3"
       }
     },
-    "depsUpdated": 8,
+    "depsUpdated": 9,
     "originalPackage": "engine.io",
     "originalVersion": "6.6.9",
-    "processedAt": "2026-07-11T00:32:25.179Z",
+    "processedAt": "2026-08-08T00:22:14.569Z",
     "smokeTest": "passed"
   }
 }

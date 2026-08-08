@@ -12,21 +12,21 @@ npm install @depup/engine.io
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.9 | **DepUp version**: 6.6.9-depup.29 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 6.6.9 | **DepUp version**: 6.6.9-depup.30 | **Updated**: 8/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @types/cors | `^2.8.12` | `^2.8.19` |
-| @types/node | `>=10.0.0` | `^26.1.1` |
+| @types/node | `>=10.0.0` | `^26.2.0` |
 | @types/ws | `^8.5.12` | `^8.18.1` |
 | accepts | `~1.3.4` | `^1.3.8` |
 | cookie | `~0.7.2` | `^2.0.1` |
 | cors | `~2.8.5` | `^2.8.6` |
 | debug | `~4.4.1` | `^4.4.3` |
 | engine.io-parser | `~5.2.1` | `^5.2.3` |
-| ws | `~8.21.0` | `^8.21.1` |
+| ws | `~8.21.0` | `^8.21.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/engine.io&labels=bug).

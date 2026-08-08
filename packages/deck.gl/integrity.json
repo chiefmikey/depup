@@ -426,5 +426,28 @@
       "timestamp": "2026-07-21T16:13:15.593Z",
       "version": "9.3.7-depup.0"
     }
+  },
+  "9.3.8": {
+    "0": {
+      "changes": {
+        "@loaders.gl/core": {
+          "from": "^4.4.3",
+          "to": "^4.4.4"
+        },
+        "@luma.gl/core": {
+          "from": "^9.3.5",
+          "to": "^9.3.6"
+        },
+        "@luma.gl/engine": {
+          "from": "^9.3.5",
+          "to": "^9.3.6"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-08T00:22:11.018Z",
+      "version": "9.3.8-depup.0"
+    }
   }
 }
