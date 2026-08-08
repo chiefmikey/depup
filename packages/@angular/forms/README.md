@@ -12,7 +12,7 @@ npm install @depup/angular__forms
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.0 | **DepUp version**: 22.1.0-depup.0 | **Updated**: 7/30/2026 | **Import test**: failed
+**Original version**: 22.1.1 | **DepUp version**: 22.1.1-depup.0 | **Updated**: 8/8/2026 | **Import test**: failed
 
 ## What changed
 
