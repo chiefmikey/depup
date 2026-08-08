@@ -1215,6 +1215,35 @@
       "status": "published",
       "timestamp": "2026-07-21T16:08:44.242Z",
       "version": "8.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20",
+          "to": "^26.2.0"
+        },
+        "@types/retry": {
+          "from": "0.12.0",
+          "to": "^0.12.5"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "p-queue": {
+          "from": "^6",
+          "to": "^9.3.3"
+        },
+        "p-retry": {
+          "from": "^4",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-08T00:21:47.287Z",
+      "version": "8.0.0-depup.1"
     }
   }
 }
