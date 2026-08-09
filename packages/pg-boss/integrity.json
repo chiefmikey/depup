@@ -526,6 +526,19 @@
       "status": "published",
       "timestamp": "2026-08-03T16:51:54.073Z",
       "version": "12.27.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "pg": {
+          "from": "^8.22.0",
+          "to": "^8.23.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-09T00:40:52.276Z",
+      "version": "12.27.0-depup.1"
     }
   }
 }
