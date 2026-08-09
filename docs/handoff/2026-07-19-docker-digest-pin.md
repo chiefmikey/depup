@@ -13,7 +13,7 @@ Infra alert: `docker-version-monitor` flagged "2 Docker image update(s) availabl
 
 ## What Landed
 
-**PR #1285** — `chore/docker-image-bump` (merged pending CI)
+**PR #1285** — `chore/docker-image-bump` — squash-merged to main 2026-07-19 (commit `a3d5b54f`)
 
 Changes:
 - `Dockerfile`: `FROM node:24-alpine` → `FROM node:24-alpine@sha256:a0b9bf06e4e6193cf7a0f58816cc935ff8c2a908f81e6f1a95432d679c54fbfd`
@@ -37,6 +37,6 @@ Changes:
 ## Open Items for Next Session
 
 - [ ] Decide on clamav/clamav:1.5 in docker-compose.yml — pin digest or remove the file
-- [ ] Set up Renovate or Dependabot for automatic Dockerfile digest updates (so the monitor alert auto-clears via PRs)
-- [ ] The `chore/perf-workflow-trim` branch has two stashes (`eb1xa1iw` and `ocwjcrpn`) from concurrent hey threads — they need to be reconciled and popped
-- [ ] PR #1285 needs merge review
+- [x] Set up Renovate or Dependabot for automatic Dockerfile digest updates — landed the next day as PR #1286 (2026-07-20), independent of this handoff. Confirmed working end-to-end 2026-08-09: PR #1293 was the first routine digest refresh (`a0b9bf0`→`d32cdf6`), reviewed and squash-merged with no manual intervention. See `project_depup_dependabot_state.md` memory.
+- [ ] The `chore/perf-workflow-trim` branch has two stashes (`eb1xa1iw` and `ocwjcrpn`) from concurrent hey threads — they need to be reconciled and popped (still present as of 2026-08-09)
+- [x] PR #1285 merged (verified digest, CI green, squash-merged)
