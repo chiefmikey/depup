@@ -12,7 +12,7 @@ npm install @depup/openpgp
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.57 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.58 | **Updated**: 8/9/2026 | **Import test**: passed
 
 ## What changed
 

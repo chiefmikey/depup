@@ -12047,5 +12047,104 @@
       "timestamp": "2026-08-02T00:58:41.651Z",
       "version": "6.8.0-depup.0"
     }
+  },
+  "6.9.1": {
+    "0": {
+      "changes": {
+        "@portabletext/editor": {
+          "from": "^7.10.14",
+          "to": "^7.10.16"
+        },
+        "@portabletext/plugin-dnd": {
+          "from": "^1.0.26",
+          "to": "^1.0.28"
+        },
+        "@portabletext/plugin-list-index": {
+          "from": "^1.0.26",
+          "to": "^1.0.28"
+        },
+        "@portabletext/plugin-markdown-shortcuts": {
+          "from": "^8.0.42",
+          "to": "^8.0.44"
+        },
+        "@portabletext/plugin-one-line": {
+          "from": "^7.0.41",
+          "to": "^7.0.43"
+        },
+        "@portabletext/plugin-paste-link": {
+          "from": "^4.0.41",
+          "to": "^4.0.43"
+        },
+        "@portabletext/plugin-table": {
+          "from": "^1.3.11",
+          "to": "^1.3.13"
+        },
+        "@portabletext/plugin-typography": {
+          "from": "^8.0.42",
+          "to": "^8.0.44"
+        },
+        "@portabletext/to-html": {
+          "from": "^5.0.2",
+          "to": "^5.0.3"
+        },
+        "@sanity/client": {
+          "from": "^7.26.0",
+          "to": "^7.26.2"
+        },
+        "@sanity/comlink": {
+          "from": "^4.0.1",
+          "to": "^4.0.3"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/presentation-comlink": {
+          "from": "^2.2.0",
+          "to": "^2.2.2"
+        },
+        "@sanity/ui": {
+          "from": "^3.5.1",
+          "to": "^3.5.2"
+        },
+        "@sentry/react": {
+          "from": "^10.68.0",
+          "to": "^10.69.0"
+        },
+        "@tanstack/react-table": {
+          "from": "^8.21.3",
+          "to": "^9.1.1"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.8",
+          "to": "^3.14.9"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^3.22.0"
+        },
+        "motion": {
+          "from": "^12.43.0",
+          "to": "^13.0.0"
+        },
+        "nanoid": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        },
+        "swr": {
+          "from": "^2.4.2",
+          "to": "^2.5.0"
+        },
+        "web-vitals": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        }
+      },
+      "depsUpdated": 22,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-09T00:36:37.083Z",
+      "version": "6.9.1-depup.0"
+    }
   }
 }

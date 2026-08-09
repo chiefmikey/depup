@@ -12,7 +12,7 @@ npm install @depup/valibot
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.2 | **DepUp version**: 1.4.2-depup.18 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 1.4.2 | **DepUp version**: 1.4.2-depup.19 | **Updated**: 8/9/2026 | **Import test**: passed
 
 ## What changed
 
