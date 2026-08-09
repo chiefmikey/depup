@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@vercel/blob": {
+      "from": "2.4.0",
+      "to": "^2.7.0"
+    },
+    "@vercel/fun": {
+      "from": "1.3.0",
+      "to": "^1.3.1"
+    },
+    "@vercel/prepare-flags-definitions": {
+      "from": "0.3.0",
+      "to": "^0.4.0"
+    },
+    "chokidar": {
+      "from": "4.0.0",
+      "to": "^5.0.0"
+    },
+    "esbuild": {
+      "from": "0.27.0",
+      "to": "^0.28.2"
+    },
+    "jose": {
+      "from": "5.9.6",
+      "to": "^6.2.8"
+    },
+    "luxon": {
+      "from": "^3.4.0",
+      "to": "^3.7.2"
+    },
+    "sandbox": {
+      "from": "3.4.0",
+      "to": "^4.0.0"
+    },
+    "smol-toml": {
+      "from": "1.5.2",
+      "to": "^1.7.1"
+    },
+    "undici": {
+      "from": "5.29.0",
+      "to": "^8.10.0"
+    },
+    "zod": {
+      "from": "4.1.11",
+      "to": "^4.4.3"
+    }
+  },
+  "timestamp": "2026-08-09T00:37:00.760Z",
+  "totalUpdated": 11
+}

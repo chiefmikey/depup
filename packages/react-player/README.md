@@ -12,7 +12,7 @@ npm install @depup/react-player
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.58 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.59 | **Updated**: 8/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,7 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | spotify-audio-element | `^1.0.3` | `^1.0.4` |
 | tiktok-video-element | `^0.1.1` | `^0.1.2` |
 | twitch-video-element | `^0.1.5` | `^0.2.0` |
-| vimeo-video-element | `^1.6.1` | `^1.7.2` |
+| vimeo-video-element | `^1.6.1` | `^1.7.3` |
 | wistia-video-element | `^1.3.5` | `^1.4.0` |
 | youtube-video-element | `^1.8.0` | `^1.9.0` |
 

@@ -1,0 +1,105 @@
+{
+  "name": "@depup/react-pdf__pdfkit",
+  "version": "6.0.0-depup.0",
+  "license": "MIT",
+  "description": "A PDF generation library for Node.js (with updated dependencies)",
+  "type": "module",
+  "main": "./lib/pdfkit.js",
+  "browser": {
+    "./lib/pdfkit.js": "./lib/pdfkit.browser.js"
+  },
+  "exports": {
+    ".": {
+      "browser": "./lib/pdfkit.browser.js",
+      "default": "./lib/pdfkit.js"
+    },
+    "./standard-fonts/Courier": "./lib/standard-fonts/Courier.js",
+    "./standard-fonts/CourierBold": "./lib/standard-fonts/CourierBold.js",
+    "./standard-fonts/CourierBoldOblique": "./lib/standard-fonts/CourierBoldOblique.js",
+    "./standard-fonts/CourierOblique": "./lib/standard-fonts/CourierOblique.js",
+    "./standard-fonts/Helvetica": "./lib/standard-fonts/Helvetica.js",
+    "./standard-fonts/HelveticaBold": "./lib/standard-fonts/HelveticaBold.js",
+    "./standard-fonts/HelveticaBoldOblique": "./lib/standard-fonts/HelveticaBoldOblique.js",
+    "./standard-fonts/HelveticaOblique": "./lib/standard-fonts/HelveticaOblique.js",
+    "./standard-fonts/Symbol": "./lib/standard-fonts/Symbol.js",
+    "./standard-fonts/TimesBold": "./lib/standard-fonts/TimesBold.js",
+    "./standard-fonts/TimesBoldItalic": "./lib/standard-fonts/TimesBoldItalic.js",
+    "./standard-fonts/TimesItalic": "./lib/standard-fonts/TimesItalic.js",
+    "./standard-fonts/TimesRoman": "./lib/standard-fonts/TimesRoman.js",
+    "./standard-fonts/ZapfDingbats": "./lib/standard-fonts/ZapfDingbats.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegomura/react-pdf.git",
+    "directory": "packages/pdfkit"
+  },
+  "author": {
+    "name": "Devon Govett",
+    "email": "devongovett@gmail.com",
+    "url": "http://badassjs.com/"
+  },
+  "scripts": {
+    "test": "vitest",
+    "clear": "rimraf ./lib",
+    "build": "npm run clear && rollup -c",
+    "watch": "npm run clear && rollup -c -w"
+  },
+  "files": [
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^8.0.0",
+    "browserify-zlib": "^0.2.0",
+    "@noble/ciphers": "^2.3.0",
+    "@noble/hashes": "^2.3.0",
+    "fontkit": "^2.0.4",
+    "js-md5": "^0.9.2",
+    "linebreak": "^1.1.0",
+    "pako": "^3.0.1",
+    "png-js": "^2.0.0",
+    "vite-compatible-readable-stream": "^3.6.1"
+  },
+  "keywords": [
+    "@react-pdf/pdfkit",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@babel/runtime": {
+        "from": "^7.20.13",
+        "to": "^8.0.0"
+      },
+      "@noble/ciphers": {
+        "from": "^1.0.0",
+        "to": "^2.3.0"
+      },
+      "@noble/hashes": {
+        "from": "^1.6.0",
+        "to": "^2.3.0"
+      },
+      "fontkit": {
+        "from": "^2.0.2",
+        "to": "^2.0.4"
+      },
+      "js-md5": {
+        "from": "^0.8.3",
+        "to": "^0.9.2"
+      },
+      "pako": {
+        "from": "^1.0.11",
+        "to": "^3.0.1"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "@react-pdf/pdfkit",
+    "originalVersion": "6.0.0",
+    "processedAt": "2026-08-09T00:31:16.151Z",
+    "smokeTest": "failed"
+  }
+}
