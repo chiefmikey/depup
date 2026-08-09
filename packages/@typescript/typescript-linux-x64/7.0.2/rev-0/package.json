@@ -1,0 +1,57 @@
+{
+  "name": "@depup/typescript__typescript-linux-x64",
+  "version": "7.0.2-depup.0",
+  "license": "Apache-2.0",
+  "author": "Microsoft Corp.",
+  "homepage": "https://www.typescriptlang.org/",
+  "description": "TypeScript is a language for application scale JavaScript development (with updated dependencies)",
+  "keywords": [
+    "@typescript/typescript-linux-x64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/microsoft/TypeScript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/TypeScript.git"
+  },
+  "type": "module",
+  "preferUnplugged": true,
+  "engines": {
+    "node": ">=16.20.0"
+  },
+  "files": [
+    "lib",
+    "NOTICE.txt",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "gitHead": "2bd066d87f5bafd315be9f40889d0a60b9e58e0b",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@typescript/typescript-linux-x64",
+    "originalVersion": "7.0.2",
+    "processedAt": "2026-08-09T00:31:11.692Z",
+    "smokeTest": "failed"
+  }
+}

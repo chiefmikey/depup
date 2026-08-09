@@ -12,7 +12,7 @@ npm install @depup/react-pdf__image
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.2 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 3.1.1 | **DepUp version**: 3.1.1-depup.0 | **Updated**: 8/9/2026 | **Import test**: passed
 
 ## What changed
 
