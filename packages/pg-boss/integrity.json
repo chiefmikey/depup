@@ -539,6 +539,23 @@
       "status": "published",
       "timestamp": "2026-08-09T00:40:52.276Z",
       "version": "12.27.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "cron-parser": {
+          "from": "^5.7.0",
+          "to": "^5.8.1"
+        },
+        "pg": {
+          "from": "^8.22.0",
+          "to": "^8.23.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-10T00:23:18.795Z",
+      "version": "12.27.0-depup.2"
     }
   }
 }

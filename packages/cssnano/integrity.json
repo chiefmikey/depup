@@ -170,5 +170,15 @@
       "timestamp": "2026-08-05T16:35:21.501Z",
       "version": "8.0.4-depup.0"
     }
+  },
+  "8.0.5": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-10T00:22:22.586Z",
+      "version": "8.0.5-depup.0"
+    }
   }
 }
