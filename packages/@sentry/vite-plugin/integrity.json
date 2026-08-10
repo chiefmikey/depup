@@ -72,19 +72,6 @@
     }
   },
   "5.4.0": {
-    "2": {
-      "changes": {
-        "@sentry/bundler-plugins": {
-          "from": "^10.64.0",
-          "to": "^10.65.0"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-13T00:26:08.637Z",
-      "version": "5.4.0-depup.2"
-    },
     "3": {
       "changes": {
         "@sentry/bundler-plugins": {
@@ -136,6 +123,19 @@
       "status": "published",
       "timestamp": "2026-07-29T16:31:58.935Z",
       "version": "5.4.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@sentry/bundler-plugins": {
+          "from": "^10.64.0",
+          "to": "^10.70.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-10T16:20:01.198Z",
+      "version": "5.4.0-depup.7"
     }
   }
 }
