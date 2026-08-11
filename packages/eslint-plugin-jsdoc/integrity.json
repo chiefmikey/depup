@@ -965,5 +965,15 @@
       "timestamp": "2026-08-10T00:23:40.711Z",
       "version": "64.0.2-depup.1"
     }
+  },
+  "64.1.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-11T00:22:42.423Z",
+      "version": "64.1.0-depup.0"
+    }
   }
 }

@@ -12,14 +12,11 @@ npm install @depup/eslint-plugin-jsdoc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 64.0.2 | **DepUp version**: 64.0.2-depup.1 | **Updated**: 8/10/2026 | **Import test**: passed
+**Original version**: 64.1.0 | **DepUp version**: 64.1.0-depup.0 | **Updated**: 8/11/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @es-joy/jsdoccomment | `~0.93.2` | `^0.94.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-plugin-jsdoc&labels=bug).
 

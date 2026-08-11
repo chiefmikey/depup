@@ -36,23 +36,6 @@
     }
   },
   "7.16.2": {
-    "2": {
-      "changes": {
-        "@typescript-eslint/scope-manager": {
-          "from": "^8.56.0",
-          "to": "^8.59.0"
-        },
-        "@typescript-eslint/utils": {
-          "from": "^8.56.0",
-          "to": "^8.59.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-04-20T20:22:35.642Z",
-      "version": "7.16.2-depup.2"
-    },
     "3": {
       "changes": {
         "@typescript-eslint/scope-manager": {
@@ -120,6 +103,23 @@
       "status": "published",
       "timestamp": "2026-08-04T00:40:45.253Z",
       "version": "7.16.2-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@typescript-eslint/scope-manager": {
+          "from": "^8.56.0",
+          "to": "^8.67.0"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.56.0",
+          "to": "^8.67.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-11T00:23:50.564Z",
+      "version": "7.16.2-depup.7"
     }
   }
 }

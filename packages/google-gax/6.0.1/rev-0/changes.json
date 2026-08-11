@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@grpc/grpc-js": {
+      "from": "^1.12.6",
+      "to": "^1.14.4"
+    },
+    "@grpc/proto-loader": {
+      "from": "^0.8.0",
+      "to": "^0.8.1"
+    },
+    "google-auth-library": {
+      "from": "^11.0.0",
+      "to": "^11.0.1"
+    },
+    "google-logging-utils": {
+      "from": "^2.0.0",
+      "to": "^2.0.1"
+    },
+    "protobufjs": {
+      "from": "^7.5.4",
+      "to": "^8.7.2"
+    }
+  },
+  "timestamp": "2026-08-11T00:23:07.200Z",
+  "totalUpdated": 5
+}

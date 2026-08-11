@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.101 | **Updated**: 8/8/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.102 | **Updated**: 8/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,9 +41,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.66.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.66.0` |
-| @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.67.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.67.0` |
+| @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.2` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
 | address | `1.2.2` | `^2.0.3` |
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | body-parser | `^2.2.2` | `^2.3.0` |
-| browserslist | `^4.21.9` | `^4.28.7` |
+| browserslist | `^4.21.9` | `^4.28.8` |
 | cache-manager | `^2.11.1` | `^7.2.9` |
 | chalk | `^4.1.2` | `^6.0.0` |
 | chokidar | `^3.6.0` | `^5.0.0` |
