@@ -1,0 +1,51 @@
+{
+  "name": "@depup/conventional-changelog-angular",
+  "type": "module",
+  "version": "9.3.0-depup.0",
+  "description": "Angular preset for conventional-changelog. (with updated dependencies)",
+  "author": "Steve Mao",
+  "license": "ISC",
+  "homepage": "https://conventional-changelog.js.org/presets/angular/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/conventional-changelog.git",
+    "directory": "packages/conventional-changelog-angular"
+  },
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/conventional-changelog/issues"
+  },
+  "keywords": [
+    "conventional-changelog-angular",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "conventional-changelog",
+    "angular",
+    "preset"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "types": "./src/index.d.ts",
+    "import": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@conventional-changelog/template": "^1.3.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "conventional-changelog-angular",
+    "originalVersion": "9.3.0",
+    "processedAt": "2026-08-11T00:22:39.869Z",
+    "smokeTest": "passed"
+  }
+}
