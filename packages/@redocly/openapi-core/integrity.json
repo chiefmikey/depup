@@ -2108,5 +2108,32 @@
       "timestamp": "2026-08-07T16:18:51.446Z",
       "version": "2.46.0-depup.0"
     }
+  },
+  "2.46.1": {
+    "0": {
+      "changes": {
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-11T16:19:21.376Z",
+      "version": "2.46.1-depup.0"
+    }
   }
 }
