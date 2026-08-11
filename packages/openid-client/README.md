@@ -12,15 +12,11 @@ npm install @depup/openid-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.8.4 | **DepUp version**: 6.8.4-depup.40 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 6.8.5 | **DepUp version**: 6.8.5-depup.0 | **Updated**: 8/11/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| jose | `^6.2.2` | `^6.2.3` |
-| oauth4webapi | `^3.8.5` | `^3.8.6` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/openid-client&labels=bug).
 
