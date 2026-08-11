@@ -335,5 +335,20 @@
       "timestamp": "2026-08-04T16:42:27.516Z",
       "version": "25.5.0-depup.0"
     }
+  },
+  "25.6.0": {
+    "0": {
+      "changes": {
+        "devtools-protocol": {
+          "from": "0.0.1653615",
+          "to": "^0.0.1676914"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-11T16:21:25.300Z",
+      "version": "25.6.0-depup.0"
+    }
   }
 }

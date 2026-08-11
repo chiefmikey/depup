@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-jest",
-  "version": "29.16.0-depup.49",
+  "version": "29.16.0-depup.54",
   "description": "ESLint rules for Jest (with updated dependencies)",
   "keywords": [
     "eslint-plugin-jest",
@@ -80,7 +80,7 @@
     ]
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.66.0"
+    "@typescript-eslint/utils": "^8.67.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -152,13 +152,13 @@
     "changes": {
       "@typescript-eslint/utils": {
         "from": "^8.0.0",
-        "to": "^8.66.0"
+        "to": "^8.67.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "eslint-plugin-jest",
     "originalVersion": "29.16.0",
-    "processedAt": "2026-08-10T00:22:35.861Z",
+    "processedAt": "2026-08-11T16:21:15.988Z",
     "smokeTest": "passed"
   }
 }

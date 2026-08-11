@@ -555,5 +555,36 @@
       "timestamp": "2026-07-27T16:43:53.025Z",
       "version": "0.86.2-depup.0"
     }
+  },
+  "0.87.0": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.25.2",
+          "to": "^8.0.1"
+        },
+        "@babel/parser": {
+          "from": "^7.29.0",
+          "to": "^8.0.4"
+        },
+        "hermes-parser": {
+          "from": "0.36.1",
+          "to": "^0.37.0"
+        },
+        "tinyglobby": {
+          "from": "^0.2.15",
+          "to": "^0.2.17"
+        },
+        "yargs": {
+          "from": "^17.6.2",
+          "to": "^18.1.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-11T16:19:14.878Z",
+      "version": "0.87.0-depup.0"
+    }
   }
 }
