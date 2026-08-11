@@ -1,62 +1,5 @@
 {
   "7.0.1": {
-    "50": {
-      "changes": {
-        "@babel/core": {
-          "from": "^7.16.0",
-          "to": "^8.0.1"
-        },
-        "@babel/eslint-parser": {
-          "from": "^7.16.3",
-          "to": "^8.0.1"
-        },
-        "@rushstack/eslint-patch": {
-          "from": "^1.1.0",
-          "to": "^1.16.1"
-        },
-        "@typescript-eslint/eslint-plugin": {
-          "from": "^5.5.0",
-          "to": "^8.63.0"
-        },
-        "@typescript-eslint/parser": {
-          "from": "^5.5.0",
-          "to": "^8.63.0"
-        },
-        "babel-preset-react-app": {
-          "from": "^10.0.1",
-          "to": "^10.1.0"
-        },
-        "eslint-plugin-import": {
-          "from": "^2.25.3",
-          "to": "^2.32.0"
-        },
-        "eslint-plugin-jest": {
-          "from": "^25.3.0",
-          "to": "^29.15.4"
-        },
-        "eslint-plugin-jsx-a11y": {
-          "from": "^6.5.1",
-          "to": "^6.10.2"
-        },
-        "eslint-plugin-react": {
-          "from": "^7.27.1",
-          "to": "^7.37.5"
-        },
-        "eslint-plugin-react-hooks": {
-          "from": "^4.3.0",
-          "to": "^7.1.1"
-        },
-        "eslint-plugin-testing-library": {
-          "from": "^5.0.1",
-          "to": "^7.16.2"
-        }
-      },
-      "depsUpdated": 12,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-13T00:38:21.216Z",
-      "version": "7.0.1-depup.50"
-    },
     "51": {
       "changes": {
         "@babel/core": {
@@ -284,6 +227,63 @@
       "status": "published",
       "timestamp": "2026-08-04T00:40:50.193Z",
       "version": "7.0.1-depup.54"
+    },
+    "55": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.16.0",
+          "to": "^8.0.1"
+        },
+        "@babel/eslint-parser": {
+          "from": "^7.16.3",
+          "to": "^8.0.1"
+        },
+        "@rushstack/eslint-patch": {
+          "from": "^1.1.0",
+          "to": "^1.16.1"
+        },
+        "@typescript-eslint/eslint-plugin": {
+          "from": "^5.5.0",
+          "to": "^8.67.0"
+        },
+        "@typescript-eslint/parser": {
+          "from": "^5.5.0",
+          "to": "^8.67.0"
+        },
+        "babel-preset-react-app": {
+          "from": "^10.0.1",
+          "to": "^10.1.0"
+        },
+        "eslint-plugin-import": {
+          "from": "^2.25.3",
+          "to": "^2.32.0"
+        },
+        "eslint-plugin-jest": {
+          "from": "^25.3.0",
+          "to": "^29.16.0"
+        },
+        "eslint-plugin-jsx-a11y": {
+          "from": "^6.5.1",
+          "to": "^6.10.2"
+        },
+        "eslint-plugin-react": {
+          "from": "^7.27.1",
+          "to": "^7.37.5"
+        },
+        "eslint-plugin-react-hooks": {
+          "from": "^4.3.0",
+          "to": "^7.1.1"
+        },
+        "eslint-plugin-testing-library": {
+          "from": "^5.0.1",
+          "to": "^7.16.2"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-11T00:23:38.397Z",
+      "version": "7.0.1-depup.55"
     }
   }
 }
