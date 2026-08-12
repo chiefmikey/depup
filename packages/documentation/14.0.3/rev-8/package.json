@@ -1,7 +1,7 @@
 {
   "name": "@depup/documentation",
   "description": "a documentation generator (with updated dependencies)",
-  "version": "14.0.3-depup.3",
+  "version": "14.0.3-depup.8",
   "author": "Tom MacWright",
   "homepage": "https://documentation.js.org",
   "type": "module",
@@ -9,12 +9,12 @@
     "documentation": "./bin/documentation.js"
   },
   "dependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/generator": "^7.29.1",
-    "@babel/parser": "^7.29.3",
-    "@babel/traverse": "^7.29.0",
-    "@babel/types": "^7.29.0",
-    "chalk": "^5.6.2",
+    "@babel/core": "^8.0.1",
+    "@babel/generator": "^8.0.0",
+    "@babel/parser": "^8.0.4",
+    "@babel/traverse": "^8.0.4",
+    "@babel/types": "^8.0.4",
+    "chalk": "^6.0.0",
     "chokidar": "^5.0.0",
     "diff": "^9.0.0",
     "doctrine-temporary-fork": "2.1.0",
@@ -22,9 +22,9 @@
     "github-slugger": "^2.0.0",
     "glob": "^13.0.6",
     "globals-docs": "^2.4.1",
-    "highlight.js": "^11.11.1",
+    "highlight.js": "^11.12.0",
     "ini": "^7.0.0",
-    "js-yaml": "^4.1.1",
+    "js-yaml": "^5.2.3",
     "konan": "^2.1.1",
     "lodash": "^4.18.1",
     "mdast-util-find-and-replace": "^3.0.2",
@@ -45,7 +45,7 @@
     "vfile": "^6.0.3",
     "vfile-reporter": "^8.1.1",
     "vfile-sort": "^4.0.0",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "optionalDependencies": {
     "@vue/compiler-sfc": "^3.2.37",
@@ -126,27 +126,27 @@
     "changes": {
       "@babel/core": {
         "from": "^7.18.10",
-        "to": "^7.29.0"
+        "to": "^8.0.1"
       },
       "@babel/generator": {
         "from": "^7.18.10",
-        "to": "^7.29.1"
+        "to": "^8.0.0"
       },
       "@babel/parser": {
         "from": "^7.18.11",
-        "to": "^7.29.3"
+        "to": "^8.0.4"
       },
       "@babel/traverse": {
         "from": "^7.18.11",
-        "to": "^7.29.0"
+        "to": "^8.0.4"
       },
       "@babel/types": {
         "from": "^7.18.10",
-        "to": "^7.29.0"
+        "to": "^8.0.4"
       },
       "chalk": {
         "from": "^5.0.1",
-        "to": "^5.6.2"
+        "to": "^6.0.0"
       },
       "chokidar": {
         "from": "^3.5.3",
@@ -170,7 +170,7 @@
       },
       "highlight.js": {
         "from": "^11.6.0",
-        "to": "^11.11.1"
+        "to": "^11.12.0"
       },
       "ini": {
         "from": "^3.0.0",
@@ -178,7 +178,7 @@
       },
       "js-yaml": {
         "from": "^4.1.0",
-        "to": "^4.1.1"
+        "to": "^5.2.3"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -250,13 +250,13 @@
       },
       "yargs": {
         "from": "^17.5.1",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 32,
     "originalPackage": "documentation",
     "originalVersion": "14.0.3",
-    "processedAt": "2026-05-09T06:58:25.741Z",
+    "processedAt": "2026-08-12T08:30:42.951Z",
     "smokeTest": "failed"
   }
 }

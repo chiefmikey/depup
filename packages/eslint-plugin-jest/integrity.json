@@ -361,5 +361,20 @@
       "timestamp": "2026-08-12T00:28:01.602Z",
       "version": "29.16.0-depup.55"
     }
+  },
+  "29.16.1": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/utils": {
+          "from": "^8.0.0",
+          "to": "^8.67.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-08-12T08:30:50.483Z",
+      "version": "29.16.1-depup.0"
+    }
   }
 }
