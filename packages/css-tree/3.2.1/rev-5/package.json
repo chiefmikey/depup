@@ -1,15 +1,17 @@
 {
   "name": "@depup/css-tree",
-  "version": "3.2.1-depup.0",
-  "description": "[DepUp] A tool set for CSS: fast detailed parser (CSS → AST), walker (AST traversal), generator (AST → CSS) and lexer (validation and matching) based on specs and browser implementations",
+  "version": "3.2.1-depup.5",
+  "description": "A tool set for CSS: fast detailed parser (CSS → AST), walker (AST traversal), generator (AST → CSS) and lexer (validation and matching) based on specs and browser implementations (with updated dependencies)",
   "author": "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)",
   "license": "MIT",
   "repository": "csstree/csstree",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "css-tree",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "css",
     "ast",
     "tokenizer",
@@ -103,7 +105,7 @@
     "coverage": "c8 --exclude lib/__tests --reporter=lcovonly npm test"
   },
   "dependencies": {
-    "mdn-data": "2.27.1",
+    "mdn-data": "^2.32.0",
     "source-map-js": "^1.2.1"
   },
   "devDependencies": {
@@ -129,11 +131,16 @@
     "README.md"
   ],
   "depup": {
-    "changes": {},
-    "depsUpdated": 0,
+    "changes": {
+      "mdn-data": {
+        "from": "2.27.1",
+        "to": "^2.32.0"
+      }
+    },
+    "depsUpdated": 1,
     "originalPackage": "css-tree",
     "originalVersion": "3.2.1",
-    "processedAt": "2026-03-17T16:35:27.927Z",
+    "processedAt": "2026-08-12T16:20:18.587Z",
     "smokeTest": "passed"
   }
 }

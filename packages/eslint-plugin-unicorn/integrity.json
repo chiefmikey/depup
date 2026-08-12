@@ -974,6 +974,39 @@
       "status": "published",
       "timestamp": "2026-08-12T00:29:08.302Z",
       "version": "73.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.9.1",
+          "to": "^4.10.1"
+        },
+        "@eslint/css-tree": {
+          "from": "^4.0.4",
+          "to": "^4.0.5"
+        },
+        "browserslist": {
+          "from": "^4.28.4",
+          "to": "^4.28.8"
+        },
+        "core-js-compat": {
+          "from": "^3.49.0",
+          "to": "^3.50.0"
+        },
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.0.0"
+        },
+        "globals": {
+          "from": "^17.7.0",
+          "to": "^17.11.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-12T16:21:34.436Z",
+      "version": "73.0.0-depup.3"
     }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/postcss-import
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.1.1 | **DepUp version**: 16.1.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: unknown
+**Original version**: 16.2.0 | **DepUp version**: 16.2.0-depup.0 | **Updated**: 8/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | postcss-value-parser | `^4.0.0` | `^4.2.0` |
-| resolve | `^1.1.7` | `^1.22.11` |
+| resolve | `^1.1.7` | `^1.22.12` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/postcss-import&labels=bug).
