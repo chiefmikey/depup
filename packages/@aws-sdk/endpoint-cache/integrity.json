@@ -314,5 +314,24 @@
       "timestamp": "2026-07-21T16:02:33.441Z",
       "version": "3.972.9-depup.6"
     }
+  },
+  "3.972.10": {
+    "0": {
+      "changes": {
+        "mnemonist": {
+          "from": "0.38.3",
+          "to": "^0.40.4"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-12T00:26:45.423Z",
+      "version": "3.972.10-depup.0"
+    }
   }
 }

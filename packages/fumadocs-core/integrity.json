@@ -1035,6 +1035,23 @@
       "status": "published",
       "timestamp": "2026-08-09T16:09:45.361Z",
       "version": "16.14.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "shiki": {
+          "from": "^4.4.1",
+          "to": "^4.4.3"
+        },
+        "zbsearch": {
+          "from": "^3.3.4",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-12T00:28:48.653Z",
+      "version": "16.14.3-depup.1"
     }
   }
 }
