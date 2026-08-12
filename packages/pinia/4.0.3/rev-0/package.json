@@ -1,0 +1,101 @@
+{
+  "name": "@depup/pinia",
+  "version": "4.0.3-depup.0",
+  "description": "Intuitive, type safe and flexible Store for Vue (with updated dependencies)",
+  "keywords": [
+    "pinia",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "api",
+    "composition",
+    "pigna",
+    "piña",
+    "safe",
+    "setup",
+    "store",
+    "ts",
+    "type",
+    "typed",
+    "typescript",
+    "vue",
+    "vuex"
+  ],
+  "homepage": "https://pinia.vuejs.org",
+  "bugs": {
+    "url": "https://github.com/vuejs/pinia/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Eduardo San Martin Morote",
+    "email": "posva13@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/pinia.git"
+  },
+  "funding": "https://github.com/sponsors/posva",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/*.js",
+    "dist/*.mjs",
+    "dist/pinia.d.ts",
+    "changes.json"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "dist/pinia.d.ts",
+  "unpkg": "dist/pinia.iife.js",
+  "jsdelivr": "dist/pinia.iife.js",
+  "exports": {
+    ".": "./dist/pinia.js",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "nostics": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vue/devtools-api": "^8.1.5",
+    "@vue/test-utils": "^2.4.11",
+    "tsdown": "^0.22.8"
+  },
+  "peerDependencies": {
+    "@vue/devtools-api": "^8.1.5",
+    "typescript": ">=5.6.0",
+    "vue": "^3.5.11"
+  },
+  "peerDependenciesMeta": {
+    "@vue/devtools-api": {
+      "optional": false
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "inlinedDependencies": {
+    "nostics": "1.1.4"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path . -l pinia -r 1",
+    "test:dist": "node ./__tests__/dist-import.mjs",
+    "test:dts": "tsc -p ./test-dts/tsconfig.json",
+    "test": "pnpm run build && pnpm test:dts && pnpm test:dist"
+  },
+  "depup": {
+    "changes": {
+      "nostics": {
+        "from": "^1.1.4",
+        "to": "^1.2.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "pinia",
+    "originalVersion": "4.0.3",
+    "processedAt": "2026-08-12T16:20:57.102Z",
+    "smokeTest": "failed"
+  }
+}

@@ -237,6 +237,67 @@
       "status": "published",
       "timestamp": "2026-08-05T16:34:26.057Z",
       "version": "10.7.8-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.26.0",
+          "to": "^8.0.0"
+        },
+        "@mediapipe/tasks-vision": {
+          "from": "0.10.17",
+          "to": "^1.0.1"
+        },
+        "@monogrid/gainmap-js": {
+          "from": "^3.0.6",
+          "to": "^3.4.0"
+        },
+        "camera-controls": {
+          "from": "^3.1.0",
+          "to": "^3.1.2"
+        },
+        "cross-env": {
+          "from": "^7.0.3",
+          "to": "^10.1.0"
+        },
+        "detect-gpu": {
+          "from": "^5.0.56",
+          "to": "^5.0.70"
+        },
+        "hls.js": {
+          "from": "^1.5.17",
+          "to": "^1.7.0"
+        },
+        "stats-gl": {
+          "from": "^2.2.8",
+          "to": "^4.2.3"
+        },
+        "three-mesh-bvh": {
+          "from": "^0.8.3",
+          "to": "^0.9.14"
+        },
+        "three-stdlib": {
+          "from": "^2.35.6",
+          "to": "^2.36.1"
+        },
+        "troika-three-text": {
+          "from": "^0.52.4",
+          "to": "^0.52.5"
+        },
+        "use-sync-external-store": {
+          "from": "^1.4.0",
+          "to": "^1.6.0"
+        },
+        "zustand": {
+          "from": "^5.0.1",
+          "to": "^5.0.14"
+        }
+      },
+      "depsUpdated": 13,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-12T16:20:10.866Z",
+      "version": "10.7.8-depup.1"
     }
   }
 }

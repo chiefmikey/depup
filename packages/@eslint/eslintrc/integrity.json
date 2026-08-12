@@ -209,51 +209,6 @@
     }
   },
   "3.3.6": {
-    "3": {
-      "changes": {
-        "ajv": {
-          "from": "^6.14.0",
-          "to": "^8.20.0"
-        },
-        "debug": {
-          "from": "^4.3.2",
-          "to": "^4.4.3"
-        },
-        "espree": {
-          "from": "^10.0.1",
-          "to": "^11.2.0"
-        },
-        "globals": {
-          "from": "^14.0.0",
-          "to": "^17.7.0"
-        },
-        "ignore": {
-          "from": "^5.2.0",
-          "to": "^7.0.6"
-        },
-        "import-fresh": {
-          "from": "^3.2.1",
-          "to": "^4.0.0"
-        },
-        "js-yaml": {
-          "from": "^4.3.0",
-          "to": "^5.2.1"
-        },
-        "minimatch": {
-          "from": "^3.1.5",
-          "to": "^10.2.5"
-        },
-        "strip-json-comments": {
-          "from": "^3.1.1",
-          "to": "^5.0.3"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-14T00:22:19.480Z",
-      "version": "3.3.6-depup.3"
-    },
     "4": {
       "changes": {
         "ajv": {
@@ -433,6 +388,51 @@
       "status": "published",
       "timestamp": "2026-08-12T00:27:50.799Z",
       "version": "3.3.6-depup.7"
+    },
+    "8": {
+      "changes": {
+        "ajv": {
+          "from": "^6.14.0",
+          "to": "^8.20.0"
+        },
+        "debug": {
+          "from": "^4.3.2",
+          "to": "^4.4.3"
+        },
+        "espree": {
+          "from": "^10.0.1",
+          "to": "^11.2.0"
+        },
+        "globals": {
+          "from": "^14.0.0",
+          "to": "^17.11.0"
+        },
+        "ignore": {
+          "from": "^5.2.0",
+          "to": "^7.0.6"
+        },
+        "import-fresh": {
+          "from": "^3.2.1",
+          "to": "^4.0.0"
+        },
+        "js-yaml": {
+          "from": "^4.3.0",
+          "to": "^5.2.3"
+        },
+        "minimatch": {
+          "from": "^3.1.5",
+          "to": "^10.2.6"
+        },
+        "strip-json-comments": {
+          "from": "^3.1.1",
+          "to": "^5.0.3"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-12T16:20:10.716Z",
+      "version": "3.3.6-depup.8"
     }
   }
 }

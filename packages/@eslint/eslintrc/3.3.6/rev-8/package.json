@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint__eslintrc",
-  "version": "3.3.6-depup.3",
+  "version": "3.3.6-depup.8",
   "description": "The legacy ESLintRC config file format for ESLint (with updated dependencies)",
   "type": "module",
   "main": "./dist/eslintrc.cjs",
@@ -70,11 +70,11 @@
     "ajv": "^8.20.0",
     "debug": "^4.4.3",
     "espree": "^11.2.0",
-    "globals": "^17.7.0",
+    "globals": "^17.11.0",
     "ignore": "^7.0.6",
     "import-fresh": "^4.0.0",
-    "js-yaml": "^5.2.1",
-    "minimatch": "^10.2.5",
+    "js-yaml": "^5.2.3",
+    "minimatch": "^10.2.6",
     "strip-json-comments": "^5.0.3"
   },
   "engines": {
@@ -96,7 +96,7 @@
       },
       "globals": {
         "from": "^14.0.0",
-        "to": "^17.7.0"
+        "to": "^17.11.0"
       },
       "ignore": {
         "from": "^5.2.0",
@@ -108,11 +108,11 @@
       },
       "js-yaml": {
         "from": "^4.3.0",
-        "to": "^5.2.1"
+        "to": "^5.2.3"
       },
       "minimatch": {
         "from": "^3.1.5",
-        "to": "^10.2.5"
+        "to": "^10.2.6"
       },
       "strip-json-comments": {
         "from": "^3.1.1",
@@ -122,7 +122,7 @@
     "depsUpdated": 9,
     "originalPackage": "@eslint/eslintrc",
     "originalVersion": "3.3.6",
-    "processedAt": "2026-07-14T00:22:17.759Z",
+    "processedAt": "2026-08-12T16:20:00.838Z",
     "smokeTest": "failed"
   }
 }
