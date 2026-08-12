@@ -1777,5 +1777,36 @@
       "timestamp": "2026-08-05T00:36:35.950Z",
       "version": "3.977.6-depup.0"
     }
+  },
+  "3.977.7": {
+    "0": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.31.1",
+          "to": "^3.32.0"
+        },
+        "@smithy/signature-v4": {
+          "from": "^5.6.12",
+          "to": "^5.7.0"
+        },
+        "@smithy/types": {
+          "from": "^4.16.1",
+          "to": "^4.17.0"
+        },
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-12T00:26:39.237Z",
+      "version": "3.977.7-depup.0"
+    }
   }
 }

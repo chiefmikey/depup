@@ -12,12 +12,13 @@ npm install @depup/aws-sdk__xml-builder
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.37 | **DepUp version**: 3.972.37-depup.0 | **Updated**: 7/25/2026 | **Import test**: passed
+**Original version**: 3.972.38 | **DepUp version**: 3.972.38-depup.0 | **Updated**: 8/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @smithy/types | `^4.16.1` | `^4.17.0` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 

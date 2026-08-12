@@ -1,0 +1,150 @@
+{
+  "bumped": {
+    "@aws-sdk/client-cloudwatch": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-cloudwatch-logs": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-ec2": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-ecs": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-iam": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-lambda": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-s3": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-sqs": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-ssm": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/client-sts": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@aws-sdk/credential-providers": {
+      "from": "^3.1034.0",
+      "to": "^3.1108.0"
+    },
+    "@azure/identity": {
+      "from": "^4.13.0",
+      "to": "^4.13.1"
+    },
+    "@azure/storage-blob": {
+      "from": "^12.30.0",
+      "to": "^12.33.0"
+    },
+    "@azure/storage-queue": {
+      "from": "^12.29.0",
+      "to": "^12.31.0"
+    },
+    "@oclif/core": {
+      "from": "^4.8.0",
+      "to": "^4.13.3"
+    },
+    "@oclif/plugin-help": {
+      "from": "^6.2.36",
+      "to": "^6.2.58"
+    },
+    "@oclif/plugin-not-found": {
+      "from": "^3.2.73",
+      "to": "^3.2.93"
+    },
+    "@smithy/core": {
+      "from": "^3.24.0",
+      "to": "^3.32.0"
+    },
+    "@upstash/redis": {
+      "from": "^1.36.1",
+      "to": "^1.38.2"
+    },
+    "async": {
+      "from": "^2.6.4",
+      "to": "^3.2.6"
+    },
+    "chalk": {
+      "from": "^2.4.2",
+      "to": "^6.0.0"
+    },
+    "chokidar": {
+      "from": "^3.6.0",
+      "to": "^5.0.0"
+    },
+    "ci-info": {
+      "from": "^4.3.1",
+      "to": "^4.4.0"
+    },
+    "csv-parse": {
+      "from": "^4.16.3",
+      "to": "^7.0.2"
+    },
+    "dotenv": {
+      "from": "^16.6.1",
+      "to": "^17.4.2"
+    },
+    "esbuild-wasm": {
+      "from": "^0.19.12",
+      "to": "^0.28.2"
+    },
+    "fs-extra": {
+      "from": "^11.3.3",
+      "to": "^11.4.0"
+    },
+    "got": {
+      "from": "^14.6.6",
+      "to": "^15.1.0"
+    },
+    "joi": {
+      "from": "^17.13.3",
+      "to": "^18.2.3"
+    },
+    "js-yaml": {
+      "from": "^3.14.1",
+      "to": "^5.2.3"
+    },
+    "lodash": {
+      "from": "^4.18.0",
+      "to": "^4.18.1"
+    },
+    "nanoid": {
+      "from": "^3.3.4",
+      "to": "^6.0.1"
+    },
+    "ora": {
+      "from": "^4.0.4",
+      "to": "^9.4.1"
+    },
+    "sqs-consumer": {
+      "from": "6.0.2",
+      "to": "^15.0.3"
+    },
+    "tempy": {
+      "from": "3.1.0",
+      "to": "^3.2.0"
+    },
+    "walk-sync": {
+      "from": "^0.2.3",
+      "to": "^4.0.2"
+    }
+  },
+  "timestamp": "2026-08-12T00:27:38.639Z",
+  "totalUpdated": 36
+}

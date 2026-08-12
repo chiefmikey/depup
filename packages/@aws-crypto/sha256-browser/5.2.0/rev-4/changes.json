@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@aws-sdk/types": {
+      "from": "^3.222.0",
+      "to": "^3.974.3"
+    },
+    "@aws-sdk/util-locate-window": {
+      "from": "^3.0.0",
+      "to": "^3.965.9"
+    },
+    "@smithy/util-utf8": {
+      "from": "^2.0.0",
+      "to": "^4.5.0"
+    },
+    "tslib": {
+      "from": "^2.6.2",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-08-12T00:25:51.538Z",
+  "totalUpdated": 4
+}

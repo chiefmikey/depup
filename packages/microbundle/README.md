@@ -12,7 +12,7 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.64 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.65 | **Updated**: 8/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,14 +41,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | filesize | `^6.1.0` | `^11.0.22` |
 | gzip-size | `^6.0.0` | `^7.0.0` |
 | kleur | `^4.1.3` | `^4.1.5` |
-| postcss | `^8.2.1` | `^8.5.21` |
+| postcss | `^8.2.1` | `^8.5.26` |
 | pretty-bytes | `^5.4.1` | `^7.1.1` |
-| rollup | `^2.35.1` | `^4.62.2` |
+| rollup | `^2.35.1` | `^4.62.4` |
 | rollup-plugin-postcss | `^4.0.0` | `^4.0.2` |
 | rollup-plugin-typescript2 | `^0.32.0` | `^0.37.0` |
 | rollup-plugin-visualizer | `^5.6.0` | `^7.0.1` |
 | sade | `^1.7.4` | `^1.8.1` |
-| terser | `^5.7.0` | `^5.49.0` |
+| terser | `^5.7.0` | `^5.50.0` |
 | tiny-glob | `^0.2.8` | `^0.2.9` |
 | tslib | `^2.0.3` | `^2.8.1` |
 | typescript | `^4.1.3` | `^7.0.2` |
