@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.13 | **Updated**: 8/3/2026 | **Import test**: passed
+**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.14 | **Updated**: 8/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,16 +21,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/generator | `^7.18.13` | `^8.0.0` |
 | @babel/template | `^7.18.10` | `^8.0.0` |
 | @babel/types | `^7.18.13` | `^8.0.4` |
-| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.34` |
-| @graphql-tools/code-file-loader | `^8.1.28` | `^8.1.36` |
-| @graphql-tools/git-loader | `^8.0.32` | `^8.0.40` |
-| @graphql-tools/github-loader | `^9.0.6` | `^9.1.6` |
-| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.18` |
-| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.32` |
-| @graphql-tools/load | `^8.1.8` | `^8.1.15` |
-| @graphql-tools/merge | `^9.0.6` | `^9.2.2` |
-| @graphql-tools/url-loader | `^9.0.6` | `^9.1.6` |
-| @graphql-tools/utils | `^11.2.0` | `^11.2.2` |
+| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.35` |
+| @graphql-tools/code-file-loader | `^8.1.28` | `^8.1.37` |
+| @graphql-tools/git-loader | `^8.0.32` | `^8.0.41` |
+| @graphql-tools/github-loader | `^9.0.6` | `^9.1.7` |
+| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.19` |
+| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.33` |
+| @graphql-tools/load | `^8.1.8` | `^8.1.16` |
+| @graphql-tools/merge | `^9.0.6` | `^9.2.3` |
+| @graphql-tools/url-loader | `^9.0.6` | `^9.1.7` |
+| @graphql-tools/utils | `^11.2.0` | `^12.0.0` |
 | @inquirer/prompts | `^8.3.2` | `^8.5.2` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.10.13` |
 | chalk | `^5.6.0` | `^6.0.0` |
@@ -46,6 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tslib | `^2.4.0` | `^2.8.1` |
 | yaml | `^2.3.1` | `^2.9.0` |
 | yargs | `^18.0.0` | `^18.1.0` |
+| @graphql-codegen/client-preset | `^6.1.0` | `^6.1.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/graphql-codegen__cli&labels=bug).

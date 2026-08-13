@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 27.1.1 | **DepUp version**: 27.1.1-depup.2 | **Updated**: 8/10/2026 | **Import test**: failed
+**Original version**: 27.1.1 | **DepUp version**: 27.1.1-depup.3 | **Updated**: 8/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,9 +20,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @fastify/static | `^10.0.0` | `^10.1.3` |
 | @netlify/ai | `^0.4.3` | `^0.4.4` |
-| @netlify/blobs | `^10.7.10` | `^10.7.12` |
-| @netlify/dev | `^4.18.10` | `^4.18.12` |
+| @netlify/blobs | `^10.7.10` | `^10.7.13` |
+| @netlify/build | `^36.3.2` | `^36.3.3` |
+| @netlify/config | `^25.2.1` | `^25.2.2` |
+| @netlify/dev | `^4.18.10` | `^4.18.13` |
+| @netlify/dev-utils | `^4.4.7` | `^5.0.0` |
+| @netlify/edge-bundler | `^16.0.1` | `^16.0.2` |
 | @netlify/edge-functions-bootstrap | `^2.17.1` | `^3.2.0` |
+| @netlify/headers-parser | `^10.1.0` | `^10.1.1` |
+| @netlify/images | `^1.3.11` | `^1.3.12` |
+| @netlify/zip-it-and-ship-it | `^15.3.2` | `^15.3.3` |
 | @octokit/rest | `^22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `^1.8.0` | `^1.9.1` |
 | chalk | `^5.6.2` | `^6.0.0` |

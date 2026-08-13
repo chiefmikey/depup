@@ -12,14 +12,14 @@ npm install @depup/graphql-tools__prisma-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.9 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.10 | **Updated**: 8/13/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @graphql-tools/url-loader | `^9.0.0` | `^9.1.6` |
-| @graphql-tools/utils | `^10.5.6` | `^11.2.2` |
+| @graphql-tools/url-loader | `^9.0.0` | `^9.1.7` |
+| @graphql-tools/utils | `^10.5.6` | `^12.0.0` |
 | @types/js-yaml | `^4.0.0` | `^4.0.9` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.10.13` |
 | chalk | `^4.1.0` | `^6.0.0` |
@@ -28,8 +28,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | graphql-request | `^6.0.0` | `^7.4.0` |
 | http-proxy-agent | `^7.0.0` | `^9.1.0` |
 | https-proxy-agent | `^7.0.0` | `^9.1.0` |
-| jose | `^5.0.0` | `^6.2.4` |
-| js-yaml | `^4.0.0` | `^5.2.2` |
+| jose | `^5.0.0` | `^6.2.8` |
+| js-yaml | `^4.0.0` | `^5.2.3` |
 | lodash | `^4.17.20` | `^4.18.1` |
 | tslib | `^2.4.0` | `^2.8.1` |
 

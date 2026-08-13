@@ -12,7 +12,7 @@ npm install @depup/apollo__server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.5.1 | **DepUp version**: 5.5.1-depup.31 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.5.1 | **DepUp version**: 5.5.1-depup.32 | **Updated**: 8/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @apollo/usage-reporting-protobuf | `^4.1.1` | `^4.1.2` |
 | @apollo/utils.createhash | `^3.0.0` | `^3.0.1` |
 | @apollo/utils.fetcher | `^3.0.0` | `^3.1.0` |
-| @graphql-tools/schema | `^10.0.0` | `^10.0.38` |
+| @graphql-tools/schema | `^10.0.0` | `^10.1.0` |
 | async-retry | `^1.2.1` | `^1.3.3` |
 | body-parser | `^2.2.2` | `^2.3.0` |
 | content-type | `^1.0.5` | `^2.0.0` |
