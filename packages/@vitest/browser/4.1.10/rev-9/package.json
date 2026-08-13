@@ -1,7 +1,7 @@
 {
   "name": "@depup/vitest__browser",
   "type": "module",
-  "version": "4.1.10-depup.4",
+  "version": "4.1.10-depup.9",
   "description": "Browser running for Vitest (with updated dependencies)",
   "license": "MIT",
   "funding": "https://opencollective.com/vitest",
@@ -68,12 +68,12 @@
     "vitest": "4.1.10"
   },
   "dependencies": {
-    "@blazediff/core": "^1.9.3",
-    "magic-string": "^0.30.21",
+    "@blazediff/core": "^1.10.0",
+    "magic-string": "^1.2.0",
     "pngjs": "^7.0.0",
     "sirv": "^3.0.2",
-    "tinyrainbow": "^3.1.0",
-    "ws": "^8.21.0",
+    "tinyrainbow": "^3.1.1",
+    "ws": "^8.21.3",
     "@vitest/mocker": "4.1.10",
     "@vitest/utils": "4.1.10"
   },
@@ -104,17 +104,25 @@
     "changes": {
       "@blazediff/core": {
         "from": "1.9.1",
-        "to": "^1.9.3"
+        "to": "^1.10.0"
+      },
+      "magic-string": {
+        "from": "^0.30.21",
+        "to": "^1.2.0"
+      },
+      "tinyrainbow": {
+        "from": "^3.1.0",
+        "to": "^3.1.1"
       },
       "ws": {
         "from": "^8.19.0",
-        "to": "^8.21.0"
+        "to": "^8.21.3"
       }
     },
-    "depsUpdated": 2,
+    "depsUpdated": 4,
     "originalPackage": "@vitest/browser",
     "originalVersion": "4.1.10",
-    "processedAt": "2026-07-11T00:27:30.943Z",
+    "processedAt": "2026-08-13T08:31:41.758Z",
     "smokeTest": "failed"
   }
 }
