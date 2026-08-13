@@ -97,6 +97,31 @@
       "status": "published",
       "timestamp": "2026-07-23T16:33:35.110Z",
       "version": "2.2.3-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ejs": {
+          "from": "^3.1.6",
+          "to": "^6.0.1"
+        },
+        "json5": {
+          "from": "^2.2.0",
+          "to": "^2.2.3"
+        },
+        "magic-string": {
+          "from": "^0.25.0",
+          "to": "^1.2.0"
+        },
+        "string.prototype.matchall": {
+          "from": "^4.0.6",
+          "to": "^4.0.12"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-13T08:32:16.372Z",
+      "version": "2.2.3-depup.4"
     }
   }
 }
