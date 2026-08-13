@@ -357,5 +357,24 @@
       "timestamp": "2026-07-21T16:05:51.280Z",
       "version": "9.1.6-depup.0"
     }
+  },
+  "9.1.7": {
+    "0": {
+      "changes": {
+        "@whatwg-node/promise-helpers": {
+          "from": "^1.0.0",
+          "to": "^1.3.2"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-13T00:27:17.753Z",
+      "version": "9.1.7-depup.0"
+    }
   }
 }
