@@ -437,6 +437,31 @@
       "status": "published",
       "timestamp": "2026-08-05T08:57:54.503Z",
       "version": "3.5.41-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.8",
+          "to": "^8.0.4"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        },
+        "magic-string": {
+          "from": "^0.30.21",
+          "to": "^1.2.0"
+        },
+        "postcss": {
+          "from": "^8.5.19",
+          "to": "^8.5.26"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-13T08:32:01.487Z",
+      "version": "3.5.41-depup.1"
     }
   }
 }

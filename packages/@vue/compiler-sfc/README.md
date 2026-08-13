@@ -12,7 +12,7 @@ npm install @depup/vue__compiler-sfc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.5.41 | **DepUp version**: 3.5.41-depup.0 | **Updated**: 8/5/2026 | **Import test**: failed
+**Original version**: 3.5.41 | **DepUp version**: 3.5.41-depup.1 | **Updated**: 8/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/parser | `^7.29.8` | `^8.0.4` |
 | estree-walker | `^2.0.2` | `^3.0.3` |
-| magic-string | `^0.30.21` | `^1.1.0` |
-| postcss | `^8.5.19` | `^8.5.25` |
+| magic-string | `^0.30.21` | `^1.2.0` |
+| postcss | `^8.5.19` | `^8.5.26` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vue__compiler-sfc&labels=bug).
