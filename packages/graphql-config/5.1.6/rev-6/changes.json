@@ -1,0 +1,46 @@
+{
+  "bumped": {
+    "@graphql-tools/graphql-file-loader": {
+      "from": "^8.0.0",
+      "to": "^8.1.19"
+    },
+    "@graphql-tools/json-file-loader": {
+      "from": "^8.0.0",
+      "to": "^8.0.33"
+    },
+    "@graphql-tools/load": {
+      "from": "^8.1.0",
+      "to": "^8.1.16"
+    },
+    "@graphql-tools/merge": {
+      "from": "^9.0.0",
+      "to": "^9.2.3"
+    },
+    "@graphql-tools/url-loader": {
+      "from": "^9.0.0",
+      "to": "^9.1.7"
+    },
+    "@graphql-tools/utils": {
+      "from": "^11.0.0",
+      "to": "^12.0.0"
+    },
+    "cosmiconfig": {
+      "from": "^8.1.0",
+      "to": "^10.0.0"
+    },
+    "jiti": {
+      "from": "^2.0.0",
+      "to": "^2.7.0"
+    },
+    "minimatch": {
+      "from": "^10.0.0",
+      "to": "^10.2.6"
+    },
+    "tslib": {
+      "from": "^2.4.0",
+      "to": "^2.8.1"
+    }
+  },
+  "timestamp": "2026-08-13T00:27:16.355Z",
+  "totalUpdated": 10
+}

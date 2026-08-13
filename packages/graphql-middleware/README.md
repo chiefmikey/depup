@@ -12,14 +12,14 @@ npm install @depup/graphql-middleware
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.35 | **DepUp version**: 6.1.35-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 6.1.35 | **DepUp version**: 6.1.35-depup.2 | **Updated**: 8/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @graphql-tools/delegate | `^8.8.1` | `^12.1.0` |
-| @graphql-tools/schema | `^8.5.1` | `^10.0.38` |
+| @graphql-tools/delegate | `^8.8.1` | `^12.1.1` |
+| @graphql-tools/schema | `^8.5.1` | `^10.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/graphql-middleware&labels=bug).
