@@ -97,6 +97,31 @@
       "status": "published",
       "timestamp": "2026-07-21T17:21:22.030Z",
       "version": "1.0.7-depup.3"
+    },
+    "4": {
+      "changes": {
+        "aws-sdk": {
+          "from": "^2.814.0",
+          "to": "^2.1693.0"
+        },
+        "js-yaml": {
+          "from": "^3.14.1",
+          "to": "^5.3.0"
+        },
+        "watchpack": {
+          "from": "^2.0.0-beta.10",
+          "to": "^2.5.2"
+        },
+        "commander": {
+          "from": "^3.0.2",
+          "to": "^15.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:19:09.628Z",
+      "version": "1.0.7-depup.4"
     }
   }
 }

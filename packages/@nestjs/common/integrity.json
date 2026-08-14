@@ -297,5 +297,20 @@
       "timestamp": "2026-08-10T16:18:34.677Z",
       "version": "11.1.29-depup.0"
     }
+  },
+  "11.2.0": {
+    "0": {
+      "changes": {
+        "file-type": {
+          "from": "21.3.4",
+          "to": "^22.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:18:31.066Z",
+      "version": "11.2.0-depup.0"
+    }
   }
 }
