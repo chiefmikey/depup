@@ -12,15 +12,15 @@ npm install @depup/express
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.2.1 | **DepUp version**: 5.2.1-depup.12 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.2.1 | **DepUp version**: 5.2.1-depup.13 | **Updated**: 8/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | body-parser | `^2.2.1` | `^2.3.0` |
-| content-disposition | `^1.0.0` | `^2.0.1` |
-| content-type | `^1.0.5` | `^2.0.0` |
+| content-disposition | `^1.0.0` | `^3.0.0` |
+| content-type | `^1.0.5` | `^2.1.0` |
 | cookie | `^0.7.1` | `^2.0.1` |
 | cookie-signature | `^1.2.1` | `^1.2.2` |
 | debug | `^4.4.0` | `^4.4.3` |

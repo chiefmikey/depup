@@ -49,6 +49,19 @@
       "status": "published",
       "timestamp": "2026-08-10T00:23:08.167Z",
       "version": "2.1.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "cron-parser": {
+          "from": "^4.2.0",
+          "to": "^5.9.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-14T00:30:32.862Z",
+      "version": "2.1.1-depup.4"
     }
   }
 }

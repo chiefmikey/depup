@@ -211,6 +211,31 @@
       "status": "published",
       "timestamp": "2026-07-21T17:21:18.956Z",
       "version": "2.3.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "content-type": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "iconv-lite": {
+          "from": "^0.7.2",
+          "to": "^0.7.3"
+        },
+        "qs": {
+          "from": "^6.15.2",
+          "to": "^6.15.3"
+        },
+        "raw-body": {
+          "from": "^3.0.2",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-14T00:28:52.573Z",
+      "version": "2.3.0-depup.4"
     }
   }
 }

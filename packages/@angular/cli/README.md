@@ -12,16 +12,14 @@ npm install @depup/angular__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.3 | **DepUp version**: 22.1.3-depup.0 | **Updated**: 8/5/2026 | **Import test**: passed
+**Original version**: 22.1.4 | **DepUp version**: 22.1.4-depup.0 | **Updated**: 8/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @listr2/prompt-adapter-inquirer | `4.2.4` | `^4.2.5` |
-| @modelcontextprotocol/sdk | `1.29.0` | `^1.30.0` |
 | listr2 | `10.2.2` | `^11.0.0` |
-| yargs | `18.0.0` | `^18.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular__cli&labels=bug).
