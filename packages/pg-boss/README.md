@@ -12,13 +12,13 @@ npm install @depup/pg-boss
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.27.0 | **DepUp version**: 12.27.0-depup.3 | **Updated**: 8/14/2026 | **Import test**: passed
+**Original version**: 12.27.0 | **DepUp version**: 12.27.0-depup.4 | **Updated**: 8/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cron-parser | `^5.7.0` | `^5.9.0` |
+| cron-parser | `^5.7.0` | `^5.10.0` |
 | pg | `^8.22.0` | `^8.23.0` |
 
 

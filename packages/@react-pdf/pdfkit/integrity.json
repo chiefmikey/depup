@@ -172,5 +172,40 @@
       "timestamp": "2026-08-09T00:31:18.930Z",
       "version": "6.0.0-depup.0"
     }
+  },
+  "6.0.1": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.13",
+          "to": "^8.0.0"
+        },
+        "@noble/ciphers": {
+          "from": "^1.0.0",
+          "to": "^2.3.0"
+        },
+        "@noble/hashes": {
+          "from": "^1.6.0",
+          "to": "^2.3.0"
+        },
+        "fflate": {
+          "from": "^0.8.2",
+          "to": "^0.8.3"
+        },
+        "fontkit": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        },
+        "js-md5": {
+          "from": "^0.8.3",
+          "to": "^0.9.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:19:54.960Z",
+      "version": "6.0.1-depup.0"
+    }
   }
 }

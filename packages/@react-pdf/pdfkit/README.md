@@ -12,7 +12,7 @@ npm install @depup/react-pdf__pdfkit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.0 | **Updated**: 8/9/2026 | **Import test**: failed
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.0 | **Updated**: 8/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,9 +21,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/runtime | `^7.20.13` | `^8.0.0` |
 | @noble/ciphers | `^1.0.0` | `^2.3.0` |
 | @noble/hashes | `^1.6.0` | `^2.3.0` |
+| fflate | `^0.8.2` | `^0.8.3` |
 | fontkit | `^2.0.2` | `^2.0.4` |
 | js-md5 | `^0.8.3` | `^0.9.2` |
-| pako | `^1.0.11` | `^3.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-pdf__pdfkit&labels=bug).

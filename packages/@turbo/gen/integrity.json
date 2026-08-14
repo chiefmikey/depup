@@ -918,5 +918,24 @@
       "timestamp": "2026-08-08T00:22:01.040Z",
       "version": "2.10.9-depup.0"
     }
+  },
+  "2.10.10": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.5.2"
+        },
+        "esbuild": {
+          "from": "^0.28.1",
+          "to": "^0.28.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:20:17.198Z",
+      "version": "2.10.10-depup.0"
+    }
   }
 }
