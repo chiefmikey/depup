@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.33-depup.45",
+  "version": "2.0.33-depup.50",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "types": "./types.d.ts",
   "exports": {
@@ -113,25 +113,25 @@
   "dependencies": {
     "@artilleryio/int-commons": "2.24.0",
     "@artilleryio/int-core": "2.28.0",
-    "@aws-sdk/client-cloudwatch": "^3.1106.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1106.0",
-    "@aws-sdk/client-ec2": "^3.1106.0",
-    "@aws-sdk/client-ecs": "^3.1106.0",
-    "@aws-sdk/client-iam": "^3.1106.0",
-    "@aws-sdk/client-lambda": "^3.1106.0",
-    "@aws-sdk/client-s3": "^3.1106.0",
-    "@aws-sdk/client-sqs": "^3.1106.0",
-    "@aws-sdk/client-ssm": "^3.1106.0",
-    "@aws-sdk/client-sts": "^3.1106.0",
-    "@aws-sdk/credential-providers": "^3.1106.0",
+    "@aws-sdk/client-cloudwatch": "^3.1110.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1110.0",
+    "@aws-sdk/client-ec2": "^3.1110.0",
+    "@aws-sdk/client-ecs": "^3.1110.0",
+    "@aws-sdk/client-iam": "^3.1110.0",
+    "@aws-sdk/client-lambda": "^3.1110.0",
+    "@aws-sdk/client-s3": "^3.1110.0",
+    "@aws-sdk/client-sqs": "^3.1110.0",
+    "@aws-sdk/client-ssm": "^3.1110.0",
+    "@aws-sdk/client-sts": "^3.1110.0",
+    "@aws-sdk/credential-providers": "^3.1110.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.1",
     "@azure/storage-blob": "^12.33.0",
     "@azure/storage-queue": "^12.31.0",
     "@oclif/core": "^4.13.3",
-    "@oclif/plugin-help": "^6.2.56",
-    "@oclif/plugin-not-found": "^3.2.92",
-    "@smithy/core": "^3.31.1",
+    "@oclif/plugin-help": "^6.2.58",
+    "@oclif/plugin-not-found": "^3.2.93",
+    "@smithy/core": "^3.33.0",
     "@upstash/redis": "^1.38.2",
     "artillery-engine-playwright": "1.30.0",
     "artillery-plugin-apdex": "1.24.0",
@@ -151,7 +151,7 @@
     "debug": "^4.4.3",
     "dotenv": "^17.4.2",
     "driftless": "^2.0.3",
-    "esbuild-wasm": "^0.28.1",
+    "esbuild-wasm": "^0.28.2",
     "eventemitter3": "^5.0.4",
     "fs-extra": "^11.4.0",
     "got": "^15.1.0",
@@ -183,47 +183,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.1034.0",
-        "to": "^3.1106.0"
+        "to": "^3.1110.0"
       },
       "@azure/identity": {
         "from": "^4.13.0",
@@ -243,15 +243,15 @@
       },
       "@oclif/plugin-help": {
         "from": "^6.2.36",
-        "to": "^6.2.56"
+        "to": "^6.2.58"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.73",
-        "to": "^3.2.92"
+        "to": "^3.2.93"
       },
       "@smithy/core": {
         "from": "^3.24.0",
-        "to": "^3.31.1"
+        "to": "^3.33.0"
       },
       "@upstash/redis": {
         "from": "^1.36.1",
@@ -283,7 +283,7 @@
       },
       "esbuild-wasm": {
         "from": "^0.19.12",
-        "to": "^0.28.1"
+        "to": "^0.28.2"
       },
       "fs-extra": {
         "from": "^11.3.3",
@@ -329,7 +329,7 @@
     "depsUpdated": 36,
     "originalPackage": "artillery",
     "originalVersion": "2.0.33",
-    "processedAt": "2026-08-08T00:22:19.831Z",
+    "processedAt": "2026-08-14T08:31:44.620Z",
     "smokeTest": "failed"
   }
 }

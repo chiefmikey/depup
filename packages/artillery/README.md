@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.49 | **Updated**: 8/14/2026 | **Import test**: failed
+**Original version**: 2.0.33 | **DepUp version**: 2.0.33-depup.50 | **Updated**: 8/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @oclif/core | `^4.8.0` | `^4.13.3` |
 | @oclif/plugin-help | `^6.2.36` | `^6.2.58` |
 | @oclif/plugin-not-found | `^3.2.73` | `^3.2.93` |
-| @smithy/core | `^3.24.0` | `^3.32.0` |
+| @smithy/core | `^3.24.0` | `^3.33.0` |
 | @upstash/redis | `^1.36.1` | `^1.38.2` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^2.4.2` | `^6.0.0` |
