@@ -1,6 +1,6 @@
 {
   "name": "@depup/express-openapi-validator",
-  "version": "5.6.2-depup.3",
+  "version": "5.6.2-depup.8",
   "description": "Automatically validate API requests and responses with OpenAPI 3 and Express. (with updated dependencies)",
   "main": "dist/index.js",
   "scripts": {
@@ -44,20 +44,20 @@
   "author": "Carmine DiMascio <cdimascio@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@apidevtools/json-schema-ref-parser": "^15.3.5",
-    "@types/multer": "^2.1.0",
+    "@apidevtools/json-schema-ref-parser": "^16.0.0",
+    "@types/multer": "^2.2.0",
     "ajv": "^8.20.0",
     "ajv-draft-04": "^1.0.0",
     "ajv-formats": "^3.0.1",
-    "content-type": "^2.0.0",
+    "content-type": "^2.1.0",
     "json-schema-traverse": "^1.0.0",
     "lodash.clonedeep": "^4.5.0",
     "lodash.get": "^4.4.2",
-    "media-typer": "^1.1.0",
-    "multer": "^2.1.1",
+    "media-typer": "^2.0.0",
+    "multer": "^2.2.0",
     "ono": "^7.1.3",
     "path-to-regexp": "^8.4.2",
-    "qs": "^6.15.1"
+    "qs": "^6.15.3"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.10",
@@ -90,11 +90,11 @@
     "changes": {
       "@apidevtools/json-schema-ref-parser": {
         "from": "^14.2.1",
-        "to": "^15.3.5"
+        "to": "^16.0.0"
       },
       "@types/multer": {
         "from": "^2.0.0",
-        "to": "^2.1.0"
+        "to": "^2.2.0"
       },
       "ajv": {
         "from": "^8.17.1",
@@ -102,11 +102,15 @@
       },
       "content-type": {
         "from": "^1.0.5",
+        "to": "^2.1.0"
+      },
+      "media-typer": {
+        "from": "^1.1.0",
         "to": "^2.0.0"
       },
       "multer": {
         "from": "^2.0.2",
-        "to": "^2.1.1"
+        "to": "^2.2.0"
       },
       "path-to-regexp": {
         "from": "^8.3.0",
@@ -114,13 +118,13 @@
       },
       "qs": {
         "from": "^6.14.1",
-        "to": "^6.15.1"
+        "to": "^6.15.3"
       }
     },
-    "depsUpdated": 7,
+    "depsUpdated": 8,
     "originalPackage": "express-openapi-validator",
     "originalVersion": "5.6.2",
-    "processedAt": "2026-05-12T07:13:55.893Z",
+    "processedAt": "2026-08-14T08:30:53.638Z",
     "smokeTest": "failed"
   }
 }
