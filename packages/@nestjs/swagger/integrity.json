@@ -221,6 +221,23 @@
       "status": "published",
       "timestamp": "2026-07-21T19:29:36.963Z",
       "version": "11.4.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "js-yaml": {
+          "from": "5.2.1",
+          "to": "^5.3.0"
+        },
+        "swagger-ui-dist": {
+          "from": "5.32.8",
+          "to": "^5.32.13"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:18:37.572Z",
+      "version": "11.4.6-depup.2"
     }
   }
 }

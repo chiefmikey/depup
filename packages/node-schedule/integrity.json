@@ -1,16 +1,5 @@
 {
   "2.1.1": {
-    "0": {
-      "changes": {
-        "cron-parser": {
-          "from": "^4.2.0",
-          "to": "^5.5.0"
-        }
-      },
-      "status": "published",
-      "timestamp": "2026-03-09T05:19:40.222Z",
-      "version": "2.1.1-depup.0"
-    },
     "1": {
       "changes": {
         "cron-parser": {
@@ -62,6 +51,19 @@
       "status": "published",
       "timestamp": "2026-08-14T00:30:32.862Z",
       "version": "2.1.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "cron-parser": {
+          "from": "^4.2.0",
+          "to": "^5.10.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:21:13.165Z",
+      "version": "2.1.1-depup.5"
     }
   }
 }

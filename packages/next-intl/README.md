@@ -12,7 +12,7 @@ npm install @depup/next-intl
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.13.6 | **DepUp version**: 4.13.6-depup.11 | **Updated**: 8/14/2026 | **Import test**: passed
+**Original version**: 4.13.6 | **DepUp version**: 4.13.6-depup.12 | **Updated**: 8/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,6 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @formatjs/intl-localematcher | `^0.8.1` | `^0.8.13` |
 | @parcel/watcher | `^2.4.1` | `^2.6.0` |
 | @swc/core | `^1.15.2` | `^1.15.47` |
+| po-parser | `^2.1.1` | `^2.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/next-intl&labels=bug).

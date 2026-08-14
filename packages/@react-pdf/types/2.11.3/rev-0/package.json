@@ -1,0 +1,35 @@
+{
+  "name": "@depup/react-pdf__types",
+  "version": "2.11.3-depup.0",
+  "license": "MIT",
+  "description": "React-pdf TypeScript definitions (with updated dependencies)",
+  "author": "Diego Muracciole <diegomuracciole@gmail.com>",
+  "homepage": "https://github.com/diegomura/react-pdf#readme",
+  "main": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegomura/react-pdf.git",
+    "directory": "packages/types"
+  },
+  "dependencies": {
+    "@react-pdf/font": "^4.0.10",
+    "@react-pdf/primitives": "^4.3.0",
+    "@react-pdf/stylesheet": "^6.2.3"
+  },
+  "keywords": [
+    "@react-pdf/types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@react-pdf/types",
+    "originalVersion": "2.11.3",
+    "processedAt": "2026-08-14T16:18:41.889Z",
+    "smokeTest": "failed"
+  }
+}

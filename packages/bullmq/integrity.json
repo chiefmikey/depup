@@ -1667,6 +1667,19 @@
       "status": "published",
       "timestamp": "2026-08-14T08:31:18.245Z",
       "version": "6.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "cron-parser": {
+          "from": "5.8.1",
+          "to": "^5.10.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-14T16:19:29.521Z",
+      "version": "6.1.1-depup.1"
     }
   }
 }

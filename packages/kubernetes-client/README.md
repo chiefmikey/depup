@@ -12,7 +12,7 @@ npm install @depup/kubernetes-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.5 | **Updated**: 8/13/2026 | **Import test**: passed
+**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.6 | **Updated**: 8/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @kubernetes/client-node | `0.10.2` | `^2.0.0` |
 | camelcase | `^6.0.0` | `^9.0.0` |
 | deepmerge | `^4.2.2` | `^4.3.1` |
-| js-yaml | `^3.13.1` | `^5.2.3` |
+| js-yaml | `^3.13.1` | `^5.3.0` |
 | openid-client | `^3.14.0` | `^6.8.5` |
 | pump | `^3.0.0` | `^3.0.4` |
 | qs | `^6.9.0` | `^6.15.3` |
