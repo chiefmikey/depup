@@ -1,0 +1,64 @@
+{
+  "name": "@depup/lovable.dev__vite-plugin-hmr-gate",
+  "version": "1.6.4-depup.0",
+  "description": "Vite plugin that gates HMR updates behind an HTTP flush signal (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@lovable.dev/vite-plugin-hmr-gate",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "plugin",
+    "hmr",
+    "hot-module-replacement"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">=5.0.0 <9.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "22.13.13",
+    "rimraf": "^5.0.0",
+    "tsdown": "^0.22.5",
+    "typescript": "7.0.2",
+    "vitest": "^4.1.5",
+    "@lovable.dev/vite-tanstack-config": "2.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovablelabs/lovable.git",
+    "directory": "npm-packages/vite-plugin-hmr-gate"
+  },
+  "scripts": {
+    "build": "pnpm --filter @lovable.dev/vite-tanstack-config run build && tsdown",
+    "check:package": "tmp=$(mktemp -d) && pnpm pack --out \"$tmp/pkg.tgz\" && tar -xzf \"$tmp/pkg.tgz\" -C \"$tmp\" && publint \"$tmp/package\" --strict && attw \"$tmp/pkg.tgz\"",
+    "typecheck": "pnpm --filter @lovable.dev/vite-tanstack-config run build && tsgo --noEmit",
+    "dev": "tsdown --watch",
+    "test": "vitest --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@lovable.dev/vite-plugin-hmr-gate",
+    "originalVersion": "1.6.4",
+    "processedAt": "2026-08-14T08:30:44.934Z",
+    "smokeTest": "passed"
+  }
+}
