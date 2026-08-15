@@ -34,5 +34,24 @@
       "timestamp": "2026-08-12T16:21:15.218Z",
       "version": "16.2.0-depup.0"
     }
+  },
+  "17.0.0": {
+    "0": {
+      "changes": {
+        "postcss-value-parser": {
+          "from": "^4.0.0",
+          "to": "^4.2.0"
+        },
+        "resolve": {
+          "from": "^1.1.7",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-15T00:17:57.406Z",
+      "version": "17.0.0-depup.0"
+    }
   }
 }

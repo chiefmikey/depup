@@ -1,0 +1,74 @@
+{
+  "name": "@depup/postcss-import",
+  "version": "17.0.0-depup.0",
+  "description": "PostCSS plugin to import CSS files (with updated dependencies)",
+  "keywords": [
+    "postcss-import",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "import",
+    "node modules",
+    "npm"
+  ],
+  "author": "Maxime Thirouin",
+  "license": "MIT",
+  "repository": "https://github.com/postcss/postcss-import.git",
+  "files": [
+    "index.js",
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0",
+    "read-cache": "^1.0.0",
+    "resolve": "^1.22.12"
+  },
+  "devDependencies": {
+    "ava": "^8.0.0",
+    "c8": "^12.0.0",
+    "eslint": "^10.8.1",
+    "eslint-config-problems": "^10.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "globals": "^17.0.0",
+    "postcss": "^8.5.19",
+    "postcss-scss": "^4.0.0",
+    "prettier": "~3.9.0",
+    "sugarss": "^5.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "scripts": {
+    "ci": "eslint . && ava",
+    "lint": "eslint . --fix",
+    "pretest": "npm run lint",
+    "test": "c8 ava"
+  },
+  "depup": {
+    "changes": {
+      "postcss-value-parser": {
+        "from": "^4.0.0",
+        "to": "^4.2.0"
+      },
+      "resolve": {
+        "from": "^1.1.7",
+        "to": "^1.22.12"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "postcss-import",
+    "originalVersion": "17.0.0",
+    "processedAt": "2026-08-15T00:17:52.647Z",
+    "smokeTest": "passed"
+  }
+}

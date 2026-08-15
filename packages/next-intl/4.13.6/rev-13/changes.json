@@ -10,9 +10,13 @@
     },
     "@swc/core": {
       "from": "^1.15.2",
-      "to": "^1.15.47"
+      "to": "^1.16.0"
+    },
+    "po-parser": {
+      "from": "^2.1.1",
+      "to": "^2.2.0"
     }
   },
-  "timestamp": "2026-08-13T08:32:32.028Z",
-  "totalUpdated": 3
+  "timestamp": "2026-08-15T00:17:49.942Z",
+  "totalUpdated": 4
 }
