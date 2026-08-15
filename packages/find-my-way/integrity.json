@@ -121,5 +121,24 @@
       "timestamp": "2026-07-21T17:15:09.801Z",
       "version": "9.7.0-depup.0"
     }
+  },
+  "9.8.0": {
+    "0": {
+      "changes": {
+        "fast-querystring": {
+          "from": "^1.0.0",
+          "to": "^1.1.2"
+        },
+        "safe-regex2": {
+          "from": "^5.0.0",
+          "to": "^5.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-15T00:17:30.246Z",
+      "version": "9.8.0-depup.0"
+    }
   }
 }

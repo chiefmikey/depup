@@ -1,0 +1,51 @@
+{
+  "name": "@depup/nestjs__testing",
+  "version": "11.2.1-depup.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@testing) (with updated dependencies)",
+  "author": "Kamil Mysliwiec",
+  "license": "MIT",
+  "homepage": "https://nestjs.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/nest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestjs/nest.git",
+    "directory": "packages/testing"
+  },
+  "dependencies": {
+    "tslib": "2.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/microservices": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/microservices": {
+      "optional": true
+    },
+    "@nestjs/platform-express": {
+      "optional": true
+    }
+  },
+  "gitHead": "4535f43b4890c9c69c57c5a5a8b49f62c83d1ed6",
+  "keywords": [
+    "@nestjs/testing",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nestjs/testing",
+    "originalVersion": "11.2.1",
+    "processedAt": "2026-08-15T00:16:27.104Z",
+    "smokeTest": "passed"
+  }
+}
