@@ -1933,6 +1933,63 @@
       "status": "published",
       "timestamp": "2026-08-13T08:33:01.974Z",
       "version": "4.5.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@dxup/nuxt": {
+          "from": "^0.5.6",
+          "to": "^0.5.7"
+        },
+        "@unhead/vue": {
+          "from": "^3.3.1",
+          "to": "^3.3.2"
+        },
+        "@vue/shared": {
+          "from": "^3.5.40",
+          "to": "^3.5.41"
+        },
+        "impound": {
+          "from": "^1.1.6",
+          "to": "^1.1.7"
+        },
+        "magic-string": {
+          "from": "^1.1.0",
+          "to": "^1.2.0"
+        },
+        "ohash": {
+          "from": "^2.0.11",
+          "to": "^2.0.12"
+        },
+        "rou3": {
+          "from": "^0.9.1",
+          "to": "^0.9.2"
+        },
+        "unhead": {
+          "from": "^3.3.1",
+          "to": "^3.3.2"
+        },
+        "unrouting": {
+          "from": "^0.2.2",
+          "to": "^0.2.3"
+        },
+        "verkit": {
+          "from": "^0.3.1",
+          "to": "^0.4.0"
+        },
+        "vue": {
+          "from": "^3.5.40",
+          "to": "^3.5.41"
+        },
+        "vue-component-type-helpers": {
+          "from": "^3.3.9",
+          "to": "^3.3.10"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-15T16:05:39.409Z",
+      "version": "4.5.2-depup.2"
     }
   }
 }

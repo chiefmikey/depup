@@ -296,6 +296,27 @@
       "status": "published",
       "timestamp": "2026-08-05T16:35:09.810Z",
       "version": "4.5.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.5"
+        },
+        "ohash": {
+          "from": "^2.0.11",
+          "to": "^2.0.12"
+        },
+        "verkit": {
+          "from": "^0.3.1",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-15T16:05:35.150Z",
+      "version": "4.5.2-depup.1"
     }
   }
 }
