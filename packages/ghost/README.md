@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.57.1 | **DepUp version**: 6.57.1-depup.7 | **Updated**: 8/15/2026 | **Import test**: failed
+**Original version**: 6.57.1 | **DepUp version**: 6.57.1-depup.8 | **Updated**: 8/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -62,7 +62,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
-| file-type | `21.3.4` | `^22.0.1` |
+| file-type | `21.3.4` | `^22.0.2` |
 | fs-extra | `11.3.6` | `^11.4.0` |
 | got | `13.0.0` | `^15.1.0` |
 | html-to-text | `5.1.1` | `^10.0.0` |
@@ -97,6 +97,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | nodemailer | `8.0.11` | `^9.0.5` |
 | otplib | `12.0.1` | `^13.4.1` |
 | papaparse | `5.5.4` | `^5.6.0` |
+| probe-image-size | `7.3.0` | `^7.4.0` |
 | sanitize-html | `2.17.5` | `^2.17.7` |
 | stripe | `8.222.0` | `^22.5.0` |
 | terser | `5.48.0` | `^5.50.0` |

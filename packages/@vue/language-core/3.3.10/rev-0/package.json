@@ -1,0 +1,70 @@
+{
+  "name": "@depup/vue__language-core",
+  "version": "3.3.10-depup.0",
+  "license": "MIT",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuejs/language-tools.git",
+    "directory": "packages/language-core"
+  },
+  "scripts": {
+    "generate-names": "node scripts/generate-names.js"
+  },
+  "dependencies": {
+    "@volar/language-core": "2.4.28",
+    "@vue/compiler-dom": "^3.5.41",
+    "@vue/shared": "^3.5.41",
+    "alien-signals": "^3.2.1",
+    "muggle-string": "^0.4.1",
+    "path-browserify": "^1.0.1",
+    "picomatch": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/path-browserify": "^1.0.3",
+    "@types/picomatch": "^4.0.3",
+    "@volar/typescript": "2.4.28",
+    "@vue/compiler-sfc": "^3.5.0"
+  },
+  "gitHead": "977995f07e39baf1a46bb42552d48ec0e896485f",
+  "description": "@vue/language-core with all dependencies updated to latest",
+  "keywords": [
+    "@vue/language-core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@vue/compiler-dom": {
+        "from": "^3.5.0",
+        "to": "^3.5.41"
+      },
+      "@vue/shared": {
+        "from": "^3.5.0",
+        "to": "^3.5.41"
+      },
+      "picomatch": {
+        "from": "^4.0.4",
+        "to": "^4.0.5"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "@vue/language-core",
+    "originalVersion": "3.3.10",
+    "processedAt": "2026-08-15T08:06:48.910Z",
+    "smokeTest": "passed"
+  }
+}
