@@ -12,7 +12,7 @@ npm install @depup/postcss-preset-env
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.3.2 | **DepUp version**: 11.3.2-depup.18 | **Updated**: 7/22/2026 | **Import test**: passed
+**Original version**: 11.3.2 | **DepUp version**: 11.3.2-depup.19 | **Updated**: 8/15/2026 | **Import test**: passed
 
 ## What changed
 
@@ -36,13 +36,15 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @csstools/postcss-stepped-value-functions | `^5.0.3` | `^5.0.4` |
 | @csstools/postcss-trigonometric-functions | `^5.0.3` | `^5.0.4` |
 | autoprefixer | `^10.5.0` | `^10.5.4` |
-| browserslist | `^4.28.1` | `^4.28.7` |
+| browserslist | `^4.28.1` | `^4.28.8` |
 | css-blank-pseudo | `^8.0.1` | `^8.0.2` |
 | css-has-pseudo | `^8.0.0` | `^8.0.1` |
 | css-prefers-color-scheme | `^11.0.0` | `^11.0.1` |
+| cssdb | `^8.9.0` | `^8.10.0` |
 | postcss-color-functional-notation | `^8.0.6` | `^8.0.7` |
 | postcss-focus-within | `^10.0.0` | `^10.0.1` |
 | postcss-lab-function | `^8.0.6` | `^8.0.7` |
+| postcss-nesting | `^14.0.0` | `^14.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/postcss-preset-env&labels=bug).
