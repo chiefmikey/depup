@@ -1681,5 +1681,15 @@
       "timestamp": "2026-08-14T16:19:29.521Z",
       "version": "6.1.1-depup.1"
     }
+  },
+  "6.1.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-16T16:05:59.493Z",
+      "version": "6.1.2-depup.0"
+    }
   }
 }
