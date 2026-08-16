@@ -1,0 +1,72 @@
+{
+  "name": "@depup/react-shepherd",
+  "version": "7.0.5-depup.0",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shipshapecode/shepherd.git"
+  },
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "LICENSE.md",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "shepherd.js": "15.2.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.18",
+    "@vitejs/plugin-react": "^6.0.5",
+    "@vitest/ui": "^4.1.10",
+    "happy-dom": "^20.11.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.1.10"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test:ci": "vitest --run",
+    "test:dev": "vitest"
+  },
+  "description": "react-shepherd with all dependencies updated to latest",
+  "keywords": [
+    "react-shepherd",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-shepherd",
+    "originalVersion": "7.0.5",
+    "processedAt": "2026-08-16T00:28:37.578Z",
+    "smokeTest": "failed"
+  }
+}

@@ -12,7 +12,7 @@ npm install @depup/react-spring__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.1.2 | **DepUp version**: 10.1.2-depup.23 | **Updated**: 8/9/2026 | **Import test**: passed
+**Original version**: 10.1.2 | **DepUp version**: 10.1.2-depup.24 | **Updated**: 8/16/2026 | **Import test**: passed
 
 ## What changed
 

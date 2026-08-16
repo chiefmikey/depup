@@ -1,0 +1,128 @@
+{
+  "name": "@depup/typeorm-extension",
+  "version": "4.0.0-depup.0",
+  "type": "module",
+  "description": "A library to create/drop database, simple seeding data sets, ... (with updated dependencies)",
+  "author": {
+    "name": "Peter Placzek",
+    "email": "contact@tada5hi.net",
+    "url": "https://github.com/tada5hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tada5hi/typeorm-extension.git"
+  },
+  "homepage": "https://typeorm-extension.tada5hi.net",
+  "bugs": {
+    "url": "https://github.com/tada5hi/typeorm-extension/issues"
+  },
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./bin/*": "./bin/*"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --noEmit",
+    "build:js": "tsdown",
+    "test": "vitest --config test/vitest.config.ts --run",
+    "test:coverage": "vitest --config test/vitest.config.ts --run --coverage",
+    "lint": "eslint",
+    "lint:fix": "npm run lint -- --fix",
+    "docs:dev": "vitepress dev docs --temp .temp",
+    "docs:build": "vitepress build docs --temp .temp",
+    "docs:help": "vitepress --help",
+    "test:integration": "vitest --config test/vitest.integration.config.ts --run"
+  },
+  "keywords": [
+    "typeorm-extension",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "database",
+    "create",
+    "drop",
+    "api",
+    "json-api",
+    "jsonapi",
+    "migration",
+    "seeder",
+    "seeding",
+    "cli"
+  ],
+  "bin": {
+    "typeorm-extension": "bin/cli.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "citty": "^0.2.2",
+    "envix": "^1.5.0",
+    "locter": "^4.1.0",
+    "pascal-case": "^4.0.0",
+    "reflect-metadata": "^0.2.2",
+    "smob": "^1.6.2"
+  },
+  "peerDependencies": {
+    "typeorm": "^1.1.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "@swc/core": "^1.15.46",
+    "@tada5hi/commitlint-config": "^1.3.1",
+    "@tada5hi/eslint-config": "^2.3.1",
+    "@tada5hi/tsconfig": "^0.7.2",
+    "@types/node": "^25.9.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "better-sqlite3": "^12.11.1",
+    "eslint": "^10.8.0",
+    "eslint-plugin-vue": "^10.10.0",
+    "husky": "^9.1.7",
+    "mongodb": "^7.5.0",
+    "mssql": "^12.7.0",
+    "mysql2": "^3.23.2",
+    "oracledb": "^7.0.1",
+    "pg": "^8.22.0",
+    "tsdown": "^0.22.14",
+    "typeorm": "^1.1.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
+    "unplugin-swc": "^1.5.9",
+    "vitepress": "^1.6.4",
+    "vitest": "^4.1.5",
+    "vue": "^3.5.40"
+  },
+  "depup": {
+    "changes": {
+      "pascal-case": {
+        "from": "^3.1.2",
+        "to": "^4.0.0"
+      },
+      "smob": {
+        "from": "^1.5.0",
+        "to": "^1.6.2"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "typeorm-extension",
+    "originalVersion": "4.0.0",
+    "processedAt": "2026-08-16T00:31:05.785Z",
+    "smokeTest": "failed"
+  }
+}

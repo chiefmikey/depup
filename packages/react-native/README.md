@@ -12,19 +12,17 @@ npm install @depup/react-native
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.86.2 | **DepUp version**: 0.86.2-depup.0 | **Updated**: 8/2/2026 | **Import test**: failed
+**Original version**: 0.87.0 | **DepUp version**: 0.87.0-depup.0 | **Updated**: 8/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | anser | `^1.4.9` | `^2.3.5` |
-| ansi-regex | `^5.0.0` | `^6.2.2` |
-| babel-plugin-syntax-hermes-parser | `0.36.0` | `^0.37.0` |
+| ansi-regex | `^5.0.0` | `^6.3.0` |
+| babel-plugin-syntax-hermes-parser | `0.36.1` | `^0.37.0` |
 | commander | `^12.0.0` | `^15.0.0` |
 | memoize-one | `^5.0.0` | `^6.0.0` |
-| metro-runtime | `^0.84.3` | `^0.87.0` |
-| metro-source-map | `^0.84.3` | `^0.87.0` |
 | pretty-format | `^29.7.0` | `^30.4.1` |
 | react-devtools-core | `^6.1.5` | `^7.0.1` |
 | react-refresh | `^0.14.0` | `^0.18.0` |
@@ -33,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | stacktrace-parser | `^0.1.10` | `^0.1.11` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
 | whatwg-fetch | `^3.0.0` | `^3.6.20` |
-| ws | `^7.5.10` | `^8.21.1` |
+| ws | `^7.5.10` | `^8.21.3` |
 | yargs | `^17.6.2` | `^18.1.0` |
 
 
