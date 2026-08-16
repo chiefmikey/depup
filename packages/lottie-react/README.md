@@ -12,14 +12,11 @@ npm install @depup/lottie-react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.4.1 | **DepUp version**: 2.4.1-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.0 | **Updated**: 8/16/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| lottie-web | `^5.10.2` | `^5.13.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/lottie-react&labels=bug).
 

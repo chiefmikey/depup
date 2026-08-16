@@ -1,0 +1,109 @@
+{
+  "name": "@depup/remeda",
+  "version": "2.40.0-depup.0",
+  "type": "module",
+  "description": "A utility library for JavaScript and Typescript. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remeda/remeda.git"
+  },
+  "homepage": "https://remedajs.com/",
+  "bugs": {
+    "url": "https://github.com/remeda/remeda/issues"
+  },
+  "author": "Łukasz Sentkiewicz",
+  "funding": "https://github.com/sponsors/remeda",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist/*",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "remeda",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "algo",
+    "algorithm",
+    "curried",
+    "fp",
+    "functional",
+    "generics",
+    "lodash",
+    "ramda",
+    "stdlib",
+    "toolkit",
+    "ts",
+    "types",
+    "typescript",
+    "underscore",
+    "util",
+    "utilities",
+    "utility",
+    "utils"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "check": "tsc --project tsconfig.source.json",
+    "check:dist": "tsc --project tsconfig.dist.json",
+    "format": "prettier . --write",
+    "lint": "eslint --fix --max-warnings 0",
+    "publish:jsr": "jsr publish",
+    "publish:preview": "pkg-pr-new publish --compact --template ../stackblitz-template/",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --project runtime",
+    "test:prop": "vitest --project prop",
+    "test:runtime": "vitest --project runtime",
+    "test:types": "vitest --project types"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@eslint/js": "^10.0.1",
+    "@fast-check/vitest": "^0.4.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/eslint-plugin": "^1.6.27",
+    "eslint": "~10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsdoc": "^64.1.0",
+    "eslint-plugin-unicorn": "^73.0.0",
+    "jiti": "^2.7.0",
+    "jsr": "^0.14.3",
+    "lint-staged": "^17.3.0",
+    "pkg-pr-new": "^0.0.87",
+    "prettier": "^3.9.6",
+    "prettier-plugin-pkg": "^0.22.1",
+    "prettier-plugin-sh": "^0.19.0",
+    "publint": "^0.3.23",
+    "semantic-release": "^25.0.9",
+    "tsdown": "^0.22.14",
+    "type-fest": "5.8.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.10"
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "remeda",
+    "originalVersion": "2.40.0",
+    "processedAt": "2026-08-16T00:27:46.534Z",
+    "smokeTest": "passed"
+  }
+}

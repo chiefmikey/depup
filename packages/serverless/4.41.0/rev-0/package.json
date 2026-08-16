@@ -1,0 +1,49 @@
+{
+  "name": "@depup/serverless",
+  "version": "4.41.0-depup.0",
+  "description": "serverless with all dependencies updated to latest",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prettier": "prettier -c . --ignore-path ../../.prettierignore",
+    "prettier:fix": "prettier -w . --ignore-path ../../.prettierignore"
+  },
+  "keywords": [
+    "serverless",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "author": "Serverless Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serverless/serverless.git"
+  },
+  "bin": {
+    "serverless": "run.js",
+    "sls": "run.js"
+  },
+  "dependencies": {
+    "undici": "^8.10.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "depup": {
+    "changes": {
+      "undici": {
+        "from": "6.28.0",
+        "to": "^8.10.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "serverless",
+    "originalVersion": "4.41.0",
+    "processedAt": "2026-08-16T00:28:11.206Z",
+    "smokeTest": "failed"
+  }
+}
