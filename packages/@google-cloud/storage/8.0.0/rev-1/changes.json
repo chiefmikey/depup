@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@google-cloud/paginator": {
+      "from": "^5.0.0",
+      "to": "^7.0.1"
+    },
+    "@google-cloud/projectify": {
+      "from": "^4.0.0",
+      "to": "^6.0.1"
+    },
+    "@google-cloud/promisify": {
+      "from": "<4.1.0",
+      "to": "^6.0.1"
+    },
+    "fast-xml-parser": {
+      "from": "^5.3.4",
+      "to": "^5.11.0"
+    },
+    "gaxios": {
+      "from": "^6.0.2",
+      "to": "^7.3.1"
+    },
+    "google-auth-library": {
+      "from": "^9.6.3",
+      "to": "^11.0.2"
+    },
+    "html-entities": {
+      "from": "^2.5.2",
+      "to": "^2.6.0"
+    },
+    "mime": {
+      "from": "^3.0.0",
+      "to": "^4.1.0"
+    },
+    "p-limit": {
+      "from": "^3.0.1",
+      "to": "^7.3.1"
+    },
+    "retry-request": {
+      "from": "^7.0.0",
+      "to": "^9.0.1"
+    },
+    "teeny-request": {
+      "from": "^9.0.0",
+      "to": "^11.0.1"
+    }
+  },
+  "timestamp": "2026-08-16T08:07:09.924Z",
+  "totalUpdated": 11
+}
