@@ -40,5 +40,15 @@
       "timestamp": "2026-08-09T00:35:23.231Z",
       "version": "7.0.4-depup.55"
     }
+  },
+  "7.0.5": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-16T00:26:38.230Z",
+      "version": "7.0.5-depup.0"
+    }
   }
 }

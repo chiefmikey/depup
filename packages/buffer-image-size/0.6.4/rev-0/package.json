@@ -1,0 +1,67 @@
+{
+  "name": "@depup/buffer-image-size",
+  "version": "0.6.4-depup.0",
+  "description": "get dimensions of any image buffer (with updated dependencies)",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "bin",
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=4.0"
+  },
+  "scripts": {
+    "pretest": "eslint lib specs",
+    "test": "nyc mocha specs",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": "evidentpoint/buffer-image-size",
+  "keywords": [
+    "buffer-image-size",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "image",
+    "size",
+    "dimensions",
+    "resolution",
+    "width",
+    "height",
+    "png",
+    "jpeg",
+    "bmp",
+    "gif",
+    "psd",
+    "webp",
+    "svg",
+    "ico",
+    "cur"
+  ],
+  "author": "netroy <aditya@netroy.in> (http://netroy.in/)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "*"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^4.13.1",
+    "expect.js": "^0.3.1",
+    "glob": "^7.1.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.2"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "buffer-image-size",
+    "originalVersion": "0.6.4",
+    "processedAt": "2026-08-16T00:24:14.379Z",
+    "smokeTest": "passed"
+  }
+}

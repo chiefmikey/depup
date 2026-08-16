@@ -367,5 +367,28 @@
       "timestamp": "2026-08-09T00:37:11.204Z",
       "version": "4.13.5-depup.0"
     }
+  },
+  "4.13.6": {
+    "0": {
+      "changes": {
+        "@formatjs/fast-memoize": {
+          "from": "^3.1.0",
+          "to": "^3.1.7"
+        },
+        "@schummar/icu-type-parser": {
+          "from": "1.21.5",
+          "to": "^1.26.1"
+        },
+        "intl-messageformat": {
+          "from": "^11.1.0",
+          "to": "^11.2.13"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-16T00:27:48.136Z",
+      "version": "4.13.6-depup.0"
+    }
   }
 }

@@ -771,5 +771,20 @@
       "timestamp": "2026-08-14T08:31:06.915Z",
       "version": "4.8.0-depup.1"
     }
+  },
+  "4.8.2": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-16T00:23:46.603Z",
+      "version": "4.8.2-depup.0"
+    }
   }
 }

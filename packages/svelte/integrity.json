@@ -1757,5 +1757,60 @@
       "timestamp": "2026-07-26T00:59:20.603Z",
       "version": "5.56.8-depup.0"
     }
+  },
+  "5.56.9": {
+    "0": {
+      "changes": {
+        "@jridgewell/remapping": {
+          "from": "^2.3.4",
+          "to": "^2.3.5"
+        },
+        "@jridgewell/sourcemap-codec": {
+          "from": "^1.5.0",
+          "to": "^1.5.5"
+        },
+        "@sveltejs/acorn-typescript": {
+          "from": "^1.0.10",
+          "to": "^1.0.13"
+        },
+        "@types/estree": {
+          "from": "^1.0.5",
+          "to": "^1.0.9"
+        },
+        "acorn": {
+          "from": "^8.12.1",
+          "to": "^8.18.0"
+        },
+        "aria-query": {
+          "from": "5.3.1",
+          "to": "^5.3.2"
+        },
+        "devalue": {
+          "from": "^5.8.1",
+          "to": "^5.9.0"
+        },
+        "esm-env": {
+          "from": "^1.2.1",
+          "to": "^1.2.2"
+        },
+        "esrap": {
+          "from": "^2.2.12",
+          "to": "^2.3.4"
+        },
+        "magic-string": {
+          "from": "^0.30.11",
+          "to": "^1.2.0"
+        },
+        "zimmerframe": {
+          "from": "^1.1.2",
+          "to": "^1.1.4"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-16T00:27:13.111Z",
+      "version": "5.56.9-depup.0"
+    }
   }
 }

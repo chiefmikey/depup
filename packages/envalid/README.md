@@ -12,7 +12,7 @@ npm install @depup/envalid
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.2.0 | **DepUp version**: 8.2.0-depup.54 | **Updated**: 8/9/2026 | **Import test**: passed
+**Original version**: 8.2.0 | **DepUp version**: 8.2.0-depup.55 | **Updated**: 8/16/2026 | **Import test**: passed
 
 ## What changed
 

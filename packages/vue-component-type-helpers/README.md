@@ -12,7 +12,7 @@ npm install @depup/vue-component-type-helpers
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.9 | **DepUp version**: 3.3.9-depup.0 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 3.3.10 | **DepUp version**: 3.3.10-depup.0 | **Updated**: 8/16/2026 | **Import test**: passed
 
 ## What changed
 

@@ -12,7 +12,7 @@ npm install @depup/svelte
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.56.8 | **DepUp version**: 5.56.8-depup.0 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 5.56.9 | **DepUp version**: 5.56.9-depup.0 | **Updated**: 8/16/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,14 +20,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @jridgewell/remapping | `^2.3.4` | `^2.3.5` |
 | @jridgewell/sourcemap-codec | `^1.5.0` | `^1.5.5` |
-| @sveltejs/acorn-typescript | `^1.0.10` | `^1.0.11` |
+| @sveltejs/acorn-typescript | `^1.0.10` | `^1.0.13` |
 | @types/estree | `^1.0.5` | `^1.0.9` |
-| acorn | `^8.12.1` | `^8.17.0` |
+| acorn | `^8.12.1` | `^8.18.0` |
 | aria-query | `5.3.1` | `^5.3.2` |
-| devalue | `^5.8.1` | `^5.8.2` |
+| devalue | `^5.8.1` | `^5.9.0` |
 | esm-env | `^1.2.1` | `^1.2.2` |
-| esrap | `^2.2.12` | `^2.3.0` |
-| magic-string | `^0.30.11` | `^1.1.0` |
+| esrap | `^2.2.12` | `^2.3.4` |
+| magic-string | `^0.30.11` | `^1.2.0` |
 | zimmerframe | `^1.1.2` | `^1.1.4` |
 
 
