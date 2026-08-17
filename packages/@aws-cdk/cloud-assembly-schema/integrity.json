@@ -705,5 +705,15 @@
       "timestamp": "2026-08-12T16:20:13.203Z",
       "version": "54.18.0-depup.0"
     }
+  },
+  "54.19.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-17T16:07:35.870Z",
+      "version": "54.19.0-depup.0"
+    }
   }
 }
