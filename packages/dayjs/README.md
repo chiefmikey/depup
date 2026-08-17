@@ -12,7 +12,7 @@ npm install @depup/dayjs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.11.22 | **DepUp version**: 1.11.22-depup.0 | **Updated**: 8/16/2026 | **Import test**: passed
+**Original version**: 1.11.23 | **DepUp version**: 1.11.23-depup.0 | **Updated**: 8/17/2026 | **Import test**: passed
 
 ## What changed
 
