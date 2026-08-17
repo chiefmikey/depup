@@ -1,0 +1,181 @@
+{
+  "name": "@depup/lottie-react",
+  "version": "3.1.0-depup.0",
+  "description": "Lottie animations in React: one component for the easy path, the whole engine when you need control. (with updated dependencies)",
+  "keywords": [
+    "lottie-react",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "lottie",
+    "lottie react",
+    "lottie animation",
+    "react animation",
+    "lottie component",
+    "lottie hook",
+    "lottie player",
+    "tree-shakeable"
+  ],
+  "homepage": "https://lottiereact.com",
+  "bugs": {
+    "url": "https://github.com/Gamote/lottie-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gamote/lottie-react.git"
+  },
+  "license": "MIT",
+  "author": "David Gamote",
+  "type": "module",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.17.0",
+      "onFail": "warn"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=24.18",
+      "onFail": "warn"
+    }
+  },
+  "sideEffects": false,
+  "types": "./build/index.d.ts",
+  "main": "./build/index.cjs",
+  "module": "./build/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "require": {
+        "types": "./build/index.d.cts",
+        "default": "./build/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build",
+    "changes.json",
+    "README.md"
+  ],
+  "size-limit": [
+    {
+      "name": "import { Lottie }",
+      "path": "build/index.js",
+      "import": "{ Lottie }",
+      "ignore": [
+        "react",
+        "react-dom",
+        "lottie-web"
+      ],
+      "gzip": true,
+      "limit": "4.9 KB"
+    },
+    {
+      "name": "import { useLottie }",
+      "path": "build/index.js",
+      "import": "{ useLottie }",
+      "ignore": [
+        "react",
+        "react-dom",
+        "lottie-web"
+      ],
+      "gzip": true,
+      "limit": "3.85 KB"
+    },
+    {
+      "name": "import { Lottie, LottieControls }",
+      "path": "build/index.js",
+      "import": "{ Lottie, LottieControls }",
+      "ignore": [
+        "react",
+        "react-dom",
+        "lottie-web"
+      ],
+      "gzip": true,
+      "limit": "7.8 KB"
+    },
+    {
+      "name": "import { LottieSvg, useLottieSvg }, only its own engine external",
+      "path": "build/index.js",
+      "import": "{ LottieSvg, useLottieSvg }",
+      "ignore": [
+        "react",
+        "react-dom",
+        "lottie-web/build/player/lottie_svg.js"
+      ],
+      "gzip": true,
+      "limit": "4.9 KB"
+    },
+    {
+      "name": "import { LottieLight, useLottieLight }, only its own engine external",
+      "path": "build/index.js",
+      "import": "{ LottieLight, useLottieLight }",
+      "ignore": [
+        "react",
+        "react-dom",
+        "lottie-web/build/player/lottie_light.js"
+      ],
+      "gzip": true,
+      "limit": "4.9 KB"
+    }
+  ],
+  "scripts": {
+    "check": "pnpm typecheck && pnpm format:check && pnpm test && pnpm build && pnpm check:size && pnpm --filter website check",
+    "check:package": "node scripts/check-package.mts",
+    "check:react18": "node scripts/check-react18.mts",
+    "check:size": "size-limit",
+    "typecheck": "tsc --noEmit",
+    "format:check": "biome check --error-on-warnings .",
+    "format": "biome check --write .",
+    "lint": "biome lint --error-on-warnings .",
+    "lint:fix": "biome lint --write .",
+    "deps:check": "pnpm -r outdated",
+    "deps:up": "pnpm -r update --latest",
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
+    "dev": "concurrently \"pnpm run build:watch\" \"pnpm --filter website dev\"",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "lottie-web": "^5.13.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@biomejs/biome": "^2.5.8",
+    "@size-limit/preset-small-lib": "^13.0.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.4",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "@vitest/coverage-v8": "^4.1.10",
+    "concurrently": "^10.0.5",
+    "happy-dom": "^20.11.2",
+    "publint": "^0.3.23",
+    "size-limit": "^13.0.3",
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "lottie-react",
+    "originalVersion": "3.1.0",
+    "processedAt": "2026-08-17T00:14:54.679Z",
+    "smokeTest": "passed"
+  }
+}
