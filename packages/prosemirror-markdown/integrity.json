@@ -169,6 +169,27 @@
       "status": "published",
       "timestamp": "2026-08-16T16:05:49.012Z",
       "version": "1.13.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "markdown-it": {
+          "from": "^14.0.0",
+          "to": "^15.0.0"
+        },
+        "prosemirror-model": {
+          "from": "^1.25.0",
+          "to": "^1.25.11"
+        },
+        "@types/markdown-it": {
+          "from": "^14.0.0",
+          "to": "^14.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T00:16:18.395Z",
+      "version": "1.13.6-depup.1"
     }
   }
 }

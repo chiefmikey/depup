@@ -234,5 +234,15 @@
       "timestamp": "2026-07-31T09:04:16.296Z",
       "version": "11.2.13-depup.0"
     }
+  },
+  "11.2.14": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T00:15:36.488Z",
+      "version": "11.2.14-depup.0"
+    }
   }
 }
