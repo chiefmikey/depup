@@ -2214,6 +2214,31 @@
       "status": "published",
       "timestamp": "2026-08-15T00:15:51.452Z",
       "version": "3.973.13-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1111.0",
+          "to": "^3.1112.0"
+        },
+        "@smithy/core": {
+          "from": "^3.31.1",
+          "to": "^3.33.2"
+        },
+        "@smithy/types": {
+          "from": "^4.16.1",
+          "to": "^4.17.2"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T00:15:26.298Z",
+      "version": "3.973.13-depup.1"
     }
   }
 }

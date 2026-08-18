@@ -12,7 +12,7 @@ npm install @depup/jsdoc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.4 | **Updated**: 7/31/2026 | **Import test**: failed
+**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.5 | **Updated**: 8/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,14 +20,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/parser | `^7.20.15` | `^8.0.4` |
 | @jsdoc/salty | `^0.2.1` | `^0.2.12` |
-| @types/markdown-it | `^14.1.1` | `^14.1.2` |
+| @types/markdown-it | `^14.1.1` | `^14.2.0` |
 | catharsis | `^0.9.0` | `^0.11.0` |
 | escape-string-regexp | `^2.0.0` | `^5.0.0` |
 | js2xmlparser | `^4.0.2` | `^5.0.0` |
 | klaw | `^3.0.0` | `^4.1.0` |
 | markdown-it | `^14.1.0` | `^15.0.0` |
 | markdown-it-anchor | `^8.6.7` | `^9.2.1` |
-| marked | `^4.0.10` | `^18.0.7` |
+| marked | `^4.0.10` | `^18.0.9` |
 | mkdirp | `^1.0.4` | `^3.0.1` |
 | requizzle | `^0.2.3` | `^0.2.4` |
 | strip-json-comments | `^3.1.0` | `^5.0.3` |

@@ -1,13 +1,15 @@
 {
   "name": "@depup/jsdoc",
-  "version": "4.0.5-depup.0",
+  "version": "4.0.5-depup.5",
   "revision": "1759892212631",
-  "description": "[DepUp] An API documentation generator for JavaScript.",
+  "description": "An API documentation generator for JavaScript. (with updated dependencies)",
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "jsdoc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "documentation",
     "javascript"
   ],
@@ -17,17 +19,17 @@
     "url": "https://github.com/jsdoc/jsdoc"
   },
   "dependencies": {
-    "@babel/parser": "^7.29.2",
-    "@jsdoc/salty": "^0.2.10",
-    "@types/markdown-it": "^14.1.2",
+    "@babel/parser": "^8.0.4",
+    "@jsdoc/salty": "^0.2.12",
+    "@types/markdown-it": "^14.2.0",
     "bluebird": "^3.7.2",
     "catharsis": "^0.11.0",
     "escape-string-regexp": "^5.0.0",
     "js2xmlparser": "^5.0.0",
     "klaw": "^4.1.0",
-    "markdown-it": "^14.1.1",
-    "markdown-it-anchor": "^9.2.0",
-    "marked": "^17.0.4",
+    "markdown-it": "^15.0.0",
+    "markdown-it-anchor": "^9.2.1",
+    "marked": "^18.0.9",
     "mkdirp": "^3.0.1",
     "requizzle": "^0.2.4",
     "strip-json-comments": "^5.0.3",
@@ -70,15 +72,15 @@
     "changes": {
       "@babel/parser": {
         "from": "^7.20.15",
-        "to": "^7.29.2"
+        "to": "^8.0.4"
       },
       "@jsdoc/salty": {
         "from": "^0.2.1",
-        "to": "^0.2.10"
+        "to": "^0.2.12"
       },
       "@types/markdown-it": {
         "from": "^14.1.1",
-        "to": "^14.1.2"
+        "to": "^14.2.0"
       },
       "catharsis": {
         "from": "^0.9.0",
@@ -98,15 +100,15 @@
       },
       "markdown-it": {
         "from": "^14.1.0",
-        "to": "^14.1.1"
+        "to": "^15.0.0"
       },
       "markdown-it-anchor": {
         "from": "^8.6.7",
-        "to": "^9.2.0"
+        "to": "^9.2.1"
       },
       "marked": {
         "from": "^4.0.10",
-        "to": "^17.0.4"
+        "to": "^18.0.9"
       },
       "mkdirp": {
         "from": "^1.0.4",
@@ -128,7 +130,7 @@
     "depsUpdated": 14,
     "originalPackage": "jsdoc",
     "originalVersion": "4.0.5",
-    "processedAt": "2026-03-17T18:41:39.785Z",
+    "processedAt": "2026-08-18T00:15:44.305Z",
     "smokeTest": "failed"
   }
 }
