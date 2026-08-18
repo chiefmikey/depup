@@ -325,5 +325,24 @@
       "timestamp": "2026-07-21T16:10:20.159Z",
       "version": "4.1.10-depup.6"
     }
+  },
+  "4.1.11": {
+    "0": {
+      "changes": {
+        "@types/chai": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        },
+        "tinyrainbow": {
+          "from": "^3.1.0",
+          "to": "^3.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T16:09:01.903Z",
+      "version": "4.1.11-depup.0"
+    }
   }
 }
