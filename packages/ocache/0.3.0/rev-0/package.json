@@ -1,0 +1,70 @@
+{
+  "name": "@depup/ocache",
+  "version": "0.3.0-depup.0",
+  "description": "Composable caching primitives with TTL, SWR, and HTTP response caching (with updated dependencies)",
+  "license": "MIT",
+  "repository": "unjs/ocache",
+  "files": [
+    "dist",
+    "lib",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
+  "imports": {
+    "#crypto": {
+      "node": "./lib/digest.node.mjs",
+      "default": "./lib/digest.mjs"
+    }
+  },
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "scripts": {
+    "bench": "node --expose-gc bench/index.ts",
+    "bench:chart": "node bench/chart.ts",
+    "bench:docs": "node bench/docs.ts",
+    "bench:micro": "node --expose-gc bench/micro.ts",
+    "build": "obuild",
+    "bundle": "node test/bundle.ts",
+    "dev": "vitest dev",
+    "fmt": "automd && oxlint . --fix && oxfmt .",
+    "lint": "oxlint . && oxfmt --check .",
+    "release": "pnpm test && pnpm build && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm typecheck && vitest run --coverage",
+    "typecheck": "tsc --noEmit --skipLibCheck"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "automd": "^0.4.3",
+    "changelogen": "^0.6.2",
+    "docs4ts": "^0.0.4",
+    "mitata": "^1.0.34",
+    "obuild": "^0.4.38",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0",
+    "rolldown": "^1.2.4",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "packageManager": "pnpm@11.21.0",
+  "keywords": [
+    "ocache",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "ocache",
+    "originalVersion": "0.3.0",
+    "processedAt": "2026-08-18T16:11:19.318Z",
+    "smokeTest": "passed"
+  }
+}

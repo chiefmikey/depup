@@ -279,5 +279,15 @@
       "timestamp": "2026-08-07T01:17:43.999Z",
       "version": "7.8.0-depup.0"
     }
+  },
+  "7.9.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T16:08:57.548Z",
+      "version": "7.9.0-depup.0"
+    }
   }
 }

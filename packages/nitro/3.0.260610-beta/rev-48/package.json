@@ -1,6 +1,6 @@
 {
   "name": "@depup/nitro",
-  "version": "3.0.260610-beta-depup.43",
+  "version": "3.0.260610-beta-depup.48",
   "description": "Build and Deploy Universal JavaScript Servers (with updated dependencies)",
   "keywords": [
     "nitro",
@@ -81,12 +81,12 @@
     "env-runner": "^0.1.16",
     "h3": "2.0.1-rc.22",
     "hookable": "^6.1.1",
-    "nf3": "^0.3.22",
-    "ocache": "^0.2.0",
+    "nf3": "^0.3.23",
+    "ocache": "^0.3.0",
     "ofetch": "2.0.0-alpha.3",
-    "ohash": "^2.0.11",
-    "rolldown": "^1.1.5",
-    "srvx": "^0.11.22",
+    "ohash": "^2.0.12",
+    "rolldown": "^1.2.4",
+    "srvx": "^0.12.5",
     "unenv": "2.0.0-rc.24",
     "unstorage": "2.0.0-alpha.7"
   },
@@ -251,25 +251,29 @@
       },
       "nf3": {
         "from": "^0.3.17",
-        "to": "^0.3.22"
+        "to": "^0.3.23"
       },
       "ocache": {
         "from": "^0.1.5",
-        "to": "^0.2.0"
+        "to": "^0.3.0"
+      },
+      "ohash": {
+        "from": "^2.0.11",
+        "to": "^2.0.12"
       },
       "rolldown": {
         "from": "^1.1.0",
-        "to": "^1.1.5"
+        "to": "^1.2.4"
       },
       "srvx": {
         "from": "^0.11.16",
-        "to": "^0.11.22"
+        "to": "^0.12.5"
       }
     },
-    "depsUpdated": 6,
+    "depsUpdated": 7,
     "originalPackage": "nitro",
     "originalVersion": "3.0.260610-beta",
-    "processedAt": "2026-07-12T00:39:19.085Z",
+    "processedAt": "2026-08-18T16:11:36.660Z",
     "smokeTest": "failed"
   }
 }

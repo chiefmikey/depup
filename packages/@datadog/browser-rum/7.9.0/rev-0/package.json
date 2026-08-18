@@ -1,0 +1,66 @@
+{
+  "name": "@depup/datadog__browser-rum",
+  "version": "7.9.0-depup.0",
+  "license": "Apache-2.0",
+  "main": "cjs/entries/main.js",
+  "module": "esm/entries/main.mjs",
+  "types": "cjs/entries/main.d.ts",
+  "files": [
+    "bundle/**/*.js",
+    "cjs",
+    "esm",
+    "src",
+    "internal",
+    "internal-synthetics",
+    "!src/**/*.spec.ts",
+    "!src/**/*.specHelper.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node ../../scripts/build/build-package.ts --modules --worker-string --bundle datadog-rum.js",
+    "build:bundle": "node ../../scripts/build/build-package.ts --worker-string --bundle datadog-rum.js"
+  },
+  "dependencies": {
+    "@datadog/browser-core": "7.9.0",
+    "@datadog/browser-rum-core": "7.9.0",
+    "@datadog/js-core": "0.0.10"
+  },
+  "peerDependencies": {
+    "@datadog/browser-logs": "7.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@datadog/browser-logs": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataDog/browser-sdk.git",
+    "directory": "packages/browser-rum"
+  },
+  "devDependencies": {
+    "@datadog/browser-worker": "7.9.0",
+    "pako": "3.0.1"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "description": "@datadog/browser-rum with all dependencies updated to latest",
+  "keywords": [
+    "@datadog/browser-rum",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@datadog/browser-rum",
+    "originalVersion": "7.9.0",
+    "processedAt": "2026-08-18T16:08:54.475Z",
+    "smokeTest": "passed"
+  }
+}
