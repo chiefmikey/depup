@@ -499,5 +499,36 @@
       "timestamp": "2026-07-21T16:09:29.127Z",
       "version": "4.1.10-depup.6"
     }
+  },
+  "4.1.11": {
+    "0": {
+      "changes": {
+        "ast-v8-to-istanbul": {
+          "from": "^1.0.0",
+          "to": "^1.0.5"
+        },
+        "magicast": {
+          "from": "^0.5.2",
+          "to": "^0.5.4"
+        },
+        "obug": {
+          "from": "^2.1.1",
+          "to": "^2.1.4"
+        },
+        "std-env": {
+          "from": "^4.0.0-rc.1",
+          "to": "^4.2.0"
+        },
+        "tinyrainbow": {
+          "from": "^3.1.0",
+          "to": "^3.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-18T16:08:54.108Z",
+      "version": "4.1.11-depup.0"
+    }
   }
 }

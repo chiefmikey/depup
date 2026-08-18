@@ -12,7 +12,7 @@ npm install @depup/algolia__requester-node-http
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.56.0 | **DepUp version**: 5.56.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.57.0 | **DepUp version**: 5.57.0-depup.0 | **Updated**: 8/18/2026 | **Import test**: passed
 
 ## What changed
 
