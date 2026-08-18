@@ -1,6 +1,6 @@
 {
   "name": "@depup/cloudflare__vite-plugin",
-  "version": "1.52.1-depup.0",
+  "version": "1.52.1-depup.5",
   "description": "Cloudflare plugin for Vite (with updated dependencies)",
   "keywords": [
     "@cloudflare/vite-plugin",
@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "unenv": "2.0.0-rc.24",
-    "workerd": "^1.20260813.1",
+    "workerd": "^1.20260818.1",
     "ws": "^8.21.3",
     "@cloudflare/unenv-preset": "2.16.1",
     "miniflare": "5.20260811.1-alpha",
@@ -108,7 +108,7 @@
     "changes": {
       "workerd": {
         "from": "1.20260811.1",
-        "to": "^1.20260813.1"
+        "to": "^1.20260818.1"
       },
       "ws": {
         "from": "8.21.0",
@@ -118,7 +118,7 @@
     "depsUpdated": 2,
     "originalPackage": "@cloudflare/vite-plugin",
     "originalVersion": "1.52.1",
-    "processedAt": "2026-08-13T16:19:53.067Z",
+    "processedAt": "2026-08-18T08:11:05.861Z",
     "smokeTest": "failed"
   }
 }
