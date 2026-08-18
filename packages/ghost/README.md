@@ -12,47 +12,47 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.57.1 | **DepUp version**: 6.57.1-depup.8 | **Updated**: 8/15/2026 | **Import test**: failed
+**Original version**: 6.57.1 | **DepUp version**: 6.57.1-depup.9 | **Updated**: 8/18/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1111.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1112.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.70.0` |
 | @slack/webhook | `7.1.0` | `^8.0.0` |
-| @tryghost/api-framework | `3.3.5` | `^3.3.7` |
-| @tryghost/bookshelf-plugins | `2.3.2` | `^2.3.8` |
+| @tryghost/api-framework | `3.3.5` | `^3.3.8` |
+| @tryghost/bookshelf-plugins | `2.3.2` | `^2.3.9` |
 | @tryghost/brute-knex | `3.2.1` | `^3.2.2` |
-| @tryghost/database-info | `2.3.2` | `^2.3.7` |
-| @tryghost/debug | `2.3.5` | `^2.3.7` |
-| @tryghost/domain-events | `3.3.5` | `^3.3.7` |
-| @tryghost/email-mock-receiver | `2.1.0` | `^2.3.7` |
-| @tryghost/errors | `3.3.5` | `^3.3.7` |
-| @tryghost/job-manager | `1.0.9` | `^4.1.7` |
-| @tryghost/logging | `5.3.0` | `^5.3.2` |
-| @tryghost/metrics | `1.0.43` | `^3.4.1` |
-| @tryghost/mongo-knex | `0.10.1` | `^0.11.0` |
+| @tryghost/database-info | `2.3.2` | `^2.3.8` |
+| @tryghost/debug | `2.3.5` | `^2.3.8` |
+| @tryghost/domain-events | `3.3.5` | `^3.3.9` |
+| @tryghost/email-mock-receiver | `2.1.0` | `^2.3.8` |
+| @tryghost/errors | `3.3.5` | `^3.3.8` |
+| @tryghost/job-manager | `1.0.9` | `^4.1.9` |
+| @tryghost/logging | `5.3.0` | `^5.3.4` |
+| @tryghost/metrics | `1.0.43` | `^3.4.2` |
+| @tryghost/mongo-knex | `0.10.1` | `^0.11.1` |
 | @tryghost/mongo-utils | `0.6.5` | `^0.6.6` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.3.7` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.3.7` |
-| @tryghost/nodemailer | `2.3.1` | `^2.3.7` |
-| @tryghost/nql | `0.13.1` | `^0.13.2` |
-| @tryghost/nql-lang | `0.6.6` | `^0.6.7` |
-| @tryghost/pretty-cli | `3.3.2` | `^3.3.7` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^4.1.7` |
-| @tryghost/promise | `2.3.2` | `^2.3.7` |
-| @tryghost/request | `3.3.4` | `^3.3.7` |
-| @tryghost/root-utils | `2.3.2` | `^2.3.7` |
-| @tryghost/security | `1.0.6` | `^3.3.7` |
-| @tryghost/tpl | `2.3.5` | `^2.3.7` |
+| @tryghost/mw-error-handler | `1.0.13` | `^3.3.8` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.3.8` |
+| @tryghost/nodemailer | `2.3.1` | `^2.3.8` |
+| @tryghost/nql | `0.13.1` | `^0.13.3` |
+| @tryghost/nql-lang | `0.6.6` | `^0.7.0` |
+| @tryghost/pretty-cli | `3.3.2` | `^3.3.8` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^4.1.9` |
+| @tryghost/promise | `2.3.2` | `^2.3.8` |
+| @tryghost/request | `3.3.4` | `^4.0.1` |
+| @tryghost/root-utils | `2.3.2` | `^2.3.8` |
+| @tryghost/security | `1.0.6` | `^3.3.8` |
+| @tryghost/tpl | `2.3.5` | `^2.3.8` |
 | @tryghost/url-utils | `5.2.6` | `^5.2.9` |
-| @tryghost/validator | `0.2.22` | `^3.2.7` |
-| @tryghost/version | `2.3.2` | `^2.3.7` |
-| @tryghost/zip | `3.5.1` | `^3.5.6` |
+| @tryghost/validator | `0.2.22` | `^3.2.8` |
+| @tryghost/version | `2.3.2` | `^2.3.8` |
+| @tryghost/zip | `3.5.1` | `^3.5.7` |
 | body-parser | `1.20.5` | `^2.3.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html5parser | `2.0.2` | `^3.0.0` |
 | iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.2` |
-| intl-messageformat | `5.4.3` | `^11.2.13` |
+| intl-messageformat | `5.4.3` | `^11.2.14` |
 | js-yaml | `4.3.0` | `^5.3.0` |
 | jsdom | `29.1.1` | `^30.0.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
@@ -78,16 +78,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^14.0.0` |
-| metascraper | `5.51.1` | `^5.55.2` |
-| metascraper-amazon | `5.51.2` | `^5.55.2` |
-| metascraper-author | `5.51.1` | `^5.55.2` |
-| metascraper-description | `5.51.1` | `^5.55.2` |
-| metascraper-image | `5.51.1` | `^5.55.2` |
-| metascraper-logo | `5.51.1` | `^5.55.2` |
-| metascraper-logo-favicon | `5.51.1` | `^5.55.2` |
-| metascraper-publisher | `5.51.1` | `^5.55.2` |
-| metascraper-title | `5.51.1` | `^5.55.2` |
-| metascraper-url | `5.51.1` | `^5.55.2` |
+| metascraper | `5.51.1` | `^5.56.2` |
+| metascraper-amazon | `5.51.2` | `^5.56.2` |
+| metascraper-author | `5.51.1` | `^5.56.2` |
+| metascraper-description | `5.51.1` | `^5.56.2` |
+| metascraper-image | `5.51.1` | `^5.56.2` |
+| metascraper-logo | `5.51.1` | `^5.56.2` |
+| metascraper-logo-favicon | `5.51.1` | `^5.56.2` |
+| metascraper-publisher | `5.51.1` | `^5.56.2` |
+| metascraper-title | `5.51.1` | `^5.56.2` |
+| metascraper-url | `5.51.1` | `^5.56.2` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.30.1` |
