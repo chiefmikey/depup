@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@electron-internal/extract-zip": {
+      "from": "^1.0.1",
+      "to": "^1.0.5"
+    },
+    "@electron/get": {
+      "from": "^5.0.0",
+      "to": "^5.1.0"
+    },
+    "@types/node": {
+      "from": "^24.9.0",
+      "to": "^26.2.0"
+    }
+  },
+  "timestamp": "2026-08-19T08:11:26.253Z",
+  "totalUpdated": 3
+}
