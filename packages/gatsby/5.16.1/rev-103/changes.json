@@ -58,15 +58,15 @@
     },
     "@graphql-codegen/typescript-operations": {
       "from": "^2.5.13",
-      "to": "^6.1.2"
+      "to": "^6.1.6"
     },
     "@graphql-tools/code-file-loader": {
       "from": "^7.3.23",
-      "to": "^8.1.36"
+      "to": "^8.1.37"
     },
     "@graphql-tools/load": {
       "from": "^7.8.14",
-      "to": "^8.1.15"
+      "to": "^8.1.16"
     },
     "@jridgewell/trace-mapping": {
       "from": "^0.3.18",
@@ -94,15 +94,15 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.66.0"
+      "to": "^8.67.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.66.0"
+      "to": "^8.67.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
-      "to": "^1.10.0"
+      "to": "^1.11.0"
     },
     "acorn-loose": {
       "from": "^8.3.0",
@@ -142,7 +142,7 @@
     },
     "browserslist": {
       "from": "^4.21.9",
-      "to": "^4.28.7"
+      "to": "^4.28.8"
     },
     "cache-manager": {
       "from": "^2.11.1",
@@ -166,7 +166,7 @@
     },
     "core-js": {
       "from": "^3.31.0",
-      "to": "^3.49.0"
+      "to": "^3.50.0"
     },
     "cors": {
       "from": "^2.8.5",
@@ -202,7 +202,7 @@
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.8.0"
+      "to": "^10.8.1"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -262,7 +262,7 @@
     },
     "globby": {
       "from": "^11.1.0",
-      "to": "^16.2.2"
+      "to": "^16.2.3"
     },
     "got": {
       "from": "^11.8.6",
@@ -278,7 +278,7 @@
     },
     "graphql-http": {
       "from": "^1.19.0",
-      "to": "^1.22.4"
+      "to": "^1.23.0"
     },
     "graphql-tag": {
       "from": "^2.12.6",
@@ -358,7 +358,7 @@
     },
     "postcss": {
       "from": "^8.4.24",
-      "to": "^8.5.25"
+      "to": "^8.5.26"
     },
     "postcss-loader": {
       "from": "^5.3.0",
@@ -366,7 +366,7 @@
     },
     "query-string": {
       "from": "^6.14.1",
-      "to": "^9.4.1"
+      "to": "^9.5.0"
     },
     "react-refresh": {
       "from": "^0.14.1",
@@ -434,7 +434,7 @@
     },
     "uuid": {
       "from": "^8.3.2",
-      "to": "^14.0.1"
+      "to": "^14.0.2"
     },
     "webpack": {
       "from": "~5.98.0",
@@ -457,6 +457,6 @@
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-08-04T00:40:19.221Z",
+  "timestamp": "2026-08-19T00:17:49.502Z",
   "totalUpdated": 114
 }

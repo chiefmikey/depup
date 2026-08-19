@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.102 | **Updated**: 8/11/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.103 | **Updated**: 8/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,9 +32,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.1.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.5` |
-| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.36` |
-| @graphql-tools/load | `^7.8.14` | `^8.1.15` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.6` |
+| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.37` |
+| @graphql-tools/load | `^7.8.14` | `^8.1.16` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
 | @nodelib/fs.walk | `^1.2.8` | `^3.0.1` |
 | @parcel/cache | `2.8.3` | `^2.16.4` |
@@ -43,7 +43,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
 | @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.67.0` |
 | @typescript-eslint/parser | `^5.60.1` | `^8.67.0` |
-| @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.10.2` |
+| @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.11.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
 | address | `1.2.2` | `^2.0.3` |
@@ -126,7 +126,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | style-to-object | `^0.4.1` | `^2.0.2` |
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
-| uuid | `^8.3.2` | `^14.0.1` |
+| uuid | `^8.3.2` | `^14.0.2` |
 | webpack | `~5.98.0` | `^5.109.2` |
 | webpack-dev-middleware | `^5.3.4` | `^8.1.1` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
