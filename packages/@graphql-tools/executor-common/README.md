@@ -12,13 +12,13 @@ npm install @depup/graphql-tools__executor-common
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.6 | **DepUp version**: 1.0.6-depup.60 | **Updated**: 8/13/2026 | **Import test**: passed
+**Original version**: 1.0.6 | **DepUp version**: 1.0.6-depup.61 | **Updated**: 8/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @envelop/core | `^5.4.0` | `^5.5.1` |
+| @envelop/core | `^5.4.0` | `^5.6.0` |
 | @graphql-tools/utils | `^11.0.0` | `^12.0.0` |
 
 
