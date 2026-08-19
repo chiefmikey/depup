@@ -1,6 +1,6 @@
 {
   "name": "@depup/mongodb",
-  "version": "7.5.0-depup.3",
+  "version": "7.5.0-depup.8",
   "description": "The official MongoDB driver for Node.js (with updated dependencies)",
   "main": "lib/index.js",
   "files": [
@@ -32,9 +32,9 @@
     "email": "dbx-node@mongodb.com"
   },
   "dependencies": {
-    "@mongodb-js/saslprep": "^1.4.12",
-    "bson": "^7.3.1",
-    "mongodb-connection-string-url": "^7.0.1"
+    "@mongodb-js/saslprep": "^1.5.0",
+    "bson": "^7.3.2",
+    "mongodb-connection-string-url": "^7.0.2"
   },
   "peerDependencies": {
     "@aws-sdk/credential-providers": "^3.806.0",
@@ -190,17 +190,21 @@
     "changes": {
       "@mongodb-js/saslprep": {
         "from": "^1.4.11",
-        "to": "^1.4.12"
+        "to": "^1.5.0"
       },
       "bson": {
         "from": "^7.2.0",
-        "to": "^7.3.1"
+        "to": "^7.3.2"
+      },
+      "mongodb-connection-string-url": {
+        "from": "^7.0.1",
+        "to": "^7.0.2"
       }
     },
-    "depsUpdated": 2,
+    "depsUpdated": 3,
     "originalPackage": "mongodb",
     "originalVersion": "7.5.0",
-    "processedAt": "2026-07-11T00:37:48.627Z",
+    "processedAt": "2026-08-19T16:09:06.457Z",
     "smokeTest": "passed"
   }
 }
