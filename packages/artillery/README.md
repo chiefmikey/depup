@@ -12,23 +12,24 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.2 | **Updated**: 8/18/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.3 | **Updated**: 8/19/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-iam | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/client-sts | `^3.1101.0` | `^3.1112.0` |
-| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1112.0` |
+| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-iam | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/client-sts | `^3.1101.0` | `^3.1113.0` |
+| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1113.0` |
+| @azure/identity | `^4.13.1` | `^4.13.2` |
 | @azure/storage-blob | `^12.30.0` | `^12.33.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.31.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
@@ -65,7 +66,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | semver | `^7.7.3` | `^7.8.5` |
 | sqs-consumer | `6.0.2` | `^15.0.3` |
 | tough-cookie | `^5.1.2` | `^6.0.2` |
-| uuid | `^11.1.1` | `^14.0.1` |
+| uuid | `^11.1.1` | `^14.0.2` |
 | walk-sync | `^0.2.3` | `^4.0.2` |
 | ws | `^7.5.13` | `^8.21.3` |
 
