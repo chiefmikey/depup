@@ -12,7 +12,7 @@ npm install @depup/cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.20.1 | **DepUp version**: 15.20.1-depup.0 | **Updated**: 8/11/2026 | **Import test**: failed
+**Original version**: 15.21.0 | **DepUp version**: 15.21.0-depup.0 | **Updated**: 8/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,11 +24,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/tmp | `^0.2.3` | `^0.2.6` |
 | buffer | `^5.7.1` | `^6.0.3` |
 | chalk | `^4.1.0` | `^6.0.0` |
+| chrome-remote-interface | `0.33.3` | `^0.34.0` |
 | ci-info | `^4.1.0` | `^4.4.0` |
 | cli-table3 | `0.6.1` | `^0.6.5` |
 | commander | `^6.2.1` | `^15.0.0` |
 | common-tags | `^1.8.0` | `^1.8.2` |
-| dayjs | `^1.10.4` | `^1.11.21` |
+| dayjs | `^1.10.4` | `^1.11.23` |
 | debug | `^4.3.4` | `^4.4.3` |
 | eventemitter2 | `6.4.7` | `^6.4.9` |
 | execa | `4.1.0` | `^10.0.1` |
