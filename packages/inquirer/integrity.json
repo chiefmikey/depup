@@ -171,5 +171,20 @@
       "timestamp": "2026-07-21T17:16:51.154Z",
       "version": "14.0.2-depup.23"
     }
+  },
+  "14.1.0": {
+    "0": {
+      "changes": {
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-20T00:18:05.153Z",
+      "version": "14.1.0-depup.0"
+    }
   }
 }

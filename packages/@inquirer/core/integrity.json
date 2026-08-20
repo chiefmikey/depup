@@ -156,5 +156,24 @@
       "timestamp": "2026-07-21T16:05:09.774Z",
       "version": "11.2.1-depup.51"
     }
+  },
+  "12.0.0": {
+    "0": {
+      "changes": {
+        "fast-wrap-ansi": {
+          "from": "^0.2.0",
+          "to": "^0.2.2"
+        },
+        "mute-stream": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-20T00:16:47.654Z",
+      "version": "12.0.0-depup.0"
+    }
   }
 }
