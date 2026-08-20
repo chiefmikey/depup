@@ -12,11 +12,14 @@ npm install @depup/angular-devkit__schematics-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.4 | **DepUp version**: 22.1.4-depup.0 | **Updated**: 8/14/2026 | **Import test**: failed
+**Original version**: 22.1.5 | **DepUp version**: 22.1.5-depup.0 | **Updated**: 8/20/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @inquirer/prompts | `8.5.2` | `^8.6.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular-devkit__schematics-cli&labels=bug).
 
