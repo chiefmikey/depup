@@ -174,5 +174,24 @@
       "timestamp": "2026-08-06T00:33:58.056Z",
       "version": "0.7.13-depup.1"
     }
+  },
+  "0.7.14": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        },
+        "web-vitals": {
+          "from": "^4.2.4",
+          "to": "^6.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-20T00:16:34.171Z",
+      "version": "0.7.14-depup.0"
+    }
   }
 }

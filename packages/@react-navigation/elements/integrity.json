@@ -1134,5 +1134,28 @@
       "timestamp": "2026-08-08T00:21:31.433Z",
       "version": "2.9.38-depup.0"
     }
+  },
+  "2.9.39": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "use-latest-callback": {
+          "from": "^0.2.4",
+          "to": "^0.3.5"
+        },
+        "use-sync-external-store": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-20T00:17:05.979Z",
+      "version": "2.9.39-depup.0"
+    }
   }
 }

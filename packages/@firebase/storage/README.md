@@ -12,7 +12,7 @@ npm install @depup/firebase__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.14.4 | **DepUp version**: 0.14.4-depup.0 | **Updated**: 7/31/2026 | **Import test**: failed
+**Original version**: 0.14.5 | **DepUp version**: 0.14.5-depup.0 | **Updated**: 8/20/2026 | **Import test**: failed
 
 ## What changed
 

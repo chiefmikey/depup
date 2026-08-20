@@ -318,5 +318,24 @@
       "timestamp": "2026-07-31T00:39:52.330Z",
       "version": "0.16.0-depup.0"
     }
+  },
+  "0.16.1": {
+    "0": {
+      "changes": {
+        "idb": {
+          "from": "7.1.1",
+          "to": "^8.0.3"
+        },
+        "tslib": {
+          "from": "^2.1.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-20T00:16:05.182Z",
+      "version": "0.16.1-depup.0"
+    }
   }
 }
