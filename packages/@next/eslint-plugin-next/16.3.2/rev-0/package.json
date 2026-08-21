@@ -1,0 +1,56 @@
+{
+  "name": "@depup/next__eslint-plugin-next",
+  "version": "16.3.2-depup.0",
+  "description": "ESLint plugin for Next.js. (with updated dependencies)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "url": "vercel/next.js",
+    "directory": "packages/eslint-plugin-next"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@eslint-community/eslint-utils": "^4.10.1",
+    "fast-glob": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/eslint": "9.6.1",
+    "@types/estree": "1.0.8",
+    "eslint": "9.37.0"
+  },
+  "scripts": {
+    "dev": "pnpm build",
+    "build": "swc -d dist src && pnpm types",
+    "types": "tsc --project tsconfig.json --skipLibCheck --declaration --emitDeclarationOnly --esModuleInterop --declarationDir dist"
+  },
+  "keywords": [
+    "@next/eslint-plugin-next",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@eslint-community/eslint-utils": {
+        "from": "4.9.1",
+        "to": "^4.10.1"
+      },
+      "fast-glob": {
+        "from": "3.3.1",
+        "to": "^3.3.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@next/eslint-plugin-next",
+    "originalVersion": "16.3.2",
+    "processedAt": "2026-08-21T16:08:39.755Z",
+    "smokeTest": "passed"
+  }
+}

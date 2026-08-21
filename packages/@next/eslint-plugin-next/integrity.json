@@ -385,5 +385,24 @@
       "timestamp": "2026-08-14T00:28:42.671Z",
       "version": "16.3.1-depup.0"
     }
+  },
+  "16.3.2": {
+    "0": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "4.9.1",
+          "to": "^4.10.1"
+        },
+        "fast-glob": {
+          "from": "3.3.1",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-21T16:08:43.020Z",
+      "version": "16.3.2-depup.0"
+    }
   }
 }
