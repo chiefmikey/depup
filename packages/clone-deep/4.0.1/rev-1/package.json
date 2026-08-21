@@ -1,0 +1,109 @@
+{
+  "name": "@depup/clone-deep",
+  "description": "Recursively (deep) clone JavaScript native types, like Object, Array, RegExp, Date as well as primitives. (with updated dependencies)",
+  "version": "4.0.1-depup.1",
+  "homepage": "https://github.com/jonschlinkert/clone-deep",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/clone-deep",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/clone-deep/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "is-plain-object": "^5.1.0",
+    "kind-of": "^6.0.3",
+    "shallow-clone": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^2.0.0",
+    "mocha": "^5.2.0"
+  },
+  "keywords": [
+    "clone-deep",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "array",
+    "assign",
+    "buffer",
+    "clamped",
+    "clone",
+    "clone-array",
+    "clone-array-deep",
+    "clone-buffer",
+    "clone-date",
+    "clone-map",
+    "clone-object",
+    "clone-object-deep",
+    "clone-reg-exp",
+    "clone-regex",
+    "clone-regexp",
+    "clone-set",
+    "date",
+    "deep",
+    "extend",
+    "mixin",
+    "mixin-object",
+    "object",
+    "regex",
+    "regexp",
+    "shallow",
+    "symbol"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "is-plain-object",
+        "isobject",
+        "kind-of",
+        "shallow-clone"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "is-plain-object": {
+        "from": "^2.0.4",
+        "to": "^5.1.0"
+      },
+      "kind-of": {
+        "from": "^6.0.2",
+        "to": "^6.0.3"
+      },
+      "shallow-clone": {
+        "from": "^3.0.0",
+        "to": "^3.0.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "clone-deep",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-08-21T16:09:20.761Z",
+    "smokeTest": "passed"
+  }
+}
