@@ -277,5 +277,36 @@
       "timestamp": "2026-07-21T17:28:49.874Z",
       "version": "8.19.0-depup.55"
     }
+  },
+  "8.20.0": {
+    "0": {
+      "changes": {
+        "@webgpu/types": {
+          "from": "^0.1.69",
+          "to": "^0.1.72"
+        },
+        "@xmldom/xmldom": {
+          "from": "^0.8.13",
+          "to": "^0.9.11"
+        },
+        "earcut": {
+          "from": "^3.0.2",
+          "to": "^3.2.3"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "tiny-lru": {
+          "from": "^11.4.7",
+          "to": "^13.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-21T00:18:46.300Z",
+      "version": "8.20.0-depup.0"
+    }
   }
 }

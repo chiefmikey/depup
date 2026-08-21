@@ -12,14 +12,14 @@ npm install @depup/micro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.3 | **Updated**: 8/14/2026 | **Import test**: passed
+**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.4 | **Updated**: 8/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | arg | `4.1.0` | `^5.0.2` |
-| content-type | `1.0.4` | `^2.1.0` |
+| content-type | `1.0.4` | `^3.0.0` |
 | raw-body | `2.4.1` | `^4.0.0` |
 
 
