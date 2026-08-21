@@ -1,0 +1,70 @@
+{
+  "name": "@depup/negotiator",
+  "description": "HTTP content negotiation (with updated dependencies)",
+  "version": "1.1.0-depup.0",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Federico Romero <federico.romero@outboxlabs.com>",
+    "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "negotiator",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "http",
+    "content negotiation",
+    "accept",
+    "accept-language",
+    "accept-encoding",
+    "accept-charset"
+  ],
+  "repository": "jshttp/negotiator",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/express"
+  },
+  "dependencies": {
+    "content-type": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-plugin-markdown": "2.2.1",
+    "mocha": "^11.7.0",
+    "nyc": "^17.1.0",
+    "vitest": "3.2.4"
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "bench": "vitest bench",
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --check-leaks test/",
+    "test:debug": "mocha --reporter spec --check-leaks --inspect --inspect-brk test/",
+    "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+  },
+  "depup": {
+    "changes": {
+      "content-type": {
+        "from": "^2.1.0",
+        "to": "^3.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "negotiator",
+    "originalVersion": "1.1.0",
+    "processedAt": "2026-08-21T00:17:35.163Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,15 +12,15 @@ npm install @depup/aws-sdk__client-secrets-manager
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1114.0 | **DepUp version**: 3.1114.0-depup.0 | **Updated**: 8/20/2026 | **Import test**: passed
+**Original version**: 3.1115.0 | **DepUp version**: 3.1115.0-depup.0 | **Updated**: 8/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @smithy/core | `^3.31.1` | `^3.33.2` |
+| @smithy/core | `^3.31.1` | `^3.33.3` |
 | @smithy/fetch-http-handler | `^5.6.13` | `^5.7.2` |
-| @smithy/node-http-handler | `^4.9.13` | `^4.11.2` |
+| @smithy/node-http-handler | `^4.9.13` | `^4.11.3` |
 | @smithy/types | `^4.16.1` | `^4.17.2` |
 | tslib | `^2.6.2` | `^2.8.1` |
 

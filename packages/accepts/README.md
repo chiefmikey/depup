@@ -12,14 +12,14 @@ npm install @depup/accepts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.8 | **DepUp version**: 1.3.8-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 1.3.8 | **DepUp version**: 1.3.8-depup.1 | **Updated**: 8/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | mime-types | `~2.1.34` | `^3.0.2` |
-| negotiator | `0.6.3` | `^1.0.0` |
+| negotiator | `0.6.3` | `^1.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/accepts&labels=bug).
