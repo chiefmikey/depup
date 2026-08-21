@@ -12,7 +12,7 @@ npm install @depup/express-openapi-validator
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.6.2 | **DepUp version**: 5.6.2-depup.8 | **Updated**: 8/14/2026 | **Import test**: failed
+**Original version**: 5.6.2 | **DepUp version**: 5.6.2-depup.9 | **Updated**: 8/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @apidevtools/json-schema-ref-parser | `^14.2.1` | `^16.0.0` |
 | @types/multer | `^2.0.0` | `^2.2.0` |
 | ajv | `^8.17.1` | `^8.20.0` |
-| content-type | `^1.0.5` | `^2.1.0` |
+| content-type | `^1.0.5` | `^3.0.0` |
 | media-typer | `^1.1.0` | `^2.0.0` |
 | multer | `^2.0.2` | `^2.2.0` |
 | path-to-regexp | `^8.3.0` | `^8.4.2` |
