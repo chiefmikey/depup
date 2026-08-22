@@ -1868,5 +1868,28 @@
       "timestamp": "2026-08-15T00:15:56.905Z",
       "version": "3.977.8-depup.0"
     }
+  },
+  "3.977.9": {
+    "0": {
+      "changes": {
+        "@smithy/signature-v4": {
+          "from": "^5.6.12",
+          "to": "^5.7.3"
+        },
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-22T00:15:15.537Z",
+      "version": "3.977.9-depup.0"
+    }
   }
 }
