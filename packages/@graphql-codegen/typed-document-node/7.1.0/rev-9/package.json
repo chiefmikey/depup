@@ -1,6 +1,6 @@
 {
   "name": "@depup/graphql-codegen__typed-document-node",
-  "version": "7.1.0-depup.4",
+  "version": "7.1.0-depup.9",
   "description": "GraphQL Code Generator plugin for generating ready-to-use TypedDocumentNode based on GraphQL operations (with updated dependencies)",
   "peerDependencies": {
     "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0"
@@ -9,8 +9,8 @@
     "auto-bind": "^5.0.1",
     "change-case-all": "^2.1.0",
     "tslib": "^2.8.1",
-    "@graphql-codegen/plugin-helpers": "^7.1.0",
-    "@graphql-codegen/visitor-plugin-common": "^7.2.0"
+    "@graphql-codegen/plugin-helpers": "^7.2.0",
+    "@graphql-codegen/visitor-plugin-common": "^7.2.5"
   },
   "repository": {
     "type": "git",
@@ -62,12 +62,20 @@
       "tslib": {
         "from": "^2.8.0",
         "to": "^2.8.1"
+      },
+      "@graphql-codegen/plugin-helpers": {
+        "from": "^7.1.0",
+        "to": "^7.2.0"
+      },
+      "@graphql-codegen/visitor-plugin-common": {
+        "from": "^7.2.0",
+        "to": "^7.2.5"
       }
     },
-    "depsUpdated": 2,
+    "depsUpdated": 4,
     "originalPackage": "@graphql-codegen/typed-document-node",
     "originalVersion": "7.1.0",
-    "processedAt": "2026-07-11T00:24:38.834Z",
+    "processedAt": "2026-08-22T08:07:16.620Z",
     "smokeTest": "passed"
   }
 }

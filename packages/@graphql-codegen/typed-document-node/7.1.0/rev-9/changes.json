@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "auto-bind": {
+      "from": "^5.0.0",
+      "to": "^5.0.1"
+    },
+    "tslib": {
+      "from": "^2.8.0",
+      "to": "^2.8.1"
+    },
+    "@graphql-codegen/plugin-helpers": {
+      "from": "^7.1.0",
+      "to": "^7.2.0"
+    },
+    "@graphql-codegen/visitor-plugin-common": {
+      "from": "^7.2.0",
+      "to": "^7.2.5"
+    }
+  },
+  "timestamp": "2026-08-22T08:07:11.363Z",
+  "totalUpdated": 4
+}
