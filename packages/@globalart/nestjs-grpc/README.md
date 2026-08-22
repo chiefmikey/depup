@@ -12,7 +12,7 @@ npm install @depup/globalart__nestjs-grpc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.8 | **DepUp version**: 4.0.8-depup.0 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 4.2.0 | **DepUp version**: 4.2.0-depup.0 | **Updated**: 8/22/2026 | **Import test**: passed
 
 ## What changed
 
