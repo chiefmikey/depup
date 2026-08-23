@@ -12,7 +12,7 @@ npm install @depup/arc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.58 | **Updated**: 8/16/2026 | **Import test**: passed
+**Original version**: 1.0.0 | **DepUp version**: 1.0.0-depup.59 | **Updated**: 8/23/2026 | **Import test**: passed
 
 ## What changed
 

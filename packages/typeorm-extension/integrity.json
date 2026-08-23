@@ -73,5 +73,24 @@
       "timestamp": "2026-08-16T00:31:08.384Z",
       "version": "4.0.0-depup.0"
     }
+  },
+  "4.1.0": {
+    "0": {
+      "changes": {
+        "pascal-case": {
+          "from": "^3.1.2",
+          "to": "^4.0.0"
+        },
+        "smob": {
+          "from": "^1.5.0",
+          "to": "^1.6.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-23T00:28:26.520Z",
+      "version": "4.1.0-depup.0"
+    }
   }
 }
