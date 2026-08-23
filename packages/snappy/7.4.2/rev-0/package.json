@@ -1,0 +1,188 @@
+{
+  "name": "@depup/snappy",
+  "version": "7.4.2-depup.0",
+  "description": "Fastest Snappy compression library in Node.js (with updated dependencies)",
+  "main": "main.js",
+  "types": "main.d.ts",
+  "browser": {
+    "index.js": "./browser-entry.js",
+    "main.js": "./browser-entry.js"
+  },
+  "repository": "https://github.com/Brooooooklyn/snappy",
+  "license": "MIT",
+  "keywords": [
+    "snappy",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "snap",
+    "compression",
+    "compress",
+    "stream",
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "Node-API",
+    "node-addon",
+    "node-addon-api"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "main.js",
+    "main.d.ts",
+    "browser.js",
+    "browser-entry.js",
+    "browser-entry.d.ts",
+    "stream-polyfill.js",
+    "stream-polyfill.mjs",
+    "changes.json",
+    "README.md"
+  ],
+  "napi": {
+    "binaryName": "snappy",
+    "packageName": "@napi-rs/snappy",
+    "targets": [
+      "x86_64-unknown-linux-gnu",
+      "x86_64-apple-darwin",
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-linux-musl",
+      "aarch64-unknown-linux-gnu",
+      "i686-pc-windows-msvc",
+      "armv7-unknown-linux-gnueabihf",
+      "aarch64-apple-darwin",
+      "aarch64-linux-android",
+      "arm-linux-androideabi",
+      "x86_64-unknown-freebsd",
+      "aarch64-unknown-linux-musl",
+      "aarch64-pc-windows-msvc",
+      "riscv64gc-unknown-linux-gnu",
+      "s390x-unknown-linux-gnu",
+      "powerpc64le-unknown-linux-gnu",
+      "aarch64-unknown-linux-ohos",
+      "wasm32-wasip1-threads"
+    ],
+    "wasm": {
+      "browser": {
+        "fs": false
+      }
+    }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts --output-dir artifacts --npm-dir ./npm",
+    "bench": "node --import @oxc-node/core/register benchmark/bench.ts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "format": "run-p format:source format:rs format:toml",
+    "format:toml": "taplo format",
+    "format:rs": "cargo fmt",
+    "format:source": "prettier --config ./package.json --write .",
+    "lint": "oxlint",
+    "test": "ava",
+    "test:mem": "node --expose-gc ./memory-leak-detect.mjs",
+    "preversion": "napi build --platform && git add .",
+    "version": "napi version && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "devDependencies": {
+    "@emnapi/core": "^2.0.0-alpha.4",
+    "@emnapi/runtime": "^2.0.0-alpha.4",
+    "@napi-rs/cli": "^3.8.6",
+    "@napi-rs/wasm-runtime": "^1.2.3",
+    "@oxc-node/core": "^0.1.0",
+    "@taplo/cli": "^0.7.0",
+    "@types/node": "^26.2.0",
+    "ava": "^8.0.1",
+    "chalk": "^6.0.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "emnapi": "^2.0.0-alpha.4",
+    "husky": "^9.1.7",
+    "legacy-snappy": "npm:snappy@7",
+    "lint-staged": "^17.3.0",
+    "npm-run-all2": "^9.0.3",
+    "oxlint": "^1.78.0",
+    "prettier": "^3.9.6",
+    "pretty-bytes": "^7.1.1",
+    "table": "^6.9.0",
+    "tinybench": "^6.1.3",
+    "typescript": "^7.0.2"
+  },
+  "lint-staged": {
+    "*.@(js|ts|tsx)": [
+      "eslint -c .eslintrc.yml --fix"
+    ],
+    "*.@(js|ts|tsx|yml|yaml|md|json)": [
+      "prettier --write"
+    ]
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "nodeArguments": [
+      "--import",
+      "@oxc-node/core/register"
+    ],
+    "timeout": "2m",
+    "workerThreads": false,
+    "environmentVariables": {
+      "TS_NODE_PROJECT": "./tsconfig.json"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "arrowParens": "always"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Brooooooklyn"
+  },
+  "packageManager": "yarn@4.18.0",
+  "exports": {
+    ".": {
+      "browser": {
+        "types": "./browser-entry.d.ts",
+        "default": "./browser-entry.js"
+      },
+      "types": "./main.d.ts",
+      "import": "./main.js",
+      "require": "./main.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "optionalDependencies": {
+    "@napi-rs/snappy-linux-x64-gnu": "7.4.2",
+    "@napi-rs/snappy-darwin-x64": "7.4.2",
+    "@napi-rs/snappy-win32-x64-msvc": "7.4.2",
+    "@napi-rs/snappy-linux-x64-musl": "7.4.2",
+    "@napi-rs/snappy-linux-arm64-gnu": "7.4.2",
+    "@napi-rs/snappy-win32-ia32-msvc": "7.4.2",
+    "@napi-rs/snappy-linux-arm-gnueabihf": "7.4.2",
+    "@napi-rs/snappy-darwin-arm64": "7.4.2",
+    "@napi-rs/snappy-android-arm64": "7.4.2",
+    "@napi-rs/snappy-android-arm-eabi": "7.4.2",
+    "@napi-rs/snappy-freebsd-x64": "7.4.2",
+    "@napi-rs/snappy-linux-arm64-musl": "7.4.2",
+    "@napi-rs/snappy-win32-arm64-msvc": "7.4.2",
+    "@napi-rs/snappy-linux-riscv64-gnu": "7.4.2",
+    "@napi-rs/snappy-linux-s390x-gnu": "7.4.2",
+    "@napi-rs/snappy-linux-ppc64-gnu": "7.4.2",
+    "@napi-rs/snappy-openharmony-arm64": "7.4.2"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "snappy",
+    "originalVersion": "7.4.2",
+    "processedAt": "2026-08-23T00:29:17.694Z",
+    "smokeTest": "passed"
+  }
+}

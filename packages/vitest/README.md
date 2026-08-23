@@ -12,22 +12,23 @@ npm install @depup/vitest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.10 | **DepUp version**: 4.1.10-depup.8 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 4.1.11 | **DepUp version**: 4.1.11-depup.0 | **Updated**: 8/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| es-module-lexer | `^2.0.0` | `^2.3.1` |
+| es-module-lexer | `^2.0.0` | `^2.3.2` |
 | expect-type | `^1.3.0` | `^1.4.0` |
-| magic-string | `^0.30.21` | `^1.0.0` |
+| magic-string | `^0.30.21` | `^1.2.2` |
 | obug | `^2.1.1` | `^2.1.4` |
 | picomatch | `^4.0.3` | `^4.0.5` |
 | std-env | `^4.0.0-rc.1` | `^4.2.0` |
-| tinybench | `^2.9.0` | `^6.0.2` |
-| tinyexec | `^1.0.2` | `^1.2.4` |
+| tinybench | `^2.9.0` | `^6.1.3` |
+| tinyexec | `^1.0.2` | `^1.3.0` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
-| vite | `^6.0.0 || ^7.0.0 || ^8.0.0` | `^8.1.5` |
+| tinyrainbow | `^3.1.0` | `^3.1.1` |
+| vite | `^6.0.0 || ^7.0.0 || ^8.0.0` | `^8.2.2` |
 | why-is-node-running | `^2.3.0` | `^3.2.2` |
 
 
