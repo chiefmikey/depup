@@ -317,5 +317,24 @@
       "timestamp": "2026-08-08T08:15:03.347Z",
       "version": "0.19.1-depup.47"
     }
+  },
+  "0.20.1": {
+    "0": {
+      "changes": {
+        "@noble/ciphers": {
+          "from": "^1.3.0",
+          "to": "^2.3.0"
+        },
+        "@noble/hashes": {
+          "from": "^1.8.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-23T16:06:32.493Z",
+      "version": "0.20.1-depup.0"
+    }
   }
 }

@@ -12,11 +12,14 @@ npm install @depup/react-three__postprocessing
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.5 | **DepUp version**: 3.0.5-depup.0 | **Updated**: 8/9/2026 | **Import test**: failed
+**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.0 | **Updated**: 8/23/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| n8ao | `^2.0.0` | `^2.0.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-three__postprocessing&labels=bug).
 
