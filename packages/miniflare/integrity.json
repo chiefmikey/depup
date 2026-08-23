@@ -4227,6 +4227,35 @@
       "status": "published",
       "timestamp": "2026-08-22T08:08:10.204Z",
       "version": "5.20260820.0-alpha-depup.2"
+    },
+    "3": {
+      "changes": {
+        "sharp": {
+          "from": "0.35.2",
+          "to": "^0.35.3"
+        },
+        "undici": {
+          "from": "7.29.0",
+          "to": "^8.10.0"
+        },
+        "workerd": {
+          "from": "1.20260820.1",
+          "to": "^1.20260823.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-23T08:07:58.098Z",
+      "version": "5.20260820.0-alpha-depup.3"
     }
   }
 }
