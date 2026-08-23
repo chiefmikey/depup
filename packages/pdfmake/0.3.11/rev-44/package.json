@@ -1,6 +1,6 @@
 {
   "name": "@depup/pdfmake",
-  "version": "0.3.11-depup.39",
+  "version": "0.3.11-depup.44",
   "description": "Client/server side PDF printing in pure JavaScript (with updated dependencies)",
   "main": "js/index.js",
   "esnext": "src/index.js",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "linebreak": "^1.1.0",
-    "pdfkit": "^0.19.1",
+    "pdfkit": "^0.20.1",
     "xmldoc": "^3.0.0"
   },
   "devDependencies": {
@@ -97,15 +97,19 @@
   },
   "depup": {
     "changes": {
+      "pdfkit": {
+        "from": "^0.19.1",
+        "to": "^0.20.1"
+      },
       "xmldoc": {
         "from": "^2.0.3",
         "to": "^3.0.0"
       }
     },
-    "depsUpdated": 1,
+    "depsUpdated": 2,
     "originalPackage": "pdfmake",
     "originalVersion": "0.3.11",
-    "processedAt": "2026-07-12T00:39:53.124Z",
+    "processedAt": "2026-08-23T16:06:12.456Z",
     "smokeTest": "passed"
   }
 }
