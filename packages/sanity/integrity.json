@@ -12249,5 +12249,112 @@
       "timestamp": "2026-08-16T00:30:08.558Z",
       "version": "6.9.2-depup.0"
     }
+  },
+  "6.10.1": {
+    "0": {
+      "changes": {
+        "@portabletext/editor": {
+          "from": "^7.11.0",
+          "to": "^7.12.0"
+        },
+        "@portabletext/plugin-dnd": {
+          "from": "^1.0.32",
+          "to": "^1.0.33"
+        },
+        "@portabletext/plugin-list-index": {
+          "from": "^1.0.32",
+          "to": "^1.0.33"
+        },
+        "@portabletext/plugin-markdown-shortcuts": {
+          "from": "^8.0.48",
+          "to": "^8.0.49"
+        },
+        "@portabletext/plugin-one-line": {
+          "from": "^7.0.47",
+          "to": "^7.0.48"
+        },
+        "@portabletext/plugin-paste-link": {
+          "from": "^4.0.47",
+          "to": "^4.0.48"
+        },
+        "@portabletext/plugin-table": {
+          "from": "^1.3.17",
+          "to": "^1.3.18"
+        },
+        "@portabletext/plugin-typography": {
+          "from": "^8.0.48",
+          "to": "^8.0.49"
+        },
+        "@portabletext/react": {
+          "from": "^8.0.0",
+          "to": "^8.0.1"
+        },
+        "@sanity/bifur-client": {
+          "from": "^1.0.0",
+          "to": "^2.0.2"
+        },
+        "@sanity/cli": {
+          "from": "^8.0.2",
+          "to": "^8.2.1"
+        },
+        "@sanity/client": {
+          "from": "^7.26.2",
+          "to": "^8.2.0"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/preview-url-secret": {
+          "from": "^4.1.4",
+          "to": "^4.1.5"
+        },
+        "@sanity/sdk-react": {
+          "from": "^2.19.0",
+          "to": "^2.20.1"
+        },
+        "@sanity/ui": {
+          "from": "^4.0.3",
+          "to": "^4.0.6"
+        },
+        "@sentry/react": {
+          "from": "^10.69.0",
+          "to": "^10.70.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.9",
+          "to": "^3.14.10"
+        },
+        "i18next": {
+          "from": "^26.3.6",
+          "to": "^26.4.0"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^3.22.0"
+        },
+        "motion": {
+          "from": "^13.1.0",
+          "to": "^13.1.1"
+        },
+        "react-i18next": {
+          "from": "^17.0.11",
+          "to": "^17.0.12"
+        },
+        "react-rx": {
+          "from": "^5.1.1",
+          "to": "^6.0.0"
+        },
+        "uuid": {
+          "from": "^14.0.1",
+          "to": "^14.0.2"
+        }
+      },
+      "depsUpdated": 24,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-23T00:28:57.427Z",
+      "version": "6.10.1-depup.0"
+    }
   }
 }

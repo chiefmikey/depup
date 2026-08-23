@@ -60,5 +60,24 @@
       "timestamp": "2026-08-16T00:30:16.038Z",
       "version": "5.3.0-depup.0"
     }
+  },
+  "6.0.0": {
+    "0": {
+      "changes": {
+        "glob": {
+          "from": "13.0.x",
+          "to": "^13.0.6"
+        },
+        "yargs": {
+          "from": "17.7.x",
+          "to": "^18.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-23T00:29:05.033Z",
+      "version": "6.0.0-depup.0"
+    }
   }
 }

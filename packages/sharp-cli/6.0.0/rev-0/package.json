@@ -1,0 +1,74 @@
+{
+  "name": "@depup/sharp-cli",
+  "version": "6.0.0-depup.0",
+  "description": "CLI for sharp. (with updated dependencies)",
+  "keywords": [
+    "sharp-cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "jpeg",
+    "libvips",
+    "png",
+    "sharp",
+    "vips",
+    "webp"
+  ],
+  "homepage": "https://github.com/vseventer/sharp-cli",
+  "bugs": "https://github.com/vseventer/sharp-cli/issues",
+  "license": "MIT",
+  "type": "module",
+  "author": "Mark van Seventer <mark@vseventer.com>",
+  "repository": "vseventer/sharp-cli",
+  "bin": {
+    "sharp": "bin/cli.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint",
+    "pretest": "npm run lint && prettier . --check",
+    "test": "NODE_OPTIONS=--experimental-loader=@istanbuljs/esm-loader-hook nyc mocha",
+    "posttest": "nyc report --reporter=lcov"
+  },
+  "dependencies": {
+    "glob": "^13.0.6",
+    "sharp": "0.35.3",
+    "yargs": "^18.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.x",
+    "@istanbuljs/esm-loader-hook": "0.3.x",
+    "eslint": "9.39.x",
+    "fs-extra": "11.4.x",
+    "globals": "17.11.x",
+    "mocha": "11.8.x",
+    "nyc": "18.0.x",
+    "prettier": "3.9.x",
+    "sinon": "22.1.x",
+    "tempy": "3.2.x"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "depup": {
+    "changes": {
+      "glob": {
+        "from": "13.0.x",
+        "to": "^13.0.6"
+      },
+      "yargs": {
+        "from": "17.7.x",
+        "to": "^18.1.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "sharp-cli",
+    "originalVersion": "6.0.0",
+    "processedAt": "2026-08-23T00:29:02.257Z",
+    "smokeTest": "passed"
+  }
+}
