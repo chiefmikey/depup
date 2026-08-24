@@ -994,6 +994,19 @@
       "status": "published",
       "timestamp": "2026-08-18T00:16:00.471Z",
       "version": "64.2.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@es-joy/jsdoccomment": {
+          "from": "~0.95.1",
+          "to": "^0.96.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-24T08:17:30.403Z",
+      "version": "64.2.1-depup.1"
     }
   }
 }
