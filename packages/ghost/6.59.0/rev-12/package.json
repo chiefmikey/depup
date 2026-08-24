@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.59.0-depup.7",
+  "version": "6.59.0-depup.12",
   "description": "The professional publishing platform (with updated dependencies)",
   "author": "Ghost Foundation",
   "homepage": "https://ghost.org",
@@ -169,7 +169,7 @@
     "moment-timezone": "^0.6.3",
     "mppx": "^0.8.19",
     "multer": "2.2.0",
-    "mysql2": "^3.23.4",
+    "mysql2": "^3.24.0",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
     "node-jose": "2.2.0",
@@ -507,7 +507,7 @@
       },
       "mysql2": {
         "from": "3.22.5",
-        "to": "^3.23.4"
+        "to": "^3.24.0"
       },
       "nodemailer": {
         "from": "8.0.11",
@@ -557,7 +557,7 @@
     "depsUpdated": 82,
     "originalPackage": "ghost",
     "originalVersion": "6.59.0",
-    "processedAt": "2026-08-22T08:08:18.752Z",
+    "processedAt": "2026-08-24T00:16:20.614Z",
     "smokeTest": "failed"
   }
 }
