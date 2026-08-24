@@ -3968,5 +3968,72 @@
       "timestamp": "2026-08-20T00:17:45.213Z",
       "version": "14.3.8-depup.0"
     }
+  },
+  "14.3.9": {
+    "0": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.13.2",
+          "to": "^1.14.4"
+        },
+        "@newrelic/security-agent": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "@opentelemetry/core": {
+          "from": "^2.0.0",
+          "to": "^2.10.0"
+        },
+        "@opentelemetry/resources": {
+          "from": "^2.0.1",
+          "to": "^2.10.0"
+        },
+        "@opentelemetry/sdk-metrics": {
+          "from": "^2.0.1",
+          "to": "^2.10.0"
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "from": "^2.0.0",
+          "to": "^2.10.0"
+        },
+        "@tyriar/fibonacci-heap": {
+          "from": "^2.0.7",
+          "to": "^2.0.9"
+        },
+        "https-proxy-agent": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        },
+        "import-in-the-middle": {
+          "from": "^3.0.1",
+          "to": "^3.3.3"
+        },
+        "json-stringify-safe": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "module-details-from-path": {
+          "from": "^1.0.3",
+          "to": "^1.0.4"
+        },
+        "semver": {
+          "from": "^7.5.2",
+          "to": "^7.8.5"
+        },
+        "winston-transport": {
+          "from": "^4.5.0",
+          "to": "^4.9.0"
+        }
+      },
+      "depsUpdated": 14,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-24T16:15:49.296Z",
+      "version": "14.3.9-depup.0"
+    }
   }
 }

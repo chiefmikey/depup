@@ -12,14 +12,14 @@ npm install @depup/firebase__performance
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.7.14 | **DepUp version**: 0.7.14-depup.0 | **Updated**: 8/20/2026 | **Import test**: passed
+**Original version**: 0.7.14 | **DepUp version**: 0.7.14-depup.1 | **Updated**: 8/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | tslib | `^2.1.0` | `^2.8.1` |
-| web-vitals | `^4.2.4` | `^6.1.1` |
+| web-vitals | `^4.2.4` | `^6.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/firebase__performance&labels=bug).
