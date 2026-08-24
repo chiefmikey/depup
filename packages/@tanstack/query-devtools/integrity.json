@@ -384,5 +384,15 @@
       "timestamp": "2026-08-23T16:05:42.855Z",
       "version": "5.102.1-depup.0"
     }
+  },
+  "5.102.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-24T00:16:01.061Z",
+      "version": "5.102.2-depup.0"
+    }
   }
 }
