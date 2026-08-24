@@ -12,32 +12,20 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 27.1.2 | **DepUp version**: 27.1.2-depup.3 | **Updated**: 8/21/2026 | **Import test**: failed
+**Original version**: 27.3.0 | **DepUp version**: 27.3.0-depup.0 | **Updated**: 8/24/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @fastify/static | `^10.0.0` | `^10.1.3` |
-| @netlify/ai | `^0.4.4` | `^1.0.0` |
-| @netlify/api | `^15.1.1` | `^15.1.2` |
-| @netlify/blobs | `^10.7.13` | `^11.0.1` |
-| @netlify/build | `^36.3.4` | `^36.4.0` |
-| @netlify/config | `^25.2.2` | `^25.2.3` |
-| @netlify/dev | `^4.18.13` | `^5.0.1` |
-| @netlify/dev-utils | `^5.0.0` | `^6.0.1` |
-| @netlify/edge-functions | `^3.0.8` | `^4.0.0` |
-| @netlify/images | `^1.3.12` | `^2.0.1` |
-| @netlify/redirect-parser | `^16.1.0` | `^16.1.1` |
-| @netlify/zip-it-and-ship-it | `^15.3.3` | `^15.4.0` |
 | @octokit/rest | `^22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `^1.8.0` | `^1.9.1` |
 | chalk | `^5.6.2` | `^6.0.0` |
-| chokidar | `^4.0.3` | `^5.0.0` |
 | commander | `^12.1.0` | `^15.0.0` |
 | comment-json | `^4.6.2` | `^5.0.0` |
 | content-type | `^1.0.5` | `^3.0.0` |
-| cookie | `^1.1.1` | `^2.0.1` |
+| cookie | `^2.0.0` | `^2.0.1` |
 | cron-parser | `^4.9.0` | `^5.10.0` |
 | dot-prop | `^10.1.0` | `^10.2.0` |
 | dotenv | `^17.3.1` | `^17.4.2` |
