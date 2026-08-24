@@ -12,7 +12,7 @@ npm install @depup/pm2
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.3 | **DepUp version**: 7.0.3-depup.1 | **Updated**: 8/14/2026 | **Import test**: passed
+**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.0 | **Updated**: 8/24/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,8 +22,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chokidar | `3.6.0` | `^5.0.0` |
 | commander | `2.15.1` | `^15.0.0` |
 | croner | `4.1.97` | `^10.0.1` |
-| dayjs | `1.11.15` | `^1.11.21` |
-| js-yaml | `4.3.0` | `^5.3.0` |
+| dayjs | `1.11.15` | `^1.11.23` |
+| js-yaml | `4.3.1` | `^5.3.0` |
 | proxy-agent | `6.5.0` | `^8.0.2` |
 | semver | `7.7.2` | `^7.8.5` |
 | ws | `8.21.0` | `^8.21.3` |
