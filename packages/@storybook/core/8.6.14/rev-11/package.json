@@ -1,6 +1,6 @@
 {
   "name": "@depup/storybook__core",
-  "version": "8.6.14-depup.6",
+  "version": "8.6.14-depup.11",
   "description": "Storybook framework-agnostic API (with updated dependencies)",
   "keywords": [
     "@storybook/core",
@@ -292,14 +292,14 @@
     "@storybook/theming": "8.6.14",
     "better-opn": "^3.0.2",
     "browser-assert": "^1.2.1",
-    "esbuild": "^0.28.1",
+    "esbuild": "^0.28.2",
     "esbuild-register": "^3.6.0",
-    "jsdoc-type-pratt-parser": "^7.3.0",
+    "jsdoc-type-pratt-parser": "^9.2.0",
     "process": "^0.11.10",
-    "recast": "^0.23.12",
+    "recast": "^0.24.0",
     "semver": "^7.8.5",
     "util": "^0.12.5",
-    "ws": "^8.21.1"
+    "ws": "^8.21.3"
   },
   "devDependencies": {
     "@aw-web-design/x-default-browser": "1.4.126",
@@ -440,7 +440,7 @@
     "changes": {
       "esbuild": {
         "from": "^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0",
-        "to": "^0.28.1"
+        "to": "^0.28.2"
       },
       "esbuild-register": {
         "from": "^3.5.0",
@@ -448,11 +448,11 @@
       },
       "jsdoc-type-pratt-parser": {
         "from": "^4.0.0",
-        "to": "^7.3.0"
+        "to": "^9.2.0"
       },
       "recast": {
         "from": "^0.23.5",
-        "to": "^0.23.12"
+        "to": "^0.24.0"
       },
       "semver": {
         "from": "^7.6.2",
@@ -460,13 +460,13 @@
       },
       "ws": {
         "from": "^8.2.3",
-        "to": "^8.21.1"
+        "to": "^8.21.3"
       }
     },
     "depsUpdated": 6,
     "originalPackage": "@storybook/core",
     "originalVersion": "8.6.14",
-    "processedAt": "2026-07-24T08:54:10.750Z",
+    "processedAt": "2026-08-24T08:17:05.524Z",
     "smokeTest": "passed"
   }
 }
