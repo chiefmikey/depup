@@ -1,6 +1,6 @@
 {
   "name": "@depup/microbundle",
-  "version": "0.15.1-depup.62",
+  "version": "0.15.1-depup.67",
   "description": "Zero-configuration bundler for tiny JS libs, powered by Rollup. (with updated dependencies)",
   "main": "dist/microbundle.js",
   "source": "src/index.js",
@@ -92,7 +92,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@surma/rollup-plugin-off-main-thread": "^2.2.3",
     "asyncro": "^3.0.0",
-    "autoprefixer": "^10.5.2",
+    "autoprefixer": "^10.5.4",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-transform-async-to-promises": "^0.8.18",
     "babel-plugin-transform-replace-expressions": "^0.2.0",
@@ -104,16 +104,16 @@
     "gzip-size": "^7.0.0",
     "kleur": "^4.1.5",
     "lodash.merge": "^4.6.2",
-    "postcss": "^8.5.18",
-    "pretty-bytes": "^7.1.0",
-    "rollup": "^4.62.2",
+    "postcss": "^8.5.26",
+    "pretty-bytes": "^7.1.1",
+    "rollup": "^4.63.0",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.37.0",
-    "rollup-plugin-visualizer": "^7.0.1",
+    "rollup-plugin-visualizer": "^7.1.1",
     "sade": "^1.8.1",
-    "terser": "^5.49.0",
+    "terser": "^5.50.0",
     "tiny-glob": "^0.2.9",
     "tslib": "^2.8.1",
     "typescript": "^7.0.2"
@@ -207,7 +207,7 @@
       },
       "autoprefixer": {
         "from": "^10.1.0",
-        "to": "^10.5.2"
+        "to": "^10.5.4"
       },
       "babel-plugin-macros": {
         "from": "^3.0.1",
@@ -239,15 +239,15 @@
       },
       "postcss": {
         "from": "^8.2.1",
-        "to": "^8.5.18"
+        "to": "^8.5.26"
       },
       "pretty-bytes": {
         "from": "^5.4.1",
-        "to": "^7.1.0"
+        "to": "^7.1.1"
       },
       "rollup": {
         "from": "^2.35.1",
-        "to": "^4.62.2"
+        "to": "^4.63.0"
       },
       "rollup-plugin-postcss": {
         "from": "^4.0.0",
@@ -259,7 +259,7 @@
       },
       "rollup-plugin-visualizer": {
         "from": "^5.6.0",
-        "to": "^7.0.1"
+        "to": "^7.1.1"
       },
       "sade": {
         "from": "^1.7.4",
@@ -267,7 +267,7 @@
       },
       "terser": {
         "from": "^5.7.0",
-        "to": "^5.49.0"
+        "to": "^5.50.0"
       },
       "tiny-glob": {
         "from": "^0.2.8",
@@ -285,7 +285,7 @@
     "depsUpdated": 34,
     "originalPackage": "microbundle",
     "originalVersion": "0.15.1",
-    "processedAt": "2026-07-13T00:31:59.454Z",
+    "processedAt": "2026-08-25T16:15:47.690Z",
     "smokeTest": "failed"
   }
 }

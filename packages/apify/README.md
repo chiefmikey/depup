@@ -12,20 +12,20 @@ npm install @depup/apify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.2 | **DepUp version**: 3.7.2-depup.63 | **Updated**: 8/11/2026 | **Import test**: passed
+**Original version**: 3.7.2 | **DepUp version**: 3.7.2-depup.64 | **Updated**: 8/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @apify/consts | `^2.51.0` | `^2.57.0` |
-| @apify/input_secrets | `^1.2.0` | `^1.2.54` |
-| @apify/log | `^2.4.3` | `^2.5.48` |
-| @apify/timeout | `^0.3.0` | `^0.4.8` |
-| @apify/utilities | `^2.13.0` | `^2.35.5` |
-| @crawlee/core | `^3.14.1` | `^3.18.0` |
-| @crawlee/types | `^3.14.1` | `^3.18.0` |
-| @crawlee/utils | `^3.14.1` | `^3.18.0` |
+| @apify/consts | `^2.51.0` | `^2.58.0` |
+| @apify/input_secrets | `^1.2.0` | `^1.2.59` |
+| @apify/log | `^2.4.3` | `^2.5.53` |
+| @apify/timeout | `^0.3.0` | `^0.4.13` |
+| @apify/utilities | `^2.13.0` | `^2.35.10` |
+| @crawlee/core | `^3.14.1` | `^3.18.1` |
+| @crawlee/types | `^3.14.1` | `^3.18.1` |
+| @crawlee/utils | `^3.14.1` | `^3.18.1` |
 | apify-client | `^2.17.0` | `^2.25.0` |
 | fs-extra | `^11.2.0` | `^11.4.0` |
 | ow | `^0.28.2` | `^3.1.1` |

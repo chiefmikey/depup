@@ -1,0 +1,34 @@
+{
+  "bumped": {
+    "@prisma/compute-sdk": {
+      "from": "0.39.0",
+      "to": "^0.42.0"
+    },
+    "@prisma/credentials-store": {
+      "from": "^7.8.0",
+      "to": "^7.10.0"
+    },
+    "@prisma/management-api-sdk": {
+      "from": "1.55.0",
+      "to": "^1.70.0"
+    },
+    "@vercel/detect-agent": {
+      "from": "^1.2.3",
+      "to": "^1.2.5"
+    },
+    "better-result": {
+      "from": "^2.9.2",
+      "to": "^3.0.1"
+    },
+    "execa": {
+      "from": "^9.6.1",
+      "to": "^10.0.1"
+    },
+    "open": {
+      "from": "^11.0.0",
+      "to": "^11.0.1"
+    }
+  },
+  "timestamp": "2026-08-25T16:15:18.569Z",
+  "totalUpdated": 7
+}
