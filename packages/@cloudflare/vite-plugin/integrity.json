@@ -1290,19 +1290,6 @@
     }
   },
   "1.53.1": {
-    "0": {
-      "changes": {
-        "ws": {
-          "from": "8.21.0",
-          "to": "^8.21.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-08-21T00:16:54.310Z",
-      "version": "1.53.1-depup.0"
-    },
     "1": {
       "changes": {
         "workerd": {
@@ -1370,6 +1357,23 @@
       "status": "published",
       "timestamp": "2026-08-24T08:17:16.291Z",
       "version": "1.53.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "workerd": {
+          "from": "1.20260820.1",
+          "to": "^1.20260825.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-25T08:16:15.165Z",
+      "version": "1.53.1-depup.5"
     }
   }
 }
