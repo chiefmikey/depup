@@ -407,5 +407,28 @@
       "timestamp": "2026-08-19T16:09:20.426Z",
       "version": "7.5.0-depup.8"
     }
+  },
+  "7.6.0": {
+    "0": {
+      "changes": {
+        "@mongodb-js/saslprep": {
+          "from": "^1.4.11",
+          "to": "^1.5.0"
+        },
+        "bson": {
+          "from": "^7.2.0",
+          "to": "^7.3.2"
+        },
+        "mongodb-connection-string-url": {
+          "from": "^7.0.1",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-25T00:17:08.977Z",
+      "version": "7.6.0-depup.0"
+    }
   }
 }

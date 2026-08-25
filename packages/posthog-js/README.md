@@ -12,7 +12,7 @@ npm install @depup/posthog-js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.418.13 | **DepUp version**: 1.418.13-depup.0 | **Updated**: 8/24/2026 | **Import test**: passed
+**Original version**: 1.418.16 | **DepUp version**: 1.418.16-depup.0 | **Updated**: 8/25/2026 | **Import test**: passed
 
 ## What changed
 
