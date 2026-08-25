@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.105 | **Updated**: 8/22/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.106 | **Updated**: 8/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^7.1.0` |
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
-| @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.2.0` |
+| @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.2.1` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.6` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.37` |
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.2` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.67.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.67.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.68.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.68.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.11.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -68,7 +68,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
 | enhanced-resolve | `^5.15.0` | `^5.24.5` |
-| eslint | `^7.32.0` | `^10.9.0` |
+| eslint | `^7.32.0` | `^10.9.1` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
