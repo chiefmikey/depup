@@ -65,6 +65,23 @@
       "status": "published",
       "timestamp": "2026-08-14T16:20:07.088Z",
       "version": "4.0.3-depup.3"
+    },
+    "4": {
+      "changes": {
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^5.4.0"
+        },
+        "kind-of": {
+          "from": "^6.0.2",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-25T08:16:17.704Z",
+      "version": "4.0.3-depup.4"
     }
   }
 }

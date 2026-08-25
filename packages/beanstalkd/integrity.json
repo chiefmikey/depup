@@ -97,6 +97,31 @@
       "status": "published",
       "timestamp": "2026-08-14T16:19:15.204Z",
       "version": "2.2.5-depup.3"
+    },
+    "4": {
+      "changes": {
+        "babel-runtime": {
+          "from": "^5.8.25",
+          "to": "^6.26.0"
+        },
+        "bluebird": {
+          "from": "^3.4.7",
+          "to": "^3.7.2"
+        },
+        "debug": {
+          "from": "^2.2.0",
+          "to": "^4.4.3"
+        },
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^5.4.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-25T08:16:21.929Z",
+      "version": "2.2.5-depup.4"
     }
   }
 }

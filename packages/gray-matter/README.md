@@ -12,13 +12,13 @@ npm install @depup/gray-matter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.3 | **DepUp version**: 4.0.3-depup.3 | **Updated**: 8/14/2026 | **Import test**: failed
+**Original version**: 4.0.3 | **DepUp version**: 4.0.3-depup.4 | **Updated**: 8/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| js-yaml | `^3.13.1` | `^5.3.0` |
+| js-yaml | `^3.13.1` | `^5.4.0` |
 | kind-of | `^6.0.2` | `^6.0.3` |
 
 

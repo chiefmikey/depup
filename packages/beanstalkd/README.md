@@ -12,7 +12,7 @@ npm install @depup/beanstalkd
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.5 | **DepUp version**: 2.2.5-depup.3 | **Updated**: 8/14/2026 | **Import test**: passed
+**Original version**: 2.2.5 | **DepUp version**: 2.2.5-depup.4 | **Updated**: 8/25/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-runtime | `^5.8.25` | `^6.26.0` |
 | bluebird | `^3.4.7` | `^3.7.2` |
 | debug | `^2.2.0` | `^4.4.3` |
-| js-yaml | `^3.13.1` | `^5.3.0` |
+| js-yaml | `^3.13.1` | `^5.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/beanstalkd&labels=bug).
