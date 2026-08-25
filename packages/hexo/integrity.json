@@ -41,47 +41,6 @@
     }
   },
   "8.1.2": {
-    "56": {
-      "changes": {
-        "abbrev": {
-          "from": "^3.0.0",
-          "to": "^5.0.0"
-        },
-        "hexo-front-matter": {
-          "from": "^4.2.1",
-          "to": "^5.0.0"
-        },
-        "hexo-fs": {
-          "from": "^5.0.0",
-          "to": "^5.0.1"
-        },
-        "js-yaml": {
-          "from": "^4.1.0",
-          "to": "^5.2.1"
-        },
-        "moize": {
-          "from": "^6.1.6",
-          "to": "^6.1.7"
-        },
-        "moment-timezone": {
-          "from": "^0.5.46",
-          "to": "^0.6.3"
-        },
-        "strip-ansi": {
-          "from": "^7.1.0",
-          "to": "^7.2.0"
-        },
-        "tildify": {
-          "from": "^2.0.0",
-          "to": "^3.0.0"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-07-21T16:15:51.693Z",
-      "version": "8.1.2-depup.56"
-    },
     "57": {
       "changes": {
         "abbrev": {
@@ -281,6 +240,59 @@
       "status": "published",
       "timestamp": "2026-08-14T16:20:03.565Z",
       "version": "8.1.2-depup.60"
+    },
+    "61": {
+      "changes": {
+        "abbrev": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "fast-archy": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "fast-text-table": {
+          "from": "^1.0.1",
+          "to": "^1.1.0"
+        },
+        "hexo-front-matter": {
+          "from": "^4.2.1",
+          "to": "^5.0.0"
+        },
+        "hexo-fs": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "js-yaml": {
+          "from": "^4.1.0",
+          "to": "^5.4.0"
+        },
+        "moize": {
+          "from": "^6.1.6",
+          "to": "^6.1.7"
+        },
+        "moment-timezone": {
+          "from": "^0.5.46",
+          "to": "^0.6.3"
+        },
+        "strip-ansi": {
+          "from": "^7.1.0",
+          "to": "^7.2.0"
+        },
+        "tildify": {
+          "from": "^2.0.0",
+          "to": "^3.0.0"
+        },
+        "warehouse": {
+          "from": "^6.0.0",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-25T08:16:51.607Z",
+      "version": "8.1.2-depup.61"
     }
   }
 }

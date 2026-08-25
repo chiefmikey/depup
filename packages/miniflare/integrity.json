@@ -4145,31 +4145,6 @@
     }
   },
   "5.20260820.0-alpha": {
-    "0": {
-      "changes": {
-        "sharp": {
-          "from": "0.35.2",
-          "to": "^0.35.3"
-        },
-        "undici": {
-          "from": "7.29.0",
-          "to": "^8.10.0"
-        },
-        "ws": {
-          "from": "8.21.0",
-          "to": "^8.21.3"
-        },
-        "youch": {
-          "from": "4.1.0-beta.10",
-          "to": "^4.1.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-08-21T00:18:22.959Z",
-      "version": "5.20260820.0-alpha-depup.0"
-    },
     "1": {
       "changes": {
         "sharp": {
@@ -4285,6 +4260,35 @@
       "status": "published",
       "timestamp": "2026-08-24T08:17:18.788Z",
       "version": "5.20260820.0-alpha-depup.4"
+    },
+    "5": {
+      "changes": {
+        "sharp": {
+          "from": "0.35.2",
+          "to": "^0.35.3"
+        },
+        "undici": {
+          "from": "7.29.0",
+          "to": "^8.10.0"
+        },
+        "workerd": {
+          "from": "1.20260820.1",
+          "to": "^1.20260825.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-25T08:17:07.957Z",
+      "version": "5.20260820.0-alpha-depup.5"
     }
   }
 }
