@@ -389,5 +389,20 @@
       "timestamp": "2026-08-11T00:22:11.976Z",
       "version": "8.67.0-depup.0"
     }
+  },
+  "8.68.0": {
+    "0": {
+      "changes": {
+        "@eslint-community/eslint-utils": {
+          "from": "^4.9.1",
+          "to": "^4.10.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-25T00:16:23.700Z",
+      "version": "8.68.0-depup.0"
+    }
   }
 }
