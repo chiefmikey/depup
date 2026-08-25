@@ -1,0 +1,94 @@
+{
+  "name": "@depup/pkgroll",
+  "version": "2.27.1-depup.59",
+  "description": "Zero-config rollup bundler (with updated dependencies)",
+  "keywords": [
+    "pkgroll",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "zero config",
+    "rollup",
+    "package.json",
+    "exports",
+    "esm",
+    "cjs",
+    "commonjs",
+    "typescript",
+    "declaration"
+  ],
+  "license": "MIT",
+  "repository": "privatenumber/pkgroll",
+  "funding": "https://github.com/privatenumber/pkgroll?sponsor=1",
+  "author": {
+    "name": "Hiroki Osame",
+    "email": "hiroki.osame@gmail.com"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "bin": "./dist/cli.mjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@rollup/plugin-alias": "^6.0.0",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.5",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "cjs-module-lexer": "^2.2.1",
+    "esbuild": "^0.28.2",
+    "magic-string": "^1.2.2",
+    "rollup": "^4.63.0",
+    "rollup-plugin-import-trace": "^1.0.1",
+    "rollup-pluginutils": "^2.8.2",
+    "yaml": "^2.9.0"
+  },
+  "peerDependencies": {
+    "typescript": "^4.1 || ^5.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "depup": {
+    "changes": {
+      "@rollup/plugin-commonjs": {
+        "from": "^29.0.1",
+        "to": "^29.0.3"
+      },
+      "cjs-module-lexer": {
+        "from": "^2.2.0",
+        "to": "^2.2.1"
+      },
+      "esbuild": {
+        "from": "^0.26.0",
+        "to": "^0.28.2"
+      },
+      "magic-string": {
+        "from": "^0.30.21",
+        "to": "^1.2.2"
+      },
+      "rollup": {
+        "from": "^4.53.5",
+        "to": "^4.63.0"
+      },
+      "yaml": {
+        "from": "^2.8.2",
+        "to": "^2.9.0"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "pkgroll",
+    "originalVersion": "2.27.1",
+    "processedAt": "2026-08-25T16:16:19.170Z",
+    "smokeTest": "failed"
+  }
+}

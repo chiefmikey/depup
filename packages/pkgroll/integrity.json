@@ -96,31 +96,6 @@
     }
   },
   "2.27.1": {
-    "54": {
-      "changes": {
-        "@rollup/plugin-commonjs": {
-          "from": "^29.0.1",
-          "to": "^29.0.3"
-        },
-        "esbuild": {
-          "from": "^0.26.0",
-          "to": "^0.28.1"
-        },
-        "rollup": {
-          "from": "^4.53.5",
-          "to": "^4.62.2"
-        },
-        "yaml": {
-          "from": "^2.8.2",
-          "to": "^2.9.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-14T00:39:28.550Z",
-      "version": "2.27.1-depup.54"
-    },
     "55": {
       "changes": {
         "@rollup/plugin-commonjs": {
@@ -236,6 +211,39 @@
       "status": "published",
       "timestamp": "2026-08-13T08:32:38.158Z",
       "version": "2.27.1-depup.58"
+    },
+    "59": {
+      "changes": {
+        "@rollup/plugin-commonjs": {
+          "from": "^29.0.1",
+          "to": "^29.0.3"
+        },
+        "cjs-module-lexer": {
+          "from": "^2.2.0",
+          "to": "^2.2.1"
+        },
+        "esbuild": {
+          "from": "^0.26.0",
+          "to": "^0.28.2"
+        },
+        "magic-string": {
+          "from": "^0.30.21",
+          "to": "^1.2.2"
+        },
+        "rollup": {
+          "from": "^4.53.5",
+          "to": "^4.63.0"
+        },
+        "yaml": {
+          "from": "^2.8.2",
+          "to": "^2.9.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-25T16:16:21.989Z",
+      "version": "2.27.1-depup.59"
     }
   }
 }

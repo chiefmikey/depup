@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@rollup/plugin-commonjs": {
+      "from": "^29.0.1",
+      "to": "^29.0.3"
+    },
+    "cjs-module-lexer": {
+      "from": "^2.2.0",
+      "to": "^2.2.1"
+    },
+    "esbuild": {
+      "from": "^0.26.0",
+      "to": "^0.28.2"
+    },
+    "magic-string": {
+      "from": "^0.30.21",
+      "to": "^1.2.2"
+    },
+    "rollup": {
+      "from": "^4.53.5",
+      "to": "^4.63.0"
+    },
+    "yaml": {
+      "from": "^2.8.2",
+      "to": "^2.9.0"
+    }
+  },
+  "timestamp": "2026-08-25T16:16:15.768Z",
+  "totalUpdated": 6
+}
