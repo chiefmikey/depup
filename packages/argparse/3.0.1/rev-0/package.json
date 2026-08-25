@@ -1,0 +1,53 @@
+{
+  "name": "@depup/argparse",
+  "description": "CLI arguments parser. Native port of python's argparse. (with updated dependencies)",
+  "version": "3.0.1-depup.0",
+  "keywords": [
+    "argparse",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "parser",
+    "option",
+    "args"
+  ],
+  "main": "lib/argparse.js",
+  "types": "lib/argparse.d.ts",
+  "files": [
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "license": "PSF-2.0",
+  "repository": "nodeca/argparse",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/puzrin"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/nodeca"
+    }
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && node --test",
+    "coverage": "c8 --reporter html npm test"
+  },
+  "devDependencies": {
+    "c8": "^11.0.0",
+    "neostandard": "^0.13.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "argparse",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-08-25T16:15:24.742Z",
+    "smokeTest": "passed"
+  }
+}

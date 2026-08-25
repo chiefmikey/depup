@@ -12,13 +12,13 @@ npm install @depup/next__bundle-analyzer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.3.2 | **DepUp version**: 16.3.2-depup.0 | **Updated**: 8/21/2026 | **Import test**: passed
+**Original version**: 16.3.3 | **DepUp version**: 16.3.3-depup.0 | **Updated**: 8/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| webpack-bundle-analyzer | `4.10.1` | `^5.3.1` |
+| webpack-bundle-analyzer | `4.10.1` | `^5.3.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/next__bundle-analyzer&labels=bug).

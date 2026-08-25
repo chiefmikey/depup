@@ -342,5 +342,20 @@
       "timestamp": "2026-08-25T08:15:30.589Z",
       "version": "11.2.2-depup.0"
     }
+  },
+  "11.2.3": {
+    "0": {
+      "changes": {
+        "file-type": {
+          "from": "21.3.4",
+          "to": "^22.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-25T16:14:17.714Z",
+      "version": "11.2.3-depup.0"
+    }
   }
 }
