@@ -405,6 +405,19 @@
       "status": "failed",
       "timestamp": "2026-08-26T00:18:17.618Z",
       "version": "5.4.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-08-26T08:17:03.577Z",
+      "version": "5.4.0-depup.3"
     }
   }
 }
