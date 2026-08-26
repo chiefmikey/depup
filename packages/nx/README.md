@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.1 | **DepUp version**: 23.1.1-depup.2 | **Updated**: 8/12/2026 | **Import test**: failed
+**Original version**: 23.1.1 | **DepUp version**: 23.1.1-depup.3 | **Updated**: 8/26/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,9 +28,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | agent-base | `6.0.2` | `^9.0.0` |
 | ansi-regex | `5.0.1` | `^6.3.0` |
 | ansi-styles | `4.3.0` | `^7.0.0` |
-| argparse | `2.0.1` | `^3.0.0` |
+| argparse | `2.0.1` | `^3.0.1` |
 | asynckit | `0.4.0` | `^0.5.0` |
-| axios | `1.18.1` | `^1.19.0` |
+| axios | `1.18.1` | `^1.20.0` |
 | balanced-match | `4.0.3` | `^4.0.4` |
 | bl | `4.1.0` | `^7.0.12` |
 | brace-expansion | `5.0.8` | `^5.0.9` |
@@ -42,7 +42,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | clone | `1.0.4` | `^2.1.2` |
 | color-convert | `2.0.1` | `^3.1.3` |
 | color-name | `1.1.4` | `^2.1.1` |
-| default-browser | `5.2.1` | `^5.5.0` |
+| default-browser | `5.2.1` | `^5.5.1` |
 | default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
 | dotenv | `16.4.7` | `^17.4.2` |
@@ -71,7 +71,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | minimatch | `10.2.5` | `^10.2.6` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
-| open | `10.1.0` | `^11.0.0` |
+| open | `10.1.0` | `^11.0.1` |
 | ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
@@ -84,9 +84,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^11.0.0` |
-| tar-stream | `2.2.0` | `^3.2.0` |
+| tar-stream | `2.2.0` | `^3.2.1` |
 | which | `3.0.1` | `^7.0.0` |
-| wrap-ansi | `7.0.0` | `^10.0.0` |
+| wrap-ansi | `7.0.0` | `^10.0.1` |
 | yargs | `17.7.2` | `^18.1.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |
 
