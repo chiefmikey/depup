@@ -4666,5 +4666,60 @@
       "timestamp": "2026-08-20T08:13:13.194Z",
       "version": "22.1.5-depup.1"
     }
+  },
+  "22.1.6": {
+    "0": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.26.0",
+          "to": "^4.28.8"
+        },
+        "less": {
+          "from": "4.6.7",
+          "to": "^4.9.0"
+        },
+        "open": {
+          "from": "11.0.0",
+          "to": "^11.0.1"
+        },
+        "picomatch": {
+          "from": "4.0.5",
+          "to": "^4.0.7"
+        },
+        "piscina": {
+          "from": "5.2.0",
+          "to": "^5.3.1"
+        },
+        "postcss": {
+          "from": "8.5.25",
+          "to": "^8.5.26"
+        },
+        "sass": {
+          "from": "1.101.0",
+          "to": "^1.103.1"
+        },
+        "terser": {
+          "from": "5.49.0",
+          "to": "^5.50.0"
+        },
+        "webpack-dev-middleware": {
+          "from": "8.0.3",
+          "to": "^8.1.1"
+        },
+        "webpack-dev-server": {
+          "from": "5.2.6",
+          "to": "^6.0.0"
+        },
+        "webpack-subresource-integrity": {
+          "from": "5.1.0",
+          "to": "^5.2.0-rc.1"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-26T08:16:07.452Z",
+      "version": "22.1.6-depup.0"
+    }
   }
 }
