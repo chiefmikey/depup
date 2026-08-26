@@ -333,5 +333,24 @@
       "timestamp": "2026-08-25T16:15:30.689Z",
       "version": "12.11.4-depup.0"
     }
+  },
+  "12.11.5": {
+    "0": {
+      "changes": {
+        "classcat": {
+          "from": "^5.0.3",
+          "to": "^5.0.5"
+        },
+        "zustand": {
+          "from": "^4.4.0",
+          "to": "^5.0.15"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-26T00:16:41.280Z",
+      "version": "12.11.5-depup.0"
+    }
   }
 }

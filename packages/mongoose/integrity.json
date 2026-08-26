@@ -607,5 +607,24 @@
       "timestamp": "2026-08-25T00:17:08.443Z",
       "version": "9.9.3-depup.2"
     }
+  },
+  "9.9.4": {
+    "0": {
+      "changes": {
+        "kareem": {
+          "from": "3.3.0",
+          "to": "^3.4.0"
+        },
+        "mongodb": {
+          "from": "~7.5",
+          "to": "^7.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-26T00:17:34.804Z",
+      "version": "9.9.4-depup.0"
+    }
   }
 }

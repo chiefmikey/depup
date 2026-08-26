@@ -978,35 +978,6 @@
     }
   },
   "4.13.7": {
-    "20": {
-      "changes": {
-        "@formatjs/intl-localematcher": {
-          "from": "^0.8.1",
-          "to": "^0.8.13"
-        },
-        "@parcel/watcher": {
-          "from": "^2.4.1",
-          "to": "^2.6.0"
-        },
-        "@swc/core": {
-          "from": "~1.15.47",
-          "to": "^1.16.1"
-        },
-        "negotiator": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        },
-        "po-parser": {
-          "from": "^2.1.1",
-          "to": "^2.2.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-08-24T08:17:56.962Z",
-      "version": "4.13.7-depup.20"
-    },
     "21": {
       "changes": {
         "@formatjs/intl-localematcher": {
@@ -1122,6 +1093,35 @@
       "status": "failed",
       "timestamp": "2026-08-25T16:16:34.806Z",
       "version": "4.13.7-depup.24"
+    },
+    "25": {
+      "changes": {
+        "@formatjs/intl-localematcher": {
+          "from": "^0.8.1",
+          "to": "^0.8.13"
+        },
+        "@parcel/watcher": {
+          "from": "^2.4.1",
+          "to": "^2.6.0"
+        },
+        "@swc/core": {
+          "from": "~1.15.47",
+          "to": "^1.16.1"
+        },
+        "negotiator": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "po-parser": {
+          "from": "^2.1.1",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-08-26T00:18:25.529Z",
+      "version": "4.13.7-depup.25"
     }
   }
 }
