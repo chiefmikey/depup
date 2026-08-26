@@ -3301,5 +3301,20 @@
       "timestamp": "2026-08-25T00:16:13.529Z",
       "version": "3.1117.0-depup.0"
     }
+  },
+  "3.1118.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-26T00:16:29.264Z",
+      "version": "3.1118.0-depup.0"
+    }
   }
 }
