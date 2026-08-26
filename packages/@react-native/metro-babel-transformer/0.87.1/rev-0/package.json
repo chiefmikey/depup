@@ -1,0 +1,61 @@
+{
+  "name": "@depup/react-native__metro-babel-transformer",
+  "version": "0.87.1-depup.0",
+  "description": "Babel transformer for React Native applications. (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/react/react-native.git",
+    "directory": "packages/react-native-babel-transformer"
+  },
+  "keywords": [
+    "@react-native/metro-babel-transformer",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "transformer",
+    "react-native",
+    "metro"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^22.13.0 || ^24.3.0 || >= 26.0.0"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "!**/__docs__/**",
+    "!**/__fixtures__/**",
+    "!**/__mocks__/**",
+    "!**/__tests__/**",
+    "changes.json"
+  ],
+  "dependencies": {
+    "@babel/core": "^8.0.1",
+    "@react-native/babel-preset": "0.87.1",
+    "hermes-parser": "^0.37.0",
+    "nullthrows": "^1.1.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "*"
+  },
+  "depup": {
+    "changes": {
+      "@babel/core": {
+        "from": "^7.25.2",
+        "to": "^8.0.1"
+      },
+      "hermes-parser": {
+        "from": "0.36.1",
+        "to": "^0.37.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@react-native/metro-babel-transformer",
+    "originalVersion": "0.87.1",
+    "processedAt": "2026-08-26T16:29:38.654Z",
+    "smokeTest": "passed"
+  }
+}

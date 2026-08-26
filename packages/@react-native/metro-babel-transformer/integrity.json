@@ -17,5 +17,24 @@
       "timestamp": "2026-08-23T00:24:20.452Z",
       "version": "0.87.0-depup.0"
     }
+  },
+  "0.87.1": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.25.2",
+          "to": "^8.0.1"
+        },
+        "hermes-parser": {
+          "from": "0.36.1",
+          "to": "^0.37.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-26T16:29:41.831Z",
+      "version": "0.87.1-depup.0"
+    }
   }
 }
