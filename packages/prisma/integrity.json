@@ -443,5 +443,40 @@
       "timestamp": "2026-08-25T16:16:16.038Z",
       "version": "8.0.0-rc.10-depup.0"
     }
+  },
+  "8.0.0-rc.12": {
+    "0": {
+      "changes": {
+        "@prisma/compute-sdk": {
+          "from": "0.42.0",
+          "to": "^0.43.0"
+        },
+        "@prisma/management-api-sdk": {
+          "from": "1.69.0",
+          "to": "^1.70.0"
+        },
+        "@vercel/detect-agent": {
+          "from": "^1.2.3",
+          "to": "^1.2.5"
+        },
+        "better-result": {
+          "from": "^2.9.2",
+          "to": "^3.0.1"
+        },
+        "execa": {
+          "from": "^9.6.1",
+          "to": "^10.0.1"
+        },
+        "open": {
+          "from": "^11.0.0",
+          "to": "^11.0.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-26T16:31:59.456Z",
+      "version": "8.0.0-rc.12-depup.0"
+    }
   }
 }

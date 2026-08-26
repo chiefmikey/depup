@@ -1,0 +1,108 @@
+{
+  "name": "@depup/prisma",
+  "version": "8.0.0-rc.12-depup.0",
+  "description": "The Prisma CLI: one binary for the ORM, Composer, and the Prisma Developer Platform. (with updated dependencies)",
+  "type": "module",
+  "bin": {
+    "prisma": "./dist/prisma.js"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "keywords": [
+    "prisma",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cli",
+    "orm",
+    "database",
+    "deployment"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prisma/prisma-cli.git",
+    "directory": "packages/prisma"
+  },
+  "homepage": "https://github.com/prisma/prisma-cli#readme",
+  "bugs": {
+    "url": "https://github.com/prisma/prisma-cli/issues"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@manypkg/tools": "^2.1.2",
+    "@prisma/cli-engine": "0.3.0",
+    "@prisma/composer-cli": "0.16.0",
+    "@prisma/compute-sdk": "^0.43.0",
+    "@prisma/management-api-sdk": "^1.70.0",
+    "@prisma/orm-toolchain": "8.0.0-rc.8",
+    "@vercel/detect-agent": "^1.2.5",
+    "better-result": "^3.0.1",
+    "dotenv": "^17.4.2",
+    "execa": "^10.0.1",
+    "open": "^11.0.1"
+  },
+  "devDependencies": {
+    "@prisma/cli": "8.0.0-rc.12",
+    "@prisma/credentials-store": "^7.8.0",
+    "@repo/cli-telemetry": "8.0.0-rc.12",
+    "@repo/tsconfig": "8.0.0-rc.12",
+    "@types/node": "^22.19.19",
+    "tsdown": "^0.21.10",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "depup": {
+    "changes": {
+      "@prisma/compute-sdk": {
+        "from": "0.42.0",
+        "to": "^0.43.0"
+      },
+      "@prisma/management-api-sdk": {
+        "from": "1.69.0",
+        "to": "^1.70.0"
+      },
+      "@vercel/detect-agent": {
+        "from": "^1.2.3",
+        "to": "^1.2.5"
+      },
+      "better-result": {
+        "from": "^2.9.2",
+        "to": "^3.0.1"
+      },
+      "execa": {
+        "from": "^9.6.1",
+        "to": "^10.0.1"
+      },
+      "open": {
+        "from": "^11.0.0",
+        "to": "^11.0.1"
+      }
+    },
+    "depsUpdated": 6,
+    "originalPackage": "prisma",
+    "originalVersion": "8.0.0-rc.12",
+    "processedAt": "2026-08-26T16:31:47.684Z",
+    "smokeTest": "failed"
+  }
+}
