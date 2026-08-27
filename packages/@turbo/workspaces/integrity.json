@@ -3066,6 +3066,55 @@
       "status": "published",
       "timestamp": "2026-08-26T00:16:55.452Z",
       "version": "2.10.12-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.7.0"
+        },
+        "commander": {
+          "from": "10.0.0",
+          "to": "^15.0.0"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^10.0.1"
+        },
+        "fast-glob": {
+          "from": "3.2.12",
+          "to": "^3.3.3"
+        },
+        "fs-extra": {
+          "from": "10.1.0",
+          "to": "^11.4.0"
+        },
+        "gradient-string": {
+          "from": "2.0.1",
+          "to": "^3.0.0"
+        },
+        "js-yaml": {
+          "from": "4.3.1",
+          "to": "^5.4.1"
+        },
+        "ora": {
+          "from": "4.1.1",
+          "to": "^9.4.1"
+        },
+        "picocolors": {
+          "from": "1.0.1",
+          "to": "^1.1.1"
+        },
+        "semver": {
+          "from": "7.6.2",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T01:37:41.860Z",
+      "version": "2.10.12-depup.1"
     }
   }
 }

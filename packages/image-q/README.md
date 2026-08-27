@@ -12,13 +12,13 @@ npm install @depup/image-q
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.30 | **Updated**: 8/25/2026 | **Import test**: passed
+**Original version**: 4.0.0 | **DepUp version**: 4.0.0-depup.31 | **Updated**: 8/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `16.9.1` | `^26.3.0` |
+| @types/node | `16.9.1` | `^26.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/image-q&labels=bug).
