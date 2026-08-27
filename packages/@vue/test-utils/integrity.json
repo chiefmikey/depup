@@ -197,5 +197,24 @@
       "timestamp": "2026-07-21T16:09:48.860Z",
       "version": "2.4.11-depup.39"
     }
+  },
+  "2.5.0": {
+    "0": {
+      "changes": {
+        "js-beautify": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        },
+        "vue-component-type-helpers": {
+          "from": "^3.0.0",
+          "to": "^3.3.11"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T19:34:22.402Z",
+      "version": "2.5.0-depup.0"
+    }
   }
 }

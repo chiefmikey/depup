@@ -88,5 +88,20 @@
       "timestamp": "2026-08-23T16:05:49.573Z",
       "version": "3.1.0-depup.0"
     }
+  },
+  "3.1.1": {
+    "0": {
+      "changes": {
+        "n8ao": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T19:33:50.667Z",
+      "version": "3.1.1-depup.0"
+    }
   }
 }

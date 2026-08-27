@@ -12,14 +12,14 @@ npm install @depup/pdfkit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.20.1 | **DepUp version**: 0.20.1-depup.0 | **Updated**: 8/23/2026 | **Import test**: failed
+**Original version**: 0.20.1 | **DepUp version**: 0.20.1-depup.1 | **Updated**: 8/27/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @noble/ciphers | `^1.3.0` | `^2.3.0` |
-| @noble/hashes | `^1.8.0` | `^2.3.0` |
+| @noble/ciphers | `^1.3.0` | `^2.4.0` |
+| @noble/hashes | `^1.8.0` | `^2.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pdfkit&labels=bug).
