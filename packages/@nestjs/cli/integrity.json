@@ -1454,5 +1454,32 @@
       "timestamp": "2026-08-27T01:38:13.401Z",
       "version": "11.0.24-depup.8"
     }
+  },
+  "12.0.0": {
+    "0": {
+      "changes": {
+        "@angular-devkit/core": {
+          "from": "22.1.5",
+          "to": "^22.1.6"
+        },
+        "@angular-devkit/schematics": {
+          "from": "22.1.5",
+          "to": "^22.1.6"
+        },
+        "@angular-devkit/schematics-cli": {
+          "from": "22.1.5",
+          "to": "^22.1.6"
+        },
+        "typescript": {
+          "from": "~6.0.2",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T11:24:03.893Z",
+      "version": "12.0.0-depup.0"
+    }
   }
 }

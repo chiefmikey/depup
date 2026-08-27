@@ -12,24 +12,16 @@ npm install @depup/nestjs__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.0.24 | **DepUp version**: 11.0.24-depup.8 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @angular-devkit/core | `19.2.27` | `^22.1.6` |
-| @angular-devkit/schematics | `19.2.27` | `^22.1.6` |
-| @angular-devkit/schematics-cli | `19.2.27` | `^22.1.6` |
-| @inquirer/prompts | `7.10.1` | `^8.7.0` |
-| @nestjs/schematics | `^11.0.1` | `^11.1.0` |
-| ansis | `4.2.0` | `^4.3.1` |
-| chokidar | `4.0.3` | `^5.0.0` |
-| commander | `4.1.1` | `^15.0.0` |
-| node-emoji | `1.11.0` | `^2.2.0` |
-| ora | `5.4.1` | `^9.4.1` |
-| typescript | `5.9.3` | `^7.0.2` |
-| webpack | `5.106.2` | `^5.109.2` |
+| @angular-devkit/core | `22.1.5` | `^22.1.6` |
+| @angular-devkit/schematics | `22.1.5` | `^22.1.6` |
+| @angular-devkit/schematics-cli | `22.1.5` | `^22.1.6` |
+| typescript | `~6.0.2` | `^7.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nestjs__cli&labels=bug).

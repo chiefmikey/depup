@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@angular-devkit/core": {
+      "from": "22.1.5",
+      "to": "^22.1.6"
+    },
+    "@angular-devkit/schematics": {
+      "from": "22.1.5",
+      "to": "^22.1.6"
+    },
+    "@angular-devkit/schematics-cli": {
+      "from": "22.1.5",
+      "to": "^22.1.6"
+    },
+    "typescript": {
+      "from": "~6.0.2",
+      "to": "^7.0.2"
+    }
+  },
+  "timestamp": "2026-08-27T11:23:37.886Z",
+  "totalUpdated": 4
+}

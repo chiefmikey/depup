@@ -12,7 +12,7 @@ npm install @depup/cloudflare__workers-types
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.20260826.1 | **DepUp version**: 5.20260826.1-depup.0 | **Updated**: 8/26/2026 | **Import test**: failed
+**Original version**: 5.20260827.1 | **DepUp version**: 5.20260827.1-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
 
 ## What changed
 

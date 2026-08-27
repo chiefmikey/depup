@@ -97,5 +97,40 @@
       "timestamp": "2026-08-05T08:58:11.917Z",
       "version": "0.6.2-depup.2"
     }
+  },
+  "0.6.3": {
+    "0": {
+      "changes": {
+        "anser": {
+          "from": "^2.1.1",
+          "to": "^2.3.5"
+        },
+        "core-js-pure": {
+          "from": "^3.23.3",
+          "to": "^3.50.0"
+        },
+        "error-stack-parser": {
+          "from": "^2.0.6",
+          "to": "^2.1.4"
+        },
+        "html-entities": {
+          "from": "^2.1.0",
+          "to": "^2.6.0"
+        },
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.3.3"
+        },
+        "source-map": {
+          "from": "^0.7.3",
+          "to": "^0.8.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T11:24:28.136Z",
+      "version": "0.6.3-depup.0"
+    }
   }
 }
