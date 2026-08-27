@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.60.0 | **DepUp version**: 6.60.0-depup.4 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 6.61.0 | **DepUp version**: 6.61.0-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.71.0` |
-| @slack/webhook | `7.1.0` | `^8.0.0` |
+| @slack/webhook | `7.1.0` | `^8.0.1` |
 | @tryghost/api-framework | `3.3.9` | `^3.3.10` |
 | @tryghost/bookshelf-plugins | `2.3.8` | `^2.3.11` |
 | @tryghost/database-info | `2.3.2` | `^2.3.10` |
@@ -40,8 +40,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/nodemailer | `2.3.1` | `^2.3.10` |
 | @tryghost/pretty-cli | `3.3.2` | `^3.3.10` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^4.1.11` |
-| @tryghost/promise | `2.3.2` | `^2.3.10` |
-| @tryghost/request | `4.0.2` | `^4.0.3` |
 | @tryghost/root-utils | `2.3.2` | `^2.3.10` |
 | @tryghost/security | `1.0.6` | `^3.3.10` |
 | @tryghost/tpl | `2.3.9` | `^2.3.10` |
@@ -91,7 +89,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.3` |
-| mppx | `0.6.20` | `^0.8.19` |
+| mppx | `0.6.20` | `^0.9.0` |
 | mysql2 | `3.22.5` | `^3.24.2` |
 | nodemailer | `8.0.11` | `^9.0.5` |
 | otplib | `12.0.1` | `^13.5.0` |
@@ -99,9 +97,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | probe-image-size | `7.3.0` | `^7.4.0` |
 | sanitize-html | `2.17.5` | `^2.17.7` |
 | sharp | `0.35.3` | `^0.35.4` |
-| stripe | `8.222.0` | `^22.5.0` |
+| stripe | `8.222.0` | `^22.6.0` |
 | temporal-polyfill | `0.3.2` | `^1.0.4` |
-| terser | `5.48.0` | `^5.51.0` |
+| terser | `5.48.0` | `^5.51.1` |
 | tldts | `^7.4.4` | `^7.4.11` |
 | type-fest | `5.7.0` | `^5.8.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |

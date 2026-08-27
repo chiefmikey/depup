@@ -266,5 +266,24 @@
       "timestamp": "2026-08-25T08:16:42.181Z",
       "version": "11.4.7-depup.1"
     }
+  },
+  "12.0.0": {
+    "0": {
+      "changes": {
+        "js-yaml": {
+          "from": "5.3.0",
+          "to": "^5.4.1"
+        },
+        "swagger-ui-dist": {
+          "from": "5.32.13",
+          "to": "^5.32.14"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T11:24:01.951Z",
+      "version": "12.0.0-depup.0"
+    }
   }
 }
