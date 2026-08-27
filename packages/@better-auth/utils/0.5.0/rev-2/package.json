@@ -1,0 +1,122 @@
+{
+  "name": "@depup/better-auth__utils",
+  "version": "0.5.0-depup.2",
+  "license": "MIT",
+  "description": "A collection of utilities for better-auth (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "keywords": [
+    "@better-auth/utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "utils",
+    "typescript",
+    "better-auth",
+    "better-auth-utils"
+  ],
+  "author": "Bereket Engida",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/utils.git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.1",
+    "bumpp": "^9.9.0",
+    "happy-dom": "^15.11.7",
+    "lefthook": "^2.1.4",
+    "tsdown": "0.22.9",
+    "typescript": "^6.0.3",
+    "vitest": "^2.1.8"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./base32": {
+      "import": "./dist/base32.mjs",
+      "require": "./dist/base32.cjs"
+    },
+    "./base64": {
+      "import": "./dist/base64.mjs",
+      "require": "./dist/base64.cjs"
+    },
+    "./binary": {
+      "import": "./dist/binary.mjs",
+      "require": "./dist/binary.cjs"
+    },
+    "./hash": {
+      "import": "./dist/hash.mjs",
+      "require": "./dist/hash.cjs"
+    },
+    "./ecdsa": {
+      "import": "./dist/ecdsa.mjs",
+      "require": "./dist/ecdsa.cjs"
+    },
+    "./hex": {
+      "import": "./dist/hex.mjs",
+      "require": "./dist/hex.cjs"
+    },
+    "./hmac": {
+      "import": "./dist/hmac.mjs",
+      "require": "./dist/hmac.cjs"
+    },
+    "./otp": {
+      "import": "./dist/otp.mjs",
+      "require": "./dist/otp.cjs"
+    },
+    "./random": {
+      "import": "./dist/random.mjs",
+      "require": "./dist/random.cjs"
+    },
+    "./rsa": {
+      "import": "./dist/rsa.mjs",
+      "require": "./dist/rsa.cjs"
+    },
+    "./password": {
+      "workerd": {
+        "import": "./dist/password.node.mjs",
+        "require": "./dist/password.node.cjs"
+      },
+      "node": {
+        "import": "./dist/password.node.mjs",
+        "require": "./dist/password.node.cjs"
+      },
+      "import": "./dist/password.mjs",
+      "require": "./dist/password.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@noble/hashes": "^2.4.0"
+  },
+  "scripts": {
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsdown",
+    "bump": "bumpp",
+    "lint:fix": "biome check . --write"
+  },
+  "depup": {
+    "changes": {
+      "@noble/hashes": {
+        "from": "^2.0.1",
+        "to": "^2.4.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@better-auth/utils",
+    "originalVersion": "0.5.0",
+    "processedAt": "2026-08-27T19:34:00.660Z",
+    "smokeTest": "passed"
+  }
+}
