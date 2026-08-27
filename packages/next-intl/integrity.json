@@ -1123,5 +1123,32 @@
       "timestamp": "2026-08-27T01:40:17.130Z",
       "version": "4.13.7-depup.28"
     }
+  },
+  "4.14.0": {
+    "0": {
+      "changes": {
+        "@formatjs/intl-localematcher": {
+          "from": "^0.8.1",
+          "to": "^0.8.13"
+        },
+        "@parcel/watcher": {
+          "from": "^2.4.1",
+          "to": "^2.6.0"
+        },
+        "@swc/core": {
+          "from": "~1.16.0",
+          "to": "^1.16.1"
+        },
+        "negotiator": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-08-27T11:25:29.086Z",
+      "version": "4.14.0-depup.0"
+    }
   }
 }

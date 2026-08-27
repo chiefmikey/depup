@@ -1,0 +1,18 @@
+{
+  "bumped": {
+    "@types/node": {
+      "from": ">=20",
+      "to": "^26.4.0"
+    },
+    "eventemitter3": {
+      "from": "^5.0.1",
+      "to": "^5.0.4"
+    },
+    "p-queue": {
+      "from": "^9",
+      "to": "^9.3.3"
+    }
+  },
+  "timestamp": "2026-08-27T11:23:24.384Z",
+  "totalUpdated": 3
+}

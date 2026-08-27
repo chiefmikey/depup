@@ -90,5 +90,24 @@
       "timestamp": "2026-08-27T01:39:21.387Z",
       "version": "5.7.0-depup.0"
     }
+  },
+  "5.8.0": {
+    "0": {
+      "changes": {
+        "jest-worker": {
+          "from": "^27.4.5",
+          "to": "^30.4.1"
+        },
+        "terser": {
+          "from": "^5.51.0",
+          "to": "^5.51.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-27T11:25:00.696Z",
+      "version": "5.8.0-depup.0"
+    }
   }
 }

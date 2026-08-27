@@ -1,0 +1,64 @@
+{
+  "name": "@depup/nestjs__common",
+  "version": "12.0.1-depup.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@common) (with updated dependencies)",
+  "author": "Kamil Mysliwiec",
+  "homepage": "https://nestjs.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/nest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestjs/nest.git",
+    "directory": "packages/common"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./internal": "./internal.js",
+    "./*.js": "./*.js",
+    "./*": "./*.js"
+  },
+  "dependencies": {
+    "@standard-schema/spec": "1.1.0",
+    "file-type": "22.0.2",
+    "iterare": "1.2.1",
+    "load-esm": "1.0.3",
+    "tslib": "2.8.1",
+    "uid": "2.0.2"
+  },
+  "peerDependencies": {
+    "class-transformer": ">=0.4.1",
+    "class-validator": ">=0.13.2",
+    "reflect-metadata": "^0.1.12 || ^0.2.0",
+    "rxjs": "^7.1.0"
+  },
+  "peerDependenciesMeta": {
+    "class-validator": {
+      "optional": true
+    },
+    "class-transformer": {
+      "optional": true
+    }
+  },
+  "gitHead": "4c751c503bc753095f4b4f052e106f95218cc33f",
+  "keywords": [
+    "@nestjs/common",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nestjs/common",
+    "originalVersion": "12.0.1",
+    "processedAt": "2026-08-27T11:23:27.157Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,14 +12,11 @@ npm install @depup/lint-staged
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 17.3.0 | **DepUp version**: 17.3.0-depup.1 | **Updated**: 8/1/2026 | **Import test**: passed
+**Original version**: 17.4.1 | **DepUp version**: 17.4.1-depup.0 | **Updated**: 8/27/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| tinyexec | `^1.2.4` | `^1.3.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/lint-staged&labels=bug).
 

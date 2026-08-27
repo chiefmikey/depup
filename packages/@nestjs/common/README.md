@@ -12,14 +12,11 @@ npm install @depup/nestjs__common
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.2.3 | **DepUp version**: 11.2.3-depup.0 | **Updated**: 8/25/2026 | **Import test**: passed
+**Original version**: 12.0.1 | **DepUp version**: 12.0.1-depup.0 | **Updated**: 8/27/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| file-type | `21.3.4` | `^22.0.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nestjs__common&labels=bug).
 
