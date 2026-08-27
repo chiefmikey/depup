@@ -264,5 +264,24 @@
       "timestamp": "2026-08-27T11:24:46.436Z",
       "version": "2.28.0-depup.0"
     }
+  },
+  "2.28.1": {
+    "0": {
+      "changes": {
+        "magic-string": {
+          "from": "^1.2.2",
+          "to": "^1.2.3"
+        },
+        "rollup": {
+          "from": "^4.62.5",
+          "to": "^4.63.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T19:34:09.225Z",
+      "version": "2.28.1-depup.0"
+    }
   }
 }
