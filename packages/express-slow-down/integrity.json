@@ -52,5 +52,20 @@
       "timestamp": "2026-07-21T17:24:35.141Z",
       "version": "3.1.0-depup.3"
     }
+  },
+  "3.1.1": {
+    "0": {
+      "changes": {
+        "express-rate-limit": {
+          "from": "8",
+          "to": "^8.6.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-27T01:40:01.966Z",
+      "version": "3.1.1-depup.0"
+    }
   }
 }

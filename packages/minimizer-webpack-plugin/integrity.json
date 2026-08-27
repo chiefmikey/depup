@@ -75,5 +75,20 @@
       "timestamp": "2026-08-26T16:30:54.837Z",
       "version": "5.6.1-depup.2"
     }
+  },
+  "5.7.0": {
+    "0": {
+      "changes": {
+        "jest-worker": {
+          "from": "^27.4.5",
+          "to": "^30.4.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-27T01:39:21.387Z",
+      "version": "5.7.0-depup.0"
+    }
   }
 }
