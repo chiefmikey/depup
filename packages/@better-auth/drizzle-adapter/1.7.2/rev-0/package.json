@@ -1,0 +1,84 @@
+{
+  "name": "@depup/better-auth__drizzle-adapter",
+  "version": "1.7.2-depup.0",
+  "bugs": {
+    "url": "https://github.com/better-auth/better-auth/issues"
+  },
+  "description": "Drizzle adapter for Better Auth (with updated dependencies)",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com/docs/adapters/drizzle",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/drizzle-adapter"
+  },
+  "keywords": [
+    "@better-auth/drizzle-adapter",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "auth",
+    "drizzle",
+    "adapter",
+    "typescript",
+    "better-auth"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "dev-source": "./src/index.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./relations-v2": {
+      "types": "./dist/relations-v2/index.d.mts",
+      "dev-source": "./src/relations-v2/index.ts",
+      "default": "./dist/relations-v2/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "drizzle-orm": "^0.45.2 || >=1.0.0-rc.1 <2.0.0",
+    "@better-auth/core": "^1.7.2"
+  },
+  "peerDependenciesMeta": {
+    "drizzle-orm": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@better-auth/utils": "0.4.2",
+    "drizzle-orm": "^0.45.2",
+    "tsdown": "0.21.10",
+    "typescript": "^6.0.3",
+    "@better-auth/core": "1.7.2"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint:package": "publint run --strict --pack false",
+    "lint:types": "attw --profile esm-only --pack .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@better-auth/drizzle-adapter",
+    "originalVersion": "1.7.2",
+    "processedAt": "2026-08-27T01:37:34.476Z",
+    "smokeTest": "failed"
+  }
+}

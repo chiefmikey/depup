@@ -778,5 +778,15 @@
       "timestamp": "2026-08-25T08:15:56.675Z",
       "version": "4.0.42-depup.0"
     }
+  },
+  "4.0.44": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-27T01:36:48.584Z",
+      "version": "4.0.44-depup.0"
+    }
   }
 }
