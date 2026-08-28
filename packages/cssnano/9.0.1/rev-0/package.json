@@ -1,0 +1,79 @@
+{
+  "name": "@depup/cssnano",
+  "version": "9.0.1-depup.0",
+  "description": "A modular CSS minifier, built on top of the PostCSS ecosystem. (with updated dependencies)",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/cssnano"
+  },
+  "keywords": [
+    "cssnano",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "css",
+    "compress",
+    "minify",
+    "optimise",
+    "optimisation",
+    "postcss",
+    "postcss-plugin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cssnano-preset-default": "^9.0.1"
+  },
+  "homepage": "https://github.com/cssnano/cssnano",
+  "author": {
+    "name": "Ben Briggs",
+    "email": "beneb.info@gmail.com",
+    "url": "https://beneb.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cssnano/cssnano.git"
+  },
+  "files": [
+    "src",
+    "LICENSE-MIT",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/cssnano/cssnano/issues"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.4",
+    "cssnano-preset-advanced": "^9.0.1",
+    "cssnano-preset-lite": "^6.0.0",
+    "postcss": "^8.5.26",
+    "postcss-font-magician": "^4.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.5.26"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "cssnano",
+    "originalVersion": "9.0.1",
+    "processedAt": "2026-08-28T20:02:15.955Z",
+    "smokeTest": "passed"
+  }
+}

@@ -12,13 +12,13 @@ npm install @depup/sentry__webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.8 | **Updated**: 8/24/2026 | **Import test**: failed
+**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.9 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @sentry/bundler-plugins | `^10.64.0` | `^10.71.0` |
+| @sentry/bundler-plugins | `^10.64.0` | `^10.72.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sentry__webpack-plugin&labels=bug).
