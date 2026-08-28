@@ -1,0 +1,56 @@
+{
+  "name": "@depup/jest-changed-files",
+  "version": "30.5.0-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-changed-files"
+  },
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "execa": "^10.0.1",
+    "jest-util": "30.5.0",
+    "p-limit": "^7.3.1"
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "gitHead": "912baa37afaa979e8179240c238cb493f960527a",
+  "description": "jest-changed-files with all dependencies updated to latest",
+  "keywords": [
+    "jest-changed-files",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "execa": {
+        "from": "^5.1.1",
+        "to": "^10.0.1"
+      },
+      "p-limit": {
+        "from": "^3.1.0",
+        "to": "^7.3.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "jest-changed-files",
+    "originalVersion": "30.5.0",
+    "processedAt": "2026-08-28T11:51:29.611Z",
+    "smokeTest": "passed"
+  }
+}

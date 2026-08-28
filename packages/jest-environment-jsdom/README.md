@@ -12,13 +12,14 @@ npm install @depup/jest-environment-jsdom
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.4.1 | **DepUp version**: 30.4.1-depup.54 | **Updated**: 7/27/2026 | **Import test**: failed
+**Original version**: 30.5.0 | **DepUp version**: 30.5.0-depup.0 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| jsdom | `^26.1.0` | `^30.0.0` |
+| @types/jsdom | `^21.1.7` | `^30.0.0` |
+| jsdom | `^26.1.0` | `^30.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jest-environment-jsdom&labels=bug).
