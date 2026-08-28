@@ -12,13 +12,13 @@ npm install @depup/bullmq
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.0 | **Updated**: 8/27/2026 | **Import test**: passed
+**Original version**: 6.3.1 | **DepUp version**: 6.3.1-depup.1 | **Updated**: 8/28/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| msgpackr | `2.0.5` | `^2.0.6` |
+| msgpackr | `2.0.5` | `^2.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/bullmq&labels=bug).
