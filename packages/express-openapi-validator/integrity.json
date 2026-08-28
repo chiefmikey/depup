@@ -1,46 +1,5 @@
 {
   "5.6.2": {
-    "5": {
-      "changes": {
-        "@apidevtools/json-schema-ref-parser": {
-          "from": "^14.2.1",
-          "to": "^15.3.6"
-        },
-        "@types/multer": {
-          "from": "^2.0.0",
-          "to": "^2.1.0"
-        },
-        "ajv": {
-          "from": "^8.17.1",
-          "to": "^8.20.0"
-        },
-        "content-type": {
-          "from": "^1.0.5",
-          "to": "^2.0.0"
-        },
-        "media-typer": {
-          "from": "^1.1.0",
-          "to": "^2.0.0"
-        },
-        "multer": {
-          "from": "^2.0.2",
-          "to": "^2.2.0"
-        },
-        "path-to-regexp": {
-          "from": "^8.3.0",
-          "to": "^8.4.2"
-        },
-        "qs": {
-          "from": "^6.14.1",
-          "to": "^6.15.2"
-        }
-      },
-      "depsUpdated": 8,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T18:15:50.834Z",
-      "version": "5.6.2-depup.5"
-    },
     "6": {
       "changes": {
         "@apidevtools/json-schema-ref-parser": {
@@ -204,6 +163,47 @@
       "status": "published",
       "timestamp": "2026-08-21T00:17:31.370Z",
       "version": "5.6.2-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@apidevtools/json-schema-ref-parser": {
+          "from": "^14.2.1",
+          "to": "^16.0.1"
+        },
+        "@types/multer": {
+          "from": "^2.0.0",
+          "to": "^2.2.0"
+        },
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        },
+        "content-type": {
+          "from": "^1.0.5",
+          "to": "^3.0.0"
+        },
+        "media-typer": {
+          "from": "^1.1.0",
+          "to": "^2.0.0"
+        },
+        "multer": {
+          "from": "^2.0.2",
+          "to": "^2.3.0"
+        },
+        "path-to-regexp": {
+          "from": "^8.3.0",
+          "to": "^8.4.2"
+        },
+        "qs": {
+          "from": "^6.14.1",
+          "to": "^6.15.3"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-28T20:02:24.100Z",
+      "version": "5.6.2-depup.10"
     }
   }
 }

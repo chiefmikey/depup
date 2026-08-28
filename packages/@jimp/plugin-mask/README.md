@@ -12,13 +12,13 @@ npm install @depup/jimp__plugin-mask
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.1 | **DepUp version**: 1.6.1-depup.30 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 1.6.1 | **DepUp version**: 1.6.1-depup.31 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| zod | `^3.23.8` | `^4.4.3` |
+| zod | `^3.23.8` | `^4.5.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jimp__plugin-mask&labels=bug).

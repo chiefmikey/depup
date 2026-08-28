@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@apidevtools/json-schema-ref-parser": {
+      "from": "^14.2.1",
+      "to": "^16.0.1"
+    },
+    "@types/multer": {
+      "from": "^2.0.0",
+      "to": "^2.2.0"
+    },
+    "ajv": {
+      "from": "^8.17.1",
+      "to": "^8.20.0"
+    },
+    "content-type": {
+      "from": "^1.0.5",
+      "to": "^3.0.0"
+    },
+    "media-typer": {
+      "from": "^1.1.0",
+      "to": "^2.0.0"
+    },
+    "multer": {
+      "from": "^2.0.2",
+      "to": "^2.3.0"
+    },
+    "path-to-regexp": {
+      "from": "^8.3.0",
+      "to": "^8.4.2"
+    },
+    "qs": {
+      "from": "^6.14.1",
+      "to": "^6.15.3"
+    }
+  },
+  "timestamp": "2026-08-28T20:02:05.065Z",
+  "totalUpdated": 8
+}

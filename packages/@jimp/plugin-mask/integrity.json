@@ -1,18 +1,5 @@
 {
   "1.6.1": {
-    "26": {
-      "changes": {
-        "zod": {
-          "from": "^3.23.8",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-06-15T18:11:51.188Z",
-      "version": "1.6.1-depup.26"
-    },
     "27": {
       "changes": {
         "zod": {
@@ -64,6 +51,19 @@
       "status": "published",
       "timestamp": "2026-07-21T19:29:13.846Z",
       "version": "1.6.1-depup.30"
+    },
+    "31": {
+      "changes": {
+        "zod": {
+          "from": "^3.23.8",
+          "to": "^4.5.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-28T20:01:34.451Z",
+      "version": "1.6.1-depup.31"
     }
   }
 }

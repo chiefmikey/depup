@@ -109,5 +109,24 @@
       "timestamp": "2026-07-21T17:25:22.741Z",
       "version": "2.2.0-depup.3"
     }
+  },
+  "2.3.0": {
+    "0": {
+      "changes": {
+        "append-field": {
+          "from": "^1.0.0",
+          "to": "^2.0.0"
+        },
+        "type-is": {
+          "from": "^1.6.18",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T20:03:12.717Z",
+      "version": "2.3.0-depup.0"
+    }
   }
 }
