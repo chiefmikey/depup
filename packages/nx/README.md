@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.2 | **DepUp version**: 23.1.2-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 23.1.2 | **DepUp version**: 23.1.2-depup.1 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @emnapi/core | `1.4.5` | `^1.11.3` |
 | @emnapi/runtime | `1.4.5` | `^1.11.3` |
 | @emnapi/wasi-threads | `1.0.4` | `^2.0.1` |
-| @jest/diff-sequences | `30.0.1` | `^30.4.0` |
+| @jest/diff-sequences | `30.0.1` | `^30.5.0` |
 | @napi-rs/wasm-runtime | `0.2.4` | `^1.2.3` |
 | @tybys/wasm-util | `0.9.0` | `^0.10.3` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
