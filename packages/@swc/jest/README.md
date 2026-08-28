@@ -12,13 +12,13 @@ npm install @depup/swc__jest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.2.39 | **DepUp version**: 0.2.39-depup.1 | **Updated**: 5/8/2026 | **Import test**: failed
+**Original version**: 0.2.39 | **DepUp version**: 0.2.39-depup.2 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @jest/create-cache-key-function | `^30.0.0` | `^30.4.0` |
+| @jest/create-cache-key-function | `^30.0.0` | `^30.5.0` |
 | jsonc-parser | `^3.2.0` | `^3.3.1` |
 
 

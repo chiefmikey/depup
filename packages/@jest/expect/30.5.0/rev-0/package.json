@@ -1,0 +1,46 @@
+{
+  "name": "@depup/jest__expect",
+  "version": "30.5.0-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-expect"
+  },
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "expect": "30.5.0",
+    "jest-snapshot": "30.5.0"
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "gitHead": "912baa37afaa979e8179240c238cb493f960527a",
+  "description": "@jest/expect with all dependencies updated to latest",
+  "keywords": [
+    "@jest/expect",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@jest/expect",
+    "originalVersion": "30.5.0",
+    "processedAt": "2026-08-28T11:50:13.064Z",
+    "smokeTest": "passed"
+  }
+}

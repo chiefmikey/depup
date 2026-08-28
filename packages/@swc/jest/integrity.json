@@ -31,6 +31,23 @@
       "status": "failed",
       "timestamp": "2026-05-08T06:53:09.535Z",
       "version": "0.2.39-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@jest/create-cache-key-function": {
+          "from": "^30.0.0",
+          "to": "^30.5.0"
+        },
+        "jsonc-parser": {
+          "from": "^3.2.0",
+          "to": "^3.3.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-28T11:50:59.030Z",
+      "version": "0.2.39-depup.2"
     }
   }
 }

@@ -121,5 +121,24 @@
       "timestamp": "2026-07-26T16:24:30.701Z",
       "version": "30.4.2-depup.57"
     }
+  },
+  "30.5.0": {
+    "0": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^6.0.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T11:52:09.365Z",
+      "version": "30.5.0-depup.0"
+    }
   }
 }

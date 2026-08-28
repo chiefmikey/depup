@@ -177,5 +177,32 @@
       "timestamp": "2026-07-26T16:25:04.126Z",
       "version": "30.4.1-depup.56"
     }
+  },
+  "30.5.0": {
+    "0": {
+      "changes": {
+        "ansi-escapes": {
+          "from": "^4.3.2",
+          "to": "^7.3.0"
+        },
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^6.0.0"
+        },
+        "emittery": {
+          "from": "^0.13.1",
+          "to": "^2.0.0"
+        },
+        "string-length": {
+          "from": "^4.0.2",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T11:52:05.499Z",
+      "version": "30.5.0-depup.0"
+    }
   }
 }

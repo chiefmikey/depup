@@ -1,0 +1,132 @@
+{
+  "name": "@depup/lovable.dev__vite-tanstack-config",
+  "version": "2.19.3-depup.0",
+  "description": "Vite config wrapper for Lovable TanStack Start projects (with updated dependencies)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./hmr-gate": {
+      "import": {
+        "types": "./dist/hmr-gate.d.ts",
+        "default": "./dist/hmr-gate.js"
+      },
+      "require": {
+        "types": "./dist/hmr-gate.d.cts",
+        "default": "./dist/hmr-gate.cjs"
+      }
+    },
+    "./dev-server-bridge": {
+      "import": {
+        "types": "./dist/dev-server-bridge.d.ts",
+        "default": "./dist/dev-server-bridge.js"
+      },
+      "require": {
+        "types": "./dist/dev-server-bridge.d.cts",
+        "default": "./dist/dev-server-bridge.cjs"
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "hmr-gate": [
+        "./dist/hmr-gate.d.ts"
+      ],
+      "dev-server-bridge": [
+        "./dist/dev-server-bridge.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "runtime",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@lovable.dev/vite-tanstack-config",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vite",
+    "tanstack",
+    "lovable",
+    "config"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@tanstack/devtools-vite": "^0.8.5",
+    "lightningcss": "^1.33.0"
+  },
+  "peerDependencies": {
+    "vite": ">=5.0.0 <9.0.0",
+    "@tailwindcss/vite": ">=4.0.0",
+    "vite-tsconfig-paths": ">=6.0.0",
+    "nitro": ">=3.0.260603-beta",
+    "@tanstack/react-start": ">=1.100.0",
+    "@vitejs/plugin-react": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "nitro": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@tanstack/react-start": "^1.167.50",
+    "@types/node": "22.13.13",
+    "@vitejs/plugin-react": "^5.2.0",
+    "nitro": "3.0.260603-beta",
+    "rimraf": "^5.0.0",
+    "tsdown": "^0.22.5",
+    "typescript": "7.0.2",
+    "vite": "^8.2.0",
+    "vite-tsconfig-paths": "^6.0.2",
+    "vitest": "^4.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovablelabs/lovable.git",
+    "directory": "npm-packages/lovable-vite-tanstack"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check:package": "tmp=$(mktemp -d) && pnpm pack --out \"$tmp/pkg.tgz\" && tar -xzf \"$tmp/pkg.tgz\" -C \"$tmp\" && publint \"$tmp/package\" --strict && attw \"$tmp/pkg.tgz\"",
+    "typecheck": "tsgo --noEmit",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rimraf dist",
+    "coverage": "vitest run --coverage"
+  },
+  "depup": {
+    "changes": {
+      "@tanstack/devtools-vite": {
+        "from": "^0.8.1",
+        "to": "^0.8.5"
+      },
+      "lightningcss": {
+        "from": "^1.30.0",
+        "to": "^1.33.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@lovable.dev/vite-tanstack-config",
+    "originalVersion": "2.19.3",
+    "processedAt": "2026-08-28T11:50:33.449Z",
+    "smokeTest": "passed"
+  }
+}
