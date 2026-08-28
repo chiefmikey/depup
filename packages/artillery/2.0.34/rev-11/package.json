@@ -1,0 +1,432 @@
+{
+  "name": "@depup/artillery",
+  "version": "2.0.34-depup.11",
+  "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/lib/index.js",
+  "types": "./types.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./dist/lib/index.js"
+    },
+    "./util": "./dist/lib/util.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">= 22.18.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/dist",
+    "console-reporter.js",
+    "util.js",
+    ".artilleryrc",
+    "types.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "oclif": {
+    "update": {
+      "s3": {
+        "bucket": "artillery-cli-assets"
+      }
+    },
+    "commands": "./dist/lib/cmds",
+    "hooks": {
+      "init": [
+        "./dist/lib/cli/hooks/version"
+      ]
+    },
+    "bin": "artillery",
+    "_helpClass": "./bin/help",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found"
+    ],
+    "topics": {
+      "aws": {
+        "description": "run tests on AWS",
+        "hidden": true
+      },
+      "pro": {
+        "description": "deploy and manage Artillery Pro",
+        "hidden": true
+      }
+    }
+  },
+  "scripts": {
+    "test:unit": "node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/unit/*.test.js\" \"test/core/unit/*.test.js\"",
+    "test:acceptance": "node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/cli/*.test.js\" && bash test/lib/run.sh && node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/publish-metrics/**/*.test.js\" && node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/integration/**/*.test.js\" && node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/core/acceptance/*.test.js\" \"test/core/acceptance/**/*.test.js\"",
+    "test": " npm run test:unit && npm run test:acceptance",
+    "test:windows": "npm run test:unit && node --test --test-timeout=420000 --require ./test/setup-env.cjs \"test/cli/*.test.js\"",
+    "test:aws": "node --test --test-timeout=4200000 --require ./test/setup-env.cjs \"test/cloud-e2e/**/*.test.js\"",
+    "test:aws:ci": "node --test --test-timeout=4200000 --require ./test/setup-env.cjs",
+    "test:aws:windows": "node --test --test-timeout=420000 --require ./test/setup-env.cjs --test-name-pattern \"@windows\" \"test/cloud-e2e/**/*.test.js\"",
+    "lint": "npx @biomejs/biome check .",
+    "lint-fix": "npx @biomejs/biome check --write .",
+    "typecheck:strict": "node scripts/check-strict.mjs",
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-builtin-packages.mjs"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": "npx @biomejs/biome check --write --files-ignore-unknown=true --no-errors-on-unmatched"
+  },
+  "keywords": [
+    "artillery",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "load testing",
+    "stress testing",
+    "benchmark",
+    "performance",
+    "blackbox testing"
+  ],
+  "author": "Hassy Veldstra <h@veldstra.org>",
+  "contributors": [
+    "Kieran Gorman (https://github.com/kjgorman)",
+    "Antony Jones (https://github.com/antony)",
+    "Joe Schofield (https://github.com/JoeScho)",
+    "Kush Jain (https://github.com/kush-jain)"
+  ],
+  "license": "MPL-2.0",
+  "preferGlobal": true,
+  "man": "./man/artillery.1",
+  "bin": {
+    "artillery": "./bin/run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artilleryio/artillery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artilleryio/artillery/issues",
+    "email": "npm@veldstra.org"
+  },
+  "dependencies": {
+    "@artilleryio/sketches-js": "^2.1.1",
+    "@aws-sdk/client-cloudwatch": "^3.1120.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1120.0",
+    "@aws-sdk/client-ec2": "^3.1120.0",
+    "@aws-sdk/client-ecs": "^3.1120.0",
+    "@aws-sdk/client-iam": "^3.1120.0",
+    "@aws-sdk/client-lambda": "^3.1120.0",
+    "@aws-sdk/client-s3": "^3.1120.0",
+    "@aws-sdk/client-sqs": "^3.1120.0",
+    "@aws-sdk/client-ssm": "^3.1120.0",
+    "@aws-sdk/client-sts": "^3.1120.0",
+    "@aws-sdk/credential-providers": "^3.1120.0",
+    "@azure/arm-containerinstance": "^9.1.0",
+    "@azure/identity": "^4.13.2",
+    "@azure/storage-blob": "^12.33.0",
+    "@azure/storage-queue": "^12.31.0",
+    "@faker-js/faker": "^10.6.0",
+    "@oclif/core": "^4.14.0",
+    "@oclif/plugin-help": "^6.3.0",
+    "@oclif/plugin-not-found": "^3.3.0",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/context-async-hooks": "^2.10.0",
+    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.221.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.221.0",
+    "@opentelemetry/exporter-metrics-otlp-proto": "^0.221.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.221.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.221.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.221.0",
+    "@opentelemetry/exporter-zipkin": "^2.10.0",
+    "@opentelemetry/resources": "^2.10.0",
+    "@opentelemetry/sdk-metrics": "^2.10.0",
+    "@opentelemetry/sdk-trace-base": "^2.10.0",
+    "@opentelemetry/semantic-conventions": "^1.43.0",
+    "@playwright/browser-chromium": "1.62.1",
+    "@playwright/test": "1.62.1",
+    "@smithy/core": "^3.33.3",
+    "@upstash/redis": "^1.38.3",
+    "agentkeepalive": "^4.6.0",
+    "arrivals": "^2.1.2",
+    "async": "^3.2.6",
+    "chalk": "^6.0.0",
+    "cheerio": "^1.2.0",
+    "chokidar": "^5.0.0",
+    "ci-info": "^4.4.0",
+    "cli-table3": "^0.6.5",
+    "cookie-parser": "^1.4.7",
+    "cross-spawn": "^7.0.6",
+    "csv-parse": "^7.0.2",
+    "datadog-metrics": "^0.12.1",
+    "debug": "^4.4.3",
+    "decompress-response": "^10.0.0",
+    "deep-for-each": "^3.0.0",
+    "dogapi": "^2.8.4",
+    "dotenv": "^17.4.2",
+    "driftless": "^2.0.3",
+    "esbuild-wasm": "^0.28.2",
+    "espree": "^11.2.0",
+    "esprima": "^4.0.1",
+    "eventemitter3": "^5.0.4",
+    "fast-deep-equal": "^3.1.3",
+    "filtrex": "^3.1.0",
+    "form-data": "^4.0.6",
+    "fs-extra": "^11.4.0",
+    "got": "^15.1.0",
+    "hot-shots": "^17.1.0",
+    "hpagent": "^1.2.0",
+    "https-proxy-agent": "^9.1.0",
+    "jmespath": "^0.16.0",
+    "joi": "^18.2.5",
+    "js-yaml": "^5.4.1",
+    "jsonpath-plus": "^10.4.0",
+    "jsonwebtoken": "^9.0.3",
+    "lodash": "^4.18.1",
+    "mixpanel": "^0.23.0",
+    "moment": "^2.30.1",
+    "ms": "^2.1.3",
+    "nanoid": "^6.0.1",
+    "opentracing": "^0.14.7",
+    "ora": "^9.4.1",
+    "playwright": "1.62.1",
+    "prom-client": "^15.1.3",
+    "protobufjs": "^8.8.0",
+    "rc": "^1.2.8",
+    "semver": "^7.8.5",
+    "socket.io-client": "^4.8.3",
+    "socketio-wildcard": "^2.0.0",
+    "sqs-consumer": "^15.0.3",
+    "tempy": "3.2.0",
+    "tough-cookie": "^6.0.2",
+    "uuid": "^14.0.2",
+    "walk-sync": "^4.0.2",
+    "ws": "^8.21.3",
+    "yaml-js": "^0.3.1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-xray": "^3.1101.0",
+    "@biomejs/biome": "^2.3.3",
+    "@hapi/basic": "^7.0.2",
+    "@hapi/hapi": "^21.4.10",
+    "execa": "^0.10.0",
+    "express": "^4.22.2",
+    "get-bin-path": "^5.1.0",
+    "nock": "^11.8.2",
+    "proxy": "^2.1.1",
+    "rewiremock": "^3.14.3",
+    "sinon": "^4.5.0",
+    "socket.io": "^4.8.0",
+    "zx": "^8.6.1"
+  },
+  "depup": {
+    "changes": {
+      "@aws-sdk/client-cloudwatch": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-cloudwatch-logs": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-ec2": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-ecs": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-iam": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-lambda": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-s3": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-sqs": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-ssm": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/client-sts": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@aws-sdk/credential-providers": {
+        "from": "^3.1101.0",
+        "to": "^3.1120.0"
+      },
+      "@azure/identity": {
+        "from": "^4.13.1",
+        "to": "^4.13.2"
+      },
+      "@azure/storage-blob": {
+        "from": "^12.30.0",
+        "to": "^12.33.0"
+      },
+      "@azure/storage-queue": {
+        "from": "^12.29.0",
+        "to": "^12.31.0"
+      },
+      "@faker-js/faker": {
+        "from": "10.5.0",
+        "to": "^10.6.0"
+      },
+      "@oclif/core": {
+        "from": "^4.8.0",
+        "to": "^4.14.0"
+      },
+      "@oclif/plugin-help": {
+        "from": "^6.2.36",
+        "to": "^6.3.0"
+      },
+      "@oclif/plugin-not-found": {
+        "from": "^3.2.73",
+        "to": "^3.3.0"
+      },
+      "@opentelemetry/api": {
+        "from": "^1.9.0",
+        "to": "^1.9.1"
+      },
+      "@smithy/core": {
+        "from": "^3.31.1",
+        "to": "^3.33.3"
+      },
+      "@upstash/redis": {
+        "from": "^1.36.1",
+        "to": "^1.38.3"
+      },
+      "async": {
+        "from": "^2.6.4",
+        "to": "^3.2.6"
+      },
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^6.0.0"
+      },
+      "chokidar": {
+        "from": "^3.6.0",
+        "to": "^5.0.0"
+      },
+      "ci-info": {
+        "from": "^4.3.1",
+        "to": "^4.4.0"
+      },
+      "csv-parse": {
+        "from": "^4.16.3",
+        "to": "^7.0.2"
+      },
+      "decompress-response": {
+        "from": "^6.0.0",
+        "to": "^10.0.0"
+      },
+      "dotenv": {
+        "from": "^16.6.1",
+        "to": "^17.4.2"
+      },
+      "esbuild-wasm": {
+        "from": "^0.28.1",
+        "to": "^0.28.2"
+      },
+      "espree": {
+        "from": "^10.3.0",
+        "to": "^11.2.0"
+      },
+      "filtrex": {
+        "from": "^2.2.3",
+        "to": "^3.1.0"
+      },
+      "fs-extra": {
+        "from": "^11.3.3",
+        "to": "^11.4.0"
+      },
+      "got": {
+        "from": "^14.6.6",
+        "to": "^15.1.0"
+      },
+      "hot-shots": {
+        "from": "^10.2.1",
+        "to": "^17.1.0"
+      },
+      "hpagent": {
+        "from": "^0.1.1",
+        "to": "^1.2.0"
+      },
+      "https-proxy-agent": {
+        "from": "^5.0.0",
+        "to": "^9.1.0"
+      },
+      "joi": {
+        "from": "^17.13.4",
+        "to": "^18.2.5"
+      },
+      "js-yaml": {
+        "from": "^3.15.1",
+        "to": "^5.4.1"
+      },
+      "jsonpath-plus": {
+        "from": "^10.3.0",
+        "to": "^10.4.0"
+      },
+      "lodash": {
+        "from": "^4.18.0",
+        "to": "^4.18.1"
+      },
+      "mixpanel": {
+        "from": "^0.18.0",
+        "to": "^0.23.0"
+      },
+      "nanoid": {
+        "from": "^3.3.16",
+        "to": "^6.0.1"
+      },
+      "ora": {
+        "from": "^4.0.4",
+        "to": "^9.4.1"
+      },
+      "prom-client": {
+        "from": "^14.2.0",
+        "to": "^15.1.3"
+      },
+      "protobufjs": {
+        "from": "^7.6.5",
+        "to": "^8.8.0"
+      },
+      "semver": {
+        "from": "^7.7.3",
+        "to": "^7.8.5"
+      },
+      "sqs-consumer": {
+        "from": "6.0.2",
+        "to": "^15.0.3"
+      },
+      "tough-cookie": {
+        "from": "^5.1.2",
+        "to": "^6.0.2"
+      },
+      "uuid": {
+        "from": "^11.1.1",
+        "to": "^14.0.2"
+      },
+      "walk-sync": {
+        "from": "^0.2.3",
+        "to": "^4.0.2"
+      },
+      "ws": {
+        "from": "^7.5.13",
+        "to": "^8.21.3"
+      }
+    },
+    "depsUpdated": 51,
+    "originalPackage": "artillery",
+    "originalVersion": "2.0.34",
+    "processedAt": "2026-08-28T02:59:26.445Z",
+    "smokeTest": "passed"
+  }
+}

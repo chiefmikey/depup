@@ -12,13 +12,13 @@ npm install @depup/angular__compiler-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.4 | **DepUp version**: 22.1.4-depup.0 | **Updated**: 8/27/2026 | **Import test**: passed
+**Original version**: 22.1.4 | **DepUp version**: 22.1.4-depup.1 | **Updated**: 8/28/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @jridgewell/sourcemap-codec | `^1.4.14` | `^1.5.5` |
+| @jridgewell/sourcemap-codec | `^1.4.14` | `^1.6.0` |
 | reflect-metadata | `^0.2.0` | `^0.2.2` |
 | convert-source-map | `^1.5.1` | `^2.0.0` |
 | semver | `^7.0.0` | `^7.8.5` |

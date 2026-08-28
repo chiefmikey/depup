@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.61.0 | **DepUp version**: 6.61.0-depup.1 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 6.61.0 | **DepUp version**: 6.61.0-depup.2 | **Updated**: 8/28/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.71.0` |
-| @slack/webhook | `7.1.0` | `^8.0.1` |
+| @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/api-framework | `3.3.9` | `^3.3.10` |
 | @tryghost/bookshelf-plugins | `2.3.8` | `^2.3.11` |
 | @tryghost/database-info | `2.3.2` | `^2.3.10` |
@@ -47,9 +47,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/validator | `0.2.22` | `^3.2.10` |
 | @tryghost/version | `2.3.2` | `^2.3.10` |
 | @tryghost/zip | `3.5.1` | `^3.5.9` |
-| @x402/core | `2.12.0` | `^2.23.0` |
-| @x402/evm | `2.12.0` | `^2.23.0` |
-| @x402/hono | `2.12.0` | `^2.23.0` |
+| @x402/core | `2.12.0` | `^2.24.0` |
+| @x402/evm | `2.12.0` | `^2.24.0` |
+| @x402/hono | `2.12.0` | `^2.24.0` |
 | body-parser | `1.20.6` | `^2.3.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
@@ -60,6 +60,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | entities | `4.5.0` | `^8.0.0` |
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
+| fastq | `^1.20.1` | `^1.20.2` |
 | file-type | `21.3.4` | `^22.0.2` |
 | fs-extra | `11.3.6` | `^11.4.0` |
 | hono | `4.12.18` | `^4.13.5` |

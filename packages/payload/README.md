@@ -12,21 +12,21 @@ npm install @depup/payload
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.88.0 | **DepUp version**: 3.88.0-depup.0 | **Updated**: 8/12/2026 | **Import test**: passed
+**Original version**: 3.88.0 | **DepUp version**: 3.88.0-depup.1 | **Updated**: 8/28/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @next/env | `^15.1.5` | `^16.3.0` |
+| @next/env | `^15.1.5` | `^16.3.3` |
 | ajv | `8.18.0` | `^8.20.0` |
 | ci-info | `^4.1.0` | `^4.4.0` |
 | console-table-printer | `2.12.1` | `^2.16.1` |
-| file-type | `21.3.4` | `^22.0.1` |
-| get-tsconfig | `4.8.1` | `^4.14.1` |
+| file-type | `21.3.4` | `^22.0.2` |
+| get-tsconfig | `4.8.1` | `^4.14.3` |
 | ipaddr.js | `2.2.0` | `^2.5.0` |
-| jose | `5.10.0` | `^6.2.8` |
-| json-schema-to-typescript | `15.0.3` | `^15.0.4` |
+| jose | `5.10.0` | `^6.2.10` |
+| json-schema-to-typescript | `15.0.3` | `^16.0.0` |
 | path-to-regexp | `6.3.0` | `^8.4.2` |
 | pino | `9.14.0` | `^10.3.1` |
 | pino-pretty | `13.1.2` | `^13.1.3` |
@@ -35,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ts-essentials | `10.0.3` | `^10.2.1` |
 | tsx | `4.22.4` | `^4.23.12` |
 | undici | `7.29.0` | `^8.10.0` |
-| uuid | `13.0.2` | `^14.0.1` |
+| uuid | `13.0.2` | `^14.0.2` |
 | ws | `^8.16.0` | `^8.21.3` |
 
 

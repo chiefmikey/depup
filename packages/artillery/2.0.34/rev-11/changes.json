@@ -1,0 +1,210 @@
+{
+  "bumped": {
+    "@aws-sdk/client-cloudwatch": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-cloudwatch-logs": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-ec2": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-ecs": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-iam": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-lambda": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-s3": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-sqs": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-ssm": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/client-sts": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@aws-sdk/credential-providers": {
+      "from": "^3.1101.0",
+      "to": "^3.1120.0"
+    },
+    "@azure/identity": {
+      "from": "^4.13.1",
+      "to": "^4.13.2"
+    },
+    "@azure/storage-blob": {
+      "from": "^12.30.0",
+      "to": "^12.33.0"
+    },
+    "@azure/storage-queue": {
+      "from": "^12.29.0",
+      "to": "^12.31.0"
+    },
+    "@faker-js/faker": {
+      "from": "10.5.0",
+      "to": "^10.6.0"
+    },
+    "@oclif/core": {
+      "from": "^4.8.0",
+      "to": "^4.14.0"
+    },
+    "@oclif/plugin-help": {
+      "from": "^6.2.36",
+      "to": "^6.3.0"
+    },
+    "@oclif/plugin-not-found": {
+      "from": "^3.2.73",
+      "to": "^3.3.0"
+    },
+    "@opentelemetry/api": {
+      "from": "^1.9.0",
+      "to": "^1.9.1"
+    },
+    "@smithy/core": {
+      "from": "^3.31.1",
+      "to": "^3.33.3"
+    },
+    "@upstash/redis": {
+      "from": "^1.36.1",
+      "to": "^1.38.3"
+    },
+    "async": {
+      "from": "^2.6.4",
+      "to": "^3.2.6"
+    },
+    "chalk": {
+      "from": "^4.1.2",
+      "to": "^6.0.0"
+    },
+    "chokidar": {
+      "from": "^3.6.0",
+      "to": "^5.0.0"
+    },
+    "ci-info": {
+      "from": "^4.3.1",
+      "to": "^4.4.0"
+    },
+    "csv-parse": {
+      "from": "^4.16.3",
+      "to": "^7.0.2"
+    },
+    "decompress-response": {
+      "from": "^6.0.0",
+      "to": "^10.0.0"
+    },
+    "dotenv": {
+      "from": "^16.6.1",
+      "to": "^17.4.2"
+    },
+    "esbuild-wasm": {
+      "from": "^0.28.1",
+      "to": "^0.28.2"
+    },
+    "espree": {
+      "from": "^10.3.0",
+      "to": "^11.2.0"
+    },
+    "filtrex": {
+      "from": "^2.2.3",
+      "to": "^3.1.0"
+    },
+    "fs-extra": {
+      "from": "^11.3.3",
+      "to": "^11.4.0"
+    },
+    "got": {
+      "from": "^14.6.6",
+      "to": "^15.1.0"
+    },
+    "hot-shots": {
+      "from": "^10.2.1",
+      "to": "^17.1.0"
+    },
+    "hpagent": {
+      "from": "^0.1.1",
+      "to": "^1.2.0"
+    },
+    "https-proxy-agent": {
+      "from": "^5.0.0",
+      "to": "^9.1.0"
+    },
+    "joi": {
+      "from": "^17.13.4",
+      "to": "^18.2.5"
+    },
+    "js-yaml": {
+      "from": "^3.15.1",
+      "to": "^5.4.1"
+    },
+    "jsonpath-plus": {
+      "from": "^10.3.0",
+      "to": "^10.4.0"
+    },
+    "lodash": {
+      "from": "^4.18.0",
+      "to": "^4.18.1"
+    },
+    "mixpanel": {
+      "from": "^0.18.0",
+      "to": "^0.23.0"
+    },
+    "nanoid": {
+      "from": "^3.3.16",
+      "to": "^6.0.1"
+    },
+    "ora": {
+      "from": "^4.0.4",
+      "to": "^9.4.1"
+    },
+    "prom-client": {
+      "from": "^14.2.0",
+      "to": "^15.1.3"
+    },
+    "protobufjs": {
+      "from": "^7.6.5",
+      "to": "^8.8.0"
+    },
+    "semver": {
+      "from": "^7.7.3",
+      "to": "^7.8.5"
+    },
+    "sqs-consumer": {
+      "from": "6.0.2",
+      "to": "^15.0.3"
+    },
+    "tough-cookie": {
+      "from": "^5.1.2",
+      "to": "^6.0.2"
+    },
+    "uuid": {
+      "from": "^11.1.1",
+      "to": "^14.0.2"
+    },
+    "walk-sync": {
+      "from": "^0.2.3",
+      "to": "^4.0.2"
+    },
+    "ws": {
+      "from": "^7.5.13",
+      "to": "^8.21.3"
+    }
+  },
+  "timestamp": "2026-08-28T02:58:51.359Z",
+  "totalUpdated": 51
+}

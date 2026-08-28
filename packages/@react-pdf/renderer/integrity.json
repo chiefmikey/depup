@@ -220,5 +220,28 @@
       "timestamp": "2026-08-24T08:16:59.468Z",
       "version": "4.8.1-depup.0"
     }
+  },
+  "4.9.0": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.20.13",
+          "to": "^8.0.0"
+        },
+        "prop-types": {
+          "from": "^15.6.2",
+          "to": "^15.8.1"
+        },
+        "queue": {
+          "from": "^6.0.1",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T02:59:03.804Z",
+      "version": "4.9.0-depup.0"
+    }
   }
 }

@@ -140,5 +140,20 @@
       "timestamp": "2026-08-24T08:16:52.327Z",
       "version": "4.1.1-depup.0"
     }
+  },
+  "4.1.2": {
+    "0": {
+      "changes": {
+        "fontkit": {
+          "from": "^2.0.2",
+          "to": "^2.0.4"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T02:58:37.401Z",
+      "version": "4.1.2-depup.0"
+    }
   }
 }
