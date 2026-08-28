@@ -147,5 +147,20 @@
       "timestamp": "2026-08-24T16:14:05.742Z",
       "version": "10.71.0-depup.0"
     }
+  },
+  "10.72.0": {
+    "0": {
+      "changes": {
+        "@sentry/conventions": {
+          "from": "^0.16.0",
+          "to": "^0.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-08-28T20:01:47.799Z",
+      "version": "10.72.0-depup.0"
+    }
   }
 }

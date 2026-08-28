@@ -2317,19 +2317,6 @@
     }
   },
   "3.973.14": {
-    "0": {
-      "changes": {
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-08-22T00:16:24.362Z",
-      "version": "3.973.14-depup.0"
-    },
     "1": {
       "changes": {
         "@aws-sdk/token-providers": {
@@ -2397,6 +2384,23 @@
       "status": "published",
       "timestamp": "2026-08-28T02:58:58.062Z",
       "version": "3.973.14-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1116.0",
+          "to": "^3.1121.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-28T20:01:25.752Z",
+      "version": "3.973.14-depup.5"
     }
   }
 }
