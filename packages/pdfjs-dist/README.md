@@ -12,7 +12,7 @@ npm install @depup/pdfjs-dist
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.108 | **DepUp version**: 6.2.108-depup.0 | **Updated**: 7/29/2026 | **Import test**: failed
+**Original version**: 6.3.289 | **DepUp version**: 6.3.289-depup.0 | **Updated**: 8/29/2026 | **Import test**: passed
 
 ## What changed
 
