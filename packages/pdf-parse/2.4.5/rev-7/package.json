@@ -1,6 +1,6 @@
 {
   "name": "@depup/pdf-parse",
-  "version": "2.4.5-depup.2",
+  "version": "2.4.5-depup.7",
   "type": "module",
   "main": "dist/pdf-parse/cjs/index.cjs",
   "module": "dist/pdf-parse/esm/index.js",
@@ -133,8 +133,8 @@
     "pack": "npm outdated && npm pack --dry-run"
   },
   "dependencies": {
-    "@napi-rs/canvas": "^0.1.100",
-    "pdfjs-dist": "^5.7.284"
+    "@napi-rs/canvas": "^1.0.8",
+    "pdfjs-dist": "^6.3.289"
   },
   "devDependencies": {
     "vite": "^7.1.5",
@@ -164,17 +164,17 @@
     "changes": {
       "@napi-rs/canvas": {
         "from": "0.1.80",
-        "to": "^0.1.100"
+        "to": "^1.0.8"
       },
       "pdfjs-dist": {
         "from": "5.4.296",
-        "to": "^5.7.284"
+        "to": "^6.3.289"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "pdf-parse",
     "originalVersion": "2.4.5",
-    "processedAt": "2026-04-27T20:32:44.349Z",
+    "processedAt": "2026-08-29T16:09:03.360Z",
     "smokeTest": "passed"
   }
 }

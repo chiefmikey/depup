@@ -1,0 +1,53 @@
+{
+  "name": "@depup/octokit__types",
+  "version": "18.0.0-depup.0",
+  "description": "Shared TypeScript definitions for Octokit projects (with updated dependencies)",
+  "dependencies": {
+    "@octokit/openapi-types": "^29.0.1"
+  },
+  "repository": "github:octokit/types.ts",
+  "keywords": [
+    "@octokit/types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "github",
+    "api",
+    "sdk",
+    "toolkit",
+    "typescript"
+  ],
+  "author": "Gregor Martynus (https://twitter.com/gr2m)",
+  "license": "MIT",
+  "devDependencies": {
+    "@octokit/tsconfig": "^4.0.0",
+    "github-openapi-graphql-query": "^5.0.0",
+    "handlebars": "^4.7.6",
+    "npm-run-all2": "^9.0.0",
+    "prettier": "3.9.6",
+    "semantic-release-plugin-update-version-in-files": "^2.0.0",
+    "sort-keys": "^6.0.0",
+    "typedoc": "^0.28.0",
+    "typescript": "^5.0.0"
+  },
+  "octokit": {
+    "openapi-version": "23.0.1"
+  },
+  "files": [
+    "dist-types/**",
+    "changes.json",
+    "README.md"
+  ],
+  "types": "dist-types/index.d.ts",
+  "sideEffects": false,
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@octokit/types",
+    "originalVersion": "18.0.0",
+    "processedAt": "2026-08-29T16:08:38.536Z",
+    "smokeTest": "failed"
+  }
+}

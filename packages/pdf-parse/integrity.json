@@ -1,22 +1,5 @@
 {
   "2.4.5": {
-    "2": {
-      "changes": {
-        "@napi-rs/canvas": {
-          "from": "0.1.80",
-          "to": "^0.1.100"
-        },
-        "pdfjs-dist": {
-          "from": "5.4.296",
-          "to": "^5.7.284"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-04-27T20:32:50.720Z",
-      "version": "2.4.5-depup.2"
-    },
     "3": {
       "changes": {
         "@napi-rs/canvas": {
@@ -84,6 +67,23 @@
       "status": "published",
       "timestamp": "2026-07-29T00:39:07.581Z",
       "version": "2.4.5-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@napi-rs/canvas": {
+          "from": "0.1.80",
+          "to": "^1.0.8"
+        },
+        "pdfjs-dist": {
+          "from": "5.4.296",
+          "to": "^6.3.289"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-29T16:09:13.502Z",
+      "version": "2.4.5-depup.7"
     }
   }
 }

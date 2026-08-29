@@ -50,6 +50,31 @@
       "status": "published",
       "timestamp": "2026-08-02T00:53:26.386Z",
       "version": "6.0.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@octokit/oauth-methods": {
+          "from": "^6.0.3",
+          "to": "^6.0.4"
+        },
+        "@octokit/request": {
+          "from": "^10.0.13",
+          "to": "^10.0.15"
+        },
+        "@octokit/types": {
+          "from": "^17.0.0",
+          "to": "^18.0.0"
+        },
+        "universal-user-agent": {
+          "from": "^7.0.0",
+          "to": "^7.0.3"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-29T16:08:49.849Z",
+      "version": "6.0.3-depup.1"
     }
   }
 }
