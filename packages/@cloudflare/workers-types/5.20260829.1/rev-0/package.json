@@ -1,0 +1,27 @@
+{
+  "name": "@depup/cloudflare__workers-types",
+  "description": "TypeScript typings for Cloudflare Workers (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudflare/workerd"
+  },
+  "author": "Cloudflare Workers DevProd Team <workers-devprod@cloudflare.com> (https://workers.cloudflare.com)",
+  "license": "MIT OR Apache-2.0",
+  "version": "5.20260829.1-depup.0",
+  "keywords": [
+    "@cloudflare/workers-types",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@cloudflare/workers-types",
+    "originalVersion": "5.20260829.1",
+    "processedAt": "2026-08-29T08:10:03.371Z",
+    "smokeTest": "failed"
+  }
+}
