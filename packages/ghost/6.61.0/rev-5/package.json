@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.61.0-depup.0",
+  "version": "6.61.0-depup.5",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,13 +46,13 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1119.0",
+    "@aws-sdk/client-s3": "^3.1121.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "^6.0.0",
     "@faker-js/faker": "^10.6.0",
     "@isaacs/ttlcache": "^2.1.5",
-    "@sentry/node": "^10.71.0",
-    "@slack/webhook": "^8.0.1",
+    "@sentry/node": "^10.72.0",
+    "@slack/webhook": "^8.0.2",
     "@tryghost/api-framework": "^3.3.10",
     "@tryghost/bookshelf-plugins": "^2.3.11",
     "@tryghost/brute-knex": "3.2.2",
@@ -92,9 +92,9 @@
     "@tryghost/validator": "^3.2.10",
     "@tryghost/version": "^2.3.10",
     "@tryghost/zip": "^3.5.9",
-    "@x402/core": "^2.23.0",
-    "@x402/evm": "^2.23.0",
-    "@x402/hono": "^2.23.0",
+    "@x402/core": "^2.24.0",
+    "@x402/evm": "^2.24.0",
+    "@x402/hono": "^2.24.0",
     "archiver": "8.0.0",
     "body-parser": "^2.3.0",
     "bookshelf": "1.2.0",
@@ -127,7 +127,7 @@
     "express-query-boolean": "2.0.0",
     "express-queue": "0.0.13",
     "express-session": "1.19.0",
-    "fastq": "^1.20.1",
+    "fastq": "^1.20.2",
     "file-type": "^22.0.2",
     "form-data": "4.0.6",
     "fs-extra": "^11.4.0",
@@ -168,13 +168,13 @@
     "mingo": "^7.2.4",
     "moment": "^2.30.1",
     "moment-timezone": "^0.6.3",
-    "mppx": "^0.9.0",
-    "multer": "2.2.0",
+    "mppx": "^0.9.1",
+    "multer": "^2.3.0",
     "mysql2": "^3.24.2",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
     "node-jose": "2.2.0",
-    "nodemailer": "^9.0.5",
+    "nodemailer": "^9.0.6",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -189,14 +189,14 @@
     "stoppable": "1.1.0",
     "stripe": "^22.6.0",
     "temporal-polyfill": "^1.0.4",
-    "terser": "^5.51.1",
+    "terser": "^5.51.2",
     "tiny-glob": "0.2.9",
     "tldts": "^7.4.11",
     "type-fest": "^5.8.0",
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
     "xml": "1.0.1",
-    "zod": "4.4.3",
+    "zod": "^4.5.1",
     "@tryghost/adapter-base-redirects": "file:components/tryghost-adapter-base-redirects-0.0.0.tgz",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.0.tgz",
     "@tryghost/adapter-base-route-settings": "file:components/tryghost-adapter-base-route-settings-0.0.0.tgz",
@@ -233,7 +233,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1119.0"
+        "to": "^3.1121.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -249,11 +249,11 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^10.71.0"
+        "to": "^10.72.0"
       },
       "@slack/webhook": {
         "from": "7.1.0",
-        "to": "^8.0.1"
+        "to": "^8.0.2"
       },
       "@tryghost/api-framework": {
         "from": "3.3.9",
@@ -349,15 +349,15 @@
       },
       "@x402/core": {
         "from": "2.12.0",
-        "to": "^2.23.0"
+        "to": "^2.24.0"
       },
       "@x402/evm": {
         "from": "2.12.0",
-        "to": "^2.23.0"
+        "to": "^2.24.0"
       },
       "@x402/hono": {
         "from": "2.12.0",
-        "to": "^2.23.0"
+        "to": "^2.24.0"
       },
       "body-parser": {
         "from": "1.20.6",
@@ -398,6 +398,10 @@
       "express-hbs": {
         "from": "2.5.0",
         "to": "^3.0.0"
+      },
+      "fastq": {
+        "from": "^1.20.1",
+        "to": "^1.20.2"
       },
       "file-type": {
         "from": "21.3.4",
@@ -517,7 +521,11 @@
       },
       "mppx": {
         "from": "0.6.20",
-        "to": "^0.9.0"
+        "to": "^0.9.1"
+      },
+      "multer": {
+        "from": "2.2.0",
+        "to": "^2.3.0"
       },
       "mysql2": {
         "from": "3.22.5",
@@ -525,7 +533,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^9.0.5"
+        "to": "^9.0.6"
       },
       "otplib": {
         "from": "12.0.1",
@@ -557,7 +565,7 @@
       },
       "terser": {
         "from": "5.48.0",
-        "to": "^5.51.1"
+        "to": "^5.51.2"
       },
       "tldts": {
         "from": "^7.4.4",
@@ -570,12 +578,16 @@
       "ua-parser-js": {
         "from": "1.0.41",
         "to": "^2.0.10"
+      },
+      "zod": {
+        "from": "4.4.3",
+        "to": "^4.5.1"
       }
     },
-    "depsUpdated": 85,
+    "depsUpdated": 88,
     "originalPackage": "ghost",
     "originalVersion": "6.61.0",
-    "processedAt": "2026-08-27T11:24:45.591Z",
+    "processedAt": "2026-08-29T00:28:58.445Z",
     "smokeTest": "failed"
   }
 }
