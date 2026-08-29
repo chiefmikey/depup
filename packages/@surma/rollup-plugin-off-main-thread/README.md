@@ -12,7 +12,7 @@ npm install @depup/surma__rollup-plugin-off-main-thread
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.3 | **DepUp version**: 2.2.3-depup.4 | **Updated**: 8/13/2026 | **Import test**: passed
+**Original version**: 2.2.3 | **DepUp version**: 2.2.3-depup.5 | **Updated**: 8/29/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | ejs | `^3.1.6` | `^6.0.1` |
 | json5 | `^2.2.0` | `^2.2.3` |
-| magic-string | `^0.25.0` | `^1.2.0` |
-| string.prototype.matchall | `^4.0.6` | `^4.0.12` |
+| magic-string | `^0.25.0` | `^1.2.3` |
+| string.prototype.matchall | `^4.0.6` | `^4.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/surma__rollup-plugin-off-main-thread&labels=bug).

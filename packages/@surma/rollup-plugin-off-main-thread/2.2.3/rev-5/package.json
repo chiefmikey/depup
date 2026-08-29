@@ -1,7 +1,7 @@
 {
   "name": "@depup/surma__rollup-plugin-off-main-thread",
-  "version": "2.2.3-depup.0",
-  "description": "[DepUp] Use Rollup with workers and ES6 modules today.",
+  "version": "2.2.3-depup.5",
+  "description": "Use Rollup with workers and ES6 modules today. (with updated dependencies)",
   "main": "index.js",
   "scripts": {
     "fmt": "prettier --write 'tests/**/*.js' *.js *.md *.json",
@@ -28,22 +28,24 @@
     "url": "https://github.com/surma/rollup-plugin-off-main-thread"
   },
   "dependencies": {
-    "ejs": "^5.0.1",
+    "ejs": "^6.0.1",
     "json5": "^2.2.3",
-    "magic-string": "^0.30.21",
-    "string.prototype.matchall": "^4.0.12"
+    "magic-string": "^1.2.3",
+    "string.prototype.matchall": "^4.1.0"
   },
   "keywords": [
+    "@surma/rollup-plugin-off-main-thread",
     "depup",
-    "dependency-bumped",
-    "updated-deps",
-    "@surma/rollup-plugin-off-main-thread"
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
   ],
   "depup": {
     "changes": {
       "ejs": {
         "from": "^3.1.6",
-        "to": "^5.0.1"
+        "to": "^6.0.1"
       },
       "json5": {
         "from": "^2.2.0",
@@ -51,17 +53,17 @@
       },
       "magic-string": {
         "from": "^0.25.0",
-        "to": "^0.30.21"
+        "to": "^1.2.3"
       },
       "string.prototype.matchall": {
         "from": "^4.0.6",
-        "to": "^4.0.12"
+        "to": "^4.1.0"
       }
     },
     "depsUpdated": 4,
     "originalPackage": "@surma/rollup-plugin-off-main-thread",
     "originalVersion": "2.2.3",
-    "processedAt": "2026-03-17T16:34:19.102Z",
+    "processedAt": "2026-08-29T00:28:57.150Z",
     "smokeTest": "passed"
   }
 }
