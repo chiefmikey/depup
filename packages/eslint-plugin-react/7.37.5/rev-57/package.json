@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-react",
-  "version": "7.37.5-depup.52",
+  "version": "7.37.5-depup.57",
   "author": "Yannick Croissant <yannick.croissant+npm@gmail.com>",
   "description": "React specific linting rules for ESLint (with updated dependencies)",
   "main": "index.js",
@@ -44,14 +44,14 @@
     "estraverse": "^5.3.0",
     "hasown": "^2.0.4",
     "jsx-ast-utils": "^3.3.5",
-    "minimatch": "^10.2.5",
+    "minimatch": "^10.2.6",
     "object.entries": "^1.1.9",
     "object.fromentries": "^2.0.8",
     "object.values": "^1.2.1",
     "prop-types": "^15.8.1",
     "resolve": "^2.0.0-next.5",
     "semver": "^7.8.5",
-    "string.prototype.matchall": "^4.0.12",
+    "string.prototype.matchall": "^4.1.0",
     "string.prototype.repeat": "^1.0.0"
   },
   "devDependencies": {
@@ -130,17 +130,21 @@
       },
       "minimatch": {
         "from": "^3.1.2",
-        "to": "^10.2.5"
+        "to": "^10.2.6"
       },
       "semver": {
         "from": "^6.3.1",
         "to": "^7.8.5"
+      },
+      "string.prototype.matchall": {
+        "from": "^4.0.12",
+        "to": "^4.1.0"
       }
     },
-    "depsUpdated": 7,
+    "depsUpdated": 8,
     "originalPackage": "eslint-plugin-react",
     "originalVersion": "7.37.5",
-    "processedAt": "2026-07-11T00:33:40.312Z",
+    "processedAt": "2026-08-29T00:29:18.060Z",
     "smokeTest": "passed"
   }
 }

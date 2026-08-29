@@ -601,5 +601,15 @@
       "timestamp": "2026-08-24T08:18:09.153Z",
       "version": "12.28.0-depup.0"
     }
+  },
+  "12.28.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-29T00:30:51.548Z",
+      "version": "12.28.1-depup.0"
+    }
   }
 }

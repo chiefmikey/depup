@@ -50,7 +50,7 @@
     },
     "@graphql-codegen/plugin-helpers": {
       "from": "^2.7.2",
-      "to": "^7.2.0"
+      "to": "^7.2.1"
     },
     "@graphql-codegen/typescript": {
       "from": "^2.8.8",
@@ -86,7 +86,7 @@
     },
     "@pmmmwh/react-refresh-webpack-plugin": {
       "from": "0.5",
-      "to": "^0.6.2"
+      "to": "^0.6.3"
     },
     "@types/http-proxy": {
       "from": "^1.17.11",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.67.0"
+      "to": "^8.68.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.67.0"
+      "to": "^8.68.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.19.0"
+      "to": "^1.20.0"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -174,7 +174,7 @@
     },
     "css-loader": {
       "from": "^5.2.7",
-      "to": "^7.1.4"
+      "to": "^7.1.5"
     },
     "css-minimizer-webpack-plugin": {
       "from": "^2.0.0",
@@ -202,7 +202,7 @@
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.9.0"
+      "to": "^10.9.1"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -246,7 +246,7 @@
     },
     "fastq": {
       "from": "^1.15.0",
-      "to": "^1.20.1"
+      "to": "^1.20.2"
     },
     "find-cache-dir": {
       "from": "^3.3.2",
@@ -274,7 +274,7 @@
     },
     "graphql-compose": {
       "from": "^9.0.10",
-      "to": "^9.1.0"
+      "to": "^9.2.0"
     },
     "graphql-http": {
       "from": "^1.19.0",
@@ -338,7 +338,7 @@
     },
     "multer": {
       "from": "^2.0.1",
-      "to": "^2.2.0"
+      "to": "^2.3.0"
     },
     "node-fetch": {
       "from": "^2.6.11",
@@ -346,7 +346,7 @@
     },
     "node-html-parser": {
       "from": "^5.4.2",
-      "to": "^9.0.1"
+      "to": "^9.0.2"
     },
     "p-defer": {
       "from": "^3.0.0",
@@ -438,7 +438,7 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.109.2"
+      "to": "^5.110.1"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
@@ -450,13 +450,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.32.5"
+      "to": "^5.32.6"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-08-22T08:07:52.130Z",
+  "timestamp": "2026-08-29T00:29:02.134Z",
   "totalUpdated": 114
 }

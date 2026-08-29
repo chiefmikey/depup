@@ -22,13 +22,17 @@
     },
     "minimatch": {
       "from": "^3.1.2",
-      "to": "^10.2.5"
+      "to": "^10.2.6"
     },
     "semver": {
       "from": "^6.3.1",
       "to": "^7.8.5"
+    },
+    "string.prototype.matchall": {
+      "from": "^4.0.12",
+      "to": "^4.1.0"
     }
   },
-  "timestamp": "2026-07-11T00:33:28.222Z",
-  "totalUpdated": 7
+  "timestamp": "2026-08-29T00:28:58.272Z",
+  "totalUpdated": 8
 }
