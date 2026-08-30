@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.61.0-depup.4",
+  "version": "6.61.0-depup.9",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -127,7 +127,7 @@
     "express-query-boolean": "2.0.0",
     "express-queue": "0.0.13",
     "express-session": "1.19.0",
-    "fastq": "^1.20.2",
+    "fastq": "^1.20.3",
     "file-type": "^22.0.2",
     "form-data": "4.0.6",
     "fs-extra": "^11.4.0",
@@ -196,7 +196,7 @@
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
     "xml": "1.0.1",
-    "zod": "^4.5.1",
+    "zod": "^4.5.4",
     "@tryghost/adapter-base-redirects": "file:components/tryghost-adapter-base-redirects-0.0.0.tgz",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.0.tgz",
     "@tryghost/adapter-base-route-settings": "file:components/tryghost-adapter-base-route-settings-0.0.0.tgz",
@@ -401,7 +401,7 @@
       },
       "fastq": {
         "from": "^1.20.1",
-        "to": "^1.20.2"
+        "to": "^1.20.3"
       },
       "file-type": {
         "from": "21.3.4",
@@ -581,13 +581,13 @@
       },
       "zod": {
         "from": "4.4.3",
-        "to": "^4.5.1"
+        "to": "^4.5.4"
       }
     },
     "depsUpdated": 88,
     "originalPackage": "ghost",
     "originalVersion": "6.61.0",
-    "processedAt": "2026-08-28T20:02:53.882Z",
+    "processedAt": "2026-08-30T08:10:48.651Z",
     "smokeTest": "failed"
   }
 }
