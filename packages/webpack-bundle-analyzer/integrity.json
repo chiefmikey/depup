@@ -319,5 +319,40 @@
       "timestamp": "2026-07-26T01:07:30.959Z",
       "version": "5.3.1-depup.2"
     }
+  },
+  "5.3.2": {
+    "0": {
+      "changes": {
+        "@discoveryjs/json-ext": {
+          "from": "^0.6.3",
+          "to": "^1.1.0"
+        },
+        "acorn": {
+          "from": "^8.0.4",
+          "to": "^8.18.0"
+        },
+        "acorn-walk": {
+          "from": "^8.0.0",
+          "to": "^8.3.5"
+        },
+        "commander": {
+          "from": "^14.0.2",
+          "to": "^15.0.0"
+        },
+        "picocolors": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-30T01:01:27.837Z",
+      "version": "5.3.2-depup.0"
+    }
   }
 }

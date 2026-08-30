@@ -60,5 +60,20 @@
       "timestamp": "2026-08-29T16:08:59.242Z",
       "version": "11.0.4-depup.1"
     }
+  },
+  "11.0.5": {
+    "0": {
+      "changes": {
+        "universal-user-agent": {
+          "from": "^7.0.2",
+          "to": "^7.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-30T00:55:24.957Z",
+      "version": "11.0.5-depup.0"
+    }
   }
 }

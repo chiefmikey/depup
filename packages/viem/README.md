@@ -12,18 +12,18 @@ npm install @depup/viem
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.55.19 | **DepUp version**: 2.55.19-depup.0 | **Updated**: 8/23/2026 | **Import test**: failed
+**Original version**: 2.56.0 | **DepUp version**: 2.56.0-depup.0 | **Updated**: 8/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @noble/curves | `1.9.1` | `^2.3.0` |
-| @noble/hashes | `1.8.0` | `^2.3.0` |
-| @scure/bip32 | `1.7.0` | `^2.3.0` |
-| @scure/bip39 | `1.6.0` | `^2.3.0` |
+| @noble/curves | `1.9.1` | `^2.4.0` |
+| @noble/hashes | `1.8.0` | `^2.4.0` |
+| @scure/bip32 | `1.7.0` | `^2.4.0` |
+| @scure/bip39 | `1.6.0` | `^2.4.0` |
 | abitype | `1.2.3` | `^1.3.0` |
-| ox | `0.14.34` | `^1.7.1` |
+| ox | `0.14.34` | `^1.7.2` |
 | ws | `8.21.0` | `^8.21.3` |
 
 

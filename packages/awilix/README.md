@@ -12,7 +12,7 @@ npm install @depup/awilix
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.0.5 | **DepUp version**: 13.0.5-depup.37 | **Updated**: 8/23/2026 | **Import test**: passed
+**Original version**: 13.0.5 | **DepUp version**: 13.0.5-depup.38 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 

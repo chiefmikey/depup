@@ -12,18 +12,18 @@ npm install @depup/webpack-bundle-analyzer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.3.1 | **DepUp version**: 5.3.1-depup.2 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 5.3.2 | **DepUp version**: 5.3.2-depup.0 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @discoveryjs/json-ext | `^0.6.3` | `^1.1.0` |
-| acorn | `^8.0.4` | `^8.17.0` |
+| acorn | `^8.0.4` | `^8.18.0` |
 | acorn-walk | `^8.0.0` | `^8.3.5` |
 | commander | `^14.0.2` | `^15.0.0` |
 | picocolors | `^1.0.0` | `^1.1.1` |
-| ws | `^8.19.0` | `^8.21.1` |
+| ws | `^8.19.0` | `^8.21.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-bundle-analyzer&labels=bug).
