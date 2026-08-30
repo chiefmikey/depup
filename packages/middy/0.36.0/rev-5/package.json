@@ -1,7 +1,7 @@
 {
   "name": "@depup/middy",
-  "version": "0.36.0-depup.0",
-  "description": "[DepUp] 🛵 The stylish Node.js middleware engine for AWS Lambda",
+  "version": "0.36.0-depup.5",
+  "description": "🛵 The stylish Node.js middleware engine for AWS Lambda (with updated dependencies)",
   "main": "./index.js",
   "files": [
     "src",
@@ -31,10 +31,12 @@
     "url": "git+https://github.com/middyjs/middy.git"
   },
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "middy",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "Lambda",
     "Middleware",
     "Serverless",
@@ -71,18 +73,18 @@
     "typings-tester": "^0.3.2"
   },
   "dependencies": {
-    "@types/aws-lambda": "^8.10.161",
+    "@types/aws-lambda": "^8.10.162",
     "@types/http-errors": "^2.0.5",
-    "ajv": "^8.18.0",
+    "ajv": "^8.20.0",
     "ajv-i18n": "^4.2.0",
     "ajv-keywords": "^5.1.0",
     "busboy": "^1.6.0",
-    "content-type": "^1.0.5",
+    "content-type": "^3.0.0",
     "http-errors": "^2.0.1",
     "json-mask": "^2.0.0",
-    "negotiator": "^1.0.0",
+    "negotiator": "^1.1.0",
     "once": "^1.4.0",
-    "qs": "^6.15.0",
+    "qs": "^6.16.0",
     "querystring": "^0.2.1"
   },
   "jest": {
@@ -105,7 +107,7 @@
     "changes": {
       "@types/aws-lambda": {
         "from": "^8.10.45",
-        "to": "^8.10.161"
+        "to": "^8.10.162"
       },
       "@types/http-errors": {
         "from": "^1.6.3",
@@ -113,7 +115,7 @@
       },
       "ajv": {
         "from": "^6.9.1",
-        "to": "^8.18.0"
+        "to": "^8.20.0"
       },
       "ajv-i18n": {
         "from": "^3.4.0",
@@ -129,7 +131,7 @@
       },
       "content-type": {
         "from": "^1.0.4",
-        "to": "^1.0.5"
+        "to": "^3.0.0"
       },
       "http-errors": {
         "from": "^1.7.3",
@@ -141,11 +143,11 @@
       },
       "negotiator": {
         "from": "^0.6.1",
-        "to": "^1.0.0"
+        "to": "^1.1.0"
       },
       "qs": {
         "from": "^6.6.0",
-        "to": "^6.15.0"
+        "to": "^6.16.0"
       },
       "querystring": {
         "from": "^0.2.0",
@@ -155,7 +157,7 @@
     "depsUpdated": 12,
     "originalPackage": "middy",
     "originalVersion": "0.36.0",
-    "processedAt": "2026-03-17T19:31:06.164Z",
+    "processedAt": "2026-08-30T01:04:00.386Z",
     "smokeTest": "passed"
   }
 }

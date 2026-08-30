@@ -12,7 +12,7 @@ npm install @depup/co-body
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.2 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 6.2.0 | **DepUp version**: 6.2.0-depup.3 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @hapi/bourne | `^3.0.0` | `^4.0.1` |
 | inflation | `^2.0.0` | `^2.1.0` |
-| qs | `^6.5.2` | `^6.15.3` |
+| qs | `^6.5.2` | `^6.16.0` |
 | raw-body | `^2.3.3` | `^4.0.0` |
 | type-is | `^1.6.16` | `^2.1.0` |
 
