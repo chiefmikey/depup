@@ -1,0 +1,78 @@
+{
+  "bumped": {
+    "@portabletext/editor": {
+      "from": "^8.0.2",
+      "to": "^8.1.0"
+    },
+    "@portabletext/plugin-dnd": {
+      "from": "^2.0.2",
+      "to": "^2.0.4"
+    },
+    "@portabletext/plugin-list-index": {
+      "from": "^2.0.2",
+      "to": "^2.0.4"
+    },
+    "@portabletext/plugin-markdown-shortcuts": {
+      "from": "^9.0.2",
+      "to": "^9.0.4"
+    },
+    "@portabletext/plugin-one-line": {
+      "from": "^8.0.2",
+      "to": "^8.0.4"
+    },
+    "@portabletext/plugin-paste-link": {
+      "from": "^5.0.2",
+      "to": "^5.0.4"
+    },
+    "@portabletext/plugin-table": {
+      "from": "^2.0.2",
+      "to": "^2.0.4"
+    },
+    "@portabletext/plugin-typography": {
+      "from": "^9.0.2",
+      "to": "^9.0.4"
+    },
+    "@sanity/cli": {
+      "from": "^8.3.0",
+      "to": "^8.5.0"
+    },
+    "@sanity/client": {
+      "from": "^8.2.0",
+      "to": "^8.4.0"
+    },
+    "@sanity/diff-patch": {
+      "from": "^5.0.0",
+      "to": "^6.0.0"
+    },
+    "@sanity/sdk-react": {
+      "from": "^2.20.1",
+      "to": "^3.0.0"
+    },
+    "@sanity/ui": {
+      "from": "^4.0.6",
+      "to": "^4.0.7"
+    },
+    "@sentry/react": {
+      "from": "^10.70.0",
+      "to": "^10.72.0"
+    },
+    "isomorphic-dompurify": {
+      "from": "2.36.0",
+      "to": "^3.23.0"
+    },
+    "use-effect-event": {
+      "from": "^2.0.3",
+      "to": "^2.0.4"
+    },
+    "web-vitals": {
+      "from": "^6.1.1",
+      "to": "^6.2.1"
+    },
+    "xstate": {
+      "from": "^5.32.5",
+      "to": "^5.32.6"
+    }
+  },
+  "timestamp": "2026-08-30T00:59:21.951Z",
+  "totalUpdated": 18
+}

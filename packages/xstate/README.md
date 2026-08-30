@@ -12,7 +12,7 @@ npm install @depup/xstate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.32.5 | **DepUp version**: 5.32.5-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.32.6 | **DepUp version**: 5.32.6-depup.0 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 

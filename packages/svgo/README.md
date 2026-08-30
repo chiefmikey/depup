@@ -12,17 +12,16 @@ npm install @depup/svgo
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.3 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 4.1.0 | **DepUp version**: 4.1.0-depup.0 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | commander | `^11.1.0` | `^15.0.0` |
-| css-select | `^5.1.0` | `^7.0.0` |
+| css-select | `^6.0.0` | `^7.0.0` |
 | css-tree | `^3.0.1` | `^3.2.1` |
-| css-what | `^6.1.0` | `^8.0.0` |
-| sax | `^1.5.0` | `^1.6.0` |
+| css-what | `^7.0.0` | `^8.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/svgo&labels=bug).

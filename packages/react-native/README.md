@@ -12,7 +12,7 @@ npm install @depup/react-native
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.87.0 | **DepUp version**: 0.87.0-depup.0 | **Updated**: 8/16/2026 | **Import test**: failed
+**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.0 | **Updated**: 8/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-plugin-syntax-hermes-parser | `0.36.1` | `^0.37.0` |
 | commander | `^12.0.0` | `^15.0.0` |
 | memoize-one | `^5.0.0` | `^6.0.0` |
-| pretty-format | `^29.7.0` | `^30.4.1` |
+| pretty-format | `^29.7.0` | `^30.5.0` |
 | react-devtools-core | `^6.1.5` | `^7.0.1` |
 | react-refresh | `^0.14.0` | `^0.18.0` |
 | regenerator-runtime | `^0.13.2` | `^0.14.1` |
