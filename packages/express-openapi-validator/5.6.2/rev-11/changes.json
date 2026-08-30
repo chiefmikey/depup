@@ -2,7 +2,7 @@
   "bumped": {
     "@apidevtools/json-schema-ref-parser": {
       "from": "^14.2.1",
-      "to": "^15.5.0"
+      "to": "^16.0.1"
     },
     "@types/multer": {
       "from": "^2.0.0",
@@ -14,7 +14,7 @@
     },
     "content-type": {
       "from": "^1.0.5",
-      "to": "^2.0.0"
+      "to": "^3.0.0"
     },
     "media-typer": {
       "from": "^1.1.0",
@@ -22,7 +22,7 @@
     },
     "multer": {
       "from": "^2.0.2",
-      "to": "^2.2.0"
+      "to": "^2.3.0"
     },
     "path-to-regexp": {
       "from": "^8.3.0",
@@ -30,9 +30,9 @@
     },
     "qs": {
       "from": "^6.14.1",
-      "to": "^6.15.3"
+      "to": "^6.16.0"
     }
   },
-  "timestamp": "2026-07-21T17:23:08.661Z",
+  "timestamp": "2026-08-30T01:03:36.022Z",
   "totalUpdated": 8
 }

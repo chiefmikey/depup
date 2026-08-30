@@ -1,6 +1,6 @@
 {
   "name": "@depup/kubernetes-client",
-  "version": "9.0.0-depup.3",
+  "version": "9.0.0-depup.8",
   "description": "Simplified Kubernetes API client. (with updated dependencies)",
   "main": "lib/index.js",
   "types": "./typings/index.d.ts",
@@ -41,19 +41,19 @@
     "README.md"
   ],
   "dependencies": {
-    "@kubernetes/client-node": "^1.4.0",
+    "@kubernetes/client-node": "^2.0.0",
     "camelcase": "^9.0.0",
     "deepmerge": "^4.3.1",
     "depd": "^2.0.0",
-    "js-yaml": "^4.2.0",
+    "js-yaml": "^5.4.1",
     "json-stream": "^1.0.0",
-    "openid-client": "^6.8.4",
+    "openid-client": "^6.8.7",
     "pump": "^3.0.4",
-    "qs": "^6.15.2",
+    "qs": "^6.16.0",
     "request": "^2.88.2",
     "swagger-fluent": "^5.0.3",
     "url-join": "^5.0.0",
-    "ws": "^8.21.0"
+    "ws": "^8.21.3"
   },
   "devDependencies": {
     "@types/node": "13.13.4",
@@ -77,7 +77,7 @@
     "changes": {
       "@kubernetes/client-node": {
         "from": "0.10.2",
-        "to": "^1.4.0"
+        "to": "^2.0.0"
       },
       "camelcase": {
         "from": "^6.0.0",
@@ -89,11 +89,11 @@
       },
       "js-yaml": {
         "from": "^3.13.1",
-        "to": "^4.2.0"
+        "to": "^5.4.1"
       },
       "openid-client": {
         "from": "^3.14.0",
-        "to": "^6.8.4"
+        "to": "^6.8.7"
       },
       "pump": {
         "from": "^3.0.0",
@@ -101,7 +101,7 @@
       },
       "qs": {
         "from": "^6.9.0",
-        "to": "^6.15.2"
+        "to": "^6.16.0"
       },
       "url-join": {
         "from": "^4.0.1",
@@ -109,13 +109,13 @@
       },
       "ws": {
         "from": "^7.2.3",
-        "to": "^8.21.0"
+        "to": "^8.21.3"
       }
     },
     "depsUpdated": 9,
     "originalPackage": "kubernetes-client",
     "originalVersion": "9.0.0",
-    "processedAt": "2026-06-01T02:17:26.267Z",
+    "processedAt": "2026-08-30T01:04:49.588Z",
     "smokeTest": "passed"
   }
 }

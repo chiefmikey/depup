@@ -13,7 +13,7 @@
     "util",
     "utility"
   ],
-  "version": "4.0.1-depup.52",
+  "version": "4.0.1-depup.57",
   "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
   "repository": {
     "type": "git",
@@ -48,7 +48,7 @@
     "json-stringify-safe": "~5.0.1",
     "mime-types": "^3.0.2",
     "performance-now": "^2.1.0",
-    "qs": "^6.15.3",
+    "qs": "^6.16.0",
     "safe-buffer": "^5.2.1",
     "tough-cookie": "^6.0.2",
     "tunnel-agent": "^0.6.0"
@@ -108,7 +108,7 @@
       },
       "qs": {
         "from": "^6.15.2",
-        "to": "^6.15.3"
+        "to": "^6.16.0"
       },
       "safe-buffer": {
         "from": "^5.1.2",
@@ -122,7 +122,7 @@
     "depsUpdated": 7,
     "originalPackage": "@cypress/request",
     "originalVersion": "4.0.1",
-    "processedAt": "2026-07-09T00:27:48.530Z",
+    "processedAt": "2026-08-30T01:03:50.872Z",
     "smokeTest": "passed"
   }
 }
