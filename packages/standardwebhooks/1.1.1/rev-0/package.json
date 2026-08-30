@@ -1,0 +1,58 @@
+{
+  "name": "@depup/standardwebhooks",
+  "version": "1.1.1-depup.0",
+  "description": "Standard Webhooks for TypeScript (with updated dependencies)",
+  "author": "Standard Webhooks",
+  "repository": "https://github.com/standard-webhooks/standard-webhooks",
+  "homepage": "https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/javascript",
+  "type": "commonjs",
+  "keywords": [
+    "standardwebhooks",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webhooks",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "!dist/**/*.test.*",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/*.test.js",
+    "check": "biome check",
+    "check:fix": "biome check --write",
+    "fmt": "biome format --write"
+  },
+  "dependencies": {
+    "@stablelib/base64": "^2.0.1",
+    "fast-sha256": "^1.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@stablelib/utf8": "^2.0.0",
+    "@types/node": "^26.1.0",
+    "typescript": "^5.3.3"
+  },
+  "depup": {
+    "changes": {
+      "@stablelib/base64": {
+        "from": "^1.0.0",
+        "to": "^2.0.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "standardwebhooks",
+    "originalVersion": "1.1.1",
+    "processedAt": "2026-08-30T00:59:07.749Z",
+    "smokeTest": "passed"
+  }
+}

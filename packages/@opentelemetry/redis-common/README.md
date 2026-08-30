@@ -12,7 +12,7 @@ npm install @depup/opentelemetry__redis-common
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.38.3 | **DepUp version**: 0.38.3-depup.52 | **Updated**: 8/9/2026 | **Import test**: passed
+**Original version**: 0.38.3 | **DepUp version**: 0.38.3-depup.53 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 

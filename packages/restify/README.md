@@ -12,28 +12,25 @@ npm install @depup/restify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.1.0 | **DepUp version**: 11.1.0-depup.60 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.0 | **Updated**: 8/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| csv | `^6.2.2` | `^6.6.1` |
-| find-my-way | `^7.2.0` | `^9.7.0` |
+| csv | `^6.2.2` | `^6.6.3` |
+| find-my-way | `^9.6.0` | `^9.9.0` |
 | formidable | `^1.2.1` | `^3.5.4` |
 | http-signature | `^1.3.6` | `^1.4.0` |
 | lodash | `^4.17.11` | `^4.18.1` |
 | lru-cache | `^7.14.1` | `^11.5.2` |
 | mime | `^3.0.0` | `^4.1.0` |
-| negotiator | `^0.6.2` | `^1.0.0` |
+| negotiator | `^0.6.2` | `^1.1.0` |
 | pidusage | `^3.0.2` | `^4.0.1` |
 | pino | `^8.7.0` | `^10.3.1` |
-| qs | `^6.7.0` | `^6.15.3` |
+| qs | `^6.15.2` | `^6.16.0` |
 | restify-errors | `^8.0.2` | `^8.1.0` |
 | semver | `^7.3.8` | `^7.8.5` |
-| send | `^0.18.0` | `^1.2.1` |
-| spdy | `^4.0.0` | `^4.0.2` |
-| uuid | `^9.0.0` | `^14.0.1` |
 | vasync | `^2.2.0` | `^2.2.1` |
 
 
