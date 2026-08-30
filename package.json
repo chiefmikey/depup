@@ -20,14 +20,14 @@
   "dependencies": {
     "chalk": "6.0.0",
     "commander": "15.0.0",
-    "inquirer": "14.1.0",
+    "inquirer": "14.2.0",
     "npm-registry-fetch": "20.0.1",
     "ora": "9.4.1",
     "pacote": "22.0.0",
     "semver": "7.8.5"
   },
   "devDependencies": {
-    "eslint": "10.8.1",
+    "eslint": "10.9.1",
     "jest": "30.4.2",
     "mikey-pro": "10.3.4",
     "prettier": "3.9.6",
