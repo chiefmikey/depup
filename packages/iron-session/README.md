@@ -12,15 +12,11 @@ npm install @depup/iron-session
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.4 | **DepUp version**: 8.0.4-depup.1 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.0 | **Updated**: 8/31/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| cookie | `^0.7.2` | `^2.0.1` |
-| iron-webcrypto | `^1.2.1` | `^2.0.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/iron-session&labels=bug).
 

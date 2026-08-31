@@ -1,6 +1,6 @@
 {
   "name": "@depup/p-memoize",
-  "version": "8.0.0-depup.0",
+  "version": "8.0.0-depup.5",
   "description": "Memoize promise-returning & async functions (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/p-memoize",
@@ -57,7 +57,7 @@
   ],
   "dependencies": {
     "mimic-function": "^5.0.1",
-    "type-fest": "^5.4.4"
+    "type-fest": "^5.9.0"
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^8.0.1",
@@ -92,13 +92,13 @@
     "changes": {
       "type-fest": {
         "from": "^4.41.0",
-        "to": "^5.4.4"
+        "to": "^5.9.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "p-memoize",
     "originalVersion": "8.0.0",
-    "processedAt": "2026-03-19T03:31:53.580Z",
+    "processedAt": "2026-08-31T00:36:24.307Z",
     "smokeTest": "passed"
   }
 }

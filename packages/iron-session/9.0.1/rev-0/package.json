@@ -1,0 +1,111 @@
+{
+  "name": "@depup/iron-session",
+  "version": "9.0.1-depup.0",
+  "description": "Secure, stateless, and cookie-based session library for JavaScript (with updated dependencies)",
+  "keywords": [
+    "iron-session",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cookie",
+    "encryption",
+    "next.js",
+    "node.js",
+    "secure",
+    "session",
+    "stateless"
+  ],
+  "bugs": "https://github.com/vvo/iron-session/issues",
+  "license": "MIT",
+  "author": "Vincent Voyer <vincent@codeagain.com> (https://github.com/vvo)",
+  "repository": {
+    "type": "git",
+    "url": "github:vvo/iron-session"
+  },
+  "funding": [
+    "https://github.com/sponsors/vvo",
+    "https://github.com/sponsors/brc-dd"
+  ],
+  "files": [
+    "dist/*",
+    "MIGRATION.md",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "cookie": "^2.0.1",
+    "iron-webcrypto": "^2.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "@playwright/test": "1.62.1",
+    "@size-limit/preset-small-lib": "13.0.3",
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.7",
+    "concurrently": "10.0.5",
+    "next": "16.3.3",
+    "oxfmt": "0.65.0",
+    "oxlint": "1.80.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "publint": "0.3.24",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "size-limit": "13.0.3",
+    "tsdown": "0.22.14",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "unrun": "0.3.1"
+  },
+  "size-limit": [
+    {
+      "name": "iron-session, with cookie + iron-webcrypto",
+      "path": "dist/index.js",
+      "limit": "6.25 kB",
+      "gzip": true
+    },
+    {
+      "name": "iron-session alone",
+      "path": "dist/index.js",
+      "import": "*",
+      "ignore": [
+        "cookie",
+        "iron-webcrypto"
+      ],
+      "limit": "3.5 kB",
+      "gzip": true
+    }
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "pnpm build && concurrently \"pnpm build --watch\" \"pnpm --filter=next-example dev\" ",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint --type-aware && tsc --noEmit && pnpm build && publint && attw --pack . --ignore-rules cjs-resolves-to-esm && pnpm lint:types",
+    "lint:types": "tsdown && tsc --noEmit -p type-tests/tsconfig.json",
+    "pretest": "node -e \"require('node:fs').mkdirSync('coverage',{recursive:true})\"",
+    "size": "size-limit",
+    "start": "pnpm --filter=next-example start",
+    "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info --import tsx src/*.test.ts",
+    "test:e2e": "playwright test",
+    "test:watch": "node --import tsx --test --watch src/*.test.ts"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "iron-session",
+    "originalVersion": "9.0.1",
+    "processedAt": "2026-08-31T00:36:24.694Z",
+    "smokeTest": "passed"
+  }
+}

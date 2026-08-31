@@ -108,6 +108,43 @@
       "status": "published",
       "timestamp": "2026-07-21T17:26:05.183Z",
       "version": "1.1.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "debug": {
+          "from": "^2.2.0",
+          "to": "^4.4.3"
+        },
+        "got": {
+          "from": "^4.1.1",
+          "to": "^16.0.0"
+        },
+        "is-plain-obj": {
+          "from": "^1.0.0",
+          "to": "^4.1.0"
+        },
+        "is-stream": {
+          "from": "^1.0.1",
+          "to": "^4.0.1"
+        },
+        "object-assign": {
+          "from": "^3.0.0",
+          "to": "^4.1.1"
+        },
+        "pinkie-promise": {
+          "from": "^1.0.0",
+          "to": "^2.0.1"
+        },
+        "retry": {
+          "from": "^0.6.1",
+          "to": "^0.13.1"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-31T00:35:31.488Z",
+      "version": "1.1.0-depup.3"
     }
   }
 }

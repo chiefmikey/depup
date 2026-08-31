@@ -1,6 +1,6 @@
 {
   "name": "@depup/electron-store",
-  "version": "11.0.2-depup.0",
+  "version": "11.0.2-depup.5",
   "description": "Simple data persistence for your Electron app or module - Save and load user settings, app state, cache, etc (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/electron-store",
@@ -52,7 +52,7 @@
   ],
   "dependencies": {
     "conf": "^15.1.0",
-    "type-fest": "^5.4.4"
+    "type-fest": "^5.9.0"
   },
   "devDependencies": {
     "ava": "^6.4.1",
@@ -85,13 +85,13 @@
       },
       "type-fest": {
         "from": "^5.0.1",
-        "to": "^5.4.4"
+        "to": "^5.9.0"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "electron-store",
     "originalVersion": "11.0.2",
-    "processedAt": "2026-03-18T00:37:35.009Z",
+    "processedAt": "2026-08-31T00:35:33.779Z",
     "smokeTest": "failed"
   }
 }

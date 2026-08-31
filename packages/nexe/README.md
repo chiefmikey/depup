@@ -12,7 +12,7 @@ npm install @depup/nexe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.0-beta.4 | **DepUp version**: 5.0.0-beta.4-depup.8 | **Updated**: 7/29/2026 | **Import test**: failed
+**Original version**: 5.0.0-beta.4 | **DepUp version**: 5.0.0-beta.4-depup.9 | **Updated**: 8/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,9 +22,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @yarnpkg/libzip | `^3.0.0-rc.43` | `^3.2.2` |
 | archiver | `^5.3.1` | `^8.0.0` |
 | chalk | `^2.4.2` | `^6.0.0` |
-| globby | `^11.0.2` | `^16.2.2` |
-| got | `^12.6.0` | `^15.1.0` |
-| meriyah | `^4.3.5` | `^7.3.0` |
+| globby | `^11.0.2` | `^16.2.4` |
+| got | `^12.6.0` | `^16.0.0` |
+| meriyah | `^4.3.5` | `^7.3.2` |
 | mkdirp | `^1.0.4` | `^3.0.1` |
 | ora | `^3.4.0` | `^9.4.1` |
 | rimraf | `^3.0.2` | `^6.1.3` |
