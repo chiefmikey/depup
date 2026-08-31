@@ -81,28 +81,62 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: sync packages"
-            for attempt in 1 2 3; do
+            for attempt in 1 2 3 4 5; do
               git fetch origin main
               # Clean unstaged changes before rebase (case-different files from packages)
               git checkout -- . 2>/dev/null || true
               if ! git rebase origin/main; then
-                echo "Rebase failed on attempt $attempt, aborting..."
-                git rebase --abort 2>/dev/null || true
-                sleep 2
-                if [ "$attempt" -eq 3 ]; then
-                  echo "Rebase failed after 3 attempts"
-                  exit 1
+                # Content conflicts happen when the cron workflow pushed the same
+                # package data concurrently (the two workflows use separate
+                # concurrency groups, so they can interleave). Retrying an
+                # identical rebase can never clear an add/add conflict, so
+                # resolve it the same way cron.yml does: keep upstream.
+                conflicted=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+                if [ -n "$conflicted" ]; then
+                  echo "Rebase conflict on attempt $attempt, auto-resolving by keeping upstream..."
+                  echo "$conflicted" | while IFS= read -r file; do
+                    git checkout --ours -- "$file" 2>/dev/null || true
+                  done
+                  git add -A packages/
+                  GIT_EDITOR=true git rebase --continue 2>/dev/null || {
+                    # Resolution can empty the commit when upstream already
+                    # contains everything this run regenerated.
+                    if git diff --cached --quiet 2>/dev/null; then
+                      echo "Commit became empty after conflict resolution, skipping..."
+                      git rebase --skip 2>/dev/null || {
+                        git rebase --abort 2>/dev/null || true
+                      }
+                    else
+                      git rebase --abort 2>/dev/null || true
+                    fi
+                    sleep $((attempt * 2))
+                    if [ "$attempt" -eq 5 ]; then
+                      echo "Rebase failed after 5 attempts"
+                      exit 1
+                    fi
+                    continue
+                  }
+                else
+                  echo "Rebase failed on attempt $attempt, aborting and retrying..."
+                  git rebase --abort 2>/dev/null || true
+                  sleep $((attempt * 2))
+                  if [ "$attempt" -eq 5 ]; then
+                    echo "Rebase failed after 5 attempts"
+                    exit 1
+                  fi
+                  continue
                 fi
-              elif git push origin main; then
+              fi
+              if git push origin main; then
                 echo "Push successful on attempt $attempt"
                 break
               else
-                if [ "$attempt" -eq 3 ]; then
-                  echo "Push failed after 3 attempts"
+                if [ "$attempt" -eq 5 ]; then
+                  echo "Push failed after 5 attempts"
                   exit 1
                 fi
                 echo "Push failed on attempt $attempt, retrying..."
-                sleep 2
+                sleep $((attempt * 2))
               fi
             done
           fi
