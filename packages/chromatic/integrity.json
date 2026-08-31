@@ -835,5 +835,20 @@
       "timestamp": "2026-08-28T20:02:43.152Z",
       "version": "18.7.1-depup.0"
     }
+  },
+  "18.7.2": {
+    "0": {
+      "changes": {
+        "semver": {
+          "from": "^7.3.5",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-31T16:09:55.183Z",
+      "version": "18.7.2-depup.0"
+    }
   }
 }

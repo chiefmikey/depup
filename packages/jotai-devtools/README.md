@@ -12,21 +12,21 @@ npm install @depup/jotai-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.14.0 | **DepUp version**: 0.14.0-depup.56 | **Updated**: 7/27/2026 | **Import test**: failed
+**Original version**: 0.14.0 | **DepUp version**: 0.14.0-depup.57 | **Updated**: 8/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mantine/code-highlight | `7.17.4` | `^9.5.0` |
-| @mantine/core | `7.17.4` | `^9.5.0` |
-| @mantine/hooks | `7.17.4` | `^9.5.0` |
+| @mantine/code-highlight | `7.17.4` | `^9.6.0` |
+| @mantine/core | `7.17.4` | `^9.6.0` |
+| @mantine/hooks | `7.17.4` | `^9.6.0` |
 | @redux-devtools/extension | `^3.3.0` | `^4.0.0` |
 | jsondiffpatch | `^0.5.0` | `^0.7.6` |
 | react-base16-styling | `^0.9.1` | `^0.10.0` |
-| react-error-boundary | `^5.0.0` | `^6.1.2` |
+| react-error-boundary | `^5.0.0` | `^6.1.4` |
 | react-json-tree | `^0.18.0` | `^0.20.0` |
-| react-resizable-panels | `2.1.7` | `^4.12.2` |
+| react-resizable-panels | `2.1.7` | `^4.12.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/jotai-devtools&labels=bug).

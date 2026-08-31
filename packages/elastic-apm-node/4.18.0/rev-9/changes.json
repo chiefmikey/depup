@@ -6,15 +6,19 @@
     },
     "@opentelemetry/core": {
       "from": "^2.8.0",
-      "to": "^2.9.0"
+      "to": "^2.10.0"
     },
     "@opentelemetry/sdk-metrics": {
       "from": "^2.8.0",
-      "to": "^2.9.0"
+      "to": "^2.10.0"
     },
     "agentkeepalive": {
       "from": "^4.2.1",
       "to": "^4.6.0"
+    },
+    "basic-auth": {
+      "from": "^2.0.1",
+      "to": "^3.0.0"
     },
     "cookie": {
       "from": "^0.7.1",
@@ -42,7 +46,7 @@
     },
     "import-in-the-middle": {
       "from": "1.15.0",
-      "to": "^3.3.1"
+      "to": "^3.4.0"
     },
     "lru-cache": {
       "from": "10.2.0",
@@ -73,6 +77,6 @@
       "to": "^7.8.5"
     }
   },
-  "timestamp": "2026-07-13T00:28:41.989Z",
-  "totalUpdated": 18
+  "timestamp": "2026-08-31T16:09:56.550Z",
+  "totalUpdated": 19
 }

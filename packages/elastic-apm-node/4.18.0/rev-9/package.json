@@ -1,6 +1,6 @@
 {
   "name": "@depup/elastic-apm-node",
-  "version": "4.18.0-depup.4",
+  "version": "4.18.0-depup.9",
   "description": "The official Elastic APM agent for Node.js (with updated dependencies)",
   "type": "commonjs",
   "main": "index.js",
@@ -96,12 +96,12 @@
   "dependencies": {
     "@elastic/ecs-pino-format": "^1.5.0",
     "@opentelemetry/api": "^1.9.1",
-    "@opentelemetry/core": "^2.9.0",
-    "@opentelemetry/sdk-metrics": "^2.9.0",
+    "@opentelemetry/core": "^2.10.0",
+    "@opentelemetry/sdk-metrics": "^2.10.0",
     "after-all-results": "^2.0.0",
     "agentkeepalive": "^4.6.0",
     "async-value-promise": "^1.1.1",
-    "basic-auth": "^2.0.1",
+    "basic-auth": "^3.0.0",
     "breadth-filter": "^2.0.0",
     "cookie": "^2.0.1",
     "core-util-is": "^1.0.3",
@@ -112,7 +112,7 @@
     "fast-safe-stringify": "^2.1.1",
     "fast-stream-to-buffer": "^1.0.0",
     "http-headers": "^3.0.2",
-    "import-in-the-middle": "^3.3.1",
+    "import-in-the-middle": "^3.4.0",
     "json-bigint": "^1.0.0",
     "lru-cache": "^11.5.2",
     "measured-reporting": "^2.0.0",
@@ -222,15 +222,19 @@
       },
       "@opentelemetry/core": {
         "from": "^2.8.0",
-        "to": "^2.9.0"
+        "to": "^2.10.0"
       },
       "@opentelemetry/sdk-metrics": {
         "from": "^2.8.0",
-        "to": "^2.9.0"
+        "to": "^2.10.0"
       },
       "agentkeepalive": {
         "from": "^4.2.1",
         "to": "^4.6.0"
+      },
+      "basic-auth": {
+        "from": "^2.0.1",
+        "to": "^3.0.0"
       },
       "cookie": {
         "from": "^0.7.1",
@@ -258,7 +262,7 @@
       },
       "import-in-the-middle": {
         "from": "1.15.0",
-        "to": "^3.3.1"
+        "to": "^3.4.0"
       },
       "lru-cache": {
         "from": "10.2.0",
@@ -289,10 +293,10 @@
         "to": "^7.8.5"
       }
     },
-    "depsUpdated": 18,
+    "depsUpdated": 19,
     "originalPackage": "elastic-apm-node",
     "originalVersion": "4.18.0",
-    "processedAt": "2026-07-13T00:28:53.867Z",
+    "processedAt": "2026-08-31T16:10:21.804Z",
     "smokeTest": "failed"
   }
 }
