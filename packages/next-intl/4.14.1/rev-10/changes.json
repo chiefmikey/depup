@@ -1,8 +1,16 @@
 {
   "bumped": {
+    "@eloqnt/config": {
+      "from": "^0.0.2",
+      "to": "^0.0.3"
+    },
+    "@eloqnt/format-json": {
+      "from": "^0.0.3",
+      "to": "^0.0.4"
+    },
     "@eloqnt/format-po": {
       "from": "^0.0.3",
-      "to": "^0.0.5"
+      "to": "^0.0.6"
     },
     "@formatjs/intl-localematcher": {
       "from": "^0.8.1",
@@ -21,6 +29,6 @@
       "to": "^1.1.0"
     }
   },
-  "timestamp": "2026-08-30T00:57:38.088Z",
-  "totalUpdated": 5
+  "timestamp": "2026-08-31T16:10:10.688Z",
+  "totalUpdated": 7
 }

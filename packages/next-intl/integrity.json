@@ -1210,35 +1210,6 @@
     }
   },
   "4.14.1": {
-    "5": {
-      "changes": {
-        "@eloqnt/format-po": {
-          "from": "^0.0.3",
-          "to": "^0.0.5"
-        },
-        "@formatjs/intl-localematcher": {
-          "from": "^0.8.1",
-          "to": "^0.8.13"
-        },
-        "@parcel/watcher": {
-          "from": "^2.4.1",
-          "to": "^2.6.0"
-        },
-        "@swc/core": {
-          "from": "~1.16.0",
-          "to": "^1.16.1"
-        },
-        "negotiator": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-08-30T00:57:53.319Z",
-      "version": "4.14.1-depup.5"
-    },
     "6": {
       "changes": {
         "@eloqnt/format-po": {
@@ -1354,6 +1325,43 @@
       "status": "failed",
       "timestamp": "2026-08-31T08:13:37.176Z",
       "version": "4.14.1-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@eloqnt/config": {
+          "from": "^0.0.2",
+          "to": "^0.0.3"
+        },
+        "@eloqnt/format-json": {
+          "from": "^0.0.3",
+          "to": "^0.0.4"
+        },
+        "@eloqnt/format-po": {
+          "from": "^0.0.3",
+          "to": "^0.0.6"
+        },
+        "@formatjs/intl-localematcher": {
+          "from": "^0.8.1",
+          "to": "^0.8.13"
+        },
+        "@parcel/watcher": {
+          "from": "^2.4.1",
+          "to": "^2.6.0"
+        },
+        "@swc/core": {
+          "from": "~1.16.0",
+          "to": "^1.16.1"
+        },
+        "negotiator": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-08-31T16:10:29.262Z",
+      "version": "4.14.1-depup.10"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@depup/email-templates",
   "description": "Create, preview (browser/iOS Simulator), and send custom email templates for Node.js. Made for Forward Email and Lad. (with updated dependencies)",
-  "version": "13.0.1-depup.1",
+  "version": "13.0.1-depup.6",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)",
   "bugs": {
     "url": "https://github.com/forwardemail/email-templates/issues",
@@ -14,10 +14,10 @@
     "@ladjs/consolidate": "^1.0.4",
     "@ladjs/i18n": "^10.0.0",
     "get-paths": "^0.0.7",
-    "html-to-text": "^9.0.5",
-    "juice": "^11.1.1",
-    "lodash": "^4.18.0",
-    "nodemailer": "^8.0.4"
+    "html-to-text": "^10.0.1",
+    "juice": "^12.1.2",
+    "lodash": "^4.18.1",
+    "nodemailer": "^9.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -90,23 +90,27 @@
   },
   "depup": {
     "changes": {
+      "html-to-text": {
+        "from": "^9.0.5",
+        "to": "^10.0.1"
+      },
       "juice": {
         "from": "^11.0.3",
-        "to": "^11.1.1"
+        "to": "^12.1.2"
       },
       "lodash": {
         "from": "^4.17.21",
-        "to": "^4.18.0"
+        "to": "^4.18.1"
       },
       "nodemailer": {
         "from": "^7.0.12",
-        "to": "^8.0.4"
+        "to": "^9.1.0"
       }
     },
-    "depsUpdated": 3,
+    "depsUpdated": 4,
     "originalPackage": "email-templates",
     "originalVersion": "13.0.1",
-    "processedAt": "2026-03-31T20:22:21.768Z",
+    "processedAt": "2026-08-31T16:09:58.111Z",
     "smokeTest": "passed"
   }
 }

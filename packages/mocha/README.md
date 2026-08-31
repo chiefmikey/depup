@@ -12,28 +12,22 @@ npm install @depup/mocha
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.8.0 | **DepUp version**: 11.8.0-depup.3 | **Updated**: 8/25/2026 | **Import test**: passed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.0 | **Updated**: 8/31/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chokidar | `^4.0.1` | `^5.0.0` |
 | debug | `^4.3.5` | `^4.4.3` |
-| diff | `^7.0.0` | `^9.0.0` |
-| escape-string-regexp | `^4.0.0` | `^5.0.0` |
 | find-up | `^5.0.0` | `^8.0.0` |
-| glob | `^10.4.5` | `^13.0.6` |
+| glob | `^13.0.0` | `^13.0.6` |
 | is-path-inside | `^3.0.3` | `^4.0.0` |
-| js-yaml | `^4.1.0` | `^5.4.0` |
-| log-symbols | `^4.1.0` | `^7.0.1` |
-| minimatch | `^9.0.5` | `^10.2.6` |
-| serialize-javascript | `^6.0.2` | `^7.1.0` |
-| strip-json-comments | `^3.1.1` | `^5.0.3` |
+| is-unicode-supported | `^0.1.0` | `^2.1.0` |
+| js-yaml | `^5.0.0` | `^5.4.1` |
+| minimatch | `^10.2.2` | `^10.2.6` |
+| serialize-javascript | `^7.0.2` | `^7.1.1` |
 | supports-color | `^8.1.1` | `^11.0.0` |
-| workerpool | `^9.2.0` | `^10.0.3` |
-| yargs | `^17.7.2` | `^18.1.0` |
-| yargs-parser | `^21.1.1` | `^22.0.0` |
+| workerpool | `^10.0.0` | `^10.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mocha&labels=bug).
