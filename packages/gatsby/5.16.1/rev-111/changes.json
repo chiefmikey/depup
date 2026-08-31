@@ -86,7 +86,7 @@
     },
     "@pmmmwh/react-refresh-webpack-plugin": {
       "from": "0.5",
-      "to": "^0.6.2"
+      "to": "^0.6.3"
     },
     "@types/http-proxy": {
       "from": "^1.17.11",
@@ -126,7 +126,7 @@
     },
     "axios": {
       "from": "^1.6.4",
-      "to": "^1.19.0"
+      "to": "^1.20.0"
     },
     "babel-loader": {
       "from": "^8.3.0",
@@ -174,7 +174,7 @@
     },
     "css-loader": {
       "from": "^5.2.7",
-      "to": "^7.1.4"
+      "to": "^7.1.5"
     },
     "css-minimizer-webpack-plugin": {
       "from": "^2.0.0",
@@ -246,7 +246,7 @@
     },
     "fastq": {
       "from": "^1.15.0",
-      "to": "^1.20.1"
+      "to": "^1.20.3"
     },
     "find-cache-dir": {
       "from": "^3.3.2",
@@ -266,7 +266,7 @@
     },
     "got": {
       "from": "^11.8.6",
-      "to": "^15.1.0"
+      "to": "^16.0.0"
     },
     "graphql": {
       "from": "^16.7.1",
@@ -274,7 +274,7 @@
     },
     "graphql-compose": {
       "from": "^9.0.10",
-      "to": "^9.1.0"
+      "to": "^9.2.0"
     },
     "graphql-http": {
       "from": "^1.19.0",
@@ -338,7 +338,7 @@
     },
     "multer": {
       "from": "^2.0.1",
-      "to": "^2.2.0"
+      "to": "^2.3.0"
     },
     "node-fetch": {
       "from": "^2.6.11",
@@ -346,7 +346,7 @@
     },
     "node-html-parser": {
       "from": "^5.4.2",
-      "to": "^9.0.1"
+      "to": "^9.0.2"
     },
     "p-defer": {
       "from": "^3.0.0",
@@ -438,7 +438,7 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.109.2"
+      "to": "^5.110.2"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
@@ -450,13 +450,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.32.5"
+      "to": "^5.32.6"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-08-25T00:17:48.733Z",
+  "timestamp": "2026-08-31T00:36:06.770Z",
   "totalUpdated": 114
 }

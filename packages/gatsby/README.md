@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.110 | **Updated**: 8/29/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.111 | **Updated**: 8/31/2026 | **Import test**: failed
 
 ## What changed
 
@@ -79,12 +79,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | execa | `^5.1.1` | `^10.0.1` |
 | express | `^4.18.2` | `^5.2.1` |
 | express-http-proxy | `^1.6.3` | `^2.1.2` |
-| fastq | `^1.15.0` | `^1.20.2` |
+| fastq | `^1.15.0` | `^1.20.3` |
 | find-cache-dir | `^3.3.2` | `^6.0.0` |
 | fs-extra | `^11.2.0` | `^11.4.0` |
 | glob | `^7.2.3` | `^13.0.6` |
 | globby | `^11.1.0` | `^16.2.4` |
-| got | `^11.8.6` | `^15.1.0` |
+| got | `^11.8.6` | `^16.0.0` |
 | graphql | `^16.7.1` | `^17.0.2` |
 | graphql-compose | `^9.0.10` | `^9.2.0` |
 | graphql-http | `^1.19.0` | `^1.23.0` |
@@ -127,7 +127,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.2` |
-| webpack | `~5.98.0` | `^5.110.1` |
+| webpack | `~5.98.0` | `^5.110.2` |
 | webpack-dev-middleware | `^5.3.4` | `^8.1.1` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.6` |

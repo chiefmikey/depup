@@ -76,5 +76,20 @@
       "timestamp": "2026-08-29T16:08:35.963Z",
       "version": "8.0.4-depup.1"
     }
+  },
+  "8.0.5": {
+    "0": {
+      "changes": {
+        "universal-user-agent": {
+          "from": "^7.0.0",
+          "to": "^7.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-31T00:35:43.560Z",
+      "version": "8.0.5-depup.0"
+    }
   }
 }

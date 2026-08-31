@@ -1,6 +1,6 @@
 {
   "name": "@depup/msw",
-  "version": "2.15.0-depup.6",
+  "version": "2.15.0-depup.11",
   "description": "Seamless REST/GraphQL API mocking library for browser and Node.js. (with updated dependencies)",
   "type": "commonjs",
   "main": "./lib/core/index.js",
@@ -229,8 +229,8 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@inquirer/confirm": "^6.1.1",
-    "@mswjs/interceptors": "^0.41.9",
+    "@inquirer/confirm": "^6.3.0",
+    "@mswjs/interceptors": "^0.42.3",
     "@open-draft/deferred-promise": "^3.0.0",
     "@types/statuses": "^2.0.6",
     "cookie": "^2.0.1",
@@ -244,9 +244,9 @@
     "statuses": "^2.0.2",
     "strict-event-emitter": "^0.5.1",
     "tough-cookie": "^6.0.2",
-    "type-fest": "^5.8.0",
+    "type-fest": "^5.9.0",
     "until-async": "^3.0.2",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
@@ -336,11 +336,11 @@
     "changes": {
       "@inquirer/confirm": {
         "from": "^6.0.11",
-        "to": "^6.1.1"
+        "to": "^6.3.0"
       },
       "@mswjs/interceptors": {
         "from": "^0.41.3",
-        "to": "^0.41.9"
+        "to": "^0.42.3"
       },
       "cookie": {
         "from": "^1.1.1",
@@ -360,17 +360,17 @@
       },
       "type-fest": {
         "from": "^5.5.0",
-        "to": "^5.8.0"
+        "to": "^5.9.0"
       },
       "yargs": {
         "from": "^17.7.2",
-        "to": "^18.0.0"
+        "to": "^18.1.0"
       }
     },
     "depsUpdated": 8,
     "originalPackage": "msw",
     "originalVersion": "2.15.0",
-    "processedAt": "2026-07-21T16:19:19.249Z",
+    "processedAt": "2026-08-31T00:37:36.582Z",
     "smokeTest": "passed"
   }
 }
