@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.61.0-depup.7",
+  "version": "6.61.0-depup.12",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -132,7 +132,7 @@
     "form-data": "4.0.6",
     "fs-extra": "^11.4.0",
     "glob": "13.0.6",
-    "got": "15.1.0",
+    "got": "^16.0.0",
     "gscan": "6.4.2",
     "handlebars": "4.7.9",
     "heic-convert": "2.1.0",
@@ -192,11 +192,11 @@
     "terser": "^5.51.2",
     "tiny-glob": "0.2.9",
     "tldts": "^7.4.11",
-    "type-fest": "^5.8.0",
+    "type-fest": "^5.9.0",
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
     "xml": "1.0.1",
-    "zod": "^4.5.2",
+    "zod": "^4.5.4",
     "@tryghost/adapter-base-redirects": "file:components/tryghost-adapter-base-redirects-0.0.0.tgz",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.0.tgz",
     "@tryghost/adapter-base-route-settings": "file:components/tryghost-adapter-base-route-settings-0.0.0.tgz",
@@ -411,6 +411,10 @@
         "from": "11.3.6",
         "to": "^11.4.0"
       },
+      "got": {
+        "from": "15.1.0",
+        "to": "^16.0.0"
+      },
       "hono": {
         "from": "4.12.18",
         "to": "^4.13.5"
@@ -573,7 +577,7 @@
       },
       "type-fest": {
         "from": "5.7.0",
-        "to": "^5.8.0"
+        "to": "^5.9.0"
       },
       "ua-parser-js": {
         "from": "1.0.41",
@@ -581,13 +585,13 @@
       },
       "zod": {
         "from": "4.4.3",
-        "to": "^4.5.2"
+        "to": "^4.5.4"
       }
     },
-    "depsUpdated": 88,
+    "depsUpdated": 89,
     "originalPackage": "ghost",
     "originalVersion": "6.61.0",
-    "processedAt": "2026-08-29T16:09:03.234Z",
+    "processedAt": "2026-08-31T08:13:30.466Z",
     "smokeTest": "failed"
   }
 }
