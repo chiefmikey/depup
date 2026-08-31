@@ -104,10 +104,16 @@ npm run heal                # Self-healing repairs
 - Validate bumps with `npm ci` (NOT `npm install --legacy-peer-deps`) before declaring green -- CI runs strict `npm ci` and `--legacy-peer-deps` masks peer conflicts that then fail in CI
 - `mikey-pro` 10.3.x requires explicit `eslint@^10`, `prettier`, and `stylelint@^16` peer deps declared in `package.json` (exact-pinned) -- transitive resolution lands eslint 9 and breaks `npm ci`
 
+## Merging PRs
+- **Squash is the house style.** Merge with `gh pr merge <n> --squash --delete-branch --admin`. The `--admin` is expected: a `main` ruleset blocks a plain merge even when the PR is green, so bare `--squash` fails with "the base branch policy prohibits the merge".
+- **Never `--merge`.** Do not infer the merge method by skimming `git log` titles -- `main` is dominated by the every-8h package-factory cron commits, which are ordinary 1-parent commits that give no signal either way. Verify with parent count instead: `git log --format='%h %p | %s' -20 origin/main` (two hashes in the `%p` column = merge commit, one = squash). A wrong-method merge is not reversible without rewriting shared history. This mistake was made on PR #1298 (2026-08-31).
+- A workflow-only change matches no CI path filter, so **no checks fire** -- an empty `statusCheckRollup` is expected, not a problem. `mergeStateStatus=CLEAN` + `mergeable=MERGEABLE` is the green signal there.
+
 ## Common Mistakes
 - `mikey-pro` sets `noInlineConfig: true` -- use eslint.config.js overrides, not inline comments
 - `chalk.orange` does not exist -- use `chalk.hex('#FFA500')`
 - `git checkout --ours` during rebase = upstream (origin/main), not local
+- `cron.yml` and `bump.yml` BOTH commit package data to main under separate concurrency groups, so they interleave and hit `CONFLICT (add/add)` on the same regenerated package revision. Both need the same rebase conflict-resolution block (resolve conflicted paths to upstream, restage, `rebase --continue`, `--skip` if it empties) -- retrying an identical rebase can never clear an add/add conflict. Keep the two files in parity; `bump.yml` was missing it until PR #1299
 - `execFileSync` inside async serializes -- use `promisify(execFile)` or `spawn`
 - Cleanup only runs when `shouldPublish=true` -- security pipeline needs files preserved
 - `add-package.mjs` writes to JSON (`config/user-packages.json`), not source code
