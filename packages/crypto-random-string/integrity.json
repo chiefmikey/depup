@@ -72,6 +72,19 @@
       "status": "published",
       "timestamp": "2026-07-24T00:37:52.278Z",
       "version": "6.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "type-fest": {
+          "from": "^5.8.0",
+          "to": "^5.9.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-08-31T00:35:50.672Z",
+      "version": "6.0.0-depup.1"
     }
   }
 }
