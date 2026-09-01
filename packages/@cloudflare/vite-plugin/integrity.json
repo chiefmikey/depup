@@ -1508,6 +1508,23 @@
       "status": "published",
       "timestamp": "2026-08-31T05:58:39.370Z",
       "version": "1.54.2-depup.3"
+    },
+    "4": {
+      "changes": {
+        "workerd": {
+          "from": "1.20260828.1",
+          "to": "^1.20260901.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-01T08:13:00.269Z",
+      "version": "1.54.2-depup.4"
     }
   }
 }

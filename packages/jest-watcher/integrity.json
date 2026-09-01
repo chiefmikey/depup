@@ -204,5 +204,32 @@
       "timestamp": "2026-08-28T11:52:05.499Z",
       "version": "30.5.0-depup.0"
     }
+  },
+  "30.5.1": {
+    "0": {
+      "changes": {
+        "ansi-escapes": {
+          "from": "^4.3.2",
+          "to": "^7.3.0"
+        },
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^6.0.0"
+        },
+        "emittery": {
+          "from": "^0.13.1",
+          "to": "^2.0.0"
+        },
+        "string-length": {
+          "from": "^4.0.2",
+          "to": "^7.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-01T08:13:08.478Z",
+      "version": "30.5.1-depup.0"
+    }
   }
 }

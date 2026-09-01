@@ -1,6 +1,6 @@
 {
   "name": "@depup/next-intl",
-  "version": "4.14.1-depup.7",
+  "version": "4.14.1-depup.12",
   "sideEffects": false,
   "author": "Jan Amann <jan@amann.work>",
   "funding": [
@@ -131,9 +131,9 @@
     "next.js"
   ],
   "dependencies": {
-    "@eloqnt/config": "^0.0.2",
-    "@eloqnt/format-json": "^0.0.3",
-    "@eloqnt/format-po": "^0.0.5",
+    "@eloqnt/config": "^0.0.3",
+    "@eloqnt/format-json": "^0.0.4",
+    "@eloqnt/format-po": "^0.0.6",
     "@formatjs/intl-localematcher": "^0.8.13",
     "@parcel/watcher": "^2.6.0",
     "@swc/core": "^1.16.1",
@@ -149,9 +149,17 @@
   "gitHead": "58b92226b44cfae981a860f76efb7f920cd0fd9c",
   "depup": {
     "changes": {
+      "@eloqnt/config": {
+        "from": "^0.0.2",
+        "to": "^0.0.3"
+      },
+      "@eloqnt/format-json": {
+        "from": "^0.0.3",
+        "to": "^0.0.4"
+      },
       "@eloqnt/format-po": {
         "from": "^0.0.3",
-        "to": "^0.0.5"
+        "to": "^0.0.6"
       },
       "@formatjs/intl-localematcher": {
         "from": "^0.8.1",
@@ -170,10 +178,10 @@
         "to": "^1.1.0"
       }
     },
-    "depsUpdated": 5,
+    "depsUpdated": 7,
     "originalPackage": "next-intl",
     "originalVersion": "4.14.1",
-    "processedAt": "2026-08-30T16:08:17.276Z",
+    "processedAt": "2026-09-01T08:14:01.921Z",
     "smokeTest": "passed"
   }
 }
