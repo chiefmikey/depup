@@ -12,13 +12,13 @@ npm install @depup/eslint-plugin-jest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 29.16.6 | **DepUp version**: 29.16.6-depup.2 | **Updated**: 8/31/2026 | **Import test**: passed
+**Original version**: 29.16.6 | **DepUp version**: 29.16.6-depup.3 | **Updated**: 9/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @typescript-eslint/utils | `^8.0.0` | `^8.68.0` |
+| @typescript-eslint/utils | `^8.0.0` | `^8.69.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/eslint-plugin-jest&labels=bug).

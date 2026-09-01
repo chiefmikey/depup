@@ -12,21 +12,17 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.24.0 | **DepUp version**: 4.24.0-depup.5 | **Updated**: 8/31/2026 | **Import test**: passed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 9/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1121.0` |
-| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1121.0` |
+| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1123.0` |
+| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1123.0` |
 | @inquirer/confirm | `^3.1.22` | `^6.3.0` |
 | @inquirer/input | `^2.2.4` | `^5.1.4` |
 | @inquirer/select | `^2.5.0` | `^5.2.3` |
-| @oclif/core | `^4.11.11` | `^4.14.0` |
-| @oclif/plugin-help | `^6.2.53` | `^6.3.0` |
-| @oclif/plugin-not-found | `^3.2.93` | `^3.3.0` |
-| @oclif/plugin-warn-if-update-available | `^3.1.73` | `^3.2.0` |
 | ansis | `^3.16.0` | `^4.3.1` |
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
