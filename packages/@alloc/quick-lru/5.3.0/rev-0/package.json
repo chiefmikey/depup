@@ -1,0 +1,59 @@
+{
+  "name": "@depup/alloc__quick-lru",
+  "version": "5.3.0-depup.0",
+  "description": "Simple “Least Recently Used” (LRU) cache (with updated dependencies)",
+  "license": "MIT",
+  "repository": "https://github.com/aleclarson/quick-lru",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "xo && nyc ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "@alloc/quick-lru",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "lru",
+    "quick",
+    "cache",
+    "caching",
+    "least",
+    "recently",
+    "used",
+    "fast",
+    "map",
+    "hash",
+    "buffer"
+  ],
+  "devDependencies": {
+    "ava": "^2.0.0",
+    "coveralls": "^3.0.3",
+    "nyc": "^15.0.0",
+    "tsd": "^0.11.0",
+    "xo": "^0.26.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@alloc/quick-lru",
+    "originalVersion": "5.3.0",
+    "processedAt": "2026-09-01T00:38:13.139Z",
+    "smokeTest": "passed"
+  }
+}
