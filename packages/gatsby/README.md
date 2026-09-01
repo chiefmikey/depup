@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.112 | **Updated**: 9/1/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.113 | **Updated**: 9/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^7.1.0` |
 | @graphql-codegen/core | `^2.6.8` | `^6.2.0` |
-| @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.2.1` |
+| @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.3.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.6` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.37` |
@@ -109,7 +109,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | path-to-regexp | `0.1.12` | `^8.4.2` |
 | postcss | `^8.4.24` | `^8.5.26` |
 | postcss-loader | `^5.3.0` | `^8.2.1` |
-| query-string | `^6.14.1` | `^9.5.0` |
+| query-string | `^6.14.1` | `^9.5.1` |
 | react-refresh | `^0.14.1` | `^0.18.0` |
 | react-server-dom-webpack | `0.0.0-experimental-c8b778b7f-20220825` | `^19.2.8` |
 | redux | `4.2.1` | `^5.0.1` |
