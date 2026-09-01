@@ -1856,6 +1856,23 @@
       "status": "published",
       "timestamp": "2026-08-22T00:15:15.572Z",
       "version": "3.972.72-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/node-http-handler": {
+          "from": "^4.11.3",
+          "to": "^4.12.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-01T00:38:56.278Z",
+      "version": "3.972.72-depup.1"
     }
   }
 }

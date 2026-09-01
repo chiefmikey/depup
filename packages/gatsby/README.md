@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.111 | **Updated**: 8/31/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.112 | **Updated**: 9/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,8 +41,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.3` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.68.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.68.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.69.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.69.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.11.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -86,7 +86,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | globby | `^11.1.0` | `^16.2.4` |
 | got | `^11.8.6` | `^16.0.0` |
 | graphql | `^16.7.1` | `^17.0.2` |
-| graphql-compose | `^9.0.10` | `^9.2.0` |
+| graphql-compose | `^9.0.10` | `^9.2.1` |
 | graphql-http | `^1.19.0` | `^1.23.0` |
 | graphql-tag | `^2.12.6` | `^2.12.7` |
 | hasha | `^5.2.2` | `^7.0.0` |

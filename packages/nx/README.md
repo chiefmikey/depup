@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.2 | **DepUp version**: 23.1.2-depup.1 | **Updated**: 8/28/2026 | **Import test**: failed
+**Original version**: 23.1.3 | **DepUp version**: 23.1.3-depup.0 | **Updated**: 9/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | flat | `5.0.2` | `^6.0.1` |
 | has-flag | `4.0.0` | `^5.0.1` |
 | https-proxy-agent | `5.0.1` | `^9.1.0` |
-| ignore | `7.0.5` | `^7.0.6` |
+| ignore | `7.0.5` | `^7.0.8` |
 | is-docker | `3.0.0` | `^4.0.0` |
 | is-fullwidth-code-point | `3.0.0` | `^5.1.0` |
 | is-interactive | `1.0.0` | `^2.0.0` |
@@ -70,7 +70,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | minimatch | `10.2.5` | `^10.2.6` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
-| open | `10.1.0` | `^11.0.1` |
+| open | `10.1.0` | `^11.0.2` |
 | ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
