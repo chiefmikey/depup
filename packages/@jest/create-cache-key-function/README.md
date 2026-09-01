@@ -12,7 +12,7 @@ npm install @depup/jest__create-cache-key-function
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.5.0 | **DepUp version**: 30.5.0-depup.0 | **Updated**: 8/28/2026 | **Import test**: passed
+**Original version**: 30.5.1 | **DepUp version**: 30.5.1-depup.0 | **Updated**: 9/1/2026 | **Import test**: passed
 
 ## What changed
 

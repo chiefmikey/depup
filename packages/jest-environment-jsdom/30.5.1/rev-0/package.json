@@ -1,0 +1,68 @@
+{
+  "name": "@depup/jest-environment-jsdom",
+  "version": "30.5.1-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-environment-jsdom"
+  },
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@jest/environment": "30.5.1",
+    "@jest/environment-jsdom-abstract": "30.5.1",
+    "@types/jsdom": "^30.0.0",
+    "jsdom": "^30.0.1"
+  },
+  "devDependencies": {
+    "@jest/test-utils": "30.5.1"
+  },
+  "peerDependencies": {
+    "canvas": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "canvas": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "gitHead": "9ab14feccd6c15fec1334dbcb03a53a079d153d3",
+  "description": "jest-environment-jsdom with all dependencies updated to latest",
+  "keywords": [
+    "jest-environment-jsdom",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@types/jsdom": {
+        "from": "^21.1.7",
+        "to": "^30.0.0"
+      },
+      "jsdom": {
+        "from": "^26.1.0",
+        "to": "^30.0.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "jest-environment-jsdom",
+    "originalVersion": "30.5.1",
+    "processedAt": "2026-09-01T08:13:05.343Z",
+    "smokeTest": "failed"
+  }
+}

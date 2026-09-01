@@ -1,22 +1,5 @@
 {
   "1.2.0": {
-    "174": {
-      "changes": {
-        "inflection": {
-          "from": "^1.12.0",
-          "to": "^3.0.2"
-        },
-        "lodash": {
-          "from": "^4.17.15",
-          "to": "^4.18.1"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-08-30T16:08:17.915Z",
-      "version": "1.2.0-depup.174"
-    },
     "175": {
       "changes": {
         "inflection": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-09-01T00:41:01.157Z",
       "version": "1.2.0-depup.178"
+    },
+    "179": {
+      "changes": {
+        "inflection": {
+          "from": "^1.12.0",
+          "to": "^3.0.2"
+        },
+        "lodash": {
+          "from": "^4.17.15",
+          "to": "^4.18.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-01T08:12:58.207Z",
+      "version": "1.2.0-depup.179"
     }
   }
 }

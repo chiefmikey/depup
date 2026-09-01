@@ -140,5 +140,24 @@
       "timestamp": "2026-08-28T11:51:32.557Z",
       "version": "30.5.0-depup.0"
     }
+  },
+  "30.5.1": {
+    "0": {
+      "changes": {
+        "execa": {
+          "from": "^5.1.1",
+          "to": "^10.0.1"
+        },
+        "p-limit": {
+          "from": "^3.1.0",
+          "to": "^7.3.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-01T08:13:05.681Z",
+      "version": "30.5.1-depup.0"
+    }
   }
 }
