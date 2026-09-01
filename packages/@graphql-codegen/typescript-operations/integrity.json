@@ -606,6 +606,27 @@
       "status": "published",
       "timestamp": "2026-08-22T08:07:57.485Z",
       "version": "6.1.6-depup.1"
+    },
+    "2": {
+      "changes": {
+        "auto-bind": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        },
+        "@graphql-codegen/plugin-helpers": {
+          "from": "^7.1.0",
+          "to": "^7.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-01T16:30:49.832Z",
+      "version": "6.1.6-depup.2"
     }
   }
 }
