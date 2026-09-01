@@ -12,7 +12,7 @@ npm install @depup/jest-circus
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.5.0 | **DepUp version**: 30.5.0-depup.0 | **Updated**: 8/28/2026 | **Import test**: failed
+**Original version**: 30.5.1 | **DepUp version**: 30.5.1-depup.0 | **Updated**: 9/1/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.2` | `^6.0.0` |
 | dedent | `^1.6.0` | `^1.7.2` |
 | is-generator-fn | `^2.1.0` | `^3.0.0` |
-| p-limit | `^3.1.0` | `^7.3.1` |
+| p-limit | `^3.1.0` | `^7.3.2` |
 | pure-rand | `^7.0.0` | `^8.4.2` |
 | slash | `^3.0.0` | `^5.1.0` |
 
