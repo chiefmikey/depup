@@ -12,22 +12,24 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.6 | **DepUp version**: 22.1.6-depup.2 | **Updated**: 8/27/2026 | **Import test**: passed
+**Original version**: 22.1.6 | **DepUp version**: 22.1.6-depup.3 | **Updated**: 9/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | browserslist | `^4.26.0` | `^4.28.8` |
+| css-loader | `7.1.4` | `^7.1.5` |
 | less | `4.6.7` | `^4.9.0` |
-| open | `11.0.0` | `^11.0.1` |
+| open | `11.0.0` | `^11.0.2` |
 | picomatch | `4.0.5` | `^4.0.7` |
-| piscina | `5.2.0` | `^5.3.1` |
+| piscina | `5.2.0` | `^5.3.2` |
 | postcss | `8.5.25` | `^8.5.26` |
 | sass | `1.101.0` | `^1.103.1` |
+| sass-loader | `17.0.0` | `^17.0.1` |
 | terser | `5.49.0` | `^5.51.2` |
-| webpack | `5.109.2` | `^5.110.0` |
-| webpack-dev-middleware | `8.0.3` | `^8.1.1` |
+| webpack | `5.109.2` | `^5.110.3` |
+| webpack-dev-middleware | `8.0.3` | `^8.2.0` |
 | webpack-dev-server | `5.2.6` | `^6.0.0` |
 | webpack-subresource-integrity | `5.1.0` | `^5.2.0-rc.1` |
 

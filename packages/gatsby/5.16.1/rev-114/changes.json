@@ -50,7 +50,7 @@
     },
     "@graphql-codegen/plugin-helpers": {
       "from": "^2.7.2",
-      "to": "^7.2.1"
+      "to": "^7.3.0"
     },
     "@graphql-codegen/typescript": {
       "from": "^2.8.8",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.68.0"
+      "to": "^8.69.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.68.0"
+      "to": "^8.69.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -246,7 +246,7 @@
     },
     "fastq": {
       "from": "^1.15.0",
-      "to": "^1.20.2"
+      "to": "^1.20.3"
     },
     "find-cache-dir": {
       "from": "^3.3.2",
@@ -266,7 +266,7 @@
     },
     "got": {
       "from": "^11.8.6",
-      "to": "^15.1.0"
+      "to": "^16.0.0"
     },
     "graphql": {
       "from": "^16.7.1",
@@ -274,7 +274,7 @@
     },
     "graphql-compose": {
       "from": "^9.0.10",
-      "to": "^9.1.0"
+      "to": "^9.2.1"
     },
     "graphql-http": {
       "from": "^1.19.0",
@@ -366,7 +366,7 @@
     },
     "query-string": {
       "from": "^6.14.1",
-      "to": "^9.5.0"
+      "to": "^9.5.1"
     },
     "react-refresh": {
       "from": "^0.14.1",
@@ -438,11 +438,11 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.110.1"
+      "to": "^5.110.3"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
-      "to": "^8.1.1"
+      "to": "^8.2.0"
     },
     "webpack-merge": {
       "from": "^5.9.0",
@@ -457,6 +457,6 @@
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-08-28T20:03:48.697Z",
+  "timestamp": "2026-09-02T00:33:24.358Z",
   "totalUpdated": 114
 }

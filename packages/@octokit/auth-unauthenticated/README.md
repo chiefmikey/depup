@@ -12,14 +12,11 @@ npm install @depup/octokit__auth-unauthenticated
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.1 | **Updated**: 8/29/2026 | **Import test**: passed
+**Original version**: 7.0.5 | **DepUp version**: 7.0.5-depup.0 | **Updated**: 9/2/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @octokit/types | `^17.0.0` | `^18.0.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/octokit__auth-unauthenticated&labels=bug).
 
