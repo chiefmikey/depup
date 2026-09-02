@@ -146,5 +146,20 @@
       "timestamp": "2026-08-20T16:10:36.605Z",
       "version": "10.5.10-depup.0"
     }
+  },
+  "10.6.0": {
+    "0": {
+      "changes": {
+        "@storybook/icons": {
+          "from": "^2.0.2",
+          "to": "^2.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T16:10:48.324Z",
+      "version": "10.6.0-depup.0"
+    }
   }
 }

@@ -784,5 +784,24 @@
       "timestamp": "2026-09-01T00:41:30.759Z",
       "version": "10.5.10-depup.2"
     }
+  },
+  "10.6.0": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/types": {
+          "from": "^8.60.0",
+          "to": "^8.69.0"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.60.0",
+          "to": "^8.69.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T16:12:01.953Z",
+      "version": "10.6.0-depup.0"
+    }
   }
 }

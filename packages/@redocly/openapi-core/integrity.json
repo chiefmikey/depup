@@ -2376,5 +2376,32 @@
       "timestamp": "2026-09-02T08:12:19.563Z",
       "version": "2.50.0-depup.0"
     }
+  },
+  "2.51.0": {
+    "0": {
+      "changes": {
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.2",
+          "to": "^5.4.1"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.7"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T16:10:42.178Z",
+      "version": "2.51.0-depup.0"
+    }
   }
 }
