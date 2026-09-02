@@ -113,5 +113,24 @@
       "timestamp": "2026-07-21T16:11:52.878Z",
       "version": "13.2.2-depup.53"
     }
+  },
+  "13.2.3": {
+    "0": {
+      "changes": {
+        "globby": {
+          "from": "^16.1.0",
+          "to": "^16.2.4"
+        },
+        "p-map": {
+          "from": "^7.0.4",
+          "to": "^7.0.7"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T00:33:42.087Z",
+      "version": "13.2.3-depup.0"
+    }
   }
 }

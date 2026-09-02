@@ -12,7 +12,7 @@ npm install @depup/cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.21.1 | **DepUp version**: 15.21.1-depup.0 | **Updated**: 8/26/2026 | **Import test**: failed
+**Original version**: 16.0.0 | **DepUp version**: 16.0.0-depup.0 | **Updated**: 9/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,7 +29,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cli-table3 | `0.6.1` | `^0.6.5` |
 | commander | `^6.2.1` | `^15.0.0` |
 | common-tags | `^1.8.0` | `^1.8.2` |
-| dayjs | `^1.10.4` | `^1.11.23` |
 | debug | `^4.3.4` | `^4.4.3` |
 | eventemitter2 | `6.4.7` | `^6.4.9` |
 | execa | `4.1.0` | `^10.0.1` |
@@ -39,10 +38,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | listr2 | `^9.0.5` | `^11.0.1` |
 | lodash | `^4.17.23` | `^4.18.1` |
 | log-symbols | `^4.0.0` | `^7.0.1` |
-| pretty-bytes | `^5.6.0` | `^7.1.1` |
+| pretty-bytes | `^5.6.0` | `^7.1.2` |
 | proxy-from-env | `1.0.0` | `^2.1.0` |
 | supports-color | `^8.1.1` | `^11.0.0` |
-| systeminformation | `^5.31.1` | `^5.33.3` |
+| systeminformation | `^5.31.1` | `^5.33.7` |
 | tmp | `~0.2.4` | `^0.2.7` |
 | untildify | `^4.0.0` | `^6.0.0` |
 | yauzl | `^3.3.1` | `^3.4.0` |

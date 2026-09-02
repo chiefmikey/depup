@@ -1030,6 +1030,23 @@
       "status": "published",
       "timestamp": "2026-09-01T16:32:40.510Z",
       "version": "74.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@eslint/css-tree": {
+          "from": "^4.0.5",
+          "to": "^4.1.0"
+        },
+        "globals": {
+          "from": "^17.11.0",
+          "to": "^17.12.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T00:33:48.006Z",
+      "version": "74.0.0-depup.2"
     }
   }
 }
