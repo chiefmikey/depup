@@ -12,7 +12,7 @@ npm install @depup/nitro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.260610-beta | **DepUp version**: 3.0.260610-beta-depup.50 | **Updated**: 8/21/2026 | **Import test**: failed
+**Original version**: 3.0.260610-beta | **DepUp version**: 3.0.260610-beta-depup.51 | **Updated**: 9/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,8 +24,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | nf3 | `^0.3.17` | `^0.3.24` |
 | ocache | `^0.1.5` | `^0.3.0` |
 | ohash | `^2.0.11` | `^2.0.12` |
-| rolldown | `^1.1.0` | `^1.2.5` |
-| srvx | `^0.11.16` | `^0.12.7` |
+| rolldown | `^1.1.0` | `^1.2.6` |
+| srvx | `^0.11.16` | `^1.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nitro&labels=bug).

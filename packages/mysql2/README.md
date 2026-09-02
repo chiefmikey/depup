@@ -12,11 +12,14 @@ npm install @depup/mysql2
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.24.2 | **DepUp version**: 3.24.2-depup.0 | **Updated**: 8/24/2026 | **Import test**: passed
+**Original version**: 3.24.3 | **DepUp version**: 3.24.3-depup.0 | **Updated**: 9/2/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| lru.min | `^1.1.4` | `^1.1.5` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mysql2&labels=bug).
 
