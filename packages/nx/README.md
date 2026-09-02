@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.1.3 | **DepUp version**: 23.1.3-depup.0 | **Updated**: 9/1/2026 | **Import test**: failed
+**Original version**: 23.2.0 | **DepUp version**: 23.2.0-depup.0 | **Updated**: 9/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -48,9 +48,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
 | emoji-regex | `8.0.0` | `^10.6.0` |
-| enquirer | `2.3.6` | `^2.4.1` |
 | es-object-atoms | `1.1.1` | `^1.1.2` |
 | escape-string-regexp | `1.0.5` | `^5.0.0` |
+| fast-wrap-ansi | `0.2.0` | `^0.2.2` |
 | figures | `3.2.0` | `^6.1.0` |
 | flat | `5.0.2` | `^6.0.1` |
 | has-flag | `4.0.0` | `^5.0.1` |
@@ -78,6 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | run-applescript | `7.0.0` | `^7.1.0` |
 | semver | `7.8.4` | `^7.8.5` |
 | signal-exit | `3.0.7` | `^4.1.0` |
+| sisteransi | `1.0.5` | `^2.0.0` |
 | smol-toml | `1.6.1` | `^1.8.0` |
 | string-width | `4.2.3` | `^8.2.2` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
