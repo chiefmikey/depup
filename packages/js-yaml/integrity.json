@@ -434,19 +434,6 @@
     }
   },
   "5.4.1": {
-    "14": {
-      "changes": {
-        "argparse": {
-          "from": "^2.0.1",
-          "to": "^3.0.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-08-31T16:10:24.804Z",
-      "version": "5.4.1-depup.14"
-    },
     "15": {
       "changes": {
         "argparse": {
@@ -498,6 +485,19 @@
       "status": "failed",
       "timestamp": "2026-09-02T00:35:03.652Z",
       "version": "5.4.1-depup.18"
+    },
+    "19": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-02T08:13:28.452Z",
+      "version": "5.4.1-depup.19"
     }
   }
 }

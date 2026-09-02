@@ -280,6 +280,19 @@
       "status": "published",
       "timestamp": "2026-08-20T16:12:58.991Z",
       "version": "2.0.1-rc.29-depup.0"
+    },
+    "1": {
+      "changes": {
+        "srvx": {
+          "from": "^0.12.7",
+          "to": "^1.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-02T08:13:19.710Z",
+      "version": "2.0.1-rc.29-depup.1"
     }
   }
 }
