@@ -12,14 +12,13 @@ npm install @depup/expo__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 57.0.20 | **DepUp version**: 57.0.20-depup.0 | **Updated**: 8/28/2026 | **Import test**: failed
+**Original version**: 57.0.21 | **DepUp version**: 57.0.21-depup.0 | **Updated**: 9/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @react-native/dev-middleware | `0.86.3` | `^0.87.1` |
-| agent-cli-detector | `0.1.6` | `^0.1.7` |
 | bplist-creator | `0.1.0` | `^0.1.1` |
 | bplist-parser | `^0.3.1` | `^0.3.2` |
 | chalk | `^4.0.0` | `^6.0.0` |
@@ -32,7 +31,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `^11.0.0` | `^14.0.0` |
 | ora | `^3.4.0` | `^9.4.1` |
 | picomatch | `^4.0.4` | `^4.0.7` |
-| pretty-format | `^29.7.0` | `^30.5.0` |
+| pretty-format | `^29.7.0` | `^30.5.1` |
 | prompts | `^2.3.2` | `^2.4.2` |
 | semver | `^7.6.0` | `^7.8.5` |
 | send | `^0.19.0` | `^1.2.1` |
@@ -42,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terminal-link | `^2.1.1` | `^5.0.0` |
 | wrap-ansi | `^7.0.0` | `^10.0.1` |
 | ws | `^8.12.1` | `^8.21.3` |
-| zod | `^3.25.76` | `^4.5.1` |
+| zod | `^3.25.76` | `^4.5.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/expo__cli&labels=bug).
