@@ -232,5 +232,28 @@
       "timestamp": "2026-08-19T16:08:59.611Z",
       "version": "18.2.5-depup.0"
     }
+  },
+  "18.2.6": {
+    "0": {
+      "changes": {
+        "@hapi/formula": {
+          "from": "^3.0.2",
+          "to": "^4.0.0"
+        },
+        "@hapi/pinpoint": {
+          "from": "^2.0.1",
+          "to": "^3.0.0"
+        },
+        "@hapi/tlds": {
+          "from": "^1.1.1",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-02T16:10:46.940Z",
+      "version": "18.2.6-depup.0"
+    }
   }
 }
