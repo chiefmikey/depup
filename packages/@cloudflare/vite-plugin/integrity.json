@@ -1561,6 +1561,23 @@
       "status": "published",
       "timestamp": "2026-09-02T08:12:47.564Z",
       "version": "1.54.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "workerd": {
+          "from": "1.20260831.1",
+          "to": "^1.20260903.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-03T08:12:40.556Z",
+      "version": "1.54.3-depup.2"
     }
   }
 }
