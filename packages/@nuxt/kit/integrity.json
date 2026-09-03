@@ -317,6 +317,39 @@
       "status": "published",
       "timestamp": "2026-08-15T16:05:35.150Z",
       "version": "4.5.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "c12": {
+          "from": "^3.3.4",
+          "to": "^4.0.0-beta.5"
+        },
+        "ignore": {
+          "from": "^7.0.6",
+          "to": "^7.0.8"
+        },
+        "ohash": {
+          "from": "^2.0.11",
+          "to": "^2.0.12"
+        },
+        "rc9": {
+          "from": "^3.0.1",
+          "to": "^3.1.0"
+        },
+        "unctx": {
+          "from": "^3.0.0",
+          "to": "^3.0.1"
+        },
+        "verkit": {
+          "from": "^0.3.1",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-03T00:34:23.681Z",
+      "version": "4.5.2-depup.2"
     }
   }
 }
