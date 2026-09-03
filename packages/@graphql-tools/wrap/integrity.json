@@ -361,5 +361,24 @@
       "timestamp": "2026-09-02T16:10:12.784Z",
       "version": "11.1.22-depup.0"
     }
+  },
+  "11.1.23": {
+    "0": {
+      "changes": {
+        "@graphql-tools/schema": {
+          "from": "^10.0.29",
+          "to": "^10.1.0"
+        },
+        "@graphql-tools/utils": {
+          "from": "^11.0.0",
+          "to": "^12.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-03T16:10:08.713Z",
+      "version": "11.1.23-depup.0"
+    }
   }
 }

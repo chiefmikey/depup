@@ -1,0 +1,78 @@
+{
+  "name": "@depup/vitest__snapshot",
+  "type": "module",
+  "version": "5.0.0-depup.0",
+  "description": "Vitest snapshot manager (with updated dependencies)",
+  "license": "MIT",
+  "funding": "https://opencollective.com/vitest",
+  "homepage": "https://vitest.dev/guide/snapshot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitest-dev/vitest.git",
+    "directory": "packages/snapshot"
+  },
+  "bugs": {
+    "url": "https://github.com/vitest-dev/vitest/issues"
+  },
+  "keywords": [
+    "@vitest/snapshot",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vitest",
+    "test",
+    "snapshot"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "__vitest_source__": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./environment": {
+      "__vitest_source__": "./src/environment.ts",
+      "types": "./dist/environment.d.ts",
+      "default": "./dist/environment.js"
+    },
+    "./manager": {
+      "__vitest_source__": "./src/manager.ts",
+      "types": "./dist/manager.d.ts",
+      "default": "./dist/manager.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@vitest/pretty-format": "5.0.0",
+    "@vitest/utils": "5.0.0",
+    "magic-string": "^1.2.3",
+    "pathe": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/natural-compare": "^1.4.3",
+    "natural-compare": "^1.4.0"
+  },
+  "scripts": {
+    "build": "premove dist && rollup -c",
+    "dev": "rollup -c --watch"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitest/snapshot",
+    "originalVersion": "5.0.0",
+    "processedAt": "2026-09-03T16:10:15.569Z",
+    "smokeTest": "passed"
+  }
+}
