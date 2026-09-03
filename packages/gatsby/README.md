@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.114 | **Updated**: 9/2/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.115 | **Updated**: 9/3/2026 | **Import test**: failed
 
 ## What changed
 
@@ -91,7 +91,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | graphql-tag | `^2.12.6` | `^2.12.7` |
 | hasha | `^5.2.2` | `^7.0.0` |
 | is-relative-url | `^3.0.0` | `^4.1.0` |
-| joi | `^17.9.2` | `^18.2.5` |
+| joi | `^17.9.2` | `^18.2.8` |
 | latest-version | `^7.0.0` | `^9.0.0` |
 | lmdb | `2.5.3` | `^3.5.6` |
 | lodash | `^4.17.21` | `^4.18.1` |
@@ -104,7 +104,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.29.4` | `^2.30.1` |
 | multer | `^2.0.1` | `^2.3.0` |
 | node-fetch | `^2.6.11` | `^3.3.2` |
-| node-html-parser | `^5.4.2` | `^9.0.2` |
+| node-html-parser | `^5.4.2` | `^9.0.3` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
 | postcss | `^8.4.24` | `^8.5.26` |
@@ -128,7 +128,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.2` |
 | webpack | `~5.98.0` | `^5.110.3` |
-| webpack-dev-middleware | `^5.3.4` | `^8.2.0` |
+| webpack-dev-middleware | `^5.3.4` | `^8.3.0` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.32.6` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |
