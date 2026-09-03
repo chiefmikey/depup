@@ -211,6 +211,19 @@
       "status": "published",
       "timestamp": "2026-08-18T16:09:32.088Z",
       "version": "4.1.11-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@vitest/utils": {
+          "from": "4.1.11",
+          "to": "^5.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-03T16:09:58.633Z",
+      "version": "4.1.11-depup.1"
     }
   }
 }

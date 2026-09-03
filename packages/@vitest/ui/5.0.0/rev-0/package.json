@@ -1,0 +1,110 @@
+{
+  "name": "@depup/vitest__ui",
+  "type": "module",
+  "version": "5.0.0-depup.0",
+  "description": "UI for Vitest (with updated dependencies)",
+  "license": "MIT",
+  "funding": "https://opencollective.com/vitest",
+  "homepage": "https://vitest.dev/guide/ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitest-dev/vitest.git",
+    "directory": "packages/ui"
+  },
+  "bugs": {
+    "url": "https://github.com/vitest-dev/vitest/issues"
+  },
+  "keywords": [
+    "@vitest/ui",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vitest",
+    "html",
+    "reporter"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./reporter": {
+      "types": "./reporter.d.ts",
+      "default": "./dist/reporter.js"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vitest": "5.0.0"
+  },
+  "dependencies": {
+    "@vitest/utils": "5.0.0",
+    "fflate": "^0.8.3",
+    "flatted": "^3.4.4",
+    "pathe": "^2.0.3",
+    "sirv": "^3.0.2",
+    "tinyrainbow": "^3.1.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "@iconify-json/carbon": "^1.2.26",
+    "@iconify-json/logos": "^1.2.13",
+    "@types/codemirror": "^5.60.18",
+    "@types/d3-selection": "^3.0.11",
+    "@unocss/reset": "^66.8.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/browser-playwright": "5.0.0",
+    "@vitest/browser-preview": "5.0.0",
+    "@vueuse/core": "^14.4.0",
+    "ansi-to-html": "^0.7.2",
+    "birpc": "^4.2.0",
+    "codemirror": "^5.65.18",
+    "codemirror-theme-vars": "^0.1.2",
+    "cookie": "^1.1.1",
+    "d3-graph-controller": "^3.1.13",
+    "floating-vue": "^5.2.2",
+    "mime": "^4.1.0",
+    "rollup": "^4.63.1",
+    "rrweb-snapshot": "2.1.1",
+    "splitpanes": "^4.1.2",
+    "typescript": "^5.9.3",
+    "unocss": "^66.8.1",
+    "vite": "latest",
+    "vitest-browser-vue": "2.1.0",
+    "vue": "^3.5.42",
+    "vue-router": "^5.3.0",
+    "vue-tsc": "^3.3.11",
+    "vue-virtual-scroller": "2.0.1"
+  },
+  "scripts": {
+    "build": "premove dist && pnpm build:node && pnpm build:client",
+    "build:client": "vite build",
+    "build:node": "rollup -c",
+    "typecheck": "tsc --noEmit",
+    "typecheck:client": "vue-tsc --noEmit",
+    "dev:client": "vite",
+    "dev": "rollup -c --watch --watch.include 'node/**'",
+    "dev:ui": "pnpm run --stream '/^(dev|dev:client)$/'",
+    "test:ui": "vitest"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitest/ui",
+    "originalVersion": "5.0.0",
+    "processedAt": "2026-09-03T16:10:48.062Z",
+    "smokeTest": "failed"
+  }
+}
