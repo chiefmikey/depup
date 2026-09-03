@@ -530,5 +530,24 @@
       "timestamp": "2026-08-18T16:08:54.108Z",
       "version": "4.1.11-depup.0"
     }
+  },
+  "5.0.0": {
+    "0": {
+      "changes": {
+        "@vitest/istanbul-lib-coverage": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "@vitest/istanbul-lib-report": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-03T16:09:54.711Z",
+      "version": "5.0.0-depup.0"
+    }
   }
 }
