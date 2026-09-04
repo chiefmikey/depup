@@ -12,7 +12,7 @@ npm install @depup/lucide
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.40.0 | **DepUp version**: 1.40.0-depup.0 | **Updated**: 9/3/2026 | **Import test**: passed
+**Original version**: 1.41.0 | **DepUp version**: 1.41.0-depup.0 | **Updated**: 9/4/2026 | **Import test**: passed
 
 ## What changed
 
