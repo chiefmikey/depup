@@ -2,7 +2,7 @@
   "bumped": {
     "@aws-sdk/client-s3": {
       "from": "3.1079.0",
-      "to": "^3.1125.0"
+      "to": "^3.1126.0"
     },
     "@extractus/oembed-extractor": {
       "from": "3.2.1",
@@ -26,43 +26,43 @@
     },
     "@tryghost/api-framework": {
       "from": "3.3.9",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/bookshelf-plugins": {
       "from": "2.3.8",
-      "to": "^2.3.13"
+      "to": "^2.3.14"
     },
     "@tryghost/database-info": {
       "from": "2.3.2",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/debug": {
       "from": "2.3.9",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/domain-events": {
       "from": "3.3.10",
-      "to": "^3.3.13"
+      "to": "^3.3.14"
     },
     "@tryghost/email-mock-receiver": {
       "from": "2.1.0",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/errors": {
       "from": "3.3.9",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/job-manager": {
       "from": "1.0.9",
-      "to": "^4.1.13"
+      "to": "^4.1.14"
     },
     "@tryghost/logging": {
       "from": "5.4.0",
-      "to": "^5.4.3"
+      "to": "^5.4.4"
     },
     "@tryghost/metrics": {
       "from": "3.5.0",
-      "to": "^3.5.3"
+      "to": "^3.5.4"
     },
     "@tryghost/mongo-utils": {
       "from": "0.6.5",
@@ -70,39 +70,39 @@
     },
     "@tryghost/mw-error-handler": {
       "from": "1.0.13",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/mw-vhost": {
       "from": "1.0.6",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/nodemailer": {
       "from": "2.3.1",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/pretty-cli": {
       "from": "3.3.2",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/prometheus-metrics": {
       "from": "1.0.8",
-      "to": "^4.1.13"
+      "to": "^4.1.14"
     },
     "@tryghost/request": {
       "from": "4.0.3",
-      "to": "^4.0.5"
+      "to": "^4.0.6"
     },
     "@tryghost/root-utils": {
       "from": "2.3.2",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/security": {
       "from": "1.0.6",
-      "to": "^3.3.12"
+      "to": "^3.3.13"
     },
     "@tryghost/tpl": {
       "from": "2.3.9",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/url-utils": {
       "from": "5.2.6",
@@ -110,27 +110,27 @@
     },
     "@tryghost/validator": {
       "from": "3.2.10",
-      "to": "^3.2.12"
+      "to": "^3.2.13"
     },
     "@tryghost/version": {
       "from": "2.3.2",
-      "to": "^2.3.12"
+      "to": "^2.3.13"
     },
     "@tryghost/zip": {
       "from": "3.5.1",
-      "to": "^3.5.11"
+      "to": "^3.5.12"
     },
     "@x402/core": {
       "from": "2.12.0",
-      "to": "^2.24.0"
+      "to": "^2.25.0"
     },
     "@x402/evm": {
       "from": "2.12.0",
-      "to": "^2.24.0"
+      "to": "^2.25.0"
     },
     "@x402/hono": {
       "from": "2.12.0",
-      "to": "^2.24.0"
+      "to": "^2.25.0"
     },
     "body-parser": {
       "from": "1.20.6",
@@ -188,6 +188,10 @@
       "from": "15.1.0",
       "to": "^16.0.0"
     },
+    "gscan": {
+      "from": "6.4.2",
+      "to": "^6.5.0"
+    },
     "hono": {
       "from": "4.12.18",
       "to": "^4.13.5"
@@ -238,7 +242,7 @@
     },
     "mailgun.js": {
       "from": "10.4.0",
-      "to": "^14.0.0"
+      "to": "^14.0.1"
     },
     "metascraper": {
       "from": "5.55.2",
@@ -310,7 +314,7 @@
     },
     "nodemailer": {
       "from": "8.0.11",
-      "to": "^9.1.1"
+      "to": "^10.0.0"
     },
     "otplib": {
       "from": "12.0.1",
@@ -361,6 +365,6 @@
       "to": "^4.5.4"
     }
   },
-  "timestamp": "2026-09-03T00:35:46.391Z",
-  "totalUpdated": 90
+  "timestamp": "2026-09-04T16:11:43.300Z",
+  "totalUpdated": 91
 }

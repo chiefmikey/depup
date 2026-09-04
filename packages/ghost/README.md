@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.62.0 | **DepUp version**: 6.62.0-depup.8 | **Updated**: 9/4/2026 | **Import test**: failed
+**Original version**: 6.62.0 | **DepUp version**: 6.62.0-depup.9 | **Updated**: 9/4/2026 | **Import test**: failed
 
 ## What changed
 
@@ -78,7 +78,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
-| mailgun.js | `10.4.0` | `^14.0.0` |
+| mailgun.js | `10.4.0` | `^14.0.1` |
 | metascraper | `5.55.2` | `^5.56.2` |
 | metascraper-amazon | `5.55.2` | `^5.56.2` |
 | metascraper-author | `5.55.2` | `^5.56.2` |
