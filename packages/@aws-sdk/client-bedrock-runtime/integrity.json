@@ -3243,5 +3243,32 @@
       "timestamp": "2026-09-03T00:33:35.654Z",
       "version": "3.1125.0-depup.0"
     }
+  },
+  "3.1126.0": {
+    "0": {
+      "changes": {
+        "@smithy/fetch-http-handler": {
+          "from": "^5.7.2",
+          "to": "^5.8.0"
+        },
+        "@smithy/node-http-handler": {
+          "from": "^4.11.3",
+          "to": "^4.12.1"
+        },
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.18.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-04T00:38:38.406Z",
+      "version": "3.1126.0-depup.0"
+    }
   }
 }

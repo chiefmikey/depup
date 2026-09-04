@@ -12,11 +12,14 @@ npm install @depup/h3
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.1-rc.30 | **DepUp version**: 2.0.1-rc.30-depup.0 | **Updated**: 9/2/2026 | **Import test**: passed
+**Original version**: 2.0.1-rc.31 | **DepUp version**: 2.0.1-rc.31-depup.0 | **Updated**: 9/4/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| srvx | `^1.0.2` | `^1.0.3` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/h3&labels=bug).
 
