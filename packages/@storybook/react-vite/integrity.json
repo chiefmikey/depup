@@ -1521,6 +1521,39 @@
       "status": "published",
       "timestamp": "2026-09-02T16:10:32.069Z",
       "version": "10.6.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@joshwooding/vite-plugin-react-docgen-typescript": {
+          "from": "^0.7.0",
+          "to": "^0.8.0"
+        },
+        "@rollup/pluginutils": {
+          "from": "^5.0.2",
+          "to": "^5.4.0"
+        },
+        "empathic": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "magic-string": {
+          "from": "^1.1.0",
+          "to": "^1.2.3"
+        },
+        "react-docgen": {
+          "from": "^8.0.2",
+          "to": "^8.0.3"
+        },
+        "resolve": {
+          "from": "^1.22.8",
+          "to": "^1.22.12"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-04T00:45:45.189Z",
+      "version": "10.6.0-depup.1"
     }
   }
 }

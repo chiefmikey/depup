@@ -328,5 +328,15 @@
       "timestamp": "2026-09-02T08:13:32.386Z",
       "version": "3.0.260610-beta-depup.51"
     }
+  },
+  "3.0.260903-beta": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-04T00:48:31.869Z",
+      "version": "3.0.260903-beta-depup.0"
+    }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@joshwooding/vite-plugin-react-docgen-typescript": {
+      "from": "^0.7.0",
+      "to": "^0.8.0"
+    },
+    "@rollup/pluginutils": {
+      "from": "^5.0.2",
+      "to": "^5.4.0"
+    },
+    "empathic": {
+      "from": "^2.0.0",
+      "to": "^2.0.1"
+    },
+    "magic-string": {
+      "from": "^1.1.0",
+      "to": "^1.2.3"
+    },
+    "react-docgen": {
+      "from": "^8.0.2",
+      "to": "^8.0.3"
+    },
+    "resolve": {
+      "from": "^1.22.8",
+      "to": "^1.22.12"
+    }
+  },
+  "timestamp": "2026-09-04T00:44:05.248Z",
+  "totalUpdated": 6
+}

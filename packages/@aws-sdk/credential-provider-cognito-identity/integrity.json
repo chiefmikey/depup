@@ -1415,6 +1415,23 @@
       "status": "published",
       "timestamp": "2026-08-22T00:15:33.186Z",
       "version": "3.972.69-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.18.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-04T00:37:54.077Z",
+      "version": "3.972.69-depup.1"
     }
   }
 }

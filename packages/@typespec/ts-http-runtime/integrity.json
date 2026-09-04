@@ -216,5 +216,28 @@
       "timestamp": "2026-07-30T00:38:47.433Z",
       "version": "0.3.8-depup.0"
     }
+  },
+  "0.3.9": {
+    "0": {
+      "changes": {
+        "http-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "https-proxy-agent": {
+          "from": "^7.0.0",
+          "to": "^9.1.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-04T00:46:44.542Z",
+      "version": "0.3.9-depup.0"
+    }
   }
 }
