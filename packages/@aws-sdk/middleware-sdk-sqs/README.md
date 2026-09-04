@@ -12,12 +12,13 @@ npm install @depup/aws-sdk__middleware-sdk-sqs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.42 | **DepUp version**: 3.972.42-depup.0 | **Updated**: 8/22/2026 | **Import test**: passed
+**Original version**: 3.972.42 | **DepUp version**: 3.972.42-depup.1 | **Updated**: 9/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @smithy/types | `^4.17.2` | `^4.18.0` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
