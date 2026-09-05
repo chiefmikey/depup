@@ -1,6 +1,6 @@
 {
   "name": "@depup/next-intl",
-  "version": "4.14.2-depup.7",
+  "version": "4.14.2-depup.12",
   "sideEffects": false,
   "author": "Jan Amann <jan@amann.work>",
   "funding": [
@@ -136,7 +136,7 @@
     "@eloqnt/format-po": "^0.1.0",
     "@formatjs/intl-localematcher": "^0.8.13",
     "@parcel/watcher": "^2.6.0",
-    "@swc/core": "^1.16.1",
+    "@swc/core": "^1.16.2",
     "icu-minify": "^4.14.2",
     "negotiator": "^1.1.0",
     "next-intl-swc-plugin-extractor": "4.14.2",
@@ -159,7 +159,7 @@
       },
       "@swc/core": {
         "from": "~1.16.0",
-        "to": "^1.16.1"
+        "to": "^1.16.2"
       },
       "negotiator": {
         "from": "^1.0.0",
@@ -169,7 +169,7 @@
     "depsUpdated": 4,
     "originalPackage": "next-intl",
     "originalVersion": "4.14.2",
-    "processedAt": "2026-09-04T00:48:34.467Z",
+    "processedAt": "2026-09-05T16:08:10.302Z",
     "smokeTest": "passed"
   }
 }
