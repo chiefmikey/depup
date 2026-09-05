@@ -1,6 +1,6 @@
 {
   "name": "@depup/lost-pixel",
-  "version": "3.22.0-depup.80",
+  "version": "3.22.0-depup.85",
   "description": "GitHub Action for Lost Pixel integration (with updated dependencies)",
   "main": "dist/",
   "bin": "dist/bin.js",
@@ -68,7 +68,7 @@
   "dependencies": {
     "@types/xml2js": "^0.4.14",
     "async": "3.2.6",
-    "axios": "^1.19.0",
+    "axios": "^1.20.0",
     "bundle-require": "^5.1.0",
     "esbuild": "^0.28.2",
     "execa": "^10.0.1",
@@ -79,15 +79,15 @@
     "lodash.kebabcase": "4.1.1",
     "odiff-bin": "^4.5.0",
     "pixelmatch": "^7.2.0",
-    "playwright-core": "^1.62.1",
+    "playwright-core": "^1.63.0",
     "pngjs": "7.0.0",
-    "posthog-node": "^5.49.0",
+    "posthog-node": "^5.51.6",
     "serve-handler": "^6.1.7",
     "shelljs": "^0.10.0",
     "ts-node": "10.9.2",
     "xml2js": "^0.6.2",
     "yargs": "^18.1.0",
-    "zod": "^4.4.3"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@playwright/test": "1.47.2",
@@ -146,7 +146,7 @@
     "changes": {
       "axios": {
         "from": "1.7.7",
-        "to": "^1.19.0"
+        "to": "^1.20.0"
       },
       "bundle-require": {
         "from": "4.0.2",
@@ -182,11 +182,11 @@
       },
       "playwright-core": {
         "from": "1.47.2",
-        "to": "^1.62.1"
+        "to": "^1.63.0"
       },
       "posthog-node": {
         "from": "3.5.0",
-        "to": "^5.49.0"
+        "to": "^5.51.6"
       },
       "serve-handler": {
         "from": "6.1.6",
@@ -202,13 +202,13 @@
       },
       "zod": {
         "from": "3.23.8",
-        "to": "^4.4.3"
+        "to": "^4.5.4"
       }
     },
     "depsUpdated": 15,
     "originalPackage": "lost-pixel",
     "originalVersion": "3.22.0",
-    "processedAt": "2026-08-13T16:23:34.719Z",
+    "processedAt": "2026-09-05T00:31:22.131Z",
     "smokeTest": "failed"
   }
 }
