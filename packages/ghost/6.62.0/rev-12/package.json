@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.62.0-depup.7",
+  "version": "6.62.0-depup.12",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,7 +46,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1126.0",
+    "@aws-sdk/client-s3": "^3.1127.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "^6.0.0",
     "@faker-js/faker": "^10.6.0",
@@ -156,7 +156,7 @@
     "gscan": "^6.5.0",
     "handlebars": "4.7.9",
     "heic-convert": "2.1.0",
-    "hono": "^4.13.5",
+    "hono": "^4.13.7",
     "html-to-text": "^10.0.1",
     "html5parser": "^3.0.0",
     "human-number": "3.0.0",
@@ -173,7 +173,7 @@
     "leaky-bucket": "^4.1.4",
     "lodash": "4.18.1",
     "luxon": "3.7.2",
-    "mailgun.js": "^14.0.0",
+    "mailgun.js": "^14.0.1",
     "metascraper": "^5.56.2",
     "metascraper-amazon": "^5.56.2",
     "metascraper-author": "^5.56.2",
@@ -194,7 +194,7 @@
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
     "node-jose": "2.2.0",
-    "nodemailer": "^9.1.1",
+    "nodemailer": "^10.0.0",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -234,7 +234,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1126.0"
+        "to": "^3.1127.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -426,7 +426,7 @@
       },
       "hono": {
         "from": "4.12.18",
-        "to": "^4.13.5"
+        "to": "^4.13.7"
       },
       "html-to-text": {
         "from": "5.1.1",
@@ -474,7 +474,7 @@
       },
       "mailgun.js": {
         "from": "10.4.0",
-        "to": "^14.0.0"
+        "to": "^14.0.1"
       },
       "metascraper": {
         "from": "5.55.2",
@@ -546,7 +546,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^9.1.1"
+        "to": "^10.0.0"
       },
       "otplib": {
         "from": "12.0.1",
@@ -600,7 +600,7 @@
     "depsUpdated": 91,
     "originalPackage": "ghost",
     "originalVersion": "6.62.0",
-    "processedAt": "2026-09-04T00:49:32.445Z",
+    "processedAt": "2026-09-05T16:08:08.400Z",
     "smokeTest": "failed"
   }
 }
