@@ -1,6 +1,6 @@
 {
   "name": "@depup/jsdoc",
-  "version": "4.0.5-depup.1",
+  "version": "4.0.5-depup.6",
   "revision": "1759892212631",
   "description": "An API documentation generator for JavaScript. (with updated dependencies)",
   "keywords": [
@@ -19,17 +19,17 @@
     "url": "https://github.com/jsdoc/jsdoc"
   },
   "dependencies": {
-    "@babel/parser": "^7.29.2",
+    "@babel/parser": "^8.0.4",
     "@jsdoc/salty": "^0.2.12",
-    "@types/markdown-it": "^14.1.2",
+    "@types/markdown-it": "^14.2.0",
     "bluebird": "^3.7.2",
     "catharsis": "^0.11.0",
     "escape-string-regexp": "^5.0.0",
     "js2xmlparser": "^5.0.0",
     "klaw": "^4.1.0",
-    "markdown-it": "^14.1.1",
-    "markdown-it-anchor": "^9.2.0",
-    "marked": "^18.0.0",
+    "markdown-it": "^15.0.1",
+    "markdown-it-anchor": "^10.0.0",
+    "marked": "^18.0.11",
     "mkdirp": "^3.0.1",
     "requizzle": "^0.2.4",
     "strip-json-comments": "^5.0.3",
@@ -72,7 +72,7 @@
     "changes": {
       "@babel/parser": {
         "from": "^7.20.15",
-        "to": "^7.29.2"
+        "to": "^8.0.4"
       },
       "@jsdoc/salty": {
         "from": "^0.2.1",
@@ -80,7 +80,7 @@
       },
       "@types/markdown-it": {
         "from": "^14.1.1",
-        "to": "^14.1.2"
+        "to": "^14.2.0"
       },
       "catharsis": {
         "from": "^0.9.0",
@@ -100,15 +100,15 @@
       },
       "markdown-it": {
         "from": "^14.1.0",
-        "to": "^14.1.1"
+        "to": "^15.0.1"
       },
       "markdown-it-anchor": {
         "from": "^8.6.7",
-        "to": "^9.2.0"
+        "to": "^10.0.0"
       },
       "marked": {
         "from": "^4.0.10",
-        "to": "^18.0.0"
+        "to": "^18.0.11"
       },
       "mkdirp": {
         "from": "^1.0.4",
@@ -130,7 +130,7 @@
     "depsUpdated": 14,
     "originalPackage": "jsdoc",
     "originalVersion": "4.0.5",
-    "processedAt": "2026-04-07T08:35:06.405Z",
+    "processedAt": "2026-09-05T08:10:09.396Z",
     "smokeTest": "failed"
   }
 }

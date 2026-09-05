@@ -12,7 +12,7 @@ npm install @depup/lint-staged
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 17.4.1 | **DepUp version**: 17.4.1-depup.0 | **Updated**: 8/27/2026 | **Import test**: passed
+**Original version**: 17.5.0 | **DepUp version**: 17.5.0-depup.0 | **Updated**: 9/5/2026 | **Import test**: passed
 
 ## What changed
 
