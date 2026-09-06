@@ -12439,5 +12439,80 @@
       "timestamp": "2026-08-30T01:00:23.240Z",
       "version": "6.11.0-depup.0"
     }
+  },
+  "6.12.0": {
+    "0": {
+      "changes": {
+        "@portabletext/editor": {
+          "from": "^8.1.1",
+          "to": "^8.1.2"
+        },
+        "@portabletext/plugin-dnd": {
+          "from": "^2.0.5",
+          "to": "^2.0.8"
+        },
+        "@portabletext/plugin-list-index": {
+          "from": "^2.0.5",
+          "to": "^2.0.6"
+        },
+        "@portabletext/plugin-markdown-shortcuts": {
+          "from": "^9.0.5",
+          "to": "^9.0.7"
+        },
+        "@portabletext/plugin-one-line": {
+          "from": "^8.0.5",
+          "to": "^8.0.6"
+        },
+        "@portabletext/plugin-paste-link": {
+          "from": "^5.0.5",
+          "to": "^5.0.6"
+        },
+        "@portabletext/plugin-table": {
+          "from": "^2.0.5",
+          "to": "^2.0.6"
+        },
+        "@portabletext/plugin-typography": {
+          "from": "^9.0.5",
+          "to": "^9.0.7"
+        },
+        "@sanity/cli": {
+          "from": "^8.7.0",
+          "to": "^8.9.1"
+        },
+        "@sanity/client": {
+          "from": "^8.4.0",
+          "to": "^8.5.0"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/sdk-react": {
+          "from": "^3.0.0",
+          "to": "^3.1.0"
+        },
+        "i18next": {
+          "from": "^26.4.1",
+          "to": "^26.4.2"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^4.1.0"
+        },
+        "motion": {
+          "from": "^13.1.1",
+          "to": "^13.2.0"
+        },
+        "react-rx": {
+          "from": "^6.0.0",
+          "to": "^6.0.1"
+        }
+      },
+      "depsUpdated": 16,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-06T01:03:44.907Z",
+      "version": "6.12.0-depup.0"
+    }
   }
 }

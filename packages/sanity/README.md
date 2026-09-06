@@ -12,30 +12,28 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.11.0 | **DepUp version**: 6.11.0-depup.0 | **Updated**: 8/30/2026 | **Import test**: failed
+**Original version**: 6.12.0 | **DepUp version**: 6.12.0-depup.0 | **Updated**: 9/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @portabletext/editor | `^8.0.2` | `^8.1.0` |
-| @portabletext/plugin-dnd | `^2.0.2` | `^2.0.4` |
-| @portabletext/plugin-list-index | `^2.0.2` | `^2.0.4` |
-| @portabletext/plugin-markdown-shortcuts | `^9.0.2` | `^9.0.4` |
-| @portabletext/plugin-one-line | `^8.0.2` | `^8.0.4` |
-| @portabletext/plugin-paste-link | `^5.0.2` | `^5.0.4` |
-| @portabletext/plugin-table | `^2.0.2` | `^2.0.4` |
-| @portabletext/plugin-typography | `^9.0.2` | `^9.0.4` |
-| @sanity/cli | `^8.3.0` | `^8.5.0` |
-| @sanity/client | `^8.2.0` | `^8.4.0` |
+| @portabletext/editor | `^8.1.1` | `^8.1.2` |
+| @portabletext/plugin-dnd | `^2.0.5` | `^2.0.8` |
+| @portabletext/plugin-list-index | `^2.0.5` | `^2.0.6` |
+| @portabletext/plugin-markdown-shortcuts | `^9.0.5` | `^9.0.7` |
+| @portabletext/plugin-one-line | `^8.0.5` | `^8.0.6` |
+| @portabletext/plugin-paste-link | `^5.0.5` | `^5.0.6` |
+| @portabletext/plugin-table | `^2.0.5` | `^2.0.6` |
+| @portabletext/plugin-typography | `^9.0.5` | `^9.0.7` |
+| @sanity/cli | `^8.7.0` | `^8.9.1` |
+| @sanity/client | `^8.4.0` | `^8.5.0` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/sdk-react | `^2.20.1` | `^3.0.0` |
-| @sanity/ui | `^4.0.6` | `^4.0.7` |
-| @sentry/react | `^10.70.0` | `^10.72.0` |
-| isomorphic-dompurify | `2.36.0` | `^3.23.0` |
-| use-effect-event | `^2.0.3` | `^2.0.4` |
-| web-vitals | `^6.1.1` | `^6.2.1` |
-| xstate | `^5.32.5` | `^5.32.6` |
+| @sanity/sdk-react | `^3.0.0` | `^3.1.0` |
+| i18next | `^26.4.1` | `^26.4.2` |
+| isomorphic-dompurify | `2.36.0` | `^4.1.0` |
+| motion | `^13.1.1` | `^13.2.0` |
+| react-rx | `^6.0.0` | `^6.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).
