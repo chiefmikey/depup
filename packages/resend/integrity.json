@@ -531,5 +531,24 @@
       "timestamp": "2026-08-30T00:59:18.351Z",
       "version": "6.25.0-depup.0"
     }
+  },
+  "6.26.0": {
+    "0": {
+      "changes": {
+        "postal-mime": {
+          "from": "2.7.5",
+          "to": "^3.0.0"
+        },
+        "standardwebhooks": {
+          "from": "1.0.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-06T01:00:25.628Z",
+      "version": "6.26.0-depup.0"
+    }
   }
 }

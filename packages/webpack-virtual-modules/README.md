@@ -12,7 +12,7 @@ npm install @depup/webpack-virtual-modules
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.6.2 | **DepUp version**: 0.6.2-depup.58 | **Updated**: 8/30/2026 | **Import test**: passed
+**Original version**: 0.6.2 | **DepUp version**: 0.6.2-depup.59 | **Updated**: 9/6/2026 | **Import test**: passed
 
 ## What changed
 

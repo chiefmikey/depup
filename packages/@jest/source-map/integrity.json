@@ -1,0 +1,17 @@
+{
+  "30.5.0": {
+    "0": {
+      "changes": {
+        "callsites": {
+          "from": "^3.1.0",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-06T00:57:00.814Z",
+      "version": "30.5.0-depup.0"
+    }
+  }
+}

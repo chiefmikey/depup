@@ -1,0 +1,49 @@
+{
+  "name": "@depup/rolldown__binding-darwin-arm64",
+  "version": "1.2.7-depup.0",
+  "cpu": [
+    "arm64"
+  ],
+  "main": "rolldown-binding.darwin-arm64.node",
+  "files": [
+    "rolldown-binding.darwin-arm64.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. (with updated dependencies)",
+  "keywords": [
+    "@rolldown/binding-darwin-arm64",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "bundler",
+    "esbuild",
+    "parcel",
+    "rolldown",
+    "rollup",
+    "webpack"
+  ],
+  "homepage": "https://rolldown.rs/",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolldown/rolldown.git",
+    "directory": "packages/rolldown"
+  },
+  "os": [
+    "darwin"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rolldown/binding-darwin-arm64",
+    "originalVersion": "1.2.7",
+    "processedAt": "2026-09-06T00:57:11.710Z",
+    "smokeTest": "failed"
+  }
+}
