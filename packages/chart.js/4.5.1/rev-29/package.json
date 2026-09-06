@@ -2,7 +2,7 @@
   "name": "@depup/chart.js",
   "homepage": "https://www.chartjs.org",
   "description": "Simple HTML5 charts using the canvas element. (with updated dependencies)",
-  "version": "4.5.1-depup.24",
+  "version": "4.5.1-depup.29",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
@@ -81,7 +81,7 @@
     "test-ci-integration": "pnpm --filter \"./test/integration/**\" test"
   },
   "dependencies": {
-    "@kurkle/color": "^0.4.0"
+    "@kurkle/color": "^0.5.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.2",
@@ -148,13 +148,13 @@
     "changes": {
       "@kurkle/color": {
         "from": "^0.3.0",
-        "to": "^0.4.0"
+        "to": "^0.5.1"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "chart.js",
     "originalVersion": "4.5.1",
-    "processedAt": "2026-06-15T10:45:26.490Z",
+    "processedAt": "2026-09-06T01:06:34.278Z",
     "smokeTest": "passed"
   }
 }
