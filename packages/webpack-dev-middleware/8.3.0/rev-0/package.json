@@ -1,0 +1,146 @@
+{
+  "name": "@depup/webpack-dev-middleware",
+  "version": "8.3.0-depup.0",
+  "description": "A development middleware for webpack (with updated dependencies)",
+  "keywords": [
+    "webpack-dev-middleware",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "webpack",
+    "middleware",
+    "development"
+  ],
+  "homepage": "https://github.com/webpack/webpack-dev-middleware",
+  "bugs": "https://github.com/webpack/webpack-dev-middleware/issues",
+  "repository": "webpack/webpack-dev-middleware",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/webpack"
+  },
+  "license": "MIT",
+  "author": "Tobias Koppers @sokra",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": "./client/index.js",
+    "./client/indicator": "./client/indicator.js",
+    "./client/overlay": "./client/overlay.js",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "client",
+    "dist",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint:prettier": "prettier --cache --list-different .",
+    "lint:code": "eslint --cache .",
+    "lint:spelling": "cspell --cache --no-must-find-files --quiet \"**/*.*\"",
+    "lint:types": "tsc --pretty --noEmit",
+    "lint:types-client": "tsc -p tsconfig.client.json --pretty",
+    "lint": "npm-run-all -l -p \"lint:**\"",
+    "fix:js": "npm run lint:code -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "fix": "npm-run-all -l fix:js fix:prettier",
+    "clean": "del-cli client dist types",
+    "prebuild": "npm run clean",
+    "build:types": "tsc && prettier \"types/**/*.ts\" --write",
+    "build:code": "babel src -d dist --copy-files",
+    "build:client": "babel client-src -d client --copy-files",
+    "build": "npm-run-all -p \"build:**\"",
+    "test:only": "node --experimental-vm-modules ./node_modules/jest-cli/bin/jest",
+    "test:e2e": "node --experimental-vm-modules ./node_modules/jest-cli/bin/jest test/e2e --runInBand",
+    "test:watch": "npm run test:only -- --watch",
+    "test:coverage": "npm run test:only -- --coverage",
+    "pretest": "npm run lint",
+    "test": "npm-run-all -s test:coverage test:e2e",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish",
+    "coverage:client": "node test/helpers/merge-coverage.js"
+  },
+  "dependencies": {
+    "ansi-html-community": "^0.0.8",
+    "memfs": "^4.71.0",
+    "mime-types": "^3.0.2",
+    "range-parser": "^1.3.0",
+    "schema-utils": "^4.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.29.7",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@changesets/cli": "^3.0.1",
+    "@changesets/get-github-info": "^1.0.0",
+    "@fastify/express": "^4.0.7",
+    "@hapi/hapi": "^21.4.10",
+    "@hono/node-server": "^2.1.1",
+    "@types/connect": "^3.4.38",
+    "@types/express": "^5.0.6",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^26.4.1",
+    "acorn": "^8.18.0",
+    "babel-jest": "^30.1.2",
+    "babel-loader": "^10.1.1",
+    "babel-plugin-istanbul": "^8.0.0",
+    "connect": "^3.7.0",
+    "cspell": "^10.2.0",
+    "deepmerge": "^4.3.1",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.5",
+    "eslint-config-webpack": "^4.9.6",
+    "execa": "^9.6.1",
+    "express": "^5.2.1",
+    "express-4": "npm:express@^4.22.2",
+    "fastify": "^5.12.1",
+    "file-loader": "^6.2.0",
+    "finalhandler": "^2.1.1",
+    "hono": "^4.13.5",
+    "husky": "^9.1.7",
+    "istanbul-lib-coverage": "^3.2.2",
+    "istanbul-lib-report": "^3.0.1",
+    "istanbul-reports": "^3.2.0",
+    "jest": "^30.5.1",
+    "koa": "^3.2.1",
+    "lint-staged": "^17.4.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.9.6",
+    "puppeteer": "^22.15.0",
+    "router": "^2.2.0",
+    "supertest": "^7.2.2",
+    "typescript": "^6.0.3",
+    "webpack": "^5.110.3"
+  },
+  "peerDependencies": {
+    "webpack": "^5.101.0"
+  },
+  "peerDependenciesMeta": {
+    "webpack": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">= 20.9.0"
+  },
+  "depup": {
+    "changes": {
+      "memfs": {
+        "from": "^4.68.2",
+        "to": "^4.71.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "webpack-dev-middleware",
+    "originalVersion": "8.3.0",
+    "processedAt": "2026-09-06T01:01:03.355Z",
+    "smokeTest": "passed"
+  }
+}

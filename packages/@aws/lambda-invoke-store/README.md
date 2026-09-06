@@ -12,7 +12,7 @@ npm install @depup/aws__lambda-invoke-store
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.0 | **DepUp version**: 0.3.0-depup.15 | **Updated**: 8/30/2026 | **Import test**: passed
+**Original version**: 0.3.0 | **DepUp version**: 0.3.0-depup.16 | **Updated**: 9/6/2026 | **Import test**: passed
 
 ## What changed
 

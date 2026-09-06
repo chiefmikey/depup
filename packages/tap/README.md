@@ -12,7 +12,7 @@ npm install @depup/tap
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.7.5 | **DepUp version**: 21.7.5-depup.0 | **Updated**: 8/2/2026 | **Import test**: passed
+**Original version**: 21.8.0 | **DepUp version**: 21.8.0-depup.0 | **Updated**: 9/6/2026 | **Import test**: passed
 
 ## What changed
 

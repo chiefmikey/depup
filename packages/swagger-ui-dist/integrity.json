@@ -192,5 +192,15 @@
       "timestamp": "2026-08-23T00:28:06.932Z",
       "version": "5.32.14-depup.0"
     }
+  },
+  "5.32.15": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-06T01:00:23.869Z",
+      "version": "5.32.15-depup.0"
+    }
   }
 }
