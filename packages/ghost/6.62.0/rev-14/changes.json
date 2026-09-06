@@ -2,7 +2,7 @@
   "bumped": {
     "@aws-sdk/client-s3": {
       "from": "3.1079.0",
-      "to": "^3.1126.0"
+      "to": "^3.1127.0"
     },
     "@extractus/oembed-extractor": {
       "from": "3.2.1",
@@ -194,7 +194,7 @@
     },
     "hono": {
       "from": "4.12.18",
-      "to": "^4.13.5"
+      "to": "^4.13.7"
     },
     "html-to-text": {
       "from": "5.1.1",
@@ -365,6 +365,6 @@
       "to": "^4.5.4"
     }
   },
-  "timestamp": "2026-09-04T16:11:43.300Z",
+  "timestamp": "2026-09-06T08:10:32.275Z",
   "totalUpdated": 91
 }
