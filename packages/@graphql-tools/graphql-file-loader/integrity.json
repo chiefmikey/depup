@@ -350,5 +350,24 @@
       "timestamp": "2026-08-13T00:27:13.783Z",
       "version": "8.1.19-depup.0"
     }
+  },
+  "8.1.20": {
+    "0": {
+      "changes": {
+        "globby": {
+          "from": "^11.0.3",
+          "to": "^16.2.4"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-07T16:09:21.996Z",
+      "version": "8.1.20-depup.0"
+    }
   }
 }

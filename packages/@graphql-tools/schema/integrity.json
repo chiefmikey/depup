@@ -285,5 +285,20 @@
       "timestamp": "2026-08-13T00:27:22.047Z",
       "version": "10.1.0-depup.0"
     }
+  },
+  "10.1.1": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-07T16:09:30.020Z",
+      "version": "10.1.1-depup.0"
+    }
   }
 }
