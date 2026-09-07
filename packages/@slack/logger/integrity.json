@@ -116,6 +116,19 @@
       "status": "published",
       "timestamp": "2026-08-27T01:39:22.308Z",
       "version": "5.0.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20",
+          "to": "^26.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-07T16:09:48.034Z",
+      "version": "5.0.0-depup.4"
     }
   }
 }
