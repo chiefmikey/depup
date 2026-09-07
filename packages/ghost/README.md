@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.62.0 | **DepUp version**: 6.62.0-depup.17 | **Updated**: 9/7/2026 | **Import test**: failed
+**Original version**: 6.62.0 | **DepUp version**: 6.62.0-depup.18 | **Updated**: 9/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -96,7 +96,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mppx | `0.6.20` | `^0.9.2` |
 | multer | `2.2.0` | `^2.3.0` |
 | mysql2 | `3.22.5` | `^3.24.3` |
-| nodemailer | `8.0.11` | `^10.0.0` |
+| nodemailer | `8.0.11` | `^10.0.1` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
@@ -105,7 +105,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | stripe | `8.222.0` | `^22.6.1` |
 | temporal-polyfill | `0.3.2` | `^1.0.4` |
 | terser | `5.48.0` | `^5.51.2` |
-| tldts | `^7.4.4` | `^7.4.11` |
+| tldts | `^7.4.4` | `^7.4.12` |
 | type-fest | `5.7.0` | `^5.9.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
 | zod | `4.4.3` | `^4.5.4` |
