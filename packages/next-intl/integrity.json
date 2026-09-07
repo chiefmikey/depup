@@ -1381,31 +1381,6 @@
     }
   },
   "4.14.2": {
-    "11": {
-      "changes": {
-        "@formatjs/intl-localematcher": {
-          "from": "^0.8.1",
-          "to": "^0.8.13"
-        },
-        "@parcel/watcher": {
-          "from": "^2.4.1",
-          "to": "^2.6.0"
-        },
-        "@swc/core": {
-          "from": "~1.16.0",
-          "to": "^1.16.2"
-        },
-        "negotiator": {
-          "from": "^1.0.0",
-          "to": "^1.1.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-09-05T08:11:11.903Z",
-      "version": "4.14.2-depup.11"
-    },
     "12": {
       "changes": {
         "@formatjs/intl-localematcher": {
@@ -1505,6 +1480,31 @@
       "status": "failed",
       "timestamp": "2026-09-06T16:09:13.308Z",
       "version": "4.14.2-depup.15"
+    },
+    "16": {
+      "changes": {
+        "@formatjs/intl-localematcher": {
+          "from": "^0.8.1",
+          "to": "^0.8.13"
+        },
+        "@parcel/watcher": {
+          "from": "^2.4.1",
+          "to": "^2.6.0"
+        },
+        "@swc/core": {
+          "from": "~1.16.0",
+          "to": "^1.16.2"
+        },
+        "negotiator": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-07T00:35:30.872Z",
+      "version": "4.14.2-depup.16"
     }
   }
 }
