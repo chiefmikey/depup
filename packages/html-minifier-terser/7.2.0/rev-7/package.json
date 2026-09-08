@@ -1,7 +1,7 @@
 {
   "name": "@depup/html-minifier-terser",
   "description": "Highly configurable, well-tested, JavaScript-based HTML minifier. (with updated dependencies)",
-  "version": "7.2.0-depup.2",
+  "version": "7.2.0-depup.7",
   "license": "MIT",
   "repository": "https://github.com/terser/html-minifier-terser.git",
   "bugs": "https://github.com/terser/html-minifier-terser/issues",
@@ -83,11 +83,11 @@
   "dependencies": {
     "camel-case": "^5.0.0",
     "clean-css": "^5.3.3",
-    "commander": "^14.0.3",
-    "entities": "^8.0.0",
+    "commander": "^15.0.0",
+    "entities": "^8.1.0",
     "param-case": "^4.0.0",
     "relateurl": "^0.2.7",
-    "terser": "^5.48.0"
+    "terser": "^5.51.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
@@ -121,11 +121,11 @@
       },
       "commander": {
         "from": "^10.0.0",
-        "to": "^14.0.3"
+        "to": "^15.0.0"
       },
       "entities": {
         "from": "^4.4.0",
-        "to": "^8.0.0"
+        "to": "^8.1.0"
       },
       "param-case": {
         "from": "^3.0.4",
@@ -133,13 +133,13 @@
       },
       "terser": {
         "from": "^5.15.1",
-        "to": "^5.48.0"
+        "to": "^5.51.2"
       }
     },
     "depsUpdated": 6,
     "originalPackage": "html-minifier-terser",
     "originalVersion": "7.2.0",
-    "processedAt": "2026-05-21T22:12:17.158Z",
+    "processedAt": "2026-09-08T00:33:35.555Z",
     "smokeTest": "passed"
   }
 }

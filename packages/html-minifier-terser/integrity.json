@@ -1,38 +1,5 @@
 {
   "7.2.0": {
-    "2": {
-      "changes": {
-        "camel-case": {
-          "from": "^4.1.2",
-          "to": "^5.0.0"
-        },
-        "clean-css": {
-          "from": "~5.3.2",
-          "to": "^5.3.3"
-        },
-        "commander": {
-          "from": "^10.0.0",
-          "to": "^14.0.3"
-        },
-        "entities": {
-          "from": "^4.4.0",
-          "to": "^8.0.0"
-        },
-        "param-case": {
-          "from": "^3.0.4",
-          "to": "^4.0.0"
-        },
-        "terser": {
-          "from": "^5.15.1",
-          "to": "^5.48.0"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-21T22:12:19.152Z",
-      "version": "7.2.0-depup.2"
-    },
     "3": {
       "changes": {
         "camel-case": {
@@ -164,6 +131,39 @@
       "status": "published",
       "timestamp": "2026-08-26T16:30:32.375Z",
       "version": "7.2.0-depup.6"
+    },
+    "7": {
+      "changes": {
+        "camel-case": {
+          "from": "^4.1.2",
+          "to": "^5.0.0"
+        },
+        "clean-css": {
+          "from": "~5.3.2",
+          "to": "^5.3.3"
+        },
+        "commander": {
+          "from": "^10.0.0",
+          "to": "^15.0.0"
+        },
+        "entities": {
+          "from": "^4.4.0",
+          "to": "^8.1.0"
+        },
+        "param-case": {
+          "from": "^3.0.4",
+          "to": "^4.0.0"
+        },
+        "terser": {
+          "from": "^5.15.1",
+          "to": "^5.51.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-08T00:33:45.745Z",
+      "version": "7.2.0-depup.7"
     }
   }
 }

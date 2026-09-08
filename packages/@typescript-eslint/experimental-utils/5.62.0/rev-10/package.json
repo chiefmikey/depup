@@ -1,6 +1,6 @@
 {
   "name": "@depup/typescript-eslint__experimental-utils",
-  "version": "5.62.0-depup.5",
+  "version": "5.62.0-depup.10",
   "description": "(Experimental) Utilities for working with TypeScript + ESLint together (with updated dependencies)",
   "keywords": [
     "@typescript-eslint/experimental-utils",
@@ -45,7 +45,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.65.0"
+    "@typescript-eslint/utils": "^8.70.0"
   },
   "peerDependencies": {
     "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -62,13 +62,13 @@
     "changes": {
       "@typescript-eslint/utils": {
         "from": "5.62.0",
-        "to": "^8.65.0"
+        "to": "^8.70.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "@typescript-eslint/experimental-utils",
     "originalVersion": "5.62.0",
-    "processedAt": "2026-07-21T17:20:32.650Z",
+    "processedAt": "2026-09-08T00:32:39.852Z",
     "smokeTest": "passed"
   }
 }

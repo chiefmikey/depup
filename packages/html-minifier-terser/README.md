@@ -12,7 +12,7 @@ npm install @depup/html-minifier-terser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.6 | **Updated**: 8/26/2026 | **Import test**: passed
+**Original version**: 7.2.0 | **DepUp version**: 7.2.0-depup.7 | **Updated**: 9/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,9 +21,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | camel-case | `^4.1.2` | `^5.0.0` |
 | clean-css | `~5.3.2` | `^5.3.3` |
 | commander | `^10.0.0` | `^15.0.0` |
-| entities | `^4.4.0` | `^8.0.0` |
+| entities | `^4.4.0` | `^8.1.0` |
 | param-case | `^3.0.4` | `^4.0.0` |
-| terser | `^5.15.1` | `^5.51.0` |
+| terser | `^5.15.1` | `^5.51.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/html-minifier-terser&labels=bug).

@@ -1,6 +1,6 @@
 {
   "name": "@depup/markdown-it",
-  "version": "15.0.1-depup.28",
+  "version": "15.0.1-depup.33",
   "description": "Markdown-it - modern pluggable markdown parser. (with updated dependencies)",
   "keywords": [
     "markdown-it",
@@ -84,7 +84,7 @@
   ],
   "dependencies": {
     "argparse": "^3.0.1",
-    "entities": "^8.0.0",
+    "entities": "^8.1.0",
     "linkify-it": "^6.1.0",
     "mdurl": "^2.1.0",
     "punycode.js": "^2.3.1",
@@ -120,15 +120,19 @@
         "from": "^3.0.0",
         "to": "^3.0.1"
       },
+      "entities": {
+        "from": "^8.0.0",
+        "to": "^8.1.0"
+      },
       "linkify-it": {
         "from": "^6.0.0",
         "to": "^6.1.0"
       }
     },
-    "depsUpdated": 2,
+    "depsUpdated": 3,
     "originalPackage": "markdown-it",
     "originalVersion": "15.0.1",
-    "processedAt": "2026-09-06T08:10:24.060Z",
+    "processedAt": "2026-09-08T00:33:35.275Z",
     "smokeTest": "passed"
   }
 }
