@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-testing-library",
-  "version": "7.16.2-depup.5",
+  "version": "7.16.2-depup.10",
   "description": "ESLint plugin to follow best practices and anticipate common mistakes when writing tests with Testing Library (with updated dependencies)",
   "keywords": [
     "eslint-plugin-testing-library",
@@ -61,8 +61,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/scope-manager": "^8.65.0",
-    "@typescript-eslint/utils": "^8.65.0"
+    "@typescript-eslint/scope-manager": "^8.70.0",
+    "@typescript-eslint/utils": "^8.70.0"
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
@@ -106,17 +106,17 @@
     "changes": {
       "@typescript-eslint/scope-manager": {
         "from": "^8.56.0",
-        "to": "^8.65.0"
+        "to": "^8.70.0"
       },
       "@typescript-eslint/utils": {
         "from": "^8.56.0",
-        "to": "^8.65.0"
+        "to": "^8.70.0"
       }
     },
     "depsUpdated": 2,
     "originalPackage": "eslint-plugin-testing-library",
     "originalVersion": "7.16.2",
-    "processedAt": "2026-07-21T17:22:57.283Z",
+    "processedAt": "2026-09-08T00:33:43.007Z",
     "smokeTest": "passed"
   }
 }

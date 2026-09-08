@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.116 | **Updated**: 9/4/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.117 | **Updated**: 9/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -33,16 +33,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.3.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.6` |
-| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.37` |
-| @graphql-tools/load | `^7.8.14` | `^8.1.16` |
+| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.38` |
+| @graphql-tools/load | `^7.8.14` | `^8.1.17` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
 | @nodelib/fs.walk | `^1.2.8` | `^3.0.1` |
 | @parcel/cache | `2.8.3` | `^2.16.4` |
 | @parcel/core | `2.8.3` | `^2.16.4` |
 | @pmmmwh/react-refresh-webpack-plugin | `0.5` | `^0.6.3` |
 | @types/http-proxy | `^1.17.11` | `^1.17.17` |
-| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.69.0` |
-| @typescript-eslint/parser | `^5.60.1` | `^8.69.0` |
+| @typescript-eslint/eslint-plugin | `^5.60.1` | `^8.70.0` |
+| @typescript-eslint/parser | `^5.60.1` | `^8.70.0` |
 | @vercel/webpack-asset-relocator-loader | `1.7.3` | `^1.11.0` |
 | acorn-loose | `^8.3.0` | `^8.5.2` |
 | acorn-walk | `^8.2.0` | `^8.3.5` |
@@ -104,7 +104,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.29.4` | `^2.30.1` |
 | multer | `^2.0.1` | `^2.3.0` |
 | node-fetch | `^2.6.11` | `^3.3.2` |
-| node-html-parser | `^5.4.2` | `^9.0.3` |
+| node-html-parser | `^5.4.2` | `^9.0.4` |
 | p-defer | `^3.0.0` | `^4.0.1` |
 | path-to-regexp | `0.1.12` | `^8.4.2` |
 | postcss | `^8.4.24` | `^8.5.28` |
