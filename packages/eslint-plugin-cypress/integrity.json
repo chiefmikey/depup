@@ -301,5 +301,15 @@
       "timestamp": "2026-09-01T16:32:03.588Z",
       "version": "7.0.1-depup.1"
     }
+  },
+  "7.0.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-08T16:11:48.156Z",
+      "version": "7.0.2-depup.0"
+    }
   }
 }
