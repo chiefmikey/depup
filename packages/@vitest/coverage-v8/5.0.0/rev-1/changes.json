@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@vitest/istanbul-lib-coverage": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "@vitest/istanbul-lib-report": {
+      "from": "^1.0.0",
+      "to": "^1.0.1"
+    },
+    "ast-v8-to-istanbul": {
+      "from": "^1.0.5",
+      "to": "^1.0.6"
+    },
+    "obug": {
+      "from": "^2.1.4",
+      "to": "^3.0.0"
+    }
+  },
+  "timestamp": "2026-09-09T08:11:59.685Z",
+  "totalUpdated": 4
+}
