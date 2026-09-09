@@ -12,7 +12,7 @@ npm install @depup/fork-ts-checker-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.11 | **Updated**: 9/4/2026 | **Import test**: failed
+**Original version**: 9.1.0 | **DepUp version**: 9.1.0-depup.12 | **Updated**: 9/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | memfs | `^3.4.1` | `^4.71.0` |
 | minimatch | `^3.0.4` | `^10.2.6` |
 | node-abort-controller | `^3.0.1` | `^3.1.1` |
-| schema-utils | `^3.1.1` | `^4.3.3` |
+| schema-utils | `^3.1.1` | `^4.4.0` |
 | semver | `^7.3.5` | `^7.8.5` |
 | tapable | `^2.2.1` | `^2.3.3` |
 

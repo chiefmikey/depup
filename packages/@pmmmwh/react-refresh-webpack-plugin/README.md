@@ -12,7 +12,7 @@ npm install @depup/pmmmwh__react-refresh-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.6.3 | **DepUp version**: 0.6.3-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 0.6.3 | **DepUp version**: 0.6.3-depup.1 | **Updated**: 9/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | core-js-pure | `^3.23.3` | `^3.50.0` |
 | error-stack-parser | `^2.0.6` | `^2.1.4` |
 | html-entities | `^2.1.0` | `^2.6.0` |
-| schema-utils | `^4.2.0` | `^4.3.3` |
+| schema-utils | `^4.2.0` | `^4.4.0` |
 | source-map | `^0.7.3` | `^0.8.0` |
 
 

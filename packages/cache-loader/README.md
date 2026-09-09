@@ -12,7 +12,7 @@ npm install @depup/cache-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.0 | **DepUp version**: 4.1.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: failed
+**Original version**: 4.1.0 | **DepUp version**: 4.1.0-depup.1 | **Updated**: 9/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | loader-utils | `^1.2.3` | `^3.3.1` |
 | mkdirp | `^0.5.1` | `^3.0.1` |
 | neo-async | `^2.6.1` | `^2.6.2` |
-| schema-utils | `^2.0.0` | `^4.3.3` |
+| schema-utils | `^2.0.0` | `^4.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cache-loader&labels=bug).

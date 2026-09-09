@@ -532,6 +532,19 @@
       "status": "published",
       "timestamp": "2026-09-06T00:58:42.030Z",
       "version": "9.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@loaders.gl/core": {
+          "from": "^4.4.3",
+          "to": "^4.5.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-09T16:11:57.659Z",
+      "version": "9.4.0-depup.1"
     }
   }
 }
