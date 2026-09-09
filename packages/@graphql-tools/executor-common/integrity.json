@@ -85,5 +85,20 @@
       "timestamp": "2026-08-19T16:08:22.085Z",
       "version": "1.0.6-depup.61"
     }
+  },
+  "1.1.0": {
+    "0": {
+      "changes": {
+        "@envelop/core": {
+          "from": "^5.4.0",
+          "to": "^5.6.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-09T00:32:58.521Z",
+      "version": "1.1.0-depup.0"
+    }
   }
 }
