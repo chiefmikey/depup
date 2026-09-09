@@ -175,5 +175,20 @@
       "timestamp": "2026-08-13T00:27:07.077Z",
       "version": "3.3.0-depup.60"
     }
+  },
+  "3.4.0": {
+    "0": {
+      "changes": {
+        "@repeaterjs/repeater": {
+          "from": "^3.0.4",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-09T00:33:48.421Z",
+      "version": "3.4.0-depup.0"
+    }
   }
 }
