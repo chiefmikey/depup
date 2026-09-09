@@ -582,5 +582,20 @@
       "timestamp": "2026-09-08T00:32:35.500Z",
       "version": "12.1.4-depup.0"
     }
+  },
+  "12.2.0": {
+    "0": {
+      "changes": {
+        "@repeaterjs/repeater": {
+          "from": "^3.0.6",
+          "to": "^3.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-09T00:32:52.489Z",
+      "version": "12.2.0-depup.0"
+    }
   }
 }
