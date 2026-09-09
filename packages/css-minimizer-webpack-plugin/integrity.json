@@ -1,38 +1,5 @@
 {
   "8.0.0": {
-    "1": {
-      "changes": {
-        "@jridgewell/trace-mapping": {
-          "from": "^0.3.25",
-          "to": "^0.3.31"
-        },
-        "cssnano": {
-          "from": "^7.0.4",
-          "to": "^8.0.0"
-        },
-        "jest-worker": {
-          "from": "^30.0.5",
-          "to": "^30.3.0"
-        },
-        "postcss": {
-          "from": "^8.4.40",
-          "to": "^8.5.14"
-        },
-        "schema-utils": {
-          "from": "^4.2.0",
-          "to": "^4.3.3"
-        },
-        "serialize-javascript": {
-          "from": "^7.0.3",
-          "to": "^7.0.5"
-        }
-      },
-      "depsUpdated": 6,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-05-07T07:16:46.818Z",
-      "version": "8.0.0-depup.1"
-    },
     "2": {
       "changes": {
         "@jridgewell/trace-mapping": {
@@ -164,6 +131,39 @@
       "status": "published",
       "timestamp": "2026-08-28T11:51:25.299Z",
       "version": "8.0.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "@jridgewell/trace-mapping": {
+          "from": "^0.3.25",
+          "to": "^0.3.31"
+        },
+        "cssnano": {
+          "from": "^7.0.4",
+          "to": "^9.0.4"
+        },
+        "jest-worker": {
+          "from": "^30.0.5",
+          "to": "^30.5.1"
+        },
+        "postcss": {
+          "from": "^8.4.40",
+          "to": "^8.5.28"
+        },
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.4.0"
+        },
+        "serialize-javascript": {
+          "from": "^7.0.3",
+          "to": "^7.1.1"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-09T16:11:09.014Z",
+      "version": "8.0.0-depup.6"
     }
   }
 }

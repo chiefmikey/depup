@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.1 | **Updated**: 9/9/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.2 | **Updated**: 9/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.73.0` |
+| @sentry/node | `7.120.4` | `^10.74.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/api-framework | `3.3.12` | `^3.3.13` |
 | @tryghost/bookshelf-plugins | `2.3.12` | `^2.3.14` |
@@ -74,7 +74,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | intl-messageformat | `5.4.3` | `^11.2.14` |
 | js-yaml | `4.3.0` | `^5.4.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
-| juice | `9.1.0` | `^12.1.2` |
+| juice | `9.1.0` | `^12.1.3` |
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |

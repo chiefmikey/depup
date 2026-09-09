@@ -12,13 +12,14 @@ npm install @depup/minimizer-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.10.0 | **DepUp version**: 5.10.0-depup.0 | **Updated**: 9/6/2026 | **Import test**: passed
+**Original version**: 5.10.1 | **DepUp version**: 5.10.1-depup.0 | **Updated**: 9/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | jest-worker | `^27.4.5` | `^30.5.1` |
+| schema-utils | `^4.3.3` | `^4.4.0` |
 | terser | `^5.51.0` | `^5.51.2` |
 
 
