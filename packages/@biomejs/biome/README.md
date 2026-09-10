@@ -12,7 +12,7 @@ npm install @depup/biomejs__biome
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.5.12 | **DepUp version**: 2.5.12-depup.0 | **Updated**: 9/3/2026 | **Import test**: failed
+**Original version**: 2.5.13 | **DepUp version**: 2.5.13-depup.0 | **Updated**: 9/10/2026 | **Import test**: failed
 
 ## What changed
 
