@@ -259,6 +259,14 @@
       "status": "published",
       "timestamp": "2026-09-10T00:32:07.324Z",
       "version": "7.10.0-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "skipped",
+      "timestamp": "2026-09-10T08:12:03.392Z",
+      "version": "7.10.0-depup.1"
     }
   }
 }
