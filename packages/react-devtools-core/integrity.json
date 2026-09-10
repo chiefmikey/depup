@@ -66,5 +66,24 @@
       "timestamp": "2026-07-21T17:30:22.560Z",
       "version": "7.0.1-depup.3"
     }
+  },
+  "8.0.0": {
+    "0": {
+      "changes": {
+        "shell-quote": {
+          "from": "^1.6.1",
+          "to": "^1.10.0"
+        },
+        "ws": {
+          "from": "^7",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:33:32.161Z",
+      "version": "8.0.0-depup.0"
+    }
   }
 }

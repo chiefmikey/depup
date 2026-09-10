@@ -12,7 +12,7 @@ npm install @depup/nextra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.63 | **Updated**: 8/28/2026 | **Import test**: failed
+**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.64 | **Updated**: 9/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,7 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | estree-util-value-to-estree | `^3.3.3` | `^3.5.0` |
 | fast-glob | `^3.3.2` | `^3.3.3` |
 | hast-util-to-estree | `^3.1.0` | `^3.1.3` |
-| katex | `^0.16.21` | `^0.18.4` |
+| katex | `^0.16.21` | `^0.18.7` |
 | mdast-util-from-markdown | `^2.0.1` | `^2.0.3` |
 | mdast-util-gfm | `^3.0.0` | `^3.1.0` |
 | mdast-util-to-hast | `^13.2.0` | `^13.2.1` |
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ts-morph | `^27.0.0` | `^28.0.0` |
 | unist-util-visit | `^5.0.0` | `^5.1.0` |
 | yaml | `^2.3.2` | `^2.9.0` |
-| zod | `^4.1.12` | `^4.5.1` |
+| zod | `^4.1.12` | `^4.6.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nextra&labels=bug).
