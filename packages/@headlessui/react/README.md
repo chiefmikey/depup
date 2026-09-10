@@ -12,17 +12,17 @@ npm install @depup/headlessui__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.10 | **DepUp version**: 2.2.10-depup.2 | **Updated**: 6/1/2026 | **Import test**: passed
+**Original version**: 2.2.10 | **DepUp version**: 2.2.10-depup.3 | **Updated**: 9/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @floating-ui/react | `^0.26.16` | `^0.27.19` |
+| @floating-ui/react | `^0.26.16` | `^0.27.20` |
 | @react-aria/focus | `^3.20.2` | `^3.22.1` |
 | @react-aria/interactions | `^3.25.0` | `^3.28.1` |
-| @tanstack/react-virtual | `^3.13.9` | `^3.14.0` |
-| use-sync-external-store | `^1.5.0` | `^1.6.0` |
+| @tanstack/react-virtual | `^3.13.9` | `^3.14.11` |
+| use-sync-external-store | `^1.5.0` | `^1.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/headlessui__react&labels=bug).

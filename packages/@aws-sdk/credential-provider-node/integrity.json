@@ -1849,5 +1849,28 @@
       "timestamp": "2026-09-04T00:41:06.829Z",
       "version": "3.972.82-depup.1"
     }
+  },
+  "3.972.83": {
+    "0": {
+      "changes": {
+        "@smithy/credential-provider-imds": {
+          "from": "^4.4.16",
+          "to": "^4.5.2"
+        },
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.18.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:31:03.338Z",
+      "version": "3.972.83-depup.0"
+    }
   }
 }

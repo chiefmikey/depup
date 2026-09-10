@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.2 | **Updated**: 9/9/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.3 | **Updated**: 9/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1128.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1129.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
@@ -55,6 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
 | cheerio | `0.22.0` | `^1.2.0` |
+| cookies | `0.9.1` | `^0.9.2` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
 | dompurify | `3.4.13` | `^3.4.15` |
@@ -96,19 +97,19 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mppx | `0.6.20` | `^0.9.2` |
 | multer | `2.2.0` | `^2.3.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
-| nodemailer | `8.0.11` | `^10.0.1` |
+| nodemailer | `8.0.11` | `^10.0.2` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
 | sanitize-html | `2.17.5` | `^2.17.7` |
 | sharp | `0.35.3` | `^0.35.4` |
-| stripe | `8.222.0` | `^22.6.1` |
+| stripe | `8.222.0` | `^22.6.2` |
 | temporal-polyfill | `0.3.2` | `^1.0.4` |
 | terser | `5.48.0` | `^5.51.2` |
 | tldts | `^7.4.4` | `^7.4.12` |
 | type-fest | `5.7.0` | `^5.9.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
-| zod | `4.4.3` | `^4.5.4` |
+| zod | `4.4.3` | `^4.6.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ghost&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/react-navigation__elements
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.9.40 | **DepUp version**: 2.9.40-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 2.9.40 | **DepUp version**: 2.9.40-depup.1 | **Updated**: 9/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | color | `^4.2.3` | `^5.0.3` |
 | use-latest-callback | `^0.2.4` | `^0.3.5` |
-| use-sync-external-store | `^1.5.0` | `^1.6.0` |
+| use-sync-external-store | `^1.5.0` | `^1.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-navigation__elements&labels=bug).
