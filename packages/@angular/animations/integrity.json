@@ -458,5 +458,20 @@
       "timestamp": "2026-09-03T08:12:16.465Z",
       "version": "22.1.5-depup.0"
     }
+  },
+  "22.1.6": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:30:52.062Z",
+      "version": "22.1.6-depup.0"
+    }
   }
 }

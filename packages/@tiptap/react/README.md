@@ -12,15 +12,15 @@ npm install @depup/tiptap__react
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.31.3 | **DepUp version**: 3.31.3-depup.0 | **Updated**: 9/4/2026 | **Import test**: failed
+**Original version**: 3.31.3 | **DepUp version**: 3.31.3-depup.1 | **Updated**: 9/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/use-sync-external-store | `^0.0.6` | `^1.5.0` |
+| @types/use-sync-external-store | `^0.0.6` | `^1.7.0` |
 | fast-equals | `^5.3.3` | `^6.0.3` |
-| use-sync-external-store | `^1.4.0` | `^1.6.0` |
+| use-sync-external-store | `^1.4.0` | `^1.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tiptap__react&labels=bug).

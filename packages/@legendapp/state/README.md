@@ -12,13 +12,13 @@ npm install @depup/legendapp__state
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.15 | **DepUp version**: 2.1.15-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 2.1.15 | **DepUp version**: 2.1.15-depup.1 | **Updated**: 9/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| use-sync-external-store | `^1.2.0` | `^1.6.0` |
+| use-sync-external-store | `^1.2.0` | `^1.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/legendapp__state&labels=bug).

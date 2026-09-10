@@ -1,42 +1,5 @@
 {
   "0.0.4": {
-    "3": {
-      "changes": {
-        "chalk": {
-          "from": "5.2.0",
-          "to": "^5.6.2"
-        },
-        "commander": {
-          "from": "^10.0.0",
-          "to": "^15.0.0"
-        },
-        "execa": {
-          "from": "^7.0.0",
-          "to": "^9.6.1"
-        },
-        "fs-extra": {
-          "from": "^11.1.0",
-          "to": "^11.3.5"
-        },
-        "node-fetch": {
-          "from": "^3.3.0",
-          "to": "^3.3.2"
-        },
-        "ora": {
-          "from": "^6.1.2",
-          "to": "^9.4.0"
-        },
-        "zod": {
-          "from": "^3.20.2",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 7,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-05-29T10:02:42.699Z",
-      "version": "0.0.4-depup.3"
-    },
     "4": {
       "changes": {
         "chalk": {
@@ -184,6 +147,43 @@
       "status": "published",
       "timestamp": "2026-08-28T20:01:46.026Z",
       "version": "0.0.4-depup.7"
+    },
+    "8": {
+      "changes": {
+        "chalk": {
+          "from": "5.2.0",
+          "to": "^6.0.0"
+        },
+        "commander": {
+          "from": "^10.0.0",
+          "to": "^15.0.0"
+        },
+        "execa": {
+          "from": "^7.0.0",
+          "to": "^10.0.1"
+        },
+        "fs-extra": {
+          "from": "^11.1.0",
+          "to": "^11.4.0"
+        },
+        "node-fetch": {
+          "from": "^3.3.0",
+          "to": "^3.3.2"
+        },
+        "ora": {
+          "from": "^6.1.2",
+          "to": "^9.4.1"
+        },
+        "zod": {
+          "from": "^3.20.2",
+          "to": "^4.6.1"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:33:07.216Z",
+      "version": "0.0.4-depup.8"
     }
   }
 }

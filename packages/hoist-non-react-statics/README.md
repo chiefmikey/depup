@@ -12,13 +12,13 @@ npm install @depup/hoist-non-react-statics
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.3.2 | **DepUp version**: 3.3.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.3.2 | **DepUp version**: 3.3.2-depup.1 | **Updated**: 9/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| react-is | `^16.7.0` | `^19.2.4` |
+| react-is | `^16.7.0` | `^19.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/hoist-non-react-statics&labels=bug).

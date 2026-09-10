@@ -905,5 +905,20 @@
       "timestamp": "2026-09-03T00:34:08.166Z",
       "version": "3.17.1-depup.0"
     }
+  },
+  "3.17.2": {
+    "0": {
+      "changes": {
+        "standardwebhooks": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:32:28.268Z",
+      "version": "3.17.2-depup.0"
+    }
   }
 }

@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-18T23:33:36.742Z",
       "version": "2.0.0-pre.9-depup.0"
+    },
+    "1": {
+      "changes": {
+        "fast-equals": {
+          "from": "^5.2.2",
+          "to": "^6.0.3"
+        },
+        "immer": {
+          "from": "^10.1.1",
+          "to": "^11.1.18"
+        },
+        "react": {
+          "from": "^19.0.0",
+          "to": "^19.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-10T00:39:44.221Z",
+      "version": "2.0.0-pre.9-depup.1"
     }
   }
 }
