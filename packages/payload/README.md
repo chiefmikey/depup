@@ -12,7 +12,7 @@ npm install @depup/payload
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.89.0 | **DepUp version**: 3.89.0-depup.0 | **Updated**: 9/10/2026 | **Import test**: passed
+**Original version**: 3.89.0 | **DepUp version**: 3.89.0-depup.1 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ajv | `8.18.0` | `^8.20.0` |
 | ci-info | `^4.1.0` | `^4.4.0` |
 | console-table-printer | `2.12.1` | `^2.16.1` |
-| file-type | `21.3.4` | `^22.0.2` |
+| file-type | `21.3.4` | `^22.1.0` |
 | get-tsconfig | `4.8.1` | `^4.14.3` |
 | ipaddr.js | `2.2.0` | `^2.5.0` |
 | jose | `5.10.0` | `^6.2.12` |
