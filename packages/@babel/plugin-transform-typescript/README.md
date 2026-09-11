@@ -12,14 +12,11 @@ npm install @depup/babel__plugin-transform-typescript
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.28 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 8.0.5 | **DepUp version**: 8.0.5-depup.0 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @babel/plugin-syntax-typescript | `^8.0.1` | `^8.0.3` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/babel__plugin-transform-typescript&labels=bug).
 

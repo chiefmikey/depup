@@ -12,15 +12,11 @@ npm install @depup/mongoose
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.9.5 | **DepUp version**: 9.9.5-depup.0 | **Updated**: 9/5/2026 | **Import test**: passed
+**Original version**: 9.10.0 | **DepUp version**: 9.10.0-depup.0 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| kareem | `3.3.0` | `^3.4.0` |
-| mongodb | `~7.5` | `^7.6.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mongoose&labels=bug).
 

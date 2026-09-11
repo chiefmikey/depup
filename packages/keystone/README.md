@@ -12,13 +12,13 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.81 | **Updated**: 9/10/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.82 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.4.4` | `^8.0.1` |
+| @babel/core | `^7.4.4` | `^8.0.5` |
 | @babel/plugin-proposal-class-properties | `^7.4.4` | `^7.18.6` |
 | @babel/plugin-proposal-decorators | `^7.4.4` | `^8.0.2` |
 | @babel/plugin-proposal-export-namespace-from | `^7.2.0` | `^7.18.9` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-syntax-import-meta | `^7.2.0` | `^7.10.4` |
 | @babel/plugin-transform-object-assign | `^7.2.0` | `^7.29.7` |
 | @babel/polyfill | `^7.4.4` | `^7.12.1` |
-| @babel/preset-env | `^7.4.4` | `^8.0.2` |
+| @babel/preset-env | `^7.4.4` | `^8.0.5` |
 | @babel/preset-react | `^7.0.0` | `^8.0.1` |
 | async | `^2.6.2` | `^3.2.6` |
 | body-parser | `^1.19.0` | `^2.3.0` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | marked | `^0.6.2` | `^18.0.12` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
-| mongoose | `^4.13.14` | `^9.9.5` |
+| mongoose | `^4.13.14` | `^9.10.0` |
 | morgan | `^1.9.1` | `^1.12.0` |
 | multer | `^1.4.1` | `^2.3.0` |
 | qs | `^6.7.0` | `^6.16.0` |
