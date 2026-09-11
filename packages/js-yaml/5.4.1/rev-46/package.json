@@ -1,6 +1,6 @@
 {
   "name": "@depup/js-yaml",
-  "version": "5.4.1-depup.41",
+  "version": "5.4.1-depup.46",
   "description": "YAML 1.2 parser and serializer (with updated dependencies)",
   "keywords": [
     "js-yaml",
@@ -75,7 +75,7 @@
     "postpublish": "npm run demo:publish"
   },
   "dependencies": {
-    "argparse": "^3.0.1"
+    "argparse": "^3.0.2"
   },
   "devDependencies": {
     "@streamparser/json": "^0.0.22",
@@ -100,13 +100,13 @@
     "changes": {
       "argparse": {
         "from": "^2.0.1",
-        "to": "^3.0.1"
+        "to": "^3.0.2"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "js-yaml",
     "originalVersion": "5.4.1",
-    "processedAt": "2026-09-09T16:11:15.924Z",
+    "processedAt": "2026-09-11T08:11:54.880Z",
     "smokeTest": "passed"
   }
 }
