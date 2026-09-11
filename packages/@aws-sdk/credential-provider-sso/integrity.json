@@ -2432,6 +2432,27 @@
       "status": "published",
       "timestamp": "2026-09-10T00:30:52.367Z",
       "version": "3.973.15-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1129.0",
+          "to": "^3.1130.0"
+        },
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.18.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-11T00:32:33.370Z",
+      "version": "3.973.15-depup.1"
     }
   }
 }

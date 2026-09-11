@@ -12,7 +12,7 @@ npm install @depup/modelcontextprotocol__sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.30.0 | **DepUp version**: 1.30.0-depup.9 | **Updated**: 9/10/2026 | **Import test**: failed
+**Original version**: 1.30.0 | **DepUp version**: 1.30.0-depup.10 | **Updated**: 9/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @hono/node-server | `^1.19.9 || ^2.0.5` | `^2.1.1` |
 | ajv | `^8.17.1` | `^8.20.0` |
-| content-type | `^1.0.5` | `^3.0.0` |
+| content-type | `^1.0.5` | `^3.1.0` |
 | cors | `^2.8.5` | `^2.8.6` |
 | cross-spawn | `^7.0.5` | `^7.0.6` |
 | eventsource | `^3.0.2` | `^5.1.1` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jose | `^6.1.3` | `^6.2.12` |
 | pkce-challenge | `^5.0.0` | `^6.0.0` |
 | raw-body | `^3.0.0` | `^4.0.0` |
-| zod | `^3.25 || ^4.0` | `^4.6.1` |
+| zod | `^3.25 || ^4.0` | `^4.6.2` |
 | zod-to-json-schema | `^3.25.1` | `^3.25.2` |
 
 

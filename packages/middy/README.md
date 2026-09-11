@@ -12,19 +12,19 @@ npm install @depup/middy
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.36.0 | **DepUp version**: 0.36.0-depup.5 | **Updated**: 8/30/2026 | **Import test**: passed
+**Original version**: 0.36.0 | **DepUp version**: 0.36.0-depup.6 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/aws-lambda | `^8.10.45` | `^8.10.162` |
+| @types/aws-lambda | `^8.10.45` | `^8.10.163` |
 | @types/http-errors | `^1.6.3` | `^2.0.5` |
 | ajv | `^6.9.1` | `^8.20.0` |
 | ajv-i18n | `^3.4.0` | `^4.2.0` |
 | ajv-keywords | `^3.4.1` | `^5.1.0` |
 | busboy | `^0.3.1` | `^1.6.0` |
-| content-type | `^1.0.4` | `^3.0.0` |
+| content-type | `^1.0.4` | `^3.1.0` |
 | http-errors | `^1.7.3` | `^2.0.1` |
 | json-mask | `^0.3.8` | `^2.0.0` |
 | negotiator | `^0.6.1` | `^1.1.0` |

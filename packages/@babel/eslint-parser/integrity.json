@@ -226,5 +226,28 @@
       "timestamp": "2026-07-21T16:02:46.772Z",
       "version": "8.0.1-depup.23"
     }
+  },
+  "8.0.5": {
+    "0": {
+      "changes": {
+        "eslint-scope": {
+          "from": "^9.1.0",
+          "to": "^9.1.2"
+        },
+        "eslint-visitor-keys": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        },
+        "verkit": {
+          "from": "^0.3.2",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-11T00:32:34.033Z",
+      "version": "8.0.5-depup.0"
+    }
   }
 }
