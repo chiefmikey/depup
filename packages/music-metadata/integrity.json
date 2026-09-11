@@ -204,6 +204,23 @@
       "status": "published",
       "timestamp": "2026-08-21T00:17:54.357Z",
       "version": "11.15.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "content-type": {
+          "from": "^2.1.0",
+          "to": "^3.1.0"
+        },
+        "file-type": {
+          "from": "^21.3.4",
+          "to": "^22.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-11T00:33:39.877Z",
+      "version": "11.15.0-depup.2"
     }
   }
 }

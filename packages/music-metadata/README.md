@@ -12,13 +12,13 @@ npm install @depup/music-metadata
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.15.0 | **DepUp version**: 11.15.0-depup.1 | **Updated**: 8/21/2026 | **Import test**: failed
+**Original version**: 11.15.0 | **DepUp version**: 11.15.0-depup.2 | **Updated**: 9/11/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| content-type | `^2.1.0` | `^3.0.0` |
+| content-type | `^2.1.0` | `^3.1.0` |
 | file-type | `^21.3.4` | `^22.0.2` |
 
 
