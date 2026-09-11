@@ -95,5 +95,24 @@
       "timestamp": "2026-08-28T11:53:37.779Z",
       "version": "1.12.0-depup.0"
     }
+  },
+  "1.12.1": {
+    "0": {
+      "changes": {
+        "basic-auth": {
+          "from": "~2.0.1",
+          "to": "^3.0.0"
+        },
+        "debug": {
+          "from": "2.6.9",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-11T16:12:14.820Z",
+      "version": "1.12.1-depup.0"
+    }
   }
 }

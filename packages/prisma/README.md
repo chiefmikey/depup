@@ -12,18 +12,19 @@ npm install @depup/prisma
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0-rc.13 | **DepUp version**: 8.0.0-rc.13-depup.1 | **Updated**: 9/8/2026 | **Import test**: failed
+**Original version**: 8.0.0-rc.13 | **DepUp version**: 8.0.0-rc.13-depup.2 | **Updated**: 9/11/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @prisma/composer-cli | `0.17.0` | `^0.18.0` |
 | @prisma/compute-sdk | `0.42.0` | `^0.43.0` |
-| @prisma/management-api-sdk | `1.69.0` | `^1.72.0` |
+| @prisma/management-api-sdk | `1.69.0` | `^1.73.0` |
 | @vercel/detect-agent | `^1.2.3` | `^1.2.5` |
 | better-result | `^2.9.2` | `^3.0.1` |
 | execa | `^9.6.1` | `^10.0.1` |
-| open | `^11.0.0` | `^11.0.2` |
+| open | `^11.0.0` | `^11.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/prisma&labels=bug).

@@ -85,5 +85,24 @@
       "timestamp": "2026-08-21T00:17:27.866Z",
       "version": "1.8.1-depup.25"
     }
+  },
+  "1.8.2": {
+    "0": {
+      "changes": {
+        "debug": {
+          "from": "2.6.9",
+          "to": "^4.4.3"
+        },
+        "negotiator": {
+          "from": "~0.6.4",
+          "to": "^1.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-11T16:10:50.450Z",
+      "version": "1.8.2-depup.0"
+    }
   }
 }
