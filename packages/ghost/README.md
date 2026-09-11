@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.7 | **Updated**: 9/11/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.8 | **Updated**: 9/11/2026 | **Import test**: failed
 
 ## What changed
 
@@ -55,6 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
 | cheerio | `0.22.0` | `^1.2.0` |
+| compression | `1.8.1` | `^1.8.2` |
 | cookies | `0.9.1` | `^0.9.2` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
@@ -63,7 +64,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
 | fastq | `^1.20.1` | `^1.20.3` |
-| file-type | `21.3.4` | `^22.0.2` |
+| file-type | `21.3.4` | `^22.1.0` |
 | fs-extra | `11.3.6` | `^11.4.0` |
 | got | `15.1.0` | `^16.0.0` |
 | gscan | `6.4.2` | `^6.6.0` |
@@ -97,7 +98,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mppx | `0.6.20` | `^0.9.3` |
 | multer | `2.2.0` | `^2.3.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
-| nodemailer | `8.0.11` | `^10.0.3` |
+| nodemailer | `8.0.11` | `^10.0.7` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |

@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.22 | **Updated**: 9/11/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.23 | **Updated**: 9/11/2026 | **Import test**: passed
 
 ## What changed
 
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.11.0` |
 | @playwright/browser-chromium | `1.62.1` | `^1.63.0` |
 | @playwright/test | `1.62.1` | `^1.63.0` |
-| @smithy/core | `^3.31.1` | `^3.33.3` |
+| @smithy/core | `^3.31.1` | `^3.34.0` |
 | @upstash/redis | `^1.36.1` | `^1.38.4` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^4.1.2` | `^6.0.0` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | hot-shots | `^10.2.1` | `^17.1.0` |
 | hpagent | `^0.1.1` | `^1.2.0` |
 | https-proxy-agent | `^5.0.0` | `^9.1.0` |
-| joi | `^17.13.4` | `^18.2.8` |
+| joi | `^17.13.4` | `^18.2.9` |
 | js-yaml | `^3.15.1` | `^5.4.1` |
 | jsonpath-plus | `^10.3.0` | `^10.4.0` |
 | lodash | `^4.18.0` | `^4.18.1` |
