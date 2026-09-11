@@ -424,5 +424,28 @@
       "timestamp": "2026-09-11T00:34:31.417Z",
       "version": "15.0.1-depup.42"
     }
+  },
+  "15.0.2": {
+    "0": {
+      "changes": {
+        "argparse": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "entities": {
+          "from": "^8.0.0",
+          "to": "^8.1.0"
+        },
+        "linkify-it": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-11T08:12:51.257Z",
+      "version": "15.0.2-depup.0"
+    }
   }
 }
