@@ -12,13 +12,13 @@ npm install @depup/nextra
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.64 | **Updated**: 9/10/2026 | **Import test**: failed
+**Original version**: 4.6.1 | **DepUp version**: 4.6.1-depup.65 | **Updated**: 9/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @formatjs/intl-localematcher | `^0.6.0` | `^0.8.13` |
+| @formatjs/intl-localematcher | `^0.6.0` | `^0.9.0` |
 | @headlessui/react | `^2.1.2` | `^2.2.10` |
 | @mdx-js/mdx | `^3.0.0` | `^3.1.1` |
 | @napi-rs/simple-git | `^0.1.9` | `^1.1.0` |
@@ -43,8 +43,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | shiki | `^3.2.1` | `^4.4.3` |
 | ts-morph | `^27.0.0` | `^28.0.0` |
 | unist-util-visit | `^5.0.0` | `^5.1.0` |
-| yaml | `^2.3.2` | `^2.9.0` |
-| zod | `^4.1.12` | `^4.6.1` |
+| yaml | `^2.3.2` | `^2.9.1` |
+| zod | `^4.1.12` | `^4.6.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nextra&labels=bug).
