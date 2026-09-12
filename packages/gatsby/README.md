@@ -12,20 +12,20 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.118 | **Updated**: 9/10/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.119 | **Updated**: 9/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/code-frame | `^7.18.6` | `^8.0.0` |
-| @babel/core | `^7.20.12` | `^8.0.1` |
-| @babel/eslint-parser | `^7.19.1` | `^8.0.1` |
+| @babel/core | `^7.20.12` | `^8.0.5` |
+| @babel/eslint-parser | `^7.19.1` | `^8.0.5` |
 | @babel/helper-plugin-utils | `^7.20.2` | `^8.0.1` |
-| @babel/parser | `^7.20.13` | `^8.0.4` |
-| @babel/runtime | `^7.20.13` | `^8.0.0` |
-| @babel/traverse | `^7.20.13` | `^8.0.4` |
-| @babel/types | `^7.20.7` | `^8.0.4` |
+| @babel/parser | `^7.20.13` | `^8.0.5` |
+| @babel/runtime | `^7.20.13` | `^8.0.5` |
+| @babel/traverse | `^7.20.13` | `^8.0.5` |
+| @babel/types | `^7.20.7` | `^8.0.5` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^7.1.0` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | acorn-walk | `^8.2.0` | `^8.3.5` |
 | address | `1.2.2` | `^2.0.3` |
 | anser | `^2.1.1` | `^2.3.5` |
-| autoprefixer | `^10.4.14` | `^10.5.5` |
+| autoprefixer | `^10.4.14` | `^10.6.0` |
 | axios | `^1.6.4` | `^1.20.0` |
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
@@ -57,7 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cache-manager | `^2.11.1` | `^7.2.9` |
 | chalk | `^4.1.2` | `^6.0.0` |
 | chokidar | `^3.6.0` | `^5.0.0` |
-| compression | `^1.7.4` | `^1.8.1` |
+| compression | `^1.7.4` | `^1.8.2` |
 | cookie | `^0.5.0` | `^2.0.1` |
 | core-js | `^3.31.0` | `^3.50.0` |
 | cors | `^2.8.5` | `^2.8.6` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^17.4.2` |
-| enhanced-resolve | `^5.15.0` | `^5.24.5` |
+| enhanced-resolve | `^5.15.0` | `^5.25.0` |
 | eslint | `^7.32.0` | `^10.10.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
@@ -91,7 +91,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | graphql-tag | `^2.12.6` | `^2.12.7` |
 | hasha | `^5.2.2` | `^7.0.0` |
 | is-relative-url | `^3.0.0` | `^4.1.0` |
-| joi | `^17.9.2` | `^18.2.8` |
+| joi | `^17.9.2` | `^18.2.9` |
 | latest-version | `^7.0.0` | `^9.0.0` |
 | lmdb | `2.5.3` | `^3.5.6` |
 | lodash | `^4.17.21` | `^4.18.1` |
@@ -130,7 +130,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | webpack | `~5.98.0` | `^5.110.3` |
 | webpack-dev-middleware | `^5.3.4` | `^8.3.0` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
-| xstate | `^4.38.0` | `^5.32.6` |
+| xstate | `^4.38.0` | `^5.33.0` |
 | yaml-loader | `^0.8.0` | `^0.9.0` |
 
 

@@ -12,16 +12,16 @@ npm install @depup/mammoth
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.12.2 | **DepUp version**: 1.12.2-depup.0 | **Updated**: 8/28/2026 | **Import test**: passed
+**Original version**: 1.12.3 | **DepUp version**: 1.12.3-depup.0 | **Updated**: 9/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @xmldom/xmldom | `^0.8.6` | `^0.9.12` |
-| argparse | `~1.0.3` | `^3.0.1` |
+| argparse | `~1.0.3` | `^3.0.2` |
 | bluebird | `~3.4.0` | `^3.7.2` |
-| jszip | `^3.7.1` | `^3.10.1` |
+| jszip | `^3.7.1` | `^3.10.2` |
 | path-is-absolute | `^1.0.0` | `^2.0.0` |
 | underscore | `^1.13.1` | `^1.13.8` |
 | xmlbuilder | `^10.0.0` | `^15.1.1` |

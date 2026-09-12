@@ -6,11 +6,11 @@
     },
     "@babel/core": {
       "from": "^7.20.12",
-      "to": "^8.0.1"
+      "to": "^8.0.5"
     },
     "@babel/eslint-parser": {
       "from": "^7.19.1",
-      "to": "^8.0.1"
+      "to": "^8.0.5"
     },
     "@babel/helper-plugin-utils": {
       "from": "^7.20.2",
@@ -18,19 +18,19 @@
     },
     "@babel/parser": {
       "from": "^7.20.13",
-      "to": "^8.0.4"
+      "to": "^8.0.5"
     },
     "@babel/runtime": {
       "from": "^7.20.13",
-      "to": "^8.0.0"
+      "to": "^8.0.5"
     },
     "@babel/traverse": {
       "from": "^7.20.13",
-      "to": "^8.0.4"
+      "to": "^8.0.5"
     },
     "@babel/types": {
       "from": "^7.20.7",
-      "to": "^8.0.4"
+      "to": "^8.0.5"
     },
     "@builder.io/partytown": {
       "from": "^0.7.5",
@@ -62,11 +62,11 @@
     },
     "@graphql-tools/code-file-loader": {
       "from": "^7.3.23",
-      "to": "^8.1.37"
+      "to": "^8.1.39"
     },
     "@graphql-tools/load": {
       "from": "^7.8.14",
-      "to": "^8.1.16"
+      "to": "^8.1.17"
     },
     "@jridgewell/trace-mapping": {
       "from": "^0.3.18",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.69.0"
+      "to": "^8.70.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.69.0"
+      "to": "^8.70.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -122,7 +122,7 @@
     },
     "autoprefixer": {
       "from": "^10.4.14",
-      "to": "^10.5.4"
+      "to": "^10.6.0"
     },
     "axios": {
       "from": "^1.6.4",
@@ -142,7 +142,7 @@
     },
     "browserslist": {
       "from": "^4.21.9",
-      "to": "^4.28.8"
+      "to": "^4.28.9"
     },
     "cache-manager": {
       "from": "^2.11.1",
@@ -158,7 +158,7 @@
     },
     "compression": {
       "from": "^1.7.4",
-      "to": "^1.8.1"
+      "to": "^1.8.2"
     },
     "cookie": {
       "from": "^0.5.0",
@@ -198,11 +198,11 @@
     },
     "enhanced-resolve": {
       "from": "^5.15.0",
-      "to": "^5.24.5"
+      "to": "^5.25.0"
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.9.1"
+      "to": "^10.10.0"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -294,7 +294,7 @@
     },
     "joi": {
       "from": "^17.9.2",
-      "to": "^18.2.5"
+      "to": "^18.2.9"
     },
     "latest-version": {
       "from": "^7.0.0",
@@ -346,7 +346,7 @@
     },
     "node-html-parser": {
       "from": "^5.4.2",
-      "to": "^9.0.2"
+      "to": "^9.0.4"
     },
     "p-defer": {
       "from": "^3.0.0",
@@ -358,7 +358,7 @@
     },
     "postcss": {
       "from": "^8.4.24",
-      "to": "^8.5.26"
+      "to": "^8.5.28"
     },
     "postcss-loader": {
       "from": "^5.3.0",
@@ -370,11 +370,11 @@
     },
     "react-refresh": {
       "from": "^0.14.1",
-      "to": "^0.18.0"
+      "to": "^0.19.0"
     },
     "react-server-dom-webpack": {
       "from": "0.0.0-experimental-c8b778b7f-20220825",
-      "to": "^19.2.8"
+      "to": "^19.3.0"
     },
     "redux": {
       "from": "4.2.1",
@@ -442,7 +442,7 @@
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
-      "to": "^8.2.0"
+      "to": "^8.3.0"
     },
     "webpack-merge": {
       "from": "^5.9.0",
@@ -450,13 +450,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.32.6"
+      "to": "^5.33.0"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-09-02T00:33:24.358Z",
+  "timestamp": "2026-09-12T16:08:58.003Z",
   "totalUpdated": 114
 }
