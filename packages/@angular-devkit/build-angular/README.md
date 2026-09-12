@@ -12,21 +12,25 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.0 | **Updated**: 9/10/2026 | **Import test**: passed
+**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.1 | **Updated**: 9/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| autoprefixer | `10.5.4` | `^10.5.6` |
+| @babel/core | `8.0.1` | `^8.0.5` |
+| @babel/generator | `8.0.0` | `^8.0.5` |
+| @babel/preset-env | `8.0.2` | `^8.0.5` |
+| @babel/runtime | `8.0.0` | `^8.0.5` |
+| autoprefixer | `10.5.4` | `^10.6.0` |
 | browserslist | `^4.26.0` | `^4.28.9` |
 | css-loader | `7.1.4` | `^7.1.5` |
 | less | `4.9.0` | `^4.9.1` |
-| open | `11.0.0` | `^11.0.2` |
+| open | `11.0.0` | `^11.0.3` |
 | picomatch | `4.0.5` | `^4.0.7` |
 | piscina | `5.2.0` | `^5.3.2` |
 | postcss | `8.5.25` | `^8.5.28` |
-| sass | `1.101.0` | `^1.104.0` |
+| sass | `1.101.0` | `^1.104.1` |
 | sass-loader | `17.0.0` | `^17.0.1` |
 | terser | `5.49.0` | `^5.51.2` |
 | webpack | `5.109.2` | `^5.110.3` |
