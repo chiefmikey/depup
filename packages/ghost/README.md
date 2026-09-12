@@ -12,46 +12,47 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.8 | **Updated**: 9/11/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.9 | **Updated**: 9/12/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1130.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1131.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.74.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/api-framework | `3.3.12` | `^3.3.13` |
-| @tryghost/bookshelf-plugins | `2.3.12` | `^2.3.14` |
-| @tryghost/database-info | `2.3.12` | `^2.3.13` |
-| @tryghost/debug | `2.3.12` | `^2.3.13` |
-| @tryghost/domain-events | `3.3.13` | `^3.3.14` |
-| @tryghost/email-mock-receiver | `2.3.12` | `^2.3.13` |
-| @tryghost/errors | `3.3.12` | `^3.3.13` |
-| @tryghost/job-manager | `1.0.9` | `^4.1.14` |
-| @tryghost/logging | `5.4.3` | `^5.4.4` |
-| @tryghost/metrics | `3.5.3` | `^3.5.4` |
+| @tryghost/bookshelf-plugins | `2.3.12` | `^2.3.15` |
+| @tryghost/database-info | `2.3.12` | `^2.3.14` |
+| @tryghost/debug | `2.3.12` | `^2.3.14` |
+| @tryghost/domain-events | `3.3.13` | `^3.3.15` |
+| @tryghost/email-mock-receiver | `2.3.12` | `^2.3.14` |
+| @tryghost/errors | `3.3.12` | `^3.3.14` |
+| @tryghost/job-manager | `1.0.9` | `^4.1.15` |
+| @tryghost/logging | `5.4.3` | `^5.4.5` |
+| @tryghost/metrics | `3.5.3` | `^3.6.0` |
 | @tryghost/mongo-utils | `0.6.5` | `^0.6.6` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.3.13` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.3.13` |
-| @tryghost/nodemailer | `2.3.12` | `^2.3.13` |
-| @tryghost/pretty-cli | `3.3.12` | `^3.3.13` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^4.1.14` |
-| @tryghost/request | `4.0.5` | `^4.0.6` |
-| @tryghost/root-utils | `2.3.12` | `^2.3.13` |
-| @tryghost/security | `1.0.6` | `^3.3.13` |
-| @tryghost/tpl | `2.3.12` | `^2.3.13` |
+| @tryghost/mw-error-handler | `1.0.13` | `^3.3.14` |
+| @tryghost/mw-vhost | `1.0.6` | `^3.3.14` |
+| @tryghost/nodemailer | `2.3.12` | `^2.3.14` |
+| @tryghost/pretty-cli | `3.3.12` | `^3.3.14` |
+| @tryghost/prometheus-metrics | `1.0.8` | `^5.0.0` |
+| @tryghost/request | `4.0.5` | `^4.0.7` |
+| @tryghost/root-utils | `2.3.12` | `^2.3.14` |
+| @tryghost/security | `1.0.6` | `^3.3.14` |
+| @tryghost/tpl | `2.3.12` | `^2.3.14` |
 | @tryghost/url-utils | `5.2.6` | `^5.2.9` |
-| @tryghost/validator | `3.2.12` | `^3.2.13` |
-| @tryghost/version | `2.3.12` | `^2.3.13` |
-| @tryghost/zip | `3.5.11` | `^3.5.12` |
+| @tryghost/validator | `3.2.12` | `^3.2.14` |
+| @tryghost/version | `2.3.12` | `^2.3.14` |
+| @tryghost/zip | `3.5.11` | `^3.5.13` |
 | @x402/core | `2.12.0` | `^2.25.0` |
 | @x402/evm | `2.12.0` | `^2.25.0` |
 | @x402/hono | `2.12.0` | `^2.25.0` |
 | body-parser | `1.20.6` | `^2.3.0` |
+| bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
 | cheerio | `0.22.0` | `^1.2.0` |
@@ -67,7 +68,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | file-type | `21.3.4` | `^22.1.0` |
 | fs-extra | `11.3.6` | `^11.4.0` |
 | got | `15.1.0` | `^16.0.0` |
-| gscan | `6.4.2` | `^6.6.0` |
+| gscan | `6.4.2` | `^6.6.1` |
 | hono | `4.12.18` | `^4.13.7` |
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
@@ -98,14 +99,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mppx | `0.6.20` | `^0.9.3` |
 | multer | `2.2.0` | `^2.3.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
-| nodemailer | `8.0.11` | `^10.0.7` |
+| nodemailer | `8.0.11` | `^10.0.8` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
 | sanitize-html | `2.17.5` | `^2.17.7` |
 | sharp | `0.35.3` | `^0.35.4` |
 | stripe | `8.222.0` | `^22.6.2` |
-| temporal-polyfill | `0.3.2` | `^1.0.4` |
+| temporal-polyfill | `0.3.2` | `^1.0.5` |
 | terser | `5.48.0` | `^5.51.2` |
 | tldts | `^7.4.4` | `^7.4.12` |
 | type-fest | `5.7.0` | `^5.9.0` |

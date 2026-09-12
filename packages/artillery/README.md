@@ -12,23 +12,23 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.23 | **Updated**: 9/11/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.24 | **Updated**: 9/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-iam | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/client-sts | `^3.1101.0` | `^3.1130.0` |
-| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1130.0` |
+| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-iam | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/client-sts | `^3.1101.0` | `^3.1131.0` |
+| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1131.0` |
 | @azure/identity | `^4.13.1` | `^4.13.2` |
 | @azure/storage-blob | `^12.30.0` | `^12.33.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.31.0` |
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.11.0` |
 | @playwright/browser-chromium | `1.62.1` | `^1.63.0` |
 | @playwright/test | `1.62.1` | `^1.63.0` |
-| @smithy/core | `^3.31.1` | `^3.34.0` |
+| @smithy/core | `^3.31.1` | `^3.34.1` |
 | @upstash/redis | `^1.36.1` | `^1.38.4` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^4.1.2` | `^6.0.0` |

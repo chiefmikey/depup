@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.34-depup.19",
+  "version": "2.0.34-depup.24",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "type": "module",
   "main": "./dist/lib/index.js",
@@ -108,17 +108,17 @@
   },
   "dependencies": {
     "@artilleryio/sketches-js": "^2.1.1",
-    "@aws-sdk/client-cloudwatch": "^3.1127.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1127.0",
-    "@aws-sdk/client-ec2": "^3.1127.0",
-    "@aws-sdk/client-ecs": "^3.1127.0",
-    "@aws-sdk/client-iam": "^3.1127.0",
-    "@aws-sdk/client-lambda": "^3.1127.0",
-    "@aws-sdk/client-s3": "^3.1127.0",
-    "@aws-sdk/client-sqs": "^3.1127.0",
-    "@aws-sdk/client-ssm": "^3.1127.0",
-    "@aws-sdk/client-sts": "^3.1127.0",
-    "@aws-sdk/credential-providers": "^3.1127.0",
+    "@aws-sdk/client-cloudwatch": "^3.1131.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1131.0",
+    "@aws-sdk/client-ec2": "^3.1131.0",
+    "@aws-sdk/client-ecs": "^3.1131.0",
+    "@aws-sdk/client-iam": "^3.1131.0",
+    "@aws-sdk/client-lambda": "^3.1131.0",
+    "@aws-sdk/client-s3": "^3.1131.0",
+    "@aws-sdk/client-sqs": "^3.1131.0",
+    "@aws-sdk/client-ssm": "^3.1131.0",
+    "@aws-sdk/client-sts": "^3.1131.0",
+    "@aws-sdk/credential-providers": "^3.1131.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.2",
     "@azure/storage-blob": "^12.33.0",
@@ -142,7 +142,7 @@
     "@opentelemetry/semantic-conventions": "^1.43.0",
     "@playwright/browser-chromium": "^1.63.0",
     "@playwright/test": "^1.63.0",
-    "@smithy/core": "^3.33.3",
+    "@smithy/core": "^3.34.1",
     "@upstash/redis": "^1.38.4",
     "agentkeepalive": "^4.6.0",
     "arrivals": "^2.1.2",
@@ -175,7 +175,7 @@
     "hpagent": "^1.2.0",
     "https-proxy-agent": "^9.1.0",
     "jmespath": "^0.16.0",
-    "joi": "^18.2.8",
+    "joi": "^18.2.9",
     "js-yaml": "^5.4.1",
     "jsonpath-plus": "^10.4.0",
     "jsonwebtoken": "^9.0.3",
@@ -220,47 +220,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.1101.0",
-        "to": "^3.1127.0"
+        "to": "^3.1131.0"
       },
       "@azure/identity": {
         "from": "^4.13.1",
@@ -348,7 +348,7 @@
       },
       "@smithy/core": {
         "from": "^3.31.1",
-        "to": "^3.33.3"
+        "to": "^3.34.1"
       },
       "@upstash/redis": {
         "from": "^1.36.1",
@@ -416,7 +416,7 @@
       },
       "joi": {
         "from": "^17.13.4",
-        "to": "^18.2.8"
+        "to": "^18.2.9"
       },
       "js-yaml": {
         "from": "^3.15.1",
@@ -482,7 +482,7 @@
     "depsUpdated": 65,
     "originalPackage": "artillery",
     "originalVersion": "2.0.34",
-    "processedAt": "2026-09-05T00:32:46.636Z",
+    "processedAt": "2026-09-12T00:31:44.325Z",
     "smokeTest": "passed"
   }
 }
