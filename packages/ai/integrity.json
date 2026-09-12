@@ -1848,5 +1848,15 @@
       "timestamp": "2026-09-10T00:32:22.419Z",
       "version": "7.0.97-depup.0"
     }
+  },
+  "7.0.98": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-12T00:31:26.860Z",
+      "version": "7.0.98-depup.0"
+    }
   }
 }
