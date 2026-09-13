@@ -622,5 +622,28 @@
       "timestamp": "2026-09-12T16:09:50.607Z",
       "version": "11.5.2-depup.1"
     }
+  },
+  "11.5.3": {
+    "0": {
+      "changes": {
+        "autoprefixer": {
+          "from": "^10.5.0",
+          "to": "^10.6.0"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.28.9"
+        },
+        "cssdb": {
+          "from": "^8.10.0",
+          "to": "^8.11.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-13T16:10:23.247Z",
+      "version": "11.5.3-depup.0"
+    }
   }
 }
