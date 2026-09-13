@@ -1,0 +1,53 @@
+{
+  "name": "@depup/react-refresh",
+  "description": "React is a JavaScript library for building user interfaces. (with updated dependencies)",
+  "keywords": [
+    "react-refresh",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react"
+  ],
+  "version": "0.19.0-depup.0",
+  "homepage": "https://react.dev/",
+  "bugs": "https://github.com/react/react/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "babel.js",
+    "runtime.js",
+    "cjs/",
+    "changes.json"
+  ],
+  "main": "runtime.js",
+  "exports": {
+    ".": "./runtime.js",
+    "./runtime": "./runtime.js",
+    "./babel": "./babel.js",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react/react.git",
+    "directory": "packages/react"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "react-16-8": "npm:react@16.8.0",
+    "react-dom-16-8": "npm:react-dom@16.8.0",
+    "scheduler-0-13": "npm:scheduler@0.13.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-refresh",
+    "originalVersion": "0.19.0",
+    "processedAt": "2026-09-13T00:59:30.980Z",
+    "smokeTest": "failed"
+  }
+}

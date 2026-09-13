@@ -1,0 +1,173 @@
+{
+  "name": "@depup/unplugin-icons",
+  "type": "module",
+  "version": "24.0.0-depup.0",
+  "description": "Access thousands of icons as components on-demand universally (with updated dependencies)",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/antfu",
+  "homepage": "https://github.com/unplugin/unplugin-icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unplugin/unplugin-icons.git"
+  },
+  "bugs": "https://github.com/unplugin/unplugin-icons/issues",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./esbuild": "./dist/esbuild.mjs",
+    "./loaders": "./dist/loaders.mjs",
+    "./nuxt": "./dist/nuxt.mjs",
+    "./resolver": "./dist/resolver.mjs",
+    "./rolldown": "./dist/rolldown.mjs",
+    "./rollup": "./dist/rollup.mjs",
+    "./rspack": "./dist/rspack.mjs",
+    "./types": "./dist/types.mjs",
+    "./vite": "./dist/vite.mjs",
+    "./webpack": "./dist/webpack.mjs",
+    "./package.json": "./package.json",
+    "./types/astro": {
+      "types": "./types/astro.d.ts"
+    },
+    "./types/ember": {
+      "types": "./types/ember.d.ts"
+    },
+    "./types/preact": {
+      "types": "./types/preact.d.ts"
+    },
+    "./types/qwik": {
+      "types": "./types/qwik.d.ts"
+    },
+    "./types/raw": {
+      "types": "./types/raw.d.ts"
+    },
+    "./types/react": {
+      "types": "./types/react.d.ts"
+    },
+    "./types/solid": {
+      "types": "./types/solid.d.ts"
+    },
+    "./types/svelte": {
+      "types": "./types/svelte.d.ts"
+    },
+    "./types/svelte3": {
+      "types": "./types/svelte3.d.ts"
+    },
+    "./types/svelte4": {
+      "types": "./types/svelte4.d.ts"
+    },
+    "./types/svelte5": {
+      "types": "./types/svelte5.d.ts"
+    },
+    "./types/vue": {
+      "types": "./types/vue.d.ts"
+    },
+    "./types/vue3": {
+      "types": "./types/vue3.d.ts"
+    },
+    "./types/web-components": {
+      "types": "./types/web-components.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*.d.mts",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "types",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@svgr/core": ">=7.0.0",
+    "@svgx/core": "^1.0.1",
+    "@vue/compiler-sfc": "^3.0.2",
+    "@vue/compiler-vapor": "^3.6.0-rc.5",
+    "svelte": "^3.0.0 || ^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@svgr/core": {
+      "optional": true
+    },
+    "@svgx/core": {
+      "optional": true
+    },
+    "@vue/compiler-sfc": {
+      "optional": true
+    },
+    "@vue/compiler-vapor": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@antfu/install-pkg": "^2.0.1",
+    "@iconify/utils": "^3.1.7",
+    "local-pkg": "^1.2.1",
+    "obug": "^3.0.0",
+    "unplugin": "^3.3.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.7.3",
+    "@antfu/utils": "^9.3.0",
+    "@iconify/json": "^2.2.527",
+    "@iconify/types": "^2.0.0",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgx/core": "^1.0.2",
+    "@types/node": "^25.9.6",
+    "@vue/compiler-sfc": "^3.5.42",
+    "@vue/compiler-vapor": "^3.6.0-rc.7",
+    "bumpp": "^10.4.1",
+    "eslint": "^9.39.2",
+    "publint": "^0.3.24",
+    "rollup": "^4.63.1",
+    "tsdown": "^0.20.3",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^4.1.11"
+  },
+  "scripts": {
+    "build": "tsx scripts/prebuild.ts && tsdown",
+    "dev": "tsx scripts/prebuild.ts && tsdown --watch src",
+    "example:build": "pnpm -C examples/vite-vue3 run build",
+    "example:dev": "pnpm -C examples/vite-vue3 run dev",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "release": "bumpp",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "unplugin-icons",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@antfu/install-pkg": {
+        "from": "^1.1.0",
+        "to": "^2.0.1"
+      },
+      "obug": {
+        "from": "^2.2.1",
+        "to": "^3.0.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "unplugin-icons",
+    "originalVersion": "24.0.0",
+    "processedAt": "2026-09-13T01:01:08.042Z",
+    "smokeTest": "passed"
+  }
+}

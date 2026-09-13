@@ -1,0 +1,41 @@
+{
+  "6.5.2": {
+    "0": {
+      "changes": {
+        "@codemirror/autocomplete": {
+          "from": "^6.7.1",
+          "to": "^6.20.3"
+        },
+        "@codemirror/lang-html": {
+          "from": "^6.0.0",
+          "to": "^6.4.12"
+        },
+        "@codemirror/language": {
+          "from": "^6.3.0",
+          "to": "^6.12.4"
+        },
+        "@codemirror/state": {
+          "from": "^6.0.0",
+          "to": "^6.7.4"
+        },
+        "@codemirror/view": {
+          "from": "^6.0.0",
+          "to": "^6.43.11"
+        },
+        "@lezer/markdown": {
+          "from": "^1.0.0",
+          "to": "^1.7.2"
+        },
+        "@lezer/common": {
+          "from": "^1.2.1",
+          "to": "^1.5.2"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-13T00:56:06.672Z",
+      "version": "6.5.2-depup.0"
+    }
+  }
+}

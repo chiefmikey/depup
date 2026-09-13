@@ -12,15 +12,14 @@ npm install @depup/unplugin-icons
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.0.1 | **DepUp version**: 23.0.1-depup.1 | **Updated**: 5/19/2026 | **Import test**: passed
+**Original version**: 24.0.0 | **DepUp version**: 24.0.0-depup.0 | **Updated**: 9/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @iconify/utils | `^3.1.0` | `^3.1.3` |
-| local-pkg | `^1.1.2` | `^1.2.0` |
-| unplugin | `^2.3.11` | `^3.0.0` |
+| @antfu/install-pkg | `^1.1.0` | `^2.0.1` |
+| obug | `^2.2.1` | `^3.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/unplugin-icons&labels=bug).
