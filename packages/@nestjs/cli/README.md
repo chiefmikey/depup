@@ -12,15 +12,18 @@ npm install @depup/nestjs__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.0 | **Updated**: 8/27/2026 | **Import test**: failed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.1 | **Updated**: 9/13/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @angular-devkit/core | `22.1.5` | `^22.1.6` |
-| @angular-devkit/schematics | `22.1.5` | `^22.1.6` |
-| @angular-devkit/schematics-cli | `22.1.5` | `^22.1.6` |
+| @angular-devkit/core | `22.1.5` | `^22.1.8` |
+| @angular-devkit/schematics | `22.1.5` | `^22.1.8` |
+| @angular-devkit/schematics-cli | `22.1.5` | `^22.1.8` |
+| @inquirer/prompts | `8.7.0` | `^8.7.2` |
+| @nestjs/schematics | `^12.0.0` | `^12.0.1` |
+| ansis | `4.3.1` | `^4.4.0` |
 | typescript | `~6.0.2` | `^7.0.2` |
 
 

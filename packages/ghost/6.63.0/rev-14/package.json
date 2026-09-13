@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.63.0-depup.9",
+  "version": "6.63.0-depup.14",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -162,8 +162,8 @@
     "human-number": "3.0.0",
     "iconv-lite": "^0.7.3",
     "image-size": "^2.0.2",
-    "intl-messageformat": "^11.2.14",
-    "js-yaml": "^5.4.1",
+    "intl-messageformat": "^11.2.15",
+    "js-yaml": "^5.4.2",
     "jsdom": "30.0.1",
     "jsonc-parser": "3.3.1",
     "jsonwebtoken": "^9.0.3",
@@ -194,7 +194,7 @@
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
     "node-jose": "2.2.0",
-    "nodemailer": "^10.0.8",
+    "nodemailer": "^10.0.9",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -216,7 +216,7 @@
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
     "xml": "1.0.1",
-    "zod": "^4.6.2"
+    "zod": "^4.6.4"
   },
   "optionalDependencies": {
     "better-sqlite3": "12.11.1"
@@ -458,11 +458,11 @@
       },
       "intl-messageformat": {
         "from": "5.4.3",
-        "to": "^11.2.14"
+        "to": "^11.2.15"
       },
       "js-yaml": {
         "from": "4.3.0",
-        "to": "^5.4.1"
+        "to": "^5.4.2"
       },
       "jsonwebtoken": {
         "from": "8.5.1",
@@ -558,7 +558,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^10.0.8"
+        "to": "^10.0.9"
       },
       "otplib": {
         "from": "12.0.1",
@@ -606,13 +606,13 @@
       },
       "zod": {
         "from": "4.4.3",
-        "to": "^4.6.2"
+        "to": "^4.6.4"
       }
     },
     "depsUpdated": 94,
     "originalPackage": "ghost",
     "originalVersion": "6.63.0",
-    "processedAt": "2026-09-12T00:31:59.953Z",
+    "processedAt": "2026-09-13T16:10:15.979Z",
     "smokeTest": "failed"
   }
 }

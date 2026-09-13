@@ -50,6 +50,23 @@
       "status": "published",
       "timestamp": "2026-09-09T16:10:33.037Z",
       "version": "12.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.5.0"
+        },
+        "serialize-javascript": {
+          "from": "^7.0.3",
+          "to": "^7.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-13T16:10:05.089Z",
+      "version": "12.0.0-depup.3"
     }
   }
 }
