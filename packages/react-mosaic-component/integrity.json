@@ -92,5 +92,20 @@
       "timestamp": "2026-07-26T01:00:56.795Z",
       "version": "7.0.0-depup.2"
     }
+  },
+  "7.1.0": {
+    "0": {
+      "changes": {
+        "uuid": {
+          "from": "^11.1.1",
+          "to": "^14.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-13T00:58:47.774Z",
+      "version": "7.1.0-depup.0"
+    }
   }
 }
