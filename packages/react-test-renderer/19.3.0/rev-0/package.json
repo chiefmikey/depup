@@ -1,0 +1,50 @@
+{
+  "name": "@depup/react-test-renderer",
+  "version": "19.3.0-depup.0",
+  "description": "React package for snapshot testing. (with updated dependencies)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react/react.git",
+    "directory": "packages/react-test-renderer"
+  },
+  "keywords": [
+    "react-test-renderer",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "react-native",
+    "react-testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react/react/issues"
+  },
+  "homepage": "https://react.dev/",
+  "dependencies": {
+    "react-is": "^19.3.0",
+    "scheduler": "^0.28.0"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "shallow.js",
+    "cjs/",
+    "changes.json"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-test-renderer",
+    "originalVersion": "19.3.0",
+    "processedAt": "2026-09-13T01:00:15.181Z",
+    "smokeTest": "passed"
+  }
+}

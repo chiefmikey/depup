@@ -1,0 +1,61 @@
+{
+  "name": "@depup/lezer__markdown",
+  "version": "1.7.2-depup.0",
+  "description": "Incremental Markdown parser that consumes and emits Lezer trees (with updated dependencies)",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Marijn Haverbeke <marijn@haverbeke.berlin>",
+  "license": "MIT",
+  "devDependencies": {
+    "ist": "^1.1.1",
+    "mocha": "^10.2.0",
+    "@lezer/html": "^1.0.0",
+    "getdocs-ts": "^0.1.0",
+    "builddocs": "^1.0.0",
+    "@marijn/buildtool": "^0.1.6"
+  },
+  "dependencies": {
+    "@lezer/common": "^1.5.2",
+    "@lezer/highlight": "^1.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://code.haverbeke.berlin/lezer/markdown.git"
+  },
+  "scripts": {
+    "watch": "node build.js --watch",
+    "test": "mocha",
+    "build-readme": "node bin/build-readme.cjs"
+  },
+  "keywords": [
+    "@lezer/markdown",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@lezer/common": {
+        "from": "^1.5.0",
+        "to": "^1.5.2"
+      },
+      "@lezer/highlight": {
+        "from": "^1.0.0",
+        "to": "^1.2.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@lezer/markdown",
+    "originalVersion": "1.7.2",
+    "processedAt": "2026-09-13T00:56:07.445Z",
+    "smokeTest": "passed"
+  }
+}

@@ -499,5 +499,20 @@
       "timestamp": "2026-09-12T16:09:17.468Z",
       "version": "5.4.1-depup.50"
     }
+  },
+  "5.4.2": {
+    "0": {
+      "changes": {
+        "argparse": {
+          "from": "^2.0.1",
+          "to": "^3.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-13T00:58:36.970Z",
+      "version": "5.4.2-depup.0"
+    }
   }
 }
