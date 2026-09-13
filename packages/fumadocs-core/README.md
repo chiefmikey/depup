@@ -12,11 +12,14 @@ npm install @depup/fumadocs-core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.15.9 | **DepUp version**: 16.15.9-depup.0 | **Updated**: 9/10/2026 | **Import test**: failed
+**Original version**: 16.15.10 | **DepUp version**: 16.15.10-depup.0 | **Updated**: 9/13/2026 | **Import test**: failed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| yaml | `^2.9.0` | `^2.9.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/fumadocs-core&labels=bug).
 
