@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.63.0-depup.10",
+  "version": "6.63.0-depup.15",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -64,18 +64,18 @@
     "@tryghost/bookshelf-plugins": "^2.3.15",
     "@tryghost/brute-knex": "3.2.2",
     "@tryghost/checkout": "file:components/tryghost-checkout-0.0.0.tgz",
-    "@tryghost/color-utils": "0.2.20",
-    "@tryghost/config-url-helpers": "1.0.27",
-    "@tryghost/custom-fonts": "1.0.11",
+    "@tryghost/color-utils": "^0.2.21",
+    "@tryghost/config-url-helpers": "^1.0.28",
+    "@tryghost/custom-fonts": "^1.0.12",
     "@tryghost/database-info": "^2.3.14",
     "@tryghost/debug": "^2.3.14",
     "@tryghost/domain-events": "^3.3.15",
     "@tryghost/email-mock-receiver": "^2.3.14",
     "@tryghost/errors": "^3.3.14",
-    "@tryghost/helpers": "1.1.106",
-    "@tryghost/html-to-plaintext": "1.0.11",
+    "@tryghost/helpers": "^1.1.107",
+    "@tryghost/html-to-plaintext": "^1.0.12",
     "@tryghost/i18n": "file:components/tryghost-i18n-0.0.0.tgz",
-    "@tryghost/image-transform": "1.4.17",
+    "@tryghost/image-transform": "^1.4.18",
     "@tryghost/job-manager": "^4.1.15",
     "@tryghost/kg-card-factory": "file:components/tryghost-kg-card-factory-5.2.4.tgz",
     "@tryghost/kg-converters": "file:components/tryghost-kg-converters-1.2.5.tgz",
@@ -100,14 +100,14 @@
     "@tryghost/parse-email-address": "file:components/tryghost-parse-email-address-0.0.0.tgz",
     "@tryghost/pretty-cli": "^3.3.14",
     "@tryghost/prometheus-metrics": "^5.0.0",
-    "@tryghost/referrer-parser": "0.1.21",
+    "@tryghost/referrer-parser": "^0.1.22",
     "@tryghost/request": "^4.0.7",
     "@tryghost/root-utils": "^2.3.14",
     "@tryghost/security": "^3.3.14",
-    "@tryghost/social-urls": "0.1.63",
-    "@tryghost/string": "0.3.5",
+    "@tryghost/social-urls": "^0.1.64",
+    "@tryghost/string": "^0.3.6",
     "@tryghost/tpl": "^2.3.14",
-    "@tryghost/url-utils": "^5.2.9",
+    "@tryghost/url-utils": "^5.3.0",
     "@tryghost/validator": "^3.2.14",
     "@tryghost/version": "^2.3.14",
     "@tryghost/zip": "^3.5.13",
@@ -162,8 +162,8 @@
     "human-number": "3.0.0",
     "iconv-lite": "^0.7.3",
     "image-size": "^2.0.2",
-    "intl-messageformat": "^11.2.14",
-    "js-yaml": "^5.4.1",
+    "intl-messageformat": "^11.2.15",
+    "js-yaml": "^5.4.2",
     "jsdom": "30.0.1",
     "jsonc-parser": "3.3.1",
     "jsonwebtoken": "^9.0.3",
@@ -194,7 +194,7 @@
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
     "node-jose": "2.2.0",
-    "nodemailer": "^10.0.8",
+    "nodemailer": "^10.0.9",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -211,12 +211,12 @@
     "temporal-polyfill": "^1.0.5",
     "terser": "^5.51.2",
     "tiny-glob": "0.2.9",
-    "tldts": "^7.4.12",
+    "tldts": "^7.4.13",
     "type-fest": "^5.9.0",
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
     "xml": "1.0.1",
-    "zod": "^4.6.2"
+    "zod": "^4.6.5"
   },
   "optionalDependencies": {
     "better-sqlite3": "12.11.1"
@@ -264,6 +264,18 @@
         "from": "2.3.12",
         "to": "^2.3.15"
       },
+      "@tryghost/color-utils": {
+        "from": "0.2.20",
+        "to": "^0.2.21"
+      },
+      "@tryghost/config-url-helpers": {
+        "from": "1.0.27",
+        "to": "^1.0.28"
+      },
+      "@tryghost/custom-fonts": {
+        "from": "1.0.11",
+        "to": "^1.0.12"
+      },
       "@tryghost/database-info": {
         "from": "2.3.12",
         "to": "^2.3.14"
@@ -283,6 +295,18 @@
       "@tryghost/errors": {
         "from": "3.3.12",
         "to": "^3.3.14"
+      },
+      "@tryghost/helpers": {
+        "from": "1.1.106",
+        "to": "^1.1.107"
+      },
+      "@tryghost/html-to-plaintext": {
+        "from": "1.0.11",
+        "to": "^1.0.12"
+      },
+      "@tryghost/image-transform": {
+        "from": "1.4.17",
+        "to": "^1.4.18"
       },
       "@tryghost/job-manager": {
         "from": "1.0.9",
@@ -320,6 +344,10 @@
         "from": "1.0.8",
         "to": "^5.0.0"
       },
+      "@tryghost/referrer-parser": {
+        "from": "0.1.21",
+        "to": "^0.1.22"
+      },
       "@tryghost/request": {
         "from": "4.0.5",
         "to": "^4.0.7"
@@ -332,13 +360,21 @@
         "from": "1.0.6",
         "to": "^3.3.14"
       },
+      "@tryghost/social-urls": {
+        "from": "0.1.63",
+        "to": "^0.1.64"
+      },
+      "@tryghost/string": {
+        "from": "0.3.5",
+        "to": "^0.3.6"
+      },
       "@tryghost/tpl": {
         "from": "2.3.12",
         "to": "^2.3.14"
       },
       "@tryghost/url-utils": {
         "from": "5.2.6",
-        "to": "^5.2.9"
+        "to": "^5.3.0"
       },
       "@tryghost/validator": {
         "from": "3.2.12",
@@ -458,11 +494,11 @@
       },
       "intl-messageformat": {
         "from": "5.4.3",
-        "to": "^11.2.14"
+        "to": "^11.2.15"
       },
       "js-yaml": {
         "from": "4.3.0",
-        "to": "^5.4.1"
+        "to": "^5.4.2"
       },
       "jsonwebtoken": {
         "from": "8.5.1",
@@ -558,7 +594,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^10.0.8"
+        "to": "^10.0.9"
       },
       "otplib": {
         "from": "12.0.1",
@@ -594,7 +630,7 @@
       },
       "tldts": {
         "from": "^7.4.4",
-        "to": "^7.4.12"
+        "to": "^7.4.13"
       },
       "type-fest": {
         "from": "5.7.0",
@@ -606,13 +642,13 @@
       },
       "zod": {
         "from": "4.4.3",
-        "to": "^4.6.2"
+        "to": "^4.6.5"
       }
     },
-    "depsUpdated": 94,
+    "depsUpdated": 103,
     "originalPackage": "ghost",
     "originalVersion": "6.63.0",
-    "processedAt": "2026-09-12T08:10:29.941Z",
+    "processedAt": "2026-09-14T00:34:47.394Z",
     "smokeTest": "failed"
   }
 }

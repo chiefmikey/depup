@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.14 | **Updated**: 9/13/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.15 | **Updated**: 9/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -26,11 +26,17 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/api-framework | `3.3.12` | `^3.3.13` |
 | @tryghost/bookshelf-plugins | `2.3.12` | `^2.3.15` |
+| @tryghost/color-utils | `0.2.20` | `^0.2.21` |
+| @tryghost/config-url-helpers | `1.0.27` | `^1.0.28` |
+| @tryghost/custom-fonts | `1.0.11` | `^1.0.12` |
 | @tryghost/database-info | `2.3.12` | `^2.3.14` |
 | @tryghost/debug | `2.3.12` | `^2.3.14` |
 | @tryghost/domain-events | `3.3.13` | `^3.3.15` |
 | @tryghost/email-mock-receiver | `2.3.12` | `^2.3.14` |
 | @tryghost/errors | `3.3.12` | `^3.3.14` |
+| @tryghost/helpers | `1.1.106` | `^1.1.107` |
+| @tryghost/html-to-plaintext | `1.0.11` | `^1.0.12` |
+| @tryghost/image-transform | `1.4.17` | `^1.4.18` |
 | @tryghost/job-manager | `1.0.9` | `^4.1.15` |
 | @tryghost/logging | `5.4.3` | `^5.4.5` |
 | @tryghost/metrics | `3.5.3` | `^3.6.0` |
@@ -40,11 +46,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/nodemailer | `2.3.12` | `^2.3.14` |
 | @tryghost/pretty-cli | `3.3.12` | `^3.3.14` |
 | @tryghost/prometheus-metrics | `1.0.8` | `^5.0.0` |
+| @tryghost/referrer-parser | `0.1.21` | `^0.1.22` |
 | @tryghost/request | `4.0.5` | `^4.0.7` |
 | @tryghost/root-utils | `2.3.12` | `^2.3.14` |
 | @tryghost/security | `1.0.6` | `^3.3.14` |
+| @tryghost/social-urls | `0.1.63` | `^0.1.64` |
+| @tryghost/string | `0.3.5` | `^0.3.6` |
 | @tryghost/tpl | `2.3.12` | `^2.3.14` |
-| @tryghost/url-utils | `5.2.6` | `^5.2.9` |
+| @tryghost/url-utils | `5.2.6` | `^5.3.0` |
 | @tryghost/validator | `3.2.12` | `^3.2.14` |
 | @tryghost/version | `2.3.12` | `^2.3.14` |
 | @tryghost/zip | `3.5.11` | `^3.5.13` |
@@ -108,10 +117,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | stripe | `8.222.0` | `^22.6.2` |
 | temporal-polyfill | `0.3.2` | `^1.0.5` |
 | terser | `5.48.0` | `^5.51.2` |
-| tldts | `^7.4.4` | `^7.4.12` |
+| tldts | `^7.4.4` | `^7.4.13` |
 | type-fest | `5.7.0` | `^5.9.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
-| zod | `4.4.3` | `^4.6.4` |
+| zod | `4.4.3` | `^4.6.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ghost&labels=bug).

@@ -32,6 +32,18 @@
       "from": "2.3.12",
       "to": "^2.3.15"
     },
+    "@tryghost/color-utils": {
+      "from": "0.2.20",
+      "to": "^0.2.21"
+    },
+    "@tryghost/config-url-helpers": {
+      "from": "1.0.27",
+      "to": "^1.0.28"
+    },
+    "@tryghost/custom-fonts": {
+      "from": "1.0.11",
+      "to": "^1.0.12"
+    },
     "@tryghost/database-info": {
       "from": "2.3.12",
       "to": "^2.3.14"
@@ -51,6 +63,18 @@
     "@tryghost/errors": {
       "from": "3.3.12",
       "to": "^3.3.14"
+    },
+    "@tryghost/helpers": {
+      "from": "1.1.106",
+      "to": "^1.1.107"
+    },
+    "@tryghost/html-to-plaintext": {
+      "from": "1.0.11",
+      "to": "^1.0.12"
+    },
+    "@tryghost/image-transform": {
+      "from": "1.4.17",
+      "to": "^1.4.18"
     },
     "@tryghost/job-manager": {
       "from": "1.0.9",
@@ -88,6 +112,10 @@
       "from": "1.0.8",
       "to": "^5.0.0"
     },
+    "@tryghost/referrer-parser": {
+      "from": "0.1.21",
+      "to": "^0.1.22"
+    },
     "@tryghost/request": {
       "from": "4.0.5",
       "to": "^4.0.7"
@@ -100,13 +128,21 @@
       "from": "1.0.6",
       "to": "^3.3.14"
     },
+    "@tryghost/social-urls": {
+      "from": "0.1.63",
+      "to": "^0.1.64"
+    },
+    "@tryghost/string": {
+      "from": "0.3.5",
+      "to": "^0.3.6"
+    },
     "@tryghost/tpl": {
       "from": "2.3.12",
       "to": "^2.3.14"
     },
     "@tryghost/url-utils": {
       "from": "5.2.6",
-      "to": "^5.2.9"
+      "to": "^5.3.0"
     },
     "@tryghost/validator": {
       "from": "3.2.12",
@@ -226,11 +262,11 @@
     },
     "intl-messageformat": {
       "from": "5.4.3",
-      "to": "^11.2.14"
+      "to": "^11.2.15"
     },
     "js-yaml": {
       "from": "4.3.0",
-      "to": "^5.4.1"
+      "to": "^5.4.2"
     },
     "jsonwebtoken": {
       "from": "8.5.1",
@@ -326,7 +362,7 @@
     },
     "nodemailer": {
       "from": "8.0.11",
-      "to": "^10.0.8"
+      "to": "^10.0.9"
     },
     "otplib": {
       "from": "12.0.1",
@@ -362,7 +398,7 @@
     },
     "tldts": {
       "from": "^7.4.4",
-      "to": "^7.4.12"
+      "to": "^7.4.13"
     },
     "type-fest": {
       "from": "5.7.0",
@@ -374,9 +410,9 @@
     },
     "zod": {
       "from": "4.4.3",
-      "to": "^4.6.2"
+      "to": "^4.6.5"
     }
   },
-  "timestamp": "2026-09-12T08:10:27.976Z",
-  "totalUpdated": 94
+  "timestamp": "2026-09-14T00:34:45.290Z",
+  "totalUpdated": 103
 }
