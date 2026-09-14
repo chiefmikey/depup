@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.82 | **Updated**: 9/11/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.83 | **Updated**: 9/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -39,7 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^2.4.2` | `^6.0.0` |
 | classnames | `^2.2.6` | `^2.5.1` |
 | cloudinary | `^1.14.0` | `^2.11.0` |
-| compression | `^1.7.4` | `^1.8.1` |
+| compression | `^1.7.4` | `^1.8.2` |
 | cookie-parser | `^1.4.4` | `^1.4.7` |
 | debug | `^4.1.1` | `^4.4.3` |
 | display-name | `^0.1.0` | `^1.0.1` |
@@ -52,12 +52,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
-| marked | `^0.6.2` | `^18.0.12` |
+| marked | `^0.6.2` | `^18.0.13` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.30.1` |
 | mongoose | `^4.13.14` | `^9.10.0` |
-| morgan | `^1.9.1` | `^1.12.0` |
-| multer | `^1.4.1` | `^2.3.0` |
+| morgan | `^1.9.1` | `^1.12.1` |
+| multer | `^1.4.1` | `^2.4.0` |
 | qs | `^6.7.0` | `^6.16.0` |
 | range_check | `^1.4.0` | `^4.1.0` |
 | react | `^15.4.2` | `^19.3.0` |

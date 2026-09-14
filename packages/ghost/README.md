@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.16 | **Updated**: 9/14/2026 | **Import test**: failed
+**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.17 | **Updated**: 9/14/2026 | **Import test**: failed
 
 ## What changed
 
@@ -82,7 +82,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
 | iconv-lite | `0.7.2` | `^0.7.3` |
-| image-size | `1.2.1` | `^2.0.2` |
+| image-size | `1.2.1` | `^2.0.3` |
 | intl-messageformat | `5.4.3` | `^11.2.15` |
 | js-yaml | `4.3.0` | `^5.4.2` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
@@ -106,9 +106,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `2.24.0` | `^2.30.1` |
 | moment-timezone | `0.5.45` | `^0.6.3` |
 | mppx | `0.6.20` | `^0.9.3` |
-| multer | `2.2.0` | `^2.3.0` |
+| multer | `2.2.0` | `^2.4.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
-| nodemailer | `8.0.11` | `^10.0.9` |
+| nodemailer | `8.0.11` | `^10.0.10` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
