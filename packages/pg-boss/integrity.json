@@ -651,5 +651,15 @@
       "timestamp": "2026-09-14T00:36:22.019Z",
       "version": "12.31.1-depup.0"
     }
+  },
+  "12.32.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-14T16:11:44.596Z",
+      "version": "12.32.0-depup.0"
+    }
   }
 }
