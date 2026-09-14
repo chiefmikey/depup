@@ -330,5 +330,20 @@
       "timestamp": "2026-08-28T20:01:55.441Z",
       "version": "12.0.1-depup.1"
     }
+  },
+  "12.0.2": {
+    "0": {
+      "changes": {
+        "multer": {
+          "from": "2.3.0",
+          "to": "^2.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-14T16:09:29.090Z",
+      "version": "12.0.2-depup.0"
+    }
   }
 }

@@ -12,13 +12,13 @@ npm install @depup/heapdump
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.3.15 | **DepUp version**: 0.3.15-depup.53 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 0.3.15 | **DepUp version**: 0.3.15-depup.54 | **Updated**: 9/14/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| nan | `^2.13.2` | `^2.28.0` |
+| nan | `^2.13.2` | `^2.29.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/heapdump&labels=bug).
