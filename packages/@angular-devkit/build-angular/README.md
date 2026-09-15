@@ -12,7 +12,7 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.2 | **Updated**: 9/14/2026 | **Import test**: passed
+**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.3 | **Updated**: 9/15/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,11 +22,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/generator | `8.0.0` | `^8.0.5` |
 | @babel/preset-env | `8.0.2` | `^8.0.5` |
 | @babel/runtime | `8.0.0` | `^8.0.5` |
-| autoprefixer | `10.5.4` | `^10.6.0` |
-| browserslist | `^4.26.0` | `^4.28.9` |
+| autoprefixer | `10.5.4` | `^10.6.1` |
+| browserslist | `^4.26.0` | `^4.29.0` |
 | css-loader | `7.1.4` | `^7.1.5` |
 | less | `4.9.0` | `^4.9.1` |
-| open | `11.0.0` | `^11.0.3` |
+| open | `11.0.0` | `^11.0.4` |
 | picomatch | `4.0.5` | `^4.0.7` |
 | piscina | `5.2.0` | `^5.3.2` |
 | postcss | `8.5.25` | `^8.5.28` |

@@ -12,7 +12,7 @@ npm install @depup/zone-eu__mailsplit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.16 | **DepUp version**: 5.4.16-depup.0 | **Updated**: 9/13/2026 | **Import test**: passed
+**Original version**: 5.4.17 | **DepUp version**: 5.4.17-depup.0 | **Updated**: 9/15/2026 | **Import test**: passed
 
 ## What changed
 

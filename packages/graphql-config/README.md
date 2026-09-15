@@ -12,19 +12,19 @@ npm install @depup/graphql-config
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.6 | **DepUp version**: 5.1.6-depup.6 | **Updated**: 8/13/2026 | **Import test**: passed
+**Original version**: 5.1.7 | **DepUp version**: 5.1.7-depup.0 | **Updated**: 9/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @graphql-tools/graphql-file-loader | `^8.0.0` | `^8.1.19` |
-| @graphql-tools/json-file-loader | `^8.0.0` | `^8.0.33` |
-| @graphql-tools/load | `^8.1.0` | `^8.1.16` |
-| @graphql-tools/merge | `^9.0.0` | `^9.2.3` |
-| @graphql-tools/url-loader | `^9.0.0` | `^9.1.7` |
-| @graphql-tools/utils | `^11.0.0` | `^12.0.0` |
-| cosmiconfig | `^8.1.0` | `^10.0.0` |
+| @graphql-tools/graphql-file-loader | `^8.0.0` | `^8.1.20` |
+| @graphql-tools/json-file-loader | `^8.0.0` | `^8.0.34` |
+| @graphql-tools/load | `^8.1.0` | `^8.1.17` |
+| @graphql-tools/merge | `^9.0.0` | `^9.2.4` |
+| @graphql-tools/url-loader | `^9.0.0` | `^9.1.9` |
+| @graphql-tools/utils | `^11.0.0` | `^12.0.1` |
+| cosmiconfig | `^8.1.0` | `^10.0.1` |
 | jiti | `^2.0.0` | `^2.7.0` |
 | minimatch | `^10.0.0` | `^10.2.6` |
 | tslib | `^2.4.0` | `^2.8.1` |
