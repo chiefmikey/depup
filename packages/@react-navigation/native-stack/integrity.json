@@ -1004,5 +1004,24 @@
       "timestamp": "2026-08-27T01:38:13.075Z",
       "version": "7.18.10-depup.0"
     }
+  },
+  "7.19.0": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-15T08:12:14.330Z",
+      "version": "7.19.0-depup.0"
+    }
   }
 }
