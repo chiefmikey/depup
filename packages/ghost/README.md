@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.63.0 | **DepUp version**: 6.63.0-depup.19 | **Updated**: 9/15/2026 | **Import test**: failed
+**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.0 | **Updated**: 9/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -24,39 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.74.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
-| @tryghost/api-framework | `3.3.12` | `^3.3.13` |
-| @tryghost/bookshelf-plugins | `2.3.12` | `^2.3.15` |
-| @tryghost/color-utils | `0.2.20` | `^0.2.21` |
-| @tryghost/config-url-helpers | `1.0.27` | `^1.0.28` |
-| @tryghost/custom-fonts | `1.0.11` | `^1.0.12` |
-| @tryghost/database-info | `2.3.12` | `^2.3.14` |
-| @tryghost/debug | `2.3.12` | `^2.3.14` |
-| @tryghost/domain-events | `3.3.13` | `^3.3.15` |
-| @tryghost/email-mock-receiver | `2.3.12` | `^2.3.14` |
-| @tryghost/errors | `3.3.12` | `^3.3.14` |
-| @tryghost/helpers | `1.1.106` | `^1.1.107` |
-| @tryghost/html-to-plaintext | `1.0.11` | `^1.0.12` |
-| @tryghost/image-transform | `1.4.17` | `^1.4.18` |
 | @tryghost/job-manager | `1.0.9` | `^4.1.15` |
-| @tryghost/logging | `5.4.3` | `^5.4.5` |
-| @tryghost/metrics | `3.5.3` | `^3.6.0` |
-| @tryghost/mongo-utils | `0.6.5` | `^0.6.6` |
-| @tryghost/mw-error-handler | `1.0.13` | `^3.3.14` |
-| @tryghost/mw-vhost | `1.0.6` | `^3.3.14` |
-| @tryghost/nodemailer | `2.3.12` | `^2.3.14` |
-| @tryghost/pretty-cli | `3.3.12` | `^3.3.14` |
-| @tryghost/prometheus-metrics | `1.0.8` | `^5.0.0` |
-| @tryghost/referrer-parser | `0.1.21` | `^0.1.22` |
-| @tryghost/request | `4.0.5` | `^4.0.7` |
-| @tryghost/root-utils | `2.3.12` | `^2.3.14` |
-| @tryghost/security | `1.0.6` | `^3.3.14` |
-| @tryghost/social-urls | `0.1.63` | `^0.1.64` |
-| @tryghost/string | `0.3.5` | `^0.3.6` |
-| @tryghost/tpl | `2.3.12` | `^2.3.14` |
-| @tryghost/url-utils | `5.2.6` | `^5.3.0` |
-| @tryghost/validator | `3.2.12` | `^3.2.14` |
-| @tryghost/version | `2.3.12` | `^2.3.14` |
-| @tryghost/zip | `3.5.11` | `^3.5.13` |
 | @x402/core | `2.12.0` | `^2.25.0` |
 | @x402/evm | `2.12.0` | `^2.25.0` |
 | @x402/hono | `2.12.0` | `^2.25.0` |
@@ -64,7 +32,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.0` |
-| cheerio | `0.22.0` | `^1.2.0` |
 | compression | `1.8.1` | `^1.8.2` |
 | cookies | `0.9.1` | `^0.9.2` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
@@ -76,17 +43,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | fastq | `^1.20.1` | `^1.20.3` |
 | file-type | `21.3.4` | `^22.1.0` |
 | fs-extra | `11.3.6` | `^11.4.0` |
-| got | `15.1.0` | `^16.0.0` |
-| gscan | `6.4.2` | `^6.6.1` |
 | hono | `4.12.18` | `^4.13.8` |
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
-| iconv-lite | `0.7.2` | `^0.7.3` |
 | image-size | `1.2.1` | `^2.0.4` |
-| intl-messageformat | `5.4.3` | `^11.2.15` |
+| intl-messageformat | `5.4.3` | `^12.0.0` |
 | js-yaml | `4.3.0` | `^5.4.2` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
-| juice | `9.1.0` | `^12.1.3` |
+| juice | `11.1.1` | `^12.1.3` |
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `5.4.1` | `^6.1.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
@@ -104,7 +68,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
-| moment-timezone | `0.5.45` | `^0.6.3` |
+| moment-timezone | `0.5.45` | `^0.6.4` |
 | mppx | `0.6.20` | `^0.9.3` |
 | multer | `2.2.0` | `^2.4.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
@@ -112,7 +76,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
-| sanitize-html | `2.17.5` | `^2.17.7` |
 | sharp | `0.35.3` | `^0.35.4` |
 | stripe | `8.222.0` | `^22.6.2` |
 | temporal-polyfill | `0.3.2` | `^1.0.5` |

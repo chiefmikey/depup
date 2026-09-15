@@ -1,6 +1,6 @@
 {
   "name": "@depup/keystone",
-  "version": "4.2.1-depup.80",
+  "version": "4.2.1-depup.85",
   "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose (with updated dependencies)",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/keystonejs/keystone.git"
   },
   "dependencies": {
-    "@babel/core": "^8.0.1",
+    "@babel/core": "^8.0.5",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^8.0.2",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
@@ -20,7 +20,7 @@
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/plugin-transform-object-assign": "^7.29.7",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-env": "^8.0.5",
     "@babel/preset-react": "^8.0.1",
     "async": "^3.2.6",
     "asyncdi": "^1.1.0",
@@ -37,7 +37,7 @@
     "classnames": "^2.5.1",
     "cloudinary": "^2.11.0",
     "cloudinary-microurl": "^1.4.0",
-    "compression": "^1.8.1",
+    "compression": "^1.8.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.7",
     "debug": "^4.4.3",
@@ -64,38 +64,38 @@
     "less-middleware": "^3.1.0",
     "list-to-array": "^1.1.0",
     "lodash": "^4.18.1",
-    "marked": "^18.0.11",
+    "marked": "^18.0.13",
     "method-override": "^3.0.0",
     "mime-types": "^3.0.2",
-    "moment": "^2.30.1",
-    "mongoose": "^9.9.4",
-    "morgan": "^1.12.0",
-    "multer": "^2.3.0",
+    "moment": "^2.31.0",
+    "mongoose": "^9.10.1",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
     "numeral": "^2.0.6",
     "object-assign": "^4.1.1",
     "qs": "^6.16.0",
     "queryfilter": "^0.0.4",
     "range_check": "^4.1.0",
-    "react": "^19.2.8",
+    "react": "^19.3.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-alt-text": "^2.0.0",
     "react-color": "^2.19.3",
     "react-day-picker": "^10.0.1",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^19.2.8",
+    "react-dom": "^19.3.0",
     "react-domify": "^0.2.6",
     "react-images": "^1.2.0-beta.7",
     "react-markdown": "^10.1.0",
     "react-redux": "^9.3.0",
-    "react-router": "^8.3.1",
+    "react-router": "^8.4.0",
     "react-router-redux": "^4.0.8",
     "redux": "^5.0.1",
     "redux-saga": "^1.5.1",
     "redux-thunk": "^3.1.0",
     "react-select": "^5.10.2",
     "sanitize-filename": "^1.6.4",
-    "tinymce": "^8.9.0",
+    "tinymce": "^8.9.1",
     "sanitize-html": "^2.17.7",
     "scmp": "^2.1.0",
     "semver": "^7.8.5",
@@ -200,7 +200,7 @@
     "changes": {
       "@babel/core": {
         "from": "^7.4.4",
-        "to": "^8.0.1"
+        "to": "^8.0.5"
       },
       "@babel/plugin-proposal-class-properties": {
         "from": "^7.4.4",
@@ -248,7 +248,7 @@
       },
       "@babel/preset-env": {
         "from": "^7.4.4",
-        "to": "^8.0.2"
+        "to": "^8.0.5"
       },
       "@babel/preset-react": {
         "from": "^7.0.0",
@@ -284,7 +284,7 @@
       },
       "compression": {
         "from": "^1.7.4",
-        "to": "^1.8.1"
+        "to": "^1.8.2"
       },
       "cookie-parser": {
         "from": "^1.4.4",
@@ -336,7 +336,7 @@
       },
       "marked": {
         "from": "^0.6.2",
-        "to": "^18.0.11"
+        "to": "^18.0.13"
       },
       "mime-types": {
         "from": "^2.1.24",
@@ -344,19 +344,19 @@
       },
       "moment": {
         "from": "^2.24.0",
-        "to": "^2.30.1"
+        "to": "^2.31.0"
       },
       "mongoose": {
         "from": "^4.13.14",
-        "to": "^9.9.4"
+        "to": "^9.10.1"
       },
       "morgan": {
         "from": "^1.9.1",
-        "to": "^1.12.0"
+        "to": "^1.12.1"
       },
       "multer": {
         "from": "^1.4.1",
-        "to": "^2.3.0"
+        "to": "^2.4.0"
       },
       "qs": {
         "from": "^6.7.0",
@@ -368,7 +368,7 @@
       },
       "react": {
         "from": "^15.4.2",
-        "to": "^19.2.8"
+        "to": "^19.3.0"
       },
       "react-color": {
         "from": "^2.14.1",
@@ -388,7 +388,7 @@
       },
       "react-dom": {
         "from": "^15.4.2",
-        "to": "^19.2.8"
+        "to": "^19.3.0"
       },
       "react-images": {
         "from": "^0.5.6",
@@ -404,7 +404,7 @@
       },
       "react-router": {
         "from": "^3.0.2",
-        "to": "^8.3.1"
+        "to": "^8.4.0"
       },
       "redux": {
         "from": "^3.7.2",
@@ -428,7 +428,7 @@
       },
       "tinymce": {
         "from": "^4.9.2",
-        "to": "^8.9.0"
+        "to": "^8.9.1"
       },
       "sanitize-html": {
         "from": "^1.20.1",
@@ -462,7 +462,7 @@
     "depsUpdated": 65,
     "originalPackage": "keystone",
     "originalVersion": "4.2.1",
-    "processedAt": "2026-08-31T08:14:03.243Z",
+    "processedAt": "2026-09-15T16:10:41.231Z",
     "smokeTest": "passed"
   }
 }
