@@ -12,13 +12,13 @@ npm install @depup/clack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.1.0 | **DepUp version**: 0.1.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 0.1.0 | **DepUp version**: 0.1.0-depup.1 | **Updated**: 9/15/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| moment | `^2.13.0` | `^2.30.1` |
+| moment | `^2.13.0` | `^2.31.0` |
 | pify | `^2.3.0` | `^6.1.0` |
 | request | `^2.72.0` | `^2.88.2` |
 | websocket | `^1.0.23` | `^1.0.35` |

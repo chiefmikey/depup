@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T19:00:36.779Z",
       "version": "0.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "moment": {
+          "from": "^2.13.0",
+          "to": "^2.31.0"
+        },
+        "pify": {
+          "from": "^2.3.0",
+          "to": "^6.1.0"
+        },
+        "request": {
+          "from": "^2.72.0",
+          "to": "^2.88.2"
+        },
+        "websocket": {
+          "from": "^1.0.23",
+          "to": "^1.0.35"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-15T08:12:34.184Z",
+      "version": "0.1.0-depup.1"
     }
   }
 }
