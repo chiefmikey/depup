@@ -532,5 +532,56 @@
       "timestamp": "2026-09-03T00:34:32.052Z",
       "version": "4.13.2-depup.2"
     }
+  },
+  "4.13.3": {
+    "0": {
+      "changes": {
+        "@azure/abort-controller": {
+          "from": "^2.0.0",
+          "to": "^2.2.0"
+        },
+        "@azure/core-auth": {
+          "from": "^1.9.0",
+          "to": "^1.11.0"
+        },
+        "@azure/core-client": {
+          "from": "^1.9.2",
+          "to": "^1.11.1"
+        },
+        "@azure/core-rest-pipeline": {
+          "from": "^1.17.0",
+          "to": "^1.25.0"
+        },
+        "@azure/core-tracing": {
+          "from": "^1.0.0",
+          "to": "^1.4.0"
+        },
+        "@azure/core-util": {
+          "from": "^1.11.0",
+          "to": "^1.14.0"
+        },
+        "@azure/logger": {
+          "from": "^1.0.0",
+          "to": "^1.4.0"
+        },
+        "@azure/msal-browser": {
+          "from": "^5.5.0",
+          "to": "^5.21.0"
+        },
+        "open": {
+          "from": "^10.1.0",
+          "to": "^11.0.4"
+        },
+        "tslib": {
+          "from": "^2.2.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-15T00:33:34.576Z",
+      "version": "4.13.3-depup.0"
+    }
   }
 }
