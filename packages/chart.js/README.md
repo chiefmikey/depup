@@ -12,13 +12,13 @@ npm install @depup/chart.js
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.1 | **DepUp version**: 4.5.1-depup.29 | **Updated**: 9/6/2026 | **Import test**: passed
+**Original version**: 4.5.1 | **DepUp version**: 4.5.1-depup.30 | **Updated**: 9/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @kurkle/color | `^0.3.0` | `^0.5.1` |
+| @kurkle/color | `^0.3.0` | `^0.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/chart.js&labels=bug).
