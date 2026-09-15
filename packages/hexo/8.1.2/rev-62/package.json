@@ -1,6 +1,6 @@
 {
   "name": "@depup/hexo",
-  "version": "8.1.2-depup.57",
+  "version": "8.1.2-depup.62",
   "description": "A fast, simple & powerful blog framework, powered by Node.js. (with updated dependencies)",
   "main": "dist/hexo",
   "bin": {
@@ -49,7 +49,7 @@
   "dependencies": {
     "abbrev": "^5.0.0",
     "bluebird": "^3.7.2",
-    "fast-archy": "^1.0.0",
+    "fast-archy": "^1.1.0",
     "fast-text-table": "^1.1.0",
     "hexo-cli": "^4.3.2",
     "hexo-front-matter": "^5.0.0",
@@ -57,11 +57,11 @@
     "hexo-i18n": "^2.0.0",
     "hexo-log": "^4.1.0",
     "hexo-util": "^4.0.0",
-    "js-yaml": "^5.2.2",
+    "js-yaml": "^5.4.2",
     "js-yaml-js-types": "^1.0.1",
     "micromatch": "^4.0.8",
     "moize": "^6.1.7",
-    "moment": "^2.30.1",
+    "moment": "^2.31.0",
     "moment-timezone": "^0.6.3",
     "nunjucks": "^3.2.4",
     "picocolors": "^1.1.1",
@@ -69,7 +69,7 @@
     "strip-ansi": "^7.2.0",
     "tildify": "^3.0.0",
     "titlecase": "^1.1.3",
-    "warehouse": "^6.0.0"
+    "warehouse": "^7.0.0"
   },
   "devDependencies": {
     "@types/abbrev": "^1.1.3",
@@ -106,6 +106,10 @@
         "from": "^3.0.0",
         "to": "^5.0.0"
       },
+      "fast-archy": {
+        "from": "^1.0.0",
+        "to": "^1.1.0"
+      },
       "fast-text-table": {
         "from": "^1.0.1",
         "to": "^1.1.0"
@@ -120,11 +124,15 @@
       },
       "js-yaml": {
         "from": "^4.1.0",
-        "to": "^5.2.2"
+        "to": "^5.4.2"
       },
       "moize": {
         "from": "^6.1.6",
         "to": "^6.1.7"
+      },
+      "moment": {
+        "from": "^2.30.1",
+        "to": "^2.31.0"
       },
       "moment-timezone": {
         "from": "^0.5.46",
@@ -137,12 +145,16 @@
       "tildify": {
         "from": "^2.0.0",
         "to": "^3.0.0"
+      },
+      "warehouse": {
+        "from": "^6.0.0",
+        "to": "^7.0.0"
       }
     },
-    "depsUpdated": 9,
+    "depsUpdated": 12,
     "originalPackage": "hexo",
     "originalVersion": "8.1.2",
-    "processedAt": "2026-07-26T08:50:25.372Z",
+    "processedAt": "2026-09-15T08:13:52.742Z",
     "smokeTest": "passed"
   }
 }

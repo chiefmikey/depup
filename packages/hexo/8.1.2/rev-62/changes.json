@@ -4,6 +4,10 @@
       "from": "^3.0.0",
       "to": "^5.0.0"
     },
+    "fast-archy": {
+      "from": "^1.0.0",
+      "to": "^1.1.0"
+    },
     "fast-text-table": {
       "from": "^1.0.1",
       "to": "^1.1.0"
@@ -18,11 +22,15 @@
     },
     "js-yaml": {
       "from": "^4.1.0",
-      "to": "^5.2.2"
+      "to": "^5.4.2"
     },
     "moize": {
       "from": "^6.1.6",
       "to": "^6.1.7"
+    },
+    "moment": {
+      "from": "^2.30.1",
+      "to": "^2.31.0"
     },
     "moment-timezone": {
       "from": "^0.5.46",
@@ -35,8 +43,12 @@
     "tildify": {
       "from": "^2.0.0",
       "to": "^3.0.0"
+    },
+    "warehouse": {
+      "from": "^6.0.0",
+      "to": "^7.0.0"
     }
   },
-  "timestamp": "2026-07-26T08:50:06.902Z",
-  "totalUpdated": 9
+  "timestamp": "2026-09-15T08:13:40.126Z",
+  "totalUpdated": 12
 }
