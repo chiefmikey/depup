@@ -12,14 +12,14 @@ npm install @depup/googleapis
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 181.0.0 | **DepUp version**: 181.0.0-depup.0 | **Updated**: 9/15/2026 | **Import test**: passed
+**Original version**: 181.0.0 | **DepUp version**: 181.0.0-depup.1 | **Updated**: 9/16/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| google-auth-library | `^11.0.0` | `^11.0.2` |
-| googleapis-common | `^9.0.0` | `^9.0.4` |
+| google-auth-library | `^11.0.0` | `^11.1.0` |
+| googleapis-common | `^9.0.0` | `^9.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/googleapis&labels=bug).

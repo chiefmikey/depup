@@ -1,0 +1,64 @@
+{
+  "name": "@depup/hapi__tlds",
+  "version": "2.0.1-depup.0",
+  "description": "TLDS list for domain validation (with updated dependencies)",
+  "keywords": [
+    "@hapi/tlds",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "domain",
+    "tlds"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hapijs/tlds.git"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@hapi/oxc-plugin": "^1.0.4",
+    "@hapi/wreck": "^18.1.2",
+    "@oxc-node/core": "0.1.0",
+    "@types/node": "^22.20.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt --check",
+    "fmt:fix": "oxfmt",
+    "build": "tsdown",
+    "update-list": "node --import @oxc-node/core/register .github/scripts/update-list.ts"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@hapi/tlds",
+    "originalVersion": "2.0.1",
+    "processedAt": "2026-09-16T16:10:14.881Z",
+    "smokeTest": "passed"
+  }
+}

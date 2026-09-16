@@ -1,0 +1,137 @@
+{
+  "name": "@depup/tanstack__query-devtools",
+  "version": "5.103.1-depup.0",
+  "description": "Developer tools to interact with and visualize the TanStack Query cache (with updated dependencies)",
+  "author": "tannerlinsley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TanStack/query.git",
+    "directory": "packages/query-devtools"
+  },
+  "homepage": "https://tanstack.com/query",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tannerlinsley"
+  },
+  "type": "module",
+  "main": "./build/index.cjs",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "browser": {},
+  "exports": {
+    "@tanstack/custom-condition": "./src/index.ts",
+    "solid": {
+      "development": "./build/index.js",
+      "import": "./build/index.js"
+    },
+    "development": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/dev.js"
+      },
+      "require": "./build/dev.cjs"
+    },
+    "import": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    },
+    "require": "./build/index.cjs"
+  },
+  "files": [
+    "build",
+    "src",
+    "!src/__tests__",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@kobalte/core": "^0.13.14",
+    "@solid-primitives/keyed": "^1.5.3",
+    "@solid-primitives/resize-observer": "^2.2.0",
+    "@solid-primitives/storage": "^4.4.0",
+    "@tanstack/match-sorter-utils": "^9.1.2",
+    "clsx": "^2.1.1",
+    "goober": "^2.1.19",
+    "solid-js": "^1.9.15",
+    "solid-transition-group": "^0.3.0",
+    "superjson": "^2.2.6",
+    "@tanstack/query-core": "5.103.1"
+  },
+  "devDependencies": {
+    "@solidjs/testing-library": "^0.8.10",
+    "npm-run-all2": "^5.0.0",
+    "unplugin-solid": "^2.0.0",
+    "vite-plugin-solid": "^2.11.6"
+  },
+  "scripts": {
+    "clean": "premove ./build ./coverage ./dist-ts ./.cache/test-types",
+    "compile": "tsc --project tsconfig.json",
+    "test:eslint": "eslint --concurrency=auto ./src",
+    "test:types": "npm-run-all --serial test:types:*",
+    "test:types:ts56": "node ../../node_modules/typescript56/lib/tsc.js --project tsconfig.json --outDir .cache/test-types/ts56 --tsBuildInfoFile .cache/test-types/ts56.tsbuildinfo",
+    "test:types:ts57": "node ../../node_modules/typescript57/lib/tsc.js --project tsconfig.json --outDir .cache/test-types/ts57 --tsBuildInfoFile .cache/test-types/ts57.tsbuildinfo",
+    "test:types:ts58": "node ../../node_modules/typescript58/lib/tsc.js --project tsconfig.json --outDir .cache/test-types/ts58 --tsBuildInfoFile .cache/test-types/ts58.tsbuildinfo",
+    "test:types:ts59": "node ../../node_modules/typescript59/lib/tsc.js --project tsconfig.json --outDir .cache/test-types/ts59 --tsBuildInfoFile .cache/test-types/ts59.tsbuildinfo",
+    "test:types:tscurrent": "tsc --project tsconfig.json --outDir .cache/test-types/tscurrent --tsBuildInfoFile .cache/test-types/tscurrent.tsbuildinfo",
+    "test:types:ts70": "node ../../node_modules/typescript70/lib/tsc.js --project tsconfig.json --outDir .cache/test-types/ts70 --tsBuildInfoFile .cache/test-types/ts70.tsbuildinfo",
+    "test:lib": "vitest",
+    "test:lib:dev": "pnpm run test:lib --watch",
+    "test:build": "publint --strict && attw --pack",
+    "build": "tsdown --tsconfig tsconfig.prod.json",
+    "build:dev": "tsdown --watch"
+  },
+  "keywords": [
+    "@tanstack/query-devtools",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@kobalte/core": {
+        "from": "^0.13.4",
+        "to": "^0.13.14"
+      },
+      "@solid-primitives/keyed": {
+        "from": "^1.2.2",
+        "to": "^1.5.3"
+      },
+      "@solid-primitives/resize-observer": {
+        "from": "^2.0.26",
+        "to": "^2.2.0"
+      },
+      "@solid-primitives/storage": {
+        "from": "^1.3.11",
+        "to": "^4.4.0"
+      },
+      "@tanstack/match-sorter-utils": {
+        "from": "^8.19.4",
+        "to": "^9.1.2"
+      },
+      "goober": {
+        "from": "^2.1.16",
+        "to": "^2.1.19"
+      },
+      "solid-js": {
+        "from": "^1.9.7",
+        "to": "^1.9.15"
+      },
+      "solid-transition-group": {
+        "from": "^0.2.3",
+        "to": "^0.3.0"
+      },
+      "superjson": {
+        "from": "^2.2.2",
+        "to": "^2.2.6"
+      }
+    },
+    "depsUpdated": 9,
+    "originalPackage": "@tanstack/query-devtools",
+    "originalVersion": "5.103.1",
+    "processedAt": "2026-09-16T16:10:45.446Z",
+    "smokeTest": "passed"
+  }
+}
