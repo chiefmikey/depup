@@ -12,22 +12,22 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.0 | **Updated**: 9/15/2026 | **Import test**: failed
+**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.1 | **Updated**: 9/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1132.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1133.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^10.74.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/job-manager | `1.0.9` | `^4.1.15` |
-| @x402/core | `2.12.0` | `^2.25.0` |
-| @x402/evm | `2.12.0` | `^2.25.0` |
-| @x402/hono | `2.12.0` | `^2.25.0` |
+| @x402/core | `2.12.0` | `^2.26.0` |
+| @x402/evm | `2.12.0` | `^2.26.0` |
+| @x402/hono | `2.12.0` | `^2.26.0` |
 | body-parser | `1.20.6` | `^2.3.0` |
 | bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `11.1.1` | `^12.1.3` |
 | knex | `2.4.2` | `^3.3.0` |
-| knex-migrator | `5.4.1` | `^6.1.0` |
+| knex-migrator | `5.4.1` | `^6.2.1` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^14.0.1` |
 | metascraper | `5.55.2` | `^5.56.2` |
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
 | moment-timezone | `0.5.45` | `^0.6.4` |
-| mppx | `0.6.20` | `^0.9.3` |
+| mppx | `0.6.20` | `^0.10.1` |
 | multer | `2.2.0` | `^2.4.0` |
 | mysql2 | `3.22.5` | `^3.24.4` |
 | nodemailer | `8.0.11` | `^10.0.10` |

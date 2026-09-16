@@ -2,51 +2,51 @@
   "bumped": {
     "@aws-sdk/client-cloudwatch": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-cloudwatch-logs": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-ec2": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-ecs": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-iam": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-lambda": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-sqs": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-ssm": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/client-sts": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@aws-sdk/credential-providers": {
       "from": "^3.1101.0",
-      "to": "^3.1130.0"
+      "to": "^3.1133.0"
     },
     "@azure/identity": {
       "from": "^4.13.1",
-      "to": "^4.13.2"
+      "to": "^4.13.3"
     },
     "@azure/storage-blob": {
       "from": "^12.30.0",
@@ -130,7 +130,7 @@
     },
     "@smithy/core": {
       "from": "^3.31.1",
-      "to": "^3.33.3"
+      "to": "^3.34.1"
     },
     "@upstash/redis": {
       "from": "^1.36.1",
@@ -186,7 +186,7 @@
     },
     "hot-shots": {
       "from": "^10.2.1",
-      "to": "^17.1.0"
+      "to": "^17.1.1"
     },
     "hpagent": {
       "from": "^0.1.1",
@@ -198,11 +198,11 @@
     },
     "joi": {
       "from": "^17.13.4",
-      "to": "^18.2.8"
+      "to": "^18.2.9"
     },
     "js-yaml": {
       "from": "^3.15.1",
-      "to": "^5.4.1"
+      "to": "^5.4.2"
     },
     "jsonpath-plus": {
       "from": "^10.3.0",
@@ -215,6 +215,10 @@
     "mixpanel": {
       "from": "^0.18.0",
       "to": "^0.24.0"
+    },
+    "moment": {
+      "from": "^2.30.1",
+      "to": "^2.31.0"
     },
     "nanoid": {
       "from": "^3.3.16",
@@ -261,6 +265,6 @@
       "to": "^8.21.3"
     }
   },
-  "timestamp": "2026-09-11T00:32:26.833Z",
-  "totalUpdated": 65
+  "timestamp": "2026-09-16T00:32:32.160Z",
+  "totalUpdated": 66
 }
