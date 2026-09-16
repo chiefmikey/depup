@@ -817,6 +817,51 @@
       "status": "published",
       "timestamp": "2026-09-08T16:10:15.955Z",
       "version": "8.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@google-cloud/paginator": {
+          "from": "^7.0.1",
+          "to": "^7.1.0"
+        },
+        "@google-cloud/projectify": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "@google-cloud/promisify": {
+          "from": "^6.0.1",
+          "to": "^6.1.0"
+        },
+        "fast-xml-parser": {
+          "from": "^5.3.4",
+          "to": "^5.11.1"
+        },
+        "gaxios": {
+          "from": "^6.0.2",
+          "to": "^8.1.0"
+        },
+        "google-auth-library": {
+          "from": "^9.6.3",
+          "to": "^11.1.0"
+        },
+        "html-entities": {
+          "from": "^2.5.2",
+          "to": "^2.6.0"
+        },
+        "mime": {
+          "from": "^3.0.0",
+          "to": "^4.1.0"
+        },
+        "p-limit": {
+          "from": "^3.0.1",
+          "to": "^7.3.2"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-16T16:10:40.169Z",
+      "version": "8.1.0-depup.1"
     }
   }
 }
