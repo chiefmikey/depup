@@ -107,6 +107,23 @@
       "status": "published",
       "timestamp": "2026-09-09T08:12:06.422Z",
       "version": "7.33.12-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@microsoft/tsdoc": {
+          "from": "~0.16.0",
+          "to": "^0.17.0"
+        },
+        "@microsoft/tsdoc-config": {
+          "from": "~0.18.1",
+          "to": "^0.18.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-16T08:12:05.615Z",
+      "version": "7.33.12-depup.1"
     }
   }
 }
