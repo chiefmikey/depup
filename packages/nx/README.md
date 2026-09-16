@@ -12,29 +12,30 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.0 | **Updated**: 9/10/2026 | **Import test**: failed
+**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.1 | **Updated**: 9/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @clack/core | `1.4.3` | `^1.5.0` |
-| @clack/prompts | `1.7.0` | `^1.8.0` |
+| @clack/core | `1.4.3` | `^1.5.1` |
+| @clack/prompts | `1.7.0` | `^1.8.1` |
 | @emnapi/core | `1.4.5` | `^1.11.3` |
 | @emnapi/runtime | `1.4.5` | `^1.11.3` |
 | @emnapi/wasi-threads | `1.0.4` | `^2.1.0` |
 | @jest/diff-sequences | `30.0.1` | `^30.5.0` |
-| @napi-rs/wasm-runtime | `0.2.4` | `^1.2.3` |
-| @tybys/wasm-util | `0.9.0` | `^0.10.3` |
+| @napi-rs/wasm-runtime | `0.2.4` | `^1.2.4` |
+| @tybys/wasm-util | `0.9.0` | `^0.10.4` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
 | agent-base | `6.0.2` | `^9.0.0` |
 | ansi-regex | `5.0.1` | `^6.3.0` |
 | ansi-styles | `4.3.0` | `^7.0.0` |
-| argparse | `2.0.1` | `^3.0.1` |
+| argparse | `2.0.1` | `^3.0.2` |
 | asynckit | `0.4.0` | `^0.5.0` |
 | axios | `1.18.1` | `^1.20.0` |
 | balanced-match | `4.0.3` | `^4.0.4` |
 | bl | `4.1.0` | `^7.0.12` |
+| brace-expansion | `5.0.9` | `^5.0.12` |
 | buffer | `5.7.1` | `^6.0.3` |
 | chalk | `4.1.2` | `^6.0.0` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
@@ -49,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dotenv | `16.4.7` | `^17.4.2` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
-| emoji-regex | `8.0.0` | `^10.6.0` |
+| emoji-regex | `8.0.0` | `^11.0.0` |
 | es-object-atoms | `1.1.1` | `^1.1.2` |
 | escape-string-regexp | `1.0.5` | `^5.0.0` |
 | fast-wrap-ansi | `0.2.0` | `^0.2.2` |
@@ -72,7 +73,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | minimatch | `10.2.5` | `^10.2.6` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | onetime | `5.1.2` | `^8.0.0` |
-| open | `10.1.0` | `^11.0.2` |
+| open | `10.1.0` | `^11.0.4` |
 | ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.7.0` |
@@ -89,6 +90,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tar-stream | `2.2.0` | `^3.2.1` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.1` |
+| yaml | `2.9.0` | `^2.9.1` |
 | yargs | `17.7.2` | `^18.1.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |
 
