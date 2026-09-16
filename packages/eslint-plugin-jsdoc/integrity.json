@@ -1204,5 +1204,24 @@
       "timestamp": "2026-09-15T16:10:34.561Z",
       "version": "64.5.0-depup.0"
     }
+  },
+  "64.5.2": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/utils": {
+          "from": "^8.69.0",
+          "to": "^8.70.0"
+        },
+        "comment-parser": {
+          "from": "1.4.8",
+          "to": "^1.4.9"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-16T16:11:24.802Z",
+      "version": "64.5.2-depup.0"
+    }
   }
 }
