@@ -145,6 +145,23 @@
       "status": "published",
       "timestamp": "2026-09-01T08:13:08.673Z",
       "version": "30.5.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/jsdom": {
+          "from": "^21.1.7",
+          "to": "^30.0.0"
+        },
+        "jsdom": {
+          "from": "^26.1.0",
+          "to": "^30.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-17T08:13:22.955Z",
+      "version": "30.5.1-depup.1"
     }
   }
 }

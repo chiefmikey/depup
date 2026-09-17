@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.4 | **Updated**: 9/17/2026 | **Import test**: failed
+**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.5 | **Updated**: 9/17/2026 | **Import test**: failed
 
 ## What changed
 
@@ -41,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
 | fastq | `^1.20.1` | `^1.20.3` |
-| file-type | `21.3.4` | `^22.1.0` |
+| file-type | `21.3.4` | `^22.1.1` |
 | fs-extra | `11.3.6` | `^11.4.0` |
 | hono | `4.12.18` | `^4.13.8` |
 | html-to-text | `5.1.1` | `^10.0.1` |
@@ -49,6 +49,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | image-size | `1.2.1` | `^2.0.4` |
 | intl-messageformat | `5.4.3` | `^12.1.0` |
 | js-yaml | `4.3.0` | `^5.4.2` |
+| jsdom | `30.0.1` | `^30.1.0` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `11.1.1` | `^12.1.3` |
 | knex | `2.4.2` | `^3.3.0` |

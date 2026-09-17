@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-import-resolver-node",
-  "version": "0.4.0-depup.44",
+  "version": "0.4.0-depup.49",
   "description": "Node default behavior import resolution plugin for eslint-plugin-import. (with updated dependencies)",
   "main": "index.js",
   "files": [
@@ -38,7 +38,7 @@
   "homepage": "https://github.com/import-js/eslint-plugin-import",
   "dependencies": {
     "debug": "^4.4.3",
-    "is-core-module": "^2.16.2",
+    "is-core-module": "^2.17.0",
     "resolve": "^2.0.0-next.7"
   },
   "devDependencies": {
@@ -51,12 +51,16 @@
       "debug": {
         "from": "^3.2.7",
         "to": "^4.4.3"
+      },
+      "is-core-module": {
+        "from": "^2.16.2",
+        "to": "^2.17.0"
       }
     },
-    "depsUpdated": 1,
+    "depsUpdated": 2,
     "originalPackage": "eslint-import-resolver-node",
     "originalVersion": "0.4.0",
-    "processedAt": "2026-07-11T00:32:32.258Z",
+    "processedAt": "2026-09-17T08:12:43.640Z",
     "smokeTest": "passed"
   }
 }
