@@ -12,20 +12,20 @@ npm install @depup/pkg
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.8.1 | **DepUp version**: 5.8.1-depup.4 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 5.8.1 | **DepUp version**: 5.8.1-depup.5 | **Updated**: 9/17/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/generator | `7.18.2` | `^8.0.0` |
-| @babel/parser | `7.18.4` | `^8.0.4` |
-| @babel/types | `7.19.0` | `^8.0.4` |
+| @babel/generator | `7.18.2` | `^8.0.5` |
+| @babel/parser | `7.18.4` | `^8.0.5` |
+| @babel/types | `7.19.0` | `^8.0.5` |
 | chalk | `^4.1.2` | `^6.0.0` |
 | fs-extra | `^9.1.0` | `^11.4.0` |
-| globby | `^11.1.0` | `^16.2.2` |
+| globby | `^11.1.0` | `^16.2.4` |
 | into-stream | `^6.0.0` | `^9.1.0` |
-| is-core-module | `2.9.0` | `^2.16.2` |
+| is-core-module | `2.9.0` | `^2.17.0` |
 | minimist | `^1.2.6` | `^1.2.8` |
 | pkg-fetch | `3.4.2` | `^3.5.2` |
 | prebuild-install | `7.1.1` | `^7.1.3` |

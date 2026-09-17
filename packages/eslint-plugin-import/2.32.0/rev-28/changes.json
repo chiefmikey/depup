@@ -1,5 +1,9 @@
 {
   "bumped": {
+    "array-includes": {
+      "from": "^3.1.9",
+      "to": "^3.2.0"
+    },
     "debug": {
       "from": "^3.2.7",
       "to": "^4.4.3"
@@ -14,7 +18,7 @@
     },
     "eslint-module-utils": {
       "from": "^2.12.1",
-      "to": "^2.13.0"
+      "to": "^2.14.0"
     },
     "hasown": {
       "from": "^2.0.2",
@@ -22,15 +26,15 @@
     },
     "is-core-module": {
       "from": "^2.16.1",
-      "to": "^2.16.2"
+      "to": "^2.17.0"
     },
     "minimatch": {
       "from": "^3.1.2",
-      "to": "^10.2.5"
+      "to": "^10.2.6"
     },
     "semver": {
       "from": "^6.3.1",
-      "to": "^7.8.4"
+      "to": "^7.8.5"
     },
     "string.prototype.trimend": {
       "from": "^1.0.9",
@@ -41,6 +45,6 @@
       "to": "^4.2.0"
     }
   },
-  "timestamp": "2026-06-15T18:15:32.226Z",
-  "totalUpdated": 10
+  "timestamp": "2026-09-17T08:12:28.000Z",
+  "totalUpdated": 11
 }
