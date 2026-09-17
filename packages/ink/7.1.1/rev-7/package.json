@@ -1,6 +1,6 @@
 {
   "name": "@depup/ink",
-  "version": "7.1.1-depup.2",
+  "version": "7.1.1-depup.7",
   "description": "React for CLI (with updated dependencies)",
   "license": "MIT",
   "repository": "vadimdemedes/ink",
@@ -54,7 +54,7 @@
     "text"
   ],
   "dependencies": {
-    "@alcalzone/ansi-tokenize": "^0.3.0",
+    "@alcalzone/ansi-tokenize": "^0.3.1",
     "ansi-escapes": "^7.3.0",
     "ansi-styles": "^7.0.0",
     "auto-bind": "^5.0.1",
@@ -63,21 +63,21 @@
     "cli-cursor": "^5.0.0",
     "cli-truncate": "^6.1.1",
     "code-excerpt": "^4.0.0",
-    "es-toolkit": "^1.50.0",
+    "es-toolkit": "^1.52.0",
     "indent-string": "^5.0.0",
     "is-in-ci": "^2.0.0",
     "patch-console": "^2.0.0",
-    "react-reconciler": "^0.33.0",
-    "scheduler": "^0.27.0",
+    "react-reconciler": "^0.34.0",
+    "scheduler": "^0.28.0",
     "signal-exit": "^4.1.0",
     "slice-ansi": "^9.0.0",
     "stack-utils": "^2.0.6",
     "string-width": "^8.2.2",
     "terminal-size": "^4.0.1",
-    "type-fest": "^5.8.0",
+    "type-fest": "^5.10.0",
     "widest-line": "^6.0.0",
-    "wrap-ansi": "^10.0.0",
-    "ws": "^8.21.1",
+    "wrap-ansi": "^10.0.1",
+    "ws": "^8.21.3",
     "yoga-layout": "~3.2.1"
   },
   "devDependencies": {
@@ -143,6 +143,10 @@
   "prettier": "@vdemedes/prettier-config",
   "depup": {
     "changes": {
+      "@alcalzone/ansi-tokenize": {
+        "from": "^0.3.0",
+        "to": "^0.3.1"
+      },
       "ansi-styles": {
         "from": "^6.2.3",
         "to": "^7.0.0"
@@ -161,7 +165,15 @@
       },
       "es-toolkit": {
         "from": "^1.45.1",
-        "to": "^1.50.0"
+        "to": "^1.52.0"
+      },
+      "react-reconciler": {
+        "from": "^0.33.0",
+        "to": "^0.34.0"
+      },
+      "scheduler": {
+        "from": "^0.27.0",
+        "to": "^0.28.0"
       },
       "signal-exit": {
         "from": "^3.0.7",
@@ -173,17 +185,21 @@
       },
       "type-fest": {
         "from": "^5.5.0",
-        "to": "^5.8.0"
+        "to": "^5.10.0"
+      },
+      "wrap-ansi": {
+        "from": "^10.0.0",
+        "to": "^10.0.1"
       },
       "ws": {
         "from": "^8.20.0",
-        "to": "^8.21.1"
+        "to": "^8.21.3"
       }
     },
-    "depsUpdated": 9,
+    "depsUpdated": 13,
     "originalPackage": "ink",
     "originalVersion": "7.1.1",
-    "processedAt": "2026-07-26T16:24:17.158Z",
+    "processedAt": "2026-09-17T16:11:07.253Z",
     "smokeTest": "failed"
   }
 }
