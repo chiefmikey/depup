@@ -1890,5 +1890,20 @@
       "timestamp": "2026-09-17T08:13:11.449Z",
       "version": "1.54.11-depup.1"
     }
+  },
+  "1.55.0": {
+    "0": {
+      "changes": {
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-17T16:10:33.160Z",
+      "version": "1.55.0-depup.0"
+    }
   }
 }
