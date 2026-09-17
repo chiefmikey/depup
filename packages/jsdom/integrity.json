@@ -562,5 +562,24 @@
       "timestamp": "2026-09-04T16:11:50.984Z",
       "version": "30.0.1-depup.4"
     }
+  },
+  "30.1.0": {
+    "0": {
+      "changes": {
+        "@asamuzakjp/dom-selector": {
+          "from": "^9.1.2",
+          "to": "^9.1.4"
+        },
+        "@csstools/css-syntax-patches-for-csstree": {
+          "from": "^1.1.13",
+          "to": "^1.1.14"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-17T08:13:17.609Z",
+      "version": "30.1.0-depup.0"
+    }
   }
 }
