@@ -1,22 +1,5 @@
 {
   "11.0.2": {
-    "1": {
-      "changes": {
-        "conf": {
-          "from": "^15.0.2",
-          "to": "^15.1.0"
-        },
-        "type-fest": {
-          "from": "^5.0.1",
-          "to": "^5.5.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-03-19T08:20:18.137Z",
-      "version": "11.0.2-depup.1"
-    },
     "2": {
       "changes": {
         "conf": {
@@ -84,6 +67,23 @@
       "status": "published",
       "timestamp": "2026-08-31T00:35:43.516Z",
       "version": "11.0.2-depup.5"
+    },
+    "6": {
+      "changes": {
+        "conf": {
+          "from": "^15.0.2",
+          "to": "^15.1.0"
+        },
+        "type-fest": {
+          "from": "^5.0.1",
+          "to": "^5.10.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-17T16:10:44.986Z",
+      "version": "11.0.2-depup.6"
     }
   }
 }

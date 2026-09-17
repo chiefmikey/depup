@@ -71,5 +71,20 @@
       "timestamp": "2026-05-12T07:13:23.582Z",
       "version": "1.4.2-depup.1"
     }
+  },
+  "1.5.0": {
+    "0": {
+      "changes": {
+        "yaml": {
+          "from": "^2.2.2",
+          "to": "^2.9.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-17T16:10:42.940Z",
+      "version": "1.5.0-depup.0"
+    }
   }
 }

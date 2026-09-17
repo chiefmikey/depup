@@ -540,5 +540,28 @@
       "timestamp": "2026-09-15T08:12:34.199Z",
       "version": "3.5.42-depup.2"
     }
+  },
+  "3.5.43": {
+    "0": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.8",
+          "to": "^8.0.5"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        },
+        "magic-string": {
+          "from": "^0.30.21",
+          "to": "^1.4.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-17T16:10:02.998Z",
+      "version": "3.5.43-depup.0"
+    }
   }
 }
