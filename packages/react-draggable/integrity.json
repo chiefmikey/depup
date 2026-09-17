@@ -100,5 +100,15 @@
       "timestamp": "2026-07-29T09:01:25.999Z",
       "version": "4.7.1-depup.0"
     }
+  },
+  "4.7.2": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-17T00:34:30.061Z",
+      "version": "4.7.2-depup.0"
+    }
   }
 }

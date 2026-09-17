@@ -12,7 +12,7 @@ npm install @depup/trpc__client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.18.0 | **DepUp version**: 11.18.0-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 11.19.0 | **DepUp version**: 11.19.0-depup.0 | **Updated**: 9/17/2026 | **Import test**: failed
 
 ## What changed
 
