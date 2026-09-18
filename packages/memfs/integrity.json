@@ -1717,5 +1717,36 @@
       "timestamp": "2026-09-14T00:35:59.796Z",
       "version": "4.78.0-depup.0"
     }
+  },
+  "4.78.1": {
+    "0": {
+      "changes": {
+        "@jsonjoy.com/json-pack": {
+          "from": "^1.11.0",
+          "to": "^18.30.0"
+        },
+        "@jsonjoy.com/util": {
+          "from": "^1.9.0",
+          "to": "^18.30.0"
+        },
+        "thingies": {
+          "from": "^2.5.0",
+          "to": "^2.6.1"
+        },
+        "tree-dump": {
+          "from": "^1.0.3",
+          "to": "^1.1.0"
+        },
+        "tslib": {
+          "from": "^2.0.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T00:33:08.655Z",
+      "version": "4.78.1-depup.0"
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@depup/slack__logger",
-  "version": "5.0.0-depup.0",
+  "version": "5.0.0-depup.5",
   "description": "Logging utility used by Node Slack SDK (with updated dependencies)",
   "author": "Slack Technologies, LLC",
   "license": "MIT",
@@ -41,19 +41,19 @@
     "test:coverage": "npm run build && node --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=lcov.info --test-reporter=junit --test-reporter-destination=test-results.xml --import tsx --test src/index.test.ts"
   },
   "dependencies": {
-    "@types/node": "^26.1.1"
+    "@types/node": "^26.6.1"
   },
   "depup": {
     "changes": {
       "@types/node": {
         "from": ">=20",
-        "to": "^26.1.1"
+        "to": "^26.6.1"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "@slack/logger",
     "originalVersion": "5.0.0",
-    "processedAt": "2026-07-21T16:07:56.969Z",
+    "processedAt": "2026-09-18T00:31:36.220Z",
     "smokeTest": "passed"
   }
 }
