@@ -1223,5 +1223,15 @@
       "timestamp": "2026-09-16T16:11:24.802Z",
       "version": "64.5.2-depup.0"
     }
+  },
+  "64.5.3": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T16:09:48.080Z",
+      "version": "64.5.3-depup.0"
+    }
   }
 }
