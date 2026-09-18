@@ -62725,279 +62725,6 @@
     }
   },
   "6.64.0": {
-    "3": {
-      "changes": {
-        "@aws-sdk/client-s3": {
-          "from": "3.1079.0",
-          "to": "^3.1133.0"
-        },
-        "@extractus/oembed-extractor": {
-          "from": "3.2.1",
-          "to": "^6.0.0"
-        },
-        "@faker-js/faker": {
-          "from": "10.5.0",
-          "to": "^10.6.0"
-        },
-        "@isaacs/ttlcache": {
-          "from": "1.4.1",
-          "to": "^2.1.5"
-        },
-        "@sentry/node": {
-          "from": "7.120.4",
-          "to": "^10.75.0"
-        },
-        "@slack/webhook": {
-          "from": "7.1.0",
-          "to": "^8.0.2"
-        },
-        "@tryghost/job-manager": {
-          "from": "1.0.9",
-          "to": "^4.1.15"
-        },
-        "@x402/core": {
-          "from": "2.12.0",
-          "to": "^2.26.0"
-        },
-        "@x402/evm": {
-          "from": "2.12.0",
-          "to": "^2.26.0"
-        },
-        "@x402/hono": {
-          "from": "2.12.0",
-          "to": "^2.26.0"
-        },
-        "body-parser": {
-          "from": "1.20.6",
-          "to": "^2.3.0"
-        },
-        "bookshelf-relations": {
-          "from": "2.8.0",
-          "to": "^3.0.0"
-        },
-        "cache-manager": {
-          "from": "4.1.0",
-          "to": "^7.2.9"
-        },
-        "chalk": {
-          "from": "4.1.2",
-          "to": "^6.0.0"
-        },
-        "compression": {
-          "from": "1.8.1",
-          "to": "^1.8.2"
-        },
-        "cookies": {
-          "from": "0.9.1",
-          "to": "^0.9.2"
-        },
-        "countries-and-timezones": {
-          "from": "3.9.0",
-          "to": "^3.10.0"
-        },
-        "cron-validate": {
-          "from": "1.4.5",
-          "to": "^1.5.3"
-        },
-        "dompurify": {
-          "from": "3.4.13",
-          "to": "^3.4.15"
-        },
-        "entities": {
-          "from": "4.5.0",
-          "to": "^8.1.0"
-        },
-        "express": {
-          "from": "4.22.2",
-          "to": "^5.2.1"
-        },
-        "express-hbs": {
-          "from": "2.5.0",
-          "to": "^3.0.0"
-        },
-        "fastq": {
-          "from": "^1.20.1",
-          "to": "^1.20.3"
-        },
-        "file-type": {
-          "from": "21.3.4",
-          "to": "^22.1.0"
-        },
-        "fs-extra": {
-          "from": "11.3.6",
-          "to": "^11.4.0"
-        },
-        "hono": {
-          "from": "4.12.18",
-          "to": "^4.13.8"
-        },
-        "html-to-text": {
-          "from": "5.1.1",
-          "to": "^10.0.1"
-        },
-        "html5parser": {
-          "from": "2.0.2",
-          "to": "^3.0.0"
-        },
-        "image-size": {
-          "from": "1.2.1",
-          "to": "^2.0.4"
-        },
-        "intl-messageformat": {
-          "from": "5.4.3",
-          "to": "^12.0.0"
-        },
-        "js-yaml": {
-          "from": "4.3.0",
-          "to": "^5.4.2"
-        },
-        "jsonwebtoken": {
-          "from": "8.5.1",
-          "to": "^9.0.3"
-        },
-        "juice": {
-          "from": "11.1.1",
-          "to": "^12.1.3"
-        },
-        "knex": {
-          "from": "2.4.2",
-          "to": "^3.3.0"
-        },
-        "knex-migrator": {
-          "from": "5.4.1",
-          "to": "^6.2.1"
-        },
-        "leaky-bucket": {
-          "from": "2.2.0",
-          "to": "^4.1.4"
-        },
-        "mailgun.js": {
-          "from": "10.4.0",
-          "to": "^14.0.1"
-        },
-        "metascraper": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-amazon": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-author": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-description": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-image": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-logo": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-logo-favicon": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-publisher": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-title": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "metascraper-url": {
-          "from": "5.55.2",
-          "to": "^5.56.2"
-        },
-        "mime-types": {
-          "from": "2.1.35",
-          "to": "^3.0.2"
-        },
-        "mingo": {
-          "from": "2.5.3",
-          "to": "^7.2.4"
-        },
-        "moment": {
-          "from": "2.24.0",
-          "to": "^2.31.0"
-        },
-        "moment-timezone": {
-          "from": "0.5.45",
-          "to": "^0.6.4"
-        },
-        "mppx": {
-          "from": "0.6.20",
-          "to": "^0.10.1"
-        },
-        "multer": {
-          "from": "2.2.0",
-          "to": "^2.4.0"
-        },
-        "mysql2": {
-          "from": "3.22.5",
-          "to": "^3.24.4"
-        },
-        "nodemailer": {
-          "from": "8.0.11",
-          "to": "^10.0.10"
-        },
-        "otplib": {
-          "from": "12.0.1",
-          "to": "^13.5.0"
-        },
-        "papaparse": {
-          "from": "5.5.4",
-          "to": "^5.7.0"
-        },
-        "probe-image-size": {
-          "from": "7.3.0",
-          "to": "^7.4.0"
-        },
-        "sharp": {
-          "from": "0.35.3",
-          "to": "^0.35.4"
-        },
-        "stripe": {
-          "from": "8.222.0",
-          "to": "^22.6.2"
-        },
-        "temporal-polyfill": {
-          "from": "0.3.2",
-          "to": "^1.0.5"
-        },
-        "terser": {
-          "from": "5.48.0",
-          "to": "^5.51.2"
-        },
-        "tldts": {
-          "from": "^7.4.4",
-          "to": "^7.4.13"
-        },
-        "type-fest": {
-          "from": "5.7.0",
-          "to": "^5.9.0"
-        },
-        "ua-parser-js": {
-          "from": "1.0.41",
-          "to": "^2.0.10"
-        },
-        "zod": {
-          "from": "4.4.3",
-          "to": "^4.6.5"
-        }
-      },
-      "depsUpdated": 66,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-09-16T16:11:37.499Z",
-      "version": "6.64.0-depup.3"
-    },
     "4": {
       "changes": {
         "@aws-sdk/client-s3": {
@@ -64101,6 +63828,283 @@
       "status": "failed",
       "timestamp": "2026-09-18T00:33:48.376Z",
       "version": "6.64.0-depup.7"
+    },
+    "8": {
+      "changes": {
+        "@aws-sdk/client-s3": {
+          "from": "3.1079.0",
+          "to": "^3.1135.0"
+        },
+        "@extractus/oembed-extractor": {
+          "from": "3.2.1",
+          "to": "^6.0.0"
+        },
+        "@faker-js/faker": {
+          "from": "10.5.0",
+          "to": "^10.6.0"
+        },
+        "@isaacs/ttlcache": {
+          "from": "1.4.1",
+          "to": "^2.1.5"
+        },
+        "@sentry/node": {
+          "from": "7.120.4",
+          "to": "^10.75.0"
+        },
+        "@slack/webhook": {
+          "from": "7.1.0",
+          "to": "^8.0.2"
+        },
+        "@tryghost/job-manager": {
+          "from": "1.0.9",
+          "to": "^4.1.15"
+        },
+        "@x402/core": {
+          "from": "2.12.0",
+          "to": "^2.26.0"
+        },
+        "@x402/evm": {
+          "from": "2.12.0",
+          "to": "^2.26.0"
+        },
+        "@x402/hono": {
+          "from": "2.12.0",
+          "to": "^2.26.0"
+        },
+        "body-parser": {
+          "from": "1.20.6",
+          "to": "^2.3.0"
+        },
+        "bookshelf-relations": {
+          "from": "2.8.0",
+          "to": "^3.0.0"
+        },
+        "cache-manager": {
+          "from": "4.1.0",
+          "to": "^7.2.9"
+        },
+        "chalk": {
+          "from": "4.1.2",
+          "to": "^6.0.0"
+        },
+        "compression": {
+          "from": "1.8.1",
+          "to": "^1.8.2"
+        },
+        "cookies": {
+          "from": "0.9.1",
+          "to": "^0.9.2"
+        },
+        "countries-and-timezones": {
+          "from": "3.9.0",
+          "to": "^3.10.0"
+        },
+        "cron-validate": {
+          "from": "1.4.5",
+          "to": "^1.5.3"
+        },
+        "dompurify": {
+          "from": "3.4.13",
+          "to": "^3.4.15"
+        },
+        "entities": {
+          "from": "4.5.0",
+          "to": "^8.1.0"
+        },
+        "express": {
+          "from": "4.22.2",
+          "to": "^5.2.1"
+        },
+        "express-hbs": {
+          "from": "2.5.0",
+          "to": "^3.0.0"
+        },
+        "fastq": {
+          "from": "^1.20.1",
+          "to": "^1.20.3"
+        },
+        "file-type": {
+          "from": "21.3.4",
+          "to": "^22.1.1"
+        },
+        "fs-extra": {
+          "from": "11.3.6",
+          "to": "^11.4.0"
+        },
+        "hono": {
+          "from": "4.12.18",
+          "to": "^4.13.8"
+        },
+        "html-to-text": {
+          "from": "5.1.1",
+          "to": "^10.0.1"
+        },
+        "html5parser": {
+          "from": "2.0.2",
+          "to": "^3.0.0"
+        },
+        "image-size": {
+          "from": "1.2.1",
+          "to": "^2.0.4"
+        },
+        "intl-messageformat": {
+          "from": "5.4.3",
+          "to": "^12.1.0"
+        },
+        "js-yaml": {
+          "from": "4.3.0",
+          "to": "^5.4.2"
+        },
+        "jsdom": {
+          "from": "30.0.1",
+          "to": "^30.1.0"
+        },
+        "jsonwebtoken": {
+          "from": "8.5.1",
+          "to": "^9.0.3"
+        },
+        "juice": {
+          "from": "11.1.1",
+          "to": "^12.1.3"
+        },
+        "knex": {
+          "from": "2.4.2",
+          "to": "^3.3.0"
+        },
+        "knex-migrator": {
+          "from": "5.4.1",
+          "to": "^6.2.1"
+        },
+        "leaky-bucket": {
+          "from": "2.2.0",
+          "to": "^4.1.4"
+        },
+        "mailgun.js": {
+          "from": "10.4.0",
+          "to": "^14.0.1"
+        },
+        "metascraper": {
+          "from": "5.55.2",
+          "to": "^5.58.1"
+        },
+        "metascraper-amazon": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-author": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-description": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-image": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-logo": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-logo-favicon": {
+          "from": "5.55.2",
+          "to": "^5.58.1"
+        },
+        "metascraper-publisher": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-title": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "metascraper-url": {
+          "from": "5.55.2",
+          "to": "^5.56.2"
+        },
+        "mime-types": {
+          "from": "2.1.35",
+          "to": "^3.0.2"
+        },
+        "mingo": {
+          "from": "2.5.3",
+          "to": "^7.2.4"
+        },
+        "moment": {
+          "from": "2.24.0",
+          "to": "^2.31.0"
+        },
+        "moment-timezone": {
+          "from": "0.5.45",
+          "to": "^0.6.4"
+        },
+        "mppx": {
+          "from": "0.6.20",
+          "to": "^0.10.1"
+        },
+        "multer": {
+          "from": "2.2.0",
+          "to": "^2.4.0"
+        },
+        "mysql2": {
+          "from": "3.22.5",
+          "to": "^3.24.4"
+        },
+        "nodemailer": {
+          "from": "8.0.11",
+          "to": "^10.0.10"
+        },
+        "otplib": {
+          "from": "12.0.1",
+          "to": "^13.5.0"
+        },
+        "papaparse": {
+          "from": "5.5.4",
+          "to": "^5.7.0"
+        },
+        "probe-image-size": {
+          "from": "7.3.0",
+          "to": "^7.4.0"
+        },
+        "sharp": {
+          "from": "0.35.3",
+          "to": "^0.35.4"
+        },
+        "stripe": {
+          "from": "8.222.0",
+          "to": "^22.6.2"
+        },
+        "temporal-polyfill": {
+          "from": "0.3.2",
+          "to": "^1.0.5"
+        },
+        "terser": {
+          "from": "5.48.0",
+          "to": "^5.51.2"
+        },
+        "tldts": {
+          "from": "^7.4.4",
+          "to": "^7.4.13"
+        },
+        "type-fest": {
+          "from": "5.7.0",
+          "to": "^5.10.0"
+        },
+        "ua-parser-js": {
+          "from": "1.0.41",
+          "to": "^2.0.10"
+        },
+        "zod": {
+          "from": "4.4.3",
+          "to": "^4.6.5"
+        }
+      },
+      "depsUpdated": 67,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-09-18T08:11:57.498Z",
+      "version": "6.64.0-depup.8"
     }
   }
 }
