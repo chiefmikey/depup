@@ -275,5 +275,24 @@
       "timestamp": "2026-09-11T00:32:44.513Z",
       "version": "8.0.5-depup.0"
     }
+  },
+  "8.0.6": {
+    "0": {
+      "changes": {
+        "obug": {
+          "from": "^2.1.1",
+          "to": "^3.0.0"
+        },
+        "verkit": {
+          "from": "^0.3.2",
+          "to": "^0.4.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T16:08:41.673Z",
+      "version": "8.0.6-depup.0"
+    }
   }
 }
