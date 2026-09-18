@@ -888,5 +888,15 @@
       "timestamp": "2026-09-17T00:31:13.252Z",
       "version": "4.0.56-depup.0"
     }
+  },
+  "4.0.57": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-18T08:11:35.872Z",
+      "version": "4.0.57-depup.0"
+    }
   }
 }
