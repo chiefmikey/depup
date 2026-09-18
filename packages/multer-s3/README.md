@@ -12,14 +12,14 @@ npm install @depup/multer-s3
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.147 | **Updated**: 9/17/2026 | **Import test**: passed
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.148 | **Updated**: 9/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/lib-storage | `^3.46.0` | `^3.1134.0` |
-| file-type | `^3.3.0` | `^22.1.0` |
+| @aws-sdk/lib-storage | `^3.46.0` | `^3.1135.0` |
+| file-type | `^3.3.0` | `^22.1.1` |
 | run-parallel | `^1.1.6` | `^1.2.0` |
 
 
