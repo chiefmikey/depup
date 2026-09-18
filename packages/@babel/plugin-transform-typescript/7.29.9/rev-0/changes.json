@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@babel/helper-annotate-as-pure": {
+      "from": "^7.29.7",
+      "to": "^8.0.0"
+    },
+    "@babel/helper-create-class-features-plugin": {
+      "from": "^7.29.7",
+      "to": "^8.0.6"
+    },
+    "@babel/helper-plugin-utils": {
+      "from": "^7.29.7",
+      "to": "^8.0.1"
+    },
+    "@babel/helper-skip-transparent-expression-wrappers": {
+      "from": "^7.29.7",
+      "to": "^8.0.0"
+    },
+    "@babel/plugin-syntax-typescript": {
+      "from": "^7.29.7",
+      "to": "^8.0.3"
+    }
+  },
+  "timestamp": "2026-09-18T16:08:12.803Z",
+  "totalUpdated": 5
+}

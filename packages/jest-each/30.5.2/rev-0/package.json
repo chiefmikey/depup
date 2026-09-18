@@ -1,0 +1,60 @@
+{
+  "name": "@depup/jest-each",
+  "version": "30.5.2-depup.0",
+  "description": "Parameterised tests for Jest (with updated dependencies)",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-each"
+  },
+  "keywords": [
+    "jest-each",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "jest",
+    "parameterised",
+    "test",
+    "each"
+  ],
+  "author": "Matt Phillips (mattphillips)",
+  "license": "MIT",
+  "dependencies": {
+    "@jest/get-type": "30.5.0",
+    "@jest/types": "30.5.1",
+    "chalk": "^6.0.0",
+    "jest-regex-util": "30.5.0",
+    "jest-util": "30.5.1",
+    "pretty-format": "30.5.1"
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "gitHead": "202dd8a14777c270607c2416bd5034c3c0abc984",
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^6.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "jest-each",
+    "originalVersion": "30.5.2",
+    "processedAt": "2026-09-18T16:09:12.362Z",
+    "smokeTest": "passed"
+  }
+}

@@ -148,5 +148,36 @@
       "timestamp": "2026-09-11T00:32:34.495Z",
       "version": "8.0.5-depup.0"
     }
+  },
+  "7.29.9": {
+    "0": {
+      "changes": {
+        "@babel/helper-annotate-as-pure": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@babel/helper-create-class-features-plugin": {
+          "from": "^7.29.7",
+          "to": "^8.0.6"
+        },
+        "@babel/helper-plugin-utils": {
+          "from": "^7.29.7",
+          "to": "^8.0.1"
+        },
+        "@babel/helper-skip-transparent-expression-wrappers": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@babel/plugin-syntax-typescript": {
+          "from": "^7.29.7",
+          "to": "^8.0.3"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T16:08:18.697Z",
+      "version": "7.29.9-depup.0"
+    }
   }
 }

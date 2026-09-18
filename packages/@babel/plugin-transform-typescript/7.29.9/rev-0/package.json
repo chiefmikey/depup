@@ -1,0 +1,73 @@
+{
+  "name": "@depup/babel__plugin-transform-typescript",
+  "version": "7.29.9-depup.0",
+  "description": "Transform TypeScript into ES.next (with updated dependencies)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-typescript"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "keywords": [
+    "@babel/plugin-transform-typescript",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "babel-plugin",
+    "typescript"
+  ],
+  "dependencies": {
+    "@babel/helper-annotate-as-pure": "^8.0.0",
+    "@babel/helper-create-class-features-plugin": "^8.0.6",
+    "@babel/helper-plugin-utils": "^8.0.1",
+    "@babel/helper-skip-transparent-expression-wrappers": "^8.0.0",
+    "@babel/plugin-syntax-typescript": "^8.0.3"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/helper-plugin-test-runner": "^7.29.7",
+    "@babel/traverse": "^7.29.8",
+    "@babel/types": "^7.29.8"
+  },
+  "homepage": "https://babel.dev/docs/en/next/babel-plugin-transform-typescript",
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "type": "commonjs",
+  "depup": {
+    "changes": {
+      "@babel/helper-annotate-as-pure": {
+        "from": "^7.29.7",
+        "to": "^8.0.0"
+      },
+      "@babel/helper-create-class-features-plugin": {
+        "from": "^7.29.7",
+        "to": "^8.0.6"
+      },
+      "@babel/helper-plugin-utils": {
+        "from": "^7.29.7",
+        "to": "^8.0.1"
+      },
+      "@babel/helper-skip-transparent-expression-wrappers": {
+        "from": "^7.29.7",
+        "to": "^8.0.0"
+      },
+      "@babel/plugin-syntax-typescript": {
+        "from": "^7.29.7",
+        "to": "^8.0.3"
+      }
+    },
+    "depsUpdated": 5,
+    "originalPackage": "@babel/plugin-transform-typescript",
+    "originalVersion": "7.29.9",
+    "processedAt": "2026-09-18T16:08:16.422Z",
+    "smokeTest": "passed"
+  }
+}
