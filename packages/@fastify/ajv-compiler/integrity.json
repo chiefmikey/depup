@@ -84,6 +84,23 @@
       "status": "published",
       "timestamp": "2026-08-08T16:08:54.622Z",
       "version": "4.0.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "ajv": {
+          "from": "^8.12.0",
+          "to": "^8.20.0"
+        },
+        "fast-uri": {
+          "from": "^4.0.0",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T08:11:23.997Z",
+      "version": "4.0.6-depup.1"
     }
   }
 }
