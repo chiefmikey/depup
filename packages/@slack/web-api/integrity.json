@@ -1377,6 +1377,31 @@
       "status": "published",
       "timestamp": "2026-09-07T16:09:37.596Z",
       "version": "8.1.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20",
+          "to": "^26.6.1"
+        },
+        "eventemitter3": {
+          "from": "^5.0.1",
+          "to": "^5.0.4"
+        },
+        "p-queue": {
+          "from": "^6.6.2",
+          "to": "^9.3.3"
+        },
+        "p-retry": {
+          "from": "^4.6.2",
+          "to": "^8.0.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T00:32:17.549Z",
+      "version": "8.1.1-depup.2"
     }
   }
 }

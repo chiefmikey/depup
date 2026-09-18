@@ -12,13 +12,13 @@ npm install @depup/cliffy
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.5.1 | **DepUp version**: 2.5.1-depup.9 | **Updated**: 9/7/2026 | **Import test**: passed
+**Original version**: 2.5.1 | **DepUp version**: 2.5.1-depup.10 | **Updated**: 9/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `^6.0.0` | `^26.5.0` |
+| @types/node | `^6.0.0` | `^26.6.1` |
 | columnify | `^1.5.4` | `^1.6.0` |
 
 

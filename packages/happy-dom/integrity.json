@@ -1421,6 +1421,35 @@
       "status": "published",
       "timestamp": "2026-09-13T08:11:34.693Z",
       "version": "20.14.5-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^26.6.1"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.1.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "ws": {
+          "from": "^8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-18T00:33:59.707Z",
+      "version": "20.14.5-depup.2"
     }
   }
 }
