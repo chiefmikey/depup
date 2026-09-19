@@ -686,5 +686,20 @@
       "timestamp": "2026-09-18T00:33:30.378Z",
       "version": "12.33.1-depup.0"
     }
+  },
+  "12.33.2": {
+    "0": {
+      "changes": {
+        "rrule-temporal": {
+          "from": "^2.2.5",
+          "to": "^2.2.6"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-19T00:33:49.563Z",
+      "version": "12.33.2-depup.0"
+    }
   }
 }
