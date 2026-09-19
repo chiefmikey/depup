@@ -12,20 +12,20 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.124 | **Updated**: 9/18/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.125 | **Updated**: 9/19/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/code-frame | `^7.18.6` | `^8.0.0` |
-| @babel/core | `^7.20.12` | `^8.0.5` |
-| @babel/eslint-parser | `^7.19.1` | `^8.0.5` |
+| @babel/code-frame | `^7.18.6` | `^8.0.6` |
+| @babel/core | `^7.20.12` | `^8.0.6` |
+| @babel/eslint-parser | `^7.19.1` | `^7.29.9` |
 | @babel/helper-plugin-utils | `^7.20.2` | `^8.0.1` |
-| @babel/parser | `^7.20.13` | `^8.0.5` |
+| @babel/parser | `^7.20.13` | `^7.29.9` |
 | @babel/runtime | `^7.20.13` | `^8.0.5` |
-| @babel/traverse | `^7.20.13` | `^8.0.5` |
-| @babel/types | `^7.20.7` | `^8.0.5` |
+| @babel/traverse | `^7.20.13` | `^8.0.6` |
+| @babel/types | `^7.20.7` | `^8.0.6` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
 | @expo/devcert | `^1.2.0` | `^1.2.1` |
 | @graphql-codegen/add | `^3.2.3` | `^7.1.0` |
@@ -66,9 +66,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | date-fns | `^2.30.0` | `^4.4.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
-| dotenv | `^8.6.0` | `^18.0.0` |
+| dotenv | `^8.6.0` | `^18.0.1` |
 | enhanced-resolve | `^5.15.0` | `^5.25.1` |
-| eslint | `^7.32.0` | `^10.10.0` |
+| eslint | `^7.32.0` | `^10.11.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
@@ -86,7 +86,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | globby | `^11.1.0` | `^16.2.4` |
 | got | `^11.8.6` | `^16.0.0` |
 | graphql | `^16.7.1` | `^17.0.2` |
-| graphql-compose | `^9.0.10` | `^9.2.1` |
+| graphql-compose | `^9.0.10` | `^9.2.2` |
 | graphql-http | `^1.19.0` | `^1.23.0` |
 | graphql-tag | `^2.12.6` | `^2.12.7` |
 | hasha | `^5.2.2` | `^7.0.0` |
@@ -127,7 +127,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | terser-webpack-plugin | `^5.3.9` | `^5.6.1` |
 | tmp | `^0.2.1` | `^0.2.7` |
 | uuid | `^8.3.2` | `^14.0.2` |
-| webpack | `~5.98.0` | `^5.111.0` |
+| webpack | `~5.98.0` | `^5.111.1` |
 | webpack-dev-middleware | `^5.3.4` | `^8.3.0` |
 | webpack-merge | `^5.9.0` | `^6.0.1` |
 | xstate | `^4.38.0` | `^5.33.2` |
