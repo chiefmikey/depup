@@ -429,6 +429,23 @@
       "status": "published",
       "timestamp": "2026-09-18T16:08:41.231Z",
       "version": "8.0.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "core-js-compat": {
+          "from": "^3.48.0",
+          "to": "^3.50.0"
+        },
+        "verkit": {
+          "from": "^0.3.2",
+          "to": "^0.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-19T00:31:34.448Z",
+      "version": "8.0.6-depup.1"
     }
   }
 }

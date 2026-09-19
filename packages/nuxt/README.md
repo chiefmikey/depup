@@ -12,7 +12,7 @@ npm install @depup/nuxt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.13 | **Updated**: 9/16/2026 | **Import test**: passed
+**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.14 | **Updated**: 9/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,9 +22,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @nuxt/devtools | `^3.4.1` | `^4.0.0-beta.1` |
 | @nuxt/telemetry | `^2.8.0` | `^2.9.1` |
 | @unhead/vue | `^3.3.1` | `^3.4.1` |
-| @vue/shared | `^3.5.40` | `^3.5.42` |
-| devalue | `^5.9.0` | `^5.9.2` |
-| errx | `^0.1.2` | `^0.2.0` |
+| @vue/shared | `^3.5.40` | `^3.5.43` |
+| devalue | `^5.9.0` | `^5.9.4` |
+| errx | `^0.1.2` | `^0.2.2` |
+| hookable | `^6.1.1` | `^6.1.2` |
 | ignore | `^7.0.6` | `^7.0.9` |
 | impound | `^1.1.6` | `^1.2.0` |
 | magic-string | `^1.1.0` | `^1.4.1` |
@@ -39,8 +40,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | unimport | `^6.4.0` | `^7.0.2` |
 | unplugin | `^3.3.0` | `^3.4.0` |
 | unrouting | `^0.2.2` | `^0.2.3` |
-| verkit | `^0.3.1` | `^0.4.0` |
-| vue | `^3.5.40` | `^3.5.42` |
+| verkit | `^0.3.1` | `^0.5.0` |
+| vue | `^3.5.40` | `^3.5.43` |
 | vue-component-type-helpers | `^3.3.9` | `^3.3.11` |
 | vue-router | `^5.2.0` | `^5.3.1` |
 

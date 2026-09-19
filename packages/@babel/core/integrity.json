@@ -293,6 +293,27 @@
       "status": "published",
       "timestamp": "2026-09-18T16:08:41.673Z",
       "version": "8.0.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "empathic": {
+          "from": "^2.0.1",
+          "to": "^2.1.0"
+        },
+        "obug": {
+          "from": "^2.1.1",
+          "to": "^3.0.0"
+        },
+        "verkit": {
+          "from": "^0.3.2",
+          "to": "^0.5.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-19T00:31:34.702Z",
+      "version": "8.0.6-depup.1"
     }
   }
 }
