@@ -1,6 +1,6 @@
 {
   "name": "@depup/nuxt",
-  "version": "4.5.2-depup.10",
+  "version": "4.5.2-depup.15",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuxt/nuxt.git",
@@ -81,31 +81,31 @@
   "dependencies": {
     "@dxup/nuxt": "^0.5.10",
     "@nuxt/cli": "^3.37.0",
-    "@nuxt/devtools": "^4.0.0-alpha.17",
+    "@nuxt/devtools": "^4.0.0-beta.1",
     "@nuxt/telemetry": "^2.9.1",
-    "@unhead/vue": "^3.4.0",
-    "@vue/shared": "^3.5.42",
+    "@unhead/vue": "^3.4.1",
+    "@vue/shared": "^3.5.43",
     "chokidar": "^5.0.0",
     "compatx": "^0.2.0",
     "consola": "^3.4.2",
     "cookie-es": "^3.1.1",
     "defu": "^6.1.7",
-    "devalue": "^5.9.2",
-    "errx": "^0.2.0",
+    "devalue": "^6.0.0",
+    "errx": "^0.2.2",
     "escape-string-regexp": "^5.0.0",
     "exsolve": "^1.1.1",
     "fnv1a-64": "^0.1.2",
-    "hookable": "^6.1.1",
-    "ignore": "^7.0.8",
+    "hookable": "^6.1.2",
+    "ignore": "^7.0.9",
     "impound": "^1.2.0",
     "jiti": "^2.7.0",
     "klona": "^2.0.6",
     "knitwork": "^1.3.0",
-    "magic-string": "^1.2.3",
+    "magic-string": "^1.4.1",
     "mlly": "^1.8.2",
     "nanotar": "^0.3.0",
     "nostics": "^1.2.0",
-    "nypm": "^0.6.9",
+    "nypm": "^0.6.10",
     "object-identity": "^0.2.3",
     "ofetch": "^1.5.1",
     "ohash": "^2.0.12",
@@ -125,13 +125,13 @@
     "uncrypto": "^0.1.3",
     "unctx": "^3.0.1",
     "undici": "^8.10.2",
-    "unhead": "^3.4.0",
-    "unimport": "^7.0.1",
-    "unplugin": "^3.3.0",
+    "unhead": "^3.4.1",
+    "unimport": "^7.0.2",
+    "unplugin": "^3.4.0",
     "unrouting": "^0.2.3",
     "untyped": "^2.0.0",
-    "verkit": "^0.4.0",
-    "vue": "^3.5.42",
+    "verkit": "^0.5.0",
+    "vue": "^3.5.43",
     "vue-component-type-helpers": "^3.3.11",
     "vue-router": "^5.3.1",
     "@nuxt/kit": "4.5.2",
@@ -191,7 +191,7 @@
       },
       "@nuxt/devtools": {
         "from": "^3.4.1",
-        "to": "^4.0.0-alpha.17"
+        "to": "^4.0.0-beta.1"
       },
       "@nuxt/telemetry": {
         "from": "^2.8.0",
@@ -199,23 +199,27 @@
       },
       "@unhead/vue": {
         "from": "^3.3.1",
-        "to": "^3.4.0"
+        "to": "^3.4.1"
       },
       "@vue/shared": {
         "from": "^3.5.40",
-        "to": "^3.5.42"
+        "to": "^3.5.43"
       },
       "devalue": {
         "from": "^5.9.0",
-        "to": "^5.9.2"
+        "to": "^6.0.0"
       },
       "errx": {
         "from": "^0.1.2",
-        "to": "^0.2.0"
+        "to": "^0.2.2"
+      },
+      "hookable": {
+        "from": "^6.1.1",
+        "to": "^6.1.2"
       },
       "ignore": {
         "from": "^7.0.6",
-        "to": "^7.0.8"
+        "to": "^7.0.9"
       },
       "impound": {
         "from": "^1.1.6",
@@ -223,7 +227,11 @@
       },
       "magic-string": {
         "from": "^1.1.0",
-        "to": "^1.2.3"
+        "to": "^1.4.1"
+      },
+      "nypm": {
+        "from": "^0.6.9",
+        "to": "^0.6.10"
       },
       "ohash": {
         "from": "^2.0.11",
@@ -251,11 +259,15 @@
       },
       "unhead": {
         "from": "^3.3.1",
-        "to": "^3.4.0"
+        "to": "^3.4.1"
       },
       "unimport": {
         "from": "^6.4.0",
-        "to": "^7.0.1"
+        "to": "^7.0.2"
+      },
+      "unplugin": {
+        "from": "^3.3.0",
+        "to": "^3.4.0"
       },
       "unrouting": {
         "from": "^0.2.2",
@@ -263,11 +275,11 @@
       },
       "verkit": {
         "from": "^0.3.1",
-        "to": "^0.4.0"
+        "to": "^0.5.0"
       },
       "vue": {
         "from": "^3.5.40",
-        "to": "^3.5.42"
+        "to": "^3.5.43"
       },
       "vue-component-type-helpers": {
         "from": "^3.3.9",
@@ -278,10 +290,10 @@
         "to": "^5.3.1"
       }
     },
-    "depsUpdated": 23,
+    "depsUpdated": 26,
     "originalPackage": "nuxt",
     "originalVersion": "4.5.2",
-    "processedAt": "2026-09-08T08:13:24.865Z",
+    "processedAt": "2026-09-19T16:09:16.589Z",
     "smokeTest": "passed"
   }
 }
