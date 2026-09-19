@@ -2,7 +2,7 @@
   "bumped": {
     "@aws-sdk/client-s3": {
       "from": "3.1079.0",
-      "to": "^3.1134.0"
+      "to": "^3.1136.0"
     },
     "@extractus/oembed-extractor": {
       "from": "3.2.1",
@@ -118,7 +118,7 @@
     },
     "intl-messageformat": {
       "from": "5.4.3",
-      "to": "^12.1.0"
+      "to": "^12.1.1"
     },
     "js-yaml": {
       "from": "4.3.0",
@@ -154,7 +154,7 @@
     },
     "metascraper": {
       "from": "5.55.2",
-      "to": "^5.56.2"
+      "to": "^5.58.1"
     },
     "metascraper-amazon": {
       "from": "5.55.2",
@@ -178,7 +178,7 @@
     },
     "metascraper-logo-favicon": {
       "from": "5.55.2",
-      "to": "^5.56.2"
+      "to": "^5.58.1"
     },
     "metascraper-publisher": {
       "from": "5.55.2",
@@ -269,6 +269,6 @@
       "to": "^4.6.5"
     }
   },
-  "timestamp": "2026-09-17T16:11:00.679Z",
+  "timestamp": "2026-09-19T08:11:13.333Z",
   "totalUpdated": 67
 }
