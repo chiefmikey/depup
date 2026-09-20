@@ -1,30 +1,5 @@
 {
   "0.31.10": {
-    "232": {
-      "changes": {
-        "@drizzle-team/brocli": {
-          "from": "^0.10.2",
-          "to": "^0.12.1"
-        },
-        "@esbuild-kit/esm-loader": {
-          "from": "^2.5.5",
-          "to": "^2.6.5"
-        },
-        "esbuild": {
-          "from": "^0.25.4",
-          "to": "^0.28.2"
-        },
-        "tsx": {
-          "from": "^4.21.0",
-          "to": "^4.23.13"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-09-18T16:10:20.984Z",
-      "version": "0.31.10-depup.232"
-    },
     "233": {
       "changes": {
         "@drizzle-team/brocli": {
@@ -124,6 +99,31 @@
       "status": "failed",
       "timestamp": "2026-09-20T00:57:52.228Z",
       "version": "0.31.10-depup.236"
+    },
+    "237": {
+      "changes": {
+        "@drizzle-team/brocli": {
+          "from": "^0.10.2",
+          "to": "^0.12.1"
+        },
+        "@esbuild-kit/esm-loader": {
+          "from": "^2.5.5",
+          "to": "^2.6.5"
+        },
+        "esbuild": {
+          "from": "^0.25.4",
+          "to": "^0.28.2"
+        },
+        "tsx": {
+          "from": "^4.21.0",
+          "to": "^4.23.15"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-20T08:11:08.790Z",
+      "version": "0.31.10-depup.237"
     }
   }
 }

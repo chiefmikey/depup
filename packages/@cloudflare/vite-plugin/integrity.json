@@ -1953,6 +1953,23 @@
       "status": "published",
       "timestamp": "2026-09-19T08:10:49.628Z",
       "version": "1.56.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "workerd": {
+          "from": "1.20260918.1",
+          "to": "^1.20260920.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-20T08:11:28.499Z",
+      "version": "1.56.0-depup.2"
     }
   }
 }

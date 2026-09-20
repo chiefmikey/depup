@@ -2,7 +2,7 @@
   "bumped": {
     "@aws-sdk/client-s3": {
       "from": "3.1079.0",
-      "to": "^3.1135.0"
+      "to": "^3.1136.0"
     },
     "@extractus/oembed-extractor": {
       "from": "3.2.1",
@@ -118,7 +118,7 @@
     },
     "intl-messageformat": {
       "from": "5.4.3",
-      "to": "^12.1.1"
+      "to": "^12.1.2"
     },
     "js-yaml": {
       "from": "4.3.0",
@@ -269,6 +269,6 @@
       "to": "^4.6.5"
     }
   },
-  "timestamp": "2026-09-18T16:10:15.079Z",
+  "timestamp": "2026-09-20T08:11:02.049Z",
   "totalUpdated": 67
 }
