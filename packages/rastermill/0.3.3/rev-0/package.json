@@ -1,0 +1,81 @@
+{
+  "name": "@depup/rastermill",
+  "version": "0.3.3-depup.0",
+  "description": "Fast, portable image processing for Node agents. (with updated dependencies)",
+  "keywords": [
+    "rastermill",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "heic",
+    "image",
+    "jpeg",
+    "photon",
+    "png",
+    "resize",
+    "webp"
+  ],
+  "homepage": "https://rastermill.com/",
+  "bugs": {
+    "url": "https://github.com/openclaw/rastermill/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openclaw/rastermill.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsgo --noEmit",
+    "docs:build": "node scripts/build-docs-site.mjs",
+    "docs:check": "pnpm docs:build && git diff --exit-code -- docs/*.html docs/favicon.svg docs/.nojekyll docs/llms.txt && test -z \"$(git ls-files --others --exclude-standard -- docs/*.html docs/favicon.svg docs/.nojekyll docs/llms.txt)\"",
+    "format": "oxfmt .oxfmtrc.json package.json tsconfig.json tsconfig.build.json vitest.config.ts src test scripts",
+    "format:check": "oxfmt --check .oxfmtrc.json package.json tsconfig.json tsconfig.build.json vitest.config.ts src test scripts",
+    "lint": "oxlint src test scripts --tsconfig tsconfig.json --vitest-plugin --no-error-on-unmatched-pattern",
+    "package:smoke": "node scripts/package-smoke.mjs /tmp/rastermill-pack",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@silvia-odwyer/photon-node": "0.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "@vitest/coverage-v8": "^5.0.0",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "rastermill",
+    "originalVersion": "0.3.3",
+    "processedAt": "2026-09-20T00:59:28.738Z",
+    "smokeTest": "passed"
+  }
+}

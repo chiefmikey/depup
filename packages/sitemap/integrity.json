@@ -49,6 +49,31 @@
       "status": "failed",
       "timestamp": "2026-07-14T00:45:44.823Z",
       "version": "9.0.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/node": {
+          "from": "^24.9.2",
+          "to": "^26.6.2"
+        },
+        "@types/sax": {
+          "from": "^1.2.1",
+          "to": "^1.2.7"
+        },
+        "arg": {
+          "from": "^5.0.0",
+          "to": "^5.0.2"
+        },
+        "sax": {
+          "from": "^1.4.1",
+          "to": "^1.6.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:00:39.924Z",
+      "version": "9.0.1-depup.2"
     }
   }
 }

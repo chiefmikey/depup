@@ -1,0 +1,52 @@
+{
+  "name": "@depup/rolldown__binding-win32-x64-msvc",
+  "version": "1.2.9-depup.0",
+  "cpu": [
+    "x64"
+  ],
+  "main": "rolldown-binding.win32-x64-msvc.node",
+  "files": [
+    "rolldown-binding.win32-x64-msvc.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. (with updated dependencies)",
+  "keywords": [
+    "@rolldown/binding-win32-x64-msvc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "bundler",
+    "esbuild",
+    "parcel",
+    "rolldown",
+    "rollup",
+    "webpack"
+  ],
+  "homepage": "https://rolldown.rs/",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolldown/rolldown.git",
+    "directory": "packages/rolldown"
+  },
+  "bugs": {
+    "url": "https://github.com/rolldown/rolldown/issues"
+  },
+  "os": [
+    "win32"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rolldown/binding-win32-x64-msvc",
+    "originalVersion": "1.2.9",
+    "processedAt": "2026-09-20T00:56:54.000Z",
+    "smokeTest": "failed"
+  }
+}

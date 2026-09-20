@@ -389,5 +389,40 @@
       "timestamp": "2026-09-13T01:02:05.185Z",
       "version": "5.3.3-depup.0"
     }
+  },
+  "5.4.0": {
+    "0": {
+      "changes": {
+        "@discoveryjs/json-ext": {
+          "from": "^0.6.3",
+          "to": "^1.1.0"
+        },
+        "acorn": {
+          "from": "^8.0.4",
+          "to": "^8.18.0"
+        },
+        "acorn-walk": {
+          "from": "^8.0.0",
+          "to": "^8.3.5"
+        },
+        "commander": {
+          "from": "^14.0.2",
+          "to": "^15.0.0"
+        },
+        "picocolors": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        },
+        "ws": {
+          "from": "^8.19.0",
+          "to": "^8.21.3"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:01:14.573Z",
+      "version": "5.4.0-depup.0"
+    }
   }
 }

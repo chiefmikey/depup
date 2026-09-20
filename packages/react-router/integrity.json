@@ -417,5 +417,20 @@
       "timestamp": "2026-08-30T00:58:54.469Z",
       "version": "8.3.1-depup.0"
     }
+  },
+  "8.4.0": {
+    "0": {
+      "changes": {
+        "@remix-run/route-pattern": {
+          "from": "^0.22.1",
+          "to": "^0.24.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:00:06.893Z",
+      "version": "8.4.0-depup.0"
+    }
   }
 }

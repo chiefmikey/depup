@@ -925,5 +925,20 @@
       "timestamp": "2026-09-06T01:02:15.496Z",
       "version": "1.2.7-depup.0"
     }
+  },
+  "1.2.9": {
+    "0": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:00:23.285Z",
+      "version": "1.2.9-depup.0"
+    }
   }
 }
