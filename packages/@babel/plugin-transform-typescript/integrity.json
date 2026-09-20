@@ -150,35 +150,6 @@
     }
   },
   "7.29.9": {
-    "0": {
-      "changes": {
-        "@babel/helper-annotate-as-pure": {
-          "from": "^7.29.7",
-          "to": "^8.0.0"
-        },
-        "@babel/helper-create-class-features-plugin": {
-          "from": "^7.29.7",
-          "to": "^8.0.6"
-        },
-        "@babel/helper-plugin-utils": {
-          "from": "^7.29.7",
-          "to": "^8.0.1"
-        },
-        "@babel/helper-skip-transparent-expression-wrappers": {
-          "from": "^7.29.7",
-          "to": "^8.0.0"
-        },
-        "@babel/plugin-syntax-typescript": {
-          "from": "^7.29.7",
-          "to": "^8.0.3"
-        }
-      },
-      "depsUpdated": 5,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-09-18T16:08:18.697Z",
-      "version": "7.29.9-depup.0"
-    },
     "1": {
       "changes": {
         "@babel/helper-annotate-as-pure": {
@@ -294,6 +265,35 @@
       "status": "published",
       "timestamp": "2026-09-20T01:04:53.533Z",
       "version": "7.29.9-depup.4"
+    },
+    "5": {
+      "changes": {
+        "@babel/helper-annotate-as-pure": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@babel/helper-create-class-features-plugin": {
+          "from": "^7.29.7",
+          "to": "^8.0.6"
+        },
+        "@babel/helper-plugin-utils": {
+          "from": "^7.29.7",
+          "to": "^8.0.1"
+        },
+        "@babel/helper-skip-transparent-expression-wrappers": {
+          "from": "^7.29.7",
+          "to": "^8.0.0"
+        },
+        "@babel/plugin-syntax-typescript": {
+          "from": "^7.29.7",
+          "to": "^8.0.3"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-20T08:10:59.516Z",
+      "version": "7.29.9-depup.5"
     }
   }
 }
