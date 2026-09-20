@@ -12569,5 +12569,80 @@
       "timestamp": "2026-09-13T01:00:40.455Z",
       "version": "6.13.2-depup.0"
     }
+  },
+  "6.15.0": {
+    "0": {
+      "changes": {
+        "@mux/mux-player-react": {
+          "from": "^3.13.2",
+          "to": "^3.13.4"
+        },
+        "@portabletext/sanity-bridge": {
+          "from": "^4.1.0",
+          "to": "^4.1.1"
+        },
+        "@sanity/cli": {
+          "from": "^8.10.0",
+          "to": "^8.12.0"
+        },
+        "@sanity/client": {
+          "from": "^8.6.1",
+          "to": "^8.6.2"
+        },
+        "@sanity/diff-patch": {
+          "from": "^5.0.0",
+          "to": "^6.0.0"
+        },
+        "@sanity/media-library-types": {
+          "from": "^1.6.0",
+          "to": "^1.7.0"
+        },
+        "@sanity/migrate": {
+          "from": "^8.0.2",
+          "to": "^8.0.4"
+        },
+        "@sanity/sdk": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "@sanity/sdk-react": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "@sentry/react": {
+          "from": "^10.73.0",
+          "to": "^10.75.0"
+        },
+        "@tanstack/react-virtual": {
+          "from": "^3.14.11",
+          "to": "^3.14.13"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^4.3.0"
+        },
+        "motion": {
+          "from": "^13.2.0",
+          "to": "^13.4.0"
+        },
+        "react-i18next": {
+          "from": "^17.0.13",
+          "to": "^17.0.14"
+        },
+        "web-vitals": {
+          "from": "^6.2.1",
+          "to": "^6.2.2"
+        },
+        "xstate": {
+          "from": "^5.32.6",
+          "to": "^5.33.2"
+        }
+      },
+      "depsUpdated": 16,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:02:19.231Z",
+      "version": "6.15.0-depup.0"
+    }
   }
 }

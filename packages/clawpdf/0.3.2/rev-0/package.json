@@ -1,0 +1,74 @@
+{
+  "name": "@depup/clawpdf",
+  "version": "0.3.2-depup.0",
+  "description": "Zero-dependency PDFium WASM bindings for PDF text extraction and page rendering. (with updated dependencies)",
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openclaw/clawpdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openclaw/clawpdf/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser.d.ts",
+      "import": "./dist/browser.js"
+    },
+    "./adapters": {
+      "types": "./dist/adapters/index.d.ts",
+      "import": "./dist/adapters/index.js"
+    }
+  },
+  "bin": {
+    "clawpdf": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "changes.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-vendor.mjs",
+    "clean": "rm -rf dist site",
+    "docs:site": "node scripts/build-docs-site.mjs",
+    "download:pdfium": "node scripts/download-pdfium.mjs",
+    "test": "pnpm build && vitest run",
+    "test:package": "pnpm build && node scripts/test-package-e2e.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.1",
+    "typescript": "^7.0.2",
+    "vitest": "5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "keywords": [
+    "clawpdf",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "clawpdf",
+    "originalVersion": "0.3.2",
+    "processedAt": "2026-09-20T00:57:30.548Z",
+    "smokeTest": "passed"
+  }
+}

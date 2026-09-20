@@ -12,23 +12,28 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.13.2 | **DepUp version**: 6.13.2-depup.0 | **Updated**: 9/13/2026 | **Import test**: failed
+**Original version**: 6.15.0 | **DepUp version**: 6.15.0-depup.0 | **Updated**: 9/20/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mux/mux-player-react | `^3.13.2` | `^3.13.3` |
-| @sanity/cli | `^8.10.0` | `^8.11.0` |
+| @mux/mux-player-react | `^3.13.2` | `^3.13.4` |
+| @portabletext/sanity-bridge | `^4.1.0` | `^4.1.1` |
+| @sanity/cli | `^8.10.0` | `^8.12.0` |
+| @sanity/client | `^8.6.1` | `^8.6.2` |
 | @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
 | @sanity/media-library-types | `^1.6.0` | `^1.7.0` |
-| @sanity/migrate | `^8.0.2` | `^8.0.3` |
-| @sentry/react | `^10.73.0` | `^10.74.0` |
-| @tanstack/react-virtual | `^3.14.11` | `^3.14.12` |
-| isomorphic-dompurify | `2.36.0` | `^4.2.0` |
-| obug | `^2.1.4` | `^3.0.0` |
-| react-rx | `^6.0.1` | `^7.0.0` |
-| xstate | `^5.32.6` | `^5.33.0` |
+| @sanity/migrate | `^8.0.2` | `^8.0.4` |
+| @sanity/sdk | `^3.2.0` | `^3.3.0` |
+| @sanity/sdk-react | `^3.2.0` | `^3.3.0` |
+| @sentry/react | `^10.73.0` | `^10.75.0` |
+| @tanstack/react-virtual | `^3.14.11` | `^3.14.13` |
+| isomorphic-dompurify | `2.36.0` | `^4.3.0` |
+| motion | `^13.2.0` | `^13.4.0` |
+| react-i18next | `^17.0.13` | `^17.0.14` |
+| web-vitals | `^6.2.1` | `^6.2.2` |
+| xstate | `^5.32.6` | `^5.33.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

@@ -282,5 +282,20 @@
       "timestamp": "2026-08-30T00:58:28.010Z",
       "version": "7.18.3-depup.0"
     }
+  },
+  "7.18.4": {
+    "0": {
+      "changes": {
+        "react-router": {
+          "from": "7.18.4",
+          "to": "^8.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:00:10.671Z",
+      "version": "7.18.4-depup.0"
+    }
   }
 }

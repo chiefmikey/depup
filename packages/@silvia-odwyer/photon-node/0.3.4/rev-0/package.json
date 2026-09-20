@@ -1,0 +1,41 @@
+{
+  "name": "@depup/silvia-odwyer__photon-node",
+  "collaborators": [
+    "Silvia O'Dwyer <silviaodwyerdev@gmail.com>"
+  ],
+  "description": "High-performance image processing library for native use and the web (with updated dependencies)",
+  "version": "0.3.4-depup.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silvia-odwyer/photon"
+  },
+  "files": [
+    "photon_rs_bg.wasm",
+    "photon_rs.js",
+    "photon_rs_bg.js",
+    "photon_rs.d.ts",
+    "LICENSE.md",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "photon_rs.js",
+  "homepage": "https://silvia-odwyer.github.io/photon/",
+  "types": "photon_rs.d.ts",
+  "keywords": [
+    "@silvia-odwyer/photon-node",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@silvia-odwyer/photon-node",
+    "originalVersion": "0.3.4",
+    "processedAt": "2026-09-20T00:56:54.302Z",
+    "smokeTest": "passed"
+  }
+}
