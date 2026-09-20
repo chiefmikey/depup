@@ -12,15 +12,11 @@ npm install @depup/react-konva
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 19.2.7 | **DepUp version**: 19.2.7-depup.0 | **Updated**: 9/13/2026 | **Import test**: failed
+**Original version**: 19.3.0 | **DepUp version**: 19.3.0-depup.0 | **Updated**: 9/20/2026 | **Import test**: failed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| react-reconciler | `0.33.0` | `^0.34.0` |
-| scheduler | `0.27.0` | `^0.28.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-konva&labels=bug).
 

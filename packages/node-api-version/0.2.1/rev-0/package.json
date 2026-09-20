@@ -1,0 +1,44 @@
+{
+  "name": "@depup/node-api-version",
+  "version": "0.2.1-depup.0",
+  "author": "Tim Fish <tim@timfish.uk>",
+  "main": "index.js",
+  "types": "types.d.ts",
+  "description": "Gets the supported Node-API version for a specific node or electron version (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timfish/node-api-version"
+  },
+  "scripts": {
+    "electron-versions": "node ./electron-versions.js",
+    "test": "node ./test.js"
+  },
+  "dependencies": {
+    "semver": "^7.8.5"
+  },
+  "devDependencies": {
+    "got": "^11.8.2"
+  },
+  "keywords": [
+    "node-api-version",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "semver": {
+        "from": "^7.3.5",
+        "to": "^7.8.5"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "node-api-version",
+    "originalVersion": "0.2.1",
+    "processedAt": "2026-09-20T00:58:15.265Z",
+    "smokeTest": "passed"
+  }
+}

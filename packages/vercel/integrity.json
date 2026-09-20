@@ -5868,5 +5868,60 @@
       "timestamp": "2026-09-13T01:02:04.738Z",
       "version": "59.16.0-depup.0"
     }
+  },
+  "59.23.2": {
+    "0": {
+      "changes": {
+        "@vercel/fun": {
+          "from": "1.3.0",
+          "to": "^1.3.1"
+        },
+        "@vercel/prepare-flags-definitions": {
+          "from": "0.3.0",
+          "to": "^0.4.0"
+        },
+        "chokidar": {
+          "from": "4.0.0",
+          "to": "^5.0.0"
+        },
+        "esbuild": {
+          "from": "0.27.0",
+          "to": "^0.28.2"
+        },
+        "jose": {
+          "from": "5.9.6",
+          "to": "^6.2.12"
+        },
+        "luxon": {
+          "from": "^3.4.0",
+          "to": "^3.7.2"
+        },
+        "sandbox": {
+          "from": "4.1.0",
+          "to": "^4.4.0"
+        },
+        "smol-toml": {
+          "from": "1.5.2",
+          "to": "^1.8.0"
+        },
+        "undici": {
+          "from": "5.29.0",
+          "to": "^8.10.2"
+        },
+        "uuid": {
+          "from": "14.0.1",
+          "to": "^14.0.2"
+        },
+        "zod": {
+          "from": "4.1.11",
+          "to": "^4.6.5"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:00:28.313Z",
+      "version": "59.23.2-depup.0"
+    }
   }
 }

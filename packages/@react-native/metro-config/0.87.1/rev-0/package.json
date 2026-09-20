@@ -1,0 +1,60 @@
+{
+  "name": "@depup/react-native__metro-config",
+  "version": "0.87.1-depup.0",
+  "description": "Metro configuration for React Native. (with updated dependencies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react/react-native.git",
+    "directory": "packages/metro-config"
+  },
+  "homepage": "https://github.com/react/react-native/tree/HEAD/packages/metro-config#readme",
+  "keywords": [
+    "@react-native/metro-config",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "metro",
+    "config",
+    "react-native"
+  ],
+  "bugs": "https://github.com/react/react-native/issues",
+  "engines": {
+    "node": "^22.13.0 || ^24.3.0 || >= 26.0.0"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@react-native/js-polyfills": "0.87.1",
+    "@react-native/metro-babel-transformer": "0.87.1",
+    "metro-config": "^0.87.1",
+    "metro-runtime": "^0.87.1"
+  },
+  "depup": {
+    "changes": {
+      "metro-config": {
+        "from": "^0.87.0",
+        "to": "^0.87.1"
+      },
+      "metro-runtime": {
+        "from": "^0.87.0",
+        "to": "^0.87.1"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@react-native/metro-config",
+    "originalVersion": "0.87.1",
+    "processedAt": "2026-09-20T00:56:36.399Z",
+    "smokeTest": "passed"
+  }
+}

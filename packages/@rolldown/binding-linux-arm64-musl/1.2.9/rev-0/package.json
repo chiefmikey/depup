@@ -1,0 +1,55 @@
+{
+  "name": "@depup/rolldown__binding-linux-arm64-musl",
+  "version": "1.2.9-depup.0",
+  "cpu": [
+    "arm64"
+  ],
+  "main": "rolldown-binding.linux-arm64-musl.node",
+  "files": [
+    "rolldown-binding.linux-arm64-musl.node",
+    "changes.json",
+    "README.md"
+  ],
+  "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. (with updated dependencies)",
+  "keywords": [
+    "@rolldown/binding-linux-arm64-musl",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "bundler",
+    "esbuild",
+    "parcel",
+    "rolldown",
+    "rollup",
+    "webpack"
+  ],
+  "homepage": "https://rolldown.rs/",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolldown/rolldown.git",
+    "directory": "packages/rolldown"
+  },
+  "bugs": {
+    "url": "https://github.com/rolldown/rolldown/issues"
+  },
+  "os": [
+    "linux"
+  ],
+  "libc": [
+    "musl"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@rolldown/binding-linux-arm64-musl",
+    "originalVersion": "1.2.9",
+    "processedAt": "2026-09-20T00:56:41.286Z",
+    "smokeTest": "failed"
+  }
+}

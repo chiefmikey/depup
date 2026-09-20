@@ -12,7 +12,7 @@ npm install @depup/react-hotkeys-hook
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.3.3 | **DepUp version**: 5.3.3-depup.1 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 5.3.3 | **DepUp version**: 5.3.3-depup.2 | **Updated**: 9/20/2026 | **Import test**: passed
 
 ## What changed
 

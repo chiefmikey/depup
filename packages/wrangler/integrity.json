@@ -3244,5 +3244,32 @@
       "timestamp": "2026-09-13T01:02:01.191Z",
       "version": "4.131.1-depup.0"
     }
+  },
+  "4.135.0": {
+    "0": {
+      "changes": {
+        "blake3-wasm": {
+          "from": "2.1.5",
+          "to": "^3.0.0"
+        },
+        "esbuild": {
+          "from": "0.28.1",
+          "to": "^0.28.2"
+        },
+        "path-to-regexp": {
+          "from": "6.3.0",
+          "to": "^8.4.2"
+        },
+        "workerd": {
+          "from": "1.20260918.1",
+          "to": "^1.20260919.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-20T01:01:19.910Z",
+      "version": "4.135.0-depup.0"
+    }
   }
 }
