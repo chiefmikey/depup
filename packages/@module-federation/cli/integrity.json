@@ -552,5 +552,24 @@
       "timestamp": "2026-08-24T16:11:58.395Z",
       "version": "2.9.0-depup.0"
     }
+  },
+  "2.9.1": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "11.1.0",
+          "to": "^15.0.0"
+        },
+        "jiti": {
+          "from": "2.4.2",
+          "to": "^2.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-21T16:10:14.018Z",
+      "version": "2.9.1-depup.0"
+    }
   }
 }

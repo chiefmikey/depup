@@ -102,5 +102,24 @@
       "timestamp": "2026-07-21T17:12:16.738Z",
       "version": "0.8.6-depup.23"
     }
+  },
+  "0.9.0": {
+    "0": {
+      "changes": {
+        "@fastify/busboy": {
+          "from": "^3.1.1",
+          "to": "^3.2.2"
+        },
+        "tslib": {
+          "from": "^2.6.3",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-21T16:10:22.896Z",
+      "version": "0.9.0-depup.0"
+    }
   }
 }

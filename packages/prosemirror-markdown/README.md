@@ -12,14 +12,14 @@ npm install @depup/prosemirror-markdown
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.13.7 | **DepUp version**: 1.13.7-depup.0 | **Updated**: 9/1/2026 | **Import test**: passed
+**Original version**: 1.13.8 | **DepUp version**: 1.13.8-depup.0 | **Updated**: 9/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| markdown-it | `^14.0.0` | `^15.0.1` |
-| prosemirror-model | `^1.25.0` | `^1.25.11` |
+| markdown-it | `^14.0.0` | `^15.0.2` |
+| prosemirror-model | `^1.25.0` | `^1.25.12` |
 | @types/markdown-it | `^14.0.0` | `^14.2.0` |
 
 

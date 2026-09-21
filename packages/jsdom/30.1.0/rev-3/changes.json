@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@asamuzakjp/css-color": {
+      "from": "^7.0.0",
+      "to": "^7.0.1"
+    },
+    "@asamuzakjp/dom-selector": {
+      "from": "^9.1.2",
+      "to": "^9.2.1"
+    },
+    "@csstools/css-syntax-patches-for-csstree": {
+      "from": "^1.1.13",
+      "to": "^1.1.14"
+    },
+    "@exodus/bytes": {
+      "from": "^1.15.1",
+      "to": "^1.15.2"
+    },
+    "html-encoding-sniffer": {
+      "from": "^6.0.0",
+      "to": "^7.0.0"
+    },
+    "lru-cache": {
+      "from": "^11.5.2",
+      "to": "^11.5.3"
+    },
+    "w3c-xmlserializer": {
+      "from": "^5.0.0",
+      "to": "^6.0.0"
+    },
+    "whatwg-url": {
+      "from": "^17.1.1",
+      "to": "^17.1.2"
+    }
+  },
+  "timestamp": "2026-09-21T16:11:35.161Z",
+  "totalUpdated": 8
+}
