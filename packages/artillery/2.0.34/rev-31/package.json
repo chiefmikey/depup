@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.34-depup.26",
+  "version": "2.0.34-depup.31",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "type": "module",
   "main": "./dist/lib/index.js",
@@ -108,17 +108,17 @@
   },
   "dependencies": {
     "@artilleryio/sketches-js": "^2.1.1",
-    "@aws-sdk/client-cloudwatch": "^3.1132.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1132.0",
-    "@aws-sdk/client-ec2": "^3.1132.0",
-    "@aws-sdk/client-ecs": "^3.1132.0",
-    "@aws-sdk/client-iam": "^3.1132.0",
-    "@aws-sdk/client-lambda": "^3.1132.0",
-    "@aws-sdk/client-s3": "^3.1132.0",
-    "@aws-sdk/client-sqs": "^3.1132.0",
-    "@aws-sdk/client-ssm": "^3.1132.0",
-    "@aws-sdk/client-sts": "^3.1132.0",
-    "@aws-sdk/credential-providers": "^3.1132.0",
+    "@aws-sdk/client-cloudwatch": "^3.1136.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1136.0",
+    "@aws-sdk/client-ec2": "^3.1136.0",
+    "@aws-sdk/client-ecs": "^3.1136.0",
+    "@aws-sdk/client-iam": "^3.1136.0",
+    "@aws-sdk/client-lambda": "^3.1136.0",
+    "@aws-sdk/client-s3": "^3.1136.0",
+    "@aws-sdk/client-sqs": "^3.1136.0",
+    "@aws-sdk/client-ssm": "^3.1136.0",
+    "@aws-sdk/client-sts": "^3.1136.0",
+    "@aws-sdk/credential-providers": "^3.1136.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.3",
     "@azure/storage-blob": "^12.33.0",
@@ -143,7 +143,7 @@
     "@playwright/browser-chromium": "^1.63.0",
     "@playwright/test": "^1.63.0",
     "@smithy/core": "^3.34.1",
-    "@upstash/redis": "^1.38.4",
+    "@upstash/redis": "^1.39.0",
     "agentkeepalive": "^4.6.0",
     "arrivals": "^2.1.2",
     "async": "^3.2.6",
@@ -160,7 +160,7 @@
     "decompress-response": "^10.0.0",
     "deep-for-each": "^3.0.0",
     "dogapi": "^2.8.4",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.1",
     "driftless": "^2.0.3",
     "esbuild-wasm": "^0.28.2",
     "espree": "^11.2.0",
@@ -220,47 +220,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.1101.0",
-        "to": "^3.1132.0"
+        "to": "^3.1136.0"
       },
       "@azure/identity": {
         "from": "^4.13.1",
@@ -352,7 +352,7 @@
       },
       "@upstash/redis": {
         "from": "^1.36.1",
-        "to": "^1.38.4"
+        "to": "^1.39.0"
       },
       "async": {
         "from": "^2.6.4",
@@ -380,7 +380,7 @@
       },
       "dotenv": {
         "from": "^16.6.1",
-        "to": "^17.4.2"
+        "to": "^18.0.1"
       },
       "esbuild-wasm": {
         "from": "^0.28.1",
@@ -486,7 +486,7 @@
     "depsUpdated": 66,
     "originalPackage": "artillery",
     "originalVersion": "2.0.34",
-    "processedAt": "2026-09-15T08:13:02.169Z",
+    "processedAt": "2026-09-21T08:13:28.628Z",
     "smokeTest": "passed"
   }
 }

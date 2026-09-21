@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@asamuzakjp/css-color": {
+      "from": "^7.0.0",
+      "to": "^7.0.1"
+    },
+    "@asamuzakjp/dom-selector": {
+      "from": "^9.1.2",
+      "to": "^9.2.1"
+    },
+    "@csstools/css-syntax-patches-for-csstree": {
+      "from": "^1.1.13",
+      "to": "^1.1.14"
+    },
+    "html-encoding-sniffer": {
+      "from": "^6.0.0",
+      "to": "^7.0.0"
+    },
+    "lru-cache": {
+      "from": "^11.5.2",
+      "to": "^11.5.3"
+    },
+    "whatwg-url": {
+      "from": "^17.1.1",
+      "to": "^17.1.2"
+    }
+  },
+  "timestamp": "2026-09-21T08:13:36.064Z",
+  "totalUpdated": 6
+}

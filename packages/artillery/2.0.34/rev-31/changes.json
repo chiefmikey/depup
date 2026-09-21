@@ -2,47 +2,47 @@
   "bumped": {
     "@aws-sdk/client-cloudwatch": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-cloudwatch-logs": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-ec2": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-ecs": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-iam": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-lambda": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-s3": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-sqs": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-ssm": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/client-sts": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@aws-sdk/credential-providers": {
       "from": "^3.1101.0",
-      "to": "^3.1132.0"
+      "to": "^3.1136.0"
     },
     "@azure/identity": {
       "from": "^4.13.1",
@@ -134,7 +134,7 @@
     },
     "@upstash/redis": {
       "from": "^1.36.1",
-      "to": "^1.38.4"
+      "to": "^1.39.0"
     },
     "async": {
       "from": "^2.6.4",
@@ -162,7 +162,7 @@
     },
     "dotenv": {
       "from": "^16.6.1",
-      "to": "^17.4.2"
+      "to": "^18.0.1"
     },
     "esbuild-wasm": {
       "from": "^0.28.1",
@@ -265,6 +265,6 @@
       "to": "^8.21.3"
     }
   },
-  "timestamp": "2026-09-15T08:12:22.649Z",
+  "timestamp": "2026-09-21T08:13:02.718Z",
   "totalUpdated": 66
 }
