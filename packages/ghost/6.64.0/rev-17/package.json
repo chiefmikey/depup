@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.64.0-depup.12",
+  "version": "6.64.0-depup.17",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -162,7 +162,7 @@
     "human-number": "3.0.0",
     "iconv-lite": "0.7.3",
     "image-size": "^2.0.4",
-    "intl-messageformat": "^12.1.1",
+    "intl-messageformat": "^12.1.2",
     "jose": "6.2.12",
     "js-yaml": "^5.4.2",
     "jsdom": "^30.1.0",
@@ -350,7 +350,7 @@
       },
       "intl-messageformat": {
         "from": "5.4.3",
-        "to": "^12.1.1"
+        "to": "^12.1.2"
       },
       "js-yaml": {
         "from": "4.3.0",
@@ -504,7 +504,7 @@
     "depsUpdated": 67,
     "originalPackage": "ghost",
     "originalVersion": "6.64.0",
-    "processedAt": "2026-09-19T16:08:17.044Z",
+    "processedAt": "2026-09-21T08:13:13.568Z",
     "smokeTest": "failed"
   }
 }
