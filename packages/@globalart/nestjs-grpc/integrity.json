@@ -154,6 +154,27 @@
       "status": "published",
       "timestamp": "2026-09-05T00:31:15.281Z",
       "version": "4.2.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.14.4",
+          "to": "^1.14.5"
+        },
+        "nestjs-cls": {
+          "from": "6.2.1",
+          "to": "^7.0.0"
+        },
+        "rxjs": {
+          "from": "^7.8.1",
+          "to": "^7.8.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-21T00:34:55.615Z",
+      "version": "4.2.0-depup.2"
     }
   }
 }

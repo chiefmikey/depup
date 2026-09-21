@@ -177,6 +177,23 @@
       "status": "published",
       "timestamp": "2026-09-18T16:09:16.995Z",
       "version": "30.5.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chalk": {
+          "from": "^4.1.2",
+          "to": "^6.0.0"
+        },
+        "yargs": {
+          "from": "^17.7.2",
+          "to": "^18.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-21T00:36:10.127Z",
+      "version": "30.5.2-depup.1"
     }
   }
 }

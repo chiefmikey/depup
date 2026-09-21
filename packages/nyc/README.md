@@ -12,7 +12,7 @@ npm install @depup/nyc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 18.0.0 | **DepUp version**: 18.0.0-depup.24 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 18.0.0 | **DepUp version**: 18.0.0-depup.25 | **Updated**: 9/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -32,10 +32,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | istanbul-lib-source-maps | `^4.0.0` | `^5.0.6` |
 | istanbul-reports | `^3.0.2` | `^3.2.0` |
 | make-dir | `^3.0.0` | `^5.1.0` |
-| p-map | `^3.0.0` | `^7.0.6` |
+| p-map | `^3.0.0` | `^7.0.8` |
 | process-on-spawn | `^1.0.0` | `^1.1.0` |
 | signal-exit | `^3.0.2` | `^4.1.0` |
-| yargs | `^15.0.2` | `^18.1.0` |
+| yargs | `^15.0.2` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/nyc&labels=bug).
