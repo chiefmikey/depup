@@ -288,6 +288,27 @@
       "status": "published",
       "timestamp": "2026-09-15T00:33:49.324Z",
       "version": "8.0.36-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@whatwg-node/fetch": {
+          "from": "^0.10.13",
+          "to": "^0.11.0"
+        },
+        "sync-fetch": {
+          "from": "0.6.0",
+          "to": "^0.7.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-21T16:09:48.056Z",
+      "version": "8.0.36-depup.2"
     }
   }
 }
