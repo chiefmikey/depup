@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.4 | **Updated**: 9/2/2026 | **Import test**: failed
+**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.5 | **Updated**: 9/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @npmcli/arborist | `9.1.6` | `^10.0.2` |
 | @npmcli/package-json | `7.0.2` | `^8.0.0` |
 | @npmcli/run-script | `10.0.3` | `^11.0.0` |
-| @nx/devkit | `>=23.1.0 < 24.0.0` | `^23.2.0` |
+| @nx/devkit | `>=23.1.0 < 24.0.0` | `^23.2.1` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | ci-info | `4.3.1` | `^4.4.0` |
 | cmd-shim | `6.0.3` | `^9.0.2` |
@@ -36,8 +36,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | import-local | `3.1.0` | `^3.2.0` |
 | ini | `^1.3.8` | `^7.0.0` |
 | init-package-json | `8.2.2` | `^9.0.0` |
-| inquirer | `12.9.6` | `^14.2.0` |
-| js-yaml | `4.3.0` | `^5.4.1` |
+| inquirer | `12.9.6` | `^14.2.2` |
+| js-yaml | `4.3.0` | `^5.4.2` |
 | libnpmaccess | `10.0.3` | `^11.0.0` |
 | libnpmpublish | `11.1.2` | `^12.0.0` |
 | load-json-file | `6.2.0` | `^7.0.1` |
@@ -46,8 +46,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `13.0.1` | `^14.0.0` |
 | npm-packlist | `10.0.3` | `^11.3.0` |
 | npm-registry-fetch | `19.1.0` | `^20.0.1` |
-| nx | `>=23.1.0 < 24.0.0` | `^23.2.0` |
-| p-map | `4.0.0` | `^7.0.7` |
+| nx | `>=23.1.0 < 24.0.0` | `^23.2.1` |
+| p-map | `4.0.0` | `^7.0.8` |
 | p-queue | `6.6.2` | `^9.3.3` |
 | pacote | `21.0.1` | `^22.0.0` |
 | read-cmd-shim | `4.0.0` | `^7.0.0` |
@@ -58,7 +58,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tinyglobby | `0.2.12` | `^0.2.17` |
 | validate-npm-package-name | `6.0.2` | `^8.0.0` |
 | write-file-atomic | `5.0.1` | `^8.0.0` |
-| yargs | `17.7.2` | `^18.1.0` |
+| yargs | `17.7.2` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/lerna&labels=bug).
