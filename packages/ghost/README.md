@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.17 | **Updated**: 9/21/2026 | **Import test**: failed
+**Original version**: 6.64.0 | **DepUp version**: 6.64.0-depup.18 | **Updated**: 9/21/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,9 +22,19 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.75.0` |
+| @sentry/node | `7.120.4` | `^10.75.1` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
+| @tryghost/color-utils | `0.2.21` | `^0.2.22` |
+| @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
+| @tryghost/custom-fonts | `1.0.12` | `^1.0.13` |
+| @tryghost/helpers | `1.1.107` | `^1.1.108` |
+| @tryghost/html-to-plaintext | `1.0.12` | `^1.0.13` |
+| @tryghost/image-transform | `1.4.18` | `^1.4.19` |
 | @tryghost/job-manager | `1.0.9` | `^4.1.15` |
+| @tryghost/referrer-parser | `0.1.22` | `^0.1.23` |
+| @tryghost/social-urls | `0.1.64` | `^0.1.65` |
+| @tryghost/string | `0.3.6` | `^0.3.7` |
+| @tryghost/url-utils | `5.3.0` | `^5.3.1` |
 | @x402/core | `2.12.0` | `^2.26.0` |
 | @x402/evm | `2.12.0` | `^2.26.0` |
 | @x402/hono | `2.12.0` | `^2.26.0` |

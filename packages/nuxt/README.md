@@ -12,7 +12,7 @@ npm install @depup/nuxt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.15 | **Updated**: 9/19/2026 | **Import test**: passed
+**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.16 | **Updated**: 9/21/2026 | **Import test**: passed
 
 ## What changed
 
@@ -29,6 +29,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ignore | `^7.0.6` | `^7.0.9` |
 | impound | `^1.1.6` | `^1.2.0` |
 | magic-string | `^1.1.0` | `^1.4.1` |
+| nostics | `^1.2.0` | `^1.3.0` |
 | nypm | `^0.6.9` | `^0.6.10` |
 | ohash | `^2.0.11` | `^2.0.12` |
 | picomatch | `^4.0.5` | `^4.0.7` |

@@ -12,13 +12,12 @@ npm install @depup/cloudflare__vite-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.56.0 | **DepUp version**: 1.56.0-depup.3 | **Updated**: 9/21/2026 | **Import test**: failed
+**Original version**: 1.57.0 | **DepUp version**: 1.57.0-depup.0 | **Updated**: 9/21/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| workerd | `1.20260918.1` | `^1.20260921.1` |
 | ws | `8.21.0` | `^8.21.3` |
 
 

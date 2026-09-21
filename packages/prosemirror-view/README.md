@@ -12,13 +12,12 @@ npm install @depup/prosemirror-view
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.42.4 | **DepUp version**: 1.42.4-depup.0 | **Updated**: 9/18/2026 | **Import test**: passed
+**Original version**: 1.42.5 | **DepUp version**: 1.42.5-depup.0 | **Updated**: 9/21/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| prosemirror-model | `^1.25.8` | `^1.25.11` |
 | prosemirror-state | `^1.0.0` | `^1.4.4` |
 | prosemirror-transform | `^1.1.0` | `^1.12.1` |
 
