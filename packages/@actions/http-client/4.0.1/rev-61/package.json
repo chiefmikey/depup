@@ -1,6 +1,6 @@
 {
   "name": "@depup/actions__http-client",
-  "version": "4.0.1-depup.56",
+  "version": "4.0.1-depup.61",
   "description": "Actions Http Client (with updated dependencies)",
   "keywords": [
     "@actions/http-client",
@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "tunnel": "^0.0.6",
-    "undici": "^8.7.0"
+    "undici": "^8.11.0"
   },
   "overrides": {
     "uri-js": "npm:uri-js-replace@^1.0.1"
@@ -79,13 +79,13 @@
     "changes": {
       "undici": {
         "from": "^6.23.0",
-        "to": "^8.7.0"
+        "to": "^8.11.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "@actions/http-client",
     "originalVersion": "4.0.1",
-    "processedAt": "2026-07-11T00:21:10.212Z",
+    "processedAt": "2026-09-22T08:12:11.994Z",
     "smokeTest": "passed"
   }
 }

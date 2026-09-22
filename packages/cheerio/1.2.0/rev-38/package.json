@@ -1,6 +1,6 @@
 {
   "name": "@depup/cheerio",
-  "version": "1.2.0-depup.33",
+  "version": "1.2.0-depup.38",
   "description": "The fast, flexible & elegant library for parsing and manipulating HTML and XML. (with updated dependencies)",
   "keywords": [
     "cheerio",
@@ -134,7 +134,7 @@
     "parse5": "^8.0.1",
     "parse5-htmlparser2-tree-adapter": "^8.0.1",
     "parse5-parser-stream": "^8.0.0",
-    "undici": "^8.5.0",
+    "undici": "^8.11.0",
     "whatwg-mimetype": "^5.0.0"
   },
   "devDependencies": {
@@ -221,7 +221,7 @@
       },
       "undici": {
         "from": "^7.19.0",
-        "to": "^8.5.0"
+        "to": "^8.11.0"
       },
       "whatwg-mimetype": {
         "from": "^4.0.0",
@@ -231,7 +231,7 @@
     "depsUpdated": 10,
     "originalPackage": "cheerio",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-06-16T02:12:23.159Z",
+    "processedAt": "2026-09-22T08:12:23.465Z",
     "smokeTest": "passed"
   }
 }
