@@ -12,7 +12,7 @@ npm install @depup/jsdom
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 30.1.1 | **DepUp version**: 30.1.1-depup.0 | **Updated**: 9/22/2026 | **Import test**: passed
+**Original version**: 30.1.1 | **DepUp version**: 30.1.1-depup.1 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @asamuzakjp/css-color | `^7.0.0` | `^7.0.1` |
 | @csstools/css-syntax-patches-for-csstree | `^1.1.13` | `^1.1.14` |
-| @exodus/bytes | `^1.15.1` | `^1.15.2` |
+| @exodus/bytes | `^1.15.1` | `^1.16.0` |
 | lru-cache | `^11.5.2` | `^11.5.3` |
 | undici | `^8.10.2` | `^8.11.0` |
 | whatwg-url | `^17.1.1` | `^17.1.2` |

@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.32 | **Updated**: 9/22/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.33 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -50,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.11.0` |
 | @playwright/browser-chromium | `1.62.1` | `^1.63.0` |
 | @playwright/test | `1.62.1` | `^1.63.0` |
-| @smithy/core | `^3.31.1` | `^3.34.1` |
+| @smithy/core | `^3.31.1` | `^3.35.0` |
 | @upstash/redis | `^1.36.1` | `^1.39.0` |
 | async | `^2.6.4` | `^3.2.6` |
 | chalk | `^4.1.2` | `^6.0.0` |
@@ -58,7 +58,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^7.0.2` |
 | decompress-response | `^6.0.0` | `^10.0.0` |
-| dotenv | `^16.6.1` | `^18.0.2` |
+| dotenv | `^16.6.1` | `^18.0.3` |
 | esbuild-wasm | `^0.28.1` | `^0.28.2` |
 | espree | `^10.3.0` | `^11.2.0` |
 | filtrex | `^2.2.3` | `^3.1.0` |

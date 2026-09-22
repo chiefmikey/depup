@@ -706,6 +706,39 @@
       "status": "published",
       "timestamp": "2026-09-22T08:13:29.615Z",
       "version": "30.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@asamuzakjp/css-color": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        },
+        "@csstools/css-syntax-patches-for-csstree": {
+          "from": "^1.1.13",
+          "to": "^1.1.14"
+        },
+        "@exodus/bytes": {
+          "from": "^1.15.1",
+          "to": "^1.16.0"
+        },
+        "lru-cache": {
+          "from": "^11.5.2",
+          "to": "^11.5.3"
+        },
+        "undici": {
+          "from": "^8.10.2",
+          "to": "^8.11.0"
+        },
+        "whatwg-url": {
+          "from": "^17.1.1",
+          "to": "^17.1.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-22T16:13:00.073Z",
+      "version": "30.1.1-depup.1"
     }
   }
 }
