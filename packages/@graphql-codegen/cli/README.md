@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.2 | **DepUp version**: 7.4.2-depup.2 | **Updated**: 9/21/2026 | **Import test**: passed
+**Original version**: 7.4.2 | **DepUp version**: 7.4.2-depup.3 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-tools/url-loader | `^9.0.6` | `^9.1.10` |
 | @graphql-tools/utils | `^11.2.0` | `^12.0.1` |
 | @inquirer/prompts | `^8.3.2` | `^8.7.2` |
-| @whatwg-node/fetch | `^0.10.0` | `^0.11.0` |
+| @whatwg-node/fetch | `^0.10.0` | `^0.12.0` |
 | chalk | `^5.6.0` | `^6.0.0` |
 | cosmiconfig | `^9.0.0` | `^10.0.1` |
 | detect-indent | `^7.0.0` | `^7.0.2` |

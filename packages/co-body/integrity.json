@@ -105,6 +105,35 @@
       "status": "published",
       "timestamp": "2026-08-30T01:04:15.838Z",
       "version": "6.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@hapi/bourne": {
+          "from": "^3.0.0",
+          "to": "^4.0.1"
+        },
+        "inflation": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "qs": {
+          "from": "^6.5.2",
+          "to": "^6.16.0"
+        },
+        "raw-body": {
+          "from": "^2.3.3",
+          "to": "^4.0.0"
+        },
+        "type-is": {
+          "from": "^1.6.16",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-22T00:33:47.608Z",
+      "version": "6.2.0-depup.4"
     }
   }
 }
