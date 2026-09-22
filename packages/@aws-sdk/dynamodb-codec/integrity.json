@@ -1231,6 +1231,27 @@
       "status": "published",
       "timestamp": "2026-09-11T16:10:11.328Z",
       "version": "3.973.45-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.33.3",
+          "to": "^3.35.0"
+        },
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.19.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-22T16:09:44.434Z",
+      "version": "3.973.45-depup.2"
     }
   }
 }
