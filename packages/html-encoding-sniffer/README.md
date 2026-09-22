@@ -12,11 +12,14 @@ npm install @depup/html-encoding-sniffer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.0 | **Updated**: 9/21/2026 | **Import test**: passed
+**Original version**: 7.0.0 | **DepUp version**: 7.0.0-depup.1 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @exodus/bytes | `^1.15.1` | `^1.16.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/html-encoding-sniffer&labels=bug).
 

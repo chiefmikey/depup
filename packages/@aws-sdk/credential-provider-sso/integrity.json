@@ -2416,31 +2416,6 @@
     }
   },
   "3.973.15": {
-    "5": {
-      "changes": {
-        "@aws-sdk/token-providers": {
-          "from": "3.1129.0",
-          "to": "^3.1133.0"
-        },
-        "@smithy/core": {
-          "from": "^3.33.3",
-          "to": "^3.34.1"
-        },
-        "@smithy/types": {
-          "from": "^4.17.2",
-          "to": "^4.18.0"
-        },
-        "tslib": {
-          "from": "^2.6.2",
-          "to": "^2.8.1"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-09-16T00:31:40.802Z",
-      "version": "3.973.15-depup.5"
-    },
     "6": {
       "changes": {
         "@aws-sdk/token-providers": {
@@ -2540,6 +2515,31 @@
       "status": "published",
       "timestamp": "2026-09-22T00:32:38.509Z",
       "version": "3.973.15-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@aws-sdk/token-providers": {
+          "from": "3.1129.0",
+          "to": "^3.1137.0"
+        },
+        "@smithy/core": {
+          "from": "^3.33.3",
+          "to": "^3.35.0"
+        },
+        "@smithy/types": {
+          "from": "^4.17.2",
+          "to": "^4.19.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-22T16:10:32.938Z",
+      "version": "3.973.15-depup.10"
     }
   }
 }

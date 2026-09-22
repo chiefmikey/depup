@@ -1,0 +1,155 @@
+{
+  "name": "@depup/quasar",
+  "version": "2.33.1-depup.0",
+  "description": "Enterprise-ready, AI-ready cross-platform Vue.js framework: high-performance, accessible components for SPA, PWA, SSR, SSG, mobile and desktop apps, with documentation your AI coding agent reads offline (with updated dependencies)",
+  "keywords": [
+    "quasar",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "desktop",
+    "electron",
+    "js",
+    "phone",
+    "pwa",
+    "spa",
+    "tablet",
+    "vue",
+    "vuejs",
+    "website"
+  ],
+  "homepage": "https://quasar.dev",
+  "bugs": {
+    "url": "https://github.com/quasarframework/quasar/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Razvan Stoenescu",
+    "email": "razvan.stoenescu@gmail.com",
+    "url": "https://quasar.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quasarframework/quasar.git",
+    "directory": "ui"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://donate.quasar.dev"
+  },
+  "files": [
+    "dist",
+    "!dist/build-stamp.json",
+    "lang",
+    "icon-set",
+    "src",
+    "!src/**/*.test.js",
+    "!src/**/*.hydration.fixtures.js",
+    "!src/**/test",
+    "wrappers",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "*.sass",
+    "./src/flags.dev.js",
+    "./src/umd-vue-guard.js"
+  ],
+  "module": "dist/quasar.client.js",
+  "typings": "dist/types/index.d.ts",
+  "unpkg": "dist/quasar.umd.prod.js",
+  "jsdelivr": "dist/quasar.umd.prod.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/quasar.server.prod.cjs",
+      "node": "./dist/quasar.server.prod.js",
+      "import": "./dist/quasar.client.js"
+    },
+    "./wrappers": {
+      "require": "./wrappers/index.cjs",
+      "import": "./wrappers/index.js"
+    },
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "@quasar/extras": "2.1.0",
+    "@quasar/vite-plugin": "2.0.2",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vitest/browser-playwright": "^5.0.1",
+    "@vitest/ui": "^5.0.1",
+    "@vue/test-utils": "^2.5.0",
+    "acorn": "^8.18.0",
+    "cli-highlight": "^2.1.11",
+    "clipboardy": "^5.3.2",
+    "cross-env": "^10.1.0",
+    "diff": "^9.0.0",
+    "fs-extra": "^11.4.0",
+    "kolorist": "^1.8.0",
+    "lightningcss": "^1.33.0",
+    "open": "^11.0.4",
+    "playwright": "^1.63.0",
+    "postcss": "^8.5.28",
+    "postcss-rtlcss": "^6.0.0",
+    "prompts": "^2.4.2",
+    "rolldown": "^1.2.8",
+    "sass-embedded": "^1.104.1",
+    "table": "^6.8.2",
+    "tinyglobby": "^0.2.17",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1",
+    "vue": "^3.5.42",
+    "vue-router": "^5.3.1",
+    "webpack-merge": "^6.0.1"
+  },
+  "engines": {
+    "node": ">= 22.0.0"
+  },
+  "web-types": "dist/web-types/web-types.json",
+  "scripts": {
+    "clean": "node build/script.clean.js",
+    "ensure-fresh-build": "node build/ensure-fresh-build.js",
+    "build": "node build/script.build.js",
+    "dev": "cd ./playground && quasar dev && cd ..",
+    "dev:ssr": "cd ./playground && quasar dev -m ssr && cd ..",
+    "dev:build": "cd ./playground && quasar build && cd ..",
+    "dev:build:ssr": "cd ./playground && quasar build -m ssr && cd ..",
+    "dev:umd": "node build/script.test-umd.js",
+    "dev:quploader": "cd ./playground/upload-server && pnpm i && cd ../.. && node playground/upload-server/server.js",
+    "test": "pnpm test:specs:check && node test/parallel.js",
+    "pretest:build": "pnpm ensure-fresh-build",
+    "test:build": "vitest run -c test/vitest-build.config.js",
+    "pretest:e2e:ssr": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:e2e:ssr": "vitest run -c test/vitest-e2e-ssr.config.js",
+    "pretest:umd": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:umd": "vitest run -c test/vitest-umd.config.js",
+    "pretest:sweep": "pnpm ensure-fresh-build && playwright install chromium firefox webkit",
+    "test:sweep": "node ./test/regression-sweep/run.js",
+    "pretest:unit": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:unit": "vitest run -c test/vitest.config.js",
+    "pretest:hydration": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:hydration": "vitest run -c test/vitest.hydration.config.js",
+    "pretest:hydration:pwa": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:hydration:pwa": "vitest run -c test/vitest.hydration-pwa.config.js",
+    "pretest:watch": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:watch": "vitest watch -c test/vitest.config.js",
+    "pretest:watch:ui": "pnpm ensure-fresh-build && playwright install chromium",
+    "test:watch:ui": "vitest watch --ui -c test/vitest.config.js",
+    "test:specs": "node ./test/specs/script.js",
+    "test:specs:check": "node ./test/specs/script.js --check",
+    "test:specs:accept": "node ./test/specs/script.js --accept",
+    "generate:mcp": "pnpm ensure-fresh-build && pnpm --filter quasar.dev generate:mcp --target ui"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "quasar",
+    "originalVersion": "2.33.1",
+    "processedAt": "2026-09-22T16:12:05.374Z",
+    "smokeTest": "failed"
+  }
+}
