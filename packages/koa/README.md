@@ -12,19 +12,19 @@ npm install @depup/koa
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.56 | **Updated**: 9/11/2026 | **Import test**: passed
+**Original version**: 3.2.1 | **DepUp version**: 3.2.1-depup.57 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | content-disposition | `~1.0.1` | `^3.0.0` |
-| content-type | `^1.0.5` | `^3.1.0` |
+| content-type | `^1.0.5` | `^3.1.1` |
 | cookies | `~0.9.1` | `^0.9.2` |
 | http-errors | `^2.0.0` | `^2.0.1` |
 | mime-types | `^3.0.1` | `^3.0.2` |
 | statuses | `^2.0.1` | `^2.0.2` |
-| type-is | `^2.0.1` | `^2.1.0` |
+| type-is | `^2.0.1` | `^3.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/koa&labels=bug).

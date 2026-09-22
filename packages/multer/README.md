@@ -12,14 +12,14 @@ npm install @depup/multer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.4.0 | **DepUp version**: 2.4.0-depup.0 | **Updated**: 9/14/2026 | **Import test**: passed
+**Original version**: 2.4.0 | **DepUp version**: 2.4.0-depup.1 | **Updated**: 9/22/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | append-field | `^1.0.0` | `^2.0.0` |
-| type-is | `^1.6.18` | `^2.1.0` |
+| type-is | `^1.6.18` | `^3.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/multer&labels=bug).
