@@ -12,7 +12,7 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 27.8.0 | **DepUp version**: 27.8.0-depup.1 | **Updated**: 9/18/2026 | **Import test**: failed
+**Original version**: 27.8.0 | **DepUp version**: 27.8.0-depup.2 | **Updated**: 9/22/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,12 +21,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @fastify/static | `^10.0.0` | `^10.1.4` |
 | @octokit/rest | `^22.0.0` | `^22.0.1` |
 | @opentelemetry/api | `~1.9.0` | `^1.9.1` |
+| boxen | `^8.0.1` | `^9.0.0` |
 | commander | `^12.1.0` | `^15.0.0` |
 | content-type | `^1.0.5` | `^3.1.1` |
 | cookie | `^2.0.0` | `^2.0.1` |
 | cron-parser | `^5.0.0` | `^5.10.1` |
 | dot-prop | `^10.1.0` | `^10.2.0` |
-| dotenv | `^17.3.1` | `^18.0.0` |
+| dotenv | `^17.3.1` | `^18.0.2` |
 | execa | `^5.1.1` | `^10.0.1` |
 | fastify | `^5.8.5` | `^5.12.5` |
 | get-port | `^5.1.1` | `^7.2.0` |
@@ -40,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | normalize-package-data | `^7.0.1` | `^9.0.0` |
 | open | `^11.0.0` | `^11.0.4` |
 | p-map | `^7.0.3` | `^7.0.8` |
-| parse-duration | `^2.1.6` | `^2.1.8` |
+| parse-duration | `^2.1.6` | `^2.1.9` |
 | parse-github-url | `^1.0.3` | `^1.0.4` |
 | pg | `^8.20.0` | `^8.23.0` |
 | readdirp | `^5.0.0` | `^5.1.1` |

@@ -167,27 +167,6 @@
     }
   },
   "2.3.0": {
-    "3": {
-      "changes": {
-        "iconv-lite": {
-          "from": "^0.7.2",
-          "to": "^0.7.3"
-        },
-        "qs": {
-          "from": "^6.15.2",
-          "to": "^6.15.3"
-        },
-        "raw-body": {
-          "from": "^3.0.2",
-          "to": "^4.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-07-21T17:21:18.956Z",
-      "version": "2.3.0-depup.3"
-    },
     "4": {
       "changes": {
         "content-type": {
@@ -287,6 +266,35 @@
       "status": "published",
       "timestamp": "2026-09-11T00:33:15.025Z",
       "version": "2.3.0-depup.7"
+    },
+    "8": {
+      "changes": {
+        "content-type": {
+          "from": "^2.0.0",
+          "to": "^3.1.1"
+        },
+        "iconv-lite": {
+          "from": "^0.7.2",
+          "to": "^0.7.3"
+        },
+        "qs": {
+          "from": "^6.15.2",
+          "to": "^6.16.0"
+        },
+        "raw-body": {
+          "from": "^3.0.2",
+          "to": "^4.0.0"
+        },
+        "type-is": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-22T00:33:08.410Z",
+      "version": "2.3.0-depup.8"
     }
   }
 }
