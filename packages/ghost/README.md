@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.2 | **Updated**: 9/23/2026 | **Import test**: failed
+**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.3 | **Updated**: 9/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^10.75.2` |
+| @sentry/node | `7.120.4` | `^11.0.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
 | @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cookies | `0.9.1` | `^0.9.2` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
-| dompurify | `3.4.13` | `^3.4.15` |
+| dompurify | `3.4.13` | `^3.4.16` |
 | entities | `4.5.0` | `^8.1.0` |
 | express | `4.22.2` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |

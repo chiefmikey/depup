@@ -7630,5 +7630,40 @@
       "timestamp": "2026-09-23T08:12:41.003Z",
       "version": "1.434.10-depup.0"
     }
+  },
+  "1.434.11": {
+    "0": {
+      "changes": {
+        "core-js": {
+          "from": "^3.49.0",
+          "to": "^3.50.0"
+        },
+        "dompurify": {
+          "from": "^3.4.13",
+          "to": "^3.4.16"
+        },
+        "fflate": {
+          "from": "^0.4.8",
+          "to": "^0.8.3"
+        },
+        "preact": {
+          "from": "^10.29.3",
+          "to": "^10.29.8"
+        },
+        "web-vitals": {
+          "from": "^6.2.1",
+          "to": "^6.2.2"
+        },
+        "@posthog/core": {
+          "from": "^1.55.1",
+          "to": "^1.55.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-23T16:12:49.904Z",
+      "version": "1.434.11-depup.0"
+    }
   }
 }

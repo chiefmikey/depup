@@ -635,5 +635,24 @@
       "timestamp": "2026-09-14T16:11:54.353Z",
       "version": "25.11.0-depup.0"
     }
+  },
+  "25.12.0": {
+    "0": {
+      "changes": {
+        "devtools-protocol": {
+          "from": "0.0.1687809",
+          "to": "^0.0.1702366"
+        },
+        "webdriver-bidi-protocol": {
+          "from": "0.4.3",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-23T16:12:45.247Z",
+      "version": "25.12.0-depup.0"
+    }
   }
 }
