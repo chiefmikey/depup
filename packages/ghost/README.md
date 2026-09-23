@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.0 | **Updated**: 9/22/2026 | **Import test**: failed
+**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.1 | **Updated**: 9/23/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1137.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1138.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
@@ -35,9 +35,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/social-urls | `0.1.64` | `^0.1.65` |
 | @tryghost/string | `0.3.6` | `^0.3.7` |
 | @tryghost/url-utils | `5.3.0` | `^5.3.1` |
-| @x402/core | `2.12.0` | `^2.26.0` |
-| @x402/evm | `2.12.0` | `^2.26.0` |
-| @x402/hono | `2.12.0` | `^2.26.0` |
+| @x402/core | `2.12.0` | `^2.27.0` |
+| @x402/evm | `2.12.0` | `^2.27.0` |
+| @x402/hono | `2.12.0` | `^2.27.0` |
 | body-parser | `1.20.6` | `^2.3.0` |
 | bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
@@ -52,7 +52,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | express-hbs | `2.5.0` | `^3.0.0` |
 | fastq | `^1.20.1` | `^1.20.3` |
 | file-type | `21.3.4` | `^22.1.1` |
-| fs-extra | `11.3.6` | `^11.4.0` |
+| fs-extra | `11.3.6` | `^11.4.1` |
 | hono | `4.12.18` | `^4.13.8` |
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
@@ -79,7 +79,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
 | moment-timezone | `0.5.45` | `^0.6.4` |
-| mppx | `0.6.20` | `^0.10.1` |
+| mppx | `0.6.20` | `^0.11.0` |
 | multer | `2.2.0` | `^2.4.0` |
 | nodemailer | `8.0.11` | `^10.0.10` |
 | otplib | `12.0.1` | `^13.5.0` |

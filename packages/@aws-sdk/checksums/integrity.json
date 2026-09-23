@@ -473,5 +473,20 @@
       "timestamp": "2026-09-22T16:09:17.388Z",
       "version": "3.1001.0-depup.2"
     }
+  },
+  "3.1001.1": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-23T00:30:05.654Z",
+      "version": "3.1001.1-depup.0"
+    }
   }
 }
