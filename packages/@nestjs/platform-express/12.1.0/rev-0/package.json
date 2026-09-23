@@ -1,0 +1,56 @@
+{
+  "name": "@depup/nestjs__platform-express",
+  "version": "12.1.0-depup.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@platform-express) (with updated dependencies)",
+  "author": "Kamil Mysliwiec",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./*.js": "./*.js",
+    "./*": "./*.js"
+  },
+  "homepage": "https://nestjs.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/nest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestjs/nest.git",
+    "directory": "packages/platform-express"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "multer": "2.4.0",
+    "path-to-regexp": "8.4.2",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/common": "12.1.0",
+    "@nestjs/core": "12.1.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^12.0.0",
+    "@nestjs/core": "^12.0.0"
+  },
+  "gitHead": "6739656fa3e8c98bd55883f0363a2254e6412232",
+  "keywords": [
+    "@nestjs/platform-express",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nestjs/platform-express",
+    "originalVersion": "12.1.0",
+    "processedAt": "2026-09-23T08:11:55.475Z",
+    "smokeTest": "failed"
+  }
+}

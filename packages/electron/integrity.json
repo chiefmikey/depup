@@ -958,5 +958,28 @@
       "timestamp": "2026-09-23T00:32:12.585Z",
       "version": "44.4.4-depup.0"
     }
+  },
+  "44.4.5": {
+    "0": {
+      "changes": {
+        "@electron-internal/extract-zip": {
+          "from": "^1.0.1",
+          "to": "^1.0.5"
+        },
+        "@electron/get": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^26.6.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-23T08:11:56.511Z",
+      "version": "44.4.5-depup.0"
+    }
   }
 }
