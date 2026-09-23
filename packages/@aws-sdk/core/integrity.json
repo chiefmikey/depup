@@ -2001,5 +2001,24 @@
       "timestamp": "2026-09-22T16:09:49.735Z",
       "version": "3.978.0-depup.2"
     }
+  },
+  "3.978.1": {
+    "0": {
+      "changes": {
+        "bowser": {
+          "from": "^2.11.0",
+          "to": "^2.14.1"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-23T00:30:37.171Z",
+      "version": "3.978.1-depup.0"
+    }
   }
 }

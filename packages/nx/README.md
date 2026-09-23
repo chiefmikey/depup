@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.3 | **Updated**: 9/21/2026 | **Import test**: failed
+**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.4 | **Updated**: 9/23/2026 | **Import test**: failed
 
 ## What changed
 
@@ -47,7 +47,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | default-browser | `5.2.1` | `^5.5.1` |
 | default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
-| dotenv | `16.4.7` | `^18.0.1` |
+| dotenv | `16.4.7` | `^18.0.3` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
 | emoji-regex | `8.0.0` | `^11.0.0` |
@@ -58,7 +58,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | flat | `5.0.2` | `^6.0.1` |
 | has-flag | `4.0.0` | `^5.0.1` |
 | https-proxy-agent | `5.0.1` | `^9.1.0` |
-| ignore | `7.0.5` | `^7.0.9` |
+| ignore | `7.0.5` | `^7.0.10` |
 | is-docker | `3.0.0` | `^4.0.0` |
 | is-fullwidth-code-point | `3.0.0` | `^5.1.0` |
 | is-interactive | `1.0.0` | `^2.0.0` |
@@ -82,14 +82,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | semver | `7.8.4` | `^7.8.5` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | sisteransi | `1.0.5` | `^2.0.0` |
-| smol-toml | `1.6.1` | `^1.8.0` |
+| smol-toml | `1.6.1` | `^1.9.0` |
 | string-width | `4.2.3` | `^8.2.2` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^11.0.0` |
 | tar-stream | `2.2.0` | `^3.2.1` |
 | which | `3.0.1` | `^7.0.0` |
-| wrap-ansi | `7.0.0` | `^10.0.1` |
+| wrap-ansi | `7.0.0` | `^10.0.2` |
 | yaml | `2.9.0` | `^2.9.1` |
 | yargs | `17.7.2` | `^18.2.0` |
 | yargs-parser | `21.1.1` | `^22.0.0` |

@@ -41,6 +41,27 @@
       "status": "published",
       "timestamp": "2026-08-30T01:03:50.093Z",
       "version": "5.1.2-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/superagent": {
+          "from": "^8.1.7",
+          "to": "^8.1.11"
+        },
+        "qs": {
+          "from": "^6.12.1",
+          "to": "^6.16.0"
+        },
+        "superagent": {
+          "from": "^10.0.0",
+          "to": "^10.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-23T00:32:19.970Z",
+      "version": "5.1.2-depup.2"
     }
   }
 }

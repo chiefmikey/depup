@@ -12,7 +12,7 @@ npm install @depup/chai-http
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.2 | **DepUp version**: 5.1.2-depup.1 | **Updated**: 8/30/2026 | **Import test**: passed
+**Original version**: 5.1.2 | **DepUp version**: 5.1.2-depup.2 | **Updated**: 9/23/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/superagent | `^8.1.7` | `^8.1.11` |
 | qs | `^6.12.1` | `^6.16.0` |
-| superagent | `^10.0.0` | `^10.3.0` |
+| superagent | `^10.0.0` | `^10.4.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/chai-http&labels=bug).
