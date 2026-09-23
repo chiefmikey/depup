@@ -1,0 +1,74 @@
+{
+  "name": "@depup/nestjs__core",
+  "version": "12.1.0-depup.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@core) (with updated dependencies)",
+  "author": "Kamil Mysliwiec",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./internal": "./internal.js",
+    "./*.js": "./*.js",
+    "./*": "./*.js"
+  },
+  "homepage": "https://nestjs.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/nest"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestjs/nest.git",
+    "directory": "packages/core"
+  },
+  "dependencies": {
+    "fast-safe-stringify": "2.1.1",
+    "iterare": "1.2.1",
+    "path-to-regexp": "8.4.2",
+    "tslib": "2.8.1",
+    "uid": "2.0.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "12.1.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^12.0.0",
+    "@nestjs/microservices": "^12.0.0",
+    "@nestjs/platform-express": "^12.0.0",
+    "@nestjs/websockets": "^12.0.0",
+    "reflect-metadata": "^0.1.12 || ^0.2.0",
+    "rxjs": "^7.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/websockets": {
+      "optional": true
+    },
+    "@nestjs/microservices": {
+      "optional": true
+    },
+    "@nestjs/platform-express": {
+      "optional": true
+    }
+  },
+  "gitHead": "6739656fa3e8c98bd55883f0363a2254e6412232",
+  "keywords": [
+    "@nestjs/core",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nestjs/core",
+    "originalVersion": "12.1.0",
+    "processedAt": "2026-09-23T08:12:00.114Z",
+    "smokeTest": "failed"
+  }
+}
