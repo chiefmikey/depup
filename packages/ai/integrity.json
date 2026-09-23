@@ -1958,5 +1958,15 @@
       "timestamp": "2026-09-23T00:31:52.565Z",
       "version": "7.0.111-depup.0"
     }
+  },
+  "7.0.112": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-23T16:11:49.025Z",
+      "version": "7.0.112-depup.0"
+    }
   }
 }
