@@ -12,14 +12,14 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.7 | **Updated**: 9/22/2026 | **Import test**: passed
+**Original version**: 6.0.1 | **DepUp version**: 6.0.1-depup.0 | **Updated**: 9/23/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1137.0` |
-| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1137.0` |
+| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1138.0` |
+| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1138.0` |
 | @inquirer/confirm | `^3.1.22` | `^6.3.2` |
 | @inquirer/input | `^2.2.4` | `^5.1.6` |
 | @inquirer/select | `^2.5.0` | `^5.2.5` |
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
 | ejs | `^3.1.10` | `^6.0.1` |
-| fs-extra | `^8.1` | `^11.4.0` |
+| fs-extra | `^8.1` | `^11.4.1` |
 | got | `^13` | `^16.0.0` |
 | normalize-package-data | `^6` | `^9.0.0` |
 | validate-npm-package-name | `^5.0.1` | `^8.0.0` |
