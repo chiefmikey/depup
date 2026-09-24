@@ -102,5 +102,15 @@
       "timestamp": "2026-09-18T08:11:53.078Z",
       "version": "7.0.2002-depup.0"
     }
+  },
+  "7.0.2003": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-24T16:11:50.389Z",
+      "version": "7.0.2003-depup.0"
+    }
   }
 }

@@ -28,6 +28,27 @@
       "status": "published",
       "timestamp": "2026-04-05T08:17:16.393Z",
       "version": "8.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "slice-ansi": {
+          "from": "^9.0.0",
+          "to": "^9.0.1"
+        },
+        "string-width": {
+          "from": "^8.2.0",
+          "to": "^8.3.0"
+        },
+        "wrap-ansi": {
+          "from": "^10.0.0",
+          "to": "^10.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-24T16:11:35.858Z",
+      "version": "8.0.0-depup.1"
     }
   }
 }

@@ -12,11 +12,16 @@ npm install @depup/log-update
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.0 | **Updated**: 4/5/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.1 | **Updated**: 9/24/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| slice-ansi | `^9.0.0` | `^9.0.1` |
+| string-width | `^8.2.0` | `^8.3.0` |
+| wrap-ansi | `^10.0.0` | `^10.0.2` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/log-update&labels=bug).
 
