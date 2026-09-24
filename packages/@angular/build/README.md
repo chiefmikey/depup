@@ -12,24 +12,19 @@ npm install @depup/angular__build
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.5 | **Updated**: 9/23/2026 | **Import test**: passed
+**Original version**: 22.2.0 | **DepUp version**: 22.2.0-depup.0 | **Updated**: 9/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `8.0.1` | `^8.0.6` |
-| @inquirer/confirm | `6.1.1` | `^6.3.2` |
-| beasties | `0.4.3` | `^0.5.4` |
+| @babel/core | `8.0.5` | `^8.0.6` |
 | browserslist | `^4.26.0` | `^4.29.0` |
-| listr2 | `11.0.0` | `^11.1.0` |
-| magic-string | `1.0.0` | `^1.4.1` |
-| oxc-parser | `0.142.0` | `^0.151.0` |
-| picomatch | `4.0.5` | `^4.0.7` |
-| piscina | `5.2.0` | `^5.3.2` |
-| rolldown | `1.2.0` | `^1.2.9` |
-| sass | `1.101.0` | `^1.105.0` |
-| vite | `8.1.5` | `^8.3.0` |
+| magic-string | `1.4.1` | `^1.4.2` |
+| oxc-parser | `0.150.0` | `^0.151.0` |
+| rolldown | `1.2.8` | `^1.2.10` |
+| sass | `1.104.1` | `^1.105.0` |
+| sass-embedded | `1.104.1` | `^1.105.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular__build&labels=bug).

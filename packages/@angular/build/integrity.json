@@ -4661,5 +4661,44 @@
       "timestamp": "2026-09-23T00:30:21.416Z",
       "version": "22.1.8-depup.5"
     }
+  },
+  "22.2.0": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "8.0.5",
+          "to": "^8.0.6"
+        },
+        "browserslist": {
+          "from": "^4.26.0",
+          "to": "^4.29.0"
+        },
+        "magic-string": {
+          "from": "1.4.1",
+          "to": "^1.4.2"
+        },
+        "oxc-parser": {
+          "from": "0.150.0",
+          "to": "^0.151.0"
+        },
+        "rolldown": {
+          "from": "1.2.8",
+          "to": "^1.2.10"
+        },
+        "sass": {
+          "from": "1.104.1",
+          "to": "^1.105.0"
+        },
+        "sass-embedded": {
+          "from": "1.104.1",
+          "to": "^1.105.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-24T00:31:19.491Z",
+      "version": "22.2.0-depup.0"
+    }
   }
 }

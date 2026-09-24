@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@angular-devkit/core": {
+      "from": "22.1.8",
+      "to": "^22.2.0"
+    },
+    "@angular-devkit/schematics": {
+      "from": "22.1.8",
+      "to": "^22.2.0"
+    },
+    "@angular-devkit/schematics-cli": {
+      "from": "22.1.8",
+      "to": "^22.2.0"
+    },
+    "@nestjs/schematics": {
+      "from": "^12.0.0",
+      "to": "^12.0.5"
+    },
+    "typescript": {
+      "from": "~6.0.2",
+      "to": "^7.0.2"
+    }
+  },
+  "timestamp": "2026-09-24T00:31:56.510Z",
+  "totalUpdated": 5
+}
