@@ -12,32 +12,20 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.8 | **DepUp version**: 22.1.8-depup.4 | **Updated**: 9/23/2026 | **Import test**: passed
+**Original version**: 22.2.0 | **DepUp version**: 22.2.0-depup.0 | **Updated**: 9/24/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `8.0.1` | `^8.0.6` |
-| @babel/generator | `8.0.0` | `^8.0.6` |
+| @babel/core | `8.0.5` | `^8.0.6` |
+| @babel/generator | `8.0.5` | `^8.0.6` |
 | @babel/plugin-transform-async-generator-functions | `8.0.1` | `^8.0.6` |
 | @babel/plugin-transform-runtime | `8.0.1` | `^8.0.6` |
-| @babel/preset-env | `8.0.2` | `^8.0.6` |
-| @babel/runtime | `8.0.0` | `^8.0.5` |
-| autoprefixer | `10.5.4` | `^10.6.1` |
+| @babel/preset-env | `8.0.5` | `^8.0.6` |
+| autoprefixer | `10.6.0` | `^10.6.1` |
 | browserslist | `^4.26.0` | `^4.29.0` |
-| css-loader | `7.1.4` | `^7.1.5` |
-| less | `4.9.0` | `^4.9.1` |
-| open | `11.0.0` | `^11.0.4` |
-| picomatch | `4.0.5` | `^4.0.7` |
-| piscina | `5.2.0` | `^5.3.2` |
-| postcss | `8.5.25` | `^8.5.28` |
-| sass | `1.101.0` | `^1.105.0` |
-| sass-loader | `17.0.0` | `^17.0.1` |
-| terser | `5.49.0` | `^5.51.2` |
-| webpack | `5.109.2` | `^5.111.1` |
-| webpack-dev-middleware | `8.0.3` | `^8.3.0` |
-| webpack-dev-server | `5.2.6` | `^6.0.0` |
+| webpack | `5.111.0` | `^5.111.1` |
 | webpack-subresource-integrity | `5.1.0` | `^5.2.0-rc.1` |
 
 

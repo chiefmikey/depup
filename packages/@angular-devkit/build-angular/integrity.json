@@ -5512,5 +5512,52 @@
       "timestamp": "2026-09-23T00:30:19.579Z",
       "version": "22.1.8-depup.4"
     }
+  },
+  "22.2.0": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "8.0.5",
+          "to": "^8.0.6"
+        },
+        "@babel/generator": {
+          "from": "8.0.5",
+          "to": "^8.0.6"
+        },
+        "@babel/plugin-transform-async-generator-functions": {
+          "from": "8.0.1",
+          "to": "^8.0.6"
+        },
+        "@babel/plugin-transform-runtime": {
+          "from": "8.0.1",
+          "to": "^8.0.6"
+        },
+        "@babel/preset-env": {
+          "from": "8.0.5",
+          "to": "^8.0.6"
+        },
+        "autoprefixer": {
+          "from": "10.6.0",
+          "to": "^10.6.1"
+        },
+        "browserslist": {
+          "from": "^4.26.0",
+          "to": "^4.29.0"
+        },
+        "webpack": {
+          "from": "5.111.0",
+          "to": "^5.111.1"
+        },
+        "webpack-subresource-integrity": {
+          "from": "5.1.0",
+          "to": "^5.2.0-rc.1"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-24T00:31:31.770Z",
+      "version": "22.2.0-depup.0"
+    }
   }
 }
