@@ -1,22 +1,5 @@
 {
   "0.12.1": {
-    "25": {
-      "changes": {
-        "@datadog/datadog-api-client": {
-          "from": "^1.17.0",
-          "to": "^1.58.0"
-        },
-        "debug": {
-          "from": "^4.1.0",
-          "to": "^4.4.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-06-16T10:23:48.869Z",
-      "version": "0.12.1-depup.25"
-    },
     "26": {
       "changes": {
         "@datadog/datadog-api-client": {
@@ -84,6 +67,23 @@
       "status": "published",
       "timestamp": "2026-09-02T16:11:23.765Z",
       "version": "0.12.1-depup.29"
+    },
+    "30": {
+      "changes": {
+        "@datadog/datadog-api-client": {
+          "from": "^1.17.0",
+          "to": "^1.64.0"
+        },
+        "debug": {
+          "from": "^4.1.0",
+          "to": "^4.4.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-24T16:12:38.121Z",
+      "version": "0.12.1-depup.30"
     }
   }
 }
