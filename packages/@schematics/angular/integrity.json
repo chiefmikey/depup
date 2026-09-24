@@ -583,5 +583,24 @@
       "timestamp": "2026-09-10T16:09:20.573Z",
       "version": "22.1.8-depup.0"
     }
+  },
+  "22.2.0": {
+    "0": {
+      "changes": {
+        "oxc-parser": {
+          "from": "0.150.0",
+          "to": "^0.151.0"
+        },
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-24T00:32:26.581Z",
+      "version": "22.2.0-depup.0"
+    }
   }
 }

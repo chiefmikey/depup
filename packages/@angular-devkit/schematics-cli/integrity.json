@@ -792,5 +792,15 @@
       "timestamp": "2026-09-10T16:09:00.625Z",
       "version": "22.1.8-depup.0"
     }
+  },
+  "22.2.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-24T00:31:25.959Z",
+      "version": "22.2.0-depup.0"
+    }
   }
 }

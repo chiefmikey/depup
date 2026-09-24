@@ -579,19 +579,6 @@
     }
   },
   "29.16.6": {
-    "67": {
-      "changes": {
-        "@typescript-eslint/utils": {
-          "from": "^8.0.0",
-          "to": "^8.70.1"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-09-22T08:13:46.409Z",
-      "version": "29.16.6-depup.67"
-    },
     "68": {
       "changes": {
         "@typescript-eslint/utils": {
@@ -643,6 +630,19 @@
       "status": "failed",
       "timestamp": "2026-09-23T16:12:11.264Z",
       "version": "29.16.6-depup.71"
+    },
+    "72": {
+      "changes": {
+        "@typescript-eslint/utils": {
+          "from": "^8.0.0",
+          "to": "^8.70.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-09-24T00:32:44.282Z",
+      "version": "29.16.6-depup.72"
     }
   }
 }
