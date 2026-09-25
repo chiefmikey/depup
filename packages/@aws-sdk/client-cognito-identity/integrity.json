@@ -3639,5 +3639,20 @@
       "timestamp": "2026-09-24T00:31:54.687Z",
       "version": "3.1139.0-depup.0"
     }
+  },
+  "3.1140.0": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-25T00:33:06.845Z",
+      "version": "3.1140.0-depup.0"
+    }
   }
 }

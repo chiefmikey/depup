@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.6 | **Updated**: 9/24/2026 | **Import test**: failed
+**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.7 | **Updated**: 9/25/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1139.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1140.0` |
 | @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
@@ -61,7 +61,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | js-yaml | `4.3.0` | `^5.4.2` |
 | jsdom | `30.0.1` | `^30.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
-| juice | `11.1.1` | `^12.1.3` |
+| juice | `11.1.1` | `^12.2.0` |
 | knex | `2.4.2` | `^3.3.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^14.0.1` |
