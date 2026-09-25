@@ -12,7 +12,7 @@ npm install @depup/framer-motion
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.4.3 | **DepUp version**: 13.4.3-depup.0 | **Updated**: 9/24/2026 | **Import test**: passed
+**Original version**: 13.4.4 | **DepUp version**: 13.4.4-depup.0 | **Updated**: 9/25/2026 | **Import test**: passed
 
 ## What changed
 
