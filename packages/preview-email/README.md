@@ -12,20 +12,17 @@ npm install @depup/preview-email
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.4.0 | **DepUp version**: 3.4.0-depup.2 | **Updated**: 9/4/2026 | **Import test**: passed
+**Original version**: 3.4.1 | **DepUp version**: 3.4.1-depup.0 | **Updated**: 9/25/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| ci-info | `^3.8.0` | `^4.4.0` |
-| get-port | `5.1.1` | `^7.2.0` |
-| mailparser | `3.9.17` | `^3.9.20` |
-| nodemailer | `^9.0.6` | `^10.0.0` |
-| open | `7` | `^11.0.2` |
-| p-event | `4.2.0` | `^7.1.0` |
-| p-wait-for | `3.2.0` | `^6.0.0` |
-| pug | `^3.0.3` | `^3.0.4` |
+| mailparser | `3.9.20` | `^3.9.28` |
+| nodemailer | `^9.1.1` | `^10.0.10` |
+| open | `10` | `^11.0.4` |
+| p-event | `6.0.1` | `^7.1.1` |
+| p-wait-for | `5.0.2` | `^6.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/preview-email&labels=bug).

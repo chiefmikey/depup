@@ -1,6 +1,6 @@
 {
   "name": "@depup/d3-dsv",
-  "version": "3.0.1-depup.246",
+  "version": "3.0.1-depup.251",
   "description": "A parser and formatter for delimiter-separated values, such as CSV and TSV (with updated dependencies)",
   "homepage": "https://d3js.org/d3-dsv/",
   "repository": {
@@ -90,7 +90,7 @@
     "depsUpdated": 3,
     "originalPackage": "d3-dsv",
     "originalVersion": "3.0.1",
-    "processedAt": "2026-09-23T08:12:02.702Z",
+    "processedAt": "2026-09-25T00:33:46.850Z",
     "smokeTest": "passed"
   }
 }
