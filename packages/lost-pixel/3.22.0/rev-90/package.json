@@ -1,6 +1,6 @@
 {
   "name": "@depup/lost-pixel",
-  "version": "3.22.0-depup.85",
+  "version": "3.22.0-depup.90",
   "description": "GitHub Action for Lost Pixel integration (with updated dependencies)",
   "main": "dist/",
   "bin": "dist/bin.js",
@@ -73,7 +73,7 @@
     "esbuild": "^0.28.2",
     "execa": "^10.0.1",
     "form-data": "^4.0.6",
-    "fs-extra": "^11.4.0",
+    "fs-extra": "^11.4.1",
     "get-port-please": "^3.2.0",
     "lodash.get": "4.4.2",
     "lodash.kebabcase": "4.1.1",
@@ -81,13 +81,13 @@
     "pixelmatch": "^7.2.0",
     "playwright-core": "^1.63.0",
     "pngjs": "7.0.0",
-    "posthog-node": "^5.51.6",
+    "posthog-node": "^5.54.1",
     "serve-handler": "^6.1.7",
     "shelljs": "^0.10.0",
     "ts-node": "10.9.2",
     "xml2js": "^0.6.2",
-    "yargs": "^18.1.0",
-    "zod": "^4.5.4"
+    "yargs": "^18.2.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@playwright/test": "1.47.2",
@@ -166,7 +166,7 @@
       },
       "fs-extra": {
         "from": "11.2.0",
-        "to": "^11.4.0"
+        "to": "^11.4.1"
       },
       "get-port-please": {
         "from": "3.1.2",
@@ -186,7 +186,7 @@
       },
       "posthog-node": {
         "from": "3.5.0",
-        "to": "^5.51.6"
+        "to": "^5.54.1"
       },
       "serve-handler": {
         "from": "6.1.6",
@@ -198,17 +198,17 @@
       },
       "yargs": {
         "from": "17.7.2",
-        "to": "^18.1.0"
+        "to": "^18.2.0"
       },
       "zod": {
         "from": "3.23.8",
-        "to": "^4.5.4"
+        "to": "^4.6.5"
       }
     },
     "depsUpdated": 15,
     "originalPackage": "lost-pixel",
     "originalVersion": "3.22.0",
-    "processedAt": "2026-09-05T00:31:22.131Z",
+    "processedAt": "2026-09-25T16:10:53.218Z",
     "smokeTest": "failed"
   }
 }
