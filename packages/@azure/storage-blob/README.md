@@ -12,7 +12,7 @@ npm install @depup/azure__storage-blob
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.33.0 | **DepUp version**: 12.33.0-depup.21 | **Updated**: 8/4/2026 | **Import test**: failed
+**Original version**: 12.34.0 | **DepUp version**: 12.34.0-depup.0 | **Updated**: 9/25/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,16 +20,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @azure/abort-controller | `^2.1.2` | `^2.2.0` |
 | @azure/core-auth | `^1.9.0` | `^1.11.0` |
-| @azure/core-client | `^1.9.3` | `^1.11.0` |
+| @azure/core-client | `^1.9.3` | `^1.11.1` |
 | @azure/core-http-compat | `^2.2.0` | `^2.5.0` |
-| @azure/core-lro | `^2.2.0` | `^3.4.0` |
+| @azure/core-lro | `^2.2.0` | `^3.4.1` |
 | @azure/core-paging | `^1.6.2` | `^1.7.0` |
 | @azure/core-rest-pipeline | `^1.19.1` | `^1.25.0` |
 | @azure/core-tracing | `^1.2.0` | `^1.4.0` |
 | @azure/core-util | `^1.11.0` | `^1.14.0` |
 | @azure/core-xml | `^1.4.5` | `^1.6.0` |
 | @azure/logger | `^1.1.4` | `^1.4.0` |
-| @azure/storage-common | `^12.4.1` | `^12.5.0` |
+| apache-arrow | `^21.1.0` | `^21.2.0` |
 | events | `^3.0.0` | `^3.3.0` |
 
 
