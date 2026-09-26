@@ -1,0 +1,57 @@
+{
+  "name": "@depup/prosemirror-schema-basic",
+  "version": "1.2.5-depup.0",
+  "description": "Basic schema elements for ProseMirror (with updated dependencies)",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Marijn Haverbeke",
+      "email": "marijn@haverbeke.berlin",
+      "web": "http://marijnhaverbeke.nl"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://code.haverbeke.berlin/prosemirror/prosemirror-schema-basic.git"
+  },
+  "dependencies": {
+    "prosemirror-model": "^1.25.12"
+  },
+  "devDependencies": {
+    "@prosemirror/buildhelper": "^0.1.5",
+    "prosemirror-test-builder": "^1.0.0"
+  },
+  "scripts": {
+    "test": "pm-runtests"
+  },
+  "keywords": [
+    "prosemirror-schema-basic",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "prosemirror-model": {
+        "from": "^1.25.0",
+        "to": "^1.25.12"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "prosemirror-schema-basic",
+    "originalVersion": "1.2.5",
+    "processedAt": "2026-09-26T00:33:07.915Z",
+    "smokeTest": "passed"
+  }
+}
