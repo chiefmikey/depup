@@ -22,6 +22,31 @@
       "status": "published",
       "timestamp": "2026-03-17T16:37:13.908Z",
       "version": "2.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "micromark-factory-space": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "micromark-util-character": {
+          "from": "^2.0.0",
+          "to": "^2.1.1"
+        },
+        "micromark-util-symbol": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "micromark-util-types": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-26T16:11:35.928Z",
+      "version": "2.0.1-depup.1"
     }
   }
 }

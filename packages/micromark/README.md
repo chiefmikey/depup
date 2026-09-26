@@ -12,18 +12,18 @@ npm install @depup/micromark
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.0.3 | **DepUp version**: 4.0.3-depup.0 | **Updated**: 9/26/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/debug | `^4.0.0` | `^4.1.12` |
+| @types/debug | `^4.0.0` | `^4.1.13` |
 | debug | `^4.0.0` | `^4.4.3` |
 | decode-named-character-reference | `^1.0.0` | `^1.3.0` |
 | devlop | `^1.0.0` | `^1.1.0` |
-| micromark-core-commonmark | `^2.0.0` | `^2.0.3` |
-| micromark-factory-space | `^2.0.0` | `^2.0.1` |
+| micromark-core-commonmark | `^2.0.0` | `^2.0.4` |
+| micromark-factory-space | `^2.0.0` | `^2.1.0` |
 | micromark-util-character | `^2.0.0` | `^2.1.1` |
 | micromark-util-chunked | `^2.0.0` | `^2.0.1` |
 | micromark-util-combine-extensions | `^2.0.0` | `^2.0.1` |
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | micromark-util-sanitize-uri | `^2.0.0` | `^2.0.1` |
 | micromark-util-subtokenize | `^2.0.0` | `^2.1.0` |
 | micromark-util-symbol | `^2.0.0` | `^2.0.1` |
-| micromark-util-types | `^2.0.0` | `^2.0.2` |
+| micromark-util-types | `^2.0.0` | `^2.0.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/micromark&labels=bug).
