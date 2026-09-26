@@ -12,7 +12,7 @@ npm install @depup/mqtt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.0 | **DepUp version**: 5.16.0-depup.0 | **Updated**: 9/16/2026 | **Import test**: passed
+**Original version**: 5.16.0 | **DepUp version**: 5.16.0-depup.1 | **Updated**: 9/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,10 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/readable-stream | `^4.0.21` | `^4.0.24` |
 | debug | `^4.4.1` | `^4.4.3` |
-| lru-cache | `^10.4.3` | `^11.5.2` |
+| lru-cache | `^10.4.3` | `^11.5.3` |
 | socks | `^2.8.6` | `^2.8.10` |
 | worker-timers | `^8.0.23` | `^8.0.34` |
-| ws | `^8.18.3` | `^8.21.3` |
+| ws | `^8.18.3` | `^8.22.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mqtt&labels=bug).

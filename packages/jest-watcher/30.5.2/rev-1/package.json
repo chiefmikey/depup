@@ -1,0 +1,73 @@
+{
+  "name": "@depup/jest-watcher",
+  "description": "Delightful JavaScript Testing. (with updated dependencies)",
+  "version": "30.5.2-depup.1",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js",
+      "import": "./build/index.mjs",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@jest/test-result": "30.5.2",
+    "@jest/types": "30.5.1",
+    "@types/node": "*",
+    "ansi-escapes": "^7.3.0",
+    "chalk": "^6.0.0",
+    "emittery": "^2.1.0",
+    "jest-util": "30.5.1",
+    "string-length": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jestjs/jest.git",
+    "directory": "packages/jest-watcher"
+  },
+  "bugs": {
+    "url": "https://github.com/jestjs/jest/issues"
+  },
+  "engines": {
+    "node": "^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0"
+  },
+  "homepage": "https://jestjs.io/",
+  "license": "MIT",
+  "gitHead": "202dd8a14777c270607c2416bd5034c3c0abc984",
+  "keywords": [
+    "jest-watcher",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "ansi-escapes": {
+        "from": "^4.3.2",
+        "to": "^7.3.0"
+      },
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^6.0.0"
+      },
+      "emittery": {
+        "from": "^0.13.1",
+        "to": "^2.1.0"
+      },
+      "string-length": {
+        "from": "^4.0.2",
+        "to": "^7.0.1"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "jest-watcher",
+    "originalVersion": "30.5.2",
+    "processedAt": "2026-09-26T16:10:07.292Z",
+    "smokeTest": "passed"
+  }
+}

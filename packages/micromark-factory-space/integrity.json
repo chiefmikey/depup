@@ -15,5 +15,24 @@
       "timestamp": "2026-03-17T16:37:05.709Z",
       "version": "2.0.1-depup.0"
     }
+  },
+  "2.1.0": {
+    "0": {
+      "changes": {
+        "micromark-util-character": {
+          "from": "^2.0.0",
+          "to": "^2.1.1"
+        },
+        "micromark-util-types": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-26T16:10:39.343Z",
+      "version": "2.1.0-depup.0"
+    }
   }
 }

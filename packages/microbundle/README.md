@@ -12,19 +12,19 @@ npm install @depup/microbundle
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.70 | **Updated**: 9/17/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.71 | **Updated**: 9/26/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.12.10` | `^8.0.5` |
+| @babel/core | `^7.12.10` | `^8.0.6` |
 | @babel/plugin-proposal-class-properties | `7.12.1` | `^7.18.6` |
 | @babel/plugin-syntax-jsx | `^7.12.1` | `^8.0.1` |
 | @babel/plugin-transform-flow-strip-types | `^7.12.10` | `^8.0.1` |
 | @babel/plugin-transform-react-jsx | `^7.12.11` | `^8.0.1` |
-| @babel/plugin-transform-regenerator | `^7.12.1` | `^8.0.5` |
-| @babel/preset-env | `^7.12.11` | `^8.0.5` |
+| @babel/plugin-transform-regenerator | `^7.12.1` | `^8.0.6` |
+| @babel/preset-env | `^7.12.11` | `^8.0.6` |
 | @babel/preset-flow | `^7.12.1` | `^8.0.1` |
 | @babel/preset-react | `^7.12.10` | `^8.0.1` |
 | @rollup/plugin-alias | `^3.1.1` | `^6.0.0` |
@@ -42,8 +42,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | gzip-size | `^6.0.0` | `^7.0.0` |
 | kleur | `^4.1.3` | `^4.1.5` |
 | postcss | `^8.2.1` | `^8.5.28` |
-| pretty-bytes | `^5.4.1` | `^7.1.3` |
-| rollup | `^2.35.1` | `^4.63.3` |
+| pretty-bytes | `^5.4.1` | `^7.2.0` |
+| rollup | `^2.35.1` | `^4.63.5` |
 | rollup-plugin-postcss | `^4.0.0` | `^4.0.2` |
 | rollup-plugin-typescript2 | `^0.32.0` | `^0.37.0` |
 | rollup-plugin-visualizer | `^5.6.0` | `^7.1.1` |

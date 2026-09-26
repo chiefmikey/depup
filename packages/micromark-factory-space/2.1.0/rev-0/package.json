@@ -1,0 +1,71 @@
+{
+  "name": "@depup/micromark-factory-space",
+  "version": "2.1.0-depup.0",
+  "description": "micromark factory to parse markdown space (found in lots of places) (with updated dependencies)",
+  "license": "MIT",
+  "keywords": [
+    "micromark-factory-space",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "micromark",
+    "factory",
+    "space"
+  ],
+  "repository": "https://github.com/micromark/micromark/tree/main/packages/micromark-factory-space",
+  "bugs": "https://github.com/micromark/micromark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/unifiedjs"
+    },
+    {
+      "type": "OpenCollective",
+      "url": "https://opencollective.com/unified"
+    }
+  ],
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dev/",
+    "index.d.ts.map",
+    "index.d.ts",
+    "index.js",
+    "changes.json",
+    "README.md"
+  ],
+  "exports": {
+    "development": "./dev/index.js",
+    "default": "./index.js"
+  },
+  "dependencies": {
+    "micromark-util-character": "^2.1.1",
+    "micromark-util-types": "^2.0.3"
+  },
+  "scripts": {
+    "build": "micromark-build"
+  },
+  "depup": {
+    "changes": {
+      "micromark-util-character": {
+        "from": "^2.0.0",
+        "to": "^2.1.1"
+      },
+      "micromark-util-types": {
+        "from": "^2.0.0",
+        "to": "^2.0.3"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "micromark-factory-space",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-09-26T16:10:36.342Z",
+    "smokeTest": "passed"
+  }
+}

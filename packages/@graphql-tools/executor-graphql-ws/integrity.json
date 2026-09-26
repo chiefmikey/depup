@@ -165,6 +165,27 @@
       "status": "published",
       "timestamp": "2026-09-25T00:33:51.766Z",
       "version": "3.2.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@whatwg-node/disposablestack": {
+          "from": "^0.0.6",
+          "to": "^0.1.0"
+        },
+        "graphql-ws": {
+          "from": "^6.0.6",
+          "to": "^6.3.0"
+        },
+        "ws": {
+          "from": "^8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-26T16:09:37.807Z",
+      "version": "3.2.0-depup.3"
     }
   }
 }
