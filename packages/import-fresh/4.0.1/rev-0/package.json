@@ -1,0 +1,69 @@
+{
+  "name": "@depup/import-fresh",
+  "version": "4.0.1-depup.0",
+  "description": "Import a module while bypassing the cache (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/import-fresh",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "test": "xo && node --test tests/*.js && tsd",
+    "heapdump": "node heapdump.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "import-fresh",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "import",
+    "require",
+    "cache",
+    "uncache",
+    "uncached",
+    "module",
+    "fresh",
+    "bypass"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "heapdump": "^0.3.15",
+    "tsd": "^0.33.0",
+    "xo": "^1.2.3"
+  },
+  "tsd": {
+    "directory": "tests",
+    "compilerOptions": {
+      "module": "nodenext",
+      "moduleResolution": "nodenext"
+    }
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "import-fresh",
+    "originalVersion": "4.0.1",
+    "processedAt": "2026-09-26T00:32:34.234Z",
+    "smokeTest": "passed"
+  }
+}

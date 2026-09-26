@@ -1988,5 +1988,15 @@
       "timestamp": "2026-09-25T00:33:58.751Z",
       "version": "7.0.114-depup.0"
     }
+  },
+  "7.0.116": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-26T00:32:21.511Z",
+      "version": "7.0.116-depup.0"
+    }
   }
 }
