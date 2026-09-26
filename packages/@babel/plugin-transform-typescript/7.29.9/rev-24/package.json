@@ -1,6 +1,6 @@
 {
   "name": "@depup/babel__plugin-transform-typescript",
-  "version": "7.29.9-depup.19",
+  "version": "7.29.9-depup.24",
   "description": "Transform TypeScript into ES.next (with updated dependencies)",
   "repository": {
     "type": "git",
@@ -67,7 +67,7 @@
     "depsUpdated": 5,
     "originalPackage": "@babel/plugin-transform-typescript",
     "originalVersion": "7.29.9",
-    "processedAt": "2026-09-24T16:10:11.467Z",
+    "processedAt": "2026-09-26T08:11:46.074Z",
     "smokeTest": "passed"
   }
 }
