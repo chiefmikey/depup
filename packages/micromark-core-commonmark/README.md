@@ -12,7 +12,7 @@ npm install @depup/micromark-core-commonmark
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.3 | **DepUp version**: 2.0.3-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.0.4 | **DepUp version**: 2.0.4-depup.0 | **Updated**: 9/26/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,7 +22,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | devlop | `^1.0.0` | `^1.1.0` |
 | micromark-factory-destination | `^2.0.0` | `^2.0.1` |
 | micromark-factory-label | `^2.0.0` | `^2.0.1` |
-| micromark-factory-space | `^2.0.0` | `^2.0.1` |
 | micromark-factory-title | `^2.0.0` | `^2.0.1` |
 | micromark-factory-whitespace | `^2.0.0` | `^2.0.1` |
 | micromark-util-character | `^2.0.0` | `^2.1.1` |
@@ -33,7 +32,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | micromark-util-resolve-all | `^2.0.0` | `^2.0.1` |
 | micromark-util-subtokenize | `^2.0.0` | `^2.1.0` |
 | micromark-util-symbol | `^2.0.0` | `^2.0.1` |
-| micromark-util-types | `^2.0.0` | `^2.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/micromark-core-commonmark&labels=bug).
