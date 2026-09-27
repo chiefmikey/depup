@@ -10,14 +10,16 @@ on:
         required: false
         type: string
 
-# Read-only: measures performance and uploads artifacts, never pushes
-permissions:
-  contents: read
+# Least privilege: no workflow-wide token scopes. Each job declares exactly
+# what it needs (contents: write only on jobs that push package data to main).
+permissions: {}
 
 jobs:
   performance-test:
     name: Performance Test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     timeout-minutes: 60
 
     steps:

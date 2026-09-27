@@ -134,11 +134,33 @@ Pending secret rotation (manual steps above). After rotation:
 
 ### Hardening measures (post-rotation)
 
-- [ ] Consider separating the npm publishing token into a dedicated workflow environment with required reviewers
-- [ ] Consider using `--ignore-scripts` when installing dependencies of processed packages
-- [ ] Consider network restrictions (e.g., only allow registry.npmjs.org outbound during install)
-- [ ] Pin GitHub Actions to commit SHAs instead of version tags
-- [ ] Add npm audit check before processing packages
+Repo-side status (branch `maxusage/b-depup-hardening`, 2026-09-27):
+
+- [x] **Publishing secrets scoped to GitHub Actions environments** (repo side done; the one-time UI step below is still open). Every job that references `NPM_TOKEN` or `GPG_PRIVATE_KEY` now declares an environment:
+  - `npm-publish` -- automated jobs: `cron.yml` discover/sync/heal, `bump.yml` sync, `process-package-request.yml`, `refresh-list.yml` (GPG only)
+  - `npm-publish-manual` -- human-dispatched jobs: `depup.yml` process-package, `depup-secure.yml` secure-processing
+- [x] **`--ignore-scripts` on processed-package installs.** Already in `scripts/depup.mjs`: `getProductionInstallMethods()` and the build-dep install both pass `--ignore-scripts`, and `buildSanitizedInstallEnvironment()` removes the publish tokens from install subprocess envs.
+- [x] **Egress audit on every secret-bearing job.** `step-security/harden-runner` (v2.21.1, SHA-pinned) runs as the first step in `egress-policy: audit` mode. Each run records outbound connections per step, so a new C2-style destination now shows up in the run's insights link. The repo is public, so this is free on the community tier.
+- [x] **Pin GitHub Actions to commit SHAs.** Done in PR #1257; harden-runner is SHA-pinned too.
+- [x] **Least-privilege tokens on every workflow.** Each workflow now has top-level `permissions: {}`, and every job declares its own scope: `contents: read`, or `contents: write` only on jobs that push to main.
+- [x] **Secrets no longer interpolated into shell source.** The 8 `Import GPG Key` steps used `echo "${{ secrets.GPG_PRIVATE_KEY }}"`, which wrote the key into the generated step script on disk. They now pass it through `env:`.
+- [x] **Regression guard.** `scripts/__tests__/workflow-hardening.test.js` fails CI if any workflow loses top-level `permissions: {}`, uses a non-SHA action ref, interpolates `secrets.*` into a `run:` script, or has a secret-bearing job without a publish environment and harden-runner as its first step. `test.yml` now also triggers on `.github/workflows/**`.
+- [ ] **Network restriction (block mode).** Leave audit mode running for about 2 weeks of cron cycles. Then collect the observed endpoints from the harden-runner insights and switch to `egress-policy: block` with an `allowed-endpoints:` list (expected: `registry.npmjs.org:443`, `github.com:443`, `api.github.com:443`, `objects.githubusercontent.com:443`, plus the npm/GitHub endpoints that show up). This is the real fix for contributing factor 3. Switching to block mode before there is a baseline could break the factory.
+- [ ] **Split untrusted processing from publishing.** Contributing factor 4 is still structurally open. The same job both installs and tests untrusted packages and holds `NPM_TOKEN`/GPG. The full fix is a two-job pipeline: an unprivileged build job uploads the tarball as an artifact, and a publish job in `npm-publish` downloads it and runs only `npm publish` plus the commit. This is a larger refactor of `depup.mjs` and the cron sharding, so it is not done yet.
+- [ ] **npm audit before processing.** Deliberately not wired into the cron path. depup's purpose is to republish packages whose upstream trees *have* vulnerabilities, so a pre-processing audit gate would block most of the catalog. `depup-security.mjs` already runs `npm audit` in the opt-in secure pipeline. A compromise-specific control (a malware-advisory deny-list checked before install) would fit better than a severity gate.
+
+### ONE-TIME GitHub settings (manual -- Mikl, in the UI)
+
+Merging the workflow change is **safe before** these steps. When a job references an environment that doesn't exist, GitHub auto-creates it with no protection rules, and repo-level secrets stay readable from environment jobs. The protection only takes effect after these steps:
+
+1. **Settings > Environments > `npm-publish`** (create if the first run hasn't already)
+   - Deployment branches and tags: **Selected branches** -> add `main`. This stops a workflow run on any other branch (e.g. a dispatched feature branch) from reaching the secrets.
+   - Required reviewers: **leave off**. This environment serves the unattended 8h cron and immediate user-submission publishing, and a reviewer gate would stall every run.
+2. **Settings > Environments > `npm-publish-manual`**
+   - Deployment branches: **Selected branches** -> `main`.
+   - Required reviewers: **add `chiefmikey`**. Leave "Prevent self-review" unchecked (solo maintainer), or no dispatch could ever be approved.
+3. **Move the secrets into the environments.** Add `NPM_TOKEN` and `GPG_PRIVATE_KEY` as environment secrets on **both** environments. Then delete the repo-level `NPM_TOKEN` and `GPG_PRIVATE_KEY` under Settings > Secrets and variables > Actions. Until the repo-level copies are deleted, environment scoping adds nothing, because the repo secrets are still visible to every job. `BOT_PAT` stays repo-level (only used for issue comments). The values have to be re-entered anyway, so this is a natural moment to do the rotation from Mitigation above.
+4. **Verify.** Run `cron.yml` via workflow_dispatch on `main`. The jobs should show a `npm-publish` deployment, `npm whoami` should pass, and the harden-runner step should print an insights link. Then dispatch `depup.yml` with `publish: false` and confirm it waits for approval.
 
 ## Postmortem
 

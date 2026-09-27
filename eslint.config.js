@@ -5,28 +5,31 @@ export default [
   {
     files: ['scripts/**/*.mjs'],
     rules: {
-      // CLI tool -- console output is the primary UI
-      'no-console': 'off',
-      // File-processing tool -- all fs calls use validated runtime paths
-      'security/detect-non-literal-fs-filename': 'off',
-      // kebab-case filenames are standard for npm script entry points
-      'unicorn/filename-case': 'off',
+      // Node.js server-side scripts -- browser compat checks are irrelevant
+      'compat/compat': 'off',
+      'max-depth': ['error', { max: 5 }],
       // Practical limits for self-contained processing scripts
-      'max-lines': ['error', { max: 900, skipBlankLines: true, skipComments: true }],
+      'max-lines': [
+        'error',
+        { max: 900, skipBlankLines: true, skipComments: true },
+      ],
       'max-lines-per-function': [
         'error',
         { max: 80, skipBlankLines: true, skipComments: true },
       ],
-      'max-depth': ['error', { max: 5 }],
       'max-params': ['error', { max: 5 }],
-      // Allow null for npm registry API compatibility
-      'unicorn/no-null': 'off',
-      // Internal data structures with validated keys -- not user-input injection vectors
-      'security/detect-object-injection': 'off',
       // Sequential awaits are intentional for rate-limited npm API calls and ordered processing
       'no-await-in-loop': 'off',
-      // Node.js server-side scripts -- browser compat checks are irrelevant
-      'compat/compat': 'off',
+      // CLI tool -- console output is the primary UI
+      'no-console': 'off',
+      // File-processing tool -- all fs calls use validated runtime paths
+      'security/detect-non-literal-fs-filename': 'off',
+      // Internal data structures with validated keys -- not user-input injection vectors
+      'security/detect-object-injection': 'off',
+      // kebab-case filenames are standard for npm script entry points
+      'unicorn/filename-case': 'off',
+      // Allow null for npm registry API compatibility
+      'unicorn/no-null': 'off',
     },
   },
   {
@@ -74,18 +77,25 @@ export default [
     files: ['scripts/depup.mjs'],
     rules: {
       complexity: ['error', { max: 15 }],
-      'sonarjs/cognitive-complexity': ['warn', 15],
-      'max-lines': ['error', { max: 1210, skipBlankLines: true, skipComments: true }],
+      'max-lines': [
+        'error',
+        { max: 1210, skipBlankLines: true, skipComments: true },
+      ],
       'max-lines-per-function': [
         'error',
         { max: 85, skipBlankLines: true, skipComments: true },
       ],
+      'sonarjs/cognitive-complexity': ['warn', 15],
     },
   },
   {
     // Discovery pipeline, malware scanner, and secure pipeline have higher complexity
     // due to multi-backend fallback logic and sharded orchestration
-    files: ['scripts/cron-discover.mjs', 'scripts/depup-security.mjs', 'scripts/security-scan.mjs'],
+    files: [
+      'scripts/cron-discover.mjs',
+      'scripts/depup-security.mjs',
+      'scripts/security-scan.mjs',
+    ],
     rules: {
       complexity: ['error', { max: 18 }],
       'sonarjs/cognitive-complexity': ['warn', 24],
@@ -94,7 +104,8 @@ export default [
   {
     files: ['scripts/__tests__/**'],
     rules: {
-      // Test file relaxations
+      'import-x/no-extraneous-dependencies': 'off',
+      'import-x/no-relative-parent-imports': 'off',
       'jest/expect-expect': 'off',
       'jest/max-expects': 'off',
       'jest/no-conditional-expect': 'off',
@@ -104,22 +115,24 @@ export default [
       'jest/prefer-expect-assertions': 'off',
       'jest/require-to-throw-message': 'off',
       'jest/require-top-level-describe': 'off',
-      'import-x/no-extraneous-dependencies': 'off',
-      'import-x/no-relative-parent-imports': 'off',
       'max-lines': 'off',
+      'max-lines-per-function': 'off',
       'no-await-in-loop': 'off',
       'no-unused-vars': 'off',
       'require-atomic-updates': 'off',
-      'simple-import-sort/imports': 'off',
       'security/detect-non-literal-fs-filename': 'off',
       'security/detect-object-injection': 'off',
       'security/detect-unsafe-regex': 'off',
+      'simple-import-sort/imports': 'off',
       'sonarjs/no-duplicate-string': 'off',
       'unicorn/consistent-function-scoping': 'off',
+      // Test file relaxations
+      // kebab-case filenames are the established convention across scripts/__tests__/
+      // (add-package-cli.test.js, cron-discover-exec.test.js, etc.)
+      'unicorn/filename-case': 'off',
       'unicorn/no-null': 'off',
       'unicorn/no-unused-properties': 'off',
       'unicorn/prefer-number-properties': 'off',
-      'max-lines-per-function': 'off',
     },
   },
 ];

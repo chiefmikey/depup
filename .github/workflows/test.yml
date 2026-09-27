@@ -12,18 +12,18 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'jest.config.cjs'
-      - '.github/workflows/test.yml'
+      - '.github/workflows/**'
   pull_request:
     paths:
       - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
       - 'jest.config.cjs'
-      - '.github/workflows/test.yml'
+      - '.github/workflows/**'
 
-# Read-only: runs tests, never pushes
-permissions:
-  contents: read
+# Least privilege: no workflow-wide token scopes. Each job declares exactly
+# what it needs (contents: write only on jobs that push package data to main).
+permissions: {}
 
 concurrency:
   group: depup-test-${{ github.ref }}
@@ -33,6 +33,8 @@ jobs:
   test:
     name: Unit Tests (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     timeout-minutes: 15
     strategy:
       fail-fast: false

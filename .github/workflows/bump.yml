@@ -10,9 +10,9 @@ on:
       - 'CONTRIBUTING.md'
   workflow_dispatch: {}
 
-# Commits synced package data and pushes to main
-permissions:
-  contents: write
+# Least privilege: no workflow-wide token scopes. Each job declares exactly
+# what it needs (contents: write only on jobs that push package data to main).
+permissions: {}
 
 concurrency:
   group: depup-sync-${{ github.ref }}
@@ -22,6 +22,9 @@ jobs:
   sync:
     name: Sync Packages
     runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: write
     timeout-minutes: 30
     # Skip if the push was from an automated workflow (De Pup or github-actions)
     if: >-
@@ -29,6 +32,11 @@ jobs:
       (github.event.head_commit.author.name != 'De Pup' &&
        github.event.head_commit.author.name != 'github-actions[bot]')
     steps:
+      - name: Harden runner (egress audit)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -54,8 +62,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |

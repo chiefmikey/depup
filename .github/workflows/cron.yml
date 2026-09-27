@@ -20,9 +20,9 @@ on:
         type: boolean
         default: false
 
-# All three jobs commit package data and push to main
-permissions:
-  contents: write
+# Least privilege: no workflow-wide token scopes. Each job declares exactly
+# what it needs (contents: write only on jobs that push package data to main).
+permissions: {}
 
 concurrency:
   group: depup-cron
@@ -32,6 +32,9 @@ jobs:
   discover:
     name: Discover (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: write
     timeout-minutes: 90
     if: ${{ !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 0') }}
     strategy:
@@ -40,6 +43,11 @@ jobs:
         shard: [0, 1, 2]
 
     steps:
+      - name: Harden runner (egress audit)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -65,8 +73,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |
@@ -173,6 +183,9 @@ jobs:
     name: Sync (shard ${{ matrix.shard }})
     needs: discover
     runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: write
     timeout-minutes: 120
     if: ${{ !cancelled() && !inputs.discover_only && (needs.discover.result == 'success' || needs.discover.result == 'skipped') }}
     strategy:
@@ -181,6 +194,11 @@ jobs:
         shard: [0, 1, 2]
 
     steps:
+      - name: Harden runner (egress audit)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
       - name: Checkout (latest main, including discover pushes)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -207,8 +225,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |
@@ -308,10 +328,18 @@ jobs:
     name: Self-Healing
     needs: sync
     runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: write
     timeout-minutes: 15
     if: ${{ !cancelled() && !inputs.discover_only }}
 
     steps:
+      - name: Harden runner (egress audit)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
       - name: Checkout (latest main after all syncs)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -329,8 +357,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |

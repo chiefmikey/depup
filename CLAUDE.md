@@ -107,7 +107,13 @@ npm run heal                # Self-healing repairs
 ## Merging PRs
 - **Squash is the house style.** Merge with `gh pr merge <n> --squash --delete-branch --admin`. The `--admin` is expected: a `main` ruleset blocks a plain merge even when the PR is green, so bare `--squash` fails with "the base branch policy prohibits the merge".
 - **Never `--merge`.** Do not infer the merge method by skimming `git log` titles -- `main` is dominated by the every-8h package-factory cron commits, which are ordinary 1-parent commits that give no signal either way. Verify with parent count instead: `git log --format='%h %p | %s' -20 origin/main` (two hashes in the `%p` column = merge commit, one = squash). A wrong-method merge is not reversible without rewriting shared history. This mistake was made on PR #1298 (2026-08-31).
-- A workflow-only change matches no CI path filter, so **no checks fire** -- an empty `statusCheckRollup` is expected, not a problem. `mergeStateStatus=CLEAN` + `mergeable=MERGEABLE` is the green signal there.
+- `test.yml` triggers on `.github/workflows/**`, so workflow-only changes run Unit Tests too, including `workflow-hardening.test.js`, the supply-chain guard. A change that matches no CI path filter (e.g. docs-only) fires **no checks**. An empty `statusCheckRollup` is expected there, and `mergeStateStatus=CLEAN` + `mergeable=MERGEABLE` is the green signal.
+
+## Workflow Security Invariants (enforced by `scripts/__tests__/workflow-hardening.test.js`)
+- Top-level `permissions: {}`; every job declares its own (`contents: write` only if it pushes)
+- All `uses:` pinned to 40-char commit SHAs
+- Never interpolate `${{ secrets.* }}` into `run:` -- pass via `env:`
+- Any job touching `NPM_TOKEN`/`GPG_PRIVATE_KEY` must set `environment: npm-publish` (automated) or `npm-publish-manual` (human-dispatched, required reviewers) and start with `step-security/harden-runner`. See `docs/incidents/2026-04-03-axios-supply-chain-compromise.md` for the one-time environment setup
 
 ## Common Mistakes
 - `mikey-pro` sets `noInlineConfig: true` -- use eslint.config.js overrides, not inline comments
