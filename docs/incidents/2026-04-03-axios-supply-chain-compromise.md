@@ -1,6 +1,6 @@
 # Incident: axios npm supply chain compromise -- secrets exfiltration
 
-_Status: ACTIVE_
+_Status: MITIGATED_
 _Reported: 2026-04-03 11:34 (GitHub notification received)_
 _Compromise Window: 2026-03-31 00:38:44 UTC to 00:38:49 UTC_
 _Severity: P1_
@@ -143,3 +143,18 @@ Pending secret rotation (manual steps above). After rotation:
 ## Postmortem
 
 _Phase 5 -- to be completed after mitigation_
+
+## Remaining (verified 2026-09-27)
+
+- **NPM_TOKEN rotation** -- unverifiable from code; manual (npmjs.com token revoke/regenerate + GitHub secret update leave no repo trace).
+- **GPG_PRIVATE_KEY rotation** -- appears NOT done: all 8 workflows still reference the pre-incident signing key ID `5A5141965C39129D` (e.g. `.github/workflows/cron.yml:77,219,341`, `depup.yml:113`, `bump.yml:66`, `refresh-list.yml:43`, `process-package-request.yml:244,293`, `depup-secure.yml:387`). If the key had been rotated per the runbook, this ID would have changed. Unverifiable from code whether the underlying key material was rotated while keeping the same ID; as recorded, this is unconfirmed.
+- **BOT_PAT rotation** -- unverifiable from code; manual (GitHub PAT revoke/regenerate leaves no repo trace).
+- **Verify new NPM_TOKEN / GPG key / BOT_PAT work post-rotation** (Fix checklist) -- blocked on the rotations above; unverifiable from code.
+- **Hardening: dedicated workflow environment with required reviewers for npm publish** -- not done. No `environment:` key present in any workflow (`grep -n "environment:" .github/workflows/*.yml` -> no matches).
+- **Hardening: network restrictions during package install (registry.npmjs.org-only egress)** -- not done. No firewall/egress-allowlist mechanism found in `.github/workflows/*.yml` or `scripts/*.mjs`.
+
+Verified done:
+- **`--ignore-scripts` on untrusted package installs**: commit `b5d81eb4a1` ("fix: prevent NPM_TOKEN exfiltration via untrusted install scripts", PR #1277, merged) adds `--ignore-scripts` to every install-method variant in `scripts/depup.mjs` (`getProductionInstallMethods`/`getTestInstallMethods`) and scrubs `NPM_TOKEN`/`NODE_AUTH_TOKEN` from the child install-subprocess environment via `buildSanitizedInstallEnvironment()`; confirmed present on `origin/main` (`scripts/depup.mjs:17,756-773,876-877`).
+- **GitHub Actions pinned to commit SHAs**: commit `c519f78a35` ("fix: harden GitHub Actions workflows against supply-chain attacks", PR #1257, merged) pins all 38 action references across 8 workflows to full commit SHAs with version comments; confirmed present on `origin/main` (e.g. `.github/workflows/cron.yml:44,49,185,191,316,322` -> `actions/checkout@3d3c42e5...` `# v7.0.1`, `actions/setup-node@820762786...` `# v7.0.0`). Same commit also added least-privilege `permissions:` blocks and disabled git credential persistence for jobs that npm-install untrusted packages.
+- **npm audit check before processing packages**: `scripts/depup-security.mjs` runs `npm audit --audit-level=moderate --json` (`runNpmAuditCommand`, line 331-333) and fails on critical/high vulnerabilities (`checkAuditForCritical`, line 296) plus a Snyk scan (`runSnykScan`, line 323) as part of the pre-install security sandbox; confirmed present on `origin/main`.
+- **No evidence of exploitation**: the incident doc itself was never updated after filing; repo history since 2026-04-03 shows only routine `chore: sync packages via cron` / dependency-bump commits and legitimate hardening PRs (#1257, #1277, #1256, #1279, #1283) -- no unauthorized commits, no C2 IP references, no persistence mechanisms found in current `origin/main` tree.
