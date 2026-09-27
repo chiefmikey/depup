@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.5 | **Updated**: 9/24/2026 | **Import test**: failed
+**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.6 | **Updated**: 9/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -28,7 +28,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tybys/wasm-util | `0.9.0` | `^0.10.4` |
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
 | agent-base | `6.0.2` | `^9.0.0` |
-| ansi-regex | `5.0.1` | `^6.3.0` |
+| ansi-regex | `5.0.1` | `^6.4.0` |
 | ansi-styles | `4.3.0` | `^7.0.0` |
 | argparse | `2.0.1` | `^3.0.2` |
 | asynckit | `0.4.0` | `^0.5.0` |
@@ -37,7 +37,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | bl | `4.1.0` | `^7.0.12` |
 | brace-expansion | `5.0.9` | `^5.0.12` |
 | buffer | `5.7.1` | `^6.0.3` |
-| chalk | `4.1.2` | `^6.0.0` |
+| bundle-name | `4.1.0` | `^4.1.1` |
+| chalk | `4.1.2` | `^6.0.1` |
 | cli-cursor | `3.1.0` | `^5.0.0` |
 | cli-spinners | `2.6.1` | `^3.4.0` |
 | cliui | `8.0.1` | `^9.0.1` |
@@ -47,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | default-browser | `5.2.1` | `^5.5.1` |
 | default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
-| dotenv | `16.4.7` | `^18.0.3` |
+| dotenv | `16.4.7` | `^18.0.4` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^6.0.1` |
 | emoji-regex | `8.0.0` | `^11.0.0` |
