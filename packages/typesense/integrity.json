@@ -134,5 +134,20 @@
       "timestamp": "2026-07-26T01:05:24.400Z",
       "version": "3.0.6-depup.54"
     }
+  },
+  "3.1.0": {
+    "0": {
+      "changes": {
+        "axios": {
+          "from": "^1.15.0",
+          "to": "^1.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:04:30.764Z",
+      "version": "3.1.0-depup.0"
+    }
   }
 }

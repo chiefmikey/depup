@@ -12,15 +12,11 @@ npm install @depup/type-is
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.0 | **DepUp version**: 2.1.0-depup.53 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.0 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| media-typer | `^1.1.0` | `^2.0.0` |
-| mime-types | `^3.0.0` | `^3.0.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/type-is&labels=bug).
 

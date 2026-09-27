@@ -1,0 +1,71 @@
+{
+  "name": "@depup/type-is",
+  "version": "3.0.0-depup.0",
+  "description": "Infer the content-type of a request. (with updated dependencies)",
+  "keywords": [
+    "type-is",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "content",
+    "type",
+    "checking"
+  ],
+  "repository": "jshttp/type-is",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/express"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)"
+  ],
+  "type": "module",
+  "exports": "./dist/index.js",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "bench": "vitest bench",
+    "build": "ts-scripts build",
+    "format": "ts-scripts format",
+    "specs": "ts-scripts specs",
+    "test": "ts-scripts test"
+  },
+  "dependencies": {
+    "content-type": "^3.1.1"
+  },
+  "devDependencies": {
+    "@borderless/ts-scripts": "^0.15.0",
+    "@types/node": "^22.13.10",
+    "@vitest/coverage-v8": "^5.0.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  },
+  "engines": {
+    "node": ">= 22"
+  },
+  "ts-scripts": {
+    "dist": [
+      "dist"
+    ],
+    "project": [
+      "tsconfig.build.json"
+    ]
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "type-is",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-09-27T01:04:22.945Z",
+    "smokeTest": "passed"
+  }
+}

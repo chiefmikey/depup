@@ -308,5 +308,15 @@
       "timestamp": "2026-09-20T01:02:40.121Z",
       "version": "5.33.12-depup.0"
     }
+  },
+  "5.33.13": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:03:55.086Z",
+      "version": "5.33.13-depup.0"
+    }
   }
 }

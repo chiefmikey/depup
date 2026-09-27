@@ -1,0 +1,51 @@
+{
+  "name": "@depup/typescript__typescript6",
+  "version": "6.0.2-depup.0",
+  "author": "Microsoft Corp.",
+  "homepage": "https://www.typescriptlang.org/",
+  "license": "Apache-2.0",
+  "description": "TypeScript is a language for application scale JavaScript development (with updated dependencies)",
+  "keywords": [
+    "@typescript/typescript6",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/microsoft/TypeScript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/TypeScript.git"
+  },
+  "main": "./lib/typescript.js",
+  "types": "./lib/typescript.d.ts",
+  "bin": {
+    "tsc6": "./bin/tsc6"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "LICENSE.txt",
+    "README.md",
+    "changes.json"
+  ],
+  "dependencies": {
+    "@typescript/old": "npm:typescript@^6"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@typescript/typescript6",
+    "originalVersion": "6.0.2",
+    "processedAt": "2026-09-27T00:58:59.638Z",
+    "smokeTest": "passed"
+  }
+}
