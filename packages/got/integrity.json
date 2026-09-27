@@ -581,6 +581,31 @@
       "status": "published",
       "timestamp": "2026-09-17T16:11:25.541Z",
       "version": "16.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@sindresorhus/is": {
+          "from": "^8.0.0",
+          "to": "^8.1.0"
+        },
+        "cacheable-request": {
+          "from": "^13.0.18",
+          "to": "^13.0.19"
+        },
+        "type-fest": {
+          "from": "^5.6.0",
+          "to": "^5.10.0"
+        },
+        "uint8array-extras": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:08:28.216Z",
+      "version": "16.0.0-depup.2"
     }
   }
 }
