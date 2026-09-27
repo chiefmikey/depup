@@ -98,6 +98,23 @@
       "status": "published",
       "timestamp": "2026-09-17T16:10:54.033Z",
       "version": "6.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "type-fest": {
+          "from": "^5.8.0",
+          "to": "^5.10.0"
+        },
+        "uint8array-extras": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:08:25.492Z",
+      "version": "6.0.0-depup.3"
     }
   }
 }

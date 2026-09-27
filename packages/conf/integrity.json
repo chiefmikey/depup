@@ -129,6 +129,43 @@
       "status": "published",
       "timestamp": "2026-07-21T17:13:29.652Z",
       "version": "15.1.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        },
+        "atomically": {
+          "from": "^2.0.3",
+          "to": "^2.1.1"
+        },
+        "dot-prop": {
+          "from": "^10.0.0",
+          "to": "^10.2.0"
+        },
+        "env-paths": {
+          "from": "^3.0.0",
+          "to": "^4.0.0"
+        },
+        "json-schema-typed": {
+          "from": "^8.0.1",
+          "to": "^8.0.2"
+        },
+        "semver": {
+          "from": "^7.7.2",
+          "to": "^7.8.5"
+        },
+        "uint8array-extras": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:08:25.049Z",
+      "version": "15.1.0-depup.4"
     }
   }
 }

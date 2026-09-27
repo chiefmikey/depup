@@ -12,16 +12,16 @@ npm install @depup/imagemin-pngquant
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.2 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | environment | `^1.0.0` | `^1.1.0` |
-| execa | `^8.0.1` | `^10.0.0` |
+| execa | `^8.0.1` | `^10.0.1` |
 | ow | `^2.0.0` | `^3.1.1` |
-| uint8array-extras | `^1.1.0` | `^1.5.0` |
+| uint8array-extras | `^1.1.0` | `^1.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/imagemin-pngquant&labels=bug).

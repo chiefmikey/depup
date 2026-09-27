@@ -276,6 +276,27 @@
       "status": "published",
       "timestamp": "2026-09-24T16:12:54.491Z",
       "version": "11.16.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "content-type": {
+          "from": "^2.1.0",
+          "to": "^3.1.1"
+        },
+        "file-type": {
+          "from": "^21.3.4",
+          "to": "^22.1.1"
+        },
+        "uint8array-extras": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:08:46.520Z",
+      "version": "11.16.1-depup.1"
     }
   }
 }

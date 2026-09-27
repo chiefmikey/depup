@@ -12,7 +12,7 @@ npm install @depup/conf
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 15.1.0 | **DepUp version**: 15.1.0-depup.3 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 15.1.0 | **DepUp version**: 15.1.0-depup.4 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,6 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | env-paths | `^3.0.0` | `^4.0.0` |
 | json-schema-typed | `^8.0.1` | `^8.0.2` |
 | semver | `^7.7.2` | `^7.8.5` |
+| uint8array-extras | `^1.5.0` | `^1.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/conf&labels=bug).

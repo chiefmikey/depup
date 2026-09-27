@@ -1,7 +1,7 @@
 {
   "name": "@depup/imagemin",
-  "version": "9.0.1-depup.0",
-  "description": "[DepUp] Minify images seamlessly",
+  "version": "9.0.1-depup.5",
+  "description": "Minify images seamlessly (with updated dependencies)",
   "license": "MIT",
   "repository": "imagemin/imagemin",
   "funding": "https://github.com/sponsors/sindresorhus",
@@ -19,10 +19,12 @@
     "README.md"
   ],
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "imagemin",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "minify",
     "compress",
     "image",
@@ -36,14 +38,14 @@
   "dependencies": {
     "change-file-extension": "^1.0.0",
     "environment": "^1.1.0",
-    "file-type": "^21.3.3",
-    "globby": "^16.1.1",
-    "image-dimensions": "^2.5.0",
+    "file-type": "^22.1.1",
+    "globby": "^16.2.4",
+    "image-dimensions": "^2.6.0",
     "junk": "^4.0.1",
     "ow": "^3.1.1",
     "p-pipe": "^4.0.0",
     "slash": "^5.1.0",
-    "uint8array-extras": "^1.5.0"
+    "uint8array-extras": "^1.6.0"
   },
   "devDependencies": {
     "ava": "^6.1.2",
@@ -66,15 +68,15 @@
       },
       "file-type": {
         "from": "^19.0.0",
-        "to": "^21.3.3"
+        "to": "^22.1.1"
       },
       "globby": {
         "from": "^14.0.1",
-        "to": "^16.1.1"
+        "to": "^16.2.4"
       },
       "image-dimensions": {
         "from": "^2.3.0",
-        "to": "^2.5.0"
+        "to": "^2.6.0"
       },
       "ow": {
         "from": "^2.0.0",
@@ -82,13 +84,13 @@
       },
       "uint8array-extras": {
         "from": "^1.1.0",
-        "to": "^1.5.0"
+        "to": "^1.6.0"
       }
     },
     "depsUpdated": 7,
     "originalPackage": "imagemin",
     "originalVersion": "9.0.1",
-    "processedAt": "2026-03-17T19:31:36.329Z",
+    "processedAt": "2026-09-27T01:08:43.821Z",
     "smokeTest": "passed"
   }
 }
