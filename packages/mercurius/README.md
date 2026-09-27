@@ -12,7 +12,7 @@ npm install @depup/mercurius
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.10.1 | **DepUp version**: 16.10.1-depup.0 | **Updated**: 9/26/2026 | **Import test**: passed
+**Original version**: 16.10.1 | **DepUp version**: 16.10.1-depup.1 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
@@ -27,7 +27,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | readable-stream | `^4.0.0` | `^4.7.0` |
 | safe-stable-stringify | `^2.3.0` | `^2.5.0` |
 | single-user-cache | `^2.0.0` | `^2.1.0` |
-| tiny-lru | `^11.0.0` | `^13.0.1` |
+| tiny-lru | `^11.0.0` | `^13.1.0` |
 | ws | `^8.2.2` | `^8.22.0` |
 
 
