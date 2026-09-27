@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.65.0-depup.10",
+  "version": "6.65.0-depup.15",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -121,7 +121,7 @@
     "bson-objectid": "2.0.4",
     "cache-manager": "^7.2.9",
     "cache-manager-ioredis": "2.1.0",
-    "chalk": "^6.0.0",
+    "chalk": "^6.0.1",
     "charset": "1.0.1",
     "cheerio": "1.2.0",
     "clsx": "2.1.1",
@@ -194,7 +194,7 @@
     "mysql2": "3.24.4",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
-    "nodemailer": "^10.0.10",
+    "nodemailer": "^10.0.11",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -204,14 +204,14 @@
     "rss": "1.2.2",
     "sanitize-html": "2.17.7",
     "semver": "7.8.5",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "simple-dom": "1.4.0",
     "stoppable": "1.1.0",
     "stripe": "^22.6.2",
     "temporal-polyfill": "^1.0.5",
     "terser": "^5.51.2",
     "tiny-glob": "0.2.9",
-    "tldts": "^7.4.15",
+    "tldts": "^7.4.16",
     "type-fest": "^5.10.0",
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
@@ -325,7 +325,7 @@
       },
       "chalk": {
         "from": "4.1.2",
-        "to": "^6.0.0"
+        "to": "^6.0.1"
       },
       "compression": {
         "from": "1.8.1",
@@ -485,7 +485,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^10.0.10"
+        "to": "^10.0.11"
       },
       "otplib": {
         "from": "12.0.1",
@@ -501,7 +501,7 @@
       },
       "sharp": {
         "from": "0.35.3",
-        "to": "^0.35.4"
+        "to": "^0.35.5"
       },
       "stripe": {
         "from": "8.222.0",
@@ -517,7 +517,7 @@
       },
       "tldts": {
         "from": "^7.4.4",
-        "to": "^7.4.15"
+        "to": "^7.4.16"
       },
       "type-fest": {
         "from": "5.7.0",
@@ -535,7 +535,7 @@
     "depsUpdated": 75,
     "originalPackage": "ghost",
     "originalVersion": "6.65.0",
-    "processedAt": "2026-09-26T00:33:11.518Z",
+    "processedAt": "2026-09-27T16:10:21.222Z",
     "smokeTest": "failed"
   }
 }
