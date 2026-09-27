@@ -375,5 +375,24 @@
       "timestamp": "2026-09-20T00:59:42.437Z",
       "version": "17.0.14-depup.0"
     }
+  },
+  "17.0.15": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.29.7",
+          "to": "^8.0.5"
+        },
+        "use-sync-external-store": {
+          "from": "^1.6.0",
+          "to": "^1.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:01:39.803Z",
+      "version": "17.0.15-depup.0"
+    }
   }
 }

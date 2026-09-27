@@ -12,28 +12,32 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.15.0 | **DepUp version**: 6.15.0-depup.0 | **Updated**: 9/20/2026 | **Import test**: failed
+**Original version**: 6.16.0 | **DepUp version**: 6.16.0-depup.0 | **Updated**: 9/27/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mux/mux-player-react | `^3.13.2` | `^3.13.4` |
-| @portabletext/sanity-bridge | `^4.1.0` | `^4.1.1` |
-| @sanity/cli | `^8.10.0` | `^8.12.0` |
-| @sanity/client | `^8.6.1` | `^8.6.2` |
-| @sanity/diff-patch | `^5.0.0` | `^6.0.0` |
-| @sanity/media-library-types | `^1.6.0` | `^1.7.0` |
-| @sanity/migrate | `^8.0.2` | `^8.0.4` |
-| @sanity/sdk | `^3.2.0` | `^3.3.0` |
-| @sanity/sdk-react | `^3.2.0` | `^3.3.0` |
-| @sentry/react | `^10.73.0` | `^10.75.0` |
-| @tanstack/react-virtual | `^3.14.11` | `^3.14.13` |
-| isomorphic-dompurify | `2.36.0` | `^4.3.0` |
-| motion | `^13.2.0` | `^13.4.0` |
-| react-i18next | `^17.0.13` | `^17.0.14` |
-| web-vitals | `^6.2.1` | `^6.2.2` |
-| xstate | `^5.32.6` | `^5.33.2` |
+| @portabletext/editor | `^8.1.8` | `^8.2.1` |
+| @portabletext/plugin-dnd | `^2.0.14` | `^2.0.16` |
+| @portabletext/plugin-list-index | `^2.0.12` | `^2.0.14` |
+| @portabletext/plugin-markdown-shortcuts | `^9.0.13` | `^9.0.15` |
+| @portabletext/plugin-one-line | `^8.0.12` | `^8.0.14` |
+| @portabletext/plugin-paste-link | `^5.0.12` | `^5.0.14` |
+| @portabletext/plugin-table | `^2.0.12` | `^2.0.14` |
+| @portabletext/plugin-typography | `^9.0.13` | `^9.0.15` |
+| @sanity/cli | `^8.12.0` | `^8.13.0` |
+| @sanity/client | `^8.6.2` | `^8.7.0` |
+| @sanity/diff-patch | `^5.0.0` | `^7.0.0` |
+| @sanity/media-library-types | `^1.7.0` | `^1.7.1` |
+| @sanity/sdk | `^3.3.0` | `^3.5.0` |
+| @sanity/sdk-react | `^3.3.0` | `^3.5.0` |
+| @sanity/ui | `^4.2.3` | `^4.2.7` |
+| @sentry/react | `^10.75.0` | `^11.0.0` |
+| isomorphic-dompurify | `2.36.0` | `^4.4.0` |
+| motion | `^13.4.0` | `^13.4.4` |
+| react-i18next | `^17.0.14` | `^17.0.15` |
+| react-rx | `^7.0.0` | `^7.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

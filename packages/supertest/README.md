@@ -12,11 +12,14 @@ npm install @depup/supertest
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.2.2 | **DepUp version**: 7.2.2-depup.61 | **Updated**: 9/20/2026 | **Import test**: passed
+**Original version**: 7.3.0 | **DepUp version**: 7.3.0-depup.0 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| superagent | `^10.3.0` | `^10.4.1` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/supertest&labels=bug).
 

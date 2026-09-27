@@ -242,5 +242,24 @@
       "timestamp": "2026-07-26T01:05:03.881Z",
       "version": "29.4.12-depup.0"
     }
+  },
+  "29.4.14": {
+    "0": {
+      "changes": {
+        "type-fest": {
+          "from": "^4.41.0",
+          "to": "^5.10.0"
+        },
+        "yargs-parser": {
+          "from": "^21.1.1",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-27T01:04:47.022Z",
+      "version": "29.4.14-depup.0"
+    }
   }
 }
