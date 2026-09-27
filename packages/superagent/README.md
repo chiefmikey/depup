@@ -12,7 +12,7 @@ npm install @depup/superagent
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.0 | **DepUp version**: 10.3.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 10.4.1 | **DepUp version**: 10.4.1-depup.0 | **Updated**: 9/27/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,8 +20,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | component-emitter | `^1.3.1` | `^2.0.0` |
 | debug | `^4.3.7` | `^4.4.3` |
+| form-data | `^4.0.5` | `^4.0.6` |
 | mime | `2.6.0` | `^4.1.0` |
-| qs | `^6.14.1` | `^6.15.0` |
+| qs | `^6.14.1` | `^6.16.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/superagent&labels=bug).

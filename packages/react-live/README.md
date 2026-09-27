@@ -12,15 +12,11 @@ npm install @depup/react-live
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.8 | **DepUp version**: 4.1.8-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| prism-react-renderer | `^2.4.0` | `^2.4.1` |
-| sucrase | `^3.35.0` | `^3.35.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-live&labels=bug).
 
