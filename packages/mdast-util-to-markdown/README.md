@@ -12,7 +12,7 @@ npm install @depup/mdast-util-to-markdown
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.1.2 | **DepUp version**: 2.1.2-depup.53 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 2.1.3 | **DepUp version**: 2.1.3-depup.0 | **Updated**: 9/27/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,8 +22,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/unist | `^3.0.0` | `^3.0.3` |
 | longest-streak | `^3.0.0` | `^3.1.0` |
 | mdast-util-phrasing | `^4.0.0` | `^4.1.0` |
+| micromark-util-character | `^2.0.0` | `^2.1.1` |
 | micromark-util-classify-character | `^2.0.0` | `^2.0.1` |
 | micromark-util-decode-string | `^2.0.0` | `^2.0.1` |
+| micromark-util-html-tag-name | `^2.0.0` | `^2.0.1` |
 | unist-util-visit | `^5.0.0` | `^5.1.0` |
 | zwitch | `^2.0.0` | `^2.0.4` |
 
