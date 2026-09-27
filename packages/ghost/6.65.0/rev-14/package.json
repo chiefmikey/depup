@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.65.0-depup.9",
+  "version": "6.65.0-depup.14",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,7 +46,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1140.0",
+    "@aws-sdk/client-s3": "^3.1141.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "^6.0.0",
     "@faker-js/faker": "^10.6.0",
@@ -121,7 +121,7 @@
     "bson-objectid": "2.0.4",
     "cache-manager": "^7.2.9",
     "cache-manager-ioredis": "2.1.0",
-    "chalk": "^6.0.0",
+    "chalk": "^6.0.1",
     "charset": "1.0.1",
     "cheerio": "1.2.0",
     "clsx": "2.1.1",
@@ -194,7 +194,7 @@
     "mysql2": "3.24.4",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
-    "nodemailer": "^10.0.10",
+    "nodemailer": "^10.0.11",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -233,7 +233,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1140.0"
+        "to": "^3.1141.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -325,7 +325,7 @@
       },
       "chalk": {
         "from": "4.1.2",
-        "to": "^6.0.0"
+        "to": "^6.0.1"
       },
       "compression": {
         "from": "1.8.1",
@@ -485,7 +485,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^10.0.10"
+        "to": "^10.0.11"
       },
       "otplib": {
         "from": "12.0.1",
@@ -535,7 +535,7 @@
     "depsUpdated": 75,
     "originalPackage": "ghost",
     "originalVersion": "6.65.0",
-    "processedAt": "2026-09-25T16:10:21.837Z",
+    "processedAt": "2026-09-27T08:11:09.191Z",
     "smokeTest": "failed"
   }
 }
