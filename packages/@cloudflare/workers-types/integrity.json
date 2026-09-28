@@ -696,5 +696,15 @@
       "timestamp": "2026-09-27T03:19:17.442Z",
       "version": "5.20260927.1-depup.0"
     }
+  },
+  "5.20260928.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-28T08:18:33.285Z",
+      "version": "5.20260928.1-depup.0"
+    }
   }
 }
