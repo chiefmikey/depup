@@ -1314,5 +1314,32 @@
       "timestamp": "2026-09-22T16:10:22.912Z",
       "version": "1.0.42-depup.0"
     }
+  },
+  "1.0.44": {
+    "0": {
+      "changes": {
+        "@babel/generator": {
+          "from": "^7.28.5",
+          "to": "^8.0.6"
+        },
+        "@babel/parser": {
+          "from": "^7.28.5",
+          "to": "^7.29.9"
+        },
+        "@babel/traverse": {
+          "from": "^7.28.5",
+          "to": "^8.0.6"
+        },
+        "@babel/types": {
+          "from": "^7.28.5",
+          "to": "^8.0.6"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-28T16:10:41.275Z",
+      "version": "1.0.44-depup.0"
+    }
   }
 }

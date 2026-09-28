@@ -1150,5 +1150,24 @@
       "timestamp": "2026-09-21T16:11:33.413Z",
       "version": "2.15.0-depup.15"
     }
+  },
+  "3.0.0": {
+    "0": {
+      "changes": {
+        "@inquirer/confirm": {
+          "from": "^6.0.11",
+          "to": "^6.3.2"
+        },
+        "type-fest": {
+          "from": "^5.5.0",
+          "to": "^5.10.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-28T16:11:41.820Z",
+      "version": "3.0.0-depup.0"
+    }
   }
 }
