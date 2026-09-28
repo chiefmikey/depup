@@ -12,7 +12,7 @@ npm install @depup/figlet
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.11.4 | **DepUp version**: 1.11.4-depup.0 | **Updated**: 7/28/2026 | **Import test**: passed
+**Original version**: 1.12.0 | **DepUp version**: 1.12.0-depup.0 | **Updated**: 9/28/2026 | **Import test**: passed
 
 ## What changed
 

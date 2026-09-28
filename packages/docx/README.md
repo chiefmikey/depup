@@ -12,13 +12,13 @@ npm install @depup/docx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.7.2 | **DepUp version**: 9.7.2-depup.0 | **Updated**: 9/23/2026 | **Import test**: passed
+**Original version**: 9.8.0 | **DepUp version**: 9.8.0-depup.0 | **Updated**: 9/28/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/node | `^25.2.3` | `^26.6.2` |
+| @types/node | `^26.6.2` | `^26.6.3` |
 | jszip | `^3.10.1` | `^3.10.2` |
 | xml-js | `^1.6.8` | `^1.6.11` |
 
