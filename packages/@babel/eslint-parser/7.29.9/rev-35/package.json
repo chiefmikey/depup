@@ -1,6 +1,6 @@
 {
   "name": "@depup/babel__eslint-parser",
-  "version": "7.29.9-depup.30",
+  "version": "7.29.9-depup.35",
   "description": "ESLint parser that allows for linting of experimental syntax transformed by Babel (with updated dependencies)",
   "author": "The Babel Team (https://babel.dev/team)",
   "license": "MIT",
@@ -71,7 +71,7 @@
     "depsUpdated": 2,
     "originalPackage": "@babel/eslint-parser",
     "originalVersion": "7.29.9",
-    "processedAt": "2026-09-28T00:37:09.289Z",
+    "processedAt": "2026-09-29T16:10:27.579Z",
     "smokeTest": "passed"
   }
 }

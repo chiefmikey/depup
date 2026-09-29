@@ -12,17 +12,18 @@ npm install @depup/vitest__coverage-v8
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.0 | **Updated**: 9/25/2026 | **Import test**: passed
+**Original version**: 5.0.2 | **DepUp version**: 5.0.2-depup.1 | **Updated**: 9/29/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vitest/istanbul-lib-coverage | `^1.0.0` | `^1.0.1` |
-| @vitest/istanbul-lib-report | `^1.0.0` | `^1.0.1` |
+| @vitest/istanbul-lib-coverage | `^1.0.0` | `^1.0.2` |
+| @vitest/istanbul-lib-report | `^1.0.0` | `^1.0.2` |
 | ast-v8-to-istanbul | `^1.0.5` | `^1.0.7` |
 | magicast | `^0.5.4` | `^0.5.5` |
 | obug | `^2.1.4` | `^3.0.0` |
+| std-env | `^4.2.0` | `^4.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitest__coverage-v8&labels=bug).

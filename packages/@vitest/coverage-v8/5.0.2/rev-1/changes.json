@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@vitest/istanbul-lib-coverage": {
+      "from": "^1.0.0",
+      "to": "^1.0.2"
+    },
+    "@vitest/istanbul-lib-report": {
+      "from": "^1.0.0",
+      "to": "^1.0.2"
+    },
+    "ast-v8-to-istanbul": {
+      "from": "^1.0.5",
+      "to": "^1.0.7"
+    },
+    "magicast": {
+      "from": "^0.5.4",
+      "to": "^0.5.5"
+    },
+    "obug": {
+      "from": "^2.1.4",
+      "to": "^3.0.0"
+    },
+    "std-env": {
+      "from": "^4.2.0",
+      "to": "^4.3.0"
+    }
+  },
+  "timestamp": "2026-09-29T16:10:51.674Z",
+  "totalUpdated": 6
+}
