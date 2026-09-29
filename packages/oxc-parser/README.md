@@ -12,14 +12,11 @@ npm install @depup/oxc-parser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.151.0 | **DepUp version**: 0.151.0-depup.1 | **Updated**: 9/28/2026 | **Import test**: passed
+**Original version**: 0.152.0 | **DepUp version**: 0.152.0-depup.0 | **Updated**: 9/29/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @oxc-project/types | `^0.151.0` | `^0.152.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/oxc-parser&labels=bug).
 
