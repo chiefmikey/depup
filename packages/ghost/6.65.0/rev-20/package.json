@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.65.0-depup.15",
+  "version": "6.65.0-depup.20",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,12 +46,12 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1141.0",
+    "@aws-sdk/client-s3": "^3.1142.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "^6.0.0",
     "@faker-js/faker": "^10.6.0",
     "@isaacs/ttlcache": "^2.1.5",
-    "@sentry/node": "^11.0.0",
+    "@sentry/node": "^11.1.0",
     "@slack/webhook": "^8.0.2",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.0.tgz",
     "@tryghost/adapter-base-jobs": "file:components/tryghost-adapter-base-jobs-0.0.0.tgz",
@@ -155,7 +155,7 @@
     "gscan": "6.6.1",
     "handlebars": "4.7.9",
     "heic-convert": "2.1.0",
-    "hono": "^4.13.9",
+    "hono": "^4.13.11",
     "html-to-text": "^10.0.1",
     "html5parser": "^3.0.0",
     "human-number": "3.0.0",
@@ -194,7 +194,7 @@
     "mysql2": "3.24.4",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
-    "nodemailer": "^10.0.11",
+    "nodemailer": "^10.0.12",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -233,7 +233,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1141.0"
+        "to": "^3.1142.0"
       },
       "@extractus/oembed-extractor": {
         "from": "3.2.1",
@@ -249,7 +249,7 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^11.0.0"
+        "to": "^11.1.0"
       },
       "@slack/webhook": {
         "from": "7.1.0",
@@ -373,7 +373,7 @@
       },
       "hono": {
         "from": "4.12.18",
-        "to": "^4.13.9"
+        "to": "^4.13.11"
       },
       "html-to-text": {
         "from": "5.1.1",
@@ -485,7 +485,7 @@
       },
       "nodemailer": {
         "from": "8.0.11",
-        "to": "^10.0.11"
+        "to": "^10.0.12"
       },
       "otplib": {
         "from": "12.0.1",
@@ -535,7 +535,7 @@
     "depsUpdated": 75,
     "originalPackage": "ghost",
     "originalVersion": "6.65.0",
-    "processedAt": "2026-09-27T16:10:21.222Z",
+    "processedAt": "2026-09-29T08:14:09.895Z",
     "smokeTest": "failed"
   }
 }
