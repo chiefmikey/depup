@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.127 | **Updated**: 9/29/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.128 | **Updated**: 9/29/2026 | **Import test**: failed
 
 ## What changed
 
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @graphql-codegen/core | `^2.6.8` | `^6.2.1` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.4.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
-| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.8` |
+| @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.9` |
 | @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.39` |
 | @graphql-tools/load | `^7.8.14` | `^8.1.17` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
@@ -67,7 +67,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
 | dotenv | `^8.6.0` | `^18.0.4` |
-| enhanced-resolve | `^5.15.0` | `^5.25.1` |
+| enhanced-resolve | `^5.15.0` | `^5.26.0` |
 | eslint | `^7.32.0` | `^10.11.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |

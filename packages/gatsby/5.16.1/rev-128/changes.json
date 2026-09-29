@@ -2,15 +2,15 @@
   "bumped": {
     "@babel/code-frame": {
       "from": "^7.18.6",
-      "to": "^8.0.0"
+      "to": "^8.0.6"
     },
     "@babel/core": {
       "from": "^7.20.12",
-      "to": "^8.0.5"
+      "to": "^8.0.6"
     },
     "@babel/eslint-parser": {
       "from": "^7.19.1",
-      "to": "^8.0.5"
+      "to": "^7.29.9"
     },
     "@babel/helper-plugin-utils": {
       "from": "^7.20.2",
@@ -18,7 +18,7 @@
     },
     "@babel/parser": {
       "from": "^7.20.13",
-      "to": "^8.0.5"
+      "to": "^7.29.9"
     },
     "@babel/runtime": {
       "from": "^7.20.13",
@@ -26,11 +26,11 @@
     },
     "@babel/traverse": {
       "from": "^7.20.13",
-      "to": "^8.0.5"
+      "to": "^8.0.6"
     },
     "@babel/types": {
       "from": "^7.20.7",
-      "to": "^8.0.5"
+      "to": "^8.0.6"
     },
     "@builder.io/partytown": {
       "from": "^0.7.5",
@@ -42,15 +42,15 @@
     },
     "@graphql-codegen/add": {
       "from": "^3.2.3",
-      "to": "^7.1.0"
+      "to": "^7.1.1"
     },
     "@graphql-codegen/core": {
       "from": "^2.6.8",
-      "to": "^6.2.0"
+      "to": "^6.2.1"
     },
     "@graphql-codegen/plugin-helpers": {
       "from": "^2.7.2",
-      "to": "^7.3.0"
+      "to": "^7.4.0"
     },
     "@graphql-codegen/typescript": {
       "from": "^2.8.8",
@@ -58,7 +58,7 @@
     },
     "@graphql-codegen/typescript-operations": {
       "from": "^2.5.13",
-      "to": "^6.1.6"
+      "to": "^6.1.9"
     },
     "@graphql-tools/code-file-loader": {
       "from": "^7.3.23",
@@ -94,11 +94,11 @@
     },
     "@typescript-eslint/eslint-plugin": {
       "from": "^5.60.1",
-      "to": "^8.70.0"
+      "to": "^8.71.0"
     },
     "@typescript-eslint/parser": {
       "from": "^5.60.1",
-      "to": "^8.70.0"
+      "to": "^8.71.0"
     },
     "@vercel/webpack-asset-relocator-loader": {
       "from": "1.7.3",
@@ -142,7 +142,7 @@
     },
     "browserslist": {
       "from": "^4.21.9",
-      "to": "^4.29.0"
+      "to": "^4.29.2"
     },
     "cache-manager": {
       "from": "^2.11.1",
@@ -150,7 +150,7 @@
     },
     "chalk": {
       "from": "^4.1.2",
-      "to": "^6.0.0"
+      "to": "^6.0.1"
     },
     "chokidar": {
       "from": "^3.6.0",
@@ -194,15 +194,15 @@
     },
     "dotenv": {
       "from": "^8.6.0",
-      "to": "^17.4.2"
+      "to": "^18.0.4"
     },
     "enhanced-resolve": {
       "from": "^5.15.0",
-      "to": "^5.25.1"
+      "to": "^5.26.0"
     },
     "eslint": {
       "from": "^7.32.0",
-      "to": "^10.10.0"
+      "to": "^10.11.0"
     },
     "eslint-config-react-app": {
       "from": "^6.0.0",
@@ -254,7 +254,7 @@
     },
     "fs-extra": {
       "from": "^11.2.0",
-      "to": "^11.4.0"
+      "to": "^11.4.1"
     },
     "glob": {
       "from": "^7.2.3",
@@ -274,11 +274,11 @@
     },
     "graphql-compose": {
       "from": "^9.0.10",
-      "to": "^9.2.1"
+      "to": "^9.2.2"
     },
     "graphql-http": {
       "from": "^1.19.0",
-      "to": "^1.23.0"
+      "to": "^1.23.1"
     },
     "graphql-tag": {
       "from": "^2.12.6",
@@ -398,11 +398,11 @@
     },
     "socket.io": {
       "from": "^4.8.1",
-      "to": "^4.8.3"
+      "to": "^4.8.4"
     },
     "socket.io-client": {
       "from": "^4.8.1",
-      "to": "^4.8.3"
+      "to": "^4.8.4"
     },
     "stack-trace": {
       "from": "^0.0.10",
@@ -438,7 +438,7 @@
     },
     "webpack": {
       "from": "~5.98.0",
-      "to": "^5.111.0"
+      "to": "^5.111.1"
     },
     "webpack-dev-middleware": {
       "from": "^5.3.4",
@@ -450,13 +450,13 @@
     },
     "xstate": {
       "from": "^4.38.0",
-      "to": "^5.33.1"
+      "to": "^5.33.2"
     },
     "yaml-loader": {
       "from": "^0.8.0",
       "to": "^0.9.0"
     }
   },
-  "timestamp": "2026-09-15T16:10:08.442Z",
+  "timestamp": "2026-09-29T16:11:06.752Z",
   "totalUpdated": 114
 }
