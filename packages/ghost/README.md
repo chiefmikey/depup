@@ -12,14 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.65.0 | **DepUp version**: 6.65.0-depup.21 | **Updated**: 9/29/2026 | **Import test**: failed
+**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.0 | **Updated**: 9/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1142.0` |
-| @extractus/oembed-extractor | `3.2.1` | `^6.0.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1143.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^11.1.0` |
@@ -35,10 +34,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/social-urls | `0.1.64` | `^0.1.65` |
 | @tryghost/string | `0.3.6` | `^0.3.7` |
 | @tryghost/url-utils | `5.3.0` | `^5.3.1` |
-| @x402/core | `2.12.0` | `^2.27.0` |
-| @x402/evm | `2.12.0` | `^2.27.0` |
-| @x402/hono | `2.12.0` | `^2.27.0` |
-| body-parser | `1.20.6` | `^2.3.0` |
+| @x402/core | `2.27.0` | `^2.28.0` |
+| @x402/evm | `2.27.0` | `^2.28.0` |
+| @x402/hono | `2.27.0` | `^2.28.0` |
+| body-parser | `1.20.8` | `^2.3.0` |
 | bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.1` |
@@ -48,17 +47,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cron-validate | `1.4.5` | `^1.5.3` |
 | dompurify | `3.4.13` | `^3.4.16` |
 | entities | `4.5.0` | `^8.1.0` |
-| express | `4.22.2` | `^5.2.1` |
+| express | `4.22.3` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
 | fastq | `^1.20.1` | `^1.20.3` |
 | file-type | `21.3.4` | `^22.1.1` |
 | fs-extra | `11.3.6` | `^11.4.1` |
-| hono | `4.12.18` | `^4.13.11` |
+| hono | `4.13.8` | `^4.13.11` |
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
-| image-size | `1.2.1` | `^2.0.4` |
 | intl-messageformat | `5.4.3` | `^12.1.2` |
-| js-yaml | `4.3.0` | `^5.4.2` |
+| js-yaml | `4.3.2` | `^5.4.2` |
 | jsdom | `30.0.1` | `^30.1.1` |
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `11.1.1` | `^12.2.0` |
@@ -79,13 +77,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
 | moment-timezone | `0.5.45` | `^0.6.4` |
-| mppx | `0.6.20` | `^0.11.0` |
-| multer | `2.2.0` | `^2.4.0` |
-| nodemailer | `8.0.11` | `^10.0.12` |
+| mppx | `0.6.20` | `^0.12.0` |
+| mysql2 | `3.24.4` | `^3.24.5` |
+| nodemailer | `10.0.10` | `^10.0.12` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
-| sharp | `0.35.3` | `^0.35.5` |
 | stripe | `8.222.0` | `^22.6.2` |
 | temporal-polyfill | `0.3.2` | `^1.0.5` |
 | terser | `5.48.0` | `^5.51.2` |
