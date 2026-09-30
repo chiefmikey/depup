@@ -12,21 +12,21 @@ npm install @depup/next-auth
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.24.15 | **DepUp version**: 4.24.15-depup.0 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 4.24.15 | **DepUp version**: 4.24.15-depup.1 | **Updated**: 9/30/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.20.13` | `^8.0.0` |
+| @babel/runtime | `^7.20.13` | `^8.0.5` |
 | @panva/hkdf | `^1.0.2` | `^1.2.1` |
 | cookie | `^0.7.0` | `^2.0.1` |
-| jose | `^4.15.5` | `^6.2.3` |
+| jose | `^4.15.5` | `^6.2.12` |
 | oauth | `^0.9.15` | `^0.10.2` |
-| openid-client | `^5.4.0` | `^6.8.4` |
-| preact | `^10.6.3` | `^10.29.7` |
+| openid-client | `^5.4.0` | `^6.8.8` |
+| preact | `^10.6.3` | `^11.0.0` |
 | preact-render-to-string | `^5.1.19` | `^6.7.0` |
-| uuid | `^11.1.1` | `^14.0.1` |
+| uuid | `^11.1.1` | `^14.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/next-auth&labels=bug).

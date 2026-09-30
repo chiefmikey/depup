@@ -12,7 +12,7 @@ npm install @depup/preact
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.29.8 | **DepUp version**: 10.29.8-depup.0 | **Updated**: 8/1/2026 | **Import test**: passed
+**Original version**: 11.0.0 | **DepUp version**: 11.0.0-depup.0 | **Updated**: 9/30/2026 | **Import test**: passed
 
 ## What changed
 

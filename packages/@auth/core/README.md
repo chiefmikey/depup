@@ -12,15 +12,15 @@ npm install @depup/auth__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.41.3 | **DepUp version**: 0.41.3-depup.0 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 0.41.3 | **DepUp version**: 0.41.3-depup.1 | **Updated**: 9/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| jose | `^6.0.6` | `^6.2.3` |
-| oauth4webapi | `^3.3.0` | `^3.8.6` |
-| preact | `10.24.3` | `^10.29.7` |
+| jose | `^6.0.6` | `^6.2.12` |
+| oauth4webapi | `^3.3.0` | `^3.8.8` |
+| preact | `10.24.3` | `^11.0.0` |
 | preact-render-to-string | `6.5.11` | `^6.7.0` |
 
 
