@@ -1,0 +1,76 @@
+{
+  "name": "@depup/postal-mime",
+  "version": "4.0.2-depup.0",
+  "description": "Email parser for Node.js and browser environments (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/cjs/postal-mime.js",
+  "module": "./dist/esm/postal-mime.js",
+  "types": "./dist/cjs/postal-mime.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/postal-mime.js",
+      "require": "./dist/cjs/postal-mime.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "typecheck": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
+    "test": "node --import tsx --test --test-concurrency=1 test/*-test.ts",
+    "lint": "eslint . && npm run typecheck",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,json}\"",
+    "format:check": "prettier --check \"**/*.{js,cjs,mjs,ts,json}\"",
+    "update": "rm -rf node_modules package-lock.json && ncu -u && npm install"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "postal-mime",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "mime",
+    "email"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postalsys/postal-mime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postalsys/postal-mime/issues"
+  },
+  "homepage": "https://postal-mime.postalsys.com",
+  "author": "Andris Reinman",
+  "license": "MIT-0",
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "eslint": "10.11.0",
+    "globals": "17.12.0",
+    "iframe-resizer": "4.3.6",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postal-mime",
+    "originalVersion": "4.0.2",
+    "processedAt": "2026-09-30T16:12:51.481Z",
+    "smokeTest": "passed"
+  }
+}

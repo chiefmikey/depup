@@ -12,7 +12,7 @@ npm install @depup/redis__search
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.1 | **DepUp version**: 6.2.1-depup.0 | **Updated**: 8/11/2026 | **Import test**: failed
+**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.0 | **Updated**: 9/30/2026 | **Import test**: failed
 
 ## What changed
 
