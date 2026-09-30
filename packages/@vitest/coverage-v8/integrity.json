@@ -669,5 +669,44 @@
       "timestamp": "2026-09-29T16:11:02.834Z",
       "version": "5.0.2-depup.1"
     }
+  },
+  "5.0.3": {
+    "0": {
+      "changes": {
+        "@vitest/istanbul-lib-coverage": {
+          "from": "^1.0.0",
+          "to": "^1.0.2"
+        },
+        "@vitest/istanbul-lib-report": {
+          "from": "^1.0.0",
+          "to": "^1.0.2"
+        },
+        "ast-v8-to-istanbul": {
+          "from": "^1.0.5",
+          "to": "^1.0.7"
+        },
+        "magicast": {
+          "from": "^0.5.4",
+          "to": "^0.5.5"
+        },
+        "obug": {
+          "from": "^2.1.4",
+          "to": "^3.0.0"
+        },
+        "std-env": {
+          "from": "^4.2.0",
+          "to": "^4.3.0"
+        },
+        "tinyrainbow": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-30T16:11:21.174Z",
+      "version": "5.0.3-depup.0"
+    }
   }
 }

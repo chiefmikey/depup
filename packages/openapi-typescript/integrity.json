@@ -1,26 +1,5 @@
 {
   "7.13.0": {
-    "74": {
-      "changes": {
-        "@redocly/openapi-core": {
-          "from": "^1.34.6",
-          "to": "^2.52.0"
-        },
-        "supports-color": {
-          "from": "^10.2.2",
-          "to": "^11.0.0"
-        },
-        "yargs-parser": {
-          "from": "^21.1.1",
-          "to": "^22.0.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-09-10T16:10:50.446Z",
-      "version": "7.13.0-depup.74"
-    },
     "75": {
       "changes": {
         "@redocly/openapi-core": {
@@ -104,6 +83,27 @@
       "status": "published",
       "timestamp": "2026-09-30T08:13:07.488Z",
       "version": "7.13.0-depup.78"
+    },
+    "79": {
+      "changes": {
+        "@redocly/openapi-core": {
+          "from": "^1.34.6",
+          "to": "^2.57.0"
+        },
+        "supports-color": {
+          "from": "^10.2.2",
+          "to": "^11.0.0"
+        },
+        "yargs-parser": {
+          "from": "^21.1.1",
+          "to": "^22.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-30T16:11:33.078Z",
+      "version": "7.13.0-depup.79"
     }
   }
 }
