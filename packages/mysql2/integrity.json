@@ -243,5 +243,24 @@
       "timestamp": "2026-09-08T08:12:52.183Z",
       "version": "3.24.4-depup.0"
     }
+  },
+  "3.24.5": {
+    "0": {
+      "changes": {
+        "lru.min": {
+          "from": "^1.1.4",
+          "to": "^1.1.5"
+        },
+        "sql-escaper": {
+          "from": "^1.5.1",
+          "to": "^1.5.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-09-30T00:39:00.900Z",
+      "version": "3.24.5-depup.0"
+    }
   }
 }

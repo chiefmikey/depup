@@ -12,7 +12,7 @@ npm install @depup/cypress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.1.0 | **DepUp version**: 16.1.0-depup.1 | **Updated**: 9/26/2026 | **Import test**: failed
+**Original version**: 16.1.1 | **DepUp version**: 16.1.1-depup.0 | **Updated**: 9/30/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @types/sizzle | `^2.3.2` | `^2.3.10` |
 | @types/tmp | `^0.2.3` | `^0.2.6` |
 | buffer | `^5.7.1` | `^6.0.3` |
-| chalk | `^4.1.0` | `^6.0.0` |
+| chalk | `^4.1.0` | `^6.0.1` |
 | chrome-remote-interface | `0.33.3` | `^0.34.0` |
 | ci-info | `^4.1.0` | `^4.4.0` |
 | cli-table3 | `0.6.1` | `^0.6.5` |
@@ -41,7 +41,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | pretty-bytes | `^5.6.0` | `^7.2.0` |
 | proxy-from-env | `1.0.0` | `^2.1.0` |
 | supports-color | `^8.1.1` | `^11.0.0` |
-| systeminformation | `^5.31.1` | `^5.33.13` |
+| systeminformation | `^5.31.1` | `^5.33.14` |
 | tmp | `~0.2.4` | `^0.2.7` |
 | untildify | `^4.0.0` | `^6.0.0` |
 | yauzl | `^3.3.1` | `^3.4.0` |

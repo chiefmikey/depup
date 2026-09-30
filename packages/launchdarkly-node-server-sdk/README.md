@@ -12,18 +12,18 @@ npm install @depup/launchdarkly-node-server-sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.5 | **Updated**: 5/20/2026 | **Import test**: passed
+**Original version**: 7.0.4 | **DepUp version**: 7.0.4-depup.6 | **Updated**: 9/30/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | async | `^3.2.4` | `^3.2.6` |
-| launchdarkly-eventsource | `1.4.4` | `^2.2.0` |
-| lru-cache | `^6.0.0` | `^11.5.0` |
+| launchdarkly-eventsource | `1.4.4` | `^2.3.0` |
+| lru-cache | `^6.0.0` | `^11.5.3` |
 | node-cache | `^5.1.0` | `^5.1.2` |
-| semver | `^7.5.4` | `^7.8.0` |
-| uuid | `^8.3.2` | `^14.0.0` |
+| semver | `^7.5.4` | `^7.8.5` |
+| uuid | `^8.3.2` | `^14.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/launchdarkly-node-server-sdk&labels=bug).

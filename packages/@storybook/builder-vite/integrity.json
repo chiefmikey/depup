@@ -670,5 +670,20 @@
       "timestamp": "2026-09-02T16:10:29.300Z",
       "version": "10.6.0-depup.0"
     }
+  },
+  "10.6.1": {
+    "0": {
+      "changes": {
+        "ts-dedent": {
+          "from": "^2.0.0",
+          "to": "^2.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-09-30T00:36:29.887Z",
+      "version": "10.6.1-depup.0"
+    }
   }
 }
