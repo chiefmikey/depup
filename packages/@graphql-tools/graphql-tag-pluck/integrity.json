@@ -695,5 +695,36 @@
       "timestamp": "2026-09-07T16:10:52.208Z",
       "version": "8.3.37-depup.0"
     }
+  },
+  "8.3.39": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.29.7",
+          "to": "^8.0.6"
+        },
+        "@babel/parser": {
+          "from": "^7.29.3",
+          "to": "^7.29.9"
+        },
+        "@babel/traverse": {
+          "from": "^7.26.10",
+          "to": "^8.0.6"
+        },
+        "@babel/types": {
+          "from": "^7.26.10",
+          "to": "^8.0.6"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:40:56.404Z",
+      "version": "8.3.39-depup.0"
+    }
   }
 }

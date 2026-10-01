@@ -331,5 +331,24 @@
       "timestamp": "2026-09-22T00:32:32.125Z",
       "version": "8.0.36-depup.3"
     }
+  },
+  "8.0.38": {
+    "0": {
+      "changes": {
+        "@whatwg-node/fetch": {
+          "from": "^0.12.0",
+          "to": "^0.12.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:40:56.087Z",
+      "version": "8.0.38-depup.0"
+    }
   }
 }

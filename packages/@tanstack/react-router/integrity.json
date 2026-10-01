@@ -1523,5 +1523,20 @@
       "timestamp": "2026-09-27T16:10:00.034Z",
       "version": "1.170.40-depup.0"
     }
+  },
+  "1.170.41": {
+    "0": {
+      "changes": {
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.2.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:41:27.816Z",
+      "version": "1.170.41-depup.0"
+    }
   }
 }

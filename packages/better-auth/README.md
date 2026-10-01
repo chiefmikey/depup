@@ -12,7 +12,7 @@ npm install @depup/better-auth
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.7.6 | **DepUp version**: 1.7.6-depup.0 | **Updated**: 9/24/2026 | **Import test**: passed
+**Original version**: 1.7.7 | **DepUp version**: 1.7.7-depup.0 | **Updated**: 10/1/2026 | **Import test**: passed
 
 ## What changed
 
@@ -24,7 +24,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | defu | `^6.1.4` | `^6.1.7` |
 | jose | `^6.2.3` | `^6.2.12` |
 | kysely | `^0.28.17 || ^0.29.0` | `^0.29.6` |
-| nanostores | `^1.3.0` | `^1.5.3` |
+| nanostores | `^1.3.0` | `^1.5.4` |
 | zod | `^4.5.4` | `^4.6.5` |
 
 

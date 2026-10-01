@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "chromium-bidi": {
+      "from": "17.0.2",
+      "to": "^157.0.8080-0"
+    },
+    "devtools-protocol": {
+      "from": "0.0.1687809",
+      "to": "^0.0.1707781"
+    },
+    "typed-query-selector": {
+      "from": "^2.12.2",
+      "to": "^2.12.3"
+    },
+    "webdriver-bidi-protocol": {
+      "from": "0.4.3",
+      "to": "^1.0.1"
+    },
+    "ws": {
+      "from": "^8.21.3",
+      "to": "^8.22.0"
+    }
+  },
+  "timestamp": "2026-10-01T00:43:32.467Z",
+  "totalUpdated": 5
+}
