@@ -407,6 +407,27 @@
       "status": "published",
       "timestamp": "2026-09-30T16:11:41.854Z",
       "version": "5.0.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/chai": {
+          "from": "^5.2.2",
+          "to": "^5.2.3"
+        },
+        "chai": {
+          "from": "^6.2.2",
+          "to": "^6.3.0"
+        },
+        "tinyrainbow": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:41:44.583Z",
+      "version": "5.0.3-depup.1"
     }
   }
 }

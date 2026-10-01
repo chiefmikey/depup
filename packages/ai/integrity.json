@@ -2028,5 +2028,15 @@
       "timestamp": "2026-09-30T08:13:06.636Z",
       "version": "7.0.123-depup.0"
     }
+  },
+  "7.0.126": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:42:00.504Z",
+      "version": "7.0.126-depup.0"
+    }
   }
 }
