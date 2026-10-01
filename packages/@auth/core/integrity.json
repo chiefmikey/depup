@@ -125,6 +125,31 @@
       "status": "published",
       "timestamp": "2026-09-30T08:12:56.145Z",
       "version": "0.41.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "jose": {
+          "from": "^6.0.6",
+          "to": "^6.2.12"
+        },
+        "oauth4webapi": {
+          "from": "^3.3.0",
+          "to": "^3.8.8"
+        },
+        "preact": {
+          "from": "10.24.3",
+          "to": "^11.0.0"
+        },
+        "preact-render-to-string": {
+          "from": "6.5.11",
+          "to": "^6.8.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T08:12:55.581Z",
+      "version": "0.41.3-depup.2"
     }
   }
 }
