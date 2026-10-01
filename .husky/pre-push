@@ -1,0 +1,4 @@
+# Chain the machine-wide pre-push guard (husky's core.hooksPath overrides the global hooks dir).
+g="$HOME/.config/git/hooks/pre-push"
+[ -x "$g" ] && exec "$g" "$@"
+exit 0
