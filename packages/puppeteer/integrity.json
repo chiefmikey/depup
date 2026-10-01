@@ -439,6 +439,27 @@
       "status": "published",
       "timestamp": "2026-09-23T16:12:37.750Z",
       "version": "25.12.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "17.0.2",
+          "to": "^157.0.8080-0"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1687809",
+          "to": "^0.0.1707781"
+        },
+        "typed-query-selector": {
+          "from": "^2.12.2",
+          "to": "^2.12.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:43:30.809Z",
+      "version": "25.12.0-depup.1"
     }
   }
 }

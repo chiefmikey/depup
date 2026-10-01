@@ -12,13 +12,13 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.85 | **Updated**: 9/15/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.86 | **Updated**: 10/1/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.4.4` | `^8.0.5` |
+| @babel/core | `^7.4.4` | `^8.0.6` |
 | @babel/plugin-proposal-class-properties | `^7.4.4` | `^7.18.6` |
 | @babel/plugin-proposal-decorators | `^7.4.4` | `^8.0.2` |
 | @babel/plugin-proposal-export-namespace-from | `^7.2.0` | `^7.18.9` |
@@ -30,13 +30,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-syntax-import-meta | `^7.2.0` | `^7.10.4` |
 | @babel/plugin-transform-object-assign | `^7.2.0` | `^7.29.7` |
 | @babel/polyfill | `^7.4.4` | `^7.12.1` |
-| @babel/preset-env | `^7.4.4` | `^8.0.5` |
+| @babel/preset-env | `^7.4.4` | `^8.0.6` |
 | @babel/preset-react | `^7.0.0` | `^8.0.1` |
 | async | `^2.6.2` | `^3.2.6` |
 | body-parser | `^1.19.0` | `^2.3.0` |
 | browserify | `^16.2.3` | `^17.0.1` |
 | browserify-shim | `^3.8.14` | `^3.8.16` |
-| chalk | `^2.4.2` | `^6.0.0` |
+| chalk | `^2.4.2` | `^6.0.1` |
 | classnames | `^2.2.6` | `^2.5.1` |
 | cloudinary | `^1.14.0` | `^2.11.0` |
 | compression | `^1.7.4` | `^1.8.2` |
@@ -48,21 +48,21 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | es6-promise | `^4.2.6` | `^4.2.8` |
 | express | `^4.17.0` | `^5.2.1` |
 | express-session | `^1.16.1` | `^1.19.0` |
-| fs-extra | `^8.0.1` | `^11.4.0` |
+| fs-extra | `^8.0.1` | `^11.4.1` |
 | greenlock-express | `^2.7.8` | `^4.0.3` |
 | i | `^0.3.6` | `^0.3.7` |
 | lodash | `^4.17.11` | `^4.18.1` |
-| marked | `^0.6.2` | `^18.0.13` |
+| marked | `^0.6.2` | `^18.0.14` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.31.0` |
-| mongoose | `^4.13.14` | `^9.10.1` |
+| mongoose | `^4.13.14` | `^9.10.3` |
 | morgan | `^1.9.1` | `^1.12.1` |
 | multer | `^1.4.1` | `^2.4.0` |
 | qs | `^6.7.0` | `^6.16.0` |
 | range_check | `^1.4.0` | `^4.1.0` |
 | react | `^15.4.2` | `^19.3.0` |
 | react-color | `^2.14.1` | `^2.19.3` |
-| react-day-picker | `^2.5.0` | `^10.0.1` |
+| react-day-picker | `^2.5.0` | `^10.0.2` |
 | react-dnd | `^2.5.3` | `^16.0.1` |
 | react-dnd-html5-backend | `^2.5.3` | `^16.0.1` |
 | react-dom | `^15.4.2` | `^19.3.0` |
@@ -75,8 +75,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | redux-thunk | `^2.2.0` | `^3.1.0` |
 | react-select | `^1.2.4` | `^5.10.2` |
 | sanitize-filename | `^1.6.1` | `^1.6.4` |
-| tinymce | `^4.9.2` | `^8.9.1` |
-| sanitize-html | `^1.20.1` | `^2.17.7` |
+| tinymce | `^4.9.2` | `^8.9.2` |
+| sanitize-html | `^1.20.1` | `^2.18.0` |
 | scmp | `^1.0.2` | `^2.1.0` |
 | semver | `^6.0.0` | `^7.8.5` |
 | serve-favicon | `^2.5.0` | `^2.5.1` |

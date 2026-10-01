@@ -176,5 +176,24 @@
       "timestamp": "2026-09-21T00:34:55.615Z",
       "version": "4.2.0-depup.2"
     }
+  },
+  "4.3.0": {
+    "0": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.14.4",
+          "to": "^1.14.5"
+        },
+        "rxjs": {
+          "from": "^7.8.1",
+          "to": "^7.8.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-01T00:41:32.990Z",
+      "version": "4.3.0-depup.0"
+    }
   }
 }
