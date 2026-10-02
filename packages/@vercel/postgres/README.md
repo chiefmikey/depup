@@ -12,13 +12,13 @@ npm install @depup/vercel__postgres
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.10.0 | **DepUp version**: 0.10.0-depup.4 | **Updated**: 9/26/2026 | **Import test**: failed
+**Original version**: 0.10.0 | **DepUp version**: 0.10.0-depup.5 | **Updated**: 10/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @neondatabase/serverless | `^0.9.3` | `^1.1.0` |
+| @neondatabase/serverless | `^0.9.3` | `^1.2.0` |
 | bufferutil | `^4.0.8` | `^4.1.0` |
 | ws | `^8.17.1` | `^8.22.0` |
 

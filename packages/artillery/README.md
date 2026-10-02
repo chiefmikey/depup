@@ -12,23 +12,23 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.42 | **Updated**: 10/1/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.43 | **Updated**: 10/2/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-iam | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/client-sts | `^3.1101.0` | `^3.1144.0` |
-| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1144.0` |
+| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-iam | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/client-sts | `^3.1101.0` | `^3.1145.0` |
+| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1145.0` |
 | @azure/identity | `^4.13.1` | `^4.13.3` |
 | @azure/storage-blob | `^12.30.0` | `^12.34.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.32.0` |
@@ -69,7 +69,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | https-proxy-agent | `^5.0.0` | `^9.1.0` |
 | joi | `^17.13.4` | `^18.2.9` |
 | js-yaml | `^3.15.1` | `^5.4.2` |
-| jsonpath-plus | `^10.3.0` | `^11.1.0` |
+| jsonpath-plus | `^10.3.0` | `^11.1.1` |
 | lodash | `^4.18.0` | `^4.18.1` |
 | mixpanel | `^0.18.0` | `^0.24.0` |
 | moment | `^2.30.1` | `^2.31.0` |
