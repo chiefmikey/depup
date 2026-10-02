@@ -2,13 +2,13 @@
   "name": "@depup/duckdb",
   "main": "./lib/duckdb.js",
   "types": "./lib/duckdb.d.ts",
-  "version": "1.4.4-depup.2",
+  "version": "1.4.4-depup.7",
   "description": "DuckDB node.js API (with updated dependencies)",
   "gypfile": true,
   "dependencies": {
     "@mapbox/node-pre-gyp": "^2.0.3",
-    "node-addon-api": "^8.7.0",
-    "node-gyp": "^12.3.0"
+    "node-addon-api": "^8.9.2",
+    "node-gyp": "^13.1.0"
   },
   "binary": {
     "module_name": "duckdb",
@@ -75,17 +75,17 @@
       },
       "node-addon-api": {
         "from": "^7.0.0",
-        "to": "^8.7.0"
+        "to": "^8.9.2"
       },
       "node-gyp": {
         "from": "^9.4.1",
-        "to": "^12.3.0"
+        "to": "^13.1.0"
       }
     },
     "depsUpdated": 3,
     "originalPackage": "duckdb",
     "originalVersion": "1.4.4",
-    "processedAt": "2026-04-21T08:45:24.073Z",
+    "processedAt": "2026-10-02T08:12:19.887Z",
     "smokeTest": "failed"
   }
 }

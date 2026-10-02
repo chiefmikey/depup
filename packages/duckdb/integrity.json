@@ -1,26 +1,5 @@
 {
   "1.4.4": {
-    "2": {
-      "changes": {
-        "@mapbox/node-pre-gyp": {
-          "from": "^2.0.0",
-          "to": "^2.0.3"
-        },
-        "node-addon-api": {
-          "from": "^7.0.0",
-          "to": "^8.7.0"
-        },
-        "node-gyp": {
-          "from": "^9.4.1",
-          "to": "^12.3.0"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-04-21T08:45:38.628Z",
-      "version": "1.4.4-depup.2"
-    },
     "3": {
       "changes": {
         "@mapbox/node-pre-gyp": {
@@ -104,6 +83,27 @@
       "status": "published",
       "timestamp": "2026-07-21T17:22:40.276Z",
       "version": "1.4.4-depup.6"
+    },
+    "7": {
+      "changes": {
+        "@mapbox/node-pre-gyp": {
+          "from": "^2.0.0",
+          "to": "^2.0.3"
+        },
+        "node-addon-api": {
+          "from": "^7.0.0",
+          "to": "^8.9.2"
+        },
+        "node-gyp": {
+          "from": "^9.4.1",
+          "to": "^13.1.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-02T08:12:38.698Z",
+      "version": "1.4.4-depup.7"
     }
   }
 }
