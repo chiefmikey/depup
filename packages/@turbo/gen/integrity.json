@@ -1123,5 +1123,24 @@
       "timestamp": "2026-10-01T08:13:49.925Z",
       "version": "2.11.6-depup.0"
     }
+  },
+  "2.11.7": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.7.2"
+        },
+        "esbuild": {
+          "from": "^0.28.1",
+          "to": "^0.28.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-02T16:10:43.039Z",
+      "version": "2.11.7-depup.0"
+    }
   }
 }

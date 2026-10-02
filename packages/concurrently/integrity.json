@@ -205,6 +205,31 @@
       "status": "published",
       "timestamp": "2026-09-29T08:13:22.735Z",
       "version": "10.0.5-depup.2"
+    },
+    "3": {
+      "changes": {
+        "chalk": {
+          "from": "5.6.2",
+          "to": "^6.0.1"
+        },
+        "shell-quote": {
+          "from": "1.9.0",
+          "to": "^1.12.0"
+        },
+        "supports-color": {
+          "from": "10.2.2",
+          "to": "^11.0.0"
+        },
+        "yargs": {
+          "from": "18.0.0",
+          "to": "^18.2.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-02T16:10:30.543Z",
+      "version": "10.0.5-depup.3"
     }
   }
 }
