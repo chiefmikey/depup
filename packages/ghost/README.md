@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.7 | **Updated**: 10/2/2026 | **Import test**: failed
+**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.8 | **Updated**: 10/2/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @aws-sdk/client-s3 | `3.1079.0` | `^3.1145.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^11.2.0` |
+| @sentry/node | `7.120.4` | `^11.3.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/bookshelf-plugins | `2.3.15` | `^2.3.17` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
@@ -96,7 +96,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
-| moment-timezone | `0.5.45` | `^0.6.4` |
+| moment-timezone | `0.5.45` | `^0.6.5` |
 | mppx | `0.6.20` | `^0.12.0` |
 | mysql2 | `3.24.4` | `^3.24.5` |
 | nodemailer | `10.0.10` | `^10.0.13` |

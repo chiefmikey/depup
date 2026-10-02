@@ -1,0 +1,76 @@
+{
+  "name": "@depup/postcss-image-set-function",
+  "description": "Display resolution-dependent images using the image-set() function in CSS (with updated dependencies)",
+  "version": "8.0.2-depup.0",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "MIT-0",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/csstools"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/csstools"
+    }
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md",
+    "dist",
+    "changes.json"
+  ],
+  "dependencies": {
+    "@csstools/utilities": "^3.0.0",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4"
+  },
+  "scripts": {},
+  "homepage": "https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-image-set-function#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csstools/postcss-plugins.git",
+    "directory": "plugins/postcss-image-set-function"
+  },
+  "bugs": "https://github.com/csstools/postcss-plugins/issues",
+  "keywords": [
+    "postcss-image-set-function",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "background",
+    "css",
+    "function",
+    "image",
+    "image-set",
+    "negotiation",
+    "optimization",
+    "postcss",
+    "postcss-plugin",
+    "resolution",
+    "responsive"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "postcss-image-set-function",
+    "originalVersion": "8.0.2",
+    "processedAt": "2026-10-02T16:10:40.508Z",
+    "smokeTest": "passed"
+  }
+}

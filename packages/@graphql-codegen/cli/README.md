@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.3 | **DepUp version**: 7.4.3-depup.2 | **Updated**: 9/29/2026 | **Import test**: passed
+**Original version**: 7.4.3 | **DepUp version**: 7.4.3-depup.3 | **Updated**: 10/2/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,26 +23,28 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/types | `^7.18.13` | `^8.0.6` |
 | @graphql-codegen/core | `^6.2.0` | `^6.2.1` |
 | @graphql-codegen/plugin-helpers | `^7.3.0` | `^7.4.0` |
-| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.36` |
-| @graphql-tools/git-loader | `^8.0.32` | `^8.0.42` |
-| @graphql-tools/github-loader | `^9.0.6` | `^9.1.9` |
-| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.20` |
-| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.34` |
-| @graphql-tools/load | `^8.1.8` | `^8.1.17` |
-| @graphql-tools/url-loader | `^9.0.6` | `^9.1.10` |
-| @graphql-tools/utils | `^11.2.0` | `^12.0.1` |
+| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.38` |
+| @graphql-tools/code-file-loader | `^8.1.39` | `^8.1.41` |
+| @graphql-tools/git-loader | `^8.0.32` | `^8.0.44` |
+| @graphql-tools/github-loader | `^9.0.6` | `^9.1.11` |
+| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.22` |
+| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.36` |
+| @graphql-tools/load | `^8.1.8` | `^8.1.19` |
+| @graphql-tools/merge | `^9.2.4` | `^9.2.6` |
+| @graphql-tools/url-loader | `^9.0.6` | `^9.1.12` |
+| @graphql-tools/utils | `^11.2.0` | `^12.0.3` |
 | @inquirer/prompts | `^8.3.2` | `^8.7.2` |
-| @whatwg-node/fetch | `^0.10.0` | `^0.12.0` |
+| @whatwg-node/fetch | `^0.10.0` | `^0.12.1` |
 | chalk | `^5.6.0` | `^6.0.1` |
 | cosmiconfig | `^9.0.0` | `^10.0.1` |
 | detect-indent | `^7.0.0` | `^7.0.2` |
 | graphql-config | `^5.1.6` | `^5.1.7` |
 | is-glob | `^4.0.1` | `^4.0.3` |
 | jiti | `^2.3.0` | `^2.7.0` |
-| listr2 | `^10.2.1` | `^11.1.0` |
+| listr2 | `^10.2.1` | `^11.1.1` |
 | log-symbols | `^7.0.0` | `^7.0.1` |
 | micromatch | `^4.0.5` | `^4.0.8` |
-| shell-quote | `^1.7.3` | `^1.11.0` |
+| shell-quote | `^1.7.3` | `^1.12.0` |
 | ts-log | `^3.0.0` | `^3.0.3` |
 | tslib | `^2.4.0` | `^2.8.1` |
 | yaml | `^2.3.1` | `^2.9.1` |

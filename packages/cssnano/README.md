@@ -12,7 +12,7 @@ npm install @depup/cssnano
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.1.2 | **DepUp version**: 9.1.2-depup.0 | **Updated**: 9/30/2026 | **Import test**: passed
+**Original version**: 9.2.0 | **DepUp version**: 9.2.0-depup.0 | **Updated**: 10/2/2026 | **Import test**: passed
 
 ## What changed
 

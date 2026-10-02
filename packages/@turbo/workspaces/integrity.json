@@ -3422,5 +3422,56 @@
       "timestamp": "2026-10-01T08:13:41.340Z",
       "version": "2.11.6-depup.0"
     }
+  },
+  "2.11.7": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "^7.10.1",
+          "to": "^8.7.2"
+        },
+        "commander": {
+          "from": "10.0.0",
+          "to": "^15.0.0"
+        },
+        "execa": {
+          "from": "5.1.1",
+          "to": "^10.0.1"
+        },
+        "fast-glob": {
+          "from": "3.2.12",
+          "to": "^3.3.3"
+        },
+        "fs-extra": {
+          "from": "10.1.0",
+          "to": "^11.4.1"
+        },
+        "gradient-string": {
+          "from": "2.0.1",
+          "to": "^3.0.0"
+        },
+        "js-yaml": {
+          "from": "4.3.2",
+          "to": "^5.4.2"
+        },
+        "ora": {
+          "from": "4.1.1",
+          "to": "^9.4.1"
+        },
+        "picocolors": {
+          "from": "1.0.1",
+          "to": "^1.1.1"
+        },
+        "semver": {
+          "from": "7.6.2",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 10,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-02T16:10:27.970Z",
+      "version": "2.11.7-depup.0"
+    }
   }
 }
