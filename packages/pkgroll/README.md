@@ -12,14 +12,14 @@ npm install @depup/pkgroll
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.28.1 | **DepUp version**: 2.28.1-depup.2 | **Updated**: 9/15/2026 | **Import test**: failed
+**Original version**: 2.28.1 | **DepUp version**: 2.28.1-depup.3 | **Updated**: 10/2/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| magic-string | `^1.2.2` | `^1.4.1` |
-| rollup | `^4.62.5` | `^4.63.3` |
+| magic-string | `^1.2.2` | `^1.4.2` |
+| rollup | `^4.62.5` | `^4.64.0` |
 | yaml | `^2.9.0` | `^2.9.1` |
 
 

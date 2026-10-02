@@ -1,0 +1,62 @@
+{
+  "name": "@depup/ioredis__commands",
+  "version": "2.1.1-depup.0",
+  "description": "Redis commands (with updated dependencies)",
+  "main": "built/index.js",
+  "files": [
+    "built/",
+    "commands.json",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "build": "rm -rf built && tsc",
+    "gen": "node tools/build",
+    "lint": "standard --fix --verbose | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioredis/commands.git"
+  },
+  "keywords": [
+    "@ioredis/commands",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "redis",
+    "commands",
+    "prefix"
+  ],
+  "author": "Zihua Li <i@zihua.li> (http://zihua.li)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ioredis/commands/issues"
+  },
+  "homepage": "https://github.com/ioredis/commands",
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@types/node": "^20.11.16",
+    "chai": "^4.3.6",
+    "ioredis": "5.11.1",
+    "mocha": "11.7.6",
+    "safe-stable-stringify": "^2.3.1",
+    "semantic-release": "25.0.5",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.4",
+    "typescript": "^5.3.3"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@ioredis/commands",
+    "originalVersion": "2.1.1",
+    "processedAt": "2026-10-02T16:09:49.537Z",
+    "smokeTest": "passed"
+  }
+}
