@@ -1,0 +1,8 @@
+# mikey-pro gate: formatting is enforced when the toolchain is installed.
+# A missing toolchain (fresh clone or worktree without node_modules) warns and
+# continues -- the gate must never be the reason a commit cannot happen.
+if [ ! -x node_modules/.bin/lint-staged ] || [ ! -x node_modules/.bin/prettier ] || [ ! -d node_modules/mikey-pro ]; then
+  echo "mikey-pro gate: dependencies not installed (run npm install); skipping lint-staged" >&2
+  exit 0
+fi
+npx --no-install lint-staged --concurrent false
