@@ -1,0 +1,85 @@
+{
+  "name": "@depup/conf-cli",
+  "description": "simple cli for configuration and key/value's (with updated dependencies)",
+  "version": "1.1.0-depup.0",
+  "author": "Nathaniel Camomot",
+  "type": "module",
+  "bin": {
+    "conf": "./bin/run.js"
+  },
+  "bugs": "https://github.com/natzcam/conf-cli/issues",
+  "dependencies": {
+    "@oclif/core": "^5.1.2",
+    "conf": "^15.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@oclif/test": "^4.2.0",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.0",
+    "c8": "^12.0.0",
+    "chai": "^6.3.0",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "mocha": "^12.0.3",
+    "oclif": "^4.24.0",
+    "rimraf": "^6.1.3",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "exports": "./lib/index.js",
+  "files": [
+    "/bin/run.js",
+    "/bin/run.cmd",
+    "/lib",
+    "/oclif.manifest.json",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/natzcam/conf-cli",
+  "keywords": [
+    "conf-cli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "oclif",
+    "conf",
+    "cli",
+    "config"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "oclif": {
+    "bin": "conf",
+    "commands": "./lib/commands",
+    "helpClass": "./lib/help.js",
+    "topicSeparator": " "
+  },
+  "repository": "natzcam/conf-cli",
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "lint": "eslint .",
+    "test": "tsc -p test && c8 --include src mocha && eslint ."
+  },
+  "depup": {
+    "changes": {
+      "@oclif/core": {
+        "from": "^4.14.0",
+        "to": "^5.1.2"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "conf-cli",
+    "originalVersion": "1.1.0",
+    "processedAt": "2026-10-03T08:11:52.279Z",
+    "smokeTest": "passed"
+  }
+}
