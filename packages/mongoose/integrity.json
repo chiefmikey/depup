@@ -703,5 +703,20 @@
       "timestamp": "2026-09-29T16:13:01.667Z",
       "version": "9.10.3-depup.0"
     }
+  },
+  "9.10.4": {
+    "0": {
+      "changes": {
+        "mongodb": {
+          "from": "~7.6",
+          "to": "^7.7.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-03T08:12:07.210Z",
+      "version": "9.10.4-depup.0"
+    }
   }
 }
