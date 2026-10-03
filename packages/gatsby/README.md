@@ -12,7 +12,7 @@ npm install @depup/gatsby
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.128 | **Updated**: 9/29/2026 | **Import test**: failed
+**Original version**: 5.16.1 | **DepUp version**: 5.16.1-depup.129 | **Updated**: 10/3/2026 | **Import test**: failed
 
 ## What changed
 
@@ -27,14 +27,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/traverse | `^7.20.13` | `^8.0.6` |
 | @babel/types | `^7.20.7` | `^8.0.6` |
 | @builder.io/partytown | `^0.7.5` | `^0.10.3` |
-| @expo/devcert | `^1.2.0` | `^1.2.1` |
+| @expo/devcert | `^1.2.0` | `^1.2.2` |
 | @graphql-codegen/add | `^3.2.3` | `^7.1.1` |
 | @graphql-codegen/core | `^2.6.8` | `^6.2.1` |
 | @graphql-codegen/plugin-helpers | `^2.7.2` | `^7.4.0` |
 | @graphql-codegen/typescript | `^2.8.8` | `^6.1.0` |
 | @graphql-codegen/typescript-operations | `^2.5.13` | `^6.1.9` |
-| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.39` |
-| @graphql-tools/load | `^7.8.14` | `^8.1.17` |
+| @graphql-tools/code-file-loader | `^7.3.23` | `^8.1.41` |
+| @graphql-tools/load | `^7.8.14` | `^8.1.19` |
 | @jridgewell/trace-mapping | `^0.3.18` | `^0.3.31` |
 | @nodelib/fs.walk | `^1.2.8` | `^3.0.1` |
 | @parcel/cache | `2.8.3` | `^2.16.4` |
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | babel-loader | `^8.3.0` | `^10.1.1` |
 | better-opn | `^2.1.1` | `^3.0.2` |
 | body-parser | `^2.2.2` | `^2.3.0` |
-| browserslist | `^4.21.9` | `^4.29.2` |
+| browserslist | `^4.21.9` | `^4.29.3` |
 | cache-manager | `^2.11.1` | `^7.2.9` |
 | chalk | `^4.1.2` | `^6.0.1` |
 | chokidar | `^3.6.0` | `^5.0.0` |
@@ -66,9 +66,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | date-fns | `^2.30.0` | `^4.4.0` |
 | debug | `^4.3.4` | `^4.4.3` |
 | detect-port | `^1.5.1` | `^2.1.0` |
-| dotenv | `^8.6.0` | `^18.0.4` |
+| dotenv | `^8.6.0` | `^18.0.5` |
 | enhanced-resolve | `^5.15.0` | `^5.26.0` |
-| eslint | `^7.32.0` | `^10.11.0` |
+| eslint | `^7.32.0` | `^10.12.0` |
 | eslint-config-react-app | `^6.0.0` | `^7.0.1` |
 | eslint-plugin-flowtype | `^5.10.0` | `^8.0.3` |
 | eslint-plugin-import | `^2.27.5` | `^2.32.0` |
@@ -93,7 +93,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | is-relative-url | `^3.0.0` | `^4.1.1` |
 | joi | `^17.9.2` | `^18.2.9` |
 | latest-version | `^7.0.0` | `^9.0.0` |
-| lmdb | `2.5.3` | `^3.5.6` |
+| lmdb | `2.5.3` | `^3.5.7` |
 | lodash | `^4.17.21` | `^4.18.1` |
 | meant | `^1.0.3` | `^2.0.1` |
 | memoizee | `^0.4.15` | `^0.4.17` |
