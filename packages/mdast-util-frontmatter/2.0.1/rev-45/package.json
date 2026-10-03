@@ -1,6 +1,6 @@
 {
   "name": "@depup/mdast-util-frontmatter",
-  "version": "2.0.1-depup.40",
+  "version": "2.0.1-depup.45",
   "description": "mdast extension to parse and serialize frontmatter (YAML, TOML, etc) (with updated dependencies)",
   "license": "MIT",
   "keywords": [
@@ -46,8 +46,8 @@
     "@types/mdast": "^4.0.4",
     "devlop": "^1.1.0",
     "escape-string-regexp": "^5.0.0",
-    "mdast-util-from-markdown": "^2.0.3",
-    "mdast-util-to-markdown": "^2.1.2",
+    "mdast-util-from-markdown": "^2.1.0",
+    "mdast-util-to-markdown": "^2.2.0",
     "micromark-extension-frontmatter": "^2.0.0"
   },
   "devDependencies": {
@@ -118,17 +118,17 @@
       },
       "mdast-util-from-markdown": {
         "from": "^2.0.0",
-        "to": "^2.0.3"
+        "to": "^2.1.0"
       },
       "mdast-util-to-markdown": {
         "from": "^2.0.0",
-        "to": "^2.1.2"
+        "to": "^2.2.0"
       }
     },
     "depsUpdated": 4,
     "originalPackage": "mdast-util-frontmatter",
     "originalVersion": "2.0.1",
-    "processedAt": "2026-07-11T00:37:26.703Z",
+    "processedAt": "2026-10-03T17:24:31.235Z",
     "smokeTest": "passed"
   }
 }

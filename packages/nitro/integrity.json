@@ -330,31 +330,6 @@
     }
   },
   "3.0.260903-beta": {
-    "1": {
-      "changes": {
-        "env-runner": {
-          "from": "^0.2.1",
-          "to": "^0.3.0"
-        },
-        "hookable": {
-          "from": "^6.1.1",
-          "to": "^6.1.2"
-        },
-        "rolldown": {
-          "from": "^1.2.7",
-          "to": "^1.2.11"
-        },
-        "srvx": {
-          "from": "^1.0.3",
-          "to": "^1.0.5"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-09-26T00:33:51.303Z",
-      "version": "3.0.260903-beta-depup.1"
-    },
     "2": {
       "changes": {
         "env-runner": {
@@ -478,6 +453,39 @@
       "status": "published",
       "timestamp": "2026-10-03T00:34:15.754Z",
       "version": "3.0.260903-beta-depup.5"
+    },
+    "6": {
+      "changes": {
+        "env-runner": {
+          "from": "^0.2.1",
+          "to": "^0.3.3"
+        },
+        "hookable": {
+          "from": "^6.1.1",
+          "to": "^6.1.2"
+        },
+        "nf3": {
+          "from": "^0.3.24",
+          "to": "^0.4.0"
+        },
+        "rolldown": {
+          "from": "^1.2.7",
+          "to": "^1.2.12"
+        },
+        "rou3": {
+          "from": "^0.9.2",
+          "to": "^1.0.0"
+        },
+        "srvx": {
+          "from": "^1.0.3",
+          "to": "^1.0.5"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-03T17:24:33.542Z",
+      "version": "3.0.260903-beta-depup.6"
     }
   }
 }

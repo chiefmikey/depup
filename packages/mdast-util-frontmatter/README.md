@@ -12,7 +12,7 @@ npm install @depup/mdast-util-frontmatter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.1 | **DepUp version**: 2.0.1-depup.44 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 2.0.1 | **DepUp version**: 2.0.1-depup.45 | **Updated**: 10/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @types/mdast | `^4.0.0` | `^4.0.4` |
 | devlop | `^1.0.0` | `^1.1.0` |
-| mdast-util-from-markdown | `^2.0.0` | `^2.0.3` |
-| mdast-util-to-markdown | `^2.0.0` | `^2.1.2` |
+| mdast-util-from-markdown | `^2.0.0` | `^2.1.0` |
+| mdast-util-to-markdown | `^2.0.0` | `^2.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mdast-util-frontmatter&labels=bug).
