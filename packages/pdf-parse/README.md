@@ -12,14 +12,14 @@ npm install @depup/pdf-parse
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.4.5 | **DepUp version**: 2.4.5-depup.7 | **Updated**: 8/29/2026 | **Import test**: passed
+**Original version**: 2.4.5 | **DepUp version**: 2.4.5-depup.8 | **Updated**: 10/3/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @napi-rs/canvas | `0.1.80` | `^1.0.8` |
-| pdfjs-dist | `5.4.296` | `^6.3.289` |
+| @napi-rs/canvas | `0.1.80` | `^1.0.10` |
+| pdfjs-dist | `5.4.296` | `^6.4.299` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pdf-parse&labels=bug).

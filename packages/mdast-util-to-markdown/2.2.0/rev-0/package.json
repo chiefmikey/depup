@@ -1,0 +1,145 @@
+{
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "bugs": "https://github.com/syntax-tree/mdast-util-to-markdown/issues",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "dependencies": {
+    "@types/mdast": "^4.0.4",
+    "@types/unist": "^3.0.3",
+    "longest-streak": "^3.1.0",
+    "mdast-util-phrasing": "^4.1.0",
+    "mdast-util-to-string": "^4.0.0",
+    "micromark-util-character": "^2.1.1",
+    "micromark-util-classify-character": "^2.0.1",
+    "micromark-util-decode-string": "^2.0.1",
+    "micromark-util-html-tag-name": "^2.0.1",
+    "unist-util-visit": "^5.1.0",
+    "zwitch": "^2.0.4"
+  },
+  "description": "mdast utility to serialize markdown (with updated dependencies)",
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "c8": "^12.0.0",
+    "mdast-util-from-markdown": "^2.0.0",
+    "prettier": "^3.0.0",
+    "remark-cli": "^12.0.0",
+    "remark-preset-wooorm": "^11.0.0",
+    "type-coverage": "^2.0.0",
+    "typescript": "^6.0.0",
+    "unist-util-remove-position": "^5.0.0",
+    "xo": "^5.0.0"
+  },
+  "exports": "./index.js",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
+  "keywords": [
+    "mdast-util-to-markdown",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "ast",
+    "compile",
+    "markdown",
+    "markup",
+    "mdast-util",
+    "mdast",
+    "serialize",
+    "stringify",
+    "syntax",
+    "tree",
+    "unist",
+    "utility",
+    "util"
+  ],
+  "license": "MIT",
+  "name": "@depup/mdast-util-to-markdown",
+  "prettier": {
+    "bracketSpacing": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-wooorm"
+    ]
+  },
+  "repository": "syntax-tree/mdast-util-to-markdown",
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build && type-coverage",
+    "format": "remark --frail --output --quiet -- . && prettier --log-level warn --write -- . && xo --fix",
+    "test-api": "node --conditions development test/index.js",
+    "test-coverage": "c8 --100 --reporter lcov -- npm run test-api",
+    "test": "npm run build && npm run format && npm run test-coverage"
+  },
+  "sideEffects": false,
+  "typeCoverage": {
+    "atLeast": 100,
+    "strict": true
+  },
+  "type": "module",
+  "version": "2.2.0-depup.0",
+  "depup": {
+    "changes": {
+      "@types/mdast": {
+        "from": "^4.0.0",
+        "to": "^4.0.4"
+      },
+      "@types/unist": {
+        "from": "^3.0.0",
+        "to": "^3.0.3"
+      },
+      "longest-streak": {
+        "from": "^3.0.0",
+        "to": "^3.1.0"
+      },
+      "mdast-util-phrasing": {
+        "from": "^4.0.0",
+        "to": "^4.1.0"
+      },
+      "micromark-util-character": {
+        "from": "^2.0.0",
+        "to": "^2.1.1"
+      },
+      "micromark-util-classify-character": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "micromark-util-decode-string": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "micromark-util-html-tag-name": {
+        "from": "^2.0.0",
+        "to": "^2.0.1"
+      },
+      "unist-util-visit": {
+        "from": "^5.0.0",
+        "to": "^5.1.0"
+      },
+      "zwitch": {
+        "from": "^2.0.0",
+        "to": "^2.0.4"
+      }
+    },
+    "depsUpdated": 10,
+    "originalPackage": "mdast-util-to-markdown",
+    "originalVersion": "2.2.0",
+    "processedAt": "2026-10-03T17:23:06.158Z",
+    "smokeTest": "passed"
+  }
+}

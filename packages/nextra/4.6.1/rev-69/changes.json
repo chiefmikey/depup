@@ -2,7 +2,7 @@
   "bumped": {
     "@formatjs/intl-localematcher": {
       "from": "^0.6.0",
-      "to": "^0.8.13"
+      "to": "^0.9.0"
     },
     "@headlessui/react": {
       "from": "^2.1.2",
@@ -14,11 +14,11 @@
     },
     "@napi-rs/simple-git": {
       "from": "^0.1.9",
-      "to": "^1.1.0"
+      "to": "^1.2.0"
     },
     "@shikijs/twoslash": {
       "from": "^3.2.1",
-      "to": "^4.4.3"
+      "to": "^4.5.0"
     },
     "@theguild/remark-npm2yarn": {
       "from": "^0.3.2",
@@ -46,11 +46,11 @@
     },
     "katex": {
       "from": "^0.16.21",
-      "to": "^0.18.7"
+      "to": "^0.19.0"
     },
     "mdast-util-from-markdown": {
       "from": "^2.0.1",
-      "to": "^2.0.3"
+      "to": "^2.1.0"
     },
     "mdast-util-gfm": {
       "from": "^3.0.0",
@@ -90,7 +90,7 @@
     },
     "shiki": {
       "from": "^3.2.1",
-      "to": "^4.4.3"
+      "to": "^4.5.0"
     },
     "ts-morph": {
       "from": "^27.0.0",
@@ -102,13 +102,13 @@
     },
     "yaml": {
       "from": "^2.3.2",
-      "to": "^2.9.0"
+      "to": "^2.9.1"
     },
     "zod": {
       "from": "^4.1.12",
-      "to": "^4.6.1"
+      "to": "^4.6.5"
     }
   },
-  "timestamp": "2026-09-10T00:32:50.971Z",
+  "timestamp": "2026-10-03T17:22:55.646Z",
   "totalUpdated": 27
 }
