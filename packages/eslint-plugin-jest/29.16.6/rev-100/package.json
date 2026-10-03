@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-jest",
-  "version": "29.16.6-depup.95",
+  "version": "29.16.6-depup.100",
   "description": "ESLint rules for Jest (with updated dependencies)",
   "keywords": [
     "eslint-plugin-jest",
@@ -158,7 +158,7 @@
     "depsUpdated": 1,
     "originalPackage": "eslint-plugin-jest",
     "originalVersion": "29.16.6",
-    "processedAt": "2026-10-01T16:10:43.057Z",
+    "processedAt": "2026-10-03T08:12:03.925Z",
     "smokeTest": "passed"
   }
 }
