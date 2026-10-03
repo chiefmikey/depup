@@ -12,16 +12,16 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.8 | **Updated**: 10/2/2026 | **Import test**: failed
+**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.9 | **Updated**: 10/3/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1145.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1146.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^11.3.0` |
+| @sentry/node | `7.120.4` | `^11.4.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/bookshelf-plugins | `2.3.15` | `^2.3.17` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
@@ -43,14 +43,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/nodemailer | `2.3.14` | `^2.3.16` |
 | @tryghost/pretty-cli | `3.3.14` | `^3.3.16` |
 | @tryghost/prometheus-metrics | `5.0.0` | `^5.0.2` |
-| @tryghost/referrer-parser | `0.1.22` | `^0.1.23` |
+| @tryghost/referrer-parser | `0.1.22` | `^0.1.24` |
 | @tryghost/request | `4.0.7` | `^4.0.9` |
 | @tryghost/root-utils | `2.3.14` | `^2.3.16` |
 | @tryghost/security | `3.3.14` | `^3.3.16` |
 | @tryghost/social-urls | `0.1.64` | `^0.1.65` |
 | @tryghost/string | `0.3.6` | `^0.3.7` |
 | @tryghost/tpl | `2.3.14` | `^2.3.16` |
-| @tryghost/url-utils | `5.3.0` | `^5.3.1` |
+| @tryghost/url-utils | `5.3.0` | `^5.4.0` |
 | @tryghost/validator | `3.2.14` | `^3.2.16` |
 | @tryghost/version | `2.3.14` | `^2.3.16` |
 | @tryghost/zip | `3.5.13` | `^3.5.15` |
@@ -97,7 +97,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | mingo | `2.5.3` | `^7.2.4` |
 | moment | `2.24.0` | `^2.31.0` |
 | moment-timezone | `0.5.45` | `^0.6.5` |
-| mppx | `0.6.20` | `^0.12.0` |
+| mppx | `0.6.20` | `^0.13.1` |
 | mysql2 | `3.24.4` | `^3.24.5` |
 | nodemailer | `10.0.10` | `^10.0.13` |
 | otplib | `12.0.1` | `^13.5.0` |
