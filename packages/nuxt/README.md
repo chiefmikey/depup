@@ -12,7 +12,7 @@ npm install @depup/nuxt
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.21 | **Updated**: 10/3/2026 | **Import test**: passed
+**Original version**: 4.5.2 | **DepUp version**: 4.5.2-depup.22 | **Updated**: 10/3/2026 | **Import test**: passed
 
 ## What changed
 
@@ -25,6 +25,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @vue/shared | `^3.5.40` | `^3.5.43` |
 | devalue | `^5.9.0` | `^6.0.2` |
 | errx | `^0.1.2` | `^0.2.2` |
+| exsolve | `^1.1.1` | `^1.1.3` |
 | hookable | `^6.1.1` | `^6.1.2` |
 | ignore | `^7.0.6` | `^7.0.12` |
 | impound | `^1.1.6` | `^1.2.0` |
@@ -34,7 +35,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ohash | `^2.0.11` | `^2.0.12` |
 | picomatch | `^4.0.5` | `^4.0.7` |
 | pkg-types | `^2.3.1` | `^2.3.3` |
-| rou3 | `^0.9.1` | `^0.12.0` |
+| rou3 | `^0.9.1` | `^1.0.0` |
 | std-env | `^4.2.0` | `^4.3.0` |
 | unctx | `^3.0.0` | `^3.0.1` |
 | undici | `^8.10.0` | `^8.11.2` |

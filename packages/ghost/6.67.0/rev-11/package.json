@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.67.0-depup.6",
+  "version": "6.67.0-depup.11",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,12 +46,12 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1145.0",
+    "@aws-sdk/client-s3": "^3.1146.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "6.0.0",
     "@faker-js/faker": "^10.6.0",
     "@isaacs/ttlcache": "^2.1.5",
-    "@sentry/node": "^11.2.0",
+    "@sentry/node": "^11.4.0",
     "@slack/webhook": "^8.0.2",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.0.tgz",
     "@tryghost/adapter-base-jobs": "file:components/tryghost-adapter-base-jobs-0.0.0.tgz",
@@ -100,14 +100,14 @@
     "@tryghost/parse-email-address": "file:components/tryghost-parse-email-address-0.0.0.tgz",
     "@tryghost/pretty-cli": "^3.3.16",
     "@tryghost/prometheus-metrics": "^5.0.2",
-    "@tryghost/referrer-parser": "^0.1.23",
+    "@tryghost/referrer-parser": "^0.1.24",
     "@tryghost/request": "^4.0.9",
     "@tryghost/root-utils": "^2.3.16",
     "@tryghost/security": "^3.3.16",
     "@tryghost/social-urls": "^0.1.65",
     "@tryghost/string": "^0.3.7",
     "@tryghost/tpl": "^2.3.16",
-    "@tryghost/url-utils": "^5.3.1",
+    "@tryghost/url-utils": "^5.4.0",
     "@tryghost/validator": "^3.2.16",
     "@tryghost/version": "^2.3.16",
     "@tryghost/zip": "^3.5.15",
@@ -188,13 +188,13 @@
     "mime-types": "^3.0.2",
     "mingo": "^7.2.4",
     "moment": "^2.31.0",
-    "moment-timezone": "^0.6.4",
-    "mppx": "^0.12.0",
+    "moment-timezone": "^0.6.5",
+    "mppx": "^0.13.1",
     "multer": "2.4.0",
     "mysql2": "^3.24.5",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
-    "nodemailer": "^10.0.13",
+    "nodemailer": "^10.0.14",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -233,7 +233,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1145.0"
+        "to": "^3.1146.0"
       },
       "@faker-js/faker": {
         "from": "10.5.0",
@@ -245,7 +245,7 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^11.2.0"
+        "to": "^11.4.0"
       },
       "@slack/webhook": {
         "from": "7.1.0",
@@ -333,7 +333,7 @@
       },
       "@tryghost/referrer-parser": {
         "from": "0.1.22",
-        "to": "^0.1.23"
+        "to": "^0.1.24"
       },
       "@tryghost/request": {
         "from": "4.0.7",
@@ -361,7 +361,7 @@
       },
       "@tryghost/url-utils": {
         "from": "5.3.0",
-        "to": "^5.3.1"
+        "to": "^5.4.0"
       },
       "@tryghost/validator": {
         "from": "3.2.14",
@@ -545,11 +545,11 @@
       },
       "moment-timezone": {
         "from": "0.5.45",
-        "to": "^0.6.4"
+        "to": "^0.6.5"
       },
       "mppx": {
         "from": "0.6.20",
-        "to": "^0.12.0"
+        "to": "^0.13.1"
       },
       "mysql2": {
         "from": "3.24.4",
@@ -557,7 +557,7 @@
       },
       "nodemailer": {
         "from": "10.0.10",
-        "to": "^10.0.13"
+        "to": "^10.0.14"
       },
       "otplib": {
         "from": "12.0.1",
@@ -607,7 +607,7 @@
     "depsUpdated": 93,
     "originalPackage": "ghost",
     "originalVersion": "6.67.0",
-    "processedAt": "2026-10-02T00:36:16.115Z",
+    "processedAt": "2026-10-03T17:22:52.645Z",
     "smokeTest": "failed"
   }
 }

@@ -1306,6 +1306,27 @@
       "status": "published",
       "timestamp": "2026-10-02T08:13:04.521Z",
       "version": "16.15.18-depup.0"
+    },
+    "1": {
+      "changes": {
+        "mdast-util-to-markdown": {
+          "from": "^2.1.2",
+          "to": "^2.2.0"
+        },
+        "shiki": {
+          "from": "^4.4.3",
+          "to": "^4.5.0"
+        },
+        "zbsearch": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-03T17:23:12.614Z",
+      "version": "16.15.18-depup.1"
     }
   }
 }

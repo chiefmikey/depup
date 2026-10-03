@@ -12,16 +12,17 @@ npm install @depup/mdast-util-gfm
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.1.0 | **DepUp version**: 3.1.0-depup.1 | **Updated**: 10/3/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| mdast-util-from-markdown | `^2.0.0` | `^2.0.3` |
+| mdast-util-from-markdown | `^2.0.0` | `^2.1.0` |
 | mdast-util-gfm-autolink-literal | `^2.0.0` | `^2.0.1` |
 | mdast-util-gfm-footnote | `^2.0.0` | `^2.1.0` |
-| mdast-util-to-markdown | `^2.0.0` | `^2.1.2` |
+| mdast-util-gfm-strikethrough | `^2.0.0` | `^2.0.1` |
+| mdast-util-to-markdown | `^2.0.0` | `^2.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/mdast-util-gfm&labels=bug).
