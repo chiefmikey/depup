@@ -1,0 +1,59 @@
+{
+  "name": "@depup/remend",
+  "version": "1.4.0-depup.0",
+  "description": "Self-healing markdown. Intelligently parses and styles incomplete Markdown blocks. (with updated dependencies)",
+  "homepage": "https://streamdown.ai/docs/termination",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vercel/streamdown.git",
+    "directory": "packages/remend"
+  },
+  "license": "Apache-2.0",
+  "author": "Hayden Bleasel <hayden.bleasel@vercel.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "changes.json"
+  ],
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.10",
+    "fast-check": "^4.9.0",
+    "mdast-util-from-markdown": "^2.0.3",
+    "tsup": "^8.5.1",
+    "vitest": "^5.0.0"
+  },
+  "scripts": {
+    "bench": "vitest bench --run > results.txt",
+    "bench:ui": "vitest bench --ui --run",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:coverage": "vitest --coverage run",
+    "test:ui": "vitest --ui run"
+  },
+  "keywords": [
+    "remend",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "remend",
+    "originalVersion": "1.4.0",
+    "processedAt": "2026-10-04T01:29:25.193Z",
+    "smokeTest": "passed"
+  }
+}
