@@ -651,5 +651,28 @@
       "timestamp": "2026-08-09T00:36:47.864Z",
       "version": "12.1.0-depup.0"
     }
+  },
+  "12.2.0": {
+    "0": {
+      "changes": {
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "get-port": {
+          "from": "^5.1.1",
+          "to": "^7.2.0"
+        },
+        "undici": {
+          "from": "^8.10.2",
+          "to": "^8.11.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-04T01:30:59.051Z",
+      "version": "12.2.0-depup.0"
+    }
   }
 }
