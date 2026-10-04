@@ -1,0 +1,56 @@
+{
+  "name": "@depup/vue__compiler-vue2",
+  "version": "2.7.16-depup.1",
+  "description": "template compiler for Vue 2.x (with updated dependencies)",
+  "main": "index.js",
+  "unpkg": "browser.js",
+  "jsdelivr": "browser.js",
+  "browser": "browser.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "types/*.d.ts",
+    "*.js",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vue.git"
+  },
+  "keywords": [
+    "@vue/compiler-vue2",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "vue",
+    "compiler"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuejs/vue/issues"
+  },
+  "homepage": "https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler#readme",
+  "dependencies": {
+    "de-indent": "^1.0.2",
+    "he": "^2.0.0"
+  },
+  "devDependencies": {
+    "vue": "file:../.."
+  },
+  "depup": {
+    "changes": {
+      "he": {
+        "from": "^1.2.0",
+        "to": "^2.0.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@vue/compiler-vue2",
+    "originalVersion": "2.7.16",
+    "processedAt": "2026-10-04T17:25:07.878Z",
+    "smokeTest": "passed"
+  }
+}

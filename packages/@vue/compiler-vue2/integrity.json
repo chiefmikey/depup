@@ -5,6 +5,19 @@
       "status": "published",
       "timestamp": "2026-03-17T16:34:52.963Z",
       "version": "2.7.16-depup.0"
+    },
+    "1": {
+      "changes": {
+        "he": {
+          "from": "^1.2.0",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-04T17:25:10.797Z",
+      "version": "2.7.16-depup.1"
     }
   }
 }

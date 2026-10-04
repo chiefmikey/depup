@@ -12,11 +12,14 @@ npm install @depup/vue__compiler-vue2
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.7.16 | **DepUp version**: 2.7.16-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.7.16 | **DepUp version**: 2.7.16-depup.1 | **Updated**: 10/4/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| he | `^1.2.0` | `^2.0.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vue__compiler-vue2&labels=bug).
 
