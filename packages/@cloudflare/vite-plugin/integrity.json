@@ -2483,6 +2483,23 @@
       "status": "published",
       "timestamp": "2026-10-02T16:09:55.966Z",
       "version": "1.62.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "workerd": {
+          "from": "1.20261001.1",
+          "to": "^1.20261004.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-04T10:10:11.794Z",
+      "version": "1.62.5-depup.1"
     }
   }
 }
