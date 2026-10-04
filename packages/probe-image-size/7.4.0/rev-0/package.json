@@ -1,0 +1,74 @@
+{
+  "name": "@depup/probe-image-size",
+  "version": "7.4.0-depup.0",
+  "description": "Get image size without full download (JPG, GIF, PNG, WebP, BMP, TIFF, PSD) (with updated dependencies)",
+  "keywords": [
+    "probe-image-size",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "image",
+    "size",
+    "jpg",
+    "jpeg",
+    "ico",
+    "gif",
+    "png",
+    "webp",
+    "tiff",
+    "bmp",
+    "svg",
+    "psd"
+  ],
+  "repository": "nodeca/probe-image-size",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/puzrin"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/nodeca"
+    }
+  ],
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "http.js",
+    "stream.js",
+    "sync.js",
+    "lib/",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && node --test",
+    "coverage": "c8 --include 'lib/**' --include 'index.js' --include 'http.js' --include 'stream.js' --include 'sync.js' -r text -r html -r lcov node --test"
+  },
+  "dependencies": {
+    "lodash.merge": "^4.6.2",
+    "needle": "^3.5.0",
+    "stream-parser": "~0.3.1"
+  },
+  "devDependencies": {
+    "c8": "^11.0.0",
+    "eslint": "^9.39.4",
+    "neostandard": "^0.13.0"
+  },
+  "depup": {
+    "changes": {
+      "needle": {
+        "from": "^2.5.2",
+        "to": "^3.5.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "probe-image-size",
+    "originalVersion": "7.4.0",
+    "processedAt": "2026-10-04T01:29:47.790Z",
+    "smokeTest": "passed"
+  }
+}

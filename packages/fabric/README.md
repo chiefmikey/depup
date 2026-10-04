@@ -12,7 +12,7 @@ npm install @depup/fabric
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.63 | **Updated**: 9/27/2026 | **Import test**: passed
+**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.64 | **Updated**: 10/4/2026 | **Import test**: passed
 
 ## What changed
 

@@ -1,0 +1,126 @@
+{
+  "bumped": {
+    "@vercel/prepare-flags-definitions": {
+      "from": "0.3.0",
+      "to": "^0.5.0"
+    },
+    "chokidar": {
+      "from": "4.0.0",
+      "to": "^5.0.0"
+    },
+    "esbuild": {
+      "from": "0.27.0",
+      "to": "^0.28.2"
+    },
+    "jose": {
+      "from": "5.9.6",
+      "to": "^6.2.12"
+    },
+    "luxon": {
+      "from": "^3.4.0",
+      "to": "^3.7.2"
+    },
+    "sandbox": {
+      "from": "4.4.0",
+      "to": "^4.6.0"
+    },
+    "smol-toml": {
+      "from": "1.5.2",
+      "to": "^1.9.0"
+    },
+    "undici": {
+      "from": "5.29.0",
+      "to": "^8.11.2"
+    },
+    "uuid": {
+      "from": "14.0.1",
+      "to": "^14.0.2"
+    },
+    "zod": {
+      "from": "4.1.11",
+      "to": "^4.6.5"
+    },
+    "@vercel/build-utils": {
+      "from": "14.15.0",
+      "to": "^14.17.0"
+    },
+    "@vercel/backends": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/elysia": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/container": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/fastify": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/express": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/go": {
+      "from": "16.0.0",
+      "to": "^18.0.0"
+    },
+    "@vercel/h3": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/hono": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/hydrogen": {
+      "from": "14.0.0",
+      "to": "^16.0.0"
+    },
+    "@vercel/koa": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/nestjs": {
+      "from": "13.0.0",
+      "to": "^15.0.0"
+    },
+    "@vercel/next": {
+      "from": "17.0.0",
+      "to": "^19.0.0"
+    },
+    "@vercel/python": {
+      "from": "19.0.0",
+      "to": "^21.0.0"
+    },
+    "@vercel/node": {
+      "from": "18.0.0",
+      "to": "^20.0.0"
+    },
+    "@vercel/redwood": {
+      "from": "15.0.0",
+      "to": "^17.0.0"
+    },
+    "@vercel/remix-builder": {
+      "from": "18.0.0",
+      "to": "^20.0.0"
+    },
+    "@vercel/ruby": {
+      "from": "15.0.0",
+      "to": "^17.0.0"
+    },
+    "@vercel/rust": {
+      "from": "14.0.0",
+      "to": "^16.0.0"
+    },
+    "@vercel/static-build": {
+      "from": "15.0.0",
+      "to": "^17.0.0"
+    }
+  },
+  "timestamp": "2026-10-04T01:32:16.648Z",
+  "totalUpdated": 30
+}

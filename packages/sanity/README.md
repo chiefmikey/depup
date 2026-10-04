@@ -12,32 +12,31 @@ npm install @depup/sanity
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.16.0 | **DepUp version**: 6.16.0-depup.0 | **Updated**: 9/27/2026 | **Import test**: failed
+**Original version**: 6.17.0 | **DepUp version**: 6.17.0-depup.0 | **Updated**: 10/4/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @portabletext/editor | `^8.1.8` | `^8.2.1` |
-| @portabletext/plugin-dnd | `^2.0.14` | `^2.0.16` |
-| @portabletext/plugin-list-index | `^2.0.12` | `^2.0.14` |
-| @portabletext/plugin-markdown-shortcuts | `^9.0.13` | `^9.0.15` |
-| @portabletext/plugin-one-line | `^8.0.12` | `^8.0.14` |
-| @portabletext/plugin-paste-link | `^5.0.12` | `^5.0.14` |
-| @portabletext/plugin-table | `^2.0.12` | `^2.0.14` |
-| @portabletext/plugin-typography | `^9.0.13` | `^9.0.15` |
-| @sanity/cli | `^8.12.0` | `^8.13.0` |
-| @sanity/client | `^8.6.2` | `^8.7.0` |
+| @portabletext/editor | `^8.2.2` | `^8.2.3` |
+| @portabletext/plugin-dnd | `^2.0.17` | `^2.0.18` |
+| @portabletext/plugin-list-index | `^2.0.15` | `^2.0.16` |
+| @portabletext/plugin-markdown-shortcuts | `^9.0.16` | `^9.0.17` |
+| @portabletext/plugin-one-line | `^8.0.15` | `^8.0.16` |
+| @portabletext/plugin-paste-link | `^5.0.15` | `^5.0.16` |
+| @portabletext/plugin-table | `^2.0.15` | `^2.0.16` |
+| @portabletext/plugin-typography | `^9.0.16` | `^9.0.17` |
+| @portabletext/sanity-bridge | `^4.1.1` | `^4.1.2` |
+| @sanity/cli | `^8.13.0` | `^8.13.1` |
+| @sanity/client | `^8.7.0` | `^8.9.0` |
 | @sanity/diff-patch | `^5.0.0` | `^7.0.0` |
-| @sanity/media-library-types | `^1.7.0` | `^1.7.1` |
-| @sanity/sdk | `^3.3.0` | `^3.5.0` |
-| @sanity/sdk-react | `^3.3.0` | `^3.5.0` |
-| @sanity/ui | `^4.2.3` | `^4.2.7` |
-| @sentry/react | `^10.75.0` | `^11.0.0` |
+| @sanity/icons | `^5.2.2` | `^5.2.3` |
+| @sanity/sdk | `^3.6.0` | `^3.7.0` |
+| @sanity/sdk-react | `^3.6.0` | `^3.7.0` |
+| @sanity/ui | `^4.2.7` | `^4.3.0` |
+| @sentry/react | `^10.75.3` | `^11.4.0` |
 | isomorphic-dompurify | `2.36.0` | `^4.4.0` |
-| motion | `^13.4.0` | `^13.4.4` |
-| react-i18next | `^17.0.14` | `^17.0.15` |
-| react-rx | `^7.0.0` | `^7.0.1` |
+| motion | `^13.4.4` | `^14.0.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sanity&labels=bug).

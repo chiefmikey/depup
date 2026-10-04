@@ -12,11 +12,14 @@ npm install @depup/tsc-watch
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.2.1 | **DepUp version**: 7.2.1-depup.26 | **Updated**: 9/27/2026 | **Import test**: passed
+**Original version**: 7.2.1 | **DepUp version**: 7.2.1-depup.27 | **Updated**: 10/4/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| string-argv | `^0.3.2` | `^0.4.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tsc-watch&labels=bug).
 
