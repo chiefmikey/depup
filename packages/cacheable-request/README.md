@@ -12,12 +12,13 @@ npm install @depup/cacheable-request
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 13.0.19 | **DepUp version**: 13.0.19-depup.53 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 13.0.19 | **DepUp version**: 13.0.19-depup.54 | **Updated**: 10/4/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| http-cache-semantics | `^4.2.0` | `^4.3.0` |
 | normalize-url | `^8.1.1` | `^9.0.1` |
 
 
