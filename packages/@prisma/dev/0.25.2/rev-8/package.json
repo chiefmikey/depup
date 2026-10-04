@@ -1,6 +1,6 @@
 {
   "name": "@depup/prisma__dev",
-  "version": "0.25.2-depup.3",
+  "version": "0.25.2-depup.8",
   "description": "A local Prisma Postgres server for development and testing (with updated dependencies)",
   "type": "module",
   "author": "Igal Klebanov <igalklebanov@gmail.com> (https://github.com/igalklebanov)",
@@ -116,9 +116,9 @@
     "get-port-please": "3.2.0",
     "pathe": "2.0.3",
     "proper-lockfile": "4.1.2",
-    "remeda": "^2.47.0",
-    "std-env": "^4.2.0",
-    "valibot": "1.4.2",
+    "remeda": "^2.51.0",
+    "std-env": "^4.3.0",
+    "valibot": "^1.5.0",
     "zeptomatch": "2.1.0"
   },
   "scripts": {
@@ -163,17 +163,21 @@
       },
       "remeda": {
         "from": "2.33.4",
-        "to": "^2.47.0"
+        "to": "^2.51.0"
       },
       "std-env": {
         "from": "3.10.0",
-        "to": "^4.2.0"
+        "to": "^4.3.0"
+      },
+      "valibot": {
+        "from": "1.4.2",
+        "to": "^1.5.0"
       }
     },
-    "depsUpdated": 9,
+    "depsUpdated": 10,
     "originalPackage": "@prisma/dev",
     "originalVersion": "0.25.2",
-    "processedAt": "2026-09-07T16:09:41.004Z",
+    "processedAt": "2026-10-04T17:25:17.442Z",
     "smokeTest": "failed"
   }
 }
