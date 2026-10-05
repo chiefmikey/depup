@@ -2,7 +2,7 @@
   "name": "@depup/nexe",
   "description": "Create a single executable out of your Node.js application (with updated dependencies)",
   "license": "MIT",
-  "version": "5.0.0-beta.4-depup.5",
+  "version": "5.0.0-beta.4-depup.10",
   "contributors": [
     "Craig Condon <craig.j.condon@gmail.com> (http://crcn.io)",
     "Jared Allard <jaredallard@outlook.com>",
@@ -51,11 +51,11 @@
     "app-builder": "^7.0.4",
     "archiver": "^8.0.0",
     "caw": "^2.0.1",
-    "chalk": "^5.6.2",
+    "chalk": "^6.0.1",
     "download": "^8.0.0",
-    "globby": "^16.2.2",
-    "got": "^15.1.0",
-    "meriyah": "^7.1.2",
+    "globby": "^16.2.4",
+    "got": "^16.0.0",
+    "meriyah": "^7.4.0",
     "minimist": "^1.2.8",
     "mkdirp": "^3.0.1",
     "multistream": "^4.1.0",
@@ -114,19 +114,19 @@
       },
       "chalk": {
         "from": "^2.4.2",
-        "to": "^5.6.2"
+        "to": "^6.0.1"
       },
       "globby": {
         "from": "^11.0.2",
-        "to": "^16.2.2"
+        "to": "^16.2.4"
       },
       "got": {
         "from": "^12.6.0",
-        "to": "^15.1.0"
+        "to": "^16.0.0"
       },
       "meriyah": {
         "from": "^4.3.5",
-        "to": "^7.1.2"
+        "to": "^7.4.0"
       },
       "mkdirp": {
         "from": "^1.0.4",
@@ -144,7 +144,7 @@
     "depsUpdated": 10,
     "originalPackage": "nexe",
     "originalVersion": "5.0.0-beta.4",
-    "processedAt": "2026-07-21T17:25:55.734Z",
+    "processedAt": "2026-10-05T08:21:29.513Z",
     "smokeTest": "failed"
   }
 }

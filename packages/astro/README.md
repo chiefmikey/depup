@@ -12,7 +12,7 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.5 | **DepUp version**: 7.3.5-depup.3 | **Updated**: 10/4/2026 | **Import test**: failed
+**Original version**: 7.3.5 | **DepUp version**: 7.3.5-depup.4 | **Updated**: 10/5/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,16 +23,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @clack/prompts | `^1.1.0` | `^1.8.1` |
 | am-i-vibing | `^0.4.0` | `^0.5.0` |
 | devalue | `^5.8.1` | `^6.0.2` |
-| es-module-lexer | `^2.0.0` | `^3.0.2` |
+| es-module-lexer | `^2.0.0` | `^3.0.3` |
 | esbuild | `^0.28.0` | `^0.28.2` |
 | find-proc | `0.2.0` | `^0.3.0` |
 | http-cache-semantics | `^4.2.0` | `^4.3.0` |
 | js-yaml | `^4.3.2` | `^5.4.2` |
-| magic-string | `^1.0.0` | `^1.4.2` |
+| magic-string | `^1.0.0` | `^1.4.3` |
 | magicast | `^0.5.2` | `^0.5.5` |
 | p-limit | `^7.3.0` | `^7.3.3` |
 | p-queue | `^9.1.0` | `^9.3.3` |
-| package-manager-detector | `^1.6.0` | `^1.8.0` |
+| package-manager-detector | `^1.6.0` | `^1.9.0` |
 | picomatch | `^4.0.4` | `^4.0.7` |
 | shiki | `^4.0.2` | `^4.5.0` |
 | smol-toml | `^1.8.0` | `^1.9.0` |
