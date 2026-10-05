@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.67.0-depup.10",
+  "version": "6.67.0-depup.15",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -155,7 +155,7 @@
     "gscan": "6.6.1",
     "handlebars": "4.7.9",
     "heic-convert": "2.1.0",
-    "hono": "^4.13.12",
+    "hono": "^4.13.13",
     "html-to-text": "^10.0.1",
     "html5parser": "^3.0.0",
     "human-number": "3.0.0",
@@ -165,7 +165,7 @@
     "ipaddr.js": "2.5.0",
     "jose": "6.2.12",
     "js-yaml": "^5.4.2",
-    "jsdom": "^30.1.1",
+    "jsdom": "^30.1.2",
     "jsonc-parser": "3.3.1",
     "jsonwebtoken": "^9.0.3",
     "juice": "^12.2.0",
@@ -194,7 +194,7 @@
     "mysql2": "^3.24.5",
     "nconf": "0.13.0",
     "node-html-markdown": "2.0.0",
-    "nodemailer": "^10.0.13",
+    "nodemailer": "^10.0.14",
     "on-headers": "1.1.0",
     "otplib": "^13.5.0",
     "papaparse": "^5.7.0",
@@ -449,7 +449,7 @@
       },
       "hono": {
         "from": "4.13.8",
-        "to": "^4.13.12"
+        "to": "^4.13.13"
       },
       "html-to-text": {
         "from": "5.1.1",
@@ -469,7 +469,7 @@
       },
       "jsdom": {
         "from": "30.0.1",
-        "to": "^30.1.1"
+        "to": "^30.1.2"
       },
       "jsonwebtoken": {
         "from": "8.5.1",
@@ -557,7 +557,7 @@
       },
       "nodemailer": {
         "from": "10.0.10",
-        "to": "^10.0.13"
+        "to": "^10.0.14"
       },
       "otplib": {
         "from": "12.0.1",
@@ -607,7 +607,7 @@
     "depsUpdated": 93,
     "originalPackage": "ghost",
     "originalVersion": "6.67.0",
-    "processedAt": "2026-10-03T08:12:14.700Z",
+    "processedAt": "2026-10-05T00:37:22.152Z",
     "smokeTest": "failed"
   }
 }
