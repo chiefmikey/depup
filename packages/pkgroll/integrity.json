@@ -341,6 +341,31 @@
       "status": "published",
       "timestamp": "2026-10-02T16:11:05.908Z",
       "version": "2.28.1-depup.3"
+    },
+    "4": {
+      "changes": {
+        "cjs-module-lexer": {
+          "from": "^2.2.1",
+          "to": "^2.3.0"
+        },
+        "magic-string": {
+          "from": "^1.2.2",
+          "to": "^1.4.3"
+        },
+        "rollup": {
+          "from": "^4.62.5",
+          "to": "^4.64.0"
+        },
+        "yaml": {
+          "from": "^2.9.0",
+          "to": "^2.9.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-05T08:20:36.235Z",
+      "version": "2.28.1-depup.4"
     }
   }
 }
