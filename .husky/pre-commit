@@ -1,8 +1,23 @@
-# mikey-pro gate: formatting is enforced when the toolchain is installed.
-# A missing toolchain (fresh clone or worktree without node_modules) warns and
-# continues -- the gate must never be the reason a commit cannot happen.
+# mikey-pro gate: auto-fixes staged files and NEVER blocks a commit on
+# lint/format. husky's core.hooksPath overrides the machine-wide hooks dir, so
+# chain the global hook (central runner + security gates; only a security gate
+# can fail it). Without it, fall back to lint-staged, non-blocking, with leftovers
+# logged as debt. Kill switch: MIKEY_PRO_PRECOMMIT=off.
+if [ "${MIKEY_PRO_PRECOMMIT:-}" = "off" ]; then
+  exit 0
+fi
+g="$HOME/.config/git/hooks/pre-commit"
+if [ -x "$g" ]; then
+  exec "$g" "$@"
+fi
 if [ ! -x node_modules/.bin/lint-staged ] || [ ! -x node_modules/.bin/prettier ] || [ ! -d node_modules/mikey-pro ]; then
   echo "mikey-pro gate: dependencies not installed (run npm install); skipping lint-staged" >&2
   exit 0
 fi
-npx --no-install lint-staged --concurrent false
+if ! npx --no-install lint-staged --concurrent false; then
+  echo "mikey-pro gate: lint debt remains in staged files; commit not blocked" >&2
+  ledger="$HOME/.local/state/mikey-pro/lint-debt.jsonl"
+  mkdir -p "$(dirname "$ledger")" 2>/dev/null &&
+    printf '{"repo":"depup","ts":"%s","source":"husky-lint-staged","status":"debt"}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" >>"$ledger" 2>/dev/null
+fi
+exit 0
