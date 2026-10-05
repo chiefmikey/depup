@@ -637,6 +637,23 @@
       "status": "published",
       "timestamp": "2026-10-01T16:10:12.949Z",
       "version": "22.2.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "oxc-parser": {
+          "from": "0.150.0",
+          "to": "^0.153.0"
+        },
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-05T16:11:14.623Z",
+      "version": "22.2.1-depup.1"
     }
   }
 }
