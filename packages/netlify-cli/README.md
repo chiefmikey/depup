@@ -12,16 +12,17 @@ npm install @depup/netlify-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 27.10.2 | **DepUp version**: 27.10.2-depup.0 | **Updated**: 9/29/2026 | **Import test**: failed
+**Original version**: 27.11.0 | **DepUp version**: 27.11.0-depup.0 | **Updated**: 10/5/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @fastify/static | `^10.0.0` | `^10.1.5` |
-| @netlify/blobs | `^11.1.0` | `^11.1.1` |
-| @netlify/dev | `^5.1.2` | `^5.1.3` |
-| @octokit/rest | `^22.0.0` | `^22.0.1` |
+| @inquirer/prompts | `^8.7.2` | `^8.7.3` |
+| @netlify/edge-functions | `^4.0.0` | `^4.0.2` |
+| @netlify/images | `^2.0.1` | `^2.0.3` |
+| @netlify/server-dev | `^0.1.1` | `^0.1.3` |
 | @opentelemetry/api | `~1.9.0` | `^1.9.1` |
 | boxen | `^8.0.1` | `^9.0.0` |
 | chalk | `^6.0.0` | `^6.0.1` |
@@ -29,15 +30,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | content-type | `^1.0.5` | `^3.1.1` |
 | cookie | `^2.0.0` | `^2.0.1` |
 | cron-parser | `^5.0.0` | `^5.10.1` |
-| dot-prop | `^10.1.0` | `^10.2.0` |
-| dotenv | `^17.3.1` | `^18.0.4` |
+| dotenv | `^17.3.1` | `^18.0.5` |
 | execa | `^5.1.1` | `^10.0.1` |
 | fastify | `^5.8.5` | `^5.12.5` |
 | get-port | `^5.1.1` | `^7.2.0` |
 | http-proxy-middleware | `^3.0.5` | `^4.2.0` |
 | https-proxy-agent | `^8.0.0` | `^9.1.0` |
-| inquirer | `^8.2.7` | `^14.2.2` |
-| inquirer-autocomplete-prompt | `^1.4.0` | `^3.0.1` |
 | is-wsl | `^3.1.0` | `^3.1.1` |
 | modern-tar | `^0.8.0` | `^0.8.5` |
 | multiparty | `^4.2.3` | `^4.3.1` |
@@ -46,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | p-map | `^7.0.3` | `^7.0.8` |
 | parse-duration | `^2.1.6` | `^2.1.9` |
 | parse-github-url | `^1.0.3` | `^1.0.4` |
-| pg | `^8.20.0` | `^8.23.0` |
+| pg | `^8.20.0` | `^8.23.1` |
 | readdirp | `^5.0.0` | `^5.1.1` |
 | semver | `^7.7.2` | `^7.8.5` |
 | toml | `^4.0.0` | `^5.0.0` |

@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.16 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.17 | **Updated**: 10/5/2026 | **Import test**: failed
 
 ## What changed
 
@@ -81,6 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jsonwebtoken | `8.5.1` | `^9.0.3` |
 | juice | `11.1.1` | `^12.2.0` |
 | knex | `2.4.2` | `^3.3.0` |
+| knex-migrator | `6.2.1` | `^6.3.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^14.0.1` |
 | metascraper | `5.55.2` | `^5.58.1` |
@@ -99,7 +100,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment-timezone | `0.5.45` | `^0.6.5` |
 | mppx | `0.6.20` | `^0.13.1` |
 | mysql2 | `3.24.4` | `^3.24.5` |
-| nodemailer | `10.0.10` | `^10.0.14` |
+| nodemailer | `10.0.10` | `^10.0.15` |
 | otplib | `12.0.1` | `^13.5.0` |
 | papaparse | `5.5.4` | `^5.7.0` |
 | probe-image-size | `7.3.0` | `^7.4.0` |
