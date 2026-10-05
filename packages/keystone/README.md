@@ -12,7 +12,7 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.86 | **Updated**: 10/1/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.87 | **Updated**: 10/5/2026 | **Import test**: passed
 
 ## What changed
 
@@ -43,7 +43,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cookie-parser | `^1.4.4` | `^1.4.7` |
 | debug | `^4.1.1` | `^4.4.3` |
 | display-name | `^0.1.0` | `^1.0.1` |
-| ejs | `^2.6.1` | `^6.0.1` |
+| ejs | `^2.6.1` | `^7.0.1` |
 | errorhandler | `^1.5.1` | `^1.5.2` |
 | es6-promise | `^4.2.6` | `^4.2.8` |
 | express | `^4.17.0` | `^5.2.1` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | marked | `^0.6.2` | `^18.0.14` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.31.0` |
-| mongoose | `^4.13.14` | `^9.10.3` |
+| mongoose | `^4.13.14` | `^9.10.4` |
 | morgan | `^1.9.1` | `^1.12.1` |
 | multer | `^1.4.1` | `^2.4.0` |
 | qs | `^6.7.0` | `^6.16.0` |

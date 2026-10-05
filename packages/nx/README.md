@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.6 | **Updated**: 9/27/2026 | **Import test**: failed
+**Original version**: 23.2.1 | **DepUp version**: 23.2.1-depup.7 | **Updated**: 10/5/2026 | **Import test**: failed
 
 ## What changed
 
@@ -48,18 +48,19 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | default-browser | `5.2.1` | `^5.5.1` |
 | default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
-| dotenv | `16.4.7` | `^18.0.4` |
+| dotenv | `16.4.7` | `^18.0.5` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
-| ejs | `5.0.1` | `^6.0.1` |
+| ejs | `5.0.1` | `^7.0.1` |
 | emoji-regex | `8.0.0` | `^11.0.0` |
 | es-object-atoms | `1.1.1` | `^1.1.2` |
 | escape-string-regexp | `1.0.5` | `^5.0.0` |
 | fast-wrap-ansi | `0.2.0` | `^0.2.2` |
 | figures | `3.2.0` | `^6.1.0` |
 | flat | `5.0.2` | `^6.0.1` |
+| follow-redirects | `1.16.0` | `^1.16.1` |
 | has-flag | `4.0.0` | `^5.0.1` |
 | https-proxy-agent | `5.0.1` | `^9.1.0` |
-| ignore | `7.0.5` | `^7.0.10` |
+| ignore | `7.0.5` | `^7.0.12` |
 | is-docker | `3.0.0` | `^4.0.0` |
 | is-fullwidth-code-point | `3.0.0` | `^5.1.0` |
 | is-interactive | `1.0.0` | `^2.0.0` |
@@ -88,7 +89,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^11.0.0` |
-| tar-stream | `2.2.0` | `^3.2.1` |
+| tar-stream | `2.2.0` | `^3.2.2` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.2` |
 | yaml | `2.9.0` | `^2.9.1` |
