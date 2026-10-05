@@ -15,7 +15,8 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit --testTimeout=120000",
     "test:unit": "node --experimental-vm-modules node_modules/.bin/jest --testPathIgnorePatterns \"/node_modules/\" \"/\\.test-temp/\" \"/rev-\" \"<rootDir>/depup/\" \"/\\.claude/\" \"integration\\.test\\.js\" --forceExit --testTimeout=120000",
     "test:integration": "node --experimental-vm-modules node_modules/.bin/jest scripts/__tests__/integration.test.js --forceExit --testTimeout=120000",
-    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000"
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --forceExit --testTimeout=120000",
+    "prepare": "husky || true"
   },
   "dependencies": {
     "chalk": "6.0.1",
@@ -28,7 +29,9 @@
   },
   "devDependencies": {
     "eslint": "10.11.0",
+    "husky": "9.1.7",
     "jest": "30.5.2",
+    "lint-staged": "17.6.0",
     "mikey-pro": "10.3.4",
     "prettier": "3.9.9",
     "stylelint": "16.26.1"
@@ -40,15 +43,16 @@
   "repository": "https://github.com/depup/npm",
   "bugs": "https://github.com/depup/npm/issues",
   "license": "MIT",
-  "keywords": [
-    "depup",
-    "npm",
-    "dependencies",
-    "security",
-    "automation"
-  ],
+  "keywords": ["depup", "npm", "dependencies", "security", "automation"],
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://github.com/chiefmikey)",
   "prettier": "mikey-pro/prettier",
+  "lint-staged": {
+    "scripts/**/*.mjs": [
+      "eslint --fix --cache --no-error-on-unmatched-pattern",
+      "prettier --write"
+    ],
+    "*.{js,mjs,cjs,json,md,yml,yaml}": ["prettier --write"]
+  },
   "overrides": {
     "@boundaries/elements": "2.0.1",
     "@istanbuljs/load-nyc-config": {
