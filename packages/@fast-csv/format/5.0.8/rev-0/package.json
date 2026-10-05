@@ -1,0 +1,55 @@
+{
+  "name": "@depup/fast-csv__format",
+  "version": "5.0.8-depup.0",
+  "description": "fast-csv formatting module (with updated dependencies)",
+  "keywords": [
+    "@fast-csv/format",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "csv",
+    "format",
+    "write"
+  ],
+  "author": "doug-martin <doug@dougamartin.com>",
+  "homepage": "https://c2fo.github.io/fast-csv/docs/formatting/getting-started/",
+  "license": "MIT",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "build/src/**",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C2FO/fast-csv.git",
+    "directory": "packages/format"
+  },
+  "scripts": {
+    "build": "pnpm run clean && pnpm run compile",
+    "clean": "rm -rf ./build && rm -rf tsconfig.tsbuildinfo",
+    "compile": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/C2FO/fast-csv/issues"
+  },
+  "devDependencies": {
+    "@types/node": "24.12.3"
+  },
+  "gitHead": "4d44cec696b39c18d45106d85adefbbfa5087e51",
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@fast-csv/format",
+    "originalVersion": "5.0.8",
+    "processedAt": "2026-10-05T16:10:28.106Z",
+    "smokeTest": "passed"
+  }
+}
