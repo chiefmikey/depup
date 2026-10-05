@@ -651,6 +651,27 @@
       "status": "published",
       "timestamp": "2026-10-02T16:10:16.388Z",
       "version": "5.104.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@solid-primitives/storage": {
+          "from": "^1.3.11",
+          "to": "^4.4.0"
+        },
+        "@tanstack/match-sorter-utils": {
+          "from": "^9.1.2",
+          "to": "^9.2.6"
+        },
+        "solid-transition-group": {
+          "from": "^0.2.3",
+          "to": "^0.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-05T00:37:28.549Z",
+      "version": "5.104.1-depup.1"
     }
   }
 }

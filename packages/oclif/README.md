@@ -12,7 +12,7 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.5 | **Updated**: 10/3/2026 | **Import test**: passed
+**Original version**: 6.0.2 | **DepUp version**: 6.0.2-depup.6 | **Updated**: 10/5/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,9 +20,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1146.0` |
 | @aws-sdk/client-s3 | `^3.1079.0` | `^3.1146.0` |
-| @inquirer/confirm | `^3.1.22` | `^6.3.2` |
-| @inquirer/input | `^2.2.4` | `^5.1.6` |
-| @inquirer/select | `^2.5.0` | `^5.2.5` |
+| @inquirer/confirm | `^3.1.22` | `^6.3.3` |
+| @inquirer/input | `^2.2.4` | `^5.1.7` |
+| @inquirer/select | `^2.5.0` | `^5.2.6` |
 | @oclif/core | `^5.0.0` | `^5.1.2` |
 | @oclif/plugin-help | `^7.0.0` | `^7.0.2` |
 | @oclif/plugin-not-found | `^4.0.0` | `^4.0.2` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ansis | `^3.16.0` | `^4.4.0` |
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
-| ejs | `^3.1.10` | `^6.0.1` |
+| ejs | `^3.1.10` | `^7.0.1` |
 | fs-extra | `^8.1` | `^11.4.1` |
 | got | `^13` | `^16.0.0` |
 | normalize-package-data | `^6` | `^9.0.0` |

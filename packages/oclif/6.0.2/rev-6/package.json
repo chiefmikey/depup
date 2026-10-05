@@ -1,18 +1,18 @@
 {
   "name": "@depup/oclif",
   "description": "oclif: create your own CLI (with updated dependencies)",
-  "version": "6.0.2-depup.1",
+  "version": "6.0.2-depup.6",
   "author": "Salesforce",
   "bin": {
     "oclif": "bin/run.js"
   },
   "bugs": "https://github.com/oclif/oclif/issues",
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.1142.0",
-    "@aws-sdk/client-s3": "^3.1142.0",
-    "@inquirer/confirm": "^6.3.2",
-    "@inquirer/input": "^5.1.6",
-    "@inquirer/select": "^5.2.5",
+    "@aws-sdk/client-cloudfront": "^3.1146.0",
+    "@aws-sdk/client-s3": "^3.1146.0",
+    "@inquirer/confirm": "^6.3.3",
+    "@inquirer/input": "^5.1.7",
+    "@inquirer/select": "^5.2.6",
     "@oclif/core": "^5.1.2",
     "@oclif/plugin-help": "^7.0.2",
     "@oclif/plugin-not-found": "^4.0.2",
@@ -22,7 +22,7 @@
     "change-case": "^5.4.4",
     "cross-spawn": "^7.0.6",
     "debug": "^4.4.3",
-    "ejs": "^6.0.1",
+    "ejs": "^7.0.1",
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^11.4.1",
     "github-slugger": "^2",
@@ -156,23 +156,23 @@
     "changes": {
       "@aws-sdk/client-cloudfront": {
         "from": "^3.1079.0",
-        "to": "^3.1142.0"
+        "to": "^3.1146.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1079.0",
-        "to": "^3.1142.0"
+        "to": "^3.1146.0"
       },
       "@inquirer/confirm": {
         "from": "^3.1.22",
-        "to": "^6.3.2"
+        "to": "^6.3.3"
       },
       "@inquirer/input": {
         "from": "^2.2.4",
-        "to": "^5.1.6"
+        "to": "^5.1.7"
       },
       "@inquirer/select": {
         "from": "^2.5.0",
-        "to": "^5.2.5"
+        "to": "^5.2.6"
       },
       "@oclif/core": {
         "from": "^5.0.0",
@@ -204,7 +204,7 @@
       },
       "ejs": {
         "from": "^3.1.10",
-        "to": "^6.0.1"
+        "to": "^7.0.1"
       },
       "fs-extra": {
         "from": "^8.1",
@@ -226,7 +226,7 @@
     "depsUpdated": 17,
     "originalPackage": "oclif",
     "originalVersion": "6.0.2",
-    "processedAt": "2026-09-29T00:38:36.663Z",
+    "processedAt": "2026-10-05T00:37:49.056Z",
     "smokeTest": "passed"
   }
 }
