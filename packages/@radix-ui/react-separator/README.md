@@ -12,7 +12,7 @@ npm install @depup/radix-ui__react-separator
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.15 | **DepUp version**: 1.1.15-depup.0 | **Updated**: 7/25/2026 | **Import test**: failed
+**Original version**: 1.1.16 | **DepUp version**: 1.1.16-depup.0 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
