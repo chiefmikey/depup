@@ -12,16 +12,16 @@ npm install @depup/cmdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.1 | **DepUp version**: 1.1.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: passed
+**Original version**: 1.1.1 | **DepUp version**: 1.1.1-depup.1 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @radix-ui/react-compose-refs | `^1.1.1` | `^1.1.2` |
-| @radix-ui/react-dialog | `^1.1.6` | `^1.1.15` |
-| @radix-ui/react-id | `^1.1.0` | `^1.1.1` |
-| @radix-ui/react-primitive | `^2.0.2` | `^2.1.4` |
+| @radix-ui/react-compose-refs | `^1.1.1` | `^1.1.5` |
+| @radix-ui/react-dialog | `^1.1.6` | `^1.2.0` |
+| @radix-ui/react-id | `^1.1.0` | `^1.1.4` |
+| @radix-ui/react-primitive | `^2.0.2` | `^2.1.11` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cmdk&labels=bug).

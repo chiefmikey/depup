@@ -24,6 +24,31 @@
       "status": "published",
       "timestamp": "2026-03-18T22:03:01.639Z",
       "version": "1.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@radix-ui/react-compose-refs": {
+          "from": "^1.1.1",
+          "to": "^1.1.5"
+        },
+        "@radix-ui/react-dialog": {
+          "from": "^1.1.6",
+          "to": "^1.2.0"
+        },
+        "@radix-ui/react-id": {
+          "from": "^1.1.0",
+          "to": "^1.1.4"
+        },
+        "@radix-ui/react-primitive": {
+          "from": "^2.0.2",
+          "to": "^2.1.11"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-06T00:34:38.730Z",
+      "version": "1.1.1-depup.1"
     }
   }
 }
