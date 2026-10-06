@@ -693,5 +693,20 @@
       "timestamp": "2026-09-17T16:10:23.064Z",
       "version": "9.14.0-depup.0"
     }
+  },
+  "9.15.0": {
+    "0": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.29.7 || ^8.0.0",
+          "to": "^8.0.5"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-06T16:10:59.063Z",
+      "version": "9.15.0-depup.0"
+    }
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.67.0 | **DepUp version**: 6.67.0-depup.19 | **Updated**: 10/6/2026 | **Import test**: failed
+**Original version**: 6.68.0 | **DepUp version**: 6.68.0-depup.0 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,49 +23,22 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^11.4.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
-| @tryghost/bookshelf-plugins | `2.3.15` | `^2.3.17` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
 | @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
 | @tryghost/custom-fonts | `1.0.12` | `^1.0.13` |
-| @tryghost/database-info | `2.3.14` | `^2.3.16` |
-| @tryghost/debug | `2.3.14` | `^2.3.16` |
-| @tryghost/domain-events | `3.3.15` | `^3.3.17` |
-| @tryghost/email-mock-receiver | `2.3.14` | `^2.3.16` |
-| @tryghost/errors | `3.3.14` | `^3.4.1` |
 | @tryghost/helpers | `1.1.107` | `^1.1.108` |
 | @tryghost/html-to-plaintext | `1.0.12` | `^1.0.13` |
-| @tryghost/image-transform | `1.4.18` | `^1.4.19` |
-| @tryghost/job-manager | `1.0.9` | `^4.1.17` |
-| @tryghost/logging | `5.4.5` | `^5.4.7` |
-| @tryghost/metrics | `3.6.0` | `^3.6.2` |
-| @tryghost/mw-error-handler | `3.3.14` | `^3.3.16` |
-| @tryghost/mw-vhost | `3.3.14` | `^3.3.16` |
-| @tryghost/nodemailer | `2.3.14` | `^2.3.16` |
-| @tryghost/pretty-cli | `3.3.14` | `^3.3.16` |
-| @tryghost/prometheus-metrics | `5.0.0` | `^5.0.2` |
 | @tryghost/referrer-parser | `0.1.22` | `^0.1.24` |
-| @tryghost/request | `4.0.7` | `^4.0.9` |
-| @tryghost/root-utils | `2.3.14` | `^2.3.16` |
-| @tryghost/security | `3.3.14` | `^3.3.16` |
 | @tryghost/social-urls | `0.1.64` | `^0.1.65` |
 | @tryghost/string | `0.3.6` | `^0.3.7` |
-| @tryghost/tpl | `2.3.14` | `^2.3.16` |
-| @tryghost/url-utils | `5.3.0` | `^5.4.0` |
-| @tryghost/validator | `3.2.14` | `^3.2.16` |
-| @tryghost/version | `2.3.14` | `^2.3.16` |
-| @tryghost/zip | `3.5.13` | `^3.5.15` |
 | @x402/core | `2.27.0` | `^2.28.0` |
 | @x402/evm | `2.27.0` | `^2.28.0` |
 | @x402/hono | `2.27.0` | `^2.28.0` |
 | body-parser | `1.20.8` | `^2.3.0` |
-| bookshelf-relations | `2.8.0` | `^3.0.0` |
 | cache-manager | `4.1.0` | `^7.2.9` |
 | chalk | `4.1.2` | `^6.0.1` |
-| compression | `1.8.1` | `^1.8.2` |
-| cookies | `0.9.1` | `^0.9.2` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
-| dompurify | `3.4.13` | `^3.4.16` |
 | entities | `4.5.0` | `^8.1.0` |
 | express | `4.22.3` | `^5.2.1` |
 | express-hbs | `2.5.0` | `^3.0.0` |
@@ -73,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | file-type | `21.3.4` | `^22.1.1` |
 | fs-extra | `11.3.6` | `^11.4.1` |
 | handlebars | `4.7.9` | `^4.7.10` |
-| hono | `4.13.8` | `^4.13.13` |
+| hono | `4.13.12` | `^4.13.13` |
 | html-to-text | `5.1.1` | `^10.0.1` |
 | html5parser | `2.0.2` | `^3.0.0` |
 | intl-messageformat | `5.4.3` | `^12.1.3` |
@@ -84,6 +57,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex | `2.4.2` | `^3.3.0` |
 | knex-migrator | `6.2.1` | `^6.3.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
+| lru-cache | `11.5.2` | `^11.5.3` |
 | mailgun.js | `10.4.0` | `^14.0.1` |
 | metascraper | `5.55.2` | `^5.58.1` |
 | metascraper-amazon | `5.55.2` | `^5.56.2` |
@@ -97,8 +71,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | metascraper-url | `5.55.2` | `^5.56.2` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.4` |
-| moment | `2.24.0` | `^2.31.0` |
-| moment-timezone | `0.5.45` | `^0.6.5` |
+| moment-timezone | `0.6.4` | `^0.6.5` |
 | mppx | `0.6.20` | `^0.13.1` |
 | mysql2 | `3.24.4` | `^3.24.5` |
 | nodemailer | `10.0.10` | `^10.0.15` |
@@ -112,7 +85,6 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tldts | `^7.4.4` | `^7.4.16` |
 | type-fest | `5.7.0` | `^5.10.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
-| zod | `4.4.3` | `^4.6.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ghost&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/caxa
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.5 | **Updated**: 7/24/2026 | **Import test**: failed
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.6 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,9 +22,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | commander | `^9.4.1` | `^15.0.0` |
 | crypto-random-string | `^5.0.0` | `^6.0.0` |
 | dedent | `^0.7.0` | `^1.7.2` |
-| execa | `^6.1.0` | `^10.0.0` |
-| fs-extra | `^10.1.0` | `^11.4.0` |
-| globby | `^13.1.2` | `^16.2.2` |
+| execa | `^6.1.0` | `^10.1.0` |
+| fs-extra | `^10.1.0` | `^11.4.1` |
+| globby | `^13.1.2` | `^16.2.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/caxa&labels=bug).

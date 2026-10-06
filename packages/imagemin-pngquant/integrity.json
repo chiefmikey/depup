@@ -74,6 +74,31 @@
       "status": "published",
       "timestamp": "2026-09-27T01:08:53.646Z",
       "version": "10.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "environment": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "execa": {
+          "from": "^8.0.1",
+          "to": "^10.1.0"
+        },
+        "ow": {
+          "from": "^2.0.0",
+          "to": "^3.1.1"
+        },
+        "uint8array-extras": {
+          "from": "^1.1.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-06T16:12:57.648Z",
+      "version": "10.0.0-depup.3"
     }
   }
 }
