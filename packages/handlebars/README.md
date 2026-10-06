@@ -12,13 +12,12 @@ npm install @depup/handlebars
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.7.9 | **DepUp version**: 4.7.9-depup.1 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 4.7.10 | **DepUp version**: 4.7.10-depup.0 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| minimist | `^1.2.5` | `^1.2.8` |
 | source-map | `^0.6.1` | `^0.8.0` |
 
 

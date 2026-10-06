@@ -598,6 +598,63 @@
       "status": "published",
       "timestamp": "2026-09-27T08:11:42.003Z",
       "version": "16.10.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@fastify/error": {
+          "from": "^4.0.0",
+          "to": "^4.2.0"
+        },
+        "@fastify/static": {
+          "from": "^10.1.0",
+          "to": "^10.1.5"
+        },
+        "@fastify/websocket": {
+          "from": "^11.0.0",
+          "to": "^11.3.3"
+        },
+        "graphql-jit": {
+          "from": "0.8.9",
+          "to": "^0.9.0"
+        },
+        "mqemitter": {
+          "from": "^7.0.0",
+          "to": "^7.1.0"
+        },
+        "p-map": {
+          "from": "^4.0.0",
+          "to": "^7.0.8"
+        },
+        "quick-lru": {
+          "from": "^7.0.0",
+          "to": "^7.3.0"
+        },
+        "readable-stream": {
+          "from": "^4.0.0",
+          "to": "^4.7.0"
+        },
+        "safe-stable-stringify": {
+          "from": "^2.3.0",
+          "to": "^2.5.0"
+        },
+        "single-user-cache": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "tiny-lru": {
+          "from": "^11.0.0",
+          "to": "^13.1.0"
+        },
+        "ws": {
+          "from": "^8.2.2",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 12,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-06T00:37:41.970Z",
+      "version": "16.10.1-depup.2"
     }
   }
 }

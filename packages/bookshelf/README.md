@@ -12,7 +12,7 @@ npm install @depup/bookshelf
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.2.0 | **DepUp version**: 1.2.0-depup.282 | **Updated**: 10/5/2026 | **Import test**: passed
+**Original version**: 1.2.0 | **DepUp version**: 1.2.0-depup.283 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
