@@ -12,14 +12,14 @@ npm install @depup/graphql-tools__graphql-tag-pluck
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.3.39 | **DepUp version**: 8.3.39-depup.0 | **Updated**: 10/1/2026 | **Import test**: passed
+**Original version**: 8.3.39 | **DepUp version**: 8.3.39-depup.1 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/core | `^7.29.7` | `^8.0.6` |
-| @babel/parser | `^7.29.3` | `^7.29.9` |
+| @babel/parser | `^7.29.3` | `^8.0.6` |
 | @babel/traverse | `^7.26.10` | `^8.0.6` |
 | @babel/types | `^7.26.10` | `^8.0.6` |
 | tslib | `^2.4.0` | `^2.8.1` |

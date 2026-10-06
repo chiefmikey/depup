@@ -12,7 +12,7 @@ npm install @depup/documentation
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.11 | **Updated**: 9/21/2026 | **Import test**: failed
+**Original version**: 14.0.3 | **DepUp version**: 14.0.3-depup.12 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,10 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @babel/core | `^7.18.10` | `^8.0.6` |
 | @babel/generator | `^7.18.10` | `^8.0.6` |
-| @babel/parser | `^7.18.11` | `^7.29.9` |
+| @babel/parser | `^7.18.11` | `^8.0.6` |
 | @babel/traverse | `^7.18.11` | `^8.0.6` |
 | @babel/types | `^7.18.10` | `^8.0.6` |
-| chalk | `^5.0.1` | `^6.0.0` |
+| chalk | `^5.0.1` | `^6.0.1` |
 | chokidar | `^3.5.3` | `^5.0.0` |
 | diff | `^5.1.0` | `^9.0.0` |
 | git-url-parse | `^13.1.0` | `^16.1.0` |
@@ -31,9 +31,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | glob | `^8.0.3` | `^13.0.6` |
 | highlight.js | `^11.6.0` | `^11.12.0` |
 | ini | `^3.0.0` | `^7.0.0` |
-| js-yaml | `^4.1.0` | `^5.4.2` |
+| js-yaml | `^4.1.0` | `^5.4.3` |
 | lodash | `^4.17.21` | `^4.18.1` |
-| mdast-util-find-and-replace | `^2.2.1` | `^3.0.2` |
+| mdast-util-find-and-replace | `^2.2.1` | `^3.0.3` |
 | micromark-util-character | `^1.1.0` | `^2.1.1` |
 | pify | `^6.0.0` | `^6.1.0` |
 | read-pkg-up | `^9.1.0` | `^11.0.0` |

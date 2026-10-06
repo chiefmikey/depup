@@ -1,0 +1,149 @@
+{
+  "name": "@depup/execa",
+  "version": "10.1.0-depup.0",
+  "description": "Process execution for humans (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/execa",
+  "funding": "https://github.com/sindresorhus/execa?sponsor=1",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run unit && npm run type",
+    "lint": "xo",
+    "unit": "c8 --merge-async node --test --test-concurrency=1 --test-timeout=240000 \"test/!(fixtures|helpers)/*.js\"",
+    "type": "tsd && tsc"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/**/*.js",
+    "types/**/*.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "execa",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "exec",
+    "child",
+    "process",
+    "subprocess",
+    "execute",
+    "fork",
+    "execfile",
+    "spawn",
+    "file",
+    "shell",
+    "bin",
+    "binary",
+    "binaries",
+    "npm",
+    "path",
+    "local",
+    "zx"
+  ],
+  "dependencies": {
+    "@sindresorhus/merge-streams": "^4.0.0",
+    "figures": "^6.1.0",
+    "get-stream": "^9.0.1",
+    "human-signals": "^8.0.1",
+    "is-plain-obj": "^4.1.0",
+    "is-stream": "^4.0.1",
+    "npm-run-path": "^6.0.0",
+    "pretty-ms": "^9.3.1",
+    "signal-exit": "^4.1.0",
+    "strip-final-newline": "^4.0.0",
+    "which-command": "^0.1.0",
+    "yoctocolors": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "c8": "^12.0.0",
+    "get-node": "^15.0.4",
+    "is-in-ci": "^2.0.0",
+    "is-running": "^2.1.0",
+    "log-process-errors": "^12.0.1",
+    "path-exists": "^5.0.0",
+    "path-key": "^4.0.0",
+    "tempfile": "^6.0.1",
+    "tsd": "^0.33.0",
+    "typescript": "^6.0.3",
+    "xo": "^5.0.1"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "exclude": [
+      "**/fixtures/**",
+      "**/test.js",
+      "**/test/**"
+    ]
+  },
+  "xo": [
+    {
+      "rules": {
+        "unicorn/no-empty-file": "off",
+        "unicorn/prefer-string-raw": "off",
+        "@typescript-eslint/no-empty-object-type": "off",
+        "unicorn/no-useless-template-literals": "off",
+        "require-unicode-regexp": "off",
+        "@stylistic/max-len": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/await-thenable": "off",
+        "@typescript-eslint/no-unnecessary-type-assertion": "off",
+        "@typescript-eslint/no-restricted-types": "off",
+        "no-shadow": "off",
+        "unicorn/no-computed-property-existence-check": "off",
+        "unicorn/max-nested-calls": "off",
+        "unicorn/no-array-sort": "off",
+        "unicorn/prefer-minimal-ternary": "off",
+        "unicorn/no-array-reverse": "off",
+        "unicorn/no-array-from-fill": "off",
+        "unicorn/prefer-number-is-safe-integer": "off",
+        "unicorn/require-array-sort-compare": "off",
+        "@typescript-eslint/ban-types": "off",
+        "regexp/strict": "off",
+        "unicorn/require-module-specifiers": "off",
+        "jsdoc/require-asterisk-prefix": "off",
+        "node-test/require-assertion": "off",
+        "node-test/no-import-test-files": "off",
+        "node-test/no-conditional-tests": "off",
+        "node-test/prefer-test-context-assert": "off",
+        "node-test/no-process-env-mutation": "off",
+        "node-test/no-useless-assertion": "off"
+      }
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "rules": {
+        "markdown/fenced-code-language": "off"
+      }
+    }
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "execa",
+    "originalVersion": "10.1.0",
+    "processedAt": "2026-10-06T16:13:13.463Z",
+    "smokeTest": "passed"
+  }
+}

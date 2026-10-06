@@ -12,7 +12,7 @@ npm install @depup/prisma
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0-rc.20 | **DepUp version**: 8.0.0-rc.20-depup.0 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 8.0.0-rc.20 | **DepUp version**: 8.0.0-rc.20-depup.1 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @vercel/detect-agent | `^1.2.3` | `^1.2.5` |
 | better-result | `^2.9.2` | `^3.0.1` |
 | dotenv | `^17.4.2` | `^18.0.5` |
-| execa | `^9.6.1` | `^10.0.1` |
+| execa | `^9.6.1` | `^10.1.0` |
 | open | `^11.0.0` | `^11.0.4` |
 
 
