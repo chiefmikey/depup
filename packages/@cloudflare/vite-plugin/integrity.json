@@ -2517,6 +2517,23 @@
       "status": "published",
       "timestamp": "2026-10-05T08:20:51.331Z",
       "version": "1.62.5-depup.2"
+    },
+    "3": {
+      "changes": {
+        "workerd": {
+          "from": "1.20261001.1",
+          "to": "^1.20261006.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-06T08:12:41.685Z",
+      "version": "1.62.5-depup.3"
     }
   }
 }
