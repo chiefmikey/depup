@@ -12,14 +12,14 @@ npm install @depup/sveltejs__kit
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.0 | **DepUp version**: 3.0.0-depup.0 | **Updated**: 10/2/2026 | **Import test**: passed
+**Original version**: 3.0.1 | **DepUp version**: 3.0.1-depup.0 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | devalue | `^5.9.4` | `^6.0.2` |
-| magic-string | `^1.2.3` | `^1.4.2` |
+| magic-string | `^1.2.3` | `^1.4.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sveltejs__kit&labels=bug).
