@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@opentelemetry/core": {
+      "from": "^2.0.0",
+      "to": "^2.12.0"
+    },
+    "@opentelemetry/instrumentation": {
+      "from": "^0.222.0",
+      "to": "^0.223.0"
+    },
+    "@opentelemetry/semantic-conventions": {
+      "from": "^1.28.0",
+      "to": "^1.43.0"
+    },
+    "minimatch": {
+      "from": "^10.2.4",
+      "to": "^10.2.6"
+    }
+  },
+  "timestamp": "2026-10-06T16:10:36.961Z",
+  "totalUpdated": 4
+}

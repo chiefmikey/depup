@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.44 | **Updated**: 10/3/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.45 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -37,17 +37,17 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @oclif/plugin-help | `^6.2.36` | `^7.0.2` |
 | @oclif/plugin-not-found | `^3.2.73` | `^4.0.2` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
-| @opentelemetry/context-async-hooks | `^2.10.0` | `^2.11.0` |
-| @opentelemetry/exporter-metrics-otlp-grpc | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-metrics-otlp-http | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-metrics-otlp-proto | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-trace-otlp-grpc | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-trace-otlp-http | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-trace-otlp-proto | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-zipkin | `^2.10.0` | `^2.11.0` |
-| @opentelemetry/resources | `^2.10.0` | `^2.11.0` |
-| @opentelemetry/sdk-metrics | `^2.10.0` | `^2.11.0` |
-| @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.11.0` |
+| @opentelemetry/context-async-hooks | `^2.10.0` | `^2.12.0` |
+| @opentelemetry/exporter-metrics-otlp-grpc | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-metrics-otlp-http | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-metrics-otlp-proto | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-trace-otlp-grpc | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-trace-otlp-http | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-trace-otlp-proto | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-zipkin | `^2.10.0` | `^2.12.0` |
+| @opentelemetry/resources | `^2.10.0` | `^2.12.0` |
+| @opentelemetry/sdk-metrics | `^2.10.0` | `^2.12.0` |
+| @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.12.0` |
 | @playwright/browser-chromium | `1.62.1` | `^1.63.0` |
 | @playwright/test | `1.62.1` | `^1.63.0` |
 | @smithy/core | `^3.31.1` | `^3.35.1` |
@@ -68,12 +68,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | hpagent | `^0.1.1` | `^1.2.0` |
 | https-proxy-agent | `^5.0.0` | `^9.1.0` |
 | joi | `^17.13.4` | `^18.2.9` |
-| js-yaml | `^3.15.1` | `^5.4.2` |
+| js-yaml | `^3.15.1` | `^5.4.3` |
 | jsonpath-plus | `^10.3.0` | `^11.1.1` |
 | lodash | `^4.18.0` | `^4.18.1` |
 | mixpanel | `^0.18.0` | `^0.24.0` |
 | moment | `^2.30.1` | `^2.31.0` |
-| nanoid | `^3.3.16` | `^6.0.1` |
+| nanoid | `^3.3.16` | `^6.0.2` |
 | ora | `^4.0.4` | `^9.4.1` |
 | playwright | `1.62.1` | `^1.63.0` |
 | prom-client | `^14.2.0` | `^15.1.3` |

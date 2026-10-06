@@ -12,7 +12,7 @@ npm install @depup/newrelic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.5.1 | **DepUp version**: 14.5.1-depup.0 | **Updated**: 9/25/2026 | **Import test**: passed
+**Original version**: 14.6.0 | **DepUp version**: 14.6.0-depup.0 | **Updated**: 10/6/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,17 +22,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @grpc/grpc-js | `^1.13.2` | `^1.14.5` |
 | @newrelic/security-agent | `^3.0.0` | `^3.0.4` |
 | @opentelemetry/api | `^1.9.0` | `^1.9.1` |
-| @opentelemetry/api-logs | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/exporter-metrics-otlp-http | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/otlp-exporter-base | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/otlp-transformer | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/resources | `^2.0.1` | `^2.11.0` |
-| @opentelemetry/sdk-logs | `^0.221.0` | `^0.222.0` |
-| @opentelemetry/sdk-metrics | `^2.0.1` | `^2.11.0` |
-| @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.11.0` |
+| @opentelemetry/api-logs | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/exporter-metrics-otlp-http | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/otlp-exporter-base | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/otlp-transformer | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/resources | `^2.0.1` | `^2.12.0` |
+| @opentelemetry/sdk-logs | `^0.221.0` | `^0.223.0` |
+| @opentelemetry/sdk-metrics | `^2.0.1` | `^2.12.0` |
+| @opentelemetry/sdk-trace-base | `^2.0.0` | `^2.12.0` |
 | @tyriar/fibonacci-heap | `^2.0.7` | `^2.0.9` |
+| ajv | `^8.17.1` | `^8.20.0` |
 | https-proxy-agent | `^9.0.0` | `^9.1.0` |
-| import-in-the-middle | `^3.0.1` | `^3.5.1` |
+| import-in-the-middle | `^3.0.1` | `^3.5.2` |
 | json-stringify-safe | `^5.0.0` | `^5.0.1` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | semver | `^7.5.2` | `^7.8.5` |

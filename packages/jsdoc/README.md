@@ -12,13 +12,13 @@ npm install @depup/jsdoc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.7 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 4.0.5 | **DepUp version**: 4.0.5-depup.8 | **Updated**: 10/6/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/parser | `^7.20.15` | `^7.29.9` |
+| @babel/parser | `^7.20.15` | `^8.0.6` |
 | @jsdoc/salty | `^0.2.1` | `^0.2.12` |
 | @types/markdown-it | `^14.1.1` | `^14.2.0` |
 | catharsis | `^0.9.0` | `^0.11.0` |
