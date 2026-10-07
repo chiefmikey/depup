@@ -12,18 +12,18 @@ npm install @depup/codemirror__lang-yaml
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.3 | **DepUp version**: 6.1.3-depup.0 | **Updated**: 9/6/2026 | **Import test**: passed
+**Original version**: 6.1.3 | **DepUp version**: 6.1.3-depup.1 | **Updated**: 10/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @codemirror/autocomplete | `^6.0.0` | `^6.20.3` |
-| @codemirror/language | `^6.0.0` | `^6.12.4` |
-| @codemirror/state | `^6.0.0` | `^6.7.4` |
-| @lezer/common | `^1.2.0` | `^1.5.2` |
-| @lezer/highlight | `^1.2.0` | `^1.2.3` |
-| @lezer/lr | `^1.0.0` | `^1.4.10` |
+| @codemirror/language | `^6.0.0` | `^6.13.1` |
+| @codemirror/state | `^6.0.0` | `^6.7.6` |
+| @lezer/common | `^1.2.0` | `^1.5.3` |
+| @lezer/highlight | `^1.2.0` | `^1.2.5` |
+| @lezer/lr | `^1.0.0` | `^1.4.11` |
 | @lezer/yaml | `^1.0.0` | `^1.0.4` |
 
 

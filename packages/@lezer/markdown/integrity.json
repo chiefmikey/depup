@@ -17,5 +17,24 @@
       "timestamp": "2026-09-13T00:56:10.240Z",
       "version": "1.7.2-depup.0"
     }
+  },
+  "1.8.0": {
+    "0": {
+      "changes": {
+        "@lezer/common": {
+          "from": "^1.5.0",
+          "to": "^1.5.3"
+        },
+        "@lezer/highlight": {
+          "from": "^1.0.0",
+          "to": "^1.2.5"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T16:10:57.500Z",
+      "version": "1.8.0-depup.0"
+    }
   }
 }

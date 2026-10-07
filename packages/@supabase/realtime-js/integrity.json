@@ -673,5 +673,15 @@
       "timestamp": "2026-09-25T16:10:09.395Z",
       "version": "2.117.2-depup.0"
     }
+  },
+  "2.117.3": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T16:11:31.186Z",
+      "version": "2.117.3-depup.0"
+    }
   }
 }
