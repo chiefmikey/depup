@@ -1,6 +1,6 @@
 {
   "name": "@depup/bookshelf",
-  "version": "1.2.0-depup.282",
+  "version": "1.2.0-depup.287",
   "description": "A lightweight ORM for PostgreSQL, MySQL, and SQLite3 (with updated dependencies)",
   "main": "bookshelf.js",
   "scripts": {
@@ -42,10 +42,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "bookshelf-jsdoc-theme": "^1.0.1",
@@ -107,7 +104,7 @@
     "depsUpdated": 2,
     "originalPackage": "bookshelf",
     "originalVersion": "1.2.0",
-    "processedAt": "2026-10-05T16:11:57.207Z",
+    "processedAt": "2026-10-07T08:13:42.742Z",
     "smokeTest": "passed"
   }
 }

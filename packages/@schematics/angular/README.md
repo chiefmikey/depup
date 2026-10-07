@@ -12,7 +12,7 @@ npm install @depup/schematics__angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.2.1 | **DepUp version**: 22.2.1-depup.1 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 22.2.2 | **DepUp version**: 22.2.2-depup.0 | **Updated**: 10/7/2026 | **Import test**: failed
 
 ## What changed
 

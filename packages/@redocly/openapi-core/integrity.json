@@ -2929,6 +2929,35 @@
       "status": "published",
       "timestamp": "2026-10-06T16:12:22.655Z",
       "version": "2.59.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@redocly/config": {
+          "from": "^0.62.0",
+          "to": "^0.63.0"
+        },
+        "colorette": {
+          "from": "^1.2.0",
+          "to": "^2.0.20"
+        },
+        "graphql": {
+          "from": "^16.14.1",
+          "to": "^17.0.2"
+        },
+        "js-yaml": {
+          "from": "^5.2.2",
+          "to": "^5.4.3"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.7"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T08:13:08.247Z",
+      "version": "2.59.0-depup.1"
     }
   }
 }

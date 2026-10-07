@@ -3047,5 +3047,28 @@
       "timestamp": "2026-10-03T00:31:56.636Z",
       "version": "22.2.1-depup.1"
     }
+  },
+  "22.2.2": {
+    "0": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.7.2",
+          "to": "^8.7.3"
+        },
+        "listr2": {
+          "from": "11.1.0",
+          "to": "^11.1.1"
+        },
+        "yargs": {
+          "from": "18.1.0",
+          "to": "^18.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T08:12:47.766Z",
+      "version": "22.2.2-depup.0"
+    }
   }
 }
