@@ -12,7 +12,7 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.7 | **Updated**: 10/6/2026 | **Import test**: failed
+**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.8 | **Updated**: 10/7/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @npmcli/arborist | `9.1.6` | `^10.0.3` |
 | @npmcli/package-json | `7.0.2` | `^8.0.0` |
 | @npmcli/run-script | `10.0.3` | `^11.0.0` |
-| @nx/devkit | `>=23.1.0 < 24.0.0` | `^23.2.1` |
+| @nx/devkit | `>=23.1.0 < 24.0.0` | `^23.3.0` |
 | @octokit/rest | `20.1.2` | `^22.0.1` |
 | ci-info | `4.3.1` | `^4.4.0` |
 | cmd-shim | `6.0.3` | `^9.0.2` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | npm-package-arg | `13.0.1` | `^14.0.0` |
 | npm-packlist | `10.0.3` | `^11.3.0` |
 | npm-registry-fetch | `19.1.0` | `^20.0.1` |
-| nx | `>=23.1.0 < 24.0.0` | `^23.2.1` |
+| nx | `>=23.1.0 < 24.0.0` | `^23.3.0` |
 | p-map | `4.0.0` | `^7.0.8` |
 | p-queue | `6.6.2` | `^9.3.3` |
 | pacote | `21.0.1` | `^22.0.0` |

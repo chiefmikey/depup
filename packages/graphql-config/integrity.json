@@ -296,5 +296,32 @@
       "timestamp": "2026-09-15T16:09:49.352Z",
       "version": "5.1.7-depup.0"
     }
+  },
+  "5.1.8": {
+    "0": {
+      "changes": {
+        "cosmiconfig": {
+          "from": "^8.1.0",
+          "to": "^10.0.1"
+        },
+        "jiti": {
+          "from": "^2.0.0",
+          "to": "^2.7.0"
+        },
+        "minimatch": {
+          "from": "^10.0.0",
+          "to": "^10.2.6"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T16:13:04.225Z",
+      "version": "5.1.8-depup.0"
+    }
   }
 }

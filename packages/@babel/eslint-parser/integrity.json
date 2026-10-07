@@ -359,5 +359,24 @@
       "timestamp": "2026-10-06T16:11:06.711Z",
       "version": "8.0.6-depup.0"
     }
+  },
+  "8.0.7": {
+    "0": {
+      "changes": {
+        "eslint-scope": {
+          "from": "^9.1.0",
+          "to": "^9.1.2"
+        },
+        "eslint-visitor-keys": {
+          "from": "^5.0.0",
+          "to": "^5.0.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T16:10:57.152Z",
+      "version": "8.0.7-depup.0"
+    }
   }
 }

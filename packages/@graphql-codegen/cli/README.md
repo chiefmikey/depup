@@ -12,7 +12,7 @@ npm install @depup/graphql-codegen__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.4.4 | **DepUp version**: 7.4.4-depup.0 | **Updated**: 10/5/2026 | **Import test**: passed
+**Original version**: 7.4.5 | **DepUp version**: 7.4.5-depup.0 | **Updated**: 10/7/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,22 +21,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/generator | `^7.18.13` | `^8.0.6` |
 | @babel/template | `^7.18.10` | `^8.0.0` |
 | @babel/types | `^7.18.13` | `^8.0.6` |
-| @graphql-tools/apollo-engine-loader | `^8.0.28` | `^8.0.38` |
-| @graphql-tools/code-file-loader | `^8.1.39` | `^8.1.41` |
-| @graphql-tools/git-loader | `^8.0.32` | `^8.0.44` |
-| @graphql-tools/github-loader | `^9.0.6` | `^9.1.11` |
-| @graphql-tools/graphql-file-loader | `^8.1.11` | `^8.1.22` |
-| @graphql-tools/json-file-loader | `^8.0.26` | `^8.0.36` |
-| @graphql-tools/load | `^8.1.8` | `^8.1.19` |
-| @graphql-tools/merge | `^9.2.4` | `^9.2.6` |
-| @graphql-tools/url-loader | `^9.0.6` | `^9.1.12` |
-| @graphql-tools/utils | `^11.2.0` | `^12.0.3` |
 | @inquirer/prompts | `^8.3.2` | `^8.7.3` |
 | @whatwg-node/fetch | `^0.10.0` | `^0.12.1` |
 | chalk | `^5.6.0` | `^6.0.1` |
 | cosmiconfig | `^9.0.0` | `^10.0.1` |
 | detect-indent | `^7.0.0` | `^7.0.2` |
-| graphql-config | `^5.1.6` | `^5.1.7` |
 | is-glob | `^4.0.1` | `^4.0.3` |
 | jiti | `^2.3.0` | `^2.7.0` |
 | listr2 | `^10.2.1` | `^11.1.1` |
