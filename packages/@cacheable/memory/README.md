@@ -12,13 +12,15 @@ npm install @depup/cacheable__memory
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.0 | **DepUp version**: 2.2.0-depup.17 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 2.2.0 | **DepUp version**: 2.2.0-depup.18 | **Updated**: 10/7/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| hookified | `^1.15.1` | `^3.0.1` |
+| @keyv/bigmap | `^1.3.1` | `^6.1.0` |
+| hookified | `^1.15.1` | `^3.0.4` |
+| keyv | `^5.6.0` | `^6.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cacheable__memory&labels=bug).

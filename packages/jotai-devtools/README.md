@@ -12,15 +12,15 @@ npm install @depup/jotai-devtools
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.15.0 | **DepUp version**: 0.15.0-depup.1 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 0.15.1 | **DepUp version**: 0.15.1-depup.0 | **Updated**: 10/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @mantine/code-highlight | `7.17.4` | `^9.7.0` |
-| @mantine/core | `7.17.4` | `^9.7.0` |
-| @mantine/hooks | `7.17.4` | `^9.7.0` |
+| @mantine/code-highlight | `7.17.4` | `^9.7.1` |
+| @mantine/core | `7.17.4` | `^9.7.1` |
+| @mantine/hooks | `7.17.4` | `^9.7.1` |
 | react-resizable-panels | `2.1.7` | `^4.14.2` |
 
 
