@@ -1,0 +1,97 @@
+{
+  "name": "@depup/cache-manager",
+  "version": "7.2.9-depup.22",
+  "description": "Cache Manager for Node.js (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "directory": "packages/cache-manager"
+  },
+  "keywords": [
+    "cache-manager",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "cache",
+    "caching",
+    "cache manager",
+    "node",
+    "node.js",
+    "in-memory cache",
+    "redis",
+    "memcached",
+    "multi-store cache",
+    "ttl",
+    "caching layer",
+    "cache abstraction",
+    "cache middleware",
+    "cache strategies",
+    "cache wrapper"
+  ],
+  "authors": [
+    {
+      "name": "Jared Wray",
+      "email": "me@jaredwray.com"
+    },
+    {
+      "name": "Tim Phan",
+      "email": "timphan.dev@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "keyv": "^6.1.0",
+    "@cacheable/utils": "^2.5.0"
+  },
+  "devDependencies": {
+    "@keyv/redis": "^5.1.6",
+    "cache-manager-redis-yet": "^5.1.5",
+    "tsdown": "^0.22.0",
+    "typescript": "^5.9.3",
+    "cacheable": "^2.5.0"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "lint": "biome check --write --error-on-warnings",
+    "test": "pnpm lint && vitest run --coverage",
+    "test:ci": "biome check --error-on-warnings && vitest run --coverage",
+    "build": "rimraf ./dist && tsdown src/index.ts --format cjs,esm --dts --clean"
+  },
+  "depup": {
+    "changes": {
+      "keyv": {
+        "from": "^5.6.0",
+        "to": "^6.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "cache-manager",
+    "originalVersion": "7.2.9",
+    "processedAt": "2026-10-07T00:37:28.082Z",
+    "smokeTest": "passed"
+  }
+}

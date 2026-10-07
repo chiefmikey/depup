@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-08-04T00:41:51.197Z",
       "version": "4.2.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@next/env": {
+          "from": "^13.4.3",
+          "to": "^16.4.0"
+        },
+        "fast-glob": {
+          "from": "^3.2.12",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T00:38:20.181Z",
+      "version": "4.2.3-depup.2"
     }
   }
 }
