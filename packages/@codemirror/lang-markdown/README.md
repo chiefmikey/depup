@@ -12,7 +12,7 @@ npm install @depup/codemirror__lang-markdown
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.5.2 | **DepUp version**: 6.5.2-depup.0 | **Updated**: 9/13/2026 | **Import test**: passed
+**Original version**: 6.5.2 | **DepUp version**: 6.5.2-depup.1 | **Updated**: 10/7/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,11 +20,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @codemirror/autocomplete | `^6.7.1` | `^6.20.3` |
 | @codemirror/lang-html | `^6.0.0` | `^6.4.12` |
-| @codemirror/language | `^6.3.0` | `^6.12.4` |
-| @codemirror/state | `^6.0.0` | `^6.7.4` |
-| @codemirror/view | `^6.0.0` | `^6.43.11` |
-| @lezer/markdown | `^1.0.0` | `^1.7.2` |
-| @lezer/common | `^1.2.1` | `^1.5.2` |
+| @codemirror/language | `^6.3.0` | `^6.13.1` |
+| @codemirror/state | `^6.0.0` | `^6.7.6` |
+| @codemirror/view | `^6.0.0` | `^6.43.14` |
+| @lezer/markdown | `^1.0.0` | `^1.8.0` |
+| @lezer/common | `^1.2.1` | `^1.5.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/codemirror__lang-markdown&labels=bug).
