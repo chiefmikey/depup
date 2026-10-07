@@ -308,5 +308,32 @@
       "timestamp": "2026-09-29T00:35:29.045Z",
       "version": "9.8.1-depup.0"
     }
+  },
+  "9.9.0": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^26.6.2",
+          "to": "^26.6.4"
+        },
+        "jszip": {
+          "from": "^3.10.1",
+          "to": "^3.10.2"
+        },
+        "nanoid": {
+          "from": "^6.0.1",
+          "to": "^6.0.2"
+        },
+        "xml-js": {
+          "from": "^1.6.8",
+          "to": "^1.6.11"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-07T00:36:36.465Z",
+      "version": "9.9.0-depup.0"
+    }
   }
 }

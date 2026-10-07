@@ -1,0 +1,108 @@
+{
+  "name": "@depup/keyv",
+  "version": "6.1.0-depup.0",
+  "description": "Simple key-value storage with support for multiple backends (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredwray/keyv.git"
+  },
+  "keywords": [
+    "keyv",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "key",
+    "value",
+    "store",
+    "cache",
+    "ttl",
+    "key-value",
+    "storage",
+    "backend",
+    "adapter",
+    "redis",
+    "mongodb",
+    "sqlite",
+    "mysql",
+    "postgresql",
+    "memory",
+    "node-cache",
+    "lru-cache",
+    "lru",
+    "cache-manager"
+  ],
+  "author": "Jared Wray <me@jaredwray.com> (http://jaredwray.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaredwray/keyv/issues"
+  },
+  "homepage": "https://github.com/jaredwray/keyv",
+  "dependencies": {
+    "hookified": "^3.0.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.11",
+    "@faker-js/faker": "^10.6.0",
+    "@vitest/coverage-v8": "^4.1.11",
+    "happy-dom": "^20.12.0",
+    "keyv-anyredis": "^3.3.0",
+    "keyv-file": "^5.3.5",
+    "lru.min": "^1.1.4",
+    "quick-lru": "^7.0.0",
+    "rimraf": "^6.1.3",
+    "timekeeper": "^2.3.1",
+    "tsd": "^0.33.0",
+    "vitest": "^4.1.11"
+  },
+  "tsd": {
+    "directory": "test"
+  },
+  "engines": {
+    "node": ">= 22.19.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "lint": "biome check --write --error-on-warnings",
+    "lint:ci": "biome check --error-on-warnings",
+    "test": "pnpm lint && vitest run --coverage",
+    "test:ci": "pnpm lint:ci && vitest --run --sequence.setupFiles=list --coverage",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist"
+  },
+  "depup": {
+    "changes": {
+      "hookified": {
+        "from": "^3.0.3",
+        "to": "^3.0.4"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "keyv",
+    "originalVersion": "6.1.0",
+    "processedAt": "2026-10-07T00:36:44.045Z",
+    "smokeTest": "passed"
+  }
+}

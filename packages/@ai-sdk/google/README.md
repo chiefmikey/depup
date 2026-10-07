@@ -12,7 +12,7 @@ npm install @depup/ai-sdk__google
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.0.88 | **DepUp version**: 4.0.88-depup.0 | **Updated**: 10/5/2026 | **Import test**: failed
+**Original version**: 4.0.89 | **DepUp version**: 4.0.89-depup.0 | **Updated**: 10/7/2026 | **Import test**: failed
 
 ## What changed
 

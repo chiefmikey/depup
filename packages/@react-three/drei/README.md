@@ -12,14 +12,14 @@ npm install @depup/react-three__drei
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.7.9 | **DepUp version**: 10.7.9-depup.0 | **Updated**: 9/25/2026 | **Import test**: failed
+**Original version**: 10.7.9 | **DepUp version**: 10.7.9-depup.1 | **Updated**: 10/7/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @babel/runtime | `^7.26.0` | `^8.0.5` |
-| @mediapipe/tasks-vision | `0.10.17` | `^1.0.1` |
+| @mediapipe/tasks-vision | `0.10.17` | `^1.1.0` |
 | @monogrid/gainmap-js | `^3.0.6` | `^3.4.0` |
 | camera-controls | `^3.1.0` | `^3.1.2` |
 | cross-env | `^7.0.3` | `^10.1.0` |
