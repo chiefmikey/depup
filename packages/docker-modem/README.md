@@ -12,14 +12,14 @@ npm install @depup/docker-modem
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.7 | **DepUp version**: 5.0.7-depup.0 | **Updated**: 3/20/2026 | **Import test**: passed
+**Original version**: 5.0.7 | **DepUp version**: 5.0.7-depup.1 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | debug | `^4.1.1` | `^4.4.3` |
-| readable-stream | `^3.5.0` | `^4.7.0` |
+| readable-stream | `^3.5.0` | `^4.8.0` |
 | ssh2 | `^1.15.0` | `^1.17.0` |
 
 

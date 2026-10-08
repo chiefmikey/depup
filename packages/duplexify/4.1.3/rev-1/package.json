@@ -1,0 +1,70 @@
+{
+  "name": "@depup/duplexify",
+  "version": "4.1.3-depup.1",
+  "description": "Turn a writable and readable stream into a streams2 duplex stream with support for async initialization and streams1/streams2 input (with updated dependencies)",
+  "main": "index.js",
+  "dependencies": {
+    "end-of-stream": "^1.4.5",
+    "inherits": "^2.0.4",
+    "readable-stream": "^4.8.0",
+    "stream-shift": "^1.0.3"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.5.2",
+    "tape": "^4.0.0",
+    "through2": "^2.0.0"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mafintosh/duplexify"
+  },
+  "keywords": [
+    "duplexify",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "duplex",
+    "streams2",
+    "streams",
+    "stream",
+    "writable",
+    "readable",
+    "async"
+  ],
+  "author": "Mathias Buus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/duplexify/issues"
+  },
+  "homepage": "https://github.com/mafintosh/duplexify",
+  "depup": {
+    "changes": {
+      "end-of-stream": {
+        "from": "^1.4.1",
+        "to": "^1.4.5"
+      },
+      "inherits": {
+        "from": "^2.0.3",
+        "to": "^2.0.4"
+      },
+      "readable-stream": {
+        "from": "^3.1.1",
+        "to": "^4.8.0"
+      },
+      "stream-shift": {
+        "from": "^1.0.2",
+        "to": "^1.0.3"
+      }
+    },
+    "depsUpdated": 4,
+    "originalPackage": "duplexify",
+    "originalVersion": "4.1.3",
+    "processedAt": "2026-10-08T16:11:58.146Z",
+    "smokeTest": "passed"
+  }
+}

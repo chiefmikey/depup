@@ -12,7 +12,7 @@ npm install @depup/archiver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.53 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.54 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,8 +21,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | async | `^3.2.4` | `^3.2.6` |
 | is-stream | `^4.0.0` | `^4.0.1` |
 | lazystream | `^1.0.0` | `^1.0.1` |
-| readable-stream | `^4.0.0` | `^4.7.0` |
-| tar-stream | `^3.0.0` | `^3.2.0` |
+| readable-stream | `^4.0.0` | `^4.8.0` |
+| tar-stream | `^3.0.0` | `^3.2.2` |
 | zip-stream | `^7.0.2` | `^7.0.5` |
 
 

@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@graphql-tools/executor": {
+      "from": "^2.0.1",
+      "to": "^2.0.3"
+    },
+    "@graphql-tools/schema": {
+      "from": "^10.1.1",
+      "to": "^10.1.3"
+    },
+    "@graphql-tools/utils": {
+      "from": "^12.0.1",
+      "to": "^12.0.3"
+    },
+    "@repeaterjs/repeater": {
+      "from": "^3.0.6",
+      "to": "^3.1.0"
+    },
+    "@whatwg-node/promise-helpers": {
+      "from": "^1.3.2",
+      "to": "^2.0.0"
+    }
+  },
+  "timestamp": "2026-10-08T16:11:15.582Z",
+  "totalUpdated": 5
+}

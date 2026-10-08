@@ -12,7 +12,7 @@ npm install @depup/elastic-apm-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.18.0 | **DepUp version**: 4.18.0-depup.13 | **Updated**: 10/6/2026 | **Import test**: failed
+**Original version**: 4.18.0 | **DepUp version**: 4.18.0-depup.14 | **Updated**: 10/8/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | measured-reporting | `^1.51.1` | `^2.0.0` |
 | module-details-from-path | `^1.0.3` | `^1.0.4` |
 | pino | `^8.15.0` | `^10.4.0` |
-| readable-stream | `^3.6.2` | `^4.7.0` |
+| readable-stream | `^3.6.2` | `^4.8.0` |
 | require-in-the-middle | `^8.0.0` | `^8.0.1` |
 | semver | `^7.5.4` | `^7.8.5` |
 
