@@ -12,7 +12,7 @@ npm install @depup/concat-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.1 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | buffer-from | `^1.0.0` | `^1.1.2` |
 | inherits | `^2.0.3` | `^2.0.4` |
-| readable-stream | `^3.0.2` | `^4.7.0` |
+| readable-stream | `^3.0.2` | `^4.8.0` |
 | typedarray | `^0.0.6` | `^0.0.7` |
 
 

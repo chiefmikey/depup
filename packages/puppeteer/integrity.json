@@ -461,5 +461,24 @@
       "timestamp": "2026-10-01T00:43:30.809Z",
       "version": "25.12.0-depup.1"
     }
+  },
+  "25.13.0": {
+    "0": {
+      "changes": {
+        "chromium-bidi": {
+          "from": "157.0.8090-0",
+          "to": "^157.0.8093-0"
+        },
+        "devtools-protocol": {
+          "from": "0.0.1696802",
+          "to": "^0.0.1714151"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-08T16:12:13.311Z",
+      "version": "25.13.0-depup.0"
+    }
   }
 }
