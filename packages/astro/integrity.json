@@ -12665,5 +12665,60 @@
       "timestamp": "2026-10-06T16:12:59.137Z",
       "version": "7.3.6-depup.0"
     }
+  },
+  "7.3.7": {
+    "0": {
+      "changes": {
+        "devalue": {
+          "from": "^5.9.4",
+          "to": "^6.0.2"
+        },
+        "es-module-lexer": {
+          "from": "^3.0.2",
+          "to": "^3.0.3"
+        },
+        "esbuild": {
+          "from": "^0.28.0",
+          "to": "^0.28.2"
+        },
+        "find-proc": {
+          "from": "0.2.0",
+          "to": "^0.3.0"
+        },
+        "http-cache-semantics": {
+          "from": "^4.2.0",
+          "to": "^4.3.0"
+        },
+        "magic-string": {
+          "from": "^1.4.2",
+          "to": "^1.4.3"
+        },
+        "package-manager-detector": {
+          "from": "^1.8.0",
+          "to": "^1.9.0"
+        },
+        "rolldown": {
+          "from": "^1.2.11",
+          "to": "^1.2.13"
+        },
+        "shiki": {
+          "from": "^4.4.3",
+          "to": "^4.5.0"
+        },
+        "unifont": {
+          "from": "~0.7.5",
+          "to": "^1.0.2"
+        },
+        "vite": {
+          "from": "^8.3.1",
+          "to": "^8.3.3"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-08T00:35:09.774Z",
+      "version": "7.3.7-depup.0"
+    }
   }
 }
