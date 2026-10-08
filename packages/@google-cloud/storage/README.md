@@ -12,7 +12,7 @@ npm install @depup/google-cloud__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.2.0 | **DepUp version**: 8.2.0-depup.0 | **Updated**: 9/17/2026 | **Import test**: passed
+**Original version**: 8.3.0 | **DepUp version**: 8.3.0-depup.0 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,12 +21,13 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @google-cloud/paginator | `^7.0.1` | `^7.1.0` |
 | @google-cloud/projectify | `^6.0.1` | `^6.1.0` |
 | @google-cloud/promisify | `^6.0.1` | `^6.1.0` |
-| fast-xml-parser | `^5.3.4` | `^5.11.1` |
-| gaxios | `^6.0.2` | `^8.1.0` |
-| google-auth-library | `^9.6.3` | `^11.1.0` |
+| fast-xml-parser | `^5.3.4` | `^5.11.2` |
+| gaxios | `^7.1.4` | `^8.2.0` |
+| google-auth-library | `^11.0.0` | `^11.2.0` |
 | html-entities | `^2.5.2` | `^2.6.0` |
 | mime | `^3.0.0` | `^4.1.0` |
-| p-limit | `^3.0.1` | `^7.3.2` |
+| p-limit | `^3.0.1` | `^7.3.3` |
+| retry-request | `^9.0.1` | `^9.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/google-cloud__storage&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.46 | **Updated**: 10/7/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.47 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
@@ -48,8 +48,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/resources | `^2.10.0` | `^2.12.0` |
 | @opentelemetry/sdk-metrics | `^2.10.0` | `^2.12.0` |
 | @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.12.0` |
-| @playwright/browser-chromium | `1.62.1` | `^1.63.0` |
-| @playwright/test | `1.62.1` | `^1.63.0` |
+| @playwright/browser-chromium | `1.62.1` | `^1.64.0` |
+| @playwright/test | `1.62.1` | `^1.64.0` |
 | @smithy/core | `^3.31.1` | `^3.35.1` |
 | @upstash/redis | `^1.36.1` | `^1.39.0` |
 | async | `^2.6.4` | `^3.2.6` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.30.1` | `^2.31.0` |
 | nanoid | `^3.3.16` | `^6.0.2` |
 | ora | `^4.0.4` | `^9.4.1` |
-| playwright | `1.62.1` | `^1.63.0` |
+| playwright | `1.62.1` | `^1.64.0` |
 | prom-client | `^14.2.0` | `^15.1.3` |
 | protobufjs | `^7.6.5` | `^8.8.0` |
 | semver | `^7.7.3` | `^7.8.5` |

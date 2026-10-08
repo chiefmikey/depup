@@ -1,0 +1,104 @@
+{
+  "name": "@depup/effect",
+  "type": "module",
+  "version": "4.0.2-depup.0",
+  "license": "MIT",
+  "description": "The missing standard library for TypeScript, for writing production-grade software. (with updated dependencies)",
+  "homepage": "https://effect.website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Effect-TS/effect.git",
+    "directory": "packages/effect"
+  },
+  "bugs": {
+    "url": "https://github.com/Effect-TS/effect/issues"
+  },
+  "tags": [
+    "typescript",
+    "error-handling",
+    "concurrency",
+    "observability"
+  ],
+  "keywords": [
+    "effect",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "typescript",
+    "error-handling",
+    "concurrency",
+    "observability"
+  ],
+  "sideEffects": [
+    "./src/schema/SchemaJITCompiler/enable.ts",
+    "./dist/schema/SchemaJITCompiler/enable.js"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js",
+    "./testing": "./dist/testing/index.js",
+    "./ai": "./dist/ai/index.js",
+    "./cli": "./dist/cli/index.js",
+    "./cluster": "./dist/cluster/index.js",
+    "./devtools": "./dist/devtools/index.js",
+    "./encoding": "./dist/encoding/index.js",
+    "./eventlog": "./dist/eventlog/index.js",
+    "./http": "./dist/http/index.js",
+    "./http-api": "./dist/http-api/index.js",
+    "./net": "./dist/net/index.js",
+    "./observability": "./dist/observability/index.js",
+    "./persistence": "./dist/persistence/index.js",
+    "./process": "./dist/process/index.js",
+    "./reactivity": "./dist/reactivity/index.js",
+    "./rpc": "./dist/rpc/index.js",
+    "./schema": "./dist/schema/index.js",
+    "./socket": "./dist/socket/index.js",
+    "./sql": "./dist/sql/index.js",
+    "./workflow": "./dist/workflow/index.js",
+    "./workers": "./dist/workers/index.js",
+    "./*": "./dist/*.js",
+    "./internal/*": null,
+    "./cli/internal/*": null,
+    "./cluster/internal/*": null,
+    "./index": null,
+    "./*/index": null
+  },
+  "files": [
+    "src/**/*.ts",
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "ai-docs/**/*",
+    "changes.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "ajv": "^8.20.0",
+    "ajv-draft-04": "^1.0.0",
+    "ast-types": "^0.16.3",
+    "immer": "^11.1.21",
+    "protobufjs": "^8.8.0",
+    "tinybench": "^6.2.0",
+    "valibot": "^1.5.0"
+  },
+  "scripts": {
+    "codegen": "effect-utils codegen",
+    "build": "tsc -b tsconfig.json && pnpm babel",
+    "babel": "babel dist --plugins annotate-pure-calls --out-dir dist --source-maps",
+    "check": "tsc -b tsconfig.json"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "effect",
+    "originalVersion": "4.0.2",
+    "processedAt": "2026-10-08T00:37:28.801Z",
+    "smokeTest": "failed"
+  }
+}
