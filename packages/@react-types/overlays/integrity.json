@@ -8,31 +8,6 @@
     }
   },
   "3.10.0": {
-    "48": {
-      "changes": {
-        "@react-aria/overlays": {
-          "from": "^3.32.0",
-          "to": "^3.32.1"
-        },
-        "@react-spectrum/overlays": {
-          "from": "^5.10.0",
-          "to": "^5.10.1"
-        },
-        "@react-stately/overlays": {
-          "from": "^3.7.0",
-          "to": "^3.7.1"
-        },
-        "@react-types/shared": {
-          "from": "^3.34.0",
-          "to": "^3.36.0"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "failed",
-      "status": "failed",
-      "timestamp": "2026-07-11T00:26:05.930Z",
-      "version": "3.10.0-depup.48"
-    },
     "49": {
       "changes": {
         "@react-aria/overlays": {
@@ -132,6 +107,31 @@
       "status": "published",
       "timestamp": "2026-07-21T17:20:16.606Z",
       "version": "3.10.0-depup.52"
+    },
+    "53": {
+      "changes": {
+        "@react-aria/overlays": {
+          "from": "^3.32.0",
+          "to": "^3.32.1"
+        },
+        "@react-spectrum/overlays": {
+          "from": "^5.10.0",
+          "to": "^5.10.1"
+        },
+        "@react-stately/overlays": {
+          "from": "^3.7.0",
+          "to": "^3.7.1"
+        },
+        "@react-types/shared": {
+          "from": "^3.34.0",
+          "to": "^3.37.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-08T08:14:39.237Z",
+      "version": "3.10.0-depup.53"
     }
   }
 }

@@ -806,5 +806,15 @@
       "timestamp": "2026-10-07T08:12:42.159Z",
       "version": "5.20261007.1-depup.0"
     }
+  },
+  "5.20261008.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-08T08:13:59.959Z",
+      "version": "5.20261008.1-depup.0"
+    }
   }
 }
