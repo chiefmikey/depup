@@ -12,14 +12,14 @@ npm install @depup/flush-write-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.1 | **Updated**: 10/8/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | inherits | `^2.0.3` | `^2.0.4` |
-| readable-stream | `^3.1.1` | `^4.7.0` |
+| readable-stream | `^3.1.1` | `^4.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/flush-write-stream&labels=bug).

@@ -1687,5 +1687,24 @@
       "timestamp": "2026-10-08T00:35:24.553Z",
       "version": "2.26.2-depup.0"
     }
+  },
+  "2.26.3": {
+    "0": {
+      "changes": {
+        "@tanstack/devtools-vite": {
+          "from": "^0.8.1",
+          "to": "^0.8.5"
+        },
+        "lightningcss": {
+          "from": "^1.30.0",
+          "to": "^1.33.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-08T16:12:02.290Z",
+      "version": "2.26.3-depup.0"
+    }
   }
 }

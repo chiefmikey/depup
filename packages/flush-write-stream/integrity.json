@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T16:36:32.552Z",
       "version": "2.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "inherits": {
+          "from": "^2.0.3",
+          "to": "^2.0.4"
+        },
+        "readable-stream": {
+          "from": "^3.1.1",
+          "to": "^4.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-08T16:12:11.414Z",
+      "version": "2.0.0-depup.1"
     }
   }
 }
