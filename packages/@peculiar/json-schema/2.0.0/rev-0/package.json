@@ -1,0 +1,89 @@
+{
+  "name": "@depup/peculiar__json-schema",
+  "version": "2.0.0-depup.0",
+  "description": "Serialize, parse and validate JSON with TypeScript decorators (with updated dependencies)",
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./build/index.mjs",
+      "require": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "build": "tsdown",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeculiarVentures/json-schema.git"
+  },
+  "keywords": [
+    "@peculiar/json-schema",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json",
+    "stringify",
+    "serialize",
+    "parse",
+    "convert",
+    "decorator"
+  ],
+  "author": "PeculiarVentures, Inc",
+  "contributors": [
+    {
+      "email": "rmh@unmitigatedrisk.com",
+      "name": "Ryan Hurst"
+    },
+    {
+      "email": "microshine@mail.ru",
+      "name": "Miroshin Stepan"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+  },
+  "homepage": "https://github.com/PeculiarVentures/json-schema#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "^4.1.11",
+    "conventional-changelog": "^8.1.3",
+    "conventional-changelog-angular": "^9.4.0",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "tsdown": "^0.23.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@peculiar/json-schema",
+    "originalVersion": "2.0.0",
+    "processedAt": "2026-10-09T13:47:23.648Z",
+    "smokeTest": "passed"
+  }
+}
