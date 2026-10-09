@@ -394,6 +394,19 @@
       "status": "published",
       "timestamp": "2026-09-30T16:10:54.495Z",
       "version": "12.1.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "express": {
+          "from": "5.2.1",
+          "to": "^5.3.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "published",
+      "timestamp": "2026-10-09T13:29:34.996Z",
+      "version": "12.1.2-depup.1"
     }
   }
 }

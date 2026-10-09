@@ -835,5 +835,32 @@
       "timestamp": "2026-10-07T16:10:53.479Z",
       "version": "6.2.2-depup.0"
     }
+  },
+  "6.2.3": {
+    "0": {
+      "changes": {
+        "@babel/helper-plugin-utils": {
+          "from": "^7.20.2",
+          "to": "^8.0.1"
+        },
+        "@babel/template": {
+          "from": "^7.20.7",
+          "to": "^8.0.0"
+        },
+        "@graphql-tools/documents": {
+          "from": "^1.0.0",
+          "to": "^1.0.2"
+        },
+        "tslib": {
+          "from": "^2.8.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T13:29:15.733Z",
+      "version": "6.2.3-depup.0"
+    }
   }
 }
