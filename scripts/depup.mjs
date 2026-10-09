@@ -9,7 +9,13 @@ import ora from 'ora';
 import pacote from 'pacote';
 import semver from 'semver';
 
-import { isNonSemverSpecifier, toScopedName } from './utilities.mjs';
+import {
+  hasUnpublishedFailedRevision,
+  isEntryPoint,
+  isNonSemverSpecifier,
+  pruneIntegrityEntries,
+  toScopedName,
+} from './utilities.mjs';
 
 const PACKAGE_JSON = 'package.json';
 // Untrusted packages (and their transitive deps) must never run lifecycle
@@ -575,8 +581,10 @@ class DepUp {
 
   async handlePublishStep(context) {
     const {
+      baseVersion,
       debug,
       dependenciesUpdated,
+      packageDirectory,
       packageJson,
       revision,
       scopedName,
@@ -599,7 +607,10 @@ class DepUp {
       return false;
     }
 
-    const shouldPublishThis = revision === 0 || dependenciesUpdated > 0;
+    const shouldPublishThis =
+      revision === 0 ||
+      dependenciesUpdated > 0 ||
+      (await hasUnpublishedFailedRevision(packageDirectory, baseVersion));
     if (shouldPublishThis) {
       await this.publishPackage(
         targetDirectory,
@@ -644,9 +655,14 @@ class DepUp {
     let lastError;
     const startTime = Date.now();
     for (let attempt = 0; attempt < attempts; attempt++) {
+      const elapsed = Date.now() - startTime;
+      const remaining = totalTimeout > 0 ? totalTimeout - elapsed : 0;
+      // An exhausted budget must not grant later attempts a fresh full
+      // timeout (callers treat remaining <= 0 as "no budget configured").
+      if (totalTimeout > 0 && remaining <= 0 && lastError) {
+        break;
+      }
       try {
-        const elapsed = Date.now() - startTime;
-        const remaining = totalTimeout > 0 ? totalTimeout - elapsed : 0;
         return await operation(remaining);
       } catch (error) {
         lastError = error;
@@ -1364,52 +1380,40 @@ try {
       }
 
       const toRemove = revDirectories.slice(0, -keepCount);
-      for (const directory of toRemove) {
-        await fs.rm(path.join(versionDirectory, directory.name), {
-          force: true,
-          recursive: true,
-        });
-        if (debug) {
-          console.log(chalk.gray(`  Pruned old revision: ${directory.name}`));
+      const removed = [];
+      try {
+        for (const directory of toRemove) {
+          await fs.rm(path.join(versionDirectory, directory.name), {
+            force: true,
+            recursive: true,
+          });
+          removed.push(String(directory.number));
+          if (debug) {
+            console.log(chalk.gray(`  Pruned old revision: ${directory.name}`));
+          }
         }
+      } finally {
+        // Also prune corresponding integrity.json entries so they don't
+        // accumulate stale data for revisions that no longer exist on disk.
+        // Runs even when a later rm threw, for the revisions actually removed.
+        await this.pruneIntegrityEntries(
+          path.dirname(versionDirectory),
+          path.basename(versionDirectory),
+          removed,
+        );
       }
-
-      // Also prune corresponding integrity.json entries so they don't
-      // accumulate stale data for revisions that no longer exist on disk
-      const packageDirectory = path.dirname(versionDirectory);
-      const versionKey = path.basename(versionDirectory);
-      await this.pruneIntegrityEntries(
-        packageDirectory,
-        versionKey,
-        toRemove.map((d) => String(d.number)),
-      );
-    } catch {
+    } catch (error) {
       // Non-fatal -- pruning failure shouldn't block processing
+      console.warn(
+        chalk.yellow(
+          `Warning: could not fully prune old revisions in ${versionDirectory}: ${error.message}`,
+        ),
+      );
     }
   }
 
-  async pruneIntegrityEntries(packageDirectory, versionKey, revisionKeys) {
-    try {
-      const integrityFile = path.join(packageDirectory, 'integrity.json');
-      const data = await fs.readFile(integrityFile);
-      const integrity = JSON.parse(data);
-      if (
-        typeof integrity !== 'object' ||
-        integrity === null ||
-        !integrity[versionKey]
-      ) {
-        return;
-      }
-      for (const revKey of revisionKeys) {
-        delete integrity[versionKey][revKey];
-      }
-      await fs.writeFile(
-        integrityFile,
-        JSON.stringify(integrity, undefined, 2),
-      );
-    } catch {
-      // Non-fatal
-    }
+  pruneIntegrityEntries(packageDirectory, versionKey, revisionKeys) {
+    return pruneIntegrityEntries(packageDirectory, versionKey, revisionKeys);
   }
 
   async preparePublishArtifacts(context) {
@@ -1526,8 +1530,8 @@ try {
 
 export { DepUp, EXIT_VERIFICATION_FAILED };
 
-// Run if called directly
-if (process.argv[1] === import.meta.filename) {
+// Run if called directly (also through a symlinked path)
+if (isEntryPoint(import.meta.filename)) {
   try {
     const depup = new DepUp();
     await depup.main();
