@@ -1,6 +1,6 @@
 {
   "name": "@depup/artillery",
-  "version": "2.0.34-depup.44",
+  "version": "2.0.34-depup.49",
   "description": "Cloud-scale load testing. https://www.artillery.io (with updated dependencies)",
   "type": "module",
   "main": "./dist/lib/index.js",
@@ -108,41 +108,41 @@
   },
   "dependencies": {
     "@artilleryio/sketches-js": "^2.1.1",
-    "@aws-sdk/client-cloudwatch": "^3.1146.0",
-    "@aws-sdk/client-cloudwatch-logs": "^3.1146.0",
-    "@aws-sdk/client-ec2": "^3.1146.0",
-    "@aws-sdk/client-ecs": "^3.1146.0",
-    "@aws-sdk/client-iam": "^3.1146.0",
-    "@aws-sdk/client-lambda": "^3.1146.0",
-    "@aws-sdk/client-s3": "^3.1146.0",
-    "@aws-sdk/client-sqs": "^3.1146.0",
-    "@aws-sdk/client-ssm": "^3.1146.0",
-    "@aws-sdk/client-sts": "^3.1146.0",
-    "@aws-sdk/credential-providers": "^3.1146.0",
+    "@aws-sdk/client-cloudwatch": "^3.1149.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1149.0",
+    "@aws-sdk/client-ec2": "^3.1149.0",
+    "@aws-sdk/client-ecs": "^3.1149.0",
+    "@aws-sdk/client-iam": "^3.1149.0",
+    "@aws-sdk/client-lambda": "^3.1149.0",
+    "@aws-sdk/client-s3": "^3.1149.0",
+    "@aws-sdk/client-sqs": "^3.1149.0",
+    "@aws-sdk/client-ssm": "^3.1149.0",
+    "@aws-sdk/client-sts": "^3.1149.0",
+    "@aws-sdk/credential-providers": "^3.1149.0",
     "@azure/arm-containerinstance": "^9.1.0",
     "@azure/identity": "^4.13.3",
     "@azure/storage-blob": "^12.34.0",
     "@azure/storage-queue": "^12.32.0",
     "@faker-js/faker": "^10.6.0",
-    "@oclif/core": "^5.1.2",
-    "@oclif/plugin-help": "^7.0.2",
-    "@oclif/plugin-not-found": "^4.0.2",
+    "@oclif/core": "^5.1.6",
+    "@oclif/plugin-help": "^7.0.3",
+    "@oclif/plugin-not-found": "^4.0.3",
     "@opentelemetry/api": "^1.9.1",
-    "@opentelemetry/context-async-hooks": "^2.11.0",
-    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.222.0",
-    "@opentelemetry/exporter-metrics-otlp-http": "^0.222.0",
-    "@opentelemetry/exporter-metrics-otlp-proto": "^0.222.0",
-    "@opentelemetry/exporter-trace-otlp-grpc": "^0.222.0",
-    "@opentelemetry/exporter-trace-otlp-http": "^0.222.0",
-    "@opentelemetry/exporter-trace-otlp-proto": "^0.222.0",
-    "@opentelemetry/exporter-zipkin": "^2.11.0",
-    "@opentelemetry/resources": "^2.11.0",
-    "@opentelemetry/sdk-metrics": "^2.11.0",
-    "@opentelemetry/sdk-trace-base": "^2.11.0",
+    "@opentelemetry/context-async-hooks": "^2.12.0",
+    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.223.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.223.0",
+    "@opentelemetry/exporter-metrics-otlp-proto": "^0.223.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.223.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.223.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.223.0",
+    "@opentelemetry/exporter-zipkin": "^2.12.0",
+    "@opentelemetry/resources": "^2.12.0",
+    "@opentelemetry/sdk-metrics": "^2.12.0",
+    "@opentelemetry/sdk-trace-base": "^2.12.0",
     "@opentelemetry/semantic-conventions": "^1.43.0",
-    "@playwright/browser-chromium": "^1.63.0",
-    "@playwright/test": "^1.63.0",
-    "@smithy/core": "^3.35.1",
+    "@playwright/browser-chromium": "^1.64.0",
+    "@playwright/test": "^1.64.0",
+    "@smithy/core": "^3.35.2",
     "@upstash/redis": "^1.39.0",
     "agentkeepalive": "^4.6.0",
     "arrivals": "^2.1.2",
@@ -160,7 +160,7 @@
     "decompress-response": "^10.0.0",
     "deep-for-each": "^3.0.0",
     "dogapi": "^2.8.4",
-    "dotenv": "^18.0.5",
+    "dotenv": "^18.0.7",
     "driftless": "^2.0.3",
     "esbuild-wasm": "^0.28.2",
     "espree": "^11.2.0",
@@ -176,17 +176,17 @@
     "https-proxy-agent": "^9.1.0",
     "jmespath": "^0.16.0",
     "joi": "^18.2.9",
-    "js-yaml": "^5.4.2",
-    "jsonpath-plus": "^11.1.1",
+    "js-yaml": "^5.4.3",
+    "jsonpath-plus": "^11.2.0",
     "jsonwebtoken": "^9.0.3",
     "lodash": "^4.18.1",
     "mixpanel": "^0.24.0",
     "moment": "^2.31.0",
     "ms": "^2.1.3",
-    "nanoid": "^6.0.1",
+    "nanoid": "^6.0.2",
     "opentracing": "^0.14.7",
     "ora": "^9.4.1",
-    "playwright": "^1.63.0",
+    "playwright": "^1.64.0",
     "prom-client": "^15.1.3",
     "protobufjs": "^8.8.0",
     "rc": "^1.2.8",
@@ -220,47 +220,47 @@
     "changes": {
       "@aws-sdk/client-cloudwatch": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-cloudwatch-logs": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-ec2": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-ecs": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-iam": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-lambda": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-s3": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-sqs": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-ssm": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/client-sts": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@aws-sdk/credential-providers": {
         "from": "^3.1101.0",
-        "to": "^3.1146.0"
+        "to": "^3.1149.0"
       },
       "@azure/identity": {
         "from": "^4.13.1",
@@ -280,15 +280,15 @@
       },
       "@oclif/core": {
         "from": "^4.8.0",
-        "to": "^5.1.2"
+        "to": "^5.1.6"
       },
       "@oclif/plugin-help": {
         "from": "^6.2.36",
-        "to": "^7.0.2"
+        "to": "^7.0.3"
       },
       "@oclif/plugin-not-found": {
         "from": "^3.2.73",
-        "to": "^4.0.2"
+        "to": "^4.0.3"
       },
       "@opentelemetry/api": {
         "from": "^1.9.0",
@@ -296,59 +296,59 @@
       },
       "@opentelemetry/context-async-hooks": {
         "from": "^2.10.0",
-        "to": "^2.11.0"
+        "to": "^2.12.0"
       },
       "@opentelemetry/exporter-metrics-otlp-grpc": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-metrics-otlp-http": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-metrics-otlp-proto": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-trace-otlp-grpc": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-trace-otlp-http": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-trace-otlp-proto": {
         "from": "^0.221.0",
-        "to": "^0.222.0"
+        "to": "^0.223.0"
       },
       "@opentelemetry/exporter-zipkin": {
         "from": "^2.10.0",
-        "to": "^2.11.0"
+        "to": "^2.12.0"
       },
       "@opentelemetry/resources": {
         "from": "^2.10.0",
-        "to": "^2.11.0"
+        "to": "^2.12.0"
       },
       "@opentelemetry/sdk-metrics": {
         "from": "^2.10.0",
-        "to": "^2.11.0"
+        "to": "^2.12.0"
       },
       "@opentelemetry/sdk-trace-base": {
         "from": "^2.10.0",
-        "to": "^2.11.0"
+        "to": "^2.12.0"
       },
       "@playwright/browser-chromium": {
         "from": "1.62.1",
-        "to": "^1.63.0"
+        "to": "^1.64.0"
       },
       "@playwright/test": {
         "from": "1.62.1",
-        "to": "^1.63.0"
+        "to": "^1.64.0"
       },
       "@smithy/core": {
         "from": "^3.31.1",
-        "to": "^3.35.1"
+        "to": "^3.35.2"
       },
       "@upstash/redis": {
         "from": "^1.36.1",
@@ -380,7 +380,7 @@
       },
       "dotenv": {
         "from": "^16.6.1",
-        "to": "^18.0.5"
+        "to": "^18.0.7"
       },
       "esbuild-wasm": {
         "from": "^0.28.1",
@@ -420,11 +420,11 @@
       },
       "js-yaml": {
         "from": "^3.15.1",
-        "to": "^5.4.2"
+        "to": "^5.4.3"
       },
       "jsonpath-plus": {
         "from": "^10.3.0",
-        "to": "^11.1.1"
+        "to": "^11.2.0"
       },
       "lodash": {
         "from": "^4.18.0",
@@ -440,7 +440,7 @@
       },
       "nanoid": {
         "from": "^3.3.16",
-        "to": "^6.0.1"
+        "to": "^6.0.2"
       },
       "ora": {
         "from": "^4.0.4",
@@ -448,7 +448,7 @@
       },
       "playwright": {
         "from": "1.62.1",
-        "to": "^1.63.0"
+        "to": "^1.64.0"
       },
       "prom-client": {
         "from": "^14.2.0",
@@ -490,7 +490,7 @@
     "depsUpdated": 67,
     "originalPackage": "artillery",
     "originalVersion": "2.0.34",
-    "processedAt": "2026-10-03T00:33:22.593Z",
+    "processedAt": "2026-10-09T23:42:20.121Z",
     "smokeTest": "passed"
   }
 }

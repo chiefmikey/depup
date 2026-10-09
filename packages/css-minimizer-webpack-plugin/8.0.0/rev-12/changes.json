@@ -6,7 +6,7 @@
     },
     "cssnano": {
       "from": "^7.0.4",
-      "to": "^9.0.4"
+      "to": "^9.5.0"
     },
     "jest-worker": {
       "from": "^30.0.5",
@@ -14,7 +14,7 @@
     },
     "postcss": {
       "from": "^8.4.40",
-      "to": "^8.5.28"
+      "to": "^8.5.29"
     },
     "schema-utils": {
       "from": "^4.2.0",
@@ -22,9 +22,9 @@
     },
     "serialize-javascript": {
       "from": "^7.0.3",
-      "to": "^7.1.1"
+      "to": "^7.1.2"
     }
   },
-  "timestamp": "2026-09-13T16:09:18.555Z",
+  "timestamp": "2026-10-09T23:42:27.251Z",
   "totalUpdated": 6
 }

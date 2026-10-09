@@ -1,0 +1,85 @@
+{
+  "name": "@depup/del",
+  "version": "9.0.1-depup.1",
+  "description": "Delete files and directories (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/del",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && node --test && tsd",
+    "bench": "node benchmark.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "del",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "delete",
+    "files",
+    "folders",
+    "directories",
+    "remove",
+    "destroy",
+    "trash",
+    "unlink",
+    "clean",
+    "cleaning",
+    "cleanup",
+    "rm",
+    "rmrf",
+    "rimraf",
+    "rmdir",
+    "glob",
+    "gulpfriendly",
+    "file",
+    "folder",
+    "directory",
+    "fs",
+    "filesystem"
+  ],
+  "dependencies": {
+    "globby": "^16.2.4",
+    "is-glob": "^4.0.3",
+    "is-path-cwd": "^4.0.1",
+    "is-path-inside": "^4.0.0",
+    "p-map": "^7.1.0",
+    "presentable-error": "^0.0.1",
+    "slash": "^5.1.0"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "tsd": "^0.33.0",
+    "xo": "^5.0.1"
+  },
+  "depup": {
+    "changes": {
+      "p-map": {
+        "from": "^7.0.8",
+        "to": "^7.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "del",
+    "originalVersion": "9.0.1",
+    "processedAt": "2026-10-09T23:42:37.857Z",
+    "smokeTest": "passed"
+  }
+}

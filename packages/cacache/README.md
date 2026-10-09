@@ -12,7 +12,7 @@ npm install @depup/cacache
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 21.0.1 | **DepUp version**: 21.0.1-depup.43 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 21.0.1 | **DepUp version**: 21.0.1-depup.44 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,11 +20,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | fs-minipass | `^3.0.0` | `^3.0.3` |
 | glob | `^13.0.0` | `^13.0.6` |
-| lru-cache | `^11.1.0` | `^11.5.2` |
+| lru-cache | `^11.1.0` | `^11.5.3` |
 | minipass | `^7.0.3` | `^7.1.3` |
 | minipass-flush | `^1.0.5` | `^2.0.1` |
 | minipass-pipeline | `^1.2.4` | `^3.0.1` |
-| p-map | `^7.0.2` | `^7.0.6` |
+| p-map | `^7.0.2` | `^7.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/cacache&labels=bug).

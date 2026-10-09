@@ -1,6 +1,6 @@
 {
   "name": "@depup/css-minimizer-webpack-plugin",
-  "version": "8.0.0-depup.7",
+  "version": "8.0.0-depup.12",
   "description": "CSS minimizer (minifier) plugin for Webpack (with updated dependencies)",
   "keywords": [
     "css-minimizer-webpack-plugin",
@@ -67,11 +67,11 @@
   },
   "dependencies": {
     "@jridgewell/trace-mapping": "^0.3.31",
-    "cssnano": "^9.0.4",
+    "cssnano": "^9.5.0",
     "jest-worker": "^30.5.1",
-    "postcss": "^8.5.28",
+    "postcss": "^8.5.29",
     "schema-utils": "^4.5.0",
-    "serialize-javascript": "^7.1.1"
+    "serialize-javascript": "^7.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.8",
@@ -147,7 +147,7 @@
       },
       "cssnano": {
         "from": "^7.0.4",
-        "to": "^9.0.4"
+        "to": "^9.5.0"
       },
       "jest-worker": {
         "from": "^30.0.5",
@@ -155,7 +155,7 @@
       },
       "postcss": {
         "from": "^8.4.40",
-        "to": "^8.5.28"
+        "to": "^8.5.29"
       },
       "schema-utils": {
         "from": "^4.2.0",
@@ -163,13 +163,13 @@
       },
       "serialize-javascript": {
         "from": "^7.0.3",
-        "to": "^7.1.1"
+        "to": "^7.1.2"
       }
     },
     "depsUpdated": 6,
     "originalPackage": "css-minimizer-webpack-plugin",
     "originalVersion": "8.0.0",
-    "processedAt": "2026-09-13T16:09:42.990Z",
+    "processedAt": "2026-10-09T23:42:48.536Z",
     "smokeTest": "passed"
   }
 }
