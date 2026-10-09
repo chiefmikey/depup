@@ -1,4 +1,4 @@
-import { promises as fs } from 'node:fs';
+import { promises as fs, realpathSync } from 'node:fs';
 import path from 'node:path';
 
 /**
@@ -11,19 +11,121 @@ export function flattenPackageName(packageName) {
     : packageName;
 }
 
+function isStrictInteger(value) {
+  return /^\d+$/u.test(value);
+}
+
+/**
+ * Delete the given revision entries of one base version from integrity.json
+ * so it doesn't keep data for revisions that no longer exist on disk.
+ * Non-fatal: any read/parse/write problem is ignored.
+ */
+export async function pruneIntegrityEntries(
+  packageDirectory,
+  versionKey,
+  revisionKeys,
+) {
+  if (revisionKeys.length === 0) {
+    return;
+  }
+  try {
+    const integrityFile = path.join(packageDirectory, 'integrity.json');
+    const integrity = JSON.parse(await fs.readFile(integrityFile));
+    if (
+      typeof integrity !== 'object' ||
+      integrity === null ||
+      !integrity[versionKey]
+    ) {
+      return;
+    }
+    for (const revKey of revisionKeys) {
+      delete integrity[versionKey][revKey];
+    }
+    await fs.writeFile(integrityFile, JSON.stringify(integrity, undefined, 2));
+  } catch {
+    // Non-fatal
+  }
+}
+
+/**
+ * True when this module is the process entry point. Compares realpaths so a
+ * symlinked invocation path (npx/bin links) still runs the CLI instead of
+ * silently exiting 0.
+ */
+export function isEntryPoint(moduleFilename, entry = process.argv[1]) {
+  if (!entry || !moduleFilename) {
+    return false;
+  }
+  try {
+    return realpathSync(entry) === realpathSync(moduleFilename);
+  } catch {
+    return entry === moduleFilename;
+  }
+}
+
+/**
+ * True when an earlier revision of this base version failed (publish or a
+ * flaky verification run) and no revision of it ever reached npm. The caller
+ * has already refused to publish a currently failing revision. Without this, the retry revision has no
+ * dependency changes, is recorded as 'skipped', and the version stays
+ * unpublished forever. Missing or corrupt integrity.json means no extra
+ * publish.
+ */
+export async function hasUnpublishedFailedRevision(
+  packageDirectory,
+  baseVersion,
+) {
+  if (!packageDirectory || !baseVersion) {
+    return false;
+  }
+  try {
+    const data = await fs.readFile(
+      path.join(packageDirectory, 'integrity.json'),
+    );
+    const integrity = JSON.parse(data);
+    const versionEntry =
+      integrity !== null && typeof integrity === 'object'
+        ? integrity[baseVersion]
+        : undefined;
+    if (
+      versionEntry === null ||
+      typeof versionEntry !== 'object' ||
+      Array.isArray(versionEntry)
+    ) {
+      return false;
+    }
+    const revisions = Object.values(versionEntry).filter(
+      (entry) => entry !== null && typeof entry === 'object',
+    );
+    return (
+      !revisions.some((entry) => entry.status === 'published') &&
+      revisions.some((entry) => entry.status === 'failed')
+    );
+  } catch {
+    // Missing or corrupt integrity.json -- do not force a publish
+    return false;
+  }
+}
+
 /**
  * Parse shard configuration from SHARD_INDEX / SHARD_TOTAL env vars.
  * Used by cron-discover and cron-sync for parallel runner support.
  */
 export function getShardConfig() {
-  const shardIndex = Number.parseInt(process.env.SHARD_INDEX || '0', 10);
-  const shardTotal = Number.parseInt(process.env.SHARD_TOTAL || '1', 10);
+  const rawIndex = process.env.SHARD_INDEX || '0';
+  const rawTotal = process.env.SHARD_TOTAL || '1';
+
+  // Strict decimal integers only: parseInt would silently accept "1e3" (1),
+  // "2.9" (2) or "1x" (1) and quietly change how work is sharded.
+  const shardIndex = Number.parseInt(rawIndex, 10);
+  const shardTotal = Number.parseInt(rawTotal, 10);
 
   if (
-    Number.isNaN(shardIndex) ||
-    Number.isNaN(shardTotal) ||
+    !isStrictInteger(rawIndex) ||
+    !isStrictInteger(rawTotal) ||
+    !Number.isSafeInteger(shardIndex) ||
+    !Number.isSafeInteger(shardTotal) ||
     shardTotal < 1 ||
-    shardIndex < 0 ||
     shardIndex >= shardTotal
   ) {
     throw new Error(

@@ -19,6 +19,10 @@ const EXIT_VERIFICATION_FAILED = 3;
 // absorb flaky installs, but a genuinely broken package must not be re-run
 // (download, install, test) on every cron cycle forever.
 const MAX_VERIFICATION_ATTEMPTS = 3;
+// The cron runs every 8 hours; the run window rotates once per 8h tick.
+const EIGHT_HOURS_MS = 8 * 60 * 60 * 1000;
+// After SIGTERM on timeout, SIGKILL the whole process group once this elapses.
+const KILL_GRACE_MS = 2000;
 
 // Number of verification-failed, never-published revisions in one
 // integrity.json version entry ({ [revision]: { smokeTest, status } }).
@@ -257,9 +261,9 @@ class PackageSyncer {
       const existingPackages = await this.getExistingPackages();
       console.log(`Found ${existingPackages.length} existing packages`);
 
-      const packagesToProcess = existingPackages.slice(
-        0,
-        this.maxPackagesPerRun,
+      const packagesToProcess = this.selectRunWindow(existingPackages);
+      console.log(
+        `Processing ${packagesToProcess.length} of ${existingPackages.length} packages this run`,
       );
 
       // Phase 1: cheap pre-check at high concurrency (no child processes)
@@ -316,6 +320,22 @@ class PackageSyncer {
     }
   }
 
+  // Stateless rotating window over the name-sorted package list. Truncating to
+  // the first N every run starves the alphabetical tail forever; instead the
+  // start offset advances by maxPackagesPerRun each 8h tick (wrapping), so every
+  // package is reached within a few ticks.
+  selectRunWindow(packages, now = Date.now()) {
+    const max = this.maxPackagesPerRun;
+    if (packages.length <= max) {
+      return packages;
+    }
+    const offset = (Math.floor(now / EIGHT_HOURS_MS) * max) % packages.length;
+    return [...packages.slice(offset), ...packages.slice(0, offset)].slice(
+      0,
+      max,
+    );
+  }
+
   async getExistingPackages() {
     const packages = [];
     const packagesDirectory = path.join(process.cwd(), 'packages');
@@ -353,8 +373,15 @@ class PackageSyncer {
               });
             }
           }
-        } catch {
-          // Not a valid package directory, skip
+        } catch (error) {
+          // A missing integrity.json just means "not a package directory".
+          // Anything else (malformed JSON, unreadable file) skips the package
+          // but must be visible, or it silently stops being synced.
+          if (error.code !== 'ENOENT') {
+            console.warn(
+              `Skipping ${packageEntry.name}: could not read integrity.json: ${error.message}`,
+            );
+          }
         }
       }
     } catch (error) {
@@ -591,15 +618,36 @@ class PackageSyncer {
   async spawnAsync(command, commandArguments, options) {
     const { spawn } = await import('node:child_process');
     return new Promise((resolve, reject) => {
-      const child = spawn(command, commandArguments, options);
+      // detached => the child leads its own process group, so a timeout can
+      // take down its grandchildren too (child.kill() only reaches the child).
+      const child = spawn(command, commandArguments, {
+        ...options,
+        detached: true,
+      });
       let killed = false;
+      let killTimer;
+      const killGroup = (signal) => {
+        try {
+          process.kill(-child.pid, signal);
+        } catch (error) {
+          // ESRCH: the group is already gone.
+          if (error.code !== 'ESRCH') {
+            child.kill(signal);
+          }
+        }
+      };
       const timer = setTimeout(() => {
         killed = true;
-        child.kill('SIGTERM');
+        killGroup('SIGTERM');
+        killTimer = setTimeout(() => killGroup('SIGKILL'), KILL_GRACE_MS);
+        killTimer.unref();
       }, options.timeout || 300_000);
       child.on('close', (code) => {
         clearTimeout(timer);
+        clearTimeout(killTimer);
         if (killed) {
+          // Reap any grandchild that ignored SIGTERM and outlived the child.
+          killGroup('SIGKILL');
           reject(new Error(`Process timed out after ${options.timeout}ms`));
         } else if (code === 0) {
           resolve();
@@ -613,6 +661,7 @@ class PackageSyncer {
       });
       child.on('error', (error) => {
         clearTimeout(timer);
+        clearTimeout(killTimer);
         reject(error);
       });
     });
