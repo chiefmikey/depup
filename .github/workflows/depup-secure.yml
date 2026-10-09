@@ -199,6 +199,7 @@ jobs:
           fi
 
       - name: Upload security reports
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: security-reports-${{ steps.sanitize.outputs.safe_name || needs.security-validation.outputs.package_safe }}
@@ -343,7 +344,9 @@ jobs:
           fi
 
           # Execute in security sandbox
-          echo "Running: docker ${DOCKER_ARGS[@]}"
+          # Print args with the token env value redacted (never echo NODE_AUTH_TOKEN=<value>)
+          SAFE_ARGS=("${DOCKER_ARGS[@]/NODE_AUTH_TOKEN=*/NODE_AUTH_TOKEN=***}")
+          echo "Running: docker ${SAFE_ARGS[*]}"
           docker "${DOCKER_ARGS[@]}"
 
       - name: Validate processing results
@@ -418,6 +421,7 @@ jobs:
           fi
 
       - name: Upload processing reports
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: processing-reports-${{ needs.security-validation.outputs.package_safe }}
