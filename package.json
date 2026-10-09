@@ -57,6 +57,7 @@
     "@boundaries/elements": "2.0.1",
     "@istanbuljs/load-nyc-config": {
       "js-yaml": "^4.2.0"
-    }
+    },
+    "handlebars": "4.7.10"
   }
 }
