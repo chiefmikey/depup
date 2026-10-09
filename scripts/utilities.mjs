@@ -64,9 +64,9 @@ export function isEntryPoint(moduleFilename, entry = process.argv[1]) {
 }
 
 /**
- * True when an earlier revision of this base version failed to publish
- * (transient registry/network error, not a verification failure) and no
- * revision of it ever reached npm. Without this, the retry revision has no
+ * True when an earlier revision of this base version failed (publish or a
+ * flaky verification run) and no revision of it ever reached npm. The caller
+ * has already refused to publish a currently failing revision. Without this, the retry revision has no
  * dependency changes, is recorded as 'skipped', and the version stays
  * unpublished forever. Missing or corrupt integrity.json means no extra
  * publish.
@@ -99,9 +99,7 @@ export async function hasUnpublishedFailedRevision(
     );
     return (
       !revisions.some((entry) => entry.status === 'published') &&
-      revisions.some(
-        (entry) => entry.status === 'failed' && entry.smokeTest !== 'failed',
-      )
+      revisions.some((entry) => entry.status === 'failed')
     );
   } catch {
     // Missing or corrupt integrity.json -- do not force a publish

@@ -16882,14 +16882,30 @@ describe('pipeline robustness fixes', () => {
       expect(publishSpy).not.toHaveBeenCalled();
     });
 
-    it('does not republish after a verification failure (smokeTest failed)', async () => {
+    it('publishes rev 1 once a flaky verification failure on rev 0 now passes', async () => {
       await writeIntegrity({ 0: { smokeTest: 'failed', status: 'failed' } });
       const publishSpy = jest
         .spyOn(depup, 'publishPackage')
         .mockResolvedValue();
-      jest.spyOn(console, 'log').mockImplementation(() => {});
 
-      const result = await depup.handlePublishStep(publishContext());
+      const result = await depup.handlePublishStep(
+        publishContext({ testResult: 'passed' }),
+      );
+
+      expect(result).toBe(true);
+      expect(publishSpy).toHaveBeenCalledTimes(1);
+    });
+
+    it('still blocks publish when the current revision fails verification', async () => {
+      await writeIntegrity({ 0: { smokeTest: 'failed', status: 'failed' } });
+      const publishSpy = jest
+        .spyOn(depup, 'publishPackage')
+        .mockResolvedValue();
+      jest.spyOn(console, 'error').mockImplementation(() => {});
+
+      const result = await depup.handlePublishStep(
+        publishContext({ testResult: 'failed' }),
+      );
 
       expect(result).toBe(false);
       expect(publishSpy).not.toHaveBeenCalled();
