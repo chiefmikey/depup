@@ -6,14 +6,17 @@ on:
 
 # Trust model (see docs/incidents/2026-10-09-publish-pipeline-audit.md):
 #   gate    -- decides whether the submitter may trigger a publish. Runs only
-#              trusted workflow code; may post a denial comment (BOT_PAT).
+#              trusted workflow code; may post a denial comment (workflow token).
 #   process -- runs UNTRUSTED package code (download, bump, test, publish). It
 #              holds NPM_TOKEN and nothing else: read-only token, no persisted
-#              checkout credential, no BOT_PAT, no GPG key.
-#   commit  -- holds the push credential, GPG key and BOT_PAT. It never executes
+#              checkout credential, no issues write, no GPG key.
+#   commit  -- holds the push credential and GPG key; comments and closes issues
+#              with the workflow token. It never executes
 #              package code: only version control, add-package.mjs from the
 #              trusted checkout and github-script. Data handed over by the
 #              process job is untrusted input and is validated before use.
+# The BOT_PAT secret is expired/unused; comments now post as github-actions[bot];
+# the secret can be deleted.
 # The workflow default is read-only; commit is the only job that can write.
 permissions:
   contents: read
@@ -32,6 +35,7 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
+      issues: write
     # The issue template applies two labels (package-request, automated), which fires
     # two `labeled` events. Only the event for the package-request label itself may
     # start a run; any other label event (automated, duplicate, ...) is ignored so one
@@ -141,7 +145,6 @@ jobs:
           AUTHOR_LOGIN: ${{ github.event.issue.user.login }}
           REASON: ${{ steps.gate.outputs.reason }}
         with:
-          github-token: ${{ secrets.BOT_PAT }}
           script: |
             const reason = process.env.REASON || 'lookup_error';
             const author = process.env.AUTHOR_LOGIN || 'unknown';
@@ -163,7 +166,7 @@ jobs:
                 body: comment
               });
             } catch (error) {
-              core.warning('Could not create comment (is BOT_PAT valid?): ' + error.message);
+              core.warning('Could not create comment (is the workflow token allowed to write issues?): ' + error.message);
             }
 
   process:
@@ -467,6 +470,7 @@ jobs:
     # The only job that can push. It never runs package code and has no NPM_TOKEN.
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Checkout
@@ -674,7 +678,6 @@ jobs:
           TEST_FAILED: ${{ needs.process.outputs.test_failed }}
           VALIDATE_OUTCOME: ${{ needs.process.outputs.validate_outcome }}
         with:
-          github-token: ${{ secrets.BOT_PAT }}
           script: |
             const issueNumber = context.issue.number;
             const packageName = process.env.PACKAGE_NAME || 'unknown';
@@ -777,14 +780,13 @@ jobs:
                 body: comment
               });
             } catch (error) {
-              core.warning('Could not create comment (is BOT_PAT valid?): ' + error.message);
+              core.warning('Could not create comment (is the workflow token allowed to write issues?): ' + error.message);
             }
 
       - name: Close Issue on Success
         if: success() && needs.process.result == 'success'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
-          github-token: ${{ secrets.BOT_PAT }}
           script: |
             await github.rest.issues.update({
               issue_number: context.issue.number,
@@ -797,7 +799,6 @@ jobs:
         if: always() && needs.process.outputs.exists == 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
-          github-token: ${{ secrets.BOT_PAT }}
           script: |
             await github.rest.issues.update({
               issue_number: context.issue.number,

@@ -332,9 +332,15 @@ describe('process-package-request.yml', () => {
 
     it('only the commit job can write; everything else is read-only', () => {
       expect(requestDocument.permissions).toStrictEqual({ contents: 'read' });
-      expect(jobOf('gate').permissions).toStrictEqual({ contents: 'read' });
+      expect(jobOf('gate').permissions).toStrictEqual({
+        contents: 'read',
+        issues: 'write',
+      });
       expect(jobOf('process').permissions).toStrictEqual({ contents: 'read' });
-      expect(jobOf('commit').permissions).toStrictEqual({ contents: 'write' });
+      expect(jobOf('commit').permissions).toStrictEqual({
+        contents: 'write',
+        issues: 'write',
+      });
     });
 
     it('keeps every action pinned by commit SHA', () => {
@@ -459,13 +465,13 @@ describe('process-package-request.yml', () => {
       );
     });
 
-    it('runs no checkout and holds only BOT_PAT, for the denial comment', () => {
+    it('runs no checkout and holds no secret, commenting with the workflow token', () => {
       const uses = jobOf('gate').steps.map((step) => step.uses ?? '');
 
       expect(uses.some((value) => value.startsWith('actions/checkout'))).toBe(
         false,
       );
-      expect(secretsOf(jobOf('gate'))).toStrictEqual(['BOT_PAT']);
+      expect(secretsOf(jobOf('gate'))).toStrictEqual([]);
       expect(runsOf(jobOf('gate'))).toStrictEqual([]);
     });
 
@@ -482,7 +488,7 @@ describe('process-package-request.yml', () => {
       const denial = stepNamed(jobOf('gate'), 'Explain Denied Request');
 
       expect(denial.if).toContain("steps.gate.outputs.allowed != 'true'");
-      expect(denial.with['github-token']).toBe(expr('secrets.BOT_PAT'));
+      expect(denial.with['github-token']).toBeUndefined();
       expect(denial.with.script).toContain('createComment');
       expect(denial.with.script).toContain('left open');
       expect(denial.with.script).not.toContain("state: 'closed'");
@@ -667,7 +673,6 @@ describe('process-package-request.yml', () => {
 
     it('commit job holds no NPM_TOKEN and never executes package code', () => {
       expect(secretsOf(commitJob)).toStrictEqual([
-        'BOT_PAT',
         'GITHUB_TOKEN',
         'GPG_PRIVATE_KEY',
       ]);
