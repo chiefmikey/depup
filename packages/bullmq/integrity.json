@@ -1874,5 +1874,15 @@
       "timestamp": "2026-10-01T08:13:52.444Z",
       "version": "6.3.11-depup.0"
     }
+  },
+  "6.3.12": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T08:14:20.822Z",
+      "version": "6.3.12-depup.0"
+    }
   }
 }

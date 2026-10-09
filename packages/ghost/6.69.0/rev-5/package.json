@@ -1,6 +1,6 @@
 {
   "name": "@depup/ghost",
-  "version": "6.69.0-depup.0",
+  "version": "6.69.0-depup.5",
   "description": "The professional publishing platform (with updated dependencies)",
   "keywords": [
     "ghost",
@@ -46,12 +46,12 @@
     "README.md"
   ],
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1147.0",
+    "@aws-sdk/client-s3": "^3.1148.0",
     "@breejs/later": "4.2.0",
     "@extractus/oembed-extractor": "6.0.0",
     "@faker-js/faker": "^10.6.0",
     "@isaacs/ttlcache": "^2.1.5",
-    "@sentry/node": "^11.5.0",
+    "@sentry/node": "^11.6.0",
     "@slack/webhook": "^8.0.2",
     "@tryghost/adapter-base-cache": "file:components/tryghost-adapter-base-cache-0.2.1.tgz",
     "@tryghost/adapter-base-jobs": "file:components/tryghost-adapter-base-jobs-0.0.0.tgz",
@@ -176,7 +176,7 @@
     "lodash": "4.18.1",
     "lru-cache": "11.5.3",
     "luxon": "3.7.2",
-    "mailgun.js": "^14.0.2",
+    "mailgun.js": "^14.1.0",
     "metascraper": "^5.58.1",
     "metascraper-amazon": "^5.56.2",
     "metascraper-author": "^5.56.2",
@@ -191,7 +191,7 @@
     "mingo": "^7.2.4",
     "moment": "2.31.0",
     "moment-timezone": "^0.6.5",
-    "mppx": "^0.13.1",
+    "mppx": "^0.13.4",
     "multer": "2.4.0",
     "mysql2": "^3.24.5",
     "nconf": "0.13.0",
@@ -212,7 +212,7 @@
     "temporal-polyfill": "^1.0.5",
     "terser": "^5.51.2",
     "tiny-glob": "0.2.9",
-    "tldts": "^7.4.16",
+    "tldts": "^7.4.18",
     "type-fest": "^5.10.0",
     "ua-parser-js": "^2.0.10",
     "unidecode": "1.1.0",
@@ -234,7 +234,7 @@
     "changes": {
       "@aws-sdk/client-s3": {
         "from": "3.1079.0",
-        "to": "^3.1147.0"
+        "to": "^3.1148.0"
       },
       "@faker-js/faker": {
         "from": "10.5.0",
@@ -246,7 +246,7 @@
       },
       "@sentry/node": {
         "from": "7.120.4",
-        "to": "^11.5.0"
+        "to": "^11.6.0"
       },
       "@slack/webhook": {
         "from": "7.1.0",
@@ -390,7 +390,7 @@
       },
       "mailgun.js": {
         "from": "10.4.0",
-        "to": "^14.0.2"
+        "to": "^14.1.0"
       },
       "metascraper": {
         "from": "5.55.2",
@@ -446,7 +446,7 @@
       },
       "mppx": {
         "from": "0.6.20",
-        "to": "^0.13.1"
+        "to": "^0.13.4"
       },
       "mysql2": {
         "from": "3.24.4",
@@ -486,7 +486,7 @@
       },
       "tldts": {
         "from": "^7.4.4",
-        "to": "^7.4.16"
+        "to": "^7.4.18"
       },
       "type-fest": {
         "from": "5.7.0",
@@ -500,7 +500,7 @@
     "depsUpdated": 66,
     "originalPackage": "ghost",
     "originalVersion": "6.69.0",
-    "processedAt": "2026-10-07T16:11:52.889Z",
+    "processedAt": "2026-10-09T08:13:54.076Z",
     "smokeTest": "failed"
   }
 }
