@@ -12,14 +12,14 @@ npm install @depup/terminal-link
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.52 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.53 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | ansi-escapes | `^7.0.0` | `^7.3.0` |
-| supports-hyperlinks | `^4.1.0` | `^4.5.0` |
+| supports-hyperlinks | `^4.1.0` | `^4.6.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/terminal-link&labels=bug).

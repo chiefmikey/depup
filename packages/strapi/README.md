@@ -12,7 +12,7 @@ npm install @depup/strapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.60 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.61 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,8 +20,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @koa/cors | `^3.0.0` | `^5.0.0` |
 | async | `^2.1.2` | `^3.2.6` |
-| boxen | `4.2.0` | `^8.0.1` |
-| chalk | `^4.1.1` | `^5.6.2` |
+| boxen | `4.2.0` | `^9.0.0` |
+| chalk | `^4.1.1` | `^6.0.1` |
 | chokidar | `3.5.1` | `^5.0.0` |
 | ci-info | `3.1.1` | `^4.4.0` |
 | cli-table3 | `^0.6.0` | `^0.6.5` |
@@ -29,14 +29,14 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | configstore | `5.0.1` | `^8.0.0` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | debug | `^4.1.1` | `^4.4.3` |
-| dotenv | `8.2.0` | `^17.4.2` |
-| execa | `^1.0.0` | `^10.0.0` |
-| fs-extra | `^9.1.0` | `^11.3.6` |
+| dotenv | `8.2.0` | `^18.0.7` |
+| execa | `^1.0.0` | `^10.1.0` |
+| fs-extra | `^9.1.0` | `^11.4.1` |
 | glob | `^7.1.2` | `^13.0.6` |
-| inquirer | `^6.2.1` | `^14.0.2` |
+| inquirer | `^6.2.1` | `^14.2.3` |
 | is-docker | `2.2.1` | `^4.0.0` |
 | koa | `^2.13.1` | `^3.2.1` |
-| koa-body | `^4.2.0` | `^8.0.0` |
+| koa-body | `^4.2.0` | `^8.0.1` |
 | koa-compress | `^5.0.1` | `^5.2.2` |
 | koa-favicon | `^2.0.0` | `^2.1.0` |
 | koa-ip | `^2.0.0` | `^2.1.4` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | opn | `^5.3.0` | `^6.0.0` |
 | ora | `^5.4.0` | `^9.4.1` |
 | package-json | `7.0.0` | `^10.0.1` |
-| qs | `^6.10.1` | `^6.15.3` |
+| qs | `^6.10.1` | `^6.16.0` |
 | rimraf | `^3.0.2` | `^6.1.3` |
 | semver | `7.3.5` | `^7.8.5` |
 

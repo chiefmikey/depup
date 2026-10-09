@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.5 | **Updated**: 10/9/2026 | **Import test**: failed
+**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.6 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,14 +23,24 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^11.6.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
+| @tryghost/bookshelf-plugins | `2.3.17` | `^2.3.18` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
 | @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
 | @tryghost/custom-fonts | `1.0.12` | `^1.0.13` |
+| @tryghost/domain-events | `3.3.17` | `^3.3.18` |
+| @tryghost/errors | `3.4.1` | `^3.4.2` |
 | @tryghost/helpers | `1.1.107` | `^1.1.108` |
 | @tryghost/html-to-plaintext | `1.0.12` | `^1.0.13` |
+| @tryghost/logging | `5.4.7` | `^5.4.8` |
+| @tryghost/mw-error-handler | `3.3.16` | `^3.3.17` |
+| @tryghost/nodemailer | `2.3.16` | `^2.3.17` |
+| @tryghost/prometheus-metrics | `5.0.2` | `^5.0.3` |
 | @tryghost/referrer-parser | `0.1.22` | `^0.1.24` |
+| @tryghost/request | `4.0.9` | `^4.0.10` |
 | @tryghost/social-urls | `0.1.64` | `^0.1.65` |
 | @tryghost/string | `0.3.6` | `^0.3.7` |
+| @tryghost/validator | `3.2.16` | `^3.2.17` |
+| @tryghost/zip | `3.5.15` | `^3.5.16` |
 | @x402/core | `2.27.0` | `^2.28.0` |
 | @x402/evm | `2.27.0` | `^2.28.0` |
 | @x402/hono | `2.27.0` | `^2.28.0` |
@@ -40,7 +50,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
 | entities | `4.5.0` | `^8.1.0` |
-| express | `4.22.3` | `^5.2.1` |
+| express | `4.22.3` | `^5.3.0` |
 | express-hbs | `2.5.0` | `^3.0.0` |
 | fastq | `^1.20.1` | `^1.20.3` |
 | file-type | `21.3.4` | `^22.1.1` |

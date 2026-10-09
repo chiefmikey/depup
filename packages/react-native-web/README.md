@@ -12,13 +12,13 @@ npm install @depup/react-native-web
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.21.3 | **DepUp version**: 0.21.3-depup.0 | **Updated**: 9/27/2026 | **Import test**: failed
+**Original version**: 0.21.4 | **DepUp version**: 0.21.4-depup.0 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.18.6` | `^8.0.5` |
+| @babel/runtime | `^7.18.6` | `^8.0.7` |
 | @react-native/normalize-colors | `^0.74.1` | `^0.87.1` |
 | fbjs | `^3.0.4` | `^3.0.5` |
 | styleq | `^0.1.3` | `^0.2.1` |

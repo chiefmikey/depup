@@ -1,0 +1,49 @@
+{
+  "name": "@depup/stream-combiner2",
+  "version": "1.1.1-depup.1",
+  "homepage": "https://github.com/substack/stream-combiner2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/stream-combiner2.git"
+  },
+  "dependencies": {
+    "duplexer2": "^0.1.4",
+    "readable-stream": "^4.8.0"
+  },
+  "devDependencies": {
+    "tape": "~2.3.0",
+    "through2": "^2.0.0",
+    "event-stream": "~3.0.7"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT",
+  "description": "stream-combiner2 with all dependencies updated to latest",
+  "keywords": [
+    "stream-combiner2",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "duplexer2": {
+        "from": "~0.1.0",
+        "to": "^0.1.4"
+      },
+      "readable-stream": {
+        "from": "^2.0.2",
+        "to": "^4.8.0"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "stream-combiner2",
+    "originalVersion": "1.1.1",
+    "processedAt": "2026-10-09T16:12:50.966Z",
+    "smokeTest": "passed"
+  }
+}

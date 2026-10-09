@@ -12,13 +12,13 @@ npm install @depup/signale
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.4.0 | **DepUp version**: 1.4.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^2.3.2` | `^5.6.2` |
+| chalk | `^2.3.2` | `^6.0.1` |
 | figures | `^2.0.0` | `^6.1.0` |
 | pkg-conf | `^2.1.0` | `^5.0.0` |
 

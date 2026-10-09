@@ -1,16 +1,5 @@
 {
   "1.0.1": {
-    "0": {
-      "changes": {
-        "streamx": {
-          "from": "^2.12.5",
-          "to": "^2.23.0"
-        }
-      },
-      "status": "published",
-      "timestamp": "2026-03-17T16:39:31.147Z",
-      "version": "1.0.1-depup.0"
-    },
     "1": {
       "changes": {
         "streamx": {
@@ -62,6 +51,19 @@
       "status": "failed",
       "timestamp": "2026-06-05T00:44:36.002Z",
       "version": "1.0.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "streamx": {
+          "from": "^2.12.5",
+          "to": "^2.28.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T16:13:23.477Z",
+      "version": "1.0.1-depup.5"
     }
   }
 }

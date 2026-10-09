@@ -12,27 +12,31 @@ npm install @depup/react-native
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.0 | **Updated**: 8/30/2026 | **Import test**: failed
+**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.1 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | anser | `^1.4.9` | `^2.3.5` |
-| ansi-regex | `^5.0.0` | `^6.3.0` |
+| ansi-regex | `^5.0.0` | `^6.4.0` |
 | babel-plugin-syntax-hermes-parser | `0.36.1` | `^0.37.0` |
 | commander | `^12.0.0` | `^15.0.0` |
+| hermes-compiler | `250829098.0.17` | `^250829098.0.19` |
 | memoize-one | `^5.0.0` | `^6.0.0` |
-| pretty-format | `^29.7.0` | `^30.5.0` |
-| react-devtools-core | `^6.1.5` | `^7.0.1` |
-| react-refresh | `^0.14.0` | `^0.18.0` |
+| metro-runtime | `^0.87.0` | `^0.87.1` |
+| metro-source-map | `^0.87.0` | `^0.87.1` |
+| pretty-format | `^29.7.0` | `^30.5.1` |
+| react-devtools-core | `^6.1.5` | `^8.0.0` |
+| react-refresh | `^0.14.0` | `^0.19.0` |
 | regenerator-runtime | `^0.13.2` | `^0.14.1` |
+| scheduler | `0.27.0` | `^0.28.0` |
 | semver | `^7.1.3` | `^7.8.5` |
 | stacktrace-parser | `^0.1.10` | `^0.1.11` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
 | whatwg-fetch | `^3.0.0` | `^3.6.20` |
-| ws | `^7.5.10` | `^8.21.3` |
-| yargs | `^17.6.2` | `^18.1.0` |
+| ws | `^7.5.10` | `^8.22.0` |
+| yargs | `^17.6.2` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native&labels=bug).

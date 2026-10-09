@@ -12,7 +12,7 @@ npm install @depup/synchronous-promise
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.17 | **DepUp version**: 2.0.17-depup.0 | **Updated**: 3/22/2026 | **Import test**: passed
+**Original version**: 2.0.18 | **DepUp version**: 2.0.18-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 

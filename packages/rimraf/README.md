@@ -12,11 +12,14 @@ npm install @depup/rimraf
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.3 | **DepUp version**: 6.1.3-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 6.1.3 | **DepUp version**: 6.1.3-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| glob | `^13.0.3` | `^13.0.6` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/rimraf&labels=bug).
 

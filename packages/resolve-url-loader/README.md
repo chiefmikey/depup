@@ -12,7 +12,7 @@ npm install @depup/resolve-url-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.0 | **Updated**: 4/12/2026 | **Import test**: passed
+**Original version**: 5.0.0 | **DepUp version**: 5.0.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,8 +21,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | adjust-sourcemap-loader | `^4.0.0` | `^5.0.0` |
 | convert-source-map | `^1.7.0` | `^2.0.0` |
 | loader-utils | `^2.0.0` | `^3.3.1` |
-| postcss | `^8.2.14` | `^8.5.9` |
-| source-map | `0.6.1` | `^0.7.6` |
+| postcss | `^8.2.14` | `^8.5.29` |
+| source-map | `0.6.1` | `^0.8.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/resolve-url-loader&labels=bug).

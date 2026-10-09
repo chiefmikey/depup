@@ -12,16 +12,16 @@ npm install @depup/react-select
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.10.2 | **DepUp version**: 5.10.2-depup.1 | **Updated**: 3/16/2026 | **Import test**: unknown
+**Original version**: 5.10.2 | **DepUp version**: 5.10.2-depup.2 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.12.0` | `^7.29.2` |
+| @babel/runtime | `^7.12.0` | `^8.0.7` |
 | @emotion/cache | `^11.4.0` | `^11.14.0` |
 | @emotion/react | `^11.8.1` | `^11.14.0` |
-| @floating-ui/dom | `^1.0.1` | `^1.7.6` |
+| @floating-ui/dom | `^1.0.1` | `^1.8.0` |
 | @types/react-transition-group | `^4.4.0` | `^4.4.12` |
 | prop-types | `^15.6.0` | `^15.8.1` |
 | react-transition-group | `^4.3.0` | `^4.4.5` |
