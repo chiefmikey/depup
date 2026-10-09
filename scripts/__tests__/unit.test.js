@@ -5023,7 +5023,7 @@ describe('securityApprovalWorkflow coverage gaps', () => {
 describe('add-package.mjs -- coverage gap fill', () => {
   // ─── Helpers ────────────────────────────────────────────────────────────────
   async function makeAdder(tmpDir) {
-    const path = await import('node:path');
+    const { default: path } = await import('node:path');
     const { PackageAdder } = await import('../add-package.mjs');
     const adder = new PackageAdder();
     adder.userPackagesPath = path.join(tmpDir, 'user-packages.json');
@@ -5043,7 +5043,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
   beforeEach(async () => {
     const { promises: fs } = await import('node:fs');
     const os = await import('node:os');
-    const path = await import('node:path');
+    const { default: path } = await import('node:path');
 
     temporaryDirectory = await fs.mkdtemp(
       path.join(os.tmpdir(), 'depup-addpkg-'),
@@ -5119,7 +5119,7 @@ describe('add-package.mjs -- coverage gap fill', () => {
 
     it('creates nested directory if it does not exist', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
       const deepPath = path.join(
         temporaryDirectory,
         'nested',
@@ -5401,8 +5401,7 @@ describe('integrity-meter.mjs -- coverage gap fill', () => {
     fsPromises = fsImport.promises;
     const osImport = await import('node:os');
     osModule = osImport.default;
-    const pathImport = await import('node:path');
-    pathModule = pathImport.default;
+    pathModule = path;
     const integrityImport = await import('../integrity-meter.mjs');
     IntegrityMeter = integrityImport.IntegrityMeter;
 
@@ -6982,7 +6981,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     const fsModule = await import('node:fs');
     fs = fsModule.promises;
     os = await import('node:os');
-    pathModule = await import('node:path');
+    pathModule = path;
     const syncModule = await import('../cron-sync.mjs');
     PackageSyncer = syncModule.PackageSyncer;
     fetchModule = await import('npm-registry-fetch');
@@ -7706,9 +7705,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
   // ─────────────────────────────────────────────────────────────────
   describe('checkBatches', () => {
     it('returns empty needsUpdate when all packages are up to date', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: false,
+        updateType: null,
+      });
 
       const packages = [
         { name: 'a', version: '1.0.0' },
@@ -7723,9 +7724,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('counts skipped packages correctly', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: true, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: true,
+        updateType: null,
+      });
 
       const packages = [{ name: 'a', version: '1.0.0' }];
       syncer.rateLimitDelay = 0;
@@ -7737,9 +7740,11 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('collects packages that need updating', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '2.0.0', skip: false, updateType: 'version' });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '2.0.0',
+        skip: false,
+        updateType: 'version',
+      });
 
       const package_ = { name: 'express', version: '1.0.0' };
       syncer.rateLimitDelay = 0;
@@ -7766,14 +7771,16 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('processes multiple batches when packages exceed checkConcurrentPackages', async () => {
-      jestInstance
-        .spyOn(syncer, 'checkNeedsUpdate')
-        .mockResolvedValue({ latestVersion: '1.0.0', skip: false, updateType: null });
+      jestInstance.spyOn(syncer, 'checkNeedsUpdate').mockResolvedValue({
+        latestVersion: '1.0.0',
+        skip: false,
+        updateType: null,
+      });
       syncer.checkConcurrentPackages = 2;
       syncer.rateLimitDelay = 0;
 
-      const packages = Array.from({ length: 5 }, (_, i) => ({
-        name: `pkg-${i}`,
+      const packages = Array.from({ length: 5 }, (_, index) => ({
+        name: `pkg-${index}`,
         version: '1.0.0',
       }));
 
@@ -7807,7 +7814,7 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
         { check, package_ },
       ]);
 
-      expect(syncedPackages).toEqual(['express']);
+      expect(syncedPackages).toStrictEqual(['express']);
     });
 
     it('increments failedCount when applyUpdate throws', async () => {
@@ -8056,17 +8063,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([{ name: 'express', version: '4.18.2' }]);
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: [
-            {
-              check: { latestVersion: '5.0.0', updateType: 'version' },
-              package_: { name: 'express', version: '4.18.2' },
-            },
-          ],
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: [
+          {
+            check: { latestVersion: '5.0.0', updateType: 'version' },
+            package_: { name: 'express', version: '4.18.2' },
+          },
+        ],
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['express'] });
@@ -8082,17 +8087,15 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
       jestInstance
         .spyOn(syncer, 'getExistingPackages')
         .mockResolvedValueOnce([{ name: 'lodash', version: '4.17.21' }]);
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: [
-            {
-              check: { latestVersion: '5.0.0', updateType: 'version' },
-              package_: { name: 'lodash', version: '4.17.21' },
-            },
-          ],
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: [
+          {
+            check: { latestVersion: '5.0.0', updateType: 'version' },
+            package_: { name: 'lodash', version: '4.17.21' },
+          },
+        ],
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 0, syncedPackages: ['lodash'] });
@@ -8116,14 +8119,12 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('reports zero synced packages when nothing needs updating', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 7 }, (_, index) => ({
-            name: `pkg-${index}`,
-            version: '1.0.0',
-          })),
-        );
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 7 }, (_, index) => ({
+          name: `pkg-${index}`,
+          version: '1.0.0',
+        })),
+      );
       jestInstance
         .spyOn(syncer, 'checkBatches')
         .mockResolvedValueOnce({ needsUpdate: [], skippedCount: 0 });
@@ -8159,24 +8160,20 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('exits with 1 and logs SYSTEMIC FAILURE when >50% of 10+ attempts fail', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 12 }, (_, index) => ({
-            name: `fail-pkg-${index}`,
-            version: '1.0.0',
-          })),
-        );
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 12 }, (_, index) => ({
+          name: `fail-pkg-${index}`,
+          version: '1.0.0',
+        })),
+      );
       // checkBatches returns 12 packages needing update, applyBatches fails all
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: Array.from({ length: 12 }, (_, index) => ({
-            check: { latestVersion: '2.0.0', updateType: 'version' },
-            package_: { name: `fail-pkg-${index}`, version: '1.0.0' },
-          })),
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: Array.from({ length: 12 }, (_, index) => ({
+          check: { latestVersion: '2.0.0', updateType: 'version' },
+          package_: { name: `fail-pkg-${index}`, version: '1.0.0' },
+        })),
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 12, syncedPackages: [] });
@@ -8193,23 +8190,19 @@ describe('cron-sync.mjs -- coverage gap fill', () => {
     });
 
     it('does NOT trigger systemic failure when fewer than 10 packages attempted', async () => {
-      jestInstance
-        .spyOn(syncer, 'getExistingPackages')
-        .mockResolvedValueOnce(
-          Array.from({ length: 3 }, (_, index) => ({
-            name: `small-fail-${index}`,
-            version: '1.0.0',
-          })),
-        );
-      jestInstance
-        .spyOn(syncer, 'checkBatches')
-        .mockResolvedValueOnce({
-          needsUpdate: Array.from({ length: 3 }, (_, index) => ({
-            check: { latestVersion: '2.0.0', updateType: 'version' },
-            package_: { name: `small-fail-${index}`, version: '1.0.0' },
-          })),
-          skippedCount: 0,
-        });
+      jestInstance.spyOn(syncer, 'getExistingPackages').mockResolvedValueOnce(
+        Array.from({ length: 3 }, (_, index) => ({
+          name: `small-fail-${index}`,
+          version: '1.0.0',
+        })),
+      );
+      jestInstance.spyOn(syncer, 'checkBatches').mockResolvedValueOnce({
+        needsUpdate: Array.from({ length: 3 }, (_, index) => ({
+          check: { latestVersion: '2.0.0', updateType: 'version' },
+          package_: { name: `small-fail-${index}`, version: '1.0.0' },
+        })),
+        skippedCount: 0,
+      });
       jestInstance
         .spyOn(syncer, 'applyBatches')
         .mockResolvedValueOnce({ failedCount: 3, syncedPackages: [] });
@@ -8360,7 +8353,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     const nodeFs = await import('node:fs');
     fsPromises = nodeFs.promises;
     os = await import('node:os');
-    pathModule = await import('node:path');
+    pathModule = path;
     const { PackageDiscoverer } = await import('../cron-discover.mjs');
     discoverer = new PackageDiscoverer();
     jestInstance.spyOn(console, 'log').mockImplementation(() => {});
@@ -8649,7 +8642,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
     beforeEach(async () => {
       temporaryDirectory = await fsPromises.mkdtemp(
-        pathModule.default.join(os.default.tmpdir(), 'depup-chk-'),
+        pathModule.join(os.tmpdir(), 'depup-chk-'),
       );
     });
 
@@ -8658,7 +8651,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('calls createNewPackage when integrity.json is missing', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8677,7 +8670,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('calls createNewPackage when integrity.json is an array (invalid format)', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8697,7 +8690,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('calls createNewPackage when integrity.json parsed as null', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8717,7 +8710,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('logs up-to-date when version already in integrity data with a published revision', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8739,7 +8732,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('calls createNewPackage with latestVersion when not in integrity data', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8766,7 +8759,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('warns and returns early when version is 0.0.0 (lines 327-330)', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8788,7 +8781,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('warns and returns early when version is empty string', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -8810,7 +8803,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('catches and warns on outer error (lines 339-344)', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory,
         'integrity.json',
       );
@@ -9144,7 +9137,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
     beforeEach(async () => {
       temporaryDirectory2 = await fsPromises.mkdtemp(
-        pathModule.default.join(os.default.tmpdir(), 'depup-chk2-'),
+        pathModule.join(os.tmpdir(), 'depup-chk2-'),
       );
     });
 
@@ -9156,7 +9149,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('retries when version key exists but all revisions have status failed', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory2,
         'integrity.json',
       );
@@ -9191,7 +9184,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('treats as up-to-date when at least one revision has status published', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory2,
         'integrity.json',
       );
@@ -9222,7 +9215,7 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
     });
 
     it('retries when versionEntry is a non-object scalar (no published revisions)', async () => {
-      const integrityFile = pathModule.default.join(
+      const integrityFile = pathModule.join(
         temporaryDirectory2,
         'integrity.json',
       );
@@ -9268,8 +9261,8 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
     jestInstance = globals.jest;
     const fsModule = await import('node:fs');
     fs = fsModule.promises;
-    os = (await import('node:os')).default;
-    nodePath = (await import('node:path')).default;
+    ({ default: os } = await import('node:os'));
+    nodePath = path;
     const { CompatibilityTester } = await import('../compatibility-test.mjs');
     tester = new CompatibilityTester();
     temporaryDirectory = await fs.mkdtemp(
@@ -10489,14 +10482,14 @@ describe('heal.mjs -- coverage gap fill', () => {
   beforeEach(async () => {
     const { promises: fs } = await import('node:fs');
     const os = await import('node:os');
-    const path = await import('node:path');
+    const { default: path } = await import('node:path');
     const globals = await import('@jest/globals');
     jestInstance = globals.jest;
 
     const { SelfHealer } = await import('../heal.mjs');
     healer = new SelfHealer();
     temporaryDirectory = await fs.mkdtemp(
-      path.join(os.default.tmpdir(), 'depup-heal-gap-'),
+      path.join(os.tmpdir(), 'depup-heal-gap-'),
     );
     healer.rootDirectory = temporaryDirectory;
 
@@ -10678,7 +10671,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('fixMissingReadmes', () => {
     it('generates readme for packages missing README.md', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'no-readme-pkg');
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
@@ -10695,7 +10688,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('skips packages that already have README.md', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10717,7 +10710,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('warns on readme generation failure and continues', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10752,7 +10745,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('fixIntegrityData', () => {
     it('rebuilds null integrity data', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10776,7 +10769,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('rebuilds array integrity data', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10793,7 +10786,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('repairs integrity data with missing fields', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10820,7 +10813,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('skips integrity file when no repair needed', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'healthy-pkg');
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
@@ -10840,7 +10833,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('warns when integrity file is missing (ENOENT)', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       // Package dir exists but no integrity.json
       const pkgDir = path.join(
@@ -10861,7 +10854,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('rebuilds on corrupt (non-JSON) integrity file', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10882,7 +10875,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('rebuilds non-object top-level integrity (string)', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10907,7 +10900,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('fixPackageStructure', () => {
     it('flags packages with invalid structure', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       // Empty package dir (no version subdirs) = invalid structure
       const pkgDir = path.join(
@@ -10927,7 +10920,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('does not flag packages with valid structure', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10954,7 +10947,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('generateMissingIntegrity', () => {
     it('creates integrity for packages without integrity.json', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -10976,7 +10969,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('skips packages that already have integrity.json', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'has-int-pkg');
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
@@ -10992,7 +10985,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('warns and continues when createBasicIntegrity fails', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -11038,7 +11031,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('returns 0 when revisions are within keepCount', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-test');
       const versionDir = path.join(pkgDir, '1.0.0');
@@ -11056,7 +11049,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('prunes excess revisions and returns count', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-excess');
       const versionDir = path.join(pkgDir, '1.0.0');
@@ -11082,7 +11075,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('prunes integrity.json entries for removed revisions', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-integrity');
       const versionDir = path.join(pkgDir, '1.0.0');
@@ -11123,7 +11116,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('handles missing integrity.json gracefully during prune', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-prune-no-integrity');
       const versionDir = path.join(pkgDir, '1.0.0');
@@ -11145,7 +11138,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('ignores non-rev-N directories', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-non-rev');
       const versionDir = path.join(pkgDir, '1.0.0');
@@ -11180,7 +11173,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('sums pruned counts across version directories', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'multi-ver-pkg');
       for (const version of ['1.0.0', '2.0.0']) {
@@ -11199,7 +11192,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('ignores non-version directories (like rev- dirs at pkg level)', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'pkg-non-ver-dir');
       await fs.mkdir(path.join(pkgDir, 'node_modules'), { recursive: true });
@@ -11223,7 +11216,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('accumulates pruned counts across packages', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       for (const packageName of ['pkg-a', 'pkg-b']) {
         const pkgDir = path.join(temporaryDirectory, 'packages', packageName);
@@ -11242,7 +11235,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('uses default keepCount of 5', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -11268,7 +11261,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('createBasicIntegrity', () => {
     it('creates integrity file with detected version', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -11292,7 +11285,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('falls back to 1.0.0 when no version dirs exist', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -11313,7 +11306,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('ignores non-semver directory names when detecting version', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(
         temporaryDirectory,
@@ -11356,7 +11349,7 @@ describe('heal.mjs -- coverage gap fill', () => {
   describe('diagnoseIssues additional branches', () => {
     it('marks corrupt when integrity file exists but contains invalid JSON (line 138)', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'diag-badJson');
       // Has version dir so hasValidStructure passes
@@ -11377,7 +11370,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('marks invalidStructure when package has no version dirs (line 146)', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       // Package dir with no version subdirs -> hasValidStructure returns false
       const pkgDir = path.join(
@@ -11394,7 +11387,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('detects corrupt integrity when JSON parses but data is invalid', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'diag-corrupt');
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
@@ -11412,7 +11405,7 @@ describe('heal.mjs -- coverage gap fill', () => {
 
     it('detects valid package with no issues', async () => {
       const { promises: fs } = await import('node:fs');
-      const path = await import('node:path');
+      const { default: path } = await import('node:path');
 
       const pkgDir = path.join(temporaryDirectory, 'packages', 'diag-healthy');
       await fs.mkdir(path.join(pkgDir, '1.0.0'), { recursive: true });
@@ -11500,7 +11493,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
   beforeEach(async () => {
     const { promises: fs } = await import('node:fs');
     const os = await import('node:os');
-    const path = await import('node:path');
+    const { default: path } = await import('node:path');
     const globals = await import('@jest/globals');
     jestInstance = globals.jest;
 
@@ -11509,10 +11502,8 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     refresher = new CuratedListRefresher();
 
     // Point output to a real tmpdir so fs.mkdir/writeFile work hermetically
-    tmpDir = await fs.mkdtemp(
-      path.default.join(os.default.tmpdir(), 'depup-curated-'),
-    );
-    refresher.outputPath = path.default.join(tmpDir, 'curated-packages.json');
+    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'depup-curated-'));
+    refresher.outputPath = path.join(tmpDir, 'curated-packages.json');
 
     // Silence console output
     jestInstance.spyOn(console, 'log').mockImplementation(() => {});
@@ -11522,7 +11513,7 @@ describe('refresh-curated-list.mjs -- coverage gap fill', () => {
     // Speed up sleep calls (rate-limit delays) -- spy on the instance method
     // instead of globalThis.setTimeout, which is not spyable inside the Jest
     // VM module sandbox on Node 26+.
-    jestInstance.spyOn(refresher, 'sleep').mockResolvedValue(undefined);
+    jestInstance.spyOn(refresher, 'sleep').mockResolvedValue();
   });
 
   afterEach(async () => {
@@ -13990,7 +13981,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       const result = await depup.fetchManifest('express', 10_000);
 
-      expect(result).toEqual(fakeManifest);
+      expect(result).toStrictEqual(fakeManifest);
     });
 
     it('hits remaining=0 ternary branch when timeout is 0', async () => {
@@ -14238,7 +14229,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
   describe('handlePublishError -- binary-expr no message branch', () => {
     it('handles error where message is empty string', () => {
-      const error = new Error('');
+      const error = new Error('placeholder');
       error.message = '';
 
       expect(() =>
