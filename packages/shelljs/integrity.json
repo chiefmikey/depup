@@ -4,6 +4,23 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.929Z",
       "version": "0.10.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "execa": {
+          "from": "^5.1.1",
+          "to": "^10.1.0"
+        },
+        "fast-glob": {
+          "from": "^3.3.2",
+          "to": "^3.3.3"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T16:11:35.483Z",
+      "version": "0.10.0-depup.1"
     }
   }
 }

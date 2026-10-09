@@ -12,52 +12,52 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.7 | **Updated**: 7/21/2026 | **Import test**: failed
+**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.8 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.23.2` | `^8.0.1` |
+| @babel/core | `^7.23.2` | `^8.0.7` |
 | @babel/plugin-proposal-decorators | `^7.23.2` | `^8.0.2` |
-| @babel/plugin-transform-async-generator-functions | `^7.25.4` | `^8.0.1` |
+| @babel/plugin-transform-async-generator-functions | `^7.25.4` | `^8.0.6` |
 | @babel/plugin-transform-async-to-generator | `^7.22.5` | `^8.0.1` |
 | @babel/plugin-transform-class-properties | `^7.25.4` | `^8.0.1` |
-| @babel/plugin-transform-class-static-block | `^7.24.7` | `^8.0.1` |
+| @babel/plugin-transform-class-static-block | `^7.24.7` | `^8.0.5` |
 | @babel/plugin-transform-exponentiation-operator | `^7.22.5` | `^8.0.1` |
-| @babel/plugin-transform-for-of | `^7.22.15` | `^8.0.1` |
+| @babel/plugin-transform-for-of | `^7.22.15` | `^8.0.7` |
 | @babel/plugin-transform-object-rest-spread | `^7.24.7` | `^8.0.1` |
 | @babel/plugin-transform-private-methods | `^7.25.4` | `^8.0.1` |
-| @babel/plugin-transform-runtime | `7.23.3` | `^8.0.1` |
-| @babel/preset-env | `^7.29.5` | `^8.0.2` |
+| @babel/plugin-transform-runtime | `7.23.3` | `^8.0.6` |
+| @babel/preset-env | `^7.29.5` | `^8.0.7` |
 | @babel/preset-flow | `^7.22.15` | `^8.0.1` |
 | @babel/preset-react | `^7.22.15` | `^8.0.1` |
-| @babel/runtime | `^7.23.2` | `^8.0.0` |
+| @babel/runtime | `^7.23.2` | `^8.0.7` |
 | @devexpress/callsite-record | `^4.1.6` | `^4.1.7` |
-| @types/node | `20.14.5` | `^26.1.1` |
+| @types/node | `20.14.5` | `^26.6.4` |
 | address | `^2.0.2` | `^2.0.3` |
 | async-exit-hook | `^1.1.2` | `^2.0.1` |
 | babel-plugin-module-resolver | `5.0.0` | `^5.0.3` |
 | bowser | `^2.8.1` | `^2.14.1` |
-| chai | `4.3.4` | `^6.2.2` |
-| chalk | `^2.3.0` | `^5.6.2` |
+| chai | `4.3.4` | `^6.3.0` |
+| chalk | `^2.3.0` | `^6.0.1` |
 | chrome-remote-interface | `^0.32.2` | `^0.34.0` |
 | coffeescript | `^2.3.1` | `^2.7.0` |
 | commander | `^8.3.0` | `^15.0.0` |
 | debug | `^4.3.1` | `^4.4.3` |
 | dedent | `^0.4.0` | `^1.7.2` |
-| del | `^3.0.0` | `^8.0.1` |
+| del | `^3.0.0` | `^9.0.1` |
 | device-specs | `^1.0.0` | `^1.0.1` |
-| devtools-protocol | `0.0.1109433` | `^0.0.1663043` |
+| devtools-protocol | `0.0.1109433` | `^0.0.1714151` |
 | diff | `^8.0.3` | `^9.0.0` |
 | elegant-spinner | `^1.0.1` | `^3.0.0` |
-| emittery | `^0.4.1` | `^2.0.0` |
-| execa | `^4.0.3` | `^10.0.0` |
-| globby | `^11.0.4` | `^16.2.2` |
+| emittery | `^0.4.1` | `^2.1.0` |
+| execa | `^4.0.3` | `^10.1.0` |
+| globby | `^11.0.4` | `^16.2.4` |
 | graceful-fs | `^4.1.11` | `^4.2.11` |
 | graphlib | `^2.1.5` | `^2.1.8` |
 | http-status-codes | `^2.2.0` | `^2.3.0` |
-| humanize-duration | `^3.25.0` | `^3.34.0` |
+| humanize-duration | `^3.25.0` | `^3.35.0` |
 | import-lazy | `^3.1.0` | `^4.0.0` |
 | indent-string | `^1.2.2` | `^5.0.0` |
 | is-ci | `^1.0.10` | `^4.1.0` |
@@ -68,10 +68,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | lodash | `^4.17.21` | `^4.18.1` |
 | make-dir | `^3.0.0` | `^5.1.0` |
 | mime-db | `^1.41.0` | `^1.54.0` |
-| moment | `^2.29.4` | `^2.30.1` |
+| moment | `^2.29.4` | `^2.31.0` |
 | moment-duration-format-commonjs | `^1.0.0` | `^1.0.1` |
 | mustache | `^2.1.2` | `^4.2.0` |
-| nanoid | `^3.1.31` | `^6.0.0` |
+| nanoid | `^3.1.31` | `^6.0.2` |
 | os-family | `^1.0.0` | `^1.1.0` |
 | parse5 | `^1.5.0` | `^8.0.1` |
 | pify | `^2.3.0` | `^6.1.0` |
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | resolve-from | `^4.0.0` | `^5.0.0` |
 | sanitize-filename | `^1.6.0` | `^1.6.4` |
 | semver | `^7.5.3` | `^7.8.5` |
-| set-cookie-parser | `^2.5.1` | `^3.1.2` |
+| set-cookie-parser | `^2.5.1` | `^3.1.3` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
 | testcafe-legacy-api | `5.1.8` | `^5.1.9` |

@@ -12,11 +12,14 @@ npm install @depup/superjson
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.2.6 | **DepUp version**: 2.2.6-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 2.2.6 | **DepUp version**: 2.2.6-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| copy-anything | `^4` | `^4.1.5` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/superjson&labels=bug).
 

@@ -12,11 +12,11 @@ npm install @depup/rotating-file-stream
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.2.9 | **DepUp version**: 3.2.9-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 3.2.10 | **DepUp version**: 3.2.10-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/rotating-file-stream&labels=bug).
 

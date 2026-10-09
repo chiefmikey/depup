@@ -1,0 +1,22 @@
+{
+  "bumped": {
+    "@aws/durable-execution-sdk-js": {
+      "from": "1.0.2",
+      "to": "^2.6.0"
+    },
+    "aws4fetch": {
+      "from": "1.0.18",
+      "to": "^1.0.20"
+    },
+    "jose": {
+      "from": "5.2.3",
+      "to": "^6.2.12"
+    },
+    "openid-client": {
+      "from": "5.6.4",
+      "to": "^6.8.8"
+    }
+  },
+  "timestamp": "2026-10-09T16:12:39.728Z",
+  "totalUpdated": 4
+}

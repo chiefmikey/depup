@@ -12,13 +12,13 @@ npm install @depup/elastic
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.1.10 | **DepUp version**: 0.1.10-depup.1 | **Updated**: 9/15/2026 | **Import test**: passed
+**Original version**: 0.1.10 | **DepUp version**: 0.1.10-depup.2 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| express | `3.0.x` | `^5.2.1` |
+| express | `3.0.x` | `^5.3.0` |
 | async | `0.1.x` | `^3.2.6` |
 | moment | `1.7.x` | `^2.31.0` |
 | s3 | `0.0.4` | `^4.4.0` |

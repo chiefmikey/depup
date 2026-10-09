@@ -12,14 +12,14 @@ npm install @depup/session-file-store
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.5.0 | **DepUp version**: 1.5.0-depup.2 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 1.5.0 | **DepUp version**: 1.5.0-depup.3 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fs-extra | `^8.0.1` | `^11.3.5` |
-| kruptein | `^2.0.4` | `^3.3.0` |
+| fs-extra | `^8.0.1` | `^11.4.1` |
+| kruptein | `^2.0.4` | `^3.4.0` |
 | retry | `^0.12.0` | `^0.13.1` |
 | write-file-atomic | `3.0.3` | `^8.0.0` |
 

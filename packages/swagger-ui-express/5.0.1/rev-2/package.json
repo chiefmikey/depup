@@ -1,0 +1,78 @@
+{
+  "name": "@depup/swagger-ui-express",
+  "version": "5.0.1-depup.2",
+  "description": "Swagger UI Express (with updated dependencies)",
+  "main": "./index.js",
+  "files": [
+    "package.json",
+    "index.js",
+    "indexTemplate.html.tpl",
+    "swagger-ui-init.js.tpl",
+    "LICENSE",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.spec.js",
+    "coverage:report": "nyc ./node_modules/.bin/mocha test/* || exit 0",
+    "coverage:badge": "npm run coverage:report && istanbul-badges-readme --coverageDir='./coverage'",
+    "test-app": "node ./test/testapp/run.js "
+  },
+  "keywords": [
+    "swagger-ui-express",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "swagger",
+    "express",
+    "ui",
+    "json",
+    "documentation"
+  ],
+  "engines": {
+    "node": ">= v0.10.32"
+  },
+  "devDependencies": {
+    "es6-shim": "0.35.8",
+    "express": "^4.19.2",
+    "istanbul-badges-readme": "^1.9.0",
+    "mocha": "^10.4.0",
+    "nyc": "^15.1.0",
+    "puppeteer": "22.8.2"
+  },
+  "author": {
+    "name": "Stephen Scott",
+    "email": "scottie1984@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:scottie1984/swagger-ui-express.git"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/scottie1984/swagger-ui-express/issues"
+  },
+  "homepage": "https://github.com/scottie1984/swagger-ui-express",
+  "dependencies": {
+    "swagger-ui-dist": "^5.33.1"
+  },
+  "peerDependencies": {
+    "express": ">=4.0.0 || >=5.0.0-beta"
+  },
+  "depup": {
+    "changes": {
+      "swagger-ui-dist": {
+        "from": ">=5.0.0",
+        "to": "^5.33.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "swagger-ui-express",
+    "originalVersion": "5.0.1",
+    "processedAt": "2026-10-09T16:12:43.104Z",
+    "smokeTest": "failed"
+  }
+}

@@ -12,11 +12,17 @@ npm install @depup/socket.io-client
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.8.3 | **DepUp version**: 4.8.3-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 4.8.4 | **DepUp version**: 4.8.4-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| @socket.io/component-emitter | `~3.1.0` | `^3.1.2` |
+| debug | `~4.4.1` | `^4.4.3` |
+| engine.io-client | `~6.6.1` | `^6.6.7` |
+| socket.io-parser | `~4.2.4` | `^4.2.7` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/socket.io-client&labels=bug).
 

@@ -12,14 +12,14 @@ npm install @depup/react-syntax-highlighter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.1.1 | **DepUp version**: 16.1.1-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 16.1.2 | **DepUp version**: 16.1.2-depup.0 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/runtime | `^7.28.4` | `^7.29.2` |
-| highlight.js | `^10.4.1` | `^11.11.1` |
+| @babel/runtime | `^7.28.4` | `^8.0.7` |
+| highlight.js | `^10.4.1` | `^11.12.0` |
 | lowlight | `^1.17.0` | `^3.3.0` |
 
 

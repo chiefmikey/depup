@@ -1,0 +1,96 @@
+{
+  "name": "@depup/react-transition-group",
+  "version": "4.4.5-depup.1",
+  "description": "A react component toolset for managing animations (with updated dependencies)",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs/react-transition-group.git"
+  },
+  "keywords": [
+    "react-transition-group",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "transition",
+    "addons",
+    "transition-group",
+    "animation",
+    "css",
+    "transitions"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/reactjs/react-transition-group/issues"
+  },
+  "homepage": "https://github.com/reactjs/react-transition-group#readme",
+  "jest": {
+    "testRegex": "-test\\.js",
+    "setupFiles": [
+      "./test/setup.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./test/setupAfterEnv.js"
+    ],
+    "roots": [
+      "<rootDir>/test"
+    ]
+  },
+  "peerDependencies": {
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^8.0.7",
+    "dom-helpers": "^6.0.1",
+    "loose-envify": "^1.4.0",
+    "prop-types": "^15.8.1"
+  },
+  "release": {
+    "pkgRoot": "lib",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "semantic-release-alt-publish-dir",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "semantic-release-alt-publish-dir",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "loose-envify"
+    ]
+  },
+  "sideEffects": false,
+  "depup": {
+    "changes": {
+      "@babel/runtime": {
+        "from": "^7.5.5",
+        "to": "^8.0.7"
+      },
+      "dom-helpers": {
+        "from": "^5.0.1",
+        "to": "^6.0.1"
+      },
+      "prop-types": {
+        "from": "^15.6.2",
+        "to": "^15.8.1"
+      }
+    },
+    "depsUpdated": 3,
+    "originalPackage": "react-transition-group",
+    "originalVersion": "4.4.5",
+    "processedAt": "2026-10-09T16:10:12.741Z",
+    "smokeTest": "passed"
+  }
+}
