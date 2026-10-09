@@ -9,6 +9,10 @@ import { Command } from 'commander';
 import ora from 'ora';
 import semver from 'semver';
 
+// npm audit / snyk JSON can exceed the 1 MiB execFileSync default on large
+// dependency trees (ENOBUFS), so raise the cap.
+const MAX_BUFFER = 64 * 1024 * 1024;
+
 class SecurityScanner {
   constructor() {
     this.scanPath = process.env.SCAN_PATH || '/scan';
@@ -145,6 +149,12 @@ class SecurityScanner {
               cause: error,
             });
           }
+        } finally {
+          try {
+            await fs.rm(clamLogPath, { force: true });
+          } catch {
+            // Best-effort cleanup of the temp log; never mask the scan result
+          }
         }
       } else {
         // Fallback: Basic file pattern analysis
@@ -264,8 +274,16 @@ class SecurityScanner {
       let items;
       try {
         items = await fs.readdir(currentPath, { withFileTypes: true });
-      } catch {
-        // Skip directories we cannot read (EACCES, ENOENT)
+      } catch (error) {
+        if (currentPath === directoryPath) {
+          // An unreadable/missing scan root must fail the scan; returning an
+          // empty list would report "no suspicious patterns" for nothing.
+          throw new Error(
+            `Cannot read scan path ${directoryPath}: ${error.message}`,
+            { cause: error },
+          );
+        }
+        // Skip subdirectories we cannot read (EACCES, ENOENT)
         return;
       }
 
@@ -345,7 +363,9 @@ class SecurityScanner {
         '--infected',
         '--quiet',
         `--log=${clamLogPath}`,
-        scanPath,
+        // Absolute path always starts with '/', so it can never be parsed as an
+        // option (clamscan's handling of a '--' terminator is not guaranteed)
+        path.resolve(scanPath),
       ],
       {
         stdio: debug ? 'inherit' : 'pipe',
@@ -419,6 +439,7 @@ class SecurityScanner {
     return execFileSync('snyk', ['test', '--json'], {
       cwd: scanPath,
       encoding: 'utf8',
+      maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 180_000,
     });
@@ -463,6 +484,12 @@ class SecurityScanner {
         }
       } else {
         console.warn('Snyk scan unavailable or failed:', error.message);
+        // Status is deliberately unchanged (policy: a Snyk outage is not a
+        // scan failure), but record it so the report does not read as if
+        // Snyk ran clean.
+        this.results.vulnerabilities.details.push(
+          `Snyk scan failed: ${String(error.message).slice(0, 200)}`,
+        );
       }
     }
   }
@@ -471,6 +498,7 @@ class SecurityScanner {
     return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
       cwd: scanPath,
       encoding: 'utf8',
+      maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 120_000,
     });
