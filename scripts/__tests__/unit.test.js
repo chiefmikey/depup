@@ -2,6 +2,7 @@
  * Real coverage tests -- imports actual script classes and tests their methods.
  * Every test here exercises real code paths, not inline reimplementations.
  */
+import { execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -16521,5 +16522,278 @@ describe('cron-sync handling of verification failures (exit 3)', () => {
       true,
     );
     expect(syncer.shouldRetryFailedRevisions(published, '1.0.0')).toBe(false);
+  });
+});
+
+describe('cron-sync starvation, swallowed errors and orphaned processes', () => {
+  const EIGHT_HOURS = 8 * 60 * 60 * 1000;
+  let syncer;
+
+  beforeEach(() => {
+    syncer = new PackageSyncer();
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  const makePackages = (count) =>
+    Array.from({ length: count }, (_, index) => ({
+      name: `pkg-${String(index).padStart(4, '0')}`,
+    }));
+
+  describe('selectRunWindow (rotating window, no starvation)', () => {
+    it('returns exactly maxPackagesPerRun unique packages for a long list', () => {
+      const packages = makePackages(766);
+
+      const window_ = syncer.selectRunWindow(packages, 7 * EIGHT_HOURS);
+
+      expect(window_).toHaveLength(600);
+      expect(new Set(window_.map((p) => p.name)).size).toBe(600);
+    });
+
+    it('covers every package of a 766-element list across consecutive 8h ticks', () => {
+      const packages = makePackages(766);
+      const seen = new Set();
+
+      for (let tick = 100; tick < 110; tick++) {
+        const window_ = syncer.selectRunWindow(packages, tick * EIGHT_HOURS);
+
+        expect(window_).toHaveLength(600);
+        expect(new Set(window_.map((p) => p.name)).size).toBe(600);
+
+        for (const package_ of window_) {
+          seen.add(package_.name);
+        }
+      }
+
+      expect(seen.size).toBe(766);
+    });
+
+    it('reaches the alphabetical tail within two ticks (old code never did)', () => {
+      const packages = makePackages(766);
+      const tail = packages.at(-1).name;
+      const names = [100, 101].flatMap((tick) =>
+        syncer.selectRunWindow(packages, tick * EIGHT_HOURS).map((p) => p.name),
+      );
+
+      expect(names).toContain(tail);
+    });
+
+    it('is stable within one 8h tick and moves on the next', () => {
+      const packages = makePackages(766);
+      const start = 200 * EIGHT_HOURS;
+
+      const first = syncer.selectRunWindow(packages, start);
+      const sameTick = syncer.selectRunWindow(
+        packages,
+        start + EIGHT_HOURS - 1,
+      );
+      const nextTick = syncer.selectRunWindow(packages, start + EIGHT_HOURS);
+
+      expect(sameTick).toEqual(first);
+      expect(nextTick[0].name).not.toBe(first[0].name);
+    });
+
+    it('returns short lists whole, in order', () => {
+      const packages = makePackages(5);
+
+      expect(syncer.selectRunWindow(packages, 123 * EIGHT_HOURS)).toEqual(
+        packages,
+      );
+      expect(
+        syncer.selectRunWindow(makePackages(600), 123 * EIGHT_HOURS),
+      ).toHaveLength(600);
+    });
+
+    it('returns an empty list for an empty input', () => {
+      expect(syncer.selectRunWindow([], 123 * EIGHT_HOURS)).toEqual([]);
+    });
+
+    it('main() processes a rotated window that reaches the tail', async () => {
+      const packages = makePackages(766);
+      jest.spyOn(syncer, 'getExistingPackages').mockResolvedValue(packages);
+      jest.spyOn(Date, 'now').mockReturnValue(1 * EIGHT_HOURS);
+      const checkSpy = jest
+        .spyOn(syncer, 'checkBatches')
+        .mockResolvedValue({ needsUpdate: [], skippedCount: 0 });
+      jest.spyOn(syncer, 'applyBatches').mockResolvedValue({
+        failedCount: 0,
+        failureReasons: [],
+        healthyAttemptedCount: 0,
+        healthyFailedCount: 0,
+        syncedPackages: [],
+      });
+
+      await syncer.main();
+
+      const processed = checkSpy.mock.calls[0][0];
+
+      expect(processed).toHaveLength(600);
+      expect(processed.map((p) => p.name)).toContain(packages.at(-1).name);
+    });
+  });
+
+  describe('getExistingPackages swallowed errors', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-cs-gep-'),
+      );
+      jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    it('skips a package with malformed integrity.json but warns with name and error', async () => {
+      const brokenDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        'broken-pkg',
+      );
+      const goodDirectory = path.join(
+        temporaryDirectory,
+        'packages',
+        'good-pkg',
+      );
+      await fs.mkdir(brokenDirectory, { recursive: true });
+      await fs.mkdir(goodDirectory, { recursive: true });
+      const malformed = '{ not valid json';
+      await fs.writeFile(
+        path.join(brokenDirectory, 'integrity.json'),
+        malformed,
+      );
+      await fs.writeFile(
+        path.join(goodDirectory, 'integrity.json'),
+        JSON.stringify({ '1.0.0': { 0: {} } }),
+      );
+      let parseMessage = '';
+      try {
+        JSON.parse(malformed);
+      } catch (error) {
+        parseMessage = error.message;
+      }
+
+      const packages = await syncer.getExistingPackages();
+
+      expect(packages.map((p) => p.name)).toEqual(['good-pkg']);
+
+      const warnings = console.warn.mock.calls.map((call) => call.join(' '));
+
+      expect(warnings).toHaveLength(1);
+      expect(warnings[0]).toContain('broken-pkg');
+      expect(warnings[0]).toContain(parseMessage);
+    });
+
+    it('does not warn when integrity.json is simply missing (ENOENT)', async () => {
+      await fs.mkdir(
+        path.join(temporaryDirectory, 'packages', 'no-integrity'),
+        { recursive: true },
+      );
+
+      const packages = await syncer.getExistingPackages();
+
+      expect(packages).toHaveLength(0);
+      expect(console.warn).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('spawnAsync process-group kill on timeout', () => {
+    let temporaryDirectory;
+
+    beforeEach(async () => {
+      temporaryDirectory = await fs.mkdtemp(
+        path.join(os.tmpdir(), 'depup-cs-spawn-'),
+      );
+    });
+
+    afterEach(async () => {
+      await fs.rm(temporaryDirectory, { force: true, recursive: true });
+    });
+
+    const isAlive = (pid) => {
+      try {
+        process.kill(pid, 0);
+      } catch {
+        return false;
+      }
+      try {
+        // A zombie awaiting reaping still answers kill(0); treat it as gone.
+        const state = execFileSync('ps', ['-o', 'stat=', '-p', String(pid)], {
+          encoding: 'utf8',
+        });
+        return !state.trim().startsWith('Z');
+      } catch {
+        return false;
+      }
+    };
+
+    const waitForGone = async (pid) => {
+      for (let attempt = 0; attempt < 50 && isAlive(pid); attempt++) {
+        await sleep(100);
+      }
+      return !isAlive(pid);
+    };
+
+    const readGrandchildPid = async (pidFile) => {
+      for (let attempt = 0; attempt < 100; attempt++) {
+        try {
+          const text = (await fs.readFile(pidFile, 'utf8')).trim();
+          if (text) {
+            return Number(text);
+          }
+        } catch {
+          // not written yet
+        }
+        await sleep(50);
+      }
+      throw new Error('grandchild pid file never appeared');
+    };
+
+    it('kills grandchildren on timeout and still rejects with the timeout error', async () => {
+      const pidFile = path.join(temporaryDirectory, 'grandchild.pid');
+
+      const result = syncer
+        .spawnAsync('sh', ['-c', 'sleep 30 & echo $! > "$0"; wait', pidFile], {
+          stdio: 'ignore',
+          timeout: 1500,
+        })
+        .catch((error) => error);
+      const grandchildPid = await readGrandchildPid(pidFile);
+
+      expect(isAlive(grandchildPid)).toBe(true);
+
+      const error = await result;
+
+      expect(error).toBeInstanceOf(Error);
+      expect(error.message).toBe('Process timed out after 1500ms');
+      await expect(waitForGone(grandchildPid)).resolves.toBe(true);
+    }, 20_000);
+
+    it('escalates to SIGKILL for a child that ignores SIGTERM', async () => {
+      const pidFile = path.join(temporaryDirectory, 'stubborn.pid');
+      const started = Date.now();
+
+      const result = syncer
+        .spawnAsync(
+          'sh',
+          ['-c', 'trap "" TERM; sleep 30 & echo $! > "$0"; wait', pidFile],
+          { stdio: 'ignore', timeout: 1500 },
+        )
+        .catch((error) => error);
+      const grandchildPid = await readGrandchildPid(pidFile);
+
+      const error = await result;
+
+      expect(error.message).toBe('Process timed out after 1500ms');
+      expect(Date.now() - started).toBeLessThan(15_000);
+      await expect(waitForGone(grandchildPid)).resolves.toBe(true);
+    }, 30_000);
   });
 });
