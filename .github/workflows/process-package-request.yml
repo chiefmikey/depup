@@ -4,10 +4,19 @@ on:
   issues:
     types: [labeled]
 
-# contents: write -- checkout + push of package data to main.
-# Issue comments and closing use BOT_PAT, not GITHUB_TOKEN, so no issues scope.
+# Trust model (see docs/incidents/2026-10-09-publish-pipeline-audit.md):
+#   gate    -- decides whether the submitter may trigger a publish. Runs only
+#              trusted workflow code; may post a denial comment (BOT_PAT).
+#   process -- runs UNTRUSTED package code (download, bump, test, publish). It
+#              holds NPM_TOKEN and nothing else: read-only token, no persisted
+#              checkout credential, no BOT_PAT, no GPG key.
+#   commit  -- holds the push credential, GPG key and BOT_PAT. It never executes
+#              package code: only version control, add-package.mjs from the
+#              trusted checkout and github-script. Data handed over by the
+#              process job is untrusted input and is validated before use.
+# The workflow default is read-only; commit is the only job that can write.
 permissions:
-  contents: write
+  contents: read
 
 # cancel-in-progress is false on purpose: cancelling a run mid-publish leaves the
 # package published to npm but never committed or queued. A newer run for the same
@@ -17,10 +26,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate-and-process:
-    name: Validate and Process Package Request
+  gate:
+    name: Author Trust Gate
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
+    permissions:
+      contents: read
     # The issue template applies two labels (package-request, automated), which fires
     # two `labeled` events. Only the event for the package-request label itself may
     # start a run; any other label event (automated, duplicate, ...) is ignored so one
@@ -29,13 +40,158 @@ jobs:
       github.event.label.name == 'package-request' &&
       github.event.issue.labels != null &&
       contains(github.event.issue.labels.*.name, 'package-request')
+    outputs:
+      allowed: ${{ steps.gate.outputs.allowed }}
+      reason: ${{ steps.gate.outputs.reason }}
+
+    steps:
+      # Public submissions stay open, but an unreviewed publish is only triggered by
+      # a repository member or by an established, non-bot account. Event data reaches
+      # the script through env only. Fails closed: any lookup error denies the run.
+      - name: Check Submitter Trust
+        id: gate
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          AUTHOR_ASSOCIATION: ${{ github.event.issue.author_association }}
+          AUTHOR_LOGIN: ${{ github.event.issue.user.login }}
+          AUTHOR_TYPE: ${{ github.event.issue.user.type }}
+          SENDER_LOGIN: ${{ github.event.sender.login }}
+        with:
+          script: |
+            const TRUSTED_ASSOCIATIONS = new Set(['COLLABORATOR', 'MEMBER', 'OWNER']);
+            const MAINTAINER_PERMISSIONS = new Set(['admin', 'maintain', 'write']);
+            const MIN_ACCOUNT_AGE_DAYS = 30;
+            const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
+            const association = process.env.AUTHOR_ASSOCIATION || '';
+            const author = process.env.AUTHOR_LOGIN || '';
+            const authorType = process.env.AUTHOR_TYPE || '';
+            const sender = process.env.SENDER_LOGIN || '';
+
+            // Fail closed: deny unless a rule below explicitly allows.
+            core.setOutput('allowed', 'false');
+            core.setOutput('reason', 'lookup_error');
+
+            const finish = (allowed, reason) => {
+              core.setOutput('allowed', allowed ? 'true' : 'false');
+              core.setOutput('reason', reason);
+              console.log('Trust gate: allowed=' + allowed + ' reason=' + reason);
+            };
+
+            if (TRUSTED_ASSOCIATIONS.has(association)) {
+              finish(true, 'trusted_association');
+              return;
+            }
+
+            // A maintainer who (re-)applies the package-request label approves the request.
+            if (sender) {
+              try {
+                const { data } = await github.rest.repos.getCollaboratorPermissionLevel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  username: sender
+                });
+                if (MAINTAINER_PERMISSIONS.has(data.permission)) {
+                  finish(true, 'maintainer_label');
+                  return;
+                }
+              } catch (error) {
+                core.warning('Could not check the labeler permission: ' + error.message);
+              }
+            }
+
+            if (authorType === 'Bot' || author.endsWith('[bot]')) {
+              finish(false, 'bot');
+              return;
+            }
+
+            if (!author) {
+              finish(false, 'lookup_error');
+              core.setFailed('Issue author is missing from the event; denying the request.');
+              return;
+            }
+
+            try {
+              const { data: user } = await github.rest.users.getByUsername({ username: author });
+              if (user.type === 'Bot') {
+                finish(false, 'bot');
+                return;
+              }
+              const createdAt = Date.parse(user.created_at);
+              if (Number.isNaN(createdAt)) {
+                finish(false, 'lookup_error');
+                core.setFailed('Author account age is unknown; denying the request.');
+                return;
+              }
+              const ageDays = (Date.now() - createdAt) / MS_PER_DAY;
+              if (ageDays >= MIN_ACCOUNT_AGE_DAYS) {
+                finish(true, 'account_age');
+                return;
+              }
+              finish(false, 'new_account');
+            } catch (error) {
+              finish(false, 'lookup_error');
+              core.setFailed('Author lookup failed; denying the request: ' + error.message);
+            }
+
+      - name: Explain Denied Request
+        if: always() && steps.gate.outputs.allowed != 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          AUTHOR_LOGIN: ${{ github.event.issue.user.login }}
+          REASON: ${{ steps.gate.outputs.reason }}
+        with:
+          github-token: ${{ secrets.BOT_PAT }}
+          script: |
+            const reason = process.env.REASON || 'lookup_error';
+            const author = process.env.AUTHOR_LOGIN || 'unknown';
+
+            let comment = '## Package Request Awaiting Maintainer Approval\n\n';
+            if (reason === 'lookup_error') {
+              comment += 'DepUp could not verify the submitter of this request, so it was not processed or published.\n\n';
+            } else {
+              comment += 'Automatic publishing is limited to repository collaborators and GitHub accounts that are at least 30 days old and not bots. `' + author + '` does not meet that bar, so this request was not processed or published.\n\n';
+            }
+            comment += 'A maintainer can approve it by removing and re-applying the `package-request` label. This issue is left open for tracking.';
+            comment += '\n\n---\n*This is an automated response*';
+
+            try {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+            } catch (error) {
+              core.warning('Could not create comment (is BOT_PAT valid?): ' + error.message);
+            }
+
+  process:
+    name: Validate and Process Package Request
+    needs: gate
+    if: needs.gate.outputs.allowed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Runs untrusted package code. NPM_TOKEN is the only secret in this job; the
+    # checkout credential is not persisted and the token cannot write.
+    permissions:
+      contents: read
+    # Every value here is a runner-set step outcome or an output of a step that
+    # finished before any untrusted code ran, except test_failed (see publish step).
+    outputs:
+      exists: ${{ steps.check-existing.outputs.exists }}
+      npm_outcome: ${{ steps.npm-info.outcome }}
+      package_name: ${{ steps.parse.outputs.package_name }}
+      parse_outcome: ${{ steps.parse.outcome }}
+      publish_outcome: ${{ steps.publish.outcome }}
+      test_failed: ${{ steps.publish.outputs.test_failed }}
+      validate_outcome: ${{ steps.validate-package-name.outcome }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -247,6 +403,12 @@ jobs:
             exit 1
           fi
 
+      # depup.mjs exit 3 means post-update verification failed and the publish was
+      # blocked: a deterministic failure the commit job must not queue for retry.
+      # Any other nonzero exit keeps the queue-for-retry path. Untrusted package code
+      # runs inside this step, so test_failed is the one output it could forge; the
+      # worst forged value only suppresses a retry queue entry. Everything else the
+      # commit job trusts comes from runner-set step outcomes.
       - name: Process and Publish Package
         id: publish
         if: success()
@@ -256,7 +418,89 @@ jobs:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
         run: |
           echo "Processing and publishing $PACKAGE_NAME..."
-          node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish
+          rc=0
+          node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish || rc=$?
+          if [ "$rc" -eq 3 ]; then
+            echo "::error::Verification failed for $PACKAGE_NAME; the publish was blocked (exit 3)"
+            echo "test_failed=true" >> "$GITHUB_OUTPUT"
+          fi
+          exit "$rc"
+
+      # Hand the processed package directory to the commit job. The directory is
+      # copied out as plain data; the commit job validates it before using it.
+      - name: Stage Package Data
+        if: steps.publish.outcome == 'success'
+        env:
+          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+        run: |
+          set -euo pipefail
+          source_dir="packages/$PACKAGE_NAME"
+          handoff="$RUNNER_TEMP/handoff"
+          if [ ! -d "$source_dir" ]; then
+            echo "::error::Expected processed package data at $source_dir but it is missing"
+            exit 1
+          fi
+          mkdir -p "$handoff"
+          cp -R "$source_dir/." "$handoff/"
+          echo "Staged $(find "$handoff" -type f | wc -l) files for the commit job"
+
+      - name: Upload Package Data
+        if: steps.publish.outcome == 'success'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: package-data-${{ github.run_id }}
+          path: ${{ runner.temp }}/handoff
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: error
+
+  commit:
+    name: Commit and Report
+    needs: [gate, process]
+    # always(): the failure path (queue for retry, issue comment) must run when the
+    # process job failed. Skipped entirely when the gate denied the request.
+    if: |
+      always() &&
+      needs.gate.outputs.allowed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # The only job that can push. It never runs package code and has no NPM_TOKEN.
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # add-package.mjs uses only Node built-ins: no dependency install here.
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+
+      # The name travels as job output data; re-check it before it names any path.
+      - name: Re-validate Package Name
+        id: verify-name
+        env:
+          PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
+        run: |
+          if [ -z "$PACKAGE_NAME" ]; then
+            echo "No package name from the process job; nothing to commit or queue."
+            echo "valid=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ "$PACKAGE_NAME" == *..* ]]; then
+            echo "::error::Package name contains '..'"
+            exit 1
+          fi
+          if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9][a-zA-Z0-9._-]*/)?[a-zA-Z0-9][a-zA-Z0-9._-]*$ ]]; then
+            echo "::error::Package name is not a valid npm name"
+            exit 1
+          fi
+          echo "valid=true" >> "$GITHUB_OUTPUT"
 
       # if: always() is required: the failure-path Queue step also signs its commit.
       - name: Import GPG Key
@@ -270,11 +514,46 @@ jobs:
           fi
           printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
+      - name: Download Package Data
+        if: needs.process.result == 'success' && steps.verify-name.outputs.valid == 'true'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: package-data-${{ github.run_id }}
+          path: ${{ runner.temp }}/incoming
+
+      # The artifact comes from a job that ran untrusted code: accept regular files
+      # and directories only, no git metadata, bounded size. Nothing in it is ever
+      # executed; it is only copied under packages/<validated-name>/.
+      - name: Validate Package Data
+        id: validate-data
+        if: needs.process.result == 'success' && steps.verify-name.outputs.valid == 'true'
+        run: |
+          set -euo pipefail
+          incoming="$RUNNER_TEMP/incoming"
+          reject() {
+            echo "::error::Rejected package data: $1"
+            exit 1
+          }
+          [ -d "$incoming" ] || reject "download directory is missing"
+
+          special="$(find "$incoming" -mindepth 1 ! -type f ! -type d -print -quit)"
+          [ -z "$special" ] || reject "contains a symlink or special file"
+
+          odd="$(find "$incoming" -mindepth 1 \( -name '.git' -o -name '.gitmodules' -o -name '.gitattributes' -o -name '*[[:cntrl:]]*' \) -print -quit)"
+          [ -z "$odd" ] || reject "contains git metadata or control characters in a name"
+
+          files="$(find "$incoming" -type f | wc -l)"
+          kilobytes="$(du -sk "$incoming" | cut -f1)"
+          [ "$files" -gt 0 ] || reject "no files"
+          [ "$files" -le 10000 ] || reject "too many files ($files)"
+          [ "$kilobytes" -le 204800 ] || reject "too large (${kilobytes} KiB)"
+          echo "Package data accepted: $files files, ${kilobytes} KiB"
+
       - name: Commit and Push
         id: commit
-        if: success()
+        if: success() && needs.process.result == 'success' && steps.verify-name.outputs.valid == 'true'
         env:
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+          PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           git config user.name "De Pup"
@@ -282,6 +561,9 @@ jobs:
           git config commit.gpgsign true
           git config gpg.program gpg
           git config user.signingkey 5A5141965C39129D
+
+          incoming="$RUNNER_TEMP/incoming"
+          destination="packages/$PACKAGE_NAME"
 
           # Rebase-free push: reset to origin/main, re-apply list change +
           # package data, push. Handles concurrent workflows without conflicts.
@@ -292,14 +574,18 @@ jobs:
             # Re-add package to list (idempotent)
             node scripts/add-package.mjs add "$PACKAGE_NAME" || echo "::warning::add-package did not add $PACKAGE_NAME (already listed or failed; see error above)"
 
-            # Re-process if package data was lost by reset (skip publish -- already done)
-            if [ ! -d "packages/${PACKAGE_NAME}" ] && [ ! -d "packages/$(echo $PACKAGE_NAME | sed 's|@||;s|/|__|')" ]; then
-              node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test || echo "::warning::Re-processing $PACKAGE_NAME after reset failed; package data may be missing from this commit"
+            # Restore the validated package data (the reset removes it). If another
+            # workflow already committed this package, keep that copy.
+            if [ -e "$destination" ]; then
+              echo "::notice::$destination already exists on main; keeping the committed copy"
+            else
+              mkdir -p "$destination"
+              cp -R "$incoming/." "$destination/"
             fi
 
-            # Stage list + package data
+            # Stage list + this package's data only
             git add config/user-packages.json
-            git add packages/ || echo "::warning::git add packages/ failed (no package data to stage?)"
+            git add -- "$destination" || echo "::warning::git add $destination failed (no package data to stage?)"
             if git diff --cached --quiet; then
               echo "No changes (already processed by another workflow)"
               exit 0
@@ -320,11 +606,20 @@ jobs:
             fi
           done
 
+      # Queue only transient failures. A verification failure (test_failed) is
+      # deterministic: retrying every cron cycle would never succeed. A cancelled
+      # run is left for a maintainer, as before.
       - name: Queue for Retry on Failure
         id: queue
-        if: failure() && steps.npm-info.outcome == 'success' && steps.check-existing.outputs.exists == 'false'
+        if: |
+          always() &&
+          steps.verify-name.outputs.valid == 'true' &&
+          needs.process.outputs.npm_outcome == 'success' &&
+          needs.process.outputs.exists == 'false' &&
+          needs.process.outputs.test_failed != 'true' &&
+          (needs.process.result == 'failure' || failure())
         env:
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
+          PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           git config user.name "De Pup"
@@ -367,21 +662,23 @@ jobs:
         if: always()
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          CHECK_EXISTS: ${{ steps.check-existing.outputs.exists }}
+          CHECK_EXISTS: ${{ needs.process.outputs.exists }}
           COMMIT_OUTCOME: ${{ steps.commit.outcome }}
           JOB_STATUS: ${{ job.status }}
-          NPM_OUTCOME: ${{ steps.npm-info.outcome }}
-          PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
-          PARSE_OUTCOME: ${{ steps.parse.outcome }}
-          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          NPM_OUTCOME: ${{ needs.process.outputs.npm_outcome }}
+          PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
+          PARSE_OUTCOME: ${{ needs.process.outputs.parse_outcome }}
+          PROCESS_RESULT: ${{ needs.process.result }}
+          PUBLISH_OUTCOME: ${{ needs.process.outputs.publish_outcome }}
           QUEUE_OUTCOME: ${{ steps.queue.outcome }}
-          VALIDATE_OUTCOME: ${{ steps.validate-package-name.outcome }}
+          TEST_FAILED: ${{ needs.process.outputs.test_failed }}
+          VALIDATE_OUTCOME: ${{ needs.process.outputs.validate_outcome }}
         with:
           github-token: ${{ secrets.BOT_PAT }}
           script: |
             const issueNumber = context.issue.number;
             const packageName = process.env.PACKAGE_NAME || 'unknown';
-            const jobStatus = process.env.JOB_STATUS;
+            const processResult = process.env.PROCESS_RESULT;
             const checkExisting = process.env.CHECK_EXISTS;
             const parseFailed = process.env.PARSE_OUTCOME === 'failure';
             const validateFailed = process.env.VALIDATE_OUTCOME === 'failure';
@@ -389,6 +686,15 @@ jobs:
             const published = process.env.PUBLISH_OUTCOME === 'success';
             const committed = process.env.COMMIT_OUTCOME === 'success';
             const queued = process.env.QUEUE_OUTCOME === 'success';
+            const testFailed = process.env.TEST_FAILED === 'true';
+
+            // The run succeeded only if the process job and every commit-job step did.
+            let jobStatus = process.env.JOB_STATUS;
+            if (processResult === 'cancelled') {
+              jobStatus = 'cancelled';
+            } else if (processResult !== 'success') {
+              jobStatus = 'failure';
+            }
 
             let comment = '## Package Request Processing\n\n';
 
@@ -435,6 +741,11 @@ jobs:
               comment += 'Request Cancelled: The workflow run was cancelled before it finished.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
               comment += 'The package may not have been processed. This issue is left open for tracking; a maintainer will follow up.';
+            } else if (testFailed) {
+              comment += 'Request Failed: Package failed verification and was not published.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += 'After its dependencies were bumped, the package did not pass the post-update verification test, so nothing was published. This is not a transient error, so the package was not queued for automatic retry.\n\n';
+              comment += 'The failed workflow run is visible to the maintainers. This issue is left open for tracking.';
             } else if (queued) {
               comment += 'Request Received: Package queued for automatic retry.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
@@ -470,7 +781,7 @@ jobs:
             }
 
       - name: Close Issue on Success
-        if: success()
+        if: success() && needs.process.result == 'success'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.BOT_PAT }}
@@ -483,7 +794,7 @@ jobs:
             });
 
       - name: Close Issue if Duplicate
-        if: always() && steps.check-existing.outputs.exists == 'true'
+        if: always() && needs.process.outputs.exists == 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ secrets.BOT_PAT }}

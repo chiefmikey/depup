@@ -37,8 +37,9 @@ Branch: fix/publish-pipeline-audit.
 - Dead NPM_TOKEN now fails before the publish step (queue-for-retry path still runs).
 
 ## Not changed: need a decision (alter blast radius or publish behavior)
-- **Anyone with a GitHub account can trigger an unreviewed publish** (issue template auto-labels, no author check; template says no review). Fix = author_association gate or maintainer-applied label.
-- **Untrusted package code and the secret-bearing steps share one job** (checkout credential stays on disk, BOT_PAT/GPG steps follow). Remaining fix = split into two jobs (process vs commit); env scrub in #1 closes the GITHUB_ENV route only.
+- **Resolved in a follow-up PR (#1312, #1313):**
+  - Anyone with a GitHub account could trigger an unreviewed publish. A `gate` job now allows only OWNER/MEMBER/COLLABORATOR authors, a maintainer (write access) re-applying the `package-request` label, or an account at least 30 days old that is not a bot; a lookup error denies (fail closed). Denied requests get a comment, stay open, and publish nothing.
+  - Untrusted package code shared a job with the checkout credential and the BOT_PAT/GPG steps. `process` (NPM_TOKEN only, read-only token, `persist-credentials: false`) now runs depup.mjs and hands the package directory over as an artifact; `commit` (push credential, GPG, BOT_PAT) runs no package code and validates the artifact (regular files only, no git metadata, size bounded) before copying it under `packages/<validated-name>/`.
 - **Smoke-test failure does not block publish** (`maybeTest` only warns). May be intentional.
 - **Queue-for-retry persists deterministic failures** in user-packages.json for the cron to retry forever. Needs a failure classification.
 - **Failed rev-0 publish with no dep updates is never retried** (revision counter skips it).
