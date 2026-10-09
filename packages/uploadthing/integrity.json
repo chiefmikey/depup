@@ -41,6 +41,27 @@
       "status": "published",
       "timestamp": "2026-03-20T00:38:52.691Z",
       "version": "7.7.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@effect/platform": {
+          "from": "0.90.3",
+          "to": "^0.97.2"
+        },
+        "@standard-schema/spec": {
+          "from": "1.0.0-beta.4",
+          "to": "^1.1.0"
+        },
+        "effect": {
+          "from": "3.17.7",
+          "to": "^4.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T15:11:56.052Z",
+      "version": "7.7.4-depup.2"
     }
   }
 }

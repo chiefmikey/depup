@@ -12,18 +12,20 @@ npm install @depup/update-notifier
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.1 | **DepUp version**: 7.3.1-depup.1 | **Updated**: 5/9/2026 | **Import test**: passed
+**Original version**: 7.3.1 | **DepUp version**: 7.3.1-depup.2 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^5.3.0` | `^5.6.2` |
+| boxen | `^8.0.1` | `^9.0.0` |
+| chalk | `^5.3.0` | `^6.0.1` |
 | configstore | `^7.0.0` | `^8.0.0` |
 | is-in-ci | `^1.0.0` | `^2.0.0` |
+| is-installed-globally | `^1.0.0` | `^1.0.1` |
 | is-npm | `^6.0.0` | `^6.1.0` |
 | pupa | `^3.1.0` | `^3.3.0` |
-| semver | `^7.6.3` | `^7.8.0` |
+| semver | `^7.6.3` | `^7.8.5` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/update-notifier&labels=bug).

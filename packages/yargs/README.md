@@ -12,11 +12,16 @@ npm install @depup/yargs
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 18.0.0 | **DepUp version**: 18.0.0-depup.0 | **Updated**: 3/9/2026 | **Import test**: unknown
+**Original version**: 18.2.0 | **DepUp version**: 18.2.0-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-No dependency changes in the latest revision.
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| escalade | `^3.1.1` | `^3.2.0` |
+| string-width | `^8.2.1` | `^8.3.0` |
+| y18n | `^5.0.5` | `^5.0.8` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/yargs&labels=bug).
 

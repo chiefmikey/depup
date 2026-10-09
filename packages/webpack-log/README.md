@@ -12,15 +12,15 @@ npm install @depup/webpack-log
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.2 | **DepUp version**: 3.0.2-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 3.0.2 | **DepUp version**: 3.0.2-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^2.4.2` | `^5.6.2` |
+| chalk | `^2.4.2` | `^6.0.1` |
 | loglevelnext | `^3.0.1` | `^6.0.0` |
-| nanoid | `^2.0.3` | `^5.1.7` |
+| nanoid | `^2.0.3` | `^6.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/webpack-log&labels=bug).

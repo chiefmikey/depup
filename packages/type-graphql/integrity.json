@@ -23,6 +23,31 @@
       "status": "failed",
       "timestamp": "2026-05-09T07:06:33.464Z",
       "version": "2.0.0-rc.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@graphql-yoga/subscription": {
+          "from": "^5.0.5",
+          "to": "^5.1.1"
+        },
+        "@types/semver": {
+          "from": "^7.7.1",
+          "to": "^7.8.0"
+        },
+        "graphql-query-complexity": {
+          "from": "^1.1.0",
+          "to": "^2.0.0"
+        },
+        "semver": {
+          "from": "^7.7.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T15:09:53.916Z",
+      "version": "2.0.0-rc.3-depup.2"
     }
   }
 }

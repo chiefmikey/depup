@@ -4,6 +4,43 @@
       "status": "created",
       "timestamp": "2026-03-09T08:18:51.940Z",
       "version": "11.0.5-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/unist": {
+          "from": "^3.0.0",
+          "to": "^3.0.3"
+        },
+        "bail": {
+          "from": "^2.0.0",
+          "to": "^2.0.2"
+        },
+        "devlop": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "extend": {
+          "from": "^3.0.0",
+          "to": "^3.0.2"
+        },
+        "is-plain-obj": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "trough": {
+          "from": "^2.0.0",
+          "to": "^2.2.0"
+        },
+        "vfile": {
+          "from": "^6.0.0",
+          "to": "^6.0.3"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:12:11.350Z",
+      "version": "11.0.5-depup.1"
     }
   }
 }

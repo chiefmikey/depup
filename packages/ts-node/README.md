@@ -12,18 +12,18 @@ npm install @depup/ts-node
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.36 | **Updated**: 6/28/2026 | **Import test**: failed
+**Original version**: 10.9.2 | **DepUp version**: 10.9.2-depup.37 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @cspotcode/source-map-support | `^0.8.0` | `^0.8.1` |
-| @tsconfig/node10 | `^1.0.7` | `^1.0.12` |
-| @tsconfig/node12 | `^1.0.7` | `^12.1.7` |
-| @tsconfig/node14 | `^1.0.0` | `^14.1.8` |
-| @tsconfig/node16 | `^1.0.2` | `^16.1.8` |
-| acorn | `^8.4.1` | `^8.17.0` |
+| @tsconfig/node10 | `^1.0.7` | `^1.0.13` |
+| @tsconfig/node12 | `^1.0.7` | `^12.1.8` |
+| @tsconfig/node14 | `^1.0.0` | `^14.1.9` |
+| @tsconfig/node16 | `^1.0.2` | `^16.1.9` |
+| acorn | `^8.4.1` | `^8.19.0` |
 | acorn-walk | `^8.1.1` | `^8.3.5` |
 | arg | `^4.1.0` | `^5.0.2` |
 | create-require | `^1.1.0` | `^1.1.1` |

@@ -12,13 +12,13 @@ npm install @depup/vue-i18n
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 11.4.5 | **DepUp version**: 11.4.5-depup.0 | **Updated**: 6/5/2026 | **Import test**: passed
+**Original version**: 11.4.13 | **DepUp version**: 11.4.13-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vue/devtools-api | `^6.5.0` | `^8.1.2` |
+| @vue/devtools-api | `^6.5.0` | `^8.2.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vue-i18n&labels=bug).

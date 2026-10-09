@@ -63,6 +63,47 @@
       "status": "failed",
       "timestamp": "2026-05-09T07:03:08.018Z",
       "version": "7.3.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "boxen": {
+          "from": "^8.0.1",
+          "to": "^9.0.0"
+        },
+        "chalk": {
+          "from": "^5.3.0",
+          "to": "^6.0.1"
+        },
+        "configstore": {
+          "from": "^7.0.0",
+          "to": "^8.0.0"
+        },
+        "is-in-ci": {
+          "from": "^1.0.0",
+          "to": "^2.0.0"
+        },
+        "is-installed-globally": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        },
+        "is-npm": {
+          "from": "^6.0.0",
+          "to": "^6.1.0"
+        },
+        "pupa": {
+          "from": "^3.1.0",
+          "to": "^3.3.0"
+        },
+        "semver": {
+          "from": "^7.6.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:12:07.125Z",
+      "version": "7.3.1-depup.2"
     }
   }
 }

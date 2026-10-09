@@ -18,6 +18,27 @@
       "status": "published",
       "timestamp": "2026-03-17T16:40:12.259Z",
       "version": "3.0.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "chalk": {
+          "from": "^2.4.2",
+          "to": "^6.0.1"
+        },
+        "loglevelnext": {
+          "from": "^3.0.1",
+          "to": "^6.0.0"
+        },
+        "nanoid": {
+          "from": "^2.0.3",
+          "to": "^6.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:14:40.177Z",
+      "version": "3.0.2-depup.1"
     }
   }
 }

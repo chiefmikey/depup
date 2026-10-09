@@ -12,14 +12,11 @@ npm install @depup/whatwg-url
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 17.1.2 | **DepUp version**: 17.1.2-depup.0 | **Updated**: 9/27/2026 | **Import test**: passed
+**Original version**: 17.2.0 | **DepUp version**: 17.2.0-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @exodus/bytes | `^1.15.1` | `^1.16.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/whatwg-url&labels=bug).
 

@@ -12,7 +12,7 @@ npm install @depup/url-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.1.1 | **DepUp version**: 4.1.1-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.1.1 | **DepUp version**: 4.1.1-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | loader-utils | `^2.0.0` | `^3.3.1` |
 | mime-types | `^2.1.27` | `^3.0.2` |
-| schema-utils | `^3.0.0` | `^4.3.3` |
+| schema-utils | `^3.0.0` | `^4.5.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/url-loader&labels=bug).

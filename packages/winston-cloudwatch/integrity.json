@@ -20,6 +20,27 @@
       "status": "published",
       "timestamp": "2026-03-19T04:46:18.940Z",
       "version": "6.3.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "async": {
+          "from": "^3.1.0",
+          "to": "^3.2.6"
+        },
+        "chalk": {
+          "from": "^4.0.0",
+          "to": "^6.0.1"
+        },
+        "fast-safe-stringify": {
+          "from": "^2.0.7",
+          "to": "^2.1.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T15:14:53.578Z",
+      "version": "6.3.0-depup.1"
     }
   }
 }

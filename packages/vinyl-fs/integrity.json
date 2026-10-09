@@ -1,22 +1,5 @@
 {
   "4.0.2": {
-    "0": {
-      "changes": {
-        "iconv-lite": {
-          "from": "^0.6.3",
-          "to": "^0.7.2"
-        },
-        "streamx": {
-          "from": "^2.14.0",
-          "to": "^2.23.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-03-19T04:47:09.539Z",
-      "version": "4.0.2-depup.0"
-    },
     "1": {
       "changes": {
         "iconv-lite": {
@@ -84,6 +67,23 @@
       "status": "failed",
       "timestamp": "2026-06-05T00:43:46.557Z",
       "version": "4.0.2-depup.4"
+    },
+    "5": {
+      "changes": {
+        "iconv-lite": {
+          "from": "^0.6.3",
+          "to": "^0.7.3"
+        },
+        "streamx": {
+          "from": "^2.14.0",
+          "to": "^2.28.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:12:42.727Z",
+      "version": "4.0.2-depup.5"
     }
   }
 }

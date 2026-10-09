@@ -12,15 +12,14 @@ npm install @depup/vue-router
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.1.0 | **DepUp version**: 5.1.0-depup.0 | **Updated**: 5/28/2026 | **Import test**: passed
+**Original version**: 5.4.0 | **DepUp version**: 5.4.0-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vue-macros/common | `^3.1.1` | `^3.1.2` |
-| local-pkg | `^1.1.2` | `^1.2.1` |
-| picomatch | `^4.0.3` | `^4.0.4` |
+| @vue-macros/common | `^3.1.3` | `^3.1.4` |
+| @vue/devtools-api | `^8.1.5` | `^8.2.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vue-router&labels=bug).

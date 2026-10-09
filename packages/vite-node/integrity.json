@@ -22,6 +22,31 @@
       "status": "failed",
       "timestamp": "2026-04-26T00:48:57.315Z",
       "version": "6.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "cac": {
+          "from": "^7.0.0",
+          "to": "^7.0.1"
+        },
+        "es-module-lexer": {
+          "from": "^2.0.0",
+          "to": "^3.0.3"
+        },
+        "obug": {
+          "from": "^2.1.1",
+          "to": "^3.0.0"
+        },
+        "vite": {
+          "from": "^8.0.0",
+          "to": "^8.3.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:13:22.154Z",
+      "version": "6.0.0-depup.2"
     }
   }
 }

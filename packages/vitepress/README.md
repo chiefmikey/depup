@@ -12,28 +12,29 @@ npm install @depup/vitepress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.58 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 1.6.4 | **DepUp version**: 1.6.4-depup.59 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @docsearch/css | `3.8.2` | `^4.6.3` |
-| @docsearch/js | `3.8.2` | `^4.6.3` |
-| @iconify-json/simple-icons | `^1.2.21` | `^1.2.91` |
-| @shikijs/core | `^2.1.0` | `^4.3.1` |
-| @shikijs/transformers | `^2.1.0` | `^4.3.1` |
-| @shikijs/types | `^2.1.0` | `^4.3.1` |
-| @vitejs/plugin-vue | `^5.2.1` | `^6.0.8` |
+| @docsearch/css | `3.8.2` | `^5.1.2` |
+| @docsearch/js | `3.8.2` | `^5.1.2` |
+| @iconify-json/simple-icons | `^1.2.21` | `^1.2.99` |
+| @shikijs/core | `^2.1.0` | `^4.5.0` |
+| @shikijs/transformers | `^2.1.0` | `^4.5.0` |
+| @shikijs/types | `^2.1.0` | `^4.5.0` |
+| @types/markdown-it | `^14.1.2` | `^14.2.0` |
+| @vitejs/plugin-vue | `^5.2.1` | `^6.0.9` |
 | @vue/devtools-api | `^7.7.0` | `^8.2.1` |
-| @vue/shared | `^3.5.13` | `^3.5.40` |
-| @vueuse/core | `^12.4.0` | `^14.3.0` |
-| @vueuse/integrations | `^12.4.0` | `^14.3.0` |
-| focus-trap | `^7.6.4` | `^8.2.2` |
+| @vue/shared | `^3.5.13` | `^3.5.43` |
+| @vueuse/core | `^12.4.0` | `^15.0.0` |
+| @vueuse/integrations | `^12.4.0` | `^15.0.0` |
+| focus-trap | `^7.6.4` | `^8.2.3` |
 | minisearch | `^7.1.1` | `^7.2.0` |
-| shiki | `^2.1.0` | `^4.3.1` |
-| vite | `^5.4.14` | `^8.1.5` |
-| vue | `^3.5.13` | `^3.5.40` |
+| shiki | `^2.1.0` | `^4.5.0` |
+| vite | `^5.4.14` | `^8.3.4` |
+| vue | `^3.5.13` | `^3.5.43` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitepress&labels=bug).

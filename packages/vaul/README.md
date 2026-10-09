@@ -12,13 +12,13 @@ npm install @depup/vaul
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.1.2 | **DepUp version**: 1.1.2-depup.0 | **Updated**: 3/18/2026 | **Import test**: failed
+**Original version**: 1.1.2 | **DepUp version**: 1.1.2-depup.1 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @radix-ui/react-dialog | `^1.1.1` | `^1.1.15` |
+| @radix-ui/react-dialog | `^1.1.1` | `^1.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vaul&labels=bug).

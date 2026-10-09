@@ -12,13 +12,13 @@ npm install @depup/winston-transport
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.9.0 | **DepUp version**: 4.9.0-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 4.9.0 | **DepUp version**: 4.9.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| readable-stream | `^3.6.2` | `^4.7.0` |
+| readable-stream | `^3.6.2` | `^4.8.0` |
 | triple-beam | `^1.3.0` | `^1.4.1` |
 
 

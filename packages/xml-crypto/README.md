@@ -12,14 +12,14 @@ npm install @depup/xml-crypto
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.2 | **DepUp version**: 6.1.2-depup.1 | **Updated**: 7/14/2026 | **Import test**: passed
+**Original version**: 6.3.3 | **DepUp version**: 6.3.3-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @xmldom/xmldom | `^0.8.10` | `^0.9.10` |
-| xpath | `^0.0.33` | `^0.0.34` |
+| @xmldom/xmldom | `^0.8.15` | `^0.9.12` |
+| xpath | `^0.0.33` | `^0.0.35` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/xml-crypto&labels=bug).

@@ -393,5 +393,52 @@
       "timestamp": "2026-05-26T14:07:26.734Z",
       "version": "9.27.2-depup.0"
     }
+  },
+  "10.0.2": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": "^22.20.4",
+          "to": "^26.6.4"
+        },
+        "@types/sinonjs__fake-timers": {
+          "from": "^8.1.5",
+          "to": "^15.0.1"
+        },
+        "aria-query": {
+          "from": "^5.3.0",
+          "to": "^5.3.2"
+        },
+        "cheerio": {
+          "from": "^1.0.0-rc.12",
+          "to": "^1.2.0"
+        },
+        "css-shorthand-properties": {
+          "from": "^1.1.1",
+          "to": "^1.1.2"
+        },
+        "htmlfy": {
+          "from": "^0.8.1",
+          "to": "^1.1.0"
+        },
+        "jszip": {
+          "from": "^3.10.1",
+          "to": "^3.10.2"
+        },
+        "serialize-error": {
+          "from": "^12.0.0",
+          "to": "^13.0.2"
+        },
+        "urlpattern-polyfill": {
+          "from": "^10.0.0",
+          "to": "^10.1.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:13:51.655Z",
+      "version": "10.0.2-depup.0"
+    }
   }
 }

@@ -83,5 +83,20 @@
       "timestamp": "2026-06-02T14:07:58.977Z",
       "version": "4.1.0-depup.0"
     }
+  },
+  "4.2.4": {
+    "0": {
+      "changes": {
+        "@vuetify/v0": {
+          "from": "^1.2.1",
+          "to": "^1.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T15:13:38.168Z",
+      "version": "4.2.4-depup.0"
+    }
   }
 }

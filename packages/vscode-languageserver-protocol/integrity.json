@@ -180,6 +180,14 @@
       "status": "failed",
       "timestamp": "2026-09-27T01:05:02.070Z",
       "version": "3.18.4-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:13:13.540Z",
+      "version": "3.18.4-depup.1"
     }
   }
 }

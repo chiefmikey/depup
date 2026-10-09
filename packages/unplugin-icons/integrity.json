@@ -52,6 +52,27 @@
       "status": "published",
       "timestamp": "2026-09-13T01:01:10.863Z",
       "version": "24.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@antfu/install-pkg": {
+          "from": "^1.1.0",
+          "to": "^2.1.0"
+        },
+        "obug": {
+          "from": "^2.2.1",
+          "to": "^3.0.0"
+        },
+        "unplugin": {
+          "from": "^3.3.0",
+          "to": "^3.4.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T15:12:12.536Z",
+      "version": "24.0.0-depup.1"
     }
   }
 }

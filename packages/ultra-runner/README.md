@@ -12,26 +12,26 @@ npm install @depup/ultra-runner
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.10.5 | **DepUp version**: 3.10.5-depup.3 | **Updated**: 5/31/2026 | **Import test**: failed
+**Original version**: 3.10.5 | **DepUp version**: 3.10.5-depup.4 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^4.1.0` | `^5.6.2` |
+| chalk | `^4.1.0` | `^6.0.1` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | fast-glob | `^3.2.5` | `^3.3.3` |
-| ignore | `^5.1.8` | `^7.0.5` |
+| ignore | `^5.1.8` | `^7.0.12` |
 | json5 | `^2.2.0` | `^2.2.3` |
-| micro-memoize | `^4.0.9` | `^5.1.1` |
+| micro-memoize | `^4.0.9` | `^5.2.0` |
 | npm-run-path | `4.0.1` | `^6.0.0` |
 | ps-list | `^7.2.0` | `^9.0.0` |
 | shellwords-ts | `^3.0.0` | `^3.0.1` |
-| string-width | `^4.2.0` | `^8.2.1` |
+| string-width | `^4.2.0` | `^8.3.0` |
 | tslib | `2.1.0` | `^2.8.1` |
-| type-fest | `^0.21.2` | `^5.7.0` |
-| wrap-ansi | `^7.0.0` | `^10.0.0` |
-| yargs | `^16.2.0` | `^18.0.0` |
+| type-fest | `^0.21.2` | `^5.10.0` |
+| wrap-ansi | `^7.0.0` | `^10.0.2` |
+| yargs | `^16.2.0` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ultra-runner&labels=bug).

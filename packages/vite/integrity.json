@@ -693,5 +693,20 @@
       "timestamp": "2026-10-04T01:33:17.960Z",
       "version": "8.3.2-depup.0"
     }
+  },
+  "8.3.4": {
+    "0": {
+      "changes": {
+        "rolldown": {
+          "from": "~1.2.12",
+          "to": "^1.2.13"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T15:12:43.108Z",
+      "version": "8.3.4-depup.0"
+    }
   }
 }

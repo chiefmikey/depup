@@ -1,0 +1,94 @@
+{
+  "name": "@depup/xml-crypto",
+  "version": "6.3.3-depup.0",
+  "description": "Xml digital signature and encryption library for Node.js (with updated dependencies)",
+  "keywords": [
+    "xml-crypto",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "xml",
+    "digital signature",
+    "xml encryption",
+    "x.509 certificate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-saml/xml-crypto.git"
+  },
+  "license": "MIT",
+  "author": "Yaron Naveh <yaronn01@gmail.com> (http://webservices20.blogspot.com/)",
+  "contributors": [
+    "LoneRifle <LoneRifle@users.noreply.github.com>",
+    "Chris Barth <chrisjbarth@hotmail.com>"
+  ],
+  "main": "./lib",
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md",
+    "changes.json"
+  ],
+  "scripts": {
+    "build": "npx tsc",
+    "changelog": "gren changelog --override --generate",
+    "lint": "eslint \"{src,test}/*.ts\" --cache && npm run prettier-check",
+    "lint:fix": "eslint --fix \"{src,test}/*.ts\" && npm run prettier-format",
+    "prettier-check": "prettier --config .prettierrc.json --check .",
+    "prettier-format": "prettier --config .prettierrc.json --write .",
+    "prerelease": "git clean -xfd && npm ci && npm test",
+    "release": "release-it",
+    "test": "nyc mocha"
+  },
+  "dependencies": {
+    "@xmldom/is-dom-node": "^1.0.1",
+    "@xmldom/xmldom": "^0.9.12",
+    "xpath": "^0.0.35"
+  },
+  "devDependencies": {
+    "@cjbarth/github-release-notes": "^5.1.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@prettier/plugin-xml": "^3.4.2",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^16.18.126",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "chai": "^4.5.0",
+    "choma": "^1.2.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-deprecation": "^3.0.0",
+    "lcov": "^1.16.0",
+    "mocha": "^10.8.2",
+    "nyc": "^15.1.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-packagejson": "^3.0.2",
+    "release-it": "^16.3.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "depup": {
+    "changes": {
+      "@xmldom/xmldom": {
+        "from": "^0.8.15",
+        "to": "^0.9.12"
+      },
+      "xpath": {
+        "from": "^0.0.33",
+        "to": "^0.0.35"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "xml-crypto",
+    "originalVersion": "6.3.3",
+    "processedAt": "2026-10-09T15:15:10.888Z",
+    "smokeTest": "passed"
+  }
+}

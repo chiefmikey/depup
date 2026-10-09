@@ -12,17 +12,17 @@ npm install @depup/umzug
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.3 | **DepUp version**: 3.8.3-depup.53 | **Updated**: 7/21/2026 | **Import test**: passed
+**Original version**: 3.8.3 | **DepUp version**: 3.8.3-depup.54 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @rushstack/ts-command-line | `4.19.1` | `^5.3.12` |
-| emittery | `^0.13.0` | `^2.0.0` |
+| @rushstack/ts-command-line | `4.19.1` | `^5.3.17` |
+| emittery | `^0.13.0` | `^2.1.0` |
 | pony-cause | `^2.1.4` | `^2.1.11` |
 | tinyglobby | `^0.2.16` | `^0.2.17` |
-| type-fest | `^4.0.0` | `^5.8.0` |
+| type-fest | `^4.0.0` | `^5.10.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/umzug&labels=bug).
