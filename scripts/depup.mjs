@@ -28,6 +28,20 @@ const SPEC_VERSION_PATTERN = /^[\w.+~-]+$/u;
 // Cap for child-process output excerpts surfaced in warnings.
 const OUTPUT_EXCERPT_LIMIT = 500;
 const INSTALL_ERROR_LIMIT = 200;
+// Process exit code when --test was requested and the package failed
+// verification (nothing is published). Callers (workflow, cron) key off this
+// to tell "package is broken" apart from infrastructure failures (exit 1).
+// Mirrored in cron-sync.mjs / cron-discover.mjs, which deliberately do not
+// import this module.
+const EXIT_VERIFICATION_FAILED = 3;
+// Error raised after a failed --test run has been recorded in integrity.json.
+// Identified by `exitCode` (the CLI entry point maps it to the process exit).
+function createVerificationFailedError(message) {
+  return Object.assign(new Error(message), {
+    exitCode: EXIT_VERIFICATION_FAILED,
+    name: 'VerificationFailedError',
+  });
+}
 
 // Registry package name: `name` or `@scope/name`.
 function isRegistryName(name) {
@@ -89,7 +103,11 @@ class DepUp {
           if (options.debug) {
             console.error(chalk.gray('Stack trace:'), error.stack);
           }
-          process.exit(1);
+          process.exit(
+            error.exitCode === EXIT_VERIFICATION_FAILED
+              ? EXIT_VERIFICATION_FAILED
+              : 1,
+          );
         }
       });
 
@@ -222,6 +240,14 @@ class DepUp {
       targetDirectory,
       testResult,
     });
+
+    // Raised only after publishAndFinalize recorded the failed revision, so
+    // integrity.json never loses the failure.
+    if (testResult === 'failed') {
+      throw createVerificationFailedError(
+        `Verification failed for ${scopedName}@${packageJson.version}; not published`,
+      );
+    }
   }
 
   // Reject path traversal, characters not valid in npm package specs and any
@@ -556,9 +582,20 @@ class DepUp {
       scopedName,
       shouldPublish,
       targetDirectory,
+      testResult,
     } = context;
 
     if (!shouldPublish) {
+      return false;
+    }
+
+    // A package that failed the requested smoke/import test is never published.
+    if (testResult === 'failed') {
+      console.error(
+        chalk.red(
+          `Not publishing ${scopedName}@${packageJson.version}: verification failed`,
+        ),
+      );
       return false;
     }
 
@@ -1288,7 +1325,12 @@ try {
         changes: changesData.bumped,
         depsUpdated: changesData.totalUpdated || 0,
         smokeTest: testResult || 'skipped',
-        status: this.getPublishStatus(shouldPublish, published, publishDidFail),
+        status: this.getPublishStatus(
+          shouldPublish,
+          published,
+          publishDidFail,
+          testResult === 'failed',
+        ),
       },
     );
 
@@ -1461,7 +1503,15 @@ try {
     );
   }
 
-  getPublishStatus(shouldPublish, published, publishDidFail = false) {
+  getPublishStatus(
+    shouldPublish,
+    published,
+    publishDidFail = false,
+    verificationFailed = false,
+  ) {
+    if (verificationFailed) {
+      return 'failed';
+    }
     if (!shouldPublish) {
       return 'prepared';
     }
@@ -1474,7 +1524,7 @@ try {
   npmRegistry = 'https://registry.npmjs.org';
 }
 
-export { DepUp };
+export { DepUp, EXIT_VERIFICATION_FAILED };
 
 // Run if called directly
 if (process.argv[1] === import.meta.filename) {
