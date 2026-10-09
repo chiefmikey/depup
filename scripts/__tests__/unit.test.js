@@ -1281,7 +1281,7 @@ describe('securityScanner class', () => {
     });
   });
 
-  // safeParseJson is on SecureDepUp, tested in that section
+  // parseAuditJson is on SecureDepUp, tested in that section
 
   describe('fileExists', () => {
     it('returns true for existing file', async () => {
@@ -1355,19 +1355,25 @@ describe('secureDepUp class', () => {
       ).not.toThrow();
     });
 
-    it('handles missing metadata gracefully', () => {
-      expect(() => secure.checkAuditForCritical({})).not.toThrow();
-      expect(() => secure.checkAuditForCritical(null)).not.toThrow();
+    it('fails closed on missing metadata (not a clean audit)', () => {
+      expect(() => secure.checkAuditForCritical({})).toThrow(
+        'no metadata.vulnerabilities',
+      );
+      expect(() => secure.checkAuditForCritical(null)).toThrow(
+        'not a JSON object',
+      );
     });
   });
 
-  describe('safeParseJson', () => {
+  describe('parseAuditJson', () => {
     it('parses valid JSON', () => {
-      expect(secure.safeParseJson('{"a":1}')).toStrictEqual({ a: 1 });
+      expect(secure.parseAuditJson('{"a":1}')).toStrictEqual({ a: 1 });
     });
 
-    it('returns empty object for invalid JSON', () => {
-      expect(secure.safeParseJson('not json')).toStrictEqual({});
+    it('throws for invalid JSON instead of returning an empty object', () => {
+      expect(() => secure.parseAuditJson('not json')).toThrow(
+        'npm audit output is not valid JSON',
+      );
     });
   });
 });
@@ -1725,12 +1731,10 @@ describe('securityScanner additional methods', () => {
       expect(findings).toStrictEqual([]);
     });
 
-    it('returns empty array for unreadable directory', async () => {
-      const findings = await scanner.performAdvancedMalwareChecks(
-        '/nonexistent/directory',
-      );
-
-      expect(findings).toStrictEqual([]);
+    it('throws for a nonexistent scan root (fail-closed, not "no findings")', async () => {
+      await expect(
+        scanner.performAdvancedMalwareChecks('/nonexistent/directory'),
+      ).rejects.toThrow('Advanced malware check failed: Cannot read scan path');
     });
   });
 
@@ -2445,10 +2449,10 @@ describe('securityScanner coverage gaps', () => {
       expect(files[0]).toContain('index.js');
     });
 
-    it('returns empty array for nonexistent path', async () => {
-      const files = await scanner.getAllFiles('/nonexistent/xyz123');
-
-      expect(files).toStrictEqual([]);
+    it('throws for nonexistent path (a missing scan root must not look clean)', async () => {
+      await expect(scanner.getAllFiles('/nonexistent/xyz123')).rejects.toThrow(
+        'Cannot read scan path /nonexistent/xyz123',
+      );
     });
   });
 
@@ -3533,26 +3537,33 @@ describe('secureDepUp coverage gaps', () => {
       ).not.toThrow();
     });
 
-    it('handles undefined vulnerabilities object', () => {
-      expect(() =>
-        secure.checkAuditForCritical({ metadata: {} }),
-      ).not.toThrow();
+    it('fails closed on undefined vulnerabilities object', () => {
+      expect(() => secure.checkAuditForCritical({ metadata: {} })).toThrow(
+        'no metadata.vulnerabilities',
+      );
     });
   });
 
-  describe('safeParseJson extended', () => {
+  describe('parseAuditJson extended', () => {
     it('parses nested JSON', () => {
-      expect(secure.safeParseJson('{"a":{"b":2}}')).toStrictEqual({
+      expect(secure.parseAuditJson('{"a":{"b":2}}')).toStrictEqual({
         a: { b: 2 },
       });
     });
 
-    it('returns empty object for empty string', () => {
-      expect(secure.safeParseJson('')).toStrictEqual({});
+    it('throws for empty string', () => {
+      expect(() => secure.parseAuditJson('')).toThrow('not valid JSON');
     });
 
-    it('returns empty object for undefined-like invalid JSON', () => {
-      expect(secure.safeParseJson('{bad}')).toStrictEqual({});
+    it('throws for malformed JSON and keeps the cause', () => {
+      let caught;
+      try {
+        secure.parseAuditJson('{bad}');
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught.cause).toBeInstanceOf(SyntaxError);
     });
   });
 
@@ -3745,10 +3756,10 @@ describe('secureDepUp coverage gaps', () => {
   });
 
   describe('performPreDownloadSecurityScan', () => {
-    it('completes scan for safe package and sets malware scan flag', async () => {
+    it('passes a safe package without marking the malware scan completed (name check is not a scan)', async () => {
       await secure.performPreDownloadSecurityScan('express');
 
-      expect(secure.completedScans.malware).toBe(true);
+      expect(secure.completedScans.malware).toBe(false);
     });
 
     it('throws when package manifest is flagged', async () => {
@@ -4232,7 +4243,7 @@ describe('secureDepUp coverage gaps', () => {
         error.stdout = JSON.stringify({
           metadata: { vulnerabilities: { critical: 0, high: 0, total: 2 } },
         });
-        secure.checkAuditForCritical(secure.safeParseJson(error.stdout));
+        secure.checkAuditForCritical(secure.parseAuditJson(error.stdout));
         secure.completedScans.vulnerability = true;
       };
 
@@ -4349,25 +4360,43 @@ describe('secureDepUp coverage gaps', () => {
       expect(publishCalled).toBe(true);
     });
 
-    it('logs dry-run message when dryRun is true', async () => {
-      secure.validatePackageAllowlist = async () => {};
-      secure.performPreDownloadSecurityScan = async () => {};
-      secure.runInSandbox = async () => {};
-      secure.performPostExtractionScan = async () => {};
-      secure.performVulnerabilityScan = async () => {};
-      secure.finalSecurityValidation = async () => {};
+    it('honors dryRun: never runs the sandbox, scans, or publish', async () => {
+      const calls = [];
+      secure.validatePackageAllowlist = async () => {
+        calls.push('allowlist');
+      };
+      secure.performPreDownloadSecurityScan = async () => {
+        calls.push('preScan');
+      };
+      secure.runInSandbox = async () => {
+        calls.push('sandbox');
+      };
+      secure.performPostExtractionScan = async () => {
+        calls.push('postScan');
+      };
+      secure.performVulnerabilityScan = async () => {
+        calls.push('vulnScan');
+      };
+      secure.finalSecurityValidation = async () => {
+        calls.push('final');
+      };
+      secure.publishWithSecurityAttestation = async () => {
+        calls.push('publish');
+      };
 
       await expect(
         secure.processPackageSecurely('express', {
           bumpDeps: false,
           debug: false,
           dryRun: true,
-          publish: false,
+          publish: true,
           skipMalwareScan: false,
           skipVulnCheck: false,
           test: false,
         }),
       ).resolves.toBeUndefined();
+
+      expect(calls).toStrictEqual(['allowlist', 'preScan']);
     });
   });
 
@@ -4525,6 +4554,7 @@ describe('secureDepUp coverage gaps', () => {
         .mockImplementationOnce(() => {
           throw auditError;
         });
+      jestInstance.spyOn(secure, 'runSnykScan').mockImplementation(() => {});
 
       await secure.performVulnerabilityScan(temporaryDirectory);
 
@@ -4657,7 +4687,7 @@ describe('secureDepUp coverage gaps', () => {
       // Mock findLatestRevisionDirectory and inject stub npm audit that exits non-zero with stdout
       secure.findLatestRevisionDirectory = async () => revisionPath;
 
-      // Simulate npm audit failure with stdout (non-critical) via override of safeParseJson
+      // Simulate npm audit failure with stdout (non-critical) via override of parseAuditJson
       // The real execFileSync will throw (no package.json); we catch and simulate the stdout path
       const auditError = new Error('npm audit exited non-zero');
       auditError.stdout = JSON.stringify({
@@ -4668,7 +4698,7 @@ describe('secureDepUp coverage gaps', () => {
       const originalRun = SecureDepUp.prototype.performVulnerabilityScan;
       secure.performVulnerabilityScan = async (packagePath) => {
         // Simulate the exact code path: error.stdout present → parse and set flag
-        secure.checkAuditForCritical(secure.safeParseJson(auditError.stdout));
+        secure.checkAuditForCritical(secure.parseAuditJson(auditError.stdout));
         secure.completedScans.vulnerability = true;
       };
 
@@ -14954,6 +14984,767 @@ describe('depup.mjs -- coverage gap fill', () => {
       await fs.mkdir(dir);
 
       await depup.cleanupDirectory(dir);
+    });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// Security modules audit fixes (depup-security, security-scan, security-approval)
+// ═══════════════════════════════════════════════════════════════════
+describe('security modules audit fixes', () => {
+  let temporaryDirectory;
+
+  const makeRevision = async (packageName = 'pkg') => {
+    const revisionPath = path.join(
+      temporaryDirectory,
+      'packages',
+      packageName,
+      '1.0.0',
+      'rev-1',
+    );
+    await fs.mkdir(revisionPath, { recursive: true });
+    return revisionPath;
+  };
+
+  beforeEach(async () => {
+    temporaryDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'depup-sa-'));
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  afterEach(async () => {
+    jest.unstable_unmockModule('node:child_process');
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  // Jest gives tests a copy of process.env, so a PATH edit does not reach
+  // children spawned without an explicit env. Load the module under test with
+  // a mocked execFileSync instead to assert the exact args and options.
+  const loadWithMockedExec = async (specifier) => {
+    jest.resetModules();
+    const execFileSync = jest.fn(() => '');
+    jest.unstable_mockModule('node:child_process', () => {
+      const actual = jest.requireActual('node:child_process');
+      return { ...actual, default: { ...actual, execFileSync }, execFileSync };
+    });
+    const loaded = await import(specifier);
+    return { execFileSync, loaded };
+  };
+
+  describe('depup-security: audit parsing fails closed (fix A)', () => {
+    let secure;
+
+    beforeEach(async () => {
+      secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jest.spyOn(secure, 'runSnykScan').mockImplementation(() => {});
+    });
+
+    it('rejects and does not mark the scan completed when audit output is not JSON', async () => {
+      jest.spyOn(secure, 'runNpmAuditCommand').mockReturnValue('<html>502');
+
+      await expect(secure.performVulnerabilityScan('/x')).rejects.toThrow(
+        'npm audit output is not valid JSON',
+      );
+      expect(secure.completedScans.vulnerability).toBe(false);
+    });
+
+    it('rejects when the audit JSON carries an error key (registry failure)', async () => {
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        error: { code: 'ENOAUDIT', summary: 'audit endpoint returned 500' },
+      });
+      jest.spyOn(secure, 'runNpmAuditCommand').mockImplementation(() => {
+        throw auditError;
+      });
+
+      await expect(secure.performVulnerabilityScan('/x')).rejects.toThrow(
+        'npm audit reported an error: audit endpoint returned 500',
+      );
+      expect(secure.completedScans.vulnerability).toBe(false);
+    });
+
+    it('rejects when the audit JSON lacks metadata.vulnerabilities', async () => {
+      jest.spyOn(secure, 'runNpmAuditCommand').mockReturnValue('{}');
+
+      await expect(secure.performVulnerabilityScan('/x')).rejects.toThrow(
+        'no metadata.vulnerabilities',
+      );
+      expect(secure.completedScans.vulnerability).toBe(false);
+    });
+
+    it('still completes (and still runs Snyk) when a non-zero audit exit has non-critical findings', async () => {
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        metadata: { vulnerabilities: { critical: 0, high: 0, total: 4 } },
+      });
+      jest.spyOn(secure, 'runNpmAuditCommand').mockImplementation(() => {
+        throw auditError;
+      });
+
+      await secure.performVulnerabilityScan('/x');
+
+      expect(secure.completedScans.vulnerability).toBe(true);
+      expect(secure.runSnykScan).toHaveBeenCalledTimes(1);
+    });
+
+    it('still throws on critical findings from a non-zero audit exit', async () => {
+      const auditError = new Error('npm audit exited 1');
+      auditError.stdout = JSON.stringify({
+        metadata: { vulnerabilities: { critical: 1, high: 0, total: 1 } },
+      });
+      jest.spyOn(secure, 'runNpmAuditCommand').mockImplementation(() => {
+        throw auditError;
+      });
+
+      await expect(secure.performVulnerabilityScan('/x')).rejects.toThrow(
+        'Critical vulnerabilities found',
+      );
+      expect(secure.completedScans.vulnerability).toBe(false);
+    });
+
+    it('runs npm audit with a 64 MiB maxBuffer (large output must not ENOBUFS)', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+      execFileSync.mockReturnValue('{}');
+
+      new loaded.SecureDepUp().runNpmAuditCommand('/some/dir');
+
+      expect(execFileSync).toHaveBeenCalledWith(
+        'npm',
+        ['audit', '--audit-level=moderate', '--json'],
+        expect.objectContaining({
+          cwd: '/some/dir',
+          maxBuffer: 64 * 1024 * 1024,
+        }),
+      );
+    });
+  });
+
+  describe('depup-security: dry run (fix B)', () => {
+    it('still enforces the allowlist and never reaches the sandbox', async () => {
+      const secure = new SecureDepUp();
+      secure.loadPackageAllowlist = async () => [];
+      const sandbox = jest
+        .spyOn(secure, 'runInSandbox')
+        .mockImplementation(async () => {});
+
+      await expect(
+        secure.processPackageSecurely('lodash', {
+          dryRun: true,
+          publish: true,
+        }),
+      ).rejects.toThrow('not in the security allowlist');
+      expect(sandbox).not.toHaveBeenCalled();
+    });
+
+    it('does not run sandbox, scans, or npm publish for an allowlisted package', async () => {
+      const secure = new SecureDepUp();
+      secure.loadPackageAllowlist = async () => ['lodash'];
+      const sandbox = jest
+        .spyOn(secure, 'runInSandbox')
+        .mockImplementation(async () => {});
+      const publish = jest
+        .spyOn(secure, 'runNpmPublish')
+        .mockImplementation(() => {});
+      const vulnScan = jest
+        .spyOn(secure, 'performVulnerabilityScan')
+        .mockImplementation(async () => {});
+
+      await secure.processPackageSecurely('lodash@^4.0.0', {
+        bumpDeps: true,
+        dryRun: true,
+        publish: true,
+        test: true,
+      });
+
+      expect(sandbox).not.toHaveBeenCalled();
+      expect(publish).not.toHaveBeenCalled();
+      expect(vulnScan).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('depup-security: malware attestation is honest (fix C)', () => {
+    let secure;
+    let revisionPath;
+
+    const readAttestation = async () => {
+      await secure.addSecurityAttestation(
+        path.join(temporaryDirectory, 'packages', 'pkg'),
+      );
+      return JSON.parse(
+        await fs.readFile(path.join(revisionPath, 'security-attestation.json')),
+      );
+    };
+
+    beforeEach(async () => {
+      secure = new SecureDepUp();
+      revisionPath = await makeRevision();
+    });
+
+    it('reports passed only after a successful clamscan', async () => {
+      jest.spyOn(secure, 'runClamScanCommand').mockImplementation(() => {});
+
+      await secure.performPostExtractionScan(revisionPath);
+      const attestation = await readAttestation();
+
+      expect(secure.completedScans.malware).toBe(true);
+      expect(attestation.scans.malware).toBe('passed');
+    });
+
+    it('reports skipped (not passed) when ClamAV is not installed', async () => {
+      const missing = new Error('spawn clamscan ENOENT');
+      missing.code = 'ENOENT';
+      jest.spyOn(secure, 'runClamScanCommand').mockImplementation(() => {
+        throw missing;
+      });
+
+      await expect(
+        secure.performPostExtractionScan(revisionPath),
+      ).resolves.toBeUndefined();
+
+      const attestation = await readAttestation();
+
+      expect(secure.completedScans.malware).toBe(false);
+      expect(attestation.scans.malware).toBe('skipped');
+    });
+
+    it('reports not-run when only the name pre-check ran', async () => {
+      await secure.performPreDownloadSecurityScan('express');
+      const attestation = await readAttestation();
+
+      expect(attestation.scans.malware).toBe('not-run');
+    });
+  });
+
+  describe('depup-security: package spec parsing (fix D)', () => {
+    let secure;
+
+    beforeEach(() => {
+      secure = new SecureDepUp();
+    });
+
+    it.each([
+      ['lodash', 'lodash'],
+      ['lodash@4.17.21', 'lodash'],
+      ['lodash@^4.17.0', 'lodash'],
+      ['lodash@4.x', 'lodash'],
+      ['lodash@>=1.0.0 <2.0.0', 'lodash'],
+      ['lodash@1.2.3-beta.1', 'lodash'],
+      ['lodash@latest', 'lodash'],
+      ['lodash@next', 'lodash'],
+      ['@scope/name', '@scope/name'],
+      ['@scope/name@1.0.0', '@scope/name'],
+      ['@scope/name@next', '@scope/name'],
+      ['@scope/name@~2.1.0', '@scope/name'],
+    ])('accepts registry spec %s', (spec, expected) => {
+      expect(secure.parsePackageName(spec)).toBe(expected);
+    });
+
+    it.each([
+      'lodash@https://evil.example/e.tgz',
+      'lodash@http://evil.example/e.tgz',
+      'lodash@npm:other@1',
+      'lodash@github:a/b',
+      'lodash@git+ssh://git@host/a/b.git',
+      'lodash@file:/etc/passwd',
+      'lodash@file:../x',
+      'lodash@user/repo',
+      '@scope/name@file:/x',
+      '@scope/name@https://evil.example/e.tgz',
+      'lodash@',
+      '',
+      '@scope',
+      '@scope/',
+      '@/name',
+      'a/b',
+      '../x',
+      '-rf',
+      '--registry=https://evil.example',
+      'lodash name',
+    ])('rejects non-registry spec %j', (spec) => {
+      expect(() => secure.parsePackageName(spec)).toThrow(/Invalid/u);
+    });
+
+    it('rejects non-string specs', () => {
+      expect(() => secure.parsePackageName(42)).toThrow(TypeError);
+    });
+
+    it('does not let a URL spec ride on an allowlisted bare name', async () => {
+      secure.loadPackageAllowlist = async () => ['lodash', '@scope/name'];
+
+      await expect(
+        secure.validatePackageAllowlist('lodash@https://evil.example/e.tgz'),
+      ).rejects.toThrow('Invalid version in package spec');
+      await expect(
+        secure.validatePackageAllowlist('@scope/name@file:/x'),
+      ).rejects.toThrow('Invalid version in package spec');
+      await expect(
+        secure.validatePackageAllowlist('@scope/name@1.0.0'),
+      ).resolves.toBeUndefined();
+    });
+  });
+
+  describe('depup-security: lifecycle scripts (fix E)', () => {
+    let secure;
+    let packagePath;
+
+    const writeManifest = async (scripts) => {
+      const revisionPath = await makeRevision('scripts-pkg');
+      packagePath = path.join(temporaryDirectory, 'packages', 'scripts-pkg');
+      await fs.writeFile(
+        path.join(revisionPath, 'package.json'),
+        JSON.stringify({ name: '@depup/scripts-pkg', scripts }),
+      );
+    };
+
+    beforeEach(() => {
+      secure = new SecureDepUp();
+    });
+
+    it.each([
+      'install',
+      'postinstall',
+      'postpack',
+      'postpublish',
+      'postuninstall',
+      'preinstall',
+      'prepack',
+      'prepare',
+      'prepublish',
+      'prepublishOnly',
+      'preuninstall',
+      'publish',
+    ])('rejects a leftover %s script', async (script) => {
+      await writeManifest({ [script]: 'node evil.js' });
+
+      await expect(
+        secure.validateProcessedPackage(packagePath),
+      ).rejects.toThrow(`Dangerous script detected: ${script}`);
+    });
+
+    it('accepts a manifest with only benign scripts', async () => {
+      await writeManifest({ build: 'tsc', test: 'jest' });
+
+      await expect(
+        secure.validateProcessedPackage(packagePath),
+      ).resolves.toBeUndefined();
+    });
+
+    it('accepts a manifest without scripts', async () => {
+      await writeManifest();
+
+      await expect(
+        secure.validateProcessedPackage(packagePath),
+      ).resolves.toBeUndefined();
+    });
+
+    it('passes --ignore-scripts to npm publish', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+
+      new loaded.SecureDepUp().runNpmPublish('/some/rev', { debug: false });
+
+      expect(execFileSync).toHaveBeenCalledWith(
+        'npm',
+        [
+          'publish',
+          '--access',
+          'public',
+          '--tag',
+          'latest',
+          '--ignore-scripts',
+        ],
+        expect.objectContaining({ cwd: '/some/rev' }),
+      );
+    });
+  });
+
+  describe('security-approval: no silent data loss (fix F)', () => {
+    let workflow;
+
+    beforeEach(async () => {
+      workflow = new SecurityApprovalWorkflow();
+      const configDirectory = path.join(temporaryDirectory, 'config');
+      await fs.mkdir(configDirectory, { recursive: true });
+      workflow.allowlistPath = path.join(
+        configDirectory,
+        'security-allowlist.json',
+      );
+      workflow.pendingPath = path.join(
+        configDirectory,
+        'pending-approvals.json',
+      );
+      workflow.approvalLogPath = path.join(
+        configDirectory,
+        'approval-log.json',
+      );
+    });
+
+    it('loadPendingApprovals throws (with cause) on corrupt JSON', async () => {
+      await fs.writeFile(workflow.pendingPath, '{not json');
+      let caught;
+      try {
+        await workflow.loadPendingApprovals();
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught.message).toContain('Failed to load pending approvals');
+      expect(caught.cause).toBeInstanceOf(SyntaxError);
+    });
+
+    it('loadPendingApprovals throws on non-object JSON and on non-ENOENT I/O errors', async () => {
+      await fs.writeFile(workflow.pendingPath, '[]');
+
+      await expect(workflow.loadPendingApprovals()).rejects.toThrow(
+        'Failed to load pending approvals',
+      );
+
+      await fs.rm(workflow.pendingPath);
+      await fs.mkdir(workflow.pendingPath);
+
+      await expect(workflow.loadPendingApprovals()).rejects.toThrow(
+        'Failed to load pending approvals',
+      );
+    });
+
+    it('loadPendingApprovals and loadApprovalLog still return empty on ENOENT', async () => {
+      await expect(workflow.loadPendingApprovals()).resolves.toStrictEqual({});
+      await expect(workflow.loadApprovalLog()).resolves.toStrictEqual({
+        decisions: [],
+      });
+    });
+
+    it('loadApprovalLog throws (with cause) on corrupt JSON and on non-ENOENT errors', async () => {
+      await fs.writeFile(workflow.approvalLogPath, 'garbage');
+      let caught;
+      try {
+        await workflow.loadApprovalLog();
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught.message).toContain('Failed to load approval log');
+      expect(caught.cause).toBeInstanceOf(SyntaxError);
+
+      await fs.rm(workflow.approvalLogPath);
+      await fs.mkdir(workflow.approvalLogPath);
+
+      await expect(workflow.loadApprovalLog()).rejects.toThrow(
+        'Failed to load approval log',
+      );
+    });
+
+    it('requestApproval does not overwrite a corrupt pending file', async () => {
+      await fs.writeFile(workflow.pendingPath, '{"keep":{"status":"pending"');
+
+      await expect(workflow.requestApproval('chalk', {})).rejects.toThrow(
+        'Failed to load pending approvals',
+      );
+      await expect(fs.readFile(workflow.pendingPath, 'utf8')).resolves.toBe(
+        '{"keep":{"status":"pending"',
+      );
+    });
+
+    it('logDecision does not wipe a corrupt audit log', async () => {
+      await fs.writeFile(workflow.approvalLogPath, '{"decisions":[{"a":1}');
+
+      await expect(
+        workflow.logDecision('chalk', 'approved', null),
+      ).rejects.toThrow('Failed to load approval log');
+      await expect(fs.readFile(workflow.approvalLogPath, 'utf8')).resolves.toBe(
+        '{"decisions":[{"a":1}',
+      );
+    });
+
+    it('logDecision refuses a log whose decisions field is not an array', async () => {
+      await workflow.saveApprovalLog({ decisions: 'oops' });
+
+      await expect(
+        workflow.logDecision('chalk', 'approved', null),
+      ).rejects.toThrow('must be an array');
+    });
+
+    it.each(['constructor', 'toString', 'hasOwnProperty', 'valueOf'])(
+      'treats prototype-named package %s as not pending, and can request it',
+      async (name) => {
+        await workflow.requestApproval(name, {});
+        const pending = await workflow.loadPendingApprovals();
+
+        expect(Object.hasOwn(pending, name)).toBe(true);
+        expect(pending[name].status).toBe('pending');
+
+        // Second request now correctly sees the real pending entry
+        const before = pending[name].requestedAt;
+        await workflow.requestApproval(name, {});
+        const after = await workflow.loadPendingApprovals();
+
+        expect(after[name].requestedAt).toBe(before);
+      },
+    );
+
+    it('checkStatus does not report prototype-named packages as pending', async () => {
+      const logSpy = jest.spyOn(console, 'log');
+      const exit = jest.spyOn(process, 'exit').mockImplementation(() => {
+        throw new Error('exit');
+      });
+
+      await expect(workflow.checkStatus('constructor')).rejects.toThrow('exit');
+
+      expect(exit).toHaveBeenCalledWith(1);
+      expect(
+        logSpy.mock.calls.some((call) =>
+          String(call[0]).includes('pending review'),
+        ),
+      ).toBe(false);
+    });
+
+    it('denyPackage records no request for a prototype-named package', async () => {
+      await workflow.denyPackage('hasOwnProperty', 'nope');
+      const log = await workflow.loadApprovalLog();
+
+      expect(log.decisions).toHaveLength(1);
+      expect(log.decisions[0].requestInfo).toBeUndefined();
+    });
+
+    it.each([
+      '__proto__',
+      '../etc/passwd',
+      'a b',
+      '',
+      'x/y',
+      '@scope',
+      '@scope/a/b',
+      '-flag',
+      '.hidden',
+      'a'.repeat(215),
+    ])(
+      'requestApproval rejects non-npm-name %j without writing',
+      async (name) => {
+        await expect(workflow.requestApproval(name, {})).rejects.toThrow(
+          'Invalid npm package name',
+        );
+        await expect(fs.access(workflow.pendingPath)).rejects.toThrow();
+      },
+    );
+
+    it('requestApproval accepts scoped and dotted names', async () => {
+      await workflow.requestApproval('@scope/some.pkg-name', {});
+      const pending = await workflow.loadPendingApprovals();
+
+      expect(Object.keys(pending)).toStrictEqual(['@scope/some.pkg-name']);
+    });
+  });
+
+  describe('security-scan: subprocess hardening and reporting (fix G)', () => {
+    let scanner;
+
+    beforeEach(() => {
+      scanner = new SecurityScanner();
+      scanner.results.vulnerabilities = { details: [], status: 'pending' };
+    });
+
+    it('runs npm audit and snyk with a 64 MiB maxBuffer', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../security-scan.mjs',
+      );
+      const fresh = new loaded.SecurityScanner();
+
+      fresh.runNpmAuditCommand('/some/dir');
+      fresh.runSnykCommand('/some/dir');
+
+      expect(execFileSync).toHaveBeenNthCalledWith(
+        1,
+        'npm',
+        ['audit', '--audit-level=moderate', '--json'],
+        expect.objectContaining({ maxBuffer: 64 * 1024 * 1024 }),
+      );
+      expect(execFileSync).toHaveBeenNthCalledWith(
+        2,
+        'snyk',
+        ['test', '--json'],
+        expect.objectContaining({ maxBuffer: 64 * 1024 * 1024 }),
+      );
+    });
+
+    it('records a Snyk crash in details while leaving status unchanged', async () => {
+      scanner.results.vulnerabilities.status = 'warning';
+      jest.spyOn(scanner, 'runSnykCommand').mockImplementation(() => {
+        throw new Error('snyk exploded');
+      });
+
+      await scanner.runSnykScan('/x');
+
+      expect(scanner.results.vulnerabilities.status).toBe('warning');
+      expect(scanner.results.vulnerabilities.details).toContain(
+        'Snyk scan failed: snyk exploded',
+      );
+    });
+
+    it('records a Snyk timeout with a truncated message', async () => {
+      const timeout = new Error(`spawnSync snyk ETIMEDOUT ${'x'.repeat(1000)}`);
+      timeout.code = 'ETIMEDOUT';
+      jest.spyOn(scanner, 'runSnykCommand').mockImplementation(() => {
+        throw timeout;
+      });
+
+      await scanner.runSnykScan('/x');
+      const [line] = scanner.results.vulnerabilities.details;
+
+      expect(
+        line.startsWith('Snyk scan failed: spawnSync snyk ETIMEDOUT'),
+      ).toBe(true);
+      expect(line.length).toBeLessThanOrEqual(
+        'Snyk scan failed: '.length + 200,
+      );
+    });
+
+    it('records unparseable Snyk output (exit 0) in details', async () => {
+      jest.spyOn(scanner, 'runSnykCommand').mockReturnValue('not json');
+
+      await scanner.runSnykScan('/x');
+
+      expect(
+        scanner.results.vulnerabilities.details.some((line) =>
+          line.startsWith('Snyk scan failed:'),
+        ),
+      ).toBe(true);
+      expect(scanner.results.vulnerabilities.status).toBe('pending');
+    });
+
+    it('puts -- before the scan path so a leading-dash path is not an option', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../security-scan.mjs',
+      );
+
+      new loaded.SecurityScanner().runClamScanCommand(
+        '--database=/evil',
+        '/tmp/x.log',
+        false,
+      );
+
+      expect(execFileSync).toHaveBeenCalledWith(
+        'clamscan',
+        [
+          '--recursive',
+          '--infected',
+          '--quiet',
+          '--log=/tmp/x.log',
+          '--',
+          '--database=/evil',
+        ],
+        expect.any(Object),
+      );
+    });
+
+    it.each([
+      ['clean scan', undefined],
+      ['infected scan', 1],
+    ])(
+      'deletes the temporary ClamAV log after a %s',
+      async (_label, status) => {
+        const { writeFileSync } = await import('node:fs');
+        let usedLogPath;
+        jest
+          .spyOn(scanner, 'checkClamAvAvailable')
+          .mockImplementation(() => {});
+        jest
+          .spyOn(scanner, 'runClamScanCommand')
+          .mockImplementation((scanPath, clamLogPath) => {
+            usedLogPath = clamLogPath;
+            writeFileSync(clamLogPath, 'FOUND: Eicar');
+            if (status) {
+              const infected = new Error('infected');
+              infected.status = status;
+              throw infected;
+            }
+          });
+
+        await scanner.performMalwareScan(temporaryDirectory, false);
+
+        expect(usedLogPath).toBeDefined();
+        await expect(fs.access(usedLogPath)).rejects.toThrow();
+        expect(scanner.results.malware.status).toBe(
+          status ? 'failed' : 'passed',
+        );
+
+        if (status) {
+          expect(scanner.results.malware.details.join('\n')).toContain('Eicar');
+        }
+      },
+    );
+
+    it('deletes the temporary ClamAV log when clamscan itself fails', async () => {
+      const { writeFileSync } = await import('node:fs');
+      let usedLogPath;
+      jest.spyOn(scanner, 'checkClamAvAvailable').mockImplementation(() => {});
+      jest
+        .spyOn(scanner, 'runClamScanCommand')
+        .mockImplementation((scanPath, clamLogPath) => {
+          usedLogPath = clamLogPath;
+          writeFileSync(clamLogPath, 'partial');
+          const crashed = new Error('clamscan crashed');
+          crashed.status = 2;
+          throw crashed;
+        });
+
+      await expect(
+        scanner.performMalwareScan(temporaryDirectory, false),
+      ).rejects.toThrow('ClamAV scan failed');
+      await expect(fs.access(usedLogPath)).rejects.toThrow();
+    });
+  });
+
+  describe('security-scan: missing scan root fails the scan (fix H)', () => {
+    let scanner;
+
+    beforeEach(() => {
+      scanner = new SecurityScanner();
+    });
+
+    it('getAllFiles throws for a nonexistent root and keeps the cause', async () => {
+      const missing = path.join(temporaryDirectory, 'does-not-exist');
+      let caught;
+      try {
+        await scanner.getAllFiles(missing);
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught.message).toBe(
+        `Cannot read scan path ${missing}: ${caught.cause.message}`,
+      );
+      expect(caught.cause.code).toBe('ENOENT');
+    });
+
+    it('getAllFiles throws when the root is a file', async () => {
+      const file = path.join(temporaryDirectory, 'plain.txt');
+      await fs.writeFile(file, 'x');
+
+      await expect(scanner.getAllFiles(file)).rejects.toThrow(
+        'Cannot read scan path',
+      );
+    });
+
+    it('fallback malware scan reports status error instead of "No suspicious patterns detected"', async () => {
+      jest.spyOn(scanner, 'checkClamAvAvailable').mockImplementation(() => {
+        throw new Error('no clamscan');
+      });
+      const missing = path.join(temporaryDirectory, 'does-not-exist');
+
+      await expect(scanner.performMalwareScan(missing, false)).rejects.toThrow(
+        'Advanced malware check failed: Cannot read scan path',
+      );
+      expect(scanner.results.malware.status).toBe('error');
+      expect(scanner.results.malware.details.join('\n')).not.toContain(
+        'No suspicious patterns detected',
+      );
     });
   });
 });

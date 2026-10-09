@@ -6,6 +6,10 @@ import chalk from 'chalk';
 import { Command } from 'commander';
 import inquirer from 'inquirer';
 
+// One segment of an npm package name; path separators are only allowed
+// between scope and name.
+const NAME_SEGMENT_PATTERN = /^[\da-z~][\w.~-]*$/iu;
+
 class SecurityApprovalWorkflow {
   constructor() {
     this.allowlistPath = path.join(
@@ -82,7 +86,23 @@ class SecurityApprovalWorkflow {
     await program.parseAsync();
   }
 
+  isValidPackageName(packageName) {
+    if (typeof packageName !== 'string' || packageName.length > 214) {
+      return false;
+    }
+    const isScoped = packageName.startsWith('@');
+    const segments = isScoped ? packageName.slice(1).split('/') : [packageName];
+    return (
+      segments.length === (isScoped ? 2 : 1) &&
+      segments.every((segment) => NAME_SEGMENT_PATTERN.test(segment))
+    );
+  }
+
   async requestApproval(packageName, options) {
+    if (!this.isValidPackageName(packageName)) {
+      throw new Error(`Invalid npm package name: ${String(packageName)}`);
+    }
+
     console.log(
       chalk.blue('📋 Requesting security approval for package:', packageName),
     );
@@ -98,7 +118,7 @@ class SecurityApprovalWorkflow {
 
     // Check if already pending
     const pending = await this.loadPendingApprovals();
-    if (pending[packageName]) {
+    if (Object.hasOwn(pending, packageName)) {
       console.log(
         chalk.yellow('⚠️  Approval request already pending for this package'),
       );
@@ -316,7 +336,9 @@ class SecurityApprovalWorkflow {
 
     // Remove from pending
     const pending = await this.loadPendingApprovals();
-    const request = pending[packageName];
+    const request = Object.hasOwn(pending, packageName)
+      ? pending[packageName]
+      : undefined;
     delete pending[packageName];
     await this.savePendingApprovals(pending);
 
@@ -336,7 +358,7 @@ class SecurityApprovalWorkflow {
 
     // Check pending
     const pending = await this.loadPendingApprovals();
-    if (pending[packageName]) {
+    if (Object.hasOwn(pending, packageName)) {
       console.log(chalk.yellow('⏳ Package approval is pending review'));
       console.log(chalk.gray(`Requested: ${pending[packageName].requestedAt}`));
       // Exit non-zero so CI workflows detect unapproved status
@@ -396,8 +418,11 @@ class SecurityApprovalWorkflow {
   async logDecision(packageName, decision, request, reason = null) {
     const log = await this.loadApprovalLog();
 
-    if (!log.decisions) {
+    if (log.decisions === undefined) {
       log.decisions = [];
+    } else if (!Array.isArray(log.decisions)) {
+      // Refuse to replace a malformed audit trail with a fresh one
+      throw new TypeError('Approval log "decisions" must be an array');
     }
 
     log.decisions.push({
@@ -445,9 +470,25 @@ class SecurityApprovalWorkflow {
   async loadPendingApprovals() {
     try {
       const data = await fs.readFile(this.pendingPath);
-      return JSON.parse(data);
-    } catch {
-      return {};
+      const parsed = JSON.parse(data);
+      if (
+        parsed === null ||
+        typeof parsed !== 'object' ||
+        Array.isArray(parsed)
+      ) {
+        throw new TypeError('Pending approvals must be a JSON object');
+      }
+      return parsed;
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        // File does not exist yet -- first run
+        return {};
+      }
+      // Any other error must propagate: returning {} here would let the next
+      // savePendingApprovals overwrite the real file with only the new entry.
+      throw new Error(`Failed to load pending approvals: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -459,9 +500,25 @@ class SecurityApprovalWorkflow {
   async loadApprovalLog() {
     try {
       const data = await fs.readFile(this.approvalLogPath);
-      return JSON.parse(data);
-    } catch {
-      return { decisions: [] };
+      const parsed = JSON.parse(data);
+      if (
+        parsed === null ||
+        typeof parsed !== 'object' ||
+        Array.isArray(parsed)
+      ) {
+        throw new TypeError('Approval log must be a JSON object');
+      }
+      return parsed;
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        // File does not exist yet -- first run
+        return { decisions: [] };
+      }
+      // Any other error must propagate: returning an empty log here would let
+      // the next saveApprovalLog wipe the existing audit trail.
+      throw new Error(`Failed to load approval log: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
