@@ -1480,5 +1480,40 @@
       "timestamp": "2026-09-26T16:11:39.575Z",
       "version": "20.14.5-depup.3"
     }
+  },
+  "20.14.6": {
+    "0": {
+      "changes": {
+        "@types/node": {
+          "from": ">=20.0.0",
+          "to": "^26.6.4"
+        },
+        "@types/whatwg-mimetype": {
+          "from": "^3.0.2",
+          "to": "^5.0.0"
+        },
+        "@types/ws": {
+          "from": "^8.18.1",
+          "to": "^8.18.2"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.1.0"
+        },
+        "whatwg-mimetype": {
+          "from": "^3.0.0",
+          "to": "^5.0.0"
+        },
+        "ws": {
+          "from": "^8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T00:40:04.183Z",
+      "version": "20.14.6-depup.0"
+    }
   }
 }
