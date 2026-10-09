@@ -27,7 +27,7 @@ Branch: fix/publish-pipeline-audit.
 | 15 | High | Workflow: GPG secret interpolated into script text. | Moved to step env, empty-secret check. |
 | 16 | Med | Workflow: two `labeled` events (package-request + automated) and `cancel-in-progress: true` let the second run cancel an in-flight publish (published but never committed). | Run only on the package-request label event; no cancel. |
 | 17 | Low | Workflow name checks allowed `.`/`..`/leading `-`; body capture silently truncated `lodash evil`. | Tightened JS + bash patterns, line-anchored capture. |
-| 18 | Med | Workflow: failure comment said "queued for retry" for every failure (including when queuing itself failed or run was cancelled); swallowed comment errors (dead BOT_PAT invisible); stderr hidden with `2>/dev/null || true`. | Outcome-based comments, core.warning, visible stderr. |
+| 18 | Med | Workflow: failure comment said "queued for retry" for every failure (including when queuing itself failed or run was cancelled); swallowed comment errors (dead BOT_PAT invisible; BOT_PAT is now removed from the workflow); stderr hidden with `2>/dev/null || true`. | Outcome-based comments, core.warning, visible stderr. |
 | 19 | Med | Workflow: no NPM_TOKEN preflight (cron.yml has one). | `npm whoami` fail-fast before publish. |
 | 20 | Med | depup-secure.yml: error reports never uploaded on scan failure; docker args echo printed the token expansion. | `if: always()` on uploads; redacted echo. |
 
@@ -39,7 +39,8 @@ Branch: fix/publish-pipeline-audit.
 ## Not changed: need a decision (alter blast radius or publish behavior)
 - **Resolved in a follow-up PR (#1312, #1313):**
   - Anyone with a GitHub account could trigger an unreviewed publish. A `gate` job now allows only OWNER/MEMBER/COLLABORATOR authors, a maintainer (write access) re-applying the `package-request` label, or an account at least 30 days old that is not a bot; a lookup error denies (fail closed). Denied requests get a comment, stay open, and publish nothing.
-  - Untrusted package code shared a job with the checkout credential and the BOT_PAT/GPG steps. `process` (NPM_TOKEN only, read-only token, `persist-credentials: false`) now runs depup.mjs and hands the package directory over as an artifact; `commit` (push credential, GPG, BOT_PAT) runs no package code and validates the artifact (regular files only, no git metadata, size bounded) before copying it under `packages/<validated-name>/`.
+  - Untrusted package code shared a job with the checkout credential and the BOT_PAT/GPG steps. `process` (NPM_TOKEN only, read-only token, `persist-credentials: false`) now runs depup.mjs and hands the package directory over as an artifact; `commit` (push credential, GPG) runs no package code and validates the artifact (regular files only, no git metadata, size bounded) before copying it under `packages/<validated-name>/`.
+  - BOT_PAT secret is expired/unused; comments now post as github-actions[bot] via the workflow token (`issues: write` on gate and commit); the secret can be deleted.
 - **Smoke-test failure does not block publish** (`maybeTest` only warns). May be intentional.
 - **Queue-for-retry persists deterministic failures** in user-packages.json for the cron to retry forever. Needs a failure classification.
 - **Failed rev-0 publish with no dep updates is never retried** (revision counter skips it).
