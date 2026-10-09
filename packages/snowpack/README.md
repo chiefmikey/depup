@@ -12,54 +12,55 @@ npm install @depup/snowpack
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.61 | **Updated**: 7/26/2026 | **Import test**: failed
+**Original version**: 3.8.8 | **DepUp version**: 3.8.8-depup.62 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `^2.6.4` | `^10.0.1` |
+| @npmcli/arborist | `^2.6.4` | `^10.0.3` |
 | bufferutil | `^4.0.2` | `^4.1.0` |
 | cachedir | `^2.3.0` | `^2.4.0` |
 | cheerio | `1.0.0-rc.10` | `^1.2.0` |
 | chokidar | `^3.4.0` | `^5.0.0` |
 | cli-spinners | `^2.5.0` | `^3.4.0` |
-| cosmiconfig | `^7.0.0` | `^9.0.2` |
+| cosmiconfig | `^7.0.0` | `^10.0.1` |
 | deepmerge | `^4.2.2` | `^4.3.1` |
 | default-browser-id | `^2.0.0` | `^5.0.1` |
 | detect-port | `^1.3.0` | `^2.1.0` |
-| es-module-lexer | `^0.3.24` | `^2.3.1` |
-| esbuild | `~0.9.0` | `^0.28.1` |
+| es-module-lexer | `^0.3.24` | `^3.0.3` |
+| esbuild | `~0.9.0` | `^0.28.2` |
 | estree-walker | `^2.0.2` | `^3.0.3` |
-| execa | `^5.1.1` | `^10.0.0` |
+| execa | `^5.1.1` | `^10.1.0` |
 | fdir | `^5.0.0` | `^6.5.0` |
 | find-cache-dir | `^3.3.1` | `^6.0.0` |
 | find-up | `^5.0.0` | `^8.0.0` |
 | glob | `^7.1.7` | `^13.0.6` |
+| is-plain-object | `^5.0.0` | `^5.1.0` |
 | is-reference | `^1.2.1` | `^3.0.3` |
 | isbinaryfile | `^4.0.6` | `^6.0.0` |
 | jsonschema | `~1.2.5` | `^1.5.0` |
 | kleur | `^4.1.1` | `^4.1.5` |
-| magic-string | `^0.25.7` | `^1.1.0` |
-| meriyah | `^3.1.6` | `^7.2.0` |
+| magic-string | `^0.25.7` | `^1.4.3` |
+| meriyah | `^3.1.6` | `^7.4.0` |
 | mime-types | `^2.1.26` | `^3.0.2` |
 | mkdirp | `^1.0.3` | `^3.0.1` |
 | npm-run-path | `^4.0.1` | `^6.0.0` |
-| open | `^8.2.1` | `^11.0.0` |
+| open | `^8.2.1` | `^11.0.4` |
 | pacote | `^11.3.4` | `^22.0.0` |
 | periscopic | `^2.0.3` | `^4.0.3` |
-| picomatch | `^2.3.0` | `^4.0.5` |
-| postcss | `^8.3.5` | `^8.5.23` |
+| picomatch | `^2.3.0` | `^4.0.7` |
+| postcss | `^8.3.5` | `^8.5.29` |
 | postcss-modules | `^4.0.0` | `^9.0.1` |
-| resolve | `^1.20.0` | `^1.22.12` |
+| resolve | `^1.20.0` | `^1.22.13` |
 | rimraf | `^3.0.0` | `^6.1.3` |
-| rollup | `~2.37.1` | `^4.62.2` |
+| rollup | `~2.37.1` | `^4.64.3` |
 | signal-exit | `^3.0.3` | `^4.1.0` |
 | slash | `~3.0.0` | `^5.1.0` |
 | source-map | `^0.7.3` | `^0.8.0` |
 | strip-ansi | `^6.0.0` | `^7.2.0` |
 | utf-8-validate | `^5.0.3` | `^6.0.6` |
-| ws | `^7.3.0` | `^8.21.1` |
+| ws | `^7.3.0` | `^8.22.0` |
 | yargs-parser | `^20.0.0` | `^22.0.0` |
 
 

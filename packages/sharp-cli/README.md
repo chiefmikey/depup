@@ -12,14 +12,15 @@ npm install @depup/sharp-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.0 | **DepUp version**: 6.1.0-depup.0 | **Updated**: 9/6/2026 | **Import test**: passed
+**Original version**: 6.1.0 | **DepUp version**: 6.1.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | glob | `13.0.x` | `^13.0.6` |
-| yargs | `17.7.x` | `^18.1.0` |
+| sharp | `0.35.4` | `^0.35.5` |
+| yargs | `17.7.x` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sharp-cli&labels=bug).

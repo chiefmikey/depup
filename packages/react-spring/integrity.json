@@ -14,6 +14,39 @@
       "status": "failed",
       "timestamp": "2026-05-22T18:15:41.260Z",
       "version": "10.0.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@react-spring/core": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        },
+        "@react-spring/konva": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        },
+        "@react-spring/native": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        },
+        "@react-spring/three": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        },
+        "@react-spring/web": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        },
+        "@react-spring/zdog": {
+          "from": "~10.1.0",
+          "to": "^10.1.2"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-09T16:13:23.594Z",
+      "version": "10.0.4-depup.1"
     }
   }
 }

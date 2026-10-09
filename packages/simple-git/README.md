@@ -12,7 +12,7 @@ npm install @depup/simple-git
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.36.0 | **DepUp version**: 3.36.0-depup.0 | **Updated**: 4/12/2026 | **Import test**: passed
+**Original version**: 4.0.2 | **DepUp version**: 4.0.2-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 

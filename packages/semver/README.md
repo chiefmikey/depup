@@ -12,7 +12,7 @@ npm install @depup/semver
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.8.2 | **DepUp version**: 7.8.2-depup.0 | **Updated**: 6/4/2026 | **Import test**: passed
+**Original version**: 7.8.5 | **DepUp version**: 7.8.5-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 

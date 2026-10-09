@@ -1,0 +1,51 @@
+{
+  "name": "@depup/recoil",
+  "version": "0.7.7-depup.1",
+  "description": "Recoil - A state management library for React (with updated dependencies)",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "react-native": "native/index.js",
+  "unpkg": "umd/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "umd",
+    "es",
+    "cjs",
+    "native",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "repository": "https://github.com/facebookexperimental/Recoil.git",
+  "license": "MIT",
+  "dependencies": {
+    "hamt_plus": "1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.1"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "recoil",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "recoil",
+    "originalVersion": "0.7.7",
+    "processedAt": "2026-10-09T16:15:28.427Z",
+    "smokeTest": "failed"
+  }
+}

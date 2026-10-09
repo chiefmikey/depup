@@ -12,14 +12,14 @@ npm install @depup/react-native-vector-icons
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.3.0 | **DepUp version**: 10.3.0-depup.0 | **Updated**: 3/18/2026 | **Import test**: unknown
+**Original version**: 10.3.0 | **DepUp version**: 10.3.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | prop-types | `^15.7.2` | `^15.8.1` |
-| yargs | `^16.1.1` | `^18.0.0` |
+| yargs | `^16.1.1` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native-vector-icons&labels=bug).

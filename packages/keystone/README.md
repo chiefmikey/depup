@@ -12,13 +12,13 @@ npm install @depup/keystone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.89 | **Updated**: 10/6/2026 | **Import test**: passed
+**Original version**: 4.2.1 | **DepUp version**: 4.2.1-depup.90 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.4.4` | `^8.0.6` |
+| @babel/core | `^7.4.4` | `^8.0.7` |
 | @babel/plugin-proposal-class-properties | `^7.4.4` | `^7.18.6` |
 | @babel/plugin-proposal-decorators | `^7.4.4` | `^8.0.2` |
 | @babel/plugin-proposal-export-namespace-from | `^7.2.0` | `^7.18.9` |
@@ -30,7 +30,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/plugin-syntax-import-meta | `^7.2.0` | `^7.10.4` |
 | @babel/plugin-transform-object-assign | `^7.2.0` | `^7.29.7` |
 | @babel/polyfill | `^7.4.4` | `^7.12.1` |
-| @babel/preset-env | `^7.4.4` | `^8.0.6` |
+| @babel/preset-env | `^7.4.4` | `^8.0.7` |
 | @babel/preset-react | `^7.0.0` | `^8.0.1` |
 | async | `^2.6.2` | `^3.2.6` |
 | body-parser | `^1.19.0` | `^2.3.0` |
@@ -46,7 +46,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ejs | `^2.6.1` | `^7.0.1` |
 | errorhandler | `^1.5.1` | `^1.5.2` |
 | es6-promise | `^4.2.6` | `^4.2.8` |
-| express | `^4.17.0` | `^5.2.1` |
+| express | `^4.17.0` | `^5.3.0` |
 | express-session | `^1.16.1` | `^1.19.0` |
 | fs-extra | `^8.0.1` | `^11.4.1` |
 | greenlock-express | `^2.7.8` | `^4.0.3` |
@@ -55,7 +55,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | marked | `^0.6.2` | `^18.1.0` |
 | mime-types | `^2.1.24` | `^3.0.2` |
 | moment | `^2.24.0` | `^2.31.0` |
-| mongoose | `^4.13.14` | `^9.11.0` |
+| mongoose | `^4.13.14` | `^9.11.1` |
 | morgan | `^1.9.1` | `^1.12.1` |
 | multer | `^1.4.1` | `^2.4.0` |
 | qs | `^6.7.0` | `^6.16.0` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | redux-thunk | `^2.2.0` | `^3.1.0` |
 | react-select | `^1.2.4` | `^5.10.2` |
 | sanitize-filename | `^1.6.1` | `^1.6.4` |
-| tinymce | `^4.9.2` | `^8.9.2` |
+| tinymce | `^4.9.2` | `^8.9.3` |
 | sanitize-html | `^1.20.1` | `^2.18.0` |
 | scmp | `^1.0.2` | `^2.1.0` |
 | semver | `^6.0.0` | `^7.8.5` |

@@ -279,5 +279,28 @@
       "timestamp": "2026-08-23T00:29:09.055Z",
       "version": "1.9.15-depup.0"
     }
+  },
+  "1.9.17": {
+    "0": {
+      "changes": {
+        "csstype": {
+          "from": "^3.1.0",
+          "to": "^3.2.3"
+        },
+        "seroval": {
+          "from": "~1.6.8",
+          "to": "^1.6.9"
+        },
+        "seroval-plugins": {
+          "from": "~1.6.8",
+          "to": "^1.6.9"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T16:17:07.307Z",
+      "version": "1.9.17-depup.0"
+    }
   }
 }

@@ -12,14 +12,14 @@ npm install @depup/react-redux
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.3.0 | **DepUp version**: 9.3.0-depup.53 | **Updated**: 7/26/2026 | **Import test**: passed
+**Original version**: 9.3.0 | **DepUp version**: 9.3.0-depup.54 | **Updated**: 10/9/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @types/use-sync-external-store | `^0.0.6` | `^1.5.0` |
-| use-sync-external-store | `^1.4.0` | `^1.6.0` |
+| @types/use-sync-external-store | `^0.0.6` | `^1.7.0` |
+| use-sync-external-store | `^1.4.0` | `^1.7.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-redux&labels=bug).

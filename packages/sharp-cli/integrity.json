@@ -97,6 +97,27 @@
       "status": "published",
       "timestamp": "2026-09-06T01:03:52.649Z",
       "version": "6.1.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "glob": {
+          "from": "13.0.x",
+          "to": "^13.0.6"
+        },
+        "sharp": {
+          "from": "0.35.4",
+          "to": "^0.35.5"
+        },
+        "yargs": {
+          "from": "17.7.x",
+          "to": "^18.2.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-09T16:17:00.266Z",
+      "version": "6.1.0-depup.1"
     }
   }
 }

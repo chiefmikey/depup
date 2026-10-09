@@ -12,17 +12,18 @@ npm install @depup/sequelize-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.5 | **DepUp version**: 6.6.5-depup.1 | **Updated**: 3/31/2026 | **Import test**: failed
+**Original version**: 6.6.5 | **DepUp version**: 6.6.5-depup.2 | **Updated**: 10/9/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fs-extra | `^9.1.0` | `^11.3.4` |
-| lodash | `^4.17.21` | `^4.18.0` |
-| resolve | `^1.22.1` | `^1.22.11` |
-| umzug | `^2.3.0` | `^3.8.2` |
-| yargs | `^16.2.0` | `^18.0.0` |
+| fs-extra | `^9.1.0` | `^11.4.1` |
+| js-beautify | `1.15.4` | `^2.0.3` |
+| lodash | `^4.17.21` | `^4.18.1` |
+| resolve | `^1.22.1` | `^1.22.13` |
+| umzug | `^2.3.0` | `^3.8.3` |
+| yargs | `^16.2.0` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sequelize-cli&labels=bug).
