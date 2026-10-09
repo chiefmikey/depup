@@ -107,6 +107,7 @@ npm run heal                # Self-healing repairs
 ## Merging PRs
 - **Squash is the house style.** Merge with `gh pr merge <n> --squash --delete-branch --admin`. The `--admin` is expected: a `main` ruleset blocks a plain merge even when the PR is green, so bare `--squash` fails with "the base branch policy prohibits the merge".
 - **Never `--merge`.** Do not infer the merge method by skimming `git log` titles -- `main` is dominated by the every-8h package-factory cron commits, which are ordinary 1-parent commits that give no signal either way. Verify with parent count instead: `git log --format='%h %p | %s' -20 origin/main` (two hashes in the `%p` column = merge commit, one = squash). A wrong-method merge is not reversible without rewriting shared history. This mistake was made on PR #1298 (2026-08-31).
+- `cicd` (ready/status/deploy) is Gitea-only and does not work here. Wait for PR CI with `gh pr checks <n> --watch`, then merge with the command above. There is no deploy step: the cron workflows run from main.
 - A workflow-only change matches no CI path filter, so **no checks fire** -- an empty `statusCheckRollup` is expected, not a problem. `mergeStateStatus=CLEAN` + `mergeable=MERGEABLE` is the green signal there.
 
 ## Common Mistakes
