@@ -11,6 +11,33 @@ import { getShardConfig, sleep } from './utilities.mjs';
 const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
 
+// depup.mjs exits with this code when --test was requested and the package
+// failed verification (it was recorded in integrity.json, not published).
+const EXIT_VERIFICATION_FAILED = 3;
+// Stop retrying a version once this many revisions failed verification: retries
+// absorb flaky installs, but a genuinely broken package must not be re-run
+// (download, install, test) on every cron cycle forever.
+const MAX_VERIFICATION_ATTEMPTS = 3;
+
+// Number of verification-failed, never-published revisions in one
+// integrity.json version entry ({ [revision]: { smokeTest, status } }).
+function countVerificationFailures(versionEntry) {
+  if (
+    versionEntry === null ||
+    typeof versionEntry !== 'object' ||
+    Array.isArray(versionEntry)
+  ) {
+    return 0;
+  }
+  return Object.values(versionEntry).filter(
+    (rev) =>
+      rev !== null &&
+      typeof rev === 'object' &&
+      rev.smokeTest === 'failed' &&
+      rev.status !== 'published',
+  ).length;
+}
+
 class PackageDiscoverer {
   async processBatches(packagesToProcess) {
     const processedPackages = [];
@@ -362,8 +389,13 @@ class PackageDiscoverer {
               typeof rev === 'object' &&
               rev.status === 'published',
           );
+        const verificationFailures = countVerificationFailures(versionEntry);
         if (hasPublished) {
           console.log(`  ✅ ${package_.name} is up to date`);
+        } else if (verificationFailures >= MAX_VERIFICATION_ATTEMPTS) {
+          console.log(
+            `  ⛔ ${package_.name}@${latestVersion} failed verification ${verificationFailures} times — not retrying`,
+          );
         } else {
           console.log(
             `  🔄 ${package_.name}@${latestVersion} has only failed revisions — retrying`,
@@ -429,6 +461,8 @@ class PackageDiscoverer {
         errorMessage += ': Process timed out';
       } else if (error.killed) {
         errorMessage += ': Process killed';
+      } else if (error.code === EXIT_VERIFICATION_FAILED) {
+        errorMessage += ': Verification failed (smoke test); not published';
       } else if (error.code) {
         errorMessage += `: Exit code ${error.code}`;
       } else {

@@ -16239,3 +16239,287 @@ describe('security modules audit fixes', () => {
     });
   });
 });
+
+// ═══════════════════════════════════════════════════════════════════
+// Verification gate -- a failed --test must block publish (exit code 3)
+// ═══════════════════════════════════════════════════════════════════
+
+describe('verification gate (failed --test blocks publish)', () => {
+  let depup;
+  let temporaryDirectory;
+  let publishSpy;
+  let testSpy;
+
+  const readRevision = async () => {
+    const integrity = JSON.parse(
+      await fs.readFile(
+        path.join(temporaryDirectory, 'packages', 'left-pad', 'integrity.json'),
+      ),
+    );
+    return integrity['1.3.0']['0'];
+  };
+
+  const run = (options) =>
+    depup.processPackage('left-pad@1.3.0', { timeout: '300000', ...options });
+
+  beforeEach(async () => {
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-verify-'),
+    );
+    jest.spyOn(process, 'cwd').mockReturnValue(temporaryDirectory);
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    depup = new DepUp();
+    jest
+      .spyOn(depup, 'fetchManifest')
+      .mockResolvedValue({ name: 'left-pad', version: '1.3.0' });
+    jest
+      .spyOn(depup, 'downloadPackage')
+      .mockImplementation(async (_spec, targetDirectory) => {
+        await fs.mkdir(targetDirectory, { recursive: true });
+        await fs.writeFile(
+          path.join(targetDirectory, 'package.json'),
+          JSON.stringify({ name: 'left-pad', version: '1.3.0' }),
+        );
+      });
+    jest.spyOn(depup, 'safeGenerateReadme').mockResolvedValue();
+    publishSpy = jest.spyOn(depup, 'publishPackage').mockResolvedValue();
+    testSpy = jest.spyOn(depup, 'testPackage').mockResolvedValue(true);
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  it('blocks publish, records the failure and signals exit code 3', async () => {
+    testSpy.mockResolvedValue(false);
+
+    const failure = await run({ publish: true, test: true }).catch(
+      (error) => error,
+    );
+
+    expect(failure).toBeInstanceOf(Error);
+    expect(failure.exitCode).toBe(3);
+    expect(failure.name).toBe('VerificationFailedError');
+    expect(publishSpy).not.toHaveBeenCalled();
+
+    const revision = await readRevision();
+
+    expect(revision.smokeTest).toBe('failed');
+    expect(revision.status).toBe('failed');
+  });
+
+  it('blocks and records a failed verification even without --publish', async () => {
+    testSpy.mockResolvedValue(false);
+
+    const failure = await run({ test: true }).catch((error) => error);
+
+    expect(failure.exitCode).toBe(3);
+    expect(publishSpy).not.toHaveBeenCalled();
+    await expect(readRevision()).resolves.toMatchObject({
+      status: 'failed',
+    });
+  });
+
+  it('publishes when the requested test passes', async () => {
+    await run({ publish: true, test: true });
+
+    expect(publishSpy).toHaveBeenCalledTimes(1);
+
+    const revision = await readRevision();
+
+    expect(revision.smokeTest).toBe('passed');
+    expect(revision.status).toBe('published');
+  });
+
+  it('leaves behavior unchanged when --test is not requested', async () => {
+    testSpy.mockResolvedValue(false);
+
+    await run({ publish: true });
+
+    expect(testSpy).not.toHaveBeenCalled();
+    expect(publishSpy).toHaveBeenCalledTimes(1);
+
+    const revision = await readRevision();
+
+    expect(revision.smokeTest).toBe('skipped');
+    expect(revision.status).toBe('published');
+  });
+
+  it('leaves dry-run unchanged: no test, no publish, no writes', async () => {
+    await run({ dryRun: true, publish: true, test: true });
+
+    expect(testSpy).not.toHaveBeenCalled();
+    expect(publishSpy).not.toHaveBeenCalled();
+    await expect(
+      fs.access(path.join(temporaryDirectory, 'packages', 'left-pad')),
+    ).rejects.toThrow(/ENOENT/u);
+  });
+
+  it('keeps other failures at exit code 1', async () => {
+    depup.fetchManifest.mockRejectedValue(new Error('registry down'));
+
+    const failure = await run({ publish: true, test: true }).catch(
+      (error) => error,
+    );
+
+    expect(failure.exitCode).toBeUndefined();
+  });
+
+  describe('cli entry point', () => {
+    let exitSpy;
+    let originalArguments;
+
+    beforeEach(() => {
+      originalArguments = process.argv;
+      exitSpy = jest.spyOn(process, 'exit').mockImplementation(() => {});
+      process.argv = ['node', 'depup', 'left-pad@1.3.0', '--test', '--publish'];
+    });
+
+    afterEach(() => {
+      process.argv = originalArguments;
+    });
+
+    it('exits 3 when verification fails', async () => {
+      testSpy.mockResolvedValue(false);
+
+      await depup.main();
+
+      expect(exitSpy).toHaveBeenCalledWith(3);
+      expect(publishSpy).not.toHaveBeenCalled();
+    });
+
+    it('exits 1 for any other failure', async () => {
+      depup.fetchManifest.mockRejectedValue(new Error('registry down'));
+
+      await depup.main();
+
+      expect(exitSpy).toHaveBeenCalledWith(1);
+    });
+
+    it('does not exit on success', async () => {
+      await depup.main();
+
+      expect(exitSpy).not.toHaveBeenCalled();
+      expect(publishSpy).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('getPublishStatus', () => {
+    it('reports failed whenever verification failed', () => {
+      expect(depup.getPublishStatus(true, false, false, true)).toBe('failed');
+      expect(depup.getPublishStatus(false, false, false, true)).toBe('failed');
+    });
+  });
+});
+
+describe('cron-sync handling of verification failures (exit 3)', () => {
+  let syncer;
+
+  beforeEach(() => {
+    syncer = new PackageSyncer();
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  const failedRevision = (status = 'failed') => ({
+    smokeTest: 'failed',
+    status,
+  });
+
+  it('spawnAsync rejects a child exiting 3 with a verification message', async () => {
+    const failure = await syncer
+      .spawnAsync('node', ['-e', 'process.exit(3)'], { timeout: 30_000 })
+      .catch((error) => error);
+
+    expect(failure.exitCode).toBe(3);
+    expect(failure.message).toMatch(/verification failed/iu);
+  });
+
+  it('spawnAsync keeps other exit codes generic', async () => {
+    const failure = await syncer
+      .spawnAsync('node', ['-e', 'process.exit(1)'], { timeout: 30_000 })
+      .catch((error) => error);
+
+    expect(failure.exitCode).toBe(1);
+    expect(failure.message).toBe('Process exited with code 1');
+  });
+
+  it('records a verification failure per package without tripping the systemic abort', async () => {
+    jest.spyOn(syncer, 'generateReadme').mockResolvedValue();
+    jest.spyOn(syncer, 'applyUpdate').mockImplementation(async () => {
+      throw Object.assign(new Error('Verification failed'), { exitCode: 3 });
+    });
+
+    const items = Array.from({ length: 12 }, (_value, index) => ({
+      check: { updateType: 'version' },
+      package_: { name: `pkg-${index}` },
+    }));
+
+    const result = await syncer.applyBatches(items);
+
+    expect(result.failedCount).toBe(12);
+    expect(result.healthyAttemptedCount).toBe(0);
+    expect(result.healthyFailedCount).toBe(0);
+    expect(result.failureReasons).toHaveLength(12);
+  });
+
+  it('still counts ordinary failures as healthy failures', async () => {
+    jest.spyOn(syncer, 'generateReadme').mockResolvedValue();
+    jest
+      .spyOn(syncer, 'applyUpdate')
+      .mockRejectedValue(new Error('Process exited with code 1'));
+
+    const result = await syncer.applyBatches([
+      { check: { updateType: 'version' }, package_: { name: 'pkg-a' } },
+    ]);
+
+    expect(result.healthyAttemptedCount).toBe(1);
+    expect(result.healthyFailedCount).toBe(1);
+  });
+
+  it('retries a version with fewer than 3 verification failures', () => {
+    const integrity = {
+      '1.0.0': { 0: failedRevision(), 1: failedRevision() },
+    };
+
+    expect(syncer.shouldRetryFailedRevisions(integrity, '1.0.0')).toBe(true);
+  });
+
+  it('stops retrying a version after 3 verification failures', () => {
+    const integrity = {
+      '1.0.0': {
+        0: failedRevision(),
+        1: failedRevision(),
+        2: failedRevision(),
+      },
+    };
+
+    expect(syncer.shouldRetryFailedRevisions(integrity, '1.0.0')).toBe(false);
+  });
+
+  it('keeps retrying other failures indefinitely and ignores published revisions', () => {
+    const publishFailures = {
+      '1.0.0': {
+        0: { smokeTest: 'passed', status: 'failed' },
+        1: { smokeTest: 'passed', status: 'failed' },
+        2: { smokeTest: 'passed', status: 'failed' },
+        3: { smokeTest: 'passed', status: 'failed' },
+      },
+    };
+    const published = { '1.0.0': { 0: failedRevision('published') } };
+
+    expect(syncer.shouldRetryFailedRevisions(publishFailures, '1.0.0')).toBe(
+      true,
+    );
+    expect(syncer.shouldRetryFailedRevisions(published, '1.0.0')).toBe(false);
+  });
+});

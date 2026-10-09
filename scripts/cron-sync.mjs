@@ -12,6 +12,33 @@ import {
   sleep,
 } from './utilities.mjs';
 
+// depup.mjs exits with this code when --test was requested and the package
+// failed verification (it was recorded in integrity.json, not published).
+const EXIT_VERIFICATION_FAILED = 3;
+// Stop retrying a version once this many revisions failed verification: retries
+// absorb flaky installs, but a genuinely broken package must not be re-run
+// (download, install, test) on every cron cycle forever.
+const MAX_VERIFICATION_ATTEMPTS = 3;
+
+// Number of verification-failed, never-published revisions in one
+// integrity.json version entry ({ [revision]: { smokeTest, status } }).
+function countVerificationFailures(versionEntry) {
+  if (
+    versionEntry === null ||
+    typeof versionEntry !== 'object' ||
+    Array.isArray(versionEntry)
+  ) {
+    return 0;
+  }
+  return Object.values(versionEntry).filter(
+    (rev) =>
+      rev !== null &&
+      typeof rev === 'object' &&
+      rev.smokeTest === 'failed' &&
+      rev.status !== 'published',
+  ).length;
+}
+
 class PackageSyncer {
   /**
    * Phase 1: cheap pre-check at high concurrency.
@@ -100,6 +127,7 @@ class PackageSyncer {
         name: package_.name,
         success: false,
         updateType: check.updateType,
+        verificationFailed: error.exitCode === EXIT_VERIFICATION_FAILED,
       };
     }
   }
@@ -119,7 +147,7 @@ class PackageSyncer {
     // (updateType 'failed-revisions') are a chronic per-package baseline:
     // expected to keep failing, excluded from the systemic ratio so the job
     // can commit its real work instead of aborting on the baseline every run.
-    const acc = {
+    const accumulator = {
       failedCount: 0,
       failureReasons: [],
       healthyAttemptedCount: 0,
@@ -145,7 +173,7 @@ class PackageSyncer {
       );
 
       for (const result of batchResults) {
-        this.accumulateResult(result, acc);
+        this.accumulateResult(result, accumulator);
       }
 
       if (index + this.concurrentPackages < packagesToUpdate.length) {
@@ -153,7 +181,7 @@ class PackageSyncer {
       }
     }
 
-    return acc;
+    return accumulator;
   }
 
   /**
@@ -165,20 +193,25 @@ class PackageSyncer {
    * are defensive (applyOne itself never throws) and are treated as healthy
    * failures so a genuine meltdown still trips the systemic-abort threshold.
    */
-  accumulateResult(result, acc) {
+  accumulateResult(result, accumulator) {
     if (result.status === 'fulfilled') {
-      const isHealthy = result.value.updateType !== 'failed-revisions';
+      // A package that failed verification is a package-specific failure
+      // (recorded, not published), never evidence of a systemic outage, so it
+      // is excluded from the healthy ratio like chronic failed-revisions.
+      const isHealthy =
+        result.value.updateType !== 'failed-revisions' &&
+        !result.value.verificationFailed;
       if (isHealthy) {
-        acc.healthyAttemptedCount++;
+        accumulator.healthyAttemptedCount++;
       }
       if (result.value.success) {
-        acc.syncedPackages.push(result.value.name);
+        accumulator.syncedPackages.push(result.value.name);
       } else {
-        acc.failedCount++;
+        accumulator.failedCount++;
         if (isHealthy) {
-          acc.healthyFailedCount++;
+          accumulator.healthyFailedCount++;
         }
-        acc.failureReasons.push({
+        accumulator.failureReasons.push({
           error: result.value.error,
           name: result.value.name,
         });
@@ -186,11 +219,11 @@ class PackageSyncer {
     } else {
       // Defensive path: applyOne catches its own errors, so rejection is rare.
       // Treat as healthy failure (updateType unknown) so outages still abort.
-      acc.failedCount++;
-      acc.healthyAttemptedCount++;
-      acc.healthyFailedCount++;
+      accumulator.failedCount++;
+      accumulator.healthyAttemptedCount++;
+      accumulator.healthyFailedCount++;
       const error = result.reason?.message || 'Unknown error';
-      acc.failureReasons.push({ error, name: 'unknown' });
+      accumulator.failureReasons.push({ error, name: 'unknown' });
       console.warn(`Sync failed: ${error}`);
     }
   }
@@ -401,7 +434,10 @@ class PackageSyncer {
       // Check whether the current version only has failed revisions -- meaning
       // the publish never actually landed, so we must retry.
       if (
-        this.hasOnlyFailedRevisions(package_.integrityData, package_.version)
+        this.shouldRetryFailedRevisions(
+          package_.integrityData,
+          package_.version,
+        )
       ) {
         console.log(
           `  ${package_.name}@${package_.version} has only failed revisions -- retrying`,
@@ -568,7 +604,11 @@ class PackageSyncer {
         } else if (code === 0) {
           resolve();
         } else {
-          reject(new Error(`Process exited with code ${code}`));
+          const message =
+            code === EXIT_VERIFICATION_FAILED
+              ? 'Verification failed (smoke test); not published'
+              : `Process exited with code ${code}`;
+          reject(Object.assign(new Error(message), { exitCode: code }));
         }
       });
       child.on('error', (error) => {
@@ -664,6 +704,23 @@ class PackageSyncer {
       diff === 'premajor' ||
       diff === 'preminor'
     );
+  }
+
+  // Retry a stuck version unless it already failed verification the maximum
+  // number of times. A fresh upstream version or dependency update still
+  // triggers a new attempt through the other update types.
+  shouldRetryFailedRevisions(integrityData, version) {
+    if (!this.hasOnlyFailedRevisions(integrityData, version)) {
+      return false;
+    }
+    const failures = countVerificationFailures(integrityData[version]);
+    if (failures >= MAX_VERIFICATION_ATTEMPTS) {
+      console.log(
+        `  ${version} failed verification ${failures} times -- not retrying`,
+      );
+      return false;
+    }
+    return true;
   }
 
   hasOnlyFailedRevisions(integrityData, version) {

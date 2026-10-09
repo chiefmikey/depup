@@ -75,13 +75,14 @@ export default [
     // subprocess env is now sanitized to scrub NPM_TOKEN/NODE_AUTH_TOKEN
     // before untrusted installs run -- both add a handful of necessary lines.
     // Registry name/spec whitelist validation, .npmrc removal and subprocess
-    // failure diagnostics add a few dozen more.
+    // failure diagnostics add a few dozen more. The verification-failure gate
+    // (typed error, exit code, status recording) adds a few dozen again.
     files: ['scripts/depup.mjs'],
     rules: {
       complexity: ['error', { max: 15 }],
       'max-lines': [
         'error',
-        { max: 1280, skipBlankLines: true, skipComments: true },
+        { max: 1320, skipBlankLines: true, skipComments: true },
       ],
       'max-lines-per-function': [
         'error',
