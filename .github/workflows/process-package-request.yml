@@ -9,16 +9,24 @@ on:
 permissions:
   contents: write
 
+# cancel-in-progress is false on purpose: cancelling a run mid-publish leaves the
+# package published to npm but never committed or queued. A newer run for the same
+# issue waits for the in-flight one instead of killing it.
 concurrency:
   group: process-package-${{ github.event.issue.number }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   validate-and-process:
     name: Validate and Process Package Request
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # The issue template applies two labels (package-request, automated), which fires
+    # two `labeled` events. Only the event for the package-request label itself may
+    # start a run; any other label event (automated, duplicate, ...) is ignored so one
+    # request never produces overlapping runs.
     if: |
+      github.event.label.name == 'package-request' &&
       github.event.issue.labels != null &&
       contains(github.event.issue.labels.*.name, 'package-request')
 
@@ -46,8 +54,9 @@ jobs:
             const issueBody = context.payload.issue.body || '';
 
             // Extract package name (handle scoped packages @scope/package and regular packages)
-            // Support both with and without backticks
-            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?/);
+            // Support both with and without backticks. The trailing lookahead requires the
+            // value to be the whole line, so `lodash evil` is not silently truncated to `lodash`.
+            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?(?=\s*(?:\n|$))/);
             let packageName = packageNameMatch ? packageNameMatch[1].trim() : '';
 
             // If package name is empty, try extracting from title
@@ -68,8 +77,10 @@ jobs:
 
             // SECURITY: Sanitize package name to prevent shell/expression injection
             // Only allow characters valid in npm package names
-            const safePattern = /^(@?[a-zA-Z0-9._/-]+)$/;
-            if (packageName && !safePattern.test(packageName)) {
+            // Each name segment must start with [a-zA-Z0-9] (so '.', '..', '-x' fail); scope is
+            // optional and at most one '/' is allowed. No stricter than add-package's validPart.
+            const safePattern = /^(?:@[a-zA-Z0-9][a-zA-Z0-9._-]*\/)?[a-zA-Z0-9][a-zA-Z0-9._-]*$/;
+            if (packageName && (packageName === '.' || packageName === '..' || !safePattern.test(packageName))) {
               console.log('Rejected unsafe package name:', JSON.stringify(packageName));
               core.setFailed('Package name contains invalid characters');
               return;
@@ -108,7 +119,12 @@ jobs:
           fi
 
           # Check if package name is valid (supports scoped packages @scope/package and regular packages)
-          if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9._-]+/)?[a-zA-Z0-9._-]+$ ]]; then
+          # Each name segment must start with an alphanumeric (rejects '.', '..', '-x')
+          if [ "$PACKAGE_NAME" = "." ] || [ "$PACKAGE_NAME" = ".." ]; then
+            echo "Invalid package name: $PACKAGE_NAME"
+            exit 1
+          fi
+          if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9][a-zA-Z0-9._-]*/)?[a-zA-Z0-9][a-zA-Z0-9._-]*$ ]]; then
             echo "Invalid package name format: $PACKAGE_NAME"
             exit 1
           fi
@@ -164,9 +180,11 @@ jobs:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
         run: |
           echo "Checking if package $PACKAGE_NAME exists on npm..."
+          NPM_STDERR="${RUNNER_TEMP:-/tmp}/npm-view-stderr.txt"
 
-          # Try to fetch package info from npm with timeout
-          if timeout 30s npm view "$PACKAGE_NAME" --json > package_info.json 2>/dev/null; then
+          # Try to fetch package info from npm with timeout (stderr kept for diagnostics)
+          if timeout 30s npm view "$PACKAGE_NAME" --json > package_info.json 2> "$NPM_STDERR"; then
+            rm -f "$NPM_STDERR"
             # Verify the response is valid JSON and contains package info
             if [ ! -s package_info.json ] || ! jq -e '.name' package_info.json > /dev/null 2>&1; then
               echo "Package $PACKAGE_NAME does not exist on npm (invalid response)"
@@ -194,6 +212,10 @@ jobs:
           else
             EXIT_CODE=$?
             rm -f package_info.json
+            echo "npm view failed (exit $EXIT_CODE); last stderr lines:"
+            # Prefix each line so registry output can never be parsed as a workflow command
+            { tail -n 5 "$NPM_STDERR" | sed 's/^/  npm: /'; } || true
+            rm -f "$NPM_STDERR"
 
             if [ $EXIT_CODE -eq 124 ]; then
               echo "Timeout checking package $PACKAGE_NAME on npm"
@@ -216,7 +238,17 @@ jobs:
           node scripts/add-package.mjs add "$PACKAGE_NAME"
           rm -f package_description.txt package_version.txt package_info.json
 
+      - name: Verify npm auth (fail fast on dead NPM_TOKEN)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if ! npm whoami; then
+            echo "::error::NPM_TOKEN is invalid or expired (npm whoami failed). Rotate the npm automation token at npmjs.com and update the NPM_TOKEN repo secret. Aborting before the publish step."
+            exit 1
+          fi
+
       - name: Process and Publish Package
+        id: publish
         if: success()
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -226,12 +258,20 @@ jobs:
           echo "Processing and publishing $PACKAGE_NAME..."
           node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test --publish
 
+      # if: always() is required: the failure-path Queue step also signs its commit.
       - name: Import GPG Key
         if: always()
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if [ -z "$GPG_PRIVATE_KEY" ]; then
+            echo "::error::GPG_PRIVATE_KEY secret is empty or not set; cannot sign commits"
+            exit 1
+          fi
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Commit and Push
+        id: commit
         if: success()
         env:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
@@ -250,16 +290,16 @@ jobs:
             git reset --hard origin/main
 
             # Re-add package to list (idempotent)
-            node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null || true
+            node scripts/add-package.mjs add "$PACKAGE_NAME" || echo "::warning::add-package did not add $PACKAGE_NAME (already listed or failed; see error above)"
 
             # Re-process if package data was lost by reset (skip publish -- already done)
             if [ ! -d "packages/${PACKAGE_NAME}" ] && [ ! -d "packages/$(echo $PACKAGE_NAME | sed 's|@||;s|/|__|')" ]; then
-              node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test 2>/dev/null || true
+              node scripts/depup.mjs "$PACKAGE_NAME" --bump-deps --test || echo "::warning::Re-processing $PACKAGE_NAME after reset failed; package data may be missing from this commit"
             fi
 
             # Stage list + package data
             git add config/user-packages.json
-            git add packages/ 2>/dev/null || true
+            git add packages/ || echo "::warning::git add packages/ failed (no package data to stage?)"
             if git diff --cached --quiet; then
               echo "No changes (already processed by another workflow)"
               exit 0
@@ -281,6 +321,7 @@ jobs:
           done
 
       - name: Queue for Retry on Failure
+        id: queue
         if: failure() && steps.npm-info.outcome == 'success' && steps.check-existing.outputs.exists == 'false'
         env:
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
@@ -299,7 +340,7 @@ jobs:
             git reset --hard origin/main
 
             # Re-add package to list (idempotent)
-            node scripts/add-package.mjs add "$PACKAGE_NAME" 2>/dev/null || true
+            node scripts/add-package.mjs add "$PACKAGE_NAME" || echo "::warning::add-package did not add $PACKAGE_NAME (already listed or failed; see error above)"
 
             # Stage only the config list (no package data -- publish failed)
             git add config/user-packages.json
@@ -327,10 +368,13 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           CHECK_EXISTS: ${{ steps.check-existing.outputs.exists }}
+          COMMIT_OUTCOME: ${{ steps.commit.outcome }}
           JOB_STATUS: ${{ job.status }}
           NPM_OUTCOME: ${{ steps.npm-info.outcome }}
           PACKAGE_NAME: ${{ steps.parse.outputs.package_name }}
           PARSE_OUTCOME: ${{ steps.parse.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          QUEUE_OUTCOME: ${{ steps.queue.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate-package-name.outcome }}
         with:
           github-token: ${{ secrets.BOT_PAT }}
@@ -342,6 +386,9 @@ jobs:
             const parseFailed = process.env.PARSE_OUTCOME === 'failure';
             const validateFailed = process.env.VALIDATE_OUTCOME === 'failure';
             const npmCheckFailed = process.env.NPM_OUTCOME === 'failure';
+            const published = process.env.PUBLISH_OUTCOME === 'success';
+            const committed = process.env.COMMIT_OUTCOME === 'success';
+            const queued = process.env.QUEUE_OUTCOME === 'success';
 
             let comment = '## Package Request Processing\n\n';
 
@@ -384,11 +431,29 @@ jobs:
               comment += '**Package published**: [`@depup/' + flatName + '`](https://www.npmjs.com/package/@depup/' + flatName + ')\n\n';
               comment += 'Dependencies bumped to latest versions. Install with:\n';
               comment += '```\nnpm install @depup/' + flatName + '\n```';
-            } else {
+            } else if (jobStatus === 'cancelled') {
+              comment += 'Request Cancelled: The workflow run was cancelled before it finished.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += 'The package may not have been processed. This issue is left open for tracking; a maintainer will follow up.';
+            } else if (queued) {
               comment += 'Request Received: Package queued for automatic retry.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
-              comment += 'Your package passed validation but could not be published in this run. DepUp has queued it and will retry automatically on the next cron cycle (within 8 hours).\n\n';
+              if (published && !committed) {
+                comment += 'Your package was published, but recording it in the repository failed in this run. DepUp has queued it and the next cron cycle (within 8 hours) will pick it up.\n\n';
+              } else {
+                comment += 'Your package passed validation but could not be published in this run. DepUp has queued it and will retry automatically on the next cron cycle (within 8 hours).\n\n';
+              }
               comment += 'This issue is left open for tracking. No action is needed on your part.';
+            } else {
+              comment += 'Request Failed: Package could not be completed in this run.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              if (published && !committed) {
+                comment += 'The package was published, but recording it in the repository failed, and queuing it for automatic retry also failed. ';
+              } else {
+                comment += 'This run did not finish processing the package, and queuing it for automatic retry did not complete either. ';
+              }
+              comment += 'This failed workflow run is visible to the maintainers, who will follow up.\n\n';
+              comment += 'This issue is left open for tracking.';
             }
 
             comment += '\n\n---\n*This is an automated response*';
@@ -401,7 +466,7 @@ jobs:
                 body: comment
               });
             } catch (error) {
-              console.log('Could not create comment:', error.message);
+              core.warning('Could not create comment (is BOT_PAT valid?): ' + error.message);
             }
 
       - name: Close Issue on Success

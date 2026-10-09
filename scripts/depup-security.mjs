@@ -8,6 +8,31 @@ import { Command } from 'commander';
 import ora from 'ora';
 import semver from 'semver';
 
+// npm-audit JSON can be many MiB for large trees; the 1 MiB execFileSync
+// default truncates it (ENOBUFS), so raise the cap.
+const MAX_BUFFER = 64 * 1024 * 1024;
+
+// One segment of an npm package name. Path separators are only allowed
+// between scope and name, which also keeps names safe to path.join.
+const NAME_SEGMENT_PATTERN = /^[\da-z~][\w.~-]*$/iu;
+const DIST_TAG_PATTERN = /^[a-z][\w.-]*$/iu;
+
+// Every lifecycle script that npm may run on install, publish, or pack.
+const DANGEROUS_SCRIPTS = [
+  'install',
+  'postinstall',
+  'postpack',
+  'postpublish',
+  'postuninstall',
+  'preinstall',
+  'prepack',
+  'prepare',
+  'prepublish',
+  'prepublishOnly',
+  'preuninstall',
+  'publish',
+];
+
 class SecureDepUp {
   constructor() {
     this.containerId = process.env.HOSTNAME || 'depup-sandbox';
@@ -16,6 +41,9 @@ class SecureDepUp {
       malware: false,
       vulnerability: false,
     };
+    // Set when the malware scanner (ClamAV) was absent, so the attestation
+    // can say 'skipped' instead of implying a scan ran.
+    this.malwareScanSkipped = false;
   }
 
   async main() {
@@ -78,6 +106,13 @@ class SecureDepUp {
       await this.performPreDownloadSecurityScan(packageSpec);
     }
 
+    // Dry run stops here: the checks above only read local config, while the
+    // remaining steps download, write to packages/, and may publish.
+    if (dryRun) {
+      this.logDryRunPlan(packageName, options);
+      return;
+    }
+
     // Step 3: Process in sandbox (download, bump deps, test -- but NOT publish)
     // This creates the package directory with the final bumped code
     await this.runInSandbox(packageSpec, {
@@ -119,18 +154,67 @@ class SecureDepUp {
     console.log(chalk.green('✅ Package processed securely'));
   }
 
-  parsePackageName(packageSpec) {
-    if (packageSpec.startsWith('@')) {
-      // Scoped: @scope/name or @scope/name@version
-      const withoutLeadingAt = packageSpec.slice(1);
-      const atIndex = withoutLeadingAt.indexOf('@');
-      if (atIndex === -1) {
-        return packageSpec; // @scope/name (no version)
-      }
-      return `@${withoutLeadingAt.slice(0, atIndex)}`; // @scope/name (strip version)
+  logDryRunPlan(packageName, options) {
+    const steps = [
+      'download and process the package in the sandbox',
+      ...(options.bumpDeps ? ['bump dependencies to latest'] : []),
+      ...(options.test ? ['run tests'] : []),
+      'scan the processed package',
+      ...(options.publish ? ['publish with security attestation'] : []),
+    ];
+    console.log(chalk.yellow(`Dry run: would process ${packageName}:`));
+    for (const step of steps) {
+      console.log(chalk.yellow(`  - ${step}`));
     }
-    // Unscoped: name or name@version
-    return packageSpec.split('@')[0];
+    console.log(
+      chalk.green('✅ Dry run complete (nothing was downloaded or published)'),
+    );
+  }
+
+  isValidPackageName(name) {
+    if (name.length > 214) {
+      return false;
+    }
+    const segments = name.startsWith('@') ? name.slice(1).split('/') : [name];
+    const expectedSegments = name.startsWith('@') ? 2 : 1;
+    return (
+      segments.length === expectedSegments &&
+      segments.every((segment) => NAME_SEGMENT_PATTERN.test(segment))
+    );
+  }
+
+  /**
+   * Extract the registry package name from `name`, `name@version`,
+   * `@scope/name` or `@scope/name@version`. Throws on anything that is not a
+   * registry spec: URLs, `npm:` aliases, `github:`/`file:` specs and other
+   * non-registry version parts must never be treated as their bare name,
+   * because the allowlist check only sees the name.
+   */
+  parsePackageName(packageSpec) {
+    if (typeof packageSpec !== 'string' || packageSpec.length === 0) {
+      throw new TypeError('Invalid package spec: must be a non-empty string');
+    }
+    // Search from index 1 so the leading '@' of a scoped name is skipped.
+    const versionIndex = packageSpec.indexOf('@', 1);
+    const name =
+      versionIndex === -1 ? packageSpec : packageSpec.slice(0, versionIndex);
+
+    if (!this.isValidPackageName(name)) {
+      throw new Error(`Invalid package name in spec: ${packageSpec}`);
+    }
+    if (versionIndex !== -1) {
+      const version = packageSpec.slice(versionIndex + 1);
+      const isRegistryVersion =
+        version.length > 0 &&
+        !/[/:]/u.test(version) &&
+        (semver.validRange(version) !== null || DIST_TAG_PATTERN.test(version));
+      if (!isRegistryVersion) {
+        throw new Error(
+          `Invalid version in package spec (only semver, semver ranges and dist-tags are allowed): ${packageSpec}`,
+        );
+      }
+    }
+    return name;
   }
 
   async findLatestRevisionDirectory(packageDirectory) {
@@ -233,7 +317,8 @@ class SecureDepUp {
         );
       }
 
-      this.completedScans.malware = true;
+      // Not a malware scan (name-pattern check only), so do not mark
+      // completedScans.malware here; only a real ClamAV pass does.
       spinner.succeed('Pre-download security scan passed');
     } catch (error) {
       spinner.fail('Pre-download security scan failed');
@@ -273,10 +358,14 @@ class SecureDepUp {
 
     try {
       this.runClamScanCommand(packagePath);
+      this.completedScans.malware = true;
+      this.malwareScanSkipped = false;
       spinner.succeed('Malware scan passed');
     } catch (error) {
       if (error.code === 'ENOENT') {
-        // ClamAV not installed -- degrade gracefully
+        // ClamAV not installed -- degrade gracefully, but record that no
+        // malware scan ran so the attestation does not claim one did.
+        this.malwareScanSkipped = true;
         spinner.warn('ClamAV not available, skipping malware scan');
         return;
       }
@@ -293,29 +382,43 @@ class SecureDepUp {
     }
   }
 
+  /**
+   * Fail-closed check of parsed `npm audit --json` output. Output that is
+   * not a report (error JSON, or no metadata.vulnerabilities counts) throws
+   * instead of being treated as a clean audit.
+   */
   checkAuditForCritical(auditData) {
-    if (!auditData?.metadata?.vulnerabilities?.total) {
-      return;
+    if (auditData === null || typeof auditData !== 'object') {
+      throw new Error('npm audit output is not a JSON object');
     }
-    const critical = auditData.metadata.vulnerabilities.critical || 0;
-    const high = auditData.metadata.vulnerabilities.high || 0;
+    if (auditData.error) {
+      const detail =
+        auditData.error.summary || auditData.error.code || 'unknown error';
+      throw new Error(`npm audit reported an error: ${detail}`);
+    }
+    const counts = auditData.metadata?.vulnerabilities;
+    if (counts === null || typeof counts !== 'object') {
+      throw new Error('npm audit output has no metadata.vulnerabilities');
+    }
+    const critical = counts.critical || 0;
+    const high = counts.high || 0;
     if (critical > 0 || high > 0) {
       throw new Error(
         `Critical vulnerabilities found: ${critical} critical, ${high} high`,
       );
     }
-    console.warn(
-      chalk.yellow(
-        `Found ${auditData.metadata.vulnerabilities.total} vulnerabilities`,
-      ),
-    );
+    if (counts.total > 0) {
+      console.warn(chalk.yellow(`Found ${counts.total} vulnerabilities`));
+    }
   }
 
-  safeParseJson(text) {
+  parseAuditJson(text) {
     try {
       return JSON.parse(text);
-    } catch {
-      return {};
+    } catch (error) {
+      throw new Error(`npm audit output is not valid JSON: ${error.message}`, {
+        cause: error,
+      });
     }
   }
 
@@ -332,21 +435,26 @@ class SecureDepUp {
     return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
       cwd: auditDirectory,
       encoding: 'utf8',
+      maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 60_000,
     });
   }
 
   runNpmPublish(revisionDirectory, options) {
-    execFileSync('npm', ['publish', '--access', 'public', '--tag', 'latest'], {
-      cwd: revisionDirectory,
-      env: {
-        ...process.env,
-        NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+    execFileSync(
+      'npm',
+      ['publish', '--access', 'public', '--tag', 'latest', '--ignore-scripts'],
+      {
+        cwd: revisionDirectory,
+        env: {
+          ...process.env,
+          NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+        },
+        stdio: options.debug ? 'inherit' : 'pipe',
+        timeout: 120_000,
       },
-      stdio: options.debug ? 'inherit' : 'pipe',
-      timeout: 120_000,
-    });
+    );
   }
 
   runSnykScan(packagePath) {
@@ -378,20 +486,32 @@ class SecureDepUp {
     try {
       const auditDirectory =
         await this.findLatestRevisionDirectory(packagePath);
-      const auditResult = this.runNpmAuditCommand(auditDirectory);
 
-      this.checkAuditForCritical(this.safeParseJson(auditResult));
+      // npm audit exits non-zero when it finds vulnerabilities but still
+      // prints the report on stdout; any other failure propagates.
+      let auditOutput;
+      let auditExitedNonZero = false;
+      try {
+        auditOutput = this.runNpmAuditCommand(auditDirectory);
+      } catch (error) {
+        if (!error.stdout) {
+          throw error;
+        }
+        auditOutput = String(error.stdout);
+        auditExitedNonZero = true;
+      }
+
+      // Throws on unparseable output, error JSON, missing vulnerability
+      // counts, or critical/high findings -- the scan is then NOT completed.
+      this.checkAuditForCritical(this.parseAuditJson(auditOutput));
       this.runSnykScan(auditDirectory);
       this.completedScans.vulnerability = true;
-      spinner.succeed('Vulnerability scan completed');
-    } catch (error) {
-      // npm audit exits non-zero when vulnerabilities found; try stdout
-      if (error.stdout) {
-        this.checkAuditForCritical(this.safeParseJson(error.stdout));
-        this.completedScans.vulnerability = true;
-        spinner.warn('Vulnerability scan found non-critical issues');
-        return;
+      if (auditExitedNonZero) {
+        spinner.warn('Vulnerability scan completed with non-critical findings');
+      } else {
+        spinner.succeed('Vulnerability scan completed');
       }
+    } catch (error) {
       spinner.fail('Vulnerability scan failed');
       throw error;
     }
@@ -530,14 +650,9 @@ class SecureDepUp {
     }
 
     // Verify no dangerous scripts remain
-    const dangerousScripts = [
-      'preinstall',
-      'postinstall',
-      'preuninstall',
-      'postuninstall',
-    ];
-    for (const script of dangerousScripts) {
-      if (packageJson.scripts?.[script]) {
+    const scripts = packageJson.scripts ?? {};
+    for (const script of DANGEROUS_SCRIPTS) {
+      if (Object.hasOwn(scripts, script)) {
         throw new Error(`Dangerous script detected: ${script}`);
       }
     }
@@ -565,6 +680,13 @@ class SecureDepUp {
     }
   }
 
+  getMalwareAttestation() {
+    if (this.completedScans.malware) {
+      return 'passed';
+    }
+    return this.malwareScanSkipped ? 'skipped' : 'not-run';
+  }
+
   async addSecurityAttestation(packagePath) {
     // Write attestation to the version/revision directory (ships with publish)
     const revisionDirectory =
@@ -579,7 +701,7 @@ class SecureDepUp {
       container: this.containerId,
       scans: {
         compatibility: this.completedScans.compatibility ? 'passed' : 'not-run',
-        malware: this.completedScans.malware ? 'passed' : 'not-run',
+        malware: this.getMalwareAttestation(),
         vulnerabilities: this.completedScans.vulnerability
           ? 'passed'
           : 'not-run',
