@@ -1,0 +1,80 @@
+{
+  "name": "@depup/p-all",
+  "version": "5.0.1-depup.1",
+  "description": "Run promise-returning & async functions concurrently with optional limited concurrency (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/p-all",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "type": "module",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "p-all",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "promise",
+    "all",
+    "function",
+    "func",
+    "fn",
+    "limited",
+    "limit",
+    "control",
+    "rate",
+    "collection",
+    "iterable",
+    "iterator",
+    "fulfilled",
+    "async",
+    "await",
+    "promises",
+    "concurrent",
+    "concurrently",
+    "concurrency",
+    "parallel",
+    "bluebird"
+  ],
+  "dependencies": {
+    "p-map": "^7.1.0"
+  },
+  "devDependencies": {
+    "ava": "^5.2.0",
+    "delay": "^5.0.0",
+    "tsd": "^0.28.1",
+    "xo": "^0.54.1"
+  },
+  "depup": {
+    "changes": {
+      "p-map": {
+        "from": "^6.0.0",
+        "to": "^7.1.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "p-all",
+    "originalVersion": "5.0.1",
+    "processedAt": "2026-10-10T08:11:39.366Z",
+    "smokeTest": "passed"
+  }
+}

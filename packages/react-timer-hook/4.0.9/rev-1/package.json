@@ -1,0 +1,84 @@
+{
+  "name": "@depup/react-timer-hook",
+  "version": "4.0.9-depup.1",
+  "description": "Lightweight, zero-dependency, drift-free, millisecond-precision custom React Hook for timer (countdown), stopwatch, and time logic/state in your React and React Native components. (with updated dependencies)",
+  "main": "dist/index.js",
+  "types": "dist/types/src/index.d.ts",
+  "scripts": {
+    "build:demo": "rm -r ./docs || true && webpack --config webpack.dev.js && cp ./demo/index.html ./docs && webpack-dev-server --open --config webpack.dev.js",
+    "build:prod": "rm -r ./dist || true && webpack --config webpack.prod.js && rm -r ./dist/types/demo",
+    "lint": "node_modules/.bin/eslint src",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn tsc --noEmit && yarn test"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrlabib/react-timer-hook.git"
+  },
+  "keywords": [
+    "react-timer-hook",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "react-hook",
+    "react-hooks",
+    "timer",
+    "countdown",
+    "time",
+    "clock",
+    "useTimer",
+    "useStopwatch",
+    "useTime",
+    "react-native"
+  ],
+  "author": "amrlabib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amrlabib/react-timer-hook/issues"
+  },
+  "homepage": "https://github.com/amrlabib/react-timer-hook#readme",
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^4.0.1",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "react": "19",
+    "react-dom": "19",
+    "styled-components": "^5.2.1",
+    "ts-jest": "^29.4.11",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^5.2.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-timer-hook",
+    "originalVersion": "4.0.9",
+    "processedAt": "2026-10-10T08:13:40.964Z",
+    "smokeTest": "failed"
+  }
+}

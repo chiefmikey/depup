@@ -12,13 +12,13 @@ npm install @depup/react-dropzone
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 20.1.2 | **DepUp version**: 20.1.2-depup.0 | **Updated**: 9/14/2026 | **Import test**: failed
+**Original version**: 20.1.3 | **DepUp version**: 20.1.3-depup.0 | **Updated**: 10/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| file-selector | `^5.0.0` | `^5.0.1` |
+| attr-accept | `^4.0.0` | `^4.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-dropzone&labels=bug).
