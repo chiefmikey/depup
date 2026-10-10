@@ -1,0 +1,69 @@
+{
+  "name": "@depup/structured-headers",
+  "version": "2.1.1-depup.0",
+  "description": "Implementation of Structured Field Values for HTTP (RFC9651, RFC8941) (with updated dependencies)",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./cjs/index.cjs"
+  },
+  "source": "src/index.ts",
+  "scripts": {
+    "test": "make test",
+    "build": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/evert/structured-header.git"
+  },
+  "keywords": [
+    "structured-headers",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "http",
+    "structured-header",
+    "structured-fields",
+    "structured fields",
+    "RFC9651",
+    "RFC8941",
+    "headers"
+  ],
+  "author": "Evert Pot <me@evertpot.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evert/structured-header/issues"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "cjs/",
+    "LICENSE",
+    "changes.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/evert/structured-header#readme",
+  "devDependencies": {
+    "@types/node": "^18.19.10",
+    "base32-decode": "^1.0.0",
+    "base32-encode": "^2.0.0",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "tsup": "^8.3.0",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "npm": ">=6",
+    "node": ">=18"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "structured-headers",
+    "originalVersion": "2.1.1",
+    "processedAt": "2026-10-10T08:14:22.292Z",
+    "smokeTest": "passed"
+  }
+}
