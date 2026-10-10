@@ -1,0 +1,97 @@
+{
+  "name": "@depup/react-live",
+  "version": "5.0.1-depup.0",
+  "description": "A production-focused playground for live editing React code (with updated dependencies)",
+  "license": "MIT",
+  "author": "@FormidableLabs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FormidableLabs/react-live.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/react-live/issues"
+  },
+  "keywords": [
+    "react-live",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "live",
+    "live edit",
+    "component playground",
+    "react live"
+  ],
+  "sideEffects": false,
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
+    "stories": "vite --config vite.stories.mts",
+    "stories:build": "vite build --config vite.stories.mts",
+    "stories:test": "vitest run -c vitest.browser.mts",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.stories.json"
+  },
+  "dependencies": {
+    "prism-react-renderer": "^2.4.1",
+    "sucrase": "^3.35.1",
+    "use-editable": "^2.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/browser-playwright": "^5.0.1",
+    "@vitest/coverage-v8": "^5.0.1",
+    "jsdom": "^30.0.1",
+    "playwright": "^1.63.0",
+    "publint": "^0.3.24",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsdown": "^0.23.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "react-live",
+    "originalVersion": "5.0.1",
+    "processedAt": "2026-10-10T00:36:31.780Z",
+    "smokeTest": "passed"
+  }
+}
