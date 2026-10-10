@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@types/earcut": {
+      "from": "^3.0.0",
+      "to": "^3.2.4"
+    },
+    "@webgpu/types": {
+      "from": "^0.1.69",
+      "to": "^0.1.74"
+    },
+    "@xmldom/xmldom": {
+      "from": "^0.8.15",
+      "to": "^0.9.12"
+    },
+    "earcut": {
+      "from": "^3.0.2",
+      "to": "^3.2.4"
+    },
+    "eventemitter3": {
+      "from": "^5.0.1",
+      "to": "^5.0.4"
+    },
+    "tiny-lru": {
+      "from": "^11.4.7",
+      "to": "^13.1.0"
+    }
+  },
+  "timestamp": "2026-10-10T00:35:17.695Z",
+  "totalUpdated": 6
+}

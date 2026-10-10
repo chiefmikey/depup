@@ -1,0 +1,133 @@
+{
+  "name": "@depup/nuxt__kit",
+  "version": "4.6.1-depup.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt/nuxt.git",
+    "directory": "packages/kit"
+  },
+  "homepage": "https://nuxt.com/docs/4.x/api/kit",
+  "description": "Toolkit for authoring modules and interacting with Nuxt (with updated dependencies)",
+  "license": "MIT",
+  "type": "module",
+  "types": "./dist/index.d.mts",
+  "typesVersions": {
+    "*": {
+      "internal": [
+        "./dist/internal/index.d.mts"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./internal": "./dist/internal/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "consola": "^3.4.2",
+    "defu": "^6.1.7",
+    "destr": "^2.0.5",
+    "errx": "^0.2.2",
+    "exsolve": "^1.1.3",
+    "ignore": "^7.0.12",
+    "klona": "^2.0.6",
+    "microdiff": "^1.6.0",
+    "nostics": "^1.3.0",
+    "package-manager-detector": "^1.9.0",
+    "pathe": "^2.0.3",
+    "rc9": "^3.1.0",
+    "scule": "^1.3.0",
+    "std-env": "^4.3.0",
+    "tinyexec": "^1.3.1",
+    "tinyglobby": "^0.2.17",
+    "unctx": "^3.0.1",
+    "verkit": "^0.5.0"
+  },
+  "peerDependencies": {
+    "@nuxt/schema": "^3.0.0 || ^4.0.0 || ^5.0.0-0",
+    "confbox": ">=0.1.0",
+    "dotenv": "*",
+    "giget": ">=3.1.0",
+    "jiti": "^2.0.0",
+    "mlly": "^1.2.0",
+    "oxc-parser": ">=0.56.0",
+    "rolldown": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@nuxt/schema": {
+      "optional": true
+    },
+    "confbox": {
+      "optional": true
+    },
+    "dotenv": {
+      "optional": true
+    },
+    "giget": {
+      "optional": true
+    },
+    "jiti": {
+      "optional": true
+    },
+    "mlly": {
+      "optional": true
+    },
+    "oxc-parser": {
+      "optional": true
+    },
+    "rolldown": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@nuxt/schema": "4.6.1",
+    "c12": "4.0.0-rc.2",
+    "chokidar": "^5.0.0",
+    "confbox": "^0.3.1",
+    "dotenv": "^18.0.6",
+    "giget": "^3.3.1",
+    "hookable": "^6.1.2",
+    "jiti": "^2.7.0",
+    "mlly": "^1.8.2",
+    "oxc-parser": "^0.152.0",
+    "pkg-types": "^2.3.3",
+    "rolldown": "~1.2.13",
+    "tsdown": "0.23.0",
+    "untyped": "^2.0.0",
+    "vite": "^8.3.2",
+    "vitest": "5.0.3"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "inlinedDependencies": {
+    "c12": "4.0.0-rc.2",
+    "pkg-types": "2.3.3",
+    "untyped": "2.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test:attw": "node ../../scripts/test-attw.ts"
+  },
+  "keywords": [
+    "@nuxt/kit",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@nuxt/kit",
+    "originalVersion": "4.6.1",
+    "processedAt": "2026-10-10T00:38:16.078Z",
+    "smokeTest": "passed"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "@depup/objection",
+  "version": "3.5.0-depup.0",
+  "description": "An SQL-friendly ORM for Node.js (with updated dependencies)",
+  "main": "lib/objection.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run eslint && mocha --slow 10 --timeout 15000 --reporter spec --recursive tests --exclude \"tests/unit/relations/files/**\" && npm run test:typings",
+    "test:fast": "mocha --slow 10 --timeout 15000 --reporter spec --recursive tests --bail --exclude \"tests/unit/relations/files/**\"",
+    "test:typings": "tsc && prettier --check \"typings/**/*.ts\" \"tests/ts/**/*.ts\"",
+    "prettier": "prettier --write \"{examples,lib,tests,testUtils,typings,doc}/**/*.{js,ts}\"",
+    "eslint": "eslint --format codeframe \"examples/**/*.js\" \"lib/**/*.js\" \"tests/**/*.js\"",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc"
+  },
+  "author": {
+    "name": "Sami Koskimäki",
+    "email": "sami@jakso.me",
+    "url": "https://github.com/koskimas"
+  },
+  "contributors": [
+    "Sami Koskimäki <sami@jakso.me> (https://github.com/koskimas)",
+    "Mikael Lepistö <mikael.lepisto@vincit.com> (https://github.com/elhigu)",
+    "Matthew McEachen <matthew-objection@photostructure.com> (https://github.com/mceachen)",
+    "Jürg Lehni <juerg@scratchdisk.com> (https://github.com/lehni)",
+    "Igor Savin <kibertoad@gmail.com> (https://github.com/kibertoad)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditojs/objection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ditojs/objection/issues"
+  },
+  "homepage": "https://ditojs.github.io/objection/",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "objection",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "orm",
+    "knex",
+    "sql",
+    "query",
+    "query builder",
+    "postgresql",
+    "mysql",
+    "sqlite3"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib/*",
+    "typings/*",
+    "changes.json"
+  ],
+  "types": "./typings/objection/index.d.ts",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "db-errors": "^0.2.3"
+  },
+  "peerDependencies": {
+    "knex": ">=2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "chai": "^4.3.10",
+    "chai-subset": "^1.6.0",
+    "eslint": "^8.54.0",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-prettier": "^5.3.1",
+    "expect.js": "^0.3.1",
+    "knex": "^3.3.0",
+    "mocha": "^11.2.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.15.6",
+    "prettier": "3.9.9",
+    "sqlite3": "^5.1.7",
+    "typescript": ">=5.8.3",
+    "vitepress": "1.6.4"
+  },
+  "depup": {
+    "changes": {
+      "ajv": {
+        "from": "^8.17.1",
+        "to": "^8.20.0"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "objection",
+    "originalVersion": "3.5.0",
+    "processedAt": "2026-10-10T00:35:28.688Z",
+    "smokeTest": "passed"
+  }
+}

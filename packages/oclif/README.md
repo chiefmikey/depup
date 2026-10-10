@@ -12,21 +12,21 @@ npm install @depup/oclif
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.4 | **DepUp version**: 6.0.4-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 6.0.5 | **DepUp version**: 6.0.5-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1148.0` |
-| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1148.0` |
+| @aws-sdk/client-cloudfront | `^3.1079.0` | `^3.1149.0` |
+| @aws-sdk/client-s3 | `^3.1079.0` | `^3.1149.0` |
 | @inquirer/confirm | `^3.1.22` | `^6.3.3` |
 | @inquirer/input | `^2.2.4` | `^5.1.7` |
 | @inquirer/select | `^2.5.0` | `^5.2.6` |
-| @oclif/core | `^5.0.0` | `^5.1.4` |
+| @oclif/core | `^5.0.0` | `^5.1.6` |
 | @oclif/plugin-help | `^7.0.0` | `^7.0.3` |
 | @oclif/plugin-not-found | `^4.0.0` | `^4.0.3` |
-| @oclif/plugin-warn-if-update-available | `^4.0.0` | `^4.0.2` |
+| @oclif/plugin-warn-if-update-available | `^4.0.0` | `^4.0.3` |
 | ansis | `^3.16.0` | `^4.4.0` |
 | change-case | `^4` | `^5.4.4` |
 | debug | `^4.4.0` | `^4.4.3` |
