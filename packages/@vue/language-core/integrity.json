@@ -756,5 +756,28 @@
       "timestamp": "2026-10-02T16:10:24.312Z",
       "version": "3.3.12-depup.0"
     }
+  },
+  "3.3.13": {
+    "0": {
+      "changes": {
+        "@vue/compiler-dom": {
+          "from": "^3.5.0",
+          "to": "^3.5.43"
+        },
+        "@vue/shared": {
+          "from": "^3.5.0",
+          "to": "^3.5.43"
+        },
+        "picomatch": {
+          "from": "^4.0.4",
+          "to": "^4.0.7"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-10T16:09:41.246Z",
+      "version": "3.3.13-depup.0"
+    }
   }
 }

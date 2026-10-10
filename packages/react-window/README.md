@@ -12,7 +12,7 @@ npm install @depup/react-window
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.3.3 | **DepUp version**: 2.3.3-depup.0 | **Updated**: 9/27/2026 | **Import test**: failed
+**Original version**: 2.3.4 | **DepUp version**: 2.3.4-depup.0 | **Updated**: 10/10/2026 | **Import test**: failed
 
 ## What changed
 
