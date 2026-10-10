@@ -1,6 +1,6 @@
 {
   "name": "@depup/trpc",
-  "version": "0.11.3-depup.0",
+  "version": "0.11.3-depup.5",
   "description": "TypeScript-first toolkit for building RPC APIs (with updated dependencies)",
   "main": "./lib/src/index.js",
   "types": "./lib/src/index.d.ts",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/vriad/trpc",
   "dependencies": {
-    "axios": "^1.13.6"
+    "axios": "^1.20.0"
   },
   "tags": [],
   "keywords": [
@@ -69,13 +69,13 @@
     "changes": {
       "axios": {
         "from": "^0.19.2",
-        "to": "^1.13.6"
+        "to": "^1.20.0"
       }
     },
     "depsUpdated": 1,
     "originalPackage": "trpc",
     "originalVersion": "0.11.3",
-    "processedAt": "2026-03-18T00:39:51.381Z",
+    "processedAt": "2026-10-10T00:36:13.243Z",
     "smokeTest": "passed"
   }
 }

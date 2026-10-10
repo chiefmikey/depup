@@ -12,14 +12,14 @@ npm install @depup/terser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.48.0 | **DepUp version**: 5.48.0-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
+**Original version**: 5.51.2 | **DepUp version**: 5.51.2-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | @jridgewell/source-map | `^0.3.3` | `^0.3.11` |
-| acorn | `^8.15.0` | `^8.16.0` |
+| acorn | `^8.15.0` | `^8.19.0` |
 | commander | `^2.20.0` | `^15.0.0` |
 | source-map-support | `~0.5.20` | `^0.5.21` |
 

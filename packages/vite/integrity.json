@@ -707,6 +707,19 @@
       "status": "failed",
       "timestamp": "2026-10-09T15:12:43.108Z",
       "version": "8.3.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "rolldown": {
+          "from": "~1.2.12",
+          "to": "^1.2.13"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-10T00:36:43.181Z",
+      "version": "8.3.4-depup.1"
     }
   }
 }

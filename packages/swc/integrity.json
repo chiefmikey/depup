@@ -14,6 +14,23 @@
       "status": "published",
       "timestamp": "2026-03-17T22:55:44.192Z",
       "version": "1.0.11-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@swc/cli": {
+          "from": "^0.1.26",
+          "to": "^0.8.1"
+        },
+        "@swc/core": {
+          "from": "^1.2.12",
+          "to": "^1.16.13"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-10T00:35:28.112Z",
+      "version": "1.0.11-depup.1"
     }
   }
 }

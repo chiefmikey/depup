@@ -12,55 +12,22 @@ npm install @depup/lerna
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.1 | **DepUp version**: 10.0.1-depup.8 | **Updated**: 10/7/2026 | **Import test**: failed
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @npmcli/arborist | `9.1.6` | `^10.0.3` |
-| @npmcli/package-json | `7.0.2` | `^8.0.0` |
-| @npmcli/run-script | `10.0.3` | `^11.0.0` |
 | @nx/devkit | `>=23.1.0 < 24.0.0` | `^23.3.0` |
-| @octokit/rest | `20.1.2` | `^22.0.1` |
-| ci-info | `4.3.1` | `^4.4.0` |
-| cmd-shim | `6.0.3` | `^9.0.2` |
-| conventional-changelog | `8.1.0` | `^8.1.3` |
-| conventional-changelog-angular | `9.2.1` | `^9.4.0` |
 | conventional-commits-parser | `7.1.2` | `^7.1.3` |
-| cosmiconfig | `9.0.0` | `^10.0.1` |
-| dedent | `1.5.3` | `^1.7.2` |
-| envinfo | `7.13.0` | `^7.21.0` |
-| execa | `5.0.0` | `^10.1.0` |
+| cosmiconfig | `9.0.2` | `^10.0.1` |
+| execa | `10.0.1` | `^10.1.0` |
 | fs-extra | `^11.2.0` | `^11.4.1` |
-| git-url-parse | `14.0.0` | `^16.1.0` |
-| handlebars | `4.7.9` | `^4.7.10` |
-| import-local | `3.1.0` | `^3.2.0` |
-| ini | `^1.3.8` | `^7.0.0` |
-| init-package-json | `8.2.2` | `^9.0.0` |
-| inquirer | `12.9.6` | `^14.2.3` |
-| js-yaml | `4.3.0` | `^5.4.3` |
-| libnpmaccess | `10.0.3` | `^11.0.0` |
-| libnpmpublish | `11.1.2` | `^12.0.1` |
-| load-json-file | `6.2.0` | `^7.0.1` |
-| make-fetch-happen | `15.0.2` | `^16.0.1` |
-| minimatch | `3.1.4` | `^10.2.6` |
-| npm-package-arg | `13.0.1` | `^14.0.0` |
-| npm-packlist | `10.0.3` | `^11.3.0` |
-| npm-registry-fetch | `19.1.0` | `^20.0.1` |
+| inquirer | `14.2.2` | `^14.2.3` |
+| js-yaml | `5.4.2` | `^5.4.3` |
 | nx | `>=23.1.0 < 24.0.0` | `^23.3.0` |
-| p-map | `4.0.0` | `^7.0.8` |
-| p-queue | `6.6.2` | `^9.3.3` |
-| pacote | `21.0.1` | `^22.0.0` |
-| read-cmd-shim | `4.0.0` | `^7.0.1` |
-| semver | `7.7.2` | `^7.8.5` |
-| signal-exit | `3.0.7` | `^4.1.0` |
-| ssri | `12.0.0` | `^14.0.0` |
-| string-width | `^4.2.3` | `^8.3.0` |
-| tinyglobby | `0.2.12` | `^0.2.17` |
-| validate-npm-package-name | `6.0.2` | `^8.0.0` |
-| write-file-atomic | `5.0.1` | `^8.0.0` |
-| yargs | `17.7.2` | `^18.2.0` |
+| p-map | `7.0.8` | `^7.1.0` |
+| string-width | `^8.0.0` | `^8.3.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/lerna&labels=bug).

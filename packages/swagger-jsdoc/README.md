@@ -12,15 +12,16 @@ npm install @depup/swagger-jsdoc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.1 | **Updated**: 5/29/2026 | **Import test**: passed
+**Original version**: 6.3.0 | **DepUp version**: 6.3.0-depup.2 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @apidevtools/swagger-parser | `^12.1.0` | `^13.1.0` |
 | commander | `6.2.0` | `^15.0.0` |
 | glob | `11.1.0` | `^13.0.6` |
-| yaml | `2.0.0-1` | `^2.9.0` |
+| yaml | `2.0.0-1` | `^2.9.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/swagger-jsdoc&labels=bug).

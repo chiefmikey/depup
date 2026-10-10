@@ -185,5 +185,40 @@
       "timestamp": "2026-05-19T04:37:45.354Z",
       "version": "19.2.1-depup.7"
     }
+  },
+  "20.3.3": {
+    "0": {
+      "changes": {
+        "@azure/core-auth": {
+          "from": "^1.10.1",
+          "to": "^1.11.0"
+        },
+        "@azure/identity": {
+          "from": "^4.13.1",
+          "to": "^4.13.3"
+        },
+        "@js-joda/core": {
+          "from": "^6.0.1",
+          "to": "^6.3.0"
+        },
+        "@types/node": {
+          "from": ">=22",
+          "to": "^26.6.5"
+        },
+        "bl": {
+          "from": "^6.1.4",
+          "to": "^7.0.12"
+        },
+        "iconv-lite": {
+          "from": "^0.7.0",
+          "to": "^0.7.3"
+        }
+      },
+      "depsUpdated": 6,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-10T00:36:22.295Z",
+      "version": "20.3.3-depup.0"
+    }
   }
 }

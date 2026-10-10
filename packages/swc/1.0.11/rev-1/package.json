@@ -1,0 +1,40 @@
+{
+  "name": "@depup/swc",
+  "version": "1.0.11-depup.1",
+  "description": "Alias for @swc/cli (with updated dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@swc/cli": "^0.8.1",
+    "@swc/core": "^1.16.13"
+  },
+  "keywords": [
+    "swc",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {
+      "@swc/cli": {
+        "from": "^0.1.26",
+        "to": "^0.8.1"
+      },
+      "@swc/core": {
+        "from": "^1.2.12",
+        "to": "^1.16.13"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "swc",
+    "originalVersion": "1.0.11",
+    "processedAt": "2026-10-10T00:35:25.190Z",
+    "smokeTest": "passed"
+  }
+}
