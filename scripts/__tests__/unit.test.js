@@ -8874,7 +8874,9 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       const result = await discoverer.fetchPackageVersion('some-pkg');
 
       expect(result).toBeNull();
-      expect(console.warn).toHaveBeenCalled();
+      expect(console.warn).toHaveBeenCalledWith(
+        '  Skipping deprecated package: some-pkg',
+      );
     });
 
     it('uses dist-tags.latest when present', async () => {
@@ -8957,7 +8959,9 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
 
       const packages = await discoverer.getCuratedPackages();
 
-      expect(console.warn).toHaveBeenCalled();
+      expect(console.warn).toHaveBeenCalledWith(
+        'Could not fetch version for package: registry down',
+      );
       expect(packages).toStrictEqual([]);
     });
 
@@ -9124,7 +9128,9 @@ describe('cron-discover.mjs -- coverage gap fill', () => {
       await expect(
         discoverer.processPackage(package_),
       ).resolves.toBeUndefined();
-      expect(console.warn).toHaveBeenCalled();
+      expect(console.warn).toHaveBeenCalledWith(
+        '⚠️  Could not generate README for my-pkg: readme failed',
+      );
     });
   });
 
@@ -9833,7 +9839,10 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       await tester.main();
 
       expect(processExit).toHaveBeenCalledWith(1);
-      expect(console.error).toHaveBeenCalled();
+      expect(console.error).toHaveBeenCalledWith(
+        'Stack trace:',
+        expect.stringContaining('debug mode error'),
+      );
 
       process.argv = originalArgv;
     });
@@ -9865,7 +9874,9 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         strict: false,
       });
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith(
+        `Package: ${temporaryDirectory}`,
+      );
     });
 
     it('runs deep analysis when deep=true', async () => {
@@ -9888,7 +9899,11 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         strict: false,
       });
 
-      expect(performDeepAnalysis).toHaveBeenCalled();
+      expect(performDeepAnalysis).toHaveBeenCalledWith(
+        temporaryDirectory,
+        { dependencies: {}, name: 'test-pkg', version: '1.0.0' },
+        expect.objectContaining({ package: 'test-pkg' }),
+      );
     });
 
     it('saves report when reportPath is specified', async () => {
@@ -9937,7 +9952,16 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         strict: false,
       });
 
-      expect(attemptFixes).toHaveBeenCalled();
+      expect(attemptFixes).toHaveBeenCalledWith(
+        temporaryDirectory,
+        {
+          dependencies: {},
+          engines: { node: '>=999.0.0' },
+          name: 'test-pkg',
+          version: '1.0.0',
+        },
+        expect.objectContaining({ package: 'test-pkg' }),
+      );
     });
 
     it('exits with code 1 in strict mode when issues exist', async () => {
@@ -10207,9 +10231,15 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
         results,
       );
 
-      expect(testInstallation).toHaveBeenCalled();
-      expect(checkPeerDependencies).toHaveBeenCalled();
-      expect(analyzePackageComplexity).toHaveBeenCalled();
+      expect(testInstallation).toHaveBeenCalledWith(
+        temporaryDirectory,
+        results,
+      );
+      expect(checkPeerDependencies).toHaveBeenCalledWith(packageJson, results);
+      expect(analyzePackageComplexity).toHaveBeenCalledWith(
+        temporaryDirectory,
+        results,
+      );
     });
 
     it('records deep_analysis_error when a sub-step throws', async () => {
@@ -10833,7 +10863,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       tester.displayResults(results);
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('Status: EXCELLENT');
     });
 
     it('displays issues when present', () => {
@@ -10849,7 +10879,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       tester.displayResults(results);
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('🚨 Critical Issues:');
     });
 
     it('displays warnings when present', () => {
@@ -10865,7 +10895,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       tester.displayResults(results);
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('⚠️  Warnings:');
     });
 
     it('displays recommendations when present', () => {
@@ -10881,7 +10911,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       tester.displayResults(results);
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('💡 Recommendations:');
     });
 
     it('displays all sections when all are populated', () => {
@@ -10897,7 +10927,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
 
       tester.displayResults(results);
 
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('🚨 Critical Issues:');
     });
   });
 
@@ -10928,7 +10958,7 @@ describe('compatibility-test.mjs -- coverage gap fill', () => {
       const parsed = JSON.parse(content);
 
       expect(parsed.package).toBe('test-pkg');
-      expect(console.log).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith(`Report saved: ${reportPath}`);
     });
   });
 
@@ -12564,7 +12594,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         timeout: '1000',
       });
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith('Debug mode enabled');
     });
 
     it('re-throws and logs error when processPackageCore throws', async () => {
@@ -12585,7 +12615,10 @@ describe('depup.mjs -- coverage gap fill', () => {
         }),
       ).rejects.toThrow('core failure');
 
-      expect(errorSpy).toHaveBeenCalled();
+      expect(errorSpy).toHaveBeenCalledWith(
+        'Error processing package:',
+        'core failure',
+      );
     });
 
     it('logs stack trace when debug=true and processPackageCore throws', async () => {
@@ -12663,7 +12696,9 @@ describe('depup.mjs -- coverage gap fill', () => {
       });
 
       expect(result).toBeUndefined();
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        'Processing express@4.18.2 -> @depup/express',
+      );
 
       consoleSpy.mockRestore();
     });
@@ -12709,8 +12744,23 @@ describe('depup.mjs -- coverage gap fill', () => {
         timeout: 1000,
       });
 
-      expect(depup.maybeBumpDeps).toHaveBeenCalled();
-      expect(depup.writeChangesJson).toHaveBeenCalled();
+      expect(depup.maybeBumpDeps).toHaveBeenCalledWith(
+        {
+          debug: false,
+          dryRun: false,
+          packageSpec: 'testpkg',
+          shouldBumpDeps: false,
+          shouldPublish: false,
+          shouldTest: false,
+          timeout: 1000,
+        },
+        expect.stringContaining(path.join('testpkg', '1.0.0', 'rev-0')),
+        { name: '@depup/testpkg', version: '1.0.0-depup.0' },
+      );
+      expect(depup.writeChangesJson).toHaveBeenCalledWith(
+        { changes: [], updatedCount: 0 },
+        expect.stringContaining(path.join('testpkg', '1.0.0', 'rev-0')),
+      );
 
       consoleSpy.mockRestore();
     });
@@ -12741,8 +12791,25 @@ describe('depup.mjs -- coverage gap fill', () => {
         testResult: 'passed',
       });
 
-      expect(publishSpy).toHaveBeenCalled();
-      expect(finalizeSpy).toHaveBeenCalled();
+      expect(publishSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          packageDirectory: tmpDir,
+          packageName: 'testpkg',
+          revision: 0,
+          scopedName: '@depup/testpkg',
+          shouldPublish: true,
+        }),
+      );
+      expect(finalizeSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          packageDirectory: tmpDir,
+          packageName: 'testpkg',
+          publishDidFail: false,
+          published: true,
+          revision: 0,
+          scopedName: '@depup/testpkg',
+        }),
+      );
     });
 
     it('still calls finalizePackage even when handlePublishStep throws', async () => {
@@ -13045,7 +13112,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         {},
       );
 
-      expect(bumpSpy).toHaveBeenCalled();
+      expect(bumpSpy).toHaveBeenCalledWith(tmpDir, {}, false, 1000);
     });
   });
 
@@ -13087,7 +13154,9 @@ describe('depup.mjs -- coverage gap fill', () => {
       );
 
       expect(result).toBe('failed');
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith(
+        'Tests failed for @depup/testpkg@1.0.0-depup.0',
+      );
     });
   });
 
@@ -13123,7 +13192,11 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.downloadPackage('express', tmpDir, 5000);
 
-      expect(retrySpy).toHaveBeenCalled();
+      expect(retrySpy).toHaveBeenCalledWith(expect.any(Function), {
+        attempts: 3,
+        baseDelay: 2000,
+        totalTimeout: 5000,
+      });
     });
 
     it('throws when extraction fails', async () => {
@@ -13169,7 +13242,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       });
 
       expect(result).toBe(true);
-      expect(publishSpy).toHaveBeenCalled();
+      expect(publishSpy).toHaveBeenCalledWith(
+        tmpDir,
+        '@depup/testpkg',
+        '1.0.0-depup.0',
+        false,
+      );
     });
 
     it('publishes when dependenciesUpdated > 0', async () => {
@@ -13188,7 +13266,12 @@ describe('depup.mjs -- coverage gap fill', () => {
       });
 
       expect(result).toBe(true);
-      expect(publishSpy).toHaveBeenCalled();
+      expect(publishSpy).toHaveBeenCalledWith(
+        tmpDir,
+        '@depup/testpkg',
+        '1.0.0-depup.1',
+        false,
+      );
     });
 
     it('skips publish when revision > 0 and no deps updated', async () => {
@@ -13207,7 +13290,9 @@ describe('depup.mjs -- coverage gap fill', () => {
       });
 
       expect(result).toBe(false);
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        'Skipping publish: No dependencies were updated for @depup/testpkg@1.0.0-depup.1',
+      );
 
       consoleSpy.mockRestore();
     });
@@ -13232,7 +13317,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.safeGenerateReadme('testpkg', true);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith(
+        'Could not generate README: readme gen failed',
+      );
     });
 
     it('does not throw when generateReadme succeeds', async () => {
@@ -13288,7 +13375,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.bumpDependencies(tmpDir, packageJson, false, 5000);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith('Failed to update 1 dependencies');
 
       warnSpy.mockRestore();
     });
@@ -13305,7 +13392,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.bumpDependencies(tmpDir, packageJson, false, 5000);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith('Failed to update 1 dependencies');
 
       warnSpy.mockRestore();
     });
@@ -13455,7 +13542,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.updateSingleDependency('express', '^4.0.0', {}, true, 5000);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith(
+        '  Could not update express: network error',
+      );
 
       warnSpy.mockRestore();
     });
@@ -13476,7 +13565,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         5000,
       );
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith('  express: ^4.0.0 -> 5.0.0');
 
       consoleSpy.mockRestore();
     });
@@ -13525,7 +13614,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.testPackage(tmpDir, '@depup/testpkg', true, 5000);
 
-      expect(errorSpy).toHaveBeenCalled();
+      expect(errorSpy).toHaveBeenCalledWith('Stack trace:', 'some stack');
     });
   });
 
@@ -13538,7 +13627,19 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.installProductionDeps(tmpDir, false, 5000);
 
-      expect(trySpy).toHaveBeenCalled();
+      expect(trySpy).toHaveBeenCalledWith(
+        [
+          ['npm', ['install', '--omit=dev', '--ignore-scripts']],
+          [
+            'npm',
+            ['install', '--omit=dev', '--legacy-peer-deps', '--ignore-scripts'],
+          ],
+          ['npm', ['install', '--omit=dev', '--force', '--ignore-scripts']],
+        ],
+        tmpDir,
+        false,
+        5000,
+      );
     });
 
     it('warns when all install methods fail', async () => {
@@ -13565,7 +13666,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.installProductionDeps(tmpDir, true, 5000);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        '  Note: Some dependencies may not be fully installed due to conflicts',
+      );
 
       consoleSpy.mockRestore();
     });
@@ -13605,7 +13708,9 @@ describe('depup.mjs -- coverage gap fill', () => {
       const methods = [['false-command-does-not-exist-xxx', ['--fail']]];
       depup.tryInstallMethods(methods, tmpDir, true, 5000);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        '  Install method failed: false-command-does-not-exist-xxx --fail',
+      );
 
       consoleSpy.mockRestore();
     });
@@ -13627,7 +13732,10 @@ describe('depup.mjs -- coverage gap fill', () => {
       );
 
       expect(result).toBe(true);
-      expect(depup.cleanupDirectory).toHaveBeenCalled();
+      expect(depup.cleanupDirectory).toHaveBeenCalledWith(
+        path.join(tmpDir, '.test-temp'),
+        false,
+      );
     });
 
     it('cleans up even when executeImportTest throws', async () => {
@@ -13642,7 +13750,10 @@ describe('depup.mjs -- coverage gap fill', () => {
         depup.runTestInTempDir(tmpDir, '@depup/testpkg', false, 5000),
       ).rejects.toThrow('import test failed');
 
-      expect(depup.cleanupDirectory).toHaveBeenCalled();
+      expect(depup.cleanupDirectory).toHaveBeenCalledWith(
+        path.join(tmpDir, '.test-temp'),
+        false,
+      );
     });
   });
 
@@ -13702,7 +13813,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.installTestDeps(tmpDir, true, 5000);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        '  Note: Test may fail due to dependency conflicts',
+      );
 
       consoleSpy.mockRestore();
     });
@@ -13754,7 +13867,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.cleanupDirectory(tmpDir, true);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith('Cleanup failed: rm failed');
 
       warnSpy.mockRestore();
     });
@@ -13794,9 +13907,9 @@ describe('depup.mjs -- coverage gap fill', () => {
         false,
       );
 
-      expect(validateSpy).toHaveBeenCalled();
-      expect(installSpy).toHaveBeenCalled();
-      expect(executeSpy).toHaveBeenCalled();
+      expect(validateSpy).toHaveBeenCalledWith();
+      expect(installSpy).toHaveBeenCalledWith(tmpDir, false);
+      expect(executeSpy).toHaveBeenCalledWith(tmpDir, '1.0.0-depup.0', false);
     });
 
     it('calls handlePublishError on failure', async () => {
@@ -13816,7 +13929,12 @@ describe('depup.mjs -- coverage gap fill', () => {
         false,
       );
 
-      expect(handleSpy).toHaveBeenCalled();
+      expect(handleSpy).toHaveBeenCalledWith(
+        expect.objectContaining({ message: 'publish failed' }),
+        '@depup/testpkg',
+        '1.0.0-depup.0',
+        false,
+      );
     });
 
     it('stops spinner in debug mode', async () => {
@@ -13866,7 +13984,9 @@ describe('depup.mjs -- coverage gap fill', () => {
       // This will fail (no package.json in tmpDir) and warn
       depup.installBuildDeps(tmpDir, true);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        'Installing devDependencies for build tools...',
+      );
 
       consoleSpy.mockRestore();
       warnSpy.mockRestore();
@@ -13877,7 +13997,9 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       depup.installBuildDeps('/nonexistent/dir/xyz', false);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith(
+        'Build dependency install failed: spawnSync npm ENOENT',
+      );
 
       warnSpy.mockRestore();
     });
@@ -13930,7 +14052,9 @@ describe('depup.mjs -- coverage gap fill', () => {
         // expected to fail - npm not available
       }
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        "  Publishing depup version with 'latest' tag",
+      );
 
       consoleSpy.mockRestore();
     });
@@ -13947,7 +14071,9 @@ describe('depup.mjs -- coverage gap fill', () => {
         // expected to fail - npm not available
       }
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith(
+        "  Publishing as prerelease with 'beta' tag",
+      );
 
       consoleSpy.mockRestore();
     });
@@ -14025,7 +14151,7 @@ describe('depup.mjs -- coverage gap fill', () => {
         // expected throw
       }
 
-      expect(errorSpy).toHaveBeenCalled();
+      expect(errorSpy).toHaveBeenCalledWith('Publish error:', 'some error');
 
       errorSpy.mockRestore();
     });
@@ -14138,7 +14264,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.pruneOldRevisions(tmpDir, true, 5);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith('  Pruned old revision: rev-0');
 
       consoleSpy.mockRestore();
     });
@@ -14340,11 +14466,24 @@ describe('depup.mjs -- coverage gap fill', () => {
         testResult: 'passed',
       });
 
-      expect(depup.cleanupAfterPublish).toHaveBeenCalled();
-      expect(depup.updateIntegrityData).toHaveBeenCalled();
-      expect(depup.pruneOldRevisions).toHaveBeenCalled();
-      expect(depup.safeGenerateReadme).toHaveBeenCalled();
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(depup.cleanupAfterPublish).toHaveBeenCalledWith(targetDir, false);
+      expect(depup.updateIntegrityData).toHaveBeenCalledWith(
+        tmpDir,
+        '1.0.0',
+        0,
+        '1.0.0-depup.0',
+        {
+          changes: {},
+          depsUpdated: 0,
+          smokeTest: 'passed',
+          status: 'published',
+        },
+      );
+      expect(depup.pruneOldRevisions).toHaveBeenCalledWith(versionDir, false);
+      expect(depup.safeGenerateReadme).toHaveBeenCalledWith('testpkg', false);
+      expect(consoleSpy).toHaveBeenCalledWith(
+        `Prepared @depup/testpkg@1.0.0-depup.0 in ${targetDir}`,
+      );
 
       consoleSpy.mockRestore();
     });
@@ -14395,7 +14534,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.cleanupAfterPublish(cleanDir, true);
 
-      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenCalledWith('  Cleaned up rev directory');
 
       consoleSpy.mockRestore();
     });
@@ -14408,7 +14547,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.cleanupAfterPublish('/nonexistent/xyz', true);
 
-      expect(warnSpy).toHaveBeenCalled();
+      expect(warnSpy).toHaveBeenCalledWith('  Cleanup warning: readdir failed');
 
       warnSpy.mockRestore();
     });
@@ -14551,7 +14690,10 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.downloadPackage('express@4.0.0', tmpDir, 10_000);
 
-      expect(depup.retryWithBackoff).toHaveBeenCalled();
+      expect(depup.retryWithBackoff).toHaveBeenCalledWith(
+        expect.any(Function),
+        { attempts: 3, baseDelay: 2000, totalTimeout: 10_000 },
+      );
     });
   });
 
@@ -14646,7 +14788,7 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.testPackage(tmpDir, '@depup/testpkg', true, 5000);
 
-      expect(errorSpy).toHaveBeenCalled();
+      expect(errorSpy).toHaveBeenCalledWith('Test error:', 'test failed');
 
       errorSpy.mockRestore();
     });
@@ -14660,7 +14802,16 @@ describe('depup.mjs -- coverage gap fill', () => {
 
       await depup.installTestDeps(tmpDir, false, 5000);
 
-      expect(trySpy).toHaveBeenCalled();
+      expect(trySpy).toHaveBeenCalledWith(
+        [
+          ['npm', ['install', '--ignore-scripts']],
+          ['npm', ['install', '--legacy-peer-deps', '--ignore-scripts']],
+          ['npm', ['install', '--force', '--ignore-scripts']],
+        ],
+        tmpDir,
+        false,
+        5000,
+      );
     });
   });
 
