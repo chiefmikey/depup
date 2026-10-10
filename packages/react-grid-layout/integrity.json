@@ -190,6 +190,27 @@
       "status": "failed",
       "timestamp": "2026-10-10T08:13:24.938Z",
       "version": "2.3.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "fast-equals": {
+          "from": "^4.0.3",
+          "to": "^6.1.1"
+        },
+        "react-draggable": {
+          "from": "^4.4.6",
+          "to": "^4.7.2"
+        },
+        "react-resizable": {
+          "from": "^3.2.0",
+          "to": "^4.0.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-10T16:10:11.944Z",
+      "version": "2.3.0-depup.2"
     }
   }
 }

@@ -1,0 +1,85 @@
+{
+  "name": "@depup/json-schema-ref-resolver",
+  "version": "3.0.1-depup.0",
+  "description": "JSON schema reference resolver (with updated dependencies)",
+  "main": "index.js",
+  "type": "commonjs",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test:unit": "c8 --100 node --test",
+    "test:typescript": "tstyche",
+    "test": "npm run lint && npm run test:unit && npm run test:typescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastify/json-schema-ref-resolver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fastify/json-schema-ref-resolver/issues"
+  },
+  "keywords": [
+    "json-schema-ref-resolver",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json",
+    "schema",
+    "reference",
+    "openapi",
+    "swagger"
+  ],
+  "author": "Ivan Tymoshenko <ivan@tymoshenko.me>",
+  "contributors": [
+    {
+      "name": "Matteo Collina",
+      "email": "hello@matteocollina.com"
+    },
+    {
+      "name": "James Sumners",
+      "url": "https://james.sumners.info"
+    },
+    {
+      "name": "Gürgün Dayıoğlu",
+      "email": "hey@gurgun.day",
+      "url": "https://heyhey.to/G"
+    },
+    {
+      "name": "Frazer Smith",
+      "email": "frazer.dev@icloud.com",
+      "url": "https://github.com/fdawgs"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fastify/json-schema-ref-resolver#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/fastify"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/fastify"
+    }
+  ],
+  "dependencies": {
+    "dequal": "^2.0.3"
+  },
+  "devDependencies": {
+    "c8": "^12.0.0",
+    "eslint": "^9.17.0",
+    "neostandard": "^0.13.0",
+    "tstyche": "^7.0.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "json-schema-ref-resolver",
+    "originalVersion": "3.0.1",
+    "processedAt": "2026-10-10T16:09:30.104Z",
+    "smokeTest": "passed"
+  }
+}

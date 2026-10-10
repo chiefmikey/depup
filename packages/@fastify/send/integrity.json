@@ -70,5 +70,24 @@
       "timestamp": "2026-08-08T16:09:01.857Z",
       "version": "4.1.1-depup.0"
     }
+  },
+  "4.1.2": {
+    "0": {
+      "changes": {
+        "http-errors": {
+          "from": "^2.0.0",
+          "to": "^2.0.1"
+        },
+        "mime": {
+          "from": "^3",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-10T16:10:43.280Z",
+      "version": "4.1.2-depup.0"
+    }
   }
 }
