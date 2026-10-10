@@ -12,15 +12,16 @@ npm install @depup/light-my-request
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.6.0 | **DepUp version**: 6.6.0-depup.3 | **Updated**: 7/30/2026 | **Import test**: passed
+**Original version**: 6.8.0 | **DepUp version**: 6.8.0-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cookie | `^1.0.1` | `^2.0.1` |
-| process-warning | `^4.0.0` | `^5.1.0` |
-| set-cookie-parser | `^2.6.0` | `^3.1.2` |
+| @fastify/deepmerge | `^3.1.0` | `^3.2.2` |
+| cookie | `^2.0.0` | `^2.0.1` |
+| process-warning | `^5.0.0` | `^5.1.1` |
+| set-cookie-parser | `^3.0.1` | `^3.1.3` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/light-my-request&labels=bug).

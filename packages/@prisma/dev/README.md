@@ -12,7 +12,7 @@ npm install @depup/prisma__dev
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.25.2 | **DepUp version**: 0.25.2-depup.8 | **Updated**: 10/4/2026 | **Import test**: failed
+**Original version**: 0.25.2 | **DepUp version**: 0.25.2-depup.9 | **Updated**: 10/10/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @electric-sql/pglite-tools | `0.3.3` | `^0.4.8` |
 | @prisma/get-platform | `7.2.0` | `^7.10.0` |
 | @prisma/query-plan-executor | `7.2.0` | `^7.10.0` |
-| find-my-way | `9.7.0` | `^9.9.0` |
+| find-my-way | `9.7.0` | `^9.10.0` |
 | foreground-child | `3.3.1` | `^4.0.3` |
 | remeda | `2.33.4` | `^2.51.0` |
 | std-env | `3.10.0` | `^4.3.0` |

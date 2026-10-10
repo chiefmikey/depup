@@ -12,14 +12,14 @@ npm install @depup/restify
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.1 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 12.0.0 | **DepUp version**: 12.0.0-depup.2 | **Updated**: 10/10/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
 | csv | `^6.2.2` | `^6.6.4` |
-| find-my-way | `^9.6.0` | `^9.9.0` |
+| find-my-way | `^9.6.0` | `^9.10.0` |
 | formidable | `^1.2.1` | `^3.5.4` |
 | http-signature | `^1.3.6` | `^1.4.0` |
 | lodash | `^4.17.11` | `^4.18.1` |
