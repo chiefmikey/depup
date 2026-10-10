@@ -12,13 +12,13 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.6 | **Updated**: 10/9/2026 | **Import test**: failed
+**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.7 | **Updated**: 10/10/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1148.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1149.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^11.6.0` |
@@ -68,16 +68,16 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | knex-migrator | `6.2.1` | `^6.3.0` |
 | leaky-bucket | `2.2.0` | `^4.1.4` |
 | mailgun.js | `10.4.0` | `^14.1.0` |
-| metascraper | `5.55.2` | `^5.58.1` |
-| metascraper-amazon | `5.55.2` | `^5.56.2` |
-| metascraper-author | `5.55.2` | `^5.56.2` |
-| metascraper-description | `5.55.2` | `^5.56.2` |
-| metascraper-image | `5.55.2` | `^5.56.2` |
-| metascraper-logo | `5.55.2` | `^5.56.2` |
-| metascraper-logo-favicon | `5.55.2` | `^5.58.1` |
-| metascraper-publisher | `5.55.2` | `^5.56.2` |
-| metascraper-title | `5.55.2` | `^5.56.2` |
-| metascraper-url | `5.55.2` | `^5.56.2` |
+| metascraper | `5.55.2` | `^5.58.4` |
+| metascraper-amazon | `5.55.2` | `^5.58.4` |
+| metascraper-author | `5.55.2` | `^5.58.4` |
+| metascraper-description | `5.55.2` | `^5.58.4` |
+| metascraper-image | `5.55.2` | `^5.58.4` |
+| metascraper-logo | `5.55.2` | `^5.58.4` |
+| metascraper-logo-favicon | `5.55.2` | `^5.58.4` |
+| metascraper-publisher | `5.55.2` | `^5.58.4` |
+| metascraper-title | `5.55.2` | `^5.58.4` |
+| metascraper-url | `5.55.2` | `^5.58.4` |
 | mime-types | `2.1.35` | `^3.0.2` |
 | mingo | `2.5.3` | `^7.2.4` |
 | moment-timezone | `0.6.4` | `^0.6.5` |

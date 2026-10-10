@@ -6046,6 +6046,31 @@
       "status": "published",
       "timestamp": "2026-10-09T08:15:39.277Z",
       "version": "5.20261006.1-alpha-depup.1"
+    },
+    "2": {
+      "changes": {
+        "undici": {
+          "from": "7.29.1",
+          "to": "^8.11.2"
+        },
+        "workerd": {
+          "from": "1.20261006.1",
+          "to": "^1.20261010.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.22.0"
+        },
+        "youch": {
+          "from": "4.1.0-beta.10",
+          "to": "^4.1.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-10T04:42:40.482Z",
+      "version": "5.20261006.1-alpha-depup.2"
     }
   }
 }
