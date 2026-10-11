@@ -1,0 +1,76 @@
+{
+  "name": "@depup/brotli",
+  "version": "2.1.0-depup.0",
+  "description": "A port of the Brotli compression algorithm as used in WOFF2 (with updated dependencies)",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./compress": {
+      "types": "./compress.d.ts",
+      "default": "./compress.js"
+    },
+    "./compress.js": {
+      "types": "./compress.d.ts",
+      "default": "./compress.js"
+    },
+    "./decompress": {
+      "types": "./decompress.d.ts",
+      "default": "./decompress.js"
+    },
+    "./decompress.js": {
+      "types": "./decompress.d.ts",
+      "default": "./decompress.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devongovett/brotli.js.git"
+  },
+  "keywords": [
+    "brotli",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "compress",
+    "decompress",
+    "encode",
+    "decode"
+  ],
+  "author": "Devon Govett <devongovett@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devongovett/brotli.js/issues"
+  },
+  "homepage": "https://github.com/devongovett/brotli.js",
+  "dependencies": {
+    "base64-js": "^1.5.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "mocha": "^12.0.3"
+  },
+  "imports": {
+    "#dictionary-data": {
+      "node": "./dec/dictionary-data.js",
+      "default": "./dec/dictionary-browser.js"
+    }
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/mocha/bin/mocha.js"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "brotli",
+    "originalVersion": "2.1.0",
+    "processedAt": "2026-10-11T01:01:54.280Z",
+    "smokeTest": "passed"
+  }
+}
