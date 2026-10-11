@@ -1552,6 +1552,19 @@
       "status": "failed",
       "timestamp": "2026-10-10T08:14:24.795Z",
       "version": "1.170.42-depup.0"
+    },
+    "1": {
+      "changes": {
+        "isbot": {
+          "from": "^5.1.22",
+          "to": "^5.2.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-11T01:01:29.557Z",
+      "version": "1.170.42-depup.1"
     }
   }
 }

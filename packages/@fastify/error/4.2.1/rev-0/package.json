@@ -1,0 +1,81 @@
+{
+  "name": "@depup/fastify__error",
+  "version": "4.2.1-depup.0",
+  "description": "A small utility, used by Fastify itself, for generating consistent error objects across your codebase and plugins. (with updated dependencies)",
+  "main": "index.js",
+  "type": "commonjs",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "npm run test:unit && npm run test:typescript",
+    "test:unit": "c8 --100 node --test",
+    "test:typescript": "tstyche"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastify/fastify-error.git"
+  },
+  "keywords": [
+    "@fastify/error",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "fastify",
+    "error",
+    "utility",
+    "plugin"
+  ],
+  "author": "Tomas Della Vedova",
+  "contributors": [
+    {
+      "name": "Matteo Collina",
+      "email": "hello@matteocollina.com"
+    },
+    {
+      "name": "James Sumners",
+      "url": "https://james.sumners.info"
+    },
+    {
+      "name": "Aras Abbasi",
+      "email": "aras.abbasi@gmail.com"
+    },
+    {
+      "name": "Frazer Smith",
+      "email": "frazer.dev@icloud.com",
+      "url": "https://github.com/fdawgs"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fastify/fastify-error/issues"
+  },
+  "homepage": "https://github.com/fastify/fastify-error#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/fastify"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/fastify"
+    }
+  ],
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "c8": "^12.0.0",
+    "eslint": "^9.17.0",
+    "neostandard": "^0.13.0",
+    "tstyche": "^7.1.0"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@fastify/error",
+    "originalVersion": "4.2.1",
+    "processedAt": "2026-10-11T01:01:09.467Z",
+    "smokeTest": "passed"
+  }
+}

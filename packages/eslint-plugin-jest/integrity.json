@@ -644,5 +644,20 @@
       "timestamp": "2026-10-09T16:10:27.657Z",
       "version": "29.16.6-depup.119"
     }
+  },
+  "29.16.11": {
+    "0": {
+      "changes": {
+        "@typescript-eslint/utils": {
+          "from": "^8.0.0",
+          "to": "^8.71.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-11T01:02:14.426Z",
+      "version": "29.16.11-depup.0"
+    }
   }
 }
