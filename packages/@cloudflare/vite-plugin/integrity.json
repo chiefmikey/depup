@@ -2636,6 +2636,23 @@
       "status": "failed",
       "timestamp": "2026-10-10T08:15:18.204Z",
       "version": "1.63.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "workerd": {
+          "from": "1.20261006.1",
+          "to": "^1.20261011.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-11T08:11:48.026Z",
+      "version": "1.63.1-depup.3"
     }
   }
 }
