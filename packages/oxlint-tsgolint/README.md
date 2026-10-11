@@ -12,7 +12,7 @@ npm install @depup/oxlint-tsgolint
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.0.2004 | **DepUp version**: 7.0.2004-depup.1 | **Updated**: 10/11/2026 | **Import test**: failed
+**Original version**: 7.0.2004 | **DepUp version**: 7.0.2004-depup.2 | **Updated**: 10/11/2026 | **Import test**: failed
 
 ## What changed
 
