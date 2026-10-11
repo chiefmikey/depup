@@ -110,5 +110,15 @@
       "timestamp": "2026-09-08T00:32:22.340Z",
       "version": "22.5.0-depup.0"
     }
+  },
+  "22.6.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-11T16:09:56.294Z",
+      "version": "22.6.0-depup.0"
+    }
   }
 }
