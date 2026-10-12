@@ -250,5 +250,20 @@
       "timestamp": "2026-10-11T16:10:22.598Z",
       "version": "9.3.4-depup.0"
     }
+  },
+  "9.3.5": {
+    "0": {
+      "changes": {
+        "p-timeout": {
+          "from": "^7.0.0",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-12T00:39:43.162Z",
+      "version": "9.3.5-depup.0"
+    }
   }
 }
