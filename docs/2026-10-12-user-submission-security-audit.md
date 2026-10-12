@@ -40,11 +40,20 @@ Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 
   split into a secretless build/test job and a publish-only job that publishes a staged artifact with
   `--ignore-scripts`. Needs a staged-publish mode in `depup.mjs` and a cron restructure; cannot be
   validated off a real runner. Not attempted.
-- **B. `depup-security.mjs` is not wired into any publish path.** No workflow, Dockerfile or script calls
-  it; the user-request path goes straight to `depup.mjs --publish`, and `depup-secure.yml`'s container
-  entrypoint is `depup.mjs` too. Its final report hard-codes "Malware Scan: Completed". Also the vuln
-  scan passes vacuously with no lockfile (ENOLOCK becomes a warning) and ClamAV absence is only a
-  warning. Wiring it in changes publish behaviour and needs a decision on what blocks.
+- **B. The pre-publish scan was not wired into any publish path. FIXED on `feat/wire-security-scan-into-publish`.**
+  Original defect: no workflow, Dockerfile or script called `security-scan.mjs` / `depup-security.mjs`; the
+  user-request path went straight to `depup.mjs --publish`, `depup-secure.yml`'s container entrypoint was
+  `depup.mjs` too, and its final report hard-coded "Malware Scan: Completed". Fix: `depup.mjs` calls the new
+  publish gate (`scripts/publish-gate.mjs`, scan stages in `publish-gate-scan.mjs`, backed by `SecurityScanner`)
+  for a package that is about to be published, before anything is staged or `npm publish` runs, so the issue
+  request, cron discover/sync, bump, `depup.yml` and the secure container are all gated by one call site.
+  Policy: block on malware / executable-payload findings and on scanner errors, timeouts or malformed output
+  (fail closed); npm-audit findings are recorded but do not block; a missing ClamAV is recorded as
+  `skipped (clamav unavailable)` and the pattern scan still runs; no lockfile is `skipped (no lockfile)`. The
+  result (`rev-N.security-report.json`, next to the revision directory, never in the tarball) feeds
+  `depup-secure.yml`'s summary and assessment through `render-security-report.mjs`; the hard-coded claims and the
+  never-produced attestation are gone. Exit code 4 = blocked (never queued for retry). The standalone
+  `depup-security.mjs` pipeline is unchanged.
 - **C. No per-author rate cap** in the gate job (30-day-old non-bot accounts may trigger publishes).
 - **D. Deprecated packages** are skipped by cron-discover but accepted by the issue path (policy choice).
 - **E. Smaller:** `refresh-curated-list.mjs` could later add a name that collides with an existing user

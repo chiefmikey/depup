@@ -222,9 +222,11 @@ jobs:
     permissions:
       contents: read
     # Every value here is a runner-set step outcome or an output of a step that
-    # finished before any untrusted code ran, except test_failed (see publish step).
+    # finished before any untrusted code ran, except test_failed and gate_blocked
+    # (see publish step).
     outputs:
       exists: ${{ steps.check-existing.outputs.exists }}
+      gate_blocked: ${{ steps.publish.outputs.gate_blocked }}
       npm_outcome: ${{ steps.npm-info.outcome }}
       package_name: ${{ steps.parse.outputs.package_name }}
       parse_outcome: ${{ steps.parse.outcome }}
@@ -469,10 +471,13 @@ jobs:
 
       # depup.mjs exit 3 means post-update verification failed and the publish was
       # blocked: a deterministic failure the commit job must not queue for retry.
-      # Any other nonzero exit keeps the queue-for-retry path. Untrusted package code
-      # runs inside this step, so test_failed is the one output it could forge; the
-      # worst forged value only suppresses a retry queue entry. Everything else the
-      # commit job trusts comes from runner-set step outcomes.
+      # Exit 4 means the publish gate (scripts/publish-gate.mjs, run inside
+      # depup.mjs right before `npm publish`) blocked the package; also final, never
+      # queued. Any other nonzero exit keeps the queue-for-retry path. Untrusted
+      # package code runs inside this step, so test_failed and gate_blocked are the
+      # outputs it could forge; the worst forged value only suppresses a retry queue
+      # entry. Everything else the commit job trusts comes from runner-set step
+      # outcomes.
       - name: Process and Publish Package
         id: publish
         if: success()
@@ -487,6 +492,10 @@ jobs:
           if [ "$rc" -eq 3 ]; then
             echo "::error::Verification failed for $PACKAGE_NAME; the publish was blocked (exit 3)"
             echo "test_failed=true" >> "$GITHUB_OUTPUT"
+          fi
+          if [ "$rc" -eq 4 ]; then
+            echo "::error::Security gate blocked the publish of $PACKAGE_NAME (exit 4); see the gate findings above"
+            echo "gate_blocked=true" >> "$GITHUB_OUTPUT"
           fi
           exit "$rc"
 
@@ -671,9 +680,10 @@ jobs:
             sleep $((RANDOM % 10 + attempt * 3))
           done
 
-      # Queue only transient failures. A verification failure (test_failed) is
-      # deterministic: retrying every cron cycle would never succeed. A cancelled
-      # run is left for a maintainer, as before.
+      # Queue only transient failures. A verification failure (test_failed) or a
+      # security gate block (gate_blocked) is deterministic: retrying every cron
+      # cycle would never succeed. A cancelled run is left for a maintainer, as
+      # before.
       - name: Queue for Retry on Failure
         id: queue
         if: |
@@ -682,6 +692,7 @@ jobs:
           needs.process.outputs.npm_outcome == 'success' &&
           needs.process.outputs.exists == 'false' &&
           needs.process.outputs.test_failed != 'true' &&
+          needs.process.outputs.gate_blocked != 'true' &&
           (needs.process.result == 'failure' || failure())
         env:
           PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
@@ -729,6 +740,7 @@ jobs:
         env:
           CHECK_EXISTS: ${{ needs.process.outputs.exists }}
           COMMIT_OUTCOME: ${{ steps.commit.outcome }}
+          GATE_BLOCKED: ${{ needs.process.outputs.gate_blocked }}
           JOB_STATUS: ${{ job.status }}
           NPM_OUTCOME: ${{ needs.process.outputs.npm_outcome }}
           PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
@@ -751,6 +763,7 @@ jobs:
             const committed = process.env.COMMIT_OUTCOME === 'success';
             const queued = process.env.QUEUE_OUTCOME === 'success';
             const testFailed = process.env.TEST_FAILED === 'true';
+            const gateBlocked = process.env.GATE_BLOCKED === 'true';
 
             // The run succeeded only if the process job and every commit-job step did.
             let jobStatus = process.env.JOB_STATUS;
@@ -805,6 +818,11 @@ jobs:
               comment += 'Request Cancelled: The workflow run was cancelled before it finished.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
               comment += 'The package may not have been processed. This issue is left open for tracking; a maintainer will follow up.';
+            } else if (gateBlocked) {
+              comment += 'Request Failed: Package was blocked by the security gate and was not published.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += 'Every package is scanned right before publishing. This one was blocked because the scan found something suspicious or could not complete, so nothing was published. This is not a transient error, so the package was not queued for automatic retry.\n\n';
+              comment += 'The failed workflow run is visible to the maintainers, who will follow up. This issue is left open for tracking.';
             } else if (testFailed) {
               comment += 'Request Failed: Package failed verification and was not published.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';

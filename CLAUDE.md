@@ -24,6 +24,9 @@ scripts/               # All source -- 13 ESM files, all classes exported for te
   cli.mjs              # Interactive CLI (commander + inquirer)
   integrity-meter.mjs  # Programmatic integrity tracking (smokeTest + depsUpdated)
   security-scan.mjs    # Malware + vulnerability scanning
+  publish-gate.mjs     # Fail-closed gate run by depup.mjs right before npm publish (exit 4 = blocked)
+  publish-gate-scan.mjs # Gate scan stages (child process), built on security-scan.mjs
+  render-security-report.mjs # Renders depup-secure.yml's report/summary from recorded results
   depup-security.mjs   # Containerized secure processing
   security-approval.mjs # Package approval workflow
   compatibility-test.mjs # Dependency compatibility testing
