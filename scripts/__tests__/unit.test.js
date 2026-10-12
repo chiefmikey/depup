@@ -15856,6 +15856,133 @@ describe('security modules audit fixes', () => {
     });
   });
 
+  // The package directory is untrusted: a .npmrc in it can redirect npm
+  // (audit, publish) to an attacker registry, forge a clean audit and, via
+  // ${NPM_TOKEN} interpolation, receive the publish token.
+  describe('depup-security: untrusted .npmrc and tokens (fix D)', () => {
+    const originalEnvironment = process.env;
+
+    beforeEach(() => {
+      process.env = {
+        ...originalEnvironment,
+        NODE_AUTH_TOKEN: 'secret-node-auth',
+        NPM_CONFIG_REGISTRY: 'http://pre-existing.example/',
+        NPM_TOKEN: 'secret-npm',
+        SNYK_TOKEN: 'snyk-needs-this',
+      };
+    });
+
+    afterEach(() => {
+      process.env = originalEnvironment;
+    });
+
+    it('runs npm audit without publish tokens and pinned to the npm registry', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+      execFileSync.mockReturnValue('{}');
+
+      new loaded.SecureDepUp().runNpmAuditCommand('/some/dir');
+
+      const { env } = execFileSync.mock.calls[0][2];
+
+      expect(env).toBeDefined();
+      expect(env.NPM_TOKEN).toBeUndefined();
+      expect(env.NODE_AUTH_TOKEN).toBeUndefined();
+      expect(env.npm_config_registry).toBe('https://registry.npmjs.org/');
+      expect(env.NPM_CONFIG_REGISTRY).toBeUndefined();
+    });
+
+    it('runs snyk without publish tokens but keeps its own token', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+
+      new loaded.SecureDepUp().spawnSnyk('/some/dir');
+
+      const { env } = execFileSync.mock.calls[0][2];
+
+      expect(env).toBeDefined();
+      expect(env.NPM_TOKEN).toBeUndefined();
+      expect(env.NODE_AUTH_TOKEN).toBeUndefined();
+      expect(env.SNYK_TOKEN).toBe('snyk-needs-this');
+    });
+
+    it('does not mutate the real environment', async () => {
+      const { loaded } = await loadWithMockedExec('../depup-security.mjs');
+
+      new loaded.SecureDepUp().buildScanEnvironment();
+
+      expect(process.env.NPM_TOKEN).toBe('secret-npm');
+      expect(process.env.NPM_CONFIG_REGISTRY).toBe(
+        'http://pre-existing.example/',
+      );
+    });
+
+    it('removes a .npmrc from the package before auditing it', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      await fs.writeFile(
+        path.join(revisionPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jest.spyOn(secure, 'runSnykScan').mockImplementation(() => {});
+      const seenAtAudit = [];
+      jest.spyOn(secure, 'runNpmAuditCommand').mockImplementation(() => {
+        seenAtAudit.push(existsSync(path.join(revisionPath, '.npmrc')));
+        return JSON.stringify({ metadata: { vulnerabilities: { total: 0 } } });
+      });
+
+      await secure.performVulnerabilityScan('/x');
+
+      expect(seenAtAudit).toStrictEqual([false]);
+    });
+
+    it('removes a .npmrc from the package before npm publish', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      await fs.writeFile(
+        path.join(revisionPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const seenAtPublish = [];
+      jest.spyOn(secure, 'runNpmPublish').mockImplementation(() => {
+        seenAtPublish.push(existsSync(path.join(revisionPath, '.npmrc')));
+      });
+
+      await secure.publishWithSecurityAttestation(
+        'pkg',
+        { name: 'pkg', path: path.dirname(path.dirname(revisionPath)) },
+        { debug: false },
+      );
+
+      expect(seenAtPublish).toStrictEqual([false]);
+    });
+
+    it('does not publish when the .npmrc cannot be removed', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jest
+        .spyOn(secure, 'removeProjectNpmrc')
+        .mockRejectedValue(new Error('EBUSY'));
+      const publishSpy = jest
+        .spyOn(secure, 'runNpmPublish')
+        .mockImplementation(() => {});
+
+      await expect(
+        secure.publishWithSecurityAttestation(
+          'pkg',
+          { name: 'pkg', path: path.dirname(path.dirname(revisionPath)) },
+          { debug: false },
+        ),
+      ).rejects.toThrow('EBUSY');
+      expect(publishSpy).not.toHaveBeenCalled();
+    });
+  });
+
   describe('depup-security: dry run (fix B)', () => {
     it('still enforces the allowlist and never reaches the sandbox', async () => {
       const secure = new SecureDepUp();
