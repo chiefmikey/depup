@@ -1,6 +1,6 @@
 {
   "name": "@depup/depcheck",
-  "version": "1.4.7-depup.9",
+  "version": "1.4.7-depup.14",
   "description": "Check dependencies in your node module (with updated dependencies)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -53,18 +53,18 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "@babel/parser": "^8.0.4",
-    "@babel/traverse": "^8.0.4",
-    "@vue/compiler-sfc": "^3.5.41",
+    "@babel/parser": "^8.0.7",
+    "@babel/traverse": "^8.0.7",
+    "@vue/compiler-sfc": "^3.5.43",
     "callsite": "^1.0.0",
-    "camelcase": "^9.0.0",
-    "cosmiconfig": "^10.0.0",
+    "camelcase": "^10.0.0",
+    "cosmiconfig": "^10.0.1",
     "debug": "^4.4.3",
     "deps-regex": "^0.2.0",
     "findup-sync": "^5.0.0",
-    "ignore": "^7.0.6",
-    "is-core-module": "^2.16.2",
-    "js-yaml": "^5.3.0",
+    "ignore": "^7.0.12",
+    "is-core-module": "^2.17.0",
+    "js-yaml": "^5.4.3",
     "json5": "^2.2.3",
     "lodash": "^4.18.1",
     "minimatch": "^10.2.6",
@@ -72,10 +72,10 @@
     "please-upgrade-node": "^3.2.0",
     "readdirp": "^5.1.1",
     "require-package-name": "^2.0.1",
-    "resolve": "^1.22.12",
+    "resolve": "^1.22.13",
     "resolve-from": "^5.0.0",
     "semver": "^7.8.5",
-    "yargs": "^18.1.0"
+    "yargs": "^18.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -131,23 +131,23 @@
     "changes": {
       "@babel/parser": {
         "from": "^7.23.0",
-        "to": "^8.0.4"
+        "to": "^8.0.7"
       },
       "@babel/traverse": {
         "from": "^7.23.2",
-        "to": "^8.0.4"
+        "to": "^8.0.7"
       },
       "@vue/compiler-sfc": {
         "from": "^3.3.4",
-        "to": "^3.5.41"
+        "to": "^3.5.43"
       },
       "camelcase": {
         "from": "^6.3.0",
-        "to": "^9.0.0"
+        "to": "^10.0.0"
       },
       "cosmiconfig": {
         "from": "^7.1.0",
-        "to": "^10.0.0"
+        "to": "^10.0.1"
       },
       "debug": {
         "from": "^4.3.4",
@@ -155,15 +155,15 @@
       },
       "ignore": {
         "from": "^5.2.4",
-        "to": "^7.0.6"
+        "to": "^7.0.12"
       },
       "is-core-module": {
         "from": "^2.12.0",
-        "to": "^2.16.2"
+        "to": "^2.17.0"
       },
       "js-yaml": {
         "from": "^3.14.1",
-        "to": "^5.3.0"
+        "to": "^5.4.3"
       },
       "lodash": {
         "from": "^4.17.21",
@@ -183,7 +183,7 @@
       },
       "resolve": {
         "from": "^1.22.3",
-        "to": "^1.22.12"
+        "to": "^1.22.13"
       },
       "semver": {
         "from": "^7.5.4",
@@ -191,13 +191,13 @@
       },
       "yargs": {
         "from": "^16.2.0",
-        "to": "^18.1.0"
+        "to": "^18.2.0"
       }
     },
     "depsUpdated": 16,
     "originalPackage": "depcheck",
     "originalVersion": "1.4.7",
-    "processedAt": "2026-08-14T16:21:27.711Z",
+    "processedAt": "2026-10-12T10:42:24.625Z",
     "smokeTest": "passed"
   }
 }

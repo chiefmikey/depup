@@ -12,14 +12,11 @@ npm install @depup/vitest__mocker
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.3 | **DepUp version**: 5.0.3-depup.0 | **Updated**: 9/30/2026 | **Import test**: passed
+**Original version**: 5.0.4 | **DepUp version**: 5.0.4-depup.0 | **Updated**: 10/12/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| magic-string | `^1.2.3` | `^1.4.2` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/vitest__mocker&labels=bug).
 
