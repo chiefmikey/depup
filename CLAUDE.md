@@ -27,7 +27,8 @@ scripts/               # All source -- 13 ESM files, all classes exported for te
   depup-security.mjs   # Containerized secure processing
   security-approval.mjs # Package approval workflow
   compatibility-test.mjs # Dependency compatibility testing
-  __tests__/unit.test.js  # 165 unit tests importing real classes
+  __tests__/unit.test.js  # Main unit suite importing real classes
+  __tests__/*-branches.test.js # Branch-gap tests for the 4 security-path modules
   __tests__/integration.test.js # 15 integration tests (real npm pipeline)
 config/
   curated-packages.json  # Top 1000 from npm (auto-refreshed weekly)
@@ -119,4 +120,5 @@ npm run heal                # Self-healing repairs
 - Cleanup only runs when `shouldPublish=true` -- security pipeline needs files preserved
 - `add-package.mjs` writes to JSON (`config/user-packages.json`), not source code
 - jest `testMatch` also matches `unit.test.js` copies inside `.claude/worktrees/` -- local `test:unit`/`test:coverage` run extra suites and report inflated numbers. Use `jest --runTestsByPath scripts/__tests__/unit.test.js --coverage` for an accurate single-file read; CI is unaffected
-- Coverage per source module is split across test files: `cli.mjs` is covered by `scripts/__tests__/cli.test.js`, NOT `unit.test.js`. Running coverage on `unit.test.js` alone reports `cli.mjs` at 0% falsely (it just isn't imported there) -- a real trap that reads as "cli.mjs is untested". For an accurate whole-module read, pass BOTH files: `jest --runTestsByPath scripts/__tests__/unit.test.js scripts/__tests__/cli.test.js --coverage`. As of this note all 9 non-security source modules are already >=80% line+branch
+- Coverage per source module is split across test files: `cli.mjs` is covered by `scripts/__tests__/cli.test.js`, NOT `unit.test.js`. Running coverage on `unit.test.js` alone reports `cli.mjs` at 0% falsely (it just isn't imported there) -- a real trap that reads as "cli.mjs is untested". For an accurate whole-module read, pass BOTH files: `jest --runTestsByPath scripts/__tests__/unit.test.js scripts/__tests__/cli.test.js --coverage`. As of this note all 9 non-security source modules are already >=80% line+branch, and the 4 security-path modules are at 99-100% branch (2026-10-11, PR #1329) -- coverage for those is split across `unit.test.js` and the `*-branches.test.js` files, so measure with all of them
+- Direct-run guards (`process.argv[1] === import.meta.filename`) are coverable in-process: override `process.argv[1]` to the module path, mock `process.exit`, and `await import('../x.mjs?direct-run')` -- the query suffix forces a fresh module evaluation. Don't write them off as "needs a subprocess"
