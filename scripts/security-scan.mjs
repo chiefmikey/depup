@@ -2,6 +2,7 @@
 import { execFileSync } from 'node:child_process';
 import { randomUUID } from 'node:crypto';
 import { promises as fs } from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 
 import chalk from 'chalk';
@@ -12,6 +13,15 @@ import semver from 'semver';
 // npm audit / snyk JSON can exceed the 1 MiB execFileSync default on large
 // dependency trees (ENOBUFS), so raise the cap.
 const MAX_BUFFER = 64 * 1024 * 1024;
+
+// The only files the dependency audit needs from the scanned package. Its
+// .npmrc is deliberately not copied: it would let the package choose the
+// registry, proxy or CA that answers the audit of that same package.
+const AUDIT_INPUT_FILES = [
+  'npm-shrinkwrap.json',
+  'package-lock.json',
+  'package.json',
+];
 
 class SecurityScanner {
   constructor() {
@@ -309,13 +319,16 @@ class SecurityScanner {
 
   async performVulnerabilityScan(scanPath) {
     const spinner = ora('Scanning for vulnerabilities...').start();
+    let auditDirectory;
 
     try {
+      auditDirectory = await this.stageAuditInputs(scanPath);
+
       // npm audit
-      await this.runNpmAudit(scanPath);
+      await this.runNpmAudit(auditDirectory);
 
       // Snyk scan if available
-      await this.runSnykScan(scanPath);
+      await this.runSnykScan(auditDirectory);
 
       // OWASP Dependency Check (if available)
       await this.runOwaspDependencyCheck();
@@ -329,7 +342,57 @@ class SecurityScanner {
         timestamp: new Date().toISOString(),
       };
       throw error;
+    } finally {
+      if (auditDirectory) {
+        await fs.rm(auditDirectory, { force: true, recursive: true });
+      }
     }
+  }
+
+  // Copy the manifest and lockfiles (regular files only) into a fresh
+  // directory so the audit runs without the package's own npm configuration.
+  async stageAuditInputs(scanPath) {
+    const stagedDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-audit-'),
+    );
+    try {
+      for (const name of AUDIT_INPUT_FILES) {
+        await this.copyIfRegularFile(
+          path.join(scanPath, name),
+          path.join(stagedDirectory, name),
+        );
+      }
+    } catch (error) {
+      await fs.rm(stagedDirectory, { force: true, recursive: true });
+      throw error;
+    }
+    return stagedDirectory;
+  }
+
+  // Missing files are skipped, and so are symlinks and directories: the
+  // scanned package must not be able to make the scanner copy other files.
+  async copyIfRegularFile(source, destination) {
+    let stats;
+    try {
+      stats = await fs.lstat(source);
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        return;
+      }
+      throw error;
+    }
+    if (stats.isFile()) {
+      await fs.copyFile(source, destination);
+    }
+  }
+
+  // Environment for tools that read the untrusted package: no publish tokens.
+  // Returns a fresh object -- never mutates the real process.env.
+  buildScanEnvironment() {
+    const scanEnvironment = { ...process.env };
+    delete scanEnvironment.NODE_AUTH_TOKEN;
+    delete scanEnvironment.NPM_TOKEN;
+    return scanEnvironment;
   }
 
   buildVulnerabilityResult(vulnerabilities) {
@@ -439,6 +502,7 @@ class SecurityScanner {
     return execFileSync('snyk', ['test', '--json'], {
       cwd: scanPath,
       encoding: 'utf8',
+      env: this.buildScanEnvironment(),
       maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 180_000,
@@ -498,6 +562,7 @@ class SecurityScanner {
     return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
       cwd: scanPath,
       encoding: 'utf8',
+      env: this.buildScanEnvironment(),
       maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 120_000,
