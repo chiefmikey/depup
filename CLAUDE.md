@@ -74,6 +74,7 @@ Every publish-capable workflow is three jobs (see docs/decisions/2026-10-12-secr
 - **commit** holds the signing key and push credential, validates the package-data artifact (`import-data`) and flips `failed` to `published` from the publish job's results (`finalize-integrity`).
 - A staged revision is recorded as `failed` (= not confirmed published, retried next cycle) until the commit job confirms it. Do not add a new status.
 - The staged modules import only `node:` builtins and siblings so publish/commit jobs need no `npm ci`; `workflow-job-split.test.js` enforces who may hold which secret.
+- To verify a live run, read the job logs. Each publish job prints `DEPUP_PUBLISH_SUMMARY published=N ... failed=N`, and each commit job prints `DEPUP_FINALIZE_SUMMARY published=N ... missing=N`; the two `published` counts must match per shard. To check one revision, use `jq` on its exact version in `integrity.json`. A context grep for `"status": "published"` matches neighbouring revisions and has produced a false "published but not on npm" report.
 
 ## Package Request Flow
 1. User opens issue with `package-request` label
