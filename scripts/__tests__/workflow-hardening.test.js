@@ -387,6 +387,11 @@ describe('process-package-request.yml', () => {
       const outputs = {};
       const failures = [];
       const calls = [];
+      const imported = [];
+      const runnableScript = gateScript.replaceAll(
+        'await import(',
+        'await importModule(',
+      );
       const sandbox = {
         console: { log() {} },
         context: { repo: { owner: 'owner', repo: 'repo' } },
@@ -439,11 +444,23 @@ describe('process-package-request.yml', () => {
             SENDER_LOGIN: sender,
           },
         },
-        // The workflow requires the checked-out module; hand it the real one.
-        require: () => rateLimitModule,
+        // A vm context has no dynamic import(): the script is run with its
+        // import() call routed to this shim, which hands back the real module.
+        importModule: async (specifier) => {
+          imported.push(specifier);
+          return rateLimitModule;
+        },
       };
-      await vm.runInNewContext(`(async () => {\n${gateScript}\n})()`, sandbox);
-      return { calls, failures: failures.length, outputs: { ...outputs } };
+      await vm.runInNewContext(
+        `(async () => {\n${runnableScript}\n})()`,
+        sandbox,
+      );
+      return {
+        calls,
+        failures: failures.length,
+        imported,
+        outputs: { ...outputs },
+      };
     };
 
     it('is the first job and gates both later jobs on allowed == true', () => {
@@ -489,6 +506,9 @@ describe('process-package-request.yml', () => {
 
         expect(result.outputs.allowed).toBe('true');
         expect(result.outputs.reason).toBe('account_age');
+        expect(result.imported).toStrictEqual([
+          `${repoRoot}/scripts/request-rate-limit.mjs`,
+        ]);
       });
 
       it('denies an established account at the cap without failing the job', async () => {

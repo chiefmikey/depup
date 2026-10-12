@@ -38,12 +38,17 @@ describe('gate job rate cap', () => {
 
     expect(script).toContain('request-rate-limit.mjs');
     expect(script).toContain('checkRateLimit');
+    expect(script).toMatch(
+      /await import\(\s*process\.env\.GITHUB_WORKSPACE \+ '\/scripts\/request-rate-limit\.mjs'/u,
+    );
+    expect(script).not.toContain('require(');
   });
 
   it('keeps the maintainer relabel path outside the cap', () => {
     const { script } = step('Check Submitter Trust').with;
     const start = script.indexOf('getCollaboratorPermissionLevel');
     const end = script.indexOf("finish(true, 'maintainer_label')");
+
     expect(start).toBeGreaterThan(-1);
     expect(end).toBeGreaterThan(start);
     expect(script.slice(start, end)).not.toContain('underCap');

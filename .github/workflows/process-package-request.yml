@@ -96,7 +96,7 @@ jobs:
             // A maintainer relabel below is not capped. Any error fails closed
             // with reason rate_limit_error: no publish, no comment, log only.
             const underCap = async () => {
-              const { checkRateLimit } = require(
+              const { checkRateLimit } = await import(
                 process.env.GITHUB_WORKSPACE + '/scripts/request-rate-limit.mjs'
               );
               const result = await checkRateLimit({
