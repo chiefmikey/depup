@@ -11807,7 +11807,7 @@ describe('heal.mjs -- coverage gap fill', () => {
       expect(data['2.5.0']['0'].version).toBe('2.5.0-depup.0');
     });
 
-    it('falls back to 1.0.0 when no version dirs exist', async () => {
+    it('skips (does not invent a 1.0.0 record) when no version dirs exist', async () => {
       const { promises: fs } = await import('node:fs');
       const { default: path } = await import('node:path');
 
@@ -11819,13 +11819,12 @@ describe('heal.mjs -- coverage gap fill', () => {
       await fs.mkdir(pkgDir, { recursive: true });
       // No version directories
 
-      await healer.createBasicIntegrity({ path: pkgDir });
+      const created = await healer.createBasicIntegrity({ path: pkgDir });
 
-      const data = JSON.parse(
-        await fs.readFile(path.join(pkgDir, 'integrity.json')),
-      );
-
-      expect(data['1.0.0']).toBeDefined();
+      expect(created).toBe(false);
+      await expect(
+        fs.readFile(path.join(pkgDir, 'integrity.json')),
+      ).rejects.toThrow(/ENOENT/u);
     });
 
     it('ignores non-semver directory names when detecting version', async () => {

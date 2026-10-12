@@ -20,7 +20,8 @@ on:
         type: boolean
         default: false
 
-# All three jobs commit package data and push to main
+# All three jobs commit package data and push to main. The alert job overrides
+# this with its own job-level permissions (issues: write, actions: read).
 permissions:
   contents: write
 
@@ -77,6 +78,7 @@ jobs:
           git config --global user.signingkey 5A5141965C39129D
 
       - name: Discover Packages
+        id: discover_run
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -87,7 +89,12 @@ jobs:
           npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
           exit "${PIPESTATUS[0]}"
 
+      # Runs even when the discover script failed: packages it already published
+      # to npm must still be committed, otherwise git drifts from npm. The job
+      # still ends red because the script step's failure fails the job.
       - name: Commit and Push Changes
+        id: discover_commit
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
         run: |
           git add -A packages/
           # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
@@ -99,7 +106,14 @@ jobs:
             exit 0
           fi
           git commit -m "feat: discover packages via cron (shard ${{ matrix.shard }})"
-          for attempt in 1 2 3 4 5; do
+
+          give_up() {
+            echo "::error::$1 failed after 10 attempts: discover shard ${{ matrix.shard }} data was published to npm but is NOT committed to git. Recovery patch uploaded as an artifact; apply it with git am."
+            git format-patch origin/main --stdout > "$RUNNER_TEMP/unpushed.patch" || echo "::warning::Could not write the recovery patch"
+            exit 1
+          }
+
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
             git fetch origin main
             # Clean any unstaged changes before rebase (e.g., case-different
             # README files from original packages that git sees as modified)
@@ -126,47 +140,63 @@ jobs:
                   else
                     git rebase --abort 2>/dev/null || true
                   fi
-                  sleep $((attempt * 2))
-                  if [ "$attempt" -eq 5 ]; then
-                    echo "Rebase failed after 5 attempts"
-                    exit 1
+                  if [ "$attempt" -eq 10 ]; then
+                    give_up "Rebase"
                   fi
+                  sleep $((RANDOM % 10 + attempt * 3))
                   continue
                 }
               else
                 echo "Rebase failed on attempt $attempt, aborting and retrying..."
                 git rebase --abort 2>/dev/null || true
-                sleep $((attempt * 2))
-                if [ "$attempt" -eq 5 ]; then
-                  echo "Rebase failed after 5 attempts"
-                  exit 1
+                if [ "$attempt" -eq 10 ]; then
+                  give_up "Rebase"
                 fi
+                sleep $((RANDOM % 10 + attempt * 3))
                 continue
               fi
             fi
             if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
-            else
-              if [ "$attempt" -eq 5 ]; then
-                echo "Push failed after 5 attempts"
-                exit 1
-              fi
-              echo "Push failed on attempt $attempt, retrying..."
-              sleep $((attempt * 2))
             fi
+            if [ "$attempt" -eq 10 ]; then
+              give_up "Push"
+            fi
+            echo "Push failed on attempt $attempt, retrying..."
+            sleep $((RANDOM % 10 + attempt * 3))
           done
+
+      - name: Upload Unpushed Commits (recovery patch)
+        if: ${{ failure() && steps.discover_commit.outcome == 'failure' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: unpushed-discover-shard-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/unpushed.patch
+          retention-days: 14
+          if-no-files-found: warn
 
       - name: Shard Summary
         if: always()
+        env:
+          JOB_KIND: Discovery
+          LOG_FILE: /tmp/depup-discover.log
+          SHARD: ${{ matrix.shard }}
         run: |
-          echo "## Discovery Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
-          summary_line=$(grep '^DEPUP_SUMMARY' /tmp/depup-discover.log 2>/dev/null || true)
-          if [ -n "$summary_line" ]; then
-            echo "- **Counts**: $summary_line" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- **Counts**: (no summary line found -- script may have errored)" >> $GITHUB_STEP_SUMMARY
+          echo "## $JOB_KIND Shard $SHARD Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
+          summary_line=$(grep '^DEPUP_SUMMARY' "$LOG_FILE" 2>/dev/null | tail -n 1 || true)
+          if [ -z "$summary_line" ]; then
+            echo "::error::$JOB_KIND shard $SHARD: no DEPUP_SUMMARY line found in $LOG_FILE (script may have crashed before finishing)"
+            echo "- **Counts**: (no summary line found -- script may have errored)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "- **Counts**: $summary_line" >> "$GITHUB_STEP_SUMMARY"
+          failed=$(printf '%s\n' "$summary_line" | sed -n 's/.*[[:space:]]failed=\([0-9][0-9]*\).*/\1/p')
+          failed=${failed:-0}
+          if [ "$failed" -gt 0 ]; then
+            echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
+            echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
           fi
 
   sync:
@@ -219,6 +249,7 @@ jobs:
           git config --global user.signingkey 5A5141965C39129D
 
       - name: Sync Packages
+        id: sync_run
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -229,7 +260,12 @@ jobs:
           npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
           exit "${PIPESTATUS[0]}"
 
+      # Runs even when the sync script failed: packages it already published to
+      # npm must still be committed, otherwise git drifts from npm. The job
+      # still ends red because the script step's failure fails the job.
       - name: Commit and Push Changes
+        id: sync_commit
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
         run: |
           git add -A packages/
           if git diff --cached --quiet; then
@@ -237,7 +273,14 @@ jobs:
             exit 0
           fi
           git commit -m "chore: sync packages via cron (shard ${{ matrix.shard }})"
-          for attempt in 1 2 3 4 5; do
+
+          give_up() {
+            echo "::error::$1 failed after 10 attempts: sync shard ${{ matrix.shard }} data was published to npm but is NOT committed to git. Recovery patch uploaded as an artifact; apply it with git am."
+            git format-patch origin/main --stdout > "$RUNNER_TEMP/unpushed.patch" || echo "::warning::Could not write the recovery patch"
+            exit 1
+          }
+
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
             git fetch origin main
             # Clean any unstaged changes before rebase (e.g., case-different
             # README files from original packages that git sees as modified)
@@ -261,55 +304,75 @@ jobs:
                   else
                     git rebase --abort 2>/dev/null || true
                   fi
-                  sleep $((attempt * 2))
-                  if [ "$attempt" -eq 5 ]; then
-                    echo "Rebase failed after 5 attempts"
-                    exit 1
+                  if [ "$attempt" -eq 10 ]; then
+                    give_up "Rebase"
                   fi
+                  sleep $((RANDOM % 10 + attempt * 3))
                   continue
                 }
               else
                 echo "Rebase failed on attempt $attempt, aborting and retrying..."
                 git rebase --abort 2>/dev/null || true
-                sleep $((attempt * 2))
-                if [ "$attempt" -eq 5 ]; then
-                  echo "Rebase failed after 5 attempts"
-                  exit 1
+                if [ "$attempt" -eq 10 ]; then
+                  give_up "Rebase"
                 fi
+                sleep $((RANDOM % 10 + attempt * 3))
                 continue
               fi
             fi
             if git push origin main; then
               echo "Push successful on attempt $attempt"
               break
-            else
-              if [ "$attempt" -eq 5 ]; then
-                echo "Push failed after 5 attempts"
-                exit 1
-              fi
-              echo "Push failed on attempt $attempt, retrying..."
-              sleep $((attempt * 2))
             fi
+            if [ "$attempt" -eq 10 ]; then
+              give_up "Push"
+            fi
+            echo "Push failed on attempt $attempt, retrying..."
+            sleep $((RANDOM % 10 + attempt * 3))
           done
+
+      - name: Upload Unpushed Commits (recovery patch)
+        if: ${{ failure() && steps.sync_commit.outcome == 'failure' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: unpushed-sync-shard-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/unpushed.patch
+          retention-days: 14
+          if-no-files-found: warn
 
       - name: Shard Summary
         if: always()
+        env:
+          JOB_KIND: Sync
+          LOG_FILE: /tmp/depup-sync.log
+          SHARD: ${{ matrix.shard }}
         run: |
-          echo "## Sync Shard ${{ matrix.shard }} Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
-          summary_line=$(grep '^DEPUP_SUMMARY' /tmp/depup-sync.log 2>/dev/null || true)
-          if [ -n "$summary_line" ]; then
-            echo "- **Counts**: $summary_line" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- **Counts**: (no summary line found -- script may have errored)" >> $GITHUB_STEP_SUMMARY
+          echo "## $JOB_KIND Shard $SHARD Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
+          summary_line=$(grep '^DEPUP_SUMMARY' "$LOG_FILE" 2>/dev/null | tail -n 1 || true)
+          if [ -z "$summary_line" ]; then
+            echo "::error::$JOB_KIND shard $SHARD: no DEPUP_SUMMARY line found in $LOG_FILE (script may have crashed before finishing)"
+            echo "- **Counts**: (no summary line found -- script may have errored)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "- **Counts**: $summary_line" >> "$GITHUB_STEP_SUMMARY"
+          failed=$(printf '%s\n' "$summary_line" | sed -n 's/.*[[:space:]]failed=\([0-9][0-9]*\).*/\1/p')
+          failed=${failed:-0}
+          if [ "$failed" -gt 0 ]; then
+            echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
+            echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
           fi
 
   heal:
     name: Self-Healing
-    needs: sync
+    needs: [discover, sync]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     if: ${{ !cancelled() && !inputs.discover_only }}
+    # contents: push heal repairs; issues: close the cron-failure issue on recovery.
+    permissions:
+      contents: write
+      issues: write
 
     steps:
       - name: Checkout (latest main after all syncs)
@@ -349,6 +412,7 @@ jobs:
           npm run heal
 
       - name: Commit and Push
+        id: heal_commit
         run: |
           git add -A packages/
           if git diff --cached --quiet; then
@@ -356,25 +420,113 @@ jobs:
             exit 0
           fi
           git commit -m "chore: self-healing repairs"
-          for attempt in 1 2 3; do
+
+          give_up() {
+            echo "::error::$1 failed after 10 attempts: self-healing repairs are NOT committed to git. Recovery patch uploaded as an artifact; apply it with git am."
+            git format-patch origin/main --stdout > "$RUNNER_TEMP/unpushed.patch" || echo "::warning::Could not write the recovery patch"
+            exit 1
+          }
+
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
             git fetch origin main
             # Clean unstaged changes before rebase (case-different files from packages)
             git checkout -- . 2>/dev/null || true
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
-              sleep 2
-              if [ "$attempt" -eq 3 ]; then
-                echo "Rebase failed after 3 attempts"
-                exit 1
+              if [ "$attempt" -eq 10 ]; then
+                give_up "Rebase"
               fi
+              sleep $((RANDOM % 10 + attempt * 3))
             elif git push origin main; then
               echo "Push successful on attempt $attempt"
               break
             else
-              if [ "$attempt" -eq 3 ]; then
-                echo "Push failed after 3 attempts"
-                exit 1
+              if [ "$attempt" -eq 10 ]; then
+                give_up "Push"
               fi
-              sleep 2
+              sleep $((RANDOM % 10 + attempt * 3))
             fi
           done
+
+      - name: Upload Unpushed Commits (recovery patch)
+        if: ${{ failure() && steps.heal_commit.outcome == 'failure' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: unpushed-heal-${{ github.run_id }}
+          path: ${{ runner.temp }}/unpushed.patch
+          retention-days: 14
+          if-no-files-found: warn
+
+      # Recovery: sync went green, so any open cron-failure issue is resolved.
+      # A few seconds of gh calls; a gh outage must not fail an otherwise green run.
+      - name: Close Resolved cron-failure Issues
+        if: ${{ success() && needs.sync.result == 'success' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if ! numbers=$(gh issue list --label cron-failure --state open --json number --jq '.[].number'); then
+            echo "::notice::Could not list cron-failure issues; skipping auto-close"
+            exit 0
+          fi
+          for number in $numbers; do
+            gh issue close "$number" --comment "Cron sync recovered: all sync shards succeeded in $RUN_URL. Closing automatically." \
+              || echo "::notice::Could not close cron-failure issue #$number; close it manually"
+          done
+
+  # Runs only when a prior job failed, so green runs pay nothing. No checkout.
+  # The cron-failure label can never start process-package-request.yml: that
+  # workflow triggers on issues `labeled` and its gate job requires
+  # github.event.label.name == 'package-request'.
+  alert:
+    name: Alert on Repeated Failure
+    needs: [discover, sync, heal]
+    if: ${{ always() && (needs.discover.result == 'failure' || needs.sync.result == 'failure' || needs.heal.result == 'failure') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+      actions: read
+
+    steps:
+      - name: Open or Update cron-failure Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          DISCOVER_RESULT: ${{ needs.discover.result }}
+          SYNC_RESULT: ${{ needs.sync.result }}
+          HEAL_RESULT: ${{ needs.heal.result }}
+        run: |
+          # The current run is still in progress, so the newest completed run is the previous one.
+          previous=$(gh run list --workflow cron.yml --status completed --limit 3 --json conclusion --jq '.[0].conclusion // "none"')
+          echo "Previous completed cron run conclusion: $previous"
+          if [ "$previous" = "success" ]; then
+            echo "::notice::First failure after a green run; not opening an issue yet"
+            exit 0
+          fi
+
+          failed_jobs=""
+          [ "$DISCOVER_RESULT" = "failure" ] && failed_jobs="$failed_jobs discover"
+          [ "$SYNC_RESULT" = "failure" ] && failed_jobs="$failed_jobs sync"
+          [ "$HEAL_RESULT" = "failure" ] && failed_jobs="$failed_jobs heal"
+          body="Repeated cron failures (previous completed run: $previous).
+
+          - Run: $RUN_URL
+          - Failed jobs:$failed_jobs"
+
+          if ! out=$(gh label create cron-failure --color B60205 --description "Repeated cron job failures" 2>&1); then
+            case "$out" in
+              *"already exists"*) ;;
+              *) echo "::error::Could not create cron-failure label: $out"; exit 1 ;;
+            esac
+          fi
+
+          existing=$(gh issue list --label cron-failure --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+            echo "Commented on existing issue #$existing"
+          else
+            gh issue create --title "Cron: repeated shard failures" --label cron-failure --body "$body"
+          fi

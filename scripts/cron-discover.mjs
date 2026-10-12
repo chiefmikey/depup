@@ -6,7 +6,7 @@ import path from 'node:path';
 import chalk from 'chalk';
 import ora from 'ora';
 
-import { getShardConfig, sleep } from './utilities.mjs';
+import { getShardConfig, logFailureBreakdown, sleep } from './utilities.mjs';
 
 const require = createRequire(import.meta.url);
 const npmregfetch = require('npm-registry-fetch');
@@ -36,6 +36,17 @@ function countVerificationFailures(versionEntry) {
       rev.smokeTest === 'failed' &&
       rev.status !== 'published',
   ).length;
+}
+
+// True when a config/optional file is simply absent. Real filesystem errors
+// always carry a code (EACCES, EISDIR, EIO, ...) and are NOT "missing"; a
+// code-less non-syntax error is not a filesystem error either, so it keeps the
+// historical lenient treatment. A SyntaxError is a corrupt file, never missing.
+function isMissingFile(error) {
+  if (error instanceof SyntaxError) {
+    return false;
+  }
+  return error.code === undefined || error.code === 'ENOENT';
 }
 
 class PackageDiscoverer {
@@ -121,45 +132,16 @@ class PackageDiscoverer {
       spinner.text = 'Fetching top packages from npm...';
       const topPackages = await this.getTopPackages();
       spinner.succeed(`Found ${topPackages.length} top packages`);
+      this.assertPackageListUsable(topPackages);
 
       const packagesToProcess = topPackages.slice(0, this.maxPackages);
       const { failedPackages, processedPackages } =
         await this.processBatches(packagesToProcess);
 
-      const attempted = processedPackages.length + failedPackages.length;
-      const skipped = packagesToProcess.length - attempted;
-
-      console.log(chalk.green(`\n✅ Discovery completed`));
-      console.log(
-        chalk.cyan(`Processed: ${processedPackages.length} packages`),
-      );
-      console.log(chalk.red(`Failed: ${failedPackages.length} packages`));
-
-      if (processedPackages.length > 0) {
-        console.log(
-          chalk.gray(`Successful packages: ${processedPackages.join(', ')}`),
-        );
-      }
-
-      if (failedPackages.length > 0) {
-        console.log(chalk.gray(`Failed packages:`));
-        for (const package_ of failedPackages) {
-          console.log(chalk.gray(`  - ${package_.name}: ${package_.error}`));
-        }
-      }
-
-      // Systemic failure detection: >50% failure rate on 10+ attempts signals
-      // a dead NPM_TOKEN or registry outage rather than individual package bugs
-      if (attempted >= 10 && failedPackages.length / attempted > 0.5) {
-        console.error(
-          `SYSTEMIC FAILURE: ${failedPackages.length}/${attempted} packages failed (>${Math.round((failedPackages.length / attempted) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
-        );
-        process.exit(1);
-      }
-
-      // Machine-readable summary for GitHub step summary (FIX 6)
-      console.log(
-        `DEPUP_SUMMARY processed=${processedPackages.length} failed=${failedPackages.length} skipped=${skipped}`,
+      this.reportResults(
+        failedPackages,
+        processedPackages,
+        packagesToProcess.length,
       );
     } catch (error) {
       spinner.fail('Discovery failed');
@@ -168,64 +150,120 @@ class PackageDiscoverer {
     }
   }
 
+  // An empty list is never a successful discovery: it means every list was
+  // empty, every registry lookup failed, or a shard was mis-sized.
+  assertPackageListUsable(topPackages) {
+    const { versionFetchAttempts: tried, versionFetchFailures: failed } = this;
+    if (topPackages.length === 0 || (tried >= 10 && failed / tried > 0.5)) {
+      throw new Error(
+        `No usable package list: ${failed}/${tried} registry lookups failed, ${topPackages.length} packages resolved`,
+      );
+    }
+  }
+
+  reportResults(failedPackages, processedPackages, total) {
+    const attempted = processedPackages.length + failedPackages.length;
+    const skipped = total - attempted;
+
+    console.log(chalk.green(`\n✅ Discovery completed`));
+    console.log(chalk.cyan(`Processed: ${processedPackages.length} packages`));
+    console.log(chalk.red(`Failed: ${failedPackages.length} packages`));
+
+    if (processedPackages.length > 0) {
+      console.log(
+        chalk.gray(`Successful packages: ${processedPackages.join(', ')}`),
+      );
+    }
+
+    if (failedPackages.length > 0) {
+      console.log(chalk.gray(`Failed packages:`));
+      for (const package_ of failedPackages) {
+        console.log(chalk.gray(`  - ${package_.name}: ${package_.error}`));
+      }
+      // Group by reason, not by package: drop the per-package prefix
+      logFailureBreakdown(
+        failedPackages.map(({ error }) =>
+          (error || 'Unknown error').replace(/^Failed to process \S+: /u, ''),
+        ),
+      );
+    }
+
+    // Machine-readable summary for GitHub step summary. Keys processed/failed/
+    // skipped keep their order; extra keys are only appended when non-zero.
+    const extra = this.versionFetchFailures
+      ? ` fetchfailed=${this.versionFetchFailures}`
+      : '';
+    console.log(
+      `DEPUP_SUMMARY processed=${processedPackages.length} failed=${failedPackages.length} skipped=${skipped}${extra}`,
+    );
+
+    // Systemic failure detection: >50% failure rate on 10+ attempts signals
+    // a dead NPM_TOKEN or registry outage rather than individual package bugs
+    if (attempted >= 10 && failedPackages.length / attempted > 0.5) {
+      console.error(
+        `SYSTEMIC FAILURE: ${failedPackages.length}/${attempted} packages failed (>${Math.round((failedPackages.length / attempted) * 100)}%). Possible dead NPM_TOKEN or registry outage.`,
+      );
+      process.exit(1);
+    }
+  }
+
   async getTopPackages() {
     return this.getCuratedPackages();
   }
 
+  // Reads and parses config/<fileName>. Returns undefined when the file does
+  // not exist (callers decide whether that is benign); throws for any read or
+  // parse failure so a broken list can never masquerade as an empty one.
+  async readPackageList(fileName) {
+    const filePath = path.resolve(process.cwd(), 'config', fileName);
+    try {
+      return JSON.parse(await fs.readFile(filePath));
+    } catch (error) {
+      if (isMissingFile(error)) {
+        return null;
+      }
+      throw new Error(`Could not load config/${fileName}: ${error.message}`, {
+        cause: error,
+      });
+    }
+  }
+
+  // Auto-curated list (weekly refresh) or the hardcoded fallback when it is
+  // absent/malformed, plus user-submitted packages (optional).
+  async loadPackageNames() {
+    const curated = await this.readPackageList('curated-packages.json');
+    const hasCurated = Array.isArray(curated?.packages);
+    const names = new Set(
+      hasCurated ? curated.packages : this.curatedPackageNames,
+    );
+    if (hasCurated) {
+      console.log(
+        chalk.gray(
+          `Loaded ${curated.packages.length} auto-curated packages (refreshed: ${curated.refreshedAt || 'unknown'})`,
+        ),
+      );
+    } else {
+      console.warn('curated-packages.json missing/malformed; using fallback');
+    }
+
+    const user = await this.readPackageList('user-packages.json');
+    const userNames = Array.isArray(user?.packages) ? user.packages : [];
+    if (user && userNames !== user.packages) {
+      console.warn('user-packages.json has no "packages" array; ignored');
+    }
+    const merged = new Set([...names, ...userNames]);
+    if (merged.size > names.size) {
+      console.log(
+        chalk.gray(`Added ${merged.size - names.size} user-submitted packages`),
+      );
+    }
+    return merged;
+  }
+
   async getCuratedPackages() {
-    // Load package lists: auto-curated + user-submitted, fall back to hardcoded
-    const packageSet = new Set();
-
-    // 1. Auto-curated list (from weekly refresh-curated-list.mjs)
-    try {
-      const configPath = path.resolve(
-        process.cwd(),
-        'config',
-        'curated-packages.json',
-      );
-      const data = JSON.parse(await fs.readFile(configPath));
-      if (Array.isArray(data.packages)) {
-        for (const name of data.packages) {
-          packageSet.add(name);
-        }
-        console.log(
-          chalk.gray(
-            `Loaded ${data.packages.length} auto-curated packages (refreshed: ${data.refreshedAt || 'unknown'})`,
-          ),
-        );
-      }
-    } catch {
-      // Config file missing -- use hardcoded fallback
-      for (const name of this.curatedPackageNames) {
-        packageSet.add(name);
-      }
-    }
-
-    // 2. User-submitted packages (from GitHub issue submissions)
-    try {
-      const userPath = path.resolve(
-        process.cwd(),
-        'config',
-        'user-packages.json',
-      );
-      const data = JSON.parse(await fs.readFile(userPath));
-      if (Array.isArray(data.packages)) {
-        let added = 0;
-        for (const name of data.packages) {
-          if (!packageSet.has(name)) {
-            packageSet.add(name);
-            added++;
-          }
-        }
-        if (added > 0) {
-          console.log(chalk.gray(`Added ${added} user-submitted packages`));
-        }
-      }
-    } catch {
-      // No user-submitted packages -- that's fine
-    }
-
-    let packageNames = [...packageSet];
+    this.versionFetchAttempts = 0;
+    this.versionFetchFailures = 0;
+    let packageNames = [...(await this.loadPackageNames())];
 
     // Sort before sharding for deterministic shard assignment matching cron-sync
     packageNames = packageNames.toSorted((a, b) => a.localeCompare(b));
@@ -255,10 +293,12 @@ class PackageDiscoverer {
         batch.map(async (name) => this.fetchPackageVersion(name)),
       );
 
+      this.versionFetchAttempts += batch.length;
       for (const result of batchResults) {
         if (result.status === 'fulfilled' && result.value !== null) {
           packages.push(result.value);
         } else if (result.status === 'rejected') {
+          this.versionFetchFailures++;
           console.warn(
             `Could not fetch version for package: ${result.reason?.message}`,
           );
@@ -321,6 +361,14 @@ class PackageDiscoverer {
       ? this.checkForUpdates(package_, packageDirectory, integrityFile)
       : this.createNewPackage(package_, packageDirectory));
 
+    // checkForUpdates warns instead of throwing; surface its failure so the
+    // package is counted as failed rather than silently processed.
+    const updateFailure = this.updateFailures.get(package_.name);
+    if (updateFailure) {
+      this.updateFailures.delete(package_.name);
+      throw updateFailure;
+    }
+
     // Auto-generate README after processing
     try {
       await this.generateReadme(sanitizedName);
@@ -335,8 +383,13 @@ class PackageDiscoverer {
     try {
       await fs.access(packageDirectory);
       return true;
-    } catch {
-      return false;
+    } catch (error) {
+      // Only "not there" means new package; EACCES/EIO must not trigger a
+      // re-create over an existing package directory.
+      if (isMissingFile(error) || error.code === 'ENOTDIR') {
+        return false;
+      }
+      throw error;
     }
   }
 
@@ -415,6 +468,7 @@ class PackageDiscoverer {
         `  ⚠️  Could not check updates for ${package_.name}:`,
         error.message,
       );
+      this.updateFailures.set(package_.name, error);
     }
   }
 
@@ -926,7 +980,10 @@ class PackageDiscoverer {
   maxPackages = 600;
   rateLimitDelay = 100;
   registry = 'https://registry.npmjs.org';
+  versionFetchAttempts = 0;
   versionFetchConcurrency = 40;
+  versionFetchFailures = 0;
+  updateFailures = new Map();
 }
 
 export { PackageDiscoverer };

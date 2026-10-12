@@ -603,11 +603,11 @@ jobs:
 
             echo "Push race on attempt $attempt, retrying..."
             # Random jitter (1-10s) + exponential backoff to spread concurrent pushes
-            sleep $((RANDOM % 10 + attempt * 3))
             if [ "$attempt" -eq 10 ]; then
-              echo "Push failed after 10 attempts"
+              echo "::error::Push failed after 10 attempts: $PACKAGE_NAME IS published to npm but is NOT committed to git. The retry queue step will list it for the next cron cycle."
               exit 1
             fi
+            sleep $((RANDOM % 10 + attempt * 3))
           done
 
       # Queue only transient failures. A verification failure (test_failed) is
@@ -655,11 +655,11 @@ jobs:
             fi
 
             echo "Push race on attempt $attempt, retrying..."
-            sleep $((RANDOM % 10 + attempt * 3))
             if [ "$attempt" -eq 10 ]; then
-              echo "Queue push failed after 10 attempts"
+              echo "::error::Queue push failed after 10 attempts: $PACKAGE_NAME is NOT queued for retry and may be published to npm without a git record. A maintainer must add it to config/user-packages.json."
               exit 1
             fi
+            sleep $((RANDOM % 10 + attempt * 3))
           done
 
       - name: Comment on Issue

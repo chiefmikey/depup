@@ -9,6 +9,7 @@ import {
   getShardConfig,
   isNonSemverSpecifier,
   listPackageDirectories,
+  logFailureBreakdown,
   sleep,
 } from './utilities.mjs';
 
@@ -23,6 +24,39 @@ const MAX_VERIFICATION_ATTEMPTS = 3;
 const EIGHT_HOURS_MS = 8 * 60 * 60 * 1000;
 // After SIGTERM on timeout, SIGKILL the whole process group once this elapses.
 const KILL_GRACE_MS = 2000;
+// Phase-1 registry fetches: npm-registry-fetch defaults to zero retries, so
+// transient 429/5xx/network errors are retried here, briefly (the pre-check
+// runs at high concurrency over ~600 packages, so added latency must stay small).
+const CHECK_MAX_RETRIES = 2;
+const CHECK_RETRY_BASE_MS = 300;
+// Systemic registry outage: at least this many packages checked, and more than
+// this fraction of them failed the check.
+const CHECK_SYSTEMIC_MIN_CHECKED = 10;
+const CHECK_SYSTEMIC_FAILURE_RATIO = 0.5;
+const TRANSIENT_ERROR_CODES = new Set([
+  'EAI_AGAIN',
+  'ECONNREFUSED',
+  'ECONNRESET',
+  'ENOTFOUND',
+  'EPIPE',
+  'ETIMEDOUT',
+  'FETCH_ERROR',
+]);
+
+// True for errors worth retrying: rate limiting, registry 5xx, and network or
+// timeout failures. Permanent errors (404, 401, malformed data) are not.
+function isTransientRegistryError(error) {
+  const status = error?.statusCode ?? error?.status;
+  if (typeof status === 'number') {
+    return status === 429 || status === 408 || status >= 500;
+  }
+  if (TRANSIENT_ERROR_CODES.has(error?.code)) {
+    return true;
+  }
+  return /fetch failed|timed? ?out|socket hang up|network/iu.test(
+    error?.message || '',
+  );
+}
 
 // Number of verification-failed, never-published revisions in one
 // integrity.json version entry ({ [revision]: { smokeTest, status } }).
@@ -54,6 +88,7 @@ class PackageSyncer {
    */
   async checkBatches(packagesToProcess) {
     const needsUpdate = [];
+    const checkFailures = [];
     let skippedCount = 0;
     let checkedCount = 0;
 
@@ -79,6 +114,14 @@ class PackageSyncer {
           const { check, package_ } = result.value;
           if (check.skip) {
             skippedCount++;
+          } else if (check.checkFailed) {
+            // Could not determine status: NOT up-to-date. Counted separately so
+            // a registry outage cannot masquerade as a clean no-op run.
+            checkFailures.push({
+              error: check.error,
+              name: package_.name,
+            });
+            checkedCount++;
           } else if (check.updateType === null) {
             // up-to-date
             checkedCount++;
@@ -88,11 +131,11 @@ class PackageSyncer {
           }
         } else {
           // Check itself failed unexpectedly (checkNeedsUpdate catches its own
-          // errors, so this path is defensive). Treat as up-to-date this run;
-          // the next cron cycle will re-check.
-          console.warn(
-            `Pre-check failed for package: ${result.reason?.message || 'Unknown error'}`,
-          );
+          // errors, so this path is defensive). Counted as a check failure so
+          // it is visible in the summary; the next cron cycle will re-check.
+          const error = result.reason?.message || 'Unknown error';
+          console.warn(`Pre-check failed for package: ${error}`);
+          checkFailures.push({ error, name: 'unknown' });
           checkedCount++;
         }
       }
@@ -102,10 +145,18 @@ class PackageSyncer {
       }
     }
 
+    const failedCheckCount = checkFailures.length;
+    const upToDateCount = checkedCount - needsUpdate.length - failedCheckCount;
     console.log(
-      `Pre-check complete: ${needsUpdate.length} packages need updates, ${checkedCount - needsUpdate.length} up-to-date, ${skippedCount} skipped`,
+      `Pre-check complete: ${needsUpdate.length} packages need updates, ${upToDateCount} up-to-date, ${skippedCount} skipped, ${failedCheckCount} check-failed`,
     );
-    return { needsUpdate, skippedCount };
+    if (failedCheckCount > 0) {
+      console.warn(
+        `${failedCheckCount} package(s) could not be checked against the registry this run.`,
+      );
+      this.logFailureBreakdown(checkFailures);
+    }
+    return { checkedCount, failedCheckCount, needsUpdate, skippedCount };
   }
 
   /**
@@ -239,19 +290,9 @@ class PackageSyncer {
    * the primary diagnostic trail when a run goes wrong.
    */
   logFailureBreakdown(failureReasons) {
-    if (!failureReasons || failureReasons.length === 0) {
-      return;
-    }
-    const counts = new Map();
-    for (const { error } of failureReasons) {
-      const key = error || 'Unknown error';
-      counts.set(key, (counts.get(key) || 0) + 1);
-    }
-    const breakdown = [...counts.entries()]
-      .toSorted((a, b) => b[1] - a[1])
-      .map(([message, count]) => `  ${count}x ${message}`)
-      .join('\n');
-    console.error(`Failure breakdown:\n${breakdown}`);
+    logFailureBreakdown(
+      (failureReasons || []).map(({ error }) => error || 'Unknown error'),
+    );
   }
 
   async main() {
@@ -260,6 +301,9 @@ class PackageSyncer {
     try {
       const existingPackages = await this.getExistingPackages();
       console.log(`Found ${existingPackages.length} existing packages`);
+      if (this.packagesDirectoryMissing) {
+        throw new Error('packages/ directory not found; nothing to sync');
+      }
 
       const packagesToProcess = this.selectRunWindow(existingPackages);
       console.log(
@@ -267,8 +311,20 @@ class PackageSyncer {
       );
 
       // Phase 1: cheap pre-check at high concurrency (no child processes)
-      const { needsUpdate, skippedCount } =
+      const { checkedCount, failedCheckCount, needsUpdate, skippedCount } =
         await this.checkBatches(packagesToProcess);
+
+      // Registry outage: if most pre-checks failed, "nothing to update" is a
+      // lie. Fail loudly instead of reporting a green no-op run.
+      if (
+        checkedCount >= CHECK_SYSTEMIC_MIN_CHECKED &&
+        failedCheckCount / checkedCount > CHECK_SYSTEMIC_FAILURE_RATIO
+      ) {
+        console.error(
+          `SYSTEMIC FAILURE: ${failedCheckCount}/${checkedCount} registry pre-checks failed (>${Math.round(CHECK_SYSTEMIC_FAILURE_RATIO * 100)}%). Possible npm registry outage or rate limiting.`,
+        );
+        process.exit(1);
+      }
 
       // Phase 2: apply updates at safe concurrency (spawns depup.mjs per package)
       const {
@@ -311,8 +367,13 @@ class PackageSyncer {
       }
 
       // Machine-readable summary for GitHub step summary
+      // checkfailed is appended last so key-by-regex parsers keep working.
+      const checkFailedSuffix =
+        typeof failedCheckCount === 'number'
+          ? ` checkfailed=${failedCheckCount}`
+          : '';
       console.log(
-        `DEPUP_SUMMARY processed=${syncedPackages.length} failed=${failedCount} skipped=${skippedCount}`,
+        `DEPUP_SUMMARY processed=${syncedPackages.length} failed=${failedCount} skipped=${skippedCount}${checkFailedSuffix}`,
       );
     } catch (error) {
       console.error('Sync failed:', error.message);
@@ -386,6 +447,17 @@ class PackageSyncer {
       }
     } catch (error) {
       console.error('Error reading packages:', error.message);
+      if (error.code === 'ENOENT') {
+        // Returned as empty for callers; main() turns this into a failure so a
+        // missing checkout cannot produce a zero-work green run.
+        this.packagesDirectoryMissing = true;
+      } else {
+        // Unreadable packages/ (EACCES, EIO, ...) must not look like "no
+        // packages"; an empty list would make the run a green no-op.
+        throw new Error(`Could not read packages directory: ${error.message}`, {
+          cause: error,
+        });
+      }
     }
 
     // Sort deterministically before sharding so each package always maps
@@ -432,10 +504,7 @@ class PackageSyncer {
       }
 
       // Get latest version from npm
-      const latestManifest = await fetch.json(`/${package_.name}`, {
-        registry: this.registry,
-        timeout: 5000,
-      });
+      const latestManifest = await this.fetchManifestWithRetry(package_.name);
 
       const latestVersion = latestManifest['dist-tags']?.latest;
 
@@ -491,8 +560,42 @@ class PackageSyncer {
       return { latestVersion: package_.version, skip: false, updateType: null };
     } catch (error) {
       console.warn(`  Could not check ${package_.name}:`, error.message);
-      return { latestVersion: package_.version, skip: false, updateType: null };
+      // Distinguishable from "up to date" (updateType null, no checkFailed) so
+      // checkBatches can count it and detect a registry outage.
+      return {
+        checkFailed: true,
+        error: error.message || 'Unknown error',
+        latestVersion: package_.version,
+        skip: false,
+        updateType: null,
+      };
     }
+  }
+
+  /**
+   * Fetch a package manifest, retrying transient failures (429, 5xx, network,
+   * timeout) with short exponential backoff. Permanent errors throw at once.
+   */
+  async fetchManifestWithRetry(packageName) {
+    for (let attempt = 0; ; attempt++) {
+      try {
+        return await fetch.json(`/${packageName}`, {
+          registry: this.registry,
+          timeout: 5000,
+        });
+      } catch (error) {
+        if (attempt >= CHECK_MAX_RETRIES || !isTransientRegistryError(error)) {
+          throw error;
+        }
+        await this.sleepBeforeRetry(attempt);
+      }
+    }
+  }
+
+  async sleepBeforeRetry(attempt) {
+    // Exponential backoff with jitter: ~300ms, ~600ms.
+    const delay = CHECK_RETRY_BASE_MS * 2 ** attempt;
+    await sleep(delay + Math.floor(Math.random() * (delay / 2)));
   }
 
   /**
@@ -610,8 +713,18 @@ class PackageSyncer {
       }
 
       return false;
-    } catch {
+    } catch (error) {
+      this.warnUnlessMissing(error, `dependency check for ${package_.name}`);
       return false;
+    }
+  }
+
+  // ENOENT is benign (nothing to compare). Anything else (corrupt
+  // package.json, unreadable file) would silently mark a package "deps up to
+  // date" forever, so make it visible.
+  warnUnlessMissing(error, what) {
+    if (error.code !== 'ENOENT') {
+      console.warn(`  Could not complete ${what}: ${error.message}`);
     }
   }
 
@@ -885,6 +998,7 @@ class PackageSyncer {
   // runs npm install + tests). 5 concurrent prevents OOM on the 7 GB runner.
   concurrentPackages = 5;
   maxPackagesPerRun = 600;
+  packagesDirectoryMissing = false;
   rateLimitDelay = 100;
   registry = 'https://registry.npmjs.org';
 }
