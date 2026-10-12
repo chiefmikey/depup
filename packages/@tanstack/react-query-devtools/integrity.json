@@ -540,6 +540,14 @@
       "status": "failed",
       "timestamp": "2026-10-12T08:26:18.548Z",
       "version": "5.104.2-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-12T09:40:34.957Z",
+      "version": "5.104.2-depup.1"
     }
   }
 }
