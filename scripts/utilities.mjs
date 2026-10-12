@@ -217,3 +217,22 @@ export async function sleep(ms) {
 export function toScopedName(packageName) {
   return `@depup/${flattenPackageName(packageName)}`;
 }
+
+/**
+ * Log failures grouped by message, most frequent first, as an actionable
+ * breakdown in the CI log. No-op when there is nothing to report.
+ */
+export function logFailureBreakdown(messages) {
+  const counts = new Map();
+  for (const message of messages) {
+    counts.set(message, (counts.get(message) || 0) + 1);
+  }
+  if (counts.size === 0) {
+    return;
+  }
+  const breakdown = [...counts.entries()]
+    .toSorted((a, b) => b[1] - a[1])
+    .map(([message, count]) => `  ${count}x ${message}`)
+    .join('\n');
+  console.error(`Failure breakdown:\n${breakdown}`);
+}

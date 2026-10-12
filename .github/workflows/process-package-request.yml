@@ -603,11 +603,11 @@ jobs:
 
             echo "Push race on attempt $attempt, retrying..."
             # Random jitter (1-10s) + exponential backoff to spread concurrent pushes
-            sleep $((RANDOM % 10 + attempt * 3))
             if [ "$attempt" -eq 10 ]; then
-              echo "Push failed after 10 attempts"
+              echo "::error::Push failed after 10 attempts: $PACKAGE_NAME IS published to npm but is NOT committed to git. The retry queue step lists it in config/user-packages.json; the next weekly discover run (up to a week) picks it up, or a maintainer can re-run it."
               exit 1
             fi
+            sleep $((RANDOM % 10 + attempt * 3))
           done
 
       # Queue only transient failures. A verification failure (test_failed) is
@@ -655,11 +655,11 @@ jobs:
             fi
 
             echo "Push race on attempt $attempt, retrying..."
-            sleep $((RANDOM % 10 + attempt * 3))
             if [ "$attempt" -eq 10 ]; then
-              echo "Queue push failed after 10 attempts"
+              echo "::error::Queue push failed after 10 attempts: $PACKAGE_NAME is NOT queued for retry and may be published to npm without a git record. A maintainer must add it to config/user-packages.json."
               exit 1
             fi
+            sleep $((RANDOM % 10 + attempt * 3))
           done
 
       - name: Comment on Issue
@@ -753,9 +753,9 @@ jobs:
               comment += 'Request Received: Package queued for automatic retry.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
               if (published && !committed) {
-                comment += 'Your package was published, but recording it in the repository failed in this run. DepUp has queued it and the next cron cycle (within 8 hours) will pick it up.\n\n';
+                comment += 'Your package was published, but recording it in the repository failed in this run. DepUp has queued it and the next weekly discover run (up to a week) will pick it up, or a maintainer can re-run it.\n\n';
               } else {
-                comment += 'Your package passed validation but could not be published in this run. DepUp has queued it and will retry automatically on the next cron cycle (within 8 hours).\n\n';
+                comment += 'Your package passed validation but could not be published in this run. DepUp has queued it and will retry automatically on the next weekly discover run (up to a week), or a maintainer can re-run it.\n\n';
               }
               comment += 'This issue is left open for tracking. No action is needed on your part.';
             } else {
