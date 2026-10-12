@@ -128,7 +128,9 @@ jobs:
           mkdir -p temp-package
           cd temp-package
           npm init -y > /dev/null 2>&1
-          npm install "$PACKAGE_NAME" --no-save
+          # --ignore-scripts: the package is untrusted and is only being fetched
+          # for scanning; its install scripts must not run before the scan.
+          npm install "$PACKAGE_NAME" --no-save --ignore-scripts
 
           # Strip version specifier for node_modules path lookup
           # e.g., express@5.0.0 -> express, @angular/core@17.0.0 -> @angular/core
@@ -294,7 +296,9 @@ jobs:
 
       - name: Run secure package processing
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Package code runs in the container started here: the npm secret is
+          # present only when this run publishes.
+          NPM_TOKEN: ${{ inputs.publish && secrets.NPM_TOKEN || '' }}
           PACKAGE_NAME: ${{ inputs.package }}
           BUMP_DEPS: ${{ inputs.bump_deps }}
           DO_TEST: ${{ inputs.test }}
@@ -376,8 +380,10 @@ jobs:
           fi
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Commit processed packages
         env:

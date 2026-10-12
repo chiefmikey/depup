@@ -41,10 +41,14 @@ jobs:
         shard: [0, 1, 2]
 
     steps:
+      # persist-credentials: false -- untrusted package code runs in this job, and a
+      # persisted token sits in .git/config where that code can read it. The push
+      # credential is configured inside the commit step instead.
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -65,9 +69,16 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Import GPG Key
+      # The key itself is imported after the script step (see Import GPG Key
+      # below); this check only fails the job before anything is published.
+      - name: Verify GPG key (fail fast before publishing)
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
+            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
+            exit 1
+          fi
 
       - name: Configure Git
         run: |
@@ -92,12 +103,25 @@ jobs:
           npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
           exit "${PIPESTATUS[0]}"
 
+      # The signing key is imported only now, after all package code has run:
+      # package code runs as this user and could otherwise export it from the
+      # keyring. Same condition as the commit step, so a failed script step
+      # still gets its (signed) commit.
+      - name: Import GPG Key
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
+
       # Runs even when the discover script failed: packages it already published
       # to npm must still be committed, otherwise git drifts from npm. The job
       # still ends red because the script step's failure fails the job.
       - name: Commit and Push Changes
         id: discover_commit
         if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        env:
+          PUSH_TOKEN: ${{ github.token }}
         run: |
           # A failed script can leave half-processed rev-N dirs with no integrity
           # record; drop them so they are not committed.
@@ -120,6 +144,12 @@ jobs:
             git format-patch origin/main --stdout > "$RUNNER_TEMP/unpushed.patch" || echo "::warning::Could not write the recovery patch"
             exit 1
           }
+
+          # Package code ran earlier in this job, so the checkout keeps no
+          # credential (persist-credentials: false); grant push access only now.
+          basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
+          echo "::add-mask::$basic_auth"
+          git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
             if ! git fetch origin main; then
@@ -236,11 +266,13 @@ jobs:
         shard: [0, 1, 2]
 
     steps:
+      # persist-credentials: false -- see the discover job.
       - name: Checkout (latest main, including discover pushes)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -261,9 +293,16 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Import GPG Key
+      # The key itself is imported after the script step (see Import GPG Key
+      # below); this check only fails the job before anything is published.
+      - name: Verify GPG key (fail fast before publishing)
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
+            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
+            exit 1
+          fi
 
       - name: Configure Git
         run: |
@@ -288,12 +327,25 @@ jobs:
           npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
           exit "${PIPESTATUS[0]}"
 
+      # The signing key is imported only now, after all package code has run:
+      # package code runs as this user and could otherwise export it from the
+      # keyring. Same condition as the commit step, so a failed script step
+      # still gets its (signed) commit.
+      - name: Import GPG Key
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
+
       # Runs even when the sync script failed: packages it already published to
       # npm must still be committed, otherwise git drifts from npm. The job
       # still ends red because the script step's failure fails the job.
       - name: Commit and Push Changes
         id: sync_commit
         if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        env:
+          PUSH_TOKEN: ${{ github.token }}
         run: |
           # A failed script can leave half-processed rev-N dirs with no integrity
           # record; drop them so they are not committed.
@@ -312,6 +364,12 @@ jobs:
             git format-patch origin/main --stdout > "$RUNNER_TEMP/unpushed.patch" || echo "::warning::Could not write the recovery patch"
             exit 1
           }
+
+          # Package code ran earlier in this job, so the checkout keeps no
+          # credential (persist-credentials: false); grant push access only now.
+          basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
+          echo "::add-mask::$basic_auth"
+          git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
             if ! git fetch origin main; then
@@ -442,8 +500,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |
@@ -454,9 +514,6 @@ jobs:
           git config --global user.signingkey 5A5141965C39129D
 
       - name: Run Self-Healing
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Running self-healing checks..."
           npm run heal

@@ -3,7 +3,7 @@
  * Every test here exercises real code paths, not inline reimplementations.
  */
 import { execFileSync } from 'node:child_process';
-import { promises as fs } from 'node:fs';
+import { existsSync, promises as fs, readdirSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
@@ -2494,8 +2494,12 @@ describe('securityScanner coverage gaps', () => {
 
       await scanner.performVulnerabilityScan('/fake/path');
 
-      expect(runNpmAudit).toHaveBeenCalledWith('/fake/path');
-      expect(runSnykScan).toHaveBeenCalledWith('/fake/path');
+      // Both audits run in the same staged copy, never in the scanned path.
+      const [[auditDirectory]] = runNpmAudit.mock.calls;
+
+      expect(auditDirectory).not.toBe('/fake/path');
+      expect(path.basename(auditDirectory)).toMatch(/^depup-audit-/u);
+      expect(runSnykScan).toHaveBeenCalledWith(auditDirectory);
       expect(runOwaspDependencyCheck).toHaveBeenCalledWith();
     });
   });
@@ -5456,6 +5460,87 @@ describe('securityApprovalWorkflow coverage gaps', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════
+// add-package.mjs -- name format hardening. add-package is the last gate
+// before a publish (the workflow runs it ahead of depup.mjs) and the only
+// writer of config/user-packages.json, which cron-discover feeds straight
+// into registry URLs and package directories.
+// ═══════════════════════════════════════════════════════════════════
+describe('add-package.mjs -- name format hardening', () => {
+  let adder;
+  let temporaryDirectory;
+
+  beforeEach(async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-addpkg-format-'),
+    );
+    adder = new PackageAdder();
+    adder.userPackagesPath = path.join(temporaryDirectory, 'user.json');
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  const rejectedNames = [
+    '..',
+    '.',
+    '-x',
+    '--help',
+    '_x',
+    '.x',
+    '@scope/..',
+    '@../name',
+    '@scope/.name',
+    '@-scope/name',
+    'a..b',
+    '__proto__',
+    'constructor',
+    'prototype',
+    'evil.tgz',
+    'x.tar',
+    'x.tar.gz',
+    'X.TGZ',
+    `a${'b'.repeat(214)}`,
+    `@${'s'.repeat(150)}/${'n'.repeat(100)}`,
+  ];
+
+  it.each(rejectedNames)('rejects %j and writes nothing', async (name) => {
+    await expect(adder.addPackage(name)).rejects.toThrow(
+      'Invalid package name format',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  const acceptedNames = [
+    'lodash',
+    'lodash.merge',
+    'JSONStream',
+    'a_b-c.d',
+    '0x',
+    '@types/node',
+    '@babel/core',
+    '@scope/constructor',
+    '@scope/name.tgz',
+    'a'.repeat(214),
+  ];
+
+  it.each(acceptedNames)('still accepts %j', async (name) => {
+    const result = await adder.addPackage(name);
+
+    expect(result.added).toBe(true);
+  });
+
+  it('rejects non-string names with the format error, not a TypeError', async () => {
+    await expect(adder.addPackage(42)).rejects.toThrow(
+      'Invalid package name format',
+    );
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
 // add-package.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
 describe('add-package.mjs -- coverage gap fill', () => {
@@ -5815,6 +5900,193 @@ describe('add-package.mjs -- coverage gap fill', () => {
       expect(result.packages).toContain('vue');
       expect(result.packages).toContain('angular');
     });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// add-package.mjs -- @depup name collisions. @scope/name flattens to
+// @depup/scope__name, which is also where the unscoped npm package
+// scope__name would publish. Anyone can register scope__name on npm, so
+// accepting it would let them publish into the namespace of @scope/name.
+// ═══════════════════════════════════════════════════════════════════
+describe('add-package.mjs -- @depup name collisions', () => {
+  let adder;
+  let temporaryDirectory;
+
+  const writeList = async (file, packages) => {
+    await fs.writeFile(file, JSON.stringify({ packages }));
+  };
+
+  beforeEach(async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-addpkg-collide-'),
+    );
+    adder = new PackageAdder();
+    adder.userPackagesPath = path.join(temporaryDirectory, 'user.json');
+    adder.curatedPackagesPath = path.join(temporaryDirectory, 'curated.json');
+    adder.packagesPath = path.join(temporaryDirectory, 'packages');
+    await writeList(adder.curatedPackagesPath, ['@babel/core', 'lodash']);
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  it('rejects an unscoped name that flattens onto a curated scoped package', async () => {
+    await expect(adder.addPackage('babel__core')).rejects.toThrow(
+      '@depup/babel__core',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('rejects a scoped name that flattens onto a user-submitted package', async () => {
+    await writeList(adder.userPackagesPath, ['a__b']);
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow('@depup/a__b');
+    await expect(adder.loadUserPackages()).resolves.toStrictEqual(['a__b']);
+  });
+
+  it('finds every flattening of the same @depup name', async () => {
+    const { findScopedNameCollision } = await import('../add-package.mjs');
+
+    expect(findScopedNameCollision('babel__core', ['@babel/core'])).toBe(
+      '@babel/core',
+    );
+    expect(findScopedNameCollision('@babel/core', ['x', 'babel__core'])).toBe(
+      'babel__core',
+    );
+    // @a__b/c and a__b__c, and @a/b__c, all become @depup/a__b__c
+    expect(findScopedNameCollision('@a__b/c', ['a__b__c', '@a/b__c'])).toBe(
+      'a__b__c',
+    );
+  });
+
+  it('does not flag the same package, unrelated names or non-strings', async () => {
+    const { findScopedNameCollision } = await import('../add-package.mjs');
+
+    expect(findScopedNameCollision('lodash', ['lodash'])).toBeUndefined();
+    expect(
+      findScopedNameCollision('@babel/core', ['@babel/cli', 'core']),
+    ).toBeUndefined();
+    expect(findScopedNameCollision('a', [])).toBeUndefined();
+    expect(findScopedNameCollision('a', [undefined, 42, null])).toBeUndefined();
+  });
+
+  it('keeps the existing duplicate message for repeats in the user list', async () => {
+    await adder.addPackage('react');
+
+    await expect(adder.addPackage('react')).rejects.toThrow(
+      'already in the user list',
+    );
+  });
+
+  it('still adds unrelated names and names already curated verbatim', async () => {
+    await expect(adder.addPackage('@babel/cli')).resolves.toMatchObject({
+      added: true,
+    });
+    await expect(adder.addPackage('lodash')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('adds names when the curated list is missing', async () => {
+    await fs.rm(adder.curatedPackagesPath);
+
+    await expect(adder.addPackage('babel__core')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('fails closed when the curated list cannot be parsed', async () => {
+    await fs.writeFile(adder.curatedPackagesPath, '{ not json');
+
+    await expect(adder.addPackage('babel__core')).rejects.toThrow(
+      'Could not read the curated package list',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  // Packages that dropped out of the weekly top-1000 refresh stay published
+  // (and stay under packages/) but are in neither list any more.
+  it('rejects a name that flattens onto a published package missing from both lists', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, '@angular', 'cdk'), {
+      recursive: true,
+    });
+
+    await expect(adder.addPackage('angular__cdk')).rejects.toThrow(
+      '@depup/angular__cdk',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('rejects a scoped name that flattens onto a published unscoped package', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, 'a__b'), { recursive: true });
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow('@depup/a__b');
+  });
+
+  it('ignores hidden entries and plain files under packages/', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, '.git', 'x'), {
+      recursive: true,
+    });
+    await fs.writeFile(path.join(adder.packagesPath, 'a__b'), 'not a dir');
+
+    await expect(adder.addPackage('@a/b')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('fails closed when packages/ cannot be read', async () => {
+    await fs.writeFile(adder.packagesPath, 'a file, not a directory');
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow(
+      'Could not read the published packages',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('adds names when packages/ does not exist', async () => {
+    await expect(adder.addPackage('@a/b')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('checks against the real packages/ directory by default', async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    const realAdder = new PackageAdder();
+    realAdder.userPackagesPath = adder.userPackagesPath;
+    // Keep the two lists out of it so only the packages/ scan can reject.
+    realAdder.curatedPackagesPath = adder.curatedPackagesPath;
+    const packagesRoot = path.resolve(
+      import.meta.dirname,
+      '..',
+      '..',
+      'packages',
+    );
+    const scopes = (await fs.readdir(packagesRoot, { withFileTypes: true }))
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith('@'))
+      .map((entry) => entry.name);
+    const [scope] = scopes;
+    const child = (
+      await fs.readdir(path.join(packagesRoot, scope), { withFileTypes: true })
+    ).find((entry) => entry.isDirectory());
+    const flat = `${scope.slice(1)}__${child.name}`;
+
+    await expect(realAdder.addPackage(flat)).rejects.toThrow(`@depup/${flat}`);
+  });
+
+  it('checks against the real curated list by default', async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    const realAdder = new PackageAdder();
+    realAdder.userPackagesPath = adder.userPackagesPath;
+
+    // @typescript-eslint/types is one of the 1000 curated packages in the repo.
+    await expect(
+      realAdder.addPackage('typescript-eslint__types'),
+    ).rejects.toThrow('@depup/typescript-eslint__types');
   });
 });
 
@@ -13948,6 +14220,97 @@ describe('depup.mjs -- coverage gap fill', () => {
         true,
       );
     });
+
+    // The import test executes untrusted package code AFTER the first .npmrc
+    // removal and BEFORE npm publish (which holds NPM_TOKEN). A .npmrc planted
+    // there can redirect the publish (and the token) to an attacker registry.
+    it('removes a .npmrc present at publish time before any npm call', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      await fs.writeFile(
+        path.join(tmpDir, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      const seenAtInstall = [];
+      const seenAtPublish = [];
+      jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {
+        seenAtInstall.push(existsSync(path.join(tmpDir, '.npmrc')));
+      });
+      jest.spyOn(depup, 'executePublish').mockImplementation(() => {
+        seenAtPublish.push(existsSync(path.join(tmpDir, '.npmrc')));
+      });
+
+      await depup.publishPackage(tmpDir, '@depup/testpkg', '1.0.0-depup.0');
+
+      expect(seenAtInstall).toStrictEqual([false]);
+      expect(seenAtPublish).toStrictEqual([false]);
+    });
+
+    it('does not publish when a planted .npmrc cannot be removed', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      jest.spyOn(depup, 'removeNpmrc').mockRejectedValue(new Error('EBUSY'));
+      const executeSpy = jest
+        .spyOn(depup, 'executePublish')
+        .mockImplementation(() => {});
+      jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
+
+      await expect(
+        depup.publishPackage(tmpDir, '@depup/testpkg', '1.0.0-depup.0'),
+      ).rejects.toThrow('EBUSY');
+      expect(executeSpy).not.toHaveBeenCalled();
+    });
+
+    it('processPackageCore never publishes a .npmrc planted by the import test', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      const originalCwd = process.cwd();
+      process.chdir(tmpDir);
+      try {
+        jest.spyOn(console, 'log').mockImplementation(() => {});
+        jest.spyOn(console, 'warn').mockImplementation(() => {});
+        jest.spyOn(depup, 'fetchManifest').mockResolvedValue({
+          name: 'plantpkg',
+          version: '1.0.0',
+        });
+        jest
+          .spyOn(depup, 'downloadPackage')
+          .mockImplementation(async (_spec, targetDirectory) => {
+            await fs.mkdir(targetDirectory, { recursive: true });
+            await fs.writeFile(
+              path.join(targetDirectory, 'package.json'),
+              JSON.stringify({ name: 'plantpkg', version: '1.0.0' }),
+            );
+          });
+        // Stand-in for the untrusted package code run by the import test.
+        jest
+          .spyOn(depup, 'testPackage')
+          .mockImplementation(async (targetDirectory) => {
+            await fs.writeFile(
+              path.join(targetDirectory, '.npmrc'),
+              'registry=http://evil.example/\n',
+            );
+            return true;
+          });
+        jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
+        const seenAtPublish = [];
+        jest
+          .spyOn(depup, 'executePublish')
+          .mockImplementation((publishDirectory) => {
+            seenAtPublish.push(
+              existsSync(path.join(publishDirectory, '.npmrc')),
+            );
+          });
+
+        await depup.processPackageCore({
+          packageSpec: 'plantpkg',
+          shouldPublish: true,
+          shouldTest: true,
+          timeout: 5000,
+        });
+
+        expect(seenAtPublish).toStrictEqual([false]);
+      } finally {
+        process.chdir(originalCwd);
+      }
+    });
   });
 
   // ─── validateNpmToken ────────────────────────────────────────────
@@ -15138,6 +15501,108 @@ describe('depup.mjs -- coverage gap fill', () => {
   });
 });
 
+// The @depup scope holds this project's own output. A request for a package in
+// that scope would be re-published as @depup/depup__<name>, re-processing our
+// own packages (and everything they depend on) under a second name.
+describe('@depup scope is never a valid request', () => {
+  const loadStep = async (jobName, stepName) => {
+    const yamlModule = await import('js-yaml');
+    const load = yamlModule.load ?? yamlModule.default.load;
+    const workflow = load(
+      await fs.readFile(
+        path.resolve(
+          import.meta.dirname,
+          '..',
+          '..',
+          '.github',
+          'workflows',
+          'process-package-request.yml',
+        ),
+        'utf8',
+      ),
+    );
+    return workflow.jobs[jobName].steps.find((step) => step.name === stepName);
+  };
+
+  // Run the real Parse Issue Content script against a fake issue.
+  const runParseStep = async (name) => {
+    const step = await loadStep('process', 'Parse Issue Content');
+    const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
+    const outputs = {};
+    const failures = [];
+    const core = {
+      setFailed: (message) => failures.push(message),
+      setOutput: (key, value) => {
+        outputs[key] = value;
+      },
+    };
+    const context = {
+      payload: {
+        issue: {
+          body: `### Package Name\n\n${name}\n\n### NPM Package URL\n\nhttps://www.npmjs.com/package/x\n`,
+          title: 'Add package: [package-name]',
+        },
+      },
+    };
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    await new AsyncFunction('context', 'core', step.with.script)(context, core);
+    return { failures, outputs };
+  };
+
+  const runValidateStep = async (name) => {
+    const { spawnSync } = await import('node:child_process');
+    const step = await loadStep('process', 'Validate Package Name');
+    return spawnSync('bash', ['-c', step.run], {
+      encoding: 'utf8',
+      env: { PACKAGE_NAME: name, PATH: process.env.PATH },
+    });
+  };
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it.each(['@depup/lodash', '@depup/depup__lodash', '@DepUp/lodash'])(
+    'the parse step rejects %s and sets no package_name output',
+    async (name) => {
+      const { failures, outputs } = await runParseStep(name);
+
+      expect(failures).toHaveLength(1);
+      expect(outputs).not.toHaveProperty('package_name');
+    },
+  );
+
+  it.each(['@depup/lodash', '@depup/depup__lodash', '@DepUp/lodash'])(
+    'the validate step rejects %s',
+    async (name) => {
+      const result = await runValidateStep(name);
+
+      expect(result.status).toBe(1);
+    },
+  );
+
+  it.each(['@types/node', 'depup', '@depupx/pkg', '@my/depup'])(
+    'the parse and validate steps still accept %s',
+    async (name) => {
+      const { failures, outputs } = await runParseStep(name);
+      const result = await runValidateStep(name);
+
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe(name);
+      expect(result.status).toBe(0);
+    },
+  );
+
+  it.each(['@depup/lodash', '@DepUp/lodash'])(
+    'depup.mjs refuses to process %s',
+    (spec) => {
+      expect(() => new DepUp().validatePackageSpec(spec)).toThrow(
+        'Invalid package spec format',
+      );
+    },
+  );
+});
+
 describe('depup.mjs -- publish audit hardening', () => {
   let depup;
   let tmpDir;
@@ -15507,6 +15972,28 @@ describe('depup.mjs -- publish audit hardening', () => {
       );
     });
 
+    // npm-package-arg resolves a bare name ending in .tgz/.tar/.tar.gz as a
+    // path on the local disk instead of a registry lookup.
+    it.each([
+      'evil.tgz',
+      'x.tar',
+      'x.tar.gz',
+      'X.TGZ',
+      'evil.tgz@1.0.0',
+      'evil.tar@latest',
+    ])('rejects bare name that npm resolves as a local file: %j', (spec) => {
+      expect(() => depup.validatePackageSpec(spec)).toThrow(
+        'Invalid package spec format',
+      );
+    });
+
+    it.each(['@scope/name.tgz', '@scope/name.tgz@1.0.0', 'tgz', 'a.tar.b'])(
+      'still accepts registry name %j',
+      (spec) => {
+        expect(() => depup.validatePackageSpec(spec)).not.toThrow();
+      },
+    );
+
     it('processPackageCore rejects a URL spec before any network call', async () => {
       const fetchSpy = jest.spyOn(depup, 'fetchManifest');
 
@@ -15762,6 +16249,133 @@ describe('security modules audit fixes', () => {
           maxBuffer: 64 * 1024 * 1024,
         }),
       );
+    });
+  });
+
+  // The package directory is untrusted: a .npmrc in it can redirect npm
+  // (audit, publish) to an attacker registry, forge a clean audit and, via
+  // ${NPM_TOKEN} interpolation, receive the publish token.
+  describe('depup-security: untrusted .npmrc and tokens (fix D)', () => {
+    const originalEnvironment = process.env;
+
+    beforeEach(() => {
+      process.env = {
+        ...originalEnvironment,
+        NODE_AUTH_TOKEN: 'secret-node-auth',
+        NPM_CONFIG_REGISTRY: 'http://pre-existing.example/',
+        NPM_TOKEN: 'secret-npm',
+        SNYK_TOKEN: 'snyk-needs-this',
+      };
+    });
+
+    afterEach(() => {
+      process.env = originalEnvironment;
+    });
+
+    it('runs npm audit without publish tokens and pinned to the npm registry', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+      execFileSync.mockReturnValue('{}');
+
+      new loaded.SecureDepUp().runNpmAuditCommand('/some/dir');
+
+      const { env } = execFileSync.mock.calls[0][2];
+
+      expect(env).toBeDefined();
+      expect(env.NPM_TOKEN).toBeUndefined();
+      expect(env.NODE_AUTH_TOKEN).toBeUndefined();
+      expect(env.npm_config_registry).toBe('https://registry.npmjs.org/');
+      expect(env.NPM_CONFIG_REGISTRY).toBeUndefined();
+    });
+
+    it('runs snyk without publish tokens but keeps its own token', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../depup-security.mjs',
+      );
+
+      new loaded.SecureDepUp().spawnSnyk('/some/dir');
+
+      const { env } = execFileSync.mock.calls[0][2];
+
+      expect(env).toBeDefined();
+      expect(env.NPM_TOKEN).toBeUndefined();
+      expect(env.NODE_AUTH_TOKEN).toBeUndefined();
+      expect(env.SNYK_TOKEN).toBe('snyk-needs-this');
+    });
+
+    it('does not mutate the real environment', async () => {
+      const { loaded } = await loadWithMockedExec('../depup-security.mjs');
+
+      new loaded.SecureDepUp().buildScanEnvironment();
+
+      expect(process.env.NPM_TOKEN).toBe('secret-npm');
+      expect(process.env.NPM_CONFIG_REGISTRY).toBe(
+        'http://pre-existing.example/',
+      );
+    });
+
+    it('removes a .npmrc from the package before auditing it', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      await fs.writeFile(
+        path.join(revisionPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jest.spyOn(secure, 'runSnykScan').mockImplementation(() => {});
+      const seenAtAudit = [];
+      jest.spyOn(secure, 'runNpmAuditCommand').mockImplementation(() => {
+        seenAtAudit.push(existsSync(path.join(revisionPath, '.npmrc')));
+        return JSON.stringify({ metadata: { vulnerabilities: { total: 0 } } });
+      });
+
+      await secure.performVulnerabilityScan('/x');
+
+      expect(seenAtAudit).toStrictEqual([false]);
+    });
+
+    it('removes a .npmrc from the package before npm publish', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      await fs.writeFile(
+        path.join(revisionPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      const seenAtPublish = [];
+      jest.spyOn(secure, 'runNpmPublish').mockImplementation(() => {
+        seenAtPublish.push(existsSync(path.join(revisionPath, '.npmrc')));
+      });
+
+      await secure.publishWithSecurityAttestation(
+        'pkg',
+        { name: 'pkg', path: path.dirname(path.dirname(revisionPath)) },
+        { debug: false },
+      );
+
+      expect(seenAtPublish).toStrictEqual([false]);
+    });
+
+    it('does not publish when the .npmrc cannot be removed', async () => {
+      const secure = new SecureDepUp();
+      const revisionPath = await makeRevision();
+      secure.findLatestRevisionDirectory = async () => revisionPath;
+      jest
+        .spyOn(secure, 'removeProjectNpmrc')
+        .mockRejectedValue(new Error('EBUSY'));
+      const publishSpy = jest
+        .spyOn(secure, 'runNpmPublish')
+        .mockImplementation(() => {});
+
+      await expect(
+        secure.publishWithSecurityAttestation(
+          'pkg',
+          { name: 'pkg', path: path.dirname(path.dirname(revisionPath)) },
+          { debug: false },
+        ),
+      ).rejects.toThrow('EBUSY');
+      expect(publishSpy).not.toHaveBeenCalled();
     });
   });
 
@@ -16337,6 +16951,102 @@ describe('security modules audit fixes', () => {
         scanner.performMalwareScan(temporaryDirectory, false),
       ).rejects.toThrow('ClamAV scan failed');
       await expect(fs.access(usedLogPath)).rejects.toThrow();
+    });
+  });
+
+  // The scanned package is attacker-controlled: its .npmrc (registry, proxy,
+  // ca, ${NPM_TOKEN} credentials) must not steer the audit that judges it.
+  describe('security-scan: untrusted .npmrc cannot steer the audit (fix E)', () => {
+    const originalEnvironment = process.env;
+    let scanner;
+    let scanPath;
+
+    beforeEach(async () => {
+      process.env = {
+        ...originalEnvironment,
+        NODE_AUTH_TOKEN: 'secret-node-auth',
+        NPM_TOKEN: 'secret-npm',
+        SNYK_TOKEN: 'snyk-needs-this',
+      };
+      scanner = new SecurityScanner();
+      scanPath = path.join(temporaryDirectory, 'scanned');
+      await fs.mkdir(scanPath, { recursive: true });
+      await fs.writeFile(path.join(scanPath, 'package.json'), '{"name":"x"}');
+      await fs.writeFile(path.join(scanPath, 'package-lock.json'), '{}');
+      await fs.writeFile(
+        path.join(scanPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      await fs.writeFile(path.join(scanPath, 'index.js'), '//');
+    });
+
+    afterEach(() => {
+      process.env = originalEnvironment;
+    });
+
+    it('runs npm audit and snyk without publish tokens', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../security-scan.mjs',
+      );
+      const fresh = new loaded.SecurityScanner();
+
+      fresh.runNpmAuditCommand('/some/dir');
+      fresh.runSnykCommand('/some/dir');
+
+      for (const [, , options] of execFileSync.mock.calls) {
+        expect(options.env).toBeDefined();
+        expect(options.env.NPM_TOKEN).toBeUndefined();
+        expect(options.env.NODE_AUTH_TOKEN).toBeUndefined();
+      }
+
+      expect(execFileSync.mock.calls[1][2].env.SNYK_TOKEN).toBe(
+        'snyk-needs-this',
+      );
+      expect(process.env.NPM_TOKEN).toBe('secret-npm');
+    });
+
+    it('audits a clean copy of the manifest and lockfile, not the package dir', async () => {
+      const seen = [];
+      const record = (directory) => {
+        seen.push({
+          directory,
+          files: readdirSync(directory).toSorted(),
+        });
+      };
+      jest.spyOn(scanner, 'runNpmAuditCommand').mockImplementation((dir) => {
+        record(dir);
+        return JSON.stringify({ metadata: { vulnerabilities: { total: 0 } } });
+      });
+      jest.spyOn(scanner, 'runSnykCommand').mockImplementation((dir) => {
+        record(dir);
+        return JSON.stringify({ vulnerabilities: [] });
+      });
+
+      await scanner.performVulnerabilityScan(scanPath);
+
+      expect(seen.map((entry) => entry.files)).toStrictEqual([
+        ['package-lock.json', 'package.json'],
+        ['package-lock.json', 'package.json'],
+      ]);
+      expect(seen[0].directory).not.toBe(scanPath);
+      expect(seen[1].directory).toBe(seen[0].directory);
+      // The staged copy is removed, and the scanned package is left untouched.
+      expect(existsSync(seen[0].directory)).toBe(false);
+      expect(existsSync(path.join(scanPath, '.npmrc'))).toBe(true);
+    });
+
+    it('removes the staged copy even when the audit throws', async () => {
+      let stagedDirectory;
+      jest.spyOn(scanner, 'runNpmAuditCommand').mockImplementation((dir) => {
+        stagedDirectory = dir;
+        throw new Error('audit crashed');
+      });
+
+      await expect(scanner.performVulnerabilityScan(scanPath)).rejects.toThrow(
+        'audit crashed',
+      );
+      expect(stagedDirectory).toBeDefined();
+      expect(existsSync(stagedDirectory)).toBe(false);
     });
   });
 
@@ -17266,5 +17976,247 @@ describe('pipeline robustness fixes', () => {
       expect(result.status).toBe(0);
       expect(result.stdout).toContain('Usage: depup');
     });
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// Credential isolation: untrusted install/import children get no
+// credentials; npm publish gets exactly the publish token.
+// ═══════════════════════════════════════════════════════════════════
+describe('child process credential isolation', () => {
+  const CREDENTIALS = {
+    ACTIONS_ID_TOKEN_REQUEST_TOKEN: 'canary-oidc-request-token',
+    ACTIONS_RUNTIME_TOKEN: 'canary-runtime-token',
+    BOT_PAT: 'canary-bot-pat',
+    GH_TOKEN: 'canary-gh-token',
+    GITHUB_TOKEN: 'canary-github-token',
+    GPG_PRIVATE_KEY: 'canary-gpg-private-key',
+    NODE_AUTH_TOKEN: 'canary-node-auth-token',
+    'npm_config_//registry.npmjs.org/:_authToken': 'canary-npmrc-token',
+    NPM_TOKEN: 'canary-npm-token',
+  };
+  const BENIGN = {
+    GITHUB_REPOSITORY: 'depup/npm',
+    NPM_CONFIG_USERCONFIG: '/tmp/canary-npmrc',
+  };
+  let depup;
+  let workDirectory;
+  let savedEnvironment;
+
+  const dumpEnvironmentSource = [
+    "import { writeFileSync } from 'node:fs';",
+    "writeFileSync('seen.json', JSON.stringify(process.env));",
+  ].join('\n');
+
+  const seenByChild = async (directory) =>
+    JSON.parse(await fs.readFile(path.join(directory, 'seen.json')));
+
+  beforeEach(async () => {
+    savedEnvironment = { ...process.env };
+    Object.assign(process.env, CREDENTIALS, BENIGN);
+    depup = new DepUp();
+    workDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'depup-creds-'));
+  });
+
+  afterEach(async () => {
+    for (const name of Object.keys({ ...CREDENTIALS, ...BENIGN })) {
+      if (savedEnvironment[name] === undefined) {
+        delete process.env[name];
+      } else {
+        process.env[name] = savedEnvironment[name];
+      }
+    }
+    await fs.rm(workDirectory, { force: true, recursive: true });
+  });
+
+  it('untrusted install commands run without any credential variable', async () => {
+    await fs.writeFile(
+      path.join(workDirectory, 'dump.mjs'),
+      dumpEnvironmentSource,
+    );
+
+    const installed = depup.tryInstallMethods(
+      [[process.execPath, ['dump.mjs']]],
+      workDirectory,
+      false,
+      60_000,
+    );
+    const seen = await seenByChild(workDirectory);
+
+    expect(installed).toBe(true);
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      expect(seen[name]).toBeUndefined();
+    }
+
+    // Unrelated configuration must survive so npm still works.
+    expect(seen.GITHUB_REPOSITORY).toBe('depup/npm');
+    expect(seen.NPM_CONFIG_USERCONFIG).toBe('/tmp/canary-npmrc');
+    expect(seen.PATH).toBe(process.env.PATH);
+  });
+
+  it('the untrusted import test runs without any credential variable', async () => {
+    await fs.writeFile(
+      path.join(workDirectory, 'test.mjs'),
+      dumpEnvironmentSource,
+    );
+
+    await depup.executeImportTest(workDirectory, false, 60_000);
+    const seen = await seenByChild(workDirectory);
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      expect(seen[name]).toBeUndefined();
+    }
+
+    expect(seen.GITHUB_REPOSITORY).toBe('depup/npm');
+  });
+
+  it('npm publish receives the publish token and no other credential', async () => {
+    const binDirectory = path.join(workDirectory, 'bin');
+    await fs.mkdir(binDirectory);
+    const fakeNpm = path.join(binDirectory, 'npm');
+    await fs.writeFile(fakeNpm, '#!/bin/sh\nenv > "$PWD/npm-env.txt"\n');
+    await fs.chmod(fakeNpm, 0o755);
+    process.env.PATH = `${binDirectory}${path.delimiter}${savedEnvironment.PATH}`;
+
+    try {
+      depup.executePublish(workDirectory, '1.0.0-depup.0', false);
+    } finally {
+      process.env.PATH = savedEnvironment.PATH;
+    }
+    const lines = (
+      await fs.readFile(path.join(workDirectory, 'npm-env.txt'), 'utf8')
+    ).split('\n');
+    const names = new Set(lines.map((line) => line.split('=')[0]));
+
+    expect(lines).toContain('NODE_AUTH_TOKEN=canary-npm-token');
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      if (name !== 'NODE_AUTH_TOKEN') {
+        expect(names.has(name)).toBe(false);
+      }
+    }
+
+    expect(lines).toContain('GITHUB_REPOSITORY=depup/npm');
+  });
+
+  it('does not mutate process.env while building the sanitized copy', () => {
+    depup.buildSanitizedInstallEnvironment();
+
+    for (const [name, value] of Object.entries(CREDENTIALS)) {
+      expect(process.env[name]).toBe(value);
+    }
+  });
+});
+
+// A GitHub issue body can be 65536 characters of attacker-chosen text. The
+// parse step runs two regexes over it that start with "### ... \s*\n\s*"; the
+// two adjacent whitespace runs made a body of blank lines cost O(n^2), several
+// seconds of runner time per request. Run the real Parse Issue Content script.
+describe('process-package-request.yml -- parse step regexes stay linear', () => {
+  const MAX_ISSUE_BODY = 65_536;
+  // Linear matching takes well under a millisecond here; the quadratic form
+  // took 4 to 7 seconds, so this bound has orders of magnitude of slack.
+  const TIME_BUDGET_MS = 1000;
+
+  const runParseStep = async (body, title = 'Add package: lodash') => {
+    const yamlModule = await import('js-yaml');
+    const load = yamlModule.load ?? yamlModule.default.load;
+    const workflow = load(
+      await fs.readFile(
+        path.resolve(
+          import.meta.dirname,
+          '..',
+          '..',
+          '.github',
+          'workflows',
+          'process-package-request.yml',
+        ),
+        'utf8',
+      ),
+    );
+    const step = workflow.jobs.process.steps.find(
+      (candidate) => candidate.name === 'Parse Issue Content',
+    );
+    const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
+    const outputs = {};
+    const failures = [];
+    const core = {
+      setFailed: (message) => failures.push(message),
+      setOutput: (key, value) => {
+        outputs[key] = value;
+      },
+    };
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    const started = performance.now();
+    await new AsyncFunction('context', 'core', step.with.script)(
+      { payload: { issue: { body, title } } },
+      core,
+    );
+    return { elapsed: performance.now() - started, failures, outputs };
+  };
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  const hostileBodies = {
+    'blank lines after the Package Name header': `### Package Name${'\n'.repeat(MAX_ISSUE_BODY - 40)}@@@@`,
+    'blank lines after the NPM Package URL header': `### Package Name\n\nlodash\n\n### NPM Package URL${'\n'.repeat(MAX_ISSUE_BODY - 80)}@@@@`,
+    'whitespace and newlines after the Package Name header': `### Package Name${' \n'.repeat(MAX_ISSUE_BODY / 2 - 20)}`,
+    'whitespace and newlines after the NPM Package URL header': `### Package Name\n\nlodash\n\n### NPM Package URL${' \n'.repeat(MAX_ISSUE_BODY / 2 - 40)}`,
+  };
+
+  it.each(Object.entries(hostileBodies))(
+    'parses a maximum-size body of %s within the time budget',
+    async (_label, body) => {
+      expect(body.length).toBeLessThanOrEqual(MAX_ISSUE_BODY);
+
+      const { elapsed, failures, outputs } = await runParseStep(body);
+
+      expect(elapsed).toBeLessThan(TIME_BUDGET_MS);
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe('lodash');
+    },
+  );
+
+  it.each([
+    [
+      'plain',
+      '### Package Name\n\nlodash\n\n### NPM Package URL\n\nhttps://x.test/p\n',
+      'lodash',
+      'https://x.test/p',
+    ],
+    [
+      'CRLF',
+      '### Package Name\r\n\r\n`@scope/pkg`\r\n\r\n### NPM Package URL\r\n\r\nhttps://x.test/p\r\n',
+      '@scope/pkg',
+      'https://x.test/p',
+    ],
+    [
+      'trailing-space',
+      '### Package Name  \n  \n   a.b-c_d  \n### NPM Package URL \t\n\n\n https://x.test/p\n',
+      'a.b-c_d',
+      'https://x.test/p',
+    ],
+  ])(
+    'still extracts the name and URL from a %s body',
+    async (_label, body, expectedName, expectedUrl) => {
+      const { failures, outputs } = await runParseStep(body, 'x');
+
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe(expectedName);
+      expect(outputs.package_url).toBe(expectedUrl);
+    },
+  );
+
+  it('does not truncate a multi-word value to its first word', async () => {
+    const { outputs } = await runParseStep(
+      '### Package Name\n\nlodash evil\n',
+      'Add package: express',
+    );
+
+    // "lodash evil" is not cut down to "lodash"; the title fallback is used.
+    expect(outputs.package_name).toBe('express');
   });
 });

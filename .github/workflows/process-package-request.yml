@@ -215,7 +215,10 @@ jobs:
             // Extract package name (handle scoped packages @scope/package and regular packages)
             // Support both with and without backticks. The trailing lookahead requires the
             // value to be the whole line, so `lodash evil` is not silently truncated to `lodash`.
-            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?(?=\s*(?:\n|$))/);
+            // The header is followed by whitespace that holds at least one newline. That is
+            // written [^\S\n]*\n\s* (not \s*\n\s*) because two adjacent whitespace runs backtrack
+            // quadratically on a body of blank lines (a 64 KiB body cost seconds of runner time).
+            const packageNameMatch = issueBody.match(/### Package Name[^\S\n]*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?(?=\s*(?:\n|$))/);
             let packageName = packageNameMatch ? packageNameMatch[1].trim() : '';
 
             // If package name is empty, try extracting from title
@@ -245,8 +248,16 @@ jobs:
               return;
             }
 
+            // @depup is this project's own publish scope (@scope/name -> @depup/scope__name).
+            // Re-publishing it would turn our output into @depup/depup__<name>.
+            if (/^@depup\//i.test(packageName)) {
+              console.log('Rejected package in the @depup scope:', JSON.stringify(packageName));
+              core.setFailed('Packages in the @depup scope cannot be requested');
+              return;
+            }
+
             // Extract package URL
-            const urlMatch = issueBody.match(/### NPM Package URL\s*\n\s*(https?:\/\/[^\s]+)/);
+            const urlMatch = issueBody.match(/### NPM Package URL[^\S\n]*\n\s*(https?:\/\/[^\s]+)/);
             const packageUrl = urlMatch ? urlMatch[1].trim() : '';
 
             // Extract reasoning
@@ -285,6 +296,14 @@ jobs:
           fi
           if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9][a-zA-Z0-9._-]*/)?[a-zA-Z0-9][a-zA-Z0-9._-]*$ ]]; then
             echo "Invalid package name format: $PACKAGE_NAME"
+            exit 1
+          fi
+
+          # @depup is this project's own publish scope; requesting it would re-publish
+          # our output as @depup/depup__<name>. Scopes are case-insensitive.
+          if [[ "${PACKAGE_NAME,,}" == @depup/* ]]; then
+            echo "Invalid package name: $PACKAGE_NAME"
+            echo "Packages in the @depup scope cannot be requested"
             exit 1
           fi
 

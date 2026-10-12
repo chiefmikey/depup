@@ -2,6 +2,44 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+// Registry name limit (validate-npm-package-name).
+const MAX_NAME_LENGTH = 214;
+// One name segment (a scope or a bare name). Must start with an alphanumeric
+// so '.', '..', '-x' and '_x' fail; the same rule the issue workflow applies.
+const NAME_SEGMENT_PATTERN = /^[\dA-Za-z][\w.-]*$/u;
+// Never used as a package name: depup.mjs refuses them as prototype-pollution
+// keys, so accepting one only queues a request that can never succeed.
+const RESERVED_NAMES = new Set(['__proto__', 'constructor', 'prototype']);
+// npm treats a bare (unscoped) name with one of these suffixes as a local
+// file, not a registry package.
+const FILE_LIKE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
+
+/**
+ * True when the name is a plain registry name (`name` or `@scope/name`) that
+ * is safe to write to the list and later use in a URL and a directory path.
+ */
+function isValidPackageName(packageName) {
+  if (
+    typeof packageName !== 'string' ||
+    packageName.length > MAX_NAME_LENGTH ||
+    packageName.includes('..')
+  ) {
+    return false;
+  }
+  if (packageName.startsWith('@')) {
+    const parts = packageName.slice(1).split('/');
+    return (
+      parts.length === 2 &&
+      parts.every((part) => NAME_SEGMENT_PATTERN.test(part))
+    );
+  }
+  return (
+    NAME_SEGMENT_PATTERN.test(packageName) &&
+    !RESERVED_NAMES.has(packageName) &&
+    !FILE_LIKE_NAME_PATTERN.test(packageName)
+  );
+}
+
 /**
  * Manages user-submitted packages in config/user-packages.json.
  * This file is separate from the auto-curated list to avoid merge conflicts
@@ -16,6 +54,52 @@ class PackageAdder {
     'config',
     'user-packages.json',
   );
+
+  curatedPackagesPath = path.resolve(
+    import.meta.dirname,
+    '..',
+    'config',
+    'curated-packages.json',
+  );
+
+  packagesPath = path.resolve(import.meta.dirname, '..', 'packages');
+
+  // Names of every package already published (one directory each, scoped ones
+  // under @scope/). Packages that dropped out of the weekly top-1000 refresh
+  // are in neither list but stay here, and stay published to npm.
+  async loadPublishedPackages() {
+    const names = [];
+    for (const name of await readDirectories(this.packagesPath)) {
+      if (name.startsWith('@')) {
+        const children = await readDirectories(
+          path.join(this.packagesPath, name),
+        );
+        names.push(...children.map((child) => `${name}/${child}`));
+      } else {
+        names.push(name);
+      }
+    }
+    return names;
+  }
+
+  // Unlike the user list this fails closed: it is read to refuse a request, so
+  // an unreadable file must not silently turn the check off. A missing file
+  // (fresh checkout without the curated list) just means nothing is curated.
+  async loadCuratedPackages() {
+    let data;
+    try {
+      data = JSON.parse(await fs.readFile(this.curatedPackagesPath));
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        return [];
+      }
+      throw new Error(
+        `Could not read the curated package list: ${error.message}`,
+        { cause: error },
+      );
+    }
+    return Array.isArray(data?.packages) ? data.packages : [];
+  }
 
   async loadUserPackages() {
     try {
@@ -50,19 +134,7 @@ class PackageAdder {
       throw new Error('Package name is required');
     }
 
-    // Validate package name format
-    const nameParts = packageName.startsWith('@')
-      ? packageName.slice(1).split('/')
-      : [packageName];
-    const validPart = /^[\w.-]+$/u;
-    const isScopedWithoutName =
-      packageName.startsWith('@') && nameParts.length !== 2;
-    if (
-      isScopedWithoutName ||
-      nameParts.length > 2 ||
-      nameParts.length === 0 ||
-      !nameParts.every((part) => validPart.test(part))
-    ) {
+    if (!isValidPackageName(packageName)) {
       throw new Error(`Invalid package name format: ${packageName}`);
     }
 
@@ -71,6 +143,19 @@ class PackageAdder {
     // Check if already in list (case-insensitive)
     if (existing.some((p) => p.toLowerCase() === packageName.toLowerCase())) {
       throw new Error(`Package ${packageName} is already in the user list`);
+    }
+
+    // @a/b and a__b share one @depup name; never accept the second of them.
+    // Checked against both lists and everything already published.
+    const collision = findScopedNameCollision(packageName, [
+      ...existing,
+      ...(await this.loadCuratedPackages()),
+      ...(await this.loadPublishedPackages()),
+    ]);
+    if (collision) {
+      throw new Error(
+        `Package ${packageName} would publish to @depup/${toFlatName(packageName)}, which ${collision} already uses`,
+      );
     }
 
     const updated = [...existing, packageName].toSorted((a, b) =>
@@ -125,7 +210,52 @@ class PackageAdder {
   }
 }
 
-export { PackageAdder };
+// Name of the package this one publishes to, minus the @depup/ prefix:
+// @scope/name -> scope__name. The same mapping as flattenPackageName in
+// utilities.mjs, kept local so this script imports nothing (the commit job runs
+// it without an install, and its tests mock node:fs).
+function toFlatName(packageName) {
+  return packageName.startsWith('@')
+    ? packageName.slice(1).replace('/', '__')
+    : packageName;
+}
+
+/**
+ * Find a package in `otherNames` that publishes to the same @depup name as
+ * `packageName` without being the same package. `@a/b` and the unscoped
+ * `a__b` both become `@depup/a__b`, so accepting both would let whoever
+ * registered `a__b` on npm publish into the namespace of `@a/b`.
+ */
+function findScopedNameCollision(packageName, otherNames) {
+  const target = toFlatName(packageName);
+  return otherNames.find(
+    (other) =>
+      typeof other === 'string' &&
+      other !== packageName &&
+      toFlatName(other) === target,
+  );
+}
+
+// Visible subdirectories of `directory`; a missing directory has none. Fails
+// closed otherwise: this feeds a refusal check, so an unreadable directory must
+// not silently turn it off.
+async function readDirectories(directory) {
+  try {
+    const entries = await fs.readdir(directory, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+      .map((entry) => entry.name);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+    throw new Error(`Could not read the published packages: ${error.message}`, {
+      cause: error,
+    });
+  }
+}
+
+export { findScopedNameCollision, PackageAdder };
 
 // CLI interface
 if (process.argv[1] === import.meta.filename) {

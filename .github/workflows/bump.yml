@@ -29,10 +29,14 @@ jobs:
       (github.event.head_commit.author.name != 'De Pup' &&
        github.event.head_commit.author.name != 'github-actions[bot]')
     steps:
+      # persist-credentials: false -- untrusted package code runs in this job, and a
+      # persisted token sits in .git/config where that code can read it. The push
+      # credential is configured inside the commit step instead.
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -53,9 +57,16 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Import GPG Key
+      # The key itself is imported after the sync step (see Import GPG Key below);
+      # this check only fails the job before anything is published.
+      - name: Verify GPG key (fail fast before publishing)
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
+            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
+            exit 1
+          fi
 
       - name: Configure Git
         run: |
@@ -72,7 +83,18 @@ jobs:
         run: |
           npm run cron:sync
 
+      # The signing key is imported only now, after all package code has run:
+      # package code runs as this user and could otherwise export it from the
+      # keyring.
+      - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
+
       - name: Commit Changes
+        env:
+          PUSH_TOKEN: ${{ github.token }}
         run: |
           # Exclude temporary files, only add package directories
           git add packages/ 2>/dev/null || true
@@ -81,6 +103,13 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: sync packages"
+
+            # Package code ran earlier in this job, so the checkout keeps no
+            # credential (persist-credentials: false); grant push access only now.
+            basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
+            echo "::add-mask::$basic_auth"
+            git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
+
             for attempt in 1 2 3 4 5; do
               git fetch origin main
               # Clean unstaged changes before rebase (case-different files from packages)

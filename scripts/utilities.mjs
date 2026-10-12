@@ -1,6 +1,37 @@
 import { promises as fs, realpathSync } from 'node:fs';
 import path from 'node:path';
 
+// Environment variable names that carry a credential (NPM_TOKEN, GITHUB_TOKEN,
+// GH_TOKEN, BOT_PAT, GPG_PRIVATE_KEY, ACTIONS_RUNTIME_TOKEN, npm_config_*
+// _authToken / _auth, ...). Matched by name so a newly added secret is
+// covered without touching a list.
+const CREDENTIAL_ENVIRONMENT_PATTERN =
+  /token|secret|passw(?:or)?d|credential|private_?key|(?:^|_)(?:auth|pat)$/iu;
+// GitHub Actions workflow-command files: code that can append to them can
+// poison later workflow steps.
+const WORKFLOW_FILE_ENVIRONMENT_NAMES = new Set([
+  'GITHUB_ENV',
+  'GITHUB_OUTPUT',
+  'GITHUB_PATH',
+  'GITHUB_STATE',
+  'GITHUB_STEP_SUMMARY',
+]);
+
+/**
+ * Copy of an environment without credential variables or GitHub Actions
+ * workflow-command files, for child processes that run untrusted code (or
+ * that only need non-secret configuration). Always returns a fresh object.
+ */
+export function buildSanitizedEnvironment(environment) {
+  return Object.fromEntries(
+    Object.entries(environment).filter(
+      ([name]) =>
+        !CREDENTIAL_ENVIRONMENT_PATTERN.test(name) &&
+        !WORKFLOW_FILE_ENVIRONMENT_NAMES.has(name),
+    ),
+  );
+}
+
 /**
  * Flatten a scoped package name for use in the @depup namespace.
  * @nestjs/common -> nestjs__common, express -> express

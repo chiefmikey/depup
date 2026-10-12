@@ -10,6 +10,7 @@ import pacote from 'pacote';
 import semver from 'semver';
 
 import {
+  buildSanitizedEnvironment,
   hasUnpublishedFailedRevision,
   isEntryPoint,
   isNonSemverSpecifier,
@@ -28,6 +29,9 @@ const RESERVED_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 // only, no leading '-', '.' or '_'. Uppercase is allowed because legacy
 // packages (e.g. JSONStream) still exist.
 const REGISTRY_SEGMENT_PATTERN = /^[\dA-Za-z~][\w.~-]*$/u;
+// npm-package-arg resolves a bare (unscoped) name with one of these suffixes as
+// a path on the local disk, not a registry lookup.
+const FILE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
 // Version / dist-tag / range suffix of a spec (no ':' or '/' so URLs, git
 // and path forms cannot hide in it).
 const SPEC_VERSION_PATTERN = /^[\w.+~-]+$/u;
@@ -55,7 +59,7 @@ function isRegistryName(name) {
     return false;
   }
   if (!name.startsWith('@')) {
-    return REGISTRY_SEGMENT_PATTERN.test(name);
+    return REGISTRY_SEGMENT_PATTERN.test(name) && !FILE_NAME_PATTERN.test(name);
   }
   const parts = name.slice(1).split('/');
   return (
@@ -259,8 +263,10 @@ class DepUp {
   // Reject path traversal, characters not valid in npm package specs and any
   // spec that is not a plain registry `name[@version|tag]` reference.
   validatePackageSpec(packageSpec) {
+    // @depup is our own publish scope; re-processing it double-prefixes the name.
     if (
       packageSpec.includes('..') ||
+      /^@depup\//iu.test(packageSpec) ||
       /[;`$|><\\{}[\]!#%^&*()='"]/u.test(packageSpec) ||
       !isRegistrySpec(packageSpec)
     ) {
@@ -887,21 +893,12 @@ class DepUp {
     ];
   }
 
-  // Clone of process.env for subprocesses that run untrusted package code:
-  // the publish tokens are stripped so they can never be read, and the
-  // GitHub Actions workflow-command files (GITHUB_ENV, GITHUB_PATH,
-  // GITHUB_OUTPUT, GITHUB_STATE) are removed so untrusted code cannot append
-  // to them and poison later workflow steps.
-  // Returns a fresh object -- never mutates the real process.env.
+  // Copy of process.env for subprocesses: credential variables and the GitHub
+  // Actions workflow-command files are removed (see utilities.mjs), so
+  // untrusted package code can neither read a token nor poison later
+  // workflow steps. Returns a fresh object -- never mutates process.env.
   buildSanitizedInstallEnvironment() {
-    const sanitizedEnvironment = { ...process.env };
-    delete sanitizedEnvironment.NODE_AUTH_TOKEN;
-    delete sanitizedEnvironment.NPM_TOKEN;
-    delete sanitizedEnvironment.GITHUB_ENV;
-    delete sanitizedEnvironment.GITHUB_OUTPUT;
-    delete sanitizedEnvironment.GITHUB_PATH;
-    delete sanitizedEnvironment.GITHUB_STATE;
-    return sanitizedEnvironment;
+    return buildSanitizedEnvironment(process.env);
   }
 
   tryInstallMethods(methods, directory, debug, timeout) {
@@ -1102,6 +1099,10 @@ try {
 
     try {
       this.validateNpmToken();
+      // The import test ran untrusted package code after the first removal
+      // (processPackageCore); it can have re-planted a .npmrc that redirects
+      // `npm publish`, and with it NPM_TOKEN, to another registry.
+      await this.removeNpmrc(packageDirectory);
       this.installBuildDeps(packageDirectory, debug);
       this.executePublish(packageDirectory, version, debug);
       spinner.succeed(`Published ${packageName}@${version}`);
@@ -1158,7 +1159,11 @@ try {
 
     execFileSync('npm', publishArguments, {
       cwd: packageDirectory,
-      env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
+      // The publish token is the only credential npm receives.
+      env: {
+        ...this.buildSanitizedInstallEnvironment(),
+        NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+      },
       // npm's verbose output for a large package can exceed the 1 MiB
       // default and make a successful publish fail with ENOBUFS.
       maxBuffer: 64 * 1024 * 1024,
