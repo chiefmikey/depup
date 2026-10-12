@@ -38,6 +38,19 @@
       "status": "published",
       "timestamp": "2026-07-21T17:13:35.383Z",
       "version": "6.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "kruptein": {
+          "from": "3.0.8",
+          "to": "^4.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-12T08:27:41.630Z",
+      "version": "6.0.0-depup.3"
     }
   }
 }

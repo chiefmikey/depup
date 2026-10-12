@@ -350,6 +350,14 @@
       "status": "failed",
       "timestamp": "2026-10-12T00:39:44.037Z",
       "version": "7.90.0-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-12T08:27:36.636Z",
+      "version": "7.90.0-depup.1"
     }
   }
 }
