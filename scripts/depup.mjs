@@ -1102,6 +1102,10 @@ try {
 
     try {
       this.validateNpmToken();
+      // The import test ran untrusted package code after the first removal
+      // (processPackageCore); it can have re-planted a .npmrc that redirects
+      // `npm publish`, and with it NPM_TOKEN, to another registry.
+      await this.removeNpmrc(packageDirectory);
       this.installBuildDeps(packageDirectory, debug);
       this.executePublish(packageDirectory, version, debug);
       spinner.succeed(`Published ${packageName}@${version}`);
