@@ -12,13 +12,13 @@ npm install @depup/expo__local-build-cache-provider
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 57.0.8 | **DepUp version**: 57.0.8-depup.0 | **Updated**: 9/20/2026 | **Import test**: passed
+**Original version**: 57.0.9 | **DepUp version**: 57.0.9-depup.0 | **Updated**: 10/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^4.1.2` | `^6.0.0` |
+| chalk | `^4.1.2` | `^6.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/expo__local-build-cache-provider&labels=bug).

@@ -12,7 +12,7 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.8 | **Updated**: 10/10/2026 | **Import test**: failed
+**Original version**: 6.69.0 | **DepUp version**: 6.69.0-depup.9 | **Updated**: 10/12/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,9 +21,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @aws-sdk/client-s3 | `3.1079.0` | `^3.1149.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
-| @sentry/node | `7.120.4` | `^11.6.0` |
+| @sentry/node | `7.120.4` | `^11.7.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/bookshelf-plugins | `2.3.17` | `^2.3.18` |
+| @tryghost/brute-knex | `3.2.2` | `^3.2.3` |
 | @tryghost/color-utils | `0.2.21` | `^0.2.22` |
 | @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
 | @tryghost/custom-fonts | `1.0.12` | `^1.0.13` |
@@ -32,6 +33,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @tryghost/helpers | `1.1.107` | `^1.1.108` |
 | @tryghost/html-to-plaintext | `1.0.12` | `^1.0.13` |
 | @tryghost/logging | `5.4.7` | `^5.4.8` |
+| @tryghost/mg-clean-html | `0.12.6` | `^0.12.7` |
 | @tryghost/mw-error-handler | `3.3.16` | `^3.3.17` |
 | @tryghost/nodemailer | `2.3.16` | `^2.3.17` |
 | @tryghost/prometheus-metrics | `5.0.2` | `^5.0.3` |
@@ -49,6 +51,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `4.1.2` | `^6.0.1` |
 | countries-and-timezones | `3.9.0` | `^3.10.0` |
 | cron-validate | `1.4.5` | `^1.5.3` |
+| dompurify | `3.4.16` | `^3.4.17` |
 | entities | `4.5.0` | `^8.1.0` |
 | express | `4.22.3` | `^5.3.0` |
 | express-hbs | `2.5.0` | `^3.0.0` |
@@ -94,6 +97,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tldts | `^7.4.4` | `^7.4.18` |
 | type-fest | `5.7.0` | `^5.10.0` |
 | ua-parser-js | `1.0.41` | `^2.0.10` |
+| zod | `4.6.5` | `^4.6.6` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ghost&labels=bug).

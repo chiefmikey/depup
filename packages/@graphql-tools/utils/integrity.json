@@ -472,5 +472,24 @@
       "timestamp": "2026-10-01T00:41:17.586Z",
       "version": "12.0.3-depup.0"
     }
+  },
+  "12.0.4": {
+    "0": {
+      "changes": {
+        "@graphql-typed-document-node/core": {
+          "from": "^3.1.1",
+          "to": "^3.2.0"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-12T16:10:54.165Z",
+      "version": "12.0.4-depup.0"
+    }
   }
 }
