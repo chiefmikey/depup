@@ -421,7 +421,12 @@ class SelfHealer {
     return created;
   }
 
-  async pruneVersionDirectory(packagePath, versionEntry, keepCount) {
+  async pruneVersionDirectory(packagePath, versionEntry, keepCount = 5) {
+    // Negative, fractional or NaN counts are invalid: prune nothing.
+    if (!Number.isInteger(keepCount) || keepCount < 0) {
+      return 0;
+    }
+
     const versionDirectory = path.join(packagePath, versionEntry.name);
     let revEntries;
     try {

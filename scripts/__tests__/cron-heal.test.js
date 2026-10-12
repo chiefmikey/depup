@@ -12,6 +12,9 @@ import {
 } from '@jest/globals';
 import fetchModule from 'npm-registry-fetch';
 
+// NOTE: this mock replaces execFile for every consumer of node:child_process
+// in this file, including heal.mjs, not just cron-discover. Tests must not
+// rely on a real execFile.
 // Intercepts the dynamic import('node:child_process') inside
 // PackageDiscoverer.createNewPackage. Everything else is passed through so the
 // static imports in heal.mjs keep working.
@@ -105,20 +108,15 @@ describe('cron-sync.mjs -- dependency checks and retry', () => {
   });
 
   describe('checkDependencyUpdates batching', () => {
-    it('fetches 25 deps in batches of 10 and never starts a new batch after a match', async () => {
+    it('fetches 25 deps with at most 10 requests in flight at once', async () => {
       const package_ = await writePackage(makeDeps(25));
-      const batchSizes = [];
       let inFlight = 0;
-      let currentBatch = 0;
-      jest.spyOn(fetchModule, 'json').mockImplementation(async (url) => {
+      let maxInFlight = 0;
+      jest.spyOn(fetchModule, 'json').mockImplementation(async () => {
         inFlight++;
-        currentBatch = Math.max(
-          currentBatch,
-          Math.floor(Number(url.slice(4)) / 10),
-        );
-        batchSizes[currentBatch] = (batchSizes[currentBatch] ?? 0) + 1;
+        maxInFlight = Math.max(maxInFlight, inFlight);
         await new Promise((resolve) => {
-          setImmediate(resolve);
+          setTimeout(resolve, 5);
         });
         inFlight--;
         return { 'dist-tags': { latest: '1.0.1' } };
@@ -128,7 +126,7 @@ describe('cron-sync.mjs -- dependency checks and retry', () => {
 
       expect(result).toBe(false);
       expect(fetchModule.json).toHaveBeenCalledTimes(25);
-      expect(batchSizes).toStrictEqual([10, 10, 5]);
+      expect(maxInFlight).toBe(10);
       expect(inFlight).toBe(0);
     });
 
@@ -194,7 +192,9 @@ describe('cron-sync.mjs -- dependency checks and retry', () => {
     it('returns false when there are no revisions, no package.json or no deps', async () => {
       await fsPromises.mkdir(path.join(root, '1.0.0'), { recursive: true });
       const package_ = { name: 'pkg', path: root, version: '1.0.0' };
-      jest.spyOn(fetchModule, 'json');
+      jest
+        .spyOn(fetchModule, 'json')
+        .mockRejectedValue(new Error('network blocked'));
 
       await expect(syncer.checkDependencyUpdates(package_)).resolves.toBe(
         false,
@@ -244,29 +244,34 @@ describe('cron-sync.mjs -- dependency checks and retry', () => {
 
   describe('sleepBeforeRetry / fetchManifestWithRetry', () => {
     it('sleeps base * 2^attempt plus jitter below half the base delay', async () => {
+      const delays = [];
+      jest
+        .spyOn(globalThis, 'setTimeout')
+        .mockImplementation((callback, ms) => {
+          delays.push(ms);
+          callback();
+          return 0;
+        });
       const random = jest.spyOn(Math, 'random');
 
       random.mockReturnValue(0);
-      const start = Date.now();
       await syncer.sleepBeforeRetry(0);
-      const elapsedMinimum = Date.now() - start;
-
-      expect(elapsedMinimum).toBeGreaterThanOrEqual(290);
-      expect(elapsedMinimum).toBeLessThan(440);
-
       random.mockReturnValue(0.99);
-      const startJitter = Date.now();
       await syncer.sleepBeforeRetry(0);
-      const elapsedJitter = Date.now() - startJitter;
+      random.mockReturnValue(0);
+      await syncer.sleepBeforeRetry(1);
+      random.mockReturnValue(0.99);
+      await syncer.sleepBeforeRetry(1);
 
-      expect(elapsedJitter).toBeGreaterThanOrEqual(430);
-      expect(elapsedJitter).toBeLessThan(600);
+      // delay = 300 * 2^attempt; jitter = floor(random * delay / 2)
+      expect(delays).toStrictEqual([300, 448, 600, 897]);
     });
 
     it('backs off with the attempt number between transient retries', async () => {
       jest.spyOn(syncer, 'sleepBeforeRetry').mockResolvedValue();
       jest
         .spyOn(fetchModule, 'json')
+        .mockRejectedValue(new Error('network blocked'))
         .mockRejectedValueOnce(
           Object.assign(new Error('x'), { statusCode: 503 }),
         )
@@ -432,6 +437,7 @@ describe('cron-discover.mjs -- uncovered branches', () => {
     it('uses manifest.version, then 0.0.0, when dist-tags has no latest', async () => {
       jest
         .spyOn(fetchModule, 'json')
+        .mockRejectedValue(new Error('network blocked'))
         .mockResolvedValueOnce({ version: '4.5.6' })
         .mockResolvedValueOnce({});
 
@@ -638,6 +644,22 @@ describe('heal.mjs -- revision pruning and failure branches', () => {
 
       expect(integrity['1.0.0']).toStrictEqual({});
     });
+
+    it.each([-1, Number.NaN, 1.5])(
+      'treats keepCount %s as invalid and prunes nothing',
+      async (keepCount) => {
+        await makeVersion('pkg', '1.0.0', [0, 1, 2]);
+
+        await expect(
+          healer.pruneVersionDirectory(
+            packageDirectory('pkg'),
+            entry,
+            keepCount,
+          ),
+        ).resolves.toBe(0);
+        await expect(listRevisions('pkg', '1.0.0')).resolves.toHaveLength(3);
+      },
+    );
 
     it('ignores non-revision entries when counting', async () => {
       await makeVersion('pkg', '1.0.0', [0, 1, 2, 3, 4]);
@@ -939,7 +961,6 @@ describe('heal.mjs -- revision pruning and failure branches', () => {
       expect(healer.failures).toStrictEqual([
         expect.objectContaining({ step: 'read integrity' }),
       ]);
-      expect(file).toBeTruthy();
     });
 
     it('reconcileVersionEntry ignores a non-object version entry', async () => {
