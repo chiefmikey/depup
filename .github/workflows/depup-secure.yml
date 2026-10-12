@@ -128,7 +128,9 @@ jobs:
           mkdir -p temp-package
           cd temp-package
           npm init -y > /dev/null 2>&1
-          npm install "$PACKAGE_NAME" --no-save
+          # --ignore-scripts: the package is untrusted and is only being fetched
+          # for scanning; its install scripts must not run before the scan.
+          npm install "$PACKAGE_NAME" --no-save --ignore-scripts
 
           # Strip version specifier for node_modules path lookup
           # e.g., express@5.0.0 -> express, @angular/core@17.0.0 -> @angular/core

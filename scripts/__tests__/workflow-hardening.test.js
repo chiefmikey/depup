@@ -6,6 +6,7 @@
  */
 import { execFileSync, spawnSync } from 'node:child_process';
 import {
+  existsSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
@@ -914,6 +915,84 @@ describe('depup-secure.yml', () => {
 
     expect(output).not.toContain('super-secret-token');
     expect(output).toContain('NODE_AUTH_TOKEN=***');
+  });
+
+  describe('scan-time install of the untrusted package', () => {
+    const downloadStep = secureDocument.jobs['security-validation'].steps.find(
+      (step) => step.id === 'download',
+    );
+
+    it('never runs lifecycle scripts of the package it is about to scan', () => {
+      const installLines = downloadStep.run
+        .split('\n')
+        .filter((line) => /\bnpm (?:install|i|add)\b/u.test(line));
+
+      expect(installLines.length).toBeGreaterThan(0);
+
+      for (const line of installLines) {
+        expect(line).toContain('--ignore-scripts');
+      }
+    });
+
+    it('does not execute a postinstall script when the step runs', () => {
+      const directory = mkdtempSync(path.join(tmpdir(), 'secure-install-'));
+      const fixture = path.join(directory, 'fixture');
+      const marker = path.join(directory, 'postinstall-ran');
+      mkdirSync(fixture);
+      writeFileSync(
+        path.join(fixture, 'package.json'),
+        JSON.stringify({
+          name: 'scan-fixture',
+          scripts: {
+            postinstall:
+              "node -e \"require('node:fs').writeFileSync(process.env.MARKER_FILE, 'ran')\"",
+          },
+          version: '1.0.0',
+        }),
+      );
+      const work = path.join(directory, 'work');
+      mkdirSync(work);
+      const pack = spawnSync('npm', ['pack', fixture, '--silent'], {
+        cwd: directory,
+        encoding: 'utf8',
+        env: { HOME: directory, PATH: process.env.PATH },
+      });
+
+      expect(pack.status).toBe(0);
+
+      const tarball = path.join(directory, pack.stdout.trim());
+      const outputFile = path.join(directory, 'github-output');
+      writeFileSync(outputFile, '');
+
+      const result = spawnSync(
+        'bash',
+        ['--noprofile', '--norc', '-e', '-c', downloadStep.run],
+        {
+          cwd: work,
+          encoding: 'utf8',
+          env: {
+            GITHUB_OUTPUT: outputFile,
+            HOME: directory,
+            MARKER_FILE: marker,
+            npm_config_cache: path.join(directory, 'cache'),
+            // npm 12 blocks dependency install scripts by default; allow them
+            // so the test proves --ignore-scripts, not the npm default.
+            npm_config_dangerously_allow_all_scripts: 'true',
+            npm_config_offline: 'true',
+            PACKAGE_NAME: tarball,
+            PATH: process.env.PATH,
+          },
+        },
+      );
+
+      expect({
+        installed: existsSync(
+          path.join(work, 'temp-package', 'node_modules', 'scan-fixture'),
+        ),
+        postinstallRan: existsSync(marker),
+        status: result.status,
+      }).toStrictEqual({ installed: true, postinstallRan: false, status: 0 });
+    });
   });
 
   it('both workflows are valid YAML with parseable jobs', () => {
