@@ -7,11 +7,13 @@
  *
  *   malware_scan        ClamAV. Missing ClamAV is recorded as skipped, never
  *                       as a pass. An infection or a ClamAV error blocks.
- *   pattern_scan        SecurityScanner's file-name heuristics. Executable
- *                       payloads and autorun.inf block; OS junk files and
- *                       dotfiles are recorded but do not (they are not
- *                       malware indicators, and ~4% of popular packages ship
- *                       one).
+ *   pattern_scan        SecurityScanner's file-name heuristics. Native
+ *                       executables/libraries (.exe, .dll, .scr, ...), .vbs,
+ *                       .jar and autorun.inf block. Windows shell shims
+ *                       (.cmd, .bat), OS junk files and dotfiles are recorded
+ *                       but do not: they are text scripts or clutter that
+ *                       legit packages ship (node-gyp, @npmcli/run-script,
+ *                       ~4% of a 673-package sample carries a dotfile).
  *   vulnerability_scan  npm audit on a copy of the lockfile. Findings are
  *                       advisory (depup ships patched dependency bumps);
  *                       no lockfile is recorded as skipped; an audit that
@@ -31,6 +33,8 @@ const MAX_FINDINGS = 200;
 const MAX_DETAIL_LENGTH = 1000;
 const LABEL_SEPARATOR = ': ';
 const SCANNER_ERROR_STATUS = 'failed (scanner error)';
+// Windows shell shims: text scripts shipped in bin/ by routine packages.
+const SHELL_SHIM_EXTENSIONS = new Set(['.bat', '.cmd']);
 
 // A SecurityScanner pattern finding ("<label>: <path>") as a gate finding.
 // Only the known harmless labels are non-blocking; anything else blocks.
@@ -52,7 +56,9 @@ export function classifyPatternFinding(finding, directory) {
   const isAutorun = path.basename(file).toLowerCase() === 'autorun.inf';
   const harmless =
     label === 'Hidden file detected' ||
-    (label === 'Suspicious file detected' && !isAutorun);
+    (label === 'Suspicious file detected' && !isAutorun) ||
+    (label === 'Suspicious file extension' &&
+      SHELL_SHIM_EXTENSIONS.has(path.extname(file).toLowerCase()));
   return {
     blocking: !harmless,
     detail: `${label}${LABEL_SEPARATOR}${file}`,

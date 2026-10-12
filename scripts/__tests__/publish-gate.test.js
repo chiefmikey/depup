@@ -130,6 +130,7 @@ describe('publish gate', () => {
         '.travis.yml': '',
         'autorun.inf': '',
         'run.bat': '',
+        'run.dll': '',
       });
       const raw = await new SecurityScanner().performAdvancedMalwareChecks(
         directory,
@@ -145,8 +146,42 @@ describe('publish gate', () => {
         [false, 'Hidden file detected: .travis.yml'],
         [false, 'Suspicious file detected: .DS_Store'],
         [true, 'Suspicious file detected: autorun.inf'],
-        [true, 'Suspicious file extension: run.bat'],
+        [false, 'Suspicious file extension: run.bat'],
+        [true, 'Suspicious file extension: run.dll'],
       ]);
+    });
+
+    it('passes Windows shell shims but blocks a native executable', async () => {
+      const shims = await newPackage({
+        'bin/foo.bat': '@echo off\r\nnode "%~dp0\\foo.js" %*\r\n',
+        'bin/foo.cmd': '@echo off\r\nnode "%~dp0\\foo.js" %*\r\n',
+      });
+      const payload = await newPackage({
+        'bin/foo.cmd': '@echo off\r\n',
+        'payload.exe': 'MZ',
+      });
+
+      const passed = await runPublishGate({
+        directory: shims,
+        env: environment(),
+      });
+      const blocked = await runPublishGate({
+        directory: payload,
+        env: environment(),
+      });
+
+      expect(passed.passed).toBe(true);
+      expect(passed.scans.pattern_scan).toBe('passed');
+      expect(passed.findings.map((f) => [f.blocking, f.detail])).toStrictEqual(
+        expect.arrayContaining([
+          [false, 'Suspicious file extension: bin/foo.bat'],
+          [false, 'Suspicious file extension: bin/foo.cmd'],
+        ]),
+      );
+      expect(blocked.passed).toBe(false);
+      expect(
+        blocked.findings.filter((f) => f.blocking).map((f) => f.detail),
+      ).toStrictEqual(['Suspicious file extension: payload.exe']);
     });
 
     it('passes a clean package and records what did not run', async () => {
