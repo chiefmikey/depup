@@ -810,6 +810,7 @@ describe('process-package-request.yml', () => {
     it('exposes only runner-set outcomes and parse outputs from the process job', () => {
       expect(processJob.outputs).toStrictEqual({
         exists: expr('steps.check-existing.outputs.exists'),
+        gate_blocked: expr('steps.publish.outputs.gate_blocked'),
         npm_outcome: expr('steps.npm-info.outcome'),
         package_name: expr('steps.parse.outputs.package_name'),
         parse_outcome: expr('steps.parse.outcome'),

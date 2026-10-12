@@ -16,6 +16,9 @@ import {
 // depup.mjs exits with this code when --test was requested and the package
 // failed verification (it was recorded in integrity.json, not published).
 const EXIT_VERIFICATION_FAILED = 3;
+// depup.mjs exits with this code when the publish gate (publish-gate.mjs)
+// blocked the package (nothing was published).
+const EXIT_SECURITY_BLOCKED = 4;
 // Stop retrying a version once this many revisions failed verification: retries
 // absorb flaky installs, but a genuinely broken package must not be re-run
 // (download, install, test) on every cron cycle forever.
@@ -180,6 +183,7 @@ class PackageSyncer {
       return {
         error: error.message,
         name: package_.name,
+        securityBlocked: error.exitCode === EXIT_SECURITY_BLOCKED,
         success: false,
         updateType: check.updateType,
         verificationFailed: error.exitCode === EXIT_VERIFICATION_FAILED,
@@ -250,12 +254,14 @@ class PackageSyncer {
    */
   accumulateResult(result, accumulator) {
     if (result.status === 'fulfilled') {
-      // A package that failed verification is a package-specific failure
-      // (recorded, not published), never evidence of a systemic outage, so it
-      // is excluded from the healthy ratio like chronic failed-revisions.
+      // A package that failed verification or was blocked by the publish gate
+      // is a package-specific failure (recorded, not published), never
+      // evidence of a systemic outage, so it is excluded from the healthy
+      // ratio like chronic failed-revisions.
       const isHealthy =
         result.value.updateType !== 'failed-revisions' &&
-        !result.value.verificationFailed;
+        !result.value.verificationFailed &&
+        !result.value.securityBlocked;
       if (isHealthy) {
         accumulator.healthyAttemptedCount++;
       }
@@ -765,10 +771,13 @@ class PackageSyncer {
         } else if (code === 0) {
           resolve();
         } else {
-          const message =
-            code === EXIT_VERIFICATION_FAILED
-              ? 'Verification failed (smoke test); not published'
-              : `Process exited with code ${code}`;
+          const messages = {
+            [EXIT_SECURITY_BLOCKED]:
+              'Blocked by the security gate; not published',
+            [EXIT_VERIFICATION_FAILED]:
+              'Verification failed (smoke test); not published',
+          };
+          const message = messages[code] ?? `Process exited with code ${code}`;
           reject(Object.assign(new Error(message), { exitCode: code }));
         }
       });

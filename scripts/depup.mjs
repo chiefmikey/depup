@@ -9,6 +9,7 @@ import ora from 'ora';
 import pacote from 'pacote';
 import semver from 'semver';
 
+import { enforcePublishGate, exitCodeFor } from './publish-gate.mjs';
 import {
   buildSanitizedEnvironment,
   hasUnpublishedFailedRevision,
@@ -113,11 +114,7 @@ class DepUp {
           if (options.debug) {
             console.error(chalk.gray('Stack trace:'), error.stack);
           }
-          process.exit(
-            error.exitCode === EXIT_VERIFICATION_FAILED
-              ? EXIT_VERIFICATION_FAILED
-              : 1,
-          );
+          process.exit(exitCodeFor(error));
         }
       });
 
@@ -618,6 +615,7 @@ class DepUp {
       dependenciesUpdated > 0 ||
       (await hasUnpublishedFailedRevision(packageDirectory, baseVersion));
     if (shouldPublishThis) {
+      await this.runPublishGate(targetDirectory);
       await this.publishPackage(
         targetDirectory,
         scopedName,
@@ -633,6 +631,12 @@ class DepUp {
       ),
     );
     return false;
+  }
+
+  // Fail-closed security gate: throws PublishGateError (exit code 4) unless
+  // the package passes, so nothing below it is reached for a blocked package.
+  runPublishGate(targetDirectory) {
+    return enforcePublishGate(targetDirectory);
   }
 
   async safeGenerateReadme(packageName, debug) {
