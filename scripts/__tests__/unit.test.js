@@ -3,7 +3,7 @@
  * Every test here exercises real code paths, not inline reimplementations.
  */
 import { execFileSync } from 'node:child_process';
-import { promises as fs } from 'node:fs';
+import { existsSync, promises as fs } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
@@ -13947,6 +13947,97 @@ describe('depup.mjs -- coverage gap fill', () => {
         '1.0.0-depup.0',
         true,
       );
+    });
+
+    // The import test executes untrusted package code AFTER the first .npmrc
+    // removal and BEFORE npm publish (which holds NPM_TOKEN). A .npmrc planted
+    // there can redirect the publish (and the token) to an attacker registry.
+    it('removes a .npmrc present at publish time before any npm call', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      await fs.writeFile(
+        path.join(tmpDir, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      const seenAtInstall = [];
+      const seenAtPublish = [];
+      jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {
+        seenAtInstall.push(existsSync(path.join(tmpDir, '.npmrc')));
+      });
+      jest.spyOn(depup, 'executePublish').mockImplementation(() => {
+        seenAtPublish.push(existsSync(path.join(tmpDir, '.npmrc')));
+      });
+
+      await depup.publishPackage(tmpDir, '@depup/testpkg', '1.0.0-depup.0');
+
+      expect(seenAtInstall).toStrictEqual([false]);
+      expect(seenAtPublish).toStrictEqual([false]);
+    });
+
+    it('does not publish when a planted .npmrc cannot be removed', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      jest.spyOn(depup, 'removeNpmrc').mockRejectedValue(new Error('EBUSY'));
+      const executeSpy = jest
+        .spyOn(depup, 'executePublish')
+        .mockImplementation(() => {});
+      jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
+
+      await expect(
+        depup.publishPackage(tmpDir, '@depup/testpkg', '1.0.0-depup.0'),
+      ).rejects.toThrow('EBUSY');
+      expect(executeSpy).not.toHaveBeenCalled();
+    });
+
+    it('processPackageCore never publishes a .npmrc planted by the import test', async () => {
+      process.env = { ...originalEnvironment, NPM_TOKEN: 'test-token' };
+      const originalCwd = process.cwd();
+      process.chdir(tmpDir);
+      try {
+        jest.spyOn(console, 'log').mockImplementation(() => {});
+        jest.spyOn(console, 'warn').mockImplementation(() => {});
+        jest.spyOn(depup, 'fetchManifest').mockResolvedValue({
+          name: 'plantpkg',
+          version: '1.0.0',
+        });
+        jest
+          .spyOn(depup, 'downloadPackage')
+          .mockImplementation(async (_spec, targetDirectory) => {
+            await fs.mkdir(targetDirectory, { recursive: true });
+            await fs.writeFile(
+              path.join(targetDirectory, 'package.json'),
+              JSON.stringify({ name: 'plantpkg', version: '1.0.0' }),
+            );
+          });
+        // Stand-in for the untrusted package code run by the import test.
+        jest
+          .spyOn(depup, 'testPackage')
+          .mockImplementation(async (targetDirectory) => {
+            await fs.writeFile(
+              path.join(targetDirectory, '.npmrc'),
+              'registry=http://evil.example/\n',
+            );
+            return true;
+          });
+        jest.spyOn(depup, 'installBuildDeps').mockImplementation(() => {});
+        const seenAtPublish = [];
+        jest
+          .spyOn(depup, 'executePublish')
+          .mockImplementation((publishDirectory) => {
+            seenAtPublish.push(
+              existsSync(path.join(publishDirectory, '.npmrc')),
+            );
+          });
+
+        await depup.processPackageCore({
+          packageSpec: 'plantpkg',
+          shouldPublish: true,
+          shouldTest: true,
+          timeout: 5000,
+        });
+
+        expect(seenAtPublish).toStrictEqual([false]);
+      } finally {
+        process.chdir(originalCwd);
+      }
     });
   });
 
