@@ -32,7 +32,7 @@ Failing counts are the new tests run against base source; all pass on the branch
 
 Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 1671 tests pass; `npm run lint` clean.
 
-## Confirmed findings and their status (A, B, C fixed; D, E open as policy/minor)
+## Confirmed findings and their status (A, B, C, D fixed; E open as minor)
 
 - **A. Parent-process token exposure. FIXED in PR #1338 (see
   `docs/decisions/2026-10-12-secretless-build-publish-split.md`).** Original defect: even with child env
@@ -65,7 +65,7 @@ Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 
   `package-request` issues in the trailing 24h (5 for non-maintainers, 25 runaway guard for
   OWNER/MEMBER/COLLABORATOR; maintainer relabel never capped); over the cap there is no publish and one
   comment; an API error fails closed with no comment. Logic in `scripts/request-rate-limit.mjs`.
-- **D. Deprecated packages** are skipped by cron-discover but accepted by the issue path (policy choice).
+- **D. Deprecated packages** were skipped by cron-discover but accepted by the issue path. FIXED: the issue path now rejects them. The validate step ("Validate Package Exists on NPM") runs the shared check in `scripts/deprecation.mjs` (the same truthiness test cron-discover now imports; an empty `deprecated` string is not deprecated) and, when the latest version is deprecated, fails with `deprecated=true` and a sanitized message output (one line, 200 chars, markdown-escaped, `@` broken). The commit job posts "Request Denied: Package is deprecated" through env only, the issue is left open like other validation denials, and the package is not queued for retry. Tests in `scripts/__tests__/deprecated-request.test.js`.
 - **E. Smaller:** `refresh-curated-list.mjs` could later add a name that collides with an existing user
   entry; `depup-security.mjs` has its own spec parser that may share the `.tgz` gap (#11); security
   allowlist `rules` values (e.g. `max_package_size_mb`) are not enforced; `GITHUB_OUTPUT` newline injection
