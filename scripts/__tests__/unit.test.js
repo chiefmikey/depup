@@ -15683,6 +15683,28 @@ describe('depup.mjs -- publish audit hardening', () => {
       );
     });
 
+    // npm-package-arg resolves a bare name ending in .tgz/.tar/.tar.gz as a
+    // path on the local disk instead of a registry lookup.
+    it.each([
+      'evil.tgz',
+      'x.tar',
+      'x.tar.gz',
+      'X.TGZ',
+      'evil.tgz@1.0.0',
+      'evil.tar@latest',
+    ])('rejects bare name that npm resolves as a local file: %j', (spec) => {
+      expect(() => depup.validatePackageSpec(spec)).toThrow(
+        'Invalid package spec format',
+      );
+    });
+
+    it.each(['@scope/name.tgz', '@scope/name.tgz@1.0.0', 'tgz', 'a.tar.b'])(
+      'still accepts registry name %j',
+      (spec) => {
+        expect(() => depup.validatePackageSpec(spec)).not.toThrow();
+      },
+    );
+
     it('processPackageCore rejects a URL spec before any network call', async () => {
       const fetchSpy = jest.spyOn(depup, 'fetchManifest');
 

@@ -29,6 +29,9 @@ const RESERVED_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 // only, no leading '-', '.' or '_'. Uppercase is allowed because legacy
 // packages (e.g. JSONStream) still exist.
 const REGISTRY_SEGMENT_PATTERN = /^[\dA-Za-z~][\w.~-]*$/u;
+// npm-package-arg resolves a bare (unscoped) name with one of these suffixes as
+// a path on the local disk, not a registry lookup.
+const FILE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
 // Version / dist-tag / range suffix of a spec (no ':' or '/' so URLs, git
 // and path forms cannot hide in it).
 const SPEC_VERSION_PATTERN = /^[\w.+~-]+$/u;
@@ -56,7 +59,7 @@ function isRegistryName(name) {
     return false;
   }
   if (!name.startsWith('@')) {
-    return REGISTRY_SEGMENT_PATTERN.test(name);
+    return REGISTRY_SEGMENT_PATTERN.test(name) && !FILE_NAME_PATTERN.test(name);
   }
   const parts = name.slice(1).split('/');
   return (
