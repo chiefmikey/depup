@@ -126,10 +126,17 @@ describe('every publisher reaches the gate through depup.mjs', () => {
     }
   });
 
-  it('no script other than depup.mjs and depup-security.mjs runs npm publish', () => {
+  // staged-publish.mjs publishes tarballs that depup.mjs staged after the
+  // gate; see staged-publish-wiring.test.js for how that coupling is pinned.
+  it('no script other than depup.mjs, depup-security.mjs and staged-publish.mjs runs npm publish', () => {
+    const publishers = new Set([
+      'depup-security.mjs',
+      'depup.mjs',
+      'staged-publish.mjs',
+    ]);
     const scripts = readdirSync(path.resolve(import.meta.dirname, '..'))
       .filter((name) => name.endsWith('.mjs'))
-      .filter((name) => name !== 'depup.mjs' && name !== 'depup-security.mjs');
+      .filter((name) => !publishers.has(name));
 
     for (const name of scripts) {
       const source = readFileSync(

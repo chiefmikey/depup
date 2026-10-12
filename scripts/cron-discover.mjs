@@ -120,8 +120,9 @@ class PackageDiscoverer {
 
   async main() {
     // Fail fast if NPM_TOKEN is missing (prevents wasting CI minutes on
-    // packages that would all fail at the publish step)
-    if (!process.env.NPM_TOKEN) {
+    // packages that would all fail at the publish step). A staged run
+    // (DEPUP_STAGE_DIR) deliberately has no token: a publish-only job holds it.
+    if (!process.env.NPM_TOKEN && !process.env.DEPUP_STAGE_DIR) {
       console.error(
         chalk.red('NPM_TOKEN is required for publishing. Aborting discovery.'),
       );
