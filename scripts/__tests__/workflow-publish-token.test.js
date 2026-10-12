@@ -1,8 +1,10 @@
 /**
  * Static checks: the manual dispatch workflows (depup.yml, depup-secure.yml)
- * take a `publish` input. Their processing step runs untrusted package code,
- * so NPM_TOKEN / NODE_AUTH_TOKEN must only be present in its environment when
- * the run actually publishes; a dry run (publish=false) holds no npm secret.
+ * take a `publish` input. Their processing job runs untrusted package code, so
+ * it references no secret at all -- with publish=true it only stages the
+ * package (--stage-only). The npm token lives in a separate publish job that
+ * runs only for publish=true, runs no package code, and sees the token in one
+ * step.
  */
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -22,15 +24,15 @@ const loadWorkflow = (name) =>
 
 const PACKAGE_CODE_PATTERN =
   /cron:discover|cron:sync|scripts\/depup\.mjs|npm run depup|docker "\$\{DOCKER_ARGS/u;
-const GATED_SECRET =
-  /^\$\{\{\s*inputs\.publish\s*&&\s*secrets\.NPM_TOKEN\s*\|\|\s*''\s*\}\}$/u;
 
 describe.each([
-  ['depup.yml', 'process-package'],
-  ['depup-secure.yml', 'secure-processing'],
-])('%s publish token scoping', (file, jobId) => {
+  ['depup.yml', 'process-package', 'publish'],
+  ['depup-secure.yml', 'secure-processing', 'secure-publish'],
+])('%s publish token scoping', (file, buildId, publishId) => {
   const document = loadWorkflow(file);
-  const processing = document.jobs[jobId].steps.find((step) =>
+  const build = document.jobs[buildId];
+  const publish = document.jobs[publishId];
+  const processing = build.steps.find((step) =>
     PACKAGE_CODE_PATTERN.test(step.run ?? ''),
   );
 
@@ -39,26 +41,41 @@ describe.each([
     expect(processing).toBeDefined();
   });
 
-  it('exposes the npm secret to package code only when publish is true', () => {
-    const secretVariables = Object.entries(processing.env).filter(([, value]) =>
-      String(value).includes('secrets.NPM_TOKEN'),
-    );
-
-    expect(secretVariables.length).toBeGreaterThan(0);
-
-    for (const [name, value] of secretVariables) {
-      expect([name, GATED_SECRET.test(value)]).toStrictEqual([name, true]);
-    }
+  it('the processing job references no secret at all', () => {
+    expect(JSON.stringify(build)).not.toContain('secrets.');
+    expect(JSON.stringify(build)).not.toContain('NPM_TOKEN');
+    expect(JSON.stringify(build)).not.toContain('NODE_AUTH_TOKEN');
   });
 
-  it('no other step in the job receives the npm secret ungated', () => {
-    const others = document.jobs[jobId].steps.filter(
-      (step) => step !== processing,
+  it('a publishing run stages the package instead of publishing it', () => {
+    expect(processing.run).toContain('--stage-only');
+    expect(processing.run).not.toContain('--publish');
+  });
+
+  it('the publish job runs only for publish=true, after the processing job', () => {
+    expect(publish.if).toContain('inputs.publish');
+    expect(publish.needs).toBe(buildId);
+  });
+
+  it('the npm token appears in exactly one step of one job', () => {
+    const holders = Object.entries(document.jobs).flatMap(([jobId, job]) =>
+      (job.steps ?? [])
+        .filter((step) =>
+          JSON.stringify(step.env ?? {}).includes('secrets.NPM_TOKEN'),
+        )
+        .map((step) => `${jobId}:${step.name}`),
     );
-    for (const step of others) {
-      for (const value of Object.values(step.env ?? {})) {
-        expect(String(value)).not.toContain('secrets.NPM_TOKEN');
-      }
+
+    expect(holders).toHaveLength(1);
+    expect(holders[0]).toMatch(new RegExp(`^${publishId}:`, 'u'));
+    // Step-level only: never job-level env, never the container.
+    expect(JSON.stringify(publish.env ?? {})).not.toContain('NPM_TOKEN');
+  });
+
+  it('the publish job runs no package code', () => {
+    for (const step of publish.steps) {
+      expect(step.run ?? '').not.toMatch(PACKAGE_CODE_PATTERN);
+      expect(step.run ?? '').not.toMatch(/\bnpm (?:ci|install|i|run|test)\b/u);
     }
   });
 });

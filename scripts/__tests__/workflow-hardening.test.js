@@ -152,9 +152,7 @@ describe('process-package-request.yml', () => {
 
     it('verifies NPM_TOKEN before the publish step', () => {
       const whoami = requestText.indexOf('- name: Verify npm auth');
-      const publish = requestText.indexOf(
-        '- name: Process and Publish Package',
-      );
+      const publish = requestText.indexOf('- name: Publish Staged Package');
 
       expect(whoami).toBeGreaterThan(-1);
       expect(whoami).toBeLessThan(publish);
@@ -286,8 +284,9 @@ describe('process-package-request.yml', () => {
 
       expect(step.env.QUEUE_OUTCOME).toBe(expr('steps.queue.outcome'));
       expect(step.env.PUBLISH_OUTCOME).toBe(
-        expr('needs.process.outputs.publish_outcome'),
+        expr('needs.publish.outputs.publish_outcome'),
       );
+      expect(step.env.PUBLISH_RESULT).toBe(expr('needs.publish.result'));
       expect(step.env.TEST_FAILED).toBe(
         expr('needs.process.outputs.test_failed'),
       );
@@ -300,7 +299,7 @@ describe('process-package-request.yml', () => {
         .filter(Boolean);
 
       expect(ids).toStrictEqual(
-        expect.arrayContaining(['publish', 'commit', 'queue']),
+        expect.arrayContaining(['stage', 'publish', 'commit', 'queue']),
       );
     });
 
@@ -434,6 +433,12 @@ describe('process-package-request.yml', () => {
             },
           },
         },
+        // A vm context has no dynamic import(): the script is run with its
+        // import() call routed to this shim, which hands back the real module.
+        importModule: async (specifier) => {
+          imported.push(specifier);
+          return rateLimitModule;
+        },
         process: {
           env: {
             AUTHOR_ASSOCIATION: association,
@@ -443,12 +448,6 @@ describe('process-package-request.yml', () => {
             ISSUE_NUMBER: '1',
             SENDER_LOGIN: sender,
           },
-        },
-        // A vm context has no dynamic import(): the script is run with its
-        // import() call routed to this shim, which hands back the real module.
-        importModule: async (specifier) => {
-          imported.push(specifier);
-          return rateLimitModule;
         },
       };
       await vm.runInNewContext(
@@ -463,14 +462,22 @@ describe('process-package-request.yml', () => {
       };
     };
 
-    it('is the first job and gates both later jobs on allowed == true', () => {
+    it('is the first job and gates every later job on allowed == true', () => {
       expect(Object.keys(requestDocument.jobs)[0]).toBe('gate');
       expect(jobOf('gate').outputs.allowed).toBe(
         expr('steps.gate.outputs.allowed'),
       );
       expect(jobOf('process').needs).toBe('gate');
       expect(jobOf('process').if).toBe("needs.gate.outputs.allowed == 'true'");
-      expect(jobOf('commit').needs).toStrictEqual(['gate', 'process']);
+      // publish only runs after a successful process job, which itself only
+      // runs when the gate allowed the request.
+      expect(jobOf('publish').needs).toStrictEqual(['gate', 'process']);
+      expect(jobOf('publish').if).toBe("needs.process.result == 'success'");
+      expect(jobOf('commit').needs).toStrictEqual([
+        'gate',
+        'process',
+        'publish',
+      ]);
       expect(jobOf('commit').if).toContain(
         "needs.gate.outputs.allowed == 'true'",
       );
@@ -732,14 +739,46 @@ describe('process-package-request.yml', () => {
       return { output: readFileSync(output, 'utf8'), status: result.status };
     };
 
-    it('process job holds NPM_TOKEN and no other secret', () => {
-      expect(secretsOf(processJob)).toStrictEqual(['NPM_TOKEN']);
+    it('process job references no secret at all', () => {
+      expect(secretsOf(processJob)).toStrictEqual([]);
 
       const text = JSON.stringify(processJob);
 
+      expect(text).not.toContain('NPM_TOKEN');
+      expect(text).not.toContain('NODE_AUTH_TOKEN');
       expect(text).not.toContain('BOT_PAT');
       expect(text).not.toContain('GPG_PRIVATE_KEY');
       expect(text).not.toContain('gpg ');
+      // setup-node's registry-url would export a placeholder NODE_AUTH_TOKEN,
+      // which stage mode refuses.
+      expect(
+        stepNamed(processJob, 'Setup Node.js').with['registry-url'],
+      ).toBeUndefined();
+    });
+
+    it('publish job holds NPM_TOKEN and nothing else, and runs no package code', () => {
+      const publishJob = jobOf('publish');
+
+      expect(secretsOf(publishJob)).toStrictEqual(['NPM_TOKEN']);
+      expect(publishJob.permissions).toStrictEqual({ contents: 'read' });
+      expect(
+        stepNamed(publishJob, 'Checkout Publisher').with['persist-credentials'],
+      ).toBe(false);
+
+      const runs = runsOf(publishJob).join('\n');
+
+      expect(runs).not.toContain('depup.mjs');
+      expect(runs).not.toMatch(/\bnpm (?:ci|install|i|view|run|test)\b/u);
+      expect(runs).not.toMatch(/git (?:push|commit|config)/u);
+
+      // Only the publish step itself sees the token; it is not a job-level env.
+      expect(JSON.stringify(publishJob.env ?? {})).not.toContain('NPM_TOKEN');
+      expect(stepNamed(publishJob, 'Publish Staged Package').env).toStrictEqual(
+        {
+          NODE_AUTH_TOKEN: expr('secrets.NPM_TOKEN'),
+          PACKAGE_NAME: expr('needs.process.outputs.package_name'),
+        },
+      );
     });
 
     it('process job checks out without persisting the credential', () => {
@@ -772,8 +811,12 @@ describe('process-package-request.yml', () => {
         (match) => match[1],
       );
 
+      // add-package.mjs and staged-publish.mjs (finalize-integrity) use only
+      // Node built-ins; neither executes package code.
       expect(scripts.length).toBeGreaterThan(0);
-      expect(new Set(scripts)).toStrictEqual(new Set(['add-package.mjs']));
+      expect(new Set(scripts)).toStrictEqual(
+        new Set(['add-package.mjs', 'staged-publish.mjs']),
+      );
       expect(JSON.stringify(commitJob)).not.toContain('NPM_TOKEN');
       expect(JSON.stringify(commitJob)).not.toContain('NODE_AUTH_TOKEN');
     });
@@ -791,43 +834,83 @@ describe('process-package-request.yml', () => {
       expect(run).not.toMatch(/git add (?:-A|\.|packages\/?\s)/u);
     });
 
-    it('commit job runs on failure but only after the process job', () => {
+    it('commit job runs on failure but only after the process and publish jobs', () => {
       expect(commitJob.needs).toContain('process');
+      expect(commitJob.needs).toContain('publish');
       expect(commitJob.if).toContain('always()');
       expect(stepNamed(commitJob, 'Import GPG Key').if).toBe('always()');
     });
 
-    it('hands package data over as a run-scoped artifact', () => {
-      const upload = stepNamed(processJob, 'Upload Package Data');
-      const download = stepNamed(commitJob, 'Download Package Data');
+    it('commits only what the publish job confirmed', () => {
+      const commit = stepNamed(commitJob, 'Commit and Push');
+      const record = stepNamed(commitJob, 'Record Publish Result');
 
-      expect(upload.with.name).toBe(download.with.name);
-      expect(upload.with.name).toContain('github.run_id');
-      expect(upload.if).toBe("steps.publish.outcome == 'success'");
-      expect(download.if).toContain("needs.process.result == 'success'");
+      expect(commit.if).toContain("needs.publish.result == 'success'");
+      expect(record.if).toContain("needs.publish.result == 'success'");
+      expect(record.run).toContain('finalize-integrity');
+      expect(record.run).toContain('--require-results');
+      // Recorded before the commit step copies the data into place.
+      expect(commitJob.steps.indexOf(record)).toBeLessThan(
+        commitJob.steps.indexOf(commit),
+      );
+    });
+
+    it('hands the staged tarball, package data and publish results over as run-scoped artifacts', () => {
+      const pairs = [
+        [processJob, 'Upload Package Data', commitJob, 'Download Package Data'],
+        [
+          processJob,
+          'Upload Staged Package',
+          jobOf('publish'),
+          'Download Staged Package',
+        ],
+        [
+          jobOf('publish'),
+          'Upload Publish Results',
+          commitJob,
+          'Download Publish Results',
+        ],
+      ];
+      for (const [producer, upload, consumer, download] of pairs) {
+        const up = stepNamed(producer, upload);
+        const down = stepNamed(consumer, download);
+
+        expect(up.with.name).toBe(down.with.name);
+        expect(up.with.name).toContain('github.run_id');
+      }
+
+      expect(stepNamed(processJob, 'Upload Package Data').if).toBe(
+        "steps.stage.outcome == 'success'",
+      );
+      expect(stepNamed(commitJob, 'Download Package Data').if).toContain(
+        "needs.process.result == 'success'",
+      );
     });
 
     it('exposes only runner-set outcomes and parse outputs from the process job', () => {
       expect(processJob.outputs).toStrictEqual({
         exists: expr('steps.check-existing.outputs.exists'),
-        gate_blocked: expr('steps.publish.outputs.gate_blocked'),
+        gate_blocked: expr('steps.stage.outputs.gate_blocked'),
         npm_outcome: expr('steps.npm-info.outcome'),
         package_name: expr('steps.parse.outputs.package_name'),
         parse_outcome: expr('steps.parse.outcome'),
-        publish_outcome: expr('steps.publish.outcome'),
-        test_failed: expr('steps.publish.outputs.test_failed'),
+        test_failed: expr('steps.stage.outputs.test_failed'),
         validate_outcome: expr('steps.validate-package-name.outcome'),
+      });
+      expect(jobOf('publish').outputs).toStrictEqual({
+        publish_outcome: expr('steps.publish.outcome'),
       });
     });
 
     it.each([
-      [0, 0, false],
-      [3, 3, true],
-      [1, 1, false],
+      [0, 0, false, false],
+      [3, 3, true, false],
+      [4, 4, false, true],
+      [1, 1, false, false],
     ])(
-      'publish step maps depup exit %i to step status %i, test_failed=%s',
-      (code, status, testFailed) => {
-        const step = stepNamed(processJob, 'Process and Publish Package');
+      'stage step maps depup exit %i to step status %i, test_failed=%s, gate_blocked=%s',
+      (code, status, testFailed, gateBlocked) => {
+        const step = stepNamed(processJob, 'Process and Stage Package');
         const result = withTemporaryDirectory((directory) =>
           runStep(step, directory, {
             environment: { PACKAGE_NAME: 'lodash' },
@@ -837,8 +920,16 @@ describe('process-package-request.yml', () => {
 
         expect(result.status).toBe(status);
         expect(result.output.includes('test_failed=true')).toBe(testFailed);
+        expect(result.output.includes('gate_blocked=true')).toBe(gateBlocked);
       },
     );
+
+    it('stage step passes --stage-only and never --publish', () => {
+      const { run } = stepNamed(processJob, 'Process and Stage Package');
+
+      expect(run).toContain('--stage-only "$RUNNER_TEMP/stage"');
+      expect(run).not.toContain('--publish');
+    });
 
     it('does not queue a verification failure for retry and says so', () => {
       const queue = stepNamed(commitJob, 'Queue for Retry on Failure');
@@ -857,10 +948,18 @@ describe('process-package-request.yml', () => {
       expect(comment).toContain('not queued for automatic retry');
     });
 
-    it('closes the issue only when both jobs succeeded', () => {
+    it('closes the issue only when every job succeeded', () => {
       const close = stepNamed(commitJob, 'Close Issue on Success');
 
-      expect(close.if).toBe("success() && needs.process.result == 'success'");
+      expect(close.if).toBe(
+        "success() && needs.process.result == 'success' && needs.publish.result == 'success'",
+      );
+    });
+
+    it('queues a transient publish failure for retry', () => {
+      const queue = stepNamed(commitJob, 'Queue for Retry on Failure');
+
+      expect(queue.if).toContain("needs.publish.result == 'failure'");
     });
 
     describe('package name re-validation in the commit job', () => {
@@ -980,26 +1079,16 @@ describe('depup-secure.yml', () => {
     },
   );
 
-  it('does not echo the raw docker args (token env value)', () => {
-    expect(secureText).not.toMatch(/echo "Running: docker \$\{DOCKER_ARGS/u);
-    expect(secureText).toContain('NODE_AUTH_TOKEN=***');
-  });
+  it('the sandbox container is started without any credential', () => {
+    const run = secureDocument.jobs['secure-processing'].steps
+      .map((step) => step.run ?? '')
+      .join('\n');
 
-  it('redacts the token in the echoed docker args', () => {
-    // Run the redaction + echo lines exactly as written in the workflow.
-    const redactLine = /^\s*(SAFE_ARGS=.*)$/mu.exec(secureText)[1];
-    const echoLine = /^\s*(echo "Running: docker .*)$/mu.exec(secureText)[1];
-    const script = [
-      String.raw`DOCKER_ARGS=(run -e NPM_TOKEN "-e" "NODE_AUTH_TOKEN=$NPM_TOKEN" img pkg)`,
-      redactLine,
-      echoLine,
-    ].join('\n');
-    const output = execFileSync('bash', ['-c', script], {
-      env: { ...process.env, NPM_TOKEN: 'super-secret-token' },
-    }).toString();
-
-    expect(output).not.toContain('super-secret-token');
-    expect(output).toContain('NODE_AUTH_TOKEN=***');
+    // No token reaches docker, so there is nothing to redact in the echo.
+    expect(run).not.toMatch(/NPM_TOKEN|NODE_AUTH_TOKEN/u);
+    expect(run).toContain('echo "Running: docker ${DOCKER_ARGS[*]}"');
+    expect(run).toContain('"--stage-only" "/app/staging"');
+    expect(run).not.toContain('"--publish"');
   });
 
   describe('scan-time install of the untrusted package', () => {
@@ -1085,6 +1174,7 @@ describe('depup-secure.yml', () => {
     expect(Object.keys(requestDocument.jobs)).toStrictEqual([
       'gate',
       'process',
+      'publish',
       'commit',
     ]);
   });

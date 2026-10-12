@@ -3,10 +3,10 @@
  *  - never as an inline `${{ secrets.* }}` expression in a run script (the
  *    secret would be spliced into the script text before the shell sees it);
  *    it goes through step env instead;
- *  - never imported before package code has run. Untrusted package code (the
+ *  - never present where package code runs. Untrusted package code (the
  *    import test) runs as the same user and can `gpg --export-secret-keys`
- *    from the keyring, so the key is imported only in the step right before
- *    the commit step, after all package code has finished.
+ *    from the keyring, so the key is only ever imported in commit jobs, which
+ *    run no package code at all.
  */
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -78,60 +78,80 @@ describe('gPG key handling in workflows', () => {
     expect(offenders).toStrictEqual([]);
   });
 
-  it('the key is imported only after all package code, right before the commit step', () => {
+  // The strongest form of "import the key only after package code": the job
+  // that holds the key never runs package code at all.
+  it('no job that holds the signing key runs package code', () => {
     const offenders = [];
-    let checkedJobs = 0;
+    let keyJobs = 0;
     for (const file of workflowFiles) {
       for (const [jobId, job] of Object.entries(
         loadWorkflow(file).jobs ?? {},
       )) {
         const steps = job.steps ?? [];
-        const lastCodeIndex = steps.findLastIndex(runsPackageCode);
-        const importIndex = steps.findIndex(importsGpgKey);
-        if (lastCodeIndex === -1 || importIndex === -1) {
-          continue;
+        if (steps.some(importsGpgKey)) {
+          keyJobs += 1;
+          if (steps.some(runsPackageCode)) {
+            offenders.push(`${file}:${jobId}`);
+          }
         }
-        checkedJobs += 1;
-        const commitStep = steps[importIndex + 1];
-        const ok =
-          importIndex > lastCodeIndex &&
-          (commitStep?.run ?? '').includes('git commit') &&
-          // The commit step may be conditional (it runs even when package
-          // code failed); the import must run under the very same condition
-          // or the commit would run without the key.
-          steps[importIndex].if === commitStep.if;
-        if (!ok) {
+      }
+    }
+
+    // bump commit, cron discover/sync commit + heal, depup commit,
+    // depup-secure commit, process-package-request commit, refresh-list
+    expect(keyJobs).toBe(8);
+    expect(offenders).toStrictEqual([]);
+  });
+
+  it('the key is imported before the commit step in every job that commits', () => {
+    const offenders = [];
+    for (const file of workflowFiles) {
+      for (const [jobId, job] of Object.entries(
+        loadWorkflow(file).jobs ?? {},
+      )) {
+        const steps = job.steps ?? [];
+        const importIndex = steps.findIndex(importsGpgKey);
+        const commitIndex = steps.findIndex((step) =>
+          (step.run ?? '').includes('git commit'),
+        );
+        if (
+          importIndex !== -1 &&
+          commitIndex !== -1 &&
+          importIndex > commitIndex
+        ) {
           offenders.push(`${file}:${jobId}`);
         }
       }
     }
 
-    // bump sync, cron discover, cron sync, depup, depup-secure
-    expect(checkedJobs).toBe(5);
     expect(offenders).toStrictEqual([]);
   });
 
   // Importing late must not let a bad key surface only after packages were
-  // published to npm: the early step validates the key without importing it.
-  for (const [file, jobId] of [
-    ['bump.yml', 'sync'],
-    ['cron.yml', 'discover'],
-    ['cron.yml', 'sync'],
+  // published to npm: the early preflight job validates the key without
+  // importing it, and every build job (hence every publish) waits for it.
+  for (const [file, buildJobs] of [
+    ['bump.yml', ['sync']],
+    ['cron.yml', ['discover', 'sync']],
   ]) {
-    it(`${file} ${jobId}: validates the key before package code without importing it`, () => {
-      const { steps } = loadWorkflow(file).jobs[jobId];
-      const firstCodeIndex = steps.findIndex(runsPackageCode);
-      const verify = steps.findIndex((step) =>
+    it(`${file}: preflight validates the key before any package code, without importing it`, () => {
+      const document = loadWorkflow(file);
+      const { steps } = document.jobs.preflight;
+      const verify = steps.find((step) =>
         (step.run ?? '').includes('--show-keys'),
       );
 
-      expect(verify).toBeGreaterThanOrEqual(0);
-      expect(verify).toBeLessThan(firstCodeIndex);
-      expect(steps[verify].run).not.toContain('--import');
-      expect(steps[verify].env.GPG_PRIVATE_KEY).toMatch(
+      expect(verify).toBeDefined();
+      expect(verify.run).not.toContain('--import');
+      expect(verify.env.GPG_PRIVATE_KEY).toMatch(
         /^\$\{\{\s*secrets\.GPG_PRIVATE_KEY\s*\}\}$/u,
       );
-      expect(steps[verify].run).toContain('exit 1');
+      expect(verify.run).toContain('exit 1');
+      expect(steps.some(runsPackageCode)).toBe(false);
+
+      for (const buildJob of buildJobs) {
+        expect([document.jobs[buildJob].needs].flat()).toContain('preflight');
+      }
     });
   }
 });

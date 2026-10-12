@@ -28,12 +28,24 @@ const stepRuns = (job) => job.steps.map((step) => step.run ?? '');
 describe('process-package-request.yml publish path', () => {
   const document = loadWorkflow('process-package-request.yml');
   const processSteps = document.jobs.process.steps;
-  const publishIndex = processSteps.findIndex((step) => step.id === 'publish');
-  const publish = processSteps[publishIndex];
+  // The secretless build step: depup.mjs runs the gate, then stages (packs)
+  // the package. Nothing is published from the job that runs package code.
+  const stageIndex = processSteps.findIndex((step) => step.id === 'stage');
+  const stage = processSteps[stageIndex];
 
-  it('publishes only through depup.mjs --publish, which runs the gate', () => {
-    expect(publish.run).toContain('node scripts/depup.mjs');
-    expect(publish.run).toContain('--publish');
+  it('stages only through depup.mjs --stage-only, which runs the gate first', () => {
+    expect(stage.run).toContain('node scripts/depup.mjs');
+    expect(stage.run).toContain('--stage-only');
+    expect(stage.run).not.toContain('--publish');
+  });
+
+  it('publishes only through staged-publish.mjs in a job that runs no package code', () => {
+    const { publish } = document.jobs;
+    const runs = stepRuns(publish).join('\n');
+
+    expect(runs).toContain('node scripts/staged-publish.mjs publish-staged');
+    expect(runs).not.toContain('depup.mjs');
+    expect(publish.needs).toContain('process');
   });
 
   it('has no other npm publish anywhere in the workflow', () => {
@@ -44,23 +56,27 @@ describe('process-package-request.yml publish path', () => {
     }
   });
 
-  it('stages and uploads package data only after the gated publish step', () => {
-    const stage = processSteps.findIndex((step) =>
+  it('hands over the staged tarball and package data only after the gated stage step', () => {
+    const handoff = processSteps.findIndex((step) =>
       (step.run ?? '').includes('handoff'),
     );
-    const upload = processSteps.findIndex((step) =>
-      (step.uses ?? '').startsWith('actions/upload-artifact@'),
-    );
+    const uploads = processSteps
+      .map((step, index) => ({ index, step }))
+      .filter(({ step }) =>
+        (step.uses ?? '').startsWith('actions/upload-artifact@'),
+      );
 
-    expect(publishIndex).toBeGreaterThan(-1);
-    expect(stage).toBeGreaterThan(publishIndex);
-    expect(upload).toBeGreaterThan(stage);
-    expect(processSteps[stage].if).toContain(
-      "steps.publish.outcome == 'success'",
+    expect(stageIndex).toBeGreaterThan(-1);
+    expect(handoff).toBeGreaterThan(stageIndex);
+    expect(processSteps[handoff].if).toContain(
+      "steps.stage.outcome == 'success'",
     );
-    expect(processSteps[upload].if).toContain(
-      "steps.publish.outcome == 'success'",
-    );
+    expect(uploads).toHaveLength(2);
+
+    for (const { index, step } of uploads) {
+      expect(index).toBeGreaterThan(stageIndex);
+      expect(step.if).toContain("steps.stage.outcome == 'success'");
+    }
   });
 
   it('keeps the commit job away from depup.mjs and the npm secret', () => {
@@ -74,10 +90,10 @@ describe('process-package-request.yml publish path', () => {
   });
 
   it('treats exit 4 (security gate) as non-retryable and says so', () => {
-    expect(publish.run).toMatch(/-eq 4/u);
-    expect(publish.run).toContain('gate_blocked=true');
+    expect(stage.run).toMatch(/-eq 4/u);
+    expect(stage.run).toContain('gate_blocked=true');
     expect(document.jobs.process.outputs.gate_blocked).toContain(
-      'steps.publish.outputs.gate_blocked',
+      'steps.stage.outputs.gate_blocked',
     );
 
     const queue = document.jobs.commit.steps.find(
