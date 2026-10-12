@@ -6,6 +6,7 @@ import path from 'node:path';
 import chalk from 'chalk';
 import ora from 'ora';
 
+import { isDeprecated } from './deprecation.mjs';
 import { getShardConfig, logFailureBreakdown, sleep } from './utilities.mjs';
 
 const require = createRequire(import.meta.url);
@@ -320,7 +321,7 @@ class PackageDiscoverer {
         timeout: 5000,
       });
       // Skip deprecated packages -- no point bumping deps on abandoned software
-      if (manifest.deprecated) {
+      if (isDeprecated(manifest)) {
         console.warn(`  Skipping deprecated package: ${name}`);
         return null;
       }

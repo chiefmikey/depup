@@ -891,6 +891,10 @@ describe('process-package-request.yml', () => {
       expect(processJob.outputs).toStrictEqual({
         exists: expr('steps.check-existing.outputs.exists'),
         gate_blocked: expr('steps.stage.outputs.gate_blocked'),
+        npm_deprecated: expr('steps.npm-info.outputs.deprecated'),
+        npm_deprecated_message: expr(
+          'steps.npm-info.outputs.deprecated_message',
+        ),
         npm_outcome: expr('steps.npm-info.outcome'),
         package_name: expr('steps.parse.outputs.package_name'),
         parse_outcome: expr('steps.parse.outcome'),

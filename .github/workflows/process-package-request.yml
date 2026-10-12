@@ -236,6 +236,8 @@ jobs:
     outputs:
       exists: ${{ steps.check-existing.outputs.exists }}
       gate_blocked: ${{ steps.stage.outputs.gate_blocked }}
+      npm_deprecated: ${{ steps.npm-info.outputs.deprecated }}
+      npm_deprecated_message: ${{ steps.npm-info.outputs.deprecated_message }}
       npm_outcome: ${{ steps.npm-info.outcome }}
       package_name: ${{ steps.parse.outputs.package_name }}
       parse_outcome: ${{ steps.parse.outcome }}
@@ -424,6 +426,24 @@ jobs:
             fi
 
             echo "Package $PACKAGE_NAME exists on npm"
+
+            # Deprecated packages are not republished (cron-discover skips them too).
+            # The shared check exits 3 and prints the registry's message already
+            # truncated, escaped and reduced to one line; it only ever travels as a
+            # step output and is never logged or interpolated into a script.
+            DEPRECATION_STATUS=0
+            DEPRECATION_MESSAGE=$(node scripts/deprecation.mjs package_info.json) || DEPRECATION_STATUS=$?
+            if [ "$DEPRECATION_STATUS" -eq 3 ]; then
+              echo "Package $PACKAGE_NAME is deprecated by its maintainers; DepUp does not republish deprecated packages"
+              echo "deprecated=true" >> "$GITHUB_OUTPUT"
+              echo "deprecated_message=$DEPRECATION_MESSAGE" >> "$GITHUB_OUTPUT"
+              rm -f package_info.json
+              exit 1
+            elif [ "$DEPRECATION_STATUS" -ne 0 ]; then
+              echo "Could not check whether $PACKAGE_NAME is deprecated (exit $DEPRECATION_STATUS); failing closed"
+              rm -f package_info.json
+              exit 1
+            fi
 
             # Extract info for PR description (store in outputs, not files)
             DESCRIPTION=$(jq -r '.description // "No description available"' package_info.json)
@@ -863,6 +883,8 @@ jobs:
           COMMIT_OUTCOME: ${{ steps.commit.outcome }}
           GATE_BLOCKED: ${{ needs.process.outputs.gate_blocked }}
           JOB_STATUS: ${{ job.status }}
+          NPM_DEPRECATED: ${{ needs.process.outputs.npm_deprecated }}
+          NPM_DEPRECATED_MESSAGE: ${{ needs.process.outputs.npm_deprecated_message }}
           NPM_OUTCOME: ${{ needs.process.outputs.npm_outcome }}
           PACKAGE_NAME: ${{ needs.process.outputs.package_name }}
           PARSE_OUTCOME: ${{ needs.process.outputs.parse_outcome }}
@@ -919,6 +941,12 @@ jobs:
               comment += '- Scoped packages: `@scope/package-name`\n';
               comment += '- Cannot contain spaces or special characters\n\n';
               comment += 'Please update the issue with a valid package name.';
+            } else if (npmCheckFailed && process.env.NPM_DEPRECATED === 'true') {
+              // The message was truncated and markdown-escaped by the validate step.
+              comment += 'Request Denied: Package is deprecated.\n\n';
+              comment += '**Package:** `' + packageName + '`\n\n';
+              comment += '`' + packageName + '` is deprecated by its maintainers: ' + process.env.NPM_DEPRECATED_MESSAGE + '\n\n';
+              comment += 'DepUp does not republish deprecated packages.';
             } else if (npmCheckFailed) {
               comment += 'Request Denied: Package does not exist on npm.\n\n';
               comment += '**Package:** `' + packageName + '`\n\n';
