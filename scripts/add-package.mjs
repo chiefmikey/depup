@@ -2,6 +2,44 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+// Registry name limit (validate-npm-package-name).
+const MAX_NAME_LENGTH = 214;
+// One name segment (a scope or a bare name). Must start with an alphanumeric
+// so '.', '..', '-x' and '_x' fail; the same rule the issue workflow applies.
+const NAME_SEGMENT_PATTERN = /^[\dA-Za-z][\w.-]*$/u;
+// Never used as a package name: depup.mjs refuses them as prototype-pollution
+// keys, so accepting one only queues a request that can never succeed.
+const RESERVED_NAMES = new Set(['__proto__', 'constructor', 'prototype']);
+// npm treats a bare (unscoped) name with one of these suffixes as a local
+// file, not a registry package.
+const FILE_LIKE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
+
+/**
+ * True when the name is a plain registry name (`name` or `@scope/name`) that
+ * is safe to write to the list and later use in a URL and a directory path.
+ */
+function isValidPackageName(packageName) {
+  if (
+    typeof packageName !== 'string' ||
+    packageName.length > MAX_NAME_LENGTH ||
+    packageName.includes('..')
+  ) {
+    return false;
+  }
+  if (packageName.startsWith('@')) {
+    const parts = packageName.slice(1).split('/');
+    return (
+      parts.length === 2 &&
+      parts.every((part) => NAME_SEGMENT_PATTERN.test(part))
+    );
+  }
+  return (
+    NAME_SEGMENT_PATTERN.test(packageName) &&
+    !RESERVED_NAMES.has(packageName) &&
+    !FILE_LIKE_NAME_PATTERN.test(packageName)
+  );
+}
+
 /**
  * Manages user-submitted packages in config/user-packages.json.
  * This file is separate from the auto-curated list to avoid merge conflicts
@@ -50,19 +88,7 @@ class PackageAdder {
       throw new Error('Package name is required');
     }
 
-    // Validate package name format
-    const nameParts = packageName.startsWith('@')
-      ? packageName.slice(1).split('/')
-      : [packageName];
-    const validPart = /^[\w.-]+$/u;
-    const isScopedWithoutName =
-      packageName.startsWith('@') && nameParts.length !== 2;
-    if (
-      isScopedWithoutName ||
-      nameParts.length > 2 ||
-      nameParts.length === 0 ||
-      !nameParts.every((part) => validPart.test(part))
-    ) {
+    if (!isValidPackageName(packageName)) {
       throw new Error(`Invalid package name format: ${packageName}`);
     }
 
