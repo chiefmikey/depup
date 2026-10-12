@@ -17,6 +17,33 @@ const WORKFLOW_FILE_ENVIRONMENT_NAMES = new Set([
   'GITHUB_STEP_SUMMARY',
 ]);
 
+// One registry name segment (a scope or a bare name): URL-safe characters
+// only, no leading '-', '.' or '_'. Uppercase is allowed because legacy
+// packages (e.g. JSONStream) still exist.
+const REGISTRY_SEGMENT_PATTERN = /^[\dA-Za-z~][\w.~-]*$/u;
+// npm-package-arg resolves a bare (unscoped) name with one of these suffixes as
+// a path on the local disk, not a registry lookup.
+const FILE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
+
+/**
+ * Registry package name: `name` or `@scope/name`. Shared by the build
+ * pipeline (depup.mjs) and the dependency-free staged-publish modules, which
+ * re-check every name that arrives through an artifact.
+ */
+export function isRegistryName(name) {
+  if (typeof name !== 'string' || name.length > 214) {
+    return false;
+  }
+  if (!name.startsWith('@')) {
+    return REGISTRY_SEGMENT_PATTERN.test(name) && !FILE_NAME_PATTERN.test(name);
+  }
+  const parts = name.slice(1).split('/');
+  return (
+    parts.length === 2 &&
+    parts.every((part) => REGISTRY_SEGMENT_PATTERN.test(part))
+  );
+}
+
 /**
  * Copy of an environment without credential variables or GitHub Actions
  * workflow-command files, for child processes that run untrusted code (or

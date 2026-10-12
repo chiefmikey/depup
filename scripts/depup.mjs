@@ -10,11 +10,13 @@ import pacote from 'pacote';
 import semver from 'semver';
 
 import { enforcePublishGate, exitCodeFor } from './publish-gate.mjs';
+import { resolveStageDirectory, stagePackage } from './staged-artifact.mjs';
 import {
   buildSanitizedEnvironment,
   hasUnpublishedFailedRevision,
   isEntryPoint,
   isNonSemverSpecifier,
+  isRegistryName,
   pruneIntegrityEntries,
   toScopedName,
 } from './utilities.mjs';
@@ -26,13 +28,6 @@ const IGNORE_SCRIPTS = '--ignore-scripts';
 // Keys that must never be used as property names on plain objects built from
 // untrusted manifest data (prototype pollution).
 const RESERVED_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
-// One registry name segment (a scope or a bare name): URL-safe characters
-// only, no leading '-', '.' or '_'. Uppercase is allowed because legacy
-// packages (e.g. JSONStream) still exist.
-const REGISTRY_SEGMENT_PATTERN = /^[\dA-Za-z~][\w.~-]*$/u;
-// npm-package-arg resolves a bare (unscoped) name with one of these suffixes as
-// a path on the local disk, not a registry lookup.
-const FILE_NAME_PATTERN = /\.(?:tar|tar\.gz|tgz)$/iu;
 // Version / dist-tag / range suffix of a spec (no ':' or '/' so URLs, git
 // and path forms cannot hide in it).
 const SPEC_VERSION_PATTERN = /^[\w.+~-]+$/u;
@@ -52,21 +47,6 @@ function createVerificationFailedError(message) {
     exitCode: EXIT_VERIFICATION_FAILED,
     name: 'VerificationFailedError',
   });
-}
-
-// Registry package name: `name` or `@scope/name`.
-function isRegistryName(name) {
-  if (typeof name !== 'string' || name.length > 214) {
-    return false;
-  }
-  if (!name.startsWith('@')) {
-    return REGISTRY_SEGMENT_PATTERN.test(name) && !FILE_NAME_PATTERN.test(name);
-  }
-  const parts = name.slice(1).split('/');
-  return (
-    parts.length === 2 &&
-    parts.every((part) => REGISTRY_SEGMENT_PATTERN.test(part))
-  );
 }
 
 // Plain registry spec: `name` with an optional `@version|tag|range` suffix.
@@ -99,6 +79,7 @@ class DepUp {
       .option('-b, --bump-deps', 'update all dependencies to latest versions')
       .option('-t, --test', 'test package functionality after processing')
       .option('-p, --publish', 'publish package to npm (requires NPM_TOKEN)')
+      .option('--stage-only <dir>', 'stage for a publish-only job (no token)')
       .option('-d, --debug', 'enable debug mode')
       .option('--dry-run', 'show what would be done without making changes')
       .option(
@@ -126,10 +107,16 @@ class DepUp {
       bumpDeps: shouldBumpDeps,
       debug,
       dryRun,
-      publish: shouldPublish,
+      publish,
+      stageOnly,
       test: shouldTest,
       timeout: rawTimeout,
     } = options;
+    // --stage-only implies the publish step, deferred to a publish-only job.
+    // Stage mode refuses to start while a publish credential is in the env.
+    const shouldPublish = Boolean(publish || stageOnly);
+    this.stageDirectory = resolveStageDirectory(stageOnly, process.env);
+    this.publishPending = false;
 
     const timeout = Math.max(Number.parseInt(rawTimeout, 10) || 300_000, 1000);
 
@@ -350,7 +337,9 @@ class DepUp {
         packageDirectory,
         packageJson,
         packageName,
-        publishDidFail: Boolean(publishError),
+        // A staged package is not published yet: record it as failed
+        // (unconfirmed) until the publish-only job confirms it.
+        publishDidFail: Boolean(publishError || this.publishPending),
         published,
         revision,
         scopedName,
@@ -1096,6 +1085,15 @@ try {
   }
 
   async publishPackage(packageDirectory, packageName, version, debug = false) {
+    if (this.stageDirectory) {
+      await this.removeNpmrc(packageDirectory);
+      await stagePackage({
+        packageDirectory,
+        stageDirectory: this.stageDirectory,
+      });
+      this.publishPending = true;
+      return;
+    }
     const spinner = ora(`Publishing ${packageName}@${version}...`).start();
     if (debug) {
       spinner.stop();

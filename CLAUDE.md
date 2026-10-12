@@ -28,6 +28,10 @@ scripts/               # All source -- 13 ESM files, all classes exported for te
   publish-gate-scan.mjs # Gate scan stages (child process), built on security-scan.mjs
   render-security-report.mjs # Renders depup-secure.yml's report/summary from recorded results
   depup-security.mjs   # Containerized secure processing
+  staged-artifact.mjs  # Staged tarball: stagePackage (npm pack --ignore-scripts) + validateStagedPackage (re-derives every claim from the bytes)
+  staged-tar.mjs       # Strict dependency-free gzip-tar reader (no symlink/hardlink/device entries); data only, never extracted
+  staged-data.mjs      # collect-data / import-data (package data hand-off), finalize-integrity (failed -> published)
+  staged-publish.mjs   # Publish-only CLI: publish-staged, collect-data, import-data, finalize-integrity (no third-party imports)
   security-approval.mjs # Package approval workflow
   compatibility-test.mjs # Dependency compatibility testing
   __tests__/unit.test.js  # Main unit suite importing real classes
@@ -38,8 +42,8 @@ config/
   user-packages.json     # User-submitted packages (via GitHub issues)
   security-allowlist.json
 .github/workflows/
-  cron.yml               # Every 8h: discover + sync (3 shards) + heal
-  process-package-request.yml # Issue-triggered: validate, publish, commit, close
+  cron.yml               # Every 8h: preflight, discover/sync chains (3 shards each: build -> publish -> commit), heal
+  process-package-request.yml # Issue-triggered: gate, process (build), publish, commit, close
   refresh-list.yml       # Weekly: refresh curated list from npm popularity
   bump.yml               # On push: re-sync (skips De Pup commits)
   depup.yml / depup-secure.yml # Manual dispatch
@@ -63,16 +67,25 @@ npm run heal                # Self-healing repairs
 - **Secrets:** `NPM_TOKEN` (publishing), `GPG_PRIVATE_KEY` (signing), `BOT_PAT` (issue comments)
 - **Skip filter:** bump.yml checks `head_commit.author.name != 'De Pup'`
 
+## Secretless Build / Publish-Only Split
+Every publish-capable workflow is three jobs (see docs/decisions/2026-10-12-secretless-build-publish-split.md):
+- **build** runs untrusted package code and references no secret. `depup.mjs --stage-only <dir>` (or `DEPUP_STAGE_DIR`, which defers the `--publish` that cron spawns) runs the pipeline and the publish gate, then `npm pack`s. It refuses to start with a publish credential in the env. Never give a build job `registry-url` on setup-node (it exports a placeholder `NODE_AUTH_TOKEN`).
+- **publish** holds `NPM_TOKEN` only and runs no package code: `node scripts/staged-publish.mjs publish-staged` validates the tarball as data and runs `npm publish --ignore-scripts` with an explicit registry and its own npm config.
+- **commit** holds the signing key and push credential, validates the package-data artifact (`import-data`) and flips `failed` to `published` from the publish job's results (`finalize-integrity`).
+- A staged revision is recorded as `failed` (= not confirmed published, retried next cycle) until the commit job confirms it. Do not add a new status.
+- The staged modules import only `node:` builtins and siblings so publish/commit jobs need no `npm ci`; `workflow-job-split.test.js` enforces who may hold which secret.
+
 ## Package Request Flow
 1. User opens issue with `package-request` label
 2. Workflow validates package on npm, adds to `config/user-packages.json`
-3. Runs depup.mjs: download, bump, test, publish to npm
-4. Commits package data to git (rebase-free push, 10 retries with jitter)
-5. Comments with npm link + install command, closes issue
-6. Trigger: `labeled` only (not `opened` -- prevents duplicate runs)
+3. Build job runs depup.mjs --stage-only: download, bump, test, gate, pack
+4. Publish job publishes the staged tarball to npm
+5. Commit job commits package data to git (rebase-free push, 10 retries with jitter)
+6. Comments with npm link + install command, closes issue
+7. Trigger: `labeled` only (not `opened` -- prevents duplicate runs)
 
 ## Cron Architecture
-- **Every 8h:** discover (curated + user lists) + sync (dep bump check) + heal
+- **Every 8h:** preflight (npm token + signing key), discover (curated + user lists) + sync (dep bump check) as build -> publish -> commit chains, then heal
 - **3 shards** parallel, 5 concurrent packages per shard (async child processes)
 - **Weekly:** refresh curated list from npm search API (1000 packages)
 - **Dep checking:** batches of 10, abort-on-first-match, minor/major only

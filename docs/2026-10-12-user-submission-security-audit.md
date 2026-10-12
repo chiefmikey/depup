@@ -34,12 +34,19 @@ Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 
 
 ## Confirmed, NOT fixed (need a design decision and a real runner to validate)
 
-- **A. Parent-process token exposure.** Even with child env scrubbed, untrusted package code can read
-  `/proc/<parent pid>/environ` and get `NPM_TOKEN` (reproduced in a Linux container). Hits the request
-  job, cron discover/sync, `bump.yml`, `depup.yml`, and the `docker run -e NPM_TOKEN` path. Real fix:
-  split into a secretless build/test job and a publish-only job that publishes a staged artifact with
-  `--ignore-scripts`. Needs a staged-publish mode in `depup.mjs` and a cron restructure; cannot be
-  validated off a real runner. Not attempted.
+- **A. Parent-process token exposure. FIXED on `feat/secretless-build-publish-split` (see
+  `docs/decisions/2026-10-12-secretless-build-publish-split.md`).** Original defect: even with child env
+  scrubbed, untrusted package code can read `/proc/<parent pid>/environ` and get `NPM_TOKEN` (reproduced in
+  a Linux container). It hit the request job, cron discover/sync, `bump.yml`, `depup.yml`, and the
+  `docker run -e NPM_TOKEN` path. Fix: every publish-capable workflow is now build (package code, no
+  secrets, `depup.mjs --stage-only` packs a tarball) -> publish (`NPM_TOKEN` only, validates the tarball as
+  data, `npm publish --ignore-scripts`) -> commit (signing key and push credential, validated package
+  data). Validated by a loopback fake registry plus a canary package that reads every ancestor process's
+  environment (no secret visible during stage; the same canary does read the token without the split),
+  by `act` job ordering, and on Linux with Node 24 / npm 11; not yet on a real runner. Remaining: the gate
+  verdict and the staged bytes still come from the job that ran package code, so a package can influence
+  what other packages in the same cron shard stage; closing that needs the publish job to re-derive the
+  tarball from the upstream registry and re-run the gate on it.
 - **B. The pre-publish scan was not wired into any publish path. FIXED on `feat/wire-security-scan-into-publish`.**
   Original defect: no workflow, Dockerfile or script called `security-scan.mjs` / `depup-security.mjs`; the
   user-request path went straight to `depup.mjs --publish`, `depup-secure.yml`'s container entrypoint was

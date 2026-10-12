@@ -10,39 +10,42 @@ on:
       - 'CONTRIBUTING.md'
   workflow_dispatch: {}
 
-# Commits synced package data and pushes to main
+# Trust model (same split as process-package-request.yml):
+#   preflight -- holds NPM_TOKEN and GPG_PRIVATE_KEY only to fail fast before
+#                any work; runs no package code and checks out nothing.
+#   sync      -- runs UNTRUSTED package code (download, bump, test, security
+#                gate) and stages the results. References no secret: read-only
+#                token, no persisted checkout credential. depup.mjs refuses
+#                stage mode if a publish credential is in the environment.
+#   publish   -- holds NPM_TOKEN and nothing else; runs no package code. It
+#                validates the staged tarballs as data and publishes them with
+#                `npm publish --ignore-scripts`.
+#   commit    -- holds the signing key and the push credential; runs no package
+#                code. Package data from sync is validated before it is used.
+# Default read-only; only the commit job can write.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: depup-sync-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  sync:
-    name: Sync Packages
+  preflight:
+    name: Verify Publish Credentials
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 5
     # Skip if the push was from an automated workflow (De Pup or github-actions)
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.head_commit.author.name != 'De Pup' &&
        github.event.head_commit.author.name != 'github-actions[bot]')
+    permissions: {}
     steps:
-      # persist-credentials: false -- untrusted package code runs in this job, and a
-      # persisted token sits in .git/config where that code can read it. The push
-      # credential is configured inside the commit step instead.
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24'
-          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Verify npm auth (fail fast on dead NPM_TOKEN)
@@ -54,11 +57,8 @@ jobs:
             exit 1
           fi
 
-      - name: Install Dependencies
-        run: npm ci
-
-      # The key itself is imported after the sync step (see Import GPG Key below);
-      # this check only fails the job before anything is published.
+      # The key itself is imported only in the commit job; this check only fails
+      # the run before anything is published.
       - name: Verify GPG key (fail fast before publishing)
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -68,6 +68,195 @@ jobs:
             exit 1
           fi
 
+  sync:
+    name: Sync Packages
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # Skip if the push was from an automated workflow (De Pup or github-actions)
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.head_commit.author.name != 'De Pup' &&
+       github.event.head_commit.author.name != 'github-actions[bot]')
+    # Runs untrusted package code: no secrets, read-only token.
+    permissions:
+      contents: read
+    steps:
+      # persist-credentials: false -- untrusted package code runs in this job, and a
+      # persisted token sits in .git/config where that code can read it.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # No registry-url on purpose: it makes setup-node export a placeholder
+      # NODE_AUTH_TOKEN, and stage mode refuses to run with one set.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # cron-sync.mjs spawns depup.mjs --publish per package; DEPUP_STAGE_DIR
+      # turns that publish into "pack the package into the stage directory".
+      - name: Sync All Packages
+        env:
+          DEPUP_STAGE_DIR: ${{ runner.temp }}/stage
+        run: |
+          npm run cron:sync
+
+      # Last step that touches package data: the files this run changed under
+      # packages/, as plain data for the commit job.
+      - name: Collect Package Data
+        run: |
+          node scripts/staged-publish.mjs collect-data --out "$RUNNER_TEMP/package-data"
+
+      - name: Upload Staged Packages
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: staged-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Upload Package Data
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: package-data-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+  publish:
+    name: Publish Staged Packages
+    needs: sync
+    # An unsuccessful sync commits and publishes nothing (as before).
+    if: needs.sync.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # Holds NPM_TOKEN and nothing else; runs no package code.
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      # No artifact means the sync staged nothing (every package up to date).
+      - name: Download Staged Packages
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: staged-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+
+      - name: Publish Staged Packages
+        id: publish
+        if: steps.download.outcome == 'success'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          node scripts/staged-publish.mjs publish-staged "$RUNNER_TEMP/stage" \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --tolerate-failures 2>&1 | tee "$RUNNER_TEMP/publish.log"
+          exit "${PIPESTATUS[0]}"
+
+      - name: Publish Summary
+        if: always() && steps.download.outcome == 'success'
+        run: |
+          summary_line=$(grep '^DEPUP_PUBLISH_SUMMARY' "$RUNNER_TEMP/publish.log" 2>/dev/null | tail -n 1 || true)
+          echo "## Publish Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Counts**: ${summary_line:-(no summary line found)}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Publish Results
+        if: always() && steps.download.outcome == 'success'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: publish-results-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+  commit:
+    name: Commit Synced Packages
+    needs: [sync, publish]
+    # The commit must record what the publish job actually published, even when
+    # that job reported failures; it never runs when the sync itself failed.
+    if: ${{ !cancelled() && needs.sync.result == 'success' && needs.publish.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      # persist-credentials: false -- the push credential is configured inside
+      # the push step only.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # staged-publish.mjs uses only Node built-ins: no dependency install here.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Download Package Data
+        id: download-data
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: package-data-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+
+      - name: Download Publish Results
+        id: download-results
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: publish-results-sync-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+
+      # The artifact comes from a job that ran untrusted code: only paths of the
+      # shapes depup writes, regular files only, JSON that parses; anything else
+      # is dropped with a warning. Nothing in it is ever executed.
+      - name: Apply Package Data
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs import-data "$RUNNER_TEMP/package-data" --packages-root packages
+
+      # The sync recorded each staged revision as `failed` (not confirmed
+      # published); only the publish job's results flip it to `published`.
+      - name: Record Publish Results
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs finalize-integrity \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --packages-root packages
+
+      # The signing key is imported only now; no package code ever ran in this job.
+      - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
+
       - name: Configure Git
         run: |
           git config --global user.name "De Pup"
@@ -75,22 +264,6 @@ jobs:
           git config --global commit.gpgsign true
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
-
-      - name: Sync All Packages
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm run cron:sync
-
-      # The signing key is imported only now, after all package code has run:
-      # package code runs as this user and could otherwise export it from the
-      # keyring.
-      - name: Import GPG Key
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-        run: |
-          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Commit Changes
         env:
@@ -104,8 +277,8 @@ jobs:
           else
             git commit -m "chore: sync packages"
 
-            # Package code ran earlier in this job, so the checkout keeps no
-            # credential (persist-credentials: false); grant push access only now.
+            # The checkout keeps no credential (persist-credentials: false);
+            # grant push access only now.
             basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
             echo "::add-mask::$basic_auth"
             git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"

@@ -28,9 +28,18 @@ on:
         type: boolean
         default: false
 
-# Commits processed package data and pushes to main
+# Trust model (same split as process-package-request.yml):
+#   process-package -- runs UNTRUSTED package code and stages the result. It
+#                      references no secret; with publish=true it only packs
+#                      the package (--stage-only), it never publishes.
+#   publish         -- only when publish=true. Holds NPM_TOKEN and nothing else;
+#                      runs no package code (validates the staged tarball as
+#                      data, then `npm publish --ignore-scripts`).
+#   commit          -- holds the signing key and the push credential; runs no
+#                      package code.
+# Default read-only; only the commit job can write.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: depup-${{ github.workflow }}-${{ inputs.package }}
@@ -40,23 +49,26 @@ jobs:
   process-package:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    # Runs untrusted package code: no secrets, read-only token.
+    permissions:
+      contents: read
 
     steps:
       # persist-credentials: false -- untrusted package code runs in this job, and a
-      # persisted token sits in .git/config where that code can read it. The push
-      # credential is configured inside the commit step instead.
+      # persisted token sits in .git/config where that code can read it.
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
 
+      # No registry-url on purpose: it makes setup-node export a placeholder
+      # NODE_AUTH_TOKEN, and stage mode refuses to run with one set.
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24'
           cache: 'npm'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -73,10 +85,6 @@ jobs:
 
       - name: Process package
         env:
-          # Package code runs in this step: the npm secret is present only when
-          # this run publishes.
-          NPM_TOKEN: ${{ inputs.publish && secrets.NPM_TOKEN || '' }}
-          NODE_AUTH_TOKEN: ${{ inputs.publish && secrets.NPM_TOKEN || '' }}
           PACKAGE_NAME: ${{ inputs.package }}
           BUMP_DEPS: ${{ inputs.bump_deps }}
           DO_TEST: ${{ inputs.test }}
@@ -93,8 +101,10 @@ jobs:
             ARGS+=("--test")
           fi
 
+          # A publishing run packs the package for the publish job; this job
+          # never holds a token and never publishes.
           if [ "$DO_PUBLISH" = "true" ]; then
-            ARGS+=("--publish")
+            ARGS+=("--stage-only" "$RUNNER_TEMP/stage")
           fi
 
           if [ "$DO_DEBUG" = "true" ]; then
@@ -103,6 +113,161 @@ jobs:
 
           echo "Running: npm run depup -- ${ARGS[*]}"
           npm run depup -- "${ARGS[@]}"
+
+      # Last step that touches package data: the files this run changed under
+      # packages/, as plain data for the commit job.
+      - name: Collect package data
+        run: |
+          node scripts/staged-publish.mjs collect-data --out "$RUNNER_TEMP/package-data"
+
+      - name: Upload staged package
+        if: inputs.publish
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: staged-package-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Upload package data
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: package-data-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Create summary
+        if: always()
+        env:
+          PACKAGE_NAME: ${{ inputs.package }}
+          BUMP_DEPS: ${{ inputs.bump_deps }}
+          DO_TEST: ${{ inputs.test }}
+          DO_PUBLISH: ${{ inputs.publish }}
+          DO_DEBUG: ${{ inputs.debug }}
+        run: |
+          echo "## DepUp Processing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: $PACKAGE_NAME" >> $GITHUB_STEP_SUMMARY
+          echo "- **Bump Dependencies**: $BUMP_DEPS" >> $GITHUB_STEP_SUMMARY
+          echo "- **Test Package**: $DO_TEST" >> $GITHUB_STEP_SUMMARY
+          echo "- **Publish Package**: $DO_PUBLISH" >> $GITHUB_STEP_SUMMARY
+          echo "- **Debug Mode**: $DO_DEBUG" >> $GITHUB_STEP_SUMMARY
+
+  publish:
+    name: Publish staged package
+    needs: process-package
+    # Only a publishing run that processed (and passed the gate for) the package.
+    if: ${{ inputs.publish && needs.process-package.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Holds NPM_TOKEN and nothing else; runs no package code.
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Download staged package
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: staged-package-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+
+      # The only step that sees the token. The requested package is the only one
+      # allowed; a version spec (express@5.0.0) is reduced to its name.
+      - name: Publish staged package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_SPEC: ${{ inputs.package }}
+        run: |
+          name="$PACKAGE_SPEC"
+          if [[ "$name" == @*/*@* ]]; then
+            name="${name%@*}"
+          elif [[ "$name" != @* && "$name" == *@* ]]; then
+            name="${name%@*}"
+          fi
+          node scripts/staged-publish.mjs publish-staged "$RUNNER_TEMP/stage" \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --expect-package "$name" \
+            --require-staged
+
+      - name: Upload publish results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: publish-results-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+  commit:
+    name: Commit processed package
+    needs: [process-package, publish]
+    # A dry run (publish=false) skips the publish job and still commits the
+    # processed data, as before; a failed process or publish commits nothing.
+    if: ${{ !cancelled() && needs.process-package.result == 'success' && (needs.publish.result == 'success' || needs.publish.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      # persist-credentials: false -- the push credential is configured inside
+      # the push step only.
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # staged-publish.mjs uses only Node built-ins: no dependency install here.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Download package data
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        continue-on-error: true
+        id: download-data
+        with:
+          name: package-data-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+
+      - name: Download publish results
+        if: needs.publish.result == 'success'
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: publish-results-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+
+      # The artifact comes from a job that ran untrusted code: only paths of the
+      # shapes depup writes, regular files only, JSON that parses; anything else
+      # is dropped with a warning. Nothing in it is ever executed.
+      - name: Apply package data
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs import-data "$RUNNER_TEMP/package-data" --packages-root packages
+
+      # The process job recorded a staged revision as `failed` (not confirmed
+      # published); only the publish job's results flip it to `published`.
+      - name: Record publish results
+        if: steps.download-data.outcome == 'success' && needs.publish.result == 'success'
+        run: |
+          node scripts/staged-publish.mjs finalize-integrity \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --packages-root packages \
+            --require-results
 
       - name: Import GPG Key
         env:
@@ -128,8 +293,8 @@ jobs:
           else
             git commit -m "feat: process $PACKAGE_NAME with DepUp"
 
-            # Package code ran earlier in this job, so the checkout keeps no
-            # credential (persist-credentials: false); grant push access only now.
+            # The checkout keeps no credential (persist-credentials: false);
+            # grant push access only now.
             basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
             echo "::add-mask::$basic_auth"
             git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
@@ -159,20 +324,3 @@ jobs:
               fi
             done
           fi
-
-      - name: Create summary
-        if: always()
-        env:
-          PACKAGE_NAME: ${{ inputs.package }}
-          BUMP_DEPS: ${{ inputs.bump_deps }}
-          DO_TEST: ${{ inputs.test }}
-          DO_PUBLISH: ${{ inputs.publish }}
-          DO_DEBUG: ${{ inputs.debug }}
-        run: |
-          echo "## DepUp Processing Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Package**: $PACKAGE_NAME" >> $GITHUB_STEP_SUMMARY
-          echo "- **Bump Dependencies**: $BUMP_DEPS" >> $GITHUB_STEP_SUMMARY
-          echo "- **Test Package**: $DO_TEST" >> $GITHUB_STEP_SUMMARY
-          echo "- **Publish Package**: $DO_PUBLISH" >> $GITHUB_STEP_SUMMARY
-          echo "- **Debug Mode**: $DO_DEBUG" >> $GITHUB_STEP_SUMMARY
-

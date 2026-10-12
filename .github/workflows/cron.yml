@@ -20,41 +20,38 @@ on:
         type: boolean
         default: false
 
-# All three jobs commit package data and push to main. The alert job overrides
-# this with its own job-level permissions (issues: write, actions: read).
+# Trust model. Package code (npm install, bump, test, the security gate) runs
+# ONLY in the discover and sync jobs, which reference no secret at all and stage
+# their results as artifacts. The npm token and the signing key live in jobs
+# that run no package code:
+#   preflight          NPM_TOKEN + GPG key, only to fail fast (npm whoami,
+#                      gpg --show-keys); no checkout, no package data.
+#   <chain>-publish    NPM_TOKEN only. Validates the staged tarballs as data
+#                      and runs `npm publish --ignore-scripts` on them.
+#   <chain>-commit     GPG key + push credential. Validates the package data
+#                      artifact, records confirmed publishes, signs and pushes.
+# Chains: discover -> discover-publish -> discover-commit, then
+#         sync -> sync-publish -> sync-commit, then heal.
+# Default read-only; commit and heal jobs grant themselves contents: write, the
+# alert job overrides with issues: write, actions: read.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: depup-cron
   cancel-in-progress: false
 
 jobs:
-  discover:
-    name: Discover (shard ${{ matrix.shard }})
+  preflight:
+    name: Verify Publish Credentials
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-    if: ${{ !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 0') }}
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0, 1, 2]
-
+    timeout-minutes: 5
+    permissions: {}
     steps:
-      # persist-credentials: false -- untrusted package code runs in this job, and a
-      # persisted token sits in .git/config where that code can read it. The push
-      # credential is configured inside the commit step instead.
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24'
-          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Verify npm auth (fail fast on dead NPM_TOKEN)
@@ -66,11 +63,8 @@ jobs:
             exit 1
           fi
 
-      - name: Install Dependencies
-        run: npm ci
-
-      # The key itself is imported after the script step (see Import GPG Key
-      # below); this check only fails the job before anything is published.
+      # The key itself is imported only in the commit jobs; this check only fails
+      # the run before anything is published.
       - name: Verify GPG key (fail fast before publishing)
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -80,6 +74,257 @@ jobs:
             exit 1
           fi
 
+  discover:
+    name: Discover (shard ${{ matrix.shard }})
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    if: ${{ !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 0') }}
+    # Runs untrusted package code: no secrets, read-only token.
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+
+    steps:
+      # persist-credentials: false -- untrusted package code runs in this job, and a
+      # persisted token sits in .git/config where that code can read it.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # No registry-url on purpose: it makes setup-node export a placeholder
+      # NODE_AUTH_TOKEN, and stage mode refuses to run with one set.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # DEPUP_STAGE_DIR turns every depup.mjs --publish this script spawns into
+      # "pack the package into the stage directory": nothing is published here.
+      - name: Discover Packages
+        id: discover_run
+        # Step-level cap below the job cap so a hang ends as a step failure (not a
+        # job-level cancel), letting the collect step and the alert still run.
+        timeout-minutes: 75
+        env:
+          DEPUP_STAGE_DIR: ${{ runner.temp }}/stage
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '3'
+        run: |
+          echo "Starting package discovery (shard ${{ matrix.shard }}/3)..."
+          npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
+          exit "${PIPESTATUS[0]}"
+
+      # Runs even when the discover script failed: packages it already staged
+      # must still be published and committed, otherwise git drifts from npm.
+      # The job still ends red because the script step's failure fails the job.
+      - name: Collect Package Data
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        run: |
+          # A failed script can leave half-processed rev-N dirs with no integrity
+          # record; drop them so they are not handed over.
+          if [ "${{ steps.discover_run.outcome }}" = "failure" ]; then
+            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be handed over"
+          fi
+          node scripts/staged-publish.mjs collect-data --out "$RUNNER_TEMP/package-data"
+
+      - name: Upload Staged Packages
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: staged-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Upload Package Data
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: package-data-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Shard Summary
+        if: always()
+        env:
+          JOB_KIND: Discovery
+          LOG_FILE: /tmp/depup-discover.log
+          SHARD: ${{ matrix.shard }}
+        run: |
+          echo "## $JOB_KIND Shard $SHARD Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
+          summary_line=$(grep '^DEPUP_SUMMARY' "$LOG_FILE" 2>/dev/null | tail -n 1 || true)
+          if [ -z "$summary_line" ]; then
+            echo "::error::$JOB_KIND shard $SHARD: no DEPUP_SUMMARY line found in $LOG_FILE (script may have crashed before finishing)"
+            echo "- **Counts**: (no summary line found -- script may have errored)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "- **Counts**: $summary_line" >> "$GITHUB_STEP_SUMMARY"
+          failed=$(printf '%s\n' "$summary_line" | sed -n 's/.*[[:space:]]failed=\([0-9][0-9]*\).*/\1/p')
+          failed=${failed:-0}
+          if [ "$failed" -gt 0 ]; then
+            echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
+            echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          for key in checkfailed fetchfailed; do
+            count=$(printf '%s\n' "$summary_line" | sed -n "s/.*[[:space:]]${key}=\([0-9][0-9]*\).*/\1/p")
+            count=${count:-0}
+            if [ "$count" -gt 0 ]; then
+              echo "::warning::$JOB_KIND shard $SHARD: $key=$count ($summary_line)"
+              echo "- **${key}**: $count" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+
+  discover-publish:
+    name: Publish Discover (shard ${{ matrix.shard }})
+    needs: discover
+    # Publishes what the build staged even if the build step failed part-way. A
+    # leg that was cancelled or never uploaded simply has nothing to download.
+    if: ${{ !cancelled() && needs.discover.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # Holds NPM_TOKEN and nothing else; runs no package code.
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+
+    steps:
+      - name: Checkout Publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      # No artifact means this shard staged nothing.
+      - name: Download Staged Packages
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: staged-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+
+      # The only step that sees the token. Per-package failures are warnings; a
+      # systemic failure (>50% of 10+) or a refused artifact fails the job.
+      - name: Publish Staged Packages
+        id: publish
+        if: steps.download.outcome == 'success'
+        timeout-minutes: 40
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          node scripts/staged-publish.mjs publish-staged "$RUNNER_TEMP/stage" \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --tolerate-failures 2>&1 | tee /tmp/depup-discover-publish.log
+          exit "${PIPESTATUS[0]}"
+
+      - name: Publish Summary
+        if: always() && steps.download.outcome == 'success'
+        run: |
+          summary_line=$(grep '^DEPUP_PUBLISH_SUMMARY' /tmp/depup-discover-publish.log 2>/dev/null | tail -n 1 || true)
+          echo "## Discovery Shard ${{ matrix.shard }} Publish Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Counts**: ${summary_line:-(no summary line found)}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Publish Results
+        if: always() && steps.download.outcome == 'success'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: publish-results-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+  discover-commit:
+    name: Commit Discover (shard ${{ matrix.shard }})
+    needs: [discover, discover-publish]
+    if: ${{ !cancelled() && needs.discover.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+
+    steps:
+      # persist-credentials: false -- the push credential is configured inside
+      # the push step only. No package code ever runs in this job.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # staged-publish.mjs uses only Node built-ins: no dependency install here.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Download Package Data
+        id: download-data
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: package-data-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+
+      - name: Download Publish Results
+        id: download-results
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: publish-results-discover-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+
+      # The artifact comes from a job that ran untrusted code: only paths of the
+      # shapes depup writes, regular files only, JSON that parses; anything else
+      # is dropped with a warning. Nothing in it is ever executed.
+      - name: Apply Package Data
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs import-data "$RUNNER_TEMP/package-data" --packages-root packages
+
+      # The build recorded each staged revision as `failed` (not confirmed
+      # published); only the publish job's results flip it to `published`. A
+      # package whose result is missing stays `failed` and is retried next cycle.
+      - name: Record Publish Results
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs finalize-integrity \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --packages-root packages
+
+      # The signing key is imported only now; no package code ever ran in this job.
+      - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
+
       - name: Configure Git
         run: |
           git config --global user.name "De Pup"
@@ -88,51 +333,14 @@ jobs:
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
 
-      - name: Discover Packages
-        id: discover_run
-        # Step-level cap below the job cap so a hang ends as a step failure (not a
-        # job-level cancel), letting the commit step and the alert still run.
-        timeout-minutes: 75
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SHARD_INDEX: ${{ matrix.shard }}
-          SHARD_TOTAL: '3'
-        run: |
-          echo "Starting package discovery (shard ${{ matrix.shard }}/3)..."
-          npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
-          exit "${PIPESTATUS[0]}"
-
-      # The signing key is imported only now, after all package code has run:
-      # package code runs as this user and could otherwise export it from the
-      # keyring. Same condition as the commit step, so a failed script step
-      # still gets its (signed) commit.
-      - name: Import GPG Key
-        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-        run: |
-          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
-
-      # Runs even when the discover script failed: packages it already published
-      # to npm must still be committed, otherwise git drifts from npm. The job
-      # still ends red because the script step's failure fails the job.
+      # Packages published to npm must be committed even when the build or the
+      # publish step reported failures, otherwise git drifts from npm.
       - name: Commit and Push Changes
         id: discover_commit
-        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
         env:
           PUSH_TOKEN: ${{ github.token }}
         run: |
-          # A failed script can leave half-processed rev-N dirs with no integrity
-          # record; drop them so they are not committed.
-          if [ "${{ steps.discover_run.outcome }}" = "failure" ]; then
-            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be committed"
-          fi
           git add -A packages/
-          # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
-          if [ "${{ matrix.shard }}" = "0" ]; then
-            git add scripts/cron-discover.mjs
-          fi
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
@@ -145,8 +353,8 @@ jobs:
             exit 1
           }
 
-          # Package code ran earlier in this job, so the checkout keeps no
-          # credential (persist-credentials: false); grant push access only now.
+          # The checkout keeps no credential (persist-credentials: false); grant
+          # push access only now.
           basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
           echo "::add-mask::$basic_auth"
           git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
@@ -172,9 +380,6 @@ jobs:
                   git checkout --ours -- "$file" 2>/dev/null || true
                 done
                 git add -A packages/
-                if [ "${{ matrix.shard }}" = "0" ]; then
-                  git add scripts/cron-discover.mjs
-                fi
                 GIT_EDITOR=true git rebase --continue 2>/dev/null || {
                   # Check if commit became empty after conflict resolution
                   if git diff --cached --quiet 2>/dev/null; then
@@ -223,11 +428,95 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
+  sync:
+    name: Sync (shard ${{ matrix.shard }})
+    needs: [preflight, discover, discover-publish, discover-commit]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    # Same gate as before the split: the whole discover chain (build, publish
+    # and commit) succeeded or was skipped, so this checkout includes its pushes.
+    if: ${{ !cancelled() && !inputs.discover_only && needs.preflight.result == 'success' && (needs.discover.result == 'success' || needs.discover.result == 'skipped') && (needs.discover-publish.result == 'success' || needs.discover-publish.result == 'skipped') && (needs.discover-commit.result == 'success' || needs.discover-commit.result == 'skipped') }}
+    # Runs untrusted package code: no secrets, read-only token.
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+
+    steps:
+      # persist-credentials: false -- see the discover job.
+      - name: Checkout (latest main, including discover pushes)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      # No registry-url on purpose: see the discover job.
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # DEPUP_STAGE_DIR turns every depup.mjs --publish this script spawns into
+      # "pack the package into the stage directory": nothing is published here.
+      - name: Sync Packages
+        id: sync_run
+        # Step-level cap below the job cap so a hang ends as a step failure (not a
+        # job-level cancel), letting the collect step and the alert still run.
+        timeout-minutes: 105
+        env:
+          DEPUP_STAGE_DIR: ${{ runner.temp }}/stage
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_TOTAL: '3'
+        run: |
+          echo "Starting package sync (shard ${{ matrix.shard }}/3)..."
+          npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
+          exit "${PIPESTATUS[0]}"
+
+      # Runs even when the sync script failed: packages it already staged must
+      # still be published and committed, otherwise git drifts from npm. The job
+      # still ends red because the script step's failure fails the job.
+      - name: Collect Package Data
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        run: |
+          # A failed script can leave half-processed rev-N dirs with no integrity
+          # record; drop them so they are not handed over.
+          if [ "${{ steps.sync_run.outcome }}" = "failure" ]; then
+            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be handed over"
+          fi
+          node scripts/staged-publish.mjs collect-data --out "$RUNNER_TEMP/package-data"
+
+      - name: Upload Staged Packages
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: staged-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+      - name: Upload Package Data
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: package-data-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
       - name: Shard Summary
         if: always()
         env:
-          JOB_KIND: Discovery
-          LOG_FILE: /tmp/depup-discover.log
+          JOB_KIND: Sync
+          LOG_FILE: /tmp/depup-sync.log
           SHARD: ${{ matrix.shard }}
         run: |
           echo "## $JOB_KIND Shard $SHARD Summary" >> "$GITHUB_STEP_SUMMARY"
@@ -254,55 +543,143 @@ jobs:
             fi
           done
 
-  sync:
-    name: Sync (shard ${{ matrix.shard }})
-    needs: discover
+  sync-publish:
+    name: Publish Sync (shard ${{ matrix.shard }})
+    needs: sync
+    # Publishes what the build staged even if the build step failed part-way. A
+    # leg that was cancelled or never uploaded simply has nothing to download.
+    if: ${{ !cancelled() && needs.sync.result != 'skipped' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-    if: ${{ !cancelled() && !inputs.discover_only && (needs.discover.result == 'success' || needs.discover.result == 'skipped') }}
+    timeout-minutes: 45
+    # Holds NPM_TOKEN and nothing else; runs no package code.
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
         shard: [0, 1, 2]
 
     steps:
-      # persist-credentials: false -- see the discover job.
-      - name: Checkout (latest main, including discover pushes)
+      - name: Checkout Publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      # No artifact means this shard staged nothing (everything up to date).
+      - name: Download Staged Packages
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: staged-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/stage
+
+      # The only step that sees the token. Per-package failures are warnings; a
+      # systemic failure (>50% of 10+) or a refused artifact fails the job.
+      - name: Publish Staged Packages
+        id: publish
+        if: steps.download.outcome == 'success'
+        timeout-minutes: 40
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          node scripts/staged-publish.mjs publish-staged "$RUNNER_TEMP/stage" \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --tolerate-failures 2>&1 | tee /tmp/depup-sync-publish.log
+          exit "${PIPESTATUS[0]}"
+
+      - name: Publish Summary
+        if: always() && steps.download.outcome == 'success'
+        run: |
+          summary_line=$(grep '^DEPUP_PUBLISH_SUMMARY' /tmp/depup-sync-publish.log 2>/dev/null | tail -n 1 || true)
+          echo "## Sync Shard ${{ matrix.shard }} Publish Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Counts**: ${summary_line:-(no summary line found)}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Publish Results
+        if: always() && steps.download.outcome == 'success'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: publish-results-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+          retention-days: 1
+          overwrite: true
+          if-no-files-found: ignore
+
+  sync-commit:
+    name: Commit Sync (shard ${{ matrix.shard }})
+    needs: [sync, sync-publish]
+    if: ${{ !cancelled() && needs.sync.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+
+    steps:
+      # persist-credentials: false -- the push credential is configured inside
+      # the push step only. No package code ever runs in this job.
+      - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           fetch-depth: 0
           persist-credentials: false
 
+      # staged-publish.mjs uses only Node built-ins: no dependency install here.
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24'
-          cache: 'npm'
-          registry-url: 'https://registry.npmjs.org'
 
-      - name: Verify npm auth (fail fast on dead NPM_TOKEN)
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Download Package Data
+        id: download-data
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: package-data-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/package-data
+
+      - name: Download Publish Results
+        id: download-results
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: publish-results-sync-${{ matrix.shard }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/publish-results
+
+      # The artifact comes from a job that ran untrusted code: only paths of the
+      # shapes depup writes, regular files only, JSON that parses; anything else
+      # is dropped with a warning. Nothing in it is ever executed.
+      - name: Apply Package Data
+        if: steps.download-data.outcome == 'success'
         run: |
-          if ! npm whoami; then
-            echo "::error::NPM_TOKEN is invalid or expired (npm whoami failed). Rotate the npm automation token at npmjs.com and update the NPM_TOKEN repo secret. Aborting early to avoid wasting CI minutes."
-            exit 1
-          fi
+          node scripts/staged-publish.mjs import-data "$RUNNER_TEMP/package-data" --packages-root packages
 
-      - name: Install Dependencies
-        run: npm ci
+      # The build recorded each staged revision as `failed` (not confirmed
+      # published); only the publish job's results flip it to `published`. A
+      # package whose result is missing stays `failed` and is retried next cycle.
+      - name: Record Publish Results
+        if: steps.download-data.outcome == 'success'
+        run: |
+          node scripts/staged-publish.mjs finalize-integrity \
+            --results "$RUNNER_TEMP/publish-results/results.json" \
+            --packages-root packages
 
-      # The key itself is imported after the script step (see Import GPG Key
-      # below); this check only fails the job before anything is published.
-      - name: Verify GPG key (fail fast before publishing)
+      # The signing key is imported only now; no package code ever ran in this job.
+      - name: Import GPG Key
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
-            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
-            exit 1
-          fi
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |
@@ -312,46 +689,13 @@ jobs:
           git config --global gpg.program gpg
           git config --global user.signingkey 5A5141965C39129D
 
-      - name: Sync Packages
-        id: sync_run
-        # Step-level cap below the job cap so a hang ends as a step failure (not a
-        # job-level cancel), letting the commit step and the alert still run.
-        timeout-minutes: 105
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SHARD_INDEX: ${{ matrix.shard }}
-          SHARD_TOTAL: '3'
-        run: |
-          echo "Starting package sync (shard ${{ matrix.shard }}/3)..."
-          npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
-          exit "${PIPESTATUS[0]}"
-
-      # The signing key is imported only now, after all package code has run:
-      # package code runs as this user and could otherwise export it from the
-      # keyring. Same condition as the commit step, so a failed script step
-      # still gets its (signed) commit.
-      - name: Import GPG Key
-        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-        run: |
-          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
-
-      # Runs even when the sync script failed: packages it already published to
-      # npm must still be committed, otherwise git drifts from npm. The job
-      # still ends red because the script step's failure fails the job.
+      # Packages published to npm must be committed even when the build or the
+      # publish step reported failures, otherwise git drifts from npm.
       - name: Commit and Push Changes
         id: sync_commit
-        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
         env:
           PUSH_TOKEN: ${{ github.token }}
         run: |
-          # A failed script can leave half-processed rev-N dirs with no integrity
-          # record; drop them so they are not committed.
-          if [ "${{ steps.sync_run.outcome }}" = "failure" ]; then
-            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be committed"
-          fi
           git add -A packages/
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -365,8 +709,8 @@ jobs:
             exit 1
           }
 
-          # Package code ran earlier in this job, so the checkout keeps no
-          # credential (persist-credentials: false); grant push access only now.
+          # The checkout keeps no credential (persist-credentials: false); grant
+          # push access only now.
           basic_auth="$(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 | tr -d '\n')"
           echo "::add-mask::$basic_auth"
           git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic $basic_auth"
@@ -440,40 +784,9 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
-      - name: Shard Summary
-        if: always()
-        env:
-          JOB_KIND: Sync
-          LOG_FILE: /tmp/depup-sync.log
-          SHARD: ${{ matrix.shard }}
-        run: |
-          echo "## $JOB_KIND Shard $SHARD Summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
-          summary_line=$(grep '^DEPUP_SUMMARY' "$LOG_FILE" 2>/dev/null | tail -n 1 || true)
-          if [ -z "$summary_line" ]; then
-            echo "::error::$JOB_KIND shard $SHARD: no DEPUP_SUMMARY line found in $LOG_FILE (script may have crashed before finishing)"
-            echo "- **Counts**: (no summary line found -- script may have errored)" >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-          echo "- **Counts**: $summary_line" >> "$GITHUB_STEP_SUMMARY"
-          failed=$(printf '%s\n' "$summary_line" | sed -n 's/.*[[:space:]]failed=\([0-9][0-9]*\).*/\1/p')
-          failed=${failed:-0}
-          if [ "$failed" -gt 0 ]; then
-            echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
-            echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
-          fi
-          for key in checkfailed fetchfailed; do
-            count=$(printf '%s\n' "$summary_line" | sed -n "s/.*[[:space:]]${key}=\([0-9][0-9]*\).*/\1/p")
-            count=${count:-0}
-            if [ "$count" -gt 0 ]; then
-              echo "::warning::$JOB_KIND shard $SHARD: $key=$count ($summary_line)"
-              echo "- **${key}**: $count" >> "$GITHUB_STEP_SUMMARY"
-            fi
-          done
-
   heal:
     name: Self-Healing
-    needs: [discover, sync]
+    needs: [preflight, discover, discover-publish, discover-commit, sync, sync-publish, sync-commit]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     if: ${{ !cancelled() && !inputs.discover_only }}
@@ -576,12 +889,14 @@ jobs:
       # ran and passed (a sync-only run says nothing about discover).
       # A few seconds of gh calls; a gh outage must not fail an otherwise green run.
       - name: Close Resolved cron-failure Issues
-        if: ${{ success() && needs.sync.result == 'success' }}
+        if: ${{ success() && needs.sync.result == 'success' && needs.sync-publish.result == 'success' && needs.sync-commit.result == 'success' }}
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          DISCOVER_RESULT: ${{ needs.discover.result }}
+          # The discover chain's verdict: success only when build, publish and
+          # commit all succeeded; skipped when discover did not run.
+          DISCOVER_RESULT: ${{ needs.discover.result == 'success' && needs.discover-publish.result == 'success' && needs.discover-commit.result == 'success' && 'success' || needs.discover.result == 'skipped' && 'skipped' || 'failure' }}
         run: |
           close_all() {
             # $1 = jq filter selecting issue numbers, $2 = label, $3 = comment
@@ -609,8 +924,8 @@ jobs:
   # github.event.label.name == 'package-request'.
   alert:
     name: Alert on Repeated Failure
-    needs: [discover, sync, heal]
-    if: ${{ always() && (needs.discover.result == 'failure' || needs.sync.result == 'failure' || needs.heal.result == 'failure') }}
+    needs: [preflight, discover, discover-publish, discover-commit, sync, sync-publish, sync-commit, heal]
+    if: ${{ always() && (needs.preflight.result == 'failure' || needs.discover.result == 'failure' || needs.discover-publish.result == 'failure' || needs.discover-commit.result == 'failure' || needs.sync.result == 'failure' || needs.sync-publish.result == 'failure' || needs.sync-commit.result == 'failure' || needs.heal.result == 'failure') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -623,9 +938,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          DISCOVER_RESULT: ${{ needs.discover.result }}
-          SYNC_RESULT: ${{ needs.sync.result }}
+          # A chain fails when any of its build / publish / commit jobs failed. A
+          # failed preflight (dead npm token or signing key) stops both chains
+          # before they start, so it counts against the sync chain, and against
+          # the discover chain when discover was due to run.
+          DISCOVER_RESULT: ${{ (needs.discover.result == 'failure' || needs.discover-publish.result == 'failure' || needs.discover-commit.result == 'failure' || (needs.preflight.result == 'failure' && !inputs.sync_only && (github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 0'))) && 'failure' || needs.discover.result }}
+          SYNC_RESULT: ${{ (needs.sync.result == 'failure' || needs.sync-publish.result == 'failure' || needs.sync-commit.result == 'failure' || needs.preflight.result == 'failure') && 'failure' || needs.sync.result }}
           HEAL_RESULT: ${{ needs.heal.result }}
+          PREFLIGHT_RESULT: ${{ needs.preflight.result }}
         run: |
           today=$(date -u +%F)
           marker="<!-- depup-cron-alert -->"
@@ -663,7 +983,7 @@ jobs:
             body="Cron discover failed.
 
           - Run: $RUN_URL
-          - Failed jobs: discover"
+          - Failed jobs: discover (build, publish or commit), or preflight"
             existing=$(gh issue list --label cron-discover-failure --state open --json number --jq '.[0].number // empty')
             if [ -n "$existing" ]; then
               comment_once "$existing" "$body"
@@ -684,6 +1004,7 @@ jobs:
             fi
 
             failed_jobs=""
+            [ "$PREFLIGHT_RESULT" = "failure" ] && failed_jobs="$failed_jobs preflight"
             [ "$SYNC_RESULT" = "failure" ] && failed_jobs="$failed_jobs sync"
             [ "$HEAL_RESULT" = "failure" ] && failed_jobs="$failed_jobs heal"
             body="Repeated cron failures (previous completed run: $previous).

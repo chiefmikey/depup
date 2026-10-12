@@ -31,25 +31,30 @@ const stepNamed = (job, namePart) => {
 const commitStepOf = (job) =>
   job.steps.find((s) => (s.name ?? '').startsWith('Commit and Push'));
 
-describe('cron.yml commit steps', () => {
+describe('cron.yml build, publish and commit steps', () => {
   const cases = [
     ['discover', 'Discover Packages'],
     ['sync', 'Sync Packages'],
   ];
 
   for (const [jobName, scriptStepName] of cases) {
-    it(`${jobName}: script step has an id and commit runs on its failure`, () => {
+    it(`${jobName}: script step has an id and the hand-over steps run on its failure`, () => {
       const job = cron.jobs[jobName];
       const script = stepNamed(job, scriptStepName);
 
       expect(script.id).toBeTruthy();
 
-      const commit = commitStepOf(job);
+      for (const name of [
+        'Collect Package Data',
+        'Upload Staged Packages',
+        'Upload Package Data',
+      ]) {
+        const step = stepNamed(job, name);
 
-      expect(commit.id).toBeTruthy();
-      expect(commit.if).toContain('!cancelled()');
-      expect(commit.if).toContain(`steps.${script.id}.outcome == 'success'`);
-      expect(commit.if).toContain(`steps.${script.id}.outcome == 'failure'`);
+        expect(step.if).toContain('!cancelled()');
+        expect(step.if).toContain(`steps.${script.id}.outcome == 'success'`);
+        expect(step.if).toContain(`steps.${script.id}.outcome == 'failure'`);
+      }
     });
 
     it(`${jobName}: script step has a step timeout below the job timeout`, () => {
@@ -60,10 +65,10 @@ describe('cron.yml commit steps', () => {
       expect(script['timeout-minutes']).toBeLessThan(job['timeout-minutes']);
     });
 
-    it(`${jobName}: cleans orphan revisions only when the script step failed, before staging`, () => {
+    it(`${jobName}: cleans orphan revisions only when the script step failed, before collecting`, () => {
       const job = cron.jobs[jobName];
       const script = stepNamed(job, scriptStepName);
-      const { run } = commitStepOf(job);
+      const { run } = stepNamed(job, 'Collect Package Data');
 
       expect(run).toContain('node scripts/heal.mjs clean-orphan-revisions');
       expect(run).toContain(
@@ -71,12 +76,22 @@ describe('cron.yml commit steps', () => {
       );
       expect(run).toMatch(/clean-orphan-revisions \|\| echo "::warning::/u);
       expect(run.indexOf('clean-orphan-revisions')).toBeLessThan(
-        run.indexOf('git add -A packages/'),
+        run.indexOf('collect-data'),
       );
     });
 
-    it(`${jobName}: uploads a recovery patch only when the commit step failed`, () => {
-      const job = cron.jobs[jobName];
+    it(`${jobName}: publish and commit still run after a failed build step`, () => {
+      for (const suffix of ['publish', 'commit']) {
+        const job = cron.jobs[`${jobName}-${suffix}`];
+
+        expect(job.if).toContain('!cancelled()');
+        expect(job.if).toContain(`needs.${jobName}.result != 'skipped'`);
+        expect(job.needs).toContain(jobName);
+      }
+    });
+
+    it(`${jobName}: the commit job uploads a recovery patch only when the commit step failed`, () => {
+      const job = cron.jobs[`${jobName}-commit`];
       const commit = commitStepOf(job);
       const upload = stepNamed(job, 'Upload Unpushed');
 
@@ -87,7 +102,7 @@ describe('cron.yml commit steps', () => {
     });
   }
 
-  for (const jobName of ['discover', 'sync', 'heal']) {
+  for (const jobName of ['discover-commit', 'sync-commit', 'heal']) {
     it(`${jobName}: 10 attempts with jitter, error on exhaustion, no sleep after the last attempt`, () => {
       const { run } = commitStepOf(cron.jobs[jobName]);
 
@@ -296,7 +311,14 @@ describe('cron.yml alert and recovery', () => {
   it('heal closes the discover issue only when discover succeeded', () => {
     const close = stepNamed(heal, 'Close Resolved');
 
-    expect(close.env.DISCOVER_RESULT).toBe('${{ needs.discover.result }}');
+    // The discover chain's verdict: success only when build, publish and
+    // commit all succeeded, skipped when discover did not run.
+    for (const job of ['discover', 'discover-publish', 'discover-commit']) {
+      expect(close.env.DISCOVER_RESULT).toContain(`needs.${job}.result`);
+    }
+
+    expect(close.env.DISCOVER_RESULT).toContain("'success'");
+    expect(close.env.DISCOVER_RESULT).toContain("'skipped'");
     expect(close.run).toContain('if [ "$DISCOVER_RESULT" = "success" ]; then');
     expect(close.run).toContain('cron-discover-failure');
     expect(
@@ -337,13 +359,33 @@ describe('cron.yml alert and recovery', () => {
     );
   });
 
-  it('green runs pay no extra cost: only alert is new and it is failure-gated', () => {
+  it('green runs pay no extra cost: alert is failure-gated, the rest is the build/publish/commit chain', () => {
     expect(Object.keys(cron.jobs).toSorted()).toEqual([
       'alert',
       'discover',
+      'discover-commit',
+      'discover-publish',
       'heal',
+      'preflight',
       'sync',
+      'sync-commit',
+      'sync-publish',
     ]);
+    expect(cron.jobs.alert.if).toContain('always()');
+  });
+
+  it('alert counts a failure anywhere in a chain, and a failed preflight, against it', () => {
+    const { env } = alert.steps[0];
+
+    for (const job of ['discover-publish', 'discover-commit']) {
+      expect(alert.if).toContain(`needs.${job}.result == 'failure'`);
+      expect(env.DISCOVER_RESULT).toContain(`needs.${job}.result`);
+    }
+
+    for (const job of ['sync-publish', 'sync-commit', 'preflight']) {
+      expect(alert.if).toContain(`needs.${job}.result == 'failure'`);
+      expect(env.SYNC_RESULT).toContain(`needs.${job}.result`);
+    }
   });
 });
 
