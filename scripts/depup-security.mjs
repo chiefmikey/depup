@@ -16,6 +16,7 @@ const MAX_BUFFER = 64 * 1024 * 1024;
 // between scope and name, which also keeps names safe to path.join.
 const NAME_SEGMENT_PATTERN = /^[\da-z~][\w.~-]*$/iu;
 const DIST_TAG_PATTERN = /^[a-z][\w.-]*$/iu;
+const NPM_REGISTRY = 'https://registry.npmjs.org/';
 
 // Every lifecycle script that npm may run on install, publish, or pack.
 const DANGEROUS_SCRIPTS = [
@@ -422,10 +423,31 @@ class SecureDepUp {
     }
   }
 
+  // Environment for tools that read the untrusted package directory: no
+  // publish tokens (a project .npmrc can interpolate ${NPM_TOKEN} into a
+  // credential for another host) and the registry pinned through the
+  // environment, which outranks a project .npmrc, so a hostile registry
+  // cannot answer the audit. Returns a fresh object.
+  buildScanEnvironment() {
+    const scanEnvironment = { ...process.env };
+    delete scanEnvironment.NODE_AUTH_TOKEN;
+    delete scanEnvironment.NPM_CONFIG_REGISTRY;
+    delete scanEnvironment.NPM_TOKEN;
+    scanEnvironment.npm_config_registry = NPM_REGISTRY;
+    return scanEnvironment;
+  }
+
+  // A .npmrc inside the package would redirect npm (audit, publish) and can
+  // be re-planted by the import test after depup.mjs removed it.
+  async removeProjectNpmrc(directory) {
+    await fs.rm(path.join(directory, '.npmrc'), { force: true });
+  }
+
   spawnSnyk(packagePath) {
     execFileSync('snyk', ['test', '--severity-threshold=high'], {
       cwd: packagePath,
       encoding: 'utf8',
+      env: this.buildScanEnvironment(),
       stdio: 'pipe',
       timeout: 120_000,
     });
@@ -435,6 +457,7 @@ class SecureDepUp {
     return execFileSync('npm', ['audit', '--audit-level=moderate', '--json'], {
       cwd: auditDirectory,
       encoding: 'utf8',
+      env: this.buildScanEnvironment(),
       maxBuffer: MAX_BUFFER,
       stdio: 'pipe',
       timeout: 60_000,
@@ -486,6 +509,7 @@ class SecureDepUp {
     try {
       const auditDirectory =
         await this.findLatestRevisionDirectory(packagePath);
+      await this.removeProjectNpmrc(auditDirectory);
 
       // npm audit exits non-zero when it finds vulnerabilities but still
       // prints the report on stdout; any other failure propagates.
@@ -669,6 +693,7 @@ class SecureDepUp {
       const revisionDirectory = await this.findLatestRevisionDirectory(
         packageInfo.path,
       );
+      await this.removeProjectNpmrc(revisionDirectory);
       this.runNpmPublish(revisionDirectory, options);
 
       spinner.succeed('Package published with security attestation');
