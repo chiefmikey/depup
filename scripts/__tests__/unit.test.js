@@ -5460,6 +5460,87 @@ describe('securityApprovalWorkflow coverage gaps', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════
+// add-package.mjs -- name format hardening. add-package is the last gate
+// before a publish (the workflow runs it ahead of depup.mjs) and the only
+// writer of config/user-packages.json, which cron-discover feeds straight
+// into registry URLs and package directories.
+// ═══════════════════════════════════════════════════════════════════
+describe('add-package.mjs -- name format hardening', () => {
+  let adder;
+  let temporaryDirectory;
+
+  beforeEach(async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-addpkg-format-'),
+    );
+    adder = new PackageAdder();
+    adder.userPackagesPath = path.join(temporaryDirectory, 'user.json');
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  const rejectedNames = [
+    '..',
+    '.',
+    '-x',
+    '--help',
+    '_x',
+    '.x',
+    '@scope/..',
+    '@../name',
+    '@scope/.name',
+    '@-scope/name',
+    'a..b',
+    '__proto__',
+    'constructor',
+    'prototype',
+    'evil.tgz',
+    'x.tar',
+    'x.tar.gz',
+    'X.TGZ',
+    `a${'b'.repeat(214)}`,
+    `@${'s'.repeat(150)}/${'n'.repeat(100)}`,
+  ];
+
+  it.each(rejectedNames)('rejects %j and writes nothing', async (name) => {
+    await expect(adder.addPackage(name)).rejects.toThrow(
+      'Invalid package name format',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  const acceptedNames = [
+    'lodash',
+    'lodash.merge',
+    'JSONStream',
+    'a_b-c.d',
+    '0x',
+    '@types/node',
+    '@babel/core',
+    '@scope/constructor',
+    '@scope/name.tgz',
+    'a'.repeat(214),
+  ];
+
+  it.each(acceptedNames)('still accepts %j', async (name) => {
+    const result = await adder.addPackage(name);
+
+    expect(result.added).toBe(true);
+  });
+
+  it('rejects non-string names with the format error, not a TypeError', async () => {
+    await expect(adder.addPackage(42)).rejects.toThrow(
+      'Invalid package name format',
+    );
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
 // add-package.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
 describe('add-package.mjs -- coverage gap fill', () => {
