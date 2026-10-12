@@ -454,9 +454,6 @@ jobs:
           git config --global user.signingkey 5A5141965C39129D
 
       - name: Run Self-Healing
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Running self-healing checks..."
           npm run heal
