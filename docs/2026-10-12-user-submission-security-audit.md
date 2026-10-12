@@ -32,9 +32,9 @@ Failing counts are the new tests run against base source; all pass on the branch
 
 Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 1671 tests pass; `npm run lint` clean.
 
-## Confirmed, NOT fixed (need a design decision and a real runner to validate)
+## Confirmed findings and their status (A, B, C fixed; D, E open as policy/minor)
 
-- **A. Parent-process token exposure. FIXED on `feat/secretless-build-publish-split` (see
+- **A. Parent-process token exposure. FIXED in PR #1338 (see
   `docs/decisions/2026-10-12-secretless-build-publish-split.md`).** Original defect: even with child env
   scrubbed, untrusted package code can read `/proc/<parent pid>/environ` and get `NPM_TOKEN` (reproduced in
   a Linux container). It hit the request job, cron discover/sync, `bump.yml`, `depup.yml`, and the
@@ -43,11 +43,11 @@ Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 
   data, `npm publish --ignore-scripts`) -> commit (signing key and push credential, validated package
   data). Validated by a loopback fake registry plus a canary package that reads every ancestor process's
   environment (no secret visible during stage; the same canary does read the token without the split),
-  by `act` job ordering, and on Linux with Node 24 / npm 11; not yet on a real runner. Remaining: the gate
+  by `act` job ordering, and on Linux with Node 24 / npm 11. Real-runner smoke run (`depup.yml`, `publish=false`, package `is-odd`) passed for the build and commit jobs, covering artifact upload/download, sparse checkout and permissions; the publish job (`publish=true`) has not run on a real runner yet, so the first live cron or issue run is its real test (a failure there is a red job and a retry, never a false `published`). Remaining: the gate
   verdict and the staged bytes still come from the job that ran package code, so a package can influence
   what other packages in the same cron shard stage; closing that needs the publish job to re-derive the
   tarball from the upstream registry and re-run the gate on it.
-- **B. The pre-publish scan was not wired into any publish path. FIXED on `feat/wire-security-scan-into-publish`.**
+- **B. The pre-publish scan was not wired into any publish path. FIXED in PR #1337.**
   Original defect: no workflow, Dockerfile or script called `security-scan.mjs` / `depup-security.mjs`; the
   user-request path went straight to `depup.mjs --publish`, `depup-secure.yml`'s container entrypoint was
   `depup.mjs` too, and its final report hard-coded "Malware Scan: Completed". Fix: `depup.mjs` calls the new
@@ -61,7 +61,10 @@ Integration result on `audit/user-submission-hardening`: `npm test` 18 suites / 
   `depup-secure.yml`'s summary and assessment through `render-security-report.mjs`; the hard-coded claims and the
   never-produced attestation are gone. Exit code 4 = blocked (never queued for retry). The standalone
   `depup-security.mjs` pipeline is unchanged.
-- **C. No per-author rate cap** in the gate job (30-day-old non-bot accounts may trigger publishes).
+- **C. No per-author rate cap** in the gate job. FIXED in PR #1336: the gate counts the author's other
+  `package-request` issues in the trailing 24h (5 for non-maintainers, 25 runaway guard for
+  OWNER/MEMBER/COLLABORATOR; maintainer relabel never capped); over the cap there is no publish and one
+  comment; an API error fails closed with no comment. Logic in `scripts/request-rate-limit.mjs`.
 - **D. Deprecated packages** are skipped by cron-discover but accepted by the issue path (policy choice).
 - **E. Smaller:** `refresh-curated-list.mjs` could later add a name that collides with an existing user
   entry; `depup-security.mjs` has its own spec parser that may share the `.tgz` gap (#11); security
