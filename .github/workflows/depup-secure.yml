@@ -294,7 +294,9 @@ jobs:
 
       - name: Run secure package processing
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Package code runs in the container started here: the npm secret is
+          # present only when this run publishes.
+          NPM_TOKEN: ${{ inputs.publish && secrets.NPM_TOKEN || '' }}
           PACKAGE_NAME: ${{ inputs.package }}
           BUMP_DEPS: ${{ inputs.bump_deps }}
           DO_TEST: ${{ inputs.test }}
