@@ -447,7 +447,8 @@ class SelfHealer {
       return 0;
     }
 
-    const toRemove = revDirectories.slice(0, -keepCount);
+    // slice(0, -keepCount) would be slice(0, -0) === [] when keepCount is 0.
+    const toRemove = revDirectories.slice(0, revDirectories.length - keepCount);
     let pruned = 0;
     for (const directory of toRemove) {
       try {
