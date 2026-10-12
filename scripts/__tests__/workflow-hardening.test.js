@@ -20,6 +20,8 @@ import vm from 'node:vm';
 
 import { describe, expect, it } from '@jest/globals';
 
+import * as rateLimitModule from '../request-rate-limit.mjs';
+
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 const readWorkflow = (name) =>
   readFileSync(path.join(repoRoot, '.github', 'workflows', name), 'utf8');
@@ -378,6 +380,7 @@ describe('process-package-request.yml', () => {
       createdAt,
       permission = 'none',
       permissionError = false,
+      recentIssues = [],
       sender = 'someone',
       userError = false,
     } = {}) => {
@@ -396,6 +399,9 @@ describe('process-package-request.yml', () => {
         },
         github: {
           rest: {
+            issues: {
+              listForRepo: async () => ({ data: recentIssues }),
+            },
             repos: {
               getCollaboratorPermissionLevel: async ({ username }) => {
                 calls.push(`permission:${username}`);
@@ -428,9 +434,13 @@ describe('process-package-request.yml', () => {
             AUTHOR_ASSOCIATION: association,
             AUTHOR_LOGIN: author,
             AUTHOR_TYPE: authorType,
+            GITHUB_WORKSPACE: repoRoot,
+            ISSUE_NUMBER: '1',
             SENDER_LOGIN: sender,
           },
         },
+        // The workflow requires the checked-out module; hand it the real one.
+        require: () => rateLimitModule,
       };
       await vm.runInNewContext(`(async () => {\n${gateScript}\n})()`, sandbox);
       return { calls, failures: failures.length, outputs: { ...outputs } };
@@ -466,11 +476,65 @@ describe('process-package-request.yml', () => {
       );
     });
 
-    it('runs no checkout and holds no secret, commenting with the workflow token', () => {
-      const uses = jobOf('gate').steps.map((step) => step.uses ?? '');
+    describe('per-author rate cap', () => {
+      const recent = (count, login = 'someone') =>
+        Array.from({ length: count }, (_, index) => ({
+          created_at: new Date(Date.now() - 60_000).toISOString(),
+          number: 100 + index,
+          user: { login },
+        }));
 
-      expect(uses.some((value) => value.startsWith('actions/checkout'))).toBe(
-        false,
+      it('allows an established account under the cap', async () => {
+        const result = await runGate({ recentIssues: recent(4) });
+
+        expect(result.outputs.allowed).toBe('true');
+        expect(result.outputs.reason).toBe('account_age');
+      });
+
+      it('denies an established account at the cap without failing the job', async () => {
+        const result = await runGate({ recentIssues: recent(5) });
+
+        expect(result.outputs).toStrictEqual({
+          allowed: 'false',
+          reason: 'rate_limited',
+        });
+        expect(result.failures).toBe(0);
+      });
+
+      it('gives members a higher cap', async () => {
+        const under = await runGate({
+          association: 'MEMBER',
+          recentIssues: recent(24),
+        });
+        const over = await runGate({
+          association: 'MEMBER',
+          recentIssues: recent(25),
+        });
+
+        expect(under.outputs.allowed).toBe('true');
+        expect(over.outputs.reason).toBe('rate_limited');
+      });
+
+      it('lets a maintainer relabel bypass the cap', async () => {
+        const result = await runGate({
+          permission: 'write',
+          recentIssues: recent(50),
+          sender: 'maintainer',
+        });
+
+        expect(result.outputs.reason).toBe('maintainer_label');
+      });
+    });
+
+    it('checks out only the rate cap module, holds no secret, comments with the workflow token', () => {
+      const checkouts = jobOf('gate').steps.filter((step) =>
+        (step.uses ?? '').startsWith('actions/checkout'),
+      );
+
+      expect(checkouts).toHaveLength(1);
+      expect(checkouts[0].with['persist-credentials']).toBe(false);
+      expect(checkouts[0].with['sparse-checkout']).toBe(
+        'scripts/request-rate-limit.mjs',
       );
       expect(secretsOf(jobOf('gate'))).toStrictEqual([]);
       expect(runsOf(jobOf('gate'))).toStrictEqual([]);
