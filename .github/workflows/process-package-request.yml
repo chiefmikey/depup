@@ -215,7 +215,10 @@ jobs:
             // Extract package name (handle scoped packages @scope/package and regular packages)
             // Support both with and without backticks. The trailing lookahead requires the
             // value to be the whole line, so `lodash evil` is not silently truncated to `lodash`.
-            const packageNameMatch = issueBody.match(/### Package Name\s*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?(?=\s*(?:\n|$))/);
+            // The header is followed by whitespace that holds at least one newline. That is
+            // written [^\S\n]*\n\s* (not \s*\n\s*) because two adjacent whitespace runs backtrack
+            // quadratically on a body of blank lines (a 64 KiB body cost seconds of runner time).
+            const packageNameMatch = issueBody.match(/### Package Name[^\S\n]*\n\s*[`]?(@?[a-zA-Z0-9._/-]+)[`]?(?=\s*(?:\n|$))/);
             let packageName = packageNameMatch ? packageNameMatch[1].trim() : '';
 
             // If package name is empty, try extracting from title
@@ -254,7 +257,7 @@ jobs:
             }
 
             // Extract package URL
-            const urlMatch = issueBody.match(/### NPM Package URL\s*\n\s*(https?:\/\/[^\s]+)/);
+            const urlMatch = issueBody.match(/### NPM Package URL[^\S\n]*\n\s*(https?:\/\/[^\s]+)/);
             const packageUrl = urlMatch ? urlMatch[1].trim() : '';
 
             // Extract reasoning
