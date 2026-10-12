@@ -400,5 +400,15 @@
       "timestamp": "2026-10-11T01:02:03.446Z",
       "version": "9.6.0-depup.0"
     }
+  },
+  "9.7.0": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-12T12:14:36.920Z",
+      "version": "9.7.0-depup.0"
+    }
   }
 }
