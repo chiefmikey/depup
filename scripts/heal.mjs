@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import { execFileSync } from 'node:child_process';
+import { execFile, execFileSync } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { promisify } from 'node:util';
 
 import chalk from 'chalk';
 import ora from 'ora';
@@ -9,7 +10,11 @@ import semver from 'semver';
 
 import { listPackageDirectories, logFailureBreakdown } from './utilities.mjs';
 
+const execFileAsync = promisify(execFile);
+
+const GIT_MAX_BUFFER = 256 * 1024 * 1024;
 const INTEGRITY_JSON = 'integrity.json';
+const REVISION_PATH = /^packages\/([^/]+)\/([^/]+)\/rev-(\d+)\//u;
 const REVISION_DIRECTORY = /^rev-\d+$/u;
 const VERSION_DIRECTORY = /^\d+\.\d+\.\d+/u;
 
@@ -27,13 +32,31 @@ function isPlainObject(value) {
 // directory is gone: published records are the source of truth for "already
 // published", and verification failures feed the retry cap in cron-discover /
 // cron-sync (deleting them would reset the counter and re-run a broken
-// package forever). Malformed records are left for repairIntegrityData.
+// package forever). 'skipped' is a terminal success state in cron-sync and
+// 'failed' drives hasUnpublishedFailedRevision, so both survive too. Malformed
+// records are left for repairIntegrityData. Only created / unknown /
+// status-less / vote-only orphan records may be removed.
+const PROTECTED_STATUSES = new Set(['failed', 'published', 'skipped']);
+
 function isProtectedRevision(revision) {
   return (
     !isPlainObject(revision) ||
-    revision.status === 'published' ||
+    PROTECTED_STATUSES.has(revision.status) ||
     revision.smokeTest === 'failed'
   );
+}
+
+// Distinct rev-N directories ("packages/<pkg>/<version>/rev-N") owning at
+// least one of the NUL-separated git paths.
+function collectRevisionDirectories(nulSeparatedPaths) {
+  const directories = new Set();
+  for (const file of nulSeparatedPaths.split('\0')) {
+    const match = REVISION_PATH.exec(file);
+    if (match) {
+      directories.add(match[0].slice(0, -1));
+    }
+  }
+  return directories;
 }
 
 class SelfHealer {
@@ -72,9 +95,13 @@ class SelfHealer {
         await this.reconcileAllIntegrity();
         break;
       }
+      case 'clean-orphan-revisions': {
+        await this.cleanOrphanRevisions();
+        break;
+      }
       default: {
         console.error(
-          'Usage: node scripts/heal.mjs [auto|missing-readmes|integrity-data|package-structure|prune-revisions|reconcile-integrity]',
+          'Usage: node scripts/heal.mjs [auto|missing-readmes|integrity-data|package-structure|prune-revisions|reconcile-integrity|clean-orphan-revisions]',
         );
         process.exit(1);
         return;
@@ -649,7 +676,7 @@ class SelfHealer {
 
     if (versions.length === 0) {
       console.warn(
-        `Skipping integrity for ${package_.name ?? package_.path}: no version directories to derive a version from`,
+        `Skipping integrity for ${package_.name ?? package_.path}: no version directories to derive a version from; any existing (possibly corrupt) integrity.json was left in place for manual review`,
       );
       return false;
     }
@@ -807,6 +834,138 @@ class SelfHealer {
       `Removed ${removed} orphan integrity entries for ${package_.name}`,
     );
     return removed;
+  }
+
+  // Remove half-processed rev directories left by a crashed or timed-out cron
+  // step: untracked in git AND without any integrity.json record. Tracked
+  // directories and directories with a record (any status) are never touched.
+  // If git cannot be queried, nothing is removed.
+  async cleanOrphanRevisions() {
+    const spinner = ora('Cleaning orphan revision directories...').start();
+    const removed = await this.removeOrphanRevisions();
+    spinner.succeed(`Removed ${removed} orphan revision directories`);
+    return removed;
+  }
+
+  async listGitPaths(extraArguments) {
+    const { stdout } = await execFileAsync(
+      'git',
+      ['ls-files', '-z', ...extraArguments, '--', 'packages/'],
+      { cwd: this.rootDirectory, maxBuffer: GIT_MAX_BUFFER },
+    );
+    return stdout;
+  }
+
+  async removeOrphanRevisions() {
+    let candidates;
+    try {
+      const untracked = collectRevisionDirectories(
+        await this.listGitPaths(['--others', '--exclude-standard']),
+      );
+      const tracked = collectRevisionDirectories(await this.listGitPaths([]));
+      candidates = [...untracked].filter((entry) => !tracked.has(entry));
+    } catch (error) {
+      this.recordFailure('list untracked revisions', 'packages', error);
+      return 0;
+    }
+
+    const integrityCache = new Map();
+    const touchedVersions = new Set();
+    let removed = 0;
+    for (const directory of candidates.toSorted()) {
+      if (await this.removeOrphanRevision(directory, integrityCache)) {
+        touchedVersions.add(path.dirname(directory));
+        removed++;
+      }
+    }
+
+    for (const versionDirectory of touchedVersions) {
+      await this.removeEmptyVersionDirectory(versionDirectory);
+    }
+    if (removed > 0) {
+      this.recordFix(removed);
+    }
+    return removed;
+  }
+
+  // Loads a package's integrity.json once: { records } (null when the file is
+  // absent) or { unreadable: true } when its contents cannot be trusted.
+  async loadIntegrityRecords(packageName, cache) {
+    if (cache.has(packageName)) {
+      return cache.get(packageName);
+    }
+    const file = path.join(
+      this.rootDirectory,
+      'packages',
+      packageName,
+      INTEGRITY_JSON,
+    );
+    let result;
+    try {
+      const parsed = JSON.parse(await fs.readFile(file));
+      result = isPlainObject(parsed)
+        ? { records: parsed }
+        : { unreadable: true };
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        result = { records: null };
+      } else {
+        // Corrupt or unreadable: records are unknown, so delete nothing
+        this.recordFailure('read integrity', packageName, error);
+        result = { unreadable: true };
+      }
+    }
+    cache.set(packageName, result);
+    return result;
+  }
+
+  // Removes one candidate rev directory when its package has no record for it.
+  // Returns true when removed.
+  async removeOrphanRevision(directory, integrityCache) {
+    const [, packageName, version, revision] = REVISION_PATH.exec(
+      `${directory}/`,
+    );
+    const { records, unreadable } = await this.loadIntegrityRecords(
+      packageName,
+      integrityCache,
+    );
+    if (unreadable) {
+      return false;
+    }
+    const versionRecords = records?.[version];
+    if (
+      isPlainObject(versionRecords) &&
+      Object.hasOwn(versionRecords, revision)
+    ) {
+      return false;
+    }
+    try {
+      await fs.rm(path.join(this.rootDirectory, directory), {
+        force: true,
+        recursive: true,
+      });
+    } catch (error) {
+      this.recordFailure('remove orphan revision', directory, error);
+      return false;
+    }
+    console.log(`Removed orphan revision directory ${directory}`);
+    return true;
+  }
+
+  // Drops a version directory left empty by orphan removal. fs.rmdir refuses
+  // non-empty directories, and git never tracks an empty directory.
+  async removeEmptyVersionDirectory(versionDirectory) {
+    try {
+      await fs.rmdir(path.join(this.rootDirectory, versionDirectory));
+    } catch (error) {
+      if (error.code !== 'ENOTEMPTY' && error.code !== 'ENOENT') {
+        this.recordFailure(
+          'remove empty version directory',
+          versionDirectory,
+          error,
+        );
+      }
+    }
   }
 
   async generateReadme(packageName) {

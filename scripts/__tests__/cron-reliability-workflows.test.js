@@ -52,6 +52,29 @@ describe('cron.yml commit steps', () => {
       expect(commit.if).toContain(`steps.${script.id}.outcome == 'failure'`);
     });
 
+    it(`${jobName}: script step has a step timeout below the job timeout`, () => {
+      const job = cron.jobs[jobName];
+      const script = stepNamed(job, scriptStepName);
+
+      expect(script['timeout-minutes']).toBe(jobName === 'discover' ? 75 : 105);
+      expect(script['timeout-minutes']).toBeLessThan(job['timeout-minutes']);
+    });
+
+    it(`${jobName}: cleans orphan revisions only when the script step failed, before staging`, () => {
+      const job = cron.jobs[jobName];
+      const script = stepNamed(job, scriptStepName);
+      const { run } = commitStepOf(job);
+
+      expect(run).toContain('node scripts/heal.mjs clean-orphan-revisions');
+      expect(run).toContain(
+        `if [ "\${{ steps.${script.id}.outcome }}" = "failure" ]; then`,
+      );
+      expect(run).toMatch(/clean-orphan-revisions \|\| echo "::warning::/u);
+      expect(run.indexOf('clean-orphan-revisions')).toBeLessThan(
+        run.indexOf('git add -A packages/'),
+      );
+    });
+
     it(`${jobName}: uploads a recovery patch only when the commit step failed`, () => {
       const job = cron.jobs[jobName];
       const commit = commitStepOf(job);
@@ -76,6 +99,17 @@ describe('cron.yml commit steps', () => {
 
       if (jobName !== 'heal') {
         expect(run).toContain('published to npm');
+      }
+
+      // A transient fetch failure counts as a failed attempt instead of killing the step.
+      expect(run).toContain('if ! git fetch origin main; then');
+      expect(run).toContain('give_up "Fetch"');
+      expect(run).not.toMatch(/^\s*git fetch origin main$/mu);
+
+      if (jobName !== 'heal') {
+        // An emptied-then-skipped commit means the data is already upstream: succeed.
+        expect(run).toContain('if git rebase --skip 2>/dev/null; then');
+        expect(run).toContain('Data already upstream');
       }
 
       // The final-attempt exit precedes the sleep, so no sleep after the last failure.
@@ -152,9 +186,34 @@ describe('cron.yml shard summary', () => {
       );
 
       expect(out.status).toBe(0);
-      expect(out.stdout).not.toContain('::warning::');
+      expect(out.stdout).not.toMatch(/package\(s\) failed/u);
       expect(out.stdout).not.toContain('::error::');
       expect(out.summary).toContain('checkfailed=3');
+    });
+
+    it(`${jobName}: warns on checkfailed>0 and fetchfailed>0`, () => {
+      const out = runSummary(
+        jobName,
+        'DEPUP_SUMMARY processed=9 failed=0 checkfailed=3 fetchfailed=2\n',
+      );
+
+      expect(out.status).toBe(0);
+      expect(out.stdout).toMatch(/::warning::.*shard 2: checkfailed=3/u);
+      expect(out.stdout).toMatch(/::warning::.*shard 2: fetchfailed=2/u);
+      expect(out.stdout).not.toMatch(/package\(s\) failed/u);
+      expect(out.summary).toContain('checkfailed**: 3');
+      expect(out.summary).toContain('fetchfailed**: 2');
+    });
+
+    it(`${jobName}: silent when checkfailed=0 and fetchfailed=0`, () => {
+      const out = runSummary(
+        jobName,
+        'DEPUP_SUMMARY processed=9 failed=0 checkfailed=0 fetchfailed=0\n',
+      );
+
+      expect(out.status).toBe(0);
+      expect(out.stdout).not.toContain('::warning::');
+      expect(out.stdout).not.toContain('::error::');
     });
 
     it(`${jobName}: extra keys do not confuse failed parsing`, () => {
@@ -201,11 +260,48 @@ describe('cron.yml alert and recovery', () => {
     const run = alert.steps.map((s) => s.run ?? '').join('\n');
 
     expect(run).toContain(
-      'gh run list --workflow cron.yml --status completed --limit 3',
+      'gh run list --workflow cron.yml --status completed --limit 5',
     );
+    expect(run).toContain('select(.conclusion != "cancelled")');
     expect(run).toContain('Cron: repeated shard failures');
     expect(run).toContain('cron-failure');
     expect(alert.steps[0].env.GH_TOKEN).toBe('${{ github.token }}');
+  });
+
+  it('alert opens a discover-specific issue immediately, outside the previous-run gate', () => {
+    const run = alert.steps.map((s) => s.run ?? '').join('\n');
+    const discoverBlock = run.indexOf('if [ "$DISCOVER_RESULT" = "failure" ]');
+    const gate = run.indexOf('previous=$(gh run list');
+
+    expect(discoverBlock).toBeGreaterThan(-1);
+    expect(discoverBlock).toBeLessThan(gate);
+    expect(run).toContain('Cron: discover failures');
+    expect(run).toContain('--label cron-failure --label cron-discover-failure');
+    expect(run).toContain('ensure_label cron-failure');
+    expect(run).toContain('ensure_label cron-discover-failure');
+    // Generic issue lookup must exclude the discover-labeled issue.
+    expect(run).toContain('index("cron-discover-failure") | not');
+  });
+
+  it('alert comments at most once per UTC day using a stable marker', () => {
+    const run = alert.steps.map((s) => s.run ?? '').join('\n');
+
+    expect(run).toContain('marker="<!-- depup-cron-alert -->"');
+    expect(run).toContain('date -u +%F');
+    expect(run).toContain('gh issue view "$1" --json comments');
+    expect(run).toContain(String.raw`startswith(\"$today\")`);
+    expect(run).not.toMatch(/gh issue comment "\$existing"/u);
+  });
+
+  it('heal closes the discover issue only when discover succeeded', () => {
+    const close = stepNamed(heal, 'Close Resolved');
+
+    expect(close.env.DISCOVER_RESULT).toBe('${{ needs.discover.result }}');
+    expect(close.run).toContain('if [ "$DISCOVER_RESULT" = "success" ]; then');
+    expect(close.run).toContain('cron-discover-failure');
+    expect(
+      close.run.indexOf('index("cron-discover-failure") | not'),
+    ).toBeLessThan(close.run.indexOf('if [ "$DISCOVER_RESULT" = "success" ]'));
   });
 
   it('heal needs sync and discover, keeps the !cancelled() semantic, and can close issues', () => {
@@ -261,6 +357,8 @@ describe('process-package-request.yml retries', () => {
     expect(run).toMatch(
       /::error::Push failed after 10 attempts.*IS published to npm but is NOT committed/u,
     );
+    expect(run).not.toContain('next cron cycle');
+    expect(run).toContain('up to a week');
     expect(run.indexOf('"$attempt" -eq 10')).toBeLessThan(
       run.indexOf('sleep $((RANDOM % 10 + attempt * 3))'),
     );

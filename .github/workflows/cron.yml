@@ -79,6 +79,9 @@ jobs:
 
       - name: Discover Packages
         id: discover_run
+        # Step-level cap below the job cap so a hang ends as a step failure (not a
+        # job-level cancel), letting the commit step and the alert still run.
+        timeout-minutes: 75
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -96,6 +99,11 @@ jobs:
         id: discover_commit
         if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
         run: |
+          # A failed script can leave half-processed rev-N dirs with no integrity
+          # record; drop them so they are not committed.
+          if [ "${{ steps.discover_run.outcome }}" = "failure" ]; then
+            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be committed"
+          fi
           git add -A packages/
           # Only shard 0 stages cron-discover.mjs to avoid cross-shard conflicts
           if [ "${{ matrix.shard }}" = "0" ]; then
@@ -114,7 +122,14 @@ jobs:
           }
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
-            git fetch origin main
+            if ! git fetch origin main; then
+              echo "Fetch failed on attempt $attempt, retrying..."
+              if [ "$attempt" -eq 10 ]; then
+                give_up "Fetch"
+              fi
+              sleep $((RANDOM % 10 + attempt * 3))
+              continue
+            fi
             # Clean any unstaged changes before rebase (e.g., case-different
             # README files from original packages that git sees as modified)
             git checkout -- . 2>/dev/null || true
@@ -134,9 +149,11 @@ jobs:
                   # Check if commit became empty after conflict resolution
                   if git diff --cached --quiet 2>/dev/null; then
                     echo "Commit became empty after conflict resolution, skipping..."
-                    git rebase --skip 2>/dev/null || {
-                      git rebase --abort 2>/dev/null || true
-                    }
+                    if git rebase --skip 2>/dev/null; then
+                      echo "Data already upstream; nothing left to push"
+                      break
+                    fi
+                    git rebase --abort 2>/dev/null || true
                   else
                     git rebase --abort 2>/dev/null || true
                   fi
@@ -198,6 +215,14 @@ jobs:
             echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
             echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
           fi
+          for key in checkfailed fetchfailed; do
+            count=$(printf '%s\n' "$summary_line" | sed -n "s/.*[[:space:]]${key}=\([0-9][0-9]*\).*/\1/p")
+            count=${count:-0}
+            if [ "$count" -gt 0 ]; then
+              echo "::warning::$JOB_KIND shard $SHARD: $key=$count ($summary_line)"
+              echo "- **${key}**: $count" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
 
   sync:
     name: Sync (shard ${{ matrix.shard }})
@@ -250,6 +275,9 @@ jobs:
 
       - name: Sync Packages
         id: sync_run
+        # Step-level cap below the job cap so a hang ends as a step failure (not a
+        # job-level cancel), letting the commit step and the alert still run.
+        timeout-minutes: 105
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -267,6 +295,11 @@ jobs:
         id: sync_commit
         if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
         run: |
+          # A failed script can leave half-processed rev-N dirs with no integrity
+          # record; drop them so they are not committed.
+          if [ "${{ steps.sync_run.outcome }}" = "failure" ]; then
+            node scripts/heal.mjs clean-orphan-revisions || echo "::warning::clean-orphan-revisions failed; half-processed revisions may be committed"
+          fi
           git add -A packages/
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -281,7 +314,14 @@ jobs:
           }
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
-            git fetch origin main
+            if ! git fetch origin main; then
+              echo "Fetch failed on attempt $attempt, retrying..."
+              if [ "$attempt" -eq 10 ]; then
+                give_up "Fetch"
+              fi
+              sleep $((RANDOM % 10 + attempt * 3))
+              continue
+            fi
             # Clean any unstaged changes before rebase (e.g., case-different
             # README files from original packages that git sees as modified)
             git checkout -- . 2>/dev/null || true
@@ -298,9 +338,11 @@ jobs:
                   # Check if commit became empty after conflict resolution
                   if git diff --cached --quiet 2>/dev/null; then
                     echo "Commit became empty after conflict resolution, skipping..."
-                    git rebase --skip 2>/dev/null || {
-                      git rebase --abort 2>/dev/null || true
-                    }
+                    if git rebase --skip 2>/dev/null; then
+                      echo "Data already upstream; nothing left to push"
+                      break
+                    fi
+                    git rebase --abort 2>/dev/null || true
                   else
                     git rebase --abort 2>/dev/null || true
                   fi
@@ -362,6 +404,14 @@ jobs:
             echo "::warning::$JOB_KIND shard $SHARD: $failed package(s) failed ($summary_line)"
             echo "- **FAILED**: $failed package(s) failed in this shard" >> "$GITHUB_STEP_SUMMARY"
           fi
+          for key in checkfailed fetchfailed; do
+            count=$(printf '%s\n' "$summary_line" | sed -n "s/.*[[:space:]]${key}=\([0-9][0-9]*\).*/\1/p")
+            count=${count:-0}
+            if [ "$count" -gt 0 ]; then
+              echo "::warning::$JOB_KIND shard $SHARD: $key=$count ($summary_line)"
+              echo "- **${key}**: $count" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
 
   heal:
     name: Self-Healing
@@ -428,7 +478,14 @@ jobs:
           }
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
-            git fetch origin main
+            if ! git fetch origin main; then
+              echo "Fetch failed on attempt $attempt, retrying..."
+              if [ "$attempt" -eq 10 ]; then
+                give_up "Fetch"
+              fi
+              sleep $((RANDOM % 10 + attempt * 3))
+              continue
+            fi
             # Clean unstaged changes before rebase (case-different files from packages)
             git checkout -- . 2>/dev/null || true
             if ! git rebase origin/main; then
@@ -457,7 +514,9 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
-      # Recovery: sync went green, so any open cron-failure issue is resolved.
+      # Recovery: sync went green, so open generic cron-failure issues are
+      # resolved. The discover-specific issue closes only when discover actually
+      # ran and passed (a sync-only run says nothing about discover).
       # A few seconds of gh calls; a gh outage must not fail an otherwise green run.
       - name: Close Resolved cron-failure Issues
         if: ${{ success() && needs.sync.result == 'success' }}
@@ -465,15 +524,27 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          DISCOVER_RESULT: ${{ needs.discover.result }}
         run: |
-          if ! numbers=$(gh issue list --label cron-failure --state open --json number --jq '.[].number'); then
-            echo "::notice::Could not list cron-failure issues; skipping auto-close"
-            exit 0
+          close_all() {
+            # $1 = jq filter selecting issue numbers, $2 = label, $3 = comment
+            if ! numbers=$(gh issue list --label "$2" --state open --json number,labels --jq "$1"); then
+              echo "::notice::Could not list $2 issues; skipping auto-close"
+              return 0
+            fi
+            for number in $numbers; do
+              gh issue close "$number" --comment "$3" \
+                || echo "::notice::Could not close $2 issue #$number; close it manually"
+            done
+          }
+
+          close_all '.[] | select([.labels[].name] | index("cron-discover-failure") | not) | .number' cron-failure \
+            "Cron sync recovered: all sync shards succeeded in $RUN_URL. Closing automatically."
+
+          if [ "$DISCOVER_RESULT" = "success" ]; then
+            close_all '.[].number' cron-discover-failure \
+              "Cron discover recovered: all discover shards succeeded in $RUN_URL. Closing automatically."
           fi
-          for number in $numbers; do
-            gh issue close "$number" --comment "Cron sync recovered: all sync shards succeeded in $RUN_URL. Closing automatically." \
-              || echo "::notice::Could not close cron-failure issue #$number; close it manually"
-          done
 
   # Runs only when a prior job failed, so green runs pay nothing. No checkout.
   # The cron-failure label can never start process-package-request.yml: that
@@ -499,34 +570,76 @@ jobs:
           SYNC_RESULT: ${{ needs.sync.result }}
           HEAL_RESULT: ${{ needs.heal.result }}
         run: |
-          # The current run is still in progress, so the newest completed run is the previous one.
-          previous=$(gh run list --workflow cron.yml --status completed --limit 3 --json conclusion --jq '.[0].conclusion // "none"')
-          echo "Previous completed cron run conclusion: $previous"
-          if [ "$previous" = "success" ]; then
-            echo "::notice::First failure after a green run; not opening an issue yet"
-            exit 0
+          today=$(date -u +%F)
+          marker="<!-- depup-cron-alert -->"
+
+          ensure_label() {
+            # $1 = name, $2 = color, $3 = description
+            if ! out=$(gh label create "$1" --color "$2" --description "$3" 2>&1); then
+              case "$out" in
+                *"already exists"*) ;;
+                *) echo "::error::Could not create $1 label: $out"; exit 1 ;;
+              esac
+            fi
+          }
+
+          # Comment on an issue at most once per UTC day (marker + createdAt date).
+          comment_once() {
+            # $1 = issue number, $2 = body
+            todays=$(gh issue view "$1" --json comments --jq "[.comments[] | select(.createdAt | startswith(\"$today\")) | select(.body | startswith(\"$marker\"))] | length")
+            if [ "${todays:-0}" -gt 0 ]; then
+              echo "Issue #$1 already has an alert comment from today; not commenting again"
+              return 0
+            fi
+            gh issue comment "$1" --body "$marker
+          $2"
+            echo "Commented on existing issue #$1"
+          }
+
+          ensure_label cron-failure B60205 "Repeated cron job failures"
+
+          # Discover runs only on Sunday 00:00 and the next run is sync-only, so
+          # a previous-run gate would hide (then auto-close) a broken discover.
+          # Open a discover-specific issue immediately.
+          if [ "$DISCOVER_RESULT" = "failure" ]; then
+            ensure_label cron-discover-failure D93F0B "Cron discover job failures"
+            body="Cron discover failed.
+
+          - Run: $RUN_URL
+          - Failed jobs: discover"
+            existing=$(gh issue list --label cron-discover-failure --state open --json number --jq '.[0].number // empty')
+            if [ -n "$existing" ]; then
+              comment_once "$existing" "$body"
+            else
+              gh issue create --title "Cron: discover failures" --label cron-failure --label cron-discover-failure --body "$marker
+          $body"
+            fi
           fi
 
-          failed_jobs=""
-          [ "$DISCOVER_RESULT" = "failure" ] && failed_jobs="$failed_jobs discover"
-          [ "$SYNC_RESULT" = "failure" ] && failed_jobs="$failed_jobs sync"
-          [ "$HEAL_RESULT" = "failure" ] && failed_jobs="$failed_jobs heal"
-          body="Repeated cron failures (previous completed run: $previous).
+          if [ "$SYNC_RESULT" = "failure" ] || [ "$HEAL_RESULT" = "failure" ]; then
+            # The current run is still in progress, so the newest completed run is the
+            # previous one; skip cancelled runs, which say nothing about health.
+            previous=$(gh run list --workflow cron.yml --status completed --limit 5 --json conclusion --jq '[.[] | select(.conclusion != "cancelled")][0].conclusion // "none"')
+            echo "Previous completed (non-cancelled) cron run conclusion: $previous"
+            if [ "$previous" = "success" ]; then
+              echo "::notice::First failure after a green run; not opening an issue yet"
+              exit 0
+            fi
+
+            failed_jobs=""
+            [ "$SYNC_RESULT" = "failure" ] && failed_jobs="$failed_jobs sync"
+            [ "$HEAL_RESULT" = "failure" ] && failed_jobs="$failed_jobs heal"
+            body="Repeated cron failures (previous completed run: $previous).
 
           - Run: $RUN_URL
           - Failed jobs:$failed_jobs"
 
-          if ! out=$(gh label create cron-failure --color B60205 --description "Repeated cron job failures" 2>&1); then
-            case "$out" in
-              *"already exists"*) ;;
-              *) echo "::error::Could not create cron-failure label: $out"; exit 1 ;;
-            esac
-          fi
-
-          existing=$(gh issue list --label cron-failure --state open --json number --jq '.[0].number // empty')
-          if [ -n "$existing" ]; then
-            gh issue comment "$existing" --body "$body"
-            echo "Commented on existing issue #$existing"
-          else
-            gh issue create --title "Cron: repeated shard failures" --label cron-failure --body "$body"
+            # Exclude the discover-specific issue, which also carries cron-failure.
+            existing=$(gh issue list --label cron-failure --state open --json number,labels --jq '[.[] | select([.labels[].name] | index("cron-discover-failure") | not)][0].number // empty')
+            if [ -n "$existing" ]; then
+              comment_once "$existing" "$body"
+            else
+              gh issue create --title "Cron: repeated shard failures" --label cron-failure --body "$marker
+          $body"
+            fi
           fi

@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { promises as fsPromises } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -95,6 +96,25 @@ describe('heal.mjs -- reliability', () => {
       expect(console.warn).toHaveBeenCalledWith(
         expect.stringContaining('Skipping integrity for stray-pkg'),
       );
+      expect(console.warn).toHaveBeenCalledWith(
+        expect.stringContaining('left in place for manual review'),
+      );
+    });
+
+    it('leaves a corrupt integrity.json untouched when there is no version directory', async () => {
+      const directory = await makePackage('corrupt-stray');
+      const file = path.join(directory, 'integrity.json');
+      await fsPromises.writeFile(file, 'not json {{{');
+
+      const written = await healer.createBasicIntegrity({
+        name: 'corrupt-stray',
+        path: directory,
+      });
+
+      expect(written).toBe(false);
+      await expect(fsPromises.readFile(file, 'utf8')).resolves.toBe(
+        'not json {{{',
+      );
     });
 
     it('derives the latest real version and its highest existing revision', async () => {
@@ -128,7 +148,7 @@ describe('heal.mjs -- reliability', () => {
   });
 
   describe('reconcileAllIntegrity (lead b)', () => {
-    it('removes verifiably-orphan entries but keeps published and verification-failed ones', async () => {
+    it('removes only created/unknown/status-less/vote-only orphans and keeps published, skipped, failed and verification-failed ones', async () => {
       const directory = await makePackage('orphan-pkg', { '1.0.0': [1] });
       const file = await writeIntegrity(directory, {
         '1.0.0': {
@@ -136,12 +156,15 @@ describe('heal.mjs -- reliability', () => {
           2: revisionRecord('skipped'),
           3: revisionRecord('created'),
           4: revisionRecord('failed', { smokeTest: 'failed' }),
+          5: revisionRecord('failed'),
+          6: { timestamp: '2026-01-01T00:00:00.000Z', votes: 2 },
         },
         '8.8.8': { 0: revisionRecord('unknown') },
         // Version directory absent entirely
         '9.9.9': {
           0: revisionRecord('created'),
           1: revisionRecord('published'),
+          2: revisionRecord('skipped'),
         },
       });
 
@@ -149,8 +172,13 @@ describe('heal.mjs -- reliability', () => {
       const data = await readJson(file);
 
       expect(removed).toBe(4);
-      expect(Object.keys(data['1.0.0']).toSorted()).toStrictEqual(['1', '4']);
-      expect(Object.keys(data['9.9.9'])).toStrictEqual(['1']);
+      expect(Object.keys(data['1.0.0']).toSorted()).toStrictEqual([
+        '1',
+        '2',
+        '4',
+        '5',
+      ]);
+      expect(Object.keys(data['9.9.9']).toSorted()).toStrictEqual(['1', '2']);
       expect(data['8.8.8']).toBeUndefined();
       expect(healer.failures).toHaveLength(0);
       expect(healer.fixed).toBe(4);
@@ -173,11 +201,11 @@ describe('heal.mjs -- reliability', () => {
     it('never empties a package of all its records', async () => {
       const directory = await makePackage('lonely-pkg', { '1.0.0': [] });
       const file = await writeIntegrity(directory, {
-        '2.0.0': { 0: revisionRecord('failed') },
+        '2.0.0': { 0: revisionRecord('created') },
       });
 
       await expect(healer.reconcileAllIntegrity()).resolves.toBe(0);
-      expect((await readJson(file))['2.0.0']['0'].status).toBe('failed');
+      expect((await readJson(file))['2.0.0']['0'].status).toBe('created');
       expect(console.warn).toHaveBeenCalledWith(
         expect.stringContaining('would leave no records'),
       );
@@ -268,6 +296,117 @@ describe('heal.mjs -- reliability', () => {
 
       await expect(healer.reconcileAllIntegrity()).resolves.toBe(0);
       expect(healer.failures).toHaveLength(0);
+    });
+  });
+
+  describe('cleanOrphanRevisions', () => {
+    const git = (...arguments_) =>
+      execFileSync('git', arguments_, { cwd: root, stdio: 'pipe' });
+
+    const exists = async (relative) => {
+      try {
+        await fsPromises.access(path.join(root, relative));
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    const addFile = async (relative) => {
+      const file = path.join(root, relative);
+      await fsPromises.mkdir(path.dirname(file), { recursive: true });
+      await fsPromises.writeFile(file, '{}');
+    };
+
+    beforeEach(() => {
+      git('init', '--quiet');
+      git('config', 'user.email', 'test@example.com');
+      git('config', 'user.name', 'Test');
+      git('config', 'commit.gpgsign', 'false');
+    });
+
+    it('removes an untracked rev dir with no record, keeps one with a record, keeps a tracked one', async () => {
+      // tracked, looks orphaned (no record for rev-1), plus an untracked file inside
+      await addFile('packages/tracked-pkg/1.0.0/rev-1/package.json');
+      git('add', '-A', 'packages');
+      git('commit', '--quiet', '-m', 'seed');
+      await addFile('packages/tracked-pkg/1.0.0/rev-1/extra.json');
+      await writeIntegrity(path.join(root, 'packages/tracked-pkg'), {
+        '1.0.0': { 0: revisionRecord('published') },
+      });
+
+      // untracked, has a record (even a failed one) -> kept
+      await addFile('packages/rec-pkg/2.0.0/rev-0/package.json');
+      await writeIntegrity(path.join(root, 'packages/rec-pkg'), {
+        '2.0.0': { 0: revisionRecord('failed') },
+      });
+
+      // untracked orphans: one with an integrity.json, one without, and
+      // one whose version directory becomes empty
+      await addFile('packages/rec-pkg/2.0.0/rev-1/package.json');
+      await addFile('packages/bare-pkg/3.0.0/rev-0/package.json');
+      await addFile('packages/rec-pkg/2.1.0/rev-0/package.json');
+
+      const removed = await healer.cleanOrphanRevisions();
+
+      expect(removed).toBe(3);
+      await expect(
+        exists('packages/tracked-pkg/1.0.0/rev-1/extra.json'),
+      ).resolves.toBe(true);
+      await expect(
+        exists('packages/rec-pkg/2.0.0/rev-0/package.json'),
+      ).resolves.toBe(true);
+      await expect(exists('packages/rec-pkg/2.0.0/rev-1')).resolves.toBe(false);
+      await expect(exists('packages/bare-pkg/3.0.0')).resolves.toBe(false);
+      await expect(exists('packages/rec-pkg/2.1.0')).resolves.toBe(false);
+      expect(healer.failures).toHaveLength(0);
+      expect(healer.fixed).toBe(3);
+    });
+
+    it('is idempotent on a second run', async () => {
+      await addFile('packages/bare-pkg/3.0.0/rev-0/package.json');
+
+      await expect(healer.cleanOrphanRevisions()).resolves.toBe(1);
+      await expect(healer.cleanOrphanRevisions()).resolves.toBe(0);
+      expect(healer.failures).toHaveLength(0);
+      expect(healer.fixed).toBe(1);
+    });
+
+    it('removes nothing and reports a failure when git cannot be queried', async () => {
+      await addFile('packages/bare-pkg/3.0.0/rev-0/package.json');
+      jest
+        .spyOn(healer, 'listGitPaths')
+        .mockRejectedValue(new Error('fatal: not a git repository'));
+
+      await expect(healer.cleanOrphanRevisions()).resolves.toBe(0);
+
+      await expect(
+        exists('packages/bare-pkg/3.0.0/rev-0/package.json'),
+      ).resolves.toBe(true);
+      expect(healer.failures).toStrictEqual([
+        {
+          error: 'fatal: not a git repository',
+          name: 'packages',
+          step: 'list untracked revisions',
+        },
+      ]);
+      expect(healer.fixed).toBe(0);
+    });
+
+    it('removes nothing when the package integrity.json is corrupt', async () => {
+      await addFile('packages/corrupt-pkg/1.0.0/rev-0/package.json');
+      await fsPromises.writeFile(
+        path.join(root, 'packages/corrupt-pkg/integrity.json'),
+        'not json {{{',
+      );
+
+      await expect(healer.cleanOrphanRevisions()).resolves.toBe(0);
+
+      await expect(
+        exists('packages/corrupt-pkg/1.0.0/rev-0/package.json'),
+      ).resolves.toBe(true);
+      expect(healer.failures).toHaveLength(1);
+      expect(healer.failures[0].step).toBe('read integrity');
     });
   });
 
