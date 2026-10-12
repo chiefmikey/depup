@@ -12,12 +12,15 @@ npm install @depup/graphql-codegen__typescript-operations
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.1.10 | **DepUp version**: 6.1.10-depup.0 | **Updated**: 10/5/2026 | **Import test**: passed
+**Original version**: 6.1.10 | **DepUp version**: 6.1.10-depup.1 | **Updated**: 10/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @graphql-codegen/plugin-helpers | `^7.4.1` | `^7.4.2` |
+| @graphql-codegen/schema-ast | `^6.1.0` | `^6.1.1` |
+| @graphql-codegen/visitor-plugin-common | `^7.2.8` | `^7.3.0` |
 | auto-bind | `^5.0.0` | `^5.0.1` |
 | tslib | `^2.8.0` | `^2.8.1` |
 

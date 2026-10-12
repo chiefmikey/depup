@@ -3069,6 +3069,35 @@
       "status": "published",
       "timestamp": "2026-10-07T08:12:47.766Z",
       "version": "22.2.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@inquirer/prompts": {
+          "from": "8.7.2",
+          "to": "^8.7.3"
+        },
+        "@listr2/prompt-adapter-inquirer": {
+          "from": "4.2.7",
+          "to": "^4.3.1"
+        },
+        "listr2": {
+          "from": "11.1.0",
+          "to": "^11.2.0"
+        },
+        "yargs": {
+          "from": "18.1.0",
+          "to": "^18.2.0"
+        },
+        "zod": {
+          "from": "4.6.5",
+          "to": "^4.6.6"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-12T16:10:13.767Z",
+      "version": "22.2.2-depup.1"
     }
   }
 }
