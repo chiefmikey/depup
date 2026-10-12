@@ -17268,3 +17268,115 @@ describe('pipeline robustness fixes', () => {
     });
   });
 });
+
+// A GitHub issue body can be 65536 characters of attacker-chosen text. The
+// parse step runs two regexes over it that start with "### ... \s*\n\s*"; the
+// two adjacent whitespace runs made a body of blank lines cost O(n^2), several
+// seconds of runner time per request. Run the real Parse Issue Content script.
+describe('process-package-request.yml -- parse step regexes stay linear', () => {
+  const MAX_ISSUE_BODY = 65_536;
+  // Linear matching takes well under a millisecond here; the quadratic form
+  // took 4 to 7 seconds, so this bound has orders of magnitude of slack.
+  const TIME_BUDGET_MS = 1000;
+
+  const runParseStep = async (body, title = 'Add package: lodash') => {
+    const yamlModule = await import('js-yaml');
+    const load = yamlModule.load ?? yamlModule.default.load;
+    const workflow = load(
+      await fs.readFile(
+        path.resolve(
+          import.meta.dirname,
+          '..',
+          '..',
+          '.github',
+          'workflows',
+          'process-package-request.yml',
+        ),
+        'utf8',
+      ),
+    );
+    const step = workflow.jobs.process.steps.find(
+      (candidate) => candidate.name === 'Parse Issue Content',
+    );
+    const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
+    const outputs = {};
+    const failures = [];
+    const core = {
+      setFailed: (message) => failures.push(message),
+      setOutput: (key, value) => {
+        outputs[key] = value;
+      },
+    };
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    const started = performance.now();
+    await new AsyncFunction('context', 'core', step.with.script)(
+      { payload: { issue: { body, title } } },
+      core,
+    );
+    return { elapsed: performance.now() - started, failures, outputs };
+  };
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  const hostileBodies = {
+    'blank lines after the Package Name header': `### Package Name${'\n'.repeat(MAX_ISSUE_BODY - 40)}@@@@`,
+    'blank lines after the NPM Package URL header': `### Package Name\n\nlodash\n\n### NPM Package URL${'\n'.repeat(MAX_ISSUE_BODY - 80)}@@@@`,
+    'whitespace and newlines after the Package Name header': `### Package Name${' \n'.repeat(MAX_ISSUE_BODY / 2 - 20)}`,
+    'whitespace and newlines after the NPM Package URL header': `### Package Name\n\nlodash\n\n### NPM Package URL${' \n'.repeat(MAX_ISSUE_BODY / 2 - 40)}`,
+  };
+
+  it.each(Object.entries(hostileBodies))(
+    'parses a maximum-size body of %s within the time budget',
+    async (_label, body) => {
+      expect(body.length).toBeLessThanOrEqual(MAX_ISSUE_BODY);
+
+      const { elapsed, failures, outputs } = await runParseStep(body);
+
+      expect(elapsed).toBeLessThan(TIME_BUDGET_MS);
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe('lodash');
+    },
+  );
+
+  it.each([
+    [
+      'plain',
+      '### Package Name\n\nlodash\n\n### NPM Package URL\n\nhttps://x.test/p\n',
+      'lodash',
+      'https://x.test/p',
+    ],
+    [
+      'CRLF',
+      '### Package Name\r\n\r\n`@scope/pkg`\r\n\r\n### NPM Package URL\r\n\r\nhttps://x.test/p\r\n',
+      '@scope/pkg',
+      'https://x.test/p',
+    ],
+    [
+      'trailing-space',
+      '### Package Name  \n  \n   a.b-c_d  \n### NPM Package URL \t\n\n\n https://x.test/p\n',
+      'a.b-c_d',
+      'https://x.test/p',
+    ],
+  ])(
+    'still extracts the name and URL from a %s body',
+    async (_label, body, expectedName, expectedUrl) => {
+      const { failures, outputs } = await runParseStep(body, 'x');
+
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe(expectedName);
+      expect(outputs.package_url).toBe(expectedUrl);
+    },
+  );
+
+  it('does not truncate a multi-word value to its first word', async () => {
+    const { outputs } = await runParseStep(
+      '### Package Name\n\nlodash evil\n',
+      'Add package: express',
+    );
+
+    // "lodash evil" is not cut down to "lodash"; the title fallback is used.
+    expect(outputs.package_name).toBe('express');
+  });
+});
