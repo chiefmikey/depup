@@ -130,5 +130,20 @@
       "timestamp": "2026-10-12T00:39:48.285Z",
       "version": "3.8.0-depup.0"
     }
+  },
+  "3.9.0": {
+    "0": {
+      "changes": {
+        "ajv": {
+          "from": "^8.17.1",
+          "to": "^8.20.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-12T16:42:42.709Z",
+      "version": "3.9.0-depup.0"
+    }
   }
 }
