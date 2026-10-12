@@ -49,6 +49,14 @@ jobs:
       reason: ${{ steps.gate.outputs.reason }}
 
     steps:
+      # Trusted module only (no dependencies); the credential is not persisted.
+      - name: Checkout Rate Limit Module
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts/request-rate-limit.mjs
+          sparse-checkout-cone-mode: false
+
       # Public submissions stay open, but an unreviewed publish is only triggered by
       # a repository member or by an established, non-bot account. Event data reaches
       # the script through env only. Fails closed: any lookup error denies the run.
@@ -59,6 +67,7 @@ jobs:
           AUTHOR_ASSOCIATION: ${{ github.event.issue.author_association }}
           AUTHOR_LOGIN: ${{ github.event.issue.user.login }}
           AUTHOR_TYPE: ${{ github.event.issue.user.type }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
           SENDER_LOGIN: ${{ github.event.sender.login }}
         with:
           script: |
@@ -71,6 +80,7 @@ jobs:
             const author = process.env.AUTHOR_LOGIN || '';
             const authorType = process.env.AUTHOR_TYPE || '';
             const sender = process.env.SENDER_LOGIN || '';
+            const issueNumber = Number(process.env.ISSUE_NUMBER);
 
             // Fail closed: deny unless a rule below explicitly allows.
             core.setOutput('allowed', 'false');
@@ -82,8 +92,36 @@ jobs:
               console.log('Trust gate: allowed=' + allowed + ' reason=' + reason);
             };
 
+            // Per-author daily cap (trusted code in scripts/request-rate-limit.mjs).
+            // A maintainer relabel below is not capped. Any error fails closed
+            // with reason rate_limit_error: no publish, no comment, log only.
+            const underCap = async () => {
+              const { checkRateLimit } = await import(
+                process.env.GITHUB_WORKSPACE + '/scripts/request-rate-limit.mjs'
+              );
+              const result = await checkRateLimit({
+                association,
+                author,
+                currentIssue: issueNumber,
+                github,
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+              console.log('Rate cap: count=' + result.count + ' cap=' + result.cap + ' reason=' + result.reason);
+              if (result.allowed) {
+                return true;
+              }
+              finish(false, result.reason);
+              if (result.reason === 'rate_limit_error') {
+                core.setFailed('Rate cap lookup failed; denying the request without a comment: ' + result.error);
+              }
+              return false;
+            };
+
             if (TRUSTED_ASSOCIATIONS.has(association)) {
-              finish(true, 'trusted_association');
+              if (await underCap()) {
+                finish(true, 'trusted_association');
+              }
               return;
             }
 
@@ -129,7 +167,9 @@ jobs:
               }
               const ageDays = (Date.now() - createdAt) / MS_PER_DAY;
               if (ageDays >= MIN_ACCOUNT_AGE_DAYS) {
-                finish(true, 'account_age');
+                if (await underCap()) {
+                  finish(true, 'account_age');
+                }
                 return;
               }
               finish(false, 'new_account');
@@ -139,7 +179,7 @@ jobs:
             }
 
       - name: Explain Denied Request
-        if: always() && steps.gate.outputs.allowed != 'true'
+        if: always() && steps.gate.outputs.allowed != 'true' && steps.gate.outputs.reason != 'rate_limit_error'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           AUTHOR_LOGIN: ${{ github.event.issue.user.login }}
@@ -150,7 +190,9 @@ jobs:
             const author = process.env.AUTHOR_LOGIN || 'unknown';
 
             let comment = '## Package Request Awaiting Maintainer Approval\n\n';
-            if (reason === 'lookup_error') {
+            if (reason === 'rate_limited') {
+              comment += 'The daily limit for package requests from `' + author + '` has been reached, so this request was not processed or published. It will not be processed until the limit resets or a maintainer approves it.\n\n';
+            } else if (reason === 'lookup_error') {
               comment += 'DepUp could not verify the submitter of this request, so it was not processed or published.\n\n';
             } else {
               comment += 'Automatic publishing is limited to repository collaborators and GitHub accounts that are at least 30 days old and not bots. `' + author + '` does not meet that bar, so this request was not processed or published.\n\n';
