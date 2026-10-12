@@ -12,13 +12,13 @@ npm install @depup/vuepress
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.9.10 | **DepUp version**: 1.9.10-depup.0 | **Updated**: 3/17/2026 | **Import test**: unknown
+**Original version**: 1.9.10 | **DepUp version**: 1.9.10-depup.1 | **Updated**: 10/12/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| cac | `^6.5.6` | `^7.0.0` |
+| cac | `^6.5.6` | `^7.1.0` |
 | envinfo | `^7.2.0` | `^7.21.0` |
 | opencollective-postinstall | `^2.0.2` | `^2.0.3` |
 | update-notifier | `^4.0.0` | `^7.3.1` |
