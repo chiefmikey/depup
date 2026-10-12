@@ -14,6 +14,9 @@ const npmregfetch = require('npm-registry-fetch');
 // depup.mjs exits with this code when --test was requested and the package
 // failed verification (it was recorded in integrity.json, not published).
 const EXIT_VERIFICATION_FAILED = 3;
+// depup.mjs exits with this code when the publish gate (publish-gate.mjs)
+// blocked the package (nothing was published).
+const EXIT_SECURITY_BLOCKED = 4;
 // Stop retrying a version once this many revisions failed verification: retries
 // absorb flaky installs, but a genuinely broken package must not be re-run
 // (download, install, test) on every cron cycle forever.
@@ -517,6 +520,8 @@ class PackageDiscoverer {
         errorMessage += ': Process killed';
       } else if (error.code === EXIT_VERIFICATION_FAILED) {
         errorMessage += ': Verification failed (smoke test); not published';
+      } else if (error.code === EXIT_SECURITY_BLOCKED) {
+        errorMessage += ': Blocked by the security gate; not published';
       } else if (error.code) {
         errorMessage += `: Exit code ${error.code}`;
       } else {

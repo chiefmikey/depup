@@ -17695,6 +17695,12 @@ describe('pipeline robustness fixes', () => {
         JSON.stringify({ '1.0.0': versionEntry }),
       );
 
+    // These tests are about the publish decision; the gate has its own tests
+    // (publish-gate*.test.js) and would block the fake revision directory.
+    beforeEach(() => {
+      jest.spyOn(depup, 'runPublishGate').mockResolvedValue();
+    });
+
     it('publishes rev 1 with no dep changes when rev 0 failed to publish', async () => {
       await writeIntegrity({ 0: { smokeTest: 'skipped', status: 'failed' } });
       const publishSpy = jest
