@@ -12,9 +12,15 @@ const fsState = { readImpl: null };
 const writeFile = jest.fn(async () => undefined);
 const mkdir = jest.fn(async () => undefined);
 const readFile = jest.fn(async (...args) => fsState.readImpl(...args));
+// The packages/ scan finds nothing: the directory does not exist.
+const readdir = jest.fn(async () => {
+  throw Object.assign(new Error('ENOENT: no such directory'), {
+    code: 'ENOENT',
+  });
+});
 
 jest.unstable_mockModule('node:fs', () => {
-  const promises = { mkdir, readFile, writeFile };
+  const promises = { mkdir, readFile, readdir, writeFile };
   const mod = { default: { promises }, promises };
   return mod;
 });

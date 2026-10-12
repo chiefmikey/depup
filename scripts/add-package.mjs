@@ -55,6 +55,52 @@ class PackageAdder {
     'user-packages.json',
   );
 
+  curatedPackagesPath = path.resolve(
+    import.meta.dirname,
+    '..',
+    'config',
+    'curated-packages.json',
+  );
+
+  packagesPath = path.resolve(import.meta.dirname, '..', 'packages');
+
+  // Names of every package already published (one directory each, scoped ones
+  // under @scope/). Packages that dropped out of the weekly top-1000 refresh
+  // are in neither list but stay here, and stay published to npm.
+  async loadPublishedPackages() {
+    const names = [];
+    for (const name of await readDirectories(this.packagesPath)) {
+      if (name.startsWith('@')) {
+        const children = await readDirectories(
+          path.join(this.packagesPath, name),
+        );
+        names.push(...children.map((child) => `${name}/${child}`));
+      } else {
+        names.push(name);
+      }
+    }
+    return names;
+  }
+
+  // Unlike the user list this fails closed: it is read to refuse a request, so
+  // an unreadable file must not silently turn the check off. A missing file
+  // (fresh checkout without the curated list) just means nothing is curated.
+  async loadCuratedPackages() {
+    let data;
+    try {
+      data = JSON.parse(await fs.readFile(this.curatedPackagesPath));
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        return [];
+      }
+      throw new Error(
+        `Could not read the curated package list: ${error.message}`,
+        { cause: error },
+      );
+    }
+    return Array.isArray(data?.packages) ? data.packages : [];
+  }
+
   async loadUserPackages() {
     try {
       const data = JSON.parse(await fs.readFile(this.userPackagesPath));
@@ -97,6 +143,19 @@ class PackageAdder {
     // Check if already in list (case-insensitive)
     if (existing.some((p) => p.toLowerCase() === packageName.toLowerCase())) {
       throw new Error(`Package ${packageName} is already in the user list`);
+    }
+
+    // @a/b and a__b share one @depup name; never accept the second of them.
+    // Checked against both lists and everything already published.
+    const collision = findScopedNameCollision(packageName, [
+      ...existing,
+      ...(await this.loadCuratedPackages()),
+      ...(await this.loadPublishedPackages()),
+    ]);
+    if (collision) {
+      throw new Error(
+        `Package ${packageName} would publish to @depup/${toFlatName(packageName)}, which ${collision} already uses`,
+      );
     }
 
     const updated = [...existing, packageName].toSorted((a, b) =>
@@ -151,7 +210,52 @@ class PackageAdder {
   }
 }
 
-export { PackageAdder };
+// Name of the package this one publishes to, minus the @depup/ prefix:
+// @scope/name -> scope__name. The same mapping as flattenPackageName in
+// utilities.mjs, kept local so this script imports nothing (the commit job runs
+// it without an install, and its tests mock node:fs).
+function toFlatName(packageName) {
+  return packageName.startsWith('@')
+    ? packageName.slice(1).replace('/', '__')
+    : packageName;
+}
+
+/**
+ * Find a package in `otherNames` that publishes to the same @depup name as
+ * `packageName` without being the same package. `@a/b` and the unscoped
+ * `a__b` both become `@depup/a__b`, so accepting both would let whoever
+ * registered `a__b` on npm publish into the namespace of `@a/b`.
+ */
+function findScopedNameCollision(packageName, otherNames) {
+  const target = toFlatName(packageName);
+  return otherNames.find(
+    (other) =>
+      typeof other === 'string' &&
+      other !== packageName &&
+      toFlatName(other) === target,
+  );
+}
+
+// Visible subdirectories of `directory`; a missing directory has none. Fails
+// closed otherwise: this feeds a refusal check, so an unreadable directory must
+// not silently turn it off.
+async function readDirectories(directory) {
+  try {
+    const entries = await fs.readdir(directory, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+      .map((entry) => entry.name);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+    throw new Error(`Could not read the published packages: ${error.message}`, {
+      cause: error,
+    });
+  }
+}
+
+export { findScopedNameCollision, PackageAdder };
 
 // CLI interface
 if (process.argv[1] === import.meta.filename) {

@@ -5904,6 +5904,193 @@ describe('add-package.mjs -- coverage gap fill', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════
+// add-package.mjs -- @depup name collisions. @scope/name flattens to
+// @depup/scope__name, which is also where the unscoped npm package
+// scope__name would publish. Anyone can register scope__name on npm, so
+// accepting it would let them publish into the namespace of @scope/name.
+// ═══════════════════════════════════════════════════════════════════
+describe('add-package.mjs -- @depup name collisions', () => {
+  let adder;
+  let temporaryDirectory;
+
+  const writeList = async (file, packages) => {
+    await fs.writeFile(file, JSON.stringify({ packages }));
+  };
+
+  beforeEach(async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    temporaryDirectory = await fs.mkdtemp(
+      path.join(os.tmpdir(), 'depup-addpkg-collide-'),
+    );
+    adder = new PackageAdder();
+    adder.userPackagesPath = path.join(temporaryDirectory, 'user.json');
+    adder.curatedPackagesPath = path.join(temporaryDirectory, 'curated.json');
+    adder.packagesPath = path.join(temporaryDirectory, 'packages');
+    await writeList(adder.curatedPackagesPath, ['@babel/core', 'lodash']);
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(async () => {
+    jest.restoreAllMocks();
+    await fs.rm(temporaryDirectory, { force: true, recursive: true });
+  });
+
+  it('rejects an unscoped name that flattens onto a curated scoped package', async () => {
+    await expect(adder.addPackage('babel__core')).rejects.toThrow(
+      '@depup/babel__core',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('rejects a scoped name that flattens onto a user-submitted package', async () => {
+    await writeList(adder.userPackagesPath, ['a__b']);
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow('@depup/a__b');
+    await expect(adder.loadUserPackages()).resolves.toStrictEqual(['a__b']);
+  });
+
+  it('finds every flattening of the same @depup name', async () => {
+    const { findScopedNameCollision } = await import('../add-package.mjs');
+
+    expect(findScopedNameCollision('babel__core', ['@babel/core'])).toBe(
+      '@babel/core',
+    );
+    expect(findScopedNameCollision('@babel/core', ['x', 'babel__core'])).toBe(
+      'babel__core',
+    );
+    // @a__b/c and a__b__c, and @a/b__c, all become @depup/a__b__c
+    expect(findScopedNameCollision('@a__b/c', ['a__b__c', '@a/b__c'])).toBe(
+      'a__b__c',
+    );
+  });
+
+  it('does not flag the same package, unrelated names or non-strings', async () => {
+    const { findScopedNameCollision } = await import('../add-package.mjs');
+
+    expect(findScopedNameCollision('lodash', ['lodash'])).toBeUndefined();
+    expect(
+      findScopedNameCollision('@babel/core', ['@babel/cli', 'core']),
+    ).toBeUndefined();
+    expect(findScopedNameCollision('a', [])).toBeUndefined();
+    expect(findScopedNameCollision('a', [undefined, 42, null])).toBeUndefined();
+  });
+
+  it('keeps the existing duplicate message for repeats in the user list', async () => {
+    await adder.addPackage('react');
+
+    await expect(adder.addPackage('react')).rejects.toThrow(
+      'already in the user list',
+    );
+  });
+
+  it('still adds unrelated names and names already curated verbatim', async () => {
+    await expect(adder.addPackage('@babel/cli')).resolves.toMatchObject({
+      added: true,
+    });
+    await expect(adder.addPackage('lodash')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('adds names when the curated list is missing', async () => {
+    await fs.rm(adder.curatedPackagesPath);
+
+    await expect(adder.addPackage('babel__core')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('fails closed when the curated list cannot be parsed', async () => {
+    await fs.writeFile(adder.curatedPackagesPath, '{ not json');
+
+    await expect(adder.addPackage('babel__core')).rejects.toThrow(
+      'Could not read the curated package list',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  // Packages that dropped out of the weekly top-1000 refresh stay published
+  // (and stay under packages/) but are in neither list any more.
+  it('rejects a name that flattens onto a published package missing from both lists', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, '@angular', 'cdk'), {
+      recursive: true,
+    });
+
+    await expect(adder.addPackage('angular__cdk')).rejects.toThrow(
+      '@depup/angular__cdk',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('rejects a scoped name that flattens onto a published unscoped package', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, 'a__b'), { recursive: true });
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow('@depup/a__b');
+  });
+
+  it('ignores hidden entries and plain files under packages/', async () => {
+    await fs.mkdir(path.join(adder.packagesPath, '.git', 'x'), {
+      recursive: true,
+    });
+    await fs.writeFile(path.join(adder.packagesPath, 'a__b'), 'not a dir');
+
+    await expect(adder.addPackage('@a/b')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('fails closed when packages/ cannot be read', async () => {
+    await fs.writeFile(adder.packagesPath, 'a file, not a directory');
+
+    await expect(adder.addPackage('@a/b')).rejects.toThrow(
+      'Could not read the published packages',
+    );
+    await expect(fs.access(adder.userPackagesPath)).rejects.toThrow('ENOENT');
+  });
+
+  it('adds names when packages/ does not exist', async () => {
+    await expect(adder.addPackage('@a/b')).resolves.toMatchObject({
+      added: true,
+    });
+  });
+
+  it('checks against the real packages/ directory by default', async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    const realAdder = new PackageAdder();
+    realAdder.userPackagesPath = adder.userPackagesPath;
+    // Keep the two lists out of it so only the packages/ scan can reject.
+    realAdder.curatedPackagesPath = adder.curatedPackagesPath;
+    const packagesRoot = path.resolve(
+      import.meta.dirname,
+      '..',
+      '..',
+      'packages',
+    );
+    const scopes = (await fs.readdir(packagesRoot, { withFileTypes: true }))
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith('@'))
+      .map((entry) => entry.name);
+    const [scope] = scopes;
+    const child = (
+      await fs.readdir(path.join(packagesRoot, scope), { withFileTypes: true })
+    ).find((entry) => entry.isDirectory());
+    const flat = `${scope.slice(1)}__${child.name}`;
+
+    await expect(realAdder.addPackage(flat)).rejects.toThrow(`@depup/${flat}`);
+  });
+
+  it('checks against the real curated list by default', async () => {
+    const { PackageAdder } = await import('../add-package.mjs');
+    const realAdder = new PackageAdder();
+    realAdder.userPackagesPath = adder.userPackagesPath;
+
+    // @typescript-eslint/types is one of the 1000 curated packages in the repo.
+    await expect(
+      realAdder.addPackage('typescript-eslint__types'),
+    ).rejects.toThrow('@depup/typescript-eslint__types');
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════
 // integrity-meter.mjs -- coverage gap fill (PR: raise core pipeline coverage)
 // ═══════════════════════════════════════════════════════════════════
 describe('integrity-meter.mjs -- coverage gap fill', () => {
