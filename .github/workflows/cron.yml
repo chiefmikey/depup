@@ -65,9 +65,16 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Import GPG Key
+      # The key itself is imported after the script step (see Import GPG Key
+      # below); this check only fails the job before anything is published.
+      - name: Verify GPG key (fail fast before publishing)
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
+            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
+            exit 1
+          fi
 
       - name: Configure Git
         run: |
@@ -91,6 +98,17 @@ jobs:
           echo "Starting package discovery (shard ${{ matrix.shard }}/3)..."
           npm run cron:discover 2>&1 | tee /tmp/depup-discover.log
           exit "${PIPESTATUS[0]}"
+
+      # The signing key is imported only now, after all package code has run:
+      # package code runs as this user and could otherwise export it from the
+      # keyring. Same condition as the commit step, so a failed script step
+      # still gets its (signed) commit.
+      - name: Import GPG Key
+        if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       # Runs even when the discover script failed: packages it already published
       # to npm must still be committed, otherwise git drifts from npm. The job
@@ -261,9 +279,16 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Import GPG Key
+      # The key itself is imported after the script step (see Import GPG Key
+      # below); this check only fails the job before anything is published.
+      - name: Verify GPG key (fail fast before publishing)
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          if ! printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --quiet --show-keys --with-colons | grep -q '^sec'; then
+            echo "::error::GPG_PRIVATE_KEY is empty or not a usable secret key. Aborting before anything is published, because the commit that records it could not be signed."
+            exit 1
+          fi
 
       - name: Configure Git
         run: |
@@ -287,6 +312,17 @@ jobs:
           echo "Starting package sync (shard ${{ matrix.shard }}/3)..."
           npm run cron:sync 2>&1 | tee /tmp/depup-sync.log
           exit "${PIPESTATUS[0]}"
+
+      # The signing key is imported only now, after all package code has run:
+      # package code runs as this user and could otherwise export it from the
+      # keyring. Same condition as the commit step, so a failed script step
+      # still gets its (signed) commit.
+      - name: Import GPG Key
+        if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       # Runs even when the sync script failed: packages it already published to
       # npm must still be committed, otherwise git drifts from npm. The job
@@ -442,8 +478,10 @@ jobs:
         run: npm ci
 
       - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          printf '%s\n' "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Configure Git
         run: |
