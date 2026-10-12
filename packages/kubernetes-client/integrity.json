@@ -1,50 +1,5 @@
 {
   "9.0.0": {
-    "5": {
-      "changes": {
-        "@kubernetes/client-node": {
-          "from": "0.10.2",
-          "to": "^2.0.0"
-        },
-        "camelcase": {
-          "from": "^6.0.0",
-          "to": "^9.0.0"
-        },
-        "deepmerge": {
-          "from": "^4.2.2",
-          "to": "^4.3.1"
-        },
-        "js-yaml": {
-          "from": "^3.13.1",
-          "to": "^5.2.3"
-        },
-        "openid-client": {
-          "from": "^3.14.0",
-          "to": "^6.8.5"
-        },
-        "pump": {
-          "from": "^3.0.0",
-          "to": "^3.0.4"
-        },
-        "qs": {
-          "from": "^6.9.0",
-          "to": "^6.15.3"
-        },
-        "url-join": {
-          "from": "^4.0.1",
-          "to": "^5.0.0"
-        },
-        "ws": {
-          "from": "^7.2.3",
-          "to": "^8.21.3"
-        }
-      },
-      "depsUpdated": 9,
-      "smokeTest": "passed",
-      "status": "published",
-      "timestamp": "2026-08-13T00:28:40.456Z",
-      "version": "9.0.0-depup.5"
-    },
     "6": {
       "changes": {
         "@kubernetes/client-node": {
@@ -224,6 +179,51 @@
       "status": "published",
       "timestamp": "2026-09-26T16:10:40.398Z",
       "version": "9.0.0-depup.9"
+    },
+    "10": {
+      "changes": {
+        "@kubernetes/client-node": {
+          "from": "0.10.2",
+          "to": "^2.0.0"
+        },
+        "camelcase": {
+          "from": "^6.0.0",
+          "to": "^10.0.0"
+        },
+        "deepmerge": {
+          "from": "^4.2.2",
+          "to": "^4.3.1"
+        },
+        "js-yaml": {
+          "from": "^3.13.1",
+          "to": "^5.4.3"
+        },
+        "openid-client": {
+          "from": "^3.14.0",
+          "to": "^6.8.8"
+        },
+        "pump": {
+          "from": "^3.0.0",
+          "to": "^3.0.4"
+        },
+        "qs": {
+          "from": "^6.9.0",
+          "to": "^6.16.0"
+        },
+        "url-join": {
+          "from": "^4.0.1",
+          "to": "^5.0.0"
+        },
+        "ws": {
+          "from": "^7.2.3",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-12T16:10:17.927Z",
+      "version": "9.0.0-depup.10"
     }
   }
 }
