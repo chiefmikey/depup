@@ -3,7 +3,7 @@
  * Every test here exercises real code paths, not inline reimplementations.
  */
 import { execFileSync } from 'node:child_process';
-import { existsSync, promises as fs } from 'node:fs';
+import { existsSync, promises as fs, readdirSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
@@ -2494,8 +2494,12 @@ describe('securityScanner coverage gaps', () => {
 
       await scanner.performVulnerabilityScan('/fake/path');
 
-      expect(runNpmAudit).toHaveBeenCalledWith('/fake/path');
-      expect(runSnykScan).toHaveBeenCalledWith('/fake/path');
+      // Both audits run in the same staged copy, never in the scanned path.
+      const [[auditDirectory]] = runNpmAudit.mock.calls;
+
+      expect(auditDirectory).not.toBe('/fake/path');
+      expect(path.basename(auditDirectory)).toMatch(/^depup-audit-/u);
+      expect(runSnykScan).toHaveBeenCalledWith(auditDirectory);
       expect(runOwaspDependencyCheck).toHaveBeenCalledWith();
     });
   });
@@ -16555,6 +16559,102 @@ describe('security modules audit fixes', () => {
         scanner.performMalwareScan(temporaryDirectory, false),
       ).rejects.toThrow('ClamAV scan failed');
       await expect(fs.access(usedLogPath)).rejects.toThrow();
+    });
+  });
+
+  // The scanned package is attacker-controlled: its .npmrc (registry, proxy,
+  // ca, ${NPM_TOKEN} credentials) must not steer the audit that judges it.
+  describe('security-scan: untrusted .npmrc cannot steer the audit (fix E)', () => {
+    const originalEnvironment = process.env;
+    let scanner;
+    let scanPath;
+
+    beforeEach(async () => {
+      process.env = {
+        ...originalEnvironment,
+        NODE_AUTH_TOKEN: 'secret-node-auth',
+        NPM_TOKEN: 'secret-npm',
+        SNYK_TOKEN: 'snyk-needs-this',
+      };
+      scanner = new SecurityScanner();
+      scanPath = path.join(temporaryDirectory, 'scanned');
+      await fs.mkdir(scanPath, { recursive: true });
+      await fs.writeFile(path.join(scanPath, 'package.json'), '{"name":"x"}');
+      await fs.writeFile(path.join(scanPath, 'package-lock.json'), '{}');
+      await fs.writeFile(
+        path.join(scanPath, '.npmrc'),
+        'registry=http://evil.example/\n',
+      );
+      await fs.writeFile(path.join(scanPath, 'index.js'), '//');
+    });
+
+    afterEach(() => {
+      process.env = originalEnvironment;
+    });
+
+    it('runs npm audit and snyk without publish tokens', async () => {
+      const { execFileSync, loaded } = await loadWithMockedExec(
+        '../security-scan.mjs',
+      );
+      const fresh = new loaded.SecurityScanner();
+
+      fresh.runNpmAuditCommand('/some/dir');
+      fresh.runSnykCommand('/some/dir');
+
+      for (const [, , options] of execFileSync.mock.calls) {
+        expect(options.env).toBeDefined();
+        expect(options.env.NPM_TOKEN).toBeUndefined();
+        expect(options.env.NODE_AUTH_TOKEN).toBeUndefined();
+      }
+
+      expect(execFileSync.mock.calls[1][2].env.SNYK_TOKEN).toBe(
+        'snyk-needs-this',
+      );
+      expect(process.env.NPM_TOKEN).toBe('secret-npm');
+    });
+
+    it('audits a clean copy of the manifest and lockfile, not the package dir', async () => {
+      const seen = [];
+      const record = (directory) => {
+        seen.push({
+          directory,
+          files: readdirSync(directory).toSorted(),
+        });
+      };
+      jest.spyOn(scanner, 'runNpmAuditCommand').mockImplementation((dir) => {
+        record(dir);
+        return JSON.stringify({ metadata: { vulnerabilities: { total: 0 } } });
+      });
+      jest.spyOn(scanner, 'runSnykCommand').mockImplementation((dir) => {
+        record(dir);
+        return JSON.stringify({ vulnerabilities: [] });
+      });
+
+      await scanner.performVulnerabilityScan(scanPath);
+
+      expect(seen.map((entry) => entry.files)).toStrictEqual([
+        ['package-lock.json', 'package.json'],
+        ['package-lock.json', 'package.json'],
+      ]);
+      expect(seen[0].directory).not.toBe(scanPath);
+      expect(seen[1].directory).toBe(seen[0].directory);
+      // The staged copy is removed, and the scanned package is left untouched.
+      expect(existsSync(seen[0].directory)).toBe(false);
+      expect(existsSync(path.join(scanPath, '.npmrc'))).toBe(true);
+    });
+
+    it('removes the staged copy even when the audit throws', async () => {
+      let stagedDirectory;
+      jest.spyOn(scanner, 'runNpmAuditCommand').mockImplementation((dir) => {
+        stagedDirectory = dir;
+        throw new Error('audit crashed');
+      });
+
+      await expect(scanner.performVulnerabilityScan(scanPath)).rejects.toThrow(
+        'audit crashed',
+      );
+      expect(stagedDirectory).toBeDefined();
+      expect(existsSync(stagedDirectory)).toBe(false);
     });
   });
 
