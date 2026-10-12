@@ -15314,6 +15314,108 @@ describe('depup.mjs -- coverage gap fill', () => {
   });
 });
 
+// The @depup scope holds this project's own output. A request for a package in
+// that scope would be re-published as @depup/depup__<name>, re-processing our
+// own packages (and everything they depend on) under a second name.
+describe('@depup scope is never a valid request', () => {
+  const loadStep = async (jobName, stepName) => {
+    const yamlModule = await import('js-yaml');
+    const load = yamlModule.load ?? yamlModule.default.load;
+    const workflow = load(
+      await fs.readFile(
+        path.resolve(
+          import.meta.dirname,
+          '..',
+          '..',
+          '.github',
+          'workflows',
+          'process-package-request.yml',
+        ),
+        'utf8',
+      ),
+    );
+    return workflow.jobs[jobName].steps.find((step) => step.name === stepName);
+  };
+
+  // Run the real Parse Issue Content script against a fake issue.
+  const runParseStep = async (name) => {
+    const step = await loadStep('process', 'Parse Issue Content');
+    const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
+    const outputs = {};
+    const failures = [];
+    const core = {
+      setFailed: (message) => failures.push(message),
+      setOutput: (key, value) => {
+        outputs[key] = value;
+      },
+    };
+    const context = {
+      payload: {
+        issue: {
+          body: `### Package Name\n\n${name}\n\n### NPM Package URL\n\nhttps://www.npmjs.com/package/x\n`,
+          title: 'Add package: [package-name]',
+        },
+      },
+    };
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    await new AsyncFunction('context', 'core', step.with.script)(context, core);
+    return { failures, outputs };
+  };
+
+  const runValidateStep = async (name) => {
+    const { spawnSync } = await import('node:child_process');
+    const step = await loadStep('process', 'Validate Package Name');
+    return spawnSync('bash', ['-c', step.run], {
+      encoding: 'utf8',
+      env: { PACKAGE_NAME: name, PATH: process.env.PATH },
+    });
+  };
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it.each(['@depup/lodash', '@depup/depup__lodash', '@DepUp/lodash'])(
+    'the parse step rejects %s and sets no package_name output',
+    async (name) => {
+      const { failures, outputs } = await runParseStep(name);
+
+      expect(failures).toHaveLength(1);
+      expect(outputs).not.toHaveProperty('package_name');
+    },
+  );
+
+  it.each(['@depup/lodash', '@depup/depup__lodash', '@DepUp/lodash'])(
+    'the validate step rejects %s',
+    async (name) => {
+      const result = await runValidateStep(name);
+
+      expect(result.status).toBe(1);
+    },
+  );
+
+  it.each(['@types/node', 'depup', '@depupx/pkg', '@my/depup'])(
+    'the parse and validate steps still accept %s',
+    async (name) => {
+      const { failures, outputs } = await runParseStep(name);
+      const result = await runValidateStep(name);
+
+      expect(failures).toHaveLength(0);
+      expect(outputs.package_name).toBe(name);
+      expect(result.status).toBe(0);
+    },
+  );
+
+  it.each(['@depup/lodash', '@DepUp/lodash'])(
+    'depup.mjs refuses to process %s',
+    (spec) => {
+      expect(() => new DepUp().validatePackageSpec(spec)).toThrow(
+        'Invalid package spec format',
+      );
+    },
+  );
+});
+
 describe('depup.mjs -- publish audit hardening', () => {
   let depup;
   let tmpDir;

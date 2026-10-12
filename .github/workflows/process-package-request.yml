@@ -245,6 +245,14 @@ jobs:
               return;
             }
 
+            // @depup is this project's own publish scope (@scope/name -> @depup/scope__name).
+            // Re-publishing it would turn our output into @depup/depup__<name>.
+            if (/^@depup\//i.test(packageName)) {
+              console.log('Rejected package in the @depup scope:', JSON.stringify(packageName));
+              core.setFailed('Packages in the @depup scope cannot be requested');
+              return;
+            }
+
             // Extract package URL
             const urlMatch = issueBody.match(/### NPM Package URL\s*\n\s*(https?:\/\/[^\s]+)/);
             const packageUrl = urlMatch ? urlMatch[1].trim() : '';
@@ -285,6 +293,14 @@ jobs:
           fi
           if [[ ! "$PACKAGE_NAME" =~ ^(@[a-zA-Z0-9][a-zA-Z0-9._-]*/)?[a-zA-Z0-9][a-zA-Z0-9._-]*$ ]]; then
             echo "Invalid package name format: $PACKAGE_NAME"
+            exit 1
+          fi
+
+          # @depup is this project's own publish scope; requesting it would re-publish
+          # our output as @depup/depup__<name>. Scopes are case-insensitive.
+          if [[ "${PACKAGE_NAME,,}" == @depup/* ]]; then
+            echo "Invalid package name: $PACKAGE_NAME"
+            echo "Packages in the @depup scope cannot be requested"
             exit 1
           fi
 

@@ -263,8 +263,10 @@ class DepUp {
   // Reject path traversal, characters not valid in npm package specs and any
   // spec that is not a plain registry `name[@version|tag]` reference.
   validatePackageSpec(packageSpec) {
+    // @depup is our own publish scope; re-processing it double-prefixes the name.
     if (
       packageSpec.includes('..') ||
+      /^@depup\//iu.test(packageSpec) ||
       /[;`$|><\\{}[\]!#%^&*()='"]/u.test(packageSpec) ||
       !isRegistrySpec(packageSpec)
     ) {
