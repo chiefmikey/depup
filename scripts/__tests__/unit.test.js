@@ -17268,3 +17268,133 @@ describe('pipeline robustness fixes', () => {
     });
   });
 });
+
+// ═══════════════════════════════════════════════════════════════════
+// Credential isolation: untrusted install/import children get no
+// credentials; npm publish gets exactly the publish token.
+// ═══════════════════════════════════════════════════════════════════
+describe('child process credential isolation', () => {
+  const CREDENTIALS = {
+    ACTIONS_ID_TOKEN_REQUEST_TOKEN: 'canary-oidc-request-token',
+    ACTIONS_RUNTIME_TOKEN: 'canary-runtime-token',
+    BOT_PAT: 'canary-bot-pat',
+    GH_TOKEN: 'canary-gh-token',
+    GITHUB_TOKEN: 'canary-github-token',
+    GPG_PRIVATE_KEY: 'canary-gpg-private-key',
+    NODE_AUTH_TOKEN: 'canary-node-auth-token',
+    'npm_config_//registry.npmjs.org/:_authToken': 'canary-npmrc-token',
+    NPM_TOKEN: 'canary-npm-token',
+  };
+  const BENIGN = {
+    GITHUB_REPOSITORY: 'depup/npm',
+    NPM_CONFIG_USERCONFIG: '/tmp/canary-npmrc',
+  };
+  let depup;
+  let workDirectory;
+  let savedEnvironment;
+
+  const dumpEnvironmentSource = [
+    "import { writeFileSync } from 'node:fs';",
+    "writeFileSync('seen.json', JSON.stringify(process.env));",
+  ].join('\n');
+
+  const seenByChild = async (directory) =>
+    JSON.parse(await fs.readFile(path.join(directory, 'seen.json')));
+
+  beforeEach(async () => {
+    savedEnvironment = { ...process.env };
+    Object.assign(process.env, CREDENTIALS, BENIGN);
+    depup = new DepUp();
+    workDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'depup-creds-'));
+  });
+
+  afterEach(async () => {
+    for (const name of Object.keys({ ...CREDENTIALS, ...BENIGN })) {
+      if (savedEnvironment[name] === undefined) {
+        delete process.env[name];
+      } else {
+        process.env[name] = savedEnvironment[name];
+      }
+    }
+    await fs.rm(workDirectory, { force: true, recursive: true });
+  });
+
+  it('untrusted install commands run without any credential variable', async () => {
+    await fs.writeFile(
+      path.join(workDirectory, 'dump.mjs'),
+      dumpEnvironmentSource,
+    );
+
+    const installed = depup.tryInstallMethods(
+      [[process.execPath, ['dump.mjs']]],
+      workDirectory,
+      false,
+      60_000,
+    );
+    const seen = await seenByChild(workDirectory);
+
+    expect(installed).toBe(true);
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      expect(seen[name]).toBeUndefined();
+    }
+
+    // Unrelated configuration must survive so npm still works.
+    expect(seen.GITHUB_REPOSITORY).toBe('depup/npm');
+    expect(seen.NPM_CONFIG_USERCONFIG).toBe('/tmp/canary-npmrc');
+    expect(seen.PATH).toBe(process.env.PATH);
+  });
+
+  it('the untrusted import test runs without any credential variable', async () => {
+    await fs.writeFile(
+      path.join(workDirectory, 'test.mjs'),
+      dumpEnvironmentSource,
+    );
+
+    await depup.executeImportTest(workDirectory, false, 60_000);
+    const seen = await seenByChild(workDirectory);
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      expect(seen[name]).toBeUndefined();
+    }
+
+    expect(seen.GITHUB_REPOSITORY).toBe('depup/npm');
+  });
+
+  it('npm publish receives the publish token and no other credential', async () => {
+    const binDirectory = path.join(workDirectory, 'bin');
+    await fs.mkdir(binDirectory);
+    const fakeNpm = path.join(binDirectory, 'npm');
+    await fs.writeFile(fakeNpm, '#!/bin/sh\nenv > "$PWD/npm-env.txt"\n');
+    await fs.chmod(fakeNpm, 0o755);
+    process.env.PATH = `${binDirectory}${path.delimiter}${savedEnvironment.PATH}`;
+
+    try {
+      depup.executePublish(workDirectory, '1.0.0-depup.0', false);
+    } finally {
+      process.env.PATH = savedEnvironment.PATH;
+    }
+    const lines = (
+      await fs.readFile(path.join(workDirectory, 'npm-env.txt'), 'utf8')
+    ).split('\n');
+    const names = new Set(lines.map((line) => line.split('=')[0]));
+
+    expect(lines).toContain('NODE_AUTH_TOKEN=canary-npm-token');
+
+    for (const name of Object.keys(CREDENTIALS)) {
+      if (name !== 'NODE_AUTH_TOKEN') {
+        expect(names.has(name)).toBe(false);
+      }
+    }
+
+    expect(lines).toContain('GITHUB_REPOSITORY=depup/npm');
+  });
+
+  it('does not mutate process.env while building the sanitized copy', () => {
+    depup.buildSanitizedInstallEnvironment();
+
+    for (const [name, value] of Object.entries(CREDENTIALS)) {
+      expect(process.env[name]).toBe(value);
+    }
+  });
+});

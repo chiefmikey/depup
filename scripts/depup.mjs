@@ -10,6 +10,7 @@ import pacote from 'pacote';
 import semver from 'semver';
 
 import {
+  buildSanitizedEnvironment,
   hasUnpublishedFailedRevision,
   isEntryPoint,
   isNonSemverSpecifier,
@@ -887,21 +888,12 @@ class DepUp {
     ];
   }
 
-  // Clone of process.env for subprocesses that run untrusted package code:
-  // the publish tokens are stripped so they can never be read, and the
-  // GitHub Actions workflow-command files (GITHUB_ENV, GITHUB_PATH,
-  // GITHUB_OUTPUT, GITHUB_STATE) are removed so untrusted code cannot append
-  // to them and poison later workflow steps.
-  // Returns a fresh object -- never mutates the real process.env.
+  // Copy of process.env for subprocesses: credential variables and the GitHub
+  // Actions workflow-command files are removed (see utilities.mjs), so
+  // untrusted package code can neither read a token nor poison later
+  // workflow steps. Returns a fresh object -- never mutates process.env.
   buildSanitizedInstallEnvironment() {
-    const sanitizedEnvironment = { ...process.env };
-    delete sanitizedEnvironment.NODE_AUTH_TOKEN;
-    delete sanitizedEnvironment.NPM_TOKEN;
-    delete sanitizedEnvironment.GITHUB_ENV;
-    delete sanitizedEnvironment.GITHUB_OUTPUT;
-    delete sanitizedEnvironment.GITHUB_PATH;
-    delete sanitizedEnvironment.GITHUB_STATE;
-    return sanitizedEnvironment;
+    return buildSanitizedEnvironment(process.env);
   }
 
   tryInstallMethods(methods, directory, debug, timeout) {
@@ -1158,7 +1150,11 @@ try {
 
     execFileSync('npm', publishArguments, {
       cwd: packageDirectory,
-      env: { ...process.env, NODE_AUTH_TOKEN: process.env.NPM_TOKEN },
+      // The publish token is the only credential npm receives.
+      env: {
+        ...this.buildSanitizedInstallEnvironment(),
+        NODE_AUTH_TOKEN: process.env.NPM_TOKEN,
+      },
       // npm's verbose output for a large package can exceed the 1 MiB
       // default and make a successful publish fail with ENOBUFS.
       maxBuffer: 64 * 1024 * 1024,
