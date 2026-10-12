@@ -23,7 +23,7 @@ Failing counts are the new tests run against base source; all pass on the branch
 | 6 | `fix/publish-npmrc-replant` | Import test could plant `.npmrc` after the first removal, redirecting the real publish and token to an attacker registry | 3 |
 | 7 | `fix/secure-install-ignore-scripts` | `depup-secure.yml` ran `npm install` of the package under scan with lifecycle scripts enabled | 2 |
 | 8 | `fix/depup-security-untrusted-npmrc` | `depup-security.mjs` audit/snyk/publish honoured a hostile package `.npmrc` and held publish tokens | 6 |
-| 9 | `fix/scan-untrusted-npmrc` | `security-scan.mjs` audited inside the package, so its `.npmrc` chose the registry that judged it (forged "no vulnerabilities") | 3 |
+| 9 | `fix/scan-untrusted-npmrc` | `security-scan.mjs` audited inside the package, so its `.npmrc` chose the registry that judged it (forged "no vulnerabilities") | 4 |
 | 10 | `fix/add-package-name-format` | `add-package` accepted `..`, `.`, `-x`, `__proto__`, `constructor`, `evil.tgz`, names over 214 chars; reserved names queued and retried forever | 21 |
 | 11 | `fix/depup-file-like-spec` | Bare `evil.tgz` / `.tar` / `.tar.gz` resolved by npm-package-arg as a local file | 6 |
 | 12 | `fix/reject-depup-scope` | `@depup/x` requests would re-publish our own output as `@depup/depup__x` | 8 |
