@@ -1,17 +1,19 @@
 {
   "name": "@depup/http-server",
-  "version": "14.1.1-depup.0",
-  "description": "[DepUp] A simple zero-configuration command-line http server",
+  "version": "14.1.1-depup.5",
+  "description": "A simple zero-configuration command-line http server (with updated dependencies)",
   "main": "./lib/http-server",
   "repository": {
     "type": "git",
     "url": "git://github.com/http-party/http-server.git"
   },
   "keywords": [
-    "depup",
-    "dependency-bumped",
-    "updated-deps",
     "http-server",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
     "cli",
     "command",
     "static",
@@ -90,19 +92,19 @@
     }
   ],
   "dependencies": {
-    "basic-auth": "^2.0.1",
-    "chalk": "^5.6.2",
+    "basic-auth": "^3.0.0",
+    "chalk": "^6.0.1",
     "corser": "^2.0.1",
-    "he": "^1.2.0",
-    "html-encoding-sniffer": "^6.0.0",
+    "he": "^2.0.0",
+    "html-encoding-sniffer": "^7.0.0",
     "http-proxy": "^1.18.1",
-    "mime": "^4.1.0",
+    "mime": "^4.1.1",
     "minimist": "^1.2.8",
     "opener": "^1.5.2",
     "portfinder": "^1.0.38",
     "secure-compare": "3.0.1",
     "union": "^0.6.0",
-    "url-join": "^5.0.0"
+    "url-join": "^5.1.0"
   },
   "devDependencies": {
     "eol": "^0.9.1",
@@ -122,17 +124,25 @@
   },
   "depup": {
     "changes": {
+      "basic-auth": {
+        "from": "^2.0.1",
+        "to": "^3.0.0"
+      },
       "chalk": {
         "from": "^4.1.2",
-        "to": "^5.6.2"
+        "to": "^6.0.1"
+      },
+      "he": {
+        "from": "^1.2.0",
+        "to": "^2.0.0"
       },
       "html-encoding-sniffer": {
         "from": "^3.0.0",
-        "to": "^6.0.0"
+        "to": "^7.0.0"
       },
       "mime": {
         "from": "^1.6.0",
-        "to": "^4.1.0"
+        "to": "^4.1.1"
       },
       "minimist": {
         "from": "^1.2.6",
@@ -152,13 +162,13 @@
       },
       "url-join": {
         "from": "^4.0.1",
-        "to": "^5.0.0"
+        "to": "^5.1.0"
       }
     },
-    "depsUpdated": 8,
+    "depsUpdated": 10,
     "originalPackage": "http-server",
     "originalVersion": "14.1.1",
-    "processedAt": "2026-03-17T16:36:37.759Z",
+    "processedAt": "2026-10-13T16:11:59.203Z",
     "smokeTest": "passed"
   }
 }

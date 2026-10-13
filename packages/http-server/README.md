@@ -12,7 +12,7 @@ npm install @depup/http-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 14.1.1 | **DepUp version**: 14.1.1-depup.4 | **Updated**: 10/4/2026 | **Import test**: passed
+**Original version**: 14.1.1 | **DepUp version**: 14.1.1-depup.5 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -22,12 +22,12 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | chalk | `^4.1.2` | `^6.0.1` |
 | he | `^1.2.0` | `^2.0.0` |
 | html-encoding-sniffer | `^3.0.0` | `^7.0.0` |
-| mime | `^1.6.0` | `^4.1.0` |
+| mime | `^1.6.0` | `^4.1.1` |
 | minimist | `^1.2.6` | `^1.2.8` |
 | opener | `^1.5.1` | `^1.5.2` |
 | portfinder | `^1.0.28` | `^1.0.38` |
 | union | `~0.5.0` | `^0.6.0` |
-| url-join | `^4.0.1` | `^5.0.0` |
+| url-join | `^4.0.1` | `^5.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/http-server&labels=bug).

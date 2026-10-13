@@ -12,12 +12,13 @@ npm install @depup/smithy__signature-v4
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.7.4 | **DepUp version**: 5.7.4-depup.0 | **Updated**: 9/26/2026 | **Import test**: passed
+**Original version**: 5.7.4 | **DepUp version**: 5.7.4-depup.1 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @smithy/core | `^3.35.0` | `^3.36.0` |
 | tslib | `^2.6.2` | `^2.8.1` |
 
 
