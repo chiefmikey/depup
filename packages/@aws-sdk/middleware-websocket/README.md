@@ -12,7 +12,7 @@ npm install @depup/aws-sdk__middleware-websocket
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.972.55 | **DepUp version**: 3.972.55-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
+**Original version**: 3.972.56 | **DepUp version**: 3.972.56-depup.0 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 

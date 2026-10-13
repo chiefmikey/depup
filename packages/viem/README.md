@@ -12,7 +12,7 @@ npm install @depup/viem
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.57.4 | **DepUp version**: 2.57.4-depup.2 | **Updated**: 10/10/2026 | **Import test**: failed
+**Original version**: 2.57.5 | **DepUp version**: 2.57.5-depup.0 | **Updated**: 10/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @scure/bip32 | `1.7.0` | `^2.4.0` |
 | @scure/bip39 | `1.6.0` | `^2.4.0` |
 | abitype | `1.2.3` | `^1.3.0` |
-| ox | `0.14.54` | `^1.8.6` |
+| ox | `0.14.56` | `^1.8.6` |
 | ws | `8.21.0` | `^8.22.0` |
 
 

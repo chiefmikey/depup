@@ -1011,6 +1011,59 @@
       "status": "published",
       "timestamp": "2026-10-09T00:38:16.562Z",
       "version": "8.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@google-cloud/paginator": {
+          "from": "^7.0.1",
+          "to": "^7.2.0"
+        },
+        "@google-cloud/projectify": {
+          "from": "^6.0.1",
+          "to": "^6.2.0"
+        },
+        "@google-cloud/promisify": {
+          "from": "^6.0.1",
+          "to": "^6.2.0"
+        },
+        "fast-xml-parser": {
+          "from": "^5.3.4",
+          "to": "^5.11.2"
+        },
+        "gaxios": {
+          "from": "^7.1.4",
+          "to": "^8.3.0"
+        },
+        "google-auth-library": {
+          "from": "^11.0.0",
+          "to": "^11.3.0"
+        },
+        "html-entities": {
+          "from": "^2.5.2",
+          "to": "^2.6.0"
+        },
+        "mime": {
+          "from": "^3.0.0",
+          "to": "^4.1.1"
+        },
+        "p-limit": {
+          "from": "^3.0.1",
+          "to": "^7.3.3"
+        },
+        "retry-request": {
+          "from": "^9.0.1",
+          "to": "^9.1.0"
+        },
+        "teeny-request": {
+          "from": "^11.0.1",
+          "to": "^11.1.0"
+        }
+      },
+      "depsUpdated": 11,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T00:39:36.990Z",
+      "version": "8.4.0-depup.1"
     }
   }
 }

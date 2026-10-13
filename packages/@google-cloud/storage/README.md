@@ -12,22 +12,23 @@ npm install @depup/google-cloud__storage
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.4.0 | **DepUp version**: 8.4.0-depup.0 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 8.4.0 | **DepUp version**: 8.4.0-depup.1 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @google-cloud/paginator | `^7.0.1` | `^7.1.0` |
-| @google-cloud/projectify | `^6.0.1` | `^6.1.0` |
-| @google-cloud/promisify | `^6.0.1` | `^6.1.0` |
+| @google-cloud/paginator | `^7.0.1` | `^7.2.0` |
+| @google-cloud/projectify | `^6.0.1` | `^6.2.0` |
+| @google-cloud/promisify | `^6.0.1` | `^6.2.0` |
 | fast-xml-parser | `^5.3.4` | `^5.11.2` |
-| gaxios | `^7.1.4` | `^8.2.0` |
-| google-auth-library | `^11.0.0` | `^11.2.0` |
+| gaxios | `^7.1.4` | `^8.3.0` |
+| google-auth-library | `^11.0.0` | `^11.3.0` |
 | html-entities | `^2.5.2` | `^2.6.0` |
-| mime | `^3.0.0` | `^4.1.0` |
+| mime | `^3.0.0` | `^4.1.1` |
 | p-limit | `^3.0.1` | `^7.3.3` |
-| retry-request | `^9.0.1` | `^9.0.2` |
+| retry-request | `^9.0.1` | `^9.1.0` |
+| teeny-request | `^11.0.1` | `^11.1.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/google-cloud__storage&labels=bug).
