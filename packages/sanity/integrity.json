@@ -13212,5 +13212,32 @@
       "timestamp": "2026-10-13T00:38:13.153Z",
       "version": "6.18.0-depup.3"
     }
+  },
+  "6.19.0": {
+    "0": {
+      "changes": {
+        "@sanity/sdk": {
+          "from": "^3.8.0",
+          "to": "^3.9.1"
+        },
+        "@sanity/sdk-react": {
+          "from": "^3.8.0",
+          "to": "^3.9.1"
+        },
+        "isomorphic-dompurify": {
+          "from": "2.36.0",
+          "to": "^4.5.0"
+        },
+        "motion": {
+          "from": "^14.1.1",
+          "to": "^14.2.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-13T16:13:24.343Z",
+      "version": "6.19.0-depup.0"
+    }
   }
 }

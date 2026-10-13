@@ -12,7 +12,7 @@ npm install @depup/express-status-monitor
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.3.4 | **DepUp version**: 1.3.4-depup.7 | **Updated**: 8/26/2026 | **Import test**: passed
+**Original version**: 1.3.4 | **DepUp version**: 1.3.4-depup.8 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,10 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | axios | `0.26.0` | `^1.20.0` |
 | debug | `4.1.1` | `^4.4.3` |
-| handlebars | `^4.7.7` | `^4.7.9` |
+| handlebars | `^4.7.7` | `^4.7.10` |
 | on-headers | `1.0.2` | `^1.1.0` |
-| pidusage | `2.0.18` | `^4.0.1` |
-| socket.io | `^2.4.1` | `^4.8.3` |
+| pidusage | `2.0.18` | `^4.1.0` |
+| socket.io | `^2.4.1` | `^4.8.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/express-status-monitor&labels=bug).
