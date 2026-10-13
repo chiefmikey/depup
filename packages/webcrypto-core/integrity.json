@@ -52,23 +52,6 @@
     }
   },
   "1.9.2": {
-    "49": {
-      "changes": {
-        "@peculiar/asn1-schema": {
-          "from": "^2.7.0",
-          "to": "^2.8.0"
-        },
-        "@peculiar/utils": {
-          "from": "^2.0.2",
-          "to": "^2.0.3"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-07-12T00:45:01.469Z",
-      "version": "1.9.2-depup.49"
-    },
     "50": {
       "changes": {
         "@peculiar/asn1-schema": {
@@ -140,6 +123,27 @@
       "status": "published",
       "timestamp": "2026-10-09T15:13:54.317Z",
       "version": "1.9.2-depup.53"
+    },
+    "54": {
+      "changes": {
+        "@peculiar/asn1-schema": {
+          "from": "^2.7.0",
+          "to": "^2.11.0"
+        },
+        "@peculiar/json-schema": {
+          "from": "^1.1.12",
+          "to": "^2.0.0"
+        },
+        "@peculiar/utils": {
+          "from": "^2.0.2",
+          "to": "^3.0.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T00:37:36.260Z",
+      "version": "1.9.2-depup.54"
     }
   }
 }

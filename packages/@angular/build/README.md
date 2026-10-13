@@ -12,22 +12,23 @@ npm install @depup/angular__build
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.2.2 | **DepUp version**: 22.2.2-depup.0 | **Updated**: 10/7/2026 | **Import test**: passed
+**Original version**: 22.2.2 | **DepUp version**: 22.2.2-depup.1 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `8.0.5` | `^8.0.6` |
+| @babel/core | `8.0.5` | `^8.0.7` |
 | @inquirer/confirm | `6.3.2` | `^6.3.3` |
+| beasties | `0.5.4` | `^0.5.5` |
 | browserslist | `^4.26.0` | `^4.29.3` |
-| listr2 | `11.1.0` | `^11.1.1` |
+| listr2 | `11.1.0` | `^11.2.0` |
 | magic-string | `1.4.1` | `^1.4.3` |
 | oxc-parser | `0.150.0` | `^0.153.0` |
-| rolldown | `1.2.8` | `^1.2.12` |
+| rolldown | `1.2.8` | `^1.2.13` |
 | sass | `1.104.1` | `^1.105.1` |
 | sass-embedded | `1.104.1` | `^1.105.1` |
-| vite | `8.3.0` | `^8.3.3` |
+| vite | `8.3.0` | `^8.3.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/angular__build&labels=bug).

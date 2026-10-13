@@ -12,13 +12,13 @@ npm install @depup/yargs-unparser
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.0 | **Updated**: 3/19/2026 | **Import test**: passed
+**Original version**: 2.0.0 | **DepUp version**: 2.0.0-depup.1 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| camelcase | `^6.0.0` | `^9.0.0` |
+| camelcase | `^6.0.0` | `^10.0.0` |
 | decamelize | `^4.0.0` | `^6.0.1` |
 | flat | `^5.0.2` | `^6.0.1` |
 | is-plain-obj | `^2.1.0` | `^4.1.0` |
