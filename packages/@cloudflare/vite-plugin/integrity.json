@@ -2586,23 +2586,6 @@
     }
   },
   "1.63.1": {
-    "0": {
-      "changes": {
-        "workerd": {
-          "from": "1.20261006.1",
-          "to": "^1.20261008.1"
-        },
-        "ws": {
-          "from": "8.21.0",
-          "to": "^8.22.0"
-        }
-      },
-      "depsUpdated": 2,
-      "smokeTest": "failed",
-      "status": "published",
-      "timestamp": "2026-10-09T00:37:24.879Z",
-      "version": "1.63.1-depup.0"
-    },
     "1": {
       "changes": {
         "workerd": {
@@ -2670,6 +2653,23 @@
       "status": "failed",
       "timestamp": "2026-10-12T04:41:07.913Z",
       "version": "1.63.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "workerd": {
+          "from": "1.20261006.1",
+          "to": "^1.20261013.1"
+        },
+        "ws": {
+          "from": "8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-13T08:22:56.770Z",
+      "version": "1.63.1-depup.5"
     }
   }
 }

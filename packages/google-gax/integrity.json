@@ -1069,6 +1069,47 @@
       "status": "published",
       "timestamp": "2026-10-09T00:39:54.577Z",
       "version": "6.12.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@grpc/grpc-js": {
+          "from": "^1.12.6",
+          "to": "^1.14.6"
+        },
+        "@grpc/proto-loader": {
+          "from": "^0.8.0",
+          "to": "^0.8.1"
+        },
+        "@opentelemetry/api": {
+          "from": "^1.9.0",
+          "to": "^1.9.1"
+        },
+        "google-auth-library": {
+          "from": "^11.0.0",
+          "to": "^11.3.0"
+        },
+        "google-logging-utils": {
+          "from": "^2.0.0",
+          "to": "^2.1.0"
+        },
+        "proto3-json-serializer": {
+          "from": "^4.0.0",
+          "to": "^4.1.0"
+        },
+        "protobufjs": {
+          "from": "^7.5.4",
+          "to": "^8.8.1"
+        },
+        "retry-request": {
+          "from": "^9.0.0",
+          "to": "^9.1.0"
+        }
+      },
+      "depsUpdated": 8,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T08:22:08.526Z",
+      "version": "6.12.1-depup.1"
     }
   }
 }
