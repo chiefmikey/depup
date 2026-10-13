@@ -1057,6 +1057,14 @@
       "status": "failed",
       "timestamp": "2026-10-13T00:37:35.634Z",
       "version": "4.0.79-depup.0"
+    },
+    "1": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-13T08:18:00.761Z",
+      "version": "4.0.79-depup.1"
     }
   }
 }

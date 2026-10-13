@@ -164,6 +164,23 @@
       "status": "published",
       "timestamp": "2026-08-31T08:13:59.160Z",
       "version": "2.22.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "mgrs": {
+          "from": "1.0.0",
+          "to": "^2.2.0"
+        },
+        "wkt-parser": {
+          "from": "^1.5.5",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T08:17:26.117Z",
+      "version": "2.22.0-depup.1"
     }
   }
 }

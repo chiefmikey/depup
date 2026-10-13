@@ -12,7 +12,7 @@ npm install @depup/storybook
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.6.1 | **DepUp version**: 10.6.1-depup.2 | **Updated**: 10/10/2026 | **Import test**: failed
+**Original version**: 10.6.2 | **DepUp version**: 10.6.2-depup.0 | **Updated**: 10/13/2026 | **Import test**: failed
 
 ## What changed
 
@@ -21,9 +21,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @storybook/icons | `^2.0.2` | `^2.1.0` |
 | @testing-library/dom | `^10.4.1` | `^10.4.2` |
 | @testing-library/jest-dom | `6.9.1` | `^7.0.1` |
-| @testing-library/user-event | `^14.6.3` | `^14.6.7` |
-| @vitest/expect | `3.2.4` | `^5.0.3` |
-| @vitest/spy | `3.2.4` | `^5.0.3` |
+| @testing-library/user-event | `^14.6.3` | `^14.6.8` |
+| @vitest/expect | `3.2.4` | `^5.0.4` |
+| @vitest/spy | `3.2.4` | `^5.0.4` |
 | esbuild | `^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0 || ^0.26.0 || ^0.27.0 || ^0.28.0` | `^0.28.2` |
 | open | `^10.2.0` | `^11.0.4` |
 | oxc-parser | `^0.127.0` | `^0.153.0` |

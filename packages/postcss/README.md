@@ -12,13 +12,13 @@ npm install @depup/postcss
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.5.29 | **DepUp version**: 8.5.29-depup.0 | **Updated**: 10/5/2026 | **Import test**: passed
+**Original version**: 8.5.30 | **DepUp version**: 8.5.30-depup.0 | **Updated**: 10/13/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| nanoid | `^3.3.19` | `^6.0.1` |
+| nanoid | `^3.3.20` | `^6.0.2` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/postcss&labels=bug).

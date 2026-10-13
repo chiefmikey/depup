@@ -904,5 +904,15 @@
       "timestamp": "2026-10-12T07:18:53.307Z",
       "version": "5.20261012.1-depup.2"
     }
+  },
+  "5.20261013.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-13T08:18:07.091Z",
+      "version": "5.20261013.1-depup.0"
+    }
   }
 }
