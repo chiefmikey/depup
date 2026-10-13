@@ -664,5 +664,15 @@
       "timestamp": "2026-10-10T16:10:09.221Z",
       "version": "1.168.61-depup.0"
     }
+  },
+  "1.169.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T00:39:01.033Z",
+      "version": "1.169.1-depup.0"
+    }
   }
 }

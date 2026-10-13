@@ -128,5 +128,15 @@
       "timestamp": "2026-10-09T00:37:23.605Z",
       "version": "9.2.8-depup.0"
     }
+  },
+  "9.3.1": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T00:39:04.503Z",
+      "version": "9.3.1-depup.0"
+    }
   }
 }
