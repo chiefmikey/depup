@@ -2677,6 +2677,23 @@
       "status": "published",
       "timestamp": "2026-10-13T00:38:11.751Z",
       "version": "3.973.18-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.35.2",
+          "to": "^3.36.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T16:13:11.079Z",
+      "version": "3.973.18-depup.1"
     }
   }
 }

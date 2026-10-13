@@ -3513,6 +3513,23 @@
       "status": "published",
       "timestamp": "2026-10-13T00:38:05.036Z",
       "version": "3.1150.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.35.2",
+          "to": "^3.36.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T16:13:03.893Z",
+      "version": "3.1150.0-depup.1"
     }
   }
 }

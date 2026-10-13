@@ -1,0 +1,115 @@
+{
+  "name": "@depup/react-share",
+  "version": "6.1.0-depup.2",
+  "description": "Social media share buttons for React. (with updated dependencies)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build-demo": "vite build --config vite.demo.config.js",
+    "check-types": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.demo.json",
+    "demo": "vite --config vite.demo.config.js",
+    "lint": "eslint ./src ./demo ./test",
+    "lint-package": "npx publint && npx @arethetypeswrong/cli --pack .",
+    "start": "npm run demo",
+    "test": "vitest run",
+    "test:dist": "vitest run --config vitest.dist.config.ts",
+    "test:coverage": "vitest run --coverage",
+    "update-example": "vitest run test/ExampleImage.test.tsx --update",
+    "release": "npm run build && changeset publish"
+  },
+  "keywords": [
+    "react-share",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "react",
+    "component",
+    "react-component",
+    "social",
+    "media",
+    "social-media",
+    "share",
+    "button"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nygardk/react-share"
+  },
+  "author": {
+    "name": "Klaus Nygård",
+    "email": "klaus.nygard@gmail.com",
+    "url": "https://www.klausnygard.fi"
+  },
+  "contributors": [
+    {
+      "name": "Ari Autio",
+      "email": "ari.autio@iki.fi"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@eslint/compat": "^2.0.3",
+    "@eslint/js": "^10.0.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/assert": "^1.5.11",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "@vitest/coverage-v8": "^4.1.0",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^17.4.0",
+    "jsdom": "^28.1.0",
+    "prettier": "^3.8.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "depup": {
+    "changes": {
+      "classnames": {
+        "from": "^2.3.2",
+        "to": "^2.5.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "react-share",
+    "originalVersion": "6.1.0",
+    "processedAt": "2026-10-13T16:11:47.397Z",
+    "smokeTest": "failed"
+  }
+}

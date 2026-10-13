@@ -186,6 +186,31 @@
       "status": "published",
       "timestamp": "2026-09-26T16:09:37.807Z",
       "version": "3.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "@graphql-tools/utils": {
+          "from": "^12.0.1",
+          "to": "^12.0.4"
+        },
+        "@whatwg-node/disposablestack": {
+          "from": "^0.0.6",
+          "to": "^0.1.0"
+        },
+        "graphql-ws": {
+          "from": "^6.0.6",
+          "to": "^6.4.0"
+        },
+        "ws": {
+          "from": "^8.21.0",
+          "to": "^8.22.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T16:13:11.641Z",
+      "version": "3.2.0-depup.4"
     }
   }
 }
