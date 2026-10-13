@@ -141,6 +141,19 @@
       "status": "failed",
       "timestamp": "2026-10-13T00:37:33.670Z",
       "version": "6.6.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "stylis": {
+          "from": "4.3.6",
+          "to": "^4.4.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-13T08:19:07.488Z",
+      "version": "6.6.0-depup.1"
     }
   }
 }

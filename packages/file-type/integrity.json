@@ -158,6 +158,27 @@
       "status": "published",
       "timestamp": "2026-10-11T16:10:05.293Z",
       "version": "22.1.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@tokenizer/inflate": {
+          "from": "^0.4.1",
+          "to": "^0.5.0"
+        },
+        "strtok3": {
+          "from": "^10.3.5",
+          "to": "^10.4.1"
+        },
+        "uint8array-extras": {
+          "from": "^1.5.0",
+          "to": "^1.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-13T08:17:51.169Z",
+      "version": "22.1.1-depup.3"
     }
   }
 }

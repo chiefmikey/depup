@@ -1,6 +1,6 @@
 {
   "name": "@depup/wrangler",
-  "version": "4.149.0-depup.1",
+  "version": "4.149.0-depup.6",
   "description": "Command-line interface for all things Cloudflare Workers (with updated dependencies)",
   "keywords": [
     "wrangler",
@@ -78,7 +78,7 @@
     "esbuild": "0.28.2",
     "path-to-regexp": "^8.4.2",
     "unenv": "2.0.0-rc.24",
-    "workerd": "^1.20261009.1",
+    "workerd": "^1.20261013.1",
     "@cloudflare/unenv-preset": "2.16.2",
     "@cloudflare/kv-asset-handler": "0.5.0",
     "miniflare": "5.20261006.1-alpha"
@@ -232,13 +232,13 @@
       },
       "workerd": {
         "from": "1.20261006.1",
-        "to": "^1.20261009.1"
+        "to": "^1.20261013.1"
       }
     },
     "depsUpdated": 3,
     "originalPackage": "wrangler",
     "originalVersion": "4.149.0",
-    "processedAt": "2026-10-09T16:14:28.919Z",
+    "processedAt": "2026-10-13T08:19:22.342Z",
     "smokeTest": "failed"
   }
 }

@@ -365,6 +365,23 @@
       "status": "published",
       "timestamp": "2026-10-09T00:39:40.945Z",
       "version": "185.0.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "google-auth-library": {
+          "from": "^11.0.0",
+          "to": "^11.3.0"
+        },
+        "googleapis-common": {
+          "from": "^9.0.0",
+          "to": "^9.3.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-13T08:18:50.680Z",
+      "version": "185.0.0-depup.1"
     }
   }
 }
