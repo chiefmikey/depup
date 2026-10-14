@@ -1098,6 +1098,23 @@
       "status": "failed",
       "timestamp": "2026-10-14T00:31:46.299Z",
       "version": "7.21.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T08:13:15.383Z",
+      "version": "7.21.0-depup.1"
     }
   }
 }
