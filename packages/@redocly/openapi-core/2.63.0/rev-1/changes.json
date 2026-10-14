@@ -1,0 +1,30 @@
+{
+  "bumped": {
+    "@redocly/config": {
+      "from": "^0.65.0",
+      "to": "^0.66.0"
+    },
+    "colorette": {
+      "from": "^1.2.0",
+      "to": "^2.0.20"
+    },
+    "graphql": {
+      "from": "^16.14.1",
+      "to": "^17.0.2"
+    },
+    "js-yaml": {
+      "from": "^5.2.2",
+      "to": "^5.4.3"
+    },
+    "json-schema-to-ts": {
+      "from": "^3.1.0",
+      "to": "^3.1.1"
+    },
+    "picomatch": {
+      "from": "^4.0.4",
+      "to": "^4.0.7"
+    }
+  },
+  "timestamp": "2026-10-14T16:13:52.040Z",
+  "totalUpdated": 6
+}

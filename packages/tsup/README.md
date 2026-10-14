@@ -12,24 +12,11 @@ npm install @depup/tsup
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.5.1 | **DepUp version**: 8.5.1-depup.7 | **Updated**: 10/12/2026 | **Import test**: passed
+**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.0 | **Updated**: 10/14/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| cac | `^6.7.14` | `^7.1.0` |
-| chokidar | `^4.0.3` | `^5.0.0` |
-| consola | `^3.4.0` | `^3.4.2` |
-| debug | `^4.4.0` | `^4.4.3` |
-| esbuild | `^0.27.0` | `^0.28.2` |
-| fix-dts-default-cjs-exports | `^1.0.0` | `^1.0.1` |
-| rollup | `^4.34.8` | `^4.64.5` |
-| source-map | `^0.7.6` | `^0.8.0` |
-| sucrase | `^3.35.0` | `^3.35.1` |
-| tinyexec | `^0.3.2` | `^1.3.1` |
-| tinyglobby | `^0.2.11` | `^0.2.17` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/tsup&labels=bug).
 

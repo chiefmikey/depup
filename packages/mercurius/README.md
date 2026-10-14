@@ -12,21 +12,23 @@ npm install @depup/mercurius
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 16.11.0 | **DepUp version**: 16.11.0-depup.1 | **Updated**: 10/10/2026 | **Import test**: passed
+**Original version**: 16.12.0 | **DepUp version**: 16.12.0-depup.0 | **Updated**: 10/14/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @fastify/error | `^4.0.0` | `^4.2.0` |
+| @fastify/error | `^4.0.0` | `^4.2.1` |
 | @fastify/static | `^10.1.0` | `^10.1.6` |
 | @fastify/websocket | `^11.0.0` | `^11.3.4` |
-| graphql-jit | `0.8.9` | `^0.9.0` |
+| fastify-plugin | `^6.0.0` | `^6.0.1` |
+| graphql-jit | `0.8.9` | `^0.9.3` |
 | mqemitter | `^7.0.0` | `^7.1.0` |
-| p-map | `^4.0.0` | `^7.1.0` |
+| p-map | `^4.0.0` | `^7.1.1` |
 | quick-lru | `^7.0.0` | `^7.3.0` |
 | readable-stream | `^4.0.0` | `^4.8.0` |
 | safe-stable-stringify | `^2.3.0` | `^2.5.0` |
+| secure-json-parse | `^4.1.0` | `^4.1.1` |
 | single-user-cache | `^2.0.0` | `^2.1.0` |
 | ws | `^8.2.2` | `^8.22.0` |
 
