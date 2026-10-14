@@ -363,6 +363,23 @@
       "status": "published",
       "timestamp": "2026-08-30T01:00:03.986Z",
       "version": "7.2.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "commander": {
+          "from": "^14.0.3",
+          "to": "^15.0.0"
+        },
+        "rechoir": {
+          "from": "^0.8.0",
+          "to": "^1.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-14T08:11:55.130Z",
+      "version": "7.2.3-depup.1"
     }
   }
 }
