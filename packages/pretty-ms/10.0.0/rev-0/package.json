@@ -1,0 +1,75 @@
+{
+  "name": "@depup/pretty-ms",
+  "version": "10.0.0-depup.0",
+  "description": "Convert milliseconds to a human readable string: `1337000000` → `15d 11h 23m 20s` (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/pretty-ms",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && node --test && nz"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "pretty-ms",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "pretty",
+    "prettify",
+    "human",
+    "humanize",
+    "humanized",
+    "readable",
+    "time",
+    "ms",
+    "milliseconds",
+    "duration",
+    "period",
+    "range",
+    "text",
+    "string",
+    "number",
+    "hrtime"
+  ],
+  "devDependencies": {
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "nz": "^0.1.0",
+    "xo": "^5.0.1"
+  },
+  "xo": [
+    {
+      "files": [
+        "test.js"
+      ],
+      "rules": {
+        "node-test/no-conditional-assertion": "off",
+        "node-test/require-assertion": "off"
+      }
+    }
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "pretty-ms",
+    "originalVersion": "10.0.0",
+    "processedAt": "2026-10-14T16:11:08.622Z",
+    "smokeTest": "passed"
+  }
+}

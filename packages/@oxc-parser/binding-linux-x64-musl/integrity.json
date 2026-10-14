@@ -163,6 +163,14 @@
       "status": "failed",
       "timestamp": "2026-10-14T08:13:02.311Z",
       "version": "0.154.0-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T16:12:35.290Z",
+      "version": "0.154.0-depup.2"
     }
   }
 }
