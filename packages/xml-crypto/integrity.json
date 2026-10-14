@@ -53,5 +53,24 @@
       "timestamp": "2026-10-09T15:15:20.553Z",
       "version": "6.3.3-depup.0"
     }
+  },
+  "6.4.0": {
+    "0": {
+      "changes": {
+        "@xmldom/xmldom": {
+          "from": "^0.8.15",
+          "to": "^0.9.12"
+        },
+        "xpath": {
+          "from": "^0.0.33",
+          "to": "^0.0.35"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-14T16:12:16.100Z",
+      "version": "6.4.0-depup.0"
+    }
   }
 }

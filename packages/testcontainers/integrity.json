@@ -696,6 +696,31 @@
       "status": "published",
       "timestamp": "2026-10-13T16:12:27.296Z",
       "version": "12.2.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@types/dockerode": {
+          "from": "^4.0.1",
+          "to": "^4.0.2"
+        },
+        "archiver": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        },
+        "get-port": {
+          "from": "^5.1.1",
+          "to": "^7.2.0"
+        },
+        "undici": {
+          "from": "^8.11.2",
+          "to": "^8.12.1"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-14T16:10:15.769Z",
+      "version": "12.2.1-depup.1"
     }
   }
 }
