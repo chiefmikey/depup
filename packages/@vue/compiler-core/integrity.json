@@ -551,6 +551,27 @@
       "status": "failed",
       "timestamp": "2026-10-13T16:10:47.466Z",
       "version": "3.5.44-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/parser": {
+          "from": "^7.29.9",
+          "to": "^8.0.7"
+        },
+        "entities": {
+          "from": "^7.0.1",
+          "to": "^8.1.0"
+        },
+        "estree-walker": {
+          "from": "^2.0.2",
+          "to": "^3.0.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:30:21.750Z",
+      "version": "3.5.44-depup.1"
     }
   }
 }

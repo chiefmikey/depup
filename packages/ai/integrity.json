@@ -2152,5 +2152,15 @@
       "timestamp": "2026-10-13T16:10:57.036Z",
       "version": "7.0.138-depup.1"
     }
+  },
+  "7.0.139": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:30:30.736Z",
+      "version": "7.0.139-depup.0"
+    }
   }
 }

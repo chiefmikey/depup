@@ -12,27 +12,28 @@ npm install @depup/ghost
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.70.0 | **DepUp version**: 6.70.0-depup.0 | **Updated**: 10/13/2026 | **Import test**: failed
+**Original version**: 6.70.0 | **DepUp version**: 6.70.0-depup.1 | **Updated**: 10/14/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-s3 | `3.1079.0` | `^3.1150.0` |
+| @aws-sdk/client-s3 | `3.1079.0` | `^3.1151.0` |
 | @faker-js/faker | `10.5.0` | `^10.6.0` |
 | @isaacs/ttlcache | `1.4.1` | `^2.1.5` |
 | @sentry/node | `7.120.4` | `^11.7.0` |
 | @slack/webhook | `7.1.0` | `^8.0.2` |
 | @tryghost/brute-knex | `3.2.2` | `^3.2.3` |
-| @tryghost/color-utils | `0.2.21` | `^0.2.22` |
-| @tryghost/config-url-helpers | `1.0.28` | `^1.0.29` |
-| @tryghost/custom-fonts | `1.0.12` | `^1.0.13` |
-| @tryghost/helpers | `1.1.107` | `^1.1.108` |
-| @tryghost/html-to-plaintext | `1.0.12` | `^1.0.13` |
+| @tryghost/color-utils | `0.2.21` | `^0.2.23` |
+| @tryghost/config-url-helpers | `1.0.28` | `^1.0.30` |
+| @tryghost/custom-fonts | `1.0.12` | `^1.0.14` |
+| @tryghost/helpers | `1.1.107` | `^1.1.109` |
+| @tryghost/html-to-plaintext | `1.0.12` | `^1.0.16` |
 | @tryghost/mg-clean-html | `0.12.6` | `^0.12.7` |
-| @tryghost/referrer-parser | `0.1.22` | `^0.1.24` |
-| @tryghost/social-urls | `0.1.64` | `^0.1.65` |
-| @tryghost/string | `0.3.6` | `^0.3.7` |
+| @tryghost/referrer-parser | `0.1.22` | `^0.1.25` |
+| @tryghost/social-urls | `0.1.64` | `^0.1.66` |
+| @tryghost/string | `0.3.6` | `^0.3.8` |
+| @tryghost/url-utils | `5.4.0` | `^5.4.1` |
 | @x402/core | `2.27.0` | `^2.28.0` |
 | @x402/evm | `2.27.0` | `^2.28.0` |
 | @x402/hono | `2.27.0` | `^2.28.0` |
@@ -79,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | papaparse | `5.5.4` | `^5.7.0` |
 | sanitize-html | `2.17.7` | `^2.18.0` |
 | stripe | `8.222.0` | `^23.0.0` |
-| temporal-polyfill | `0.3.2` | `^1.0.5` |
+| temporal-polyfill | `0.3.2` | `^1.0.6` |
 | terser | `5.48.0` | `^5.51.2` |
 | tldts | `^7.4.4` | `^7.4.18` |
 | type-fest | `5.7.0` | `^5.10.0` |

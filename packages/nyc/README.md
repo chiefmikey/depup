@@ -12,7 +12,7 @@ npm install @depup/nyc
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 18.0.0 | **DepUp version**: 18.0.0-depup.26 | **Updated**: 10/10/2026 | **Import test**: passed
+**Original version**: 18.0.0 | **DepUp version**: 18.0.0-depup.27 | **Updated**: 10/14/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,7 +21,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @istanbuljs/load-nyc-config | `^1.0.0` | `^1.1.0` |
 | @istanbuljs/schema | `^0.1.2` | `^0.1.6` |
 | convert-source-map | `^1.7.0` | `^2.0.0` |
-| decamelize | `^1.2.0` | `^6.0.1` |
+| decamelize | `^1.2.0` | `^7.0.0` |
 | find-cache-dir | `^3.2.0` | `^6.0.0` |
 | find-up | `^4.1.0` | `^8.0.0` |
 | foreground-child | `^3.3.0` | `^4.0.3` |
@@ -32,7 +32,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | istanbul-lib-source-maps | `^4.0.0` | `^5.0.6` |
 | istanbul-reports | `^3.0.2` | `^3.2.0` |
 | make-dir | `^3.0.0` | `^5.1.0` |
-| p-map | `^3.0.0` | `^7.1.0` |
+| p-map | `^3.0.0` | `^7.1.1` |
 | process-on-spawn | `^1.0.0` | `^1.1.0` |
 | signal-exit | `^3.0.2` | `^4.1.0` |
 | yargs | `^15.0.2` | `^18.2.0` |
