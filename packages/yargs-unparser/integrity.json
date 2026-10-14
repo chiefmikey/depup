@@ -49,6 +49,31 @@
       "status": "published",
       "timestamp": "2026-10-13T00:37:38.944Z",
       "version": "2.0.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "camelcase": {
+          "from": "^6.0.0",
+          "to": "^10.0.0"
+        },
+        "decamelize": {
+          "from": "^4.0.0",
+          "to": "^7.0.0"
+        },
+        "flat": {
+          "from": "^5.0.2",
+          "to": "^6.0.1"
+        },
+        "is-plain-obj": {
+          "from": "^2.1.0",
+          "to": "^4.1.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-14T00:31:21.898Z",
+      "version": "2.0.0-depup.2"
     }
   }
 }

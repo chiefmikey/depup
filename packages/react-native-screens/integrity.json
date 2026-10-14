@@ -355,6 +355,23 @@
       "status": "failed",
       "timestamp": "2026-10-13T16:12:00.972Z",
       "version": "4.30.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "react-freeze": {
+          "from": "^1.0.0",
+          "to": "^1.0.4"
+        },
+        "warn-once": {
+          "from": "^0.1.0",
+          "to": "^0.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:30:56.007Z",
+      "version": "4.30.0-depup.1"
     }
   }
 }
