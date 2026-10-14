@@ -556,6 +556,23 @@
       "status": "failed",
       "timestamp": "2026-10-13T08:22:42.113Z",
       "version": "3.1001.3-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@smithy/core": {
+          "from": "^3.35.2",
+          "to": "^3.36.0"
+        },
+        "tslib": {
+          "from": "^2.6.2",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:29:37.010Z",
+      "version": "3.1001.3-depup.2"
     }
   }
 }

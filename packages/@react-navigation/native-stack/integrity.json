@@ -1080,5 +1080,24 @@
       "timestamp": "2026-09-30T00:36:43.965Z",
       "version": "7.20.0-depup.0"
     }
+  },
+  "7.21.0": {
+    "0": {
+      "changes": {
+        "color": {
+          "from": "^4.2.3",
+          "to": "^5.0.3"
+        },
+        "sf-symbols-typescript": {
+          "from": "^2.1.0",
+          "to": "^2.2.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:31:46.299Z",
+      "version": "7.21.0-depup.0"
+    }
   }
 }

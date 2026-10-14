@@ -1073,5 +1073,28 @@
       "timestamp": "2026-10-08T00:37:30.973Z",
       "version": "44.7.0-depup.0"
     }
+  },
+  "44.7.1": {
+    "0": {
+      "changes": {
+        "@electron-internal/extract-zip": {
+          "from": "^1.0.1",
+          "to": "^1.0.5"
+        },
+        "@electron/get": {
+          "from": "^5.0.0",
+          "to": "^5.1.0"
+        },
+        "@types/node": {
+          "from": "^24.9.0",
+          "to": "^26.6.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-14T00:32:48.410Z",
+      "version": "44.7.1-depup.0"
+    }
   }
 }
