@@ -2,7 +2,7 @@
   "bumped": {
     "@babel/core": {
       "from": "^7.4.4",
-      "to": "^8.0.6"
+      "to": "^8.0.7"
     },
     "@babel/plugin-proposal-class-properties": {
       "from": "^7.4.4",
@@ -50,7 +50,7 @@
     },
     "@babel/preset-env": {
       "from": "^7.4.4",
-      "to": "^8.0.6"
+      "to": "^8.0.7"
     },
     "@babel/preset-react": {
       "from": "^7.0.0",
@@ -102,7 +102,7 @@
     },
     "ejs": {
       "from": "^2.6.1",
-      "to": "^6.0.1"
+      "to": "^7.0.1"
     },
     "errorhandler": {
       "from": "^1.5.1",
@@ -114,7 +114,7 @@
     },
     "express": {
       "from": "^4.17.0",
-      "to": "^5.2.1"
+      "to": "^5.3.0"
     },
     "express-session": {
       "from": "^1.16.1",
@@ -138,7 +138,7 @@
     },
     "marked": {
       "from": "^0.6.2",
-      "to": "^18.0.14"
+      "to": "^18.1.1"
     },
     "mime-types": {
       "from": "^2.1.24",
@@ -150,7 +150,7 @@
     },
     "mongoose": {
       "from": "^4.13.14",
-      "to": "^9.10.3"
+      "to": "^9.11.2"
     },
     "morgan": {
       "from": "^1.9.1",
@@ -230,7 +230,7 @@
     },
     "tinymce": {
       "from": "^4.9.2",
-      "to": "^8.9.2"
+      "to": "^8.10.0"
     },
     "sanitize-html": {
       "from": "^1.20.1",
@@ -261,6 +261,6 @@
       "to": "^2.6.0"
     }
   },
-  "timestamp": "2026-10-01T00:43:25.966Z",
+  "timestamp": "2026-10-14T08:12:56.600Z",
   "totalUpdated": 65
 }
