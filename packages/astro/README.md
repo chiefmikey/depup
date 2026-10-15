@@ -12,25 +12,19 @@ npm install @depup/astro
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 7.3.8 | **DepUp version**: 7.3.8-depup.1 | **Updated**: 10/13/2026 | **Import test**: failed
+**Original version**: 7.4.0 | **DepUp version**: 7.4.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| devalue | `^5.9.4` | `^6.0.2` |
-| es-module-lexer | `^3.0.2` | `^3.0.3` |
-| find-proc | `0.2.0` | `^0.3.0` |
-| http-cache-semantics | `^4.2.0` | `^4.3.0` |
-| magic-string | `^1.4.2` | `^1.4.3` |
-| p-queue | `^9.3.3` | `^10.0.0` |
-| package-manager-detector | `^1.8.0` | `^1.9.0` |
-| rolldown | `^1.2.11` | `^1.2.13` |
-| shiki | `^4.4.3` | `^4.5.0` |
-| smol-toml | `^1.9.0` | `^1.9.1` |
-| unifont | `~0.7.5` | `^1.0.3` |
-| vite | `^8.3.1` | `^8.3.4` |
-| zod | `^4.6.5` | `^4.6.7` |
+| @astrojs/compiler-rs | `^0.5.1` | `^0.5.2` |
+| devalue | `^6.0.2` | `^6.0.3` |
+| es-module-lexer | `^3.0.3` | `^3.0.4` |
+| p-queue | `^9.3.5` | `^10.0.0` |
+| rolldown | `^1.2.13` | `^1.2.14` |
+| unstorage | `^1.17.5` | `^1.17.6` |
+| zod | `^4.6.6` | `^4.6.7` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/astro&labels=bug).

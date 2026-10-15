@@ -1,0 +1,11 @@
+{
+  "duration_ms": 623,
+  "findings": [],
+  "passed": true,
+  "scanned_at": "2026-10-15T16:09:22.985Z",
+  "scans": {
+    "malware_scan": "skipped (clamav unavailable)",
+    "pattern_scan": "passed",
+    "vulnerability_scan": "passed"
+  }
+}

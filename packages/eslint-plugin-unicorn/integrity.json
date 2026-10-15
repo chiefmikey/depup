@@ -1222,27 +1222,6 @@
     }
   },
   "78.0.0": {
-    "1": {
-      "changes": {
-        "browserslist": {
-          "from": "^4.29.1",
-          "to": "^4.29.3"
-        },
-        "globals": {
-          "from": "^17.12.0",
-          "to": "^17.13.0"
-        },
-        "regjsparser": {
-          "from": "^0.13.3",
-          "to": "^0.13.4"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-10-13T08:18:58.811Z",
-      "version": "78.0.0-depup.1"
-    },
     "2": {
       "changes": {
         "browserslist": {
@@ -1326,6 +1305,27 @@
       "status": "failed",
       "timestamp": "2026-10-15T08:11:52.690Z",
       "version": "78.0.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "browserslist": {
+          "from": "^4.29.1",
+          "to": "^4.29.3"
+        },
+        "globals": {
+          "from": "^17.12.0",
+          "to": "^17.13.0"
+        },
+        "regjsparser": {
+          "from": "^0.13.3",
+          "to": "^0.13.4"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-15T16:10:49.725Z",
+      "version": "78.0.0-depup.6"
     }
   }
 }

@@ -12,15 +12,11 @@ npm install @depup/react-native__metro-config
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.0 | **Updated**: 9/20/2026 | **Import test**: passed
+**Original version**: 0.88.0 | **DepUp version**: 0.88.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| metro-config | `^0.87.0` | `^0.87.1` |
-| metro-runtime | `^0.87.0` | `^0.87.1` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native__metro-config&labels=bug).
 

@@ -858,5 +858,32 @@
       "timestamp": "2026-10-14T16:13:38.371Z",
       "version": "30.1.2-depup.3"
     }
+  },
+  "30.1.3": {
+    "0": {
+      "changes": {
+        "@asamuzakjp/css-color": {
+          "from": "^7.1.3",
+          "to": "^7.1.5"
+        },
+        "@bramus/specificity": {
+          "from": "^2.4.2",
+          "to": "^2.4.3"
+        },
+        "undici": {
+          "from": "^8.12.1",
+          "to": "^8.12.2"
+        },
+        "whatwg-url": {
+          "from": "^17.2.0",
+          "to": "^17.3.0"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T16:12:10.964Z",
+      "version": "30.1.3-depup.0"
+    }
   }
 }
