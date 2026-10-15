@@ -514,5 +514,28 @@
       "timestamp": "2026-08-26T16:29:42.131Z",
       "version": "0.87.1-depup.0"
     }
+  },
+  "0.88.0": {
+    "0": {
+      "changes": {
+        "commander": {
+          "from": "^12.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "^4.4.0",
+          "to": "^4.4.3"
+        },
+        "semver": {
+          "from": "^7.1.3",
+          "to": "^7.8.5"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T16:12:26.149Z",
+      "version": "0.88.0-depup.0"
+    }
   }
 }

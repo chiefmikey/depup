@@ -12,7 +12,7 @@ npm install @depup/vercel
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 64.1.0 | **DepUp version**: 64.1.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: failed
+**Original version**: 64.2.0 | **DepUp version**: 64.2.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -26,7 +26,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | luxon | `^3.4.0` | `^3.7.2` |
 | sandbox | `4.4.0` | `^4.8.1` |
 | smol-toml | `1.5.2` | `^1.9.1` |
-| undici | `5.29.0` | `^8.12.1` |
+| undici | `5.29.0` | `^8.12.2` |
 | uuid | `14.0.1` | `^14.0.3` |
 | zod | `4.1.11` | `^4.6.7` |
 

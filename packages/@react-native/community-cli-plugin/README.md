@@ -12,12 +12,13 @@ npm install @depup/react-native__community-cli-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.0 | **Updated**: 8/26/2026 | **Import test**: passed
+**Original version**: 0.88.0 | **DepUp version**: 0.88.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| commander | `^12.0.0` | `^15.0.0` |
 | debug | `^4.4.0` | `^4.4.3` |
 | semver | `^7.1.3` | `^7.8.5` |
 

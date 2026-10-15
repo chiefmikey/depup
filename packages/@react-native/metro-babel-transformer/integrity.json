@@ -36,5 +36,24 @@
       "timestamp": "2026-08-26T16:29:41.831Z",
       "version": "0.87.1-depup.0"
     }
+  },
+  "0.88.0": {
+    "0": {
+      "changes": {
+        "@babel/core": {
+          "from": "^7.25.2",
+          "to": "^8.0.7"
+        },
+        "flow-parser": {
+          "from": "0.327.0",
+          "to": "^0.336.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T16:12:26.496Z",
+      "version": "0.88.0-depup.0"
+    }
   }
 }

@@ -200,5 +200,15 @@
       "timestamp": "2026-10-15T00:33:36.238Z",
       "version": "1.7.8-depup.0"
     }
+  },
+  "1.7.10": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T16:10:38.361Z",
+      "version": "1.7.10-depup.0"
+    }
   }
 }

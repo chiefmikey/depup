@@ -12,12 +12,14 @@ npm install @depup/graphql-codegen__core
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.2.2 | **DepUp version**: 6.2.2-depup.0 | **Updated**: 10/7/2026 | **Import test**: passed
+**Original version**: 6.2.2 | **DepUp version**: 6.2.2-depup.1 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @graphql-tools/schema | `^10.1.3` | `^10.1.5` |
+| @graphql-tools/utils | `^12.0.3` | `^12.1.0` |
 | tslib | `^2.8.0` | `^2.8.1` |
 
 

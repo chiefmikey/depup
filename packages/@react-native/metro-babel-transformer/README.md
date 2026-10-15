@@ -12,14 +12,14 @@ npm install @depup/react-native__metro-babel-transformer
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.87.1 | **DepUp version**: 0.87.1-depup.0 | **Updated**: 8/26/2026 | **Import test**: passed
+**Original version**: 0.88.0 | **DepUp version**: 0.88.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `^7.25.2` | `^8.0.1` |
-| hermes-parser | `0.36.1` | `^0.37.0` |
+| @babel/core | `^7.25.2` | `^8.0.7` |
+| flow-parser | `0.327.0` | `^0.336.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/react-native__metro-babel-transformer&labels=bug).

@@ -1,6 +1,6 @@
 {
   "name": "@depup/got",
-  "version": "16.1.0-depup.1",
+  "version": "16.1.0-depup.6",
   "description": "Human-friendly and powerful HTTP request library for Node.js (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/got",
@@ -182,7 +182,7 @@
     "depsUpdated": 1,
     "originalPackage": "got",
     "originalVersion": "16.1.0",
-    "processedAt": "2026-10-13T16:12:05.552Z",
+    "processedAt": "2026-10-15T16:13:19.224Z",
     "smokeTest": "passed"
   }
 }

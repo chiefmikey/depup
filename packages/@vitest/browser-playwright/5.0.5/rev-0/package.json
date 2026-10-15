@@ -1,0 +1,84 @@
+{
+  "name": "@depup/vitest__browser-playwright",
+  "type": "module",
+  "version": "5.0.5-depup.0",
+  "description": "Browser running for Vitest using playwright (with updated dependencies)",
+  "license": "MIT",
+  "funding": "https://opencollective.com/vitest",
+  "homepage": "https://vitest.dev/config/browser/playwright",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitest-dev/vitest.git",
+    "directory": "packages/browser-playwright"
+  },
+  "bugs": {
+    "url": "https://github.com/vitest-dev/vitest/issues"
+  },
+  "keywords": [
+    "@vitest/browser-playwright",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "browser",
+    "playwright",
+    "component",
+    "mocks",
+    "test",
+    "testing"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "__vitest_source__": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./context": {
+      "types": "./context.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "context.d.ts",
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "playwright": "*",
+    "vitest": "5.0.5"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@vitest/browser": "5.0.5",
+    "@vitest/mocker": "5.0.5",
+    "tinyrainbow": "^3.2.0"
+  },
+  "devDependencies": {
+    "pathe": "^2.0.3",
+    "playwright": "^1.64.0",
+    "vite": "8.0.11",
+    "vitest": "5.0.5"
+  },
+  "scripts": {
+    "build": "premove dist && pnpm rollup -c",
+    "dev": "rollup -c --watch --watch.include 'src/**'"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitest/browser-playwright",
+    "originalVersion": "5.0.5",
+    "processedAt": "2026-10-15T16:13:04.615Z",
+    "smokeTest": "passed"
+  }
+}
