@@ -12,23 +12,23 @@ npm install @depup/artillery
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.52 | **Updated**: 10/14/2026 | **Import test**: passed
+**Original version**: 2.0.34 | **DepUp version**: 2.0.34-depup.53 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-iam | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/client-sts | `^3.1101.0` | `^3.1151.0` |
-| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1151.0` |
+| @aws-sdk/client-cloudwatch | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-cloudwatch-logs | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-ec2 | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-ecs | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-iam | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-lambda | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-s3 | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-sqs | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-ssm | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/client-sts | `^3.1101.0` | `^3.1152.0` |
+| @aws-sdk/credential-providers | `^3.1101.0` | `^3.1152.0` |
 | @azure/identity | `^4.13.1` | `^4.14.0` |
 | @azure/storage-blob | `^12.30.0` | `^12.34.0` |
 | @azure/storage-queue | `^12.29.0` | `^12.32.0` |
@@ -48,8 +48,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @opentelemetry/resources | `^2.10.0` | `^2.12.0` |
 | @opentelemetry/sdk-metrics | `^2.10.0` | `^2.12.0` |
 | @opentelemetry/sdk-trace-base | `^2.10.0` | `^2.12.0` |
-| @playwright/browser-chromium | `1.62.1` | `^1.64.0` |
-| @playwright/test | `1.62.1` | `^1.64.0` |
+| @playwright/browser-chromium | `1.62.1` | `^1.64.1` |
+| @playwright/test | `1.62.1` | `^1.64.1` |
 | @smithy/core | `^3.31.1` | `^3.36.0` |
 | @upstash/redis | `^1.36.1` | `^1.39.0` |
 | async | `^2.6.4` | `^3.2.6` |
@@ -58,7 +58,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ci-info | `^4.3.1` | `^4.4.0` |
 | csv-parse | `^4.16.3` | `^7.0.3` |
 | decompress-response | `^6.0.0` | `^10.0.0` |
-| dotenv | `^16.6.1` | `^18.0.7` |
+| dotenv | `^16.6.1` | `^18.0.8` |
 | esbuild-wasm | `^0.28.1` | `^0.28.2` |
 | espree | `^10.3.0` | `^11.2.0` |
 | filtrex | `^2.2.3` | `^3.1.0` |
@@ -75,7 +75,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | moment | `^2.30.1` | `^2.31.0` |
 | nanoid | `^3.3.16` | `^6.0.2` |
 | ora | `^4.0.4` | `^9.4.1` |
-| playwright | `1.62.1` | `^1.64.0` |
+| playwright | `1.62.1` | `^1.64.1` |
 | prom-client | `^14.2.0` | `^15.1.3` |
 | protobufjs | `^7.6.5` | `^8.8.1` |
 | semver | `^7.7.3` | `^7.8.5` |
