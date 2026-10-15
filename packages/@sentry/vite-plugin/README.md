@@ -12,14 +12,11 @@ npm install @depup/sentry__vite-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.4.1 | **DepUp version**: 5.4.1-depup.3 | **Updated**: 10/12/2026 | **Import test**: failed
+**Original version**: 11.8.0 | **DepUp version**: 11.8.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @sentry/bundler-plugins | `^10.76.0` | `^11.7.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/sentry__vite-plugin&labels=bug).
 

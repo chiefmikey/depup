@@ -572,5 +572,28 @@
       "timestamp": "2026-10-12T16:10:49.959Z",
       "version": "9.1.12-depup.0"
     }
+  },
+  "9.1.13": {
+    "0": {
+      "changes": {
+        "@graphql-tools/executor-http": {
+          "from": "^3.4.0",
+          "to": "^3.4.1"
+        },
+        "@whatwg-node/fetch": {
+          "from": "^0.12.0",
+          "to": "^0.12.1"
+        },
+        "tslib": {
+          "from": "^2.4.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T16:10:24.483Z",
+      "version": "9.1.13-depup.0"
+    }
   }
 }

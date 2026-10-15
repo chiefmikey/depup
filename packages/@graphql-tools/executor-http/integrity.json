@@ -254,6 +254,35 @@
       "status": "published",
       "timestamp": "2026-09-22T00:32:22.076Z",
       "version": "3.4.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@graphql-tools/utils": {
+          "from": "^12.0.1",
+          "to": "^12.1.0"
+        },
+        "@repeaterjs/repeater": {
+          "from": "^3.0.4",
+          "to": "^3.1.0"
+        },
+        "@whatwg-node/disposablestack": {
+          "from": "^0.0.6",
+          "to": "^0.1.0"
+        },
+        "@whatwg-node/fetch": {
+          "from": "^0.10.13",
+          "to": "^0.12.1"
+        },
+        "@whatwg-node/promise-helpers": {
+          "from": "^1.3.2",
+          "to": "^2.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T16:10:24.851Z",
+      "version": "3.4.1-depup.3"
     }
   }
 }

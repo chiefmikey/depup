@@ -179,6 +179,19 @@
       "status": "failed",
       "timestamp": "2026-10-15T00:32:11.186Z",
       "version": "4.2.6-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@vuetify/v0": {
+          "from": "^1.2.1",
+          "to": "^1.2.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T16:09:54.747Z",
+      "version": "4.2.6-depup.1"
     }
   }
 }
