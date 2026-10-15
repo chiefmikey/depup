@@ -12,13 +12,13 @@ npm install @depup/resend
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.33.0 | **DepUp version**: 6.33.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
+**Original version**: 6.33.0 | **DepUp version**: 6.33.0-depup.1 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| postal-mime | `2.7.6` | `^4.0.6` |
+| postal-mime | `2.7.6` | `^4.0.7` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/resend&labels=bug).

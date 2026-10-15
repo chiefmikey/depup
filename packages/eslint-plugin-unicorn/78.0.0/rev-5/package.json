@@ -1,6 +1,6 @@
 {
   "name": "@depup/eslint-plugin-unicorn",
-  "version": "78.0.0-depup.0",
+  "version": "78.0.0-depup.5",
   "description": "More than 300 powerful ESLint rules (with updated dependencies)",
   "license": "MIT",
   "repository": "github:sindresorhus/eslint-plugin-unicorn",
@@ -152,7 +152,7 @@
     "depsUpdated": 3,
     "originalPackage": "eslint-plugin-unicorn",
     "originalVersion": "78.0.0",
-    "processedAt": "2026-10-13T00:40:36.945Z",
+    "processedAt": "2026-10-15T08:11:50.792Z",
     "smokeTest": "passed"
   }
 }
