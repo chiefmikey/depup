@@ -624,5 +624,20 @@
       "timestamp": "2026-10-14T16:12:06.192Z",
       "version": "4.43.0-depup.1"
     }
+  },
+  "4.44.0": {
+    "0": {
+      "changes": {
+        "undici": {
+          "from": "6.29.0",
+          "to": "^8.12.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T00:31:57.438Z",
+      "version": "4.44.0-depup.0"
+    }
   }
 }

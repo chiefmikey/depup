@@ -1,6 +1,6 @@
 {
   "name": "@depup/imagemin",
-  "version": "9.0.1-depup.1",
+  "version": "9.0.1-depup.6",
   "description": "Minify images seamlessly (with updated dependencies)",
   "license": "MIT",
   "repository": "imagemin/imagemin",
@@ -38,14 +38,14 @@
   "dependencies": {
     "change-file-extension": "^1.0.0",
     "environment": "^1.1.0",
-    "file-type": "^22.0.0",
-    "globby": "^16.1.1",
-    "image-dimensions": "^2.5.0",
+    "file-type": "^22.2.0",
+    "globby": "^16.2.4",
+    "image-dimensions": "^2.6.0",
     "junk": "^4.0.1",
     "ow": "^3.1.1",
     "p-pipe": "^4.0.0",
     "slash": "^5.1.0",
-    "uint8array-extras": "^1.5.0"
+    "uint8array-extras": "^1.6.0"
   },
   "devDependencies": {
     "ava": "^6.1.2",
@@ -68,15 +68,15 @@
       },
       "file-type": {
         "from": "^19.0.0",
-        "to": "^22.0.0"
+        "to": "^22.2.0"
       },
       "globby": {
         "from": "^14.0.1",
-        "to": "^16.1.1"
+        "to": "^16.2.4"
       },
       "image-dimensions": {
         "from": "^2.3.0",
-        "to": "^2.5.0"
+        "to": "^2.6.0"
       },
       "ow": {
         "from": "^2.0.0",
@@ -84,13 +84,13 @@
       },
       "uint8array-extras": {
         "from": "^1.1.0",
-        "to": "^1.5.0"
+        "to": "^1.6.0"
       }
     },
     "depsUpdated": 7,
     "originalPackage": "imagemin",
     "originalVersion": "9.0.1",
-    "processedAt": "2026-03-26T20:19:45.573Z",
+    "processedAt": "2026-10-15T00:30:12.831Z",
     "smokeTest": "passed"
   }
 }

@@ -12,7 +12,7 @@ npm install @depup/imagemin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.5 | **Updated**: 9/27/2026 | **Import test**: passed
+**Original version**: 9.0.1 | **DepUp version**: 9.0.1-depup.6 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | change-file-extension | `^0.1.1` | `^1.0.0` |
 | environment | `^1.0.0` | `^1.1.0` |
-| file-type | `^19.0.0` | `^22.1.1` |
+| file-type | `^19.0.0` | `^22.2.0` |
 | globby | `^14.0.1` | `^16.2.4` |
 | image-dimensions | `^2.3.0` | `^2.6.0` |
 | ow | `^2.0.0` | `^3.1.1` |

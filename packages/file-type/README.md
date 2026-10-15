@@ -12,16 +12,11 @@ npm install @depup/file-type
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.1.1 | **DepUp version**: 22.1.1-depup.4 | **Updated**: 10/13/2026 | **Import test**: passed
+**Original version**: 22.2.0 | **DepUp version**: 22.2.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| @tokenizer/inflate | `^0.4.1` | `^0.5.0` |
-| strtok3 | `^10.3.5` | `^10.5.0` |
-| uint8array-extras | `^1.5.0` | `^1.6.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/file-type&labels=bug).
 
