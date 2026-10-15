@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.3.0 | **DepUp version**: 23.3.0-depup.1 | **Updated**: 10/8/2026 | **Import test**: failed
+**Original version**: 23.3.0 | **DepUp version**: 23.3.0-depup.2 | **Updated**: 10/15/2026 | **Import test**: failed
 
 ## What changed
 
@@ -44,7 +44,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | default-browser | `5.2.1` | `^5.5.1` |
 | default-browser-id | `5.0.0` | `^5.0.1` |
 | defaults | `1.0.4` | `^3.0.0` |
-| dotenv | `16.4.7` | `^18.0.6` |
+| dotenv | `16.4.7` | `^18.0.8` |
 | dotenv-expand | `12.0.3` | `^1000.0.0` |
 | ejs | `5.0.1` | `^7.0.1` |
 | emoji-regex | `8.0.0` | `^11.0.0` |
@@ -69,16 +69,18 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | ora | `5.4.1` | `^9.4.1` |
 | path-key | `3.1.1` | `^4.0.0` |
 | readable-stream | `3.6.2` | `^4.8.0` |
+| resolve.exports | `2.0.3` | `^2.0.4` |
 | restore-cursor | `3.1.0` | `^5.1.0` |
 | run-applescript | `7.0.0` | `^7.1.0` |
 | signal-exit | `3.0.7` | `^4.1.0` |
 | sisteransi | `1.0.5` | `^2.0.0` |
+| smol-toml | `1.9.0` | `^1.9.1` |
 | string-width | `4.2.3` | `^8.3.0` |
 | strip-ansi | `6.0.1` | `^7.2.0` |
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^11.0.0` |
 | tar-stream | `2.2.0` | `^3.2.2` |
-| undici | `7.29.0` | `^8.11.2` |
+| undici | `7.29.0` | `^8.12.1` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.2` |
 | yaml | `2.9.0` | `^2.9.1` |

@@ -1,0 +1,18 @@
+{
+  "duration_ms": 660,
+  "findings": [
+    {
+      "blocking": false,
+      "detail": "Hidden file detected: .borp.yaml",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    }
+  ],
+  "passed": true,
+  "scanned_at": "2026-10-15T00:29:42.425Z",
+  "scans": {
+    "malware_scan": "skipped (clamav unavailable)",
+    "pattern_scan": "passed",
+    "vulnerability_scan": "passed"
+  }
+}

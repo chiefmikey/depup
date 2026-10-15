@@ -1002,5 +1002,20 @@
       "timestamp": "2026-10-13T16:12:29.539Z",
       "version": "1.2.13-depup.1"
     }
+  },
+  "1.2.14": {
+    "0": {
+      "changes": {
+        "@rolldown/pluginutils": {
+          "from": "^1.0.0",
+          "to": "^1.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T00:30:52.446Z",
+      "version": "1.2.14-depup.0"
+    }
   }
 }

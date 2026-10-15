@@ -12,12 +12,13 @@ npm install @depup/anthropic-ai__sdk
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 0.133.0 | **DepUp version**: 0.133.0-depup.0 | **Updated**: 10/10/2026 | **Import test**: passed
+**Original version**: 0.134.0 | **DepUp version**: 0.134.0-depup.0 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
+| @opentelemetry/api | `^1.4.1` | `^1.9.1` |
 | standardwebhooks | `^1.0.0` | `^1.1.1` |
 
 

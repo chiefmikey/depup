@@ -12,15 +12,15 @@ npm install @depup/pullstate
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.0.0-pre.9 | **DepUp version**: 2.0.0-pre.9-depup.2 | **Updated**: 10/3/2026 | **Import test**: passed
+**Original version**: 2.0.0-pre.9 | **DepUp version**: 2.0.0-pre.9-depup.3 | **Updated**: 10/15/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| fast-equals | `^5.2.2` | `^6.1.0` |
+| fast-equals | `^5.2.2` | `^6.2.1` |
 | immer | `^10.1.1` | `^11.1.21` |
-| react | `^19.0.0` | `^19.3.0` |
+| react | `^19.0.0` | `^19.3.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/pullstate&labels=bug).

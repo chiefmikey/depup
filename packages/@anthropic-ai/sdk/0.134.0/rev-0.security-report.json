@@ -1,0 +1,18 @@
+{
+  "duration_ms": 1083,
+  "findings": [
+    {
+      "blocking": false,
+      "detail": "Hidden file detected: src/lib/.keep",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    }
+  ],
+  "passed": true,
+  "scanned_at": "2026-10-15T00:31:06.068Z",
+  "scans": {
+    "malware_scan": "skipped (clamav unavailable)",
+    "pattern_scan": "passed",
+    "vulnerability_scan": "passed"
+  }
+}

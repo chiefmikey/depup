@@ -870,5 +870,24 @@
       "timestamp": "2026-10-10T00:36:42.271Z",
       "version": "0.133.0-depup.0"
     }
+  },
+  "0.134.0": {
+    "0": {
+      "changes": {
+        "@opentelemetry/api": {
+          "from": "^1.4.1",
+          "to": "^1.9.1"
+        },
+        "standardwebhooks": {
+          "from": "^1.0.0",
+          "to": "^1.1.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-15T00:31:14.024Z",
+      "version": "0.134.0-depup.0"
+    }
   }
 }

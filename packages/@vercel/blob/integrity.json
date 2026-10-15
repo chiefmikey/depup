@@ -595,6 +595,27 @@
       "status": "failed",
       "timestamp": "2026-10-14T16:13:23.930Z",
       "version": "2.8.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@vercel/oidc": {
+          "from": "^3.6.1",
+          "to": "^4.0.1"
+        },
+        "throttleit": {
+          "from": "^2.1.0",
+          "to": "^3.0.0"
+        },
+        "undici": {
+          "from": "^6.23.0",
+          "to": "^8.12.1"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T00:32:18.091Z",
+      "version": "2.8.2-depup.1"
     }
   }
 }
