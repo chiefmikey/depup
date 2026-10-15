@@ -803,5 +803,20 @@
       "timestamp": "2026-10-09T00:36:20.156Z",
       "version": "22.2.2-depup.0"
     }
+  },
+  "22.2.3": {
+    "0": {
+      "changes": {
+        "tslib": {
+          "from": "^2.3.0",
+          "to": "^2.8.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-15T00:32:45.218Z",
+      "version": "22.2.3-depup.0"
+    }
   }
 }

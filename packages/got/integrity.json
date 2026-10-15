@@ -689,6 +689,19 @@
       "status": "failed",
       "timestamp": "2026-10-14T08:14:03.059Z",
       "version": "16.1.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "keyv": {
+          "from": "^5.6.0",
+          "to": "^6.1.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-15T00:30:21.174Z",
+      "version": "16.1.0-depup.4"
     }
   }
 }

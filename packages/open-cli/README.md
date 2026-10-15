@@ -12,14 +12,14 @@ npm install @depup/open-cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.2 | **Updated**: 9/11/2026 | **Import test**: failed
+**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.3 | **Updated**: 10/15/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| file-type | `^21.3.4` | `^22.1.0` |
-| open | `^11.0.0` | `^11.0.3` |
+| file-type | `^21.3.4` | `^22.2.0` |
+| open | `^11.0.0` | `^11.0.4` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/open-cli&labels=bug).
