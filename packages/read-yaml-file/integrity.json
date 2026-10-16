@@ -31,6 +31,19 @@
       "status": "failed",
       "timestamp": "2026-10-09T16:15:33.775Z",
       "version": "3.0.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "js-yaml": {
+          "from": "^4.1.1",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-16T08:11:42.931Z",
+      "version": "3.0.0-depup.3"
     }
   }
 }

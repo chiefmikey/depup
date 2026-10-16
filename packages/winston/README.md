@@ -12,7 +12,7 @@ npm install @depup/winston
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.19.0 | **DepUp version**: 3.19.0-depup.2 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 3.19.0 | **DepUp version**: 3.19.0-depup.3 | **Updated**: 10/16/2026 | **Import test**: passed
 
 ## What changed
 
@@ -23,7 +23,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | async | `^3.2.3` | `^3.2.6` |
 | is-stream | `^2.0.0` | `^4.0.1` |
 | readable-stream | `^3.4.0` | `^4.8.0` |
-| safe-stable-stringify | `^2.3.1` | `^2.5.0` |
+| safe-stable-stringify | `^2.3.1` | `^3.0.0` |
 | stack-trace | `0.0.x` | `^1.0.0` |
 | triple-beam | `^1.3.0` | `^1.4.1` |
 

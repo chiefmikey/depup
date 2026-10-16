@@ -561,6 +561,23 @@
       "status": "failed",
       "timestamp": "2026-10-16T00:31:46.701Z",
       "version": "8.0.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "pretty-ms": {
+          "from": "^9.3.1",
+          "to": "^10.0.0"
+        },
+        "write-file-atomic": {
+          "from": "^7.0.1",
+          "to": "^8.0.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-16T08:15:00.110Z",
+      "version": "8.0.2-depup.1"
     }
   }
 }

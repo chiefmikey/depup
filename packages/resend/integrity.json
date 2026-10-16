@@ -669,6 +669,19 @@
       "status": "failed",
       "timestamp": "2026-10-15T16:12:28.277Z",
       "version": "6.33.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "postal-mime": {
+          "from": "2.7.6",
+          "to": "^4.0.7"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-16T08:13:52.086Z",
+      "version": "6.33.0-depup.3"
     }
   }
 }
