@@ -12,14 +12,11 @@ npm install @depup/p-memoize
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.6 | **Updated**: 9/17/2026 | **Import test**: passed
+**Original version**: 9.0.0 | **DepUp version**: 9.0.0-depup.0 | **Updated**: 10/16/2026 | **Import test**: passed
 
 ## What changed
 
-| Dependency | Original | Updated |
-|------------|----------|--------|
-| type-fest | `^4.41.0` | `^5.10.0` |
-
+No dependencies were updated (all already at latest).
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/p-memoize&labels=bug).
 

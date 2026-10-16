@@ -1,0 +1,76 @@
+{
+  "name": "@depup/expo__local-build-cache-provider",
+  "version": "58.0.6-depup.0",
+  "description": "Local build cache provider for Expo (with updated dependencies)",
+  "keywords": [
+    "@expo/local-build-cache-provider",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "build-cache-provider",
+    "expo",
+    "local-build-cache",
+    "react-native"
+  ],
+  "homepage": "https://github.com/expo/expo/tree/main/packages/@expo/local-build-cache-provider#readme",
+  "bugs": {
+    "url": "https://github.com/expo/expo/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/@expo/local-build-cache-provider"
+  },
+  "files": [
+    "build",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "expo-source": "./src/index.ts",
+        "default": "./build/index.d.ts"
+      },
+      "expo-source": "./src/index.ts",
+      "default": "./build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@expo/config": "~58.0.6",
+    "chalk": "^6.0.1"
+  },
+  "devDependencies": {
+    "@expo/internal-scripts": "58.0.2",
+    "@types/node": "^22.14.0",
+    "memfs": "^3.6.0"
+  },
+  "scripts": {
+    "build": "expo-build cjs:src",
+    "clean": "expo-module clean",
+    "lint": "oxlint --config oxlint.config.mjs .",
+    "format": "expo-module format",
+    "test": "jest",
+    "depscheck": "expo-module depscheck",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^4.1.2",
+        "to": "^6.0.1"
+      }
+    },
+    "depsUpdated": 1,
+    "originalPackage": "@expo/local-build-cache-provider",
+    "originalVersion": "58.0.6",
+    "processedAt": "2026-10-16T00:31:05.818Z",
+    "smokeTest": "passed"
+  }
+}

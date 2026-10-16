@@ -1,0 +1,100 @@
+{
+  "name": "@depup/p-memoize",
+  "version": "9.0.0-depup.0",
+  "description": "Memoize promise-returning & async functions (with updated dependencies)",
+  "license": "MIT",
+  "repository": "sindresorhus/p-memoize",
+  "funding": "https://github.com/sindresorhus/p-memoize?sponsor=1",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "xo && node --import=tsimp/import --test test.ts && npm run build && nz",
+    "build": "del-cli dist && tsc"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "p-memoize",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "promise",
+    "memoize",
+    "mem",
+    "memoization",
+    "function",
+    "cache",
+    "caching",
+    "optimize",
+    "performance",
+    "ttl",
+    "expire",
+    "async",
+    "await",
+    "promises",
+    "time",
+    "out",
+    "cancel",
+    "bluebird"
+  ],
+  "dependencies": {
+    "mimic-function": "^5.0.1"
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^8.1.0",
+    "@types/serialize-javascript": "^5.0.4",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "del-cli": "^7.0.0",
+    "nz": "^0.1.0",
+    "p-defer": "^4.0.1",
+    "p-state": "^3.0.0",
+    "serialize-javascript": "^7.1.2",
+    "tsimp": "^2.0.12",
+    "xo": "^5.0.1"
+  },
+  "xo": [
+    {
+      "rules": {
+        "@typescript-eslint/no-redundant-type-constituents": "off"
+      }
+    },
+    {
+      "files": [
+        "test.ts",
+        "test-d/**"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off"
+      }
+    },
+    {
+      "files": [
+        "package.json"
+      ]
+    }
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "p-memoize",
+    "originalVersion": "9.0.0",
+    "processedAt": "2026-10-16T00:29:15.530Z",
+    "smokeTest": "passed"
+  }
+}

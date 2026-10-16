@@ -12,21 +12,23 @@ npm install @depup/angular-devkit__build-angular
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 22.2.2 | **DepUp version**: 22.2.2-depup.0 | **Updated**: 10/7/2026 | **Import test**: passed
+**Original version**: 22.2.3 | **DepUp version**: 22.2.3-depup.0 | **Updated**: 10/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @babel/core | `8.0.5` | `^8.0.6` |
+| @babel/core | `8.0.5` | `^8.0.7` |
 | @babel/generator | `8.0.5` | `^8.0.6` |
 | @babel/plugin-transform-async-generator-functions | `8.0.1` | `^8.0.6` |
 | @babel/plugin-transform-runtime | `8.0.1` | `^8.0.6` |
-| @babel/preset-env | `8.0.5` | `^8.0.6` |
+| @babel/preset-env | `8.0.5` | `^8.0.7` |
+| @babel/runtime | `8.0.5` | `^8.0.7` |
 | autoprefixer | `10.6.0` | `^10.6.1` |
+| beasties | `0.5.4` | `^0.5.5` |
 | browserslist | `^4.26.0` | `^4.29.3` |
-| postcss | `8.5.28` | `^8.5.29` |
-| webpack | `5.111.0` | `^5.111.1` |
+| postcss | `8.5.28` | `^8.5.30` |
+| webpack | `5.111.0` | `^5.112.0` |
 | webpack-subresource-integrity | `5.1.0` | `^5.2.0-rc.1` |
 
 
