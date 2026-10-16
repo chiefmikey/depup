@@ -1,0 +1,54 @@
+{
+  "name": "@depup/expo__schema-utils",
+  "version": "58.0.1-depup.0",
+  "description": "Reusable JSON Schema (Draft 04) validation library for Expo (with updated dependencies)",
+  "homepage": "https://github.com/expo/expo/tree/main/packages/@expo/schema-utils#readme",
+  "bugs": {
+    "url": "https://github.com/expo/expo/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/@expo/schema-utils"
+  },
+  "files": [
+    "build",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^29.2.1",
+    "@types/node": "^22.14.0",
+    "expo-module-scripts": "56.0.4",
+    "json-schema-to-typescript": "^15.0.0"
+  },
+  "scripts": {
+    "build": "expo-build cjs:src",
+    "clean": "expo-module clean",
+    "lint": "oxlint --config oxlint.config.mjs .",
+    "format": "expo-module format",
+    "generate": "node ./scripts/generate.js",
+    "test": "jest",
+    "depscheck": "expo-module depscheck",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "@expo/schema-utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched"
+  ],
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@expo/schema-utils",
+    "originalVersion": "58.0.1",
+    "processedAt": "2026-10-16T00:33:08.609Z",
+    "smokeTest": "passed"
+  }
+}

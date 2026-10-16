@@ -612,6 +612,35 @@
       "status": "published",
       "timestamp": "2026-10-10T08:14:15.749Z",
       "version": "3.4.1-depup.2"
+    },
+    "3": {
+      "changes": {
+        "mailparser": {
+          "from": "3.9.20",
+          "to": "^3.9.39"
+        },
+        "nodemailer": {
+          "from": "^9.1.1",
+          "to": "^10.1.1"
+        },
+        "open": {
+          "from": "10",
+          "to": "^11.0.4"
+        },
+        "p-event": {
+          "from": "6.0.1",
+          "to": "^8.0.1"
+        },
+        "p-wait-for": {
+          "from": "5.0.2",
+          "to": "^7.0.0"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T00:32:15.604Z",
+      "version": "3.4.1-depup.3"
     }
   }
 }

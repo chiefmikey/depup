@@ -12,33 +12,25 @@ npm install @depup/expo__cli
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 57.0.31 | **DepUp version**: 57.0.31-depup.0 | **Updated**: 10/15/2026 | **Import test**: failed
+**Original version**: 58.1.9 | **DepUp version**: 58.1.9-depup.0 | **Updated**: 10/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @expo/code-signing-certificates | `^0.0.6` | `^0.0.7` |
-| @expo/devcert | `^1.2.1` | `^1.2.2` |
-| @expo/metro | `~56.0.2` | `^58.0.0` |
-| @expo/ws-tunnel | `^2.0.0` | `^2.0.1` |
-| @expo/xcpretty | `^4.4.4` | `^4.4.7` |
-| @react-native/dev-middleware | `0.86.3` | `^0.88.0` |
+| @expo/xcpretty | `^4.4.6` | `^4.4.7` |
 | bplist-creator | `0.1.0` | `^0.3.0` |
 | bplist-parser | `^0.3.1` | `^0.5.0` |
 | chalk | `^4.0.0` | `^6.0.1` |
 | ci-info | `^3.3.0` | `^4.4.0` |
 | compression | `^1.7.4` | `^1.8.2` |
-| debug | `^4.3.4` | `^4.4.3` |
-| dnssd-advertise | `^1.1.4` | `^1.1.6` |
 | glob | `^13.0.0` | `^13.0.6` |
-| node-forge | `^1.3.3` | `^1.4.0` |
 | npm-package-arg | `^11.0.0` | `^14.0.0` |
 | ora | `^3.4.0` | `^9.4.1` |
 | picomatch | `^4.0.4` | `^4.0.7` |
 | pretty-format | `^29.7.0` | `^30.5.1` |
 | prompts | `^2.3.2` | `^2.4.2` |
-| semver | `^7.6.0` | `^7.8.5` |
+| semver | `^7.7.4` | `^7.8.5` |
 | send | `^0.19.0` | `^1.2.1` |
 | slugify | `^1.3.4` | `^1.6.9` |
 | stacktrace-parser | `^0.1.10` | `^0.1.11` |

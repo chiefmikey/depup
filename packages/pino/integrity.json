@@ -217,6 +217,43 @@
       "status": "published",
       "timestamp": "2026-10-03T00:34:07.521Z",
       "version": "10.4.0-depup.0"
+    },
+    "1": {
+      "changes": {
+        "on-exit-leak-free": {
+          "from": "^2.1.0",
+          "to": "^2.1.2"
+        },
+        "pino-std-serializers": {
+          "from": "^7.0.0",
+          "to": "^7.1.0"
+        },
+        "process-warning": {
+          "from": "^5.0.0",
+          "to": "^5.1.1"
+        },
+        "quick-format-unescaped": {
+          "from": "^4.0.3",
+          "to": "^4.0.4"
+        },
+        "safe-stable-stringify": {
+          "from": "^2.3.1",
+          "to": "^3.0.0"
+        },
+        "sonic-boom": {
+          "from": "^4.0.1",
+          "to": "^5.0.2"
+        },
+        "thread-stream": {
+          "from": "^4.0.0",
+          "to": "^4.2.0"
+        }
+      },
+      "depsUpdated": 7,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T00:29:41.493Z",
+      "version": "10.4.0-depup.1"
     }
   }
 }

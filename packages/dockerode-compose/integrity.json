@@ -1,26 +1,5 @@
 {
   "1.4.0": {
-    "1": {
-      "changes": {
-        "dockerode": {
-          "from": "^4.0.0",
-          "to": "^5.0.0"
-        },
-        "js-yaml": {
-          "from": "^4.0.0",
-          "to": "^4.1.1"
-        },
-        "tar-fs": {
-          "from": "^2.1.1",
-          "to": "^3.1.2"
-        }
-      },
-      "depsUpdated": 3,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-04-24T00:48:25.953Z",
-      "version": "1.4.0-depup.1"
-    },
     "2": {
       "changes": {
         "dockerode": {
@@ -104,6 +83,27 @@
       "status": "published",
       "timestamp": "2026-08-25T08:15:49.309Z",
       "version": "1.4.0-depup.5"
+    },
+    "6": {
+      "changes": {
+        "dockerode": {
+          "from": "^4.0.0",
+          "to": "^5.0.1"
+        },
+        "js-yaml": {
+          "from": "^4.0.0",
+          "to": "^5.5.0"
+        },
+        "tar-fs": {
+          "from": "^2.1.1",
+          "to": "^3.1.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T00:35:03.348Z",
+      "version": "1.4.0-depup.6"
     }
   }
 }

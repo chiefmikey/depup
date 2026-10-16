@@ -359,6 +359,27 @@
       "status": "published",
       "timestamp": "2026-09-23T08:12:22.314Z",
       "version": "12.0.2-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@microsoft/tsdoc": {
+          "from": "0.17.0",
+          "to": "^0.17.1"
+        },
+        "js-yaml": {
+          "from": "5.4.2",
+          "to": "^5.5.0"
+        },
+        "swagger-ui-dist": {
+          "from": "5.33.0",
+          "to": "^5.33.3"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-16T00:33:41.236Z",
+      "version": "12.0.2-depup.1"
     }
   }
 }
