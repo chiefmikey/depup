@@ -531,5 +531,15 @@
       "timestamp": "2026-10-10T00:35:46.446Z",
       "version": "15.0.2-depup.85"
     }
+  },
+  "15.0.3": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T08:16:00.751Z",
+      "version": "15.0.3-depup.0"
+    }
   }
 }

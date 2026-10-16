@@ -96,5 +96,24 @@
       "timestamp": "2026-10-09T16:11:15.888Z",
       "version": "1.105.1-depup.0"
     }
+  },
+  "1.105.2": {
+    "0": {
+      "changes": {
+        "immutable": {
+          "from": "^5.1.5",
+          "to": "^5.1.9"
+        },
+        "source-map-js": {
+          "from": ">=0.6.2 <2.0.0",
+          "to": "^1.2.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T08:15:52.762Z",
+      "version": "1.105.2-depup.0"
+    }
   }
 }

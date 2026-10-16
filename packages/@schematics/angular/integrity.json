@@ -709,6 +709,23 @@
       "status": "failed",
       "timestamp": "2026-10-16T00:34:10.680Z",
       "version": "22.2.3-depup.0"
+    },
+    "1": {
+      "changes": {
+        "oxc-parser": {
+          "from": "0.150.0",
+          "to": "^0.154.0"
+        },
+        "typescript": {
+          "from": "6.0.3",
+          "to": "^7.0.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-16T08:17:34.720Z",
+      "version": "22.2.3-depup.1"
     }
   }
 }

@@ -808,6 +808,14 @@
       "status": "failed",
       "timestamp": "2026-10-16T00:34:12.369Z",
       "version": "11.8.0-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-16T08:17:45.744Z",
+      "version": "11.8.0-depup.2"
     }
   }
 }
