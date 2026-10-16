@@ -1,6 +1,6 @@
 {
   "name": "@depup/pretty-ms",
-  "version": "10.0.0-depup.0",
+  "version": "10.0.0-depup.5",
   "description": "Convert milliseconds to a human readable string: `1337000000` → `15d 11h 23m 20s` (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/pretty-ms",
@@ -69,7 +69,7 @@
     "depsUpdated": 0,
     "originalPackage": "pretty-ms",
     "originalVersion": "10.0.0",
-    "processedAt": "2026-10-14T16:11:08.622Z",
+    "processedAt": "2026-10-16T16:11:05.667Z",
     "smokeTest": "passed"
   }
 }

@@ -289,6 +289,27 @@
       "status": "published",
       "timestamp": "2026-10-09T08:14:03.422Z",
       "version": "0.8.4-depup.0"
+    },
+    "1": {
+      "changes": {
+        "axios": {
+          "from": "1.18.1",
+          "to": "^1.20.0"
+        },
+        "google-libphonenumber": {
+          "from": "3.2.44",
+          "to": "^3.2.47"
+        },
+        "joi": {
+          "from": "18.2.3",
+          "to": "^18.3.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T16:10:12.776Z",
+      "version": "0.8.4-depup.1"
     }
   }
 }

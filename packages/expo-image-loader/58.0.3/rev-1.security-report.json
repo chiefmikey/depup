@@ -1,0 +1,24 @@
+{
+  "duration_ms": 6313,
+  "findings": [
+    {
+      "blocking": true,
+      "detail": "Suspicious file extension: local-maven-repo/host/exp/exponent/expo.modules.imageloader/58.0.3/expo.modules.imageloader-58.0.3-sources.jar",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    },
+    {
+      "blocking": false,
+      "detail": "npm audit: 0 critical, 15 high, 7 moderate, 0 low",
+      "kind": "vulnerability",
+      "scan": "vulnerability_scan"
+    }
+  ],
+  "passed": false,
+  "scanned_at": "2026-10-16T16:10:42.076Z",
+  "scans": {
+    "malware_scan": "skipped (clamav unavailable)",
+    "pattern_scan": "failed",
+    "vulnerability_scan": "failed"
+  }
+}
