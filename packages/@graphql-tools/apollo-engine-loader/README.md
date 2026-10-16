@@ -12,7 +12,7 @@ npm install @depup/graphql-tools__apollo-engine-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.39 | **DepUp version**: 8.0.39-depup.0 | **Updated**: 10/13/2026 | **Import test**: passed
+**Original version**: 8.0.40 | **DepUp version**: 8.0.40-depup.0 | **Updated**: 10/16/2026 | **Import test**: passed
 
 ## What changed
 

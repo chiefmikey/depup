@@ -12,27 +12,14 @@ npm install @depup/ava
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.1 | **DepUp version**: 8.0.1-depup.67 | **Updated**: 10/14/2026 | **Import test**: failed
+**Original version**: 8.0.2 | **DepUp version**: 8.0.2-depup.0 | **Updated**: 10/16/2026 | **Import test**: failed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| @vercel/nft | `^1.5.0` | `^1.11.0` |
-| acorn | `^8.16.0` | `^8.19.0` |
-| ansi-styles | `^6.2.3` | `^7.0.0` |
-| cbor2 | `^2.3.0` | `^2.4.0` |
-| chalk | `^5.6.2` | `^6.0.1` |
-| cli-truncate | `^6.0.0` | `^6.1.1` |
-| emittery | `^2.0.0` | `^2.1.0` |
-| globby | `^16.2.0` | `^16.2.4` |
-| is-plain-object | `^5.0.0` | `^5.1.0` |
-| matcher | `^6.0.0` | `^7.0.0` |
-| p-map | `^7.0.4` | `^7.1.1` |
-| picomatch | `^4.0.4` | `^4.0.7` |
-| pretty-ms | `^9.3.0` | `^10.0.0` |
+| pretty-ms | `^9.3.1` | `^10.0.0` |
 | write-file-atomic | `^7.0.1` | `^8.0.0` |
-| yargs | `^18.0.0` | `^18.2.0` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/ava&labels=bug).

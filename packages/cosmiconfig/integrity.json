@@ -242,6 +242,23 @@
       "status": "published",
       "timestamp": "2026-08-30T16:09:29.567Z",
       "version": "10.0.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "env-paths": {
+          "from": "^2.2.1",
+          "to": "^4.0.0"
+        },
+        "js-yaml": {
+          "from": "^5.4.1",
+          "to": "^5.5.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-16T00:32:47.548Z",
+      "version": "10.0.1-depup.1"
     }
   }
 }

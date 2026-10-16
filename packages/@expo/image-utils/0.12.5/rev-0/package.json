@@ -1,0 +1,75 @@
+{
+  "name": "@depup/expo__image-utils",
+  "version": "0.12.5-depup.0",
+  "description": "A package used by Expo CLI for processing images (with updated dependencies)",
+  "keywords": [
+    "@expo/image-utils",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json"
+  ],
+  "homepage": "https://github.com/expo/expo/tree/main/packages/%40expo/image-utils#readme",
+  "bugs": {
+    "url": "https://github.com/expo/expo/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/expo.git",
+    "directory": "packages/@expo/image-utils"
+  },
+  "files": [
+    "build",
+    "changes.json",
+    "README.md"
+  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "dependencies": {
+    "@expo/require-utils": "^58.0.4",
+    "@expo/spawn-async": "^1.8.0",
+    "chalk": "^6.0.1",
+    "getenv": "^2.0.0",
+    "jimp-compact": "0.16.1",
+    "parse-png": "^2.1.0",
+    "semver": "^7.8.5"
+  },
+  "devDependencies": {
+    "@expo/internal-scripts": "58.0.2",
+    "@types/getenv": "^1.0.3",
+    "@types/semver": "^7.7.1",
+    "sharp": "~0.34.2",
+    "sharp-cli": "^5.2.0"
+  },
+  "scripts": {
+    "build": "expo-build cjs:src",
+    "clean": "expo-module clean",
+    "lint": "oxlint --config oxlint.config.mjs .",
+    "format": "expo-module format",
+    "test": "jest",
+    "pretest:e2e": "expo-module prepublishOnly",
+    "test:e2e": "jest --config e2e/jest.config.js",
+    "depscheck": "expo-module depscheck",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "depup": {
+    "changes": {
+      "chalk": {
+        "from": "^4.0.0",
+        "to": "^6.0.1"
+      },
+      "semver": {
+        "from": "^7.7.4",
+        "to": "^7.8.5"
+      }
+    },
+    "depsUpdated": 2,
+    "originalPackage": "@expo/image-utils",
+    "originalVersion": "0.12.5",
+    "processedAt": "2026-10-16T00:29:44.524Z",
+    "smokeTest": "passed"
+  }
+}
