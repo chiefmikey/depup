@@ -12,11 +12,14 @@ npm install @depup/wait-on
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 9.5.1 | **DepUp version**: 9.5.1-depup.0 | **Updated**: 10/4/2026 | **Import test**: passed
+**Original version**: 9.5.1 | **DepUp version**: 9.5.1-depup.1 | **Updated**: 10/16/2026 | **Import test**: passed
 
 ## What changed
 
-No dependencies were updated (all already at latest).
+| Dependency | Original | Updated |
+|------------|----------|--------|
+| joi | `^18.2.9` | `^18.3.0` |
+
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/wait-on&labels=bug).
 
