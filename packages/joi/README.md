@@ -12,7 +12,7 @@ npm install @depup/joi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 18.2.9 | **DepUp version**: 18.2.9-depup.0 | **Updated**: 9/11/2026 | **Import test**: passed
+**Original version**: 18.3.0 | **DepUp version**: 18.3.0-depup.0 | **Updated**: 10/16/2026 | **Import test**: passed
 
 ## What changed
 
@@ -20,7 +20,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @hapi/formula | `^3.0.2` | `^4.0.0` |
 | @hapi/pinpoint | `^2.0.1` | `^3.0.0` |
-| @hapi/tlds | `^1.1.1` | `^2.0.0` |
+| @hapi/tlds | `^1.1.1` | `^2.0.1` |
 
 
 Something broken? [Report it](https://github.com/depup/npm/issues/new?title=Issue+with+@depup/joi&labels=bug).
