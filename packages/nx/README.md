@@ -12,7 +12,7 @@ npm install @depup/nx
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 23.3.0 | **DepUp version**: 23.3.0-depup.2 | **Updated**: 10/15/2026 | **Import test**: failed
+**Original version**: 23.3.0 | **DepUp version**: 23.3.0-depup.3 | **Updated**: 10/17/2026 | **Import test**: failed
 
 ## What changed
 
@@ -29,8 +29,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @zkochan/js-yaml | `0.0.7` | `^0.0.11` |
 | ansi-regex | `5.0.1` | `^6.4.0` |
 | ansi-styles | `4.3.0` | `^7.0.0` |
-| argparse | `2.0.1` | `^3.0.2` |
-| balanced-match | `4.0.3` | `^4.0.4` |
+| argparse | `2.0.1` | `^3.0.3` |
+| balanced-match | `4.0.3` | `^5.0.0` |
 | bl | `4.1.0` | `^7.0.12` |
 | buffer | `5.7.1` | `^6.0.3` |
 | bundle-name | `4.1.0` | `^4.1.1` |
@@ -80,7 +80,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | strip-bom | `3.0.0` | `^5.0.0` |
 | supports-color | `7.2.0` | `^11.0.0` |
 | tar-stream | `2.2.0` | `^3.2.2` |
-| undici | `7.29.0` | `^8.12.1` |
+| undici | `7.29.0` | `^8.12.2` |
 | which | `3.0.1` | `^7.0.0` |
 | wrap-ansi | `7.0.0` | `^10.0.2` |
 | yaml | `2.9.0` | `^2.9.1` |

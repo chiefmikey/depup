@@ -304,5 +304,20 @@
       "timestamp": "2026-10-07T00:38:06.977Z",
       "version": "15.0.1-depup.0"
     }
+  },
+  "15.0.2": {
+    "0": {
+      "changes": {
+        "@mswjs/interceptors": {
+          "from": "^0.44.0",
+          "to": "^0.45.8"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-17T00:32:04.613Z",
+      "version": "15.0.2-depup.0"
+    }
   }
 }

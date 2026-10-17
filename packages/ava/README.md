@@ -12,7 +12,7 @@ npm install @depup/ava
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.2 | **DepUp version**: 8.0.2-depup.1 | **Updated**: 10/16/2026 | **Import test**: failed
+**Original version**: 8.0.2 | **DepUp version**: 8.0.2-depup.2 | **Updated**: 10/17/2026 | **Import test**: failed
 
 ## What changed
 

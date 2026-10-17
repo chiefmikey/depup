@@ -503,6 +503,23 @@
       "status": "failed",
       "timestamp": "2026-10-16T16:10:44.925Z",
       "version": "17.0.20-depup.0"
+    },
+    "1": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.29.7",
+          "to": "^8.0.7"
+        },
+        "use-sync-external-store": {
+          "from": "^1.6.0",
+          "to": "^1.7.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-17T00:32:22.710Z",
+      "version": "17.0.20-depup.1"
     }
   }
 }
