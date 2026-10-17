@@ -446,6 +446,27 @@
       "status": "failed",
       "timestamp": "2026-10-17T00:29:48.704Z",
       "version": "2.1.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "entities": {
+          "from": "^4.5.0",
+          "to": "^8.1.0"
+        },
+        "html-to-text": {
+          "from": "^9.0.5",
+          "to": "^10.0.1"
+        },
+        "prettier": {
+          "from": "^3.5.3",
+          "to": "^3.9.10"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-17T08:10:55.378Z",
+      "version": "2.1.1-depup.1"
     }
   }
 }

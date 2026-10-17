@@ -12,7 +12,7 @@ npm install @depup/expo-image-loader
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 58.0.3 | **DepUp version**: 58.0.3-depup.2 | **Updated**: 10/17/2026 | **Import test**: passed
+**Original version**: 58.0.3 | **DepUp version**: 58.0.3-depup.3 | **Updated**: 10/17/2026 | **Import test**: passed
 
 ## What changed
 

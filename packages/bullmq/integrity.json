@@ -1919,5 +1919,15 @@
       "timestamp": "2026-10-14T08:13:38.886Z",
       "version": "6.3.15-depup.0"
     }
+  },
+  "6.3.16": {
+    "0": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-17T08:11:11.824Z",
+      "version": "6.3.16-depup.0"
+    }
   }
 }

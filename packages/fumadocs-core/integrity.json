@@ -1525,6 +1525,19 @@
       "status": "failed",
       "timestamp": "2026-10-17T00:30:55.204Z",
       "version": "16.17.5-depup.1"
+    },
+    "2": {
+      "changes": {
+        "micromark": {
+          "from": "^4.0.2",
+          "to": "^4.0.3"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-17T08:11:33.753Z",
+      "version": "16.17.5-depup.2"
     }
   }
 }

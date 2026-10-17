@@ -1,6 +1,6 @@
 {
   "name": "@depup/file-type",
-  "version": "22.2.0-depup.1",
+  "version": "22.2.0-depup.6",
   "description": "Detect the file type of a file, stream, or data (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/file-type",
@@ -286,7 +286,7 @@
     "depsUpdated": 0,
     "originalPackage": "file-type",
     "originalVersion": "22.2.0",
-    "processedAt": "2026-10-15T08:13:05.097Z",
+    "processedAt": "2026-10-17T08:11:21.490Z",
     "smokeTest": "passed"
   }
 }
