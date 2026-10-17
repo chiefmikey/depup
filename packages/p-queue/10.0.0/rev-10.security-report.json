@@ -1,15 +1,15 @@
 {
-  "duration_ms": 1521,
+  "duration_ms": 1475,
   "findings": [
     {
       "blocking": false,
-      "detail": "npm audit: 2 critical, 10 high, 4 moderate, 8 low",
+      "detail": "npm audit: 0 critical, 7 high, 0 moderate, 4 low",
       "kind": "vulnerability",
       "scan": "vulnerability_scan"
     }
   ],
   "passed": true,
-  "scanned_at": "2026-10-14T08:14:01.114Z",
+  "scanned_at": "2026-10-17T00:31:29.947Z",
   "scans": {
     "malware_scan": "skipped (clamav unavailable)",
     "pattern_scan": "passed",

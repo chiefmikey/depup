@@ -1,6 +1,6 @@
 {
   "name": "@depup/p-queue",
-  "version": "10.0.0-depup.5",
+  "version": "10.0.0-depup.10",
   "description": "Promise queue with concurrency control (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/p-queue",
@@ -91,7 +91,7 @@
     "depsUpdated": 0,
     "originalPackage": "p-queue",
     "originalVersion": "10.0.0",
-    "processedAt": "2026-10-15T00:30:40.966Z",
+    "processedAt": "2026-10-17T00:31:29.945Z",
     "smokeTest": "passed"
   }
 }
