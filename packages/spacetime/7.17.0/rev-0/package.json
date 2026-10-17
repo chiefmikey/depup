@@ -1,0 +1,105 @@
+{
+  "name": "@depup/spacetime",
+  "version": "7.17.0-depup.0",
+  "description": "figure-out dates across timezones (with updated dependencies)",
+  "license": "Apache-2.0",
+  "repository": "github:spencermountain/spacetime",
+  "homepage": "https://spacetime.how",
+  "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types/index.d.ts",
+        "default": "./builds/spacetime.mjs"
+      },
+      "require": {
+        "types": "./types/index.d.cts",
+        "default": "./builds/spacetime.cjs"
+      }
+    },
+    "./temporal": {
+      "import": {
+        "types": "./types/temporal.d.ts",
+        "default": "./builds/spacetime-temporal.mjs"
+      },
+      "require": {
+        "types": "./types/temporal.d.cts",
+        "default": "./builds/spacetime-temporal.cjs"
+      }
+    }
+  },
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "api",
+    "builds",
+    "src",
+    "types",
+    "zonefile",
+    "changes.json",
+    "README.md"
+  ],
+  "keywords": [
+    "spacetime",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "date-time",
+    "timezone",
+    "daylight-savings"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-terser": "^1.0.0",
+    "@types/node": "^26.6.5",
+    "@types/tape": "^5.8.1",
+    "eslint": "^10.12.0",
+    "eslint-plugin-regexp": "3.3.1",
+    "rollup": "4.64.7",
+    "rollup-plugin-filesize-check": "2.0.1",
+    "tap-dancer": "0.4.4",
+    "tape": "5.10.3",
+    "timekeeper": "2.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "unpkg": "builds/spacetime.min.js",
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "scripts": {
+    "watch": "node --watch ./scratch.js",
+    "build:zones": "node ./zonefile/pack.js",
+    "build:plugins": "pnpm --filter \"./plugins/*\" run build",
+    "version": "node ./scripts/version.js",
+    "build": "pnpm run build:zones && pnpm run version && rollup -c --silent",
+    "build:tz": "node ./scripts/tz/update.js",
+    "test": "tape './tests/**/*.test.js' | tap-dancer",
+    "testb": "TESTENV=prod pnpm run test",
+    "test:plugins": "pnpm --filter \"./plugins/*\" run test",
+    "test:temporal": "tape tests/temporal/_require.js './tests/temporal/*.test.js' | tap-dancer",
+    "test:types": "tsc --project ./tests/types/tsconfig.json && node --import tsx ./tests/types/index.ts | tap-dancer",
+    "test:all": "pnpm run test && pnpm run test:temporal && pnpm run test:types && pnpm run test:plugins && pnpm run lint",
+    "bench": "node ./scripts/bench/index.js",
+    "bench:write": "node ./scripts/bench/index.js --write",
+    "lint": "eslint ."
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "spacetime",
+    "originalVersion": "7.17.0",
+    "processedAt": "2026-10-17T08:10:20.160Z",
+    "smokeTest": "passed"
+  }
+}
