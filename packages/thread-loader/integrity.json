@@ -33,6 +33,23 @@
       "status": "published",
       "timestamp": "2026-10-10T00:36:30.362Z",
       "version": "4.0.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "loader-runner": {
+          "from": "^4.1.0",
+          "to": "^4.3.2"
+        },
+        "schema-utils": {
+          "from": "^4.2.0",
+          "to": "^4.6.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-17T16:08:47.323Z",
+      "version": "4.0.4-depup.2"
     }
   }
 }

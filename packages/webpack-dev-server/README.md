@@ -12,7 +12,7 @@ npm install @depup/webpack-dev-server
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.13 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 6.0.0 | **DepUp version**: 6.0.0-depup.14 | **Updated**: 10/17/2026 | **Import test**: passed
 
 ## What changed
 
@@ -28,9 +28,9 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | launch-editor | `^2.14.1` | `^2.14.2` |
 | open | `^11.0.0` | `^11.0.4` |
 | p-retry | `^8.0.0` | `^8.0.1` |
-| schema-utils | `^4.3.3` | `^4.5.0` |
+| schema-utils | `^4.3.3` | `^4.6.0` |
 | tinyglobby | `^0.2.15` | `^0.2.17` |
-| webpack-dev-middleware | `^8.0.3` | `^8.3.0` |
+| webpack-dev-middleware | `^8.0.3` | `^8.4.0` |
 | ws | `^8.20.0` | `^8.22.0` |
 
 

@@ -39,6 +39,27 @@
       "status": "published",
       "timestamp": "2026-10-09T15:12:33.078Z",
       "version": "4.1.1-depup.1"
+    },
+    "2": {
+      "changes": {
+        "loader-utils": {
+          "from": "^2.0.0",
+          "to": "^3.3.1"
+        },
+        "mime-types": {
+          "from": "^2.1.27",
+          "to": "^3.0.2"
+        },
+        "schema-utils": {
+          "from": "^3.0.0",
+          "to": "^4.6.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-17T16:08:49.350Z",
+      "version": "4.1.1-depup.2"
     }
   }
 }

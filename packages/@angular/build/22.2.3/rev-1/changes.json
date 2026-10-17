@@ -1,0 +1,50 @@
+{
+  "bumped": {
+    "@babel/core": {
+      "from": "8.0.5",
+      "to": "^8.0.7"
+    },
+    "@inquirer/confirm": {
+      "from": "6.3.2",
+      "to": "^6.3.3"
+    },
+    "beasties": {
+      "from": "0.5.4",
+      "to": "^0.5.5"
+    },
+    "browserslist": {
+      "from": "^4.26.0",
+      "to": "^4.29.3"
+    },
+    "listr2": {
+      "from": "11.1.0",
+      "to": "^11.3.0"
+    },
+    "magic-string": {
+      "from": "1.4.1",
+      "to": "^1.4.3"
+    },
+    "oxc-parser": {
+      "from": "0.150.0",
+      "to": "^0.154.0"
+    },
+    "rolldown": {
+      "from": "1.2.8",
+      "to": "^1.2.14"
+    },
+    "sass": {
+      "from": "1.104.1",
+      "to": "^1.105.2"
+    },
+    "sass-embedded": {
+      "from": "1.104.1",
+      "to": "^1.105.2"
+    },
+    "vite": {
+      "from": "8.3.0",
+      "to": "^8.3.4"
+    }
+  },
+  "timestamp": "2026-10-17T16:08:56.724Z",
+  "totalUpdated": 11
+}
