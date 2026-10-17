@@ -1,0 +1,84 @@
+{
+  "name": "@depup/peculiar__json-schema",
+  "version": "3.0.0-depup.0",
+  "description": "Serialize, parse and validate JSON with TypeScript decorators (with updated dependencies)",
+  "type": "module",
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": "./build/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE",
+    "changes.json"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "build": "tsdown",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeculiarVentures/json-schema.git"
+  },
+  "keywords": [
+    "@peculiar/json-schema",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "json",
+    "stringify",
+    "serialize",
+    "parse",
+    "convert",
+    "decorator"
+  ],
+  "author": "PeculiarVentures, Inc",
+  "contributors": [
+    {
+      "email": "rmh@unmitigatedrisk.com",
+      "name": "Ryan Hurst"
+    },
+    {
+      "email": "microshine@mail.ru",
+      "name": "Miroshin Stepan"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+  },
+  "homepage": "https://github.com/PeculiarVentures/json-schema#readme",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@vitest/coverage-v8": "^5.0.5",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "tsdown": "^0.23.1",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@peculiar/json-schema",
+    "originalVersion": "3.0.0",
+    "processedAt": "2026-10-17T00:29:49.671Z",
+    "smokeTest": "passed"
+  }
+}
