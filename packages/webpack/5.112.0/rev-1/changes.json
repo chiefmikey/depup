@@ -1,0 +1,38 @@
+{
+  "bumped": {
+    "@types/estree": {
+      "from": "^1.0.8",
+      "to": "^1.0.9"
+    },
+    "browserslist": {
+      "from": "^4.28.1",
+      "to": "^4.29.3"
+    },
+    "chrome-trace-event": {
+      "from": "^1.0.2",
+      "to": "^1.0.4"
+    },
+    "es-module-lexer": {
+      "from": "^2.1.0",
+      "to": "^3.0.4"
+    },
+    "events": {
+      "from": "^3.2.0",
+      "to": "^3.3.0"
+    },
+    "schema-utils": {
+      "from": "^4.5.0",
+      "to": "^4.6.0"
+    },
+    "tapable": {
+      "from": "^2.3.0",
+      "to": "^2.3.3"
+    },
+    "watchpack": {
+      "from": "^2.6.1",
+      "to": "^2.6.2"
+    }
+  },
+  "timestamp": "2026-10-17T16:09:20.806Z",
+  "totalUpdated": 8
+}
