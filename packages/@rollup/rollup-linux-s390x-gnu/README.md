@@ -12,7 +12,7 @@ npm install @depup/rollup__rollup-linux-s390x-gnu
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.64.7 | **DepUp version**: 4.64.7-depup.2 | **Updated**: 10/16/2026 | **Import test**: failed
+**Original version**: 4.64.8 | **DepUp version**: 4.64.8-depup.0 | **Updated**: 10/17/2026 | **Import test**: failed
 
 ## What changed
 

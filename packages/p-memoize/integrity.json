@@ -98,6 +98,14 @@
       "status": "failed",
       "timestamp": "2026-10-17T00:31:24.198Z",
       "version": "9.0.0-depup.3"
+    },
+    "4": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-17T16:08:22.197Z",
+      "version": "9.0.0-depup.4"
     }
   }
 }

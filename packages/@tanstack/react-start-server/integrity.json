@@ -663,6 +663,14 @@
       "status": "failed",
       "timestamp": "2026-10-17T08:11:02.459Z",
       "version": "1.167.51-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-17T16:10:37.419Z",
+      "version": "1.167.51-depup.2"
     }
   }
 }
