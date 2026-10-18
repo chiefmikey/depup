@@ -139,7 +139,7 @@ jobs:
 
       - name: Upload Staged Packages
         if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: staged-discover-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/stage
@@ -149,7 +149,7 @@ jobs:
 
       - name: Upload Package Data
         if: ${{ !cancelled() && (steps.discover_run.outcome == 'success' || steps.discover_run.outcome == 'failure') }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: package-data-discover-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/package-data
@@ -248,7 +248,7 @@ jobs:
 
       - name: Upload Publish Results
         if: always() && steps.download.outcome == 'success'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: publish-results-discover-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/publish-results
@@ -421,7 +421,7 @@ jobs:
 
       - name: Upload Unpushed Commits (recovery patch)
         if: ${{ failure() && steps.discover_commit.outcome == 'failure' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: unpushed-discover-shard-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/unpushed.patch
@@ -494,7 +494,7 @@ jobs:
 
       - name: Upload Staged Packages
         if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: staged-sync-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/stage
@@ -504,7 +504,7 @@ jobs:
 
       - name: Upload Package Data
         if: ${{ !cancelled() && (steps.sync_run.outcome == 'success' || steps.sync_run.outcome == 'failure') }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: package-data-sync-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/package-data
@@ -603,7 +603,7 @@ jobs:
 
       - name: Upload Publish Results
         if: always() && steps.download.outcome == 'success'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: publish-results-sync-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/publish-results
@@ -777,7 +777,7 @@ jobs:
 
       - name: Upload Unpushed Commits (recovery patch)
         if: ${{ failure() && steps.sync_commit.outcome == 'failure' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: unpushed-sync-shard-${{ matrix.shard }}-${{ github.run_id }}
           path: ${{ runner.temp }}/unpushed.patch
@@ -877,7 +877,7 @@ jobs:
 
       - name: Upload Unpushed Commits (recovery patch)
         if: ${{ failure() && steps.heal_commit.outcome == 'failure' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: unpushed-heal-${{ github.run_id }}
           path: ${{ runner.temp }}/unpushed.patch
