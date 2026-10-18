@@ -12,7 +12,7 @@ npm install @depup/testcafe
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.8 | **Updated**: 10/9/2026 | **Import test**: failed
+**Original version**: 3.7.6 | **DepUp version**: 3.7.6-depup.9 | **Updated**: 10/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -34,7 +34,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @babel/preset-react | `^7.22.15` | `^8.0.1` |
 | @babel/runtime | `^7.23.2` | `^8.0.7` |
 | @devexpress/callsite-record | `^4.1.6` | `^4.1.7` |
-| @types/node | `20.14.5` | `^26.6.4` |
+| @types/node | `20.14.5` | `^26.6.5` |
 | address | `^2.0.2` | `^2.0.3` |
 | async-exit-hook | `^1.1.2` | `^2.0.1` |
 | babel-plugin-module-resolver | `5.0.0` | `^5.0.3` |
@@ -48,11 +48,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | dedent | `^0.4.0` | `^1.7.2` |
 | del | `^3.0.0` | `^9.0.1` |
 | device-specs | `^1.0.0` | `^1.0.1` |
-| devtools-protocol | `0.0.1109433` | `^0.0.1714151` |
+| devtools-protocol | `0.0.1109433` | `^0.0.1721318` |
 | diff | `^8.0.3` | `^9.0.0` |
 | elegant-spinner | `^1.0.1` | `^3.0.0` |
 | emittery | `^0.4.1` | `^2.1.0` |
-| execa | `^4.0.3` | `^10.1.0` |
+| execa | `^4.0.3` | `^10.2.0` |
 | globby | `^11.0.4` | `^16.2.4` |
 | graceful-fs | `^4.1.11` | `^4.2.11` |
 | graphlib | `^2.1.5` | `^2.1.8` |
@@ -81,7 +81,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | resolve-from | `^4.0.0` | `^5.0.0` |
 | sanitize-filename | `^1.6.0` | `^1.6.4` |
 | semver | `^7.5.3` | `^7.8.5` |
-| set-cookie-parser | `^2.5.1` | `^3.1.3` |
+| set-cookie-parser | `^2.5.1` | `^3.1.4` |
 | source-map-support | `^0.5.16` | `^0.5.21` |
 | strip-bom | `^2.0.0` | `^5.0.0` |
 | testcafe-legacy-api | `5.1.8` | `^5.1.9` |
