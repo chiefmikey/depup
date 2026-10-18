@@ -1,6 +1,6 @@
 {
   "name": "@depup/rive-react",
-  "version": "4.24.0-depup.0",
+  "version": "4.24.0-depup.5",
   "description": "React wrapper around the rive-js library (with updated dependencies)",
   "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
@@ -37,10 +37,10 @@
   },
   "homepage": "https://github.com/rive-app/rive-react#readme",
   "dependencies": {
-    "@rive-app/canvas": "^2.35.3",
-    "@rive-app/canvas-lite": "^2.35.3",
-    "@rive-app/webgl": "^2.35.3",
-    "@rive-app/webgl2": "^2.35.3"
+    "@rive-app/canvas": "^2.45.0",
+    "@rive-app/canvas-lite": "^2.45.0",
+    "@rive-app/webgl": "^2.37.0",
+    "@rive-app/webgl2": "^2.45.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0"
@@ -90,25 +90,25 @@
     "changes": {
       "@rive-app/canvas": {
         "from": "2.32.0",
-        "to": "^2.35.3"
+        "to": "^2.45.0"
       },
       "@rive-app/canvas-lite": {
         "from": "2.32.0",
-        "to": "^2.35.3"
+        "to": "^2.45.0"
       },
       "@rive-app/webgl": {
         "from": "2.32.0",
-        "to": "^2.35.3"
+        "to": "^2.37.0"
       },
       "@rive-app/webgl2": {
         "from": "2.32.0",
-        "to": "^2.35.3"
+        "to": "^2.45.0"
       }
     },
     "depsUpdated": 4,
     "originalPackage": "rive-react",
     "originalVersion": "4.24.0",
-    "processedAt": "2026-03-18T22:43:38.303Z",
+    "processedAt": "2026-10-18T00:59:12.266Z",
     "smokeTest": "failed"
   }
 }
