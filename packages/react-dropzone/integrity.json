@@ -287,6 +287,19 @@
       "status": "failed",
       "timestamp": "2026-10-18T00:55:12.640Z",
       "version": "20.1.4-depup.1"
+    },
+    "2": {
+      "changes": {
+        "attr-accept": {
+          "from": "^4.0.0",
+          "to": "^4.0.1"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-18T08:11:12.698Z",
+      "version": "20.1.4-depup.2"
     }
   }
 }
