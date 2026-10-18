@@ -1,6 +1,6 @@
 {
   "name": "@depup/miniflare",
-  "version": "4.20260730.0-depup.12",
+  "version": "4.20260730.0-depup.17",
   "description": "Fun, full-featured, fully-local simulator for Cloudflare Workers (with updated dependencies)",
   "keywords": [
     "miniflare",
@@ -42,7 +42,7 @@
     "@cspotcode/source-map-support": "0.8.1",
     "sharp": "^0.35.5",
     "undici": "^8.12.2",
-    "workerd": "^1.20261016.1",
+    "workerd": "^1.20261018.1",
     "ws": "^8.22.0",
     "youch": "^4.1.1"
   },
@@ -137,7 +137,7 @@
       },
       "workerd": {
         "from": "1.20260730.1",
-        "to": "^1.20261016.1"
+        "to": "^1.20261018.1"
       },
       "ws": {
         "from": "8.21.0",
@@ -151,7 +151,7 @@
     "depsUpdated": 5,
     "originalPackage": "miniflare",
     "originalVersion": "4.20260730.0",
-    "processedAt": "2026-10-16T16:10:35.145Z",
+    "processedAt": "2026-10-18T16:08:14.731Z",
     "smokeTest": "failed"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@depup/conf",
-  "version": "16.0.0-depup.8",
+  "version": "16.0.0-depup.13",
   "description": "Simple config handling for your app or module (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/conf",
@@ -97,7 +97,7 @@
     "depsUpdated": 3,
     "originalPackage": "conf",
     "originalVersion": "16.0.0",
-    "processedAt": "2026-10-16T08:15:18.889Z",
+    "processedAt": "2026-10-18T16:07:54.275Z",
     "smokeTest": "passed"
   }
 }
