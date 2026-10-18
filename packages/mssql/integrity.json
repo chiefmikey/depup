@@ -729,5 +729,36 @@
       "timestamp": "2026-10-15T16:12:07.167Z",
       "version": "12.7.9-depup.0"
     }
+  },
+  "12.7.10": {
+    "0": {
+      "changes": {
+        "@tediousjs/connection-string": {
+          "from": "^1.0.0",
+          "to": "^1.1.0"
+        },
+        "commander": {
+          "from": "^11.0.0",
+          "to": "^15.0.0"
+        },
+        "debug": {
+          "from": "^4.3.3",
+          "to": "^4.4.3"
+        },
+        "tarn": {
+          "from": "^3.0.2",
+          "to": "^3.1.2"
+        },
+        "tedious": {
+          "from": "^19.2.2 || ^20.0.0",
+          "to": "^20.3.8"
+        }
+      },
+      "depsUpdated": 5,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-18T16:09:21.717Z",
+      "version": "12.7.10-depup.0"
+    }
   }
 }

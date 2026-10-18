@@ -1488,5 +1488,24 @@
       "timestamp": "2026-10-18T00:53:46.867Z",
       "version": "65.3.11-depup.0"
     }
+  },
+  "65.3.12": {
+    "0": {
+      "changes": {
+        "@es-joy/jsdoccomment": {
+          "from": "~0.98.0",
+          "to": "^0.99.0"
+        },
+        "@typescript-eslint/utils": {
+          "from": "^8.70.1",
+          "to": "^8.71.2"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-18T16:09:05.031Z",
+      "version": "65.3.12-depup.0"
+    }
   }
 }
