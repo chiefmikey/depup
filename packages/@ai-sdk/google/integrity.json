@@ -1263,6 +1263,14 @@
       "status": "failed",
       "timestamp": "2026-10-17T16:10:00.804Z",
       "version": "4.0.99-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-18T00:52:00.414Z",
+      "version": "4.0.99-depup.2"
     }
   }
 }

@@ -1,0 +1,55 @@
+{
+  "name": "@depup/vitest__istanbul-lib-coverage",
+  "version": "1.0.2-depup.0",
+  "description": "Data library for istanbul coverage objects (with updated dependencies)",
+  "keywords": [
+    "@vitest/istanbul-lib-coverage",
+    "depup",
+    "updated-dependencies",
+    "security",
+    "latest",
+    "patched",
+    "coverage",
+    "data",
+    "istanbul",
+    "vitest"
+  ],
+  "homepage": "https://vitest.dev/",
+  "bugs": {
+    "url": "https://github.com/vitest-dev/vitest/issues"
+  },
+  "license": "MIT",
+  "author": "Vitest Team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitest-dev/istanbuljs.git",
+    "directory": "packages/istanbul-lib-coverage"
+  },
+  "files": [
+    "dist",
+    "changes.json",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
+  "exports": "./dist/index.mjs",
+  "devDependencies": {
+    "tsdown": "^0.22.14"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "pnpm --filter @vitest/istanbuljs-monorepo run test --project @vitest/istanbul-lib-coverage"
+  },
+  "depup": {
+    "changes": {},
+    "depsUpdated": 0,
+    "originalPackage": "@vitest/istanbul-lib-coverage",
+    "originalVersion": "1.0.2",
+    "processedAt": "2026-10-18T00:52:52.316Z",
+    "smokeTest": "passed"
+  }
+}

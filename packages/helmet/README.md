@@ -12,7 +12,7 @@ npm install @depup/helmet
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.3.0 | **DepUp version**: 8.3.0-depup.14 | **Updated**: 10/11/2026 | **Import test**: passed
+**Original version**: 8.3.0 | **DepUp version**: 8.3.0-depup.15 | **Updated**: 10/18/2026 | **Import test**: passed
 
 ## What changed
 
