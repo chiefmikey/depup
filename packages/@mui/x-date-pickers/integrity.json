@@ -789,6 +789,27 @@
       "status": "failed",
       "timestamp": "2026-10-17T16:09:59.468Z",
       "version": "8.29.5-depup.2"
+    },
+    "3": {
+      "changes": {
+        "@babel/runtime": {
+          "from": "^7.28.4",
+          "to": "^8.0.7"
+        },
+        "@mui/utils": {
+          "from": "^7.3.5",
+          "to": "^9.5.0"
+        },
+        "@mui/x-internals": {
+          "from": "8.29.3",
+          "to": "^9.15.0"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-18T00:58:54.015Z",
+      "version": "8.29.5-depup.3"
     }
   }
 }

@@ -288,6 +288,14 @@
       "status": "failed",
       "timestamp": "2026-10-17T16:08:28.328Z",
       "version": "2.11.9-depup.1"
+    },
+    "2": {
+      "changes": {},
+      "depsUpdated": 0,
+      "smokeTest": "failed",
+      "status": "failed",
+      "timestamp": "2026-10-18T00:58:49.452Z",
+      "version": "2.11.9-depup.2"
     }
   }
 }
