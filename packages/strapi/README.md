@@ -12,7 +12,7 @@ npm install @depup/strapi
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.61 | **Updated**: 10/9/2026 | **Import test**: passed
+**Original version**: 3.6.11 | **DepUp version**: 3.6.11-depup.62 | **Updated**: 10/18/2026 | **Import test**: passed
 
 ## What changed
 
@@ -29,8 +29,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | configstore | `5.0.1` | `^8.0.0` |
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | debug | `^4.1.1` | `^4.4.3` |
-| dotenv | `8.2.0` | `^18.0.7` |
-| execa | `^1.0.0` | `^10.1.0` |
+| dotenv | `8.2.0` | `^18.0.8` |
+| execa | `^1.0.0` | `^10.2.0` |
 | fs-extra | `^9.1.0` | `^11.4.1` |
 | glob | `^7.1.2` | `^13.0.6` |
 | inquirer | `^6.2.1` | `^14.2.3` |
@@ -48,7 +48,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | opn | `^5.3.0` | `^6.0.0` |
 | ora | `^5.4.0` | `^9.4.1` |
 | package-json | `7.0.0` | `^10.0.1` |
-| qs | `^6.10.1` | `^6.16.0` |
+| qs | `^6.10.1` | `^6.16.1` |
 | rimraf | `^3.0.2` | `^6.1.3` |
 | semver | `7.3.5` | `^7.8.5` |
 
