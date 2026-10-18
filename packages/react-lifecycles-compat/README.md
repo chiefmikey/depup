@@ -12,7 +12,7 @@ npm install @depup/react-lifecycles-compat
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 3.0.4 | **DepUp version**: 3.0.4-depup.65 | **Updated**: 10/11/2026 | **Import test**: passed
+**Original version**: 3.0.4 | **DepUp version**: 3.0.4-depup.66 | **Updated**: 10/18/2026 | **Import test**: passed
 
 ## What changed
 
