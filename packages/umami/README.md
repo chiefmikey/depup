@@ -12,7 +12,7 @@ npm install @depup/umami
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.77 | **Updated**: 10/9/2026 | **Import test**: failed
+**Original version**: 2.10.0 | **DepUp version**: 2.10.0-depup.78 | **Updated**: 10/18/2026 | **Import test**: failed
 
 ## What changed
 
@@ -20,10 +20,10 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 |------------|----------|--------|
 | @clickhouse/client | `^0.2.2` | `^1.24.1` |
 | @fontsource/inter | `^4.5.15` | `^5.3.0` |
-| @prisma/client | `5.7.0` | `^7.10.0` |
+| @prisma/client | `5.7.0` | `^7.10.1` |
 | @prisma/extension-read-replicas | `^0.3.0` | `^0.5.0` |
 | @react-spring/web | `^9.7.3` | `^10.1.2` |
-| @tanstack/react-query | `^5.12.2` | `^5.104.1` |
+| @tanstack/react-query | `^5.12.2` | `^5.104.4` |
 | @umami/prisma-client | `^0.13.0` | `^0.20.0` |
 | @umami/redis-client | `^0.18.0` | `^0.30.0` |
 | chalk | `^4.1.1` | `^6.0.1` |
@@ -34,10 +34,11 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | cross-spawn | `^7.0.3` | `^7.0.6` |
 | date-fns | `^2.23.0` | `^4.4.0` |
 | date-fns-tz | `^1.1.4` | `^3.2.0` |
+| dateformat | `^5.0.3` | `^5.0.4` |
 | debug | `^4.3.4` | `^4.4.3` |
 | del | `^6.0.0` | `^9.0.1` |
 | detect-browser | `^5.2.0` | `^5.3.0` |
-| dotenv | `^10.0.0` | `^18.0.6` |
+| dotenv | `^10.0.0` | `^18.0.8` |
 | fs-extra | `^10.0.1` | `^11.4.1` |
 | immer | `^9.0.12` | `^11.1.21` |
 | ipaddr.js | `^2.0.1` | `^2.5.0` |
@@ -48,23 +49,23 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | kafkajs | `^2.1.0` | `^2.2.4` |
 | maxmind | `^4.3.6` | `^5.0.7` |
 | moment-timezone | `^0.5.35` | `^0.6.5` |
-| next | `14.0.4` | `^16.4.0` |
+| next | `14.0.4` | `^16.4.2` |
 | next-basics | `^0.39.0` | `^0.40.0` |
 | node-fetch | `^3.2.8` | `^3.3.2` |
-| prisma | `5.7.0` | `^8.0.0-rc.22` |
-| react | `^18.2.0` | `^19.3.0` |
+| prisma | `5.7.0` | `^8.0.0-rc.23` |
+| react | `^18.2.0` | `^19.3.1` |
 | react-basics | `^0.122.0` | `^0.126.0` |
 | react-beautiful-dnd | `^13.1.0` | `^13.1.1` |
-| react-dom | `^18.2.0` | `^19.3.0` |
+| react-dom | `^18.2.0` | `^19.3.1` |
 | react-error-boundary | `^4.0.4` | `^6.1.6` |
 | react-intl | `^6.5.5` | `^12.1.4` |
 | react-simple-maps | `^2.3.0` | `^5.0.5` |
 | react-use-measure | `^2.0.4` | `^2.1.7` |
-| react-window | `^1.8.6` | `^2.3.3` |
+| react-window | `^1.8.6` | `^2.4.0` |
 | semver | `^7.5.4` | `^7.8.5` |
 | thenby | `^1.3.4` | `^1.4.1` |
 | timezone-support | `^2.0.2` | `^3.1.0` |
-| uuid | `^9.0.0` | `^14.0.2` |
+| uuid | `^9.0.0` | `^14.0.3` |
 | yup | `^0.32.11` | `^1.7.1` |
 | zustand | `^4.3.8` | `^5.0.15` |
 

@@ -1,0 +1,36 @@
+{
+  "duration_ms": 1139,
+  "findings": [
+    {
+      "blocking": true,
+      "detail": "Suspicious file extension: fallbacks/windows/clipboard_aarch64.exe",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    },
+    {
+      "blocking": true,
+      "detail": "Suspicious file extension: fallbacks/windows/clipboard_i686.exe",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    },
+    {
+      "blocking": true,
+      "detail": "Suspicious file extension: fallbacks/windows/clipboard_x86_64.exe",
+      "kind": "pattern",
+      "scan": "pattern_scan"
+    },
+    {
+      "blocking": false,
+      "detail": "npm audit: 0 critical, 6 high, 4 moderate, 2 low",
+      "kind": "vulnerability",
+      "scan": "vulnerability_scan"
+    }
+  ],
+  "passed": false,
+  "scanned_at": "2026-10-18T16:08:03.512Z",
+  "scans": {
+    "malware_scan": "skipped (clamav unavailable)",
+    "pattern_scan": "failed",
+    "vulnerability_scan": "failed"
+  }
+}
