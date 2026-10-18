@@ -12,15 +12,14 @@ npm install @depup/wdio__logger
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 10.0.0 | **DepUp version**: 10.0.0-depup.0 | **Updated**: 10/5/2026 | **Import test**: passed
+**Original version**: 10.1.0 | **DepUp version**: 10.1.0-depup.0 | **Updated**: 10/18/2026 | **Import test**: passed
 
 ## What changed
 
 | Dependency | Original | Updated |
 |------------|----------|--------|
-| chalk | `^5.1.2` | `^6.0.1` |
 | loglevel | `^1.6.0` | `^1.9.2` |
-| safe-regex2 | `^5.0.0` | `^5.1.1` |
+| safe-regex2 | `^5.0.0` | `^5.1.2` |
 | strip-ansi | `^7.1.0` | `^7.2.0` |
 
 
