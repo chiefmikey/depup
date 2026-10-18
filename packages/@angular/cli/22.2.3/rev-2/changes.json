@@ -1,0 +1,26 @@
+{
+  "bumped": {
+    "@inquirer/prompts": {
+      "from": "8.7.2",
+      "to": "^8.7.3"
+    },
+    "@listr2/prompt-adapter-inquirer": {
+      "from": "4.2.7",
+      "to": "^4.3.3"
+    },
+    "listr2": {
+      "from": "11.1.0",
+      "to": "^11.4.0"
+    },
+    "yargs": {
+      "from": "18.1.0",
+      "to": "^18.2.0"
+    },
+    "zod": {
+      "from": "4.6.6",
+      "to": "^4.6.7"
+    }
+  },
+  "timestamp": "2026-10-18T00:59:56.436Z",
+  "totalUpdated": 5
+}
