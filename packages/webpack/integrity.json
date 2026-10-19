@@ -1931,6 +1931,51 @@
       "status": "published",
       "timestamp": "2026-10-17T16:09:47.298Z",
       "version": "5.112.0-depup.1"
+    },
+    "2": {
+      "changes": {
+        "@types/estree": {
+          "from": "^1.0.8",
+          "to": "^1.0.9"
+        },
+        "browserslist": {
+          "from": "^4.28.1",
+          "to": "^4.29.3"
+        },
+        "chrome-trace-event": {
+          "from": "^1.0.2",
+          "to": "^1.0.4"
+        },
+        "es-module-lexer": {
+          "from": "^2.1.0",
+          "to": "^3.0.4"
+        },
+        "events": {
+          "from": "^3.2.0",
+          "to": "^3.3.0"
+        },
+        "minimizer-webpack-plugin": {
+          "from": "^5.13.0",
+          "to": "^5.13.1"
+        },
+        "schema-utils": {
+          "from": "^4.5.0",
+          "to": "^4.8.1"
+        },
+        "tapable": {
+          "from": "^2.3.0",
+          "to": "^2.3.3"
+        },
+        "watchpack": {
+          "from": "^2.6.1",
+          "to": "^2.6.3"
+        }
+      },
+      "depsUpdated": 9,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-19T08:16:31.379Z",
+      "version": "5.112.0-depup.2"
     }
   }
 }

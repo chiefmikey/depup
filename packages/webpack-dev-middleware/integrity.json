@@ -185,5 +185,24 @@
       "timestamp": "2026-10-17T16:09:41.971Z",
       "version": "8.4.0-depup.0"
     }
+  },
+  "8.5.0": {
+    "0": {
+      "changes": {
+        "memfs": {
+          "from": "^4.68.2",
+          "to": "^4.80.0"
+        },
+        "schema-utils": {
+          "from": "^4.3.3",
+          "to": "^4.8.1"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-19T08:16:45.669Z",
+      "version": "8.5.0-depup.0"
+    }
   }
 }
