@@ -12,7 +12,7 @@ npm install @depup/react-resizable-panels
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 4.14.5 | **DepUp version**: 4.14.5-depup.2 | **Updated**: 10/13/2026 | **Import test**: failed
+**Original version**: 4.14.6 | **DepUp version**: 4.14.6-depup.0 | **Updated**: 10/19/2026 | **Import test**: failed
 
 ## What changed
 

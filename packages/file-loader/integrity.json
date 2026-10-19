@@ -65,6 +65,23 @@
       "status": "published",
       "timestamp": "2026-10-18T08:11:13.494Z",
       "version": "6.2.0-depup.3"
+    },
+    "4": {
+      "changes": {
+        "loader-utils": {
+          "from": "^2.0.0",
+          "to": "^3.3.1"
+        },
+        "schema-utils": {
+          "from": "^3.0.0",
+          "to": "^4.8.0"
+        }
+      },
+      "depsUpdated": 2,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-19T00:34:10.134Z",
+      "version": "6.2.0-depup.4"
     }
   }
 }
