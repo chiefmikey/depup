@@ -260,6 +260,19 @@
       "status": "failed",
       "timestamp": "2026-10-19T00:33:12.425Z",
       "version": "10.2.0-depup.2"
+    },
+    "3": {
+      "changes": {
+        "pretty-ms": {
+          "from": "^9.3.1",
+          "to": "^10.0.0"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-19T08:17:09.632Z",
+      "version": "10.2.0-depup.3"
     }
   }
 }

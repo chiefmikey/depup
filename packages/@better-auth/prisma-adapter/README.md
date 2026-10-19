@@ -12,7 +12,7 @@ npm install @depup/better-auth__prisma-adapter
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 1.7.10 | **DepUp version**: 1.7.10-depup.2 | **Updated**: 10/16/2026 | **Import test**: failed
+**Original version**: 1.7.11 | **DepUp version**: 1.7.11-depup.0 | **Updated**: 10/19/2026 | **Import test**: failed
 
 ## What changed
 

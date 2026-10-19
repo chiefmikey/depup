@@ -12,7 +12,7 @@ npm install @depup/tedious
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 20.3.8 | **DepUp version**: 20.3.8-depup.0 | **Updated**: 10/18/2026 | **Import test**: failed
+**Original version**: 20.3.8 | **DepUp version**: 20.3.8-depup.1 | **Updated**: 10/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -22,7 +22,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @azure/identity | `^4.13.1` | `^4.14.0` |
 | @js-joda/core | `^6.0.1` | `^6.3.0` |
 | @types/node | `>=22` | `^26.6.5` |
-| bl | `^6.1.4` | `^7.0.12` |
+| bl | `^6.1.4` | `^7.0.13` |
 | iconv-lite | `^0.7.0` | `^0.7.3` |
 
 

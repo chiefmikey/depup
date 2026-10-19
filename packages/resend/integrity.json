@@ -700,19 +700,6 @@
     }
   },
   "6.34.1": {
-    "0": {
-      "changes": {
-        "postal-mime": {
-          "from": "2.7.6",
-          "to": "^4.0.7"
-        }
-      },
-      "depsUpdated": 1,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-10-17T00:32:21.616Z",
-      "version": "6.34.1-depup.0"
-    },
     "1": {
       "changes": {
         "postal-mime": {
@@ -764,6 +751,19 @@
       "status": "failed",
       "timestamp": "2026-10-18T16:08:33.787Z",
       "version": "6.34.1-depup.4"
+    },
+    "5": {
+      "changes": {
+        "postal-mime": {
+          "from": "2.7.6",
+          "to": "^4.0.11"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-19T08:16:06.221Z",
+      "version": "6.34.1-depup.5"
     }
   }
 }
