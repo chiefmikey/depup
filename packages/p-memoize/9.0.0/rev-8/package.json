@@ -1,6 +1,6 @@
 {
   "name": "@depup/p-memoize",
-  "version": "9.0.0-depup.3",
+  "version": "9.0.0-depup.8",
   "description": "Memoize promise-returning & async functions (with updated dependencies)",
   "license": "MIT",
   "repository": "sindresorhus/p-memoize",
@@ -94,7 +94,7 @@
     "depsUpdated": 0,
     "originalPackage": "p-memoize",
     "originalVersion": "9.0.0",
-    "processedAt": "2026-10-17T00:31:22.979Z",
+    "processedAt": "2026-10-19T08:16:19.516Z",
     "smokeTest": "passed"
   }
 }
