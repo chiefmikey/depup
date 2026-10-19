@@ -12,7 +12,7 @@ npm install @depup/react-scripts
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.18 | **Updated**: 10/16/2026 | **Import test**: failed
+**Original version**: 5.0.1 | **DepUp version**: 5.0.1-depup.19 | **Updated**: 10/19/2026 | **Import test**: failed
 
 ## What changed
 
@@ -39,7 +39,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | jest-resolve | `^27.4.2` | `^30.5.1` |
 | jest-watch-typeahead | `^1.0.0` | `^3.0.1` |
 | mini-css-extract-plugin | `^2.4.5` | `^2.10.2` |
-| postcss | `^8.4.4` | `^8.5.30` |
+| postcss | `^8.4.4` | `^8.5.31` |
 | postcss-loader | `^6.2.1` | `^8.2.1` |
 | postcss-normalize | `^10.0.1` | `^13.0.1` |
 | postcss-preset-env | `^7.0.1` | `^11.6.1` |
@@ -53,7 +53,7 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | tailwindcss | `^3.0.2` | `^4.3.3` |
 | terser-webpack-plugin | `^5.2.5` | `^5.6.1` |
 | webpack | `^5.64.4` | `^5.112.0` |
-| webpack-dev-server | `^4.6.0` | `^6.0.0` |
+| webpack-dev-server | `^4.6.0` | `^6.1.0` |
 | webpack-manifest-plugin | `^4.0.2` | `^6.0.1` |
 | workbox-webpack-plugin | `^6.4.1` | `^7.4.1` |
 

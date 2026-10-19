@@ -316,6 +316,27 @@
       "status": "published",
       "timestamp": "2026-10-18T16:08:25.276Z",
       "version": "5.13.1-depup.0"
+    },
+    "1": {
+      "changes": {
+        "jest-worker": {
+          "from": "^27.4.5",
+          "to": "^30.5.1"
+        },
+        "schema-utils": {
+          "from": "^4.6.0",
+          "to": "^4.8.0"
+        },
+        "terser": {
+          "from": "^5.51.0",
+          "to": "^5.51.2"
+        }
+      },
+      "depsUpdated": 3,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-19T00:33:41.119Z",
+      "version": "5.13.1-depup.1"
     }
   }
 }

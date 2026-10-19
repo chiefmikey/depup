@@ -1222,31 +1222,6 @@
     }
   },
   "78.0.0": {
-    "10": {
-      "changes": {
-        "@eslint/css-tree": {
-          "from": "^4.1.1",
-          "to": "^4.1.2"
-        },
-        "browserslist": {
-          "from": "^4.29.1",
-          "to": "^4.29.3"
-        },
-        "globals": {
-          "from": "^17.12.0",
-          "to": "^17.13.0"
-        },
-        "regjsparser": {
-          "from": "^0.13.3",
-          "to": "^0.13.4"
-        }
-      },
-      "depsUpdated": 4,
-      "smokeTest": "passed",
-      "status": "failed",
-      "timestamp": "2026-10-17T08:10:46.592Z",
-      "version": "78.0.0-depup.10"
-    },
     "11": {
       "changes": {
         "@eslint/css-tree": {
@@ -1346,6 +1321,31 @@
       "status": "failed",
       "timestamp": "2026-10-18T16:07:59.043Z",
       "version": "78.0.0-depup.14"
+    },
+    "15": {
+      "changes": {
+        "@eslint/css-tree": {
+          "from": "^4.1.1",
+          "to": "^4.1.2"
+        },
+        "browserslist": {
+          "from": "^4.29.1",
+          "to": "^4.29.3"
+        },
+        "globals": {
+          "from": "^17.12.0",
+          "to": "^17.13.0"
+        },
+        "regjsparser": {
+          "from": "^0.13.3",
+          "to": "^0.13.4"
+        }
+      },
+      "depsUpdated": 4,
+      "smokeTest": "passed",
+      "status": "failed",
+      "timestamp": "2026-10-19T00:33:14.874Z",
+      "version": "78.0.0-depup.15"
     }
   }
 }

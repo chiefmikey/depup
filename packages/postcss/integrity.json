@@ -282,5 +282,20 @@
       "timestamp": "2026-10-13T08:17:16.717Z",
       "version": "8.5.30-depup.0"
     }
+  },
+  "8.5.31": {
+    "0": {
+      "changes": {
+        "nanoid": {
+          "from": "^3.3.20",
+          "to": "^6.0.2"
+        }
+      },
+      "depsUpdated": 1,
+      "smokeTest": "passed",
+      "status": "published",
+      "timestamp": "2026-10-19T00:33:27.307Z",
+      "version": "8.5.31-depup.0"
+    }
   }
 }

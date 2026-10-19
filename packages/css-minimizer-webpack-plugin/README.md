@@ -12,7 +12,7 @@ npm install @depup/css-minimizer-webpack-plugin
 
 Outdated transitive dependencies are the #1 source of npm security vulnerabilities. Most package maintainers don't bump their deps on every patch. DepUp does it automatically -- every 4 hours.
 
-**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.17 | **Updated**: 10/17/2026 | **Import test**: passed
+**Original version**: 8.0.0 | **DepUp version**: 8.0.0-depup.18 | **Updated**: 10/19/2026 | **Import test**: passed
 
 ## What changed
 
@@ -21,8 +21,8 @@ Outdated transitive dependencies are the #1 source of npm security vulnerabiliti
 | @jridgewell/trace-mapping | `^0.3.25` | `^0.3.31` |
 | cssnano | `^7.0.4` | `^9.9.0` |
 | jest-worker | `^30.0.5` | `^30.5.1` |
-| postcss | `^8.4.40` | `^8.5.30` |
-| schema-utils | `^4.2.0` | `^4.6.0` |
+| postcss | `^8.4.40` | `^8.5.31` |
+| schema-utils | `^4.2.0` | `^4.8.0` |
 | serialize-javascript | `^7.0.3` | `^7.1.2` |
 
 
